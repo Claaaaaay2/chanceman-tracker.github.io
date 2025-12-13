@@ -44889,6 +44889,9 @@
     "image": "grey_wolf_fur.png",
     "sources": {
       "drops": {
+        "Fur stall": {
+          "droprate": "Always"
+        },
         "Alexis": {
           "droprate": "1/5.12"
         },

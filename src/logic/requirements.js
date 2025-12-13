@@ -174,6 +174,15 @@ export const REQUIREMENT_CHECKS = {
     canCompleteGrimTales(ctx) {
         return false; // TODO
     },
+    canCompleteObservatoryQuest(ctx) {
+        return false; // TODO
+    },
+    canCompleteBetweenARock(ctx) {
+        return false; // TODO
+    },
+    canGetGoutweed(ctx) {
+        return false; // TODO
+    },
     canCompleteRegicide(ctx) {
         return false; // TODO
     },
@@ -231,11 +240,14 @@ export const REQUIREMENT_CHECKS = {
     canCompleteMeatAndGreet(ctx) {
         return false; // TODO
     },
+    canCompleteNatureSpirit(ctx) {
+        return canCompleteNatureSpirit(ctx);
+    },
     canCompleteSecretsOfTheNorth(ctx) {
         return false; // TODO
     },
     canCompleteLunarDiplomacy(ctx) {
-        return false; // TODO
+        return canCompleteLunarDiplomacy(ctx);
     },
     canCompleteEaglesPeak(ctx) {
         return false; // TODO
@@ -315,6 +327,9 @@ export const REQUIREMENT_CHECKS = {
     canCompleteTheHeartOfDarkness(ctx) {
         return canCompleteTheHeartOfDarkness(ctx);
     },
+    canStartIcthlarinsLittleHelper(ctx) {
+        return canCompleteIcthlarinsLittleHelper(ctx); // TODO start maybe anders?
+    },
     canCompleteIcthlarinsLittleHelper(ctx) {
         return canCompleteIcthlarinsLittleHelper(ctx);
     },
@@ -386,6 +401,12 @@ export const REQUIREMENT_CHECKS = {
     },
     hasFacemask(ctx) {
         return has(ctx, 4164);
+    },
+    hasBagOfSalt(ctx) {
+        return has(ctx, 4161);
+    },
+    hasBrineSabre(ctx) {
+        return has(ctx, 11037);
     },
     canKillGargoyles(ctx) {
         return canKillGargoyles(ctx);
@@ -459,6 +480,9 @@ export const REQUIREMENT_CHECKS = {
     canStartLegendsQuest(ctx) {
         return false; // TODO
     },
+    canCompleteSeaSlug(ctx) {
+        return false; // TODO
+    },
     canCompleteLegendsQuest(ctx) {
         return false; // TODO
     },
@@ -498,6 +522,15 @@ export const REQUIREMENT_CHECKS = {
     canFishFromRewardPool(ctx) {
         return canFishFromRewardPool(ctx);
     },
+    canReachGemRocks(ctx) {
+        return canReachGemRocks(ctx);
+    },
+    hasGiantFrogLegs(ctx) {
+        return has(ctx, 4517);
+    },
+    hasRawCaveEel(ctx) {
+        return has(ctx, 5001);
+    },
     hasSteelArrow(ctx) {
         return has(ctx, 886);
     },
@@ -517,7 +550,10 @@ export const REQUIREMENT_CHECKS = {
         return has(ctx, 305);
     },
     hasHarpoon(ctx) {
-        return has(ctx, 311);
+        return has(ctx, 311) || has(ctx, 10129) || has(ctx, 21028);
+    },
+    hasAnyLantern(ctx) {
+        return hasAnyLantern(ctx);
     },
     hasFishingRod(ctx) {
         return has(ctx, 307);
@@ -854,6 +890,18 @@ function canCompleteBeneathCursedSands(ctx) {
 
 function hasAnyFeather(ctx) {
     return has(ctx, 314); // TODO andere feathers
+}
+
+function hasAnyLantern(ctx) {
+    return (canTrainFiremaking(ctx) //
+            && (canDoGuardiansOfTheRift(ctx) //
+                || has(ctx, 4548) // Bullseye lantern
+                || has(ctx, 4532) // Candle lantern (black)
+                || has(ctx, 4529) // Candle lantern (white)
+                || has(ctx, 7051) // Unlit bug lantern
+                || has(ctx, 4537) // Oil lantern
+                || canCompleteDesertTreasureII(ctx) //
+            ));
 }
 
 function canCompleteContact(ctx) {
@@ -1413,6 +1461,20 @@ function canCompletePiratesTreasure(ctx) {
     return has(ctx, 1005)  // White apron
         && has(ctx, 952)   // Spade
         && has(ctx, 1963); // Banana
+}
+
+function canReachGemRocks(ctx) {
+    return canCompletePandemonium(ctx) //
+        || canCompleteShiloVillage(ctx) //
+        || canCompleteLunarDiplomacy(ctx);
+}
+
+function canCompleteLunarDiplomacy(ctx) {
+    return false; // TODO
+}
+
+function canCompleteShiloVillage(ctx) {
+    return false; // TODO
 }
 
 function canFishFromRewardPool(ctx) {

@@ -1049,7 +1049,7 @@ export const NPC_DATA = {
     },
     "Baby Roc": {
         "wiki": "https://oldschool.runescape.wiki/w/Baby_Roc",
-        "rule": "canCompleteMyArmsBigAdventure",
+        "rule": ["canCompleteMyArmsBigAdventure"],
         "skill": [],
         "level": [],
         "tags": ["quest"],
@@ -5904,62 +5904,82 @@ export const NPC_DATA = {
                 "hasKarambwanVesselBaited"
             ]
         },
-        "skill": [],
-        "level": [],
+        "skill": ["fishing"],
+        "level": [65],
         "tags": [],
         "f2p": false
     },
     "Fishing spot (karambwanji)": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(karambwanji)",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["hasSmallFishingNet"],
+        "skill": ["fishing"],
+        "level": [5],
         "tags": [],
         "f2p": false
     },
     "Fishing spot (lantern) Harpoon": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(lantern)#Harpoon",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canTrainFishing",
+                "canCompletePandemonium",
+                "hasHarpoon",
+                "hasAnyLantern"
+            ]
+        },
+        "skill": ["fishing"],
+        "level": [52],
         "tags": [],
         "f2p": false
     },
     "Fishing spot (small net, bait) Bait": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(small_net,_bait)#Bait",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canTrainFishing",
+                "hasFishingRod",
+                "hasFishingBait"
+            ]
+        },
+        "skill": ["fishing"],
+        "level": [5],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Fishing spot (small net, bait) Small net": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(small_net,_bait)#Small_net",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["hasSmallFishingNet"],
+        "skill": ["fishing"],
+        "level": [1],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Fishing spot (swamp)": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(swamp)",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canCompletePriestInPeril",
+                "canTrainFishing",
+                "hasFishingRod",
+                "hasFishingBait"
+            ]
+        },
+        "skill": ["fishing"],
+        "level": [28],
         "tags": [],
         "f2p": false
     },
     "Fishy salvage": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishy_salvage",
         "rule": ["canDoSalvaging"],
-        "skill": [],
-        "level": [],
+        "skill": ["sailing"],
+        "level": [26],
         "tags": [],
         "f2p": false
     },
     "Fiyr Shade": {
         "wiki": "https://oldschool.runescape.wiki/w/Fiyr_Shade",
-        "rule": null,
+        "rule": ["canBurnAsynShades"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -5967,15 +5987,15 @@ export const NPC_DATA = {
     },
     "Flambeed": {
         "wiki": "https://oldschool.runescape.wiki/w/Flambeed",
-        "rule": null,
+        "rule": ["canCompleteRecipeForDisaster"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["quest"],
         "f2p": false
     },
     "Flambeed (Nightmare Zone)": {
         "wiki": "https://oldschool.runescape.wiki/w/Flambeed_(Nightmare_Zone)",
-        "rule": null,
+        "rule": ["canCompleteRecipeForDisaster"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -5984,9 +6004,9 @@ export const NPC_DATA = {
     "Flaming pyrelord": {
         "wiki": "https://oldschool.runescape.wiki/w/Flaming_pyrelord",
         "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
+        "skill": ["slayer"],
+        "level": [30],
+        "tags": ["superior"],
         "f2p": false
     },
     "Flawed Golem": {
@@ -5995,7 +6015,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Flax (plant)": {
         "wiki": "https://oldschool.runescape.wiki/w/Flax_(plant)",
@@ -6011,7 +6031,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Flesh Crawler Members": {
         "wiki": "https://oldschool.runescape.wiki/w/Flesh_Crawler#Members",
@@ -6040,22 +6060,22 @@ export const NPC_DATA = {
     "Flowering Tree (Forestry event)": {
         "wiki": "https://oldschool.runescape.wiki/w/Flowering_Tree_(Forestry_event)",
         "rule": ["canTrainWoodcutting"],
-        "skill": [],
-        "level": [],
+        "skill": ["woodcutting"],
+        "level": [1],
         "tags": [],
         "f2p": false
     },
     "Food Stall": {
         "wiki": "https://oldschool.runescape.wiki/w/Food_Stall",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canCompleteMonkeyMadnessI"],
+        "skill": ["thieving"],
+        "level": [5],
         "tags": [],
         "f2p": false
     },
     "Foreman": {
         "wiki": "https://oldschool.runescape.wiki/w/Foreman",
-        "rule": null,
+        "rule": ["canCompleteTheGrandTree"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -6063,9 +6083,9 @@ export const NPC_DATA = {
     },
     "Forester (Woodcutting Guild)": {
         "wiki": "https://oldschool.runescape.wiki/w/Forester_(Woodcutting_Guild)",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canTrainWoodcutting"],
+        "skill": ["woodcutting"],
+        "level": [60],
         "tags": [],
         "f2p": false
     },
@@ -6104,7 +6124,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Fox": {
         "wiki": "https://oldschool.runescape.wiki/w/Fox",
@@ -6125,14 +6145,14 @@ export const NPC_DATA = {
     "Fremennik salvage": {
         "wiki": "https://oldschool.runescape.wiki/w/Fremennik_salvage",
         "rule": ["canDoSalvaging"],
-        "skill": [],
-        "level": [],
+        "skill": ["sailing"],
+        "level": [80],
         "tags": [],
         "f2p": false
     },
     "Frenzied ice troll female": {
         "wiki": "https://oldschool.runescape.wiki/w/Frenzied_ice_troll_female",
-        "rule": null,
+        "rule": ["canCompleteTheFremennikIsles"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -6140,7 +6160,7 @@ export const NPC_DATA = {
     },
     "Frenzied ice troll grunt": {
         "wiki": "https://oldschool.runescape.wiki/w/Frenzied_ice_troll_grunt",
-        "rule": null,
+        "rule": ["canCompleteTheFremennikIsles"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -6148,7 +6168,7 @@ export const NPC_DATA = {
     },
     "Frenzied ice troll male": {
         "wiki": "https://oldschool.runescape.wiki/w/Frenzied_ice_troll_male",
-        "rule": null,
+        "rule": ["canCompleteTheFremennikIsles"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -6156,7 +6176,7 @@ export const NPC_DATA = {
     },
     "Frenzied ice troll runt": {
         "wiki": "https://oldschool.runescape.wiki/w/Frenzied_ice_troll_runt",
-        "rule": null,
+        "rule": ["canCompleteTheFremennikIsles"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -6165,8 +6185,8 @@ export const NPC_DATA = {
     "Friendly Ent (Forestry event)": {
         "wiki": "https://oldschool.runescape.wiki/w/Friendly_Ent_(Forestry_event)",
         "rule": ["canTrainWoodcutting"],
-        "skill": [],
-        "level": [],
+        "skill": ["woodcutting"],
+        "level": [1],
         "tags": [],
         "f2p": false
     },
@@ -6184,11 +6204,17 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Frogeel": {
         "wiki": "https://oldschool.runescape.wiki/w/Frogeel",
-        "rule": null,
+        "rule": {
+            "all": [
+                "canCompleteTowerOfLife",
+                "hasGiantFrogLegs",
+                "hasRawCaveEel"
+            ]
+        },
         "skill": [],
         "level": [],
         "tags": [],
@@ -6204,25 +6230,17 @@ export const NPC_DATA = {
     },
     "Frost Nagua": {
         "wiki": "https://oldschool.runescape.wiki/w/Frost_Nagua",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canCompleteTheHeartOfDarkness"],
+        "skill": ["slayer"],
+        "level": [48],
         "tags": [],
         "f2p": false
     },
     "Frost dragon": {
         "wiki": "https://oldschool.runescape.wiki/w/Frost_dragon",
         "rule": ["canSailToGrimstone"],
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
-    "Frost nagua": {
-        "wiki": null,
-        "rule": ["canCompleteTheHeartOfDarkness"],
-        "skill": [],
-        "level": [],
+        "skill": ["sailing"],
+        "level": [87],
         "tags": [],
         "f2p": false
     },
@@ -6237,8 +6255,8 @@ export const NPC_DATA = {
     "Fruit Stall": {
         "wiki": "https://oldschool.runescape.wiki/w/Fruit_Stall",
         "rule": null,
-        "skill": [],
-        "level": [],
+        "skill": ["thieving"],
+        "level": [25],
         "tags": [],
         "f2p": false
     },
@@ -6250,11 +6268,19 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
+    "Fur stall": {
+        "wiki": "https://oldschool.runescape.wiki/w/Fur_stall",
+        "rule": null,
+        "skill": ["thieving"],
+        "level": [35],
+        "tags": [],
+        "f2p": false
+    },
     "Fur stall (Port Roberts)": {
         "wiki": "https://oldschool.runescape.wiki/w/Fur_stall_(Port_Roberts)",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canCompletePandemonium"],
+        "skill": ["thieving"],
+        "level": [35],
         "tags": [],
         "f2p": false
     },
@@ -6268,7 +6294,7 @@ export const NPC_DATA = {
     },
     "Galina": {
         "wiki": "https://oldschool.runescape.wiki/w/Galina",
-        "rule": null,
+        "rule": ["canCompletePriestInPeril"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -6296,14 +6322,18 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Gargoyle": {
         "wiki": "https://oldschool.runescape.wiki/w/Gargoyle",
-        "rule": ["canCompletePriestInPeril",
-            "canKillGargoyles"],
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canCompletePriestInPeril",
+                "canKillGargoyles"
+            ]
+        },
+        "skill": ["slayer"],
+        "level": [75],
         "tags": [],
         "f2p": false
     },
@@ -6317,7 +6347,7 @@ export const NPC_DATA = {
     },
     "Gelatinnoth Mother (Nightmare Zone)": {
         "wiki": "https://oldschool.runescape.wiki/w/Gelatinnoth_Mother_(Nightmare_Zone)",
-        "rule": null,
+        "rule": ["canCompleteRecipeForDisaster"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -6325,55 +6355,60 @@ export const NPC_DATA = {
     },
     "Gem rocks": {
         "wiki": "https://oldschool.runescape.wiki/w/Gem_rocks",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canTrainMining",
+                "canReachGemRocks"
+            ]
+        },
+        "skill": ["mining"],
+        "level": [40],
         "tags": [],
         "f2p": false
     },
     "Gem stall": {
         "wiki": "https://oldschool.runescape.wiki/w/Gem_stall",
         "rule": null,
-        "skill": [],
-        "level": [],
+        "skill": ["thieving"],
+        "level": [75],
         "tags": [],
         "f2p": false
     },
     "Gem stall (Port Roberts)": {
         "wiki": "https://oldschool.runescape.wiki/w/Gem_stall_(Port_Roberts)",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canCompletePandemonium"],
+        "skill": ["thieving"],
+        "level": [75],
         "tags": [],
         "f2p": false
     },
     "Gemstone Crab": {
         "wiki": "https://oldschool.runescape.wiki/w/Gemstone_Crab",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canTrainMining"],
+        "skill": ["mining"],
+        "level": [1],
         "tags": [],
         "f2p": false
     },
     "General Graardor": {
         "wiki": "https://oldschool.runescape.wiki/w/General_Graardor",
         "rule": ["canDoGeneralGraardor"],
-        "skill": [],
-        "level": [],
+        "skill": ["strength"],
+        "level": [70],
         "tags": [],
         "f2p": false
     },
     "General Stall": {
         "wiki": "https://oldschool.runescape.wiki/w/General_Stall",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canCompleteMonkeyMadnessI"],
+        "skill": ["thieving"],
+        "level": [5],
         "tags": [],
         "f2p": false
     },
     "Georgy": {
         "wiki": "https://oldschool.runescape.wiki/w/Georgy",
-        "rule": null,
+        "rule": ["canCompletePriestInPeril"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -6381,7 +6416,7 @@ export const NPC_DATA = {
     },
     "Ghast": {
         "wiki": "https://oldschool.runescape.wiki/w/Ghast",
-        "rule": null,
+        "rule": ["canCompleteNatureSpirit"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -6397,23 +6432,23 @@ export const NPC_DATA = {
     },
     "Giant Mole": {
         "wiki": "https://oldschool.runescape.wiki/w/Giant_Mole",
-        "rule": null,
+        "rule": ["hasSpade"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Giant Roc": {
         "wiki": "https://oldschool.runescape.wiki/w/Giant_Roc",
-        "rule": null,
+        "rule": ["canCompleteMyArmsBigAdventure"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["quest"],
         "f2p": false
     },
     "Giant Roc (Nightmare Zone)": {
         "wiki": "https://oldschool.runescape.wiki/w/Giant_Roc_(Nightmare_Zone)",
-        "rule": null,
+        "rule": ["canCompleteMyArmsBigAdventure"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -6445,7 +6480,12 @@ export const NPC_DATA = {
     },
     "Giant bat (Brine Rat Cavern)": {
         "wiki": "https://oldschool.runescape.wiki/w/Giant_bat_(Brine_Rat_Cavern)",
-        "rule": null,
+        "rule": {
+            "all": [
+                "canCompleteFremennikTrials",
+                "hasSpade"
+            ]
+        },
         "skill": [],
         "level": [],
         "tags": [],
@@ -6453,7 +6493,12 @@ export const NPC_DATA = {
     },
     "Giant crypt rat": {
         "wiki": "https://oldschool.runescape.wiki/w/Giant_crypt_rat",
-        "rule": null,
+        "rule": {
+            "all": [
+                "canCompletePriestInPeril",
+                "hasSpade"
+            ]
+        },
         "skill": [],
         "level": [],
         "tags": [],
@@ -6461,7 +6506,7 @@ export const NPC_DATA = {
     },
     "Giant egg sac": {
         "wiki": "https://oldschool.runescape.wiki/w/Giant_egg_sac",
-        "rule": null,
+        "rule": ["hasSlashWeapon"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -6473,7 +6518,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Giant frog Level 99": {
         "wiki": "https://oldschool.runescape.wiki/w/Giant_frog#Level_99",
@@ -6485,7 +6530,7 @@ export const NPC_DATA = {
     },
     "Giant lobster": {
         "wiki": "https://oldschool.runescape.wiki/w/Giant_lobster",
-        "rule": null,
+        "rule": ["canCompleteSeaSlug"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -6496,7 +6541,7 @@ export const NPC_DATA = {
         "rule": ["canCompletePriestInPeril"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["quest"],
         "f2p": false
     },
     "Giant rat Regular": {
@@ -6505,7 +6550,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Giant rat Stronghold of Security": {
         "wiki": "https://oldschool.runescape.wiki/w/Giant_rat#Stronghold_of_Security",
@@ -6513,14 +6558,19 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Giant rockslug": {
         "wiki": "https://oldschool.runescape.wiki/w/Giant_rockslug",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
+        "rule": {
+            "any": [
+                "hasBrineSabre",
+                "hasBagOfSalt"
+            ]
+        },
+        "skill": ["slayer"],
+        "level": [20],
+        "tags": ["superior"],
         "f2p": false
     },
     "Giant skeleton (Shadow Dungeon)": {
@@ -6533,7 +6583,7 @@ export const NPC_DATA = {
     },
     "Giant skeleton (Tarn's Lair)": {
         "wiki": "https://oldschool.runescape.wiki/w/Giant_skeleton_(Tarn%27s_Lair)",
-        "rule": null,
+        "rule": ["canCompletePriestInPeril"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -6557,15 +6607,15 @@ export const NPC_DATA = {
     },
     "Glod": {
         "wiki": "https://oldschool.runescape.wiki/w/Glod",
-        "rule": null,
+        "rule": ["canCompleteGrimTales"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["quest"],
         "f2p": false
     },
     "Glod (Nightmare Zone)": {
         "wiki": "https://oldschool.runescape.wiki/w/Glod_(Nightmare_Zone)",
-        "rule": null,
+        "rule": ["canCompleteGrimTales"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -6657,7 +6707,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Goblin (Goblin Village) (m)": {
         "wiki": "https://oldschool.runescape.wiki/w/Goblin_(Goblin_Village)",
@@ -6669,7 +6719,7 @@ export const NPC_DATA = {
     },
     "Goblin (God Wars Dungeon)": {
         "wiki": "https://oldschool.runescape.wiki/w/Goblin_(God_Wars_Dungeon)",
-        "rule": null,
+        "rule": ["canEnterGodWarsDungeon"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -6681,7 +6731,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Goblin (Vault of War) (m)": {
         "wiki": "https://oldschool.runescape.wiki/w/Goblin_(Vault_of_War)",
@@ -6697,7 +6747,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Goblin Drop table 1 (m)": {
         "wiki": "https://oldschool.runescape.wiki/w/Goblin#Drop_table_1",
@@ -6713,7 +6763,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Goblin Drop table 2 (m)": {
         "wiki": "https://oldschool.runescape.wiki/w/Goblin#Drop_table_2",
@@ -6725,15 +6775,7 @@ export const NPC_DATA = {
     },
     "Goblin guard": {
         "wiki": "https://oldschool.runescape.wiki/w/Goblin_guard",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
-    "Gold Chest": {
-        "wiki": null,
-        "rule": ["canBurnFiyrShades"],
+        "rule": ["canCompleteObservatoryQuest"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -6789,23 +6831,23 @@ export const NPC_DATA = {
     },
     "Gold vein": {
         "wiki": "https://oldschool.runescape.wiki/w/Gold_vein",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canCompleteBetweenARock"],
+        "skill": ["mining"],
+        "level": [40],
         "tags": [],
         "f2p": false
     },
     "Golden warbler": {
         "wiki": "https://oldschool.runescape.wiki/w/Golden_warbler",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canBirdSnare"],
+        "skill": ["hunter"],
+        "level": [5],
         "tags": [],
         "f2p": false
     },
     "Gorad": {
         "wiki": "https://oldschool.runescape.wiki/w/Gorad",
-        "rule": null,
+        "rule": ["canCompleteWatchtower"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -6821,7 +6863,7 @@ export const NPC_DATA = {
     },
     "Gorak Gems": {
         "wiki": "https://oldschool.runescape.wiki/w/Gorak#Gems",
-        "rule": null,
+        "rule": ["canCompleteFairytaleIGrowingPains"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -6829,7 +6871,7 @@ export const NPC_DATA = {
     },
     "Gourmet impling": {
         "wiki": "https://oldschool.runescape.wiki/w/Gourmet_impling",
-        "rule": null,
+        "rule": ["canTrainHunter"],
         "skill": ["hunter"],
         "level": [38],
         "tags": [],
@@ -6845,7 +6887,7 @@ export const NPC_DATA = {
     },
     "Goutweed": {
         "wiki": "https://oldschool.runescape.wiki/w/Goutweed",
-        "rule": null,
+        "rule": ["canGetGoutweed"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -6853,73 +6895,73 @@ export const NPC_DATA = {
     },
     "Grand Gold Chest Room 1": {
         "wiki": "https://oldschool.runescape.wiki/w/Grand_Gold_Chest#Room_1",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canStartIcthlarinsLittleHelper"],
+        "skill": ["thieving"],
+        "level": [21],
         "tags": [],
         "f2p": false
     },
     "Grand Gold Chest Room 2": {
         "wiki": "https://oldschool.runescape.wiki/w/Grand_Gold_Chest#Room_2",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canStartIcthlarinsLittleHelper"],
+        "skill": ["thieving"],
+        "level": [31],
         "tags": [],
         "f2p": false
     },
     "Grand Gold Chest Room 3": {
         "wiki": "https://oldschool.runescape.wiki/w/Grand_Gold_Chest#Room_3",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canStartIcthlarinsLittleHelper"],
+        "skill": ["thieving"],
+        "level": [41],
         "tags": [],
         "f2p": false
     },
     "Grand Gold Chest Room 4": {
         "wiki": "https://oldschool.runescape.wiki/w/Grand_Gold_Chest#Room_4",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canStartIcthlarinsLittleHelper"],
+        "skill": ["thieving"],
+        "level": [51],
         "tags": [],
         "f2p": false
     },
     "Grand Gold Chest Room 5": {
         "wiki": "https://oldschool.runescape.wiki/w/Grand_Gold_Chest#Room_5",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canStartIcthlarinsLittleHelper"],
+        "skill": ["thieving"],
+        "level": [61],
         "tags": [],
         "f2p": false
     },
     "Grand Gold Chest Room 6": {
         "wiki": "https://oldschool.runescape.wiki/w/Grand_Gold_Chest#Room_6",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canStartIcthlarinsLittleHelper"],
+        "skill": ["thieving"],
+        "level": [71],
         "tags": [],
         "f2p": false
     },
     "Grand Gold Chest Room 7": {
         "wiki": "https://oldschool.runescape.wiki/w/Grand_Gold_Chest#Room_7",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canStartIcthlarinsLittleHelper"],
+        "skill": ["thieving"],
+        "level": [81],
         "tags": [],
         "f2p": false
     },
     "Grand Gold Chest Room 8": {
         "wiki": "https://oldschool.runescape.wiki/w/Grand_Gold_Chest#Room_8",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canStartIcthlarinsLittleHelper"],
+        "skill": ["thieving"],
+        "level": [91],
         "tags": [],
         "f2p": false
     },
     "Grand Hallowed Coffin": {
         "wiki": "https://oldschool.runescape.wiki/w/Grand_Hallowed_Coffin",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canDoHallowedSepulchre"],
+        "skill": ["agility", "thieving"],
+        "level": [92, 66],
         "tags": [],
         "f2p": false
     },
@@ -12122,9 +12164,14 @@ export const NPC_DATA = {
     },
     "Rockslug": {
         "wiki": "https://oldschool.runescape.wiki/w/Rockslug",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "any": [
+                "hasBrineSabre",
+                "hasBagOfSalt"
+            ]
+        },
+        "skill": ["slayer"],
+        "level": [20],
         "tags": [],
         "f2p": false
     },
@@ -12794,24 +12841,24 @@ export const NPC_DATA = {
     "Sergeant Grimspike": {
         "wiki": "https://oldschool.runescape.wiki/w/Sergeant_Grimspike",
         "rule": ["canDoGeneralGraardor"],
-        "skill": [],
-        "level": [],
+        "skill": ["strength"],
+        "level": [70],
         "tags": [],
         "f2p": false
     },
     "Sergeant Steelwill": {
         "wiki": "https://oldschool.runescape.wiki/w/Sergeant_Steelwill",
         "rule": ["canDoGeneralGraardor"],
-        "skill": [],
-        "level": [],
+        "skill": ["strength"],
+        "level": [70],
         "tags": [],
         "f2p": false
     },
     "Sergeant Strongstack": {
         "wiki": "https://oldschool.runescape.wiki/w/Sergeant_Strongstack",
         "rule": ["canDoGeneralGraardor"],
-        "skill": [],
-        "level": [],
+        "skill": ["strength"],
+        "level": [70],
         "tags": [],
         "f2p": false
     },
