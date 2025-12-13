@@ -69,6 +69,9 @@ export function canObtainItem(item, ctx, allItems, visited = new Set()) {
 }
 
 export const REQUIREMENT_CHECKS = {
+    canCompleteTaiBwoWannaiTrio(ctx) {
+        return canCompleteTaiBwoWannaiTrio(ctx);
+    },
     canCompleteDragonSlayerII(ctx) {
         return false; // TODO
     },
@@ -79,6 +82,9 @@ export const REQUIREMENT_CHECKS = {
         return false; // TODO
     },
     canCompleteDesertTreasureI(ctx) {
+        return false; // TODO
+    },
+    canCompleteMyArmsBigAdventure(ctx) {
         return false; // TODO
     },
     canCompleteInAidOfTheMyreque(ctx) {
@@ -141,10 +147,16 @@ export const REQUIREMENT_CHECKS = {
     canCompleteTheCorsairCurse(ctx) {
         return false; // TODO
     },
+    canCompleteTheEyesOfGlouphrie(ctx) {
+        return false; // TODO
+    },
+    canCompleteCreatureOfFenkenstrain(ctx) {
+        return false; // TODO
+    },
     canCompleteRFDFreeingPiratePete(ctx) {
         return false; // TODO
     },
-    canCompleteRFDSirAmikVarse(ctx) {
+    canCompleteRFDFreeingSirAmikVarse(ctx) {
         return false; // TODO
     },
     canEnterNightmareZone(ctx) {
@@ -177,6 +189,15 @@ export const REQUIREMENT_CHECKS = {
     canCompleteTrollRomance(ctx) {
         return false; // TODO
     },
+    canStartMourningsEndPartI(ctx) {
+        return false; // TODO
+    },
+    canEnterTheChampionsGuild(ctx) {
+        return false; // TODO quest points
+    },
+    canCompleteMourningsEndPartI(ctx) {
+        return false; // TODO
+    },
     canCompleteMourningsEndPartII(ctx) {
         return false; // TODO
     },
@@ -202,6 +223,12 @@ export const REQUIREMENT_CHECKS = {
         return false; // TODO
     },
     canCompleteRumDeal(ctx) {
+        return false; // TODO
+    },
+    canCompleteHorrorFromTheDeep(ctx) {
+        return false; // TODO
+    },
+    canCompleteMeatAndGreet(ctx) {
         return false; // TODO
     },
     canCompleteSecretsOfTheNorth(ctx) {
@@ -342,6 +369,12 @@ export const REQUIREMENT_CHECKS = {
     canCompleteMonkeyMadnessI(ctx) {
         return false; // TODO
     },
+    canCompletePryingTimes(ctx) {
+        return false; // TODO
+    },
+    canCompleteOneSmallFavour(ctx) {
+        return false; // TODO
+    },
     canCompletePriestInPeril(ctx) {
         return canCompletePriestInPeril(ctx);
     },
@@ -477,6 +510,45 @@ export const REQUIREMENT_CHECKS = {
     hasLockpick(ctx) {
         return has(ctx, 1523);
     },
+    hasSmallFishingNet(ctx) {
+        return has(ctx, 303);
+    },
+    hasBigFishingNet(ctx) {
+        return has(ctx, 305);
+    },
+    hasHarpoon(ctx) {
+        return has(ctx, 311);
+    },
+    hasFishingRod(ctx) {
+        return has(ctx, 307);
+    },
+    hasFishingBait(ctx) {
+        return has(ctx, 313);
+    },
+    hasLobsterPot(ctx) {
+        return has(ctx, 301);
+    },
+    hasFlyFishingRod(ctx) {
+        return has(ctx, 309);
+    },
+    hasAnyFeather(ctx) {
+        return hasAnyFeather(ctx); //TODO andere
+    },
+    hasDarkFishingBait(ctx) {
+        return has(ctx, 11940);
+    },
+    hasKarambwanVesselBaited(ctx) {
+        return has(ctx, 3159);
+    },
+    canAerialFish(ctx) {
+        return has(ctx, 11334) || has(ctx, 2162);
+    },
+    canBarbarianFish(ctx) {
+        return hasAnyFeather(ctx) || has(ctx, 313) || has(ctx, 11324) || has(ctx, 11326);
+    },
+    canReachFrogSpawnSpot(ctx) {
+        return this.canCompleteBelowIceMountain(ctx) || this.canEnterLumbridgeSwampCaves(ctx);
+    },
     hasOgreCoffinKey(ctx) {
         return has(ctx, 4850);
     },
@@ -489,11 +561,17 @@ export const REQUIREMENT_CHECKS = {
     hasSpinyHelmet(ctx) {
         return has(ctx, 4551);
     },
+    hasNosePeg(ctx) {
+        return has(ctx, 4168);
+    },
     hasSlayerBell(ctx) {
         return has(ctx, 10952);
     },
     hasCrystalKey(ctx) {
         return has(ctx, 989);
+    },
+    hasMachete(ctx) {
+        return has(ctx, 975) || has(ctx, 6313) || has(ctx, 6315) || has(ctx, 6317);
     },
     hasSpade(ctx) {
         return has(ctx, 952);
@@ -540,6 +618,9 @@ export const REQUIREMENT_CHECKS = {
     hasCurrySapling(ctx) {
         return has(ctx, 5499);
     },
+    hasDragonfruitSapling(ctx) {
+        return has(ctx, 22866);
+    },
     hasRosemarySeed(ctx) {
         return has(ctx, 5097);
     },
@@ -567,8 +648,23 @@ export const REQUIREMENT_CHECKS = {
     hasWildbloodSeed(ctx) {
         return has(ctx, 5311);
     },
+    hasRedberrySeed(ctx) {
+        return has(ctx, 5101);
+    },
     hasCadavaberrySeed(ctx) {
         return has(ctx, 5102);
+    },
+    hasDwellberrySeed(ctx) {
+        return has(ctx, 5103);
+    },
+    hasJangerberrySeed(ctx) {
+        return has(ctx, 5104);
+    },
+    hasWhiteberrySeed(ctx) {
+        return has(ctx, 5105);
+    },
+    hasPoisonIvySeed(ctx) {
+        return has(ctx, 5106);
     },
     hasMushroomSpore(ctx) {
         return has(ctx, 5282);
@@ -608,6 +704,12 @@ export const REQUIREMENT_CHECKS = {
     },
     hasSlashWeapon(ctx) {
         return true; // TODO
+    },
+    hasDriftNet(ctx) {
+        return has(ctx, 21652);
+    },
+    hasNumulite(ctx) {
+        return has(ctx, 21555);
     },
     hasHammer(ctx) {
         return has(ctx, 2347);
@@ -748,6 +850,10 @@ function canCompleteBeneathCursedSands(ctx) {
             || has(ctx, 1859)  // Raw ugthanki meat
             || has(ctx, 9978)  // Raw bird meat
         );
+}
+
+function hasAnyFeather(ctx) {
+    return has(ctx, 314); // TODO andere feathers
 }
 
 function canCompleteContact(ctx) {
@@ -1035,16 +1141,18 @@ function canCatchCrabs(ctx) {
         && has(ctx, 8794)      // Saw
         && has(ctx, 1925)      // Bucket
         && has(ctx, 960)       // Plank
-        && (
-            has(ctx, 4819)     // Bronze nails
+        && hasAnyNails(ctx);
+}
+
+function hasAnyNails(ctx) {
+    return has(ctx, 4819)      // Bronze nails
             || has(ctx, 4820)  // Iron nails
             || has(ctx, 1539)  // Steel nails
             || has(ctx, 4821)  // Black nails
             || has(ctx, 4822)  // Mithril nails
             || has(ctx, 4823)  // Adamantite nails
             || has(ctx, 4824)  // Rune nails
-            || has(ctx, 31406) // Dragon nails
-        );
+            || has(ctx, 31406);// Dragon nails
 }
 
 function canEnterKalphiteLair(ctx) {
@@ -1632,7 +1740,7 @@ function canTrainConstruction(ctx) {
     return has(ctx, 8431) // Bagged plant 1
         && (
             (has(ctx, 2347) && has(ctx, 8794)) // Hammer and Saw
-                (has(ctx, 2351) || has(ctx, 960))  // Iron bar or Plank and any nails
+            && (has(ctx, 2351) || (has(ctx, 960) && hasAnyNails(ctx)))  // Iron bar or Plank and any nails
         );
 }
 

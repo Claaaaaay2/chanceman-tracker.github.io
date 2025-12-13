@@ -41,15 +41,15 @@ export const NPC_DATA = {
     },
     "Aberrant spectre": {
         "wiki": "https://oldschool.runescape.wiki/w/Aberrant_spectre",
-        "rule": null,
+        "rule": ["hasNosePeg"],
         "skill": ["slayer"],
         "level": [60],
         "tags": [],
         "f2p": false
     },
     "Abhorrent spectre": {
-        "wiki": "https://oldschool.runescape.wiki/w/Abhorrent_spectre",
-        "rule": null,
+        "wiki": "https://oldschool.runescape.wiki/w/Aberrant_spectre",
+        "rule": ["hasNosePeg"],
         "skill": ["slayer"],
         "level": [60],
         "tags": ["superior"],
@@ -1059,7 +1059,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Baby_black_dragon",
         "rule": {
             "any": [
-                "canCompleteRFDSirAmikVarse",
+                "canCompleteRFDFreeingSirAmikVarse",
                 "canCompleteDragonSlayerI",
                 "canEnterTheCharredDungeon"
             ]
@@ -1158,7 +1158,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Bale_of_flax",
         "rule": ["canDoValeTotems"],
         "skill": ["fletching"],
-        "level": [50],
+        "level": [20],
         "tags": [],
         "f2p": false
     },
@@ -3076,7 +3076,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Chaos Fanatic": {
@@ -3084,7 +3084,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Chaos Golem": {
@@ -4232,15 +4232,15 @@ export const NPC_DATA = {
     },
     "Dad": {
         "wiki": "https://oldschool.runescape.wiki/w/Dad",
-        "rule": null,
+        "rule": ["canCompleteTrollStronghold"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["quest"],
         "f2p": false
     },
     "Dad (Nightmare Zone)": {
         "wiki": "https://oldschool.runescape.wiki/w/Dad_(Nightmare_Zone)",
-        "rule": null,
+        "rule": ["canCompleteTrollStronghold"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -4275,7 +4275,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Dagannoth Rex": {
@@ -4283,7 +4283,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Dagannoth Supreme": {
@@ -4291,7 +4291,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Dagannoth fledgeling": {
@@ -4304,15 +4304,15 @@ export const NPC_DATA = {
     },
     "Dagannoth mother": {
         "wiki": "https://oldschool.runescape.wiki/w/Dagannoth_mother",
-        "rule": null,
+        "rule": ["canCompleteHorrorFromTheDeep"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["quest"],
         "f2p": false
     },
     "Dagannoth mother (Nightmare Zone)": {
         "wiki": "https://oldschool.runescape.wiki/w/Dagannoth_mother_(Nightmare_Zone)",
-        "rule": null,
+        "rule": ["canCompleteHorrorFromTheDeep"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -4331,12 +4331,12 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["armourStand"],
         "f2p": false
     },
     "Damis (Nightmare Zone)": {
         "wiki": "https://oldschool.runescape.wiki/w/Damis_(Nightmare_Zone)",
-        "rule": null,
+        "rule": ["canCompleteDesertTreasureI"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -4345,16 +4345,16 @@ export const NPC_DATA = {
     "Dark Chest": {
         "wiki": "https://oldschool.runescape.wiki/w/Dark_Chest",
         "rule": null,
-        "skill": [],
-        "level": [],
+        "skill": ["thieving"],
+        "level": [28],
         "tags": [],
         "f2p": false
     },
     "Dark beast": {
         "wiki": "https://oldschool.runescape.wiki/w/Dark_beast",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canCompleteMourningsEndPartI"],
+        "skill": ["slayer"],
+        "level": [90],
         "tags": [],
         "f2p": false
     },
@@ -4363,14 +4363,14 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Dark kebbit": {
         "wiki": "https://oldschool.runescape.wiki/w/Dark_kebbit",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canTrainHunter"],
+        "skill": ["hunter"],
+        "level": [57],
         "tags": [],
         "f2p": false
     },
@@ -4396,7 +4396,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Dark warrior Low level (m)": {
         "wiki": "https://oldschool.runescape.wiki/w/Dark_warrior#Low_level",
@@ -4412,7 +4412,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Dark wizard High level (m)": {
         "wiki": "https://oldschool.runescape.wiki/w/Dark_wizard#High_level",
@@ -4428,7 +4428,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Dark wizard Low level (m)": {
         "wiki": "https://oldschool.runescape.wiki/w/Dark_wizard#Low_level",
@@ -4440,75 +4440,67 @@ export const NPC_DATA = {
     },
     "Dashing kebbit": {
         "wiki": "https://oldschool.runescape.wiki/w/Dashing_kebbit",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canTrainHunter"],
+        "skill": ["hunter"],
+        "level": [69],
         "tags": [],
         "f2p": false
     },
     "Dead tree": {
         "wiki": "https://oldschool.runescape.wiki/w/Dead_tree",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canTrainWoodcutting"],
+        "skill": ["woodcutting"],
+        "level": [1],
         "tags": [],
-        "f2p": false
-    },
-    "Dead tree (2021 Christmas event)": {
-        "wiki": "https://oldschool.runescape.wiki/w/Dead_tree_(2021_Christmas_event)",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Dead tree (burnt)": {
         "wiki": "https://oldschool.runescape.wiki/w/Dead_tree_(burnt)",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canTrainWoodcutting"],
+        "skill": ["woodcutting"],
+        "level": [1],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Dead tree (old)": {
         "wiki": "https://oldschool.runescape.wiki/w/Dead_tree_(old)",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canTrainWoodcutting"],
+        "skill": ["woodcutting"],
+        "level": [1],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Dead tree (sandy)": {
         "wiki": "https://oldschool.runescape.wiki/w/Dead_tree_(sandy)",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canTrainWoodcutting"],
+        "skill": ["woodcutting"],
+        "level": [1],
         "tags": [],
         "f2p": false
     },
     "Dead tree (snowy)": {
         "wiki": "https://oldschool.runescape.wiki/w/Dead_tree_(snowy)",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canTrainWoodcutting"],
+        "skill": ["woodcutting"],
+        "level": [1],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Dead tree (swampy)": {
         "wiki": "https://oldschool.runescape.wiki/w/Dead_tree_(swampy)",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canTrainWoodcutting"],
+        "skill": ["woodcutting"],
+        "level": [1],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Dead tree (weathered)": {
         "wiki": "https://oldschool.runescape.wiki/w/Dead_tree_(weathered)",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canTrainWoodcutting"],
+        "skill": ["woodcutting"],
+        "level": [1],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Deadly red spider (m)": {
         "wiki": "https://oldschool.runescape.wiki/w/Deadly_red_spider",
@@ -4520,17 +4512,17 @@ export const NPC_DATA = {
     },
     "Death rune pile": {
         "wiki": "https://oldschool.runescape.wiki/w/Death_rune_pile",
-        "rule": null,
+        "rule": ["canCompleteWhileGuthixSleeps"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["easy"],
         "f2p": false
     },
     "Death spawn": {
         "wiki": "https://oldschool.runescape.wiki/w/Death_spawn",
         "rule": null,
-        "skill": [],
-        "level": [],
+        "skill": ["slayer"],
+        "level": [80],
         "tags": [],
         "f2p": false
     },
@@ -4552,7 +4544,7 @@ export const NPC_DATA = {
     },
     "Demonic gorilla": {
         "wiki": "https://oldschool.runescape.wiki/w/Demonic_gorilla",
-        "rule": null,
+        "rule": ["canCompleteMonkeyMadnessII"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -4560,9 +4552,14 @@ export const NPC_DATA = {
     },
     "Dense Jungle": {
         "wiki": "https://oldschool.runescape.wiki/w/Dense_Jungle",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canTrainWoodcutting",
+                "hasMachete"
+            ]
+        },
+        "skill": ["woodcutting"],
+        "level": [35],
         "tags": [],
         "f2p": false
     },
@@ -4571,14 +4568,14 @@ export const NPC_DATA = {
         "rule": ["canCompleteBoneVoyage"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Desert Lizard": {
         "wiki": "https://oldschool.runescape.wiki/w/Desert_Lizard",
         "rule": null,
-        "skill": [],
-        "level": [],
+        "skill": ["slayer"],
+        "level": [22],
         "tags": [],
         "f2p": false
     },
@@ -4592,23 +4589,23 @@ export const NPC_DATA = {
     },
     "Desert devil": {
         "wiki": "https://oldschool.runescape.wiki/w/Desert_devil",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canNooseWand"],
+        "skill": ["hunter"],
+        "level": [13],
         "tags": [],
         "f2p": false
     },
     "Dessourt": {
         "wiki": "https://oldschool.runescape.wiki/w/Dessourt",
-        "rule": null,
+        "rule": ["canCompleteRecipeForDisaster"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["quest"],
         "f2p": false
     },
     "Dessourt (Nightmare Zone)": {
         "wiki": "https://oldschool.runescape.wiki/w/Dessourt_(Nightmare_Zone)",
-        "rule": null,
+        "rule": ["canCompleteRecipeForDisaster"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -4629,23 +4626,23 @@ export const NPC_DATA = {
     },
     "Deviant spectre": {
         "wiki": "https://oldschool.runescape.wiki/w/Deviant_spectre",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["hasNosePeg"],
+        "skill": ["slayer"],
+        "level": [60],
         "tags": [],
         "f2p": false
     },
     "Digsite workman": {
         "wiki": "https://oldschool.runescape.wiki/w/Digsite_workman",
         "rule": null,
-        "skill": [],
-        "level": [],
+        "skill": ["thieving"],
+        "level": [25],
         "tags": [],
         "f2p": false
     },
     "Dinky the drink troll": {
         "wiki": "https://oldschool.runescape.wiki/w/Dinky_the_drink_troll",
-        "rule": null,
+        "rule": ["canCompletePandemonium"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -4661,74 +4658,74 @@ export const NPC_DATA = {
     },
     "Dire Wolf Alpha": {
         "wiki": "https://oldschool.runescape.wiki/w/Dire_Wolf_Alpha",
-        "rule": null,
+        "rule": ["canCompleteMeatAndGreet"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["quest"],
         "f2p": false
     },
     "Dire gryphon": {
         "wiki": "https://oldschool.runescape.wiki/w/Dire_gryphon",
         "rule": ["canCompleteTroubledTortugans"],
-        "skill": [],
-        "level": [],
-        "tags": [],
+        "skill": ["slayer"],
+        "level": [51],
+        "tags": ["superior"],
         "f2p": false
     },
     "Dire gryphon Normal": {
         "wiki": "https://oldschool.runescape.wiki/w/Dire_gryphon#Normal",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
+        "rule": ["canCompleteTroubledTortugans"],
+        "skill": ["slayer"],
+        "level": [51],
+        "tags": ["superior"],
         "f2p": false
     },
     "Dirty arrowtips Level 50-64": {
         "wiki": "https://oldschool.runescape.wiki/w/Dirty_arrowtips#Level_50-64",
         "rule": ["canDoValeTotems"],
-        "skill": [],
-        "level": [],
+        "skill": ["fletching"],
+        "level": [50],
         "tags": [],
         "f2p": false
     },
     "Dirty arrowtips Level 65-79": {
         "wiki": "https://oldschool.runescape.wiki/w/Dirty_arrowtips#Level_65-79",
         "rule": ["canDoValeTotems"],
-        "skill": [],
-        "level": [],
+        "skill": ["fletching"],
+        "level": [65],
         "tags": [],
         "f2p": false
     },
     "Dirty arrowtips Level 80-89": {
         "wiki": "https://oldschool.runescape.wiki/w/Dirty_arrowtips#Level_80-89",
         "rule": ["canDoValeTotems"],
-        "skill": [],
-        "level": [],
+        "skill": ["fletching"],
+        "level": [80],
         "tags": [],
         "f2p": false
     },
     "Dirty arrowtips Level 90+": {
         "wiki": "https://oldschool.runescape.wiki/w/Dirty_arrowtips#Level_90+",
         "rule": ["canDoValeTotems"],
-        "skill": [],
-        "level": [],
+        "skill": ["fletching"],
+        "level": [90],
         "tags": [],
         "f2p": false
     },
     "Dirty arrowtips Level < 50": {
         "wiki": "https://oldschool.runescape.wiki/w/Dirty_arrowtips#Level_<_50",
         "rule": ["canDoValeTotems"],
-        "skill": [],
-        "level": [],
+        "skill": ["fletching"],
+        "level": [20],
         "tags": [],
         "f2p": false
     },
     "Disciple of Iban": {
         "wiki": "https://oldschool.runescape.wiki/w/Disciple_of_Iban",
-        "rule": null,
+        "rule": ["canCompleteUndergroundPass"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["quest"],
         "f2p": false
     },
     "Dolphin": {
@@ -4750,7 +4747,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Donny the lad (m)": {
         "wiki": "https://oldschool.runescape.wiki/w/Donny_the_lad",
@@ -4770,15 +4767,15 @@ export const NPC_DATA = {
     },
     "Doomion": {
         "wiki": "https://oldschool.runescape.wiki/w/Doomion",
-        "rule": null,
+        "rule": ["canCompleteUndergroundPass"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["quest"],
         "f2p": false
     },
     "Dossier": {
         "wiki": "https://oldschool.runescape.wiki/w/Dossier",
-        "rule": null,
+        "rule": ["canDoYama"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -4789,7 +4786,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["clue"],
         "f2p": false
     },
     "Dragon impling": {
@@ -4810,25 +4807,36 @@ export const NPC_DATA = {
     },
     "Dragonfruit tree": {
         "wiki": "https://oldschool.runescape.wiki/w/Dragonfruit_tree",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canPlantTrees",
+                "hasDragonfruitSapling"
+            ]
+        },
+        "skill": ["farming"],
+        "level": [81],
         "tags": [],
         "f2p": false
     },
     "Dragonfruit tree Diseased": {
         "wiki": "https://oldschool.runescape.wiki/w/Dragonfruit_tree#Diseased",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canPlantTrees",
+                "hasDragonfruitSapling",
+                "hasSecateurs"
+            ]
+        },
+        "skill": ["farming"],
+        "level": [81],
         "tags": [],
         "f2p": false
     },
     "Drake": {
         "wiki": "https://oldschool.runescape.wiki/w/Drake",
         "rule": ["canEnterKaruulmSlayerDungeon"],
-        "skill": [],
-        "level": [],
+        "skill": ["slayer"],
+        "level": [84],
         "tags": [],
         "f2p": false
     },
@@ -4843,70 +4851,126 @@ export const NPC_DATA = {
     "Dreadborn Araxyte": {
         "wiki": "https://oldschool.runescape.wiki/w/Dreadborn_Araxyte",
         "rule": ["canCompletePriestInPeril"],
-        "skill": [],
-        "level": [],
-        "tags": [],
+        "skill": ["slayer"],
+        "level": [92],
+        "tags": ["superior"],
         "f2p": false
     },
     "Drift net fishing": {
         "wiki": "https://oldschool.runescape.wiki/w/Drift_net_fishing",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canTrainFishing",
+                "canTrainHunter",
+                "canCompleteBoneVoyage",
+                "hasDriftNet",
+                "hasNumulite"
+            ]
+        },
+        "skill": ["hunter", "fishing"],
+        "level": [44, 47],
         "tags": [],
         "f2p": false
     },
     "Drift net fishing Levels 47-49": {
         "wiki": "https://oldschool.runescape.wiki/w/Drift_net_fishing#Levels_47-49",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canTrainFishing",
+                "canTrainHunter",
+                "canCompleteBoneVoyage",
+                "hasDriftNet",
+                "hasNumulite"
+            ]
+        },
+        "skill": ["hunter", "fishing"],
+        "level": [44, 47],
         "tags": [],
         "f2p": false
     },
     "Drift net fishing Levels 50-59": {
         "wiki": "https://oldschool.runescape.wiki/w/Drift_net_fishing#Levels_50-59",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canTrainFishing",
+                "canTrainHunter",
+                "canCompleteBoneVoyage",
+                "hasDriftNet",
+                "hasNumulite"
+            ]
+        },
+        "skill": ["hunter", "fishing"],
+        "level": [44, 50],
         "tags": [],
         "f2p": false
     },
     "Drift net fishing Levels 60-69": {
         "wiki": "https://oldschool.runescape.wiki/w/Drift_net_fishing#Levels_60-69",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canTrainFishing",
+                "canTrainHunter",
+                "canCompleteBoneVoyage",
+                "hasDriftNet",
+                "hasNumulite"
+            ]
+        },
+        "skill": ["hunter", "fishing"],
+        "level": [44, 60],
         "tags": [],
         "f2p": false
     },
     "Drift net fishing Levels 70-79": {
         "wiki": "https://oldschool.runescape.wiki/w/Drift_net_fishing#Levels_70-79",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canTrainFishing",
+                "canTrainHunter",
+                "canCompleteBoneVoyage",
+                "hasDriftNet",
+                "hasNumulite"
+            ]
+        },
+        "skill": ["hunter", "fishing"],
+        "level": [44, 70],
         "tags": [],
         "f2p": false
     },
     "Drift net fishing Levels 80-89": {
         "wiki": "https://oldschool.runescape.wiki/w/Drift_net_fishing#Levels_80-89",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canTrainFishing",
+                "canTrainHunter",
+                "canCompleteBoneVoyage",
+                "hasDriftNet",
+                "hasNumulite"
+            ]
+        },
+        "skill": ["hunter", "fishing"],
+        "level": [44, 80],
         "tags": [],
         "f2p": false
     },
     "Drift net fishing Levels 90-99": {
         "wiki": "https://oldschool.runescape.wiki/w/Drift_net_fishing#Levels_90-99",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canTrainFishing",
+                "canTrainHunter",
+                "canCompleteBoneVoyage",
+                "hasDriftNet",
+                "hasNumulite"
+            ]
+        },
+        "skill": ["hunter", "fishing"],
+        "level": [44, 90],
         "tags": [],
         "f2p": false
     },
     "Drink troll": {
         "wiki": "https://oldschool.runescape.wiki/w/Drink_troll",
-        "rule": null,
+        "rule": ["canCompletePryingTimes"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -4914,7 +4978,7 @@ export const NPC_DATA = {
     },
     "Drink troll queen": {
         "wiki": "https://oldschool.runescape.wiki/w/Drink_troll_queen",
-        "rule": null,
+        "rule": ["canCompletePandemonium"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -4934,7 +4998,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Drunken man": {
         "wiki": "https://oldschool.runescape.wiki/w/Drunken_man",
@@ -4942,7 +5006,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Drunken man (m)": {
         "wiki": "https://oldschool.runescape.wiki/w/Drunken_man",
@@ -4957,7 +5021,7 @@ export const NPC_DATA = {
         "rule": ["canCompleteDesertTreasureII"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Dungeon rat Regular": {
@@ -4979,16 +5043,16 @@ export const NPC_DATA = {
     "Dust devil Regular": {
         "wiki": "https://oldschool.runescape.wiki/w/Dust_devil#Regular",
         "rule": ["hasFacemask"],
-        "skill": [],
-        "level": [],
+        "skill": ["slayer"],
+        "level": [65],
         "tags": [],
         "f2p": false
     },
     "Dust devil Wilderness Slayer Cave": {
         "wiki": "https://oldschool.runescape.wiki/w/Dust_devil#Wilderness_Slayer_Cave",
         "rule": ["hasFacemask"],
-        "skill": [],
-        "level": [],
+        "skill": ["slayer"],
+        "level": [65],
         "tags": [],
         "f2p": false
     },
@@ -5006,7 +5070,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Dwarf Regular (m)": {
         "wiki": "https://oldschool.runescape.wiki/w/Dwarf#Regular",
@@ -5018,7 +5082,7 @@ export const NPC_DATA = {
     },
     "Dwarf gang member": {
         "wiki": "https://oldschool.runescape.wiki/w/Dwarf_gang_member",
-        "rule": null,
+        "rule": ["canCompleteOneSmallFavour"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -5026,27 +5090,38 @@ export const NPC_DATA = {
     },
     "Dwellberry bush": {
         "wiki": "https://oldschool.runescape.wiki/w/Dwellberry_bush",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canPlantPlants",
+                "hasDwellberrySeed"
+            ]
+        },
+        "skill": ["farming"],
+        "level": [36],
         "tags": [],
         "f2p": false
     },
     "Dwellberry bush Diseased": {
         "wiki": "https://oldschool.runescape.wiki/w/Dwellberry_bush#Diseased",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canPlantPlants",
+                "hasDwellberrySeed",
+                "hasSecateurs"
+            ]
+        },
+        "skill": ["farming"],
+        "level": [36],
         "tags": [],
         "f2p": false
     },
     "Dying tree": {
         "wiki": "https://oldschool.runescape.wiki/w/Dying_tree",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canTrainWoodcutting"],
+        "skill": ["woodcutting"],
+        "level": [1],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Eadburg": {
         "wiki": "https://oldschool.runescape.wiki/w/Eadburg",
@@ -5066,7 +5141,7 @@ export const NPC_DATA = {
     },
     "Earth elemental Regular": {
         "wiki": "https://oldschool.runescape.wiki/w/Earth_elemental#Regular",
-        "rule": null,
+        "rule": ["hasSlashWeapon"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -5093,14 +5168,14 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
-        "f2p": false
+        "tags": ["easy"],
+        "f2p": true
     },
     "Earth warrior": {
         "wiki": "https://oldschool.runescape.wiki/w/Earth_warrior",
         "rule": null,
-        "skill": [],
-        "level": [],
+        "skill": ["agility"],
+        "level": [15],
         "tags": [],
         "f2p": false
     },
@@ -5110,13 +5185,13 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Earthen Nagua": {
         "wiki": "https://oldschool.runescape.wiki/w/Earthen_Nagua",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canCompleteTheFinalDawn"],
+        "skill": ["slayer"],
+        "level": [48],
         "tags": [],
         "f2p": false
     },
@@ -5138,7 +5213,7 @@ export const NPC_DATA = {
     },
     "Eduard": {
         "wiki": "https://oldschool.runescape.wiki/w/Eduard",
-        "rule": null,
+        "rule": ["canCompletePriestInPeril"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -5146,15 +5221,15 @@ export const NPC_DATA = {
     },
     "Efh salt rocks": {
         "wiki": "https://oldschool.runescape.wiki/w/Efh_salt_rocks",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canCompleteMyArmsBigAdventure"],
+        "skill": ["mining"],
+        "level": [72],
         "tags": [],
         "f2p": false
     },
     "Einar": {
         "wiki": "https://oldschool.runescape.wiki/w/Einar",
-        "rule": null,
+        "rule": ["canCompleteThroneOfMiscellania"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -5166,7 +5241,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Elder Chaos druid": {
         "wiki": "https://oldschool.runescape.wiki/w/Elder_Chaos_druid",
@@ -5179,24 +5254,24 @@ export const NPC_DATA = {
     "Elder aquanite": {
         "wiki": "https://oldschool.runescape.wiki/w/Elder_aquanite",
         "rule": ["canSailToYnysdail"],
-        "skill": [],
-        "level": [],
-        "tags": [],
+        "skill": ["slayer"],
+        "level": [78],
+        "tags": ["superior"],
         "f2p": false
     },
     "Elder aquanite Normal": {
         "wiki": "https://oldschool.runescape.wiki/w/Elder_aquanite#Normal",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
+        "rule": ["canSailToYnysdail"],
+        "skill": ["slayer"],
+        "level": [78],
+        "tags": ["superior"],
         "f2p": false
     },
     "Elder custodian stalker": {
         "wiki": "https://oldschool.runescape.wiki/w/Elder_custodian_stalker",
         "rule": ["canCompleteShadowsOfCustodia"],
-        "skill": [],
-        "level": [],
+        "skill": ["slayer"],
+        "level": [76],
         "tags": [],
         "f2p": false
     },
@@ -5205,14 +5280,14 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Elf (Thieving)": {
         "wiki": "https://oldschool.runescape.wiki/w/Elf_(Thieving)",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canStartMourningsEndPartI"],
+        "skill": ["thieving"],
+        "level": [85],
         "tags": [],
         "f2p": false
     },
@@ -5234,7 +5309,7 @@ export const NPC_DATA = {
     },
     "Elite Black Knight": {
         "wiki": "https://oldschool.runescape.wiki/w/Elite_Black_Knight",
-        "rule": null,
+        "rule": ["canCompleteWhileGuthixSleeps"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -5242,7 +5317,7 @@ export const NPC_DATA = {
     },
     "Elite Dark Mage": {
         "wiki": "https://oldschool.runescape.wiki/w/Elite_Dark_Mage",
-        "rule": null,
+        "rule": ["canCompleteWhileGuthixSleeps"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -5250,7 +5325,7 @@ export const NPC_DATA = {
     },
     "Elite Dark Ranger": {
         "wiki": "https://oldschool.runescape.wiki/w/Elite_Dark_Ranger",
-        "rule": null,
+        "rule": ["canCompleteWhileGuthixSleeps"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -5258,7 +5333,7 @@ export const NPC_DATA = {
     },
     "Elite Dark Warrior": {
         "wiki": "https://oldschool.runescape.wiki/w/Elite_Dark_Warrior",
-        "rule": null,
+        "rule": ["canCompleteWhileGuthixSleeps"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -5280,7 +5355,7 @@ export const NPC_DATA = {
     },
     "Elvarg (Nightmare Zone)": {
         "wiki": "https://oldschool.runescape.wiki/w/Elvarg_(Nightmare_Zone)",
-        "rule": null,
+        "rule": ["canCompleteDragonSlayerI"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -5288,7 +5363,12 @@ export const NPC_DATA = {
     },
     "Elven Crystal Chest": {
         "wiki": "https://oldschool.runescape.wiki/w/Elven_Crystal_Chest",
-        "rule": null,
+        "rule": {
+            "all": [
+                "canCompleteSongOfTheElves",
+                "hasCrystalKey"
+            ]
+        },
         "skill": [],
         "level": [],
         "tags": [],
@@ -5296,9 +5376,9 @@ export const NPC_DATA = {
     },
     "Embertailed jerboa": {
         "wiki": "https://oldschool.runescape.wiki/w/Embertailed_jerboa",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canCompleteEaglesPeak"],
+        "skill": ["hunter"],
+        "level": [39],
         "tags": [],
         "f2p": false
     },
@@ -5331,36 +5411,28 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
-        "f2p": false
+        "tags": ["easy"],
+        "f2p": true
     },
     "Empty jug pack": {
         "wiki": "https://oldschool.runescape.wiki/w/Empty_jug_pack",
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
-        "f2p": false
+        "tags": ["easy"],
+        "f2p": true
     },
     "Empty vial pack": {
         "wiki": "https://oldschool.runescape.wiki/w/Empty_vial_pack",
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
-        "f2p": false
+        "tags": ["easy"],
+        "f2p": true
     },
     "Enclave guard": {
         "wiki": "https://oldschool.runescape.wiki/w/Enclave_guard",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
-    "Enraged Boar": {
-        "wiki": "https://oldschool.runescape.wiki/w/Enraged_Boar",
-        "rule": null,
+        "rule": ["canCompleteWatchtower"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -5376,7 +5448,7 @@ export const NPC_DATA = {
     },
     "Ent": {
         "wiki": "https://oldschool.runescape.wiki/w/Ent",
-        "rule": null,
+        "rule": ["canTrainWoodcutting"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -5408,15 +5480,15 @@ export const NPC_DATA = {
     },
     "Evergreen tree": {
         "wiki": "https://oldschool.runescape.wiki/w/Evergreen_tree",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canTrainWoodcutting"],
+        "skill": ["woodcutting"],
+        "level": [1],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Evil Chicken": {
         "wiki": "https://oldschool.runescape.wiki/w/Evil_Chicken",
-        "rule": null,
+        "rule": ["canEnterTheChampionsGuild"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -5424,7 +5496,7 @@ export const NPC_DATA = {
     },
     "Evil Chicken (Nightmare Zone)": {
         "wiki": "https://oldschool.runescape.wiki/w/Evil_Chicken_(Nightmare_Zone)",
-        "rule": null,
+        "rule": ["canCompleteRFDFreeingSirAmikVarse"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -5432,15 +5504,15 @@ export const NPC_DATA = {
     },
     "Evil Chicken (Recipe for Disaster)": {
         "wiki": "https://oldschool.runescape.wiki/w/Evil_Chicken_(Recipe_for_Disaster)",
-        "rule": null,
+        "rule": ["canCompleteRFDFreeingSirAmikVarse"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["quest"],
         "f2p": false
     },
     "Evil Creature": {
         "wiki": "https://oldschool.runescape.wiki/w/Evil_Creature",
-        "rule": null,
+        "rule": ["canCompleteTheEyesOfGlouphrie"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -5448,10 +5520,10 @@ export const NPC_DATA = {
     },
     "Evil spirit": {
         "wiki": "https://oldschool.runescape.wiki/w/Evil_spirit",
-        "rule": null,
+        "rule": ["canCompleteRumDeal"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["quest"],
         "f2p": false
     },
     "Evil twin": {
@@ -5460,11 +5532,11 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Experiment": {
         "wiki": "https://oldschool.runescape.wiki/w/Experiment",
-        "rule": null,
+        "rule": ["canCompleteCreatureOfFenkenstrain"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -5488,7 +5560,7 @@ export const NPC_DATA = {
     },
     "Extra supply crate": {
         "wiki": "https://oldschool.runescape.wiki/w/Extra_supply_crate",
-        "rule": null,
+        "rule": ["canDoWintertodt"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -5499,20 +5571,20 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
-        "f2p": false
+        "tags": ["easy"],
+        "f2p": true
     },
     "Fareed": {
         "wiki": "https://oldschool.runescape.wiki/w/Fareed",
-        "rule": null,
+        "rule": ["canCompleteDesertTreasureI"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["quest"],
         "f2p": false
     },
     "Fareed (Nightmare Zone)": {
         "wiki": "https://oldschool.runescape.wiki/w/Fareed_(Nightmare_Zone)",
-        "rule": null,
+        "rule": ["canCompleteDesertTreasureI"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -5532,7 +5604,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Farmer Members-only": {
         "wiki": "https://oldschool.runescape.wiki/w/Farmer#Members-only",
@@ -5547,14 +5619,14 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
-        "f2p": false
+        "tags": ["easy"],
+        "f2p": true
     },
     "Feldip weasel": {
         "wiki": "https://oldschool.runescape.wiki/w/Feldip_weasel",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canNooseWand"],
+        "skill": ["hunter"],
+        "level": [7],
         "tags": [],
         "f2p": false
     },
@@ -5581,15 +5653,15 @@ export const NPC_DATA = {
     },
     "Fever spider": {
         "wiki": "https://oldschool.runescape.wiki/w/Fever_spider",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canCompleteRumDeal"],
+        "skill": ["slayer"],
+        "level": [42],
         "tags": [],
         "f2p": false
     },
     "Fire elemental": {
         "wiki": "https://oldschool.runescape.wiki/w/Fire_elemental",
-        "rule": null,
+        "rule": ["hasSlashWeapon"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -5608,15 +5680,15 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
-        "f2p": false
+        "tags": ["easy"],
+        "f2p": true
     },
     "Fire rune pile": {
         "wiki": "https://oldschool.runescape.wiki/w/Fire_rune_pile",
-        "rule": null,
+        "rule": ["canCompleteWhileGuthixSleeps"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["easy"],
         "f2p": false
     },
     "Fire wizard": {
@@ -5625,59 +5697,70 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Fish stall": {
         "wiki": "https://oldschool.runescape.wiki/w/Fish_stall",
         "rule": null,
-        "skill": [],
-        "level": [],
+        "skill": ["thieving"],
+        "level": [42],
         "tags": [],
         "f2p": false
     },
     "Fish stall (Port Roberts)": {
         "wiki": "https://oldschool.runescape.wiki/w/Fish_stall_(Port_Roberts)",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canCompletePandemonium"],
+        "skill": ["thieving"],
+        "level": [42],
         "tags": [],
         "f2p": false
     },
     "Fishing Trawler": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_Trawler",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canTrainFishing"],
+        "skill": ["fishing"],
+        "level": [15],
         "tags": [],
         "f2p": false
     },
     "Fishing spot (Civitas illa Fortis)": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(Civitas_illa_Fortis)",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["hasBigFishingNet"],
+        "skill": ["fishing"],
+        "level": [1],
         "tags": [],
         "f2p": false
     },
     "Fishing spot (Piscatoris Fishing Colony) Harpoon": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(Piscatoris_Fishing_Colony)#Harpoon",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canCompleteSwanSong",
+                "hasHarpoon"
+            ]
+        },
+        "skill": ["fishing"],
+        "level": [35],
         "tags": [],
         "f2p": false
     },
     "Fishing spot (Piscatoris Fishing Colony) Small net": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(Piscatoris_Fishing_Colony)#Small_net",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canCompleteSwanSong"],
+        "skill": ["fishing"],
+        "level": [62],
         "tags": [],
         "f2p": false
     },
     "Fishing spot (The Stranglewood)": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(The_Stranglewood)",
-        "rule": null,
+        "rule": {
+            "all": [
+                "canCompleteDesertTreasureII",
+                "hasFishingRod",
+                "hasFishingBait"
+            ]
+        },
         "skill": [],
         "level": [],
         "tags": [],
@@ -5685,87 +5768,142 @@ export const NPC_DATA = {
     },
     "Fishing spot (aerial fishing)": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(aerial_fishing)",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canTrainFishing",
+                "canTrainHunter",
+                "canAerialFish"
+            ]
+        },
+        "skill": ["fishing", "hunter"],
+        "level": [43, 35],
         "tags": [],
         "f2p": false
     },
     "Fishing spot (barbarian)": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(barbarian)",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canTrainFishing",
+                "canBarbarianFish"
+            ]
+        },
+        "skill": ["fishing", "strength", "agility"],
+        "level": [48, 15, 15],
         "tags": [],
         "f2p": false
     },
     "Fishing spot (big net, harpoon) Big net": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(big_net,_harpoon)#Big_net",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["hasBigFishingNet"],
+        "skill": ["fishing"],
+        "level": [16],
         "tags": [],
         "f2p": false
     },
     "Fishing spot (big net, harpoon) Harpoon": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(big_net,_harpoon)#Harpoon",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canTrainFishing",
+                "hasHarpoon"
+            ]
+        },
+        "skill": ["fishing"],
+        "level": [76],
         "tags": [],
         "f2p": false
     },
     "Fishing spot (cage, harpoon) Cage": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(cage,_harpoon)#Cage",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canTrainFishing",
+                "hasLobsterPot"
+            ]
+        },
+        "skill": ["fishing"],
+        "level": [40],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Fishing spot (cage, harpoon) Harpoon": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(cage,_harpoon)#Harpoon",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canTrainFishing",
+                "hasHarpoon"
+            ]
+        },
+        "skill": ["fishing"],
+        "level": [35],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Fishing spot (dark crab) Dark bait": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(dark_crab)#Dark_bait",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canTrainFishing",
+                "hasLobsterPot",
+                "hasDarkFishingBait"
+            ]
+        },
+        "skill": ["fishing"],
+        "level": [85],
         "tags": [],
         "f2p": false
     },
     "Fishing spot (dark crab) No bait": {
-        "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(dark_crab)#No_bait",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canTrainFishing",
+                "hasLobsterPot"
+            ]
+        },
+        "skill": ["fishing"],
+        "level": [40],
         "tags": [],
         "f2p": false
     },
     "Fishing spot (frogspawn) Bait": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(frogspawn)#Bait",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canTrainFishing",
+                "hasFishingRod",
+                "hasFishingBait",
+                "canReachFrogSpawnSpot"
+            ]
+        },
+        "skill": ["fishing"],
+        "level": [28],
         "tags": [],
         "f2p": false
     },
     "Fishing spot (frogspawn) Small net": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(frogspawn)#Small_net",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canTrainFishing",
+                "hasSmallFishingNet",
+                "canReachFrogSpawnSpot"
+            ]
+        },
+        "skill": ["fishing"],
+        "level": [33],
         "tags": [],
         "f2p": false
     },
     "Fishing spot (karambwan)": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(karambwan)",
-        "rule": null,
+        "rule": {
+            "all": [
+                "canCompleteTaiBwoWannaiTrio",
+                "hasSmallFishingNet",
+                "hasKarambwanVesselBaited"
+            ]
+        },
         "skill": [],
         "level": [],
         "tags": [],
@@ -7157,9 +7295,9 @@ export const NPC_DATA = {
     "Guardian Drake": {
         "wiki": "https://oldschool.runescape.wiki/w/Guardian_Drake",
         "rule": ["canEnterKaruulmSlayerDungeon"],
-        "skill": [],
-        "level": [],
-        "tags": [],
+        "skill": ["slayer"],
+        "level": [84],
+        "tags": ["superior"],
         "f2p": false
     },
     "Guardian of Armadyl": {
@@ -8130,17 +8268,28 @@ export const NPC_DATA = {
     },
     "Jangerberry bush": {
         "wiki": "https://oldschool.runescape.wiki/w/Jangerberry_bush",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canPlantPlants",
+                "hasJangerberrySeed"
+            ]
+        },
+        "skill": ["farming"],
+        "level": [48],
         "tags": [],
         "f2p": false
     },
     "Jangerberry bush Diseased": {
         "wiki": "https://oldschool.runescape.wiki/w/Jangerberry_bush#Diseased",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canPlantPlants",
+                "hasJangerberrySeed",
+                "hasSecateurs"
+            ]
+        },
+        "skill": ["farming"],
+        "level": [48],
         "tags": [],
         "f2p": false
     },
@@ -8844,9 +8993,14 @@ export const NPC_DATA = {
     },
     "Light Jungle": {
         "wiki": "https://oldschool.runescape.wiki/w/Light_Jungle",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canTrainWoodcutting",
+                "hasMachete"
+            ]
+        },
+        "skill": ["woodcutting"],
+        "level": [10],
         "tags": [],
         "f2p": false
     },
@@ -9483,9 +9637,14 @@ export const NPC_DATA = {
     },
     "Medium Jungle": {
         "wiki": "https://oldschool.runescape.wiki/w/Medium_Jungle",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canTrainWoodcutting",
+                "hasMachete"
+            ]
+        },
+        "skill": ["woodcutting"],
+        "level": [20],
         "tags": [],
         "f2p": false
     },
@@ -10169,10 +10328,10 @@ export const NPC_DATA = {
     },
     "Night beast": {
         "wiki": "https://oldschool.runescape.wiki/w/Night_beast",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
+        "rule": ["canCompleteMourningsEndPartI"],
+        "skill": ["slayer"],
+        "level": [90],
+        "tags": ["superior"],
         "f2p": false
     },
     "Nikita": {
@@ -10871,9 +11030,14 @@ export const NPC_DATA = {
     },
     "Poison Ivy bush": {
         "wiki": "https://oldschool.runescape.wiki/w/Poison_Ivy_bush",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canPlantPlants",
+                "hasPoisonIvySeed"
+            ]
+        },
+        "skill": ["farming"],
+        "level": [70],
         "tags": [],
         "f2p": false
     },
@@ -11185,9 +11349,14 @@ export const NPC_DATA = {
     },
     "Redberry bush": {
         "wiki": "https://oldschool.runescape.wiki/w/Redberry_bush",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canPlantPlants",
+                "hasRedberrySeed"
+            ]
+        },
+        "skill": ["farming"],
+        "level": [10],
         "tags": [],
         "f2p": false
     },
@@ -11196,14 +11365,20 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
-        "f2p": false
+        "tags": ["easy"],
+        "f2p": true
     },
     "Redberry bush Diseased": {
         "wiki": "https://oldschool.runescape.wiki/w/Redberry_bush#Diseased",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canPlantPlants",
+                "hasRedberrySeed",
+                "hasSecateurs"
+            ]
+        },
+        "skill": ["farming"],
+        "level": [10],
         "tags": [],
         "f2p": false
     },
@@ -11273,9 +11448,9 @@ export const NPC_DATA = {
     },
     "Repugnant spectre": {
         "wiki": "https://oldschool.runescape.wiki/w/Repugnant_spectre",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["hasNosePeg"],
+        "skill": ["slayer"],
+        "level": [60],
         "tags": [],
         "f2p": false
     },
@@ -14048,9 +14223,9 @@ export const NPC_DATA = {
     },
     "Te salt rocks": {
         "wiki": "https://oldschool.runescape.wiki/w/Te_salt_rocks",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canCompleteMyArmsBigAdventure"],
+        "skill": ["mining"],
+        "level": [72],
         "tags": [],
         "f2p": false
     },
@@ -14949,9 +15124,9 @@ export const NPC_DATA = {
     },
     "Urt salt rocks": {
         "wiki": "https://oldschool.runescape.wiki/w/Urt_salt_rocks",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canCompleteMyArmsBigAdventure"],
+        "skill": ["mining"],
+        "level": [72],
         "tags": [],
         "f2p": false
     },
@@ -15473,17 +15648,28 @@ export const NPC_DATA = {
     },
     "Whiteberry bush": {
         "wiki": "https://oldschool.runescape.wiki/w/Whiteberry_bush",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canPlantPlants",
+                "hasWhiteberrySeed"
+            ]
+        },
+        "skill": ["farming"],
+        "level": [59],
         "tags": [],
         "f2p": false
     },
     "Whiteberry bush Diseased": {
         "wiki": "https://oldschool.runescape.wiki/w/Whiteberry_bush#Diseased",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canPlantPlants",
+                "hasWhiteberrySeed",
+                "hasSecateurs"
+            ]
+        },
+        "skill": ["farming"],
+        "level": [59],
         "tags": [],
         "f2p": false
     },
