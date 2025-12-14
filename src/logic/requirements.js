@@ -108,6 +108,12 @@ export const REQUIREMENT_CHECKS = {
     canCompleteSinsOfTheFather(ctx) {
         return false; // TODO
     },
+    canCompleteWhatLiesBelow(ctx) {
+        return false; // TODO
+    },
+    canCompleteErnestTheChicken(ctx) {
+        return canCompleteErnestTheChicken(ctx);
+    },
     canCompleteTheFremennikExiles(ctx) {
         return false; // TODO
     },
@@ -138,7 +144,13 @@ export const REQUIREMENT_CHECKS = {
     canCompleteTheTouristTrap(ctx) {
         return false; // TODO
     },
+    canCompleteTreeGnomeVillage(ctx) {
+        return false; // TODO
+    },
     canCompleteAPorcineOfInterest(ctx) {
+        return false; // TODO
+    },
+    canCompleteTempleOfIkov(ctx) {
         return false; // TODO
     },
     canCompleteInSearchOfTheMyreque(ctx) {
@@ -157,6 +169,12 @@ export const REQUIREMENT_CHECKS = {
         return false; // TODO
     },
     canCompleteRFDFreeingSirAmikVarse(ctx) {
+        return false; // TODO
+    },
+    canCompleteRFDFreeingEvilDave(ctx) {
+        return false; // TODO
+    },
+    canCompleteRFDFreeingSkrachUglologwee(ctx) {
         return false; // TODO
     },
     canEnterNightmareZone(ctx) {
@@ -220,6 +238,12 @@ export const REQUIREMENT_CHECKS = {
         return false; // TODO
     },
     canCompleteMerlinsCrystal(ctx) {
+        return false; // TODO
+    },
+    canCompletePlagueCity(ctx) {
+        return false; // TODO
+    },
+    canCompleteGettingAhead(ctx) {
         return false; // TODO
     },
     canCompleteFremennikTrials(ctx) {
@@ -294,6 +318,9 @@ export const REQUIREMENT_CHECKS = {
     canDeadfallTrap(ctx) {
         return canDeadfallTrap(ctx);
     },
+    canPitfallTrap(ctx) {
+        return canPitfallTrap(ctx);
+    },
     canDoBirdhouses(ctx) {
         return canDoBirdhouses(ctx);
     },
@@ -360,9 +387,6 @@ export const REQUIREMENT_CHECKS = {
     canTrainCooking(ctx) {
         return canTrainCooking(ctx);
     },
-    isNotSlayerLocked(ctx) {
-        return true; // TODO implement slayer locked filter
-    },
     canDoGnomeRestaurant(ctx) {
         return canDoGnomeRestaurant(ctx);
     },
@@ -401,6 +425,9 @@ export const REQUIREMENT_CHECKS = {
     },
     hasFacemask(ctx) {
         return has(ctx, 4164);
+    },
+    hasUnlitBugLantern(ctx) {
+        return has(ctx, 7051);
     },
     hasBagOfSalt(ctx) {
         return has(ctx, 4161);
@@ -498,6 +525,15 @@ export const REQUIREMENT_CHECKS = {
     canDoZulrah(ctx) {
         return false; // TODO
     },
+    canCompleteAtFirstLight(ctx) {
+        return false; // TODO
+    },
+    canCompleteColdWar(ctx) {
+        return false; // TODO
+    },
+    canDoHuntersRumours(ctx) {
+        return canTrainHunter(ctx);
+    },
     canTrainHunter(ctx) {
         return canTrainHunter(ctx);
     },
@@ -531,6 +567,12 @@ export const REQUIREMENT_CHECKS = {
     hasRawCaveEel(ctx) {
         return has(ctx, 5001);
     },
+    hasRawJubbly(ctx) {
+        return has(ctx, 7566);
+    },
+    hasRawLobster(ctx) {
+        return has(ctx, 377);
+    },
     hasSteelArrow(ctx) {
         return has(ctx, 886);
     },
@@ -539,6 +581,15 @@ export const REQUIREMENT_CHECKS = {
     },
     hasSecateurs(ctx) {
         return has(ctx, 5329);
+    },
+    hasGardeningTrowel(ctx) {
+        return has(ctx, 5325);
+    },
+    hasSaltpetre(ctx) {
+        return has(ctx, 13421);
+    },
+    hasGrubbyKey(ctx) {
+        return has(ctx, 23499);
     },
     hasLockpick(ctx) {
         return has(ctx, 1523);
@@ -611,6 +662,96 @@ export const REQUIREMENT_CHECKS = {
     },
     hasSpade(ctx) {
         return has(ctx, 952);
+    },
+    hasAvantoeSeed(ctx) {
+        return has(ctx, 5298);
+    },
+    hasCadantineSeed(ctx) {
+        return has(ctx, 5301);
+    },
+    hasDwarfWeedSeed(ctx) {
+        return has(ctx, 5303);
+    },
+    hasGuamSeed(ctx) {
+        return has(ctx, 5291);
+    },
+    hasHarralanderSeed(ctx) {
+        return has(ctx, 5294);
+    },
+    hasHuascaSeed(ctx) {
+        return has(ctx, 30088);
+    },
+    hasIritSeed(ctx) {
+        return has(ctx, 5297);
+    },
+    hasKwuarmSeed(ctx) {
+        return has(ctx, 5299);
+    },
+    hasLantadymeSeed(ctx) {
+        return has(ctx, 5302);
+    },
+    hasMarrentillSeed(ctx) {
+        return has(ctx, 5292);
+    },
+    hasRanarrSeed(ctx) {
+        return has(ctx, 5295);
+    },
+    hasSnapdragonSeed(ctx) {
+        return has(ctx, 5300);
+    },
+    hasTarrominSeed(ctx) {
+        return has(ctx, 5293);
+    },
+    hasToadflaxSeed(ctx) {
+        return has(ctx, 5296);
+    },
+    hasTorstolSeed(ctx) {
+        return has(ctx, 5304);
+    },
+    hasAvantoe(ctx) {
+        return has(ctx, 261);
+    },
+    hasCadantine(ctx) {
+        return has(ctx, 265);
+    },
+    hasDwarfWeed(ctx) {
+        return has(ctx, 267);
+    },
+    hasGuam(ctx) {
+        return has(ctx, 249);
+    },
+    hasHarralander(ctx) {
+        return has(ctx, 255);
+    },
+    hasHuasca(ctx) {
+        return has(ctx, 30097);
+    },
+    hasIrit(ctx) {
+        return has(ctx, 259);
+    },
+    hasKwuarm(ctx) {
+        return has(ctx, 263);
+    },
+    hasLantadyme(ctx) {
+        return has(ctx, 2481);
+    },
+    hasMarrentill(ctx) {
+        return has(ctx, 251);
+    },
+    hasRanarr(ctx) {
+        return has(ctx, 257);
+    },
+    hasSnapdragon(ctx) {
+        return has(ctx, 3000);
+    },
+    hasTarromin(ctx) {
+        return has(ctx, 253);
+    },
+    hasToadflax(ctx) {
+        return has(ctx, 2998);
+    },
+    hasTorstol(ctx) {
+        return has(ctx, 269);
     },
     hasWillowSapling(ctx) {
         return has(ctx, 5371);
@@ -1160,6 +1301,26 @@ function canCatchImplingsInJars(ctx) {
 function canDeadfallTrap(ctx) {
     return canTrainHunter(ctx) //
         && has(ctx, 946) // Knife
+        && (
+            has(ctx, 1511)     // logs
+            || has(ctx, 1521)  // Oak logs
+            || has(ctx, 1519)  // Willow logs
+            || has(ctx, 6333)  // Teak logs
+            || has(ctx, 1517)  // Maple logs
+            || has(ctx, 6332)  // Mahogany logs
+            || has(ctx, 32904) // Camphor logs
+            || has(ctx, 1515)  // Yew logs
+            || has(ctx, 1513)  // Magic logs
+            || has(ctx, 32907) // Ironwood logs
+            || has(ctx, 32910) // Rosewood logs
+            || canTrainWoodcutting(ctx) // for untradable Juniper logs
+        );
+}
+
+function canPitfallTrap(ctx) {
+    return canTrainHunter(ctx) //
+        && has(ctx, 946) // Knife
+        && (has(ctx, 10029) || has(ctx, 29305)) // Teasing stick of Hunter's spear
         && (
             has(ctx, 1511)     // logs
             || has(ctx, 1521)  // Oak logs
@@ -1795,7 +1956,7 @@ function canPlantHardwoodTrees(ctx) {
 function canPlantPlants(ctx) {
     return canTrainFarming(ctx) //
         && has(ctx, 5341) // Rake
-        && has(ctx, 5343); // Seed dibber
+        && has(ctx, 5343); // Seed dibber TODO: barbarian farming, possible by training farming in COX
 }
 
 function canTrainConstruction(ctx) {
