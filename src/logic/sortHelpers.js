@@ -73,6 +73,7 @@ export async function getObtainabilityRank(item, ctx) {
     const name = item.name.toLowerCase();
     const id = item.id;
     const player = await playerStore.get();
+    let rank = null;
 
     const unlocked = fileStore.unlocked.includes(id);
 
@@ -105,6 +106,7 @@ export async function getObtainabilityRank(item, ctx) {
         let hasReachableDrop = false;
         let hasEasy = false;
         let hasSkillMet = false;
+        let skillNotMetYet = false;
 
         for (const npcName of Object.keys(src.drops)) {
             if (!(await canReachNpc(npcName, ctx))) continue;
@@ -114,20 +116,23 @@ export async function getObtainabilityRank(item, ctx) {
             const npc = NPC_DATA[npcName];
 
             if (npc?.tags?.includes("easy")) {
-
                 hasEasy = true;
             }
 
-            if (player && npc?.skill?.length) {
-                if (npc.skill.length !== npc.level.length) {
-                    console.error("npc skill and level not in order: ", npc);
-                }
-                for (let i = 0; i < npc.skill.length; i++) {
-                    const skill = npc.skill[i];
-                    const level = npc.level[i];
-
-                    if (player.levels[capitalizeFirstLetter(skill)] >= level) {
-                        hasSkillMet = true;
+            if (npc?.skill?.length) {
+                if(player) {
+                    if (npc.skill.length !== npc.level.length) {
+                        console.error("npc skill and level not in order: ", npc);
+                    }
+                    for (let i = 0; i < npc.skill.length; i++) {
+                        const skill = npc.skill[i];
+                        const level = npc.level[i];
+    
+                        if (player.levels[capitalizeFirstLetter(skill)] >= level) { //TODO probleem: wat als je 1 skill wel hebt en 1 skill niet?
+                            hasSkillMet = true;
+                        } else {
+                            skillNotMetYet = true;
+                        }
                     }
                 }
             }
@@ -143,7 +148,11 @@ export async function getObtainabilityRank(item, ctx) {
                 return { rank: 4, name };
             }
 
-            return { rank: 6, name };
+            if (skillNotMetYet) {
+                rank = 7;
+            } else {
+                rank = 6;
+            }
         }
     }
 
@@ -156,6 +165,8 @@ export async function getObtainabilityRank(item, ctx) {
         }
     }
 
+    if(rank) return { rank, name }; // In case of rank 6 or 7
+
     // 7. Unobtainable
-    return { rank: 7, name };
+    return { rank: 8, name };
 }

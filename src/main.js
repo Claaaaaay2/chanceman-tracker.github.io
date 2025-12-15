@@ -10,7 +10,8 @@ const ITEM_SECTION_TITLES = {
     4: "Skill Requirements Met",
     5: "Other Sources",
     6: "Other Drops",
-    7: "Unobtainable Items"
+    7: "Drops for which you do not have the level yet",
+    8: "Unobtainable Items"
 };
 
 function parseDropRate(rate) {
