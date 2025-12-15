@@ -1,4 +1,6 @@
+import { fetchPlayer } from "../api/playerApi.js";
 import { fileStore } from "../storage/fileStore.js";
+import { playerStore } from "../storage/playerStore.js";
 
 export default function UploadPage() {
     return `
@@ -23,6 +25,13 @@ export default function UploadPage() {
         </label>
 
         <br><br>
+
+        <label>
+            Player name: (Only works with Runelite's <a href="https://oldschool.runescape.wiki/w/RuneScape:WikiSync">WikiSync</a>)<br>
+            <input type="text" id="playerName" placeholder="OSRS username">
+        </label>
+        <br><br>
+
         <button id="saveBtn">Save & Continue</button>
 
         <p id="status"></p>
@@ -36,6 +45,7 @@ document.addEventListener("click", async (e) => {
 
     const rolledInput = app.querySelector("#rolledInput");
     const unlockedInput = app.querySelector("#unlockedInput");
+    const playerNameInput = app.querySelector("#playerName");
     const status = app.querySelector("#status");
 
     try {
@@ -49,14 +59,19 @@ document.addEventListener("click", async (e) => {
             await fileStore.setUnlocked(json);
         }
 
-        status.textContent = "Files saved! Redirecting...";
+        if (playerNameInput.value) {
+            status.textContent = "Fetching player data...";
+            const player = await fetchPlayer(playerNameInput.value);
+            await playerStore.set(player);
+        }
 
         // Redirect to items page
+        status.textContent = "Saved! Redirecting...";
         history.pushState(null, "", "/items");
         window.dispatchEvent(new PopStateEvent("popstate"));
 
     } catch (err) {
         console.error(err);
-        status.textContent = "Error reading files!";
+        status.textContent = err.message || "Error reading files!";
     }
 });

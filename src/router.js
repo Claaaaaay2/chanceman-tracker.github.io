@@ -31,7 +31,7 @@ export async function router() {
     const app = document.getElementById("app");
 
     if (basePath !== "/") {
-        app.innerHTML = Header() + await page();
+        app.innerHTML = await Header() + await page();
     } else {
         app.innerHTML = await page();
     }

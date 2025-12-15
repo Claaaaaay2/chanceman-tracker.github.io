@@ -5,10 +5,15 @@ body {
 
 /* For header.js */
 .header {
-    padding:10px;
+    padding: 10px;
     border-bottom: 1px solid #ccc;
     background-color: #B8A282;
 }
+
+.header strong {
+    color: #9B6039;
+}
+
 /* End header.js */
 
 /* For item.js */
@@ -18,7 +23,8 @@ body {
     margin-bottom: 1.5rem;
 }
 
-.osrs-table th, .osrs-table td {
+.osrs-table th,
+.osrs-table td {
     border: 1px solid #ccc;
     padding: 6px 10px;
     text-align: left;
@@ -31,6 +37,7 @@ body {
 .osrs-table tr:nth-child(even) {
     background: #fafafa;
 }
+
 /* End item.js */
 
 /* For items.js */
@@ -86,13 +93,14 @@ body {
     position: absolute;
     top: 4px;
     right: 62px;
-    background: #c48aff; /* purple-ish */
+    background: #c48aff;
 }
 
 .badge.unlocked {
     position: absolute;
     top: 4px;
-    right:4px;
-    background: #7bff7b; /* green-ish */
+    right: 4px;
+    background: #7bff7b;
 }
+
 /* End items.js */
