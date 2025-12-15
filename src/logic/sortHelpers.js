@@ -1,8 +1,9 @@
 import { fileStore } from "../storage/fileStore.js";
+import { playerStore } from "../storage/playerStore.js";
 import { canDoOtherMethod, canReachNpc } from "./itemAvailability.js";
+import { NPC_DATA } from "./npcData.js";
 
 export async function isItemObtainable(item, ctx) {
-    await ctx.ensureItemsLoaded();
     const src = item.sources || {};
 
     if (fileStore.unlocked.includes(item.id)) {
@@ -59,6 +60,10 @@ export async function isItemObtainable(item, ctx) {
     return false;
 }
 
+function capitalizeFirstLetter(val) {
+    return String(val).charAt(0).toUpperCase() + String(val).slice(1);
+}
+
 /*
     LOWER rank = appears first.
     Obtainable → shop/spawn > drop > other → alphabetical
@@ -67,67 +72,90 @@ export async function getObtainabilityRank(item, ctx) {
     const src = item.sources || {};
     const name = item.name.toLowerCase();
     const id = item.id;
+    const player = await playerStore.get();
 
-    // 1. Shops
-    if (src.shops) {
+    const unlocked = fileStore.unlocked.includes(id);
+
+    // 1. Shop (obtainable)
+    if (unlocked && src.shops) {
         for (const rule of Object.values(src.shops)) {
-            if (fileStore.unlocked.includes(id)) {
-                // Rule is a string
-                if (typeof rule === "string") {
-                    if (rule === "No requirements") {
-                        return { rank: 1, type: "shop", name };
-                    }
-                    if (await canDoOtherMethod(rule, ctx)) {
-                        return { rank: 1, type: "shop", name };
-                    }
-                }
-                // Rule is an object (e.g. any/all)
-                else if (typeof rule === "object") {
-                    if (await canDoOtherMethod(rule, ctx)) {
-                        return { rank: 1, type: "shop", name };
-                    }
-                }
+            if (rule === "No requirements") {
+                return { rank: 1, name };
+            }
+            if (await canDoOtherMethod(rule, ctx)) {
+                return { rank: 1, name };
             }
         }
     }
 
-    // 2. Spawns
-    if (src.spawns) {
+    // 2. Spawn (obtainable)
+    if (unlocked && src.spawns) {
         for (const rule of Object.values(src.spawns)) {
-            if (fileStore.unlocked.includes(id)) {
-                if (typeof rule === "string") {
-                    if (rule === "No requirements") {
-                        return { rank: 2, type: "spawn", name };
-                    }
-                    if (await canDoOtherMethod(rule, ctx)) {
-                        return { rank: 2, type: "spawn", name };
-                    }
-                }
-                else if (typeof rule === "object") {
-                    if (await canDoOtherMethod(rule, ctx)) {
-                        return { rank: 2, type: "spawn", name };
-                    }
-                }
+            if (rule === "No requirements") {
+                return { rank: 2, name };
+            }
+            if (await canDoOtherMethod(rule, ctx)) {
+                return { rank: 2, name };
             }
         }
     }
 
-    // 3. Drops
+    // Drops handling
     if (src.drops) {
-        for (const npc of Object.keys(src.drops)) {
-            if (await canReachNpc(npc, ctx))
-                return { rank: 3, type: "drop", name };
+        let hasReachableDrop = false;
+        let hasEasy = false;
+        let hasSkillMet = false;
+
+        for (const npcName of Object.keys(src.drops)) {
+            if (!(await canReachNpc(npcName, ctx))) continue;
+
+            hasReachableDrop = true;
+
+            const npc = NPC_DATA[npcName];
+
+            if (npc?.tags?.includes("easy")) {
+
+                hasEasy = true;
+            }
+
+            if (player && npc?.skill?.length) {
+                if (npc.skill.length !== npc.level.length) {
+                    console.error("npc skill and level not in order: ", npc);
+                }
+                for (let i = 0; i < npc.skill.length; i++) {
+                    const skill = npc.skill[i];
+                    const level = npc.level[i];
+
+                    if (player.levels[capitalizeFirstLetter(skill)] >= level) {
+                        hasSkillMet = true;
+                    }
+                }
+            }
+        }
+
+        // IMPORTANT: only classify drops if reachable
+        if (hasReachableDrop) {
+            if (hasEasy) {
+                return { rank: 3, name };
+            }
+
+            if (hasSkillMet) {
+                return { rank: 4, name };
+            }
+
+            return { rank: 6, name };
         }
     }
 
-    // 4. Other methods (crafting, etc.)
+    // 5. Other sources (crafting, etc.)
     if (src.other) {
         for (const obj of Object.values(src.other)) {
-            if (await canDoOtherMethod(obj.rule, ctx))
-                return { rank: 4, type: "other", name };
+            if (await canDoOtherMethod(obj.rule, ctx)) {
+                return { rank: 5, name };
+            }
         }
     }
 
-    // 5. Unobtainable
-    return { rank: 99, type: "unobtainable", name };
+    // 7. Unobtainable
+    return { rank: 7, name };
 }

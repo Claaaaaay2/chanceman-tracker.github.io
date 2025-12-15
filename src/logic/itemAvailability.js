@@ -6,14 +6,17 @@ import { canObtainItem, REQUIREMENT_CHECKS } from "./requirements.js";
    =========================================================== */
 
 export async function canReachNpc(npcName, ctx) {
-    await ctx.ensureItemsLoaded();
+    ctx.npcReachCache ??= new Map();
+
+    if (ctx.npcReachCache.has(npcName)) {
+        return ctx.npcReachCache.get(npcName);
+    }
 
     const rule = NPC_DATA[npcName].rule;
+    const result = !rule ? true : await evaluateRule(rule, ctx);
 
-    // No rule = always killable
-    if (!rule) return true;
-
-    return await evaluateRule(rule, ctx);
+    ctx.npcReachCache.set(npcName, result);
+    return result;
 }
 
 
@@ -31,8 +34,6 @@ export async function canDoOtherMethod(rule, ctx) {
    =========================================================== */
 
 export async function evaluateRule(rule, ctx) {
-    await ctx.ensureItemsLoaded();
-
     // Empty or null = always allowed
     if (!rule) return true;
 
@@ -59,6 +60,7 @@ export async function evaluateRule(rule, ctx) {
 
         // has {id}
         if (rule.has !== undefined) {
+
             const id = rule.has;
             const item = ctx.items.find(i => i.id === id);
 

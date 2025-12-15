@@ -676,62 +676,6 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
-    "Animated Adamant Armour": {
-        "wiki": "https://oldschool.runescape.wiki/w/Animated_Adamant_Armour",
-        "rule": ["hasFullAdamantArmour"],
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
-    "Animated Black Armour": {
-        "wiki": "https://oldschool.runescape.wiki/w/Animated_Black_Armour",
-        "rule": ["hasFullBlackArmour"],
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
-    "Animated Bronze Armour": {
-        "wiki": "https://oldschool.runescape.wiki/w/Animated_Bronze_Armour",
-        "rule": ["hasFullBronzeArmour"],
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
-    "Animated Iron Armour": {
-        "wiki": "https://oldschool.runescape.wiki/w/Animated_Iron_Armour",
-        "rule": ["hasFullIronArmour"],
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
-    "Animated Mithril Armour": {
-        "wiki": "https://oldschool.runescape.wiki/w/Animated_Mithril_Armour",
-        "rule": ["hasFullMithrilArmour"],
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
-    "Animated Rune Armour": {
-        "wiki": "https://oldschool.runescape.wiki/w/Animated_Rune_Armour",
-        "rule": ["hasFullRuneArmour"],
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
-    "Animated Steel Armour": {
-        "wiki": "https://oldschool.runescape.wiki/w/Animated_Steel_Armour",
-        "rule": ["hasFullSteelArmour"],
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
     "Animated spade": {
         "wiki": "https://oldschool.runescape.wiki/w/Animated_spade",
         "rule": ["canCompletePriestInPeril"],

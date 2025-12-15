@@ -3,8 +3,6 @@ import { NPC_DATA } from "../logic/npcData.js";
 import { fileStore } from "../storage/fileStore.js";
 
 export default async function ItemPage() {
-    await fileStore.ensureItemsLoaded();
-
     const rolled = fileStore.rolled;
     const unlocked = fileStore.unlocked;
 

@@ -57,7 +57,7 @@ body {
 .item-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
@@ -101,6 +101,16 @@ body {
     top: 4px;
     right: 4px;
     background: #7bff7b;
+}
+
+.item-section-header {
+    flex: 0 0 100%;
+    /* take full row */
+    width: 100%;
+    margin: 1.5rem 0 0.5rem;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #8E8068;
+    color: #5a3e2b;
 }
 
 /* End items.js */

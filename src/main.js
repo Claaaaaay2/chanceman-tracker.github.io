@@ -1,6 +1,101 @@
-import { getObtainabilityRank, isItemObtainable } from "./logic/sortHelpers.js";
+import { canReachNpc } from "./logic/itemAvailability.js";
+import { getObtainabilityRank } from "./logic/sortHelpers.js";
 import { router } from "./router.js";
 import { fileStore } from "./storage/fileStore.js";
+
+const ITEM_SECTION_TITLES = {
+    1: "Buyable shop Items",
+    2: "Pickupable spawns",
+    3: "Easy Rolls",
+    4: "Skill Requirements Met",
+    5: "Other Sources",
+    6: "Other Drops",
+    7: "Unobtainable Items"
+};
+
+function parseDropRate(rate) {
+    if (!rate || rate === "N/A" || rate === "Unknown") return -1;
+
+    rate = rate.trim();
+
+    if (rate === "Always" || rate === "Once") return 1_000_000;
+    if (rate.includes("Varies")) return 1 / 800;
+    if (rate === "Common") return 1 / 16;
+    if (rate === "Uncommon") return 1 / 64;
+    if (rate === "Rare") return 1 / 128;
+
+    // Remove multipliers: "3 × ~1/64" → "~1/64"
+    rate = rate.replace(/^\d+\s*×\s*/i, "");
+
+    // Handle percentages: "22.33%-28.11%"
+    if (rate.includes("%")) {
+        return 1_000_000;
+    }
+
+    // Handle multiple rates: "1/8; 1/50"
+    if (rate.includes(";")) {
+        return Math.min(
+            ...rate.split(";").map(r => parseDropRate(r))
+        );
+    }
+
+    // Handle ranges: "~1/800–~1/1200"
+    if (rate.includes("–")) {
+        const nums = rate.match(/\d+/g);
+        if (!nums) return Infinity;
+        return 1 / Math.min(...nums.map(Number));
+    }
+
+    // Handle estimates "~1/42"
+    const match = rate.match(/(\d+)\s*\/\s*(\d+)/);
+    if (match) {
+        return Number(match[1]) / Number(match[2]);
+    }
+
+    return Infinity;
+}
+
+let rankedItemsCache = null;
+
+async function computeAllRanksOnce(items, ctx) {
+    if (rankedItemsCache) return rankedItemsCache;
+
+    rankedItemsCache = await Promise.all(
+        items.map(async item => {
+            let bestDropRate = 0;
+
+            if (item.sources?.drops) {
+                for (const [npcName, drops] of Object.entries(item.sources.drops)) {
+
+                    // ONLY consider reachable NPCs
+                    if (!(await canReachNpc(npcName, ctx))) continue;
+
+                    if (Array.isArray(drops)) {
+                        for (const d of drops) {
+                            bestDropRate = Math.max(
+                                bestDropRate,
+                                parseDropRate(d.droprate)
+                            );
+                        }
+                    } else if (drops?.droprate) {
+                        bestDropRate = Math.max(
+                            bestDropRate,
+                            parseDropRate(drops.droprate)
+                        );
+                    }
+                }
+            }
+
+            return {
+                item,
+                sort: await getObtainabilityRank(item, ctx),
+                bestDropRate
+            };
+        })
+    );
+
+    return rankedItemsCache;
+}
 
 window.addEventListener("DOMContentLoaded", async () => {
     await fileStore.init(); // load from IndexedDB first
@@ -36,7 +131,9 @@ function initLazyImages() {
     lazyImages.forEach(img => observer.observe(img));
 }
 
-window.initItemsPage = function () {
+window.initItemsPage = async function () {
+    await fileStore.ensureItemsLoaded();
+
     const data = window.__itemsPageData;
     if (!data) return;
 
@@ -68,45 +165,52 @@ window.initItemsPage = function () {
         const onlyO = onlyObtainable.checked;
         const hideCl = hideClue.checked;
 
-        let filtered = [];
-
-        for (const item of items) {
-            if (!item.name.toLowerCase().includes(search)) continue;
-
-            const isRolled = rolled.includes(item.id);
-            const isUnlocked = unlocked.includes(item.id);
-
-            if (hideR && isRolled) continue;
-            if (onlyU && !isUnlocked) continue;
-
-            if (hideCl && item.tags?.includes("clue-reward-only")) continue;
-
-            if (onlyO) {
-                const obtainable = await isItemObtainable(item, fileStore);
-                if (!obtainable) continue;
-            }
-
-            filtered.push(item);
-        }
+        const ranked = await computeAllRanksOnce(items, fileStore);
 
         // sort async
-        filtered = await Promise.all(
-            filtered.map(async item => ({
-                item,
-                sort: await getObtainabilityRank(item, fileStore)
-            }))
-        );
+        const filtered = ranked.filter(({ item, sort }) => {
+            if (!item.name.toLowerCase().includes(search)) return false;
+            if (hideR && rolled.includes(item.id)) return false;
+            if (onlyU && !unlocked.includes(item.id)) return false;
+            if (hideCl && item.tags?.includes("clue-reward-only")) return false;
+            if (onlyO && sort.rank === 7) return false;
+            return true;
+        });
 
         filtered.sort((a, b) => {
-            if (a.sort.rank !== b.sort.rank) return a.sort.rank - b.sort.rank;
+            // Primary: rank
+            if (a.sort.rank !== b.sort.rank) {
+                return a.sort.rank - b.sort.rank;
+            }
+
+            // Secondary: droprate for drop ranks
+            if (a.sort.rank === 6) {
+                if (a.bestDropRate !== b.bestDropRate) {
+                    return b.bestDropRate - a.bestDropRate;
+                }
+            }
+
+            // Fallback: alphabetical
             return a.sort.name.localeCompare(b.sort.name);
         });
 
-        grid.innerHTML = filtered.map(({ item }) => {
+        let html = "";
+        let lastRank = null;
+
+        for (const { item, sort } of filtered) {
+            if (sort.rank !== lastRank) {
+                html += `
+                    <h2 class="item-section-header">
+                        ${ITEM_SECTION_TITLES[sort.rank] ?? "Other Items"}
+                    </h2>
+                `;
+                lastRank = sort.rank;
+            }
+
             const isRolled = rolled.includes(item.id);
             const isUnlocked = unlocked.includes(item.id);
 
-            return `
+            html += `
                 <div class="item-card" onclick="navigate('/item?id=${item.id}')">
                     ${isRolled ? `<span class="badge rolled">Rolled</span>` : ""}
                     ${isUnlocked ? `<span class="badge unlocked">Unlocked</span>` : ""}
@@ -114,7 +218,9 @@ window.initItemsPage = function () {
                     ${item.name}
                 </div>
             `;
-        }).join("");
+        }
+
+        grid.innerHTML = html;
 
         setTimeout(() => initLazyImages(), 0);
     }

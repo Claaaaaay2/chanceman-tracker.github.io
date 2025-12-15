@@ -1,2072 +1,2019 @@
 import { canDoOtherMethod, canReachNpc } from "./itemAvailability.js";
 
-function has(ctx, id) {
+async function has(ctx, id) {
     const item = ctx.items.find(i => i.id === id);
     if (!item) return false;
-    return ctx.unlocked.includes(id) && canObtainItem(item, ctx, ctx.items);
+    return ctx.unlocked.includes(id) && await canObtainItem(item, ctx, ctx.items);
 }
 
-export function canObtainItem(item, ctx, allItems, visited = new Set()) {
+export async function canObtainItem(item, ctx, allItems, visited = new Set()) {
     if (!item) return false;
 
-    // Stop cycles
     if (visited.has(item.id)) return false;
     visited.add(item.id);
 
-    // 1. Already rolled
-    if (ctx.rolled.includes(item.id)) return true;
+    let result = false;
 
-    // 2. Droppable by killable NPC
-    if (item.sources?.drops) {
-        for (const [npcName] of Object.entries(item.sources.drops)) {
-            if (canReachNpc(npcName, ctx)) return true;
-        }
+    if (ctx.rolled.includes(item.id)) {
+        result = true;
     }
 
-    // 3. Other methods
-    if (item.sources?.other) {
-        for (const [method, obj] of Object.entries(item.sources.other)) {
-            if (canDoOtherMethod(obj.rule, ctx)) {
-                return true;
+    else if (item.sources?.drops) {
+        for (const npcName of Object.keys(item.sources.drops)) {
+            if (await canReachNpc(npcName, ctx)) {
+                result = true;
+                break;
             }
         }
     }
 
-    // 4. Processable (crafting)
-    if (item.processable) {
-        for (const [resultId, ingredientList] of Object.entries(item.processable)) {
-            //
-            // NOTE: The item itself is the **result**, not the ingredient.
-            // Processable is like:
-            //     "9143": "9380"
-            //
-            // That means item 9380 -> item 9143
-            //
-            // So if the current item is 9143, ingredients are 9380.
-            //
+    else if (item.sources?.other) {
+        for (const obj of Object.values(item.sources.other)) {
+            if (await canDoOtherMethod(obj.rule, ctx)) {
+                result = true;
+                break;
+            }
+        }
+    }
 
+    else if (item.processable) {
+        for (const [resultId, ingredientList] of Object.entries(item.processable)) {
             if (Number(resultId) !== item.id) continue;
 
             const ingredients = ingredientList.split(",");
-
-            let allIngredientsObtainable = true;
+            let ok = true;
 
             for (const ingId of ingredients) {
                 const ingObj = allItems.find(i => i.id == ingId);
-
-                if (!ingObj || !canObtainItem(ingObj, ctx, allItems, visited)) {
-                    allIngredientsObtainable = false;
+                if (!ingObj || !(await canObtainItem(ingObj, ctx, allItems, new Set(visited)))) {
+                    ok = false;
                     break;
                 }
             }
 
-            if (allIngredientsObtainable) return true;
+            if (ok) {
+                result = true;
+                break;
+            }
         }
     }
 
-    // Nothing worked
-    return false;
+    return result;
 }
 
 export const REQUIREMENT_CHECKS = {
-    canCompleteTaiBwoWannaiTrio(ctx) {
-        return canCompleteTaiBwoWannaiTrio(ctx);
+    async canCompleteTaiBwoWannaiTrio(ctx) {
+        return await canCompleteTaiBwoWannaiTrio(ctx);
     },
-    canCompleteDragonSlayerII(ctx) {
+    async canCompleteDragonSlayerII(ctx) {
         return false; // TODO
     },
-    canCompleteDragonSlayerI(ctx) {
+    async canCompleteDragonSlayerI(ctx) {
         return false; // TODO
     },
-    canCompleteDesertTreasureII(ctx) {
+    async canCompleteDesertTreasureII(ctx) {
         return false; // TODO
     },
-    canCompleteDesertTreasureI(ctx) {
+    async canCompleteDesertTreasureI(ctx) {
         return false; // TODO
     },
-    canCompleteMyArmsBigAdventure(ctx) {
+    async canCompleteMyArmsBigAdventure(ctx) {
         return false; // TODO
     },
-    canCompleteInAidOfTheMyreque(ctx) {
+    async canCompleteInAidOfTheMyreque(ctx) {
         return false; // TODO
     },
-    canCompleteShadowsOfCustodia(ctx) {
+    async canCompleteShadowsOfCustodia(ctx) {
         return false; // TODO
     },
-    canCompleteSongOfTheElves(ctx) {
+    async canCompleteSongOfTheElves(ctx) {
         return false; // TODO
     },
-    canCompleteWhileGuthixSleeps(ctx) {
+    async canCompleteWhileGuthixSleeps(ctx) {
         return false; // TODO
     },
-    canCompleteTheGreatBrainRobbery(ctx) {
+    async canCompleteTheGreatBrainRobbery(ctx) {
         return false; // TODO
     },
-    canCompleteATasteOfHope(ctx) {
+    async canCompleteATasteOfHope(ctx) {
         return false; // TODO
     },
-    canCompleteSinsOfTheFather(ctx) {
+    async canCompleteSinsOfTheFather(ctx) {
         return false; // TODO
     },
-    canCompleteWhatLiesBelow(ctx) {
+    async canCompleteWhatLiesBelow(ctx) {
         return false; // TODO
     },
-    canCompleteErnestTheChicken(ctx) {
-        return canCompleteErnestTheChicken(ctx);
+    async canCompleteErnestTheChicken(ctx) {
+        return await canCompleteErnestTheChicken(ctx);
     },
-    canCompleteTheFremennikExiles(ctx) {
+    async canCompleteTheFremennikExiles(ctx) {
         return false; // TODO
     },
-    canCompleteCabinFever(ctx) {
+    async canCompleteCabinFever(ctx) {
         return false; // TODO
     },
-    canCompleteWanted(ctx) {
+    async canCompleteWanted(ctx) {
         return false; // TODO
     },
-    canCompleteTheFinalDawn(ctx) {
+    async canCompleteTheFinalDawn(ctx) {
         return false; // TODO
     },
-    canCompleteShadesOfMortton(ctx) {
-        return canCompleteShadesOfMortton(ctx);
+    async canCompleteShadesOfMortton(ctx) {
+        return await canCompleteShadesOfMortton(ctx);
     },
-    canCompleteSleepingGiants(ctx) {
+    async canCompleteSleepingGiants(ctx) {
         return false; // TODO
     },
-    canCompleteBelowIceMountain(ctx) {
+    async canCompleteBelowIceMountain(ctx) {
         return false; // TODO
     },
-    canCompleteAKingdomDivided(ctx) {
+    async canCompleteAKingdomDivided(ctx) {
         return false; // TODO
     },
-    canCompleteTaleOfTheRighteous(ctx) {
+    async canCompleteTaleOfTheRighteous(ctx) {
         return false; // TODO
     },
-    canCompleteTheTouristTrap(ctx) {
+    async canCompleteTheTouristTrap(ctx) {
         return false; // TODO
     },
-    canCompleteTreeGnomeVillage(ctx) {
+    async canCompleteTreeGnomeVillage(ctx) {
         return false; // TODO
     },
-    canCompleteAPorcineOfInterest(ctx) {
+    async canCompleteAPorcineOfInterest(ctx) {
         return false; // TODO
     },
-    canCompleteTempleOfIkov(ctx) {
+    async canCompleteTempleOfIkov(ctx) {
         return false; // TODO
     },
-    canCompleteInSearchOfTheMyreque(ctx) {
+    async canCompleteInSearchOfTheMyreque(ctx) {
         return false; // TODO
     },
-    canCompleteTheCorsairCurse(ctx) {
+    async canCompleteTheCorsairCurse(ctx) {
         return false; // TODO
     },
-    canCompleteTheEyesOfGlouphrie(ctx) {
+    async canCompleteTheEyesOfGlouphrie(ctx) {
         return false; // TODO
     },
-    canCompleteCreatureOfFenkenstrain(ctx) {
+    async canCompleteCreatureOfFenkenstrain(ctx) {
         return false; // TODO
     },
-    canCompleteRFDFreeingPiratePete(ctx) {
+    async canCompleteRFDFreeingPiratePete(ctx) {
         return false; // TODO
     },
-    canCompleteRFDFreeingSirAmikVarse(ctx) {
+    async canCompleteRFDFreeingSirAmikVarse(ctx) {
         return false; // TODO
     },
-    canCompleteRFDFreeingEvilDave(ctx) {
+    async canCompleteRFDFreeingEvilDave(ctx) {
         return false; // TODO
     },
-    canCompleteRFDFreeingSkrachUglologwee(ctx) {
+    async canCompleteRFDFreeingSkrachUglologwee(ctx) {
         return false; // TODO
     },
-    canEnterNightmareZone(ctx) {
+    async canEnterNightmareZone(ctx) {
         return false; // TODO
     },
-    canEnterLumbridgeSwampCaves(ctx) {
+    async canEnterLumbridgeSwampCaves(ctx) {
         return false; // TODO
     },
-    canCompleteMakingFriendsWithMyArm(ctx) {
+    async canCompleteMakingFriendsWithMyArm(ctx) {
         return false; // TODO
     },
-    canCompleteSwanSong(ctx) {
+    async canCompleteSwanSong(ctx) {
         return false; // TODO
     },
-    canCompleteGrimTales(ctx) {
+    async canCompleteGrimTales(ctx) {
         return false; // TODO
     },
-    canCompleteObservatoryQuest(ctx) {
+    async canCompleteObservatoryQuest(ctx) {
         return false; // TODO
     },
-    canCompleteBetweenARock(ctx) {
+    async canCompleteBetweenARock(ctx) {
         return false; // TODO
     },
-    canGetGoutweed(ctx) {
+    async canGetGoutweed(ctx) {
         return false; // TODO
     },
-    canCompleteRegicide(ctx) {
+    async canCompleteRegicide(ctx) {
         return false; // TODO
     },
-    canCompleteDefenderOfVarrock(ctx) {
+    async canCompleteDefenderOfVarrock(ctx) {
         return false; // TODO
     },
-    canCompleteTheCurseOfArrav(ctx) {
+    async canCompleteTheCurseOfArrav(ctx) {
         return false; // TODO
     },
-    canCompleteDreamMentor(ctx) {
+    async canCompleteDreamMentor(ctx) {
         return false; // TODO
     },
-    canCompleteTrollRomance(ctx) {
+    async canCompleteTrollRomance(ctx) {
         return false; // TODO
     },
-    canStartMourningsEndPartI(ctx) {
+    async canStartMourningsEndPartI(ctx) {
         return false; // TODO
     },
-    canEnterTheChampionsGuild(ctx) {
+    async canEnterTheChampionsGuild(ctx) {
         return false; // TODO quest points
     },
-    canCompleteMourningsEndPartI(ctx) {
+    async canCompleteMourningsEndPartI(ctx) {
         return false; // TODO
     },
-    canCompleteMourningsEndPartII(ctx) {
+    async canCompleteMourningsEndPartII(ctx) {
         return false; // TODO
     },
-    canCompleteDarknessOfHallowvale(ctx) {
+    async canCompleteDarknessOfHallowvale(ctx) {
         return false; // TODO
     },
-    canCompleteShadowOfTheStorm(ctx) {
+    async canCompleteShadowOfTheStorm(ctx) {
         return false; // TODO
     },
-    canCompleteASoulsBane(ctx) {
+    async canCompleteASoulsBane(ctx) {
         return false; // TODO
     },
-    canCompleteMerlinsCrystal(ctx) {
+    async canCompleteMerlinsCrystal(ctx) {
         return false; // TODO
     },
-    canCompletePlagueCity(ctx) {
+    async canCompletePlagueCity(ctx) {
         return false; // TODO
     },
-    canCompleteGettingAhead(ctx) {
+    async canCompleteGettingAhead(ctx) {
         return false; // TODO
     },
-    canCompleteFremennikTrials(ctx) {
+    async canCompleteFremennikTrials(ctx) {
         return false; // TODO
     },
-    canCompleteTheFeud(ctx) {
+    async canCompleteTheFeud(ctx) {
         return false; // TODO
     },
-    canCompleteRecipeForDisaster(ctx) {
+    async canCompleteRecipeForDisaster(ctx) {
         return false; // TODO
     },
-    canCompleteRumDeal(ctx) {
+    async canCompleteRumDeal(ctx) {
         return false; // TODO
     },
-    canCompleteHorrorFromTheDeep(ctx) {
+    async canCompleteHorrorFromTheDeep(ctx) {
         return false; // TODO
     },
-    canCompleteMeatAndGreet(ctx) {
+    async canCompleteMeatAndGreet(ctx) {
         return false; // TODO
     },
-    canCompleteNatureSpirit(ctx) {
-        return canCompleteNatureSpirit(ctx);
+    async canCompleteNatureSpirit(ctx) {
+        return await canCompleteNatureSpirit(ctx);
     },
-    canCompleteSecretsOfTheNorth(ctx) {
+    async canCompleteSecretsOfTheNorth(ctx) {
         return false; // TODO
     },
-    canCompleteLunarDiplomacy(ctx) {
-        return canCompleteLunarDiplomacy(ctx);
+    async canCompleteLunarDiplomacy(ctx) {
+        return await canCompleteLunarDiplomacy(ctx);
     },
-    canCompleteEaglesPeak(ctx) {
+    async canCompleteEaglesPeak(ctx) {
         return false; // TODO
     },
-    canCompleteUndergroundPass(ctx) {
+    async canCompleteUndergroundPass(ctx) {
         return false; // TODO
     },
-    canCompleteWatchtower(ctx) {
+    async canCompleteWatchtower(ctx) {
         return false; // TODO
     },
-    canCompleteFairytaleIICureAQueen(ctx) {
+    async canCompleteFairytaleIICureAQueen(ctx) {
         return false; // TODO
     },
-    canCompleteRecipeForDisaster(ctx) {
+    async canCompleteRecipeForDisaster(ctx) {
         return false; // TODO
     },
-    canCompleteEnakhrasLament(ctx) {
+    async canCompleteEnakhrasLament(ctx) {
         return false; // TODO
     },
-    canCompleteTheGrandTree(ctx) {
+    async canCompleteTheGrandTree(ctx) {
         return false; // TODO
     },
-    canEnterBraindeathIsland(ctx) {
+    async canEnterBraindeathIsland(ctx) {
         return false; // TODO
     },
-    canDoMixology(ctx) {
+    async canDoMixology(ctx) {
         return false; // TODO
     },
-    canDoTombsOfAmascut(ctx) {
-        return canDoTombsOfAmascut(ctx);
+    async canDoTombsOfAmascut(ctx) {
+        return await canDoTombsOfAmascut(ctx);
     },
-    canCompleteHeroesQuest(ctx) {
-        return canCompleteHeroesQuest(ctx);
+    async canCompleteHeroesQuest(ctx) {
+        return await canCompleteHeroesQuest(ctx);
     },
-    canBirdSnare(ctx) {
-        return canBirdSnare(ctx);
+    async canBirdSnare(ctx) {
+        return await canBirdSnare(ctx);
     },
-    canNooseWand(ctx) {
-        return canNooseWand(ctx);
+    async canNooseWand(ctx) {
+        return await canNooseWand(ctx);
     },
-    canCatchImplingsInJars(ctx) {
-        return canCatchImplingsInJars(ctx);
+    async canCatchImplingsInJars(ctx) {
+        return await canCatchImplingsInJars(ctx);
     },
-    canDeadfallTrap(ctx) {
-        return canDeadfallTrap(ctx);
+    async canDeadfallTrap(ctx) {
+        return await canDeadfallTrap(ctx);
     },
-    canPitfallTrap(ctx) {
-        return canPitfallTrap(ctx);
+    async canPitfallTrap(ctx) {
+        return await canPitfallTrap(ctx);
     },
-    canDoBirdhouses(ctx) {
-        return canDoBirdhouses(ctx);
+    async canDoBirdhouses(ctx) {
+        return await canDoBirdhouses(ctx);
     },
-    canCatchSalamanders(ctx) {
-        return canCatchSalamanders(ctx);
+    async canCatchSalamanders(ctx) {
+        return await canCatchSalamanders(ctx);
     },
-    canCatchCrabs(ctx) {
-        return canCatchCrabs(ctx);
+    async canCatchCrabs(ctx) {
+        return await canCatchCrabs(ctx);
     },
-    canCompleteTheFrozenDoor(ctx) {
-        return canCompleteTheFrozenDoor(ctx);
+    async canCompleteTheFrozenDoor(ctx) {
+        return await canCompleteTheFrozenDoor(ctx);
     },
-    canStartPerilousMoons(ctx) {
-        return canStartPerilousMoons(ctx);
+    async canStartPerilousMoons(ctx) {
+        return await canStartPerilousMoons(ctx);
     },
-    canCompleteFairytaleIGrowingPains(ctx) {
-        return canCompleteFairytaleIGrowingPains(ctx)
+    async canCompleteFairytaleIGrowingPains(ctx) {
+        return await canCompleteFairytaleIGrowingPains(ctx)
     },
-    canCompleteBoneVoyage(ctx) {
-        return canCompleteBoneVoyage(ctx);
+    async canCompleteBoneVoyage(ctx) {
+        return await canCompleteBoneVoyage(ctx);
     },
-    canCompleteBigChompyBirdHunting(ctx) {
-        return canCompleteBigChompyBirdHunting(ctx);
+    async canCompleteBigChompyBirdHunting(ctx) {
+        return await canCompleteBigChompyBirdHunting(ctx);
     },
-    canCompleteThroneOfMiscellania(ctx) {
-        return canCompleteThroneOfMiscellania(ctx);
+    async canCompleteThroneOfMiscellania(ctx) {
+        return await canCompleteThroneOfMiscellania(ctx);
     },
-    canCompleteDeathPlateau(ctx) {
-        return canCompleteDeathPlateau(ctx);
+    async canCompleteDeathPlateau(ctx) {
+        return await canCompleteDeathPlateau(ctx);
     },
-    canCompleteTheHeartOfDarkness(ctx) {
-        return canCompleteTheHeartOfDarkness(ctx);
+    async canCompleteTheHeartOfDarkness(ctx) {
+        return await canCompleteTheHeartOfDarkness(ctx);
     },
-    canStartIcthlarinsLittleHelper(ctx) {
-        return canCompleteIcthlarinsLittleHelper(ctx); // TODO start maybe anders?
+    async canStartIcthlarinsLittleHelper(ctx) {
+        return await canCompleteIcthlarinsLittleHelper(ctx); // TODO start maybe anders?
     },
-    canCompleteIcthlarinsLittleHelper(ctx) {
-        return canCompleteIcthlarinsLittleHelper(ctx);
+    async canCompleteIcthlarinsLittleHelper(ctx) {
+        return await canCompleteIcthlarinsLittleHelper(ctx);
     },
-    canReachAbyssalSire(ctx) {
-        return canCompleteEnterTheAbyss(ctx) || canCompleteFairytaleIGrowingPains(ctx);
+    async canReachAbyssalSire(ctx) {
+        return await canCompleteEnterTheAbyss(ctx) || await canCompleteFairytaleIGrowingPains(ctx);
     },
-    canReachTrollheim(ctx) {
-        return canReachTrollheim(ctx);
+    async canReachTrollheim(ctx) {
+        return await canReachTrollheim(ctx);
     },
-    canGetBirdNestWyson(ctx) {
-        return canGetBirdNestWyson(ctx);
+    async canGetBirdNestWyson(ctx) {
+        return await canGetBirdNestWyson(ctx);
     },
-    canDoGuardiansOfTheRift(ctx) {
-        return canCompleteTempleOfTheEye(ctx);
+    async canDoGuardiansOfTheRift(ctx) {
+        return await canCompleteTempleOfTheEye(ctx);
     },
-    canTrainFarming(ctx) {
-        return canTrainFarming(ctx);
+    async canTrainFarming(ctx) {
+        return await canTrainFarming(ctx);
     },
-    canTrainFishing(ctx) {
-        return canTrainFishing(ctx);
+    async canTrainFishing(ctx) {
+        return await canTrainFishing(ctx);
     },
-    canTrainWoodcutting(ctx) {
-        return canTrainWoodcutting(ctx);
+    async canTrainWoodcutting(ctx) {
+        return await canTrainWoodcutting(ctx);
     },
-    canTrainMining(ctx) {
-        return canTrainMining(ctx);
+    async canTrainMining(ctx) {
+        return await canTrainMining(ctx);
     },
-    canTrainCooking(ctx) {
-        return canTrainCooking(ctx);
+    async canTrainCooking(ctx) {
+        return await canTrainCooking(ctx);
     },
-    canDoGnomeRestaurant(ctx) {
-        return canDoGnomeRestaurant(ctx);
+    async canDoGnomeRestaurant(ctx) {
+        return await canDoGnomeRestaurant(ctx);
     },
-    canDoValeTotems(ctx) {
-        return canDoValeTotems(ctx);
+    async canDoValeTotems(ctx) {
+        return await canDoValeTotems(ctx);
     },
-    canDoWintertodt(ctx) {
-        return canDoWintertodt(ctx);
+    async canDoWintertodt(ctx) {
+        return await canDoWintertodt(ctx);
     },
-    canDoHallowedSepulchre(ctx) {
+    async canDoHallowedSepulchre(ctx) {
         return false; // TODO
     },
-    canDoSalvaging(ctx) {
-        return canDoSalvaging(ctx);
+    async canDoSalvaging(ctx) {
+        return await canDoSalvaging(ctx);
     },
-    canCompleteMonkeyMadnessII(ctx) {
+    async canCompleteMonkeyMadnessII(ctx) {
         return false; // TODO
     },
-    canCompleteMonkeyMadnessI(ctx) {
+    async canCompleteMonkeyMadnessI(ctx) {
         return false; // TODO
     },
-    canCompletePryingTimes(ctx) {
+    async canCompletePryingTimes(ctx) {
         return false; // TODO
     },
-    canCompleteOneSmallFavour(ctx) {
+    async canCompleteOneSmallFavour(ctx) {
         return false; // TODO
     },
-    canCompletePriestInPeril(ctx) {
-        return canCompletePriestInPeril(ctx);
+    async canCompletePriestInPeril(ctx) {
+        return await canCompletePriestInPeril(ctx);
     },
-    canCompleteZogreFleshEaters(ctx) {
-        return canCompleteZogreFleshEaters(ctx);
+    async canCompleteZogreFleshEaters(ctx) {
+        return await canCompleteZogreFleshEaters(ctx);
     },
-    canEnterKaruulmSlayerDungeon(ctx) {
-        return canEnterKaruulmSlayerDungeon(ctx);
+    async canEnterKaruulmSlayerDungeon(ctx) {
+        return await canEnterKaruulmSlayerDungeon(ctx);
     },
-    hasFacemask(ctx) {
-        return has(ctx, 4164);
+    async hasFacemask(ctx) {
+        return await has(ctx, 4164);
     },
-    hasUnlitBugLantern(ctx) {
-        return has(ctx, 7051);
+    async hasUnlitBugLantern(ctx) {
+        return await has(ctx, 7051);
     },
-    hasBagOfSalt(ctx) {
-        return has(ctx, 4161);
+    async hasBagOfSalt(ctx) {
+        return await has(ctx, 4161);
     },
-    hasBrineSabre(ctx) {
-        return has(ctx, 11037);
+    async hasBrineSabre(ctx) {
+        return await has(ctx, 11037);
     },
-    canKillGargoyles(ctx) {
-        return canKillGargoyles(ctx);
+    async canKillGargoyles(ctx) {
+        return await canKillGargoyles(ctx);
     },
-    canKillDifficultDragons(ctx) {
-        return canKillDifficultDragons(ctx);
+    async canKillDifficultDragons(ctx) {
+        return await canKillDifficultDragons(ctx);
     },
-    canKillFossilIslandWyverns(ctx) {
-        return canKillFossilIslandWyverns(ctx);
+    async canKillFossilIslandWyverns(ctx) {
+        return await canKillFossilIslandWyverns(ctx);
     },
-    hasAccessToWyvernProtection(ctx) {
-        return hasAccessToWyvernProtection(ctx);
+    async hasAccessToWyvernProtection(ctx) {
+        return await hasAccessToWyvernProtection(ctx);
     },
-    canTrainFletching(ctx) {
-        return canTrainFletching(ctx);
+    async canTrainFletching(ctx) {
+        return await canTrainFletching(ctx);
     },
-    canTrainSmithing(ctx) {
-        return canTrainSmithing(ctx);
+    async canTrainSmithing(ctx) {
+        return await canTrainSmithing(ctx);
     },
-    canCompleteDwarfCannon(ctx) {
-        return canCompleteDwarfCannon(ctx);
+    async canCompleteDwarfCannon(ctx) {
+        return await canCompleteDwarfCannon(ctx);
     },
-    canCompleteTroubledTortugans(ctx) {
-        return canCompleteTroubledTortugans(ctx);
+    async canCompleteTroubledTortugans(ctx) {
+        return await canCompleteTroubledTortugans(ctx);
     },
-    canLongrange(ctx) {
-        return canLongrange(ctx);
+    async canLongrange(ctx) {
+        return await canLongrange(ctx);
     },
-    canCastStrikeSpells(ctx) {
-        return canCastStrikeSpells(ctx);
+    async canCastStrikeSpells(ctx) {
+        return await canCastStrikeSpells(ctx);
     },
-    canShortrange(ctx) {
-        return canShortrange(ctx);
+    async canShortrange(ctx) {
+        return await canShortrange(ctx);
     },
-    canSailToTheNorthernOcean(ctx) {
-        return canSailToTheNorthernOcean(ctx);
+    async canSailToTheNorthernOcean(ctx) {
+        return await canSailToTheNorthernOcean(ctx);
     },
-    canDoSailingCombat(ctx) {
-        return canDoSailingCombat(ctx);
+    async canDoSailingCombat(ctx) {
+        return await canDoSailingCombat(ctx);
     },
-    canEnterTheCharredDungeon(ctx) {
-        return canEnterTheCharredDungeon(ctx);
+    async canEnterTheCharredDungeon(ctx) {
+        return await canEnterTheCharredDungeon(ctx);
     },
-    canSailToBrittleIsle(ctx) {
-        return canSailToBrittleIsle(ctx);
+    async canSailToBrittleIsle(ctx) {
+        return await canSailToBrittleIsle(ctx);
     },
-    canSailToYnysdail(ctx) {
-        return canSailToYnysdail(ctx);
+    async canSailToYnysdail(ctx) {
+        return await canSailToYnysdail(ctx);
     },
-    canSailToGrimstone(ctx) {
-        return canSailToGrimstone(ctx);
+    async canSailToGrimstone(ctx) {
+        return await canSailToGrimstone(ctx);
     },
-    canEnterAncientCavern(ctx) {
-        return canEnterAncientCavern(ctx);
+    async canEnterAncientCavern(ctx) {
+        return await canEnterAncientCavern(ctx);
     },
-    canEnterKalphiteLair(ctx) {
-        return canEnterKalphiteLair(ctx);
+    async canEnterKalphiteLair(ctx) {
+        return await canEnterKalphiteLair(ctx);
     },
-    canCompleteRoyalTrouble(ctx) {
-        return canCompleteRoyalTrouble(ctx);
+    async canCompleteRoyalTrouble(ctx) {
+        return await canCompleteRoyalTrouble(ctx);
     },
-    canCompleteTouristTrap(ctx) {
-        return canCompleteTouristTrap(ctx);
+    async canCompleteTouristTrap(ctx) {
+        return await canCompleteTouristTrap(ctx);
     },
-    canCompletePandemonium(ctx) {
-        return canCompletePandemonium(ctx);
+    async canCompletePandemonium(ctx) {
+        return await canCompletePandemonium(ctx);
     },
-    canCompleteEnchantedKey(ctx) {
-        return canCompleteMakingHistory(ctx);
+    async canCompleteEnchantedKey(ctx) {
+        return await canCompleteMakingHistory(ctx);
     },
-    canStartLegendsQuest(ctx) {
+    async canStartLegendsQuest(ctx) {
         return false; // TODO
     },
-    canCompleteSeaSlug(ctx) {
+    async canCompleteSeaSlug(ctx) {
         return false; // TODO
     },
-    canCompleteLegendsQuest(ctx) {
+    async canCompleteLegendsQuest(ctx) {
         return false; // TODO
     },
-    canDoYama(ctx) {
+    async canDoYama(ctx) {
         return false; // TODO
     },
-    canDoNex(ctx) {
-        return canCompleteTheFrozenDoor(ctx) && false; // TODO
+    async canDoNex(ctx) {
+        return await canCompleteTheFrozenDoor(ctx) && false; // TODO
     },
-    canCompleteTheFrozenDoor(ctx) {
-        return canCompleteTheFrozenDoor(ctx);
+    async canCompleteTheFrozenDoor(ctx) {
+        return await canCompleteTheFrozenDoor(ctx);
     },
-    canDoZulrah(ctx) {
+    async canDoZulrah(ctx) {
         return false; // TODO
     },
-    canCompleteAtFirstLight(ctx) {
+    async canCompleteAtFirstLight(ctx) {
         return false; // TODO
     },
-    canCompleteColdWar(ctx) {
+    async canCompleteColdWar(ctx) {
         return false; // TODO
     },
-    canDoHuntersRumours(ctx) {
-        return canTrainHunter(ctx);
+    async canDoHuntersRumours(ctx) {
+        return await canTrainHunter(ctx);
     },
-    canTrainHunter(ctx) {
-        return canTrainHunter(ctx);
+    async canTrainHunter(ctx) {
+        return await canTrainHunter(ctx);
     },
-    canCompleteTheDigSite(ctx) {
-        return canCompleteTheDigSite(ctx);
+    async canCompleteTheDigSite(ctx) {
+        return await canCompleteTheDigSite(ctx);
     },
-    canCompleteAnimalMagnetism(ctx) {
-        return canCompleteAnimalMagnetism(ctx);
+    async canCompleteAnimalMagnetism(ctx) {
+        return await canCompleteAnimalMagnetism(ctx);
     },
-    canCompleteDeathToTheDorgeshuun(ctx) {
-        return canCompleteDeathToTheDorgeshuun(ctx);
+    async canCompleteDeathToTheDorgeshuun(ctx) {
+        return await canCompleteDeathToTheDorgeshuun(ctx);
     },
-    canCompleteTheLostTribe(ctx) {
-        return canCompleteTheLostTribe(ctx);
+    async canCompleteTheLostTribe(ctx) {
+        return await canCompleteTheLostTribe(ctx);
     },
-    canCompletePerilousMoons(ctx) {
-        return canCompletePerilousMoons(ctx);
+    async canCompletePerilousMoons(ctx) {
+        return await canCompletePerilousMoons(ctx);
     },
-    canCompletePiratesTreasure(ctx) {
-        return canCompletePiratesTreasure(ctx);
+    async canCompletePiratesTreasure(ctx) {
+        return await canCompletePiratesTreasure(ctx);
     },
-    canFishFromRewardPool(ctx) {
-        return canFishFromRewardPool(ctx);
+    async canFishFromRewardPool(ctx) {
+        return await canFishFromRewardPool(ctx);
     },
-    canReachGemRocks(ctx) {
-        return canReachGemRocks(ctx);
+    async canReachGemRocks(ctx) {
+        return await canReachGemRocks(ctx);
     },
-    hasGiantFrogLegs(ctx) {
-        return has(ctx, 4517);
+    async hasGiantFrogLegs(ctx) {
+        return await has(ctx, 4517);
     },
-    hasRawCaveEel(ctx) {
-        return has(ctx, 5001);
+    async hasRawCaveEel(ctx) {
+        return await has(ctx, 5001);
     },
-    hasRawJubbly(ctx) {
-        return has(ctx, 7566);
+    async hasRawJubbly(ctx) {
+        return await has(ctx, 7566);
     },
-    hasRawLobster(ctx) {
-        return has(ctx, 377);
+    async hasRawLobster(ctx) {
+        return await has(ctx, 377);
     },
-    hasSteelArrow(ctx) {
-        return has(ctx, 886);
+    async hasSteelArrow(ctx) {
+        return await has(ctx, 886);
     },
-    hasMithrilArrow(ctx) {
-        return has(ctx, 888);
+    async hasMithrilArrow(ctx) {
+        return await has(ctx, 888);
     },
-    hasSecateurs(ctx) {
-        return has(ctx, 5329);
+    async hasSecateurs(ctx) {
+        return await has(ctx, 5329);
     },
-    hasGardeningTrowel(ctx) {
-        return has(ctx, 5325);
+    async hasGardeningTrowel(ctx) {
+        return await has(ctx, 5325);
     },
-    hasSaltpetre(ctx) {
-        return has(ctx, 13421);
+    async hasSaltpetre(ctx) {
+        return await has(ctx, 13421);
     },
-    hasGrubbyKey(ctx) {
-        return has(ctx, 23499);
+    async hasGrubbyKey(ctx) {
+        return await has(ctx, 23499);
     },
-    hasLockpick(ctx) {
-        return has(ctx, 1523);
+    async hasLockpick(ctx) {
+        return await has(ctx, 1523);
     },
-    hasSmallFishingNet(ctx) {
-        return has(ctx, 303);
+    async hasSmallFishingNet(ctx) {
+        return await has(ctx, 303);
     },
-    hasBigFishingNet(ctx) {
-        return has(ctx, 305);
+    async hasBigFishingNet(ctx) {
+        return await has(ctx, 305);
     },
-    hasHarpoon(ctx) {
-        return has(ctx, 311) || has(ctx, 10129) || has(ctx, 21028);
+    async hasHarpoon(ctx) {
+        return await has(ctx, 311) || await has(ctx, 10129) || await has(ctx, 21028);
     },
-    hasAnyLantern(ctx) {
-        return hasAnyLantern(ctx);
+    async hasAnyLantern(ctx) {
+        return await hasAnyLantern(ctx);
     },
-    hasFishingRod(ctx) {
-        return has(ctx, 307);
+    async hasFishingRod(ctx) {
+        return await has(ctx, 307);
     },
-    hasFishingBait(ctx) {
-        return has(ctx, 313);
+    async hasFishingBait(ctx) {
+        return await has(ctx, 313);
     },
-    hasLobsterPot(ctx) {
-        return has(ctx, 301);
+    async hasLobsterPot(ctx) {
+        return await has(ctx, 301);
     },
-    hasFlyFishingRod(ctx) {
-        return has(ctx, 309);
+    async hasFlyFishingRod(ctx) {
+        return await has(ctx, 309);
     },
-    hasAnyFeather(ctx) {
-        return hasAnyFeather(ctx); //TODO andere
+    async hasAnyFeather(ctx) {
+        return await hasAnyFeather(ctx); //TODO andere
     },
-    hasDarkFishingBait(ctx) {
-        return has(ctx, 11940);
+    async hasDarkFishingBait(ctx) {
+        return await has(ctx, 11940);
     },
-    hasKarambwanVesselBaited(ctx) {
-        return has(ctx, 3159);
+    async hasKarambwanVesselBaited(ctx) {
+        return await has(ctx, 3159);
     },
-    canAerialFish(ctx) {
-        return has(ctx, 11334) || has(ctx, 2162);
+    async canAerialFish(ctx) {
+        return await has(ctx, 11334) || await has(ctx, 2162);
     },
-    canBarbarianFish(ctx) {
-        return hasAnyFeather(ctx) || has(ctx, 313) || has(ctx, 11324) || has(ctx, 11326);
+    async canBarbarianFish(ctx) {
+        return await hasAnyFeather(ctx) || await has(ctx, 313) || await has(ctx, 11324) || await has(ctx, 11326);
     },
-    canReachFrogSpawnSpot(ctx) {
-        return this.canCompleteBelowIceMountain(ctx) || this.canEnterLumbridgeSwampCaves(ctx);
+    async canReachFrogSpawnSpot(ctx) {
+        return await this.canCompleteBelowIceMountain(ctx) || await this.canEnterLumbridgeSwampCaves(ctx);
     },
-    hasOgreCoffinKey(ctx) {
-        return has(ctx, 4850);
+    async hasOgreCoffinKey(ctx) {
+        return await has(ctx, 4850);
     },
-    hasZombiePirateKey(ctx) {
-        return has(ctx, 29449);
+    async hasZombiePirateKey(ctx) {
+        return await has(ctx, 29449);
     },
-    hasMirrorShield(ctx) {
-        return has(ctx, 4156);
+    async hasMirrorShield(ctx) {
+        return await has(ctx, 4156);
     },
-    hasSpinyHelmet(ctx) {
-        return has(ctx, 4551);
+    async hasSpinyHelmet(ctx) {
+        return await has(ctx, 4551);
     },
-    hasNosePeg(ctx) {
-        return has(ctx, 4168);
+    async hasNosePeg(ctx) {
+        return await has(ctx, 4168);
     },
-    hasSlayerBell(ctx) {
-        return has(ctx, 10952);
+    async hasSlayerBell(ctx) {
+        return await has(ctx, 10952);
     },
-    hasCrystalKey(ctx) {
-        return has(ctx, 989);
+    async hasCrystalKey(ctx) {
+        return await has(ctx, 989);
     },
-    hasMachete(ctx) {
-        return has(ctx, 975) || has(ctx, 6313) || has(ctx, 6315) || has(ctx, 6317);
+    async hasMachete(ctx) {
+        return await has(ctx, 975) || await has(ctx, 6313) || await has(ctx, 6315) || await has(ctx, 6317);
     },
-    hasSpade(ctx) {
-        return has(ctx, 952);
+    async hasSpade(ctx) {
+        return await has(ctx, 952);
     },
-    hasAvantoeSeed(ctx) {
-        return has(ctx, 5298);
+    async hasAvantoeSeed(ctx) {
+        return await has(ctx, 5298);
     },
-    hasCadantineSeed(ctx) {
-        return has(ctx, 5301);
+    async hasCadantineSeed(ctx) {
+        return await has(ctx, 5301);
     },
-    hasDwarfWeedSeed(ctx) {
-        return has(ctx, 5303);
+    async hasDwarfWeedSeed(ctx) {
+        return await has(ctx, 5303);
     },
-    hasGuamSeed(ctx) {
-        return has(ctx, 5291);
+    async hasGuamSeed(ctx) {
+        return await has(ctx, 5291);
     },
-    hasHarralanderSeed(ctx) {
-        return has(ctx, 5294);
+    async hasHarralanderSeed(ctx) {
+        return await has(ctx, 5294);
     },
-    hasHuascaSeed(ctx) {
-        return has(ctx, 30088);
+    async hasHuascaSeed(ctx) {
+        return await has(ctx, 30088);
     },
-    hasIritSeed(ctx) {
-        return has(ctx, 5297);
+    async hasIritSeed(ctx) {
+        return await has(ctx, 5297);
     },
-    hasKwuarmSeed(ctx) {
-        return has(ctx, 5299);
+    async hasKwuarmSeed(ctx) {
+        return await has(ctx, 5299);
     },
-    hasLantadymeSeed(ctx) {
-        return has(ctx, 5302);
+    async hasLantadymeSeed(ctx) {
+        return await has(ctx, 5302);
     },
-    hasMarrentillSeed(ctx) {
-        return has(ctx, 5292);
+    async hasMarrentillSeed(ctx) {
+        return await has(ctx, 5292);
     },
-    hasRanarrSeed(ctx) {
-        return has(ctx, 5295);
+    async hasRanarrSeed(ctx) {
+        return await has(ctx, 5295);
     },
-    hasSnapdragonSeed(ctx) {
-        return has(ctx, 5300);
+    async hasSnapdragonSeed(ctx) {
+        return await has(ctx, 5300);
     },
-    hasTarrominSeed(ctx) {
-        return has(ctx, 5293);
+    async hasTarrominSeed(ctx) {
+        return await has(ctx, 5293);
     },
-    hasToadflaxSeed(ctx) {
-        return has(ctx, 5296);
+    async hasToadflaxSeed(ctx) {
+        return await has(ctx, 5296);
     },
-    hasTorstolSeed(ctx) {
-        return has(ctx, 5304);
+    async hasTorstolSeed(ctx) {
+        return await has(ctx, 5304);
     },
-    hasAvantoe(ctx) {
-        return has(ctx, 261);
+    async hasAvantoe(ctx) {
+        return await has(ctx, 261);
     },
-    hasCadantine(ctx) {
-        return has(ctx, 265);
+    async hasCadantine(ctx) {
+        return await has(ctx, 265);
     },
-    hasDwarfWeed(ctx) {
-        return has(ctx, 267);
+    async hasDwarfWeed(ctx) {
+        return await has(ctx, 267);
     },
-    hasGuam(ctx) {
-        return has(ctx, 249);
+    async hasGuam(ctx) {
+        return await has(ctx, 249);
     },
-    hasHarralander(ctx) {
-        return has(ctx, 255);
+    async hasHarralander(ctx) {
+        return await has(ctx, 255);
     },
-    hasHuasca(ctx) {
-        return has(ctx, 30097);
+    async hasHuasca(ctx) {
+        return await has(ctx, 30097);
     },
-    hasIrit(ctx) {
-        return has(ctx, 259);
+    async hasIrit(ctx) {
+        return await has(ctx, 259);
     },
-    hasKwuarm(ctx) {
-        return has(ctx, 263);
+    async hasKwuarm(ctx) {
+        return await has(ctx, 263);
     },
-    hasLantadyme(ctx) {
-        return has(ctx, 2481);
+    async hasLantadyme(ctx) {
+        return await has(ctx, 2481);
     },
-    hasMarrentill(ctx) {
-        return has(ctx, 251);
+    async hasMarrentill(ctx) {
+        return await has(ctx, 251);
     },
-    hasRanarr(ctx) {
-        return has(ctx, 257);
+    async hasRanarr(ctx) {
+        return await has(ctx, 257);
     },
-    hasSnapdragon(ctx) {
-        return has(ctx, 3000);
+    async hasSnapdragon(ctx) {
+        return await has(ctx, 3000);
     },
-    hasTarromin(ctx) {
-        return has(ctx, 253);
+    async hasTarromin(ctx) {
+        return await has(ctx, 253);
     },
-    hasToadflax(ctx) {
-        return has(ctx, 2998);
+    async hasToadflax(ctx) {
+        return await has(ctx, 2998);
     },
-    hasTorstol(ctx) {
-        return has(ctx, 269);
+    async hasTorstol(ctx) {
+        return await has(ctx, 269);
     },
-    hasWillowSapling(ctx) {
-        return has(ctx, 5371);
+    async hasWillowSapling(ctx) {
+        return await has(ctx, 5371);
     },
-    hasOakSapling(ctx) {
-        return has(ctx, 5370);
+    async hasOakSapling(ctx) {
+        return await has(ctx, 5370);
     },
-    hasYewSapling(ctx) {
-        return has(ctx, 5373);
+    async hasYewSapling(ctx) {
+        return await has(ctx, 5373);
     },
-    hasMapleSapling(ctx) {
-        return has(ctx, 5372);
+    async hasMapleSapling(ctx) {
+        return await has(ctx, 5372);
     },
-    hasMagicSapling(ctx) {
-        return has(ctx, 5374);
+    async hasMagicSapling(ctx) {
+        return await has(ctx, 5374);
     },
-    hasRedwoodSapling(ctx) {
-        return has(ctx, 22859);
+    async hasRedwoodSapling(ctx) {
+        return await has(ctx, 22859);
     },
-    hasTeakSapling(ctx) {
-        return has(ctx, 21477);
+    async hasTeakSapling(ctx) {
+        return await has(ctx, 21477);
     },
-    hasMahoganySapling(ctx) {
-        return has(ctx, 21480);
+    async hasMahoganySapling(ctx) {
+        return await has(ctx, 21480);
     },
-    hasCamphorSapling(ctx) {
-        return has(ctx, 31502);
+    async hasCamphorSapling(ctx) {
+        return await has(ctx, 31502);
     },
-    hasIronwoodSapling(ctx) {
-        return has(ctx, 31505);
+    async hasIronwoodSapling(ctx) {
+        return await has(ctx, 31505);
     },
-    hasRosewoodSapling(ctx) {
-        return has(ctx, 31508);
+    async hasRosewoodSapling(ctx) {
+        return await has(ctx, 31508);
     },
-    hasBananaSapling(ctx) {
-        return has(ctx, 5497);
+    async hasBananaSapling(ctx) {
+        return await has(ctx, 5497);
     },
-    hasAppleSapling(ctx) {
-        return has(ctx, 5496);
+    async hasAppleSapling(ctx) {
+        return await has(ctx, 5496);
     },
-    hasCurrySapling(ctx) {
-        return has(ctx, 5499);
+    async hasCurrySapling(ctx) {
+        return await has(ctx, 5499);
     },
-    hasDragonfruitSapling(ctx) {
-        return has(ctx, 22866);
+    async hasDragonfruitSapling(ctx) {
+        return await has(ctx, 22866);
     },
-    hasRosemarySeed(ctx) {
-        return has(ctx, 5097);
+    async hasRosemarySeed(ctx) {
+        return await has(ctx, 5097);
     },
-    hasCabbageSeed(ctx) {
-        return has(ctx, 5324);
+    async hasCabbageSeed(ctx) {
+        return await has(ctx, 5324);
     },
-    hasBarleySeed(ctx) {
-        return has(ctx, 5305);
+    async hasBarleySeed(ctx) {
+        return await has(ctx, 5305);
     },
-    hasJuteSeed(ctx) {
-        return has(ctx, 5306);
+    async hasJuteSeed(ctx) {
+        return await has(ctx, 5306);
     },
-    hasHammerstoneSeed(ctx) {
-        return has(ctx, 5307);
+    async hasHammerstoneSeed(ctx) {
+        return await has(ctx, 5307);
     },
-    hasAsgarnianSeed(ctx) {
-        return has(ctx, 5308);
+    async hasAsgarnianSeed(ctx) {
+        return await has(ctx, 5308);
     },
-    hasYanillianSeed(ctx) {
-        return has(ctx, 5309);
+    async hasYanillianSeed(ctx) {
+        return await has(ctx, 5309);
     },
-    hasKrandorianSeed(ctx) {
-        return has(ctx, 5310);
+    async hasKrandorianSeed(ctx) {
+        return await has(ctx, 5310);
     },
-    hasWildbloodSeed(ctx) {
-        return has(ctx, 5311);
+    async hasWildbloodSeed(ctx) {
+        return await has(ctx, 5311);
     },
-    hasRedberrySeed(ctx) {
-        return has(ctx, 5101);
+    async hasRedberrySeed(ctx) {
+        return await has(ctx, 5101);
     },
-    hasCadavaberrySeed(ctx) {
-        return has(ctx, 5102);
+    async hasCadavaberrySeed(ctx) {
+        return await has(ctx, 5102);
     },
-    hasDwellberrySeed(ctx) {
-        return has(ctx, 5103);
+    async hasDwellberrySeed(ctx) {
+        return await has(ctx, 5103);
     },
-    hasJangerberrySeed(ctx) {
-        return has(ctx, 5104);
+    async hasJangerberrySeed(ctx) {
+        return await has(ctx, 5104);
     },
-    hasWhiteberrySeed(ctx) {
-        return has(ctx, 5105);
+    async hasWhiteberrySeed(ctx) {
+        return await has(ctx, 5105);
     },
-    hasPoisonIvySeed(ctx) {
-        return has(ctx, 5106);
+    async hasPoisonIvySeed(ctx) {
+        return await has(ctx, 5106);
     },
-    hasMushroomSpore(ctx) {
-        return has(ctx, 5282);
+    async hasMushroomSpore(ctx) {
+        return await has(ctx, 5282);
     },
-    hasSeaweedSpore(ctx) {
-        return has(ctx, 21490);
+    async hasSeaweedSpore(ctx) {
+        return await has(ctx, 21490);
     },
-    hasCactusSeed(ctx) {
-        return has(ctx, 5280);
+    async hasCactusSeed(ctx) {
+        return await has(ctx, 5280);
     },
-    hasPotatoCactusSeed(ctx) {
-        return has(ctx, 22873);
+    async hasPotatoCactusSeed(ctx) {
+        return await has(ctx, 22873);
     },
-    hasCalquatSapling(ctx) {
-        return has(ctx, 5503);
+    async hasCalquatSapling(ctx) {
+        return await has(ctx, 5503);
     },
-    hasWhiteLilySeed(ctx) {
-        return has(ctx, 22887);
+    async hasWhiteLilySeed(ctx) {
+        return await has(ctx, 22887);
     },
-    hasCottonSeed(ctx) {
-        return has(ctx, 31545);
+    async hasCottonSeed(ctx) {
+        return await has(ctx, 31545);
     },
-    hasHempSeed(ctx) {
-        return has(ctx, 31543);
+    async hasHempSeed(ctx) {
+        return await has(ctx, 31543);
     },
-    hasElkhornFrag(ctx) {
-        return has(ctx, 31511);
+    async hasElkhornFrag(ctx) {
+        return await has(ctx, 31511);
     },
-    hasPillarFrag(ctx) {
-        return has(ctx, 31513);
+    async hasPillarFrag(ctx) {
+        return await has(ctx, 31513);
     },
-    hasUmbralFrag(ctx) {
-        return has(ctx, 31515);
+    async hasUmbralFrag(ctx) {
+        return await has(ctx, 31515);
     },
-    hasCupOfTea(ctx) {
-        return hasCupOfTea(ctx);
+    async hasCupOfTea(ctx) {
+        return await hasCupOfTea(ctx);
     },
-    hasSlashWeapon(ctx) {
+    async hasSlashWeapon(ctx) {
         return true; // TODO
     },
-    hasDriftNet(ctx) {
-        return has(ctx, 21652);
+    async hasDriftNet(ctx) {
+        return await has(ctx, 21652);
     },
-    hasNumulite(ctx) {
-        return has(ctx, 21555);
+    async hasNumulite(ctx) {
+        return await has(ctx, 21555);
     },
-    hasHammer(ctx) {
-        return has(ctx, 2347);
+    async hasHammer(ctx) {
+        return await has(ctx, 2347);
     },
-    hasRope(ctx) {
-        return has(ctx, 954);
+    async hasRope(ctx) {
+        return await has(ctx, 954);
     },
-    hasCasket(ctx) {
-        return has(ctx, 405);
+    async hasCasket(ctx) {
+        return await has(ctx, 405);
     },
-    hasPoison(ctx) {
-        return has(ctx, 273);
+    async hasPoison(ctx) {
+        return await has(ctx, 273);
     },
-    hasAnyGuthixBalance(ctx) {
-        return hasAnyGuthixBalance(ctx);
+    async hasAnyGuthixBalance(ctx) {
+        return await hasAnyGuthixBalance(ctx);
     },
-    hasAnySerum207(ctx) {
-        return hasAnySerum207(ctx);
+    async hasAnySerum207(ctx) {
+        return await hasAnySerum207(ctx);
     },
-    hasFullAdamantArmour(ctx) {
-        return has(ctx, 1161) && has(ctx, 1123) && has(ctx, 1073);
+    async canPlantTrees(ctx) {
+        return await canPlantTrees(ctx);
     },
-    hasFullBlackArmour(ctx) {
-        return has(ctx, 1165) && has(ctx, 1125) && has(ctx, 1077);
+    async canPlantHardwoodTrees(ctx) {
+        return await canPlantHardwoodTrees(ctx);
     },
-    hasFullBronzeArmour(ctx) {
-        return has(ctx, 1155) && has(ctx, 1117) && has(ctx, 1075);
+    async canPlantPlants(ctx) {
+        return await canPlantPlants(ctx);
     },
-    hasFullIronArmour(ctx) {
-        return has(ctx, 1153) && has(ctx, 1115) && has(ctx, 1067);
+    async hasHunterMeat(ctx) {
+        return await hasHunterMeat(ctx);
     },
-    hasFullMithrilArmour(ctx) {
-        return has(ctx, 1159) && has(ctx, 1121) && has(ctx, 1071);
+    async hasAirRuneSource(ctx) {
+        return await hasAirRuneSource(ctx);
     },
-    hasFullRuneArmour(ctx) {
-        return has(ctx, 1163) && has(ctx, 1127) && has(ctx, 1079);
+    async hasWaterRuneSource(ctx) {
+        return await hasWaterRuneSource(ctx);
     },
-    hasFullSteelArmour(ctx) {
-        return has(ctx, 1157) && has(ctx, 1119) && has(ctx, 1069);
+    async hasEarthRuneSource(ctx) {
+        return await hasEarthRuneSource(ctx);
     },
-    canPlantTrees(ctx) {
-        return canPlantTrees(ctx);
+    async hasFireRuneSource(ctx) {
+        return await hasFireRuneSource(ctx);
     },
-    canPlantHardwoodTrees(ctx) {
-        return canPlantHardwoodTrees(ctx);
-    },
-    canPlantPlants(ctx) {
-        return canPlantPlants(ctx);
-    },
-    hasHunterMeat(ctx) {
-        return hasHunterMeat(ctx);
-    },
-    hasAirRuneSource(ctx) {
-        return hasAirRuneSource(ctx);
-    },
-    hasWaterRuneSource(ctx) {
-        return hasWaterRuneSource(ctx);
-    },
-    hasEarthRuneSource(ctx) {
-        return hasEarthRuneSource(ctx);
-    },
-    hasFireRuneSource(ctx) {
-        return hasFireRuneSource(ctx);
-    },
-    canEnterGodWarsDungeon(ctx) {
+    async canEnterGodWarsDungeon(ctx) {
         return false; // TODO
     },
-    canDoCommanderZilyana(ctx) {
-        return canDoCommanderZilyana(ctx);
+    async canDoCommanderZilyana(ctx) {
+        return await canDoCommanderZilyana(ctx);
     },
-    canDoGeneralGraardor(ctx) {
-        return canDoGeneralGraardor(ctx);
+    async canDoGeneralGraardor(ctx) {
+        return await canDoGeneralGraardor(ctx);
     },
-    canDoKreearra(ctx) {
-        return canDoKreearra(ctx);
+    async canDoKreearra(ctx) {
+        return await canDoKreearra(ctx);
     },
-    canDoKrilTsutsaroth(ctx) {
-        return canDoKrilTsutsaroth(ctx);
+    async canDoKrilTsutsaroth(ctx) {
+        return await canDoKrilTsutsaroth(ctx);
     },
-    canDoNex(ctx) {
-        return canDoNex(ctx);
+    async canDoNex(ctx) {
+        return await canDoNex(ctx);
     },
-    canCompleteBarbarianHerblore(ctx) {
-        return canCompleteBarbarianHerblore(ctx);
+    async canCompleteBarbarianHerblore(ctx) {
+        return await canCompleteBarbarianHerblore(ctx);
     },
-    canCompleteBarbarianSmithing(ctx) {
-        return canCompleteBarbarianSmithing(ctx);
+    async canCompleteBarbarianSmithing(ctx) {
+        return await canCompleteBarbarianSmithing(ctx);
     },
-    canTrainHerblore(ctx) {
-        return canTrainHerblore(ctx);
+    async canTrainHerblore(ctx) {
+        return await canTrainHerblore(ctx);
     },
-    canTrainCrafting(ctx) {
-        return canTrainCrafting(ctx);
+    async canTrainCrafting(ctx) {
+        return await canTrainCrafting(ctx);
     },
-    canBurnLoarShades(ctx) {
-        return canBurnLoarShades(ctx);
+    async canBurnLoarShades(ctx) {
+        return await canBurnLoarShades(ctx);
     },
-    canBurnPhrinShades(ctx) {
-        return canBurnPhrinShades(ctx);
+    async canBurnPhrinShades(ctx) {
+        return await canBurnPhrinShades(ctx);
     },
-    canBurnRiylShades(ctx) {
-        return canBurnRiylShades(ctx);
+    async canBurnRiylShades(ctx) {
+        return await canBurnRiylShades(ctx);
     },
-    canBurnAsynShades(ctx) {
-        return canBurnAsynShades(ctx);
+    async canBurnAsynShades(ctx) {
+        return await canBurnAsynShades(ctx);
     },
-    canBurnFiyrShades(ctx) {
-        return canBurnFiyrShades(ctx);
+    async canBurnFiyrShades(ctx) {
+        return await canBurnFiyrShades(ctx);
     },
-    canBurnUriumShades(ctx) {
-        return canBurnUriumShades(ctx);
+    async canBurnUriumShades(ctx) {
+        return await canBurnUriumShades(ctx);
     },
-    never(ctx) {
+    async never(ctx) {
         return false;
     }
 };
 
-function canDoTombsOfAmascut(ctx) {
-    return canCompleteBeneathCursedSands(ctx) //
-        && canTrainMining(ctx);
+async function canDoTombsOfAmascut(ctx) {
+    return await canCompleteBeneathCursedSands(ctx) //
+        && await canTrainMining(ctx);
 }
 
-function canCompleteBeneathCursedSands(ctx) {
-    return canCompleteContact(ctx) //
-        && canTrainCrafting(ctx) //
-        && canTrainFiremaking(ctx) //
-        && has(ctx, 453) // Coal
-        && has(ctx, 2351) // Iron bar
-        && has(ctx, 590) // Tinderbox
-        && has(ctx, 952) // Spade
+async function canCompleteBeneathCursedSands(ctx) {
+    return await canCompleteContact(ctx) //
+        && await canTrainCrafting(ctx) //
+        && await canTrainFiremaking(ctx) //
+        && await has(ctx, 453) // Coal
+        && await has(ctx, 2351) // Iron bar
+        && await has(ctx, 590) // Tinderbox
+        && await has(ctx, 952) // Spade
         && (
-            has(ctx, 2136)     // Raw bear meat
-            || has(ctx, 2134)  // Raw rat meat
-            || has(ctx, 2132)  // Raw beef
-            || has(ctx, 2138)  // Raw chicken
-            || has(ctx, 3226)  // Raw rabbit
-            || has(ctx, 25833) // Raw boar meat
-            || has(ctx, 1859)  // Raw ugthanki meat
-            || has(ctx, 9978)  // Raw bird meat
+            await has(ctx, 2136)     // Raw bear meat
+            || await has(ctx, 2134)  // Raw rat meat
+            || await has(ctx, 2132)  // Raw beef
+            || await has(ctx, 2138)  // Raw chicken
+            || await has(ctx, 3226)  // Raw rabbit
+            || await has(ctx, 25833) // Raw boar meat
+            || await has(ctx, 1859)  // Raw ugthanki meat
+            || await has(ctx, 9978)  // Raw bird meat
         );
 }
 
-function hasAnyFeather(ctx) {
-    return has(ctx, 314); // TODO andere feathers
+async function hasAnyFeather(ctx) {
+    return await has(ctx, 314); // TODO andere feathers
 }
 
-function hasAnyLantern(ctx) {
-    return (canTrainFiremaking(ctx) //
-            && (canDoGuardiansOfTheRift(ctx) //
-                || has(ctx, 4548) // Bullseye lantern
-                || has(ctx, 4532) // Candle lantern (black)
-                || has(ctx, 4529) // Candle lantern (white)
-                || has(ctx, 7051) // Unlit bug lantern
-                || has(ctx, 4537) // Oil lantern
-                || canCompleteDesertTreasureII(ctx) //
-            ));
+async function hasAnyLantern(ctx) {
+    return (await canTrainFiremaking(ctx) //
+        && (await canDoGuardiansOfTheRift(ctx) //
+            || await has(ctx, 4548) // Bullseye lantern
+            || await has(ctx, 4532) // Candle lantern (black)
+            || await has(ctx, 4529) // Candle lantern (white)
+            || await has(ctx, 7051) // Unlit bug lantern
+            || await has(ctx, 4537) // Oil lantern
+            || await canCompleteDesertTreasureII(ctx) //
+        ));
 }
 
-function canCompleteContact(ctx) {
-    return canCompletePrinceAliRescue(ctx) //
-        && canCompleteIcthlarinsLittleHelper(ctx); //
+async function canCompleteContact(ctx) {
+    return await canCompletePrinceAliRescue(ctx) //
+        && await canCompleteIcthlarinsLittleHelper(ctx); //
 }
 
-function canCompletePrinceAliRescue(ctx) {
-    return has(ctx, 1761) // Soft clay
-        && has(ctx, 1759) // Ball of wool
-        && has(ctx, 1765) // Yellow dye
-        && has(ctx, 1951) // Redberries
-        && has(ctx, 592)  // Ashes
-        && (has(ctx, 1929) || has(ctx, 1937) || has(ctx, 1921)) // Bucket of water or Jug of water or Bowl of water
-        && has(ctx, 1933) // Pot of flour
-        && has(ctx, 2349) // Bronze bar
-        && has(ctx, 1013) // Pink skirt
-        && has(ctx, 1917) // Beer
-        && has(ctx, 954); //  Rope
+async function canCompletePrinceAliRescue(ctx) {
+    return await has(ctx, 1761) // Soft clay
+        && await has(ctx, 1759) // Ball of wool
+        && await has(ctx, 1765) // Yellow dye
+        && await has(ctx, 1951) // Redberries
+        && await has(ctx, 592)  // Ashes
+        && (await has(ctx, 1929) || await has(ctx, 1937) || await has(ctx, 1921)) // Bucket of water or Jug of water or Bowl of water
+        && await has(ctx, 1933) // Pot of flour
+        && await has(ctx, 2349) // Bronze bar
+        && await has(ctx, 1013) // Pink skirt
+        && await has(ctx, 1917) // Beer
+        && await has(ctx, 954); //  Rope
 }
 
-function canCompleteShadesOfMortton(ctx) {
-    return canCompletePriestInPeril(ctx) //
-        && canTrainCrafting(ctx) //
-        && canTrainHerblore(ctx) //
-        && canTrainFiremaking(ctx) //
-        && has(ctx, 3410)  // Serum 207 (3)
-        && has(ctx, 95)    // Tarromin potion (unf) (might not be needed?)
-        && has(ctx, 592)   // Ashes (might not be needed?)
-        && has(ctx, 590)   // Tinderbox (might not be needed?)
-        && has(ctx, 1511)  // Logs (might not be needed?)
-        && (has(ctx, 2347) || has(ctx, 3678)) // Hammer of Flamtaer hammer
+async function canCompleteShadesOfMortton(ctx) {
+    return await canCompletePriestInPeril(ctx) //
+        && await canTrainCrafting(ctx) //
+        && await canTrainHerblore(ctx) //
+        && await canTrainFiremaking(ctx) //
+        && await has(ctx, 3410)  // Serum 207 (3)
+        && await has(ctx, 95)    // Tarromin potion (unf) (might not be needed?)
+        && await has(ctx, 592)   // Ashes (might not be needed?)
+        && await has(ctx, 590)   // Tinderbox (might not be needed?)
+        && await has(ctx, 1511)  // Logs (might not be needed?)
+        && (await has(ctx, 2347) || await has(ctx, 3678)) // Hammer of Flamtaer hammer
         && (
-            has(ctx, 3438)     // Pyre logs
-            || has(ctx, 3440)  // Oak pyre logs
-            || has(ctx, 3442)  // Willow pyre logs
-            || has(ctx, 6211)  // Teak pyre logs
-            || has(ctx, 10808) // Arctic pyre logs
-            || has(ctx, 3444)  // Maple pyre logs
-            || has(ctx, 6213)  // Mahogany pyre logs
-            || has(ctx, 31383) // Camphor pyre logs
-            || has(ctx, 3446)  // Yew pyre logs
-            || has(ctx, 3448)  // Magic pyre logs
-            || has(ctx, 31386) // Ironwood pyre logs
-            || has(ctx, 19672) // Redwood pyre logs
-            || has(ctx, 31389) // Rosewood pyre logs
+            await has(ctx, 3438)     // Pyre logs
+            || await has(ctx, 3440)  // Oak pyre logs
+            || await has(ctx, 3442)  // Willow pyre logs
+            || await has(ctx, 6211)  // Teak pyre logs
+            || await has(ctx, 10808) // Arctic pyre logs
+            || await has(ctx, 3444)  // Maple pyre logs
+            || await has(ctx, 6213)  // Mahogany pyre logs
+            || await has(ctx, 31383) // Camphor pyre logs
+            || await has(ctx, 3446)  // Yew pyre logs
+            || await has(ctx, 3448)  // Magic pyre logs
+            || await has(ctx, 31386) // Ironwood pyre logs
+            || await has(ctx, 19672) // Redwood pyre logs
+            || await has(ctx, 31389) // Rosewood pyre logs
         )
-        && has(ctx, 3396); // Loar remains
+        && await has(ctx, 3396); // Loar remains
 
 }
 
-function canBurnLoarShades(ctx) {
-    return canCompleteShadesOfMortton(ctx);
+async function canBurnLoarShades(ctx) {
+    return await canCompleteShadesOfMortton(ctx);
 }
 
-function canBurnPhrinShades(ctx) {
-    return canBurnLoarShades(ctx) //
-        && has(ctx, 3398); // Phrin remains
+async function canBurnPhrinShades(ctx) {
+    return await canBurnLoarShades(ctx) //
+        && await has(ctx, 3398); // Phrin remains
 }
 
-function canBurnRiylShades(ctx) {
-    return canBurnPhrinShades(ctx) //
-        && has(ctx, 3400) // Riyl remains
+async function canBurnRiylShades(ctx) {
+    return await canBurnPhrinShades(ctx) //
+        && await has(ctx, 3400) // Riyl remains
         && (
-            has(ctx, 3442)     // Willow pyre logs
-            || has(ctx, 6211)  // Teak pyre logs
-            || has(ctx, 10808) // Arctic pyre logs
-            || has(ctx, 3444)  // Maple pyre logs
-            || has(ctx, 6213)  // Mahogany pyre logs
-            || has(ctx, 31383) // Camphor pyre logs
-            || has(ctx, 3446)  // Yew pyre logs
-            || has(ctx, 3448)  // Magic pyre logs
-            || has(ctx, 31386) // Ironwood pyre logs
-            || has(ctx, 19672) // Redwood pyre logs
-            || has(ctx, 31389) // Rosewood pyre logs
+            await has(ctx, 3442)     // Willow pyre logs
+            || await has(ctx, 6211)  // Teak pyre logs
+            || await has(ctx, 10808) // Arctic pyre logs
+            || await has(ctx, 3444)  // Maple pyre logs
+            || await has(ctx, 6213)  // Mahogany pyre logs
+            || await has(ctx, 31383) // Camphor pyre logs
+            || await has(ctx, 3446)  // Yew pyre logs
+            || await has(ctx, 3448)  // Magic pyre logs
+            || await has(ctx, 31386) // Ironwood pyre logs
+            || await has(ctx, 19672) // Redwood pyre logs
+            || await has(ctx, 31389) // Rosewood pyre logs
         );
 }
 
-function canBurnAsynShades(ctx) {
-    return canBurnRiylShades(ctx) //
-        && has(ctx, 3402) // Asyn remains
+async function canBurnAsynShades(ctx) {
+    return await canBurnRiylShades(ctx) //
+        && await has(ctx, 3402) // Asyn remains
         && (
-            has(ctx, 31383)    // Camphor pyre logs
-            || has(ctx, 3446)  // Yew pyre logs
-            || has(ctx, 3448)  // Magic pyre logs
-            || has(ctx, 31386) // Ironwood pyre logs
-            || has(ctx, 19672) // Redwood pyre logs
-            || has(ctx, 31389) // Rosewood pyre logs
+            await has(ctx, 31383)    // Camphor pyre logs
+            || await has(ctx, 3446)  // Yew pyre logs
+            || await has(ctx, 3448)  // Magic pyre logs
+            || await has(ctx, 31386) // Ironwood pyre logs
+            || await has(ctx, 19672) // Redwood pyre logs
+            || await has(ctx, 31389) // Rosewood pyre logs
         );
 }
 
-function canBurnFiyrShades(ctx) {
-    return canBurnAsynShades(ctx) //
-        && has(ctx, 3404) // Fiyr remains
+async function canBurnFiyrShades(ctx) {
+    return await canBurnAsynShades(ctx) //
+        && await has(ctx, 3404) // Fiyr remains
         && (
-            has(ctx, 3448)     // Magic pyre logs
-            || has(ctx, 31386) // Ironwood pyre logs
-            || has(ctx, 19672) // Redwood pyre logs
-            || has(ctx, 31389) // Rosewood pyre logs
+            await has(ctx, 3448)     // Magic pyre logs
+            || await has(ctx, 31386) // Ironwood pyre logs
+            || await has(ctx, 19672) // Redwood pyre logs
+            || await has(ctx, 31389) // Rosewood pyre logs
         );
 }
 
-function canBurnUriumShades(ctx) {
-    return canBurnFiyrShades(ctx) //
-        && has(ctx, 25419) // Urium remains
+async function canBurnUriumShades(ctx) {
+    return await canBurnFiyrShades(ctx) //
+        && await has(ctx, 25419) // Urium remains
         && (
-            has(ctx, 19672) // Redwood pyre logs
-            || has(ctx, 31389) // Rosewood pyre logs
+            await has(ctx, 19672) // Redwood pyre logs
+            || await has(ctx, 31389) // Rosewood pyre logs
         );
 }
 
-function hasCupOfTea(ctx) {
-    return has(ctx, 1978) // Cup of tea
-        || (has(ctx, 1980) && has(ctx, 1921)) // Empty cup and Bowl of water
+async function hasCupOfTea(ctx) {
+    return await has(ctx, 1978) // Cup of tea
+        || (await has(ctx, 1980) && await has(ctx, 1921)) // Empty cup and Bowl of water
 }
 
-function hasAnyGuthixBalance(ctx) {
-    return has(ctx, 7660) // Guthix balance(4)
-        || has(ctx, 7662) // Guthix balance(3)
-        || has(ctx, 7664) // Guthix balance(2)
-        || has(ctx, 7666) // Guthix balance(1)
+async function hasAnyGuthixBalance(ctx) {
+    return await has(ctx, 7660) // Guthix balance(4)
+        || await has(ctx, 7662) // Guthix balance(3)
+        || await has(ctx, 7664) // Guthix balance(2)
+        || await has(ctx, 7666) // Guthix balance(1)
 }
 
-function hasAnySerum207(ctx) {
-    return has(ctx, 3408) // Serum 207(4)
-        || has(ctx, 3410) // Serum 207(3)
-        || has(ctx, 3412) // Serum 207(2)
-        || has(ctx, 3414) // Serum 207(1)
+async function hasAnySerum207(ctx) {
+    return await has(ctx, 3408) // Serum 207(4)
+        || await has(ctx, 3410) // Serum 207(3)
+        || await has(ctx, 3412) // Serum 207(2)
+        || await has(ctx, 3414) // Serum 207(1)
 }
 
-function hasAirRuneSource(ctx) {
-    return has(ctx, 556) // Air rune
-        || has(ctx, 4696) // Dust rune
-        || has(ctx, 4697) // Smoke rune
-        || has(ctx, 4695) // Mist rune
-        || has(ctx, 1381) // Staff of air
-        || has(ctx, 1397) // Air battlestaff
-        || has(ctx, 1405) // Mystic air staff
-        || has(ctx, 20736) // Dust battlestaff
-        || has(ctx, 20739) // Mystic dust staff
-        || has(ctx, 11998) // Smoke battlestaff
-        || has(ctx, 12000) // Mystic smoke staff
-        || has(ctx, 20730) // Mist battlestaff
-        || has(ctx, 20733); // Mystic mist staff
+async function hasAirRuneSource(ctx) {
+    return await has(ctx, 556) // Air rune
+        || await has(ctx, 4696) // Dust rune
+        || await has(ctx, 4697) // Smoke rune
+        || await has(ctx, 4695) // Mist rune
+        || await has(ctx, 1381) // Staff of air
+        || await has(ctx, 1397) // Air battlestaff
+        || await has(ctx, 1405) // Mystic air staff
+        || await has(ctx, 20736) // Dust battlestaff
+        || await has(ctx, 20739) // Mystic dust staff
+        || await has(ctx, 11998) // Smoke battlestaff
+        || await has(ctx, 12000) // Mystic smoke staff
+        || await has(ctx, 20730) // Mist battlestaff
+        || await has(ctx, 20733); // Mystic mist staff
 }
 
-function hasWaterRuneSource(ctx) {
-    return has(ctx, 555) // Water rune
-        || has(ctx, 4698) // Mud rune
-        || has(ctx, 4694) // Steam rune
-        || has(ctx, 4695) // Mist rune
-        || has(ctx, 1383) // Staff of water
-        || has(ctx, 1395) // Water battlestaff
-        || has(ctx, 1403) // Mystic water staff
-        || has(ctx, 6562) // Mud battlestaff
-        || has(ctx, 6563) // Mystic mud staff
-        || has(ctx, 11787) // Steam battlestaff
-        || has(ctx, 11789) // Mystic steam staff
-        || has(ctx, 20730) // Mist battlestaff
-        || has(ctx, 20733) // Mystic mist staff
-        || (has(ctx, 25576) && has(ctx, 25578)); // Tome of water and Soaked page
+async function hasWaterRuneSource(ctx) {
+    return await has(ctx, 555) // Water rune
+        || await has(ctx, 4698) // Mud rune
+        || await has(ctx, 4694) // Steam rune
+        || await has(ctx, 4695) // Mist rune
+        || await has(ctx, 1383) // Staff of water
+        || await has(ctx, 1395) // Water battlestaff
+        || await has(ctx, 1403) // Mystic water staff
+        || await has(ctx, 6562) // Mud battlestaff
+        || await has(ctx, 6563) // Mystic mud staff
+        || await has(ctx, 11787) // Steam battlestaff
+        || await has(ctx, 11789) // Mystic steam staff
+        || await has(ctx, 20730) // Mist battlestaff
+        || await has(ctx, 20733) // Mystic mist staff
+        || (await has(ctx, 25576) && await has(ctx, 25578)); // Tome of water and Soaked page
 }
 
-function hasEarthRuneSource(ctx) {
-    return has(ctx, 557) // Earth rune
-        || has(ctx, 4696) // Dust rune
-        || has(ctx, 4698) // Mud rune
-        || has(ctx, 4699) // Lava rune
-        || has(ctx, 1385) // Staff of earth
-        || has(ctx, 1399) // Earth battlestaff
-        || has(ctx, 1407) // Mystic earth staff
-        || has(ctx, 20736) // Dust battlestaff
-        || has(ctx, 20739) // Mystic dust staff
-        || has(ctx, 6562) // Mud battlestaff
-        || has(ctx, 6563) // Mystic mud staff
-        || has(ctx, 3053) // Lava battlestaff
-        || has(ctx, 3054) // Mystic lava staff
-        || (has(ctx, 30066) && has(ctx, 30068)); // Tome of earth and Soiled page
+async function hasEarthRuneSource(ctx) {
+    return await has(ctx, 557) // Earth rune
+        || await has(ctx, 4696) // Dust rune
+        || await has(ctx, 4698) // Mud rune
+        || await has(ctx, 4699) // Lava rune
+        || await has(ctx, 1385) // Staff of earth
+        || await has(ctx, 1399) // Earth battlestaff
+        || await has(ctx, 1407) // Mystic earth staff
+        || await has(ctx, 20736) // Dust battlestaff
+        || await has(ctx, 20739) // Mystic dust staff
+        || await has(ctx, 6562) // Mud battlestaff
+        || await has(ctx, 6563) // Mystic mud staff
+        || await has(ctx, 3053) // Lava battlestaff
+        || await has(ctx, 3054) // Mystic lava staff
+        || (await has(ctx, 30066) && await has(ctx, 30068)); // Tome of earth and Soiled page
 }
 
-function hasFireRuneSource(ctx) {
-    return has(ctx, 554) // Fire rune
-        || has(ctx, 4699) // Lava rune
-        || has(ctx, 4697) // Smoke rune
-        || has(ctx, 4694) // Steam rune
-        || has(ctx, 28929) // Sunfire rune
-        || has(ctx, 1387) // Staff of fire
-        || has(ctx, 1393) // Fire battlestaff
-        || has(ctx, 1401) // Mystic fire staff
-        || has(ctx, 3053) // Lava battlestaff
-        || has(ctx, 3054) // Mystic lava staff
-        || has(ctx, 11998) // Smoke battlestaff
-        || has(ctx, 12000) // Mystic smoke staff
-        || has(ctx, 11787) // Steam battlestaff
-        || has(ctx, 11789) // Mystic steam staff
-        || (has(ctx, 20716) && has(ctx, 20718)); // Tome of fire and Burnt page
+async function hasFireRuneSource(ctx) {
+    return await has(ctx, 554) // Fire rune
+        || await has(ctx, 4699) // Lava rune
+        || await has(ctx, 4697) // Smoke rune
+        || await has(ctx, 4694) // Steam rune
+        || await has(ctx, 28929) // Sunfire rune
+        || await has(ctx, 1387) // Staff of fire
+        || await has(ctx, 1393) // Fire battlestaff
+        || await has(ctx, 1401) // Mystic fire staff
+        || await has(ctx, 3053) // Lava battlestaff
+        || await has(ctx, 3054) // Mystic lava staff
+        || await has(ctx, 11998) // Smoke battlestaff
+        || await has(ctx, 12000) // Mystic smoke staff
+        || await has(ctx, 11787) // Steam battlestaff
+        || await has(ctx, 11789) // Mystic steam staff
+        || (await has(ctx, 20716) && await has(ctx, 20718)); // Tome of fire and Burnt page
 }
 
-function canReachTrollheim(ctx) {
-    return canCompleteDeathPlateau(ctx); // TODO achievement diaries
+async function canReachTrollheim(ctx) {
+    return await canCompleteDeathPlateau(ctx); // TODO achievement diaries
 }
 
-function hasHunterMeat(ctx) {
-    return has(ctx, 29104)
-        || has(ctx, 29122)
-        || has(ctx, 29101)
-        || has(ctx, 29119)
-        || has(ctx, 29125)
-        || has(ctx, 29110)
-        || has(ctx, 29116)
-        || has(ctx, 29107)
-        || has(ctx, 29113)
+async function hasHunterMeat(ctx) {
+    return await has(ctx, 29104)
+        || await has(ctx, 29122)
+        || await has(ctx, 29101)
+        || await has(ctx, 29119)
+        || await has(ctx, 29125)
+        || await has(ctx, 29110)
+        || await has(ctx, 29116)
+        || await has(ctx, 29107)
+        || await has(ctx, 29113)
 }
 
-function canGetBirdNestWyson(ctx) {
-    return has(ctx, 7418)  // Mole skin
-        && has(ctx, 7416); // Mole claw
+async function canGetBirdNestWyson(ctx) {
+    return await has(ctx, 7418)  // Mole skin
+        && await has(ctx, 7416); // Mole claw
 }
 
-function canDoCommanderZilyana(ctx) {
+async function canDoCommanderZilyana(ctx) {
     return false; // TODO
 }
 
-function canDoGeneralGraardor(ctx) {
+async function canDoGeneralGraardor(ctx) {
     return false; // TODO
 }
 
-function canDoKreearra(ctx) {
+async function canDoKreearra(ctx) {
     return false; // TODO
 }
 
-function canDoKrilTsutsaroth(ctx) {
+async function canDoKrilTsutsaroth(ctx) {
     return false; // TODO
 }
 
-function canDoNex(ctx) {
+async function canDoNex(ctx) {
     return false; // TODO
 }
 
-function canBirdSnare(ctx) {
-    return canTrainHunter(ctx) //
-        && has(ctx, 10006); // Bird snare
+async function canBirdSnare(ctx) {
+    return await canTrainHunter(ctx) //
+        && await has(ctx, 10006); // Bird snare
 }
 
-function canNooseWand(ctx) {
-    return canTrainHunter(ctx) //
-        && has(ctx, 10150); // Bird snare
+async function canNooseWand(ctx) {
+    return await canTrainHunter(ctx) //
+        && await has(ctx, 10150); // Bird snare
 }
 
-function canCatchImplingsInJars(ctx) {
-    return canTrainHunter(ctx) //
-        && has(ctx, 10010)  // Butterfly net
-        && has(ctx, 11260); // Impling jar
+async function canCatchImplingsInJars(ctx) {
+    return await canTrainHunter(ctx) //
+        && await has(ctx, 10010)  // Butterfly net
+        && await has(ctx, 11260); // Impling jar
 }
 
-function canDeadfallTrap(ctx) {
-    return canTrainHunter(ctx) //
-        && has(ctx, 946) // Knife
+async function canDeadfallTrap(ctx) {
+    return await canTrainHunter(ctx) //
+        && await has(ctx, 946) // Knife
         && (
-            has(ctx, 1511)     // logs
-            || has(ctx, 1521)  // Oak logs
-            || has(ctx, 1519)  // Willow logs
-            || has(ctx, 6333)  // Teak logs
-            || has(ctx, 1517)  // Maple logs
-            || has(ctx, 6332)  // Mahogany logs
-            || has(ctx, 32904) // Camphor logs
-            || has(ctx, 1515)  // Yew logs
-            || has(ctx, 1513)  // Magic logs
-            || has(ctx, 32907) // Ironwood logs
-            || has(ctx, 32910) // Rosewood logs
-            || canTrainWoodcutting(ctx) // for untradable Juniper logs
+            await has(ctx, 1511)     // logs
+            || await has(ctx, 1521)  // Oak logs
+            || await has(ctx, 1519)  // Willow logs
+            || await has(ctx, 6333)  // Teak logs
+            || await has(ctx, 1517)  // Maple logs
+            || await has(ctx, 6332)  // Mahogany logs
+            || await has(ctx, 32904) // Camphor logs
+            || await has(ctx, 1515)  // Yew logs
+            || await has(ctx, 1513)  // Magic logs
+            || await has(ctx, 32907) // Ironwood logs
+            || await has(ctx, 32910) // Rosewood logs
+            || await canTrainWoodcutting(ctx) // for untradable Juniper logs
         );
 }
 
-function canPitfallTrap(ctx) {
-    return canTrainHunter(ctx) //
-        && has(ctx, 946) // Knife
-        && (has(ctx, 10029) || has(ctx, 29305)) // Teasing stick of Hunter's spear
+async function canPitfallTrap(ctx) {
+    return await canTrainHunter(ctx) //
+        && await has(ctx, 946) // Knife
+        && (await has(ctx, 10029) || await has(ctx, 29305)) // Teasing stick of Hunter's spear
         && (
-            has(ctx, 1511)     // logs
-            || has(ctx, 1521)  // Oak logs
-            || has(ctx, 1519)  // Willow logs
-            || has(ctx, 6333)  // Teak logs
-            || has(ctx, 1517)  // Maple logs
-            || has(ctx, 6332)  // Mahogany logs
-            || has(ctx, 32904) // Camphor logs
-            || has(ctx, 1515)  // Yew logs
-            || has(ctx, 1513)  // Magic logs
-            || has(ctx, 32907) // Ironwood logs
-            || has(ctx, 32910) // Rosewood logs
-            || canTrainWoodcutting(ctx) // for untradable Juniper logs
+            await has(ctx, 1511)     // logs
+            || await has(ctx, 1521)  // Oak logs
+            || await has(ctx, 1519)  // Willow logs
+            || await has(ctx, 6333)  // Teak logs
+            || await has(ctx, 1517)  // Maple logs
+            || await has(ctx, 6332)  // Mahogany logs
+            || await has(ctx, 32904) // Camphor logs
+            || await has(ctx, 1515)  // Yew logs
+            || await has(ctx, 1513)  // Magic logs
+            || await has(ctx, 32907) // Ironwood logs
+            || await has(ctx, 32910) // Rosewood logs
+            || await canTrainWoodcutting(ctx) // for untradable Juniper logs
         );
 }
 
-function canCatchSalamanders(ctx) {
-    return canTrainHunter(ctx) //
-        && has(ctx, 954) // Rope
-        && has(ctx, 303); // Small fishing net
+async function canCatchSalamanders(ctx) {
+    return await canTrainHunter(ctx) //
+        && await has(ctx, 954) // Rope
+        && await has(ctx, 303); // Small fishing net
 }
 
-function canCatchCrabs(ctx) {
-    return canTrainConstruction(ctx) //
-        && canTrainHunter(ctx) //
-        && has(ctx, 2347)      // Hammer
-        && has(ctx, 8794)      // Saw
-        && has(ctx, 1925)      // Bucket
-        && has(ctx, 960)       // Plank
-        && hasAnyNails(ctx);
+async function canCatchCrabs(ctx) {
+    return await canTrainConstruction(ctx) //
+        && await canTrainHunter(ctx) //
+        && await has(ctx, 2347)      // Hammer
+        && await has(ctx, 8794)      // Saw
+        && await has(ctx, 1925)      // Bucket
+        && await has(ctx, 960)       // Plank
+        && await hasAnyNails(ctx);
 }
 
-function hasAnyNails(ctx) {
-    return has(ctx, 4819)      // Bronze nails
-            || has(ctx, 4820)  // Iron nails
-            || has(ctx, 1539)  // Steel nails
-            || has(ctx, 4821)  // Black nails
-            || has(ctx, 4822)  // Mithril nails
-            || has(ctx, 4823)  // Adamantite nails
-            || has(ctx, 4824)  // Rune nails
-            || has(ctx, 31406);// Dragon nails
+async function hasAnyNails(ctx) {
+    return await has(ctx, 4819)      // Bronze nails
+        || await has(ctx, 4820)  // Iron nails
+        || await has(ctx, 1539)  // Steel nails
+        || await has(ctx, 4821)  // Black nails
+        || await has(ctx, 4822)  // Mithril nails
+        || await has(ctx, 4823)  // Adamantite nails
+        || await has(ctx, 4824)  // Rune nails
+        || await has(ctx, 31406);// Dragon nails
 }
 
-function canEnterKalphiteLair(ctx) {
-    return has(ctx, 954); // Rope
+async function canEnterKalphiteLair(ctx) {
+    return await has(ctx, 954); // Rope
 }
 
-function canEnterAncientCavern(ctx) {
-    return canCompleteBarbarianFiremaking(ctx);
+async function canEnterAncientCavern(ctx) {
+    return await canCompleteBarbarianFiremaking(ctx);
 }
 
-function canCompleteBarbarianFiremaking(ctx) {
-    return has(ctx, 1521) // Oak logs
+async function canCompleteBarbarianFiremaking(ctx) {
+    return await has(ctx, 1521) // Oak logs
         && ( //
-            has(ctx, 841) // Shortbow
-            || has(ctx, 839) // Longbow
-            || has(ctx, 843) // Oak shortbow
-            || has(ctx, 845) // Oak longbow
-            || has(ctx, 849) // Willow shortbow
-            || has(ctx, 847) // Willow longbow
-            || has(ctx, 853) // Maple shortbow
-            || has(ctx, 851) // Maple longbow
-            || has(ctx, 857) // Yew shortbow
-            || has(ctx, 855) // Yew longbow
-            || has(ctx, 861) // Magic shortbow
-            || has(ctx, 859) // Magic longbow
+            await has(ctx, 841) // Shortbow
+            || await has(ctx, 839) // Longbow
+            || await has(ctx, 843) // Oak shortbow
+            || await has(ctx, 845) // Oak longbow
+            || await has(ctx, 849) // Willow shortbow
+            || await has(ctx, 847) // Willow longbow
+            || await has(ctx, 853) // Maple shortbow
+            || await has(ctx, 851) // Maple longbow
+            || await has(ctx, 857) // Yew shortbow
+            || await has(ctx, 855) // Yew longbow
+            || await has(ctx, 861) // Magic shortbow
+            || await has(ctx, 859) // Magic longbow
         );
 }
 
-function canCompleteBarbarianFishing(ctx) {
-    return canTrainFishing(ctx);
+async function canCompleteBarbarianFishing(ctx) {
+    return await canTrainFishing(ctx);
 }
 
-function canCompleteBarbarianHerblore(ctx) {
-    return canCompleteDruidicRitual(ctx) //
-        && canCompleteBarbarianFiremaking(ctx) //
-        && canCompleteBarbarianFishing(ctx) //
-        && has(ctx, 123) // Attack potion(2)
-        && (has(ctx, 11324) || has(ctx, 11326)); // Roe or Caviar
+async function canCompleteBarbarianHerblore(ctx) {
+    return await canCompleteDruidicRitual(ctx) //
+        && await canCompleteBarbarianFiremaking(ctx) //
+        && await canCompleteBarbarianFishing(ctx) //
+        && await has(ctx, 123) // Attack potion(2)
+        && (await has(ctx, 11324) || await has(ctx, 11326)); // Roe or Caviar
 }
 
-function canCompleteBarbarianSmithing(ctx) {
-    return canCompleteBarbarianFishing(ctx) //
-        && canCompleteTaiBwoWannaiTrio(ctx) //
-        && canTrainSmithing(ctx) //
+async function canCompleteBarbarianSmithing(ctx) {
+    return await canCompleteBarbarianFishing(ctx) //
+        && await canCompleteTaiBwoWannaiTrio(ctx) //
+        && await canTrainSmithing(ctx) //
         && ( //
-            (has(ctx, 2349) && has(ctx, 1511)) // Bronze bar & Logs
-            || (has(ctx, 2351) && has(ctx, 1521)) // Iron bar & Oak Logs
-            || (has(ctx, 2353) && has(ctx, 1519)) // Steel bar & Willow Logs
-            || (has(ctx, 2359) && has(ctx, 1517)) // Mithril bar & Maple Logs
-            || (has(ctx, 2361) && has(ctx, 1515)) // Adamantite bar & Yew Logs
-            || (has(ctx, 2363) && has(ctx, 1513)) // Runite bar & Magic Logs
+            (await has(ctx, 2349) && await has(ctx, 1511)) // Bronze bar & Logs
+            || (await has(ctx, 2351) && await has(ctx, 1521)) // Iron bar & Oak Logs
+            || (await has(ctx, 2353) && await has(ctx, 1519)) // Steel bar & Willow Logs
+            || (await has(ctx, 2359) && await has(ctx, 1517)) // Mithril bar & Maple Logs
+            || (await has(ctx, 2361) && await has(ctx, 1515)) // Adamantite bar & Yew Logs
+            || (await has(ctx, 2363) && await has(ctx, 1513)) // Runite bar & Magic Logs
         )
 }
 
-function canCompleteTaiBwoWannaiTrio(ctx) {
+async function canCompleteTaiBwoWannaiTrio(ctx) {
     return false; // TODO
 }
 
-function canCompleteTheFrozenDoor(ctx) {
-    return canDoKreearra(ctx) //
-        && canDoGeneralGraardor(ctx) //
-        && canDoCommanderZilyana(ctx) //
-        && canDoKrilTsutsaroth(ctx);
+async function canCompleteTheFrozenDoor(ctx) {
+    return await canDoKreearra(ctx) //
+        && await canDoGeneralGraardor(ctx) //
+        && await canDoCommanderZilyana(ctx) //
+        && await canDoKrilTsutsaroth(ctx);
 }
 
-function canCompleteMakingHistory(ctx) {
-    return canCompletePriestInPeril(ctx)
-        && has(ctx, 1694) //Sapphire amulet
-        && has(ctx, 952); // Spade
+async function canCompleteMakingHistory(ctx) {
+    return await canCompletePriestInPeril(ctx)
+        && await has(ctx, 1694) //Sapphire amulet
+        && await has(ctx, 952); // Spade
 }
 
-function canSailToTheNorthernOcean(ctx) {
-    return canCompletePandemonium(ctx) //
+async function canSailToTheNorthernOcean(ctx) {
+    return await canCompletePandemonium(ctx) //
         && false; // TODO sailing stuff
 }
 
-function canSailToTheWesternOcean(ctx) {
-    return canCompletePandemonium(ctx) //
+async function canSailToTheWesternOcean(ctx) {
+    return await canCompletePandemonium(ctx) //
         && false; // TODO sailing stuff
 }
 
-function canSailToYnysdail(ctx) {
-    return canSailToTheWesternOcean(ctx);
+async function canSailToYnysdail(ctx) {
+    return await canSailToTheWesternOcean(ctx);
 }
 
-function canSailToGrimstone(ctx) {
-    return canSailToTheNorthernOcean(ctx);
+async function canSailToGrimstone(ctx) {
+    return await canSailToTheNorthernOcean(ctx);
 }
 
-function canSailToBrittleIsle(ctx) {
-    return canSailToTheNorthernOcean(ctx);
+async function canSailToBrittleIsle(ctx) {
+    return await canSailToTheNorthernOcean(ctx);
 }
 
-function canEnterTheCharredDungeon(ctx) {
-    return canCompletePandemonium(ctx) //
-        && has(ctx, 954); // Rope
+async function canEnterTheCharredDungeon(ctx) {
+    return await canCompletePandemonium(ctx) //
+        && await has(ctx, 954); // Rope
 }
 
-function canLongrange(ctx) {
-    return ((has(ctx, 841) || has(ctx, 839)) // Shortbow or Longbow
-        && (has(ctx, 882) || has(ctx, 884))) // Bronze arrow or Iron arrow
-        || ((has(ctx, 837) || has(ctx, 9174)) // Crossbow or Bronze crossbow
-            && has(ctx, 877)) // Bronze bolts
-        || ((has(ctx, 556) || has(ctx, 4696) || has(ctx, 1381) || has(ctx, 1397)) // Air rune, Dust rune, Staff of air or Air battlestaff
-            && (has(ctx, 558) || has(ctx, 562) || has(ctx, 560) || has(ctx, 565))) // Mind rune, Chaos rune, Death rune or Blood rune
+async function canLongrange(ctx) {
+    return ((await has(ctx, 841) || await has(ctx, 839)) // Shortbow or Longbow
+        && (await has(ctx, 882) || await has(ctx, 884))) // Bronze arrow or Iron arrow
+        || ((await has(ctx, 837) || await has(ctx, 9174)) // Crossbow or Bronze crossbow
+            && await has(ctx, 877)) // Bronze bolts
+        || ((await has(ctx, 556) || await has(ctx, 4696) || await has(ctx, 1381) || await has(ctx, 1397)) // Air rune, Dust rune, Staff of air or Air battlestaff
+            && (await has(ctx, 558) || await has(ctx, 562) || await has(ctx, 560) || await has(ctx, 565))) // Mind rune, Chaos rune, Death rune or Blood rune
 }
 
-function canCastStrikeSpells(ctx) {
-    return ((has(ctx, 556) || has(ctx, 4696) || has(ctx, 1381) || has(ctx, 1397)) // Air rune, Dust rune, Staff of air or Air battlestaff
-        && has(ctx, 558)) // Mind rune
+async function canCastStrikeSpells(ctx) {
+    return ((await has(ctx, 556) || await has(ctx, 4696) || await has(ctx, 1381) || await has(ctx, 1397)) // Air rune, Dust rune, Staff of air or Air battlestaff
+        && await has(ctx, 558)) // Mind rune
 }
 
-function canShortrange(ctx) {
-    return canLongrange(ctx) //
-        || has(ctx, 864) // Bronze knife
-        || has(ctx, 870) // Bronze knife(p)
-        || has(ctx, 863) // Iron knife
-        || has(ctx, 865) // Steel knife
-        || has(ctx, 869) // Black knife
-        || has(ctx, 866) // Mithril knife
-        || has(ctx, 867) // Adamant knife
-        || has(ctx, 868) // Rune knife
-        || has(ctx, 5667) // Rune knife(p++)
-        || has(ctx, 806) // Bronze dart
-        || has(ctx, 807) // Iron dart
-        || has(ctx, 813) // Iron dart(p)
-        || has(ctx, 808) // Steel dart
-        || has(ctx, 3093) // Black dart
-        || has(ctx, 809) // Mithril dart
-        || has(ctx, 810) // Adamant dart
-        || has(ctx, 816) // Adamant dart(p)
-        || has(ctx, 811) // Rune dart
-        || has(ctx, 817) // Rune dart(p)
-        || has(ctx, 6522) // Toktz-xil-ul
-        || has(ctx, 10033) // Chinchompa
-        || has(ctx, 10034) // Red chinchompa
-        || has(ctx, 11959) // Black chinchompa
-        || has(ctx, 800) // Bronze thrownaxe
-        || has(ctx, 801) // Iron thrownaxe
-        || has(ctx, 802) // Steel thrownaxe
-        || has(ctx, 803) // Mithril thrownaxe
-        || has(ctx, 804) // Adamant thrownaxe
-        || has(ctx, 805); // Rune thrownaxe
+async function canShortrange(ctx) {
+    return await canLongrange(ctx) //
+        || await has(ctx, 864) // Bronze knife
+        || await has(ctx, 870) // Bronze knife(p)
+        || await has(ctx, 863) // Iron knife
+        || await has(ctx, 865) // Steel knife
+        || await has(ctx, 869) // Black knife
+        || await has(ctx, 866) // Mithril knife
+        || await has(ctx, 867) // Adamant knife
+        || await has(ctx, 868) // Rune knife
+        || await has(ctx, 5667) // Rune knife(p++)
+        || await has(ctx, 806) // Bronze dart
+        || await has(ctx, 807) // Iron dart
+        || await has(ctx, 813) // Iron dart(p)
+        || await has(ctx, 808) // Steel dart
+        || await has(ctx, 3093) // Black dart
+        || await has(ctx, 809) // Mithril dart
+        || await has(ctx, 810) // Adamant dart
+        || await has(ctx, 816) // Adamant dart(p)
+        || await has(ctx, 811) // Rune dart
+        || await has(ctx, 817) // Rune dart(p)
+        || await has(ctx, 6522) // Toktz-xil-ul
+        || await has(ctx, 10033) // Chinchompa
+        || await has(ctx, 10034) // Red chinchompa
+        || await has(ctx, 11959) // Black chinchompa
+        || await has(ctx, 800) // Bronze thrownaxe
+        || await has(ctx, 801) // Iron thrownaxe
+        || await has(ctx, 802) // Steel thrownaxe
+        || await has(ctx, 803) // Mithril thrownaxe
+        || await has(ctx, 804) // Adamant thrownaxe
+        || await has(ctx, 805); // Rune thrownaxe
 }
 
-function canKillGargoyles(ctx) {
-    return has(ctx, 4162)       // Rock hammer
-        || has(ctx, 21754); // Rock thrownhammer
+async function canKillGargoyles(ctx) {
+    return await has(ctx, 4162)       // Rock hammer
+        || await has(ctx, 21754); // Rock thrownhammer
 }
 
-function canKillDifficultDragons(ctx) {
+async function canKillDifficultDragons(ctx) {
     return false; // TODO: need to implement quest points
 }
 
-function canEnterKaruulmSlayerDungeon(ctx) {
-    return has(ctx, 23037) // Boots of stone
-        || has(ctx, 21643); // Granite boots
+async function canEnterKaruulmSlayerDungeon(ctx) {
+    return await has(ctx, 23037) // Boots of stone
+        || await has(ctx, 21643); // Granite boots
 }
 
-function canKillFossilIslandWyverns(ctx) {
-    return canCompleteBoneVoyage(ctx) && hasAccessToWyvernProtection(ctx);
+async function canKillFossilIslandWyverns(ctx) {
+    return await canCompleteBoneVoyage(ctx) && await hasAccessToWyvernProtection(ctx);
 }
 
-function hasAccessToWyvernProtection(ctx) {
-    return canCompleteElementalWorkshopI(ctx) //
-        && (has(ctx, 2890) // Elemental shield
-            || (has(ctx, 9731) && canCompleteElementalWorkshopII(ctx)) // Mind shield
+async function hasAccessToWyvernProtection(ctx) {
+    return await canCompleteElementalWorkshopI(ctx) //
+        && (await has(ctx, 2890) // Elemental shield
+            || (await has(ctx, 9731) && await canCompleteElementalWorkshopII(ctx)) // Mind shield
         );
 }
 
-function canCompleteAnimalMagnetism(ctx) {
-    return canCompleteErnestTheChicken(ctx) //
-        && canCompletePriestInPeril(ctx) //
-        && has(ctx, 1355) // Mithril axe
-        && has(ctx, 2351) // Iron bar
-        && has(ctx, 2347) // Hammer
-        && has(ctx, 1743) // Hard leather
-        && has(ctx, 1718) // Holy symbol
-        && has(ctx, 10496) // Polished buttons
-        && has(ctx, 1931) // Pot
-        && ( // Bones for Ecto-tokens
-            has(ctx, 534)      // Babydragon bones
-            || has(ctx, 530)   // Bat bones
-            || has(ctx, 532)   // Big bones
-            || has(ctx, 526)   // Bones
-            || has(ctx, 528)   // Burnt bones
-            || has(ctx, 6729)  // Dagannoth bones
-            || has(ctx, 536)   // Dragon bones
-            || has(ctx, 22783) // Drake bones
-            || has(ctx, 31729) // Frost dragon bones
-            || has(ctx, 22786) // Hydra bones
-            || has(ctx, 3125)  // Jogre bones
-            || has(ctx, 11943) // Lava dragon bones
-            || has(ctx, 3183)  // Monkey bones
-            || has(ctx, 4834)  // Ourg bones
-            || has(ctx, 4832)  // Raurg bones
-            || has(ctx, 3123)  // Shaikahan bones
-            || has(ctx, 31726) // Strykewyrm bones
-            || has(ctx, 22124) // Superior dragon bones
-            || has(ctx, 2859)  // Wolf bones
-            || has(ctx, 22780) // Wyrm bones
-            || has(ctx, 28899) // Wyrmling bones
-            || has(ctx, 6812)  // Wyvern bones
-            || has(ctx, 4812)  // Zogre bones
-        );
+async function canCompleteAnimalMagnetism(ctx) {
+    return await canCompleteErnestTheChicken(ctx) //
+        && await canCompletePriestInPeril(ctx) //
+        && await has(ctx, 1355) // Mithril axe
+        && await has(ctx, 2351) // Iron bar
+        && await has(ctx, 2347) // Hammer
+        && await has(ctx, 1743) // Hard leather
+        && await has(ctx, 1718) // Holy symbol
+        && await has(ctx, 10496) // Polished buttons
+        && await has(ctx, 1931); // Pot
 }
 
-function canCompleteErnestTheChicken(ctx) {
-    return has(ctx, 952) // Spade
-        && has(ctx, 272) // Fish food
-        && has(ctx, 273); // Poison (item)
+async function canCompleteErnestTheChicken(ctx) {
+    return await has(ctx, 952) // Spade
+        && await has(ctx, 272) // Fish food
+        && await has(ctx, 273); // Poison (item)
 }
 
-function canCompleteDeathToTheDorgeshuun(ctx) {
-    return canCompleteTheLostTribe(ctx) //
-        && has(ctx, 4310) // Ham boots
-        && has(ctx, 4304) // Ham cloak
-        && has(ctx, 4308) // Ham gloves
-        && has(ctx, 4302) // Ham hood
-        && has(ctx, 4306) // Ham logo
-        && has(ctx, 4300) // Ham robe
-        && has(ctx, 4298); // Ham shirt
+async function canCompleteDeathToTheDorgeshuun(ctx) {
+    return await canCompleteTheLostTribe(ctx) //
+        && await has(ctx, 4310) // Ham boots
+        && await has(ctx, 4304) // Ham cloak
+        && await has(ctx, 4308) // Ham gloves
+        && await has(ctx, 4302) // Ham hood
+        && await has(ctx, 4306) // Ham logo
+        && await has(ctx, 4300) // Ham robe
+        && await has(ctx, 4298); // Ham shirt
 }
 
-function canCompleteTheLostTribe(ctx) {
-    return canCompleteGoblinDiplomacy(ctx) //
-        && canCompleteRuneMysteries(ctx) //
-        && canTrainMining(ctx); //
+async function canCompleteTheLostTribe(ctx) {
+    return await canCompleteGoblinDiplomacy(ctx) //
+        && await canCompleteRuneMysteries(ctx) //
+        && await canTrainMining(ctx); //
 }
 
-function canCompleteGoblinDiplomacy(ctx) {
-    return has(ctx, 288) // Goblin mail
-        && has(ctx, 1769) // Orange dye
-        && has(ctx, 1767); // Blue dye
+async function canCompleteGoblinDiplomacy(ctx) {
+    return await has(ctx, 288) // Goblin mail
+        && await has(ctx, 1769) // Orange dye
+        && await has(ctx, 1767); // Blue dye
 }
 
-function canStartPerilousMoons(ctx) {
-    return canCompleteTwilightsPromise(ctx) //
-        && canTrainHunter(ctx) //
-        && canTrainFishing(ctx) //
-        && canTrainRunecraft(ctx) //
-        && canTrainConstruction(ctx);
+async function canStartPerilousMoons(ctx) {
+    return await canCompleteTwilightsPromise(ctx) //
+        && await canTrainHunter(ctx) //
+        && await canTrainFishing(ctx) //
+        && await canTrainRunecraft(ctx) //
+        && await canTrainConstruction(ctx);
 }
 
-function canCompleteTwilightsPromise(ctx) {
+async function canCompleteTwilightsPromise(ctx) {
     return false; //TODO
 }
 
-function canCompletePerilousMoons(ctx) {
-    return canStartPerilousMoons(ctx) //
-        && has(ctx, 946)  // Knife
-        && has(ctx, 305)  // Big fishing net
-        && has(ctx, 954)  // Rope
-        && has(ctx, 233); // Pestle and mortar
+async function canCompletePerilousMoons(ctx) {
+    return await canStartPerilousMoons(ctx) //
+        && await has(ctx, 946)  // Knife
+        && await has(ctx, 305)  // Big fishing net
+        && await has(ctx, 954)  // Rope
+        && await has(ctx, 233); // Pestle and mortar
 }
 
-function canCompletePiratesTreasure(ctx) {
-    return has(ctx, 1005)  // White apron
-        && has(ctx, 952)   // Spade
-        && has(ctx, 1963); // Banana
+async function canCompletePiratesTreasure(ctx) {
+    return await has(ctx, 1005)  // White apron
+        && await has(ctx, 952)   // Spade
+        && await has(ctx, 1963); // Banana
 }
 
-function canReachGemRocks(ctx) {
-    return canCompletePandemonium(ctx) //
-        || canCompleteShiloVillage(ctx) //
-        || canCompleteLunarDiplomacy(ctx);
+async function canReachGemRocks(ctx) {
+    return await canCompletePandemonium(ctx) //
+        || await canCompleteShiloVillage(ctx) //
+        || await canCompleteLunarDiplomacy(ctx);
 }
 
-function canCompleteLunarDiplomacy(ctx) {
+async function canCompleteLunarDiplomacy(ctx) {
     return false; // TODO
 }
 
-function canCompleteShiloVillage(ctx) {
+async function canCompleteShiloVillage(ctx) {
     return false; // TODO
 }
 
-function canFishFromRewardPool(ctx) {
-    return has(ctx, 305)  // Big fishing net
-        || has(ctx, 303); // Small fishing net
+async function canFishFromRewardPool(ctx) {
+    return await has(ctx, 305)  // Big fishing net
+        || await has(ctx, 303); // Small fishing net
 }
 
-function canCompleteEnterTheAbyss(ctx) {
-    return canCompleteRuneMysteries(ctx);
+async function canCompleteEnterTheAbyss(ctx) {
+    return await canCompleteRuneMysteries(ctx);
 }
 
-function canCompleteRuneMysteries(ctx) {
-    return has(ctx, 1438); // Air talisman
+async function canCompleteRuneMysteries(ctx) {
+    return await has(ctx, 1438); // Air talisman
 }
 
-function canCompleteFairytaleIGrowingPains(ctx) {
-    return canCompleteLostCity(ctx) //
-        && canCompleteNatureSpirit(ctx) //
-        && has(ctx, 5329) // Secateurs
-        && has(ctx, 952)  // Spade
+async function canCompleteFairytaleIGrowingPains(ctx) {
+    return await canCompleteLostCity(ctx) //
+        && await canCompleteNatureSpirit(ctx) //
+        && await has(ctx, 5329) // Secateurs
+        && await has(ctx, 952)  // Spade
         // TODO other item reqs?
         ;
 }
 
-function canCompleteLostCity(ctx) {
-    return has(ctx, 1351)     // Bronze axe
-        && has(ctx, 946)  // Knife
-        && canTrainCrafting(ctx);
+async function canCompleteLostCity(ctx) {
+    return await has(ctx, 1351)     // Bronze axe
+        && await has(ctx, 946)  // Knife
+        && await canTrainCrafting(ctx);
 }
 
-function canCompleteNatureSpirit(ctx) {
-    return has(ctx, 2961)     // Silver sickle
-        && has(ctx, 2355) // Silver bar
-        && has(ctx, 2976) // Sickle mould
-        && canTrainCrafting(ctx);
+async function canCompleteNatureSpirit(ctx) {
+    return await has(ctx, 2961)     // Silver sickle
+        && await has(ctx, 2355) // Silver bar
+        && await has(ctx, 2976) // Sickle mould
+        && await canTrainCrafting(ctx);
 }
 
-function canCompleteTempleOfTheEye(ctx) {
-    return has(ctx, 1929) // Bucket of water
-        && has(ctx, 1755) // Chisel
-        && (has(ctx, 1265) || has(ctx, 1267)) // A bronze or iron pickaxe
-        && canTrainRunecraft(ctx);
+async function canCompleteTempleOfTheEye(ctx) {
+    return await has(ctx, 1929) // Bucket of water
+        && await has(ctx, 1755) // Chisel
+        && (await has(ctx, 1265) || await has(ctx, 1267)) // A bronze or iron pickaxe
+        && await canTrainRunecraft(ctx);
 }
 
-function canCompleteDeathPlateau(ctx) {
-    return has(ctx, 2309)  // Bread
-        && has(ctx, 333)   // Trout
-        && has(ctx, 2351)  // Iron bar
-        && has(ctx, 1905)  // Asgarnian ale
-        && has(ctx, 3105); // Climbing boots
+async function canCompleteDeathPlateau(ctx) {
+    return await has(ctx, 2309)  // Bread
+        && await has(ctx, 333)   // Trout
+        && await has(ctx, 2351)  // Iron bar
+        && await has(ctx, 1905)  // Asgarnian ale
+        && await has(ctx, 3105); // Climbing boots
 }
 
-function canCompleteRoyalTrouble(ctx) {
-    return canCompleteThroneOfMiscellania(ctx) //
-        && has(ctx, 954)  // Rope
-        && has(ctx, 453)  // Coal
-        && has(ctx, 960); // Plank
+async function canCompleteRoyalTrouble(ctx) {
+    return await canCompleteThroneOfMiscellania(ctx) //
+        && await has(ctx, 954)  // Rope
+        && await has(ctx, 453)  // Coal
+        && await has(ctx, 960); // Plank
 }
 
-function canCompleteTouristTrap(ctx) {
-    return canTrainFletching(ctx) //
-        && canTrainSmithing(ctx) //
-        && has(ctx, 1833) // Desert shirt
-        && has(ctx, 1835) // Desert robe
-        && has(ctx, 1837) // Desert boots
-        && has(ctx, 2347) // Hammer
-        && has(ctx, 2349) // Bronze bar
-        && has(ctx, 314); // Feather
+async function canCompleteTouristTrap(ctx) {
+    return await canTrainFletching(ctx) //
+        && await canTrainSmithing(ctx) //
+        && await has(ctx, 1833) // Desert shirt
+        && await has(ctx, 1835) // Desert robe
+        && await has(ctx, 1837) // Desert boots
+        && await has(ctx, 2347) // Hammer
+        && await has(ctx, 2349) // Bronze bar
+        && await has(ctx, 314); // Feather
 }
 
-function canCompleteThroneOfMiscellania(ctx) {
-    return canCompleteHeroesQuest(ctx) //
-        && canCompleteTheFremennikTrials(ctx) //
-        && has(ctx, 2351)      // Iron bar
-        && (has(ctx, 1635)     // Gold ring
-            || has(ctx, 1637)  // Sapphire ring
-            || has(ctx, 1639)  // Emerald ring
-            || has(ctx, 1641)  // Ruby ring
-            || has(ctx, 1643)) // Diamond ring
-        && has(ctx, 1511); // Logs
+async function canCompleteThroneOfMiscellania(ctx) {
+    return await canCompleteHeroesQuest(ctx) //
+        && await canCompleteTheFremennikTrials(ctx) //
+        && await has(ctx, 2351)      // Iron bar
+        && (await has(ctx, 1635)     // Gold ring
+            || await has(ctx, 1637)  // Sapphire ring
+            || await has(ctx, 1639)  // Emerald ring
+            || await has(ctx, 1641)  // Ruby ring
+            || await has(ctx, 1643)) // Diamond ring
+        && await has(ctx, 1511); // Logs
 }
 
-function canCompleteHeroesQuest(ctx) { // TODO quest points
-    return canCompleteLostCity(ctx) //
-        && canCompleteMerlinsCrystal(ctx) //
-        && canCompleteDragonSlayerI(ctx) //
-        && canTrainMining(ctx) //
-        && canTrainHerblore(ctx) //
-        && canTrainFishing(ctx) //
-        && canTrainCooking(ctx) //
-        && has(ctx, 307) // Fishing rod
-        && has(ctx, 313) // Fishing bait
-        && has(ctx, 97)  // Harralander potion (unf)
-        && has(ctx, 255) // Harralander
-        && has(ctx, 227); // Vial of water
+async function canCompleteHeroesQuest(ctx) { // TODO quest points
+    return await canCompleteLostCity(ctx) //
+        && await canCompleteMerlinsCrystal(ctx) //
+        && await canCompleteDragonSlayerI(ctx) //
+        && await canTrainMining(ctx) //
+        && await canTrainHerblore(ctx) //
+        && await canTrainFishing(ctx) //
+        && await canTrainCooking(ctx) //
+        && await has(ctx, 307) // Fishing rod
+        && await has(ctx, 313) // Fishing bait
+        && await has(ctx, 97)  // Harralander potion (unf)
+        && await has(ctx, 255) // Harralander
+        && await has(ctx, 227); // Vial of water
 }
 
-function canCompleteTheDigSite(ctx) {
-    return canCompleteDruidicRitual(ctx) //
-        && has(ctx, 233) // Pestle and mortar
-        && has(ctx, 229) // Vial
-        && has(ctx, 590) // Tinderbox
-        && hasCupOfTea(ctx) //
-        && has(ctx, 954) // Rope
-        && (has(ctx, 1609) || has(ctx, 1625)) // Opal or Uncut opal
-        && has(ctx, 973); // Charcoal
+async function canCompleteTheDigSite(ctx) {
+    return await canCompleteDruidicRitual(ctx) //
+        && await has(ctx, 233) // Pestle and mortar
+        && await has(ctx, 229) // Vial
+        && await has(ctx, 590) // Tinderbox
+        && await hasCupOfTea(ctx) //
+        && await has(ctx, 954) // Rope
+        && (await has(ctx, 1609) || await has(ctx, 1625)) // Opal or Uncut opal
+        && await has(ctx, 973); // Charcoal
 }
 
-function canCompleteMerlinsCrystal(ctx) {
-    return has(ctx, 2309)     // Bread
-        && has(ctx, 590)  // Tinderbox
-        && has(ctx, 30)   // Bucket of wax
-        && has(ctx, 1925) // Bucket
-        && has(ctx, 28)   // Insect repellent
-        && has(ctx, 530); // Bat bones
+async function canCompleteMerlinsCrystal(ctx) {
+    return await has(ctx, 2309)     // Bread
+        && await has(ctx, 590)  // Tinderbox
+        && await has(ctx, 30)   // Bucket of wax
+        && await has(ctx, 1925) // Bucket
+        && await has(ctx, 28)   // Insect repellent
+        && await has(ctx, 530); // Bat bones
 }
 
-function canCompleteDragonSlayerI(ctx) { // TODO quest points
-    return has(ctx, 1791)      // Unfired bowl
-        && has(ctx, 1761)  // Soft clay
-        && has(ctx, 1907)  // Wizards mind bomb
-        && has(ctx, 301)   // Lobster pot
-        && has(ctx, 950)   // Silk
-        && has(ctx, 1540)  // Anti-dragon shield
-        && has(ctx, 2347)  // Hammer
-        && has(ctx, 1539)  // Steel nails
-        && has(ctx, 960);  // Plank
+async function canCompleteDragonSlayerI(ctx) { // TODO quest points
+    return await has(ctx, 1791)      // Unfired bowl
+        && await has(ctx, 1761)  // Soft clay
+        && await has(ctx, 1907)  // Wizards mind bomb
+        && await has(ctx, 301)   // Lobster pot
+        && await has(ctx, 950)   // Silk
+        && await has(ctx, 1540)  // Anti-dragon shield
+        && await has(ctx, 2347)  // Hammer
+        && await has(ctx, 1539)  // Steel nails
+        && await has(ctx, 960);  // Plank
 }
 
-function canCompleteDwarfCannon(ctx) {
-    return has(ctx, 2347); // Hammer
+async function canCompleteDwarfCannon(ctx) {
+    return await has(ctx, 2347); // Hammer
 }
 
-function canCompleteTroubledTortugans(ctx) {
-    return canTrainCrafting(ctx) //
-        && canTrainHunter(ctx) //
-        && canTrainWoodcutting(ctx) //
-        && canTrainConstruction(ctx) //
-        && canCompletePandemonium(ctx) //
-        && has(ctx, 401);     // Seaweed
+async function canCompleteTroubledTortugans(ctx) {
+    return await canTrainCrafting(ctx) //
+        && await canTrainHunter(ctx) //
+        && await canTrainWoodcutting(ctx) //
+        && await canTrainConstruction(ctx) //
+        && await canCompletePandemonium(ctx) //
+        && await has(ctx, 401);     // Seaweed
 }
 
-function canCompleteTheFremennikTrials(ctx) {
-    return has(ctx, 1917)      // Beer
-        && has(ctx, 590)   // Tinderbox
-        && (has(ctx, 383) // Raw shark
-            || (canTrainFishing(ctx) && (has(ctx, 389) || has(ctx, 395))))  // Raw manta ray or Raw sea turtle
+async function canCompleteTheFremennikTrials(ctx) {
+    return await has(ctx, 1917)      // Beer
+        && await has(ctx, 590)   // Tinderbox
+        && (await has(ctx, 383) // Raw shark
+            || (await canTrainFishing(ctx) && (await has(ctx, 389) || await has(ctx, 395))))  // Raw manta ray or Raw sea turtle
 }
 
-function canCompleteDruidicRitual(ctx) {
-    return has(ctx, 2136)  // Raw bear meat
-        && has(ctx, 2134)  // Raw rat meat
-        && has(ctx, 2132)  // Raw beef
-        && has(ctx, 2138); // Raw chicken
+async function canCompleteDruidicRitual(ctx) {
+    return await has(ctx, 2136)  // Raw bear meat
+        && await has(ctx, 2134)  // Raw rat meat
+        && await has(ctx, 2132)  // Raw beef
+        && await has(ctx, 2138); // Raw chicken
 }
 
-function canCompletePandemonium(ctx) {
-    return has(ctx, 2347)  // Hammer
-        && has(ctx, 8794); // Saw
+async function canCompletePandemonium(ctx) {
+    return await has(ctx, 2347)  // Hammer
+        && await has(ctx, 8794); // Saw
 }
 
-function canCompleteTheHeartOfDarkness(ctx) {
-    return canTrainMining(ctx);
+async function canCompleteTheHeartOfDarkness(ctx) {
+    return await canTrainMining(ctx);
 }
 
-function canCompleteIcthlarinsLittleHelper(ctx) {
-    return canCompleteGertrudesCat(ctx) //
-        && has(ctx, 590) // Tinderbox
-        && has(ctx, 1519) // Willow logs
-        && (has(ctx, 4161) || (has(ctx, 1925) && has(ctx, 4689))) // Bag of salt or (Bucket and Pile of salt)
-        && has(ctx, 4687) // Bucket of sap
-        && has(ctx, 1823) // Waterskin(4)
-        && has(ctx, 4684); // Linen
+async function canCompleteIcthlarinsLittleHelper(ctx) {
+    return await canCompleteGertrudesCat(ctx) //
+        && await has(ctx, 590) // Tinderbox
+        && await has(ctx, 1519) // Willow logs
+        && (await has(ctx, 4161) || (await has(ctx, 1925) && await has(ctx, 4689))) // Bag of salt or (Bucket and Pile of salt)
+        && await has(ctx, 4687) // Bucket of sap
+        && await has(ctx, 1823) // Waterskin(4)
+        && await has(ctx, 4684); // Linen
 }
 
-function canCompleteGertrudesCat(ctx) {
-    return has(ctx, 1927) // Bucket of milk
-        && has(ctx, 1552); // Seasoned sardine
+async function canCompleteGertrudesCat(ctx) {
+    return await has(ctx, 1927) // Bucket of milk
+        && await has(ctx, 1552); // Seasoned sardine
 }
 
-function canCompletePriestInPeril(ctx) {
-    return has(ctx, 1925)      // Bucket
-        && (has(ctx, 7936) // Pure essence
-            || has(ctx, 1436) // or Rune essence
+async function canCompletePriestInPeril(ctx) {
+    return await has(ctx, 1925)      // Bucket
+        && (await has(ctx, 7936) // Pure essence
+            || await has(ctx, 1436) // or Rune essence
         );
 }
 
-function canCompleteBoneVoyage(ctx) {
+async function canCompleteBoneVoyage(ctx) {
     return false; // TODO
 }
 
-function canCompleteElementalWorkshopI(ctx) {
-    return canTrainMining(ctx) //
-        && canTrainCrafting(ctx) //
-        && has(ctx, 2347) // Hammer
-        && has(ctx, 1733) // Needle
-        && has(ctx, 1734) // Thread
-        && has(ctx, 1741) // Leather
-        && has(ctx, 453); // Coal
+async function canCompleteElementalWorkshopI(ctx) {
+    return await canTrainMining(ctx) //
+        && await canTrainCrafting(ctx) //
+        && await has(ctx, 2347) // Hammer
+        && await has(ctx, 1733) // Needle
+        && await has(ctx, 1734) // Thread
+        && await has(ctx, 1741) // Leather
+        && await has(ctx, 453); // Coal
 }
 
-function canCompleteElementalWorkshopII(ctx) {
-    return canCompleteElementalWorkshopI(ctx);
+async function canCompleteElementalWorkshopII(ctx) {
+    return await canCompleteElementalWorkshopI(ctx);
 }
 
-function canCompleteZogreFleshEaters(ctx) {
-    return canCompleteBigChompyBirdHunting(ctx) //
-        && canCompleteJunglePotion(ctx) //
-        && canTrainSmithing(ctx);
+async function canCompleteZogreFleshEaters(ctx) {
+    return await canCompleteBigChompyBirdHunting(ctx) //
+        && await canCompleteJunglePotion(ctx) //
+        && await canTrainSmithing(ctx);
 }
 
-function canCompleteJunglePotion(ctx) {
-    return canCompleteDruidicRitual(ctx);
+async function canCompleteJunglePotion(ctx) {
+    return await canCompleteDruidicRitual(ctx);
 }
 
-function canCompleteBigChompyBirdHunting(ctx) {
-    return canTrainFletching(ctx) //
-        && canTrainCooking(ctx) //
-        && canTrainWoodcutting(ctx) //
-        && has(ctx, 314)  // Feather
-        && has(ctx, 946)  // Knife
-        && has(ctx, 1755) // Chisel
-        && has(ctx, 1965) // Cabbage
-        && has(ctx, 1982) // Tomato
-        && has(ctx, 1957) // Onion
-        && has(ctx, 1942) // Potato
-        && has(ctx, 2128) // Equa leaves
-        && has(ctx, 1573) // Doogle leaves
-        && has(ctx, 2862) // Achey tree logs
-        && has(ctx, 2864) // Ogre arrow shaft
-        && has(ctx, 2865) // Flighted ogre arrow
-        && has(ctx, 2859) // Wolf bones
-        && has(ctx, 2861) // Wolfbone arrowtips
-        && has(ctx, 2866) // Ogre arrow
-        && has(ctx, 2876);// Raw chompy
+async function canCompleteBigChompyBirdHunting(ctx) {
+    return await canTrainFletching(ctx) //
+        && await canTrainCooking(ctx) //
+        && await canTrainWoodcutting(ctx) //
+        && await has(ctx, 314)  // Feather
+        && await has(ctx, 946)  // Knife
+        && await has(ctx, 1755) // Chisel
+        && await has(ctx, 1965) // Cabbage
+        && await has(ctx, 1982) // Tomato
+        && await has(ctx, 1957) // Onion
+        && await has(ctx, 1942) // Potato
+        && await has(ctx, 2128) // Equa leaves
+        && await has(ctx, 1573) // Doogle leaves
+        && await has(ctx, 2862) // Achey tree logs
+        && await has(ctx, 2864) // Ogre arrow shaft
+        && await has(ctx, 2865) // Flighted ogre arrow
+        && await has(ctx, 2859) // Wolf bones
+        && await has(ctx, 2861) // Wolfbone arrowtips
+        && await has(ctx, 2866) // Ogre arrow
+        && await has(ctx, 2876);// Raw chompy
 }
 
-function canTrainCrafting(ctx) {
+async function canTrainCrafting(ctx) {
     return true; // TODO implement this beast (true because lamps and buttons)
 }
 
-function canTrainRunecraft(ctx) {
-    return canCompleteRuneMysteries(ctx) &&
+async function canTrainRunecraft(ctx) {
+    return await canCompleteRuneMysteries(ctx) &&
         (
-            has(ctx, 5525)    // Tiara
-            || has(ctx, 1436) // Rune essence
-            || has(ctx, 7936) // Pure essence
+            await has(ctx, 5525)    // Tiara
+            || await has(ctx, 1436) // Rune essence
+            || await has(ctx, 7936) // Pure essence
         );
 }
 
-function canTrainWoodcutting(ctx) {
-    return has(ctx, 1351)      // Bronze axe
-        || has(ctx, 1349)  // Iron axe
-        || has(ctx, 1353); // Steel axe
+async function canTrainWoodcutting(ctx) {
+    return await has(ctx, 1351)      // Bronze axe
+        || await has(ctx, 1349)  // Iron axe
+        || await has(ctx, 1353); // Steel axe
 }
 
-function canTrainMining(ctx) {
-    return has(ctx, 1265)      // Bronze pickaxe
-        || has(ctx, 1267)  // Iron pickaxe
-        || has(ctx, 1269); // Steel pickaxe
+async function canTrainMining(ctx) {
+    return await has(ctx, 1265)      // Bronze pickaxe
+        || await has(ctx, 1267)  // Iron pickaxe
+        || await has(ctx, 1269); // Steel pickaxe
 }
 
-function canTrainHerblore(ctx) {
-    return canCompleteDruidicRitual(ctx) //
-        && has(ctx, 199)  // Grimy guam leaf
-        && has(ctx, 201)  // Grimy marrentill
-        && has(ctx, 203); // Grimy tarromin
+async function canTrainHerblore(ctx) {
+    return await canCompleteDruidicRitual(ctx) //
+        && await has(ctx, 199)  // Grimy guam leaf
+        && await has(ctx, 201)  // Grimy marrentill
+        && await has(ctx, 203); // Grimy tarromin
 }
 
-function canTrainFishing(ctx) {
-    return has(ctx, 303)     // Small fishing net
-        && has(ctx, 305) // Big fishing net
-        && (has(ctx, 307) && has(ctx, 313)); // Fishing rod & Fishing bait
+async function canTrainFishing(ctx) {
+    return await has(ctx, 303)     // Small fishing net
+        && await has(ctx, 305) // Big fishing net
+        && (await has(ctx, 307) && await has(ctx, 313)); // Fishing rod & Fishing bait
 }
 
-function canTrainHunter(ctx) {
-    return has(ctx, 10006)     // Bird snare
-        && has(ctx, 10150) // Noose wand
-        && has(ctx, 10010) // Butterfly net
+async function canTrainHunter(ctx) {
+    return await has(ctx, 10006)     // Bird snare
+        && await has(ctx, 10150) // Noose wand
+        && await has(ctx, 10010) // Butterfly net
         ; // TODO or the player's lvl allows for barehanding butterflies (lvl 25)
 }
 
-function canTrainCooking(ctx) {
-    return has(ctx, 25833)    // Raw boar meat
-        && has(ctx, 2132) // Raw beef
-        && has(ctx, 2136) // Raw bear meat
-        && has(ctx, 2134) // Raw rat meat
-        && has(ctx, 2138) // Raw chicken
-        && has(ctx, 317)  // Raw shrimps
-        && has(ctx, 3226) // Raw rabbit
-        && has(ctx, 327)  // Raw sardine
-        && has(ctx, 321)  // Raw anchovies
-        && has(ctx, 1859) // Raw ugthanki meat
-        && has(ctx, 2307) // Bread dough
-        && has(ctx, 345); // Raw herring
+async function canTrainCooking(ctx) {
+    return await has(ctx, 25833)    // Raw boar meat
+        && await has(ctx, 2132) // Raw beef
+        && await has(ctx, 2136) // Raw bear meat
+        && await has(ctx, 2134) // Raw rat meat
+        && await has(ctx, 2138) // Raw chicken
+        && await has(ctx, 317)  // Raw shrimps
+        && await has(ctx, 3226) // Raw rabbit
+        && await has(ctx, 327)  // Raw sardine
+        && await has(ctx, 321)  // Raw anchovies
+        && await has(ctx, 1859) // Raw ugthanki meat
+        && await has(ctx, 2307) // Bread dough
+        && await has(ctx, 345); // Raw herring
 }
 
-function canTrainFarming(ctx) {
-    return has(ctx, 5341) // Rake
-        || has(ctx, 8431);// Bagged plant 1
+async function canTrainFarming(ctx) {
+    return await has(ctx, 5341) // Rake
+        || await has(ctx, 8431);// Bagged plant 1
 }
 
-function canPlantTrees(ctx) {
-    return canTrainFarming(ctx) //
-        && has(ctx, 5341) // Rake
-        && has(ctx, 952); // Spade
+async function canPlantTrees(ctx) {
+    return await canTrainFarming(ctx) //
+        && await has(ctx, 5341) // Rake
+        && await has(ctx, 952); // Spade
 }
 
-function canPlantHardwoodTrees(ctx) {
-    return canPlantTrees(ctx) //
+async function canPlantHardwoodTrees(ctx) {
+    return await canPlantTrees(ctx) //
         && (
-            canCompleteBoneVoyage(ctx) //
-            || canTrainWoodcutting(ctx) //
-            || canCompletePandemonium(ctx) //
+            await canCompleteBoneVoyage(ctx) //
+            || await canTrainWoodcutting(ctx) //
+            || await canCompletePandemonium(ctx) //
         );
 }
 
-function canPlantPlants(ctx) {
-    return canTrainFarming(ctx) //
-        && has(ctx, 5341) // Rake
-        && has(ctx, 5343); // Seed dibber TODO: barbarian farming, possible by training farming in COX
+async function canPlantPlants(ctx) {
+    return await canTrainFarming(ctx) //
+        && await has(ctx, 5341) // Rake
+        && await has(ctx, 5343); // Seed dibber TODO: barbarian farming, possible by training farming in COX
 }
 
-function canTrainConstruction(ctx) {
-    return has(ctx, 8431) // Bagged plant 1
+async function canTrainConstruction(ctx) {
+    return await has(ctx, 8431) // Bagged plant 1
         && (
-            (has(ctx, 2347) && has(ctx, 8794)) // Hammer and Saw
-            && (has(ctx, 2351) || (has(ctx, 960) && hasAnyNails(ctx)))  // Iron bar or Plank and any nails
+            (await has(ctx, 2347) && await has(ctx, 8794)) // Hammer and Saw
+            && (await has(ctx, 2351) || (await has(ctx, 960) && await hasAnyNails(ctx)))  // Iron bar or Plank and any nails
         );
 }
 
-function canTrainFletching(ctx) {
-    return (has(ctx, 946) && has(ctx, 1511)) // Knife & Logs
-        || (has(ctx, 52) && has(ctx, 314)) // Arrow shaft & Feather
-        || (has(ctx, 53) && has(ctx, 39)) // Headless arrow & Bronze arrowtip
+async function canTrainFletching(ctx) {
+    return (await has(ctx, 946) && await has(ctx, 1511)) // Knife & Logs
+        || (await has(ctx, 52) && await has(ctx, 314)) // Arrow shaft & Feather
+        || (await has(ctx, 53) && await has(ctx, 39)) // Headless arrow & Bronze arrowtip
 }
 
-function canTrainFiremaking(ctx) {
-    return has(ctx, 590); // Tinderbox
+async function canTrainFiremaking(ctx) {
+    return await has(ctx, 590); // Tinderbox
 }
 
-function canTrainSmithing(ctx) {
-    return has(ctx, 2347); // Hammer
+async function canTrainSmithing(ctx) {
+    return await has(ctx, 2347); // Hammer
 }
 
-function canDoGnomeRestaurant(ctx) {
-    return canTrainCooking(ctx) //
+async function canDoGnomeRestaurant(ctx) {
+    return await canTrainCooking(ctx) //
         && ( //
             ( // Crunchies
-                (has(ctx, 2171) && has(ctx, 2165) && has(ctx, 2169)) // Gianne dough, Crunchy tray & Gnome spice
+                (await has(ctx, 2171) && await has(ctx, 2165) && await has(ctx, 2169)) // Gianne dough, Crunchy tray & Gnome spice
                 && (
-                    (has(ctx, 2128) && has(ctx, 2217)) // Toad crunchies
-                    || (has(ctx, 2128) && has(ctx, 2213)) // Spicy crunchies
-                    || (has(ctx, 2128) && has(ctx, 2162) && has(ctx, 2205)) // Worm crunchies
-                    || (has(ctx, 1973) && has(ctx, 1975) && has(ctx, 2209)) // Chocchip crunchies
+                    (await has(ctx, 2128) && await has(ctx, 2217)) // Toad crunchies
+                    || (await has(ctx, 2128) && await has(ctx, 2213)) // Spicy crunchies
+                    || (await has(ctx, 2128) && await has(ctx, 2162) && await has(ctx, 2205)) // Worm crunchies
+                    || (await has(ctx, 1973) && await has(ctx, 1975) && await has(ctx, 2209)) // Chocchip crunchies
                 )
             ) //
             || ( // Battas
-                (has(ctx, 2171) && has(ctx, 2164) && has(ctx, 2128)) // Gianne dough, Batta tin & Equa leaves
+                (await has(ctx, 2171) && await has(ctx, 2164) && await has(ctx, 2128)) // Gianne dough, Batta tin & Equa leaves
                 && (
-                    (has(ctx, 2120) && has(ctx, 2122) && has(ctx, 2108) && has(ctx, 2110) && has(ctx, 2114) && has(ctx, 2116) && has(ctx, 2169) && has(ctx, 2277)) // Fruit batta
-                    || (has(ctx, 2169) && has(ctx, 1985) && has(ctx, 2152) && has(ctx, 2255)) // Toad Batta
-                    || (has(ctx, 2169) && has(ctx, 1985) && has(ctx, 2162) && has(ctx, 2253)) // Worm Batta
-                    || (has(ctx, 1982) && has(ctx, 2126) && has(ctx, 1957) && has(ctx, 1985) && has(ctx, 1965) && has(ctx, 2281)) // Vegetable Batta
-                    || (has(ctx, 1982) && has(ctx, 1985) && has(ctx, 2259)) // Cheese+tom batta
+                    (await has(ctx, 2120) && await has(ctx, 2122) && await has(ctx, 2108) && await has(ctx, 2110) && await has(ctx, 2114) && await has(ctx, 2116) && await has(ctx, 2169) && await has(ctx, 2277)) // Fruit batta
+                    || (await has(ctx, 2169) && await has(ctx, 1985) && await has(ctx, 2152) && await has(ctx, 2255)) // Toad Batta
+                    || (await has(ctx, 2169) && await has(ctx, 1985) && await has(ctx, 2162) && await has(ctx, 2253)) // Worm Batta
+                    || (await has(ctx, 1982) && await has(ctx, 2126) && await has(ctx, 1957) && await has(ctx, 1985) && await has(ctx, 1965) && await has(ctx, 2281)) // Vegetable Batta
+                    || (await has(ctx, 1982) && await has(ctx, 1985) && await has(ctx, 2259)) // Cheese+tom batta
                 )
             )
             || ( // Gnomebowls
-                (has(ctx, 2171) && has(ctx, 2166) && has(ctx, 2128)) // Gianne dough, Gnomebowl & Equa leaves
+                (await has(ctx, 2171) && await has(ctx, 2166) && await has(ctx, 2128)) // Gianne dough, Gnomebowl & Equa leaves
                 && (
-                    (has(ctx, 2162) && has(ctx, 1957) && has(ctx, 2169) && has(ctx, 2191)) // Worm hole
-                    || (has(ctx, 1957) && has(ctx, 1942) && has(ctx, 2152) && has(ctx, 2195)) // Veg bowl
-                    || (has(ctx, 2152) && has(ctx, 2169) && has(ctx, 1985) && has(ctx, 2126) && has(ctx, 2187)) // Tangled toad's legs
-                    || (has(ctx, 1973) && has(ctx, 1975) && has(ctx, 2130) && has(ctx, 2185)) // Chocolate bomb
+                    (await has(ctx, 2162) && await has(ctx, 1957) && await has(ctx, 2169) && await has(ctx, 2191)) // Worm hole
+                    || (await has(ctx, 1957) && await has(ctx, 1942) && await has(ctx, 2152) && await has(ctx, 2195)) // Veg bowl
+                    || (await has(ctx, 2152) && await has(ctx, 2169) && await has(ctx, 1985) && await has(ctx, 2126) && await has(ctx, 2187)) // Tangled toad's legs
+                    || (await has(ctx, 1973) && await has(ctx, 1975) && await has(ctx, 2130) && await has(ctx, 2185)) // Chocolate bomb
                 )
             )
             || ( // Cocktails
-                (has(ctx, 2025) && has(ctx, 2026)) // Cocktail shaker & Cocktail glass
+                (await has(ctx, 2025) && await has(ctx, 2026)) // Cocktail shaker & Cocktail glass
                 && (
-                    (has(ctx, 2114) && has(ctx, 2102) && has(ctx, 2108) && has(ctx, 2106) && has(ctx, 2084)) // Fruit blast
-                    || (has(ctx, 2114) && has(ctx, 2102) && has(ctx, 2108) && has(ctx, 2120) && has(ctx, 2122) && has(ctx, 2116) && has(ctx, 2112) && has(ctx, 2048)) // Pineapple punch
-                    || (has(ctx, 2015) && has(ctx, 2019) && has(ctx, 2120) && has(ctx, 2102) && has(ctx, 2114) && has(ctx, 2108) && has(ctx, 2116) && has(ctx, 2124) && has(ctx, 2054)) // Wizard blizzard
-                    || (has(ctx, 2015) && has(ctx, 2120) && has(ctx, 2124) && has(ctx, 2128) && has(ctx, 2080)) // Short green guy
-                    || (has(ctx, 2015) && has(ctx, 2019) && has(ctx, 2126) && has(ctx, 2114) && has(ctx, 2116) && has(ctx, 2130) && has(ctx, 2092)) // Drunk dragon
-                    || (has(ctx, 2017) && has(ctx, 1973) && has(ctx, 2128) && has(ctx, 1927) && has(ctx, 1975) && has(ctx, 2130) && has(ctx, 2074)) // Choc saturday
-                    || (has(ctx, 2015) && has(ctx, 2021) && has(ctx, 2019) && has(ctx, 2102) && has(ctx, 2104) && has(ctx, 2108) && has(ctx, 2110) && has(ctx, 2128) && has(ctx, 2120) && has(ctx, 2124) && has(ctx, 2064)) // Blurberry special
+                    (await has(ctx, 2114) && await has(ctx, 2102) && await has(ctx, 2108) && await has(ctx, 2106) && await has(ctx, 2084)) // Fruit blast
+                    || (await has(ctx, 2114) && await has(ctx, 2102) && await has(ctx, 2108) && await has(ctx, 2120) && await has(ctx, 2122) && await has(ctx, 2116) && await has(ctx, 2112) && await has(ctx, 2048)) // Pineapple punch
+                    || (await has(ctx, 2015) && await has(ctx, 2019) && await has(ctx, 2120) && await has(ctx, 2102) && await has(ctx, 2114) && await has(ctx, 2108) && await has(ctx, 2116) && await has(ctx, 2124) && await has(ctx, 2054)) // Wizard blizzard
+                    || (await has(ctx, 2015) && await has(ctx, 2120) && await has(ctx, 2124) && await has(ctx, 2128) && await has(ctx, 2080)) // Short green guy
+                    || (await has(ctx, 2015) && await has(ctx, 2019) && await has(ctx, 2126) && await has(ctx, 2114) && await has(ctx, 2116) && await has(ctx, 2130) && await has(ctx, 2092)) // Drunk dragon
+                    || (await has(ctx, 2017) && await has(ctx, 1973) && await has(ctx, 2128) && await has(ctx, 1927) && await has(ctx, 1975) && await has(ctx, 2130) && await has(ctx, 2074)) // Choc saturday
+                    || (await has(ctx, 2015) && await has(ctx, 2021) && await has(ctx, 2019) && await has(ctx, 2102) && await has(ctx, 2104) && await has(ctx, 2108) && await has(ctx, 2110) && await has(ctx, 2128) && await has(ctx, 2120) && await has(ctx, 2124) && await has(ctx, 2064)) // Blurberry special
                 )
             )
         );
 }
 
-function canDoValeTotems(ctx) {
-    return canTrainFletching(ctx) //
-        && has(ctx, 946) // Knife
+async function canDoValeTotems(ctx) {
+    return await canTrainFletching(ctx) //
+        && await has(ctx, 946) // Knife
         && ((
-            has(ctx, 843) // Oak shortbow
-            || has(ctx, 845) // Oak longbow
-            || has(ctx, 9442) // Oak stock
-            || has(ctx, 22251) // Oak shield
-            || (has(ctx, 1521) && (has(ctx, 54) || has(ctx, 56))) // Oak logs & either Oak shortbow (u) or Oak longbow (u)
+            await has(ctx, 843) // Oak shortbow
+            || await has(ctx, 845) // Oak longbow
+            || await has(ctx, 9442) // Oak stock
+            || await has(ctx, 22251) // Oak shield
+            || (await has(ctx, 1521) && (await has(ctx, 54) || await has(ctx, 56))) // Oak logs & either Oak shortbow (u) or Oak longbow (u)
         ) //
             || (
-                has(ctx, 849) // Willow shortbow
-                || has(ctx, 847) // Willow longbow
-                || has(ctx, 9444) // Willow stock
-                || (has(ctx, 1519) && (has(ctx, 60) || has(ctx, 58) || has(ctx, 22254))) // Willow logs & either Willow shortbow (u), Willow longbow (u) or Willow shield
+                await has(ctx, 849) // Willow shortbow
+                || await has(ctx, 847) // Willow longbow
+                || await has(ctx, 9444) // Willow stock
+                || (await has(ctx, 1519) && (await has(ctx, 60) || await has(ctx, 58) || await has(ctx, 22254))) // Willow logs & either Willow shortbow (u), Willow longbow (u) or Willow shield
             ) //
             || (
-                has(ctx, 853) // Maple shortbow
-                || has(ctx, 851) // Maple longbow
-                || has(ctx, 9448) // Maple stock
-                || (has(ctx, 1517) && (has(ctx, 64) || has(ctx, 62) || has(ctx, 22257))) // Maple logs & either Maple shortbow (u), Maple longbow (u) or Maple shield
+                await has(ctx, 853) // Maple shortbow
+                || await has(ctx, 851) // Maple longbow
+                || await has(ctx, 9448) // Maple stock
+                || (await has(ctx, 1517) && (await has(ctx, 64) || await has(ctx, 62) || await has(ctx, 22257))) // Maple logs & either Maple shortbow (u), Maple longbow (u) or Maple shield
             ) //
             || (
-                has(ctx, 857) // Yew shortbow
-                || has(ctx, 855) // Yew longbow
-                || (has(ctx, 1515) && (has(ctx, 68) || has(ctx, 66) || has(ctx, 22260) || has(ctx, 9452))) // Yew logs & either Yew shortbow (u), Yew longbow (u), Yew shield or Yew stock
+                await has(ctx, 857) // Yew shortbow
+                || await has(ctx, 855) // Yew longbow
+                || (await has(ctx, 1515) && (await has(ctx, 68) || await has(ctx, 66) || await has(ctx, 22260) || await has(ctx, 9452))) // Yew logs & either Yew shortbow (u), Yew longbow (u), Yew shield or Yew stock
             ) //
-            || (has(ctx, 1513) && (has(ctx, 72) || has(ctx, 70) || has(ctx, 22263) || has(ctx, 21952))) // Magic logs & either Magic shortbow (u), Magic longbow (u), Magic shield or Magic stock
-            || (canTrainWoodcutting(ctx) && has(ctx, 19669) && (has(ctx, 31049) || has(ctx, 22266)))); // Redwood logs & either Redwood hiking staff or Redwood shield
+            || (await has(ctx, 1513) && (await has(ctx, 72) || await has(ctx, 70) || await has(ctx, 22263) || await has(ctx, 21952))) // Magic logs & either Magic shortbow (u), Magic longbow (u), Magic shield or Magic stock
+            || (await canTrainWoodcutting(ctx) && await has(ctx, 19669) && (await has(ctx, 31049) || await has(ctx, 22266)))); // Redwood logs & either Redwood hiking staff or Redwood shield
 }
 
-function canDoWintertodt(ctx) {
-    return canTrainFiremaking(ctx) //
-        && canTrainWoodcutting(ctx);
+async function canDoWintertodt(ctx) {
+    return await canTrainFiremaking(ctx) //
+        && await canTrainWoodcutting(ctx);
 }
 
-function canDoSalvaging(ctx) {
-    return canCompletePandemonium(ctx) && false; // TODO add different salvaging hooks requirements
+async function canDoSalvaging(ctx) {
+    return await canCompletePandemonium(ctx) && false; // TODO add different salvaging hooks requirements
 }
 
-function canDoSailingCombat(ctx) {
-    return canCompletePandemonium(ctx) && false; // TODO sailing combat
+async function canDoSailingCombat(ctx) {
+    return await canCompletePandemonium(ctx) && false; // TODO sailing combat
 }

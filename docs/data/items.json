@@ -2645,9 +2645,6 @@
     "image": "adamant_full_helm.png",
     "sources": {
       "drops": {
-        "Animated Adamant Armour": {
-          "droprate": "Always"
-        },
         "Agility dispenser Laps 16-30": {
           "droprate": "1/9"
         },
@@ -3472,9 +3469,6 @@
     "image": "adamant_platebody.png",
     "sources": {
       "drops": {
-        "Animated Adamant Armour": {
-          "droprate": "Always"
-        },
         "Agility dispenser Laps 1-15": {
           "droprate": "1/5"
         },
@@ -3768,9 +3762,6 @@
     "image": "adamant_platelegs.png",
     "sources": {
       "drops": {
-        "Animated Adamant Armour": {
-          "droprate": "Always"
-        },
         "Agility dispenser Laps 16-30": {
           "droprate": "1/9"
         },
@@ -14298,9 +14289,6 @@
     "image": "black_full_helm.png",
     "sources": {
       "drops": {
-        "Animated Black Armour": {
-          "droprate": "Always"
-        },
         "Lesser demon Wilderness Slayer Cave": {
           "droprate": "1/9.75"
         },
@@ -14886,9 +14874,6 @@
     "image": "black_platebody.png",
     "sources": {
       "drops": {
-        "Animated Black Armour": {
-          "droprate": "Always"
-        },
         "Damaged armour": {
           "droprate": "1/20"
         },
@@ -15053,9 +15038,6 @@
     "image": "black_platelegs.png",
     "sources": {
       "drops": {
-        "Animated Black Armour": {
-          "droprate": "Always"
-        },
         "Repugnant spectre": {
           "droprate": "3 × 1/25.6"
         },
@@ -22530,9 +22512,6 @@
     "image": "bronze_full_helm.png",
     "sources": {
       "drops": {
-        "Animated Bronze Armour": {
-          "droprate": "1/1.111"
-        },
         "Giant skeleton (Tarn's Lair)": {
           "droprate": "1/25.6"
         },
@@ -23072,9 +23051,6 @@
     "image": "bronze_platebody.png",
     "sources": {
       "drops": {
-        "Animated Bronze Armour": {
-          "droprate": "1/1.111"
-        },
         "Damaged armour": {
           "droprate": "1/4.167"
         },
@@ -23123,9 +23099,6 @@
     "image": "bronze_platelegs.png",
     "sources": {
       "drops": {
-        "Animated Bronze Armour": {
-          "droprate": "1/1.111"
-        },
         "Broken armour": {
           "droprate": "1/8.333"
         },
@@ -60511,9 +60484,6 @@
     "image": "iron_full_helm.png",
     "sources": {
       "drops": {
-        "Animated Iron Armour": {
-          "droprate": "Always"
-        },
         "Black Knight Titan": {
           "droprate": "1/25.6"
         },
@@ -61417,9 +61387,6 @@
     "image": "iron_platebody.png",
     "sources": {
       "drops": {
-        "Animated Iron Armour": {
-          "droprate": "Always"
-        },
         "Animated steel armour (Tarn's Lair)": {
           "droprate": "Always"
         },
@@ -61479,9 +61446,6 @@
       "drops": {
         "Combat path starter kit": {
           "droprate": "Always"
-        },
-        "Animated Iron Armour": {
-          "droprate": "1/1.111"
         },
         "Broken armour": {
           "droprate": "1/3.509"
@@ -71987,9 +71951,6 @@
         "Adventurer Jon Mithril defence (m)": {
           "droprate": "Always"
         },
-        "Animated Mithril Armour": {
-          "droprate": "Always"
-        },
         "Insatiable mutated Bloodveld": {
           "droprate": "3 × 1/16"
         },
@@ -72861,9 +72822,6 @@
     "image": "mithril_platebody.png",
     "sources": {
       "drops": {
-        "Animated Mithril Armour": {
-          "droprate": "Always"
-        },
         "Hammerhead shark": {
           "droprate": "1/12.5"
         },
@@ -72970,9 +72928,6 @@
     "sources": {
       "drops": {
         "Adventurer Jon Mithril defence (m)": {
-          "droprate": "Always"
-        },
-        "Animated Mithril Armour": {
           "droprate": "Always"
         },
         "Agility dispenser Laps 16-30": {
@@ -88861,9 +88816,6 @@
     "image": "rune_full_helm.png",
     "sources": {
       "drops": {
-        "Animated Rune Armour": {
-          "droprate": "Always"
-        },
         "Reward Chest (The Gauntlet) (Corrupted)": {
           "droprate": "3 × 1/24"
         },
@@ -90212,9 +90164,6 @@
     "image": "rune_platebody.png",
     "sources": {
       "drops": {
-        "Animated Rune Armour": {
-          "droprate": "Always"
-        },
         "Hallowed sack": {
           "droprate": "2 × 1/10"
         },
@@ -90484,9 +90433,6 @@
     "image": "rune_platelegs.png",
     "sources": {
       "drops": {
-        "Animated Rune Armour": {
-          "droprate": "Always"
-        },
         "Reward Chest (The Gauntlet) (Corrupted)": {
           "droprate": "3 × 1/24"
         },
@@ -100256,9 +100202,6 @@
     "image": "steel_full_helm.png",
     "sources": {
       "drops": {
-        "Animated Steel Armour": {
-          "droprate": "1/1.111"
-        },
         "Flaming pyrelord": {
           "droprate": "3 × 1/32"
         },
@@ -101193,9 +101136,6 @@
     "image": "steel_platebody.png",
     "sources": {
       "drops": {
-        "Animated Steel Armour": {
-          "droprate": "Always"
-        },
         "Mystery box Free-to-play": {
           "droprate": "1/6"
         },
@@ -101323,9 +101263,6 @@
     "sources": {
       "drops": {
         "Adventurer Jon Sticks and stones (m)": {
-          "droprate": "Always"
-        },
-        "Animated Steel Armour": {
           "droprate": "Always"
         },
         "Spiked Turoth": {
