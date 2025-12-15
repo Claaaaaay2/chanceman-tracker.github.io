@@ -942,7 +942,7 @@ export const NPC_DATA = {
     },
     "Asyn shadow (Temple Trekking)": {
         "wiki": "https://oldschool.runescape.wiki/w/Asyn_shadow_(Temple_Trekking)",
-        "rule": ["canCompleteInAidOfTheMyreque"],
+        "rule": ["canCompleteInSearchOfTheMyreque"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -1068,7 +1068,7 @@ export const NPC_DATA = {
     },
     "Backpack": {
         "wiki": "https://oldschool.runescape.wiki/w/Backpack",
-        "rule": ["canCompleteInAidOfTheMyreque"],
+        "rule": ["canCompleteInSearchOfTheMyreque"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -1638,7 +1638,8 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompleteBoneVoyage",
-                "canDoBirdhouses"
+                "canTrainHunter",
+                "hasBirdhouse"
             ]
         },
         "skill": ["hunter"],
@@ -3367,7 +3368,7 @@ export const NPC_DATA = {
         "rule": ["canDoTombsOfAmascut"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["raid"],
         "f2p": false
     },
     "Chest (Underwater)": {
@@ -8987,14 +8988,14 @@ export const NPC_DATA = {
     "Large salvage": {
         "wiki": "https://oldschool.runescape.wiki/w/Large_salvage",
         "rule": ["canDoSalvaging"],
-        "skill": [],
-        "level": [],
+        "skill": ["sailing"],
+        "level": [53],
         "tags": [],
         "f2p": false
     },
     "Larran's big chest": {
         "wiki": "https://oldschool.runescape.wiki/w/Larran%27s_big_chest",
-        "rule": null,
+        "rule": ["hasLarransKey"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -9002,7 +9003,7 @@ export const NPC_DATA = {
     },
     "Larran's small chest": {
         "wiki": "https://oldschool.runescape.wiki/w/Larran%27s_small_chest",
-        "rule": null,
+        "rule": ["hasLarransKey"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -9011,8 +9012,8 @@ export const NPC_DATA = {
     "Lava Strykewyrm": {
         "wiki": "https://oldschool.runescape.wiki/w/Lava_Strykewyrm",
         "rule": ["canEnterTheCharredDungeon"],
-        "skill": [],
-        "level": [],
+        "skill": ["slayer"],
+        "level": [62],
         "tags": [],
         "f2p": false
     },
@@ -9027,8 +9028,8 @@ export const NPC_DATA = {
     "Lead rocks": {
         "wiki": "https://oldschool.runescape.wiki/w/Lead_rocks",
         "rule": ["canTrainMining"],
-        "skill": [],
-        "level": [],
+        "skill": ["mining"],
+        "level": [25],
         "tags": [],
         "f2p": false
     },
@@ -9042,7 +9043,7 @@ export const NPC_DATA = {
     },
     "Lesser demon (Melzar's Maze)": {
         "wiki": "https://oldschool.runescape.wiki/w/Lesser_demon_(Melzar%27s_Maze)",
-        "rule": null,
+        "rule": ["canCompleteDragonSlayerI"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -9062,7 +9063,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Lesser demon Regular (m)": {
         "wiki": "https://oldschool.runescape.wiki/w/Lesser_demon#Regular",
@@ -9082,7 +9083,7 @@ export const NPC_DATA = {
     },
     "Lev": {
         "wiki": "https://oldschool.runescape.wiki/w/Lev",
-        "rule": null,
+        "rule": ["canCompletePriestInPeril"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -9111,7 +9112,7 @@ export const NPC_DATA = {
     },
     "Liliya": {
         "wiki": "https://oldschool.runescape.wiki/w/Liliya",
-        "rule": null,
+        "rule": ["canCompletePriestInPeril"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -9119,33 +9120,38 @@ export const NPC_DATA = {
     },
     "Limestone rock": {
         "wiki": "https://oldschool.runescape.wiki/w/Limestone_rock",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canTrainMining"],
+        "skill": ["mining"],
+        "level": [10],
         "tags": [],
         "f2p": false
     },
     "Limestone rocks": {
-        "wiki": null,
+        "wiki": "https://oldschool.runescape.wiki/w/Limestone_rock",
         "rule": ["canTrainMining"],
-        "skill": [],
-        "level": [],
+        "skill": ["mining"],
+        "level": [10],
         "tags": [],
         "f2p": false
     },
     "Limpwurt plant": {
         "wiki": "https://oldschool.runescape.wiki/w/Limpwurt_plant",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canPlantPlants",
+                "hasLimpwurtSeed"
+            ]
+        },
+        "skill": ["farming"],
+        "level": [26],
         "tags": [],
         "f2p": false
     },
     "Lizard": {
         "wiki": "https://oldschool.runescape.wiki/w/Lizard",
         "rule": null,
-        "skill": [],
-        "level": [],
+        "skill": ["slayer"],
+        "level": [22],
         "tags": [],
         "f2p": false
     },
@@ -9191,7 +9197,7 @@ export const NPC_DATA = {
     },
     "Loar Shade": {
         "wiki": "https://oldschool.runescape.wiki/w/Loar_Shade",
-        "rule": null,
+        "rule": ["canCompletePriestInPeril"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -9226,22 +9232,22 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
-        "f2p": false
+        "tags": ["easy"],
+        "f2p": true
     },
     "Long-tailed Wyvern": {
         "wiki": "https://oldschool.runescape.wiki/w/Long-tailed_Wyvern",
         "rule": ["canKillFossilIslandWyverns"],
-        "skill": [],
-        "level": [],
+        "skill": ["slayer"],
+        "level": [66],
         "tags": [],
         "f2p": false
     },
     "Lost camphor crate": {
         "wiki": "https://oldschool.runescape.wiki/w/Lost_camphor_crate",
         "rule": ["canCompletePandemonium"],
-        "skill": [],
-        "level": [],
+        "skill": ["sailing"],
+        "level": [85],
         "tags": [],
         "f2p": false
     },
@@ -9249,47 +9255,47 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Lost_ironwood_crate",
         "rule": ["canCompletePandemonium"],
         "skill": [],
-        "level": [],
+        "level": [95],
         "tags": [],
         "f2p": false
     },
     "Lost mahogany crate": {
         "wiki": "https://oldschool.runescape.wiki/w/Lost_mahogany_crate",
         "rule": ["canCompletePandemonium"],
-        "skill": [],
-        "level": [],
+        "skill": ["sailing"],
+        "level": [70],
         "tags": [],
         "f2p": false
     },
     "Lost oak crate": {
         "wiki": "https://oldschool.runescape.wiki/w/Lost_oak_crate",
         "rule": ["canCompletePandemonium"],
-        "skill": [],
-        "level": [],
+        "skill": ["sailing"],
+        "level": [25],
         "tags": [],
         "f2p": false
     },
     "Lost teak crate": {
         "wiki": "https://oldschool.runescape.wiki/w/Lost_teak_crate",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [50],
         "tags": [],
         "f2p": false
     },
     "Lost wooden crate": {
         "wiki": "https://oldschool.runescape.wiki/w/Lost_wooden_crate",
         "rule": ["canCompletePandemonium"],
-        "skill": [],
-        "level": [],
+        "skill": ["sailing"],
+        "level": [5],
         "tags": [],
         "f2p": false
     },
     "Lovakite rocks": {
         "wiki": "https://oldschool.runescape.wiki/w/Lovakite_rocks",
         "rule": ["canTrainMining"],
-        "skill": [],
-        "level": [],
+        "skill": ["mining"],
+        "level": [65],
         "tags": [],
         "f2p": false
     },
@@ -9303,7 +9309,7 @@ export const NPC_DATA = {
     },
     "Lunar Chest": {
         "wiki": "https://oldschool.runescape.wiki/w/Lunar_Chest",
-        "rule": null,
+        "rule": ["canCompletePerilousMoons"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -9311,7 +9317,7 @@ export const NPC_DATA = {
     },
     "Lundail Easy Wilderness diary": {
         "wiki": "https://oldschool.runescape.wiki/w/Lundail#Easy_Wilderness_diary",
-        "rule": null,
+        "rule": ["canCompleteWildernessDiaryEasy"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -9319,7 +9325,7 @@ export const NPC_DATA = {
     },
     "Lundail Elite Wilderness diary": {
         "wiki": "https://oldschool.runescape.wiki/w/Lundail#Elite_Wilderness_diary",
-        "rule": null,
+        "rule": ["canCompleteWildernessDiaryElite"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -9327,7 +9333,7 @@ export const NPC_DATA = {
     },
     "Lundail Hard Wilderness diary": {
         "wiki": "https://oldschool.runescape.wiki/w/Lundail#Hard_Wilderness_diary",
-        "rule": null,
+        "rule": ["canCompleteWildernessDiaryHard"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -9335,7 +9341,7 @@ export const NPC_DATA = {
     },
     "Lundail Medium Wilderness diary": {
         "wiki": "https://oldschool.runescape.wiki/w/Lundail#Medium_Wilderness_diary",
-        "rule": null,
+        "rule": ["canCompleteWildernessDiaryMedium"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -9359,7 +9365,7 @@ export const NPC_DATA = {
     },
     "Magic Stall": {
         "wiki": "https://oldschool.runescape.wiki/w/Magic_Stall",
-        "rule": null,
+        "rule": ["canCompleteMonkeyMadnessI"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -9375,9 +9381,15 @@ export const NPC_DATA = {
     },
     "Magic birdhouse": {
         "wiki": "https://oldschool.runescape.wiki/w/Magic_birdhouse",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canCompleteBoneVoyage",
+                "canTrainHunter",
+                "hasMagicBirdhouse"
+            ]
+        },
+        "skill": ["hunter"],
+        "level": [74],
         "tags": [],
         "f2p": false
     },
@@ -9394,14 +9406,14 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["easy"],
         "f2p": false
     },
     "Magic tree": {
         "wiki": "https://oldschool.runescape.wiki/w/Magic_tree",
         "rule": ["canTrainWoodcutting"],
-        "skill": [],
-        "level": [],
+        "skill": ["woodcutting"],
+        "level": [75],
         "tags": [],
         "f2p": false
     },
@@ -9441,25 +9453,25 @@ export const NPC_DATA = {
                 "canTrainWoodcutting"
             ]
         },
-        "skill": ["farming"],
-        "level": [75],
+        "skill": ["farming", "woodcutting"],
+        "level": [75, 75],
         "tags": [],
         "f2p": false
     },
     "Magma strykewyrm": {
         "wiki": "https://oldschool.runescape.wiki/w/Magma_strykewyrm",
         "rule": ["canEnterTheCharredDungeon"],
-        "skill": [],
-        "level": [],
-        "tags": [],
+        "skill": ["slayer"],
+        "level": [62],
+        "tags": ["superior"],
         "f2p": false
     },
     "Magma strykewyrm Normal": {
         "wiki": "https://oldschool.runescape.wiki/w/Magma_strykewyrm#Normal",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
+        "rule": ["canEnterTheCharredDungeon"],
+        "skill": ["slayer"],
+        "level": [62],
+        "tags": ["superior"],
         "f2p": false
     },
     "Magpie impling": {
@@ -9480,17 +9492,23 @@ export const NPC_DATA = {
     },
     "Mahogany birdhouse": {
         "wiki": "https://oldschool.runescape.wiki/w/Mahogany_birdhouse",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canCompleteBoneVoyage",
+                "canTrainHunter",
+                "hasMahoganyBirdhouse"
+            ]
+        },
+        "skill": ["hunter"],
+        "level": [49],
         "tags": [],
         "f2p": false
     },
     "Mahogany tree": {
         "wiki": "https://oldschool.runescape.wiki/w/Mahogany_tree",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canTrainWoodcutting"],
+        "skill": ["woodcutting"],
+        "level": [50],
         "tags": [],
         "f2p": false
     },
@@ -9510,9 +9528,9 @@ export const NPC_DATA = {
     "Malevolent Mage": {
         "wiki": "https://oldschool.runescape.wiki/w/Malevolent_Mage",
         "rule": ["canCompletePriestInPeril"],
-        "skill": [],
-        "level": [],
-        "tags": [],
+        "skill": ["slayer"],
+        "level": [45],
+        "tags": ["superior"],
         "f2p": false
     },
     "Mammoth": {
@@ -9529,7 +9547,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Man (East Ardougne)": {
         "wiki": "https://oldschool.runescape.wiki/w/Man_(East_Ardougne)",
@@ -9574,8 +9592,8 @@ export const NPC_DATA = {
     "Maniacal monkey (Hunter)": {
         "wiki": "https://oldschool.runescape.wiki/w/Maniacal_monkey_(Hunter)",
         "rule": ["canCompleteMonkeyMadnessII"],
-        "skill": [],
-        "level": [],
+        "skill": ["hunter"],
+        "level": [60],
         "tags": [],
         "f2p": false
     },
@@ -9589,17 +9607,36 @@ export const NPC_DATA = {
     },
     "Maple birdhouse": {
         "wiki": "https://oldschool.runescape.wiki/w/Maple_birdhouse",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canCompleteBoneVoyage",
+                "canTrainHunter",
+                "hasMapleBirdhouse"
+            ]
+        },
+        "skill": ["hunter"],
+        "level": [44],
         "tags": [],
         "f2p": false
+    },
+    "Maple tree Free-to-play": {
+        "wiki": "https://oldschool.runescape.wiki/w/Maple_tree",
+        "rule": {
+            "all": [
+                "canTrainWoodcutting",
+                "canCompleteDragonSlayerI"
+            ]
+        },
+        "skill": ["woodcutting"],
+        "level": [45],
+        "tags": [],
+        "f2p": true
     },
     "Maple tree": {
         "wiki": "https://oldschool.runescape.wiki/w/Maple_tree",
         "rule": ["canTrainWoodcutting"],
-        "skill": [],
-        "level": [],
+        "skill": ["woodcutting"],
+        "level": [45],
         "tags": [],
         "f2p": false
     },
@@ -9639,24 +9676,29 @@ export const NPC_DATA = {
                 "canTrainWoodcutting"
             ]
         },
-        "skill": ["farming"],
-        "level": [45],
+        "skill": ["farming", "woodcutting"],
+        "level": [45, 45],
         "tags": [],
         "f2p": false
     },
     "Marble gargoyle": {
         "wiki": "https://oldschool.runescape.wiki/w/Marble_gargoyle",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
+        "rule": ["canCompletePriestInPeril"],
+        "skill": ["slayer"],
+        "level": [75],
+        "tags": ["superior"],
         "f2p": false
     },
     "Marigold": {
         "wiki": "https://oldschool.runescape.wiki/w/Marigold",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canPlantPlants",
+                "hasMarigoldSeed"
+            ]
+        },
+        "skill": ["farming"],
+        "level": [2],
         "tags": [],
         "f2p": false
     },
@@ -9674,19 +9716,19 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Market stall (wine)": {
         "wiki": "https://oldschool.runescape.wiki/w/Market_stall_(wine)",
         "rule": null,
-        "skill": [],
-        "level": [],
+        "skill": ["thieving"],
+        "level": [22],
         "tags": [],
         "f2p": false
     },
     "Marlo's crate": {
         "wiki": "https://oldschool.runescape.wiki/w/Marlo%27s_crate",
-        "rule": null,
+        "rule": ["canCompleteDaddysHome"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -9695,46 +9737,46 @@ export const NPC_DATA = {
     "Martial salvage": {
         "wiki": "https://oldschool.runescape.wiki/w/Martial_salvage",
         "rule": ["canDoSalvaging"],
-        "skill": [],
-        "level": [],
+        "skill": ["sailing"],
+        "level": [73],
         "tags": [],
         "f2p": false
     },
     "Martin the Master Gardener": {
         "wiki": "https://oldschool.runescape.wiki/w/Martin_the_Master_Gardener",
         "rule": null,
-        "skill": [],
-        "level": [],
+        "skill": ["thieving"],
+        "level": [38],
         "tags": [],
         "f2p": false
     },
     "Master Farmer": {
         "wiki": "https://oldschool.runescape.wiki/w/Master_Farmer",
         "rule": null,
-        "skill": [],
-        "level": [],
+        "skill": ["thieving"],
+        "level": [38],
         "tags": [],
         "f2p": false
     },
     "Mature custodian stalker": {
         "wiki": "https://oldschool.runescape.wiki/w/Mature_custodian_stalker",
         "rule": ["canCompleteShadowsOfCustodia"],
-        "skill": [],
-        "level": [],
+        "skill": [67],
+        "level": ["slayer"],
         "tags": [],
         "f2p": false
     },
     "Me": {
         "wiki": "https://oldschool.runescape.wiki/w/Me",
-        "rule": null,
+        "rule": ["canCompleteLunarDiplomacy"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["quest"],
         "f2p": false
     },
     "Me (Nightmare Zone)": {
         "wiki": "https://oldschool.runescape.wiki/w/Me_(Nightmare_Zone)",
-        "rule": null,
+        "rule": ["canCompleteLunarDiplomacy"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -9755,11 +9797,11 @@ export const NPC_DATA = {
     },
     "Melzar the Mad": {
         "wiki": "https://oldschool.runescape.wiki/w/Melzar_the_Mad",
-        "rule": null,
+        "rule": ["cancompleteDragonSlayerI"],
         "skill": [],
         "level": [],
-        "tags": [],
-        "f2p": false
+        "tags": ["quest"],
+        "f2p": true
     },
     "Menaphite Thug": {
         "wiki": "https://oldschool.runescape.wiki/w/Menaphite_Thug",
@@ -9779,7 +9821,7 @@ export const NPC_DATA = {
     },
     "Milla": {
         "wiki": "https://oldschool.runescape.wiki/w/Milla",
-        "rule": null,
+        "rule": ["canCompletePriestInPeril"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -9791,15 +9833,15 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Mind rune pack": {
         "wiki": "https://oldschool.runescape.wiki/w/Mind_rune_pack",
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
-        "f2p": false
+        "tags": ["easy"],
+        "f2p": true
     },
     "Minotaur": {
         "wiki": "https://oldschool.runescape.wiki/w/Minotaur",
@@ -9807,7 +9849,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Minotaur (f)": {
         "wiki": "https://oldschool.runescape.wiki/w/Minotaur",
@@ -9815,7 +9857,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Minotaur (m)": {
         "wiki": "https://oldschool.runescape.wiki/w/Minotaur",
@@ -9841,24 +9883,24 @@ export const NPC_DATA = {
     "Mithril rocks": {
         "wiki": "https://oldschool.runescape.wiki/w/Mithril_rocks",
         "rule": ["canTrainMining"],
-        "skill": [],
-        "level": [],
+        "skill": ["mining"],
+        "level": [55],
         "tags": [],
         "f2p": false
     },
     "Mogre": {
         "wiki": "https://oldschool.runescape.wiki/w/Mogre",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canCompleteSkippyAndTheMogres"],
+        "skill": ["slayer"],
+        "level": [32],
         "tags": [],
         "f2p": false
     },
     "Mogre (Sailing)": {
         "wiki": "https://oldschool.runescape.wiki/w/Mogre_(Sailing)",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canShortrange"],
+        "skill": ["slayer"],
+        "level": [32],
         "tags": [],
         "f2p": false
     },
@@ -9870,8 +9912,8 @@ export const NPC_DATA = {
                 "hasSlayerBell"
             ]
         },
-        "skill": [],
-        "level": [],
+        "skill": ["slayer"],
+        "level": [39],
         "tags": [],
         "f2p": false
     },
@@ -9881,7 +9923,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Monk of Zamorak": {
         "wiki": "https://oldschool.runescape.wiki/w/Monk_of_Zamorak",
@@ -9889,7 +9931,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Monkey (monster)": {
         "wiki": "https://oldschool.runescape.wiki/w/Monkey_(monster)",
@@ -9897,7 +9939,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Monkey (monster) (m)": {
         "wiki": "https://oldschool.runescape.wiki/w/Monkey_(monster)",
@@ -9909,7 +9951,7 @@ export const NPC_DATA = {
     },
     "Monkey Archer": {
         "wiki": "https://oldschool.runescape.wiki/w/Monkey_Archer",
-        "rule": null,
+        "rule": ["canCompleteMonkeyMadnessI"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -9917,7 +9959,7 @@ export const NPC_DATA = {
     },
     "Monkey Guard": {
         "wiki": "https://oldschool.runescape.wiki/w/Monkey_Guard",
-        "rule": null,
+        "rule": ["canCompleteMonkeyMadnessI"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -9931,33 +9973,33 @@ export const NPC_DATA = {
                 "hasMirrorShield"
             ]
         },
-        "skill": [],
-        "level": [],
-        "tags": [],
+        "skill": ["slayer"],
+        "level": [40],
+        "tags": ["superior"],
         "f2p": false
     },
     "Monumental chest": {
         "wiki": "https://oldschool.runescape.wiki/w/Monumental_chest",
-        "rule": null,
+        "rule": ["canCompletePriestInPeril"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["raid"],
         "f2p": false
     },
     "Monumental chest Hard Mode": {
         "wiki": "https://oldschool.runescape.wiki/w/Monumental_chest#Hard_Mode",
-        "rule": null,
+        "rule": ["canCompletePriestInPeril"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["raid"],
         "f2p": false
     },
     "Monumental chest Normal Mode": {
         "wiki": "https://oldschool.runescape.wiki/w/Monumental_chest#Normal_Mode",
-        "rule": null,
+        "rule": ["canCompletePriestInPeril"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["raid"],
         "f2p": false
     },
     "Moonlight Cockatrice": {
@@ -9968,8 +10010,8 @@ export const NPC_DATA = {
                 "hasMirrorShield"
             ]
         },
-        "skill": [],
-        "level": [],
+        "skill": ["slayer"],
+        "level": [25],
         "tags": [],
         "f2p": false
     },
@@ -9983,9 +10025,9 @@ export const NPC_DATA = {
     },
     "Moonlight moth": {
         "wiki": "https://oldschool.runescape.wiki/w/Moonlight_moth",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canTrainHunter"],
+        "skill": ["hunter"],
+        "level": [85],
         "tags": [],
         "f2p": false
     },
@@ -10015,15 +10057,15 @@ export const NPC_DATA = {
     },
     "Moss Guardian": {
         "wiki": "https://oldschool.runescape.wiki/w/Moss_Guardian",
-        "rule": null,
+        "rule": ["canCompleteRovingElves"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["quest"],
         "f2p": false
     },
     "Moss Guardian (Nightmare Zone)": {
         "wiki": "https://oldschool.runescape.wiki/w/Moss_Guardian_(Nightmare_Zone)",
-        "rule": null,
+        "rule": ["canCompleteRovingElves"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -10035,7 +10077,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Moss giant Regular (m)": {
         "wiki": "https://oldschool.runescape.wiki/w/Moss_giant#Regular",
@@ -10071,7 +10113,7 @@ export const NPC_DATA = {
     },
     "Mourner Level 11": {
         "wiki": "https://oldschool.runescape.wiki/w/Mourner#Level_11",
-        "rule": null,
+        "rule": ["canCompletePlagueCity"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -10079,7 +10121,7 @@ export const NPC_DATA = {
     },
     "Mouse": {
         "wiki": "https://oldschool.runescape.wiki/w/Mouse",
-        "rule": null,
+        "rule": ["canCompleteGrimTales"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -10087,7 +10129,7 @@ export const NPC_DATA = {
     },
     "Muddy chest": {
         "wiki": "https://oldschool.runescape.wiki/w/Muddy_chest",
-        "rule": null,
+        "rule": ["hasMuddyKey"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -10095,7 +10137,7 @@ export const NPC_DATA = {
     },
     "Muddy chest (m)": {
         "wiki": "https://oldschool.runescape.wiki/w/Muddy_chest",
-        "rule": null,
+        "rule": ["hasMuddyKey"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -10103,15 +10145,21 @@ export const NPC_DATA = {
     },
     "Muddy patch": {
         "wiki": "https://oldschool.runescape.wiki/w/Muddy_patch",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canCompleteBoneVoyage",
+                "canTrainHunter",
+                "canTrainHerblore"
+            ]
+        },
+        "skill": ["hunter", "herblore"],
+        "level": [80, 31],
         "tags": [],
         "f2p": false
     },
     "Mudskipper": {
         "wiki": "https://oldschool.runescape.wiki/w/Mudskipper",
-        "rule": null,
+        "rule": ["canCompleteRFDFreeingPiratePete"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -10123,7 +10171,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Mugger (m)": {
         "wiki": "https://oldschool.runescape.wiki/w/Mugger",
@@ -10135,7 +10183,7 @@ export const NPC_DATA = {
     },
     "Mummy (Ancient Pyramid sarcophagus)": {
         "wiki": "https://oldschool.runescape.wiki/w/Mummy_(Ancient_Pyramid_sarcophagus)",
-        "rule": null,
+        "rule": ["canCompleteDesertTreasureI"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -10151,7 +10199,7 @@ export const NPC_DATA = {
     },
     "Mummy (Klenter's Pyramid)": {
         "wiki": "https://oldschool.runescape.wiki/w/Mummy_(Klenter%27s_Pyramid)",
-        "rule": null,
+        "rule": ["canCompleteIcthlarinsLittleHelper"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -10159,7 +10207,7 @@ export const NPC_DATA = {
     },
     "Mummy (Pyramid Plunder)": {
         "wiki": "https://oldschool.runescape.wiki/w/Mummy_(Pyramid_Plunder)",
-        "rule": null,
+        "rule": ["canStartIcthlarinsLittleHelper"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -10167,34 +10215,40 @@ export const NPC_DATA = {
     },
     "Mushroom (herbiboar, red)": {
         "wiki": "https://oldschool.runescape.wiki/w/Mushroom_(herbiboar,_red)",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canCompleteBoneVoyage",
+                "canTrainHunter",
+                "canTrainHerblore"
+            ]
+        },
+        "skill": ["hunter", "herblore"],
+        "level": [80, 31],
         "tags": [],
         "f2p": false
     },
     "Mutated Bloodveld": {
         "wiki": "https://oldschool.runescape.wiki/w/Mutated_Bloodveld",
         "rule": null,
-        "skill": [],
-        "level": [],
+        "skill": ["slayer"],
+        "level": [50],
         "tags": [],
         "f2p": false
     },
     "Mutated Terrorbird": {
         "wiki": "https://oldschool.runescape.wiki/w/Mutated_Terrorbird",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
+        "rule": ["canCompleteThePathOfGlouphrie"],
+        "skill": ["slayer"],
+        "level": [56],
+        "tags": ["superior"],
         "f2p": false
     },
     "Mutated Tortoise": {
         "wiki": "https://oldschool.runescape.wiki/w/Mutated_Tortoise",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
+        "rule": ["canCompleteThePathOfGlouphrie"],
+        "skill": ["slayer"],
+        "level": [56],
+        "tags": ["superior"],
         "f2p": false
     },
     "Muttadile": {
@@ -10207,7 +10261,12 @@ export const NPC_DATA = {
     },
     "Myre Blamish Snail Pointed": {
         "wiki": "https://oldschool.runescape.wiki/w/Myre_Blamish_Snail#Pointed",
-        "rule": null,
+        "rule": {
+            "any": [
+                "canCompletePriestInPeril",
+                "canLongrange"
+            ]
+        },
         "skill": [],
         "level": [],
         "tags": [],
@@ -10215,7 +10274,12 @@ export const NPC_DATA = {
     },
     "Myre Blamish Snail Round": {
         "wiki": "https://oldschool.runescape.wiki/w/Myre_Blamish_Snail#Round",
-        "rule": null,
+        "rule": {
+            "any": [
+                "canCompletePriestInPeril",
+                "canLongrange"
+            ]
+        },
         "skill": [],
         "level": [],
         "tags": [],
@@ -10227,7 +10291,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Mysterious Old Man (m)": {
         "wiki": "https://oldschool.runescape.wiki/w/Mysterious_Old_Man",
@@ -10259,7 +10323,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Mystery box Members": {
         "wiki": "https://oldschool.runescape.wiki/w/Mystery_box#Members",
@@ -10271,7 +10335,7 @@ export const NPC_DATA = {
     },
     "Nail beast": {
         "wiki": "https://oldschool.runescape.wiki/w/Nail_beast",
-        "rule": null,
+        "rule": ["canCompleteInSearchOfTheMyreque"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -10283,7 +10347,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Narf (m)": {
         "wiki": "https://oldschool.runescape.wiki/w/Narf",
@@ -10308,7 +10372,14 @@ export const NPC_DATA = {
     },
     "Nasturtium": {
         "wiki": "https://oldschool.runescape.wiki/w/Nasturtium",
-        "rule": null,
+        "rule": {
+            "all": [
+                "canPlantPlants",
+                "hasNasturtiumSeed"
+            ]
+        },
+        "skill": ["farming"],
+        "level": [24],
         "skill": [],
         "level": [],
         "tags": [],
@@ -10332,34 +10403,48 @@ export const NPC_DATA = {
     },
     "Nechryael": {
         "wiki": "https://oldschool.runescape.wiki/w/Nechryael",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "any": [
+                "canEnterTheCharredDungeon",
+                "canCompletePriestInPeril"
+            ]
+        },
+        "skill": ["slayer"],
+        "level": [80],
         "tags": [],
         "f2p": false
     },
     "Nechryarch Greater": {
         "wiki": "https://oldschool.runescape.wiki/w/Nechryarch#Greater",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
+        "rule": {
+            "any": [
+                "canEnterTheCharredDungeon",
+                "canCompletePriestInPeril"
+            ]
+        },
+        "skill": ["slayer"],
+        "level": [80],
+        "tags": ["superior"],
         "f2p": false
     },
     "Nechryarch Normal": {
         "wiki": "https://oldschool.runescape.wiki/w/Nechryarch#Normal",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
+        "rule": {
+            "any": [
+                "canEnterTheCharredDungeon",
+                "canCompletePriestInPeril"
+            ]
+        },
+        "skill": ["slayer"],
+        "level": [80],
+        "tags": ["superior"],
         "f2p": false
     },
     "Nechryarch Wilderness Slayer Cave": {
         "wiki": "https://oldschool.runescape.wiki/w/Nechryarch#Wilderness_Slayer_Cave",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
+        "skill": ["slayer"],
+        "level": [80],
+        "tags": ["superior"],
         "f2p": false
     },
     "Necromancer": {
@@ -10380,7 +10465,7 @@ export const NPC_DATA = {
     },
     "Nest box Empty": {
         "wiki": "https://oldschool.runescape.wiki/w/Nest_box#Empty",
-        "rule": null,
+        "rule": ["hasMoleParts"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -10391,12 +10476,18 @@ export const NPC_DATA = {
         "rule": ["canCompleteSwanSong"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["easy"],
         "f2p": false
     },
     "Newtroost": {
         "wiki": "https://oldschool.runescape.wiki/w/Newtroost",
-        "rule": null,
+        "rule": {
+            "all": [
+                "canCompleteTowerOfLife",
+                "hasEyeOfNewt",
+                "hasFeather"
+            ]
+        },
         "skill": [],
         "level": [],
         "tags": [],
@@ -10412,7 +10503,7 @@ export const NPC_DATA = {
     },
     "Nezikchened (Nightmare Zone)": {
         "wiki": "https://oldschool.runescape.wiki/w/Nezikchened_(Nightmare_Zone)",
-        "rule": null,
+        "rule": ["canCompleteLegendsQuest"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -10426,8 +10517,8 @@ export const NPC_DATA = {
                 "canTrainMining"
             ]
         },
-        "skill": [],
-        "level": [],
+        "skill": ["mining", "sailing"],
+        "level": [74, 67],
         "tags": [],
         "f2p": false
     },
@@ -10441,7 +10532,7 @@ export const NPC_DATA = {
     },
     "Nikita": {
         "wiki": "https://oldschool.runescape.wiki/w/Nikita",
-        "rule": null,
+        "rule": ["canCompletePriestInPeril"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -10449,7 +10540,7 @@ export const NPC_DATA = {
     },
     "Nikolai": {
         "wiki": "https://oldschool.runescape.wiki/w/Nikolai",
-        "rule": null,
+        "rule": ["canCompletePriestInPeril"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -10473,17 +10564,23 @@ export const NPC_DATA = {
     },
     "Nuclear smoke devil": {
         "wiki": "https://oldschool.runescape.wiki/w/Nuclear_smoke_devil",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
+        "rule": ["hasFaceMask"],
+        "skill": ["slayer"],
+        "level": [93],
+        "tags": ["superior"],
         "f2p": false
     },
     "Oak birdhouse": {
         "wiki": "https://oldschool.runescape.wiki/w/Oak_birdhouse",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canCompleteBoneVoyage",
+                "canTrainHunter",
+                "hasOakBirdhouse"
+            ]
+        },
+        "skill": ["hunter"],
+        "level": [14],
         "tags": [],
         "f2p": false
     },
@@ -10563,8 +10660,8 @@ export const NPC_DATA = {
                 "canTrainWoodcutting"
             ]
         },
-        "skill": ["farming"],
-        "level": [15],
+        "skill": ["farming", "woodcutting"],
+        "level": [15, 15],
         "tags": [],
         "f2p": false
     },
@@ -11489,9 +11586,15 @@ export const NPC_DATA = {
     },
     "Redwood birdhouse": {
         "wiki": "https://oldschool.runescape.wiki/w/Redwood_birdhouse",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canCompleteBoneVoyage",
+                "canTrainHunter",
+                "hasRedwoodBirdhouse"
+            ]
+        },
+        "skill": ["hunter"],
+        "level": [89],
         "tags": [],
         "f2p": false
     },
@@ -12145,7 +12248,7 @@ export const NPC_DATA = {
     },
     "Riyl shadow (Temple Trekking)": {
         "wiki": "https://oldschool.runescape.wiki/w/Riyl_shadow_(Temple_Trekking)",
-        "rule": null,
+        "rule": ["canCompleteInSearchOfTheMyreque"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -12831,9 +12934,15 @@ export const NPC_DATA = {
     },
     "Seaweed (herbiboar)": {
         "wiki": "https://oldschool.runescape.wiki/w/Seaweed_(herbiboar)",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canCompleteBoneVoyage",
+                "canTrainHunter",
+                "canTrainHerblore"
+            ]
+        },
+        "skill": ["hunter", "herblore"],
+        "level": [80, 31],
         "tags": [],
         "f2p": false
     },
@@ -13218,8 +13327,8 @@ export const NPC_DATA = {
     "Skeletal Wyvern": {
         "wiki": "https://oldschool.runescape.wiki/w/Skeletal_Wyvern",
         "rule": ["hasAccessToWyvernProtection"],
-        "skill": [],
-        "level": [],
+        "skill": ["slayer"],
+        "level": [72],
         "tags": [],
         "f2p": false
     },
@@ -13977,8 +14086,8 @@ export const NPC_DATA = {
     "Spitting Wyvern": {
         "wiki": "https://oldschool.runescape.wiki/w/Spitting_Wyvern",
         "rule": ["canKillFossilIslandWyverns"],
-        "skill": [],
-        "level": [],
+        "skill": ["slayer"],
+        "level": [66],
         "tags": [],
         "f2p": false
     },
@@ -14286,8 +14395,8 @@ export const NPC_DATA = {
     "Taloned Wyvern": {
         "wiki": "https://oldschool.runescape.wiki/w/Taloned_Wyvern",
         "rule": ["canKillFossilIslandWyverns"],
-        "skill": [],
-        "level": [],
+        "skill": ["slayer"],
+        "level": [66],
         "tags": [],
         "f2p": false
     },
@@ -14349,9 +14458,15 @@ export const NPC_DATA = {
     },
     "Teak birdhouse": {
         "wiki": "https://oldschool.runescape.wiki/w/Teak_birdhouse",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canCompleteBoneVoyage",
+                "canTrainHunter",
+                "hasTeakBirdhouse"
+            ]
+        },
+        "skill": ["hunter"],
+        "level": [34],
         "tags": [],
         "f2p": false
     },
@@ -15809,9 +15924,15 @@ export const NPC_DATA = {
     },
     "Willow birdhouse": {
         "wiki": "https://oldschool.runescape.wiki/w/Willow_birdhouse",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canCompleteBoneVoyage",
+                "canTrainHunter",
+                "hasWillowBirdhouse"
+            ]
+        },
+        "skill": ["hunter"],
+        "level": [24],
         "tags": [],
         "f2p": false
     },
@@ -15859,8 +15980,8 @@ export const NPC_DATA = {
                 "canTrainWoodcutting"
             ]
         },
-        "skill": ["farming"],
-        "level": [30],
+        "skill": ["farming", "woodcutting"],
+        "level": [30, 30],
         "tags": [],
         "f2p": false
     },
@@ -16087,9 +16208,15 @@ export const NPC_DATA = {
     },
     "Yew birdhouse": {
         "wiki": "https://oldschool.runescape.wiki/w/Yew_birdhouse",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canCompleteBoneVoyage",
+                "canTrainHunter",
+                "hasYewBirdhouse"
+            ]
+        },
+        "skill": ["hunter"],
+        "level": [59],
         "tags": [],
         "f2p": false
     },
@@ -16137,8 +16264,8 @@ export const NPC_DATA = {
                 "canTrainWoodcutting"
             ]
         },
-        "skill": ["farming"],
-        "level": [60],
+        "skill": ["farming", "woodcutting"],
+        "level": [60, 60],
         "tags": [],
         "f2p": false
     },

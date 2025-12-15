@@ -293,6 +293,18 @@ export const REQUIREMENT_CHECKS = {
     async canDoMixology(ctx) {
         return false; // TODO
     },
+    async canCompleteWildernessDiaryEasy(ctx) {
+        return false; // TODO
+    },
+    async canCompleteWildernessDiaryMedium(ctx) {
+        return false; // TODO
+    },
+    async canCompleteWildernessDiaryHard(ctx) {
+        return false; // TODO
+    },
+    async canCompleteWildernessDiaryElite(ctx) {
+        return false; // TODO
+    },
     async canDoTombsOfAmascut(ctx) {
         return await canDoTombsOfAmascut(ctx);
     },
@@ -313,9 +325,6 @@ export const REQUIREMENT_CHECKS = {
     },
     async canPitfallTrap(ctx) {
         return await canPitfallTrap(ctx);
-    },
-    async canDoBirdhouses(ctx) {
-        return await canDoBirdhouses(ctx);
     },
     async canCatchSalamanders(ctx) {
         return await canCatchSalamanders(ctx);
@@ -416,6 +425,15 @@ export const REQUIREMENT_CHECKS = {
     async canEnterKaruulmSlayerDungeon(ctx) {
         return await canEnterKaruulmSlayerDungeon(ctx);
     },
+    async hasMoleParts(ctx) {
+        return await has(ctx, 7418) || await has(ctx, 7416);
+    },
+    async hasEyeOfNewt(ctx) {
+        return await has(ctx, 221);
+    },
+    async hasFeather(ctx) {
+        return await has(ctx, 314);
+    },
     async hasFacemask(ctx) {
         return await has(ctx, 4164);
     },
@@ -500,7 +518,16 @@ export const REQUIREMENT_CHECKS = {
     async canStartLegendsQuest(ctx) {
         return false; // TODO
     },
+    async canCompleteThePathOfGlouphrie(ctx) {
+        return false; // TODO
+    },
     async canCompleteSeaSlug(ctx) {
+        return false; // TODO
+    },
+    async canCompleteDaddysHome(ctx) {
+        return false; // TODO
+    },
+    async canCompleteSkippyAndTheMogres(ctx) {
         return false; // TODO
     },
     async canCompleteLegendsQuest(ctx) {
@@ -566,6 +593,33 @@ export const REQUIREMENT_CHECKS = {
     async hasRawLobster(ctx) {
         return await has(ctx, 377);
     },
+    async hasBirdhouse(ctx) {
+        return await has(ctx, 21512);
+    },
+    async hasMagicBirdhouse(ctx) {
+        return await has(ctx, 22201);
+    },
+    async hasMahoganyBirdhouse(ctx) {
+        return await has(ctx, 22195);
+    },
+    async hasMapleBirdhouse(ctx) {
+        return await has(ctx, 22192);
+    },
+    async hasOakBirdhouse(ctx) {
+        return await has(ctx, 21515);
+    },
+    async hasRedwoodBirdhouse(ctx) {
+        return await has(ctx, 22204);
+    },
+    async hasTeakBirdhouse(ctx) {
+        return await has(ctx, 21521);
+    },
+    async hasWillowBirdhouse(ctx) {
+        return await has(ctx, 21518);
+    },
+    async hasYewBirdhouse(ctx) {
+        return await has(ctx, 22198);
+    },
     async hasSteelArrow(ctx) {
         return await has(ctx, 886);
     },
@@ -580,6 +634,9 @@ export const REQUIREMENT_CHECKS = {
     },
     async hasSaltpetre(ctx) {
         return await has(ctx, 13421);
+    },
+    async hasMuddyKey(ctx) {
+        return await has(ctx, 991);
     },
     async hasGrubbyKey(ctx) {
         return await has(ctx, 23499);
@@ -791,8 +848,17 @@ export const REQUIREMENT_CHECKS = {
     async hasDragonfruitSapling(ctx) {
         return await has(ctx, 22866);
     },
+    async hasMarigoldSeed(ctx) {
+        return await has(ctx, 5096);
+    },
+    async hasNasturtiumSeed(ctx) {
+        return await has(ctx, 5098);
+    },
     async hasRosemarySeed(ctx) {
         return await has(ctx, 5097);
+    },
+    async hasLimpwurtSeed(ctx) {
+        return await has(ctx, 5100);
     },
     async hasCabbageSeed(ctx) {
         return await has(ctx, 5324);
