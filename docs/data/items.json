@@ -20415,9 +20415,6 @@
         "Emissary Chosen": {
           "droprate": "Always"
         },
-        "Enraged Boar": {
-          "droprate": "Always"
-        },
         "Entrana firebird": {
           "droprate": "Always"
         },
@@ -78362,10 +78359,10 @@
         },
         "Coffin (Hallowed Sepulchre) Low": {
           "droprate": "1/10"
-        },
-        "spawns": {
-          "Yes": "canTrainPrayer"
         }
+      },
+      "spawns": {
+        "Yes": "canTrainPrayer"
       }
     }
   },
@@ -91880,9 +91877,6 @@
     "sources": {
       "drops": {
         "Boar": {
-          "droprate": "Always"
-        },
-        "Enraged Boar": {
           "droprate": "Always"
         }
       }

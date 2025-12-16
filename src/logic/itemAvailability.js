@@ -12,7 +12,15 @@ export async function canReachNpc(npcName, ctx) {
         return ctx.npcReachCache.get(npcName);
     }
 
-    const rule = NPC_DATA[npcName].rule;
+    const npc = NPC_DATA[npcName];
+
+    if (!npc) {
+        console.warn("NPC missing from NPC_DATA:", npcName);
+        ctx.npcReachCache.set(npcName, false);
+        return false;
+    }
+
+    const rule = npc.rule;
     const result = !rule ? true : await evaluateRule(rule, ctx);
 
     ctx.npcReachCache.set(npcName, result);

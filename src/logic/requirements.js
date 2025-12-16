@@ -6,18 +6,41 @@ async function has(ctx, id) {
     return ctx.unlocked.includes(id) && await canObtainItem(item, ctx, ctx.items);
 }
 
-export async function canObtainItem(item, ctx, allItems, visited = new Set()) {
+export async function canObtainItem(item, ctx, allItems) {
+    ctx.itemAvailability ??= new Map();
+
+    if (ctx.itemAvailability.has(item.id)) {
+        return ctx.itemAvailability.get(item.id);
+    }
+
+    const result = await canObtainItemInternal(item, ctx, allItems);
+    ctx.itemAvailability.set(item.id, result);
+    return result;
+}
+
+async function canObtainItemInternal(item, ctx, allItems) {
     if (!item) return false;
 
-    if (visited.has(item.id)) return false;
-    visited.add(item.id);
+    const cache = ctx.itemAvailability;
+
+    // Already resolved
+    if (cache.get(item.id) === true) return true;
+    if (cache.get(item.id) === false) return false;
+
+    // Cycle detected → treat as unresolved for now
+    if (cache.get(item.id) === "visiting") return false;
+
+    // Mark as in progress
+    cache.set(item.id, "visiting");
 
     let result = false;
 
+    /* 1. Already rolled */
     if (ctx.rolled.includes(item.id)) {
         result = true;
     }
 
+    /* 2. Droppable NPC */
     else if (item.sources?.drops) {
         for (const npcName of Object.keys(item.sources.drops)) {
             if (await canReachNpc(npcName, ctx)) {
@@ -27,6 +50,7 @@ export async function canObtainItem(item, ctx, allItems, visited = new Set()) {
         }
     }
 
+    /* 3. Other methods */
     else if (item.sources?.other) {
         for (const obj of Object.values(item.sources.other)) {
             if (await canDoOtherMethod(obj.rule, ctx)) {
@@ -36,6 +60,7 @@ export async function canObtainItem(item, ctx, allItems, visited = new Set()) {
         }
     }
 
+    /* 4. Crafting / processing */
     else if (item.processable) {
         for (const [resultId, ingredientList] of Object.entries(item.processable)) {
             if (Number(resultId) !== item.id) continue;
@@ -45,7 +70,7 @@ export async function canObtainItem(item, ctx, allItems, visited = new Set()) {
 
             for (const ingId of ingredients) {
                 const ingObj = allItems.find(i => i.id == ingId);
-                if (!ingObj || !(await canObtainItem(ingObj, ctx, allItems, new Set(visited)))) {
+                if (!ingObj || !(await canObtainItemInternal(ingObj, ctx, allItems))) {
                     ok = false;
                     break;
                 }
@@ -58,6 +83,8 @@ export async function canObtainItem(item, ctx, allItems, visited = new Set()) {
         }
     }
 
+    // Commit final result
+    cache.set(item.id, result);
     return result;
 }
 
