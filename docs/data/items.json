@@ -27075,7 +27075,7 @@
         "Muddy chest": {
           "droprate": "Always"
         },
-        "Paladin": {
+        "Paladin (thieving)": {
           "droprate": "Always"
         },
         "Chest (Barrows)": {
@@ -82338,9 +82338,6 @@
         "Oak tree": {
           "droprate": "1/4"
         },
-        "Oak tree (2024 Christmas event)": {
-          "droprate": "1/4"
-        },
         "Friendly Ent (Forestry event)": {
           "droprate": "1/6"
         },
@@ -82358,9 +82355,6 @@
     "sources": {
       "drops": {
         "Oak tree": {
-          "droprate": "Always"
-        },
-        "Oak tree (2024 Christmas event)": {
           "droprate": "Always"
         },
         "Oak tree (Farming)": {

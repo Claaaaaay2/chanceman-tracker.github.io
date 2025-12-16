@@ -77,6 +77,9 @@ export const REQUIREMENT_CHECKS = {
     async canCompleteDesertTreasureI(ctx) {
         return false; // TODO
     },
+    async canCompleteGiantsFoundry(ctx) {
+        return false; // TODO
+    },
     async canCompleteMyArmsBigAdventure(ctx) {
         return false; // TODO
     },
@@ -102,6 +105,9 @@ export const REQUIREMENT_CHECKS = {
         return false; // TODO
     },
     async canCompleteWhatLiesBelow(ctx) {
+        return false; // TODO
+    },
+    async canStartMageArenaII(ctx) {
         return false; // TODO
     },
     async canCompleteErnestTheChicken(ctx) {
@@ -368,6 +374,9 @@ export const REQUIREMENT_CHECKS = {
     async canReachTrollheim(ctx) {
         return await canReachTrollheim(ctx);
     },
+    async canReachPiratesCove(ctx) {
+        return false; // TODO
+    },
     async canGetBirdNestWyson(ctx) {
         return await canGetBirdNestWyson(ctx);
     },
@@ -516,6 +525,9 @@ export const REQUIREMENT_CHECKS = {
         return await canCompleteMakingHistory(ctx);
     },
     async canStartLegendsQuest(ctx) {
+        return false; // TODO
+    },
+    async canReachKharaziJungle(ctx) {
         return false; // TODO
     },
     async canCompleteThePathOfGlouphrie(ctx) {
@@ -845,6 +857,18 @@ export const REQUIREMENT_CHECKS = {
     async hasCurrySapling(ctx) {
         return await has(ctx, 5499);
     },
+    async hasOrangeSapling(ctx) {
+        return await has(ctx, 5498);
+    },
+    async hasPalmSapling(ctx) {
+        return await has(ctx, 5502);
+    },
+    async hasPapayaSapling(ctx) {
+        return await has(ctx, 5501);
+    },
+    async hasPineappleSapling(ctx) {
+        return await has(ctx, 5500);
+    },
     async hasDragonfruitSapling(ctx) {
         return await has(ctx, 22866);
     },
@@ -860,8 +884,29 @@ export const REQUIREMENT_CHECKS = {
     async hasLimpwurtSeed(ctx) {
         return await has(ctx, 5100);
     },
+    async hasPotatoSeed(ctx) {
+        return await has(ctx, 5318);
+    },
+    async hasOnionSeed(ctx) {
+        return await has(ctx, 5319);
+    },
     async hasCabbageSeed(ctx) {
         return await has(ctx, 5324);
+    },
+    async hasTomatoSeed(ctx) {
+        return await has(ctx, 5322);
+    },
+    async hasSweetcornSeed(ctx) {
+        return await has(ctx, 5320);
+    },
+    async hasStrawberrySeed(ctx) {
+        return await has(ctx, 5323);
+    },
+    async hasWatermelonSeed(ctx) {
+        return await has(ctx, 5321);
+    },
+    async hasSnapeGrassSeed(ctx) {
+        return await has(ctx, 22879);
     },
     async hasBarleySeed(ctx) {
         return await has(ctx, 5305);
@@ -949,6 +994,9 @@ export const REQUIREMENT_CHECKS = {
     },
     async hasHammer(ctx) {
         return await has(ctx, 2347);
+    },
+    async hasOyster(ctx) {
+        return await has(ctx, 407);
     },
     async hasRope(ctx) {
         return await has(ctx, 954);

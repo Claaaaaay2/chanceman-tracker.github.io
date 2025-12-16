@@ -1417,7 +1417,7 @@ export const NPC_DATA = {
     },
     "Barrel (cooking apples) Apples": {
         "wiki": "https://oldschool.runescape.wiki/w/Barrel_(cooking_apples)#Apples",
-        "rule": ["canCompleteLunarDiplomacy"],
+        "rule": ["canReachPiratesCove"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -8359,7 +8359,7 @@ export const NPC_DATA = {
     },
     "Jake": {
         "wiki": "https://oldschool.runescape.wiki/w/Jake",
-        "rule": ["canCompleteLunarDiplomacy"],
+        "rule": ["canReachPiratesCove"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -10589,7 +10589,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["house"],
         "f2p": false
     },
     "Oak shelves 1": {
@@ -10597,7 +10597,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["house"],
         "f2p": false
     },
     "Oak shelves 2": {
@@ -10605,24 +10605,16 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["house"],
         "f2p": false
     },
     "Oak tree": {
         "wiki": "https://oldschool.runescape.wiki/w/Oak_tree",
         "rule": ["canTrainWoodcutting"],
-        "skill": [],
-        "level": [],
+        "skill": ["woodcutting"],
+        "level": [15],
         "tags": [],
-        "f2p": false
-    },
-    "Oak tree (2024 Christmas event)": {
-        "wiki": "https://oldschool.runescape.wiki/w/Oak_tree_(2024_Christmas_event)",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Oak tree (Farming)": {
         "wiki": "https://oldschool.runescape.wiki/w/Oak_tree_(Farming)",
@@ -10668,30 +10660,30 @@ export const NPC_DATA = {
     "Oak tree (The Node)": {
         "wiki": "https://oldschool.runescape.wiki/w/Oak_tree_(The_Node)",
         "rule": null,
-        "skill": [],
-        "level": [],
+        "skill": ["woodcutting"],
+        "level": [15],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Obor Free-to-play": {
         "wiki": "https://oldschool.runescape.wiki/w/Obor#Free-to-play",
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
-        "f2p": false
+        "tags": ["boss"],
+        "f2p": true
     },
     "Obor Members": {
         "wiki": "https://oldschool.runescape.wiki/w/Obor#Members",
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Ocean Man": {
         "wiki": "https://oldschool.runescape.wiki/w/Ocean_Man",
-        "rule": null,
+        "rule": ["canCompletePandemonium"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -10715,7 +10707,12 @@ export const NPC_DATA = {
     },
     "Ochre Blamish Snail Pointed": {
         "wiki": "https://oldschool.runescape.wiki/w/Ochre_Blamish_Snail#Pointed",
-        "rule": null,
+        "rule": {
+            "any": [
+                "canCompletePriestInPeril",
+                "canLongrange"
+            ]
+        },
         "skill": [],
         "level": [],
         "tags": [],
@@ -10723,7 +10720,12 @@ export const NPC_DATA = {
     },
     "Ochre Blamish Snail Round": {
         "wiki": "https://oldschool.runescape.wiki/w/Ochre_Blamish_Snail#Round",
-        "rule": null,
+        "rule": {
+            "any": [
+                "canCompletePriestInPeril",
+                "canLongrange"
+            ]
+        },
         "skill": [],
         "level": [],
         "tags": [],
@@ -10764,7 +10766,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Ogress Shaman (m)": {
         "wiki": "https://oldschool.runescape.wiki/w/Ogress_Shaman",
@@ -10780,7 +10782,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Ogress Warrior (m)": {
         "wiki": "https://oldschool.runescape.wiki/w/Ogress_Warrior",
@@ -10795,23 +10797,23 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
-        "f2p": false
+        "tags": ["easy"],
+        "f2p": true
     },
     "Old tools": {
         "wiki": "https://oldschool.runescape.wiki/w/Old_tools",
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["easy"],
         "f2p": false
     },
     "Olive oil pack": {
         "wiki": "https://oldschool.runescape.wiki/w/Olive_oil_pack",
-        "rule": null,
+        "rule": ["canCompletePriestInPeril"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["easy"],
         "f2p": false
     },
     "Onion (scenery)": {
@@ -10820,19 +10822,24 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Onion plant": {
         "wiki": "https://oldschool.runescape.wiki/w/Onion_plant",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canPlantPlants",
+                "hasOnionSeed"
+            ]
+        },
+        "skill": ["farming"],
+        "level": [5],
         "tags": [],
         "f2p": false
     },
     "Oomlie bird": {
         "wiki": "https://oldschool.runescape.wiki/w/Oomlie_bird",
-        "rule": null,
+        "rule": ["canReachKharaziJungle"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -10841,32 +10848,43 @@ export const NPC_DATA = {
     "Opulent salvage": {
         "wiki": "https://oldschool.runescape.wiki/w/Opulent_salvage",
         "rule": ["canDoSalvaging"],
-        "skill": [],
-        "level": [],
+        "skill": ["sailing"],
+        "level": [87],
         "tags": [],
         "f2p": false
     },
     "Orange salamander (Hunter)": {
         "wiki": "https://oldschool.runescape.wiki/w/Orange_salamander_(Hunter)",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canCatchSalamanders"],
+        "skill": ["hunter"],
+        "level": [47],
         "tags": [],
         "f2p": false
     },
     "Orange tree": {
         "wiki": "https://oldschool.runescape.wiki/w/Orange_tree",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canPlantTrees",
+                "hasOrangeSapling"
+            ]
+        },
+        "skill": ["farming"],
+        "level": [39],
         "tags": [],
         "f2p": false
     },
     "Orange tree Diseased": {
         "wiki": "https://oldschool.runescape.wiki/w/Orange_tree#Diseased",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canPlantTrees",
+                "hasOrangeSapling",
+                "hasSecateurs"
+            ]
+        },
+        "skill": ["farming"],
+        "level": [39],
         "tags": [],
         "f2p": false
     },
@@ -10906,9 +10924,9 @@ export const NPC_DATA = {
     },
     "Ore stall (Port Roberts)": {
         "wiki": "https://oldschool.runescape.wiki/w/Ore_stall_(Port_Roberts)",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canCompletePandemoniom"],
+        "skill": ["thieving"],
+        "level": [82],
         "tags": [],
         "f2p": false
     },
@@ -10934,7 +10952,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Oryx": {
         "wiki": "https://oldschool.runescape.wiki/w/Oryx",
@@ -10946,7 +10964,12 @@ export const NPC_DATA = {
     },
     "Osprey": {
         "wiki": "https://oldschool.runescape.wiki/w/Osprey",
-        "rule": null,
+        "rule": {
+            "any": [
+                "canDoSailingCombat",
+                "canShortrange"
+            ]
+        },
         "skill": [],
         "level": [],
         "tags": [],
@@ -10954,7 +10977,7 @@ export const NPC_DATA = {
     },
     "Othainian": {
         "wiki": "https://oldschool.runescape.wiki/w/Othainian",
-        "rule": null,
+        "rule": ["canCompleteUndergroundPass"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -10962,7 +10985,7 @@ export const NPC_DATA = {
     },
     "Otherworldly being": {
         "wiki": "https://oldschool.runescape.wiki/w/Otherworldly_being",
-        "rule": null,
+        "rule": ["canCompleteLostCity"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -10974,13 +10997,21 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Oyster": {
         "wiki": "https://oldschool.runescape.wiki/w/Oyster",
-        "rule": null,
+        "rule": ["hasOyster"],
         "skill": [],
         "level": [],
+        "tags": [],
+        "f2p": false
+    },
+    "Paladin (thieving)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Paladin",
+        "rule": null,
+        "skill": ["thieving"],
+        "level": [70],
         "tags": [],
         "f2p": false
     },
@@ -10994,23 +11025,34 @@ export const NPC_DATA = {
     },
     "Palm tree": {
         "wiki": "https://oldschool.runescape.wiki/w/Palm_tree",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canPlantTrees",
+                "hasPalmSapling"
+            ]
+        },
+        "skill": ["farming"],
+        "level": [68],
         "tags": [],
         "f2p": false
     },
     "Palm tree Diseased": {
         "wiki": "https://oldschool.runescape.wiki/w/Palm_tree#Diseased",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canPlantTrees",
+                "hasPalmSapling",
+                "hasSecateurs"
+            ]
+        },
+        "skill": ["farming"],
+        "level": [68],
         "tags": [],
         "f2p": false
     },
     "Palmer": {
         "wiki": "https://oldschool.runescape.wiki/w/Palmer",
-        "rule": null,
+        "rule": ["canReachPiratesCove"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -11018,7 +11060,7 @@ export const NPC_DATA = {
     },
     "Panning tray Mud": {
         "wiki": "https://oldschool.runescape.wiki/w/Panning_tray#Mud",
-        "rule": null,
+        "rule": ["hasCupOfTea"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -11026,17 +11068,29 @@ export const NPC_DATA = {
     },
     "Papaya tree": {
         "wiki": "https://oldschool.runescape.wiki/w/Papaya_tree",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canPlantTrees",
+                "hasPapayaSapling",
+                "hasSecateurs"
+            ]
+        },
+        "skill": ["farming"],
+        "level": [57],
         "tags": [],
         "f2p": false
     },
     "Papaya tree Diseased": {
         "wiki": "https://oldschool.runescape.wiki/w/Papaya_tree#Diseased",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canPlantTrees",
+                "hasPapayaSapling",
+                "hasSecateurs"
+            ]
+        },
+        "skill": ["farming"],
+        "level": [57],
         "tags": [],
         "f2p": false
     },
@@ -11077,20 +11131,20 @@ export const NPC_DATA = {
         "rule": ["canCompleteSecretsOfTheNorth"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Phosani's Nightmare": {
         "wiki": "https://oldschool.runescape.wiki/w/Phosani%27s_Nightmare",
-        "rule": null,
+        "rule": ["canCompletePriestInPeril"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Phrin Shade": {
         "wiki": "https://oldschool.runescape.wiki/w/Phrin_Shade",
-        "rule": null,
+        "rule": ["canBurnLoarShades"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -11098,10 +11152,15 @@ export const NPC_DATA = {
     },
     "Pile of Buckets": {
         "wiki": "https://oldschool.runescape.wiki/w/Pile_of_Buckets",
-        "rule": null,
+        "rule": {
+            "any": [
+                "canCompleteGiantsFoundry",
+                "canCompleteMakingFriendsWithMyArm"
+            ]
+        },
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["easy"],
         "f2p": false
     },
     "Pillar coral (plant)": {
@@ -11124,7 +11183,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Pillory (m)": {
         "wiki": "https://oldschool.runescape.wiki/w/Pillory",
@@ -11140,29 +11199,40 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Pineapple Plant (wild)": {
         "wiki": "https://oldschool.runescape.wiki/w/Pineapple_Plant_(wild)",
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["easy"],
         "f2p": false
     },
     "Pineapple plant": {
         "wiki": "https://oldschool.runescape.wiki/w/Pineapple_plant",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canPlantTrees",
+                "hasPineappleSapling"
+            ]
+        },
+        "skill": ["farming"],
+        "level": [51],
         "tags": [],
         "f2p": false
     },
     "Pineapple plant Diseased": {
         "wiki": "https://oldschool.runescape.wiki/w/Pineapple_plant#Diseased",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canPlantTrees",
+                "hasPineappleSapling",
+                "hasSecateurs"
+            ]
+        },
+        "skill": ["farming"],
+        "level": [51],
         "tags": [],
         "f2p": false
     },
@@ -11172,13 +11242,13 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Pirate (Thieving)": {
         "wiki": "https://oldschool.runescape.wiki/w/Pirate_(Thieving)",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canCompletePandemonium"],
+        "skill": ["thieving"],
+        "level": [60],
         "tags": [],
         "f2p": false
     },
@@ -11200,7 +11270,7 @@ export const NPC_DATA = {
     },
     "Pirate Pirate's Cove": {
         "wiki": "https://oldschool.runescape.wiki/w/Pirate#Pirate's_Cove",
-        "rule": null,
+        "rule": ["canReachPiratesCove"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -11208,7 +11278,12 @@ export const NPC_DATA = {
     },
     "Pit Scorpion": {
         "wiki": "https://oldschool.runescape.wiki/w/Pit_Scorpion",
-        "rule": null,
+        "rule": {
+            "any": [
+                "canStartLegendsQuest",
+                "canShortrange"
+            ]
+        },
         "skill": [],
         "level": [],
         "tags": [],
@@ -11219,14 +11294,14 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["easy"],
         "f2p": false
     },
     "Plundered salvage": {
         "wiki": "https://oldschool.runescape.wiki/w/Plundered_salvage",
         "rule": ["canDoSalvaging"],
-        "skill": [],
-        "level": [],
+        "skill": ["sailing"],
+        "level": [64],
         "tags": [],
         "f2p": false
     },
@@ -11261,9 +11336,9 @@ export const NPC_DATA = {
     },
     "Polar kebbit": {
         "wiki": "https://oldschool.runescape.wiki/w/Polar_kebbit",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canNooseWand"],
+        "skill": ["hunter"],
+        "level": [1],
         "tags": [],
         "f2p": false
     },
@@ -11277,7 +11352,7 @@ export const NPC_DATA = {
     },
     "Porazdir": {
         "wiki": "https://oldschool.runescape.wiki/w/Porazdir",
-        "rule": null,
+        "rule": ["canStartMageArenaII"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -11309,7 +11384,12 @@ export const NPC_DATA = {
     },
     "Possessed pickaxe Regular": {
         "wiki": "https://oldschool.runescape.wiki/w/Possessed_pickaxe#Regular",
-        "rule": null,
+        "rule": {
+            "any": [
+                "canCompletePriestInPeril",
+                "canCompleteSongOfTheElves"
+            ]
+        },
         "skill": [],
         "level": [],
         "tags": [],
@@ -11321,7 +11401,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Potato cactus (plant)": {
         "wiki": "https://oldschool.runescape.wiki/w/Potato_cactus_(plant)",
@@ -11338,17 +11418,22 @@ export const NPC_DATA = {
     },
     "Potato plant": {
         "wiki": "https://oldschool.runescape.wiki/w/Potato_plant",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canPlantPlants",
+                "hasPotatoSeed"
+            ]
+        },
+        "skill": ["farming"],
+        "level": [1],
         "tags": [],
         "f2p": false
     },
     "Prickly kebbit": {
         "wiki": "https://oldschool.runescape.wiki/w/Prickly_kebbit",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canDeadfallTrap"],
+        "skill": ["hunter"],
+        "level": [37],
         "tags": [],
         "f2p": false
     },
@@ -11358,7 +11443,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Prison Pete Members": {
         "wiki": "https://oldschool.runescape.wiki/w/Prison_Pete#Members",
@@ -11415,26 +11500,26 @@ export const NPC_DATA = {
     },
     "Pyre fox": {
         "wiki": "https://oldschool.runescape.wiki/w/Pyre_fox",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canDeadfallTrap"],
+        "skill": ["hunter"],
+        "level": [57],
         "tags": [],
         "f2p": false
     },
     "Pyrefiend": {
         "wiki": "https://oldschool.runescape.wiki/w/Pyrefiend",
         "rule": null,
-        "skill": [],
-        "level": [],
+        "skill": ["slayer"],
+        "level": [30],
         "tags": [],
         "f2p": false
     },
     "Pyrelord": {
         "wiki": "https://oldschool.runescape.wiki/w/Pyrelord",
         "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
+        "skill": ["slayer"],
+        "level": [30],
+        "tags": ["superior"],
         "f2p": false
     },
     "Rabbit": {
@@ -11447,7 +11532,7 @@ export const NPC_DATA = {
     },
     "Rabbit (Prifddinas)": {
         "wiki": "https://oldschool.runescape.wiki/w/Rabbit_(Prifddinas)",
-        "rule": null,
+        "rule": ["canCompleteSongOfTheElves"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -11543,9 +11628,9 @@ export const NPC_DATA = {
     },
     "Red salamander (Hunter)": {
         "wiki": "https://oldschool.runescape.wiki/w/Red_salamander_(Hunter)",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canCatchSalamanders"],
+        "skill": ["hunter"],
+        "level": [59],
         "tags": [],
         "f2p": false
     },
@@ -13274,7 +13359,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Sinister chest": {
         "wiki": "https://oldschool.runescape.wiki/w/Sinister_chest",
@@ -13747,9 +13832,14 @@ export const NPC_DATA = {
     },
     "Snape grass plant": {
         "wiki": "https://oldschool.runescape.wiki/w/Snape_grass_plant",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canPlantPlants",
+                "hasSnapeGrassSeed"
+            ]
+        },
+        "skill": ["farming"],
+        "level": [61],
         "tags": [],
         "f2p": false
     },
@@ -14242,9 +14332,14 @@ export const NPC_DATA = {
     },
     "Strawberry plant": {
         "wiki": "https://oldschool.runescape.wiki/w/Strawberry_plant",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canPlantPlants",
+                "hasStrawberrySeed"
+            ]
+        },
+        "skill": ["farming"],
+        "level": [31],
         "tags": [],
         "f2p": false
     },
@@ -14346,9 +14441,14 @@ export const NPC_DATA = {
     },
     "Swamp lizard (Hunter)": {
         "wiki": "https://oldschool.runescape.wiki/w/Swamp_lizard_(Hunter)",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canCatchSalamanders",
+                "canCompletePriestInPeril"
+            ]
+        },
+        "skill": ["hunter"],
+        "level": [29],
         "tags": [],
         "f2p": false
     },
@@ -14370,9 +14470,14 @@ export const NPC_DATA = {
     },
     "Sweetcorn plant": {
         "wiki": "https://oldschool.runescape.wiki/w/Sweetcorn_plant",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canPlantPlants",
+                "hasSweetcornSeed"
+            ]
+        },
+        "skill": ["farming"],
+        "level": [20],
         "tags": [],
         "f2p": false
     },
@@ -14517,9 +14622,9 @@ export const NPC_DATA = {
     },
     "Tecu salamander (Hunter)": {
         "wiki": "https://oldschool.runescape.wiki/w/Tecu_salamander_(Hunter)",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canCatchSalamanders"],
+        "skill": ["hunter"],
+        "level": [79],
         "tags": [],
         "f2p": false
     },
@@ -14528,7 +14633,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["raid"],
         "f2p": false
     },
     "Temple Spider": {
@@ -14754,9 +14859,14 @@ export const NPC_DATA = {
     },
     "Tomato plant": {
         "wiki": "https://oldschool.runescape.wiki/w/Tomato_plant",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canPlantPlants",
+                "hasTomatoSeed"
+            ]
+        },
+        "skill": ["farming"],
+        "level": [12],
         "tags": [],
         "f2p": false
     },
@@ -15727,9 +15837,14 @@ export const NPC_DATA = {
     },
     "Watermelons": {
         "wiki": "https://oldschool.runescape.wiki/w/Watermelons",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": {
+            "all": [
+                "canPlantPlants",
+                "hasWatermelonSeed"
+            ]
+        },
+        "skill": ["farming"],
+        "level": [47],
         "tags": [],
         "f2p": false
     },
