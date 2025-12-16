@@ -107,6 +107,9 @@ export const REQUIREMENT_CHECKS = {
     async canCompleteGiantsFoundry(ctx) {
         return false; // TODO
     },
+    async canCompleteRatcatchers(ctx) {
+        return false; // TODO
+    },
     async canCompleteMyArmsBigAdventure(ctx) {
         return false; // TODO
     },
@@ -1211,7 +1214,7 @@ async function canBurnLoarShades(ctx) {
     return await canCompleteShadesOfMortton(ctx);
 }
 
-async function canBurnPhrinShades(ctx) {
+async function canBurnPhrinShades(ctx) { //TODO shades from temple tracking
     return await canBurnLoarShades(ctx) //
         && await has(ctx, 3398); // Phrin remains
 }

@@ -934,7 +934,7 @@ export const NPC_DATA = {
     },
     "Asyn Shade": {
         "wiki": "https://oldschool.runescape.wiki/w/Asyn_Shade",
-        "rule": ["canBurnLoarShades"],
+        "rule": ["canBurnRiylShades"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -11548,7 +11548,7 @@ export const NPC_DATA = {
     },
     "Ragnvald": {
         "wiki": "https://oldschool.runescape.wiki/w/Ragnvald",
-        "rule": null,
+        "rule": ["canCompleteThroneOfMiscellania"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -11560,27 +11560,27 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Ranging cape accumulator": {
         "wiki": "https://oldschool.runescape.wiki/w/Ranging_cape#accumulator",
         "rule": ["never"],
-        "skill": [],
-        "level": [],
+        "skill": ["ranged"],
+        "level": [99],
         "tags": [],
         "f2p": false
     },
     "Ranging cape assembler": {
         "wiki": "https://oldschool.runescape.wiki/w/Ranging_cape#assembler",
         "rule": ["never"],
-        "skill": [],
-        "level": [],
+        "skill": ["ranged"],
+        "level": [99],
         "tags": [],
         "f2p": false
     },
     "Rannveig": {
         "wiki": "https://oldschool.runescape.wiki/w/Rannveig",
-        "rule": null,
+        "rule": ["canCompleteThroneOfMiscellania"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -11592,29 +11592,29 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Rat trap Cheese-loaded": {
         "wiki": "https://oldschool.runescape.wiki/w/Rat_trap#Cheese-loaded",
-        "rule": null,
+        "rule": ["canCompleteRatcatchers"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["easy"],
         "f2p": false
     },
     "Razor-backed kebbit": {
         "wiki": "https://oldschool.runescape.wiki/w/Razor-backed_kebbit",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canNooseWand"],
+        "skill": ["hunter"],
+        "level": [49],
         "tags": [],
         "f2p": false
     },
     "Red crab (Hunter)": {
         "wiki": "https://oldschool.runescape.wiki/w/Red_crab_(Hunter)",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canCatchCrabs"],
+        "skill": ["hunter"],
+        "level": [21],
         "tags": [],
         "f2p": false
     },
@@ -11685,9 +11685,9 @@ export const NPC_DATA = {
     },
     "Redwood tree": {
         "wiki": "https://oldschool.runescape.wiki/w/Redwood_tree",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canTrainWoodcutting"],
+        "skill": ["woodcutting"],
+        "level": [90],
         "tags": [],
         "f2p": false
     },
@@ -11726,8 +11726,8 @@ export const NPC_DATA = {
                 "canSailToBrittleIsle"
             ]
         },
-        "skill": [],
-        "level": [],
+        "skill": ["thieving", "sailing"],
+        "level": [76, 73],
         "tags": [],
         "f2p": false
     },
@@ -11736,7 +11736,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["quest"],
         "f2p": false
     },
     "Repugnant spectre": {
@@ -11744,7 +11744,7 @@ export const NPC_DATA = {
         "rule": ["hasNosePeg"],
         "skill": ["slayer"],
         "level": [60],
-        "tags": [],
+        "tags": ["superior"],
         "f2p": false
     },
     "Revenant cyclops": {
@@ -12037,7 +12037,7 @@ export const NPC_DATA = {
     },
     "Reward Cart": {
         "wiki": "https://oldschool.runescape.wiki/w/Reward_Cart",
-        "rule": null,
+        "rule": ["canDoWintertodt"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -12064,15 +12064,15 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
-        "f2p": false
+        "tags": ["clue"],
+        "f2p": true
     },
     "Reward casket (easy) Entrana": {
         "wiki": "https://oldschool.runescape.wiki/w/Reward_casket_(easy)#Entrana",
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["clue"],
         "f2p": false
     },
     "Reward casket (easy) Standard": {
@@ -12080,7 +12080,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["clue"],
         "f2p": false
     },
     "Reward casket (elite)": {
@@ -12088,7 +12088,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["clue"],
         "f2p": false
     },
     "Reward casket (hard)": {
@@ -12096,7 +12096,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["clue"],
         "f2p": false
     },
     "Reward casket (master)": {
@@ -12104,7 +12104,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["clue"],
         "f2p": false
     },
     "Reward casket (medium) Entrana": {
@@ -12112,7 +12112,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["clue"],
         "f2p": false
     },
     "Reward casket (medium) Standard": {
@@ -12120,76 +12120,76 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["clue"],
         "f2p": false
     },
     "Reward pool": {
         "wiki": "https://oldschool.runescape.wiki/w/Reward_pool",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canTrainFishing"],
+        "skill": ["fishing"],
+        "level": [35],
         "tags": [],
         "f2p": false
     },
     "Reward pool 35–39 Fishing": {
         "wiki": "https://oldschool.runescape.wiki/w/Reward_pool#35–39_Fishing",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canTrainFishing"],
+        "skill": ["fishing"],
+        "level": [35],
         "tags": [],
         "f2p": false
     },
     "Reward pool 40–45 Fishing": {
         "wiki": "https://oldschool.runescape.wiki/w/Reward_pool#40–45_Fishing",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canTrainFishing"],
+        "skill": ["fishing"],
+        "level": [40],
         "tags": [],
         "f2p": false
     },
     "Reward pool 46–49 Fishing": {
         "wiki": "https://oldschool.runescape.wiki/w/Reward_pool#46–49_Fishing",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canTrainFishing"],
+        "skill": ["fishing"],
+        "level": [46],
         "tags": [],
         "f2p": false
     },
     "Reward pool 50–75 Fishing": {
         "wiki": "https://oldschool.runescape.wiki/w/Reward_pool#50–75_Fishing",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canTrainFishing"],
+        "skill": ["fishing"],
+        "level": [50],
         "tags": [],
         "f2p": false
     },
     "Reward pool 76–78 Fishing": {
         "wiki": "https://oldschool.runescape.wiki/w/Reward_pool#76–78_Fishing",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canTrainFishing"],
+        "skill": ["fishing"],
+        "level": [76],
         "tags": [],
         "f2p": false
     },
     "Reward pool 79–80 Fishing": {
         "wiki": "https://oldschool.runescape.wiki/w/Reward_pool#79–80_Fishing",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canTrainFishing"],
+        "skill": ["fishing"],
+        "level": [79],
         "tags": [],
         "f2p": false
     },
     "Reward pool 81+ Fishing": {
         "wiki": "https://oldschool.runescape.wiki/w/Reward_pool#81+_Fishing",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canTrainFishing"],
+        "skill": ["fishing"],
+        "level": [81],
         "tags": [],
         "f2p": false
     },
     "Reward token": {
         "wiki": "https://oldschool.runescape.wiki/w/Reward_token",
-        "rule": null,
+        "rule": ["canCompleteInSearchOfTheMyreque"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -12200,7 +12200,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["raid"],
         "f2p": false
     },
     "Rewards Chest (Fortis Colosseum) Wave 10": {
@@ -12208,7 +12208,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["raid"],
         "f2p": false
     },
     "Rewards Chest (Fortis Colosseum) Wave 11": {
@@ -12216,7 +12216,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["raid"],
         "f2p": false
     },
     "Rewards Chest (Fortis Colosseum) Wave 12": {
@@ -12224,7 +12224,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["raid"],
         "f2p": false
     },
     "Rewards Chest (Fortis Colosseum) Wave 2": {
@@ -12232,7 +12232,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["raid"],
         "f2p": false
     },
     "Rewards Chest (Fortis Colosseum) Wave 3": {
@@ -12240,7 +12240,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["raid"],
         "f2p": false
     },
     "Rewards Chest (Fortis Colosseum) Wave 4": {
@@ -12248,7 +12248,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["raid"],
         "f2p": false
     },
     "Rewards Chest (Fortis Colosseum) Wave 5": {
@@ -12256,7 +12256,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["raid"],
         "f2p": false
     },
     "Rewards Chest (Fortis Colosseum) Wave 6": {
@@ -12264,7 +12264,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["raid"],
         "f2p": false
     },
     "Rewards Chest (Fortis Colosseum) Wave 7": {
@@ -12272,7 +12272,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["raid"],
         "f2p": false
     },
     "Rewards Chest (Fortis Colosseum) Wave 8": {
@@ -12280,7 +12280,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["raid"],
         "f2p": false
     },
     "Rewards Chest (Fortis Colosseum) Wave 9": {
@@ -12288,7 +12288,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["raid"],
         "f2p": false
     },
     "Rewards Guardian": {
@@ -12305,7 +12305,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Rick Turpentine (m)": {
         "wiki": "https://oldschool.runescape.wiki/w/Rick_Turpentine",
@@ -12325,7 +12325,12 @@ export const NPC_DATA = {
     },
     "Riyl Shade": {
         "wiki": "https://oldschool.runescape.wiki/w/Riyl_Shade",
-        "rule": null,
+        "rule": {
+            "any": [
+                "canCompleteInAidOfTheMyreque",
+                "canBurnLoarShades"
+            ]
+        },
         "skill": [],
         "level": [],
         "tags": [],
@@ -12352,7 +12357,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["easy"],
         "f2p": false
     },
     "Rock Crab": {
@@ -13155,7 +13160,7 @@ export const NPC_DATA = {
     },
     "Shade (Temple Trekking)": {
         "wiki": "https://oldschool.runescape.wiki/w/Shade_(Temple_Trekking)",
-        "rule": null,
+        "rule": ["canCompleteInSearchOfTheMyreque"],
         "skill": [],
         "level": [],
         "tags": [],
