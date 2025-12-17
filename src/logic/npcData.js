@@ -5651,7 +5651,12 @@ export const NPC_DATA = {
     },
     "Fish stall": {
         "wiki": "https://oldschool.runescape.wiki/w/Fish_stall",
-        "rule": null,
+        "rule": {
+            "any": [
+                "canCompleteFremennikTrials",
+                "canStartQueenOfThieves"
+            ]
+        },
         "skill": ["thieving"],
         "level": [42],
         "tags": [],
@@ -10569,7 +10574,7 @@ export const NPC_DATA = {
     },
     "Nuclear smoke devil": {
         "wiki": "https://oldschool.runescape.wiki/w/Nuclear_smoke_devil",
-        "rule": ["hasFaceMask"],
+        "rule": ["hasFacemask"],
         "skill": ["slayer"],
         "level": [93],
         "tags": ["superior"],

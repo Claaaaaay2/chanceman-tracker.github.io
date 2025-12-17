@@ -87,6 +87,9 @@ export const REQUIREMENT_CHECKS = {
     async canCompleteTaleOfTheRighteous(ctx) {
         return false; // TODO
     },
+    async canCompleteTheSlugMenace(ctx) {
+        return false; // TODO
+    },
     async canCompleteTheTouristTrap(ctx) {
         return false; // TODO
     },
@@ -197,6 +200,15 @@ export const REQUIREMENT_CHECKS = {
     },
     async canCompleteTheFeud(ctx) {
         return false; // TODO
+    },
+    async canCompleteTheFremennikIsles(ctx) {
+        return false; // TODO
+    },
+    async hasAnySlashWeapon(ctx) {
+        return false; // TODO
+    },
+    async canAccessCooksGuild(ctx) {
+        return await has(ctx, 1949) && await canTrainCooking(ctx);
     },
     async canCompleteRecipeForDisaster(ctx) {
         return false; // TODO
@@ -309,8 +321,14 @@ export const REQUIREMENT_CHECKS = {
     async canCompleteThroneOfMiscellania(ctx) {
         return await canCompleteThroneOfMiscellania(ctx);
     },
+    async hasLarransKey(ctx) {
+        return await has(ctx, 23490);
+    },
     async canCompleteDeathPlateau(ctx) {
         return await canCompleteDeathPlateau(ctx);
+    },
+    async canCompleteJunglePotion(ctx) {
+        return await canCompleteJunglePotion(ctx);
     },
     async canCompleteBeneathCursedSands(ctx) {
         return await canCompleteBeneathCursedSands(ctx);
@@ -505,6 +523,9 @@ export const REQUIREMENT_CHECKS = {
         return false; // TODO
     },
     async canReachKharaziJungle(ctx) {
+        return false; // TODO
+    },
+    async canStartQueenOfThieves(ctx) {
         return false; // TODO
     },
     async canCompleteThePathOfGlouphrie(ctx) {
@@ -1059,7 +1080,13 @@ export const REQUIREMENT_CHECKS = {
     async canTrainHerblore(ctx) {
         return await canTrainHerblore(ctx);
     },
+    async canTrainPrayer(ctx) {
+        return await canTrainPrayer(ctx);
+    },
     async canTrainCrafting(ctx) {
+        return await canTrainCrafting(ctx);
+    },
+    async canTrainFiremaking(ctx) {
         return await canTrainCrafting(ctx);
     },
     async canBurnLoarShades(ctx) {
@@ -1937,6 +1964,77 @@ async function canCompleteBigChompyBirdHunting(ctx) {
 
 async function canTrainCrafting(ctx) {
     return true; // TODO implement this beast (true because lamps and buttons)
+}
+
+async function canTrainPrayer(ctx) {
+    return await has(ctx, 3183) // Monkey bones
+        || await has(ctx, 4834) // Ourg bones
+        || await has(ctx, 4832) // Raurg bones
+        || await has(ctx, 3123) // Shaikahan bones
+        || await has(ctx, 31726) // Strykewyrm bones
+        || await has(ctx, 22124) // Superior dragon bones
+        || await has(ctx, 2859) // Wolf bones
+        || await has(ctx, 22780) // Wyrm bones
+        || await has(ctx, 28899) // Wyrmling bones
+        || await has(ctx, 6812) // Wyvern bones
+        || await has(ctx, 4812) // Zogre bones
+        || await has(ctx, 534) // Babydragon bones
+        || await has(ctx, 530) // Bat bones
+        || await has(ctx, 532) // Big bones
+        || await has(ctx, 526) // Bones
+        || await has(ctx, 528) // Burnt bones
+        || await has(ctx, 6729) // Dagannoth bones
+        || await has(ctx, 536) // Dragon bones
+        || await has(ctx, 22783) // Drake bones
+        || await has(ctx, 4830) // Fayrg bones
+        || await has(ctx, 31729) // Frost dragon bones
+        || await has(ctx, 22786) // Hydra bones
+        || await has(ctx, 3125) // Jogre bones
+        || await has(ctx, 11943) // Lava dragon bones
+        || await has(ctx, 25769) // Vile ashes
+        || await has(ctx, 25775) // Abyssal ashes
+        || await has(ctx, 25766) // Fiendish ashes
+        || await has(ctx, 25778) // Infernal ashes
+        || await has(ctx, 25772) // Malicious ashes
+        || ( // Basic reanimation
+            (await has(ctx, 559) && await has(ctx, 561)) // Body rune and Nature rune
+            && (await has(ctx, 13448) // Ensouled goblin head
+                || await has(ctx, 13451) // Ensouled monkey head
+                || await has(ctx, 13454) // Ensouled imp head
+                || await has(ctx, 13457) // Ensouled minotaur head
+                || await has(ctx, 13460) // Ensouled scorpion head
+                || await has(ctx, 13463) // Ensouled bear head
+                || await has(ctx, 13466) // Ensouled unicorn head
+            )
+        ) //
+        || ( // Adept reanimation
+            (await has(ctx, 559) && await has(ctx, 561) && await has(ctx, 566)) // Body rune and Nature rune and Soul rune
+            && (await has(ctx, 13469) // Ensouled dog head
+                || await has(ctx, 13472) // Ensouled chaos druid head
+                || await has(ctx, 13475) // Ensouled giant head
+                || await has(ctx, 13478) // Ensouled ogre head
+                || await has(ctx, 13481) // Ensouled elf head
+                || await has(ctx, 13484) // Ensouled troll head
+                || await has(ctx, 13487) // Ensouled horror head
+            )
+        ) //
+        || ( // Expert reanimation
+            (await has(ctx, 565) && await has(ctx, 561) && await has(ctx, 566)) // Blood rune and Nature rune and Soul rune
+            && (await has(ctx, 13490) // Ensouled kalphite head
+                || await has(ctx, 13493) // Ensouled dagannoth head
+                || await has(ctx, 13496) // Ensouled bloodveld head
+                || await has(ctx, 13499) // Ensouled tzhaar head
+                || await has(ctx, 13502) // Ensouled demon head
+                || await has(ctx, 26997) // Ensouled hellhound head
+            )
+        ) //
+        || ( // Master reanimation
+            (await has(ctx, 565) && await has(ctx, 561) && await has(ctx, 566)) // Blood rune and Nature rune and Soul rune
+            && (await has(ctx, 13505) // Ensouled aviansie head
+                || await has(ctx, 13508) // Ensouled abyssal head
+                || await has(ctx, 13511) // Ensouled dragon head
+            )
+        ); //
 }
 
 async function canTrainRunecraft(ctx) {
