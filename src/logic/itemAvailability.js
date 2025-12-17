@@ -1,5 +1,5 @@
 import { NPC_DATA } from "./npcData.js";
-import { canObtainItem, REQUIREMENT_CHECKS } from "./requirements.js";
+import { REQUIREMENT_CHECKS } from "./requirements.js";
 
 /* ===========================================================
    NPC ACCESS
@@ -76,8 +76,7 @@ export async function evaluateRule(rule, ctx) {
 
             // must be unlocked AND obtainable
             return (
-                ctx.unlocked.includes(id) &&
-                (await canObtainItem(item, ctx, ctx.items))
+                ctx.unlocked.includes(id) && ctx.rolled.includes(id)
             );
         }
 

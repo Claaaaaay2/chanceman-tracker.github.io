@@ -1,91 +1,8 @@
-import { canDoOtherMethod, canReachNpc } from "./itemAvailability.js";
 
 async function has(ctx, id) {
     const item = ctx.items.find(i => i.id === id);
     if (!item) return false;
-    return ctx.unlocked.includes(id) && await canObtainItem(item, ctx, ctx.items);
-}
-
-export async function canObtainItem(item, ctx, allItems) {
-    ctx.itemAvailability ??= new Map();
-
-    if (ctx.itemAvailability.has(item.id)) {
-        return ctx.itemAvailability.get(item.id);
-    }
-
-    const result = await canObtainItemInternal(item, ctx, allItems);
-    ctx.itemAvailability.set(item.id, result);
-    return result;
-}
-
-async function canObtainItemInternal(item, ctx, allItems) {
-    if (!item) return false;
-
-    const cache = ctx.itemAvailability;
-
-    // Already resolved
-    if (cache.get(item.id) === true) return true;
-    if (cache.get(item.id) === false) return false;
-
-    // Cycle detected → treat as unresolved for now
-    if (cache.get(item.id) === "visiting") return false;
-
-    // Mark as in progress
-    cache.set(item.id, "visiting");
-
-    let result = false;
-
-    /* 1. Already rolled */
-    if (ctx.rolled.includes(item.id)) {
-        result = true;
-    }
-
-    /* 2. Droppable NPC */
-    else if (item.sources?.drops) {
-        for (const npcName of Object.keys(item.sources.drops)) {
-            if (await canReachNpc(npcName, ctx)) {
-                result = true;
-                break;
-            }
-        }
-    }
-
-    /* 3. Other methods */
-    else if (item.sources?.other) {
-        for (const obj of Object.values(item.sources.other)) {
-            if (await canDoOtherMethod(obj.rule, ctx)) {
-                result = true;
-                break;
-            }
-        }
-    }
-
-    /* 4. Crafting / processing */
-    else if (item.processable) {
-        for (const [resultId, ingredientList] of Object.entries(item.processable)) {
-            if (Number(resultId) !== item.id) continue;
-
-            const ingredients = ingredientList.split(",");
-            let ok = true;
-
-            for (const ingId of ingredients) {
-                const ingObj = allItems.find(i => i.id == ingId);
-                if (!ingObj || !(await canObtainItemInternal(ingObj, ctx, allItems))) {
-                    ok = false;
-                    break;
-                }
-            }
-
-            if (ok) {
-                result = true;
-                break;
-            }
-        }
-    }
-
-    // Commit final result
-    cache.set(item.id, result);
-    return result;
+    return ctx.unlocked.includes(id) && await ctx.rolled.includes(id);
 }
 
 export const REQUIREMENT_CHECKS = {
@@ -2044,7 +1961,7 @@ async function canTrainMining(ctx) {
 }
 
 async function canTrainHerblore(ctx) {
-    return await canCompleteDruidicRitual(ctx) //
+    return await canCompleteDruidicRitual(ctx)
         && await has(ctx, 199)  // Grimy guam leaf
         && await has(ctx, 201)  // Grimy marrentill
         && await has(ctx, 203); // Grimy tarromin
