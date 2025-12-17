@@ -96,6 +96,9 @@ export const REQUIREMENT_CHECKS = {
     async canCompleteTreeGnomeVillage(ctx) {
         return false; // TODO
     },
+    async canCompleteMountainDaughter(ctx) {
+        return false; // TODO
+    },
     async canCompleteAPorcineOfInterest(ctx) {
         return false; // TODO
     },

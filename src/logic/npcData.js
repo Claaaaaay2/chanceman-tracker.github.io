@@ -14565,11 +14565,11 @@ export const NPC_DATA = {
     },
     "Table (Misthalin Mystery)": {
         "wiki": "https://oldschool.runescape.wiki/w/Table_(Misthalin_Mystery)",
-        "rule": null,
+        "rule": ["hasBucket"],
         "skill": [],
         "level": [],
-        "tags": [],
-        "f2p": false
+        "tags": ["easy"],
+        "f2p": true
     },
     "Taloned Wyvern": {
         "wiki": "https://oldschool.runescape.wiki/w/Taloned_Wyvern",
@@ -14581,7 +14581,7 @@ export const NPC_DATA = {
     },
     "Tanglefoot (Nightmare Zone)": {
         "wiki": "https://oldschool.runescape.wiki/w/Tanglefoot_(Nightmare_Zone)",
-        "rule": null,
+        "rule": ["canCompleteFairyTaleIGrowingPains"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -14589,7 +14589,7 @@ export const NPC_DATA = {
     },
     "Tar Monster": {
         "wiki": "https://oldschool.runescape.wiki/w/Tar_Monster",
-        "rule": null,
+        "rule": ["canCompleteBoneVoyage"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -14597,7 +14597,7 @@ export const NPC_DATA = {
     },
     "Tar barrel Full": {
         "wiki": "https://oldschool.runescape.wiki/w/Tar_barrel#Full",
-        "rule": null,
+        "rule": ["canStartLunarDiplomacy"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -14614,8 +14614,8 @@ export const NPC_DATA = {
     "Tarnished chest": {
         "wiki": "https://oldschool.runescape.wiki/w/Tarnished_chest",
         "rule": ["canCompletePandemonium"],
-        "skill": [],
-        "level": [],
+        "skill": ["sailing", "thieving"],
+        "level": [49, 54],
         "tags": [],
         "f2p": false
     },
@@ -14630,8 +14630,8 @@ export const NPC_DATA = {
     "Tea stall": {
         "wiki": "https://oldschool.runescape.wiki/w/Tea_stall",
         "rule": null,
-        "skill": [],
-        "level": [],
+        "skill": ["thieving"],
+        "level": [5],
         "tags": [],
         "f2p": false
     },
@@ -14654,7 +14654,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["house"],
         "f2p": false
     },
     "Teak shelves 1": {
@@ -14662,7 +14662,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["house"],
         "f2p": false
     },
     "Teak shelves 2": {
@@ -14670,14 +14670,14 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["house"],
         "f2p": false
     },
     "Teak tree": {
         "wiki": "https://oldschool.runescape.wiki/w/Teak_tree",
-        "rule": null,
-        "skill": [],
-        "level": [],
+        "rule": ["canTrainWoodcutting"],
+        "skill": ["woodcutting"],
+        "level": [35],
         "tags": [],
         "f2p": false
     },
@@ -14734,16 +14734,16 @@ export const NPC_DATA = {
     "Terror dog Level 100": {
         "wiki": "https://oldschool.runescape.wiki/w/Terror_dog#Level_100",
         "rule": ["canCompleteHauntedMine"],
-        "skill": [],
-        "level": [],
+        "skill": ["slayer"],
+        "level": [40],
         "tags": [],
         "f2p": false
     },
     "Terror dog Level 110": {
         "wiki": "https://oldschool.runescape.wiki/w/Terror_dog#Level_110",
         "rule": ["canCompleteHauntedMine"],
-        "skill": [],
-        "level": [],
+        "skill": ["slayer"],
+        "level": [40],
         "tags": [],
         "f2p": false
     },
@@ -14760,20 +14760,20 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "The Kendal": {
         "wiki": "https://oldschool.runescape.wiki/w/The_Kendal",
-        "rule": null,
+        "rule": ["canCompleteMountainDaughter"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["quest"],
         "f2p": false
     },
     "The Kendal (Nightmare Zone)": {
         "wiki": "https://oldschool.runescape.wiki/w/The_Kendal_(Nightmare_Zone)",
-        "rule": null,
+        "rule": ["canCompleteMountainDaughter"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -14784,7 +14784,7 @@ export const NPC_DATA = {
         "rule": ["canCompleteDesertTreasureII"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "The Mimic Elite": {
@@ -14792,7 +14792,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["clue"],
         "f2p": false
     },
     "The Mimic Master": {
@@ -14800,20 +14800,20 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["clue"],
         "f2p": false
     },
     "The Nightmare": {
         "wiki": "https://oldschool.runescape.wiki/w/The_Nightmare",
-        "rule": null,
+        "rule": ["canCompletePriestInPeril"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "The Shaikahan": {
         "wiki": "https://oldschool.runescape.wiki/w/The_Shaikahan",
-        "rule": null,
+        "rule": ["canCompleteTaiBwoWannaiTrio"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -14824,15 +14824,15 @@ export const NPC_DATA = {
         "rule": ["canCompleteDesertTreasureII"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Thermonuclear smoke devil": {
         "wiki": "https://oldschool.runescape.wiki/w/Thermonuclear_smoke_devil",
         "rule": ["hasFacemask"],
-        "skill": [],
-        "level": [],
-        "tags": [],
+        "skill": ["slayer"],
+        "level": [93],
+        "tags": ["boss"],
         "f2p": false
     },
     "Thief": {
@@ -14841,7 +14841,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Thief (Varlamore)": {
         "wiki": "https://oldschool.runescape.wiki/w/Thief_(Varlamore)",
@@ -14869,7 +14869,7 @@ export const NPC_DATA = {
     },
     "Thora (Miscellania)": {
         "wiki": "https://oldschool.runescape.wiki/w/Thora_(Miscellania)",
-        "rule": null,
+        "rule": ["canCompleteThroneOfMiscellania"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -14877,7 +14877,7 @@ export const NPC_DATA = {
     },
     "Thorhild": {
         "wiki": "https://oldschool.runescape.wiki/w/Thorhild",
-        "rule": null,
+        "rule": ["canCompleteThroneOfMiscellania"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -14893,7 +14893,7 @@ export const NPC_DATA = {
     },
     "Thrower troll (Trollheim)": {
         "wiki": "https://oldschool.runescape.wiki/w/Thrower_troll_(Trollheim)",
-        "rule": null,
+        "rule": ["canReachTrollheim"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -14928,8 +14928,8 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
-        "f2p": false
+        "tags": ["easy"],
+        "f2p": true
     },
     "Tomato plant": {
         "wiki": "https://oldschool.runescape.wiki/w/Tomato_plant",
@@ -14949,7 +14949,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["house"],
         "f2p": false
     },
     "Tool store 2": {
@@ -14957,7 +14957,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["house"],
         "f2p": false
     },
     "Tool store 3": {
@@ -14965,7 +14965,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["house"],
         "f2p": false
     },
     "Tool store 4": {
@@ -14973,7 +14973,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["house"],
         "f2p": false
     },
     "Tool store 5": {
@@ -14981,12 +14981,12 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["house"],
         "f2p": false
     },
     "Tools (Varrock Museum)": {
         "wiki": "https://oldschool.runescape.wiki/w/Tools_(Varrock_Museum)",
-        "rule": null,
+        "rule": ["canCompleteTheDigSite"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -14997,7 +14997,15 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["easy"],
+        "f2p": true
+    },
+    "Tools (gardening) m": {
+        "wiki": "https://oldschool.runescape.wiki/w/Tools_(gardening)",
+        "rule": null,
+        "skill": [],
+        "level": [],
+        "tags": ["easy"],
         "f2p": false
     },
     "Tormented Demon": {
