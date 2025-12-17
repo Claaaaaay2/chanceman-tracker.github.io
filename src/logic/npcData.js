@@ -686,7 +686,7 @@ export const NPC_DATA = {
     },
     "Animated steel armour (Tarn's Lair)": {
         "wiki": "https://oldschool.runescape.wiki/w/Animated_steel_armour_(Tarn%27s_Lair)",
-        "rule": ["canCompletePriestInPeril"],
+        "rule": ["canCompleteHauntedMine"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -6538,7 +6538,7 @@ export const NPC_DATA = {
     },
     "Giant skeleton (Tarn's Lair)": {
         "wiki": "https://oldschool.runescape.wiki/w/Giant_skeleton_(Tarn%27s_Lair)",
-        "rule": ["canCompletePriestInPeril"],
+        "rule": ["canCompleteHauntedMine"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -13566,7 +13566,7 @@ export const NPC_DATA = {
     },
     "Skeleton (Tarn's Lair) Low level": {
         "wiki": "https://oldschool.runescape.wiki/w/Skeleton_(Tarn%27s_Lair)#Low_level",
-        "rule": ["canCompletePriestInPeril"],
+        "rule": ["canCompleteHauntedMine"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -13606,7 +13606,7 @@ export const NPC_DATA = {
     },
     "Skeleton (mage)": {
         "wiki": "https://oldschool.runescape.wiki/w/Skeleton_(mage)",
-        "rule": ["canCompletePriestInPeril"],
+        "rule": ["canCompleteHauntedMine"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -14733,7 +14733,7 @@ export const NPC_DATA = {
     },
     "Terror dog Level 100": {
         "wiki": "https://oldschool.runescape.wiki/w/Terror_dog#Level_100",
-        "rule": ["canCompletePriestInPeril"],
+        "rule": ["canCompleteHauntedMine"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -14741,7 +14741,7 @@ export const NPC_DATA = {
     },
     "Terror dog Level 110": {
         "wiki": "https://oldschool.runescape.wiki/w/Terror_dog#Level_110",
-        "rule": ["canCompletePriestInPeril"],
+        "rule": ["canCompleteHauntedMine"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -16636,7 +16636,7 @@ export const NPC_DATA = {
     },
     "Zombie (Tarn's Lair) High level": {
         "wiki": "https://oldschool.runescape.wiki/w/Zombie_(Tarn%27s_Lair)#High_level",
-        "rule": ["canCompletePriestInPeril"],
+        "rule": ["canCompleteHauntedMine"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -16644,7 +16644,7 @@ export const NPC_DATA = {
     },
     "Zombie (Tarn's Lair) Low level": {
         "wiki": "https://oldschool.runescape.wiki/w/Zombie_(Tarn%27s_Lair)#Low_level",
-        "rule": ["canCompletePriestInPeril"],
+        "rule": ["canCompleteHauntedMine"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -16652,7 +16652,7 @@ export const NPC_DATA = {
     },
     "Zombie (Tarn's Lair) Medium level": {
         "wiki": "https://oldschool.runescape.wiki/w/Zombie_(Tarn%27s_Lair)#Medium_level",
-        "rule": ["canCompletePriestInPeril"],
+        "rule": ["canCompleteHauntedMine"],
         "skill": [],
         "level": [],
         "tags": [],

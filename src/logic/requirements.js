@@ -654,6 +654,9 @@ export const REQUIREMENT_CHECKS = {
     async hasMuddyKey(ctx) {
         return await has(ctx, 991);
     },
+    async canCompleteHauntedMine(ctx) {
+        return await canCompleteHauntedMine(ctx);
+    },
     async hasGrubbyKey(ctx) {
         return await has(ctx, 23499);
     },
@@ -1170,6 +1173,12 @@ async function canCompletePrinceAliRescue(ctx) {
         && await has(ctx, 1013) // Pink skirt
         && await has(ctx, 1917) // Beer
         && await has(ctx, 954); //  Rope
+}
+
+async function canCompleteHauntedMine(ctx) {
+    return await canCompletePriestInPeril(ctx) //
+        && await canTrainCrafting(ctx) //
+        && await has(ctx, 1755); // Chisel
 }
 
 async function canCompleteShadesOfMortton(ctx) {
