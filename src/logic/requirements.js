@@ -156,6 +156,12 @@ export const REQUIREMENT_CHECKS = {
     async canCompleteRegicide(ctx) {
         return false; // TODO
     },
+    async canCompleteTheAscentOfArceuus(ctx) {
+        return false; // TODO
+    },
+    async canCompleteOlafsQuest(ctx) {
+        return false; // TODO
+    },
     async canCompleteDefenderOfVarrock(ctx) {
         return false; // TODO
     },
@@ -306,6 +312,9 @@ export const REQUIREMENT_CHECKS = {
     async canCatchButterflies(ctx) {
         return await canCatchButterflies(ctx);
     },
+    async hasRabbitSnare(ctx) {
+        return await has(ctx, 10031);
+    },
     async canCompleteTheFrozenDoor(ctx) {
         return await canCompleteTheFrozenDoor(ctx);
     },
@@ -400,6 +409,9 @@ export const REQUIREMENT_CHECKS = {
         return false; // TODO
     },
     async canReachLunarIsle(ctx) {
+        return false; // TODO
+    },
+    async canCompleteWitchsHouse(ctx) {
         return false; // TODO
     },
     async canDoMahoganyHomes(ctx) {
@@ -599,6 +611,12 @@ export const REQUIREMENT_CHECKS = {
     },
     async hasRawChicken(ctx) {
         return await has(ctx, 2138);
+    },
+    async hasCowhide(ctx) {
+        return await has(ctx, 1739);
+    },
+    async hasUnicornHorn(ctx) {
+        return await has(ctx, 237);
     },
     async hasGiantFrogLegs(ctx) {
         return await has(ctx, 4517);
@@ -902,6 +920,9 @@ export const REQUIREMENT_CHECKS = {
     },
     async hasRosemarySeed(ctx) {
         return await has(ctx, 5097);
+    },
+    async hasWoadSeed(ctx) {
+        return await has(ctx, 5099);
     },
     async hasLimpwurtSeed(ctx) {
         return await has(ctx, 5100);
