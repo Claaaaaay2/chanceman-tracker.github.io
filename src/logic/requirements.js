@@ -347,6 +347,9 @@ export const REQUIREMENT_CHECKS = {
     async canCompleteHeroesQuest(ctx) {
         return await canCompleteHeroesQuest(ctx);
     },
+    async canCompleteRuneMysteries(ctx) {
+        return await canCompleteRuneMysteries(ctx);
+    },
     async canBirdSnare(ctx) {
         return await canBirdSnare(ctx);
     },
@@ -368,6 +371,9 @@ export const REQUIREMENT_CHECKS = {
     async canCatchCrabs(ctx) {
         return await canCatchCrabs(ctx);
     },
+    async canCatchButterflies(ctx) {
+        return await canCatchButterflies(ctx);
+    },
     async canCompleteTheFrozenDoor(ctx) {
         return await canCompleteTheFrozenDoor(ctx);
     },
@@ -388,6 +394,9 @@ export const REQUIREMENT_CHECKS = {
     },
     async canCompleteDeathPlateau(ctx) {
         return await canCompleteDeathPlateau(ctx);
+    },
+    async canCompleteBeneathCursedSands(ctx) {
+        return await canCompleteBeneathCursedSands(ctx);
     },
     async canCompleteTheHeartOfDarkness(ctx) {
         return await canCompleteTheHeartOfDarkness(ctx);
@@ -452,6 +461,12 @@ export const REQUIREMENT_CHECKS = {
     async canCompletePryingTimes(ctx) {
         return false; // TODO
     },
+    async canReachLunarIsle(ctx) {
+        return false; // TODO
+    },
+    async canDoMahoganyHomes(ctx) {
+        return false; // TODO
+    },
     async canCompleteOneSmallFavour(ctx) {
         return false; // TODO
     },
@@ -461,14 +476,29 @@ export const REQUIREMENT_CHECKS = {
     async canCompleteZogreFleshEaters(ctx) {
         return await canCompleteZogreFleshEaters(ctx);
     },
+    async canStartZogreFleshEaters(ctx) {
+        return await canCompleteZogreFleshEaters(ctx); // TODO start different from complete?
+    },
     async canEnterKaruulmSlayerDungeon(ctx) {
         return await canEnterKaruulmSlayerDungeon(ctx);
+    },
+    async hasSardine(ctx) {
+        return await has(ctx, 327);
+    },
+    async hasRedSpidersEggs(ctx) {
+        return await has(ctx, 223);
     },
     async hasMoleParts(ctx) {
         return await has(ctx, 7418) || await has(ctx, 7416);
     },
+    async hasSinisterKey(ctx) {
+        return await has(ctx, 993);
+    },
     async hasEyeOfNewt(ctx) {
         return await has(ctx, 221);
+    },
+    async hasOpal(ctx) {
+        return await has(ctx, 1625) || await has(ctx, 1609);
     },
     async hasFeather(ctx) {
         return await has(ctx, 314);
@@ -623,6 +653,12 @@ export const REQUIREMENT_CHECKS = {
     async canReachGemRocks(ctx) {
         return await canReachGemRocks(ctx);
     },
+    async hasRawSwordfish(ctx) {
+        return await has(ctx, 371);
+    },
+    async hasRawChicken(ctx) {
+        return await has(ctx, 2138);
+    },
     async hasGiantFrogLegs(ctx) {
         return await has(ctx, 4517);
     },
@@ -704,6 +740,9 @@ export const REQUIREMENT_CHECKS = {
     async hasFishingBait(ctx) {
         return await has(ctx, 313);
     },
+    async hasSandworms(ctx) {
+        return await has(ctx, 13431);
+    },
     async hasLobsterPot(ctx) {
         return await has(ctx, 301);
     },
@@ -711,7 +750,10 @@ export const REQUIREMENT_CHECKS = {
         return await has(ctx, 309);
     },
     async hasAnyFeather(ctx) {
-        return await hasAnyFeather(ctx); //TODO andere
+        return await hasAnyFeather(ctx);
+    },
+    async hasStripyFeather(ctx) {
+        return await has(ctx, 10087);
     },
     async hasDarkFishingBait(ctx) {
         return await has(ctx, 11940);
@@ -746,6 +788,9 @@ export const REQUIREMENT_CHECKS = {
     async hasSlayerBell(ctx) {
         return await has(ctx, 10952);
     },
+    async hasEarmuffs(ctx) {
+        return await has(ctx, 4166);
+    },
     async hasCrystalKey(ctx) {
         return await has(ctx, 989);
     },
@@ -754,6 +799,9 @@ export const REQUIREMENT_CHECKS = {
     },
     async hasSpade(ctx) {
         return await has(ctx, 952);
+    },
+    async hasBucket(ctx) {
+        return await has(ctx, 1925);
     },
     async hasAvantoeSeed(ctx) {
         return await has(ctx, 5298);
@@ -1127,12 +1175,12 @@ async function canDoTombsOfAmascut(ctx) {
 
 async function canCompleteBeneathCursedSands(ctx) {
     return await canCompleteContact(ctx) //
-        && await canTrainCrafting(ctx) //
+        && await canTrainCrafting(ctx)   //
         && await canTrainFiremaking(ctx) //
-        && await has(ctx, 453) // Coal
+        && await has(ctx, 453)  // Coal
         && await has(ctx, 2351) // Iron bar
-        && await has(ctx, 590) // Tinderbox
-        && await has(ctx, 952) // Spade
+        && await has(ctx, 590)  // Tinderbox
+        && await has(ctx, 952)  // Spade
         && (
             await has(ctx, 2136)     // Raw bear meat
             || await has(ctx, 2134)  // Raw rat meat
@@ -1467,6 +1515,12 @@ async function canCatchCrabs(ctx) {
         && await has(ctx, 1925)      // Bucket
         && await has(ctx, 960)       // Plank
         && await hasAnyNails(ctx);
+}
+
+async function canCatchButterflies(ctx) {
+    return await canTrainHunter(ctx) //
+        && await has(ctx, 10010)     // Butterfly net
+        && await has(ctx, 10012);    // Butterfly jar
 }
 
 async function hasAnyNails(ctx) {
