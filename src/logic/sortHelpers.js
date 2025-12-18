@@ -144,7 +144,7 @@ export async function getObtainabilityRank(item, ctx) {
             }
 
             if (hasSkillMet) {
-                rank = 5;
+                return { rank: 4, name };
             }
 
             if (skillNotMetYet) {
@@ -159,7 +159,7 @@ export async function getObtainabilityRank(item, ctx) {
     if (src.other) {
         for (const obj of Object.values(src.other)) {
             if (await canDoOtherMethod(obj.rule, ctx)) {
-                return { rank: 4, name };
+                return { rank: 5, name };
             }
         }
     }
