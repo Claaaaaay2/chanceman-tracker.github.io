@@ -29996,9 +29996,9 @@
           }
         }
       },
-        "spawns": {
-          "Yes": "No requirements"
-        }
+      "spawns": {
+        "Yes": "No requirements"
+      }
     }
   },
   {
@@ -30042,12 +30042,12 @@
           "droprate": "1/22"
         }
       },
-        "shops": {
-          "Yes": "No requirements"
-        },
-        "spawns": {
-          "Yes": "No requirements"
-        }
+      "shops": {
+        "Yes": "No requirements"
+      },
+      "spawns": {
+        "Yes": "No requirements"
+      }
     }
   },
   {
@@ -30238,9 +30238,9 @@
           "droprate": "1/64"
         }
       },
-        "shops": {
-          "Yes": "No requirements"
-        }
+      "shops": {
+        "Yes": "No requirements"
+      }
     }
   },
   {
@@ -30632,12 +30632,12 @@
           "droprate": "1/14; 1/12.5"
         }
       },
-        "shops": {
-          "Yes": "No requirements"
-        },
-        "spawns": {
-          "Yes": "No requirements"
-        }
+      "shops": {
+        "Yes": "No requirements"
+      },
+      "spawns": {
+        "Yes": "No requirements"
+      }
     }
   },
   {
@@ -30856,14 +30856,16 @@
           "notes": "Requires red crab or blue crab and a pestle and mortar.",
           "rule": {
             "all": [
-              { "any": [
               {
-                "has": 31671
+                "any": [
+                  {
+                    "has": 31671
+                  },
+                  {
+                    "has": 31674
+                  }
+                ]
               },
-              {
-                "has": 31674
-              }
-              ]},
               {
                 "has": 233
               }
@@ -31080,26 +31082,28 @@
           "notes": "Requires sinew, oak roots, willow roots, maple roots, yew roots or magic roots.",
           "rule": {
             "all": [
-              { "any": [
               {
-                "has": 9436
+                "any": [
+                  {
+                    "has": 9436
+                  },
+                  {
+                    "has": 6043
+                  },
+                  {
+                    "has": 6045
+                  },
+                  {
+                    "has": 6047
+                  },
+                  {
+                    "has": 6049
+                  },
+                  {
+                    "has": 6051
+                  }
+                ]
               },
-              {
-                "has": 6043
-              },
-              {
-                "has": 6045
-              },
-              {
-                "has": 6047
-              },
-              {
-                "has": 6049
-              },
-              {
-                "has": 6051
-              }
-              ]},
               "canTrainCrafting"
             ]
           }
@@ -31348,9 +31352,9 @@
           "droprate": "1/120"
         }
       },
-        "shops": {
-          "Yes": "No requirements"
-        }
+      "shops": {
+        "Yes": "No requirements"
+      }
     }
   },
   {
@@ -31400,12 +31404,12 @@
           "droprate": "1/25.6"
         }
       },
-        "shops": {
-          "Yes": "No requirements"
-        },
-        "spawns": {
-          "Yes": "No requirements"
-        }
+      "shops": {
+        "Yes": "No requirements"
+      },
+      "spawns": {
+        "Yes": "No requirements"
+      }
     }
   },
   {
@@ -31512,22 +31516,24 @@
               {
                 "has": 1942
               },
-              { "any": [
-                {
-                  "has": 2142
-                },
-                {
-                  "has": 2140
-                }
+              {
+                "any": [
+                  {
+                    "has": 2142
+                  },
+                  {
+                    "has": 2140
+                  }
                 ]
               },
-              { "any": [
-                {
-                  "has": 5970
-                },
-                {
-                  "has": 2007
-                }
+              {
+                "any": [
+                  {
+                    "has": 5970
+                  },
+                  {
+                    "has": 2007
+                  }
                 ]
               },
               "canTrainCooking"
@@ -31972,9 +31978,9 @@
           "droprate": "1/128"
         }
       },
-        "spawns": {
-          "Yes": "No requirements"
-        }
+      "spawns": {
+        "Yes": "No requirements"
+      }
     }
   },
   {
@@ -32892,12 +32898,12 @@
           "droprate": "1/5.158; 1/5.15"
         }
       },
-        "shops": {
-          "Yes": "No requirements"
-        },
-        "spawns": {
-          "Yes": "No requirements"
-        }
+      "shops": {
+        "Yes": "No requirements"
+      },
+      "spawns": {
+        "Yes": "No requirements"
+      }
     }
   },
   {
@@ -33132,9 +33138,9 @@
           }
         }
       },
-        "shops": {
-          "Yes": "No requirements"
-        }
+      "shops": {
+        "Yes": "No requirements"
+      }
     }
   },
   {
@@ -33236,9 +33242,9 @@
     "name": "Desert boots",
     "image": "desert_boots.png",
     "sources": {
-        "shops": {
-          "Yes": "No requirements"
-        }
+      "shops": {
+        "Yes": "No requirements"
+      }
     }
   },
   {
@@ -33331,9 +33337,9 @@
     "name": "Desert robe",
     "image": "desert_robe.png",
     "sources": {
-        "shops": {
-          "Yes": "No requirements"
-        }
+      "shops": {
+        "Yes": "No requirements"
+      }
     }
   },
   {
@@ -33353,9 +33359,9 @@
     "name": "Desert shirt",
     "image": "desert_shirt.png",
     "sources": {
-        "shops": {
-          "Yes": "No requirements"
-        }
+      "shops": {
+        "Yes": "No requirements"
+      }
     }
   },
   {
@@ -33752,7 +33758,7 @@
     "id": 1681,
     "name": "Diamond amulet (u)",
     "image": "diamond_amulet_(u).png",
-    "sources":{
+    "sources": {
       "other": {
         "Crafting": {
           "notes": "Requires gold bar, diamond and an amulet mould.",
@@ -34156,9 +34162,9 @@
     "name": "Disk of returning",
     "image": "disk_of_returning.png",
     "sources": {
-        "shops": {
-          "Yes": "No requirements"
-        }
+      "shops": {
+        "Yes": "No requirements"
+      }
     }
   },
   {
@@ -35499,9 +35505,9 @@
     "name": "Doogle leaves",
     "image": "doogle_leaves.png",
     "sources": {
-        "spawns": {
-          "Yes": "No requirements"
-        }
+      "spawns": {
+        "Yes": "No requirements"
+      }
     }
   },
   {
@@ -35515,9 +35521,9 @@
           "droprate": "1/23"
         }
       },
-        "shops": {
-          "Yes": "canCompleteTheLostTribe"
-        }
+      "shops": {
+        "Yes": "canCompleteTheLostTribe"
+      }
     }
   },
   {
@@ -35951,9 +35957,9 @@
           "droprate": "2 × 1/75"
         }
       },
-        "shops": {
-          "Yes": "canCompleteHeroesQuest"
-        }
+      "shops": {
+        "Yes": "canCompleteHeroesQuest"
+      }
     }
   },
   {
@@ -35987,9 +35993,9 @@
           }
         }
       },
-        "shops": {
-          "Yes": "No requirements"
-        }
+      "shops": {
+        "Yes": "No requirements"
+      }
     }
   },
   {
@@ -37082,9 +37088,9 @@
           "droprate": "2 × 1/124.5"
         }
       },
-        "shops": {
-          "Yes": "canCompleteRegicide"
-        }
+      "shops": {
+        "Yes": "canCompleteRegicide"
+      }
     }
   },
   {
@@ -37753,9 +37759,9 @@
           "droprate": "1/143.91; 1/142.17"
         }
       },
-        "shops": {
-          "Yes": "canCompleteLostCity"
-        }
+      "shops": {
+        "Yes": "canCompleteLostCity"
+      }
     }
   },
   {
@@ -37796,9 +37802,9 @@
           "droprate": "1/143.91; 1/142.17"
         }
       },
-        "shops": {
-          "Yes": "canCompleteLegendsQuest"
-        }
+      "shops": {
+        "Yes": "canCompleteLegendsQuest"
+      }
     }
   },
   {
@@ -37914,9 +37920,9 @@
     "name": "Dragon metal shard",
     "image": "dragon_metal_shard.png",
     "sources": {
-        "shops": {
-          "Yes": "canCompleteDragonSlayerII"
-        }
+      "shops": {
+        "Yes": "canCompleteDragonSlayerII"
+      }
     }
   },
   {
@@ -38049,9 +38055,9 @@
     "name": "Dragon pickaxe upgrade kit",
     "image": "dragon_pickaxe_upgrade_kit.png",
     "sources": {
-        "shops": {
-          "Yes": "No requirements"
-        }
+      "shops": {
+        "Yes": "No requirements"
+      }
     }
   },
   {
@@ -38389,9 +38395,9 @@
           "droprate": "1/1260"
         }
       },
-        "shops": {
-          "Yes": "canCompleteMonkeyMadness"
-        }
+      "shops": {
+        "Yes": "canCompleteMonkeyMadness"
+      }
     }
   },
   {
@@ -38932,7 +38938,7 @@
     "id": 1683,
     "name": "Dragonstone amulet (u)",
     "image": "dragonstone_amulet_(u).png",
-    "sources":{
+    "sources": {
       "other": {
         "Crafting": {
           "notes": "Requires gold bar, dragonstone and amulet mould.",
@@ -39752,9 +39758,9 @@
           }
         }
       },
-        "shops": {
-          "Yes": "canCompleteDwarfCannon"
-        }
+      "shops": {
+        "Yes": "canCompleteDwarfCannon"
+      }
     }
   },
   {
@@ -40268,9 +40274,9 @@
           "notes": "Purchase from Falador pub (free roll)."
         }
       },
-        "shops": {
-          "Yes": "No requirements"
-        }
+      "shops": {
+        "Yes": "No requirements"
+      }
     }
   },
   {
@@ -40386,12 +40392,12 @@
           "droprate": "1/64"
         }
       },
-        "shops": {
-          "Yes": "No requirements"
-        },
-        "spawns": {
-          "Yes": "No requirements"
-        }
+      "shops": {
+        "Yes": "No requirements"
+      },
+      "spawns": {
+        "Yes": "No requirements"
+      }
     }
   },
   {
@@ -40466,9 +40472,9 @@
           "droprate": "1/30"
         }
       },
-        "shops": {
-          "Yes": "No requirements"
-        }
+      "shops": {
+        "Yes": "No requirements"
+      }
     }
   },
   {
@@ -40477,9 +40483,9 @@
     "name": "Earmuffs",
     "image": "earmuffs.png",
     "sources": {
-        "shops": {
-          "Yes": "No requirements"
-        }
+      "shops": {
+        "Yes": "No requirements"
+      }
     }
   },
   {
@@ -41125,12 +41131,12 @@
           "droprate": "Common"
         }
       },
-        "shops": {
-          "Yes": "No requirements"
-        },
-        "spawns": {
-          "Yes": "No requirements"
-        }
+      "shops": {
+        "Yes": "No requirements"
+      },
+      "spawns": {
+        "Yes": "No requirements"
+      }
     }
   },
   {
@@ -41601,12 +41607,12 @@
           "droprate": "1/27.8"
         }
       },
-        "shops": {
-          "Yes": "No requirements"
-        },
-        "spawns": {
-          "Yes": "No requirements"
-        }
+      "shops": {
+        "Yes": "No requirements"
+      },
+      "spawns": {
+        "Yes": "No requirements"
+      }
     }
   },
   {
@@ -41653,9 +41659,9 @@
           "droprate": "1/64"
         }
       },
-        "spawns": {
-          "Yes": "No requirements"
-        }
+      "spawns": {
+        "Yes": "No requirements"
+      }
     }
   },
   {
@@ -41714,9 +41720,9 @@
           "droprate": "1/25.6"
         }
       },
-        "spawns": {
-          "Yes": "No requirements"
-        }
+      "spawns": {
+        "Yes": "No requirements"
+      }
     }
   },
   {
@@ -42073,9 +42079,9 @@
     "name": "Elven boots",
     "image": "elven_boots.png",
     "sources": {
-        "shops": {
-          "Yes": "canCompleteSongOfTheElves"
-        }
+      "shops": {
+        "Yes": "canCompleteSongOfTheElves"
+      }
     }
   },
   {
@@ -42084,9 +42090,9 @@
     "name": "Elven dawn",
     "image": "elven_dawn.png",
     "sources": {
-        "shops": {
-          "Yes": "canCompleteSongOfTheElves"
-        }
+      "shops": {
+        "Yes": "canCompleteSongOfTheElves"
+      }
     }
   },
   {
@@ -42095,9 +42101,9 @@
     "name": "Elven gloves",
     "image": "elven_gloves.png",
     "sources": {
-        "shops": {
-          "Yes": "canCompleteSongOfTheElves"
-        }
+      "shops": {
+        "Yes": "canCompleteSongOfTheElves"
+      }
     }
   },
   {
@@ -42106,9 +42112,9 @@
     "name": "Elven legwear",
     "image": "elven_legwear.png",
     "sources": {
-        "shops": {
-          "Yes": "canCompleteSongOfTheElves"
-        }
+      "shops": {
+        "Yes": "canCompleteSongOfTheElves"
+      }
     }
   },
   {
@@ -42133,9 +42139,9 @@
     "name": "Elven skirt (white)",
     "image": "elven_skirt_(white).png",
     "sources": {
-        "shops": {
-          "Yes": "canCompleteSongOfTheElves"
-        }
+      "shops": {
+        "Yes": "canCompleteSongOfTheElves"
+      }
     }
   },
   {
@@ -42144,9 +42150,9 @@
     "name": "Elven skirt (yellow)",
     "image": "elven_skirt_(yellow).png",
     "sources": {
-        "shops": {
-          "Yes": "canCompleteSongOfTheElves"
-        }
+      "shops": {
+        "Yes": "canCompleteSongOfTheElves"
+      }
     }
   },
   {
@@ -42155,9 +42161,9 @@
     "name": "Elven top (white vest)",
     "image": "elven_top_(white_vest).png",
     "sources": {
-        "shops": {
-          "Yes": "canCompleteSongOfTheElves"
-        }
+      "shops": {
+        "Yes": "canCompleteSongOfTheElves"
+      }
     }
   },
   {
@@ -42166,9 +42172,9 @@
     "name": "Elven top (white)",
     "image": "elven_top_(white).png",
     "sources": {
-        "shops": {
-          "Yes": "canCompleteSongOfTheElves"
-        }
+      "shops": {
+        "Yes": "canCompleteSongOfTheElves"
+      }
     }
   },
   {
@@ -42177,9 +42183,9 @@
     "name": "Elven top (yellow vest)",
     "image": "elven_top_(yellow_vest).png",
     "sources": {
-        "shops": {
-          "Yes": "canCompleteSongOfTheElves"
-        }
+      "shops": {
+        "Yes": "canCompleteSongOfTheElves"
+      }
     }
   },
   {
@@ -42188,9 +42194,9 @@
     "name": "Elven top (yellow)",
     "image": "elven_top_(yellow).png",
     "sources": {
-        "shops": {
-          "Yes": "canCompleteSongOfTheElves"
-        }
+      "shops": {
+        "Yes": "canCompleteSongOfTheElves"
+      }
     }
   },
   {
@@ -42287,9 +42293,9 @@
           "droprate": "1/100"
         }
       },
-        "shops": {
-          "Yes": "No requirements"
-        },
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Cutting a gem": {
           "Notes": "requires an uncut emerald and a chisel",
@@ -42772,12 +42778,12 @@
           }
         }
       },
-        "shops": {
-          "Yes": "No requirements"
-        },
-        "spawns": {
-          "Yes": "No requirements"
-        }
+      "shops": {
+        "Yes": "No requirements"
+      },
+      "spawns": {
+        "Yes": "No requirements"
+      }
     }
   },
   {
@@ -42812,12 +42818,14 @@
     "name": "Empty oil lamp",
     "image": "empty_oil_lamp.png",
     "sources": {
-        "shops": {
-          "Yes": {"any":[
-                    "canCompleteDeathToTheDorgeshuun",
-                    "canCompleteSinsOfTheFather"
-          ]}
-        },
+      "shops": {
+        "Yes": {
+          "any": [
+            "canCompleteDeathToTheDorgeshuun",
+            "canCompleteSinsOfTheFather"
+          ]
+        }
+      },
       "other": {
         "Crafting": {
           "notes": "Requires molten glass",
@@ -42839,12 +42847,14 @@
     "name": "Empty oil lantern",
     "image": "empty_oil_lantern.png",
     "sources": {
-        "shops": {
-          "Yes": {"any":[
-                    "canCompleteDeathToTheDorgeshuun",
-                    "canCompleteSinsOfTheFather"
-          ]}
-        },
+      "shops": {
+        "Yes": {
+          "any": [
+            "canCompleteDeathToTheDorgeshuun",
+            "canCompleteSinsOfTheFather"
+          ]
+        }
+      },
       "other": {
         "Crafting": {
           "notes": "Requires an oil lantern frame and an empty oil lamp",
@@ -42874,9 +42884,9 @@
           "droprate": "1/42.667"
         }
       },
-        "shops": {
-          "Yes": "No requirements"
-        },
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Crafting": {
           "notes": "Fire an unfired plant pot",
@@ -42899,71 +42909,73 @@
               {
                 "has": 952
               },
-              { "any" : [
-                {
-                  "has": 5370
-                },
-                {
-                  "has": 5371
-                },
-                {
-                  "has": 5372
-                },
-                {
-                  "has": 5373
-                },
-                {
-                  "has": 5374
-                },
-                {
-                  "has": 5500
-                },
-                {
-                  "has": 5496
-                },
-                {
-                  "has": 5497
-                },
-                {
-                  "has": 5498
-                },
-                {
-                  "has": 5499
-                },
-                {
-                  "has": 5501
-                },
-                {
-                  "has": 5502
-                },
-                {
-                  "has": 22866
-                },
-                {
-                  "has": 21477
-                },
-                {
-                  "has": 21480
-                },
-                {
-                  "has": 31502
-                },
-                {
-                  "has": 5503
-                },
-                {
-                  "has": 31505
-                },
-                {
-                  "has": 22856
-                },
-                {
-                  "has": 22859
-                },
-                {
-                  "has": 31508
-                }
-              ]}
+              {
+                "any": [
+                  {
+                    "has": 5370
+                  },
+                  {
+                    "has": 5371
+                  },
+                  {
+                    "has": 5372
+                  },
+                  {
+                    "has": 5373
+                  },
+                  {
+                    "has": 5374
+                  },
+                  {
+                    "has": 5500
+                  },
+                  {
+                    "has": 5496
+                  },
+                  {
+                    "has": 5497
+                  },
+                  {
+                    "has": 5498
+                  },
+                  {
+                    "has": 5499
+                  },
+                  {
+                    "has": 5501
+                  },
+                  {
+                    "has": 5502
+                  },
+                  {
+                    "has": 22866
+                  },
+                  {
+                    "has": 21477
+                  },
+                  {
+                    "has": 21480
+                  },
+                  {
+                    "has": 31502
+                  },
+                  {
+                    "has": 5503
+                  },
+                  {
+                    "has": 31505
+                  },
+                  {
+                    "has": 22856
+                  },
+                  {
+                    "has": 22859
+                  },
+                  {
+                    "has": 31508
+                  }
+                ]
+              }
             ]
           }
         }
@@ -42987,9 +42999,9 @@
           "droprate": "1/32"
         }
       },
-        "shops": {
-          "Yes": "No requirements"
-        },
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Crafting": {
           "notes": "Requires jute fibre",
@@ -48435,10 +48447,13 @@
         "Cave crawler (Ruins of Tapoyauik)": {
           "droprate": "Unknown"
         },
+        "Chasm crawler (Ruins of Tapoyauik)": {
+          "droprate": "Unknown"
+        },
         "Chilled jelly": {
           "droprate": "Rare"
         },
-        "Ice giant Regular (m) (Ruins of Tapoyauik)": {
+        "Ice giant (Ruins of Tapoyauik)": {
           "droprate": "Unknown"
         },
         "Ice spider (Ruins of Tapoyauik)": {
@@ -48447,7 +48462,7 @@
         "Ice warrior (Ruins of Tapoyauik)": {
           "droprate": "Unknown"
         },
-        "Icefiend Level 13 (Ruins of Tapoyauik)": {
+        "Icefiend (Ruins of Tapoyauik)": {
           "droprate": "Unknown"
         },
         "Vitreous Chilled Jelly": {
@@ -102207,7 +102222,7 @@
     "image": "raw_mystery_meat.png",
     "sources": {
       "shops": {
-        "Yes": "No requirements"
+        "Yes": "canCompleteSinsOfTheFather"
       }
     }
   },
@@ -105163,15 +105178,15 @@
               }
             ]
           },
-        "Decanting jewellery": {
-          "notes": "Requires an Ring of Dueling(1), (3) or (4).",
-          "rule": {
-            "any": [
-              "canCompleteDesertTreasure",
-              "canCompleteHauntedMine"
-            ]
+          "Decanting jewellery": {
+            "notes": "Requires an Ring of Dueling(1), (3) or (4).",
+            "rule": {
+              "any": [
+                "canCompleteDesertTreasure",
+                "canCompleteHauntedMine"
+              ]
+            }
           }
-        }
         }
       }
     }

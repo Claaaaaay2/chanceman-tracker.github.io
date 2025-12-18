@@ -1021,6 +1021,14 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
+    "Baby blue dragon (Ruins of Tapoyauik)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Baby_blue_dragon",
+        "rule": ["canCompleteTheHeartOfDarkness"],
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
     "Baby green dragon": {
         "wiki": "https://oldschool.runescape.wiki/w/Baby_green_dragon",
         "rule": {
@@ -1967,6 +1975,14 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
+    "Blue dragon (Ruins of Tapoyauik)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Blue_dragon",
+        "rule": ["canCompleteTheHeartOfDarkness"],
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
     "Blurite rocks": {
         "wiki": "https://oldschool.runescape.wiki/w/Blurite_rocks",
         "rule": ["canTrainMining"],
@@ -2415,6 +2431,19 @@ export const NPC_DATA = {
     "Brutal blue dragon": {
         "wiki": "https://oldschool.runescape.wiki/w/Brutal_blue_dragon",
         "rule": ["canKillDifficultDragons"],
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
+    "Brutal blue dragon (Ruins of Tapoyauik)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Brutal_blue_dragon",
+        "rule": {
+            "all": [
+                "canKillDifficultDragons",
+                "canCompleteTheHeartOfDarkness",
+            ]
+        },
         "skill": [],
         "level": [],
         "tags": [],
@@ -2898,6 +2927,14 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
+    "Cave crawler (Ruins of Tapoyauik)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Cave_crawler",
+        "rule": ["canCompleteTheHeartOfDarkness"],
+        "skill": ["slayer"],
+        "level": [10],
+        "tags": [],
+        "f2p": false
+    },
     "Cave goblin (Dorgesh-Kaan)": {
         "wiki": "https://oldschool.runescape.wiki/w/Cave_goblin_(Dorgesh-Kaan)",
         "rule": ["canCompleteDeathToTheDorgeshuun"],
@@ -3088,6 +3125,14 @@ export const NPC_DATA = {
     "Chasm Crawler": {
         "wiki": "https://oldschool.runescape.wiki/w/Chasm_Crawler",
         "rule": null,
+        "skill": ["slayer"],
+        "level": [10],
+        "tags": ["superior"],
+        "f2p": false
+    },
+    "Chasm crawler (Ruins of Tapoyauik)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Cave_crawler",
+        "rule": ["canCompleteTheHeartOfDarkness"],
         "skill": ["slayer"],
         "level": [10],
         "tags": ["superior"],
@@ -8024,6 +8069,14 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
+    "Ice giant (Ruins of Tapoyauik)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Ice_giant#Regular",
+        "rule": ["canCompleteTheHeartOfDarkness"],
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
     "Ice giant Wilderness Slayer Cave": {
         "wiki": "https://oldschool.runescape.wiki/w/Ice_giant#Wilderness_Slayer_Cave",
         "rule": null,
@@ -8035,6 +8088,14 @@ export const NPC_DATA = {
     "Ice spider": {
         "wiki": "https://oldschool.runescape.wiki/w/Ice_spider",
         "rule": null,
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
+    "Ice spider (Ruins of Tapoyauik)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Ice_spider",
+        "rule": ["canCompleteTheHeartOfDarkness"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -8112,6 +8173,14 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": true
     },
+    "Ice warrior (Ruins of Tapoyauik)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Ice_warrior",
+        "rule": ["canCompleteTheHeartOfDarkness"],
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": true
+    },
     "Ice warrior (m)": {
         "wiki": "https://oldschool.runescape.wiki/w/Ice_warrior",
         "rule": null,
@@ -8131,6 +8200,14 @@ export const NPC_DATA = {
     "Icefiend": {
         "wiki": "https://oldschool.runescape.wiki/w/Icefiend",
         "rule": null,
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
+    "Icefiend (Ruins of Tapoyauik)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Icefiend",
+        "rule": ["canCompleteTheHeartOfDarkness"],
         "skill": [],
         "level": [],
         "tags": [],

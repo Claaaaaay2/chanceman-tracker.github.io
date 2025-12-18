@@ -1,5 +1,5 @@
 import { NPC_DATA } from "./npcData.js";
-import { REQUIREMENT_CHECKS } from "./requirements.js";
+import { REQUIREMENT_CHECKS, has } from "./requirements.js";
 
 /* ===========================================================
    NPC ACCESS
@@ -68,16 +68,7 @@ export async function evaluateRule(rule, ctx) {
 
         // has {id}
         if (rule.has !== undefined) {
-
-            const id = rule.has;
-            const item = ctx.items.find(i => i.id === id);
-
-            if (!item) return false;
-
-            // must be unlocked AND obtainable
-            return (
-                ctx.unlocked.includes(id) && ctx.rolled.includes(id)
-            );
+            return has(ctx, rule.has)
         }
 
         // any
