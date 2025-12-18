@@ -27,7 +27,7 @@ export default function UploadPage() {
 
         <label>
             Player name: (Only works with Runelite's <a href="https://oldschool.runescape.wiki/w/RuneScape:WikiSync">WikiSync</a>)<br>
-            <input type="text" id="playerName" placeholder="OSRS username">
+            <input type="text" id="playerName" placeholder="OSRS username" value="${fileStore.player?.name ?? ""}">
         </label>
         <br><br>
 

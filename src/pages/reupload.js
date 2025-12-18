@@ -5,17 +5,32 @@ export default function ReuploadPage() {
     return `
         <h1>Reupload Files</h1>
 
-        <p>Replace your chanceman_rolled.json and chanceman_unlocked.json files.</p>
+        <p><strong>Replace your chanceman_rolled.json and chanceman_unlocked.json files.</strong></p>
 
-        <input type="file" id="rolledInput" accept=".json"><br><br>
-        <input type="file" id="unlockedInput" accept=".json"><br><br>
+        <p>Location:<br>
+        C:\\Users\\[user]\\.runelite\\chanceman\\[osrs-account]\\chanceman_rolled.json<br>
+        C:\\Users\\[user]\\.runelite\\chanceman\\[osrs-account]\\chanceman_unlocked.json
+        </p>
+
         <label>
-            Player name: (Only works with Runelite's <a href="https://oldschool.runescape.wiki/w/RuneScape:WikiSync">WikiSync</a>)<br>
-            <input type="text" id="playerName">
+            Rolled:<br>
+            <input type="file" id="rolledInput" accept=".json">
         </label>
         <br><br>
 
-        <button id="saveBtn">Save</button>
+        <label>
+            Unlocked:<br>
+            <input type="file" id="unlockedInput" accept=".json">
+        </label>
+        <br><br>
+
+        <label>
+            Player name: (Only works with Runelite's <a href="https://oldschool.runescape.wiki/w/RuneScape:WikiSync">WikiSync</a>)<br>
+            <input type="text" id="playerName" placeholder="OSRS username" value="${fileStore.player?.name ?? ""}">
+        </label>
+        <br><br>
+
+        <button id="saveBtn">Save & Continue</button>
 
         <p id="status"></p>
     `;
