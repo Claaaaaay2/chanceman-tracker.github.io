@@ -9,7 +9,8 @@ let memory = {
         onlyUnlocked: false,
         onlyObtainable: false,
         hideClue: true
-    }
+    },
+    player: null
 };
 
 // ---- Public API ----
@@ -17,6 +18,7 @@ export const fileStore = {
     rolled: null,
     unlocked: null,
     items: null,
+    player: null,
 
     async ensureItemsLoaded() {
         if (!this.items) {
@@ -27,6 +29,7 @@ export const fileStore = {
     async init() {
         memory.rolled = await loadFromDB("rolled");
         memory.unlocked = await loadFromDB("unlocked");
+        memory.player = await loadFromDB("player");
 
         const loadedFilters = await loadFromDB("filters");
         if (loadedFilters) {
@@ -49,6 +52,11 @@ export const fileStore = {
         await saveToDB("filters", filters);
     },
 
+    async setPlayer(player) {
+        memory.player = player;
+        await saveToDB("player", player);
+    },
+
     get rolled() {
         return memory.rolled;
     },
@@ -59,5 +67,9 @@ export const fileStore = {
 
     get filters() {
         return memory.filters;
+    },
+
+    get player() {
+        return memory.player;
     }
 };

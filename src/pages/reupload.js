@@ -1,6 +1,5 @@
 import { fetchPlayer } from "../api/playerApi.js";
 import { fileStore } from "../storage/fileStore.js";
-import { playerStore } from "../storage/playerStore.js";
 
 export default function ReuploadPage() {
     return `
@@ -44,7 +43,7 @@ document.addEventListener("click", async (e) => {
 
         if (playerNameInput.value) {
             const player = await fetchPlayer(playerNameInput.value);
-            await playerStore.set(player);
+            await fileStore.setPlayer(player);
         }
 
         status.textContent = "Updated!";

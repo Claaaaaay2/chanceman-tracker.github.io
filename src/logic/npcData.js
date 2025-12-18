@@ -10954,7 +10954,12 @@ export const NPC_DATA = {
     },
     "Oomlie bird": {
         "wiki": "https://oldschool.runescape.wiki/w/Oomlie_bird",
-        "rule": ["canReachKharaziJungle"],
+        "rule": {
+            "any": [
+                "canReachKharaziJungle",
+                "canLongrange"
+            ]
+        },
         "skill": [],
         "level": [],
         "tags": [],

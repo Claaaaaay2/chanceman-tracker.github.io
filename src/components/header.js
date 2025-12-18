@@ -1,7 +1,8 @@
-import { playerStore } from "../storage/playerStore.js";
+import { fileStore } from "../storage/fileStore";
+
 
 export async function Header() {
-    const player = await playerStore.get();
+    const player = fileStore.player;
 
     return `
         <nav class="header">

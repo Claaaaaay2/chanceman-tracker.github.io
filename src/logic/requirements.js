@@ -1,4 +1,3 @@
-
 export function has(ctx, id) {
     const item = ctx.items.find(i => i.id === id);
     if (!item) return false;

@@ -11,9 +11,6 @@ node_modules
 dist-ssr
 *.local
 *.py
-all_items.json
-items_old_(pre_auto_scrape).json
-items_old_pre_–.json
 
 # Editor directories and files
 .vscode/*

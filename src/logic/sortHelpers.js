@@ -1,5 +1,4 @@
 import { fileStore } from "../storage/fileStore.js";
-import { playerStore } from "../storage/playerStore.js";
 import { canDoOtherMethod, canReachNpc } from "./itemAvailability.js";
 import { NPC_DATA } from "./npcData.js";
 
@@ -72,7 +71,7 @@ export async function getObtainabilityRank(item, ctx) {
     const src = item.sources || {};
     const name = item.name.toLowerCase();
     const id = item.id;
-    const player = await playerStore.get();
+    const player = ctx.player;
     let rank = null;
 
     const unlocked = fileStore.unlocked.includes(id);
@@ -120,14 +119,14 @@ export async function getObtainabilityRank(item, ctx) {
             }
 
             if (npc?.skill?.length) {
-                if(player) {
+                if (player) {
                     if (npc.skill.length !== npc.level.length) {
                         console.error("npc skill and level not in order: ", npc);
                     }
                     for (let i = 0; i < npc.skill.length; i++) {
                         const skill = npc.skill[i];
                         const level = npc.level[i];
-    
+
                         if (player.levels[capitalizeFirstLetter(skill)] >= level) { //TODO probleem: wat als je 1 skill wel hebt en 1 skill niet?
                             hasSkillMet = true;
                         } else {
@@ -165,7 +164,7 @@ export async function getObtainabilityRank(item, ctx) {
         }
     }
 
-    if(rank) return { rank, name }; // In case of rank 6 or 7
+    if (rank) return { rank, name }; // In case of rank 6 or 7
 
     // 7. Unobtainable
     return { rank: 8, name };
