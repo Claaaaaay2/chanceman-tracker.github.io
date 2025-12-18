@@ -8,6 +8,12 @@ export const REQUIREMENT_CHECKS = {
     canCompleteTaiBwoWannaiTrio(ctx) {
         return canCompleteTaiBwoWannaiTrio(ctx);
     },
+    canGetKPSpears(ctx) {
+        return canGetKPSpears(ctx);
+    },
+    canGetKarambwanVessel(ctx) {
+        return canGetKarambwanVessel(ctx);
+    },
     canCompleteDragonSlayerII(ctx) {
         return false; // TODO
     },
@@ -479,6 +485,9 @@ export const REQUIREMENT_CHECKS = {
     canTrainFletching(ctx) {
         return canTrainFletching(ctx);
     },
+    canFishKarambwan(ctx) {
+        return canFishKarambwan(ctx);
+    },
     canTrainSmithing(ctx) {
         return canTrainSmithing(ctx);
     },
@@ -712,6 +721,9 @@ export const REQUIREMENT_CHECKS = {
     },
     hasAnyFeather(ctx) {
         return hasAnyFeather(ctx);
+    },
+    hasAnyFeatherButStripy(ctx) {
+        return hasAnyFeatherButStripy(ctx);
     },
     hasStripyFeather(ctx) {
         return has(ctx, 10087);
@@ -1080,7 +1092,7 @@ export const REQUIREMENT_CHECKS = {
         return hasFireRuneSource(ctx);
     },
     canEnterGodWarsDungeon(ctx) {
-        return false; // TODO
+        return canEnterGodWarsDungeon(ctx);
     },
     canDoCommanderZilyana(ctx) {
         return canDoCommanderZilyana(ctx);
@@ -1164,7 +1176,20 @@ function canCompleteBeneathCursedSands(ctx) {
 }
 
 function hasAnyFeather(ctx) {
-    return has(ctx, 314); // TODO andere feathers
+    return has(ctx, 314)    // Feather
+        || has(ctx, 10089)  // Blue feather
+        || has(ctx, 10091)  // Orange feather
+        || has(ctx, 10088)  // Red feather
+        || has(ctx, 10087)  // Stripy feather
+        || has(ctx, 10090); // Yellow feather
+}
+
+function hasAnyFeatherButStripy(ctx) {
+    return has(ctx, 314)    // Feather
+        || has(ctx, 10089)  // Blue feather
+        || has(ctx, 10091)  // Orange feather
+        || has(ctx, 10088)  // Red feather
+        || has(ctx, 10090); // Yellow feather
 }
 
 function hasAnyLantern(ctx) {
@@ -1248,7 +1273,7 @@ function canBurnLoarShades(ctx) {
     return canCompleteShadesOfMortton(ctx);
 }
 
-function canBurnPhrinShades(ctx) { //TODO shades from temple tracking
+function canBurnPhrinShades(ctx) {
     return canBurnLoarShades(ctx) //
         && has(ctx, 3398); // Phrin remains
 }
@@ -1392,7 +1417,8 @@ function hasFireRuneSource(ctx) {
 }
 
 function canReachTrollheim(ctx) {
-    return canCompleteDeathPlateau(ctx); // TODO achievement diaries
+    return canCompleteDeathPlateau(ctx) //
+        || ctx.player.combatAchievements.length >= 38;
 }
 
 function hasHunterMeat(ctx) {
@@ -1412,24 +1438,56 @@ function canGetBirdNestWyson(ctx) {
         && has(ctx, 7416); // Mole claw
 }
 
+function hasRope(ctx) {
+    return has(ctx, 954); // Rope
+}
+
+function hasHammer(ctx) {
+    return has(ctx, 2347); // Hammer
+}
+
+function canEnterGodWarsDungeon(ctx) {
+    return canReachTrollheim(ctx) //
+        && hasRope(ctx);
+}
+
 function canDoCommanderZilyana(ctx) {
-    return false; // TODO
+    return canEnterGodWarsDungeon(ctx) //
+        && ctx.player.levels.Agility >= 70
+        && hasRope(ctx);
 }
 
 function canDoGeneralGraardor(ctx) {
-    return false; // TODO
+    return canEnterGodWarsDungeon(ctx) //
+        && ctx.player.levels.Strength >= 70
+        && ( // Any hammer/warhammer https://oldschool.runescape.wiki/w/Warhammer#Other_warhammers < these dont work
+            hasHammer(ctx) //
+            || has(ctx, 1345)  // Adamant warhammer
+            || has(ctx, 1341)  // Black warhammer
+            || has(ctx, 1337)  // Bronze warhammer
+            || has(ctx, 13576) // Dragon warhammer
+            || has(ctx, 1335)  // Iron warhammer
+            || has(ctx, 1343)  // Mithril warhammer
+            || has(ctx, 1347)  // Rune warhammer
+            || has(ctx, 1339)  // Steel warhammer
+            || has(ctx, 6613)  // White warhammer
+            || has(ctx, 21003) // Elder maul
+        );
 }
 
 function canDoKreearra(ctx) {
-    return false; // TODO
+    return canEnterGodWarsDungeon(ctx) //
+        && ctx.player.levels.Ranged >= 70
+        && has(ctx, 9419); // Mith Grapple (phoenix crossbow is available)
 }
 
 function canDoKrilTsutsaroth(ctx) {
-    return false; // TODO
+    return canEnterGodWarsDungeon(ctx) //
+        && ctx.player.levels.Hitpoints >= 70;
 }
 
 function canDoNex(ctx) {
-    return false; // TODO
+    return canCompleteTheFrozenDoor(ctx);
 }
 
 function canBirdSnare(ctx) {
@@ -1572,8 +1630,59 @@ function canCompleteBarbarianSmithing(ctx) {
         )
 }
 
+function canFishKarambwan(ctx) {
+    return canCompleteJunglePotion(ctx) //
+        && has(ctx, 3157) // Karambwan vessel
+        && has(ctx, 3159) // Karambwan vessel (baited)
+        && has(ctx, 303); // Small fishing net
+}
+
+function canGetKarambwanVessel(ctx) {
+    return canCompleteJunglePotion(ctx) //
+        && has(ctx, 303); // Small fishing net
+}
+
+function canGetKPSpears(ctx) {
+    return canCompleteJunglePotion(ctx) //
+        && canTrainCooking(ctx) //
+        && has(ctx, 303)  // Small fishing net
+        && has(ctx, 3157) // Karambwan vessel
+        && has(ctx, 3159) // Karambwan vessel (baited)
+        && has(ctx, 3142) // Raw Karambwan
+        // && has(ctx, 233) // Pestle and mortar not needed because crusher guy in Nardah
+        && (
+            has(ctx, 1237)    // Bronze spear
+            && has(ctx, 1239) // Iron spear
+            && has(ctx, 1241) // Steel spear
+            && has(ctx, 1243) // Mithril spear
+            && has(ctx, 1245) // Adamant spear
+            && has(ctx, 1247) // Rune spear
+            && has(ctx, 1249) // Dragon spear
+        )
+}
+
 function canCompleteTaiBwoWannaiTrio(ctx) {
-    return false; // TODO
+    return canCompleteJunglePotion(ctx) //
+        && canTrainCooking(ctx) //
+        && hasSlashWeapon(ctx) //
+        && has(ctx, 3162) // Sliced banana
+        && has(ctx, 303)  // Small fishing net
+        // && has(ctx, 233) // Pestle and mortar not needed because crusher guy in Nardah
+        && has(ctx, 3032) // Agility potion(4)
+        && canShortrange(ctx) //
+        && has(ctx, 3125) // Jogre bones
+        && has(ctx, 401)  // Seaweed
+        && (
+            has(ctx, 1239)    // Iron spear
+            && has(ctx, 1241) // Steel spear
+            && has(ctx, 1243) // Mithril spear
+            && has(ctx, 1245) // Adamant spear
+            && has(ctx, 1247) // Rune spear
+            && has(ctx, 1249) // Dragon spear
+        )
+        && has(ctx, 3157)  // Karambwan vessel
+        && has(ctx, 3159)  // Karambwan vessel (baited)
+        && has(ctx, 3142); // Raw Karambwan
 }
 
 function canCompleteTheFrozenDoor(ctx) {
@@ -1617,54 +1726,56 @@ function canEnterTheCharredDungeon(ctx) {
 }
 
 function canLongrange(ctx) {
-    return ((has(ctx, 841) || has(ctx, 839)) // Shortbow or Longbow
-        && (has(ctx, 882) || has(ctx, 884))) // Bronze arrow or Iron arrow
-        || ((has(ctx, 837) || has(ctx, 9174)) // Crossbow or Bronze crossbow
-            && has(ctx, 877)) // Bronze bolts
-        || ((has(ctx, 556) || has(ctx, 4696) || has(ctx, 1381) || has(ctx, 1397)) // Air rune, Dust rune, Staff of air or Air battlestaff
-            && (has(ctx, 558) || has(ctx, 562) || has(ctx, 560) || has(ctx, 565))) // Mind rune, Chaos rune, Death rune or Blood rune
+    return (has(ctx, 882) || has(ctx, 884)) // Bronze arrow or Iron arrow (with cursed goblin bow)
+        || has(ctx, 877) // Bronze bolts (with phoenix crossbow)
+        || (hasAirRuneSource(ctx) //
+            && (has(ctx, 558) || has(ctx, 562) || has(ctx, 560) || has(ctx, 565)) // Mind rune, Chaos rune, Death rune or Blood rune
+        ); //
 }
 
 function canCastStrikeSpells(ctx) {
-    return ((has(ctx, 556) || has(ctx, 4696) || has(ctx, 1381) || has(ctx, 1397)) // Air rune, Dust rune, Staff of air or Air battlestaff
-        && has(ctx, 558)) // Mind rune
+    return hasAirRuneSource(ctx) //
+        && has(ctx, 558); // Mind rune
 }
 
 function canShortrange(ctx) {
     return canLongrange(ctx) //
-        || has(ctx, 864) // Bronze knife
-        || has(ctx, 870) // Bronze knife(p)
-        || has(ctx, 863) // Iron knife
-        || has(ctx, 865) // Steel knife
-        || has(ctx, 869) // Black knife
-        || has(ctx, 866) // Mithril knife
-        || has(ctx, 867) // Adamant knife
-        || has(ctx, 868) // Rune knife
-        || has(ctx, 5667) // Rune knife(p++)
-        || has(ctx, 806) // Bronze dart
-        || has(ctx, 807) // Iron dart
-        || has(ctx, 813) // Iron dart(p)
-        || has(ctx, 808) // Steel dart
-        || has(ctx, 3093) // Black dart
-        || has(ctx, 809) // Mithril dart
-        || has(ctx, 810) // Adamant dart
-        || has(ctx, 816) // Adamant dart(p)
-        || has(ctx, 811) // Rune dart
-        || has(ctx, 817) // Rune dart(p)
-        || has(ctx, 6522) // Toktz-xil-ul
+        || has(ctx, 864)   // Bronze knife
+        || has(ctx, 870)   // Bronze knife(p)
+        || has(ctx, 863)   // Iron knife
+        || has(ctx, 865)   // Steel knife
+        || has(ctx, 869)   // Black knife
+        || has(ctx, 866)   // Mithril knife
+        || has(ctx, 867)   // Adamant knife
+        || has(ctx, 868)   // Rune knife
+        || has(ctx, 5667)  // Rune knife(p++)
+        || has(ctx, 22804) // Dragon knife
+        || has(ctx, 806)   // Bronze dart
+        || has(ctx, 807)   // Iron dart
+        || has(ctx, 813)   // Iron dart(p)
+        || has(ctx, 808)   // Steel dart
+        || has(ctx, 3093)  // Black dart
+        || has(ctx, 809)   // Mithril dart
+        || has(ctx, 810)   // Adamant dart
+        || has(ctx, 816)   // Adamant dart(p)
+        || has(ctx, 811)   // Rune dart
+        || has(ctx, 817)   // Rune dart(p)
+        || has(ctx, 11230) // Dragon dart
+        || has(ctx, 6522)  // Toktz-xil-ul
         || has(ctx, 10033) // Chinchompa
         || has(ctx, 10034) // Red chinchompa
         || has(ctx, 11959) // Black chinchompa
-        || has(ctx, 800) // Bronze thrownaxe
-        || has(ctx, 801) // Iron thrownaxe
-        || has(ctx, 802) // Steel thrownaxe
-        || has(ctx, 803) // Mithril thrownaxe
-        || has(ctx, 804) // Adamant thrownaxe
-        || has(ctx, 805); // Rune thrownaxe
+        || has(ctx, 800)   // Bronze thrownaxe
+        || has(ctx, 801)   // Iron thrownaxe
+        || has(ctx, 802)   // Steel thrownaxe
+        || has(ctx, 803)   // Mithril thrownaxe
+        || has(ctx, 804)   // Adamant thrownaxe
+        || has(ctx, 805)   // Rune thrownaxe
+        || has(ctx, 20849);// Dragon thrownaxe
 }
 
 function canKillGargoyles(ctx) {
-    return has(ctx, 4162)       // Rock hammer
+    return has(ctx, 4162)   // Rock hammer
         || has(ctx, 21754); // Rock thrownhammer
 }
 
@@ -1673,7 +1784,7 @@ function canKillDifficultDragons(ctx) {
 }
 
 function canEnterKaruulmSlayerDungeon(ctx) {
-    return has(ctx, 23037) // Boots of stone
+    return has(ctx, 23037)  // Boots of stone
         || has(ctx, 21643); // Granite boots
 }
 
@@ -1738,7 +1849,7 @@ function canStartPerilousMoons(ctx) {
 }
 
 function canCompleteTwilightsPromise(ctx) {
-    return false; //TODO
+    return canShortrange(ctx);
 }
 
 function canCompletePerilousMoons(ctx) {
@@ -2121,7 +2232,7 @@ function canTrainHunter(ctx) {
 }
 
 function canTrainCooking(ctx) {
-    return has(ctx, 25833)    // Raw boar meat
+    return has(ctx, 25833) // Raw boar meat
         || has(ctx, 2132) // Raw beef
         || has(ctx, 2136) // Raw bear meat
         || has(ctx, 2134) // Raw rat meat
@@ -2132,6 +2243,7 @@ function canTrainCooking(ctx) {
         || has(ctx, 321)  // Raw anchovies
         || has(ctx, 1859) // Raw ugthanki meat
         || has(ctx, 2307) // Bread dough
+        || has(ctx, 3142) // Raw karambwan
         || has(ctx, 345); // Raw herring
 }
 
@@ -2171,7 +2283,7 @@ function canTrainConstruction(ctx) {
 
 function canTrainFletching(ctx) {
     return (has(ctx, 946) && has(ctx, 1511)) // Knife & Logs
-        || (has(ctx, 52) && has(ctx, 314)) // Arrow shaft & Feather
+        || (has(ctx, 52) && hasAnyFeather(ctx)) // Arrow shaft & Feather
         || (has(ctx, 53) && has(ctx, 39)) // Headless arrow & Bronze arrowtip
 }
 

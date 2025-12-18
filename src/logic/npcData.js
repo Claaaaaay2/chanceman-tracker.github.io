@@ -5918,13 +5918,7 @@ export const NPC_DATA = {
     },
     "Fishing spot (karambwan)": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(karambwan)",
-        "rule": {
-            "all": [
-                "canCompleteTaiBwoWannaiTrio",
-                "hasSmallFishingNet",
-                "hasKarambwanVesselBaited"
-            ]
-        },
+        "rule": ["canFishKarambwan"],
         "skill": ["fishing"],
         "level": [65],
         "tags": [],
@@ -11044,7 +11038,7 @@ export const NPC_DATA = {
     },
     "Ore stall (Port Roberts)": {
         "wiki": "https://oldschool.runescape.wiki/w/Ore_stall_(Port_Roberts)",
-        "rule": ["canCompletePandemoniom"],
+        "rule": ["canCompletePandemonium"],
         "skill": ["thieving"],
         "level": [82],
         "tags": [],
@@ -12585,7 +12579,7 @@ export const NPC_DATA = {
             "all": [
                 "canTrainFishing",
                 "hasFishingRod",
-                "hasAnyFeather"
+                "hasAnyFeatherButStripy"
             ]
         },
         "skill": ["fishing"],
@@ -14923,7 +14917,7 @@ export const NPC_DATA = {
     },
     "The Shaikahan": {
         "wiki": "https://oldschool.runescape.wiki/w/The_Shaikahan",
-        "rule": ["canCompleteTaiBwoWannaiTrio"],
+        "rule": ["canGetKPSpears"],
         "skill": [],
         "level": [],
         "tags": [],

@@ -1766,9 +1766,7 @@
           "notes": "",
           "rule": {
             "all": [
-              {
-                "has": 314
-              },
+              "hasAnyFeather",
               {
                 "has": 9380
               },
@@ -22750,9 +22748,7 @@
               {
                 "has": 9375
               },
-              {
-                "has": 314
-              },
+              "hasAnyFeather",
               "canTrainFletching"
             ]
           }
@@ -36138,9 +36134,7 @@
               {
                 "has": 21930
               },
-              {
-                "has": 314
-              },
+              "hasAnyFeather",
               "canTrainFletching"
             ]
           }
@@ -73540,7 +73534,7 @@
       "other": {
         "Obtaining from Quest": {
           "notes": "Obtained during Tai Bwo Wannai Trio.",
-          "rule": "canCompleteTaiBwoWannaiTrio"
+          "rule": "canGetKarambwanVessel"
         }
       }
     }
@@ -73556,10 +73550,10 @@
       },
       "other": {
         "Obtaining from Quest": {
-          "notes": "Obtained during Tai Bwo Wannai Trio + add karambwanji.",
+          "notes": "Obtained during Tai Bwo Wannai Trio + add Raw karambwanji.",
           "rule": {
             "all": [
-              "canCompleteTaiBwoWannaiTrio",
+              "canGetKarambwanVessel",
               {
                 "has": 303
               }
@@ -84590,9 +84584,7 @@
               {
                 "has": 9379
               },
-              {
-                "has": 314
-              },
+              "hasAnyFeather",
               "canTrainFletching"
             ]
           }
@@ -112113,9 +112105,7 @@
               {
                 "has": 9381
               },
-              {
-                "has": 314
-              },
+              "hasAnyFeather",
               "canTrainFletching"
             ]
           }
@@ -116512,9 +116502,7 @@
               {
                 "has": 9382
               },
-              {
-                "has": 314
-              },
+              "hasAnyFeather",
               "canTrainFletching"
             ]
           }
@@ -122498,9 +122486,7 @@
               {
                 "has": 9378
               },
-              {
-                "has": 314
-              },
+              "hasAnyFeather",
               "canTrainFletching"
             ]
           }
