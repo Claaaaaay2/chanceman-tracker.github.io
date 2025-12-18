@@ -2100,30 +2100,30 @@ async function canTrainHerblore(ctx) {
 
 async function canTrainFishing(ctx) {
     return await has(ctx, 303)     // Small fishing net
-        && await has(ctx, 305) // Big fishing net
-        && (await has(ctx, 307) && await has(ctx, 313)); // Fishing rod & Fishing bait
+        || await has(ctx, 305) // Big fishing net
+        || (await has(ctx, 307) && await has(ctx, 313)); // Fishing rod & Fishing bait
 }
 
 async function canTrainHunter(ctx) {
-    return await has(ctx, 10006)     // Bird snare
-        && await has(ctx, 10150) // Noose wand
-        && await has(ctx, 10010) // Butterfly net
+    return await has(ctx, 10006) // Bird snare
+        || await has(ctx, 10150) // Noose wand
+        || await has(ctx, 10010) // Butterfly net
         ; // TODO or the player's lvl allows for barehanding butterflies (lvl 25)
 }
 
 async function canTrainCooking(ctx) {
     return await has(ctx, 25833)    // Raw boar meat
-        && await has(ctx, 2132) // Raw beef
-        && await has(ctx, 2136) // Raw bear meat
-        && await has(ctx, 2134) // Raw rat meat
-        && await has(ctx, 2138) // Raw chicken
-        && await has(ctx, 317)  // Raw shrimps
-        && await has(ctx, 3226) // Raw rabbit
-        && await has(ctx, 327)  // Raw sardine
-        && await has(ctx, 321)  // Raw anchovies
-        && await has(ctx, 1859) // Raw ugthanki meat
-        && await has(ctx, 2307) // Bread dough
-        && await has(ctx, 345); // Raw herring
+        || await has(ctx, 2132) // Raw beef
+        || await has(ctx, 2136) // Raw bear meat
+        || await has(ctx, 2134) // Raw rat meat
+        || await has(ctx, 2138) // Raw chicken
+        || await has(ctx, 317)  // Raw shrimps
+        || await has(ctx, 3226) // Raw rabbit
+        || await has(ctx, 327)  // Raw sardine
+        || await has(ctx, 321)  // Raw anchovies
+        || await has(ctx, 1859) // Raw ugthanki meat
+        || await has(ctx, 2307) // Bread dough
+        || await has(ctx, 345); // Raw herring
 }
 
 async function canTrainFarming(ctx) {
@@ -2154,7 +2154,7 @@ async function canPlantPlants(ctx) {
 
 async function canTrainConstruction(ctx) {
     return await has(ctx, 8431) // Bagged plant 1
-        && (
+        || (
             (await has(ctx, 2347) && await has(ctx, 8794)) // Hammer and Saw
             && (await has(ctx, 2351) || (await has(ctx, 960) && await hasAnyNails(ctx)))  // Iron bar or Plank and any nails
         );
@@ -2223,37 +2223,62 @@ async function canDoGnomeRestaurant(ctx) {
 async function canDoValeTotems(ctx) {
     return await canTrainFletching(ctx) //
         && await has(ctx, 946) // Knife
-        && ((
-            await has(ctx, 843) // Oak shortbow
-            || await has(ctx, 845) // Oak longbow
-            || await has(ctx, 9442) // Oak stock
-            || await has(ctx, 22251) // Oak shield
-            || (await has(ctx, 1521) && (await has(ctx, 54) || await has(ctx, 56))) // Oak logs & either Oak shortbow (u) or Oak longbow (u)
-        ) //
-            || (
-                await has(ctx, 849) // Willow shortbow
-                || await has(ctx, 847) // Willow longbow
-                || await has(ctx, 9444) // Willow stock
-                || (await has(ctx, 1519) && (await has(ctx, 60) || await has(ctx, 58) || await has(ctx, 22254))) // Willow logs & either Willow shortbow (u), Willow longbow (u) or Willow shield
+        && ( //
+            (await has(ctx, 1521) // Oak logs
+                && (await has(ctx, 843) // Oak shortbow
+                    || await has(ctx, 845) // Oak longbow
+                    || await has(ctx, 9442) // Oak stock
+                    || await has(ctx, 22251) // Oak shield
+                    || await has(ctx, 54) // Oak shortbow (u)
+                    || await has(ctx, 56) // Oak longbow (u)
+                ) //
             ) //
-            || (
-                await has(ctx, 853) // Maple shortbow
-                || await has(ctx, 851) // Maple longbow
-                || await has(ctx, 9448) // Maple stock
-                || (await has(ctx, 1517) && (await has(ctx, 64) || await has(ctx, 62) || await has(ctx, 22257))) // Maple logs & either Maple shortbow (u), Maple longbow (u) or Maple shield
+            || (await has(ctx, 1519) // Willow logs
+                && (await has(ctx, 849) // Willow shortbow
+                    || await has(ctx, 847) // Willow longbow
+                    || await has(ctx, 9444) // Willow stock
+                    || await has(ctx, 60)  // Willow shortbow (u)
+                    || await has(ctx, 58) // Willow longbow (u)
+                    || await has(ctx, 22254) // Willow shield
+                ) //
             ) //
-            || (
-                await has(ctx, 857) // Yew shortbow
-                || await has(ctx, 855) // Yew longbow
-                || (await has(ctx, 1515) && (await has(ctx, 68) || await has(ctx, 66) || await has(ctx, 22260) || await has(ctx, 9452))) // Yew logs & either Yew shortbow (u), Yew longbow (u), Yew shield or Yew stock
+            || (await has(ctx, 1517) // Maple logs
+                && (await has(ctx, 853) // Maple shortbow
+                    || await has(ctx, 851) // Maple longbow
+                    || await has(ctx, 9448) // Maple stock
+                    || await has(ctx, 64) // Maple shortbow (u)
+                    || await has(ctx, 62) // Maple longbow (u)
+                    || await has(ctx, 22257) // Maple shield
+                ) //
             ) //
-            || (await has(ctx, 1513) && (await has(ctx, 72) || await has(ctx, 70) || await has(ctx, 22263) || await has(ctx, 21952))) // Magic logs & either Magic shortbow (u), Magic longbow (u), Magic shield or Magic stock
-            || (await canTrainWoodcutting(ctx) && await has(ctx, 19669) && (await has(ctx, 31049) || await has(ctx, 22266)))); // Redwood logs & either Redwood hiking staff or Redwood shield
+            || (await has(ctx, 1515) // Yew logs
+                && (await has(ctx, 857) // Yew shortbow
+                    || await has(ctx, 855) // Yew longbow
+                    || await has(ctx, 68) // Yew shortbow (u)
+                    || await has(ctx, 66) // Yew longbow (u)
+                    || await has(ctx, 22260) // Yew shield
+                    || await has(ctx, 9452) // Yew stock
+                ) //
+            ) //
+            || (await has(ctx, 1513) // Magic logs
+                && (await has(ctx, 861) // Magic shortbow
+                    || await has(ctx, 859) // Magic longbow
+                    || await has(ctx, 72) // Magic shortbow (u)
+                    || await has(ctx, 70) // Magic longbow (u)
+                    || await has(ctx, 22263) // Magic shield
+                    || await has(ctx, 21952) // Magic stock
+                ) //
+            ) //
+            || (await has(ctx, 19669) // Redwood logs
+                && (await has(ctx, 31049) // Redwood hiking staff
+                    || await has(ctx, 22266) // Redwood shield
+                ) //
+            ) //
+        ); //
 }
 
 async function canDoWintertodt(ctx) {
-    return await canTrainFiremaking(ctx) //
-        && await canTrainWoodcutting(ctx);
+    return await canTrainFiremaking(ctx);
 }
 
 async function canDoSalvaging(ctx) {

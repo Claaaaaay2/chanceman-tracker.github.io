@@ -509,7 +509,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": true
+        "f2p": false
     },
     "Albino bat": {
         "wiki": "https://oldschool.runescape.wiki/w/Albino_bat",
@@ -5511,8 +5511,8 @@ export const NPC_DATA = {
     "Extra supply crate": {
         "wiki": "https://oldschool.runescape.wiki/w/Extra_supply_crate",
         "rule": ["canDoWintertodt"],
-        "skill": [],
-        "level": [],
+        "skill": ["firemaking"],
+        "level": [50],
         "tags": [],
         "f2p": false
     },
@@ -12048,8 +12048,8 @@ export const NPC_DATA = {
     "Reward Cart": {
         "wiki": "https://oldschool.runescape.wiki/w/Reward_Cart",
         "rule": ["canDoWintertodt"],
-        "skill": [],
-        "level": [],
+        "skill": ["firemaking"],
+        "level": [50],
         "tags": [],
         "f2p": false
     },
