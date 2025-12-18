@@ -120011,7 +120011,7 @@
         "Cooking": {
           "notes": "Requires a Raw spider on shaft.",
           "rule": {
-            "any": [
+            "all": [
               {
                 "has": 52
               },
@@ -120035,7 +120035,7 @@
         "Cooking": {
           "notes": "Requires a Raw spider on a stick (spider carcass + skewer stick or arrow shaft.",
           "rule": {
-            "any": [
+            "all": [
               {
                 "has": 6305
               },
@@ -126930,7 +126930,7 @@
         "Cooking": {
           "notes": "Requires a Raw summer pie.",
           "rule": {
-            "any": [
+            "all": [
               {
                 "has": 7216
               },
@@ -146281,6 +146281,10 @@
               {
                 "has": 2337
               },
+              { "any": [
+                "canCompletePandemonium",
+                "canCompleteLegendsQuest"
+              ]},
               "canTrainCooking"
             ]
           }

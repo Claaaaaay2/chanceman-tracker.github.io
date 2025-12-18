@@ -9791,7 +9791,12 @@ export const NPC_DATA = {
     },
     "Marble gargoyle": {
         "wiki": "https://oldschool.runescape.wiki/w/Marble_gargoyle",
-        "rule": ["canCompletePriestInPeril"],
+        "rule": {
+            "all": [
+                "canCompletePriestInPeril",
+                "canKillGargoyles"
+            ]
+        },
         "skill": ["slayer"],
         "level": [75],
         "tags": ["superior"],
@@ -12578,8 +12583,8 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canTrainFishing",
-                "hasFishingRod",
-                "hasAnyFeatherButStripy"
+                "hasFlyFishingRod",
+                "hasFeather"
             ]
         },
         "skill": ["fishing"],
@@ -12592,7 +12597,7 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canTrainFishing",
-                "hasFishingRod",
+                "hasFlyFishingRod",
                 "hasStripyFeather"
             ]
         },

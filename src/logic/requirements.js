@@ -738,7 +738,7 @@ export const REQUIREMENT_CHECKS = {
         return has(ctx, 11334) || has(ctx, 2162);
     },
     canBarbarianFish(ctx) {
-        return hasAnyFeather(ctx) || has(ctx, 313) || has(ctx, 11324) || has(ctx, 11326);
+        return has(ctx, 314) || has(ctx, 313) || has(ctx, 11324) || has(ctx, 11326);
     },
     canReachFrogSpawnSpot(ctx) {
         return this.canCompleteBelowIceMountain(ctx) || canEnterLumbridgeSwampCaves(ctx);
