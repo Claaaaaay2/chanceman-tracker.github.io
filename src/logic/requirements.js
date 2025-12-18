@@ -133,7 +133,7 @@ export const REQUIREMENT_CHECKS = {
         return false; // TODO
     },
     async canEnterLumbridgeSwampCaves(ctx) {
-        return false; // TODO
+        return canEnterLumbridgeSwampCaves(ctx);
     },
     async canCompleteMakingFriendsWithMyArm(ctx) {
         return false; // TODO
@@ -730,7 +730,7 @@ export const REQUIREMENT_CHECKS = {
         return await hasAnyFeather(ctx) || await has(ctx, 313) || await has(ctx, 11324) || await has(ctx, 11326);
     },
     async canReachFrogSpawnSpot(ctx) {
-        return await this.canCompleteBelowIceMountain(ctx) || await this.canEnterLumbridgeSwampCaves(ctx);
+        return await this.canCompleteBelowIceMountain(ctx) || await canEnterLumbridgeSwampCaves(ctx);
     },
     async hasOgreCoffinKey(ctx) {
         return await has(ctx, 4850);
@@ -1203,6 +1203,16 @@ async function canCompleteHauntedMine(ctx) {
     return await canCompletePriestInPeril(ctx) //
         && await canTrainCrafting(ctx) //
         && await has(ctx, 1755); // Chisel
+}
+
+async function canEnterLumbridgeSwampCaves(ctx) {
+    return await has(ctx, 954) // Rope
+        || await canStartTheLostTribe(ctx) && await canTrainMining(ctx);
+}
+
+async function canStartTheLostTribe(ctx) {
+    return await canCompleteGoblinDiplomacy(ctx) //
+        && await canCompleteRuneMysteries(ctx);
 }
 
 async function canCompleteShadesOfMortton(ctx) {
@@ -2080,13 +2090,13 @@ async function canTrainRunecraft(ctx) {
 }
 
 async function canTrainWoodcutting(ctx) {
-    return await has(ctx, 1351)      // Bronze axe
+    return await has(ctx, 1351)  // Bronze axe
         || await has(ctx, 1349)  // Iron axe
         || await has(ctx, 1353); // Steel axe
 }
 
 async function canTrainMining(ctx) {
-    return await has(ctx, 1265)      // Bronze pickaxe
+    return await has(ctx, 1265)  // Bronze pickaxe
         || await has(ctx, 1267)  // Iron pickaxe
         || await has(ctx, 1269); // Steel pickaxe
 }

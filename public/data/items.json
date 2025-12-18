@@ -6048,7 +6048,22 @@
     "index": 167,
     "id": 5767,
     "name": "Ale yeast",
-    "image": "ale_yeast.png"
+    "image": "ale_yeast.png",
+    "sources": {
+      "other": {
+        "Cooking": {
+          "Notes": "Requires pot.",
+          "rule": {
+            "all": [
+              {
+                "has": 1931
+              },
+              "canCompletePriestInPeril"
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 168,
@@ -6609,6 +6624,9 @@
     "id": 10362,
     "name": "Amulet of glory (t)",
     "image": "amulet_of_glory_(t).png",
+    "tags": [
+      "clue-reward-only"
+    ],
     "sources": {
       "drops": {
         "Reward casket (hard)": {
@@ -6638,6 +6656,9 @@
     "id": 11964,
     "name": "Amulet of glory (t6)",
     "image": "amulet_of_glory_(t6).png",
+    "tags": [
+      "clue-reward-only"
+    ],
     "sources": {
       "drops": {
         "Reward casket (hard)": {
@@ -9166,7 +9187,14 @@
     "index": 334,
     "id": 6891,
     "name": "Arena book",
-    "image": "arena_book.png"
+    "image": "arena_book.png",
+    "sources": {
+      "other": {
+        "Purchasing through dialogue": {
+          "notes": "Purchase from mage training arena through dialogue."
+        }
+      }
+    }
   },
   {
     "index": 335,
@@ -9410,6 +9438,9 @@
     "id": 20068,
     "name": "Armadyl godsword ornament kit",
     "image": "armadyl_godsword_ornament_kit.png",
+    "tags": [
+      "clue-reward-only"
+    ],
     "sources": {
       "drops": {
         "Reward casket (master)": {
@@ -9799,6 +9830,11 @@
         },
         "Drink troll": {
           "droprate": "1/10"
+        }
+      },
+      "other": {
+        "Purchasing through dialogue": {
+          "notes": "Purchase from Falador pub (free roll)."
         }
       }
     }
@@ -11400,6 +11436,9 @@
     "id": 20071,
     "name": "Bandos godsword ornament kit",
     "image": "bandos_godsword_ornament_kit.png",
+    "tags": [
+      "clue-reward-only"
+    ],
     "sources": {
       "drops": {
         "Reward casket (master)": {
@@ -16253,6 +16292,9 @@
     "id": 20266,
     "name": "Black unicorn mask",
     "image": "black_unicorn_mask.png",
+    "tags": [
+      "clue-reward-only"
+    ],
     "sources": {
       "drops": {
         "Reward casket (medium) Standard": {
@@ -17703,9 +17745,16 @@
     "name": "Blood moon chestplate (broken)",
     "image": "blood_moon_chestplate_(broken).png",
     "sources": {
-      "drops": {
-        "Lunar Chest": {
-          "droprate": "1/224"
+      "other": {
+        "Degrading an item": {
+          "notes": "Requires blood moon chestplate.",
+          "rule": {
+            "all": [
+              {
+                "has": 29022
+              }
+            ]
+          }
         }
       }
     }
@@ -17729,9 +17778,16 @@
     "name": "Blood moon helm (broken)",
     "image": "blood_moon_helm_(broken).png",
     "sources": {
-      "drops": {
-        "Lunar Chest": {
-          "droprate": "1/224"
+      "other": {
+        "Degrading an item": {
+          "notes": "Requires blood moon helm.",
+          "rule": {
+            "all": [
+              {
+                "has": 29028
+              }
+            ]
+          }
         }
       }
     }
@@ -17755,9 +17811,16 @@
     "name": "Blood moon tassets (broken)",
     "image": "blood_moon_tassets_(broken).png",
     "sources": {
-      "drops": {
-        "Lunar Chest": {
-          "droprate": "1/224"
+      "other": {
+        "Degrading an item": {
+          "notes": "Requires blood moon tassets.",
+          "rule": {
+            "all": [
+              {
+                "has": 29025
+              }
+            ]
+          }
         }
       }
     }
@@ -19053,9 +19116,16 @@
     "name": "Blue moon helm (broken)",
     "image": "blue_moon_helm_(broken).png",
     "sources": {
-      "drops": {
-        "Lunar Chest": {
-          "droprate": "1/224"
+      "other": {
+        "Degrading an item": {
+          "notes": "Requires blue moon helm.",
+          "rule": {
+            "all": [
+              {
+                "has": 29019
+              }
+            ]
+          }
         }
       }
     }
@@ -19092,9 +19162,16 @@
     "name": "Blue moon tassets (broken)",
     "image": "blue_moon_tassets_(broken).png",
     "sources": {
-      "drops": {
-        "Lunar Chest": {
-          "droprate": "1/224"
+      "other": {
+        "Degrading an item": {
+          "notes": "Requires blue moon tassets.",
+          "rule": {
+            "all": [
+              {
+                "has": 29016
+              }
+            ]
+          }
         }
       }
     }
@@ -29820,37 +29897,130 @@
     "index": 1099,
     "id": 29137,
     "name": "Cooked pyre fox",
-    "image": "cooked_pyre_fox.png"
+    "image": "cooked_pyre_fox.png",
+    "sources": {
+      "other": {
+        "Cooking": {
+          "Notes": "Requires Raw pyre fox.",
+          "rule": {
+            "all": [
+              {
+                "has": 29110
+              },
+              "canTrainCooking"
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1100,
     "id": 3228,
     "name": "Cooked rabbit",
-    "image": "cooked_rabbit.png"
+    "image": "cooked_rabbit.png",
+    "sources": {
+      "other": {
+        "Cooking": {
+          "Notes": "Requires Raw rabbit.",
+          "rule": {
+            "all": [
+              {
+                "has": 3226
+              },
+              "canTrainCooking"
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1101,
     "id": 3381,
     "name": "Cooked slimy eel",
-    "image": "cooked_slimy_eel.png"
+    "image": "cooked_slimy_eel.png",
+    "sources": {
+      "other": {
+        "Cooking": {
+          "Notes": "Requires Raw slimy eel.",
+          "rule": {
+            "all": [
+              {
+                "has": 3379
+              },
+              "canTrainCooking"
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1102,
     "id": 29140,
     "name": "Cooked sunlight antelope",
-    "image": "cooked_sunlight_antelope.png"
+    "image": "cooked_sunlight_antelope.png",
+    "sources": {
+      "other": {
+        "Cooking": {
+          "Notes": "Requires Raw sunlight antelope.",
+          "rule": {
+            "all": [
+              {
+                "has": 29116
+              },
+              "canTrainCooking"
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1103,
     "id": 5988,
     "name": "Cooked sweetcorn",
-    "image": "cooked_sweetcorn.png"
+    "image": "cooked_sweetcorn.png",
+    "sources": {
+      "other": {
+        "Cooking": {
+          "Notes": "Requires Sweetcorn.",
+          "rule": {
+            "all": [
+              {
+                "has": 5986
+              },
+              "canTrainCooking"
+            ]
+          }
+        }
+      },
+        "spawns": {
+          "Yes": "No requirements"
+        }
+    }
   },
   {
     "index": 1104,
     "id": 29128,
     "name": "Cooked wild kebbit",
-    "image": "cooked_wild_kebbit.png"
+    "image": "cooked_wild_kebbit.png",
+    "sources": {
+      "other": {
+        "Cooking": {
+          "Notes": "Requires raw wild kebbit.",
+          "rule": {
+            "all": [
+              {
+                "has": 29104
+              },
+              "canTrainCooking"
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1105,
@@ -29871,7 +30041,13 @@
         "Sourhog": {
           "droprate": "1/22"
         }
-      }
+      },
+        "shops": {
+          "Yes": "No requirements"
+        },
+        "spawns": {
+          "Yes": "No requirements"
+        }
     }
   },
   {
@@ -30061,118 +30237,83 @@
         "Zombie Level 13": {
           "droprate": "1/64"
         }
-      }
+      },
+        "shops": {
+          "Yes": "No requirements"
+        }
     }
-  },
-  {
-    "index": 1107,
-    "id": 7466,
-    "name": "Cornflour",
-    "image": "cornflour.png"
   },
   {
     "index": 1108,
     "id": 28537,
     "name": "Corrupted armadyl godsword",
     "image": "corrupted_armadyl_godsword.png",
-    "sources": {
-      "drops": {
-        "Trinket of advanced weaponry": {
-          "droprate": "1/8"
-        }
-      }
-    }
+    "tags": [
+      "deadman"
+    ]
   },
   {
     "index": 1109,
     "id": 29599,
     "name": "Corrupted dark bow",
     "image": "corrupted_dark_bow.png",
-    "sources": {
-      "drops": {
-        "Trinket of advanced weaponry": {
-          "droprate": "1/8"
-        }
-      }
-    }
+    "tags": [
+      "deadman"
+    ]
   },
   {
     "index": 1110,
     "id": 28534,
     "name": "Corrupted dragon claws",
     "image": "corrupted_dragon_claws.png",
-    "sources": {
-      "drops": {
-        "Trinket of advanced weaponry": {
-          "droprate": "1/8"
-        }
-      }
-    }
+    "tags": [
+      "deadman"
+    ]
   },
   {
     "index": 1111,
     "id": 28545,
     "name": "Corrupted scythe of vitur (uncharged)",
     "image": "corrupted_scythe_of_vitur_(uncharged).png",
-    "sources": {
-      "drops": {
-        "Trinket of advanced weaponry": {
-          "droprate": "1/8"
-        }
-      }
-    }
+    "tags": [
+      "deadman"
+    ]
   },
   {
     "index": 1112,
     "id": 28549,
     "name": "Corrupted tumeken's shadow (uncharged)",
     "image": "corrupted_tumeken's_shadow_(uncharged).png",
-    "sources": {
-      "drops": {
-        "Trinket of advanced weaponry": {
-          "droprate": "1/8"
-        }
-      }
-    }
+    "tags": [
+      "deadman"
+    ]
   },
   {
     "index": 1113,
     "id": 28540,
     "name": "Corrupted twisted bow",
     "image": "corrupted_twisted_bow.png",
-    "sources": {
-      "drops": {
-        "Trinket of advanced weaponry": {
-          "droprate": "1/8"
-        }
-      }
-    }
+    "tags": [
+      "deadman"
+    ]
   },
   {
     "index": 1114,
     "id": 28531,
     "name": "Corrupted voidwaker",
     "image": "corrupted_voidwaker.png",
-    "sources": {
-      "drops": {
-        "Trinket of advanced weaponry": {
-          "droprate": "1/8"
-        }
-      }
-    }
+    "tags": [
+      "deadman"
+    ]
   },
   {
     "index": 1115,
     "id": 29602,
     "name": "Corrupted volatile nightmare staff",
     "image": "corrupted_volatile_nightmare_staff.png",
-    "sources": {
-      "drops": {
-        "Trinket of advanced weaponry": {
-          "droprate": "1/8"
-        }
-      }
-    }
+    "tags": [
+      "deadman"
+    ]
   },
   {
     "index": 1116,
@@ -30490,7 +30631,13 @@
         "Rewards Guardian": {
           "droprate": "1/14; 1/12.5"
         }
-      }
+      },
+        "shops": {
+          "Yes": "No requirements"
+        },
+        "spawns": {
+          "Yes": "No requirements"
+        }
     }
   },
   {
@@ -30566,6 +30713,9 @@
         "Rewards Guardian": {
           "droprate": "1/76.562; 1/68.359"
         }
+      },
+      "shops": {
+        "Yes": "canCompleteTempleOfTheEye"
       }
     }
   },
@@ -30650,7 +30800,22 @@
     "index": 1121,
     "id": 31469,
     "name": "Cotton yarn",
-    "image": "cotton_yarn.png"
+    "image": "cotton_yarn.png",
+    "sources": {
+      "other": {
+        "Crafting": {
+          "notes": "Requires cotton boll.",
+          "rule": {
+            "all": [
+              {
+                "has": 31460
+              },
+              "canTrainCrafting"
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1122,
@@ -30684,7 +30849,29 @@
     "index": 1123,
     "id": 31708,
     "name": "Crab paste",
-    "image": "crab_paste.png"
+    "image": "crab_paste.png",
+    "sources": {
+      "other": {
+        "Grinding": {
+          "notes": "Requires red crab or blue crab and a pestle and mortar.",
+          "rule": {
+            "all": [
+              { "any": [
+              {
+                "has": 31671
+              },
+              {
+                "has": 31674
+              }
+              ]},
+              {
+                "has": 233
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1124,
@@ -30887,6 +31074,36 @@
         "Smoke devil": {
           "droprate": "1/64"
         }
+      },
+      "other": {
+        "Crafting": {
+          "notes": "Requires sinew, oak roots, willow roots, maple roots, yew roots or magic roots.",
+          "rule": {
+            "all": [
+              { "any": [
+              {
+                "has": 9436
+              },
+              {
+                "has": 6043
+              },
+              {
+                "has": 6045
+              },
+              {
+                "has": 6047
+              },
+              {
+                "has": 6049
+              },
+              {
+                "has": 6051
+              }
+              ]},
+              "canTrainCrafting"
+            ]
+          }
+        }
       }
     }
   },
@@ -30894,7 +31111,25 @@
     "index": 1134,
     "id": 8496,
     "name": "Crude chair (flatpack)",
-    "image": "crude_chair_(flatpack).png"
+    "image": "crude_chair_(flatpack).png",
+    "sources": {
+      "other": {
+        "Constructing a flatpack": {
+          "notes": "Requires planks and steel nails.",
+          "rule": {
+            "all": [
+              {
+                "has": 960
+              },
+              {
+                "has": 1539
+              },
+              "canCompletePandemonium"
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1135,
@@ -30921,7 +31156,26 @@
     "index": 1136,
     "id": 30848,
     "name": "Crushed infernal shale",
-    "image": "crushed_infernal_shale.png"
+    "image": "crushed_infernal_shale.png",
+    "sources": {
+      "other": {
+        "Crushing": {
+          "notes": "Requires infernal shale, a hammer and a chisel.",
+          "rule": {
+            "all": [
+              {
+                "has": 2347
+              },
+              {
+                "has": 1755
+              },
+              "canTrainMining",
+              "canCompleteAKingdomDivided"
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1137,
@@ -30939,6 +31193,18 @@
         "Wingman Skree": {
           "droprate": "1/15.875"
         }
+      },
+      "other": {
+        "Grinding": {
+          "notes": "Requires bird nest (empty) and a pestle and mortar (or ask Wesley in Nardah).",
+          "rule": {
+            "all": [
+              {
+                "has": 5075
+              }
+            ]
+          }
+        }
       }
     }
   },
@@ -30946,7 +31212,21 @@
     "index": 1138,
     "id": 21975,
     "name": "Crushed superior dragon bones",
-    "image": "crushed_superior_dragon_bones.png"
+    "image": "crushed_superior_dragon_bones.png",
+    "sources": {
+      "other": {
+        "Grinding": {
+          "notes": "Requires superior dragon bones and a pestle and mortar (or ask Wesley in Nardah).",
+          "rule": {
+            "all": [
+              {
+                "has": 22124
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1141,
@@ -30963,12 +31243,6 @@
         }
       }
     }
-  },
-  {
-    "index": 1142,
-    "id": 8624,
-    "name": "Crystal ball (flatpack)",
-    "image": "crystal_ball_(flatpack).png"
   },
   {
     "index": 1143,
@@ -31029,14 +31303,23 @@
         "Reward casket (elite)": {
           "droprate": "1/14662.5"
         }
+      },
+      "other": {
+        "Combining two items": {
+          "notes": "Requires loop and tooth half of key.",
+          "rule": {
+            "all": [
+              {
+                "has": 987
+              },
+              {
+                "has": 985
+              }
+            ]
+          }
+        }
       }
     }
-  },
-  {
-    "index": 1145,
-    "id": 8628,
-    "name": "Crystal of power (flatpack)",
-    "image": "crystal_of_power_(flatpack).png"
   },
   {
     "index": 1146,
@@ -31064,14 +31347,44 @@
         "Reward Chest (The Gauntlet)": {
           "droprate": "1/120"
         }
-      }
+      },
+        "shops": {
+          "Yes": "No requirements"
+        }
     }
   },
   {
     "index": 1148,
     "id": 4460,
     "name": "Cup of hot water",
-    "image": "cup_of_hot_water.png"
+    "image": "cup_of_hot_water.png",
+    "sources": {
+      "other": {
+        "Heating up a cup": {
+          "notes": "Requires a cup of water.",
+          "rule": {
+            "all": [
+              {
+                "has": 4458
+              }
+            ]
+          }
+        },
+        "Using a bowl of hot water on an empty cup": {
+          "notes": "Requires a bowl of hot water and an empty cup.",
+          "rule": {
+            "all": [
+              {
+                "has": 4456
+              },
+              {
+                "has": 1980
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1149,
@@ -31086,14 +31399,34 @@
         "Zombie (Tarn's Lair) Medium level": {
           "droprate": "1/25.6"
         }
-      }
+      },
+        "shops": {
+          "Yes": "No requirements"
+        },
+        "spawns": {
+          "Yes": "No requirements"
+        }
     }
   },
   {
     "index": 1150,
     "id": 4458,
     "name": "Cup of water",
-    "image": "cup_of_water.png"
+    "image": "cup_of_water.png",
+    "sources": {
+      "other": {
+        "Filling a cup": {
+          "notes": "Requires an empty cup.",
+          "rule": {
+            "all": [
+              {
+                "has": 1980
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1151,
@@ -31123,7 +31456,21 @@
     "index": 1152,
     "id": 10820,
     "name": "Cured yak-hide",
-    "image": "cured_yak-hide.png"
+    "image": "cured_yak-hide.png",
+    "sources": {
+      "other": {
+        "Curing": {
+          "notes": "Requires yak-hide.",
+          "rule": {
+            "all": [
+              {
+                "has": 10818
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1153,
@@ -31152,6 +31499,40 @@
         },
         "Steel dragon Standard": {
           "droprate": "1/128"
+        }
+      },
+      "other": {
+        "Cooking": {
+          "Notes": "Requires uncooked curry (bowl of water + potato + cooked meat/cooked chicken + curry leaf/spice.",
+          "rule": {
+            "all": [
+              {
+                "has": 1921
+              },
+              {
+                "has": 1942
+              },
+              { "any": [
+                {
+                  "has": 2142
+                },
+                {
+                  "has": 2140
+                }
+                ]
+              },
+              { "any": [
+                {
+                  "has": 5970
+                },
+                {
+                  "has": 2007
+                }
+                ]
+              },
+              "canTrainCooking"
+            ]
+          }
         }
       }
     }
@@ -31355,7 +31736,27 @@
     "index": 1164,
     "id": 24333,
     "name": "Dagon'hai robes set",
-    "image": "dagon'hai_robes_set.png"
+    "image": "dagon'hai_robes_set.png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires Dagon'hai hat, robe top and robe bottom.",
+          "rule": {
+            "all": [
+              {
+                "has": 24288
+              },
+              {
+                "has": 24291
+              },
+              {
+                "has": 24294
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1165,
@@ -31517,6 +31918,19 @@
         "Spindel": {
           "droprate": "1/25.6"
         }
+      },
+      "other": {
+        "Cooking": {
+          "Notes": "Requires raw dark crab.",
+          "rule": {
+            "all": [
+              {
+                "has": 11934
+              },
+              "canTrainCooking"
+            ]
+          }
+        }
       }
     }
   },
@@ -31557,7 +31971,10 @@
         "Spindel": {
           "droprate": "1/128"
         }
-      }
+      },
+        "spawns": {
+          "Yes": "No requirements"
+        }
     }
   },
   {
@@ -32474,7 +32891,13 @@
         "The Mimic Master": {
           "droprate": "1/5.158; 1/5.15"
         }
-      }
+      },
+        "shops": {
+          "Yes": "No requirements"
+        },
+        "spawns": {
+          "Yes": "No requirements"
+        }
     }
   },
   {
@@ -32493,6 +32916,9 @@
         "Rewards Guardian": {
           "droprate": "1/306.25; 1/273.438"
         }
+      },
+      "shops": {
+        "Yes": "canCompleteTempleOfTheEye"
       }
     }
   },
@@ -32540,13 +32966,45 @@
     "index": 1183,
     "id": 11459,
     "name": "Defence mix(1)",
-    "image": "defence_mix(1).png"
+    "image": "defence_mix(1).png",
+    "sources": {
+      "other": {
+        "Drinking or decanting a barbarian potion": {
+          "notes": "Drinking or decanting a defence mix(2).",
+          "rule": {
+            "all": [
+              {
+                "has": 11457
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1184,
     "id": 11457,
     "name": "Defence mix(2)",
-    "image": "defence_mix(2).png"
+    "image": "defence_mix(2).png",
+    "sources": {
+      "other": {
+        "Mixing a barbarian potion": {
+          "notes": "Mixing a defence potion(2) with caviar.",
+          "rule": {
+            "all": [
+              "canCompleteBarbarianHerblore",
+              {
+                "has": 137
+              },
+              {
+                "has": 11326
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1185,
@@ -32557,6 +33015,24 @@
       "drops": {
         "Barrel (Shaman Caves)": {
           "droprate": "Uncommon"
+        }
+      },
+      "other": {
+        "Decanting a potion": {
+          "notes": "Decanting a defence potion(2), (3) or (4).",
+          "rule": {
+            "any": [
+              {
+                "has": 135
+              },
+              {
+                "has": 133
+              },
+              {
+                "has": 2432
+              }
+            ]
+          }
         }
       }
     }
@@ -32570,6 +33046,24 @@
       "drops": {
         "Chest (Maze) (m)": {
           "droprate": "1/10"
+        }
+      },
+      "other": {
+        "Decanting a potion": {
+          "notes": "Decanting a defence potion(1), (3) or (4).",
+          "rule": {
+            "any": [
+              {
+                "has": 137
+              },
+              {
+                "has": 133
+              },
+              {
+                "has": 2432
+              }
+            ]
+          }
         }
       }
     }
@@ -32605,7 +33099,42 @@
         "Kalphite Guardian": {
           "droprate": "1/128"
         }
-      }
+      },
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires ranarr potion (unf) and white berries.",
+          "rule": {
+            "all": [
+              {
+                "has": 99
+              },
+              {
+                "has": 239
+              },
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a defence potion(1), (2) or (4).",
+          "rule": {
+            "any": [
+              {
+                "has": 137
+              },
+              {
+                "has": 135
+              },
+              {
+                "has": 2432
+              }
+            ]
+          }
+        }
+      },
+        "shops": {
+          "Yes": "No requirements"
+        }
     }
   },
   {
@@ -32620,6 +33149,38 @@
         },
         "Possessed Priest": {
           "droprate": "Always"
+        }
+      },
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires ranarr potion (unf) and white berries while wearing an amulet of chemistry or an alchemist's amulet.",
+          "rule": {
+            "all": [
+              {
+                "has": 99
+              },
+              {
+                "has": 239
+              },
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a defence potion(1), (2) or (3).",
+          "rule": {
+            "any": [
+              {
+                "has": 137
+              },
+              {
+                "has": 135
+              },
+              {
+                "has": 133
+              }
+            ]
+          }
         }
       }
     }
@@ -32673,19 +33234,44 @@
     "index": 1192,
     "id": 1837,
     "name": "Desert boots",
-    "image": "desert_boots.png"
+    "image": "desert_boots.png",
+    "sources": {
+        "shops": {
+          "Yes": "No requirements"
+        }
+    }
   },
   {
     "index": 1193,
     "id": 10063,
     "name": "Desert camo legs",
-    "image": "desert_camo_legs.png"
+    "image": "desert_camo_legs.png",
+    "sources": {
+      "other": {
+        "Crafting hunter armour": {
+          "notes": "Requires desert devil fur.",
+          "rule": {
+            "has": 10123
+          }
+        }
+      }
+    }
   },
   {
     "index": 1195,
     "id": 10061,
     "name": "Desert camo top",
-    "image": "desert_camo_top.png"
+    "image": "desert_camo_top.png",
+    "sources": {
+      "other": {
+        "Crafting hunter armour": {
+          "notes": "Requires desert devil fur.",
+          "rule": {
+            "has": 10123
+          }
+        }
+      }
+    }
   },
   {
     "index": 1197,
@@ -32732,43 +33318,90 @@
     "index": 1199,
     "id": 6390,
     "name": "Desert legs",
-    "image": "desert_legs.png"
+    "image": "desert_legs.png",
+    "sources": {
+      "shops": {
+        "Yes": "canCompleteRogueTrader"
+      }
+    }
   },
   {
     "index": 1200,
     "id": 1835,
     "name": "Desert robe",
-    "image": "desert_robe.png"
+    "image": "desert_robe.png",
+    "sources": {
+        "shops": {
+          "Yes": "No requirements"
+        }
+    }
   },
   {
     "index": 1201,
     "id": 6386,
     "name": "Desert robes",
-    "image": "desert_robes.png"
+    "image": "desert_robes.png",
+    "sources": {
+      "shops": {
+        "Yes": "canCompleteRogueTrader"
+      }
+    }
   },
   {
     "index": 1202,
     "id": 1833,
     "name": "Desert shirt",
-    "image": "desert_shirt.png"
+    "image": "desert_shirt.png",
+    "sources": {
+        "shops": {
+          "Yes": "No requirements"
+        }
+    }
   },
   {
     "index": 1203,
     "id": 6384,
     "name": "Desert top",
-    "image": "desert_top.png"
+    "image": "desert_top.png",
+    "sources": {
+      "shops": {
+        "Yes": "canCompleteRogueTrader"
+      }
+    }
   },
   {
     "index": 1204,
     "id": 6388,
     "name": "Desert top (overcoat)",
-    "image": "desert_top_(overcoat).png"
+    "image": "desert_top_(overcoat).png",
+    "sources": {
+      "shops": {
+        "Yes": "canCompleteRogueTrader"
+      }
+    }
   },
   {
     "index": 1205,
     "id": 22954,
     "name": "Devout boots",
-    "image": "devout_boots.png"
+    "image": "devout_boots.png",
+    "sources": {
+      "other": {
+        "Crafting": {
+          "notes": "Requires holy sandals and drake's tooth.",
+          "rule": {
+            "all": [
+              {
+                "has": 12598
+              },
+              {
+                "has": 22960
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1206,
@@ -32787,7 +33420,30 @@
     "index": 1207,
     "id": 12877,
     "name": "Dharok's armour set",
-    "image": "dharok's_armour_set.png"
+    "image": "dharok's_armour_set.png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires Dharok's helm, platebody, platelegs and greataxe.",
+          "rule": {
+            "all": [
+              {
+                "has": 4716
+              },
+              {
+                "has": 4720
+              },
+              {
+                "has": 4722
+              },
+              {
+                "has": 4718
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1208,
@@ -33028,6 +33684,19 @@
         "Gem stall (Port Roberts)": {
           "droprate": "1/384"
         }
+      },
+      "other": {
+        "Cutting a gem": {
+          "Notes": "Requires an uncut diamond",
+          "rule": {
+            "all": [
+              {
+                "has": 1617
+              },
+              "canTrainCrafting"
+            ]
+          }
+        }
       }
     }
   },
@@ -33059,6 +33728,22 @@
         "Wardrobe (stealing valuables)": {
           "droprate": "1/2083.333"
         }
+      },
+      "other": {
+        "Crafting": {
+          "notes": "Requires diamond amulet (u) and a ball of wool.",
+          "rule": {
+            "all": [
+              {
+                "has": 1681
+              },
+              {
+                "has": 1759
+              },
+              "canTrainCrafting"
+            ]
+          }
+        }
       }
     }
   },
@@ -33066,7 +33751,28 @@
     "index": 1219,
     "id": 1681,
     "name": "Diamond amulet (u)",
-    "image": "diamond_amulet_(u).png"
+    "image": "diamond_amulet_(u).png",
+    "sources":{
+      "other": {
+        "Crafting": {
+          "notes": "Requires gold bar, diamond and an amulet mould.",
+          "rule": {
+            "all": [
+              {
+                "has": 2357
+              },
+              {
+                "has": 1601
+              },
+              {
+                "has": 1595
+              },
+              "canTrainCrafting"
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1220,
@@ -33201,6 +33907,25 @@
         "Plundered salvage": {
           "droprate": "1/41.4"
         }
+      },
+      "other": {
+        "Crafting": {
+          "notes": "Requires gold bar, diamond and bracelet mould.",
+          "rule": {
+            "all": [
+              {
+                "has": 2357
+              },
+              {
+                "has": 1601
+              },
+              {
+                "has": 11065
+              },
+              "canTrainCrafting"
+            ]
+          }
+        }
       }
     }
   },
@@ -33273,6 +33998,25 @@
         "Wardrobe (stealing valuables)": {
           "droprate": "1/6250"
         }
+      },
+      "other": {
+        "Crafting": {
+          "notes": "Requires gold bar, diamond and necklace mould.",
+          "rule": {
+            "all": [
+              {
+                "has": 2357
+              },
+              {
+                "has": 1601
+              },
+              {
+                "has": 1597
+              },
+              "canTrainCrafting"
+            ]
+          }
+        }
       }
     }
   },
@@ -33337,6 +34081,25 @@
         "Wardrobe (stealing valuables)": {
           "droprate": "1/6250"
         }
+      },
+      "other": {
+        "Crafting": {
+          "notes": "Requires gold bar, diamond and ring mould.",
+          "rule": {
+            "all": [
+              {
+                "has": 2357
+              },
+              {
+                "has": 1601
+              },
+              {
+                "has": 1592
+              },
+              "canTrainCrafting"
+            ]
+          }
+        }
       }
     }
   },
@@ -33391,211 +34154,1355 @@
     "index": 1230,
     "id": 981,
     "name": "Disk of returning",
-    "image": "disk_of_returning.png"
+    "image": "disk_of_returning.png",
+    "sources": {
+        "shops": {
+          "Yes": "No requirements"
+        }
+    }
   },
   {
     "index": 1231,
     "id": 24644,
     "name": "Divine bastion potion(1)",
-    "image": "divine_bastion_potion(1).png"
+    "image": "divine_bastion_potion(1).png",
+    "sources": {
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires bastion potion(1) and crystal dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 22470
+              },
+              {
+                "has": 233
+              },
+              "canCompleteSongOfTheElves",
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a divine bastion potion(2), (3) or (4).",
+          "rule": {
+            "any": [
+              {
+                "has": 24641
+              },
+              {
+                "has": 24638
+              },
+              {
+                "has": 24635
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1232,
     "id": 24641,
     "name": "Divine bastion potion(2)",
-    "image": "divine_bastion_potion(2).png"
+    "image": "divine_bastion_potion(2).png",
+    "sources": {
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires bastion potion(2) and crystal dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 22467
+              },
+              {
+                "has": 233
+              },
+              "canCompleteSongOfTheElves",
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a divine bastion potion(1), (3) or (4).",
+          "rule": {
+            "any": [
+              {
+                "has": 24644
+              },
+              {
+                "has": 24638
+              },
+              {
+                "has": 24635
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1233,
     "id": 24638,
     "name": "Divine bastion potion(3)",
-    "image": "divine_bastion_potion(3).png"
+    "image": "divine_bastion_potion(3).png",
+    "sources": {
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires bastion potion(3) and crystal dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 22464
+              },
+              {
+                "has": 233
+              },
+              "canCompleteSongOfTheElves",
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a divine bastion potion(1), (2) or (4).",
+          "rule": {
+            "any": [
+              {
+                "has": 24644
+              },
+              {
+                "has": 24641
+              },
+              {
+                "has": 24635
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1234,
     "id": 24635,
     "name": "Divine bastion potion(4)",
-    "image": "divine_bastion_potion(4).png"
+    "image": "divine_bastion_potion(4).png",
+    "sources": {
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires bastion potion(4) and crystal dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 22461
+              },
+              {
+                "has": 233
+              },
+              "canCompleteSongOfTheElves",
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a divine bastion potion(1), (2) or (3).",
+          "rule": {
+            "any": [
+              {
+                "has": 24644
+              },
+              {
+                "has": 24641
+              },
+              {
+                "has": 24638
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1235,
     "id": 24632,
     "name": "Divine battlemage potion(1)",
-    "image": "divine_battlemage_potion(1).png"
+    "image": "divine_battlemage_potion(1).png",
+    "sources": {
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires battlemage potion(1) and crystal dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 22458
+              },
+              {
+                "has": 233
+              },
+              "canCompleteSongOfTheElves",
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a divine battlemage potion(2), (3) or (4).",
+          "rule": {
+            "any": [
+              {
+                "has": 24629
+              },
+              {
+                "has": 24626
+              },
+              {
+                "has": 24623
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1236,
     "id": 24629,
     "name": "Divine battlemage potion(2)",
-    "image": "divine_battlemage_potion(2).png"
+    "image": "divine_battlemage_potion(2).png",
+    "sources": {
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires battlemage potion(2) and crystal dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 22455
+              },
+              {
+                "has": 233
+              },
+              "canCompleteSongOfTheElves",
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a divine battlemage potion(1), (3) or (4).",
+          "rule": {
+            "any": [
+              {
+                "has": 24632
+              },
+              {
+                "has": 24626
+              },
+              {
+                "has": 24623
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1237,
     "id": 24626,
     "name": "Divine battlemage potion(3)",
-    "image": "divine_battlemage_potion(3).png"
+    "image": "divine_battlemage_potion(3).png",
+    "sources": {
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires battlemage potion(3) and crystal dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 22452
+              },
+              {
+                "has": 233
+              },
+              "canCompleteSongOfTheElves",
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a divine battlemage potion(1), (2) or (4).",
+          "rule": {
+            "any": [
+              {
+                "has": 24632
+              },
+              {
+                "has": 24629
+              },
+              {
+                "has": 24623
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1238,
     "id": 24623,
     "name": "Divine battlemage potion(4)",
-    "image": "divine_battlemage_potion(4).png"
+    "image": "divine_battlemage_potion(4).png",
+    "sources": {
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires battlemage potion(4) and crystal dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 22449
+              },
+              {
+                "has": 233
+              },
+              "canCompleteSongOfTheElves",
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a divine battlemage potion(1), (2) or (3).",
+          "rule": {
+            "any": [
+              {
+                "has": 24632
+              },
+              {
+                "has": 24629
+              },
+              {
+                "has": 24626
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1239,
     "id": 23754,
     "name": "Divine magic potion(1)",
-    "image": "divine_magic_potion(1).png"
+    "image": "divine_magic_potion(1).png",
+    "sources": {
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires magic potion(1) and crystal dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 3046
+              },
+              {
+                "has": 233
+              },
+              "canCompleteSongOfTheElves",
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a divine magic potion(2), (3) or (4).",
+          "rule": {
+            "any": [
+              {
+                "has": 23751
+              },
+              {
+                "has": 23748
+              },
+              {
+                "has": 23745
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1240,
     "id": 23751,
     "name": "Divine magic potion(2)",
-    "image": "divine_magic_potion(2).png"
+    "image": "divine_magic_potion(2).png",
+    "sources": {
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires magic potion(2) and crystal dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 3044
+              },
+              {
+                "has": 233
+              },
+              "canCompleteSongOfTheElves",
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a divine magic potion(1), (3) or (4).",
+          "rule": {
+            "any": [
+              {
+                "has": 23754
+              },
+              {
+                "has": 23748
+              },
+              {
+                "has": 23745
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1241,
     "id": 23748,
     "name": "Divine magic potion(3)",
-    "image": "divine_magic_potion(3).png"
+    "image": "divine_magic_potion(3).png",
+    "sources": {
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires magic potion(3) and crystal dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 3042
+              },
+              {
+                "has": 233
+              },
+              "canCompleteSongOfTheElves",
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a divine magic potion(1), (2) or (4).",
+          "rule": {
+            "any": [
+              {
+                "has": 23754
+              },
+              {
+                "has": 23751
+              },
+              {
+                "has": 23745
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1242,
     "id": 23745,
     "name": "Divine magic potion(4)",
-    "image": "divine_magic_potion(4).png"
+    "image": "divine_magic_potion(4).png",
+    "sources": {
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires magic potion(4) and crystal dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 3040
+              },
+              {
+                "has": 233
+              },
+              "canCompleteSongOfTheElves",
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a divine magic potion(1), (2) or (3).",
+          "rule": {
+            "any": [
+              {
+                "has": 23754
+              },
+              {
+                "has": 23751
+              },
+              {
+                "has": 23748
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1243,
     "id": 23742,
     "name": "Divine ranging potion(1)",
-    "image": "divine_ranging_potion(1).png"
+    "image": "divine_ranging_potion(1).png",
+    "sources": {
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires ranging potion(1) and crystal dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 173
+              },
+              {
+                "has": 233
+              },
+              "canCompleteSongOfTheElves",
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a divine ranging potion(2), (3) or (4).",
+          "rule": {
+            "any": [
+              {
+                "has": 23739
+              },
+              {
+                "has": 23736
+              },
+              {
+                "has": 23733
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1244,
     "id": 23739,
     "name": "Divine ranging potion(2)",
-    "image": "divine_ranging_potion(2).png"
+    "image": "divine_ranging_potion(2).png",
+    "sources": {
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires ranging potion(2) and crystal dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 171
+              },
+              {
+                "has": 233
+              },
+              "canCompleteSongOfTheElves",
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a divine ranging potion(1), (3) or (4).",
+          "rule": {
+            "any": [
+              {
+                "has": 23742
+              },
+              {
+                "has": 23736
+              },
+              {
+                "has": 23733
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1245,
     "id": 23736,
     "name": "Divine ranging potion(3)",
-    "image": "divine_ranging_potion(3).png"
+    "image": "divine_ranging_potion(3).png",
+    "sources": {
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires ranging potion(3) and crystal dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 169
+              },
+              {
+                "has": 233
+              },
+              "canCompleteSongOfTheElves",
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a divine ranging potion(1), (2) or (4).",
+          "rule": {
+            "any": [
+              {
+                "has": 23742
+              },
+              {
+                "has": 23739
+              },
+              {
+                "has": 23733
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1246,
     "id": 23733,
     "name": "Divine ranging potion(4)",
-    "image": "divine_ranging_potion(4).png"
+    "image": "divine_ranging_potion(4).png",
+    "sources": {
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires ranging potion(4) and crystal dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 2444
+              },
+              {
+                "has": 233
+              },
+              "canCompleteSongOfTheElves",
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a divine ranging potion(1), (2) or (3).",
+          "rule": {
+            "any": [
+              {
+                "has": 23742
+              },
+              {
+                "has": 23739
+              },
+              {
+                "has": 23736
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1247,
     "id": 23706,
     "name": "Divine super attack potion(1)",
-    "image": "divine_super_attack_potion(1).png"
+    "image": "divine_super_attack_potion(1).png",
+    "sources": {
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires super attack(1) and crystal dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 149
+              },
+              {
+                "has": 233
+              },
+              "canCompleteSongOfTheElves",
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a divine super attack potion(2), (3) or (4).",
+          "rule": {
+            "any": [
+              {
+                "has": 23703
+              },
+              {
+                "has": 23700
+              },
+              {
+                "has": 23697
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1248,
     "id": 23703,
     "name": "Divine super attack potion(2)",
-    "image": "divine_super_attack_potion(2).png"
+    "image": "divine_super_attack_potion(2).png",
+    "sources": {
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires super attack(2) and crystal dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 147
+              },
+              {
+                "has": 233
+              },
+              "canCompleteSongOfTheElves",
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a divine super attack potion(1), (3) or (4).",
+          "rule": {
+            "any": [
+              {
+                "has": 23706
+              },
+              {
+                "has": 23700
+              },
+              {
+                "has": 23697
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1249,
     "id": 23700,
     "name": "Divine super attack potion(3)",
-    "image": "divine_super_attack_potion(3).png"
+    "image": "divine_super_attack_potion(3).png",
+    "sources": {
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires super attack(3) and crystal dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 145
+              },
+              {
+                "has": 233
+              },
+              "canCompleteSongOfTheElves",
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a divine super attack potion(1), (2) or (4).",
+          "rule": {
+            "any": [
+              {
+                "has": 23706
+              },
+              {
+                "has": 23703
+              },
+              {
+                "has": 23697
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1250,
     "id": 23697,
     "name": "Divine super attack potion(4)",
-    "image": "divine_super_attack_potion(4).png"
+    "image": "divine_super_attack_potion(4).png",
+    "sources": {
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires super attack(4) and crystal dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 2436
+              },
+              {
+                "has": 233
+              },
+              "canCompleteSongOfTheElves",
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a divine super attack potion(1), (2) or (3).",
+          "rule": {
+            "any": [
+              {
+                "has": 23706
+              },
+              {
+                "has": 23703
+              },
+              {
+                "has": 23700
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1251,
     "id": 23694,
     "name": "Divine super combat potion(1)",
-    "image": "divine_super_combat_potion(1).png"
+    "image": "divine_super_combat_potion(1).png",
+    "sources": {
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires super combat potion(1) and crystal dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 12701
+              },
+              {
+                "has": 233
+              },
+              "canCompleteSongOfTheElves",
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a divine super combat potion(2), (3) or (4).",
+          "rule": {
+            "any": [
+              {
+                "has": 23691
+              },
+              {
+                "has": 23688
+              },
+              {
+                "has": 23685
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1252,
     "id": 23691,
     "name": "Divine super combat potion(2)",
-    "image": "divine_super_combat_potion(2).png"
+    "image": "divine_super_combat_potion(2).png",
+    "sources": {
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires super combat potion(2) and crystal dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 12699
+              },
+              {
+                "has": 233
+              },
+              "canCompleteSongOfTheElves",
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a divine super combat potion(1), (3) or (4).",
+          "rule": {
+            "any": [
+              {
+                "has": 23694
+              },
+              {
+                "has": 23688
+              },
+              {
+                "has": 23685
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1253,
     "id": 23688,
     "name": "Divine super combat potion(3)",
-    "image": "divine_super_combat_potion(3).png"
+    "image": "divine_super_combat_potion(3).png",
+    "sources": {
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires super combat potion(3) and crystal dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 12697
+              },
+              {
+                "has": 233
+              },
+              "canCompleteSongOfTheElves",
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a divine super combat potion(1), (2) or (4).",
+          "rule": {
+            "any": [
+              {
+                "has": 23694
+              },
+              {
+                "has": 23691
+              },
+              {
+                "has": 23685
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1254,
     "id": 23685,
     "name": "Divine super combat potion(4)",
-    "image": "divine_super_combat_potion(4).png"
+    "image": "divine_super_combat_potion(4).png",
+    "sources": {
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires super combat potion(4) and crystal dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 12695
+              },
+              {
+                "has": 233
+              },
+              "canCompleteSongOfTheElves",
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a divine super combat potion(1), (2) or (3).",
+          "rule": {
+            "any": [
+              {
+                "has": 23694
+              },
+              {
+                "has": 23691
+              },
+              {
+                "has": 23688
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1255,
     "id": 23730,
     "name": "Divine super defence potion(1)",
-    "image": "divine_super_defence_potion(1).png"
+    "image": "divine_super_defence_potion(1).png",
+    "sources": {
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires super defence(1) and crystal dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 167
+              },
+              {
+                "has": 233
+              },
+              "canCompleteSongOfTheElves",
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a divine super defence potion(2), (3) or (4).",
+          "rule": {
+            "any": [
+              {
+                "has": 23727
+              },
+              {
+                "has": 23724
+              },
+              {
+                "has": 23721
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1256,
     "id": 23727,
     "name": "Divine super defence potion(2)",
-    "image": "divine_super_defence_potion(2).png"
+    "image": "divine_super_defence_potion(2).png",
+    "sources": {
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires super defence(2) and crystal dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 165
+              },
+              {
+                "has": 233
+              },
+              "canCompleteSongOfTheElves",
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a divine super defence potion(1), (3) or (4).",
+          "rule": {
+            "any": [
+              {
+                "has": 23730
+              },
+              {
+                "has": 23724
+              },
+              {
+                "has": 23721
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1257,
     "id": 23724,
     "name": "Divine super defence potion(3)",
-    "image": "divine_super_defence_potion(3).png"
+    "image": "divine_super_defence_potion(3).png",
+    "sources": {
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires super defence(3) and crystal dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 163
+              },
+              {
+                "has": 233
+              },
+              "canCompleteSongOfTheElves",
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a divine super defence potion(1), (2) or (4).",
+          "rule": {
+            "any": [
+              {
+                "has": 23730
+              },
+              {
+                "has": 23727
+              },
+              {
+                "has": 23721
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1258,
     "id": 23721,
     "name": "Divine super defence potion(4)",
-    "image": "divine_super_defence_potion(4).png"
+    "image": "divine_super_defence_potion(4).png",
+    "sources": {
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires super defence(4) and crystal dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 2442
+              },
+              {
+                "has": 233
+              },
+              "canCompleteSongOfTheElves",
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a divine super defence potion(1), (2) or (3).",
+          "rule": {
+            "any": [
+              {
+                "has": 23730
+              },
+              {
+                "has": 23727
+              },
+              {
+                "has": 23724
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1259,
     "id": 23718,
     "name": "Divine super strength potion(1)",
-    "image": "divine_super_strength_potion(1).png"
+    "image": "divine_super_strength_potion(1).png",
+    "sources": {
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires super strength(2) and crystal dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 161
+              },
+              {
+                "has": 233
+              },
+              "canCompleteSongOfTheElves",
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a divine super strength potion(2), (3) or (4).",
+          "rule": {
+            "any": [
+              {
+                "has": 23715
+              },
+              {
+                "has": 23712
+              },
+              {
+                "has": 23709
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1260,
     "id": 23715,
     "name": "Divine super strength potion(2)",
-    "image": "divine_super_strength_potion(2).png"
+    "image": "divine_super_strength_potion(2).png",
+    "sources": {
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires super strength(2) and crystal dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 159
+              },
+              {
+                "has": 233
+              },
+              "canCompleteSongOfTheElves",
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a divine super strength potion(1), (3) or (4).",
+          "rule": {
+            "any": [
+              {
+                "has": 23718
+              },
+              {
+                "has": 23712
+              },
+              {
+                "has": 23709
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1261,
     "id": 23712,
     "name": "Divine super strength potion(3)",
-    "image": "divine_super_strength_potion(3).png"
+    "image": "divine_super_strength_potion(3).png",
+    "sources": {
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires super strength(3) and crystal dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 157
+              },
+              {
+                "has": 233
+              },
+              "canCompleteSongOfTheElves",
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a divine super strength potion(1), (2) or (4).",
+          "rule": {
+            "any": [
+              {
+                "has": 23718
+              },
+              {
+                "has": 23715
+              },
+              {
+                "has": 23709
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1262,
     "id": 23709,
     "name": "Divine super strength potion(4)",
-    "image": "divine_super_strength_potion(4).png"
+    "image": "divine_super_strength_potion(4).png",
+    "sources": {
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires super strength(4) and crystal dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 2440
+              },
+              {
+                "has": 233
+              },
+              "canCompleteSongOfTheElves",
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a divine super strength potion(1), (2) or (3).",
+          "rule": {
+            "any": [
+              {
+                "has": 23718
+              },
+              {
+                "has": 23715
+              },
+              {
+                "has": 23712
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1263,
     "id": 21143,
     "name": "Dodgy necklace",
-    "image": "dodgy_necklace.png"
+    "image": "dodgy_necklace.png",
+    "sources": {
+      "other": {
+        "Enchanting jewellery": {
+          "notes": "Requires a opal necklace.",
+          "rule": {
+            "all": [
+              {
+                "has": 21090
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1264,
     "id": 1573,
     "name": "Doogle leaves",
-    "image": "doogle_leaves.png"
+    "image": "doogle_leaves.png",
+    "sources": {
+        "spawns": {
+          "Yes": "No requirements"
+        }
+    }
   },
   {
     "index": 1265,
@@ -33607,14 +35514,35 @@
         "Chest (Dorgesh-Kaan Average) Zanik's house": {
           "droprate": "1/23"
         }
-      }
+      },
+        "shops": {
+          "Yes": "canCompleteTheLostTribe"
+        }
     }
   },
   {
     "index": 1266,
     "id": 19727,
     "name": "Double eye patch",
-    "image": "double_eye_patch.png"
+    "image": "double_eye_patch.png",
+    "sources": {
+      "other": {
+        "Combining two items": {
+          "notes": "Requires a left and right eye patch the completion of Cabin Fever.",
+          "rule": {
+            "all": [
+              {
+                "has": 19724
+              },
+              {
+                "has": 1025
+              },
+              "canCompleteCabinFever"
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1267,
@@ -33712,13 +35640,59 @@
     "index": 1269,
     "id": 21882,
     "name": "Dragon armour set (lg)",
-    "image": "dragon_armour_set_(lg).png"
+    "image": "dragon_armour_set_(lg).png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires Dragon full helm, platebody, platelegs and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 11335
+              },
+              {
+                "has": 21892
+              },
+              {
+                "has": 4087
+              },
+              {
+                "has": 21895
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1270,
     "id": 21885,
     "name": "Dragon armour set (sk)",
-    "image": "dragon_armour_set_(sk).png"
+    "image": "dragon_armour_set_(sk).png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires Dragon full helm, platebody, plateskirt and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 11335
+              },
+              {
+                "has": 21892
+              },
+              {
+                "has": 4585
+              },
+              {
+                "has": 21895
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1271,
@@ -33976,38 +35950,173 @@
         "Vorkath Post-quest": {
           "droprate": "2 × 1/75"
         }
-      }
+      },
+        "shops": {
+          "Yes": "canCompleteHeroesQuest"
+        }
     }
   },
   {
     "index": 1278,
     "id": 1911,
     "name": "Dragon bitter",
-    "image": "dragon_bitter.png"
+    "image": "dragon_bitter.png",
+    "sources": {
+      "other": {
+        "Brewing": {
+          "notes": "Requires a bucket of water, beer glass, ale yeast, barley malt and krandorian hops.",
+          "rule": {
+            "all": [
+              {
+                "has": 1929
+              },
+              {
+                "has": 1919
+              },
+              {
+                "has": 5767
+              },
+              {
+                "has": 6008
+              },
+              {
+                "has": 6000
+              },
+              "canTrainCooking"
+            ]
+          }
+        }
+      },
+        "shops": {
+          "Yes": "No requirements"
+        }
+    }
   },
   {
     "index": 1279,
     "id": 8524,
     "name": "Dragon bitter (flatpack)",
-    "image": "dragon_bitter_(flatpack).png"
+    "image": "dragon_bitter_(flatpack).png",
+    "sources": {
+      "other": {
+        "Constructing a flatpack": {
+          "notes": "Requires oak planks, steel bar and a dragon bitter.",
+          "rule": {
+            "all": [
+              {
+                "has": 8778
+              },
+              {
+                "has": 2353
+              },
+              {
+                "has": 1911
+              },
+              "canCompletePandemonium"
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1280,
     "id": 5809,
     "name": "Dragon bitter(4)",
-    "image": "dragon_bitter(4).png"
+    "image": "dragon_bitter(4).png",
+    "sources": {
+      "other": {
+        "Brewing": {
+          "notes": "Requires a bucket of water, calquat keg, ale yeast, barley malt and krandorian hops.",
+          "rule": {
+            "all": [
+              {
+                "has": 1929
+              },
+              {
+                "has": 5769
+              },
+              {
+                "has": 5767
+              },
+              {
+                "has": 6008
+              },
+              {
+                "has": 6000
+              },
+              "canTrainCooking"
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1281,
     "id": 5745,
     "name": "Dragon bitter(m)",
-    "image": "dragon_bitter(m).png"
+    "image": "dragon_bitter(m).png",
+    "sources": {
+      "other": {
+        "Brewing": {
+          "notes": "Requires a bucket of water, beer glass, ale yeast, barley malt and krandorian hops.",
+          "rule": {
+            "all": [
+              {
+                "has": 1929
+              },
+              {
+                "has": 1919
+              },
+              {
+                "has": 5767
+              },
+              {
+                "has": 6008
+              },
+              {
+                "has": 6000
+              },
+              "canTrainCooking"
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1282,
     "id": 5889,
     "name": "Dragon bitter(m)",
-    "image": "dragon_bitter(m4).png"
+    "image": "dragon_bitter(m4).png",
+    "sources": {
+      "other": {
+        "Brewing": {
+          "notes": "Requires a bucket of water, calquat keg, ale yeast, barley malt and krandorian hops.",
+          "rule": {
+            "all": [
+              {
+                "has": 1929
+              },
+              {
+                "has": 5769
+              },
+              {
+                "has": 5767
+              },
+              {
+                "has": 6008
+              },
+              {
+                "has": 6000
+              },
+              "canTrainCooking"
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1283,
@@ -34972,7 +37081,10 @@
         "Zulrah": {
           "droprate": "2 × 1/124.5"
         }
-      }
+      },
+        "shops": {
+          "Yes": "canCompleteRegicide"
+        }
     }
   },
   {
@@ -34998,7 +37110,21 @@
     "index": 1314,
     "id": 22731,
     "name": "Dragon hasta",
-    "image": "dragon_hasta.png"
+    "image": "dragon_hasta.png",
+    "sources": {
+      "other": {
+        "Smithing": {
+          "Notes": "Repair a broken dragon hasta.",
+          "rule": {
+            "all": [
+              {
+                "has": 22963
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1315,
@@ -35086,7 +37212,24 @@
     "index": 1319,
     "id": 22978,
     "name": "Dragon hunter lance",
-    "image": "dragon_hunter_lance.png"
+    "image": "dragon_hunter_lance.png",
+    "sources": {
+      "other": {
+        "Crafting": {
+          "Notes": "Requires a Hydra's claw and a zamorakian hasta.",
+          "rule": {
+            "all": [
+              {
+                "has": 22966
+              },
+              {
+                "has": 11889
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1320,
@@ -35310,6 +37453,19 @@
         "Great white shark": {
           "droprate": "1/6138"
         }
+      },
+      "other": {
+        "Smithing": {
+          "Notes": "Requires a Dragon metal sheet.",
+          "rule": {
+            "all": [
+              {
+                "has": 31996
+              },
+              "canCompleteDragonSlayerII"
+            ]
+          }
+        }
       }
     }
   },
@@ -35317,7 +37473,27 @@
     "index": 1328,
     "id": 21895,
     "name": "Dragon kiteshield",
-    "image": "dragon_kiteshield.png"
+    "image": "dragon_kiteshield.png",
+    "sources": {
+      "other": {
+        "Smithing": {
+          "Notes": "Requires a dragon sq shield, dragon metal slice and a dragon metal shard.",
+          "rule": {
+            "all": [
+              {
+                "has": 1187
+              },
+              {
+                "has": 22100
+              },
+              {
+                "has": 22097
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1329,
@@ -35576,7 +37752,10 @@
         "Gold Chest (red)": {
           "droprate": "1/143.91; 1/142.17"
         }
-      }
+      },
+        "shops": {
+          "Yes": "canCompleteLostCity"
+        }
     }
   },
   {
@@ -35616,7 +37795,10 @@
         "Gold Chest (red)": {
           "droprate": "1/143.91; 1/142.17"
         }
-      }
+      },
+        "shops": {
+          "Yes": "canCompleteLegendsQuest"
+        }
     }
   },
   {
@@ -35730,7 +37912,12 @@
     "index": 1340,
     "id": 22097,
     "name": "Dragon metal shard",
-    "image": "dragon_metal_shard.png"
+    "image": "dragon_metal_shard.png",
+    "sources": {
+        "shops": {
+          "Yes": "canCompleteDragonSlayerII"
+        }
+    }
   },
   {
     "index": 1341,
@@ -35842,6 +38029,17 @@
         "King Black Dragon": {
           "droprate": "1/1000"
         }
+      },
+      "other": {
+        "Smithing": {
+          "Notes": "Repair a broken dragon pickaxe.",
+          "rule": {
+            "all": [
+              "canCompleteBoneVoyage",
+              "canTrainMining"
+            ]
+          }
+        }
       }
     }
   },
@@ -35849,13 +38047,40 @@
     "index": 1346,
     "id": 12800,
     "name": "Dragon pickaxe upgrade kit",
-    "image": "dragon_pickaxe_upgrade_kit.png"
+    "image": "dragon_pickaxe_upgrade_kit.png",
+    "sources": {
+        "shops": {
+          "Yes": "No requirements"
+        }
+    }
   },
   {
     "index": 1347,
     "id": 21892,
     "name": "Dragon platebody",
-    "image": "dragon_platebody.png"
+    "image": "dragon_platebody.png",
+    "sources": {
+      "other": {
+        "Smithing": {
+          "Notes": "Requires dragon chainbody, dragon metal lump and dragon metal shard.",
+          "rule": {
+            "all": [
+              {
+                "has": 3140
+              },
+              {
+                "has": 22103
+              },
+              {
+                "has": 22097
+              },
+              "canTrainSmithing",
+              "canCompleteDragonSlayerII"
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1348,
@@ -36119,7 +38344,21 @@
     "index": 1351,
     "id": 241,
     "name": "Dragon scale dust",
-    "image": "dragon_scale_dust.png"
+    "image": "dragon_scale_dust.png",
+    "sources": {
+      "other": {
+        "Grinding": {
+          "notes": "Requires blue dragon scale and a pestle and mortar (or ask Wesley in Nardah).",
+          "rule": {
+            "all": [
+              {
+                "has": 243
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1352,
@@ -36149,7 +38388,10 @@
         "Zombie pirate Regular": {
           "droprate": "1/1260"
         }
-      }
+      },
+        "shops": {
+          "Yes": "canCompleteMonkeyMadness"
+        }
     }
   },
   {
@@ -36257,7 +38499,25 @@
     "index": 1358,
     "id": 1187,
     "name": "Dragon sq shield",
-    "image": "dragon_sq_shield.png"
+    "image": "dragon_sq_shield.png",
+    "sources": {
+      "other": {
+        "Smithing": {
+          "Notes": "Requires shield left and right half.",
+          "rule": {
+            "all": [
+              {
+                "has": 2366
+              },
+              {
+                "has": 2368
+              },
+              "canTrainSmithing"
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1359,
@@ -36355,13 +38615,47 @@
     "index": 1364,
     "id": 11284,
     "name": "Dragonfire shield",
-    "image": "dragonfire_shield.png"
+    "image": "dragonfire_shield.png",
+    "sources": {
+      "other": {
+        "Smithing": {
+          "Notes": "requires an anti-dragon shield and a draconic visage.",
+          "rule": {
+            "all": [
+              {
+                "has": 1540
+              },
+              {
+                "has": 11286
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1365,
     "id": 22003,
     "name": "Dragonfire ward",
-    "image": "dragonfire_ward.png"
+    "image": "dragonfire_ward.png",
+    "sources": {
+      "other": {
+        "Smithing": {
+          "Notes": "requires an anti-dragon shield and a skeletal visage.",
+          "rule": {
+            "all": [
+              {
+                "has": 1540
+              },
+              {
+                "has": 22006
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1366,
@@ -36380,7 +38674,22 @@
     "index": 1367,
     "id": 22795,
     "name": "Dragonfruit pie",
-    "image": "dragonfruit_pie.png"
+    "image": "dragonfruit_pie.png",
+    "sources": {
+      "other": {
+        "Cooking": {
+          "Notes": "Requires uncooked dragonfruit pie.",
+          "rule": {
+            "all": [
+              {
+                "has": 22789
+              },
+              "canTrainCooking"
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1368,
@@ -36564,6 +38873,19 @@
         "Gold Chest (red)": {
           "droprate": "1/71.955; 1/71.085"
         }
+      },
+      "other": {
+        "Cutting a gem": {
+          "Notes": "Requires an uncut dragonstone",
+          "rule": {
+            "all": [
+              {
+                "has": 1631
+              },
+              "canTrainCrafting"
+            ]
+          }
+        }
       }
     }
   },
@@ -36586,6 +38908,22 @@
         "Dragon impling jar": {
           "droprate": "1/19"
         }
+      },
+      "other": {
+        "Crafting": {
+          "notes": "Requires dragonstone amulet (u) and a ball of wool.",
+          "rule": {
+            "all": [
+              {
+                "has": 1683
+              },
+              {
+                "has": 1759
+              },
+              "canTrainCrafting"
+            ]
+          }
+        }
       }
     }
   },
@@ -36593,13 +38931,60 @@
     "index": 1372,
     "id": 1683,
     "name": "Dragonstone amulet (u)",
-    "image": "dragonstone_amulet_(u).png"
+    "image": "dragonstone_amulet_(u).png",
+    "sources":{
+      "other": {
+        "Crafting": {
+          "notes": "Requires gold bar, dragonstone and amulet mould.",
+          "rule": {
+            "all": [
+              {
+                "has": 2357
+              },
+              {
+                "has": 1615
+              },
+              {
+                "has": 1595
+              },
+              "canTrainCrafting"
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1373,
     "id": 23667,
     "name": "Dragonstone armour set",
-    "image": "dragonstone_armour_set.png"
+    "image": "dragonstone_armour_set.png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires dragonstone full helm, platebody, platelegs, gauntlets and boots.",
+          "rule": {
+            "all": [
+              {
+                "has": 24034
+              },
+              {
+                "has": 24037
+              },
+              {
+                "has": 24040
+              },
+              {
+                "has": 24046
+              },
+              {
+                "has": 24043
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1374,
@@ -36794,6 +39179,25 @@
         "Reward casket (elite)": {
           "droprate": "1/32.3"
         }
+      },
+      "other": {
+        "Crafting": {
+          "notes": "Requires gold bar, dragonstone and bracelet mould.",
+          "rule": {
+            "all": [
+              {
+                "has": 2357
+              },
+              {
+                "has": 1615
+              },
+              {
+                "has": 11065
+              },
+              "canTrainCrafting"
+            ]
+          }
+        }
       }
     }
   },
@@ -36927,6 +39331,25 @@
         "Kraken": {
           "droprate": "1/128"
         }
+      },
+      "other": {
+        "Crafting": {
+          "notes": "Requires gold bar, dragonstone and ring mould.",
+          "rule": {
+            "all": [
+              {
+                "has": 2357
+              },
+              {
+                "has": 1615
+              },
+              {
+                "has": 1592
+              },
+              "canTrainCrafting"
+            ]
+          }
+        }
       }
     }
   },
@@ -37012,7 +39435,22 @@
     "index": 1390,
     "id": 21652,
     "name": "Drift net",
-    "image": "drift_net.png"
+    "image": "drift_net.png",
+    "sources": {
+      "other": {
+        "Crafting": {
+          "notes": "Requires jute fibre",
+          "rule": {
+            "all": [
+              {
+                "has": 5931
+              },
+              "canTrainCrafting"
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1391,
@@ -37050,6 +39488,37 @@
         "Ocean Man": {
           "droprate": "1/7"
         }
+      },
+      "other": {
+        "Gnome cooking": {
+          "notes": "Requires a mixed dragon (cocktail shaker, cocktail glass, vodka, gin, dwellberries, pineapple chunks, pot of cream.",
+          "rule": {
+            "all": [
+              {
+                "has": 2025
+              },
+              {
+                "has": 2026
+              },
+              {
+                "has": 2015
+              },
+              {
+                "has": 2019
+              },
+              {
+                "has": 2126
+              },
+              {
+                "has": 2116
+              },
+              {
+                "has": 2130
+              },
+              "canTrainCooking"
+            ]
+          }
+        }
       }
     }
   },
@@ -37086,7 +39555,20 @@
     "index": 1396,
     "id": 30328,
     "name": "Dust",
-    "image": "dust.png"
+    "image": "dust.png",
+    "sources": {
+      "drops": {
+        "Barrel (Twilight Temple)": {
+          "droprate": "1/200"
+        },
+        "Bookcase (Twilight Temple)": {
+          "droprate": "1/200"
+        },
+        "Skeleton (Uzer Mastaba)": {
+          "droprate": "Always"
+        }
+      }
+    }
   },
   {
     "index": 1397,
@@ -37247,7 +39729,33 @@
     "index": 1399,
     "id": 12863,
     "name": "Dwarf cannon set",
-    "image": "dwarf_cannon_set.png"
+    "image": "dwarf_cannon_set.png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires cannon barrels, base, furance and stand.",
+          "rule": {
+            "all": [
+              {
+                "has": 10
+              },
+              {
+                "has": 6
+              },
+              {
+                "has": 12
+              },
+              {
+                "has": 8
+              }
+            ]
+          }
+        }
+      },
+        "shops": {
+          "Yes": "canCompleteDwarfCannon"
+        }
+    }
   },
   {
     "index": 1400,
@@ -37264,6 +39772,18 @@
         },
         "Zulrah": {
           "droprate": "2 × 1/124.5"
+        }
+      },
+      "other": {
+        "Cleaning a herb": {
+          "notes": "Can be cleaned in Nardah. Requires a grimy version of herb.",
+          "rule": {
+            "all": [
+              {
+                "has": 217
+              }
+            ]
+          }
         }
       }
     }
@@ -37684,7 +40204,15 @@
     "index": 1403,
     "id": 11200,
     "name": "Dwarven helmet",
-    "image": "dwarven_helmet.png"
+    "image": "dwarven_helmet.png",
+    "sources": {
+      "other": {
+        "Questing": {
+          "notes": "Obtained during Grim Tales.",
+          "rule": "canCompleteGrimTales"
+        }
+      }
+    }
   },
   {
     "index": 1404,
@@ -37711,26 +40239,138 @@
         "Drink troll": {
           "droprate": "1/10"
         }
-      }
+      },
+      "other": {
+        "Brewing": {
+          "notes": "Requires a bucket of water, beer glass, ale yeast, barley malt and hammerstone hops.",
+          "rule": {
+            "all": [
+              {
+                "has": 1929
+              },
+              {
+                "has": 1919
+              },
+              {
+                "has": 5767
+              },
+              {
+                "has": 6008
+              },
+              {
+                "has": 5994
+              },
+              "canTrainCooking"
+            ]
+          }
+        },
+        "Purchasing through dialogue": {
+          "notes": "Purchase from Falador pub (free roll)."
+        }
+      },
+        "shops": {
+          "Yes": "No requirements"
+        }
     }
   },
   {
     "index": 1405,
     "id": 5777,
     "name": "Dwarven stout(4)",
-    "image": "dwarven_stout(4).png"
+    "image": "dwarven_stout(4).png",
+    "sources": {
+      "other": {
+        "Brewing": {
+          "notes": "Requires a bucket of water, calquat keg, ale yeast, barley malt and hammerstone hops.",
+          "rule": {
+            "all": [
+              {
+                "has": 1929
+              },
+              {
+                "has": 5769
+              },
+              {
+                "has": 5767
+              },
+              {
+                "has": 6008
+              },
+              {
+                "has": 5994
+              },
+              "canTrainCooking"
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1406,
     "id": 5747,
     "name": "Dwarven stout(m)",
-    "image": "dwarven_stout(m).png"
+    "image": "dwarven_stout(m).png",
+    "sources": {
+      "other": {
+        "Brewing": {
+          "notes": "Requires a bucket of water, beer glass, ale yeast, barley malt and hammerstone hops.",
+          "rule": {
+            "all": [
+              {
+                "has": 1929
+              },
+              {
+                "has": 1919
+              },
+              {
+                "has": 5767
+              },
+              {
+                "has": 6008
+              },
+              {
+                "has": 5994
+              },
+              "canTrainCooking"
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1407,
     "id": 5857,
     "name": "Dwarven stout(m)",
-    "image": "dwarven_stout(m4).png"
+    "image": "dwarven_stout(m4).png",
+    "sources": {
+      "other": {
+        "Brewing": {
+          "notes": "Requires a bucket of water, calquat keg, ale yeast, barley malt and hammerstone hops.",
+          "rule": {
+            "all": [
+              {
+                "has": 1929
+              },
+              {
+                "has": 5769
+              },
+              {
+                "has": 5767
+              },
+              {
+                "has": 6008
+              },
+              {
+                "has": 5994
+              },
+              "canTrainCooking"
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1408,
@@ -37745,7 +40385,13 @@
         "Zombie (Tarn's Lair) High level": {
           "droprate": "1/64"
         }
-      }
+      },
+        "shops": {
+          "Yes": "No requirements"
+        },
+        "spawns": {
+          "Yes": "No requirements"
+        }
     }
   },
   {
@@ -37819,14 +40465,22 @@
         "Extra supply crate": {
           "droprate": "1/30"
         }
-      }
+      },
+        "shops": {
+          "Yes": "No requirements"
+        }
     }
   },
   {
     "index": 1411,
     "id": 4166,
     "name": "Earmuffs",
-    "image": "earmuffs.png"
+    "image": "earmuffs.png",
+    "sources": {
+        "shops": {
+          "Yes": "No requirements"
+        }
+    }
   },
   {
     "index": 1412,
@@ -37937,6 +40591,24 @@
         },
         "Zombie (Tarn's Lair) Low level": {
           "droprate": "1/128"
+        }
+      },
+      "other": {
+        "Creating a water orb": {
+          "notes": "Requires an unpowered orb, an earth rune and a cosmic rune.",
+          "rule": {
+            "all": [
+              {
+                "has": 567
+              },
+              {
+                "has": 557
+              },
+              {
+                "has": 564
+              }
+            ]
+          }
         }
       }
     }
@@ -38452,7 +41124,13 @@
         "Wise Old Man tasks": {
           "droprate": "Common"
         }
-      }
+      },
+        "shops": {
+          "Yes": "No requirements"
+        },
+        "spawns": {
+          "Yes": "No requirements"
+        }
     }
   },
   {
@@ -38600,6 +41278,9 @@
         "Rewards Guardian": {
           "droprate": "1/102.083; 1/91.146"
         }
+      },
+      "shops": {
+        "Yes": "canCompleteTempleOfTheEye"
       }
     }
   },
@@ -38662,7 +41343,10 @@
     "index": 1420,
     "id": 30451,
     "name": "Echo ahrim's ornament kit",
-    "image": "echo_ahrim's_ornament_kit.png"
+    "image": "echo_ahrim's_ornament_kit.png",
+    "tags": [
+      "leagues"
+    ]
   },
   {
     "index": 1421,
@@ -38705,25 +41389,44 @@
     "index": 1422,
     "id": 30453,
     "name": "Echo home teleport scroll",
-    "image": "echo_home_teleport_scroll.png"
+    "image": "echo_home_teleport_scroll.png",
+    "tags": [
+      "leagues"
+    ]
   },
   {
     "index": 1423,
     "id": 31946,
     "name": "Echo pearl",
-    "image": "echo_pearl.png"
+    "image": "echo_pearl.png",
+    "sources": {
+      "drops": {
+        "Dolphin": {
+          "droprate": "1/927"
+        },
+        "Orca": {
+          "droprate": "1/65.5"
+        }
+      }
+    }
   },
   {
     "index": 1424,
     "id": 30432,
     "name": "Echo venator bow ornament kit",
-    "image": "echo_venator_bow_ornament_kit.png"
+    "image": "echo_venator_bow_ornament_kit.png",
+    "tags": [
+      "leagues"
+    ]
   },
   {
     "index": 1425,
     "id": 30443,
     "name": "Echo virtus ornament kit",
-    "image": "echo_virtus_ornament_kit.png"
+    "image": "echo_virtus_ornament_kit.png",
+    "tags": [
+      "leagues"
+    ]
   },
   {
     "index": 1426,
@@ -38763,7 +41466,30 @@
     "index": 1428,
     "id": 31142,
     "name": "Eclipse moon armour set",
-    "image": "eclipse_moon_armour_set.png"
+    "image": "eclipse_moon_armour_set.png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires eclipse moon chestplate, helm tassets, and the eclipse atlatl.",
+          "rule": {
+            "all": [
+              {
+                "has": 29004
+              },
+              {
+                "has": 29010
+              },
+              {
+                "has": 29007
+              },
+              {
+                "has": 29000
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1429,
@@ -38784,9 +41510,16 @@
     "name": "Eclipse moon chestplate (broken)",
     "image": "eclipse_moon_chestplate_(broken).png",
     "sources": {
-      "drops": {
-        "Lunar Chest": {
-          "droprate": "1/224"
+      "other": {
+        "Degrading an item": {
+          "notes": "Requires eclipse moon chestplate.",
+          "rule": {
+            "all": [
+              {
+                "has": 29004
+              }
+            ]
+          }
         }
       }
     }
@@ -38810,9 +41543,16 @@
     "name": "Eclipse moon helm (broken)",
     "image": "eclipse_moon_helm_(broken).png",
     "sources": {
-      "drops": {
-        "Lunar Chest": {
-          "droprate": "1/224"
+      "other": {
+        "Degrading an item": {
+          "notes": "Requires eclipse moon helm.",
+          "rule": {
+            "all": [
+              {
+                "has": 29010
+              }
+            ]
+          }
         }
       }
     }
@@ -38836,9 +41576,16 @@
     "name": "Eclipse moon tassets (broken)",
     "image": "eclipse_moon_tassets_(broken).png",
     "sources": {
-      "drops": {
-        "Lunar Chest": {
-          "droprate": "1/224"
+      "other": {
+        "Degrading an item": {
+          "notes": "Requires eclipse moon tassets.",
+          "rule": {
+            "all": [
+              {
+                "has": 29007
+              }
+            ]
+          }
         }
       }
     }
@@ -38853,7 +41600,13 @@
         "Chest (Aldarin Villas)": {
           "droprate": "1/27.8"
         }
-      }
+      },
+        "shops": {
+          "Yes": "No requirements"
+        },
+        "spawns": {
+          "Yes": "No requirements"
+        }
     }
   },
   {
@@ -38899,14 +41652,31 @@
         "Swamp Crab": {
           "droprate": "1/64"
         }
-      }
+      },
+        "spawns": {
+          "Yes": "No requirements"
+        }
     }
   },
   {
     "index": 1437,
     "id": 21140,
     "name": "Efaritay's aid",
-    "image": "efaritay's_aid.png"
+    "image": "efaritay's_aid.png",
+    "sources": {
+      "other": {
+        "Enchanting jewellery": {
+          "notes": "Requires a topaz ring.",
+          "rule": {
+            "all": [
+              {
+                "has": 21087
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1438,
@@ -38943,14 +41713,35 @@
         "Imp": {
           "droprate": "1/25.6"
         }
-      }
+      },
+        "spawns": {
+          "Yes": "No requirements"
+        }
     }
   },
   {
     "index": 1440,
     "id": 7064,
     "name": "Egg and tomato",
-    "image": "egg_and_tomato.png"
+    "image": "egg_and_tomato.png",
+    "sources": {
+      "other": {
+        "Cooking": {
+          "Notes": "Requires scrambled egg and tomato",
+          "rule": {
+            "all": [
+              {
+                "has": 7078
+              },
+              {
+                "has": 1982
+              },
+              "canTrainCooking"
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1441,
@@ -38965,6 +41756,22 @@
         "Sarachnis": {
           "droprate": "1/20"
         }
+      },
+      "other": {
+        "Cooking": {
+          "Notes": "Requires egg & tomato and potato with butter",
+          "rule": {
+            "all": [
+              {
+                "has": 7064
+              },
+              {
+                "has": 6703
+              },
+              "canTrainCooking"
+            ]
+          }
+        }
       }
     }
   },
@@ -38972,7 +41779,12 @@
     "index": 1442,
     "id": 7435,
     "name": "Egg whisk",
-    "image": "egg_whisk.png"
+    "image": "egg_whisk.png",
+    "sources": {
+      "shops": {
+        "Yes": "canCompleteRecipeForDisaster1"
+      }
+    }
   },
   {
     "index": 1443,
@@ -39046,19 +41858,37 @@
     "index": 1448,
     "id": 9729,
     "name": "Elemental helmet",
-    "image": "elemental_helmet.png"
+    "image": "elemental_helmet.png",
+    "sources": {
+      "other": {
+        "Smithing": {
+          "notes": "Requires completing elemental workshop.",
+          "rule": {
+            "all": [
+              "canCompleteElementalWorkshop"
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1449,
     "id": 2890,
     "name": "Elemental shield",
-    "image": "elemental_shield.png"
-  },
-  {
-    "index": 1450,
-    "id": 8626,
-    "name": "Elemental sphere (flatpack)",
-    "image": "elemental_sphere_(flatpack).png"
+    "image": "elemental_shield.png",
+    "sources": {
+      "other": {
+        "Smithing": {
+          "notes": "Requires completing elemental workshop.",
+          "rule": {
+            "all": [
+              "canCompleteElementalWorkshop"
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1451,
@@ -39086,7 +41916,24 @@
     "index": 1452,
     "id": 26804,
     "name": "Elemental tiara",
-    "image": "elemental_tiara.png"
+    "image": "elemental_tiara.png",
+    "sources": {
+      "other": {
+        "Crafting a tiara": {
+          "notes": "Requires a gold tiara and an elemental talisman.",
+          "rule": {
+            "all": [
+              {
+                "has": 26788
+              },
+              {
+                "has": 5516
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1453,
@@ -39224,25 +42071,45 @@
     "index": 1457,
     "id": 24003,
     "name": "Elven boots",
-    "image": "elven_boots.png"
+    "image": "elven_boots.png",
+    "sources": {
+        "shops": {
+          "Yes": "canCompleteSongOfTheElves"
+        }
+    }
   },
   {
     "index": 1458,
     "id": 23948,
     "name": "Elven dawn",
-    "image": "elven_dawn.png"
+    "image": "elven_dawn.png",
+    "sources": {
+        "shops": {
+          "Yes": "canCompleteSongOfTheElves"
+        }
+    }
   },
   {
     "index": 1459,
     "id": 24006,
     "name": "Elven gloves",
-    "image": "elven_gloves.png"
+    "image": "elven_gloves.png",
+    "sources": {
+        "shops": {
+          "Yes": "canCompleteSongOfTheElves"
+        }
+    }
   },
   {
     "index": 1460,
     "id": 24024,
     "name": "Elven legwear",
-    "image": "elven_legwear.png"
+    "image": "elven_legwear.png",
+    "sources": {
+        "shops": {
+          "Yes": "canCompleteSongOfTheElves"
+        }
+    }
   },
   {
     "index": 1461,
@@ -39264,37 +42131,67 @@
     "index": 1462,
     "id": 24018,
     "name": "Elven skirt (white)",
-    "image": "elven_skirt_(white).png"
+    "image": "elven_skirt_(white).png",
+    "sources": {
+        "shops": {
+          "Yes": "canCompleteSongOfTheElves"
+        }
+    }
   },
   {
     "index": 1463,
     "id": 24012,
     "name": "Elven skirt (yellow)",
-    "image": "elven_skirt_(yellow).png"
+    "image": "elven_skirt_(yellow).png",
+    "sources": {
+        "shops": {
+          "Yes": "canCompleteSongOfTheElves"
+        }
+    }
   },
   {
     "index": 1464,
     "id": 24027,
     "name": "Elven top (white vest)",
-    "image": "elven_top_(white_vest).png"
+    "image": "elven_top_(white_vest).png",
+    "sources": {
+        "shops": {
+          "Yes": "canCompleteSongOfTheElves"
+        }
+    }
   },
   {
     "index": 1465,
     "id": 24015,
     "name": "Elven top (white)",
-    "image": "elven_top_(white).png"
+    "image": "elven_top_(white).png",
+    "sources": {
+        "shops": {
+          "Yes": "canCompleteSongOfTheElves"
+        }
+    }
   },
   {
     "index": 1466,
     "id": 24021,
     "name": "Elven top (yellow vest)",
-    "image": "elven_top_(yellow_vest).png"
+    "image": "elven_top_(yellow_vest).png",
+    "sources": {
+        "shops": {
+          "Yes": "canCompleteSongOfTheElves"
+        }
+    }
   },
   {
     "index": 1467,
     "id": 24009,
     "name": "Elven top (yellow)",
-    "image": "elven_top_(yellow).png"
+    "image": "elven_top_(yellow).png",
+    "sources": {
+        "shops": {
+          "Yes": "canCompleteSongOfTheElves"
+        }
+    }
   },
   {
     "index": 1468,
@@ -39313,7 +42210,26 @@
     "index": 1469,
     "id": 12817,
     "name": "Elysian spirit shield",
-    "image": "elysian_spirit_shield.png"
+    "image": "elysian_spirit_shield.png",
+    "sources": {
+      "other": {
+        "Smithing": {
+          "Notes": "requires a blessed spirit shield and an elysian sigil",
+          "rule": {
+            "all": [
+              {
+                "has": 12831
+              },
+              {
+                "has": 12819
+              },
+              "canTrainPrayer",
+              "canTrainSmithing"
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1470,
@@ -39370,6 +42286,25 @@
         "Vardorvis": {
           "droprate": "1/100"
         }
+      },
+        "shops": {
+          "Yes": "No requirements"
+        },
+      "other": {
+        "Cutting a gem": {
+          "Notes": "requires an uncut emerald and a chisel",
+          "rule": {
+            "all": [
+              {
+                "has": 1621
+              },
+              {
+                "has": 1755
+              },
+              "canTrainCrafting"
+            ]
+          }
+        }
       }
     }
   },
@@ -39392,6 +42327,22 @@
         "Wardrobe (stealing valuables)": {
           "droprate": "1/625"
         }
+      },
+      "other": {
+        "Crafting": {
+          "notes": "Requires emerald amulet (u) and a ball of wool.",
+          "rule": {
+            "all": [
+              {
+                "has": 1677
+              },
+              {
+                "has": 1759
+              },
+              "canTrainCrafting"
+            ]
+          }
+        }
       }
     }
   },
@@ -39410,6 +42361,25 @@
         },
         "Sarcophagus (Klenter's Pyramid)": {
           "droprate": "Rare"
+        }
+      },
+      "other": {
+        "Crafting": {
+          "notes": "Requires gold bar, emerald and amulet mould.",
+          "rule": {
+            "all": [
+              {
+                "has": 2357
+              },
+              {
+                "has": 1605
+              },
+              {
+                "has": 1595
+              },
+              "canTrainCrafting"
+            ]
+          }
         }
       }
     }
@@ -39533,6 +42503,25 @@
         "Casket (Reward pool)": {
           "droprate": "1/25.556"
         }
+      },
+      "other": {
+        "Crafting": {
+          "notes": "Requires gold bar, emerald and bracelet mould.",
+          "rule": {
+            "all": [
+              {
+                "has": 2357
+              },
+              {
+                "has": 1605
+              },
+              {
+                "has": 11065
+              },
+              "canTrainCrafting"
+            ]
+          }
+        }
       }
     }
   },
@@ -39608,6 +42597,25 @@
         "Wardrobe (stealing valuables)": {
           "droprate": "1/694.444"
         }
+      },
+      "other": {
+        "Crafting": {
+          "notes": "Requires gold bar, emerald and necklace mould.",
+          "rule": {
+            "all": [
+              {
+                "has": 2357
+              },
+              {
+                "has": 1605
+              },
+              {
+                "has": 1597
+              },
+              "canTrainCrafting"
+            ]
+          }
+        }
       }
     }
   },
@@ -39681,6 +42689,25 @@
         "Steel Chest (red)": {
           "droprate": "1/67.175; 1/64.595"
         }
+      },
+      "other": {
+        "Crafting": {
+          "notes": "Requires gold bar, emerald and ring mould.",
+          "rule": {
+            "all": [
+              {
+                "has": 2357
+              },
+              {
+                "has": 1605
+              },
+              {
+                "has": 1592
+              },
+              "canTrainCrafting"
+            ]
+          }
+        }
       }
     }
   },
@@ -39700,6 +42727,19 @@
         "Cave bug Level 6": {
           "droprate": "1/128"
         }
+      },
+      "other": {
+        "Crafting": {
+          "notes": "Requires molten glass",
+          "rule": {
+            "all": [
+              {
+                "has": 1775
+              },
+              "canTrainCrafting"
+            ]
+          }
+        }
       }
     }
   },
@@ -39707,7 +42747,38 @@
     "index": 1482,
     "id": 1980,
     "name": "Empty cup",
-    "image": "empty_cup.png"
+    "image": "empty_cup.png",
+    "sources": {
+      "other": {
+        "Crafting": {
+          "notes": "Requires unfired cup",
+          "rule": {
+            "all": [
+              {
+                "has": 28193
+              },
+              "canTrainCrafting"
+            ]
+          }
+        },
+        "Drinking a cuppa": {
+          "notes": "Requires cup of tea",
+          "rule": {
+            "all": [
+              {
+                "has": 1978
+              }
+            ]
+          }
+        }
+      },
+        "shops": {
+          "Yes": "No requirements"
+        },
+        "spawns": {
+          "Yes": "No requirements"
+        }
+    }
   },
   {
     "index": 1483,
@@ -39719,6 +42790,19 @@
         "Mogre": {
           "droprate": "1/128"
         }
+      },
+      "other": {
+        "Crafting": {
+          "notes": "Requires molten glass",
+          "rule": {
+            "all": [
+              {
+                "has": 1775
+              },
+              "canTrainCrafting"
+            ]
+          }
+        }
       }
     }
   },
@@ -39726,13 +42810,58 @@
     "index": 1484,
     "id": 4525,
     "name": "Empty oil lamp",
-    "image": "empty_oil_lamp.png"
+    "image": "empty_oil_lamp.png",
+    "sources": {
+        "shops": {
+          "Yes": {"any":[
+                    "canCompleteDeathToTheDorgeshuun",
+                    "canCompleteSinsOfTheFather"
+          ]}
+        },
+      "other": {
+        "Crafting": {
+          "notes": "Requires molten glass",
+          "rule": {
+            "all": [
+              {
+                "has": 1775
+              },
+              "canTrainCrafting"
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1485,
     "id": 4535,
     "name": "Empty oil lantern",
-    "image": "empty_oil_lantern.png"
+    "image": "empty_oil_lantern.png",
+    "sources": {
+        "shops": {
+          "Yes": {"any":[
+                    "canCompleteDeathToTheDorgeshuun",
+                    "canCompleteSinsOfTheFather"
+          ]}
+        },
+      "other": {
+        "Crafting": {
+          "notes": "Requires an oil lantern frame and an empty oil lamp",
+          "rule": {
+            "all": [
+              {
+                "has": 4540
+              },
+              {
+                "has": 4525
+              },
+              "canTrainCrafting"
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1486,
@@ -39743,6 +42872,100 @@
       "drops": {
         "Zombie (Tarn's Lair) Low level": {
           "droprate": "1/42.667"
+        }
+      },
+        "shops": {
+          "Yes": "No requirements"
+        },
+      "other": {
+        "Crafting": {
+          "notes": "Fire an unfired plant pot",
+          "rule": {
+            "all": [
+              {
+                "has": 5352
+              },
+              "canTrainCrafting"
+            ]
+          }
+        },
+        "Planting a tree sapling": {
+          "notes": "Requires rake, spade, and any tree sapling",
+          "rule": {
+            "all": [
+              {
+                "has": 5341
+              },
+              {
+                "has": 952
+              },
+              { "any" : [
+                {
+                  "has": 5370
+                },
+                {
+                  "has": 5371
+                },
+                {
+                  "has": 5372
+                },
+                {
+                  "has": 5373
+                },
+                {
+                  "has": 5374
+                },
+                {
+                  "has": 5500
+                },
+                {
+                  "has": 5496
+                },
+                {
+                  "has": 5497
+                },
+                {
+                  "has": 5498
+                },
+                {
+                  "has": 5499
+                },
+                {
+                  "has": 5501
+                },
+                {
+                  "has": 5502
+                },
+                {
+                  "has": 22866
+                },
+                {
+                  "has": 21477
+                },
+                {
+                  "has": 21480
+                },
+                {
+                  "has": 31502
+                },
+                {
+                  "has": 5503
+                },
+                {
+                  "has": 31505
+                },
+                {
+                  "has": 22856
+                },
+                {
+                  "has": 22859
+                },
+                {
+                  "has": 31508
+                }
+              ]}
+            ]
+          }
         }
       }
     }
@@ -39762,6 +42985,22 @@
         },
         "Gryphon": {
           "droprate": "1/32"
+        }
+      },
+        "shops": {
+          "Yes": "No requirements"
+        },
+      "other": {
+        "Crafting": {
+          "notes": "Requires jute fibre",
+          "rule": {
+            "all": [
+              {
+                "has": 5931
+              },
+              "canTrainCrafting"
+            ]
+          }
         }
       }
     }
@@ -39980,25 +43219,97 @@
     "index": 1497,
     "id": 11455,
     "name": "Energy mix(1)",
-    "image": "energy_mix(1).png"
+    "image": "energy_mix(1).png",
+    "sources": {
+      "other": {
+        "Drinking or decanting a barbarian potion": {
+          "notes": "Drinking or decanting a energy mix(2).",
+          "rule": {
+            "all": [
+              {
+                "has": 11453
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1498,
     "id": 11453,
     "name": "Energy mix(2)",
-    "image": "energy_mix(2).png"
+    "image": "energy_mix(2).png",
+    "sources": {
+      "other": {
+        "Mixing a barbarian potion": {
+          "notes": "Mixing an energy potion(2) with caviar.",
+          "rule": {
+            "all": [
+              "canCompleteBarbarianHerblore",
+              {
+                "has": 3012
+              },
+              {
+                "has": 11326
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1499,
     "id": 3014,
     "name": "Energy potion(1)",
-    "image": "energy_potion(1).png"
+    "image": "energy_potion(1).png",
+    "sources": {
+      "other": {
+        "Decanting a potion": {
+          "notes": "Decanting an energy potion(2), (3) or (4).",
+          "rule": {
+            "any": [
+              {
+                "has": 3012
+              },
+              {
+                "has": 3010
+              },
+              {
+                "has": 3008
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1500,
     "id": 3012,
     "name": "Energy potion(2)",
-    "image": "energy_potion(2).png"
+    "image": "energy_potion(2).png",
+    "sources": {
+      "other": {
+        "Decanting a potion": {
+          "notes": "Decanting an energy potion(1), (3) or (4).",
+          "rule": {
+            "any": [
+              {
+                "has": 3014
+              },
+              {
+                "has": 3010
+              },
+              {
+                "has": 3008
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1501,
@@ -40019,6 +43330,38 @@
         "Ornate lockbox": {
           "droprate": "1/16.667"
         }
+      },
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires harralander potion (unf) and chocolate dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 97
+              },
+              {
+                "has": 1975
+              },
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting an energy potion(1), (2) or (4).",
+          "rule": {
+            "any": [
+              {
+                "has": 3014
+              },
+              {
+                "has": 3012
+              },
+              {
+                "has": 3008
+              }
+            ]
+          }
+        }
       }
     }
   },
@@ -40031,6 +43374,51 @@
       "drops": {
         "Jekyll and Hyde Ranarr": {
           "droprate": "Always"
+        }
+      },
+      "other": {
+        "Mixing a potion": {
+          "notes": "Requires harralander potion (unf) and chocolate dust while wearing an amulet of chemistry or an alchemist's amulet.",
+          "rule": {
+            "all": [
+              {
+                "has": 97
+              },
+              {
+                "has": 1975
+              },
+              "canTrainHerblore"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting an energy potion(1), (2) or (3).",
+          "rule": {
+            "any": [
+              {
+                "has": 3014
+              },
+              {
+                "has": 3012
+              },
+              {
+                "has": 3010
+              }
+            ]
+          }
+        },
+        "Apothecary": {
+          "notes": "Requires a limpwurt root and chocolate dust.",
+          "rule": {
+            "all": [
+              {
+                "has": 225
+              },
+              {
+                "has": 1975
+              }
+            ]
+          }
         }
       }
     }
@@ -41003,7 +44391,7 @@
     "sources": {
       "other": {
         "Mixing a potion": {
-          "notes": "Requires anti-venom+(3) and Lava scale shard.",
+          "notes": "Requires anti-venom+(1) and Lava scale shard.",
           "rule": {
             "all": [
               {
@@ -41043,7 +44431,7 @@
     "sources": {
       "other": {
         "Mixing a potion": {
-          "notes": "Requires anti-venom+(3) and Lava scale shard.",
+          "notes": "Requires anti-venom+(2) and Lava scale shard.",
           "rule": {
             "all": [
               {
@@ -45032,34 +48420,34 @@
         "Frost Nagua": {
           "droprate": "1/10"
         },
-        "Brutal blue dragon": {
+        "Brutal blue dragon (Ruins of Tapoyauik)": {
           "droprate": "1/32"
         },
         "Frost Crab": {
           "droprate": "1/90"
         },
-        "Baby blue dragon": {
+        "Baby blue dragon (Ruins of Tapoyauik)": {
           "droprate": "1/100"
         },
-        "Blue dragon": {
+        "Blue dragon (Ruins of Tapoyauik)": {
           "droprate": "1/100"
         },
-        "Cave crawler": {
+        "Cave crawler (Ruins of Tapoyauik)": {
           "droprate": "Unknown"
         },
         "Chilled jelly": {
           "droprate": "Rare"
         },
-        "Ice giant Regular (m)": {
+        "Ice giant Regular (m) (Ruins of Tapoyauik)": {
           "droprate": "Unknown"
         },
-        "Ice spider": {
+        "Ice spider (Ruins of Tapoyauik)": {
           "droprate": "Unknown"
         },
-        "Ice warrior": {
+        "Ice warrior (Ruins of Tapoyauik)": {
           "droprate": "Unknown"
         },
-        "Icefiend Level 13": {
+        "Icefiend Level 13 (Ruins of Tapoyauik)": {
           "droprate": "Unknown"
         },
         "Vitreous Chilled Jelly": {
@@ -45287,6 +48675,9 @@
               }
             ]
           }
+        },
+        "Decanting jewellery": {
+          "notes": "Requires a games necklace (2) (drop from Skeleton (tarn's lair))."
         }
       }
     }
@@ -45387,14 +48778,11 @@
     "sources": {
       "other": {
         "Grinding": {
-          "notes": "Requires garlic and a pestle and mortar.",
+          "notes": "Requires garlic and a pestle and mortar (or ask Wesley in Nardah).",
           "rule": {
             "all": [
               {
                 "has": 1550
-              },
-              {
-                "has": 233
               }
             ]
           }
@@ -46670,14 +50058,11 @@
     "sources": {
       "other": {
         "Grinding": {
-          "notes": "Requires desert goat horn and a pestle and mortar.",
+          "notes": "Requires desert goat horn and a pestle and mortar (or ask Wesley in Nardah).",
           "rule": {
             "all": [
               {
                 "has": 9735
-              },
-              {
-                "has": 233
               }
             ]
           }
@@ -46998,7 +50383,7 @@
         }
       },
       "shops": {
-        "Yes": "canCompletePerilousMoons"
+        "Yes": "canStartPerilousMoons"
       }
     }
   },
@@ -47207,29 +50592,6 @@
     "name": "Gold bracelet",
     "image": "gold_bracelet.png",
     "sources": {
-      "drops": {
-        "Capt' Arnav's Chest": {
-          "droprate": "1/4"
-        },
-        "Small chest": {
-          "droprate": "1/25"
-        },
-        "Mummy (Ancient Pyramid)": {
-          "droprate": "1/25.65"
-        },
-        "Zombie (Tarn's Lair) Medium level": {
-          "droprate": "1/42.667"
-        },
-        "Chest (stealing valuables)": {
-          "droprate": "1/625"
-        },
-        "Jewellery case (stealing valuables)": {
-          "droprate": "1/625"
-        },
-        "Wardrobe (stealing valuables)": {
-          "droprate": "1/625"
-        }
-      },
       "other": {
         "Crafting": {
           "notes": "Requires gold bar, and bracelet mould.",
@@ -47247,7 +50609,7 @@
         }
       },
       "shops": {
-        "Yes": "canCompletePerilousMoons"
+        "Yes": "canStartPerilousMoons"
       }
     }
   },
@@ -47413,7 +50775,7 @@
         }
       },
       "shops": {
-        "Yes": "canCompletePerilousMoons"
+        "Yes": "canStartPerilousMoons"
       },
       "spawns": {
         "Yes": "No requirements"
@@ -47764,7 +51126,7 @@
         }
       },
       "shops": {
-        "Yes": "canCompletePerilousMoons"
+        "Yes": "canStartPerilousMoons"
       },
       "spawns": {
         "Yes": "No requirements"
@@ -48814,6 +52176,21 @@
     "sources": {
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Mixing a dye": {
+          "notes": "Requires yellow and blue dye.",
+          "rule": {
+            "all": [
+              {
+                "has": 1765
+              },
+              {
+                "has": 1767
+              }
+            ]
+          }
+        }
       }
     }
   },
@@ -60617,14 +63994,11 @@
     "sources": {
       "other": {
         "Grinding": {
-          "notes": "Requires guam leaf and a pestle and mortar.",
+          "notes": "Requires guam leaf and a pestle and mortar (or ask Wesley in Nardah).",
           "rule": {
             "all": [
               {
                 "has": 249
-              },
-              {
-                "has": 233
               }
             ]
           }
@@ -62498,17 +65872,6 @@
     "name": "Hard leather shield",
     "image": "hard_leather_shield.png",
     "sources": {
-      "drops": {
-        "Reward casket (beginner)": {
-          "droprate": "1/44.727"
-        },
-        "Kalphite Worker": {
-          "droprate": "1/64"
-        }
-      },
-      "shops": {
-        "Yes": "No requirements"
-      },
       "other": {
         "Crafting": {
           "notes": "Requires hard leather, oak shield, bronze nails and a hammer",
@@ -70499,14 +73862,11 @@
     "sources": {
       "other": {
         "Grinding": {
-          "notes": "Requires Kebbit teeth and a pestle and mortar.",
+          "notes": "Requires Kebbit teeth and a pestle and mortar (or ask Wesley in Nardah).",
           "rule": {
             "all": [
               {
                 "has": 10109
-              },
-              {
-                "has": 233
               }
             ]
           }
@@ -72903,14 +76263,11 @@
       },
       "other": {
         "Grinding": {
-          "notes": "Requires a Lava scale and a pestle and mortar.",
+          "notes": "Requires a Lava scale and a pestle and mortar (or ask Wesley in Nardah).",
           "rule": {
             "all": [
               {
                 "has": 11992
-              },
-              {
-                "has": 233
               }
             ]
           }
@@ -75388,9 +78745,6 @@
         "Tree": {
           "droprate": "Always"
         },
-        "Tree (2024 Christmas event)": {
-          "droprate": "Always"
-        },
         "Tree (crystal)": {
           "droprate": "Always"
         },
@@ -75410,9 +78764,6 @@
           "droprate": "Always"
         },
         "Tree (snow)": {
-          "droprate": "Always"
-        },
-        "Tree (The Node)": {
           "droprate": "Always"
         },
         "Tree (Tirannwn)": {
@@ -87910,14 +91261,11 @@
     "sources": {
       "other": {
         "Grinding": {
-          "notes": "Requires a nihil shard and a pestle and mortar.",
+          "notes": "Requires a nihil shard and a pestle and mortar (or ask Wesley in Nardah).",
           "rule": {
             "all": [
               {
                 "has": 26231
-              },
-              {
-                "has": 233
               }
             ]
           }
@@ -88519,9 +91867,6 @@
           "droprate": "Always"
         },
         "Oak tree (Farming)": {
-          "droprate": "Always"
-        },
-        "Oak tree (The Node)": {
           "droprate": "Always"
         },
         "Simple lockbox": {
@@ -90925,7 +94270,7 @@
         "Mixing a dye": {
           "notes": "Requires red and yellow dye.",
           "rule": {
-            "any": [
+            "all": [
               {
                 "has": 1763
               },
@@ -96041,7 +99386,7 @@
         "Mixing a dye": {
           "notes": "Requires red and blue dye.",
           "rule": {
-            "any": [
+            "all": [
               {
                 "has": 1763
               },
@@ -96774,7 +100119,7 @@
         "Tool store 5": {
           "droprate": "Always"
         },
-        "Tools (gardening) m": {
+        "Tools (gardening)": {
           "droprate": "Always"
         },
         "Farmer Members-only": {
@@ -100822,7 +104167,7 @@
         "Yes": {
           "any": [
             "canAccessCooksGuild",
-            "canCompletePerilousMoons"
+            "canStartPerilousMoons"
           ]
         }
       },
@@ -101817,7 +105162,16 @@
                 "has": 1639
               }
             ]
+          },
+        "Decanting jewellery": {
+          "notes": "Requires an Ring of Dueling(1), (3) or (4).",
+          "rule": {
+            "any": [
+              "canCompleteDesertTreasure",
+              "canCompleteHauntedMine"
+            ]
           }
+        }
         }
       }
     }
@@ -110712,6 +114066,9 @@
     "id": 10388,
     "name": "Saradomin chaps",
     "image": "saradomin_chaps.png",
+    "tags": [
+      "clue-reward-only"
+    ],
     "sources": {
       "drops": {
         "Reward casket (hard)": {
@@ -110889,6 +114246,9 @@
     "id": 20074,
     "name": "Saradomin godsword ornament kit",
     "image": "saradomin_godsword_ornament_kit.png",
+    "tags": [
+      "clue-reward-only"
+    ],
     "sources": {
       "drops": {
         "Reward casket (master)": {
@@ -112073,6 +115433,11 @@
     "sources": {
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Purchasing through dialogue": {
+          "notes": "Purchase from Shantay (free roll)."
+        }
       }
     }
   },
@@ -116353,12 +119718,13 @@
     "sources": {
       "other": {
         "Crafting": {
-          "notes": "Requires blood runes.",
+          "notes": "Requires blood runes and drops from all the DT2 bosses.",
           "rule": {
             "all": [
               {
                 "has": 565
-              }
+              },
+              "canCompleteDesertTreasureII"
             ]
           }
         }
@@ -116664,7 +120030,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "notes": "Requires a Raw spider on a stick.",
+          "notes": "Requires a Raw spider on a stick (spider carcass + skewer stick or arrow shaft.",
           "rule": {
             "any": [
               {
@@ -116989,7 +120355,8 @@
               {
                 "has": 10810
               },
-              "canTrainWoodcutting"
+              "canTrainWoodcutting",
+              "canCompleteTheFremennikIsles"
             ]
           }
         }
@@ -121863,7 +125230,7 @@
         "Yes": "No requirements"
       },
       "spawns": {
-        "Yes": "canCompletePerilousMoons"
+        "Yes": "canStartPerilousMoons"
       }
     }
   },
@@ -123186,8 +126553,7 @@
               },
               {
                 "has": 223
-              },
-              "canTrainHerblore"
+              }
             ]
           }
         },
@@ -136674,7 +140040,8 @@
               },
               {
                 "has": 1759
-              }
+              },
+              "canCompleteObservatoryQuest"
             ]
           }
         }
@@ -140153,6 +143520,11 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Picking up from the wall": {
+          "notes": "Pick up the white apron in Port Sarim."
+        }
       }
     }
   },
@@ -142275,6 +145647,11 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Purchasing through dialogue": {
+          "notes": "Purchase from Falador pub (free roll)."
+        }
       }
     }
   },
@@ -145167,6 +148544,9 @@
           "notes": "Requires a bologa's blessing from Tithe Farm.",
           "rule": {
             "all": [
+              {
+                "has": 13657
+              },
               "canTrainFarming"
             ]
           }

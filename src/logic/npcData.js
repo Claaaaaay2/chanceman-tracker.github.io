@@ -3490,7 +3490,12 @@ export const NPC_DATA = {
     },
     "Choke devil": {
         "wiki": "https://oldschool.runescape.wiki/w/Choke_devil",
-        "rule": ["hasFacemask"],
+        "rule": {
+            "any": [
+                "hasFacemask",
+                "canLongrange"
+            ]
+        },
         "skill": ["slayer"],
         "level": [65],
         "tags": ["superior"],
@@ -3498,7 +3503,12 @@ export const NPC_DATA = {
     },
     "Choke devil Wilderness Slayer Cave superior": {
         "wiki": "https://oldschool.runescape.wiki/w/Choke_devil#Wilderness_Slayer_Cave_superior",
-        "rule": ["hasFacemask"],
+        "rule": {
+            "any": [
+                "hasFacemask",
+                "canLongrange"
+            ]
+        },
         "skill": ["slayer"],
         "level": [65],
         "tags": ["superior"],
@@ -4505,7 +4515,8 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canTrainWoodcutting",
-                "hasMachete"
+                "hasMachete",
+                "canCompleteJunglePotion"
             ]
         },
         "skill": ["woodcutting"],
@@ -4992,7 +5003,12 @@ export const NPC_DATA = {
     },
     "Dust devil Regular": {
         "wiki": "https://oldschool.runescape.wiki/w/Dust_devil#Regular",
-        "rule": ["hasFacemask"],
+        "rule": {
+            "any": [
+                "hasFacemask",
+                "canLongrange"
+            ]
+        },
         "skill": ["slayer"],
         "level": [65],
         "tags": [],
@@ -5000,7 +5016,12 @@ export const NPC_DATA = {
     },
     "Dust devil Wilderness Slayer Cave": {
         "wiki": "https://oldschool.runescape.wiki/w/Dust_devil#Wilderness_Slayer_Cave",
-        "rule": ["hasFacemask"],
+        "rule": {
+            "any": [
+                "hasFacemask",
+                "canLongrange"
+            ]
+        },
         "skill": ["slayer"],
         "level": [65],
         "tags": [],
@@ -7875,7 +7896,12 @@ export const NPC_DATA = {
     },
     "Hollow tree": {
         "wiki": "https://oldschool.runescape.wiki/w/Hollow_tree",
-        "rule": ["canTrainWoodcutting"],
+        "rule": {
+            "all": [
+                "canTrainWoodcutting",
+                "canCompletePriestInPeril"
+            ]
+        },
         "skill": ["woodcutting"],
         "level": [45],
         "tags": [],
@@ -9112,7 +9138,8 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canTrainWoodcutting",
-                "hasMachete"
+                "hasMachete",
+                "canCompleteJunglePotion"
             ]
         },
         "skill": ["woodcutting"],
@@ -9797,7 +9824,8 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canTrainWoodcutting",
-                "hasMachete"
+                "hasMachete",
+                "canCompleteJunglePotion"
             ]
         },
         "skill": ["woodcutting"],
@@ -10370,8 +10398,8 @@ export const NPC_DATA = {
     "Narwhal": {
         "wiki": "https://oldschool.runescape.wiki/w/Narwhal",
         "rule": {
-            "all": [
-                "canDoSailingCombat",
+            "any": [
+                "canLongrange",
                 "canSailToTheNorthernOcean"
             ]
         },
