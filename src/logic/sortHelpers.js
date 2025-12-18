@@ -72,7 +72,6 @@ export async function getObtainabilityRank(item, ctx) {
     const name = item.name.toLowerCase();
     const id = item.id;
     const player = ctx.player;
-    let rank = null;
 
     const unlocked = fileStore.unlocked.includes(id);
 
@@ -100,12 +99,34 @@ export async function getObtainabilityRank(item, ctx) {
         }
     }
 
-    // Drops handling
+    // Drops handling EASY
+    if (src.drops) {
+        for (const npcName of Object.keys(src.drops)) {
+            if (!(await canReachNpc(npcName, ctx))) continue;
+
+            const npc = NPC_DATA[npcName];
+
+            if (npc?.tags?.includes("easy")) {
+                return { rank: 3, name };
+            }
+        }
+    }
+
+    // Other sources (crafting, etc.)
+    if (src.other) {
+        for (const obj of Object.values(src.other)) {
+            if (await canDoOtherMethod(obj.rule, ctx)) {
+                return { rank: 4, name };
+            }
+        }
+    }
+
+    // Drops handling OTHERS
     if (src.drops) {
         let hasReachableDrop = false;
-        let hasEasy = false;
         let hasSkillMet = false;
         let skillNotMetYet = false;
+        let otherDropSourceNoSkillLevel = false;
 
         for (const npcName of Object.keys(src.drops)) {
             if (!(await canReachNpc(npcName, ctx))) continue;
@@ -113,10 +134,6 @@ export async function getObtainabilityRank(item, ctx) {
             hasReachableDrop = true;
 
             const npc = NPC_DATA[npcName];
-
-            if (npc?.tags?.includes("easy")) {
-                hasEasy = true;
-            }
 
             if (npc?.skill?.length) {
                 if (player) {
@@ -134,37 +151,26 @@ export async function getObtainabilityRank(item, ctx) {
                         }
                     }
                 }
+            } else {
+                otherDropSourceNoSkillLevel = true;
             }
         }
 
         // IMPORTANT: only classify drops if reachable
         if (hasReachableDrop) {
-            if (hasEasy) {
-                return { rank: 3, name };
+            if (otherDropSourceNoSkillLevel) {
+                return { rank: 6, name };
             }
 
             if (hasSkillMet) {
-                return { rank: 4, name };
+                return { rank: 5, name };
             }
 
             if (skillNotMetYet) {
-                rank = 7;
-            } else {
-                rank = 6;
+                return { rank: 7, name };
             }
         }
     }
-
-    // 5. Other sources (crafting, etc.)
-    if (src.other) {
-        for (const obj of Object.values(src.other)) {
-            if (await canDoOtherMethod(obj.rule, ctx)) {
-                return { rank: 5, name };
-            }
-        }
-    }
-
-    if (rank) return { rank, name }; // In case of rank 6 or 7
 
     // 7. Unobtainable
     return { rank: 8, name };
