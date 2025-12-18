@@ -14,7 +14,7 @@ const ITEM_SECTION_TITLES = {
     8: "Unobtainable Items"
 };
 
-function parseDropRate(rate) {
+export function parseDropRate(rate) {
     if (!rate || rate === "N/A" || rate === "Unknown") return -1;
 
     rate = rate.trim();

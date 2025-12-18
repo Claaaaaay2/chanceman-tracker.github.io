@@ -1,5 +1,6 @@
 import { canDoOtherMethod, canReachNpc } from "../logic/itemAvailability.js";
 import { NPC_DATA } from "../logic/npcData.js";
+import { parseDropRate } from "../main.js";
 import { fileStore } from "../storage/fileStore.js";
 
 export default async function ItemPage() {
@@ -85,14 +86,37 @@ async function renderSourceTable(section, entries) {
         for (const [name, data] of Object.entries(entries)) {
             const obtainable = await canReachNpc(name, fileStore);
 
-            rows.push(`
-                <tr>
-                    <td><a href="${NPC_DATA[name]?.wiki || "#"}" target="_blank">${name}</a></td>
-                    <td>${data.droprate}</td>
-                    <td>${obtainable ? yes() : no()}</td>
-                </tr>
-            `);
+            rows.push({
+                name,
+                data,
+                obtainable
+            });
         }
+
+        rows.sort((a, b) => {
+            // 1. Obtainable first
+            if (a.obtainable !== b.obtainable) {
+                return a.obtainable ? -1 : 1;
+            }
+
+            // 2. Droprate (better first)
+            const rateA = parseDropRate(a.data.droprate);
+            const rateB = parseDropRate(b.data.droprate);
+            if (rateB !== rateA) {
+                return rateB - rateA;
+            }
+
+            // 3. Alphabetical fallback
+            return a.name.localeCompare(b.name);
+        });
+
+        const htmlRows = rows.map(({ name, data, obtainable }) => `
+            <tr>
+                <td><a href="${NPC_DATA[name]?.wiki || "#"}" target="_blank">${name}</a></td>
+                <td>${data.droprate}</td>
+                <td>${obtainable ? yes() : no()}</td>
+            </tr>
+        `).join("");
 
         return `
             <table class="osrs-table">
@@ -101,7 +125,7 @@ async function renderSourceTable(section, entries) {
                     <th>Droprate</th>
                     <th>Obtainable?</th>
                 </tr>
-                ${rows.join("")}
+                ${htmlRows}
             </table>
         `;
     }
