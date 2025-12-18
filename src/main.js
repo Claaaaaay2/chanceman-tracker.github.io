@@ -7,8 +7,8 @@ const ITEM_SECTION_TITLES = {
     1: "Buyable shop Items",
     2: "Pickupable spawns",
     3: "Easy Rolls",
-    4: "Skill Requirements Met",
-    5: "Other Sources",
+    4: "Other Sources",
+    5: "Skill Requirements Met",
     6: "Other Drops",
     7: "Drops for which you do not have the level yet",
     8: "Unobtainable Items"
