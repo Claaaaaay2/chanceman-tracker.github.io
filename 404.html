@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script>
+        // Redirect all unknown routes back to index.html
+        sessionStorage.redirect = location.pathname;
+        location.replace("/");
+    </script>
+</head>
+
+</html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Chanceman Tracker</title>
@@ -7,8 +8,17 @@
   <script type="module" crossorigin src="/assets/index-CMQvyYhm.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/index-BT4jatjM.css">
 </head>
+
 <body>
+  <script>
+    const redirect = sessionStorage.redirect;
+    if (redirect) {
+      delete sessionStorage.redirect;
+      history.replaceState(null, "", redirect);
+    }
+  </script>
   <div id="app"></div>
 
 </body>
+
 </html>
