@@ -84,7 +84,7 @@ export const REQUIREMENT_CHECKS = {
         return false; // TODO
     },
     canCompleteBelowIceMountain(ctx) {
-        return false; // TODO
+        return canCompleteBelowIceMountain(ctx); // TODO
     },
     canCompleteAKingdomDivided(ctx) {
         return false; // TODO
@@ -741,7 +741,7 @@ export const REQUIREMENT_CHECKS = {
         return has(ctx, 314) || has(ctx, 313) || has(ctx, 11324) || has(ctx, 11326);
     },
     canReachFrogSpawnSpot(ctx) {
-        return this.canCompleteBelowIceMountain(ctx) || canEnterLumbridgeSwampCaves(ctx);
+        return canCompleteBelowIceMountain(ctx) || canEnterLumbridgeSwampCaves(ctx);
     },
     hasOgreCoffinKey(ctx) {
         return has(ctx, 4850);
@@ -1237,6 +1237,10 @@ function canEnterLumbridgeSwampCaves(ctx) {
 function canStartTheLostTribe(ctx) {
     return canCompleteGoblinDiplomacy(ctx) //
         && canCompleteRuneMysteries(ctx);
+}
+
+function canCompleteBelowIceMountain(ctx) {
+    return false; // TODO
 }
 
 function canCompleteShadesOfMortton(ctx) {
