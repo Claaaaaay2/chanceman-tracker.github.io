@@ -2674,13 +2674,59 @@
     "index": 74,
     "id": 13020,
     "name": "Adamant gold-trimmed set (lg)",
-    "image": "adamant_gold-trimmed_set_(lg).png"
+    "image": "adamant_gold-trimmed_set_(lg).png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires (g) versions of adamant full helm, platelegs, platebody and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 2613
+              },
+              {
+                "has": 2609
+              },
+              {
+                "has": 2607
+              },
+              {
+                "has": 2611
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 75,
     "id": 13022,
     "name": "Adamant gold-trimmed set (sk)",
-    "image": "adamant_gold-trimmed_set_(sk).png"
+    "image": "adamant_gold-trimmed_set_(sk).png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires (g) versions of adamant full helm, plateskirt, platebody and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 2613
+              },
+              {
+                "has": 3475
+              },
+              {
+                "has": 2607
+              },
+              {
+                "has": 2611
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 76,
@@ -4317,13 +4363,59 @@
     "index": 119,
     "id": 13012,
     "name": "Adamant set (lg)",
-    "image": "adamant_set_(lg).png"
+    "image": "adamant_set_(lg).png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires adamant full helm, platelegs, platebody and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 1161
+              },
+              {
+                "has": 1073
+              },
+              {
+                "has": 1123
+              },
+              {
+                "has": 1199
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 120,
     "id": 13014,
     "name": "Adamant set (sk)",
-    "image": "adamant_set_(sk).png"
+    "image": "adamant_set_(sk).png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires adamant full helm, plateskirt, platebody and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 1161
+              },
+              {
+                "has": 1091
+              },
+              {
+                "has": 1123
+              },
+              {
+                "has": 1199
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 121,
@@ -4767,13 +4859,59 @@
     "index": 133,
     "id": 13016,
     "name": "Adamant trimmed set (lg)",
-    "image": "adamant_trimmed_set_(lg).png"
+    "image": "adamant_trimmed_set_(lg).png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires (t) versions of adamant full helm, platelegs, platebody and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 2605
+              },
+              {
+                "has": 2601
+              },
+              {
+                "has": 2599
+              },
+              {
+                "has": 2603
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 134,
     "id": 13018,
     "name": "Adamant trimmed set (sk)",
-    "image": "adamant_trimmed_set_(sk).png"
+    "image": "adamant_trimmed_set_(sk).png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires (t) versions of adamant full helm, plateskirt, platebody and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 2605
+              },
+              {
+                "has": 3474
+              },
+              {
+                "has": 2599
+              },
+              {
+                "has": 2603
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 135,
@@ -5655,7 +5793,30 @@
     "index": 150,
     "id": 12881,
     "name": "Ahrim's armour set",
-    "image": "ahrim's_armour_set.png"
+    "image": "ahrim's_armour_set.png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires ahrim's hood, robetop, robeskirt and staff.",
+          "rule": {
+            "all": [
+              {
+                "has": 4708
+              },
+              {
+                "has": 4712
+              },
+              {
+                "has": 4714
+              },
+              {
+                "has": 4710
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 151,
@@ -6524,7 +6685,10 @@
         }
       },
         "shops": {
-          "Yes": "No requirements"
+          "Yes": 
+              {
+                "has": 1931
+              }
         }
     }
   },
@@ -7674,7 +7838,27 @@
     "index": 213,
     "id": 21049,
     "name": "Ancestral robes set",
-    "image": "ancestral_robes_set.png"
+    "image": "ancestral_robes_set.png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires ancestral hat, robe bottom and robe top.",
+          "rule": {
+            "all": [
+              {
+                "has": 21018
+              },
+              {
+                "has": 21024
+              },
+              {
+                "has": 21021
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 214,
@@ -8272,7 +8456,30 @@
     "index": 235,
     "id": 13171,
     "name": "Ancient dragonhide set",
-    "image": "ancient_dragonhide_set.png"
+    "image": "ancient_dragonhide_set.png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires ancient coif, bracers, d'hide body and chaps.",
+          "rule": {
+            "all": [
+              {
+                "has": 12496
+              },
+              {
+                "has": 12490
+              },
+              {
+                "has": 12492
+              },
+              {
+                "has": 12494
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 236,
@@ -8967,13 +9174,59 @@
     "index": 258,
     "id": 13060,
     "name": "Ancient rune armour set (lg)",
-    "image": "ancient_rune_armour_set_(lg).png"
+    "image": "ancient_rune_armour_set_(lg).png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires ancient full helm, platelegs, platebody and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 12466
+              },
+              {
+                "has": 12462
+              },
+              {
+                "has": 12460
+              },
+              {
+                "has": 12468
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 259,
     "id": 13062,
     "name": "Ancient rune armour set (sk)",
-    "image": "ancient_rune_armour_set_(sk).png"
+    "image": "ancient_rune_armour_set_(sk).png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires ancient full helm, plateskirt, platebody and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 12466
+              },
+              {
+                "has": 12464
+              },
+              {
+                "has": 12460
+              },
+              {
+                "has": 12468
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 260,
@@ -10596,7 +10849,7 @@
     "image": "apple_pie.png",
     "sources": {
       "drops": {
-        "Frost dragon": {
+        "Frost Dragon": {
           "droprate": "1/26"
         }
       },
@@ -11420,7 +11673,30 @@
     "index": 350,
     "id": 13169,
     "name": "Armadyl dragonhide set",
-    "image": "armadyl_dragonhide_set.png"
+    "image": "armadyl_dragonhide_set.png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires armadyl coif, bracers, d'hide body and chaps.",
+          "rule": {
+            "all": [
+              {
+                "has": 12512
+              },
+              {
+                "has": 12506
+              },
+              {
+                "has": 12508
+              },
+              {
+                "has": 12510
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 351,
@@ -11770,13 +12046,59 @@
     "index": 367,
     "id": 13052,
     "name": "Armadyl rune armour set (lg)",
-    "image": "armadyl_rune_armour_set_(lg).png"
+    "image": "armadyl_rune_armour_set_(lg).png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires armadyl full helm, platelegs, platebody and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 12476
+              },
+              {
+                "has": 12472
+              },
+              {
+                "has": 12470
+              },
+              {
+                "has": 12478
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 368,
     "id": 13054,
     "name": "Armadyl rune armour set (sk)",
-    "image": "armadyl_rune_armour_set_(sk).png"
+    "image": "armadyl_rune_armour_set_(sk).png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires armadyl full helm, plateskirt, platebody and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 12476
+              },
+              {
+                "has": 12474
+              },
+              {
+                "has": 12470
+              },
+              {
+                "has": 12478
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 369,
@@ -14072,7 +14394,30 @@
     "index": 451,
     "id": 13167,
     "name": "Bandos dragonhide set",
-    "image": "bandos_dragonhide_set.png"
+    "image": "bandos_dragonhide_set.png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires bandos coif, bracers, d'hide body and chaps.",
+          "rule": {
+            "all": [
+              {
+                "has": 12504
+              },
+              {
+                "has": 12498
+              },
+              {
+                "has": 12500
+              },
+              {
+                "has": 12502
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 452,
@@ -14394,13 +14739,59 @@
     "index": 467,
     "id": 13056,
     "name": "Bandos rune armour set (lg)",
-    "image": "bandos_rune_armour_set_(lg).png"
+    "image": "bandos_rune_armour_set_(lg).png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires bandos full helm, platelegs, platebody and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 12486
+              },
+              {
+                "has": 12482
+              },
+              {
+                "has": 12480
+              },
+              {
+                "has": 12488
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 468,
     "id": 13058,
     "name": "Bandos rune armour set (sk)",
-    "image": "bandos_rune_armour_set_(sk).png"
+    "image": "bandos_rune_armour_set_(sk).png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires bandos full helm, plateskirt, platebody and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 12486
+              },
+              {
+                "has": 12484
+              },
+              {
+                "has": 12480
+              },
+              {
+                "has": 12488
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 469,
@@ -14474,9 +14865,9 @@
     "image": "barb_bolttips.png",
     "sources": {
         "shops": {
-          "Yes":
+          "Yes": 
               {
-                "has": 882
+                "has": 1464
               }
         }
     }
@@ -18018,7 +18409,27 @@
     "index": 561,
     "id": 12871,
     "name": "Black dragonhide set",
-    "image": "black_dragonhide_set.png"
+    "image": "black_dragonhide_set.png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires black d'hide body, chaps and vambraces.",
+          "rule": {
+            "all": [
+              {
+                "has": 2503
+              },
+              {
+                "has": 2497
+              },
+              {
+                "has": 2491
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 562,
@@ -18180,13 +18591,59 @@
     "index": 569,
     "id": 12996,
     "name": "Black gold-trimmed set (lg)",
-    "image": "black_gold-trimmed_set_(lg).png"
+    "image": "black_gold-trimmed_set_(lg).png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires (g) version of black full helm, platelegs, platebody and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 2595
+              },
+              {
+                "has": 2593
+              },
+              {
+                "has": 2591
+              },
+              {
+                "has": 2597
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 570,
     "id": 12998,
     "name": "Black gold-trimmed set (sk)",
-    "image": "black_gold-trimmed_set_(sk).png"
+    "image": "black_gold-trimmed_set_(sk).png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires (g) version of black full helm, plateskirt, platebody and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 2595
+              },
+              {
+                "has": 3473
+              },
+              {
+                "has": 2591
+              },
+              {
+                "has": 2597
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 571,
@@ -19200,13 +19657,59 @@
     "index": 611,
     "id": 12988,
     "name": "Black set (lg)",
-    "image": "black_set_(lg).png"
+    "image": "black_set_(lg).png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires black full helm, platelegs, platebody and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 1165
+              },
+              {
+                "has": 1077
+              },
+              {
+                "has": 1125
+              },
+              {
+                "has": 1195
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 612,
     "id": 12990,
     "name": "Black set (sk)",
-    "image": "black_set_(sk).png"
+    "image": "black_set_(sk).png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires black full helm, plateskirt, platebody and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 1165
+              },
+              {
+                "has": 1089
+              },
+              {
+                "has": 1125
+              },
+              {
+                "has": 1195
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 613,
@@ -19671,13 +20174,59 @@
     "index": 630,
     "id": 12992,
     "name": "Black trimmed set (lg)",
-    "image": "black_trimmed_set_(lg).png"
+    "image": "black_trimmed_set_(lg).png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires (t) versions of black full helm, platelegs, platebody and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 2587
+              },
+              {
+                "has": 2585
+              },
+              {
+                "has": 2583
+              },
+              {
+                "has": 2589
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 631,
     "id": 12994,
     "name": "Black trimmed set (sk)",
-    "image": "black_trimmed_set_(sk).png"
+    "image": "black_trimmed_set_(sk).png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires (t) versions of black full helm, plateskirt, platebody and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 2587
+              },
+              {
+                "has": 3472
+              },
+              {
+                "has": 2583
+              },
+              {
+                "has": 2589
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 632,
@@ -27958,13 +28507,59 @@
     "index": 849,
     "id": 12968,
     "name": "Bronze gold-trimmed set (lg)",
-    "image": "bronze_gold-trimmed_set_(lg).png"
+    "image": "bronze_gold-trimmed_set_(lg).png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires (g) versions of bronze full helm, platelegs, platebody and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 12211
+              },
+              {
+                "has": 12207
+              },
+              {
+                "has": 12205
+              },
+              {
+                "has": 12213
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 850,
     "id": 12970,
     "name": "Bronze gold-trimmed set (sk)",
-    "image": "bronze_gold-trimmed_set_(sk).png"
+    "image": "bronze_gold-trimmed_set_(sk).png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires (g) versions of bronze full helm, plateskirt, platebody and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 12211
+              },
+              {
+                "has": 12209
+              },
+              {
+                "has": 12205
+              },
+              {
+                "has": 12213
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 851,
@@ -29020,13 +29615,59 @@
     "index": 886,
     "id": 12960,
     "name": "Bronze set (lg)",
-    "image": "bronze_set_(lg).png"
+    "image": "bronze_set_(lg).png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires bronze full helm, platelegs, platebody and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 1155
+              },
+              {
+                "has": 1075
+              },
+              {
+                "has": 1117
+              },
+              {
+                "has": 1189
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 887,
     "id": 12962,
     "name": "Bronze set (sk)",
-    "image": "bronze_set_(sk).png"
+    "image": "bronze_set_(sk).png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires bronze full helm, plateskirt, platebody and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 1155
+              },
+              {
+                "has": 1087
+              },
+              {
+                "has": 1117
+              },
+              {
+                "has": 1189
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 888,
@@ -29255,13 +29896,59 @@
     "index": 895,
     "id": 12964,
     "name": "Bronze trimmed set (lg)",
-    "image": "bronze_trimmed_set_(lg).png"
+    "image": "bronze_trimmed_set_(lg).png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires (t) versions of bronze full helm, platelegs, platebody and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 12221
+              },
+              {
+                "has": 12217
+              },
+              {
+                "has": 12215
+              },
+              {
+                "has": 12223
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 896,
     "id": 12966,
     "name": "Bronze trimmed set (sk)",
-    "image": "bronze_trimmed_set_(sk).png"
+    "image": "bronze_trimmed_set_(sk).png",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires (t) versions of bronze full helm, plateskirt, platebody and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 12221
+              },
+              {
+                "has": 12219
+              },
+              {
+                "has": 12215
+              },
+              {
+                "has": 12223
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 897,
@@ -143623,7 +144310,7 @@
                   "canTrainCooking"
                 ]
               }
-            },
+            }, 
           "Cooking 2": {
           "notes": "Requires sweetcorn (bowl) and chopped tuna.",
           "rule": {
@@ -143637,7 +144324,7 @@
                   "canTrainCooking"
                 ]
               }
-            },
+            }, 
           "Cooking 3": {
           "notes": "Requires cooked sweetcorn and chopped tuna.",
           "rule": {
