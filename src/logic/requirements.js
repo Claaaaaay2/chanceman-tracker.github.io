@@ -35,7 +35,10 @@ export const REQUIREMENT_CHECKS = {
             && has(ctx, 8778); // Oak plank
     },
     canMakeCraftingTableII(ctx) {
-        return canMakeCraftingTableI(ctx) //
+        return canTrainConstruction(ctx) //
+            && has(ctx, 8794)  // Saw
+            && has(ctx, 2347)  // Hammer
+            && has(ctx, 8778)  // Oak plank
             && has(ctx, 1775); // Molten glass
     },
     canMakeRepairBench(ctx) {
