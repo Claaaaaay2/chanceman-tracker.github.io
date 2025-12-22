@@ -53,6 +53,11 @@ export default async function ItemsPage() {
                 <input type="checkbox" id="hasItemsets">
                 I play with item sets
             </label>
+
+            <label>
+                <input type="checkbox" id="hasSuperiors">
+                'Bigger and Badder' unlocked
+            </label>
         </div>
 
         <div class="item-grid" id="itemGrid"></div>
