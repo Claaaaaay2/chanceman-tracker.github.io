@@ -13851,7 +13851,12 @@ export const NPC_DATA = {
     },
     "Skogre": {
         "wiki": "https://oldschool.runescape.wiki/w/Skogre",
-        "rule": ["canStartZogreFleshEaters"],
+        "rule": {
+            "any": [
+                "canStartZogreFleshEaters",
+                "canShortrange"
+            ],
+        },
         "skill": [],
         "level": [],
         "tags": [],
@@ -16704,7 +16709,12 @@ export const NPC_DATA = {
     },
     "Zogre": {
         "wiki": "https://oldschool.runescape.wiki/w/Zogre",
-        "rule": ["canStartZogreFleshEaters"],
+        "rule": {
+            "any": [
+                "canStartZogreFleshEaters",
+                "canShortrange"
+            ],
+        },
         "skill": [],
         "level": [],
         "tags": [],
