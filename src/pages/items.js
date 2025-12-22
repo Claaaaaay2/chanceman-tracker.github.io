@@ -17,7 +17,7 @@ export default async function ItemsPage() {
         <h1>Items</h1>
 
         <div class="item-filters">
-            <input type="text" id="itemSearch" placeholder="Search items..." />
+            <input type="text" id="itemSearch" placeholder="Filter items..." />
 
             <label>
                 <input type="checkbox" id="hideRolled">

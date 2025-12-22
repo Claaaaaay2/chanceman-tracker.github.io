@@ -43,6 +43,7 @@ document.addEventListener("click", async (e) => {
 
     const rolledInput = app.querySelector("#rolledInput");
     const unlockedInput = app.querySelector("#unlockedInput");
+    const playerNameInput = app.querySelector("#playerName");
     const status = app.querySelector("#status");
 
     try {
@@ -57,12 +58,17 @@ document.addEventListener("click", async (e) => {
         }
 
         if (playerNameInput.value) {
+            status.textContent = "Fetching player data...";
             const player = await fetchPlayer(playerNameInput.value);
             await fileStore.setPlayer(player);
         }
 
-        status.textContent = "Updated!";
+        // Redirect to items page
+        status.textContent = "Saved! Redirecting...";
+        history.pushState(null, "", "/items");
+        window.dispatchEvent(new PopStateEvent("popstate"));
     } catch (err) {
-        status.textContent = "Error!";
+        console.error(err);
+        status.textContent = err.message || "Error reading files!";
     }
 });

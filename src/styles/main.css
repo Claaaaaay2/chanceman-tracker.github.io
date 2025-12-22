@@ -46,7 +46,6 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 0.5rem 1rem;
-    max-width: 1000px;
 }
 
 .item-filters input[type="text"] {
@@ -64,7 +63,7 @@ body {
 #itemSearch {
     padding: 6px;
     font-size: 14px;
-    width: 250px;
+    width: 200px;
 }
 
 .item-grid {

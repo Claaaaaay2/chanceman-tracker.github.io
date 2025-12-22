@@ -68,7 +68,6 @@ document.addEventListener("click", async (e) => {
         status.textContent = "Saved! Redirecting...";
         history.pushState(null, "", "/items");
         window.dispatchEvent(new PopStateEvent("popstate"));
-
     } catch (err) {
         console.error(err);
         status.textContent = err.message || "Error reading files!";
