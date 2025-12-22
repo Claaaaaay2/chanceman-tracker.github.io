@@ -7056,7 +7056,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": ["slayer"],
         "level": [85],
-        "tags": [],
+        "tags": ["superior"],
         "f2p": false
     },
     "Greater abyssal demon Wilderness Slayer Cave superior": {
@@ -7064,7 +7064,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": ["slayer"],
         "level": [85],
-        "tags": [],
+        "tags": ["superior"],
         "f2p": false
     },
     "Greater demon Chasm of Fire": {

@@ -147,9 +147,10 @@ window.initItemsPage = async function () {
     const allowOthersHouses = document.getElementById("allowOthersHouses");
     const hasFlatpacks = document.getElementById("hasFlatpacks");
     const hasItemsets = document.getElementById("hasItemsets");
+    const hasSuperiors = document.getElementById("hasSuperiors");
     const grid = document.getElementById("itemGrid");
 
-    if (!searchInput || !hideRolled || !onlyUnlocked || !onlyObtainable || !hideClue || !allowOthersHouses || !hasFlatpacks || !hasItemsets || !grid) {
+    if (!searchInput || !hideRolled || !onlyUnlocked || !onlyObtainable || !hideClue || !allowOthersHouses || !hasFlatpacks || !hasItemsets || !hasSuperiors || !grid) {
         setTimeout(initItemsPage, 0);
         return;
     }
@@ -163,6 +164,7 @@ window.initItemsPage = async function () {
     allowOthersHouses.checked = f.allowOthersHouses ?? false;
     hasFlatpacks.checked = f.hasFlatpacks ?? true;
     hasItemsets.checked = f.hasItemsets ?? true;
+    hasSuperiors.checked = f.hasSuperiors ?? false;
 
     const { items, rolled, unlocked } = data;
 
@@ -175,6 +177,7 @@ window.initItemsPage = async function () {
         const allowHo = allowOthersHouses.checked;
         const hasFl = hasFlatpacks.checked;
         const hasIt = hasItemsets.checked;
+        const hasSup = hasSuperiors.checked;
 
         const ranked = await computeAllRanksOnce(items, fileStore);
 
@@ -189,10 +192,13 @@ window.initItemsPage = async function () {
             if (hideR && rolled.includes(item.id)) continue;
             if (onlyU && !unlocked.includes(item.id)) continue;
             if (hideCl && item.tags?.includes("clue-reward-only")) continue;
-            if (onlyO && sort.rank === 7) continue;
             if (allowHo && await isHouseOnlyItem(item, fileStore)) {
                 sort.rank = 8;
             }
+            if (!hasSup && await isSuperiorOnlyItem(item, fileStore)) {
+                sort.rank = 8;
+            };
+            if (onlyO && (sort.rank === 7 || sort.rank === 8)) continue;
             if (!hasFl && item.tags?.includes("flatpack")) continue;
             if (!hasIt && item.tags?.includes("itemset")) continue;
 
@@ -256,7 +262,8 @@ window.initItemsPage = async function () {
             hideClue: hideClue.checked,
             allowOthersHouses: allowOthersHouses.checked,
             hasFlatpacks: hasFlatpacks.checked,
-            hasItemsets: hasItemsets.checked
+            hasItemsets: hasItemsets.checked,
+            hasSuperiors: hasSuperiors.checked
         });
     }
 
@@ -296,6 +303,11 @@ window.initItemsPage = async function () {
     });
 
     hasItemsets.addEventListener("input", () => {
+        saveFilters();
+        renderItems();
+    });
+
+    hasSuperiors.addEventListener("input", () => {
         saveFilters();
         renderItems();
     });
@@ -403,5 +415,37 @@ async function isHouseOnlyItem(item, ctx) {
     if (hasReachableSource && hasAnyHouseSource) return true;
 
     // Otherwise not house-only
+    return false;
+}
+
+async function isSuperiorOnlyItem(item, ctx) {
+    let hasAnySuperiorSource = false;
+    let hasReachableSource = false;
+    let hasReachableNonSuperiorSource = false;
+
+    // NPC drops
+    if (item.sources?.drops) {
+        for (const npcName of Object.keys(item.sources.drops)) {
+            const npc = NPC_DATA[npcName];
+            if (!npc) continue;
+
+            const isSuperior = npc.tags?.includes("superior");
+            if (isSuperior) hasAnySuperiorSource = true;
+
+            const reachable = await canReachNpc(npcName, ctx);
+            if (!reachable) continue;
+
+            hasReachableSource = true;
+            if (!isSuperior) hasReachableNonSuperiorSource = true;
+        }
+    }
+
+    // If there is ANY reachable non-superior source → obtainable
+    if (hasReachableNonSuperiorSource) return false;
+
+    // If there are reachable sources, but ALL are superior → superior-only
+    if (hasReachableSource && hasAnySuperiorSource) return true;
+
+    // Otherwise not superior-only
     return false;
 }
