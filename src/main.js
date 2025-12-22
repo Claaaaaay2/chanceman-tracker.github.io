@@ -192,7 +192,7 @@ window.initItemsPage = async function () {
             if (hideR && rolled.includes(item.id)) continue;
             if (onlyU && !unlocked.includes(item.id)) continue;
             if (hideCl && item.tags?.includes("clue-reward-only")) continue;
-            if (allowHo && await isHouseOnlyItem(item, fileStore)) {
+            if (!allowHo && await isHouseOnlyItem(item, fileStore)) {
                 sort.rank = 8;
             }
             if (!hasSup && await isSuperiorOnlyItem(item, fileStore)) {
@@ -369,7 +369,6 @@ async function canReachSource(source, ctx) {
 
 async function isHouseOnlyItem(item, ctx) {
     let hasAnyHouseSource = false;
-    let hasReachableSource = false;
     let hasReachableNonHouseSource = false;
 
     // NPC drops
@@ -384,7 +383,6 @@ async function isHouseOnlyItem(item, ctx) {
             const reachable = await canReachNpc(npcName, ctx);
             if (!reachable) continue;
 
-            hasReachableSource = true;
             if (!isHouse) hasReachableNonHouseSource = true;
         }
     }
@@ -398,7 +396,6 @@ async function isHouseOnlyItem(item, ctx) {
             const reachable = await canReachSource(source, ctx);
             if (!reachable) continue;
 
-            hasReachableSource = true;
             if (!isHouse) hasReachableNonHouseSource = true;
         }
     }
@@ -412,7 +409,7 @@ async function isHouseOnlyItem(item, ctx) {
     if (hasReachableNonHouseSource) return false;
 
     // If there are reachable sources, but ALL are house → house-only
-    if (hasReachableSource && hasAnyHouseSource) return true;
+    if (hasAnyHouseSource) return true;
 
     // Otherwise not house-only
     return false;
