@@ -38,6 +38,11 @@ export default async function ItemsPage() {
                 <input type="checkbox" id="hideClueRewardOnly">
                 Hide clue items
             </label>
+
+            <label>
+                <input type="checkbox" id="allowOthersHouses">
+                Allow other players' houses
+            </label>
         </div>
 
         <div class="item-grid" id="itemGrid"></div>

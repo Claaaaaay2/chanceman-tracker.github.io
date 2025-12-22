@@ -1,4 +1,5 @@
-import { canReachNpc } from "./logic/itemAvailability.js";
+import { canReachNpc, evaluateRule } from "./logic/itemAvailability.js";
+import { NPC_DATA } from "./logic/npcData.js";
 import { getObtainabilityRank } from "./logic/sortHelpers.js";
 import { router } from "./router.js";
 import { fileStore } from "./storage/fileStore.js";
@@ -143,9 +144,10 @@ window.initItemsPage = async function () {
     const onlyUnlocked = document.getElementById("onlyUnlocked");
     const onlyObtainable = document.getElementById("onlyObtainable");
     const hideClue = document.getElementById("hideClueRewardOnly");
+    const allowOthersHouses = document.getElementById("allowOthersHouses");
     const grid = document.getElementById("itemGrid");
 
-    if (!searchInput || !hideRolled || !onlyUnlocked || !onlyObtainable || !hideClue || !grid) {
+    if (!searchInput || !hideRolled || !onlyUnlocked || !onlyObtainable || !hideClue || !allowOthersHouses || !grid) {
         setTimeout(initItemsPage, 0);
         return;
     }
@@ -156,6 +158,7 @@ window.initItemsPage = async function () {
     onlyUnlocked.checked = f.onlyUnlocked ?? false;
     onlyObtainable.checked = f.onlyObtainable ?? false;
     hideClue.checked = f.hideClue ?? true;
+    allowOthersHouses.checked = f.allowOthersHouses ?? false;
 
     const { items, rolled, unlocked } = data;
 
@@ -165,18 +168,28 @@ window.initItemsPage = async function () {
         const onlyU = onlyUnlocked.checked;
         const onlyO = onlyObtainable.checked;
         const hideCl = hideClue.checked;
+        const allowHo = allowOthersHouses.checked;
 
         const ranked = await computeAllRanksOnce(items, fileStore);
 
         // sort async
-        const filtered = ranked.filter(({ item, sort }) => {
-            if (!item.name.toLowerCase().includes(search)) return false;
-            if (hideR && rolled.includes(item.id)) return false;
-            if (onlyU && !unlocked.includes(item.id)) return false;
-            if (hideCl && item.tags?.includes("clue-reward-only")) return false;
-            if (onlyO && sort.rank === 7) return false;
-            return true;
-        });
+        const filtered = [];
+
+        for (const entry of ranked) {
+            const { item } = entry;
+            let sort = { ...entry.sort };
+
+            if (!item.name.toLowerCase().includes(search)) continue;
+            if (hideR && rolled.includes(item.id)) continue;
+            if (onlyU && !unlocked.includes(item.id)) continue;
+            if (hideCl && item.tags?.includes("clue-reward-only")) continue;
+            if (onlyO && sort.rank === 7) continue;
+            if (allowHo && await isHouseOnlyItem(item, fileStore)) {
+                sort.rank = 8;
+            }
+
+            filtered.push({ ...entry, sort });
+        }
 
         filtered.sort((a, b) => {
             // Primary: rank
@@ -232,7 +245,8 @@ window.initItemsPage = async function () {
             hideRolled: hideRolled.checked,
             onlyUnlocked: onlyUnlocked.checked,
             onlyObtainable: onlyObtainable.checked,
-            hideClue: hideClue.checked
+            hideClue: hideClue.checked,
+            allowOthersHouses: allowOthersHouses.checked
         });
     }
 
@@ -257,6 +271,11 @@ window.initItemsPage = async function () {
     });
 
     hideClue.addEventListener("input", () => {
+        saveFilters();
+        renderItems();
+    });
+
+    allowOthersHouses.addEventListener("input", () => {
         saveFilters();
         renderItems();
     });
@@ -292,4 +311,77 @@ export function afterRoute() {
     if (typeof initItemsPage === "function") {
         initItemsPage();
     }
+}
+
+async function canReachSource(source, ctx) {
+    if (!source?.rule) return true;
+
+    let rule = source.rule;
+
+    // Conditional house requirement
+    if (
+        source.tags?.includes("house") &&
+        source.houseRule &&
+        !fileStore.filters.allowOthersHouses
+    ) {
+        rule = {
+            all: [
+                rule,
+                source.houseRule
+            ]
+        };
+    }
+
+    return evaluateRule(rule, ctx);
+}
+
+async function isHouseOnlyItem(item, ctx) {
+    let hasAnyHouseSource = false;
+    let hasReachableSource = false;
+    let hasReachableNonHouseSource = false;
+
+    // NPC drops
+    if (item.sources?.drops) {
+        for (const npcName of Object.keys(item.sources.drops)) {
+            const npc = NPC_DATA[npcName];
+            if (!npc) continue;
+
+            const isHouse = npc.tags?.includes("house");
+            if (isHouse) hasAnyHouseSource = true;
+
+            const reachable = await canReachNpc(npcName, ctx);
+            if (!reachable) continue;
+
+            hasReachableSource = true;
+            if (!isHouse) hasReachableNonHouseSource = true;
+        }
+    }
+
+    // Other sources (crafting, house actions, etc)
+    if (item.sources?.other) {
+        for (const source of Object.values(item.sources.other)) {
+            const isHouse = source.tags?.includes("house");
+            if (isHouse) hasAnyHouseSource = true;
+
+            const reachable = await canReachSource(source, ctx);
+            if (!reachable) continue;
+
+            hasReachableSource = true;
+            if (!isHouse) hasReachableNonHouseSource = true;
+        }
+    }
+
+    // Shops & spawns ALWAYS override house restrictions
+    if (ctx.unlocked.includes(item.id) && (item.sources?.shops || item.sources?.spawns)) {
+        return false;
+    }
+
+    // If there is ANY reachable non-house source → obtainable
+    if (hasReachableNonHouseSource) return false;
+
+    // If there are reachable sources, but ALL are house → house-only
+    if (hasReachableSource && hasAnyHouseSource) return true;
+
+    // Otherwise not house-only
+    return false;
 }

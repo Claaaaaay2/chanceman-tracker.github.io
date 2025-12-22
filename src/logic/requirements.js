@@ -5,6 +5,90 @@ export function has(ctx, id) {
 }
 
 export const REQUIREMENT_CHECKS = {
+    hasAnyNails(ctx) {
+        return hasAnyNails(ctx);
+    },
+    canMakeWoodenWorkbench(ctx) {
+        return canTrainConstruction(ctx) //
+            && hasAnyNails(ctx) //
+            && has(ctx, 960); // Plank
+    },
+    canMakeOakWorkbench(ctx) {
+        return canTrainConstruction(ctx) //
+            && has(ctx, 8778); // Oak plank
+    },
+    canMakeSteelFramedWorkbench(ctx) {
+        return canTrainConstruction(ctx) //
+            && has(ctx, 8778)  // Oak plank
+            && has(ctx, 2353); // Steel bar
+    },
+    canMakeCraftingTableI(ctx) {
+        return canTrainConstruction(ctx) //
+            && has(ctx, 8778); // Oak plank
+    },
+    canMakeCraftingTableII(ctx) {
+        return canMakeCraftingTableI(ctx) //
+            && has(ctx, 1775); // Molten glass
+    },
+    canMakeRepairBench(ctx) {
+        return canTrainConstruction(ctx) //
+            && has(ctx, 8778); // Oak plank
+    },
+    canMakeWhetstone(ctx) {
+        return canTrainConstruction(ctx) //
+            && has(ctx, 8778)  // Oak plank
+            && has(ctx, 3420); // Limestone brick
+    },
+    canMakeArmourStand(ctx) {
+        return canTrainConstruction(ctx) //
+            && has(ctx, 8778)  // Oak plank
+            && has(ctx, 3420); // Limestone brick
+    },
+    canMakeToolStore(ctx) {
+        return canTrainConstruction(ctx) //
+            && has(ctx, 8778); // Oak plank
+    },
+    canMakeWoodenLarder(ctx) {
+        return canTrainConstruction(ctx) //
+            && hasAnyNails(ctx) //
+            && has(ctx, 960); // Plank
+    },
+    canMakeOakLarder(ctx) {
+        return canTrainConstruction(ctx) //
+            && has(ctx, 8778); // Oak plank
+    },
+    canMakeTeakLarder(ctx) {
+        return canTrainConstruction(ctx) //
+            && has(ctx, 8790)  // Bolt of cloth
+            && has(ctx, 8780); // Teak plank
+    },
+    canMakeWoodenShelvesI(ctx) {
+        return canTrainConstruction(ctx) //
+            && hasAnyNails(ctx) //
+            && has(ctx, 960); // Plank
+    },
+    canMakeWoodenShelvesII(ctx) {
+        return canTrainConstruction(ctx) //
+            && hasAnyNails(ctx) //
+            && has(ctx, 1761) // Soft clay
+            && has(ctx, 960); // Plank
+    },
+    canMakeOakShelves(ctx) {
+        return canTrainConstruction(ctx) //
+            && has(ctx, 1761)  // Soft clay
+            && has(ctx, 8778); // Oak plank
+    },
+    canMakeTeakShelvesI(ctx) {
+        return canTrainConstruction(ctx) //
+            && has(ctx, 1761)  // Soft clay
+            && has(ctx, 8780); // Teak plank
+    },
+    canMakeTeakShelvesII(ctx) {
+        return canTrainConstruction(ctx) //
+            && has(ctx, 1761)  // Soft clay
+            && has(ctx, 8780)  // Teak plank
+            && has(ctx, 8784); // Gold leaf
+    },
     canCompleteTaiBwoWannaiTrio(ctx) {
         return canCompleteTaiBwoWannaiTrio(ctx);
     },
@@ -1572,7 +1656,7 @@ function canCatchButterflies(ctx) {
 }
 
 function hasAnyNails(ctx) {
-    return has(ctx, 4819)      // Bronze nails
+    return has(ctx, 4819)  // Bronze nails
         || has(ctx, 4820)  // Iron nails
         || has(ctx, 1539)  // Steel nails
         || has(ctx, 4821)  // Black nails

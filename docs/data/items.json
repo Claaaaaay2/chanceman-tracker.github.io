@@ -4557,7 +4557,7 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Smithing": {
+        "Barbarian smithing": {
           "notes": "Requires an adamantite bar and yew logs.",
           "rule": {
             "all": [
@@ -4567,7 +4567,7 @@
               {
                 "has": 1515
               },
-              "canTrainSmithing"
+              "canCompleteBarbarianSmithing"
             ]
           }
         }
@@ -10870,6 +10870,10 @@
               "canTrainCooking"
             ]
           }
+        },
+        "Questing": {
+          "notes": "Received at the start of Nature Spirit.",
+          "rule": "canCompletePriestInPeril"
         }
       },
       "shops": {
@@ -12278,10 +12282,15 @@
     "id": 8520,
     "name": "Asgarnian ale (flatpack)",
     "image": "asgarnian_ale_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires oak planks and asgarnian ale.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeWoodenWorkbench",
           "rule": {
             "all": [
               {
@@ -16181,18 +16190,21 @@
     "id": 8516,
     "name": "Beer barrel (flatpack)",
     "image": "beer_barrel_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
-          "notes": "Requires planks and steel nails.",
+          "notes": "Requires planks and any nails.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeWoodenWorkbench",
           "rule": {
             "all": [
               {
                 "has": 960
               },
-              {
-                "has": 1539
-              },
+              "hasAnyNails",
               "canCompletePandemonium"
             ]
           }
@@ -16206,6 +16218,26 @@
     "name": "Beer glass",
     "image": "beer_glass.png",
     "sources": {
+      "drops": {
+        "Wooden shelves 2": {
+          "droprate": "Always"
+        },
+        "Wooden shelves 3": {
+          "droprate": "Always"
+        },
+        "Oak shelves 1": {
+          "droprate": "Always"
+        },
+        "Oak shelves 2": {
+          "droprate": "Always"
+        },
+        "Teak shelves 1": {
+          "droprate": "Always"
+        },
+        "Teak shelves 2": {
+          "droprate": "Always"
+        }
+      },
       "other": {
         "Searching": {
           "notes": "Search shelves in the Sorceress's house."
@@ -20182,6 +20214,10 @@
       "other": {
         "Crafting a toy horsey": {
           "notes": "Requires plank",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeCraftingTableI",
           "rule": {
             "all": [
               {
@@ -22865,6 +22901,12 @@
       },
       "spawns": {
         "Yes": "canCompletePriestInPeril"
+      },
+      "other": {
+        "Purchasing through dialogue": {
+          "notes": "Talk to the bartender in Slepe.",
+          "rule": "canCompletePriestInPeril"
+        }
       }
     }
   },
@@ -26284,18 +26326,21 @@
     "id": 8510,
     "name": "Bookcase (flatpack)",
     "image": "bookcase_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
-          "notes": "Requires planks and steel nails.",
+          "notes": "Requires planks and any nails.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeWoodenWorkbench",
           "rule": {
             "all": [
               {
                 "has": 960
               },
-              {
-                "has": 1539
-              },
+              "hasAnyNails",
               "canCompletePandemonium"
             ]
           }
@@ -26843,6 +26888,9 @@
         "Drink troll": {
           "droprate": "1/10"
         }
+      },
+      "shops": {
+        "Yes": "No requirements"
       }
     }
   },
@@ -29741,14 +29789,17 @@
         }
       },
       "other": {
-        "Smithing": {
-          "notes": "Requires a bronze bar.",
+        "Barbarian smithing": {
+          "notes": "Requires a bronze bar and logs.",
           "rule": {
             "all": [
               {
                 "has": 2349
               },
-              "canTrainSmithing"
+              {
+                "has": 1511
+              },
+              "canCompleteBarbarianSmithing"
             ]
           }
         }
@@ -30215,6 +30266,10 @@
       "other": {
         "Crafting a toy horsey": {
           "notes": "Requires plank",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeCraftingTableI",
           "rule": {
             "all": [
               {
@@ -32189,6 +32244,23 @@
     "name": "Cake tin",
     "image": "cake_tin.png",
     "sources": {
+      "drops": {
+        "Wooden shelves 3": {
+          "droprate": "Always"
+        },
+        "Oak shelves 1": {
+          "droprate": "Always"
+        },
+        "Oak shelves 2": {
+          "droprate": "Always"
+        },
+        "Teak shelves 1": {
+          "droprate": "Always"
+        },
+        "Teak shelves 2": {
+          "droprate": "Always"
+        }
+      },
       "shops": {
         "Yes": "No requirements"
       },
@@ -32803,10 +32875,15 @@
     "id": 8566,
     "name": "Carved oak bench (flatpack)",
     "image": "carved_oak_bench_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires oak planks.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeOakWorkbench",
           "rule": {
             "all": [
               {
@@ -32824,10 +32901,15 @@
     "id": 9853,
     "name": "Carved oak magic wardrobe (flatpack)",
     "image": "carved_oak_magic_wardrobe_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires oak planks.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -32845,10 +32927,15 @@
     "id": 8552,
     "name": "Carved oak table (flatpack)",
     "image": "carved_oak_table_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires oak planks.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeOakWorkbench",
           "rule": {
             "all": [
               {
@@ -32866,10 +32953,15 @@
     "id": 8570,
     "name": "Carved teak bench (flatpack)",
     "image": "carved_teak_bench_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires teak planks.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -32887,10 +32979,15 @@
     "id": 9855,
     "name": "Carved teak magic wardrobe (flatpack)",
     "image": "carved_teak_magic_wardrobe_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires teak planks.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -32908,10 +33005,15 @@
     "id": 8556,
     "name": "Carved teak table (flatpack)",
     "image": "carved_teak_table_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires teak planks and a bolt of cloth.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -34620,10 +34722,15 @@
     "id": 8526,
     "name": "Chef's delight (flatpack)",
     "image": "chef's_delight_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires planks, steel bar, and chef's delight.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -35430,18 +35537,21 @@
     "id": 8518,
     "name": "Cider barrel (flatpack)",
     "image": "cider_barrel_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
-          "notes": "Requires planks, steel nails, and cider.",
+          "notes": "Requires planks, any nails, and cider.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeWoodenWorkbench",
           "rule": {
             "all": [
               {
                 "has": 960
               },
-              {
-                "has": 1539
-              },
+              "hasAnyNails",
               {
                 "has": 5763
               },
@@ -35707,6 +35817,10 @@
       "other": {
         "Crafting": {
           "notes": "Requires steel bar",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeCraftingTableII",
           "rule": {
             "all": [
               {
@@ -38756,18 +38870,21 @@
     "id": 8496,
     "name": "Crude chair (flatpack)",
     "image": "crude_chair_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
-          "notes": "Requires planks and steel nails.",
+          "notes": "Requires planks and any nails.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeWoodenWorkbench",
           "rule": {
             "all": [
               {
                 "has": 960
               },
-              {
-                "has": 1539
-              },
+              "hasAnyNails",
               "canCompletePandemonium"
             ]
           }
@@ -43643,10 +43760,15 @@
     "id": 8524,
     "name": "Dragon bitter (flatpack)",
     "image": "dragon_bitter_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires oak planks, steel bar and a dragon bitter.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeOakWorkbench",
           "rule": {
             "all": [
               {
@@ -50429,6 +50551,9 @@
       "drops": {
         "Mogre": {
           "droprate": "1/128"
+        },
+        "Mogre (Sailing)": {
+          "droprate": "1/128"
         }
       },
       "other": {
@@ -53111,10 +53236,15 @@
     "id": 8604,
     "name": "Fancy teak dresser (flatpack)",
     "image": "fancy_teak_dresser_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires teak planks and a molten glass.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -55625,10 +55755,15 @@
     "id": 8586,
     "name": "Four-poster bed (flatpack)",
     "image": "four-poster_bed_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires Mahogany plank and a bolt of cloth.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -56745,10 +56880,15 @@
     "id": 8574,
     "name": "Gilded bench (flatpack)",
     "image": "gilded_bench_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires Mahogany plank and gold leaf.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -56788,10 +56928,15 @@
     "id": 9846,
     "name": "Gilded cape rack (flatpack)",
     "image": "gilded_cape_rack_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires Mahogany plank and gold leaf.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -56834,10 +56979,15 @@
     "id": 8594,
     "name": "Gilded clock (flatpack)",
     "image": "gilded_clock_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires Mahogany plank, clockwork and gold leaf.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -56963,10 +57113,15 @@
     "id": 8608,
     "name": "Gilded dresser (flatpack)",
     "image": "gilded_dresser_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires Mahogany plank, molten glass and gold leaf.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -56990,10 +57145,15 @@
     "id": 8588,
     "name": "Gilded four-poster (flatpack)",
     "image": "gilded_four-poster_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires Mahogany plank, bolt of cloth and gold leaf.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -57083,10 +57243,15 @@
     "id": 9857,
     "name": "Gilded magic wardrobe (flatpack)",
     "image": "gilded_magic_wardrobe_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires Mahogany plank and gold leaf.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -57296,10 +57461,15 @@
     "id": 8622,
     "name": "Gilded wardrobe (flatpack)",
     "image": "gilded_wardrobe_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires Mahogany plank and gold leaf.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -60150,10 +60320,15 @@
     "id": 8522,
     "name": "Greenman's ale (flatpack)",
     "image": "greenman's_ale_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires oak planks and greenman's ale.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeOakWorkbench",
           "rule": {
             "all": [
               {
@@ -60336,6 +60511,10 @@
       "other": {
         "Crafting a toy horsey": {
           "notes": "Requires plank",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeCraftingTableI",
           "rule": {
             "all": [
               {
@@ -81776,18 +81955,21 @@
     "id": 8528,
     "name": "Kitchen table (flatpack)",
     "image": "kitchen_table_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
-          "notes": "Requires planks and steel nails.",
+          "notes": "Requires planks and any nails.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeWoodenWorkbench",
           "rule": {
             "all": [
               {
                 "has": 960
               },
-              {
-                "has": 1539
-              },
+              "hasAnyNails",
               "canCompletePandemonium"
             ]
           }
@@ -83220,10 +83402,15 @@
     "id": 8580,
     "name": "Large oak bed (flatpack)",
     "image": "large_oak_bed_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires oak planks and a bolt of cloth.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeOakWorkbench",
           "rule": {
             "all": [
               {
@@ -83328,10 +83515,15 @@
     "id": 8584,
     "name": "Large teak bed (flatpack)",
     "image": "large_teak_bed_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires teak planks and a bolt of cloth.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -86957,10 +87149,15 @@
     "id": 9864,
     "name": "M. treasure chest (flatpack)",
     "image": "m._treasure_chest_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires mahogany plank.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -87064,10 +87261,15 @@
     "id": 9848,
     "name": "Magic cape rack (flatpack)",
     "image": "magic_cape_rack_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires magic stone.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -88145,10 +88347,15 @@
     "id": 8508,
     "name": "Mahogany armchair (flatpack)",
     "image": "mahogany_armchair_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires mahogany plank.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -88166,10 +88373,15 @@
     "id": 9861,
     "name": "Mahogany armour case (flatpack)",
     "image": "mahogany_armour_case_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires mahogany plank.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -88187,10 +88399,15 @@
     "id": 8572,
     "name": "Mahogany bench (flatpack)",
     "image": "mahogany_bench_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires mahogany plank.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -88238,10 +88455,15 @@
     "id": 8514,
     "name": "Mahogany bookcase (flatpack)",
     "image": "mahogany_bookcase_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires mahogany plank.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeOakWorkbench",
           "rule": {
             "all": [
               {
@@ -88259,10 +88481,15 @@
     "id": 9845,
     "name": "Mahogany cape rack (flatpack)",
     "image": "mahogany_cape_rack_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires mahogany plank.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -88280,10 +88507,15 @@
     "id": 8606,
     "name": "Mahogany dresser (flatpack)",
     "image": "mahogany_dresser_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires mahogany plank and molten glass.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -88304,10 +88536,15 @@
     "id": 9867,
     "name": "Mahogany fancy dress box (flatpack)",
     "image": "mahogany_fancy_dress_box_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires mahogany plank.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -88327,7 +88564,7 @@
     "image": "mahogany_hull_parts.png",
     "sources": {
       "other": {
-        "Constructing a flatpack": {
+        "Constructing hull parts": {
           "notes": "Requires mahogany plank.",
           "rule": {
             "all": [
@@ -88422,10 +88659,15 @@
     "id": 9856,
     "name": "Mahogany magic wardrobe (flatpack)",
     "image": "mahogany_magic_wardrobe_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires mahogany plank.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -88735,10 +88977,15 @@
     "id": 8558,
     "name": "Mahogany table (flatpack)",
     "image": "mahogany_table_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires mahogany plank.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -88756,10 +89003,15 @@
     "id": 9851,
     "name": "Mahogany toy box (flatpack)",
     "image": "mahogany_toy_box_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires mahogany plank.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -88777,10 +89029,15 @@
     "id": 8620,
     "name": "Mahogany wardrobe (flatpack)",
     "image": "mahogany_wardrobe_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires mahogany plank.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -89476,10 +89733,15 @@
     "id": 9847,
     "name": "Marble cape rack (flatpack)",
     "image": "marble_cape_rack_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires Marble block.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -89497,10 +89759,15 @@
     "id": 9858,
     "name": "Marble magic wardrobe (flatpack)",
     "image": "marble_magic_wardrobe_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires Marble block.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -90273,6 +90540,10 @@
               "canTrainCooking"
             ]
           }
+        },
+        "Questing": {
+          "notes": "Received at the start of Nature Spirit.",
+          "rule": "canCompletePriestInPeril"
         }
       }
     }
@@ -95907,6 +96178,9 @@
             ]
           }
         }
+      },
+      "shops": {
+        "Yes": "canCompletePriestInPeril"
       }
     }
   },
@@ -99185,10 +99459,15 @@
     "id": 8504,
     "name": "Oak armchair (flatpack)",
     "image": "oak_armchair_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires oak planks.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeOakWorkbench",
           "rule": {
             "all": [
               {
@@ -99206,10 +99485,15 @@
     "id": 9859,
     "name": "Oak armour case (flatpack)",
     "image": "oak_armour_case_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires oak planks.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -99227,10 +99511,15 @@
     "id": 8578,
     "name": "Oak bed (flatpack)",
     "image": "oak_bed_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires oak planks and a bolt of cloth.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeOakWorkbench",
           "rule": {
             "all": [
               {
@@ -99251,10 +99540,15 @@
     "id": 8564,
     "name": "Oak bench (flatpack)",
     "image": "oak_bench_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires oak planks.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeOakWorkbench",
           "rule": {
             "all": [
               {
@@ -99324,10 +99618,15 @@
     "id": 8512,
     "name": "Oak bookcase (flatpack)",
     "image": "oak_bookcase_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires oak planks.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeOakWorkbench",
           "rule": {
             "all": [
               {
@@ -99345,10 +99644,15 @@
     "id": 9843,
     "name": "Oak cape rack (flatpack)",
     "image": "oak_cape_rack_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires oak planks.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -99366,10 +99670,15 @@
     "id": 8502,
     "name": "Oak chair (flatpack)",
     "image": "oak_chair_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires oak planks.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeWoodenWorkbench",
           "rule": {
             "all": [
               {
@@ -99387,10 +99696,15 @@
     "id": 8590,
     "name": "Oak clock (flatpack)",
     "image": "oak_clock_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires oak planks and clockwork.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeOakWorkbench",
           "rule": {
             "all": [
               {
@@ -99411,10 +99725,15 @@
     "id": 8550,
     "name": "Oak dining table (flatpack)",
     "image": "oak_dining_table_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires oak planks.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeOakWorkbench",
           "rule": {
             "all": [
               {
@@ -99432,10 +99751,15 @@
     "id": 8612,
     "name": "Oak drawers (flatpack)",
     "image": "oak_drawers_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires oak planks.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeOakWorkbench",
           "rule": {
             "all": [
               {
@@ -99453,10 +99777,15 @@
     "id": 8600,
     "name": "Oak dresser (flatpack)",
     "image": "oak_dresser_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires oak planks and molten glass.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeOakWorkbench",
           "rule": {
             "all": [
               {
@@ -99477,10 +99806,15 @@
     "id": 9865,
     "name": "Oak fancy dress box (flatpack)",
     "image": "oak_fancy_dress_box_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires oak planks.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -99519,10 +99853,15 @@
     "id": 8530,
     "name": "Oak kitchen table (flatpack)",
     "image": "oak_kitchen_table_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires oak planks.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeOakWorkbench",
           "rule": {
             "all": [
               {
@@ -99669,10 +100008,15 @@
     "id": 9852,
     "name": "Oak magic wardrobe (flatpack)",
     "image": "oak_magic_wardrobe_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires oak planks.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -99878,10 +100222,15 @@
     "id": 8598,
     "name": "Oak shaving stand (flatpack)",
     "image": "oak_shaving_stand_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires oak planks and molten glass.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeOakWorkbench",
           "rule": {
             "all": [
               {
@@ -100018,10 +100367,15 @@
     "id": 9849,
     "name": "Oak toy box (flatpack)",
     "image": "oak_toy_box_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires oak planks.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -100039,10 +100393,15 @@
     "id": 9862,
     "name": "Oak treasure chest (flatpack)",
     "image": "oak_treasure_chest_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires oak planks.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -100060,10 +100419,15 @@
     "id": 8614,
     "name": "Oak wardrobe (flatpack)",
     "image": "oak_wardrobe_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires oak planks.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeOakWorkbench",
           "rule": {
             "all": [
               {
@@ -101849,10 +102213,15 @@
     "id": 8560,
     "name": "Opulent table (flatpack)",
     "image": "opulent_table_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires mahogany planks, bolt of cloth, gold leaf and marble block.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -113614,18 +113983,21 @@
     "id": 8500,
     "name": "Rocking chair (flatpack)",
     "image": "rocking_chair_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
-          "notes": "Requires planks, and steel nails.",
+          "notes": "Requires planks, and any nails.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeWoodenWorkbench",
           "rule": {
             "all": [
               {
                 "has": 960
               },
-              {
-                "has": 1539
-              },
+              "hasAnyNails",
               "canCompletePandemonium"
             ]
           }
@@ -118930,7 +119302,7 @@
         }
       },
       "other": {
-        "Smithing": {
+        "Barbarian smithing": {
           "notes": "Requires a runite bar and magic logs.",
           "rule": {
             "all": [
@@ -123618,18 +123990,21 @@
     "id": 8596,
     "name": "Shaving stand (flatpack)",
     "image": "shaving_stand_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
-          "notes": "Requires planks, steel nails and molten glass.",
+          "notes": "Requires planks, any nails and molten glass.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeOakWorkbench",
           "rule": {
             "all": [
               {
                 "has": 960
               },
-              {
-                "has": 1539
-              },
+              "hasAnyNails",
               {
                 "has": 1775
               },
@@ -123807,18 +124182,21 @@
     "id": 8610,
     "name": "Shoe box (flatpack)",
     "image": "shoe_box_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
-          "notes": "Requires planks and steel nails.",
+          "notes": "Requires planks and any nails.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeWoodenWorkbench",
           "rule": {
             "all": [
               {
                 "has": 960
               },
-              {
-                "has": 1539
-              },
+              "hasAnyNails",
               "canCompletePandemonium"
             ]
           }
@@ -132956,6 +133334,22 @@
       },
       "spawns": {
         "Yes": "canStartPerilousMoons"
+      },
+      "other": {
+        "Barbarian smithing": {
+          "notes": "Requires a steel bar and willow logs.",
+          "rule": {
+            "all": [
+              {
+                "has": 2353
+              },
+              {
+                "has": 1519
+              },
+              "canCompleteBarbarianSmithing"
+            ]
+          }
+        }
       }
     }
   },
@@ -134569,15 +134963,13 @@
     "sources": {
       "other": {
         "Smithing": {
-          "notes": "Requires a log brace, steel nails, a rope, and an adamantite bar",
+          "notes": "Requires a log brace, any nails, a rope, and an adamantite bar",
           "rule": {
             "all": [
               {
                 "has": 28146
               },
-              {
-                "has": 1539
-              },
+              "hasAnyNails",
               {
                 "has": 954
               },
@@ -138705,10 +139097,15 @@
     "id": 8506,
     "name": "Teak armchair (flatpack)",
     "image": "teak_armchair_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires teak planks.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeOakWorkbench",
           "rule": {
             "all": [
               {
@@ -138726,10 +139123,15 @@
     "id": 9860,
     "name": "Teak armour case (flatpack)",
     "image": "teak_armour_case_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires teak planks.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -138747,10 +139149,15 @@
     "id": 8582,
     "name": "Teak bed (flatpack)",
     "image": "teak_bed_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires teak planks and a bolt of cloth.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeOakWorkbench",
           "rule": {
             "all": [
               {
@@ -138801,10 +139208,15 @@
     "id": 9844,
     "name": "Teak cape rack (flatpack)",
     "image": "teak_cape_rack_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires teak planks.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -138822,10 +139234,15 @@
     "id": 8592,
     "name": "Teak clock (flatpack)",
     "image": "teak_clock_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires teak planks and a clockwork.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -138846,10 +139263,15 @@
     "id": 8568,
     "name": "Teak dining bench (flatpack)",
     "image": "teak_dining_bench_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires teak planks.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeOakWorkbench",
           "rule": {
             "all": [
               {
@@ -138867,10 +139289,15 @@
     "id": 8616,
     "name": "Teak drawers (flatpack)",
     "image": "teak_drawers_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires teak planks.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -138888,10 +139315,15 @@
     "id": 8602,
     "name": "Teak dresser (flatpack)",
     "image": "teak_dresser_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires teak planks and molten glass.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -138912,10 +139344,15 @@
     "id": 9866,
     "name": "Teak fancy dress box (flatpack)",
     "image": "teak_fancy_dress_box_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires teak planks.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -138954,10 +139391,15 @@
     "id": 8532,
     "name": "Teak kitchen table (flatpack)",
     "image": "teak_kitchen_table_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires teak planks.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -139042,10 +139484,15 @@
     "id": 9854,
     "name": "Teak magic wardrobe (flatpack)",
     "image": "teak_magic_wardrobe_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires teak planks.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -139313,6 +139760,9 @@
             ]
           }
         }
+      },
+      "shops": {
+        "Yes": "No requirements"
       }
     }
   },
@@ -139321,10 +139771,15 @@
     "id": 8554,
     "name": "Teak table (flatpack)",
     "image": "teak_table_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires teak planks.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeOakWorkbench",
           "rule": {
             "all": [
               {
@@ -139342,10 +139797,15 @@
     "id": 9850,
     "name": "Teak toy box (flatpack)",
     "image": "teak_toy_box_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires teak planks.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -139363,10 +139823,15 @@
     "id": 9863,
     "name": "Teak treasure chest (flatpack)",
     "image": "teak_treasure_chest_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires teak planks.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -139384,10 +139849,15 @@
     "id": 8618,
     "name": "Teak wardrobe (flatpack)",
     "image": "teak_wardrobe_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
           "notes": "Requires teak planks.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeSteelFramedWorkbench",
           "rule": {
             "all": [
               {
@@ -143268,6 +143738,10 @@
       "other": {
         "Craft a toy cat": {
           "notes": "Requires a plank and a clockwork.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeCraftingTableII",
           "rule": {
             "all": [
               {
@@ -143292,6 +143766,10 @@
       "other": {
         "Craft a toy doll": {
           "notes": "Requires a plank and a clockwork.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeCraftingTableII",
           "rule": {
             "all": [
               {
@@ -143347,6 +143825,10 @@
       "other": {
         "Craft a toy mouse": {
           "notes": "Requires a plank and a clockwork.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeCraftingTableII",
           "rule": {
             "all": [
               {
@@ -143402,6 +143884,10 @@
       "other": {
         "Craft a toy soldier": {
           "notes": "Requires a plank and a clockwork.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeCraftingTableII",
           "rule": {
             "all": [
               {
@@ -150396,6 +150882,11 @@
     "name": "Watering can",
     "image": "watering_can.png",
     "sources": {
+      "drops": {
+        "Tool store 5": {
+          "droprate": "Always"
+        }
+      },
       "shops": {
         "Yes": "No requirements"
       },
@@ -151907,6 +152398,10 @@
       "other": {
         "Crafting a toy horsey": {
           "notes": "Requires plank",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeCraftingTableI",
           "rule": {
             "all": [
               {
@@ -153685,18 +154180,21 @@
     "id": 8548,
     "name": "Wood dining table (flatpack)",
     "image": "wood_dining_table_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
-          "notes": "Requires planks and steel nails.",
+          "notes": "Requires planks and any nails.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeWoodenWorkbench",
           "rule": {
             "all": [
               {
                 "has": 960
               },
-              {
-                "has": 1539
-              },
+              "hasAnyNails",
               "canCompletePandemonium"
             ]
           }
@@ -153709,18 +154207,21 @@
     "id": 8576,
     "name": "Wooden bed (flatpack)",
     "image": "wooden_bed_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
-          "notes": "Requires planks, steel nails and a bolt of cloth.",
+          "notes": "Requires planks, any nails and a bolt of cloth.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeWoodenWorkbench",
           "rule": {
             "all": [
               {
                 "has": 960
               },
-              {
-                "has": 1539
-              },
+              "hasAnyNails",
               {
                 "has": 8790
               },
@@ -153736,18 +154237,21 @@
     "id": 8562,
     "name": "Wooden bench (flatpack)",
     "image": "wooden_bench_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
-          "notes": "Requires planks and steel nails.",
+          "notes": "Requires planks and any nails.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeWoodenWorkbench",
           "rule": {
             "all": [
               {
                 "has": 960
               },
-              {
-                "has": 1539
-              },
+              "hasAnyNails",
               "canCompletePandemonium"
             ]
           }
@@ -153764,6 +154268,10 @@
       "other": {
         "Crafting a wooden cat": {
           "notes": "Requires planks and fur, bear fur, or grey wolf fur.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeCraftingTableI",
           "rule": {
             "all": [
               {
@@ -153794,18 +154302,21 @@
     "id": 8498,
     "name": "Wooden chair (flatpack)",
     "image": "wooden_chair_(flatpack).png",
+    "tags": "flatpack",
     "sources": {
       "other": {
         "Constructing a flatpack": {
-          "notes": "Requires planks and steel nails.",
+          "notes": "Requires planks and any nails.",
+          "tags": [
+            "house"
+          ],
+          "houseRule": "canMakeWoodenWorkbench",
           "rule": {
             "all": [
               {
                 "has": 960
               },
-              {
-                "has": 1539
-              },
+              "hasAnyNails",
               "canCompletePandemonium"
             ]
           }

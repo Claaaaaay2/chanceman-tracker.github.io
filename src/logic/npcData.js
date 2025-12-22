@@ -2278,18 +2278,18 @@ export const NPC_DATA = {
     },
     "Broken armour": {
         "wiki": "https://oldschool.runescape.wiki/w/Broken_armour",
-        "rule": null,
+        "rule": ["canMakeArmourStand"],
         "skill": [],
         "level": [],
-        "tags": ["armourStand"],
+        "tags": ["house"],
         "f2p": false
     },
     "Broken arrow": {
         "wiki": "https://oldschool.runescape.wiki/w/Broken_arrow",
-        "rule": null,
+        "rule": ["canMakeRepairBench"],
         "skill": [],
         "level": [],
-        "tags": ["armourStand"],
+        "tags": ["house"],
         "f2p": false
     },
     "Broken rune case": {
@@ -2302,10 +2302,10 @@ export const NPC_DATA = {
     },
     "Broken staff": {
         "wiki": "https://oldschool.runescape.wiki/w/Broken_staff",
-        "rule": null,
+        "rule": ["canMakeRepairBench"],
         "skill": [],
         "level": [],
-        "tags": ["armourStand"],
+        "tags": ["house"],
         "f2p": false
     },
     "Bronze Chest (black)": {
@@ -4333,10 +4333,10 @@ export const NPC_DATA = {
     },
     "Damaged armour": {
         "wiki": "https://oldschool.runescape.wiki/w/Damaged_armour",
-        "rule": null,
+        "rule": ["canMakeArmourStand"],
         "skill": [],
         "level": [],
-        "tags": ["armourStand"],
+        "tags": ["house"],
         "f2p": false
     },
     "Damis (Nightmare Zone)": {
@@ -10700,7 +10700,7 @@ export const NPC_DATA = {
     },
     "Oak larder": {
         "wiki": "https://oldschool.runescape.wiki/w/Oak_larder",
-        "rule": null,
+        "rule": ["canMakeOakLarder"],
         "skill": [],
         "level": [],
         "tags": ["house"],
@@ -10708,7 +10708,7 @@ export const NPC_DATA = {
     },
     "Oak shelves 1": {
         "wiki": "https://oldschool.runescape.wiki/w/Oak_shelves_1",
-        "rule": null,
+        "rule": ["canMakeOakShelves"],
         "skill": [],
         "level": [],
         "tags": ["house"],
@@ -10716,7 +10716,7 @@ export const NPC_DATA = {
     },
     "Oak shelves 2": {
         "wiki": "https://oldschool.runescape.wiki/w/Oak_shelves_2",
-        "rule": null,
+        "rule": ["canMakeOakShelves"],
         "skill": [],
         "level": [],
         "tags": ["house"],
@@ -12788,7 +12788,7 @@ export const NPC_DATA = {
     },
     "Rusty sword POH repair": {
         "wiki": "https://oldschool.runescape.wiki/w/Rusty_sword#POH_repair",
-        "rule": null,
+        "rule": ["canMakeWhetstone"],
         "skill": [],
         "level": [],
         "tags": ["house"],
@@ -14760,7 +14760,7 @@ export const NPC_DATA = {
     },
     "Teak larder": {
         "wiki": "https://oldschool.runescape.wiki/w/Teak_larder",
-        "rule": null,
+        "rule": ["canMakeTeakLarder"],
         "skill": [],
         "level": [],
         "tags": ["house"],
@@ -14768,7 +14768,7 @@ export const NPC_DATA = {
     },
     "Teak shelves 1": {
         "wiki": "https://oldschool.runescape.wiki/w/Teak_shelves_1",
-        "rule": null,
+        "rule": ["canMakeTeakShelvesI"],
         "skill": [],
         "level": [],
         "tags": ["house"],
@@ -14776,7 +14776,7 @@ export const NPC_DATA = {
     },
     "Teak shelves 2": {
         "wiki": "https://oldschool.runescape.wiki/w/Teak_shelves_2",
-        "rule": null,
+        "rule": ["canMakeTeakShelvesII"],
         "skill": [],
         "level": [],
         "tags": ["house"],
@@ -15055,7 +15055,7 @@ export const NPC_DATA = {
     },
     "Tool store 1": {
         "wiki": "https://oldschool.runescape.wiki/w/Tool_store_1",
-        "rule": null,
+        "rule": ["canMakeToolStore"],
         "skill": [],
         "level": [],
         "tags": ["house"],
@@ -15063,7 +15063,7 @@ export const NPC_DATA = {
     },
     "Tool store 2": {
         "wiki": "https://oldschool.runescape.wiki/w/Tool_store_2",
-        "rule": null,
+        "rule": ["canMakeToolStore"],
         "skill": [],
         "level": [],
         "tags": ["house"],
@@ -15071,7 +15071,7 @@ export const NPC_DATA = {
     },
     "Tool store 3": {
         "wiki": "https://oldschool.runescape.wiki/w/Tool_store_3",
-        "rule": null,
+        "rule": ["canMakeToolStore"],
         "skill": [],
         "level": [],
         "tags": ["house"],
@@ -15079,7 +15079,7 @@ export const NPC_DATA = {
     },
     "Tool store 4": {
         "wiki": "https://oldschool.runescape.wiki/w/Tool_store_4",
-        "rule": null,
+        "rule": ["canMakeToolStore"],
         "skill": [],
         "level": [],
         "tags": ["house"],
@@ -15087,7 +15087,7 @@ export const NPC_DATA = {
     },
     "Tool store 5": {
         "wiki": "https://oldschool.runescape.wiki/w/Tool_store_5",
-        "rule": null,
+        "rule": ["canMakeToolStore"],
         "skill": [],
         "level": [],
         "tags": ["house"],
@@ -16428,7 +16428,31 @@ export const NPC_DATA = {
     },
     "Wooden larder": {
         "wiki": "https://oldschool.runescape.wiki/w/Wooden_larder",
-        "rule": null,
+        "rule": ["canMakeWoodenLarder"],
+        "skill": [],
+        "level": [],
+        "tags": ["house"],
+        "f2p": false
+    },
+    "Wooden shelves 1": {
+        "wiki": "https://oldschool.runescape.wiki/w/Wooden_shelves_1",
+        "rule": ["canMakeWoodenShelvesI"],
+        "skill": [],
+        "level": [],
+        "tags": ["house"],
+        "f2p": false
+    },
+    "Wooden shelves 2": {
+        "wiki": "https://oldschool.runescape.wiki/w/Wooden_shelves_2",
+        "rule": ["canMakeWoodenShelvesII"],
+        "skill": [],
+        "level": [],
+        "tags": ["house"],
+        "f2p": false
+    },
+    "Wooden shelves 3": {
+        "wiki": "https://oldschool.runescape.wiki/w/Wooden_shelves_3",
+        "rule": ["canMakeWoodenShelvesII"],
         "skill": [],
         "level": [],
         "tags": ["house"],
