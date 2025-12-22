@@ -9656,10 +9656,10 @@
               "canCompleteDesertTreasure"
             ]
           }
+        },
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -20845,8 +20845,10 @@
           "droprate": "1/105"
         }
       },
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
+        }
       }
     }
   },
@@ -21023,8 +21025,10 @@
           "droprate": "1/105"
         }
       },
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
+        }
       }
     }
   },
@@ -21108,8 +21112,10 @@
           "droprate": "1/12.15"
         }
       },
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
+        }
       }
     }
   },
@@ -21274,8 +21280,10 @@
           "droprate": "1/105"
         }
       },
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
+        }
       }
     }
   },
@@ -21428,8 +21436,10 @@
           "droprate": "1/105"
         }
       },
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
+        }
       }
     }
   },
@@ -21633,8 +21643,10 @@
           "droprate": "1/105"
         }
       },
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
+        }
       }
     }
   },
@@ -21718,8 +21730,10 @@
           "droprate": "1/24.3"
         }
       },
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
+        }
       }
     }
   },
@@ -21809,8 +21823,10 @@
           "droprate": "1/24.3"
         }
       },
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
+        }
       }
     }
   },
@@ -23221,8 +23237,10 @@
     "name": "Blue dark bow paint",
     "image": "blue_dark_bow_paint.png",
     "sources": {
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
+        }
       }
     }
   },
@@ -24514,8 +24532,10 @@
           "droprate": "7 × 1/8.096"
         }
       },
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
+        }
       }
     }
   },
@@ -32901,10 +32921,10 @@
               "canCompleteDesertTreasure"
             ]
           }
+        },
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -34525,10 +34545,10 @@
           "rule": {
             "all": [
               {
-                "has": 1452
+                "has": 5525
               },
               {
-                "has": 1446
+                "has": 1452
               }
             ]
           }
@@ -35825,8 +35845,10 @@
     "name": "Climbing boots",
     "image": "climbing_boots.png",
     "sources": {
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
+        }
       }
     }
   },
@@ -35902,8 +35924,8 @@
     "image": "clothes_pouch_blueprint.png",
     "sources": {
       "other": {
-        "Forestry rewards": {
-          "notes": "Requires willow and maple logs.",
+        "Special shop": {
+          "notes": "Forestry reward - Requires willow and maple logs.",
           "rule": {
             "all": [
               {
@@ -38524,7 +38546,7 @@
           "rule": {
             "all": [
               {
-                "has": 1452
+                "has": 5525
               },
               {
                 "has": 1454
@@ -39148,8 +39170,10 @@
           "droprate": "1/120"
         }
       },
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
+        }
       }
     }
   },
@@ -39638,10 +39662,10 @@
               "canCompleteDesertTreasure"
             ]
           }
+        },
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -40737,7 +40761,7 @@
           "rule": {
             "all": [
               {
-                "has": 1452
+                "has": 5525
               },
               {
                 "has": 1456
@@ -45857,8 +45881,10 @@
     "name": "Dragon pickaxe upgrade kit",
     "image": "dragon_pickaxe_upgrade_kit.png",
     "sources": {
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
+        }
       }
     }
   },
@@ -49103,7 +49129,7 @@
           "rule": {
             "all": [
               {
-                "has": 1452
+                "has": 5525
               },
               {
                 "has": 1440
@@ -53651,8 +53677,8 @@
     "image": "felling_axe_handle.png",
     "sources": {
       "other": {
-        "Forestry rewards": {
-          "notes": "Requires oak logs.",
+        "Special shop": {
+          "notes": "forestry rewards - Requires oak logs.",
           "rule": {
             "all": [
               {
@@ -54684,7 +54710,7 @@
           "rule": {
             "all": [
               {
-                "has": 1452
+                "has": 5525
               },
               {
                 "has": 1442
@@ -56292,8 +56318,10 @@
     "name": "Frozen whip mix",
     "image": "frozen_whip_mix.png",
     "sources": {
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
+        }
       }
     }
   },
@@ -56676,10 +56704,10 @@
               "canCompleteDesertTreasure"
             ]
           }
+        },
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -59401,8 +59429,10 @@
     "name": "Granite clamp",
     "image": "granite_clamp.png",
     "sources": {
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
+        }
       }
     }
   },
@@ -59564,8 +59594,17 @@
     "name": "Grape seed",
     "image": "grape_seed.png",
     "sources": {
-      "shops": {
-        "Yes": "canTrainFarming"
+      "other": {
+        "Special shop": {
+          "notes": "Tithe farm reward.",
+          "rule": {
+            "all": [
+                {
+                  "has": 952
+                },
+                "canTrainFarming"
+                ]}
+              }
       }
     }
   },
@@ -59931,8 +59970,10 @@
     "name": "Green dark bow paint",
     "image": "green_dark_bow_paint.png",
     "sources": {
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
+        }
       }
     }
   },
@@ -81938,10 +81979,10 @@
               "canCompleteDesertTreasure"
             ]
           }
+        },
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -84070,10 +84111,10 @@
               "canCompleteDesertTreasure"
             ]
           }
+        },
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -84242,8 +84283,10 @@
     "name": "Lava staff upgrade kit",
     "image": "lava_staff_upgrade_kit.png",
     "sources": {
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
+        }
       }
     }
   },
@@ -86667,8 +86710,8 @@
     "image": "log_brace.png",
     "sources": {
       "other": {
-        "Forestry rewards": {
-          "notes": "Requires maple and yew logs.",
+        "Special shop": {
+          "notes": "Forestry rewards - Requires maple and yew logs.",
           "rule": {
             "all": [
               {
@@ -87060,8 +87103,10 @@
           "droprate": "1/1790.3"
         }
       },
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
+        }
       }
     }
   },
@@ -88250,8 +88295,10 @@
           "droprate": "1/447.6"
         }
       },
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
+        }
       }
     }
   },
@@ -91535,7 +91582,7 @@
           "rule": {
             "all": [
               {
-                "has": 1452
+                "has": 5525
               },
               {
                 "has": 1448
@@ -99062,7 +99109,7 @@
           "rule": {
             "all": [
               {
-                "has": 1452
+                "has": 5525
               },
               {
                 "has": 1462
@@ -101872,7 +101919,7 @@
           "rule": {
             "all": [
               {
-                "has": 9342
+                "has": 21973
               }
             ]
           }
@@ -102596,8 +102643,10 @@
     "name": "Ornate maul handle",
     "image": "ornate_maul_handle.png",
     "sources": {
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
+        }
       }
     }
   },
@@ -102898,10 +102947,10 @@
               "canCompleteDesertTreasure"
             ]
           }
+        },
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -104601,8 +104650,10 @@
     "name": "Pirate's hook",
     "image": "pirate's_hook.png",
     "sources": {
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "From Agility Arena interface."
+        }
       }
     }
   },
@@ -113670,8 +113721,10 @@
           "droprate": "1/447.6"
         }
       },
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
+        }
       }
     }
   },
@@ -113682,8 +113735,8 @@
     "image": "ritual_mulch.png",
     "sources": {
       "other": {
-        "Forestry rewards": {
-          "notes": "Requires maple logs.",
+        "Special shop": {
+          "notes": "Forestry reward - Requires maple logs.",
           "rule": {
             "all": [
               {
@@ -119041,8 +119094,10 @@
     "name": "Rune pouch note",
     "image": "rune_pouch_note.png",
     "sources": {
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
+        }
       }
     }
   },
@@ -122784,8 +122839,10 @@
     "name": "Saradomin's tear",
     "image": "saradomin's_tear.png",
     "sources": {
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
+        }
       }
     }
   },
@@ -122874,8 +122931,10 @@
     "name": "Sawmill voucher",
     "image": "sawmill_voucher.png",
     "sources": {
-      "shops": {
-        "Yes": "canTrainWoodcutting"
+      "other": {
+        "Special shop": {
+          "notes": "From Forestry rewards interface."
+        }
       }
     }
   },
@@ -123216,17 +123275,20 @@
     "name": "Secateurs blade",
     "image": "secateurs_blade.png",
     "sources": {
-      "shops": {
-        "Yes": {
-          "all": [
-            {
-              "has": 1521
-            },
-            {
-              "has": 1519
-            },
-            "canTrainWoodcutting"
-          ]
+      "other": {
+        "Special shop": {
+          "notes": "From Forestry rewards interface.",
+          "rule": {
+            "all": [
+              {
+                "has": 1521
+              },
+              {
+                "has": 1519
+              },
+              "canTrainWoodcutting"
+            ]
+        }
         }
       }
     }
@@ -123383,10 +123445,10 @@
               "canCompleteDesertTreasure"
             ]
           }
+        },
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -126289,8 +126351,10 @@
           "droprate": "1/100"
         }
       },
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "From Agility Arena interface."
+        }
       }
     }
   },
@@ -129483,8 +129547,10 @@
     "name": "Steam staff upgrade kit",
     "image": "steam_staff_upgrade_kit.png",
     "sources": {
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
+        }
       }
     }
   },
@@ -137632,10 +137698,17 @@
           "droprate": "1/100"
         }
       },
-      "shops": {
-        "Yes": "canTrainFarming"
-      },
       "other": {
+        "Special shop": {
+          "notes": "Tithe farm reward.",
+          "rule": {
+            "all": [
+                {
+                  "has": 952
+                },
+                "canTrainFarming"
+                ]}
+              },
         "Creating supercompost (compost bin)": {
           "notes": "Requires compostable items and a bucket.",
           "rule": {
@@ -138467,8 +138540,10 @@
     "name": "Swift blade",
     "image": "swift_blade.png",
     "sources": {
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
+        }
       }
     }
   },
@@ -138784,8 +138859,10 @@
           "droprate": "1/179"
         }
       },
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
+        }
       }
     }
   },
@@ -138795,8 +138872,10 @@
     "name": "Target teleport scroll",
     "image": "target_teleport_scroll.png",
     "sources": {
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
+        }
       }
     }
   },
@@ -141613,9 +141692,6 @@
           "droprate": "2 × 1/124.5"
         }
       },
-      "shops": {
-        "Yes": "No requirements"
-      },
       "other": {
         "Cleaning a herb": {
           "notes": "Can be cleaned in Nardah. Requires a grimy toadflax.",
@@ -141626,6 +141702,9 @@
               }
             ]
           }
+        },
+        "Special shop": {
+          "notes": "From Agility Arena interface."
         }
       }
     }
@@ -144826,8 +144905,10 @@
           "droprate": "1/1790.3"
         }
       },
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
+        }
       }
     }
   },
@@ -149932,8 +150013,10 @@
     "name": "Volcanic whip mix",
     "image": "volcanic_whip_mix.png",
     "sources": {
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
+        }
       }
     }
   },
@@ -150019,8 +150102,10 @@
     "name": "Ward upgrade kit",
     "image": "ward_upgrade_kit.png",
     "sources": {
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
+        }
       }
     }
   },
@@ -152179,8 +152264,10 @@
     "name": "White dark bow paint",
     "image": "white_dark_bow_paint.png",
     "sources": {
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
+        }
       }
     }
   },
@@ -153155,8 +153242,10 @@
           "droprate": "1/179"
         }
       },
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
+        }
       }
     }
   },
@@ -155151,8 +155240,10 @@
     "name": "Yellow dark bow paint",
     "image": "yellow_dark_bow_paint.png",
     "sources": {
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface."
+        }
       }
     }
   },
@@ -156929,8 +157020,7 @@
             "all": [
               {
                 "has": 13657
-              },
-              "canTrainFarming"
+              }
             ]
           }
         }
