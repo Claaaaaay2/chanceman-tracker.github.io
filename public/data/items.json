@@ -59599,12 +59599,13 @@
           "notes": "Tithe farm reward.",
           "rule": {
             "all": [
-                {
-                  "has": 952
-                },
-                "canTrainFarming"
-                ]}
-              }
+              {
+                "has": 952
+              },
+              "canTrainFarming"
+            ]
+          }
+        }
       }
     }
   },
@@ -123288,7 +123289,7 @@
               },
               "canTrainWoodcutting"
             ]
-        }
+          }
         }
       }
     }
@@ -137703,12 +137704,13 @@
           "notes": "Tithe farm reward.",
           "rule": {
             "all": [
-                {
-                  "has": 952
-                },
-                "canTrainFarming"
-                ]}
+              {
+                "has": 952
               },
+              "canTrainFarming"
+            ]
+          }
+        },
         "Creating supercompost (compost bin)": {
           "notes": "Requires compostable items and a bucket.",
           "rule": {
@@ -145457,7 +145459,7 @@
         "Cooking 1": {
           "notes": "Requires Chopped onion and Ugthanki meat, and a knife.",
           "rule": {
-            "any": [
+            "all": [
               {
                 "has": 1871
               },
