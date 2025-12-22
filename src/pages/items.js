@@ -60,6 +60,39 @@ export default async function ItemsPage() {
             </label>
         </div>
 
+        <p class="marginOneRem">Overrides (e.g. when you've lamped a skill)</p>
+        <div class="skill-filters">
+            <label>
+                <input type="checkbox" id="overrideWoodcutting">
+                Override woodcutting
+            </label>
+
+            <label>
+                <input type="checkbox" id="overrideMining">
+                Override mining
+            </label>
+
+            <label>
+                <input type="checkbox" id="overrideFishing">
+                Override fishing
+            </label>
+
+            <label>
+                <input type="checkbox" id="overrideCooking">
+                Override cooking
+            </label>
+
+            <label>
+                <input type="checkbox" id="overrideFletching">
+                Override fletching
+            </label>
+
+            <label>
+                <input type="checkbox" id="overrideFletching">
+                Override crafting
+            </label>
+        </div>
+
         <div class="item-grid" id="itemGrid"></div>
     `;
 }
