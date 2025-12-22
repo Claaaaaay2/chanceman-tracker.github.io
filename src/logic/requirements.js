@@ -1277,7 +1277,8 @@ function hasAnyFeatherButStripy(ctx) {
 }
 
 function hasAnyLantern(ctx) {
-    return (canTrainFiremaking(ctx) //
+    return canTrainFiremaking(ctx) //
+        && has(ctx, 590) // Tinderbox
         && (canDoGuardiansOfTheRift(ctx) //
             || has(ctx, 4548) // Bullseye lantern
             || has(ctx, 4532) // Candle lantern (black)
@@ -1285,7 +1286,7 @@ function hasAnyLantern(ctx) {
             || has(ctx, 7051) // Unlit bug lantern
             || has(ctx, 4537) // Oil lantern
             || canCompleteDesertTreasureII(ctx) //
-        ));
+        );
 }
 
 function canCompleteContact(ctx) {
@@ -2376,7 +2377,8 @@ function canTrainFletching(ctx) {
 }
 
 function canTrainFiremaking(ctx) {
-    return has(ctx, 590); // Tinderbox
+    return has(ctx, 590) // Tinderbox
+        || canTrainWoodcutting(ctx); // For training FM in COX
 }
 
 function canTrainSmithing(ctx) {

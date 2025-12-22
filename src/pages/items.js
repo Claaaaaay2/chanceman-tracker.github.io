@@ -43,6 +43,16 @@ export default async function ItemsPage() {
                 <input type="checkbox" id="allowOthersHouses">
                 Allow other players' houses
             </label>
+
+            <label>
+                <input type="checkbox" id="hasFlatpacks">
+                I play with flatpacks
+            </label>
+
+            <label>
+                <input type="checkbox" id="hasItemsets">
+                I play with item sets
+            </label>
         </div>
 
         <div class="item-grid" id="itemGrid"></div>

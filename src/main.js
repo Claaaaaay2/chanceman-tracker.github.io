@@ -145,9 +145,11 @@ window.initItemsPage = async function () {
     const onlyObtainable = document.getElementById("onlyObtainable");
     const hideClue = document.getElementById("hideClueRewardOnly");
     const allowOthersHouses = document.getElementById("allowOthersHouses");
+    const hasFlatpacks = document.getElementById("hasFlatpacks");
+    const hasItemsets = document.getElementById("hasItemsets");
     const grid = document.getElementById("itemGrid");
 
-    if (!searchInput || !hideRolled || !onlyUnlocked || !onlyObtainable || !hideClue || !allowOthersHouses || !grid) {
+    if (!searchInput || !hideRolled || !onlyUnlocked || !onlyObtainable || !hideClue || !allowOthersHouses || !hasFlatpacks || !hasItemsets || !grid) {
         setTimeout(initItemsPage, 0);
         return;
     }
@@ -159,6 +161,8 @@ window.initItemsPage = async function () {
     onlyObtainable.checked = f.onlyObtainable ?? false;
     hideClue.checked = f.hideClue ?? true;
     allowOthersHouses.checked = f.allowOthersHouses ?? false;
+    hasFlatpacks.checked = f.hasFlatpacks ?? true;
+    hasItemsets.checked = f.hasItemsets ?? true;
 
     const { items, rolled, unlocked } = data;
 
@@ -169,6 +173,8 @@ window.initItemsPage = async function () {
         const onlyO = onlyObtainable.checked;
         const hideCl = hideClue.checked;
         const allowHo = allowOthersHouses.checked;
+        const hasFl = hasFlatpacks.checked;
+        const hasIt = hasItemsets.checked;
 
         const ranked = await computeAllRanksOnce(items, fileStore);
 
@@ -187,6 +193,8 @@ window.initItemsPage = async function () {
             if (allowHo && await isHouseOnlyItem(item, fileStore)) {
                 sort.rank = 8;
             }
+            if (!hasFl && item.tags?.includes("flatpack")) continue;
+            if (!hasIt && item.tags?.includes("itemset")) continue;
 
             filtered.push({ ...entry, sort });
         }
@@ -246,7 +254,9 @@ window.initItemsPage = async function () {
             onlyUnlocked: onlyUnlocked.checked,
             onlyObtainable: onlyObtainable.checked,
             hideClue: hideClue.checked,
-            allowOthersHouses: allowOthersHouses.checked
+            allowOthersHouses: allowOthersHouses.checked,
+            hasFlatpacks: hasFlatpacks.checked,
+            hasItemsets: hasItemsets.checked
         });
     }
 
@@ -276,6 +286,16 @@ window.initItemsPage = async function () {
     });
 
     allowOthersHouses.addEventListener("input", () => {
+        saveFilters();
+        renderItems();
+    });
+
+    hasFlatpacks.addEventListener("input", () => {
+        saveFilters();
+        renderItems();
+    });
+
+    hasItemsets.addEventListener("input", () => {
         saveFilters();
         renderItems();
     });

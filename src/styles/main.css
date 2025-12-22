@@ -43,9 +43,22 @@ body {
 /* For items.js */
 .item-filters {
     margin: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.5rem 1rem;
+    max-width: 1000px;
+}
+
+.item-filters input[type="text"] {
+    /* search bar full width */
+    grid-column: 1 / -1;
+}
+
+.item-filters label {
     display: flex;
-    gap: 1rem;
     align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
 }
 
 #itemSearch {
