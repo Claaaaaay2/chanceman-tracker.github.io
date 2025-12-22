@@ -60,7 +60,7 @@ export default async function ItemsPage() {
             </label>
         </div>
 
-        <p class="marginOneRem">Overrides (e.g. when you've lamped a skill)</p>
+        <p class="marginOneRem">Overrides (e.g. when you've lamped a skill or want to see what lamping one can bring you)</p>
         <div class="skill-filters">
             <label>
                 <input type="checkbox" id="overrideWoodcutting">
@@ -88,8 +88,13 @@ export default async function ItemsPage() {
             </label>
 
             <label>
-                <input type="checkbox" id="overrideFletching">
+                <input type="checkbox" id="overrideCrafting">
                 Override crafting
+            </label>
+
+            <label>
+                <input type="checkbox" id="overrideConstruction">
+                Override construction
             </label>
         </div>
 

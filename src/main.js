@@ -148,9 +148,16 @@ window.initItemsPage = async function () {
     const hasFlatpacks = document.getElementById("hasFlatpacks");
     const hasItemsets = document.getElementById("hasItemsets");
     const hasSuperiors = document.getElementById("hasSuperiors");
+    const overrideWoodcutting = document.getElementById("overrideWoodcutting");
+    const overrideMining = document.getElementById("overrideMining");
+    const overrideFishing = document.getElementById("overrideFishing");
+    const overrideCooking = document.getElementById("overrideCooking");
+    const overrideFletching = document.getElementById("overrideFletching");
+    const overrideCrafting = document.getElementById("overrideCrafting");
+    const overrideConstruction = document.getElementById("overrideConstruction");
     const grid = document.getElementById("itemGrid");
 
-    if (!searchInput || !hideRolled || !onlyUnlocked || !onlyObtainable || !hideClue || !allowOthersHouses || !hasFlatpacks || !hasItemsets || !hasSuperiors || !grid) {
+    if (!searchInput || !hideRolled || !onlyUnlocked || !onlyObtainable || !hideClue || !allowOthersHouses || !hasFlatpacks || !hasItemsets || !hasSuperiors || !overrideWoodcutting || !overrideMining || !overrideFishing || !overrideCooking || !overrideFletching || !overrideCrafting || !overrideConstruction || !grid) {
         setTimeout(initItemsPage, 0);
         return;
     }
@@ -165,6 +172,13 @@ window.initItemsPage = async function () {
     hasFlatpacks.checked = f.hasFlatpacks ?? true;
     hasItemsets.checked = f.hasItemsets ?? true;
     hasSuperiors.checked = f.hasSuperiors ?? false;
+    overrideWoodcutting.checked = f.overrideWoodcutting ?? false;
+    overrideMining.checked = f.overrideMining ?? false;
+    overrideFishing.checked = f.overrideFishing ?? false;
+    overrideCooking.checked = f.overrideCooking ?? false;
+    overrideFletching.checked = f.overrideFletching ?? false;
+    overrideCrafting.checked = f.overrideCrafting ?? false;
+    overrideConstruction.checked = f.overrideConstruction ?? false;
 
     const { items, rolled, unlocked } = data;
 
@@ -263,7 +277,14 @@ window.initItemsPage = async function () {
             allowOthersHouses: allowOthersHouses.checked,
             hasFlatpacks: hasFlatpacks.checked,
             hasItemsets: hasItemsets.checked,
-            hasSuperiors: hasSuperiors.checked
+            hasSuperiors: hasSuperiors.checked,
+            overrideWoodcutting: overrideWoodcutting.checked,
+            overrideMining: overrideMining.checked,
+            overrideFishing: overrideFishing.checked,
+            overrideCooking: overrideCooking.checked,
+            overrideFletching: overrideFletching.checked,
+            overrideCrafting: overrideCrafting.checked,
+            overrideConstruction: overrideConstruction.checked
         });
     }
 
@@ -312,8 +333,56 @@ window.initItemsPage = async function () {
         renderItems();
     });
 
+    overrideWoodcutting.addEventListener("input", () => {
+        saveFilters();
+        invalidateLogicCaches(fileStore);
+        renderItems();
+    });
+
+    overrideMining.addEventListener("input", () => {
+        saveFilters();
+        invalidateLogicCaches(fileStore);
+        renderItems();
+    });
+
+    overrideFishing.addEventListener("input", () => {
+        saveFilters();
+        invalidateLogicCaches(fileStore);
+        renderItems();
+    });
+
+    overrideCooking.addEventListener("input", () => {
+        saveFilters();
+        invalidateLogicCaches(fileStore);
+        renderItems();
+    });
+
+    overrideFletching.addEventListener("input", () => {
+        saveFilters();
+        invalidateLogicCaches(fileStore);
+        renderItems();
+    });
+
+    overrideCrafting.addEventListener("input", () => {
+        saveFilters();
+        invalidateLogicCaches(fileStore);
+        renderItems();
+    });
+
+    overrideConstruction.addEventListener("input", () => {
+        saveFilters();
+        invalidateLogicCaches(fileStore);
+        renderItems();
+    });
+
     renderItems();
 };
+
+function invalidateLogicCaches(ctx) {
+  rankedItemsCache = null;
+  ctx.itemAvailability = new Map();
+  ctx.npcReachCache = new Map();
+}
 
 window.addEventListener("DOMContentLoaded", async () => {
     await fileStore.init();

@@ -73,7 +73,7 @@ export async function getObtainabilityRank(item, ctx) {
     const id = item.id;
     const player = ctx.player;
 
-    const unlocked = fileStore.unlocked.includes(id);
+    const unlocked = fileStore.unlocked?.includes(id);
 
     // 1. Shop (obtainable)
     if (unlocked && src.shops) {

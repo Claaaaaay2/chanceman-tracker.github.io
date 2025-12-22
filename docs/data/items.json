@@ -862,12 +862,6 @@
     "name": "Achey tree logs",
     "image": "achey_tree_logs.png",
     "sources": {
-      "other": {
-        "Chopping Achey logs": {
-          "notes": "Achey tree.",
-          "rule": "canTrainWoodcutting"
-        }
-      },
       "drops": {
         "Achey Tree": {
           "droprate": "Common"
@@ -153479,12 +153473,6 @@
         },
         "Black Chest (red)": {
           "droprate": "1/14.685; 1/16.794"
-        }
-      },
-      "other": {
-        "Chopping willow logs": {
-          "notes": "Willow tree.",
-          "rule": "canTrainWoodcutting"
         }
       }
     }

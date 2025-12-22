@@ -1244,7 +1244,7 @@ export const REQUIREMENT_CHECKS = {
         return canTrainCrafting(ctx);
     },
     canTrainFiremaking(ctx) {
-        return canTrainCrafting(ctx);
+        return canTrainFiremaking(ctx);
     },
     canBurnLoarShades(ctx) {
         return canBurnLoarShades(ctx);
@@ -1542,7 +1542,7 @@ function hasFireRuneSource(ctx) {
 
 function canReachTrollheim(ctx) {
     return canCompleteDeathPlateau(ctx) //
-        || ctx.player.combatAchievements.length >= 38;
+        || ctx.player?.combatAchievements.length >= 38;
 }
 
 function hasHunterMeat(ctx) {
@@ -2240,6 +2240,7 @@ function canCompleteBigChompyBirdHunting(ctx) {
 }
 
 function canTrainCrafting(ctx) {
+    if (ctx.filters?.overrideWoodcutting) return true;
     return true; // TODO implement this beast (true because lamps and buttons)
 }
 
@@ -2324,12 +2325,13 @@ function canTrainRunecraft(ctx) {
 }
 
 function canTrainWoodcutting(ctx) {
+    if (ctx.filters?.overrideWoodcutting) return true;
     return has(ctx, 1351)  // Bronze axe
-        || has(ctx, 1349)  // Iron axe
-        || has(ctx, 1353); // Steel axe
+        || has(ctx, 1349); // Iron axe
 }
 
 function canTrainMining(ctx) {
+    if (ctx.filters?.overrideMining) return true;
     return has(ctx, 1265)  // Bronze pickaxe
         || has(ctx, 1267)  // Iron pickaxe
         || has(ctx, 1269); // Steel pickaxe
@@ -2343,7 +2345,8 @@ function canTrainHerblore(ctx) {
 }
 
 function canTrainFishing(ctx) {
-    return has(ctx, 303)     // Small fishing net
+    if (ctx.filters?.overrideFishing) return true;
+    return has(ctx, 303) // Small fishing net
         || has(ctx, 305) // Big fishing net
         || (has(ctx, 307) && has(ctx, 313)); // Fishing rod & Fishing bait
 }
@@ -2352,10 +2355,11 @@ function canTrainHunter(ctx) {
     return has(ctx, 10006) // Bird snare
         || has(ctx, 10150) // Noose wand
         || has(ctx, 10010) // Butterfly net
-        ; // TODO or the player's lvl allows for barehanding butterflies (lvl 25)
+        || ctx.player.levels.Hunter >= 25; // Barehanding butterflies
 }
 
 function canTrainCooking(ctx) {
+    if (ctx.filters?.overrideCooking) return true;
     return has(ctx, 25833) // Raw boar meat
         || has(ctx, 2132) // Raw beef
         || has(ctx, 2136) // Raw bear meat
@@ -2398,6 +2402,7 @@ function canPlantPlants(ctx) {
 }
 
 function canTrainConstruction(ctx) {
+    if (ctx.filters?.overrideConstruction) return true;
     return has(ctx, 8431) // Bagged plant 1
         || (
             (has(ctx, 2347) && has(ctx, 8794)) // Hammer and Saw
@@ -2406,6 +2411,7 @@ function canTrainConstruction(ctx) {
 }
 
 function canTrainFletching(ctx) {
+    if (ctx.filters?.overrideFletching) return true;
     return (has(ctx, 946) && has(ctx, 1511)) // Knife & Logs
         || (has(ctx, 52) && hasAnyFeather(ctx)) // Arrow shaft & Feather
         || (has(ctx, 53) && has(ctx, 39)) // Headless arrow & Bronze arrowtip
