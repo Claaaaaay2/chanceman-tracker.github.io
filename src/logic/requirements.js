@@ -5,6 +5,62 @@ export function has(ctx, id) {
 }
 
 export const REQUIREMENT_CHECKS = {
+    hasAnyNormalCape(ctx) {
+        return has(ctx, 1023) //
+            && has(ctx, 1007) //
+            && has(ctx, 1021) //
+            && has(ctx, 1019) //
+            && has(ctx, 1031) //
+            && has(ctx, 6959) //
+            && has(ctx, 1029) //
+            && has(ctx, 1027);//
+    },
+    hasAnyCookedMeatFish(ctx) {
+        return has(ctx, 315) //
+            && has(ctx, 325) //
+            && has(ctx, 2140) //
+            && has(ctx, 2142) //
+            && has(ctx, 1861) //
+            && has(ctx, 3228) //
+            && has(ctx, 325) //
+            && has(ctx, 347) //
+            && has(ctx, 355) //
+            && has(ctx, 333) //
+            && has(ctx, 351) //
+            && has(ctx, 339) //
+            && has(ctx, 2142) //
+            && has(ctx, 329) //
+            && has(ctx, 3381) //
+            && has(ctx, 361) //
+            && has(ctx, 3144) //
+            && has(ctx, 29217) //
+            && has(ctx, 10136) //
+            && has(ctx, 5003) //
+            && has(ctx, 379) //
+            && has(ctx, 7568) //
+            && has(ctx, 365) //
+            && has(ctx, 373) //
+            && has(ctx, 7946) //
+            && has(ctx, 32312) //
+            && has(ctx, 32320) //
+            && has(ctx, 32328) //
+            && has(ctx, 385) //
+            && has(ctx, 397) //
+            && has(ctx, 32336) //
+            && has(ctx, 13441) //
+            && has(ctx, 32344) //
+            && has(ctx, 11936) //
+            && has(ctx, 391) //
+            && has(ctx, 32352); //
+    },
+    hasAnyLeaves(ctx) {
+        return has(ctx, 6020) //
+            && has(ctx, 6030) //
+            && has(ctx, 6028) //
+            && has(ctx, 6022) //
+            && has(ctx, 6024) //
+            && has(ctx, 6026);
+    },
     hasAnyNails(ctx) {
         return hasAnyNails(ctx);
     },
@@ -134,7 +190,7 @@ export const REQUIREMENT_CHECKS = {
         return canGetKarambwanVessel(ctx);
     },
     canCompleteDragonSlayerII(ctx) {
-        return false; // TODO
+        return canCompleteDragonSlayerII(ctx);
     },
     canCompleteDragonSlayerI(ctx) {
         return canCompleteDragonSlayerI(ctx);
@@ -686,7 +742,7 @@ export const REQUIREMENT_CHECKS = {
         return canCompleteMakingHistory(ctx);
     },
     canStartLegendsQuest(ctx) {
-        return false; // TODO
+        return ctx.player.questPoints >= 107;
     },
     canReachKharaziJungle(ctx) {
         return false; // TODO
@@ -707,7 +763,7 @@ export const REQUIREMENT_CHECKS = {
         return false; // TODO
     },
     canCompleteLegendsQuest(ctx) {
-        return false; // TODO
+        return canCompleteLegendsQuest(ctx);
     },
     canDoYama(ctx) {
         return false; // TODO
@@ -911,7 +967,7 @@ export const REQUIREMENT_CHECKS = {
         return has(ctx, 989);
     },
     hasMachete(ctx) {
-        return has(ctx, 975) || has(ctx, 6313) || has(ctx, 6315) || has(ctx, 6317);
+        return hasMachete(ctx);
     },
     hasSpade(ctx) {
         return has(ctx, 952);
@@ -2323,6 +2379,170 @@ function canCompleteDragonSlayerI(ctx) {
         && has(ctx, 960);  // Plank
 }
 
+function canCompleteXMarksTheSpot(ctx) {
+    return has(ctx, 952); // Spade
+}
+
+function canCompleteClientOfKourend(ctx) {
+    return canCompleteXMarksTheSpot(ctx) //
+        && hasAnyFeather(ctx);
+}
+
+function canCompleteGhostsAhoy(ctx) {
+    return canCompletePriestInPeril(ctx) //
+        && canTrainCooking(ctx) //
+        && has(ctx, 1927) // Bucket of milk
+        && has(ctx, 950)  // Silk
+        && has(ctx, 1763) // Red dye
+        && has(ctx, 1765) // Yellow dye
+        && has(ctx, 1767) // Blue dye
+        && has(ctx, 952)  // Spade
+        && has(ctx, 845)  // Oak longbow
+        && has(ctx, 1921) // Bowl of water for Nettle tea
+        && has(ctx, 946); // Knife
+}
+
+function canCompleteATailOfTwoCats(ctx) {
+    return canCompleteIcthlarinsLittleHelper(ctx) //
+        && has(ctx, 560)  // Death rune
+        && has(ctx, 1897) // Chocolate cake
+        && has(ctx, 1511) // Logs
+        && has(ctx, 590)  // Tinderbox
+        && has(ctx, 1927) // Bucket of milk
+        && has(ctx, 1735) // Shears
+        && has(ctx, 5318) // Potato seed
+        && has(ctx, 5341) // Rake
+        && has(ctx, 227)  // Vial of water
+        && (has(ctx, 1833) || has(ctx, 540)) // Desert shirt or Druid's robe top
+        && (has(ctx, 1835) || has(ctx, 538)); // Desert robe or Druid's robe
+}
+
+function canCompleteDreamMentor(ctx) {
+    return canCompleteLunarDiplomacy(ctx) //
+        && canCompleteEadgarsRuse(ctx) //
+        && has(ctx, 9075) // Astral rune
+        && has(ctx, 590)  // Tinderbox
+        && has(ctx, 2347) // Hammer
+        && has(ctx, 233); // Pestle and mortar
+}
+
+function canCompleteEadgarsRuse(ctx) {
+    return canCompleteDruidicRitual(ctx) //
+        && canCompleteTrollStronghold(ctx) //
+        && canTrainHerblore(ctx) //
+        && has(ctx, 3105) // Climbing boots
+        && has(ctx, 2015) // Vodka
+        && has(ctx, 2116) // Pineapple chunks
+        && has(ctx, 1511) // Logs
+        && has(ctx, 1947) // Grain
+        && has(ctx, 2138) // Raw chicken
+        && has(ctx, 233)  // Pestle and mortar
+        && has(ctx, 99);  // Rannar potion (unf)
+}
+
+function canCompleteLegendsQuest(ctx) {
+    return ctx.player.questPoints >= 107 //
+        && canTrainCrafting(ctx) //
+        && canTrainHerblore(ctx) //
+        && canTrainMining(ctx) //
+        && canTrainPrayer(ctx) //
+        && canTrainSmithing(ctx) //
+        && canTrainWoodcutting(ctx) //
+        && canCompleteFamilyCrest(ctx) //
+        && canCompleteHeroesQuest(ctx) //
+        && canCompleteShiloVillage(ctx) //
+        && canCompleteUndergroundPass(ctx) // 
+        && canCompleteWaterfallQuest(ctx) // 
+        && hasMachete(ctx) //
+        && has(ctx, 2357) // Gold bar
+        && has(ctx, 2347) // Hammer
+        && has(ctx, 954)  // Rope
+        && (has(ctx, 1359) || has(ctx, 6739)) // Rune axe or Dragon axe
+        && has(ctx, 973)  // Charcoal
+        && has(ctx, 970)  // Papyrus
+        && has(ctx, 1523) // Lockpick
+        && has(ctx, 227)  // Vial of water
+        && has(ctx, 1607) // Sapphire
+        && has(ctx, 1605) // Emerald
+        && has(ctx, 1603) // Ruby
+        && has(ctx, 1601) // Diamond
+        && has(ctx, 1611) // Jade
+        && has(ctx, 1609) // Opal
+        && has(ctx, 1613) // Red topaz
+        && has(ctx, 566)  // Soul rune
+        && has(ctx, 558)  // Mind rune
+        && has(ctx, 563)  // Law rune
+        && has(ctx, 557)  // Earth rune
+        && has(ctx, 567)  // Unpowered orb
+        && has(ctx, 564)  // Cosmic rune
+        && (hasAirRuneSource(ctx) || hasFireRuneSource(ctx) || hasWaterRuneSource(ctx));
+}
+
+function hasMachete(ctx) {
+    return has(ctx, 975) || has(ctx, 6313) || has(ctx, 6315) || has(ctx, 6317);
+}
+
+function canCompleteFamilyCrest(ctx) {
+    return canTrainMining(ctx) //
+        && canTrainSmithing(ctx) //
+        && canTrainCrafting(ctx) //
+        && has(ctx, 315)  // Shrimps
+        && has(ctx, 329)  // Salmon
+        && has(ctx, 361)  // Tuna
+        && has(ctx, 365)  // Bass
+        && has(ctx, 373)  // Swordfish
+        && has(ctx, 1603) // Ruby
+        && has(ctx, 1592) // Ring mould
+        && has(ctx, 1597) // Necklace mould
+        && has(ctx, 560)  // Death rune
+        && hasAirRuneSource(ctx) //
+        && hasWaterRuneSource(ctx) //
+        && hasEarthRuneSource(ctx) //
+        && hasFireRuneSource(ctx) //
+        && hasAnyPoisonCure(ctx);
+}
+
+function hasAnyPoisonCure(ctx) {
+    return false; // TODO
+}
+
+function canCompleteUndergroundPass(ctx) {
+    return false; // TODO
+}
+
+function canCompleteDragonSlayerII(ctx) {
+    return ctx.player.questPoints >= 200 //
+        && canCompleteLegendsQuest(ctx) //
+        && canCompleteDreamMentor(ctx) //
+        && canCompleteATailOfTwoCats(ctx) //
+        && canCompleteAnimalMagnetism(ctx) //
+        && canCompleteGhostsAhoy(ctx) //
+        && canCompleteBoneVoyage(ctx) //
+        && canCompleteClientOfKourend(ctx) //
+        && canEnterAncientCavern(ctx) //
+        && canTrainSmithing(ctx) //
+        && canTrainMining(ctx) //
+        && canTrainCrafting(ctx) //
+        && canTrainConstruction(ctx) //
+        && canTrainWoodcutting(ctx) //
+        && has(ctx, 8778) // Oak plank
+        && has(ctx, 1941) // Swamp paste
+        && hasAnyNails(ctx) //
+        && has(ctx, 2347) // Hammer
+        && has(ctx, 975)  // Machete
+        && has(ctx, 8794) // Saw
+        && has(ctx, 1615) // Dragonstone
+        && has(ctx, 1775) // Molten glass
+        && has(ctx, 1785) // Glassblowing pipe
+        && has(ctx, 952)  // Spade
+        && has(ctx, 9075) // Astral rune
+        && has(ctx, 590)  // Tinderbox
+        && has(ctx, 233)  // Pestle and mortar
+        && hasFireRuneSource(ctx) //
+        && hasAirRuneSource(ctx) //
+        && has(ctx, 565); // Blood rune
+}
+
 function canCompleteDesertTreasureI(ctx) {
     return canCompleteTheDigSite(ctx) //
         && canCompleteTempleOfIkov(ctx) //
@@ -2396,11 +2616,11 @@ function canCompleteTheHeartOfDarkness(ctx) {
 
 function canCompleteIcthlarinsLittleHelper(ctx) {
     return canCompleteGertrudesCat(ctx) //
-        && has(ctx, 590) // Tinderbox
-        && has(ctx, 1519) // Willow logs
+        && has(ctx, 590)   // Tinderbox
+        && has(ctx, 1519)  // Willow logs
         && (has(ctx, 4161) || (has(ctx, 1925) && has(ctx, 4689))) // Bag of salt or (Bucket and Pile of salt)
-        && has(ctx, 4687) // Bucket of sap
-        && has(ctx, 1823) // Waterskin(4)
+        && has(ctx, 4687)  // Bucket of sap
+        && has(ctx, 1823)  // Waterskin(4)
         && has(ctx, 4684); // Linen
 }
 
