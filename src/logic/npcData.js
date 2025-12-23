@@ -897,7 +897,7 @@ export const NPC_DATA = {
     },
     "Artio": {
         "wiki": "https://oldschool.runescape.wiki/w/Artio",
-        "rule": null,
+        "rule": ["canCompleteWildernessDiaryMedium"],
         "skill": [],
         "level": [],
         "tags": ["boss"],
@@ -2719,7 +2719,7 @@ export const NPC_DATA = {
     },
     "Calvar'ion": {
         "wiki": "https://oldschool.runescape.wiki/w/Calvar%27ion",
-        "rule": null,
+        "rule": ["canCompleteWildernessDiaryMedium"],
         "skill": [],
         "level": [],
         "tags": ["boss"],
@@ -12244,7 +12244,7 @@ export const NPC_DATA = {
     },
     "Reward pool": {
         "wiki": "https://oldschool.runescape.wiki/w/Reward_pool",
-        "rule": ["canTrainFishing"],
+        "rule": ["canFishFromRewardPool"],
         "skill": ["fishing"],
         "level": [35],
         "tags": [],
@@ -12252,7 +12252,7 @@ export const NPC_DATA = {
     },
     "Reward pool 35–39 Fishing": {
         "wiki": "https://oldschool.runescape.wiki/w/Reward_pool#35–39_Fishing",
-        "rule": ["canTrainFishing"],
+        "rule": ["canFishFromRewardPool"],
         "skill": ["fishing"],
         "level": [35],
         "tags": [],
@@ -12260,7 +12260,7 @@ export const NPC_DATA = {
     },
     "Reward pool 40–45 Fishing": {
         "wiki": "https://oldschool.runescape.wiki/w/Reward_pool#40–45_Fishing",
-        "rule": ["canTrainFishing"],
+        "rule": ["canFishFromRewardPool"],
         "skill": ["fishing"],
         "level": [40],
         "tags": [],
@@ -12268,7 +12268,7 @@ export const NPC_DATA = {
     },
     "Reward pool 46–49 Fishing": {
         "wiki": "https://oldschool.runescape.wiki/w/Reward_pool#46–49_Fishing",
-        "rule": ["canTrainFishing"],
+        "rule": ["canFishFromRewardPool"],
         "skill": ["fishing"],
         "level": [46],
         "tags": [],
@@ -12276,7 +12276,7 @@ export const NPC_DATA = {
     },
     "Reward pool 50–75 Fishing": {
         "wiki": "https://oldschool.runescape.wiki/w/Reward_pool#50–75_Fishing",
-        "rule": ["canTrainFishing"],
+        "rule": ["canFishFromRewardPool"],
         "skill": ["fishing"],
         "level": [50],
         "tags": [],
@@ -12284,7 +12284,7 @@ export const NPC_DATA = {
     },
     "Reward pool 76–78 Fishing": {
         "wiki": "https://oldschool.runescape.wiki/w/Reward_pool#76–78_Fishing",
-        "rule": ["canTrainFishing"],
+        "rule": ["canFishFromRewardPool"],
         "skill": ["fishing"],
         "level": [76],
         "tags": [],
@@ -12292,7 +12292,7 @@ export const NPC_DATA = {
     },
     "Reward pool 79–80 Fishing": {
         "wiki": "https://oldschool.runescape.wiki/w/Reward_pool#79–80_Fishing",
-        "rule": ["canTrainFishing"],
+        "rule": ["canFishFromRewardPool"],
         "skill": ["fishing"],
         "level": [79],
         "tags": [],
@@ -12300,7 +12300,7 @@ export const NPC_DATA = {
     },
     "Reward pool 81+ Fishing": {
         "wiki": "https://oldschool.runescape.wiki/w/Reward_pool#81+_Fishing",
-        "rule": ["canTrainFishing"],
+        "rule": ["canFishFromRewardPool"],
         "skill": ["fishing"],
         "level": [81],
         "tags": [],
@@ -14267,7 +14267,7 @@ export const NPC_DATA = {
     },
     "Spindel": {
         "wiki": "https://oldschool.runescape.wiki/w/Spindel",
-        "rule": null,
+        "rule": ["canCompleteWildernessDiaryMedium"],
         "skill": [],
         "level": [],
         "tags": ["boss"],

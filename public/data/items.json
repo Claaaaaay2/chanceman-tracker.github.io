@@ -3065,7 +3065,8 @@
               {
                 "has": 2361
               },
-              "canTrainSmithing"
+              "canTrainSmithing",
+              "canCompletePandemonium"
             ]
           }
         }
@@ -12891,6 +12892,10 @@
               }
             ]
           }
+        },
+        "Questing": {
+          "notes": "Received during Underground Pass.",
+          "rule": "canCompleteUndergroundPass"
         }
       }
     }
@@ -27024,6 +27029,10 @@
               }
             ]
           }
+        },
+        "Questing": {
+          "notes": "Received during Underground Pass.",
+          "rule": "canCompleteUndergroundPass"
         }
       }
     }
@@ -28938,7 +28947,8 @@
               {
                 "has": 2349
               },
-              "canTrainSmithing"
+              "canTrainSmithing",
+              "canCompletePandemonium"
             ]
           }
         }
@@ -30904,6 +30914,11 @@
       "drops": {
         "Reward Cart": {
           "droprate": "1/45"
+        }
+      },
+      "other": {
+        "Converting Dessicated Pages": {
+          "notes": "Requires 50 Runecraft to convert the untradable dessicated pages."
         }
       }
     }
@@ -37407,6 +37422,14 @@
               "canTrainCooking"
             ]
           }
+        },
+        "Questing": {
+          "notes": "Obtained at the start of Zogre Flesh Eaters.",
+          "rule": {
+            "all": [
+              "canStartZogreFleshEaters"
+            ]
+          }
         }
       }
     }
@@ -41565,6 +41588,10 @@
               "canTrainCrafting"
             ]
           }
+        },
+        "Questing": {
+          "notes": "Obtained upon completion of Waterfall Quest.",
+          "rule": "canCompleteWaterfallQuest"
         }
       }
     }
@@ -45288,7 +45315,8 @@
               {
                 "has": 31996
               },
-              "canCompleteDragonSlayerII"
+              "canCompleteDragonSlayerII",
+              "canCompletePandemonium"
             ]
           }
         }
@@ -58464,6 +58492,10 @@
               "canTrainSmithing"
             ]
           }
+        },
+        "Questing": {
+          "notes": "Obtained upon completion of Waterfall Quest.",
+          "rule": "canCompleteWaterfallQuest"
         }
       },
       "spawns": {
@@ -78272,7 +78304,8 @@
               {
                 "has": 2351
               },
-              "canTrainSmithing"
+              "canTrainSmithing",
+              "canCompletePandemonium"
             ]
           }
         }
@@ -90653,6 +90686,10 @@
         "Questing": {
           "notes": "Received at the start of Nature Spirit.",
           "rule": "canCompletePriestInPeril"
+        },
+        "Questing 2": {
+          "notes": "Received during Underground Pass.",
+          "rule": "canCompleteUndergroundPass"
         }
       }
     }
@@ -93814,7 +93851,8 @@
               {
                 "has": 2359
               },
-              "canTrainSmithing"
+              "canTrainSmithing",
+              "canCompletePandemonium"
             ]
           }
         }
@@ -102450,6 +102488,16 @@
               }
             ]
           }
+        },
+        "Cutting Orange (hat)": {
+          "notes": "Requires a knife and 43 agility to get Orange (hat) (other slash weapons do NOT work)",
+          "rule": {
+            "all": [
+              {
+                "has": 946
+              }
+            ]
+          }
         }
       }
     }
@@ -102574,6 +102622,16 @@
               },
               {
                 "has": 2108
+              }
+            ]
+          }
+        },
+        "Cutting Orange (hat)": {
+          "notes": "Requires a knife and 43 agility to get Orange (hat) (other slash weapons do NOT work)",
+          "rule": {
+            "all": [
+              {
+                "has": 946
               }
             ]
           }
@@ -106607,6 +106665,10 @@
               }
             ]
           }
+        },
+        "Questing": {
+          "notes": "Received during Underground Pass.",
+          "rule": "canCompleteUndergroundPass"
         }
       }
     }
@@ -106700,6 +106762,10 @@
               }
             ]
           }
+        },
+        "Questing": {
+          "notes": "Received during The Fremmenik Isles.",
+          "rule": "canCompleteTheFremennikIsles"
         }
       }
     }
@@ -116375,9 +116441,6 @@
           ]
         }
       },
-      "spawns": {
-        "Yes": "No requirements"
-      },
       "other": {
         "Smithing Rune dagger": {
           "notes": "Runite bar and Hammer",
@@ -117476,7 +117539,8 @@
               {
                 "has": 2363
               },
-              "canTrainSmithing"
+              "canTrainSmithing",
+              "canCompletePandemonium"
             ]
           }
         }
@@ -120978,6 +121042,10 @@
               }
             ]
           }
+        },
+        "Questing": {
+          "notes": "Received during Underground Pass.",
+          "rule": "canCompleteUndergroundPass"
         }
       }
     }
@@ -123858,6 +123926,23 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Cooking": {
+          "notes": "Requires a raw shark.",
+          "rule": {
+            "all": [
+              {
+                "has": 383
+              },
+              "canTrainCooking"
+            ]
+          }
+        },
+        "Trading with Bardur": {
+          "notes": "Trade Fremennik blade, shield or helm after completion of Fremennik Trials.",
+          "rule": "canCompleteFremennikTrials"
+        }
       }
     }
   },
@@ -127606,6 +127691,11 @@
         "Reward pool": {
           "droprate": "1/53.691"
         }
+      },
+      "other": {
+        "Converting Dessicated Pages": {
+          "notes": "Requires 50 Runecraft to convert the untradable dessicated pages."
+        }
       }
     }
   },
@@ -127713,6 +127803,11 @@
       "drops": {
         "The Hueycoatl": {
           "droprate": "1/13.6"
+        }
+      },
+      "other": {
+        "Converting Dessicated Pages": {
+          "notes": "Requires 50 Runecraft to convert the untradable dessicated pages."
         }
       }
     }
@@ -132071,7 +132166,8 @@
               {
                 "has": 2353
               },
-              "canTrainSmithing"
+              "canTrainSmithing",
+              "canCompletePandemonium"
             ]
           }
         }
@@ -133944,6 +134040,10 @@
       "other": {
         "Seers Pub": {
           "notes": "Purchasing at Seers Pub through dialogue"
+        },
+        "Questing": {
+          "notes": "Received during Underground Pass.",
+          "rule": "canCompleteUndergroundPass"
         }
       }
     }
@@ -134857,6 +134957,10 @@
               }
             ]
           }
+        },
+        "Questing": {
+          "notes": "Received during The Fremmenik Isles.",
+          "rule": "canCompleteTheFremennikIsles"
         }
       }
     }
@@ -137043,6 +137147,17 @@
               {
                 "has": 3024
               }
+            ]
+          }
+        },
+        "Questing": {
+          "notes": "Obtained at the start of Zogre Flesh Eaters.",
+          "rule": {
+            "all": [
+              {
+                "has": 2353
+              },
+              "canStartZogreFleshEaters"
             ]
           }
         }
@@ -144982,6 +145097,10 @@
               "canTrainCooking"
             ]
           }
+        },
+        "Questing": {
+          "notes": "Received during The Fremmenik Isles.",
+          "rule": "canCompleteTheFremennikIsles"
         }
       }
     }

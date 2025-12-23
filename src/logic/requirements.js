@@ -392,16 +392,16 @@ export const REQUIREMENT_CHECKS = {
         return false; // TODO
     },
     canCompleteWildernessDiaryEasy(ctx) {
-        return false; // TODO
+        return ctx.player.achievementDiaries.Wilderness.Easy.complete;
     },
     canCompleteWildernessDiaryMedium(ctx) {
-        return false; // TODO
+        return ctx.player.achievementDiaries.Wilderness.Medium.complete;
     },
     canCompleteWildernessDiaryHard(ctx) {
-        return false; // TODO
+        return ctx.player.achievementDiaries.Wilderness.Hard.complete;
     },
     canCompleteWildernessDiaryElite(ctx) {
-        return false; // TODO
+        return ctx.player.achievementDiaries.Wilderness.Elite.complete;
     },
     canDoTombsOfAmascut(ctx) {
         return canDoTombsOfAmascut(ctx);
