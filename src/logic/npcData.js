@@ -1398,7 +1398,7 @@ export const NPC_DATA = {
     },
     "Barrel (Zaff's Superior Staffs!) Easy diary": {
         "wiki": "https://oldschool.runescape.wiki/w/Barrel_(Zaff%27s_Superior_Staffs!)#Easy_diary",
-        "rule": null,
+        "rule": ["canCompleteVarrockDiaryEasy"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -1406,7 +1406,7 @@ export const NPC_DATA = {
     },
     "Barrel (Zaff's Superior Staffs!) Elite diary": {
         "wiki": "https://oldschool.runescape.wiki/w/Barrel_(Zaff%27s_Superior_Staffs!)#Elite_diary",
-        "rule": null,
+        "rule": ["canCompleteVarrockDiaryElite"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -1414,7 +1414,7 @@ export const NPC_DATA = {
     },
     "Barrel (Zaff's Superior Staffs!) Hard diary": {
         "wiki": "https://oldschool.runescape.wiki/w/Barrel_(Zaff%27s_Superior_Staffs!)#Hard_diary",
-        "rule": null,
+        "rule": ["canCompleteVarrockDiaryHard"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -1422,7 +1422,7 @@ export const NPC_DATA = {
     },
     "Barrel (Zaff's Superior Staffs!) Medium diary": {
         "wiki": "https://oldschool.runescape.wiki/w/Barrel_(Zaff%27s_Superior_Staffs!)#Medium_diary",
-        "rule": null,
+        "rule": ["canCompleteVarrockDiaryMedium"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -2251,7 +2251,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Brine_rat",
         "rule": {
             "all": [
-                "canCompleteFremennikTrials",
+                "canCompleteTheFremennikTrials",
                 "hasSpade"
             ]
         },
@@ -5719,7 +5719,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Fish_stall",
         "rule": {
             "any": [
-                "canCompleteFremennikTrials",
+                "canCompleteTheFremennikTrials",
                 "canStartQueenOfThieves"
             ]
         },
@@ -6497,7 +6497,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Giant_bat_(Brine_Rat_Cavern)",
         "rule": {
             "all": [
-                "canCompleteFremennikTrials",
+                "canCompleteTheFremennikTrials",
                 "hasSpade"
             ]
         },
@@ -14711,7 +14711,7 @@ export const NPC_DATA = {
     },
     "Tar barrel Full": {
         "wiki": "https://oldschool.runescape.wiki/w/Tar_barrel#Full",
-        "rule": ["canReachLunarIsle"],
+        "rule": ["canReachPiratesCove"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -16308,7 +16308,7 @@ export const NPC_DATA = {
     },
     "Wilson": {
         "wiki": "https://oldschool.runescape.wiki/w/Wilson",
-        "rule": ["canReachLunarIsle"],
+        "rule": ["canReachPiratesCove"],
         "skill": [],
         "level": [],
         "tags": [],

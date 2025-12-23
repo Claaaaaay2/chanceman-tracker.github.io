@@ -137,16 +137,13 @@ export const REQUIREMENT_CHECKS = {
         return false; // TODO
     },
     canCompleteDragonSlayerI(ctx) {
-        return false; // TODO
+        return canCompleteDragonSlayerI(ctx);
     },
     canCompleteDesertTreasureII(ctx) {
         return false; // TODO
     },
     canCompleteDesertTreasureI(ctx) {
-        return false; // TODO
-    },
-    canCompleteGiantsFoundry(ctx) {
-        return false; // TODO
+        return canCompleteDesertTreasureI(ctx);
     },
     canCompleteRatcatchers(ctx) {
         return false; // TODO
@@ -171,6 +168,9 @@ export const REQUIREMENT_CHECKS = {
     },
     canCompleteATasteOfHope(ctx) {
         return false; // TODO
+    },
+    canCompleteTrollStronghold(ctx) {
+        return canCompleteTrollStronghold(ctx);
     },
     canCompleteSinsOfTheFather(ctx) {
         return false; // TODO
@@ -200,10 +200,10 @@ export const REQUIREMENT_CHECKS = {
         return canCompleteShadesOfMortton(ctx);
     },
     canCompleteSleepingGiants(ctx) {
-        return false; // TODO
+        return canCompleteSleepingGiants(ctx);
     },
     canCompleteBelowIceMountain(ctx) {
-        return canCompleteBelowIceMountain(ctx); // TODO
+        return canCompleteBelowIceMountain(ctx);
     },
     canCompleteAKingdomDivided(ctx) {
         return false; // TODO
@@ -256,6 +256,9 @@ export const REQUIREMENT_CHECKS = {
     canEnterNightmareZone(ctx) {
         return false; // TODO
     },
+    canCompleteShiloVillage(ctx) {
+        return canCompleteShiloVillage(ctx);
+    },
     canEnterLumbridgeSwampCaves(ctx) {
         return canEnterLumbridgeSwampCaves(ctx);
     },
@@ -298,17 +301,23 @@ export const REQUIREMENT_CHECKS = {
     canCompleteTrollRomance(ctx) {
         return false; // TODO
     },
-    canStartMourningsEndPartI(ctx) {
-        return false; // TODO
+    canCompleteRovingElves(ctx) {
+        return canCompleteRovingElves(ctx); // TODO
     },
     canEnterTheChampionsGuild(ctx) {
-        return false; // TODO quest points
+        return ctx.player.questPoints >= 32;
+    },
+    canStartMourningsEndPartI(ctx) {
+        return canStartMourningsEndPartI(ctx);
     },
     canCompleteMourningsEndPartI(ctx) {
-        return false; // TODO
+        return canCompleteMourningsEndPartI(ctx);
     },
     canCompleteMourningsEndPartII(ctx) {
-        return false; // TODO
+        return canCompleteMourningsEndPartII(ctx);
+    },
+    has50JunkItems(ctx) {
+        return has50JunkItems(ctx);
     },
     canCompleteDarknessOfHallowvale(ctx) {
         return false; // TODO
@@ -328,7 +337,7 @@ export const REQUIREMENT_CHECKS = {
     canCompleteGettingAhead(ctx) {
         return false; // TODO
     },
-    canCompleteFremennikTrials(ctx) {
+    canCompleteTheFremennikTrials(ctx) {
         return false; // TODO
     },
     canCompleteTheFeud(ctx) {
@@ -364,6 +373,12 @@ export const REQUIREMENT_CHECKS = {
     canCompleteLunarDiplomacy(ctx) {
         return canCompleteLunarDiplomacy(ctx);
     },
+    canReachLunarIsle(ctx) {
+        return canReachLunarIsle(ctx);
+    },
+    canReachPiratesCove(ctx) {
+        return canReachPiratesCove(ctx);
+    },
     canCompleteEaglesPeak(ctx) {
         return false; // TODO
     },
@@ -390,6 +405,18 @@ export const REQUIREMENT_CHECKS = {
     },
     canDoMixology(ctx) {
         return false; // TODO
+    },
+    canCompleteVarrockDiaryEasy(ctx) {
+        return ctx.player.achievementDiaries.Varrock.Easy.complete;
+    },
+    canCompleteVarrockDiaryMedium(ctx) {
+        return ctx.player.achievementDiaries.Varrock.Medium.complete;
+    },
+    canCompleteVarrockDiaryHard(ctx) {
+        return ctx.player.achievementDiaries.Varrock.Hard.complete;
+    },
+    canCompleteVarrockDiaryElite(ctx) {
+        return ctx.player.achievementDiaries.Varrock.Elite.complete;
     },
     canCompleteWildernessDiaryEasy(ctx) {
         return ctx.player.achievementDiaries.Wilderness.Easy.complete;
@@ -484,14 +511,11 @@ export const REQUIREMENT_CHECKS = {
     canReachTrollheim(ctx) {
         return canReachTrollheim(ctx);
     },
-    canReachPiratesCove(ctx) {
-        return false; // TODO
-    },
     canGetBirdNestWyson(ctx) {
         return canGetBirdNestWyson(ctx);
     },
     canDoGuardiansOfTheRift(ctx) {
-        return canCompleteTempleOfTheEye(ctx);
+        return canDoGuardiansOfTheRift(ctx);
     },
     canTrainFarming(ctx) {
         return canTrainFarming(ctx);
@@ -532,9 +556,6 @@ export const REQUIREMENT_CHECKS = {
     canCompletePryingTimes(ctx) {
         return false; // TODO
     },
-    canReachLunarIsle(ctx) {
-        return false; // TODO
-    },
     canCompleteWitchsHouse(ctx) {
         return false; // TODO
     },
@@ -555,6 +576,9 @@ export const REQUIREMENT_CHECKS = {
     },
     canEnterKaruulmSlayerDungeon(ctx) {
         return canEnterKaruulmSlayerDungeon(ctx);
+    },
+    canCompleteWaterfallQuest(ctx) {
+        return canCompleteWaterfallQuest(ctx);
     },
     hasSardine(ctx) {
         return has(ctx, 327);
@@ -652,8 +676,8 @@ export const REQUIREMENT_CHECKS = {
     canCompleteRoyalTrouble(ctx) {
         return canCompleteRoyalTrouble(ctx);
     },
-    canCompleteTouristTrap(ctx) {
-        return canCompleteTouristTrap(ctx);
+    canCompleteTheTouristTrap(ctx) {
+        return canCompleteTheTouristTrap(ctx);
     },
     canCompletePandemonium(ctx) {
         return canCompletePandemonium(ctx);
@@ -1359,8 +1383,124 @@ function canStartTheLostTribe(ctx) {
         && canCompleteRuneMysteries(ctx);
 }
 
+function canStartMourningsEndPartI(ctx) {
+    return ctx.player.levels.Ranged >= 60 //
+        && ctx.player.levels.Thieving >= 50 //
+        && canCompleteRovingElves(ctx) //
+        && canCompleteBigChompyBirdHunting(ctx) //
+        && canCompleteSheepHerder(ctx);
+}
+
+function canCompleteMourningsEndPartI(ctx) {
+    return canStartMourningsEndPartI(ctx) //
+        && has(ctx, 948)  // Bear fur
+        && has(ctx, 950)  // Silk
+        && has(ctx, 1763) // Red dye
+        && has(ctx, 1765) // Yellow dye
+        && has(ctx, 1771) // Green dye
+        && has(ctx, 1767) // Blue dye
+        && has(ctx, 1929) // Bucket of water
+        && has(ctx, 314)  // Feather
+        && (has(ctx, 2217) || has(ctx, 2243))  // Toad cruncies or Premade t'd crunch
+        && has(ctx, 1513) // Magic logs
+        && has(ctx, 1741) // Leather
+        && has(ctx, 3216) // Barrel
+        && has(ctx, 453); // Coal
+}
+
+function canCompleteMourningsEndPartII(ctx) {
+    return canCompleteMourningsEndPartI(ctx) //
+        && has(ctx, 1755) // Chisel
+        && has(ctx, 954)  // Rope
+        && hasDeathTalismanSource(ctx);
+}
+
+function hasDeathTalismanSource(ctx) {
+    return has(ctx, 1456) // Death talisman
+        || has(ctx, 5547) // Death tiara
+        || canDoGuardiansOfTheRift(ctx) // For Catalytic talisman
+        || ctx.player.levels.Runecraft >= 99
+        || has50JunkItems(ctx)
+}
+
+function has50JunkItems(ctx) {
+    return has(ctx, 534)  // Babydragon bones
+        && has(ctx, 1759) // Ball of wool
+        && has(ctx, 2349) // Bronze bar
+        && has(ctx, 1139) // Bronze med helm
+        && has(ctx, 1927) // Bucket of milk
+        && has(ctx, 1887) // Cake tin
+        && has(ctx, 1985) // Cheese
+        && has(ctx, 1755) // Chisel
+        && has(ctx, 2142) // Cooked meat
+        && has(ctx, 1944) // Egg
+        && has(ctx, 4164) // Facemask
+        && has(ctx, 307)  // Fishing rod
+        && has(ctx, 1779) // Flax
+        && has(ctx, 1635) // Gold ring
+        && has(ctx, 2347) // Hammer
+        && has(ctx, 1349) // Iron axe
+        && has(ctx, 4820) // Iron nails
+        && has(ctx, 1267) // Iron pickaxe
+        && has(ctx, 1993) // Jug of wine
+        && has(ctx, 1971) // Kebab
+        && has(ctx, 946)  // Knife
+        && has(ctx, 1061) // Leather boots
+        && has(ctx, 1059) // Leather gloves
+        && has(ctx, 301)  // Lobster pot
+        && has(ctx, 1523) // Lockpick
+        && has(ctx, 1597) // Necklace mould
+        && has(ctx, 1733) // Needle
+        && has(ctx, 1521) // Oak logs
+        && has(ctx, 2313) // Pie dish
+        && has(ctx, 960)  // Plank
+        && has(ctx, 1933) // Pot of flour
+        && has(ctx, 3138) // Potato cactus
+        && has(ctx, 5438) // Potatoes(10)
+        && has(ctx, 7936) // Pure essence
+        && has(ctx, 1951) // Redberries
+        && has(ctx, 954)  // Rope
+        && has(ctx, 1735) // Shears
+        && has(ctx, 952)  // Spade
+        && has(ctx, 1941) // Swamp paste
+        && has(ctx, 1734) // Thread
+        && has(ctx, 590)  // Tinderbox
+        && has(ctx, 235)  // Unicorn horn dust
+        && has(ctx, 227)  // Vial of water
+        && has(ctx, 1005) // White apron
+        && has(ctx, 239); // White berries
+}
+
+function canCompleteSheepHerder(ctx) {
+    return true;
+}
+
+function canCompleteRovingElves(ctx) {
+    return ctx.player.questPoints >= 16 //
+        && has(ctx, 2142) // Cooked meat
+        && has(ctx, 2309) // Bread
+        && has(ctx, 946)  // Knife
+        && (has(ctx, 1917) || has(ctx, 1905) || has(ctx, 1913) || has(ctx, 1907)) // Beer, Asgarnian ale, Dwarven stout or Wizard's mind bomb
+}
+
 function canCompleteBelowIceMountain(ctx) {
-    return false; // TODO
+    return ctx.player.questPoints >= 16 //
+        && has(ctx, 2142) // Cooked meat
+        && has(ctx, 2309) // Bread
+        && has(ctx, 946)  // Knife
+        && (has(ctx, 1917) || has(ctx, 1905) || has(ctx, 1913) || has(ctx, 1907)) // Beer, Asgarnian ale, Dwarven stout or Wizard's mind bomb
+}
+
+function canCompleteSleepingGiants(ctx) {
+    return canTrainSmithing(ctx) //
+        && hasAnyNails(ctx) //
+        && has(ctx, 2142)   // Oak logs
+        && has(ctx, 2309)   // Wool
+        && has(ctx, 2347)   // Hammer
+        && has(ctx, 1755)   // Chisel
+        && (has(ctx, 1929)  // Bucket of water
+            || canTrainMining(ctx) // For Ice gloves
+        )
 }
 
 function canCompleteShadesOfMortton(ctx) {
@@ -1904,7 +2044,7 @@ function canKillGargoyles(ctx) {
 }
 
 function canKillDifficultDragons(ctx) {
-    return false; // TODO: need to implement quest points
+    return ctx.player.questPoints >= 32;
 }
 
 function canEnterKaruulmSlayerDungeon(ctx) {
@@ -1993,15 +2133,61 @@ function canCompletePiratesTreasure(ctx) {
 function canReachGemRocks(ctx) {
     return canCompletePandemonium(ctx) //
         || canCompleteShiloVillage(ctx) //
-        || canCompleteLunarDiplomacy(ctx);
+        || canReachLunarIsle(ctx);
 }
 
 function canCompleteLunarDiplomacy(ctx) {
-    return false; // TODO
+    return canCompleteTheFremennikTrials(ctx) //
+        && canCompleteLostCity(ctx) //
+        && canCompleteRuneMysteries(ctx) //
+        && canCompleteShiloVillage(ctx) //
+        && canTrainCrafting(ctx) //
+        && canTrainFiremaking(ctx) //
+        && canTrainMining(ctx) //
+        && canTrainWoodcutting(ctx) //
+        && has(ctx, 590)  // Tinderbox
+        && has(ctx, 249)  // Guam leaf
+        && has(ctx, 251)  // Marrentill
+        && has(ctx, 233)  // Pestle and mortar
+        && has(ctx, 2347) // Hammer
+        && has(ctx, 952)  // Spade
+        && has(ctx, 4548) // Bullseye lantern
+        && (canDoGuardiansOfTheRift(ctx) //
+            || canCompleteEnterTheAbyss(ctx) //
+            || (
+                (has(ctx, 1438) || has(ctx, 5527)) // Air talisman or Air tiara
+                && (has(ctx, 1444) || has(ctx, 5531)) // Water talisman or Water tiara
+                && (has(ctx, 1440) || has(ctx, 5535)) // Earth talisman or Earth tiara
+                && (has(ctx, 1442) || has(ctx, 5537)) // Fire talisman or Fire tiara
+            )
+        );
+}
+
+function canReachLunarIsle(ctx) {
+    return canReachPiratesCove(ctx) //
+        && has(ctx, 590)   // Tinderbox
+        && has(ctx, 4548); // Bullseye lantern
+}
+
+function canReachPiratesCove(ctx) {
+    return canCompleteTheFremennikTrials(ctx) //
+        && canCompleteLostCity(ctx) //
+        && canCompleteRuneMysteries(ctx) //
+        && canCompleteShiloVillage(ctx) //
+        && canTrainCrafting(ctx) //
+        && canTrainFiremaking(ctx) //
+        && canTrainMining(ctx) //
+        && canTrainWoodcutting(ctx); //
 }
 
 function canCompleteShiloVillage(ctx) {
-    return false; // TODO
+    return canCompleteJunglePotion(ctx) //
+        && canTrainCrafting(ctx) //
+        && has(ctx, 952)  // Spade
+        && has(ctx, 954)  // Rope
+        && has(ctx, 1794) // Bronze wire
+        && has(ctx, 1755) // Chisel
+        && has(ctx, 526); // Bones
 }
 
 function canFishFromRewardPool(ctx) {
@@ -2024,6 +2210,10 @@ function canCompleteFairytaleIGrowingPains(ctx) {
         && has(ctx, 952)  // Spade
         // TODO other item reqs?
         ;
+}
+
+function canDoGuardiansOfTheRift(ctx) {
+    return canCompleteTempleOfTheEye(ctx);
 }
 
 function canCompleteLostCity(ctx) {
@@ -2061,7 +2251,7 @@ function canCompleteRoyalTrouble(ctx) {
         && has(ctx, 960); // Plank
 }
 
-function canCompleteTouristTrap(ctx) {
+function canCompleteTheTouristTrap(ctx) {
     return canTrainFletching(ctx) //
         && canTrainSmithing(ctx) //
         && has(ctx, 1833) // Desert shirt
@@ -2084,8 +2274,9 @@ function canCompleteThroneOfMiscellania(ctx) {
         && has(ctx, 1511); // Logs
 }
 
-function canCompleteHeroesQuest(ctx) { // TODO quest points
-    return canCompleteLostCity(ctx) //
+function canCompleteHeroesQuest(ctx) {
+    return ctx.player.questPoints >= 55 //
+        && canCompleteLostCity(ctx) //
         && canCompleteMerlinsCrystal(ctx) //
         && canCompleteDragonSlayerI(ctx) //
         && canTrainMining(ctx) //
@@ -2111,7 +2302,7 @@ function canCompleteTheDigSite(ctx) {
 }
 
 function canCompleteMerlinsCrystal(ctx) {
-    return has(ctx, 2309)     // Bread
+    return has(ctx, 2309) // Bread
         && has(ctx, 590)  // Tinderbox
         && has(ctx, 30)   // Bucket of wax
         && has(ctx, 1925) // Bucket
@@ -2119,8 +2310,9 @@ function canCompleteMerlinsCrystal(ctx) {
         && has(ctx, 530); // Bat bones
 }
 
-function canCompleteDragonSlayerI(ctx) { // TODO quest points
-    return has(ctx, 1791)      // Unfired bowl
+function canCompleteDragonSlayerI(ctx) {
+    return ctx.player.questPoints >= 32 //
+        && has(ctx, 1791)  // Unfired bowl
         && has(ctx, 1761)  // Soft clay
         && has(ctx, 1907)  // Wizards mind bomb
         && has(ctx, 301)   // Lobster pot
@@ -2129,6 +2321,41 @@ function canCompleteDragonSlayerI(ctx) { // TODO quest points
         && has(ctx, 2347)  // Hammer
         && has(ctx, 1539)  // Steel nails
         && has(ctx, 960);  // Plank
+}
+
+function canCompleteDesertTreasureI(ctx) {
+    return canCompleteTheDigSite(ctx) //
+        && canCompleteTempleOfIkov(ctx) //
+        && canCompleteTheTouristTrap(ctx) //
+        && canCompleteTrollStronghold(ctx) //
+        && canCompletePriestInPeril(ctx) //
+        && canCompleteWaterfallQuest(ctx) //
+        && canReachTrollheim(ctx)
+        && (has(ctx, 2126) || has(ctx, 4164)) // Dwellberries for gas mask or Facemask
+        && has(ctx, 1513) // Magic logs
+        && has(ctx, 2353) // Steel bar
+        && has(ctx, 1775) // Molten glass
+        && has(ctx, 592)  // Ashes
+        && has(ctx, 973)  // Charcoal
+        && has(ctx, 565)  // Blood rune
+        && has(ctx, 526)  // Bones
+        && has(ctx, 2355) // Silver bar
+        && has(ctx, 4668) // Garlic powder
+        && has(ctx, 2007) // Spice
+        && has(ctx, 3107) // Spiked boots
+        && has(ctx, 1523) // Lockpick
+        && has(ctx, 590); // Tinderbox
+}
+
+function canCompleteTrollStronghold(ctx) {
+    return canCompleteDeathPlateau(ctx);
+}
+
+function canCompleteWaterfallQuest(ctx) {
+    return has(ctx, 556)  // Air rune
+        && has(ctx, 555)  // Water rune
+        && has(ctx, 557)  // Earth rune
+        && has(ctx, 954); // Rope
 }
 
 function canCompleteDwarfCannon(ctx) {

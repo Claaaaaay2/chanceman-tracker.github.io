@@ -2357,7 +2357,7 @@
                 "has": 2361
               },
               "canTrainSmithing",
-              "canCompleteTouristTrap"
+              "canCompleteTheTouristTrap"
             ]
           }
         }
@@ -11216,7 +11216,7 @@
         }
       },
       "shops": {
-        "Yes": "canCompleteFremennikTrials"
+        "Yes": "canCompleteTheFremennikTrials"
       }
     }
   },
@@ -12680,7 +12680,7 @@
         }
       },
       "shops": {
-        "Yes": "canCompleteLunarDiplomacy"
+        "Yes": "canReachLunarIsle"
       },
       "other": {
         "Runecrafting": {
@@ -12695,7 +12695,7 @@
                   "canCompleteSinsOfTheFather"
                 ]
               },
-              "canCompleteLunarDiplomacy"
+              "canReachLunarIsle"
             ]
           }
         }
@@ -16751,7 +16751,7 @@
         }
       },
       "shops": {
-        "Yes": "canCompleteFremennikTrials"
+        "Yes": "canCompleteTheFremennikTrials"
       }
     }
   },
@@ -30837,6 +30837,10 @@
               "canTrainSmithing"
             ]
           }
+        },
+        "Given to you by Lunar diplomacy's Cabin boy": {
+          "notes": "He is found on Pirates Cove at the start of Lunar Diplomacy",
+          "rule": "canReachPiratesCove"
         }
       }
     }
@@ -40763,6 +40767,17 @@
       },
       "shops": {
         "Yes": "canCompleteTempleOfTheEye"
+      },
+      "other": {
+        "Giving 50 junk items to Thorgel during Mournings End Part II": {
+          "notes": "Requires a lot of items",
+          "rule": {
+            "all": [
+              "has50JunkItems",
+              "canCompleteMourningsEndPartII"
+            ]
+          }
+        }
       }
     }
   },
@@ -53410,7 +53425,7 @@
         }
       },
       "shops": {
-        "Yes": "canCompleteFremennikTrials"
+        "Yes": "canCompleteTheFremennikTrials"
       }
     }
   },
@@ -55893,7 +55908,7 @@
     "image": "fremennik_beige_shirt.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteFremennikTrials"
+        "Yes": "canCompleteTheFremennikTrials"
       }
     }
   },
@@ -55904,7 +55919,7 @@
     "image": "fremennik_black_cloak.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteFremennikTrials"
+        "Yes": "canCompleteTheFremennikTrials"
       }
     }
   },
@@ -55915,7 +55930,7 @@
     "image": "fremennik_blue_cloak.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteFremennikTrials"
+        "Yes": "canCompleteTheFremennikTrials"
       }
     }
   },
@@ -55926,7 +55941,7 @@
     "image": "fremennik_blue_shirt.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteFremennikTrials"
+        "Yes": "canCompleteTheFremennikTrials"
       }
     }
   },
@@ -55937,7 +55952,7 @@
     "image": "fremennik_boots.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteFremennikTrials"
+        "Yes": "canCompleteTheFremennikTrials"
       }
     }
   },
@@ -55956,7 +55971,7 @@
         }
       },
       "shops": {
-        "Yes": "canCompleteFremennikTrials"
+        "Yes": "canCompleteTheFremennikTrials"
       }
     }
   },
@@ -55975,7 +55990,7 @@
         }
       },
       "shops": {
-        "Yes": "canCompleteFremennikTrials"
+        "Yes": "canCompleteTheFremennikTrials"
       }
     }
   },
@@ -55986,7 +56001,7 @@
     "image": "fremennik_cyan_cloak.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteFremennikTrials"
+        "Yes": "canCompleteTheFremennikTrials"
       }
     }
   },
@@ -56005,7 +56020,7 @@
         }
       },
       "shops": {
-        "Yes": "canCompleteFremennikTrials"
+        "Yes": "canCompleteTheFremennikTrials"
       }
     }
   },
@@ -56016,7 +56031,7 @@
     "image": "fremennik_green_cloak.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteFremennikTrials"
+        "Yes": "canCompleteTheFremennikTrials"
       }
     }
   },
@@ -56027,7 +56042,7 @@
     "image": "fremennik_grey_cloak.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteFremennikTrials"
+        "Yes": "canCompleteTheFremennikTrials"
       }
     }
   },
@@ -56038,7 +56053,7 @@
     "image": "fremennik_grey_shirt.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteFremennikTrials"
+        "Yes": "canCompleteTheFremennikTrials"
       }
     }
   },
@@ -56049,7 +56064,7 @@
     "image": "fremennik_hat.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteFremennikTrials"
+        "Yes": "canCompleteTheFremennikTrials"
       }
     }
   },
@@ -56087,7 +56102,7 @@
     "image": "fremennik_purple_cloak.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteFremennikTrials"
+        "Yes": "canCompleteTheFremennikTrials"
       }
     }
   },
@@ -56098,7 +56113,7 @@
     "image": "fremennik_red_cloak.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteFremennikTrials"
+        "Yes": "canCompleteTheFremennikTrials"
       }
     }
   },
@@ -56109,7 +56124,7 @@
     "image": "fremennik_red_shirt.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteFremennikTrials"
+        "Yes": "canCompleteTheFremennikTrials"
       }
     }
   },
@@ -56120,7 +56135,7 @@
     "image": "fremennik_robe.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteFremennikTrials"
+        "Yes": "canCompleteTheFremennikTrials"
       }
     }
   },
@@ -56131,7 +56146,7 @@
     "image": "fremennik_skirt.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteFremennikTrials"
+        "Yes": "canCompleteTheFremennikTrials"
       }
     }
   },
@@ -56142,7 +56157,7 @@
     "image": "fremennik_teal_cloak.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteFremennikTrials"
+        "Yes": "canCompleteTheFremennikTrials"
       }
     }
   },
@@ -56153,7 +56168,7 @@
     "image": "fremennik_yellow_cloak.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteFremennikTrials"
+        "Yes": "canCompleteTheFremennikTrials"
       }
     }
   },
@@ -77819,7 +77834,7 @@
                 "has": 2351
               },
               "canTrainSmithing",
-              "canCompleteTouristTrap"
+              "canCompleteTheTouristTrap"
             ]
           }
         }
@@ -81918,7 +81933,7 @@
         }
       },
       "shops": {
-        "Yes": "canCompleteFremennikTrials"
+        "Yes": "canCompleteTheFremennikTrials"
       }
     }
   },
@@ -93298,7 +93313,7 @@
                 "has": 2359
               },
               "canTrainSmithing",
-              "canCompleteTouristTrap"
+              "canCompleteTheTouristTrap"
             ]
           }
         }
@@ -114066,7 +114081,7 @@
               {
                 "has": 6157
               },
-              "canCompleteFremennikTrials"
+              "canCompleteTheFremennikTrials"
             ]
           }
         }
@@ -114095,7 +114110,7 @@
               {
                 "has": 6161
               },
-              "canCompleteFremennikTrials"
+              "canCompleteTheFremennikTrials"
             ]
           }
         }
@@ -114124,7 +114139,7 @@
               {
                 "has": 6159
               },
-              "canCompleteFremennikTrials"
+              "canCompleteTheFremennikTrials"
             ]
           }
         }
@@ -116637,7 +116652,7 @@
                 "has": 2363
               },
               "canTrainSmithing",
-              "canCompleteTouristTrap"
+              "canCompleteTheTouristTrap"
             ]
           }
         }
@@ -123941,7 +123956,7 @@
         },
         "Trading with Bardur": {
           "notes": "Trade Fremennik blade, shield or helm after completion of Fremennik Trials.",
-          "rule": "canCompleteFremennikTrials"
+          "rule": "canCompleteTheFremennikTrials"
         }
       }
     }
@@ -125231,7 +125246,7 @@
               {
                 "has": 6167
               },
-              "canCompleteFremennikTrials"
+              "canCompleteTheFremennikTrials"
             ]
           }
         }
@@ -125268,7 +125283,7 @@
               {
                 "has": 6163
               },
-              "canCompleteFremennikTrials"
+              "canCompleteTheFremennikTrials"
             ]
           }
         }
@@ -125297,7 +125312,7 @@
               {
                 "has": 6165
               },
-              "canCompleteFremennikTrials"
+              "canCompleteTheFremennikTrials"
             ]
           }
         }
@@ -128576,7 +128591,7 @@
               {
                 "has": 6171
               },
-              "canCompleteFremennikTrials"
+              "canCompleteTheFremennikTrials"
             ]
           }
         }
@@ -128618,7 +128633,7 @@
               {
                 "has": 6173
               },
-              "canCompleteFremennikTrials"
+              "canCompleteTheFremennikTrials"
             ]
           }
         }
@@ -128655,7 +128670,7 @@
               {
                 "has": 6169
               },
-              "canCompleteFremennikTrials"
+              "canCompleteTheFremennikTrials"
             ]
           }
         }
@@ -131567,7 +131582,7 @@
                 "has": 2353
               },
               "canTrainSmithing",
-              "canCompleteTouristTrap"
+              "canCompleteTheTouristTrap"
             ]
           }
         }
@@ -150289,7 +150304,7 @@
         }
       },
       "shops": {
-        "Yes": "canCompleteFremennikTrials"
+        "Yes": "canCompleteTheFremennikTrials"
       }
     }
   },
