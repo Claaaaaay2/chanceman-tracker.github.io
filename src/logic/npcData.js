@@ -942,7 +942,7 @@ export const NPC_DATA = {
     },
     "Asyn shadow (Temple Trekking)": {
         "wiki": "https://oldschool.runescape.wiki/w/Asyn_shadow_(Temple_Trekking)",
-        "rule": ["canCompleteInSearchOfTheMyreque"],
+        "rule": ["canCompleteInAidOfTheMyreque"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -1076,7 +1076,7 @@ export const NPC_DATA = {
     },
     "Backpack": {
         "wiki": "https://oldschool.runescape.wiki/w/Backpack",
-        "rule": ["canCompleteInSearchOfTheMyreque"],
+        "rule": ["canCompleteInAidOfTheMyreque"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -10449,7 +10449,7 @@ export const NPC_DATA = {
     },
     "Nail beast": {
         "wiki": "https://oldschool.runescape.wiki/w/Nail_beast",
-        "rule": ["canCompleteInSearchOfTheMyreque"],
+        "rule": ["canCompleteInAidOfTheMyreque"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -12308,7 +12308,7 @@ export const NPC_DATA = {
     },
     "Reward token": {
         "wiki": "https://oldschool.runescape.wiki/w/Reward_token",
-        "rule": ["canCompleteInSearchOfTheMyreque"],
+        "rule": ["canCompleteInAidOfTheMyreque"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -12457,7 +12457,7 @@ export const NPC_DATA = {
     },
     "Riyl shadow (Temple Trekking)": {
         "wiki": "https://oldschool.runescape.wiki/w/Riyl_shadow_(Temple_Trekking)",
-        "rule": ["canCompleteInSearchOfTheMyreque"],
+        "rule": ["canCompleteInAidOfTheMyreque"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -13326,7 +13326,7 @@ export const NPC_DATA = {
     },
     "Shade (Temple Trekking)": {
         "wiki": "https://oldschool.runescape.wiki/w/Shade_(Temple_Trekking)",
-        "rule": ["canCompleteInSearchOfTheMyreque"],
+        "rule": ["canCompleteInAidOfTheMyreque"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -14636,7 +14636,7 @@ export const NPC_DATA = {
     },
     "Swamp snake": {
         "wiki": "https://oldschool.runescape.wiki/w/Swamp_snake",
-        "rule": ["canCompleteInSearchOfTheMyreque"],
+        "rule": ["canCompleteInAidOfTheMyreque"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -15553,7 +15553,7 @@ export const NPC_DATA = {
     },
     "Undead Lumberjack": {
         "wiki": "https://oldschool.runescape.wiki/w/Undead_Lumberjack",
-        "rule": ["canCompleteInSearchOfTheMyreque"],
+        "rule": ["canCompleteInAidOfTheMyreque"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -15727,7 +15727,7 @@ export const NPC_DATA = {
     },
     "Vampyre Juvinate": {
         "wiki": "https://oldschool.runescape.wiki/w/Vampyre_Juvinate",
-        "rule": ["canCompleteInSearchOfTheMyreque"],
+        "rule": ["canCompleteInAidOfTheMyreque"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -16826,7 +16826,7 @@ export const NPC_DATA = {
     },
     "Zombie (Temple Trekking)": {
         "wiki": "https://oldschool.runescape.wiki/w/Zombie_(Temple_Trekking)",
-        "rule": ["canCompleteInSearchOfTheMyreque"],
+        "rule": ["canCompleteInAidOfTheMyreque"],
         "skill": [],
         "level": [],
         "tags": [],

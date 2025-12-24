@@ -96610,7 +96610,7 @@
       "other": {
         "Using a silver sickle (b)": {
           "notes": "Requires complteing Priesst in Peril.",
-          "rule": "canCompleteNatureSpirit"
+          "rule": "canUseSilverSickle"
         }
       }
     }
@@ -96624,7 +96624,7 @@
       "other": {
         "Using a silver sickle (b)": {
           "notes": "Requires complteing Priesst in Peril.",
-          "rule": "canCompleteNatureSpirit"
+          "rule": "canUseSilverSickle"
         }
       }
     }
@@ -96638,7 +96638,7 @@
       "other": {
         "Using a silver sickle (b)": {
           "notes": "Requires complteing Priesst in Peril.",
-          "rule": "canCompleteNatureSpirit"
+          "rule": "canUseSilverSickle"
         }
       }
     }

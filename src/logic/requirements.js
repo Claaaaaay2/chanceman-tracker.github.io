@@ -5,6 +5,9 @@ export function has(ctx, id) {
 }
 
 export const REQUIREMENT_CHECKS = {
+    canUseSilverSickle(ctx) {
+        return canUseSilverSickle(ctx);
+    },
     canMakeWoodenCats(ctx) {
         return canMakeWoodenCats(ctx);
     },
@@ -202,7 +205,7 @@ export const REQUIREMENT_CHECKS = {
         return canCompleteDragonSlayerI(ctx);
     },
     canCompleteDesertTreasureII(ctx) {
-        return false; // TODO
+        return canCompleteDesertTreasureII(ctx);
     },
     canCompleteDesertTreasureI(ctx) {
         return canCompleteDesertTreasureI(ctx);
@@ -214,10 +217,10 @@ export const REQUIREMENT_CHECKS = {
         return canCompleteMyArmsBigAdventure(ctx);
     },
     canCompleteInAidOfTheMyreque(ctx) {
-        return false; // TODO
+        return canCompleteInAidOfTheMyreque(ctx);
     },
     canCompleteShadowsOfCustodia(ctx) {
-        return false; // TODO
+        return canCompleteShadowsOfCustodia(ctx);
     },
     canCompleteSongOfTheElves(ctx) {
         return false; // TODO
@@ -253,7 +256,7 @@ export const REQUIREMENT_CHECKS = {
         return canCompleteCabinFever(ctx);
     },
     canCompleteWanted(ctx) {
-        return false; // TODO
+        return canCompleteWanted(ctx);
     },
     canCompleteTheFinalDawn(ctx) {
         return false; // TODO
@@ -289,7 +292,7 @@ export const REQUIREMENT_CHECKS = {
         return canCompleteTempleOfIkov(ctx);
     },
     canCompleteInSearchOfTheMyreque(ctx) {
-        return false; // TODO
+        return canCompleteInSearchOfTheMyreque(ctx);
     },
     canCompleteTheCorsairCurse(ctx) {
         return false; // TODO
@@ -433,7 +436,7 @@ export const REQUIREMENT_CHECKS = {
         return canCompleteNatureSpirit(ctx);
     },
     canCompleteSecretsOfTheNorth(ctx) {
-        return false; // TODO
+        return canCompleteSecretsOfTheNorth(ctx);
     },
     canCompleteLunarDiplomacy(ctx) {
         return canCompleteLunarDiplomacy(ctx);
@@ -2328,6 +2331,14 @@ function canCompleteLostCity(ctx) {
 
 function canCompleteNatureSpirit(ctx) {
     return canTrainCrafting(ctx) //
+        && (has(ctx, 2970) || has(ctx, 2974) || has(ctx, 2972)) // Mort myre Fungus, Mort myre pear of Mort myre stem
+        && has(ctx, 2961)  // Silver sickle
+        && has(ctx, 2355)  // Silver bar
+        && has(ctx, 2976); // Sickle mould
+}
+
+function canUseSilverSickle(ctx) {
+    return canTrainCrafting(ctx) //
         && has(ctx, 2961)  // Silver sickle
         && has(ctx, 2355)  // Silver bar
         && has(ctx, 2976); // Sickle mould
@@ -2793,6 +2804,97 @@ function canCompleteDesertTreasureI(ctx) {
         && has(ctx, 590); // Tinderbox
 }
 
+function canCompleteDesertTreasureII(ctx) {
+    return canCompleteDesertTreasureI(ctx) //
+        && canCompleteSecretsOfTheNorth(ctx) //
+        && canCompleteEnakhrasLament(ctx) //
+        && canCompleteTempleOfTheEye(ctx) //
+        && canCompleteGardenOfDeath(ctx) //
+        && canCompleteBelowIceMountain(ctx) //
+        && canCompleteHisFaithfulServants(ctx) //
+        && canTrainFiremaking(ctx) //
+        && canTrainHerblore(ctx) //
+        && canTrainRunecraft(ctx) //
+        && canTrainConstruction(ctx) //
+        && canTrainMining(ctx) //
+        && has(ctx, 560)  // Death rune
+        && has(ctx, 565)  // Blood rune
+        && has(ctx, 562)  // Chaos rune
+        && has(ctx, 566)  // Soul rune
+        && hasAirRuneSource(ctx) //
+        && hasWaterRuneSource(ctx) //
+        && hasFireRuneSource(ctx) //
+        && has(ctx, 590)  // Tinderbox
+        && has(ctx, 4164) // Facemask
+        && has(ctx, 233); // Pestle and mortar
+}
+
+function canCompleteSecretsOfTheNorth(ctx) {
+    return canCompleteMakingFriendsWithMyArm(ctx) //
+        && canCompleteTheGeneralsShadow(ctx) //
+        && canCompleteDeviousMinds(ctx) //
+        && has(ctx, 1523) // Lockpick
+        && has(ctx, 590); // Tinderbox
+}
+
+function canCompleteTheGeneralsShadow(ctx) {
+    return canCompleteCurseOfTheEmptyLord(ctx);
+}
+
+function canCompleteCurseOfTheEmptyLord(ctx) {
+    return canCompleteDesertTreasureI(ctx) //
+        && canTrainPrayer(ctx);
+}
+
+function canCompleteDeviousMinds(ctx) {
+    return canCompleteWanted(ctx) //
+        && canCompleteTrollStronghold(ctx) //
+        && canCompleteDoricsQuest(ctx) //
+        && canTrainSmithing(ctx) //
+        && canTrainRunecraft(ctx) //
+        && canTrainFletching(ctx) //
+        && has(ctx, 1315)  // Mithril 2h sword
+        && has(ctx, 1777); // Bow string
+}
+
+function canCompleteWanted(ctx) {
+    return canCompleteRecruitmentDrive(ctx) //
+        && canCompleteTheLostTribe(ctx) //
+        && canCompletePriestInPeril(ctx) //
+        && canCompleteEnterTheAbyss(ctx)  //
+        && (has(ctx, 7936) || has(ctx, 1436)) // Pure essence or Rune essence
+        && ctx.player.questPoints >= 32;
+}
+
+function canCompleteRecruitmentDrive(ctx) {
+    return canCompleteBlackKnightsFortress(ctx) //
+        && canCompleteDruidicRitual(ctx) //
+        && (has(ctx, 946) || has(ctx, 1755) || has(ctx, 1794)); // Knife, Chisel or Bronze wire
+}
+
+function canCompleteBlackKnightsFortress(ctx) {
+    return ctx.player.questPoints >= 12 //
+        && has(ctx, 1965)  // Cabbage
+        && has(ctx, 1101)  // Iron chainbody
+        && has(ctx, 1139); // Bronze med helm
+}
+
+function canCompleteDoricsQuest(ctx) {
+    return has(ctx, 440)  // Iron ore
+        && has(ctx, 436)  // Copper ore
+        && has(ctx, 434); // Clay
+}
+
+function canCompleteGardenOfDeath(ctx) {
+    return canTrainFarming(ctx) //
+        && has(ctx, 5329);
+}
+
+function canCompleteHisFaithfulServants(ctx) {
+    return canCompletePriestInPeril(ctx) //
+        && has(ctx, 952); // Spade
+}
+
 function canCompleteTempleOfIkov(ctx) {
     return has(ctx, 225)       // Limpwurt root
         && (has(ctx, 864)      // Bronze knife
@@ -3159,7 +3261,7 @@ function canCompleteTheFeud(ctx) {
 }
 
 function canCompleteTheFremennikIsles(ctx) {
-    return true;
+    return false; // TODO
 }
 
 function canCompleteEnakhrasLament(ctx) {
@@ -3200,6 +3302,57 @@ function canStartLegendsQuest(ctx) {
 
 function canCompleteTrollStronghold(ctx) {
     return canCompleteDeathPlateau(ctx);
+}
+
+function canCompleteShadowsOfCustodia(ctx) {
+    return canTrainSlayer(ctx) //
+        && canTrainFishing(ctx) //
+        && canTrainConstruction(ctx) //
+        && canTrainHunter(ctx) //
+        && has(ctx, 847)  // Willow longbow
+        && has(ctx, 1517) // Maple logs
+        && has(ctx, 2347) // Hammer
+        && has(ctx, 307); // Fishing rod
+}
+
+function canCompleteInAidOfTheMyreque(ctx) {
+    return canCompleteInSearchOfTheMyreque(ctx) //
+        && canTrainCrafting(ctx) //
+        && canTrainMining(ctx) //
+        && has(ctx, 952) // Spade
+        && has(ctx, 1925) // Bucket
+        && has(ctx, 2347) // Hammer
+        && has(ctx, 960)  // Plank
+        && hasAnyNails(ctx) //
+        && has(ctx, 1941) // Swamp paste
+        && ( //
+            has(ctx, 353) // Raw mackerel
+            || has(ctx, 355) // Mackerel
+            || has(ctx, 3363) // Thin snail
+            || has(ctx, 3365) // Lean snail
+            || has(ctx, 3367) // Fat snail
+        ) //
+        && has(ctx, 1351) // Bronze axe
+        && has(ctx, 590)  // Tinderbox
+        && has(ctx, 2353) // Steel bar
+        && has(ctx, 453)  // Coal
+        && has(ctx, 1761) // Soft clay
+        && has(ctx, 2355) // Silver bar
+        && has(ctx, 2359) // Mithril bar
+        && has(ctx, 1607) // Sapphire
+        && has(ctx, 954); // Rope
+}
+
+function canCompleteInSearchOfTheMyreque(ctx) {
+    return canCompleteNatureSpirit(ctx) //
+        && has(ctx, 1295) // Steel longsword
+        && has(ctx, 1281) // Stel sword
+        && has(ctx, 1424) // Steel mace
+        && has(ctx, 1339) // Steel warhammer
+        && has(ctx, 1207) // Steel dagger
+        && has(ctx, 1539) // Steel nails
+        && has(ctx, 2347) // Hammer
+        && has(ctx, 960); // Plank
 }
 
 function canCompleteWaterfallQuest(ctx) {
