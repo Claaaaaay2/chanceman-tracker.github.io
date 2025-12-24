@@ -7177,14 +7177,7 @@
       "other": {
         "Questing": {
           "notes": "Obtained after Imp Catcher.",
-          "rule": {
-            "all": [
-              {
-                "has": 2353
-              },
-              "canCompleteImpCatcher"
-            ]
-          }
+          "rule": "canCompleteImpCatcher"
         }
       }
     }
@@ -8755,14 +8748,7 @@
       "other": {
         "Questing": {
           "notes": "Obtained during Another Slice of H.A.M.",
-          "rule": {
-            "all": [
-              {
-                "has": 2353
-              },
-              "canCompleteAnotherSliceOfHAM"
-            ]
-          }
+          "rule": "canCompleteAnotherSliceOfHAM"
         }
       }
     }
@@ -30551,6 +30537,11 @@
       },
       "spawns": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Questing": {
+          "notes": "Can be picked up from the ground in Misthalin Mystery (even if you don't have it unlocked)."
+        }
       }
     }
   },
@@ -33586,14 +33577,7 @@
         },
         "Questing": {
           "notes": "Obtained during A Taste of Hope.",
-          "rule": {
-            "all": [
-              {
-                "has": 2353
-              },
-              "canCompleteATasteOfHope"
-            ]
-          }
+          "rule": "canCompleteATasteOfHope"
         }
       }
     }
@@ -35869,7 +35853,7 @@
     "image": "cleaver.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteRecipeForDisaster"
+        "Yes": "canCompleteRecipeForDisasterEntirely"
       }
     }
   },
@@ -58100,6 +58084,11 @@
         },
         "Hobgoblin Unarmed": {
           "droprate": "1/25.6; 1/64"
+        }
+      },
+      "other": {
+        "Questing": {
+          "notes": "Received during Goblin Diplomacy (search crates in Goblin Village)."
         }
       }
     }
@@ -82273,6 +82262,11 @@
       },
       "spawns": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Questing": {
+          "notes": "Can be picked up from the table in Misthalin Mystery (even if you don't have it unlocked)."
+        }
       }
     }
   },
@@ -96610,7 +96604,7 @@
       "other": {
         "Using a silver sickle (b)": {
           "notes": "Requires complteing Priesst in Peril.",
-          "rule": "canCompleteNatureSpirit"
+          "rule": "canUseSilverSickle"
         }
       }
     }
@@ -96624,7 +96618,7 @@
       "other": {
         "Using a silver sickle (b)": {
           "notes": "Requires complteing Priesst in Peril.",
-          "rule": "canCompleteNatureSpirit"
+          "rule": "canUseSilverSickle"
         }
       }
     }
@@ -96638,7 +96632,7 @@
       "other": {
         "Using a silver sickle (b)": {
           "notes": "Requires complteing Priesst in Peril.",
-          "rule": "canCompleteNatureSpirit"
+          "rule": "canUseSilverSickle"
         }
       }
     }
@@ -103861,6 +103855,12 @@
       },
       "spawns": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Questing": {
+          "notes": "Received during A Taste of Hope.",
+          "rule": "canStartATasteOfHope"
+        }
       }
     }
   },
@@ -144246,6 +144246,10 @@
               "canTrainCrafting"
             ]
           }
+        },
+        "Questing": {
+          "notes": "Received during At First Light.",
+          "rule": "canStartAtFirstLight"
         }
       }
     }
