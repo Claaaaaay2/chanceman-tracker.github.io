@@ -11273,7 +11273,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Pile_of_Buckets",
         "rule": {
             "any": [
-                "canCompleteGiantsFoundry",
+                "canCompleteSleepingGiants",
                 "canCompleteMakingFriendsWithMyArm"
             ]
         },

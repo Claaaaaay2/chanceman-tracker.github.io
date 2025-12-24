@@ -918,6 +918,12 @@
         "Flowering Tree (Forestry event)": {
           "droprate": "Uncommon"
         }
+      },
+      "other": {
+        "Questing": {
+          "notes": "Received after Garden of Tranquility.",
+          "rule": "canCompleteGardenOfTranquility"
+        }
       }
     },
     "processable": {
@@ -6594,6 +6600,11 @@
       },
       "shops": {
         "Yes": "canCompleteTempleOfTheEye"
+      },
+      "other": {
+        "Questing": {
+          "notes": "Received at the start of Rune Mysteries."
+        }
       }
     }
   },
@@ -6637,7 +6648,7 @@
               {
                 "has": 4440
               },
-              "canCompleteOneSmallFavor",
+              "canMakeAirtightPot",
               "canTrainCrafting"
             ]
           }
@@ -10947,6 +10958,12 @@
         },
         "Flowering Tree (Forestry event)": {
           "droprate": "Uncommon"
+        }
+      },
+      "other": {
+        "Questing": {
+          "notes": "Received after Garden of Tranquility.",
+          "rule": "canCompleteGardenOfTranquility"
         }
       }
     }
@@ -35348,6 +35365,10 @@
               "canTrainCooking"
             ]
           }
+        },
+        "Questing": {
+          "notes": "Received after The Digsite (show Certificate level 3 to Curator in Varrock Museum).",
+          "rule": "canCompleteTheDigsite"
         }
       }
     }
@@ -35848,7 +35869,7 @@
     "image": "cleaver.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteRecipeForDisasterEntirely"
+        "Yes": "canCompleteRecipeForDisaster"
       }
     }
   },
@@ -37113,6 +37134,10 @@
               }
             ]
           }
+        },
+        "Questing": {
+          "notes": "Received after Garden of Tranquility.",
+          "rule": "canCompleteGardenOfTranquility"
         }
       },
       "shops": {
@@ -50175,6 +50200,24 @@
               "canTrainCrafting"
             ]
           }
+        },
+        "Questing": {
+          "notes": "Obtained after Shadow of the Storm.",
+          "rule": {
+            "all": [
+              {
+                "has": 2347
+              },
+              {
+                "has": 1755
+              },
+              "canCompleteShadowOfTheStorm"
+            ]
+          }
+        },
+        "Questing 2": {
+          "notes": "Received after Pirate's Treasure.",
+          "rule": "canCompletePiratesTreasure"
         }
       }
     }
@@ -55685,7 +55728,7 @@
     "image": "forester's_ration.png",
     "sources": {
       "other": {
-        "Combinging leaves with a cooked type of meat": {
+        "Combining leaves with a cooked type of meat": {
           "notes": "Requires any leaves and most cooked meat/fish.",
           "rule": {
             "all": [
@@ -56431,6 +56474,10 @@
               }
             ]
           }
+        },
+        "Questing": {
+          "notes": "Received after The Digsite (show Certificate level 3 to Curator in Varrock Museum).",
+          "rule": "canCompleteTheDigsite"
         }
       }
     }
@@ -56567,7 +56614,7 @@
           }
         },
         "Decanting jewellery": {
-          "notes": "Requires a games necklace (2) (drop from Skeleton (tarn's lair))."
+          "notes": "Requires a games necklace (2) (drop from Skeleton (tarn's lair)) (well 4 of them actually)."
         }
       }
     }
@@ -58509,8 +58556,16 @@
           }
         },
         "Questing": {
-          "notes": "Obtained upon completion of Waterfall Quest.",
+          "notes": "Received after Waterfall Quest.",
           "rule": "canCompleteWaterfallQuest"
+        },
+        "Questing 2": {
+          "notes": "Received after Pirate's Treasure.",
+          "rule": "canCompletePiratesTreasure"
+        },
+        "Questing 3": {
+          "notes": "Received after The Digsite.",
+          "rule": "canCompleteTheDigsite"
         }
       },
       "spawns": {
@@ -72110,6 +72165,12 @@
         "Wise Old Man tasks": {
           "droprate": "Uncommon"
         }
+      },
+      "other": {
+        "Questing": {
+          "notes": "Received after Garden of Tranquility.",
+          "rule": "canCompleteGardenOfTranquility"
+        }
       }
     }
   },
@@ -73045,7 +73106,7 @@
                 "has": 251
               },
               "canTrainHerblore",
-              "canCompleteOneSmallFavor"
+              "canMakeGuthixRests"
             ]
           }
         },
@@ -73092,7 +73153,7 @@
                 "has": 251
               },
               "canTrainHerblore",
-              "canCompleteOneSmallFavor"
+              "canMakeGuthixRests"
             ]
           }
         },
@@ -79742,6 +79803,9 @@
     "name": "Iron spit",
     "image": "iron_spit.png",
     "sources": {
+      "spawns": {
+        "Yes": "canCompleteMyArmsBigAdventure"
+      },
       "other": {
         "Smithing": {
           "notes": "Requires an iron bar.",
@@ -85614,7 +85678,7 @@
                   {
                     "has": 946
                   },
-                  "hasAnySlashWeapon"
+                  "hasSlashWeapon"
                 ]
               },
               {
@@ -85642,7 +85706,7 @@
                   {
                     "has": 946
                   },
-                  "hasAnySlashWeapon"
+                  "hasSlashWeapon"
                 ]
               },
               {
@@ -85896,7 +85960,7 @@
                   {
                     "has": 946
                   },
-                  "hasAnySlashWeapon"
+                  "hasSlashWeapon"
                 ]
               },
               {
@@ -85924,7 +85988,7 @@
                   {
                     "has": 946
                   },
-                  "hasAnySlashWeapon"
+                  "hasSlashWeapon"
                 ]
               },
               {
@@ -102495,7 +102559,7 @@
                   {
                     "has": 946
                   },
-                  "hasAnySlashWeapon"
+                  "hasSlashWeapon"
                 ]
               },
               {
@@ -102632,7 +102696,7 @@
                   {
                     "has": 946
                   },
-                  "hasAnySlashWeapon"
+                  "hasSlashWeapon"
                 ]
               },
               {
@@ -105090,6 +105154,11 @@
       },
       "spawns": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Questing": {
+          "notes": "Received during Hazeel Cult (note if you don't have Poison (item) unlocked that will lock the quest)."
+        }
       }
     }
   },
@@ -113004,6 +113073,10 @@
               "canCompletePandemonium"
             ]
           }
+        },
+        "Questing": {
+          "notes": "Received after Pandemonium.",
+          "rule": "canCompletePandemonium"
         }
       }
     }
@@ -114724,6 +114797,24 @@
               "canTrainCrafting"
             ]
           }
+        },
+        "Questing": {
+          "notes": "Obtained after Shadow of the Storm.",
+          "rule": {
+            "all": [
+              {
+                "has": 2347
+              },
+              {
+                "has": 1755
+              },
+              "canCompleteShadowOfTheStorm"
+            ]
+          }
+        },
+        "Questing 2": {
+          "notes": "Obtained after Olaf's quest.",
+          "rule": "canCompleteOlafsQuest"
         }
       }
     }
@@ -121632,6 +121723,20 @@
               "canTrainCrafting"
             ]
           }
+        },
+        "Questing": {
+          "notes": "Obtained after Shadow of the Storm.",
+          "rule": {
+            "all": [
+              {
+                "has": 2347
+              },
+              {
+                "has": 1755
+              },
+              "canCompleteShadowOfTheStorm"
+            ]
+          }
         }
       }
     }
@@ -125994,7 +126099,7 @@
                   {
                     "has": 946
                   },
-                  "hasAnySlashWeapon"
+                  "hasSlashWeapon"
                 ]
               }
             ]
@@ -146965,6 +147070,12 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Questing": {
+          "notes": "Obtained after Misthalin Mystery.",
+          "rule": "canCompleteMisthalinMystery"
+        }
       }
     }
   },
@@ -147796,6 +147907,12 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Questing": {
+          "notes": "Obtained after Misthalin Mystery.",
+          "rule": "canCompleteMisthalinMystery"
+        }
       }
     }
   },
@@ -148112,6 +148229,12 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Questing": {
+          "notes": "Obtained after Misthalin Mystery.",
+          "rule": "canCompleteMisthalinMystery"
+        }
       }
     }
   },
@@ -148290,7 +148413,7 @@
               {
                 "has": 1761
               },
-              "canCompleteOneSmallFavor"
+              "canMakePotLids"
             ]
           }
         }
@@ -154599,6 +154722,7 @@
                 "has": 960
               },
               "canTrainCrafting",
+              "canCompleteTheGreatBrainRobbery",
               {
                 "any": [
                   {
