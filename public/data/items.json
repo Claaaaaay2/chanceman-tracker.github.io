@@ -2487,10 +2487,10 @@
           "rule": {
             "all": [
               {
-                "has": 20011
+                "has": 1357
               },
               {
-                "has": 1357
+                "has": 28177
               }
             ]
           }
@@ -10973,6 +10973,10 @@
               }
             ]
           }
+        },
+        "Questing": {
+          "notes": "Obtained during Enlightened Journey.",
+          "rule": "canCompleteEnlightenedJourney"
         }
       }
     }
@@ -18552,7 +18556,7 @@
                 "has": 1361
               },
               {
-                "has": 1357
+                "has": 28177
               }
             ]
           }
@@ -23017,6 +23021,10 @@
               "hasAnyNormalCape"
             ]
           }
+        },
+        "Questing": {
+          "notes": "Obtained during Wanted!",
+          "rule": "canCompleteWanted"
         }
       }
     }
@@ -24705,6 +24713,12 @@
       },
       "shops": {
         "Yes": "canCompleteTheLostTribe"
+      },
+      "other": {
+        "Questing": {
+          "notes": "Obtained during Wanted!",
+          "rule": "canCompleteWanted"
+        }
       }
     }
   },
@@ -28439,7 +28453,8 @@
               {
                 "has": 2349
               },
-              "canTrainSmithing"
+              "canTrainSmithing",
+              "canCompleteTheTouristTrap"
             ]
           }
         }
@@ -28546,7 +28561,7 @@
                 "has": 1351
               },
               {
-                "has": 1357
+                "has": 28177
               }
             ]
           }
@@ -37438,11 +37453,7 @@
         },
         "Questing": {
           "notes": "Obtained at the start of Zogre Flesh Eaters.",
-          "rule": {
-            "all": [
-              "canStartZogreFleshEaters"
-            ]
-          }
+          "rule": "canStartZogreFleshEaters"
         }
       }
     }
@@ -44899,7 +44910,7 @@
                 "has": 6739
               },
               {
-                "has": 1357
+                "has": 28177
               }
             ]
           }
@@ -74485,11 +74496,7 @@
       "other": {
         "Questing": {
           "notes": "Requires completing The Fremmenik Isles.",
-          "rule": {
-            "all": [
-              "canCompleteTheFremennikIsles"
-            ]
-          }
+          "rule": "canCompleteTheFremennikIsles"
         }
       }
     }
@@ -77968,7 +77975,7 @@
                 "has": 1349
               },
               {
-                "has": 1357
+                "has": 28177
               }
             ]
           }
@@ -93478,7 +93485,7 @@
                 "has": 1355
               },
               {
-                "has": 1357
+                "has": 28177
               }
             ]
           }
@@ -96603,7 +96610,7 @@
       },
       "other": {
         "Using a silver sickle (b)": {
-          "notes": "Requires complteing Priesst in Peril.",
+          "notes": "Requires completing Priest in Peril.",
           "rule": "canUseSilverSickle"
         }
       }
@@ -96617,7 +96624,7 @@
     "sources": {
       "other": {
         "Using a silver sickle (b)": {
-          "notes": "Requires complteing Priesst in Peril.",
+          "notes": "Requires completing Priest in Peril.",
           "rule": "canUseSilverSickle"
         }
       }
@@ -96631,7 +96638,7 @@
     "sources": {
       "other": {
         "Using a silver sickle (b)": {
-          "notes": "Requires complteing Priesst in Peril.",
+          "notes": "Requires completing Priest in Peril.",
           "rule": "canUseSilverSickle"
         }
       }
@@ -102545,16 +102552,11 @@
     "sources": {
       "other": {
         "Cooking": {
-          "notes": "Requires an orange and a knife or any slash weapon.",
+          "notes": "Requires an orange and a knife.",
           "rule": {
             "all": [
               {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasSlashWeapon"
-                ]
+                "has": 946
               },
               {
                 "has": 2108
@@ -102682,16 +102684,11 @@
     "sources": {
       "other": {
         "Cooking": {
-          "notes": "Requires an orange and a knife or any slash weapon.",
+          "notes": "Requires an orange and a knife.",
           "rule": {
             "all": [
               {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasSlashWeapon"
-                ]
+                "has": 946
               },
               {
                 "has": 2108
@@ -107691,6 +107688,12 @@
         },
         "Reward Cart": {
           "droprate": "Varies"
+        }
+      },
+      "other": {
+        "Questing": {
+          "notes": "Obtained during Wanted!",
+          "rule": "canCompleteWanted"
         }
       }
     }
@@ -116911,7 +116914,7 @@
                 "has": 1359
               },
               {
-                "has": 1357
+                "has": 28177
               }
             ]
           }
@@ -131794,7 +131797,7 @@
                 "has": 1353
               },
               {
-                "has": 1357
+                "has": 28177
               }
             ]
           }

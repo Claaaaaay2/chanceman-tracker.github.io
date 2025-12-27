@@ -2330,7 +2330,8 @@ function canCompleteLostCity(ctx) {
 }
 
 function canCompleteNatureSpirit(ctx) {
-    return canTrainCrafting(ctx) //
+    return canCompletePriestInPeril(ctx) //
+        && canTrainCrafting(ctx) //
         && (has(ctx, 2970) || has(ctx, 2974) || has(ctx, 2972)) // Mort myre Fungus, Mort myre pear of Mort myre stem
         && has(ctx, 2961)  // Silver sickle
         && has(ctx, 2355)  // Silver bar
@@ -2338,7 +2339,8 @@ function canCompleteNatureSpirit(ctx) {
 }
 
 function canUseSilverSickle(ctx) {
-    return canTrainCrafting(ctx) //
+    return canCompletePriestInPeril(ctx) //
+        && canTrainCrafting(ctx) //
         && has(ctx, 2961)  // Silver sickle
         && has(ctx, 2355)  // Silver bar
         && has(ctx, 2976); // Sickle mould
