@@ -921,8 +921,8 @@
       },
       "other": {
         "Questing": {
-          "notes": "Received after Garden of Tranquility.",
-          "rule": "canCompleteGardenOfTranquility"
+          "notes": "Received after Garden of Tranquillity.",
+          "rule": "canCompleteGardenOfTranquillity"
         }
       }
     },
@@ -10948,8 +10948,8 @@
       },
       "other": {
         "Questing": {
-          "notes": "Received after Garden of Tranquility.",
-          "rule": "canCompleteGardenOfTranquility"
+          "notes": "Received after Garden of Tranquillity.",
+          "rule": "canCompleteGardenOfTranquillity"
         }
       }
     }
@@ -10988,7 +10988,7 @@
     "image": "apprentice_wand.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteMageTrainingArena"
+        "Yes": "canDoMageTrainingArena"
       }
     }
   },
@@ -12236,7 +12236,7 @@
           "notes": "Requires any logs and a knife.",
           "rule": {
             "all": [
-              "hasAnyLogs",
+              "hasAnyFletchableLog",
               {
                 "has": 946
               }
@@ -16308,7 +16308,7 @@
     "image": "beginner_wand.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteMageTrainingArena"
+        "Yes": "canDoMageTrainingArena"
       }
     }
   },
@@ -35367,7 +35367,7 @@
         },
         "Questing": {
           "notes": "Received after The Digsite (show Certificate level 3 to Curator in Varrock Museum).",
-          "rule": "canCompleteTheDigsite"
+          "rule": "canCompleteTheDigSite"
         }
       }
     }
@@ -37135,8 +37135,8 @@
           }
         },
         "Questing": {
-          "notes": "Received after Garden of Tranquility.",
-          "rule": "canCompleteGardenOfTranquility"
+          "notes": "Received after Garden of Tranquillity.",
+          "rule": "canCompleteGardenOfTranquillity"
         }
       },
       "shops": {
@@ -37490,7 +37490,7 @@
           "Notes": "Requires Giant crab meat.",
           "rule": {
             "all": [
-              "canStartFreeingPiratePete",
+              "canCompleteRFDFreeingPiratePete",
               "canTrainCooking"
             ]
           }
@@ -56472,7 +56472,7 @@
         },
         "Questing": {
           "notes": "Received after The Digsite (show Certificate level 3 to Curator in Varrock Museum).",
-          "rule": "canCompleteTheDigsite"
+          "rule": "canCompleteTheDigSite"
         }
       }
     }
@@ -58565,7 +58565,7 @@
         },
         "Questing 3": {
           "notes": "Received after The Digsite.",
-          "rule": "canCompleteTheDigsite"
+          "rule": "canCompleteTheDigSite"
         }
       },
       "spawns": {
@@ -60436,7 +60436,7 @@
         }
       },
       "shops": {
-        "Yes": "canCompleteValeTotems"
+        "Yes": "canDoValeTotems"
       }
     }
   },
@@ -72168,8 +72168,8 @@
       },
       "other": {
         "Questing": {
-          "notes": "Received after Garden of Tranquility.",
-          "rule": "canCompleteGardenOfTranquility"
+          "notes": "Received after Garden of Tranquillity.",
+          "rule": "canCompleteGardenOfTranquillity"
         }
       }
     }
@@ -75846,7 +75846,7 @@
     "image": "infinity_boots.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteMageTrainingArena"
+        "Yes": "canDoMageTrainingArena"
       }
     }
   },
@@ -75857,7 +75857,7 @@
     "image": "infinity_bottoms.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteMageTrainingArena"
+        "Yes": "canDoMageTrainingArena"
       }
     }
   },
@@ -75868,7 +75868,7 @@
     "image": "infinity_gloves.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteMageTrainingArena"
+        "Yes": "canDoMageTrainingArena"
       }
     }
   },
@@ -75879,7 +75879,7 @@
     "image": "infinity_hat.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteMageTrainingArena"
+        "Yes": "canDoMageTrainingArena"
       }
     }
   },
@@ -75890,7 +75890,7 @@
     "image": "infinity_top.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteMageTrainingArena"
+        "Yes": "canDoMageTrainingArena"
       }
     }
   },
@@ -87425,7 +87425,7 @@
     "image": "mage's_book.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteMageTrainingArena"
+        "Yes": "canDoMageTrainingArena"
       }
     }
   },
@@ -90646,7 +90646,7 @@
     "image": "master_wand.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteMageTrainingArena"
+        "Yes": "canDoMageTrainingArena"
       }
     }
   },
@@ -104043,8 +104043,8 @@
     "sources": {
       "other": {
         "Crafting": {
-          "notes": "Made during Itchlarin's Little Helper.",
-          "rule": "canCompleteItchlarinsLittleHelper"
+          "notes": "Made during Icthlarin's Little Helper.",
+          "rule": "canCompleteIcthlarinsLittleHelper"
         }
       }
     }
@@ -105154,7 +105154,8 @@
       },
       "other": {
         "Questing": {
-          "notes": "Received during Hazeel Cult (note if you don't have Poison (item) unlocked that will lock the quest)."
+          "notes": "Received during Hazeel Cult (note if you don't have Poison (item) unlocked that will lock the quest).",
+          "rule": "canStartHazeelCult"
         }
       }
     }
@@ -108354,18 +108355,12 @@
   {
     "index": 2955,
     "id": 31677,
-    "name": "Rainbow crab (1)",
+    "name": "Rainbow crab A",
     "image": "rainbow_crab_(1).png",
     "sources": {
-      "other": {
-        "Crab trapping": {
-          "notes": "Avast me hearties yo-ho.",
-          "rule": {
-            "all": [
-              "canCompletePandemonium",
-              "canTrainHunter"
-            ]
-          }
+      "drops": {
+        "Red crab (Hunter)": {
+          "droprate": "Always"
         }
       }
     }
@@ -108373,18 +108368,12 @@
   {
     "index": 2956,
     "id": 31680,
-    "name": "Rainbow crab (2)",
+    "name": "Rainbow crab B",
     "image": "rainbow_crab_(2).png",
     "sources": {
-      "other": {
-        "Crab trapping": {
-          "notes": "Avast me hearties yo-ho.",
-          "rule": {
-            "all": [
-              "canCompletePandemonium",
-              "canTrainHunter"
-            ]
-          }
+      "drops": {
+        "Red crab (Hunter)": {
+          "droprate": "Always"
         }
       }
     }
@@ -108392,18 +108381,12 @@
   {
     "index": 2957,
     "id": 31683,
-    "name": "Rainbow crab (3)",
+    "name": "Rainbow crab C",
     "image": "rainbow_crab_(3).png",
     "sources": {
-      "other": {
-        "Crab trapping": {
-          "notes": "Avast me hearties yo-ho.",
-          "rule": {
-            "all": [
-              "canCompletePandemonium",
-              "canTrainHunter"
-            ]
-          }
+      "drops": {
+        "Rainbow crab (Hunter)": {
+          "droprate": "Always"
         }
       }
     }
@@ -139495,7 +139478,7 @@
     "image": "teacher_wand.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteMageTrainingArena"
+        "Yes": "canDoMageTrainingArena"
       }
     }
   },

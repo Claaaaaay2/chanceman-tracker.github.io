@@ -9911,7 +9911,7 @@ export const NPC_DATA = {
     },
     "Melzar the Mad": {
         "wiki": "https://oldschool.runescape.wiki/w/Melzar_the_Mad",
-        "rule": ["cancompleteDragonSlayerI"],
+        "rule": ["canCompleteDragonSlayerI"],
         "skill": [],
         "level": [],
         "tags": ["quest"],
@@ -11670,6 +11670,19 @@ export const NPC_DATA = {
         "rule": ["canCompleteThroneOfMiscellania"],
         "skill": [],
         "level": [],
+        "tags": [],
+        "f2p": false
+    },
+    "Rainbow crab (Hunter)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Red_crab_(Hunter)",
+        "rule": {
+            "all": [
+                "canCatchCrabs",
+                "canCompletePandemonium"
+            ]
+        },
+        "skill": ["hunter"],
+        "level": [77],
         "tags": [],
         "f2p": false
     },

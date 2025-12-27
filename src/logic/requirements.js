@@ -5,6 +5,12 @@ export function has(ctx, id) {
 }
 
 export const REQUIREMENT_CHECKS = {
+    hasAnyLog(ctx) {
+        return hasAnyLog(ctx);
+    },
+    hasAnyFletchableLog(ctx) {
+        return hasAnyFletchableLog(ctx);
+    },
     canUseSilverSickle(ctx) {
         return canUseSilverSickle(ctx);
     },
@@ -223,7 +229,7 @@ export const REQUIREMENT_CHECKS = {
         return canCompleteShadowsOfCustodia(ctx);
     },
     canCompleteSongOfTheElves(ctx) {
-        return false; // TODO
+        return canCompleteSongOfTheElves(ctx);
     },
     canCompleteWhileGuthixSleeps(ctx) {
         return false; // TODO
@@ -241,7 +247,7 @@ export const REQUIREMENT_CHECKS = {
         return false; // TODO
     },
     canCompleteWhatLiesBelow(ctx) {
-        return false; // TODO
+        return canCompleteWhatLiesBelow(ctx);
     },
     canStartMageArenaII(ctx) {
         return false; // TODO
@@ -303,6 +309,9 @@ export const REQUIREMENT_CHECKS = {
     canCompleteCreatureOfFenkenstrain(ctx) {
         return canCompleteCreatureOfFenkenstrain(ctx);
     },
+    canStartHazeelCult(ctx) {
+        return ctx.player.quests["Hazeel Cult"] < 2;
+    },
     canCompleteRFDFreeingTheMountainDwarf(ctx) {
         return canCompleteRFDFreeingTheMountainDwarf(ctx);
     },
@@ -355,7 +364,7 @@ export const REQUIREMENT_CHECKS = {
         return false; // TODO
     },
     canCompleteRegicide(ctx) {
-        return false; // TODO
+        return canCompleteRegicide(ctx);
     },
     canCompleteTheAscentOfArceuus(ctx) {
         return false; // TODO
@@ -396,6 +405,15 @@ export const REQUIREMENT_CHECKS = {
     canCompleteDarknessOfHallowvale(ctx) {
         return false; // TODO
     },
+    canCompleteGardenOfTranquillity(ctx) {
+        return canCompleteGardenOfTranquillity(ctx);
+    },
+    canCompleteLostCity(ctx) {
+        return canCompleteLostCity(ctx);
+    },
+    canAccessChampionsGuild(ctx) {
+        return ctx.player.questPoints >= 32;
+    },
     canCompleteShadowOfTheStorm(ctx) {
         return canCompleteShadowOfTheStorm(ctx);
     },
@@ -425,6 +443,12 @@ export const REQUIREMENT_CHECKS = {
     },
     canCompleteRumDeal(ctx) {
         return canCompleteRumDeal(ctx);
+    },
+    canCompleteTheGiantDwarf(ctx) {
+        return canCompleteTheGiantDwarf(ctx);
+    },
+    canCompleteAnotherSliceOfHAM(ctx) {
+        return canCompleteAnotherSliceOfHAM(ctx);
     },
     canCompleteHorrorFromTheDeep(ctx) {
         return canCompleteHorrorFromTheDeep(ctx);
@@ -492,6 +516,9 @@ export const REQUIREMENT_CHECKS = {
     canCompleteEnakhrasLament(ctx) {
         return canCompleteEnakhrasLament(ctx);
     },
+    canCompleteScorpionCatcher(ctx) {
+        return canCompleteScorpionCatcher(ctx);
+    },
     canCompleteTheGrandTree(ctx) {
         return canCompleteTheGrandTree(ctx);
     },
@@ -500,6 +527,9 @@ export const REQUIREMENT_CHECKS = {
     },
     canDoMixology(ctx) {
         return false; // TODO
+    },
+    canDoMageTrainingArena(ctx) {
+        return canDoMageTrainingArena(ctx);
     },
     canCompleteVarrockDiaryEasy(ctx) {
         return ctx.player.achievementDiaries.Varrock.Easy.complete;
@@ -981,6 +1011,12 @@ export const REQUIREMENT_CHECKS = {
     hasKarambwanVesselBaited(ctx) {
         return has(ctx, 3159);
     },
+    canCompleteElementalWorkshopII(ctx) {
+        return canCompleteElementalWorkshopII(ctx);
+    },
+    canCompleteImpCatcher(ctx) {
+        return canCompleteImpCatcher(ctx);
+    },
     canAerialFish(ctx) {
         return has(ctx, 11334) || has(ctx, 2162);
     },
@@ -1402,6 +1438,16 @@ function canDoTombsOfAmascut(ctx) {
         && canTrainMining(ctx);
 }
 
+function canDoMageTrainingArena(ctx) {
+    return has(ctx, 564) // Cosmic rune
+        && has(ctx, 561) // Nature rune
+        && has(ctx, 563) // Law rune
+        && hasAirRuneSource(ctx) //
+        && hasWaterRuneSource(ctx) //
+        && hasEarthRuneSource(ctx) //
+        && hasFireRuneSource(ctx);
+}
+
 function canCompleteBeneathCursedSands(ctx) {
     return canCompleteContact(ctx) //
         && canTrainCrafting(ctx)   //
@@ -1580,11 +1626,35 @@ function canCompleteSheepHerder(ctx) {
 }
 
 function canCompleteRovingElves(ctx) {
-    return ctx.player.questPoints >= 16 //
-        && has(ctx, 2142) // Cooked meat
-        && has(ctx, 2309) // Bread
-        && has(ctx, 946)  // Knife
-        && (has(ctx, 1917) || has(ctx, 1905) || has(ctx, 1913) || has(ctx, 1907)) // Beer, Asgarnian ale, Dwarven stout or Wizard's mind bomb
+    return canCompleteRegicide(ctx) //
+        && canCompleteWaterfallQuest(ctx) //
+        && has(ctx, 952)  // Spade
+        && has(ctx, 954); // Rope
+}
+
+function canCompleteRegicide(ctx) {
+    return canCompleteUndergroundPass(ctx) //
+        && canTrainCrafting(ctx) //
+        // Bow and arrows needed, but thats a huge one... TODO
+        && has(ctx, 453)  // Coal
+        && has(ctx, 954)  // Rope
+        && has(ctx, 952)  // Spade
+        && has(ctx, 3211) // Limestone
+        && has(ctx, 590)  // Tinderbox
+        && has(ctx, 1759) // Ball of wool
+        && has(ctx, 233)  // Pestle and mortar
+        && has(ctx, 1931) // Pot
+        && (has(ctx, 3228)  // Cooked rabbit
+        || has(ctx, 7223)); // Roast rabbit
+}
+
+function canCompleteUndergroundPass(ctx) {
+    return canCompleteBiohazard(ctx) //
+        // Bow and arrows needed, but thats a huge one... TODO
+        && has(ctx, 954)  // Rope
+        && has(ctx, 952)  // Spade
+        && has(ctx, 1925) // Bucket
+        && has(ctx, 590); // Tinderbox
 }
 
 function canCompleteBelowIceMountain(ctx) {
@@ -1881,7 +1951,7 @@ function canDeadfallTrap(ctx) {
 }
 
 function hasAnyLog(ctx) {
-    return has(ctx, 1511)     // Logs
+    return has(ctx, 1511)  // Logs
         || has(ctx, 1521)  // Oak logs
         || has(ctx, 1519)  // Willow logs
         || has(ctx, 6333)  // Teak logs
@@ -1894,6 +1964,16 @@ function hasAnyLog(ctx) {
         || has(ctx, 32910) // Rosewood logs
         || has(ctx, 19669) // Redwood logs
         || canTrainWoodcutting(ctx); // for untradable Juniper logs
+}
+
+function hasAnyFletchableLog(ctx) {
+    return has(ctx, 1511)   // Logs
+        || has(ctx, 1521)   // Oak logs
+        || has(ctx, 1519)   // Willow logs
+        || has(ctx, 1517)   // Maple logs
+        || has(ctx, 1515)   // Yew logs
+        || has(ctx, 1513)   // Magic logs
+        || has(ctx, 19669); // Redwood logs
 }
 
 function canPitfallTrap(ctx) {
@@ -2065,7 +2145,7 @@ function canCompleteTheFrozenDoor(ctx) {
 
 function canCompleteMakingHistory(ctx) {
     return canCompletePriestInPeril(ctx)
-        && has(ctx, 1694) //Sapphire amulet
+        && has(ctx, 1694) // Sapphire amulet
         && has(ctx, 952); // Spade
 }
 
@@ -2564,10 +2644,6 @@ function canCompleteFamilyCrest(ctx) {
 }
 
 function hasAnyPoisonCure(ctx) {
-    return false; // TODO
-}
-
-function canCompleteUndergroundPass(ctx) {
     return false; // TODO
 }
 
@@ -3266,6 +3342,10 @@ function canCompleteTheFremennikIsles(ctx) {
     return false; // TODO
 }
 
+function canCompleteScorpionCatcher(ctx) {
+    return canTrainPrayer(ctx);
+}
+
 function canCompleteEnakhrasLament(ctx) {
     return canTrainCrafting(ctx) //
         && canTrainFiremaking(ctx) //
@@ -3304,6 +3384,69 @@ function canStartLegendsQuest(ctx) {
 
 function canCompleteTrollStronghold(ctx) {
     return canCompleteDeathPlateau(ctx);
+}
+
+function canCompleteWhatLiesBelow(ctx) {
+    return canCompleteRuneMysteries(ctx) //
+        && canTrainRunecraft(ctx) //
+        && has(ctx, 1923) // Bowl
+        && has(ctx, 562)  // Chaos rune
+        && (
+            has(ctx, 1452)    // Chaos talisman
+            || has(ctx, 5543) // Chaos tiara
+            || canCompleteEnterTheAbyss(ctx) //
+            || canDoGuardiansOfTheRift(ctx)
+        );
+}
+
+function canCompleteSongOfTheElves(ctx) {
+    return canCompleteMourningsEndPartII(ctx) //
+        && canCompleteMakingHistory(ctx) //
+        && canCompleteDruidicRitual(ctx) //
+        && canTrainConstruction(ctx) //
+        && canTrainFarming(ctx) //
+        && canTrainHerblore(ctx) //
+        && canTrainHunter(ctx) //
+        && canTrainMining(ctx) //
+        && canTrainSmithing(ctx) //
+        && canTrainWoodcutting(ctx) //
+        && has(ctx, 1157) // Steel full helm
+        && has(ctx, 1119) // Steel platebody
+        && has(ctx, 1069) // Steel platelegs
+        && has(ctx, 1763) // Red dye
+        && has(ctx, 1773) // Purple dye
+        && has(ctx, 950)  // Silk
+        && has(ctx, 2363) // Runite bar
+        && has(ctx, 3420) // Limestone brick
+        && has(ctx, 590)  // Tinderbox
+        && has(ctx, 954)  // Rope
+        && has(ctx, 561)  // Nature rune
+        && (
+            has(ctx, 2472)    // Mixed flowers
+            || has(ctx, 2462) // Red flowers
+            || has(ctx, 2466) // Yellow flowers
+            || has(ctx, 2464) // Blue flowers
+            || has(ctx, 2470) // Orange flowers
+            || has(ctx, 2468) // Purple flowers
+            || has(ctx, 2460) // Assorted flowers
+            || has(ctx, 2476) // Black flowers
+            || has(ctx, 2474) // White flowers
+            || has(ctx, 259)  // Irit leaf
+        )
+        && has(ctx, 1111) // Adamant chainbody
+        && (has(ctx, 245) // Wine of zamorak
+            || has(ctx, 2450) // Zamorak brew(4)
+        )
+        // && has(ctx, 1965) // Cabbage, draynor cabbage might be used?
+        && (has(ctx, 869) // Black knife
+            || has(ctx, 1217) // Black dagger
+        )
+        && has(ctx, 5301) // Cadantine seed
+        && has(ctx, 227)  // Vial of water
+        && has(ctx, 233)  // Pestle and mortar
+        && has(ctx, 2347) // Hammer
+        && has(ctx, 8794) // Saw
+        && has(ctx, 952); // Spade
 }
 
 function canCompleteShadowsOfCustodia(ctx) {
@@ -3438,6 +3581,33 @@ function canCompleteElementalWorkshopI(ctx) {
 
 function canCompleteElementalWorkshopII(ctx) {
     return canCompleteElementalWorkshopI(ctx);
+}
+
+function canCompleteAnotherSliceOfHAM(ctx) {
+    return canCompleteDeathToTheDorgeshuun(ctx) //
+        && canCompleteTheGiantDwarf(ctx) //
+        && canCompleteTheDigSite(ctx) //
+        && canTrainPrayer(ctx); //
+}
+
+function canCompleteTheGiantDwarf(ctx) {
+    return canTrainCrafting(ctx) //
+        && canTrainFiremaking(ctx) //
+        && has(ctx, 563)  // Law rune
+        && hasAirRuneSource(ctx) //
+        && hasAnyLog(ctx) //
+        && has(ctx, 453)  // Coal
+        && has(ctx, 2351) // Iron bar
+        && has(ctx, 1607) // Sapphire
+        && has(ctx, 2325) // Redberry pie
+        && has(ctx, 590); // Tinderbox
+}
+
+function canCompleteImpCatcher(ctx) {
+    return has(ctx, 1470)  // Red bead
+        && has(ctx, 1472)  // Yellow bead
+        && has(ctx, 1474)  // Black bead
+        && has(ctx, 1476); // White bead
 }
 
 function canCompleteZogreFleshEaters(ctx) {
