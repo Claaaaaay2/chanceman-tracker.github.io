@@ -33,26 +33,15 @@ export async function router() {
     const page = routes[basePath] || NotFoundPage;
     const app = document.getElementById("app");
 
-    if (basePath !== "/") {
-        app.innerHTML = `
-            <div class="layout">
-                ${await Header()}
-                <main class="content">
-                    ${await page()}
-                </main>
-                ${await Footer()}
-            </div>
-        `;
-    } else {
-        app.innerHTML = `
-            <div class="layout">
-                <main class="content">
-                    ${await page()}
-                </main>
-                ${await Footer()}
-            </div>
-        `;
-    }
+    app.innerHTML = `
+        <div class="layout">
+            ${await Header()}
+            <main class="content">
+                ${await page()}
+            </main>
+            ${await Footer()}
+        </div>
+    `;
 
     afterRoute();
 }
