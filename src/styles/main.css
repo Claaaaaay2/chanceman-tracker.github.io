@@ -1,20 +1,67 @@
+:root {
+    --header-height: 19px;
+    --footer-height: 17px;
+}
+
 body {
-    margin-top: 0px;
+    margin-top: 25px;
     background-color: #E2DBC8;
+}
+
+/* Layout container */
+.layout {
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main page content expands */
+.content {
+    flex: 1;
 }
 
 /* For header.js */
 .header {
-    padding: 10px;
+    height: var(--header-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 10px 10px 10px;
     border-bottom: 1px solid #ccc;
     background-color: #B8A282;
+    z-index: 1000;
 }
 
 .header strong {
     color: #9B6039;
 }
 
+.playerName {
+    float: right;
+    margin-right: 20px;
+}
+
 /* End header.js */
+
+/* For footer.js */
+footer {
+    height: var(--footer-height);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    font-size: 0.8rem;
+    color: white;
+    background-color: #B8A282;
+    border-top: 1px solid #ccc;
+    text-align: center;
+
+    z-index: 1000;
+}
+
+/* End footer.js */
 
 /* For item.js */
 .osrs-table {

@@ -1,3 +1,4 @@
+import { Footer } from "./components/footer.js";
 import { Header } from "./components/header.js";
 import { afterRoute } from "./main.js";
 import ItemPage from "./pages/item.js";
@@ -33,9 +34,24 @@ export async function router() {
     const app = document.getElementById("app");
 
     if (basePath !== "/") {
-        app.innerHTML = await Header() + await page();
+        app.innerHTML = `
+            <div class="layout">
+                ${await Header()}
+                <main class="content">
+                    ${await page()}
+                </main>
+                ${await Footer()}
+            </div>
+        `;
     } else {
-        app.innerHTML = await page();
+        app.innerHTML = `
+            <div class="layout">
+                <main class="content">
+                    ${await page()}
+                </main>
+                ${await Footer()}
+            </div>
+        `;
     }
 
     afterRoute();
