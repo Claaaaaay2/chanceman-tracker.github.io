@@ -12,7 +12,8 @@ export async function Header() {
         <span>
             <a data-link href="/items">Items</a> |
             <a data-link href="/quests">Quests</a> |
-            <a data-link href="/reupload">Reupload</a>
+            <a data-link href="/reupload">Reupload</a> |
+            <a data-link href="/bug">Report a bug</a>
         </span>
         </nav>
     `;

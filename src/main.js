@@ -1,6 +1,7 @@
 import { canReachNpc, evaluateRule } from "./logic/itemAvailability.js";
 import { NPC_DATA } from "./logic/npcData.js";
 import { getObtainabilityRank } from "./logic/sortHelpers.js";
+import { initBugPage } from "./pages/reportABug.js";
 import { router } from "./router.js";
 import { fileStore } from "./storage/fileStore.js";
 
@@ -379,9 +380,9 @@ window.initItemsPage = async function () {
 };
 
 function invalidateLogicCaches(ctx) {
-  rankedItemsCache = null;
-  ctx.itemAvailability = new Map();
-  ctx.npcReachCache = new Map();
+    rankedItemsCache = null;
+    ctx.itemAvailability = new Map();
+    ctx.npcReachCache = new Map();
 }
 
 window.addEventListener("DOMContentLoaded", async () => {
@@ -411,6 +412,9 @@ export function afterRoute() {
 
     if (typeof initItemsPage === "function") {
         initItemsPage();
+    }
+    if (typeof initBugPage === "function") {
+        initBugPage();
     }
 }
 
