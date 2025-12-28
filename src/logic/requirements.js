@@ -249,6 +249,9 @@ export const REQUIREMENT_CHECKS = {
     canCompleteTheGreatBrainRobbery(ctx) {
         return canCompleteTheGreatBrainRobbery(ctx);
     },
+    canStartATasteOfHope(ctx) {
+        return canStartATasteOfHope(ctx);
+    },
     canCompleteATasteOfHope(ctx) {
         return canCompleteATasteOfHope(ctx);
     },
@@ -313,7 +316,10 @@ export const REQUIREMENT_CHECKS = {
         return canCompleteInSearchOfTheMyreque(ctx);
     },
     canCompleteTheCorsairCurse(ctx) {
-        return canCompleteTheCorsairCurse(cxt);
+        return canCompleteTheCorsairCurse(ctx);
+    },
+    hasNarwhalKnife(ctx){
+        return hasNarwhalKnife(ctx);
     },
     canCompleteTheEyesOfGlouphrie(ctx) {
         return canCompleteTheEyesOfGlouphrie(ctx);
@@ -413,6 +419,9 @@ export const REQUIREMENT_CHECKS = {
     },
     has50JunkItems(ctx) {
         return has50JunkItems(ctx);
+    },
+    canStartDarknessOfHallowvale(ctx) {
+        return canStartDarknessOfHallowvale(ctx);
     },
     canCompleteDarknessOfHallowvale(ctx) {
         return canCompleteDarknessOfHallowvale(ctx);
@@ -855,11 +864,14 @@ export const REQUIREMENT_CHECKS = {
     canCompleteLegendsQuest(ctx) {
         return canCompleteLegendsQuest(ctx);
     },
+    canCompleteFamilyCrest(ctx) {
+        return canCompleteFamilyCrest(ctx);
+    },
     canDoYama(ctx) {
-        return false; // TODO
+        return canCompleteAKingdomDivided(ctx);
     },
     canDoNex(ctx) {
-        return canCompleteTheFrozenDoor(ctx) && false; // TODO
+        return canCompleteTheFrozenDoor(ctx);
     },
     canCompleteTheFrozenDoor(ctx) {
         return canCompleteTheFrozenDoor(ctx);
@@ -1022,6 +1034,9 @@ export const REQUIREMENT_CHECKS = {
     },
     hasKarambwanVesselBaited(ctx) {
         return has(ctx, 3159);
+    },
+    canCompleteElementalWorkshopI(ctx) {
+        return canCompleteElementalWorkshopI(ctx);
     },
     canCompleteElementalWorkshopII(ctx) {
         return canCompleteElementalWorkshopII(ctx);
@@ -3093,6 +3108,12 @@ function canCompleteCreatureOfFenkenstrain(ctx) {
         && has(ctx, 952); // Spade
 }
 
+function hasNarwhalKnife(ctx) {
+    return canTrainCrafting(ctx) //
+        && has(ctx, 31954) // Narwhal horn
+        && has(ctx, 1755); // Chisel
+}
+
 function canCompleteTheEyesOfGlouphrie(ctx) {
     return canCompleteTheGrandTree(ctx) //
         && canTrainConstruction(ctx) //
@@ -3162,7 +3183,6 @@ function canCompleteRecipeForDisaster(ctx) {
 }
 
 const RFD_SUBQUESTS = [
-    canCompleteRFDAnotherCooksQuest,
     canCompleteRFDFreeingTheMountainDwarf,
     canCompleteRFDFreeingTheGoblinGenerals,
     canCompleteRFDFreeingPiratePete,
@@ -3178,7 +3198,7 @@ function countCompletableRFDSubquests(ctx) {
 }
 
 function canCompleteRecipeForDisaster0(ctx) {
-    return countCompletableRFDSubquests(ctx) >= 0;
+    return canCompleteRFDAnotherCooksQuest(ctx);
 }
 
 function canCompleteRecipeForDisaster1(ctx) {
@@ -3542,6 +3562,13 @@ function canStartLegendsQuest(ctx) {
         && canCompleteWaterfallQuest(ctx); //
 }
 
+function canStartDarknessOfHallowvale(ctx) {
+    return canCompleteInAidOfTheMyreque(ctx) //
+        && canTrainConstruction(ctx) //
+        && canTrainMining(ctx) //
+        && canTrainCrafting(ctx); //
+}
+
 function canCompleteDarknessOfHallowvale(ctx) {
     return canCompleteInAidOfTheMyreque(ctx) //
         && canTrainConstruction(ctx) //
@@ -3553,6 +3580,14 @@ function canCompleteDarknessOfHallowvale(ctx) {
         && has(ctx, 946)  // Knife
         && hasAirRuneSource(ctx) //
         && has(ctx, 563); // Law rune
+}
+
+function canStartATasteOfHope(ctx) {
+    return canCompleteDarknessOfHallowvale(ctx) //
+        && canTrainCrafting(ctx) //
+        && canTrainSlayer(ctx) //
+        && canTrainHerblore(ctx) //
+        && canTrainMining(ctx); //
 }
 
 function canCompleteATasteOfHope(ctx) {
@@ -4110,7 +4145,7 @@ function canTrainFishing(ctx) {
 }
 
 function canTrainSlayer(ctx) {
-    if (ctx.filters?.slayerLocked) return true; // TODO implemnent this filter
+    if (ctx.filters?.slayerLocked) return false; // TODO implement this filter
     return true;
 }
 

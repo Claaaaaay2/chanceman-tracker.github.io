@@ -3572,7 +3572,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["notForIronmen"],
         "f2p": true
     },
     "Chronozon": {
@@ -14708,7 +14708,7 @@ export const NPC_DATA = {
     },
     "Tanglefoot (Nightmare Zone)": {
         "wiki": "https://oldschool.runescape.wiki/w/Tanglefoot_(Nightmare_Zone)",
-        "rule": ["canCompleteFairyTaleIGrowingPains"],
+        "rule": ["canCompleteFairytaleIGrowingPains"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -15921,12 +15921,7 @@ export const NPC_DATA = {
     },
     "Wall beast": {
         "wiki": "https://oldschool.runescape.wiki/w/Wall_beast",
-        "rule": {
-            "all": [
-                "canEnterLumbridgeSwampCaves",
-                "hasSpinyHelmet"
-            ]
-        },
+        "rule": ["canEnterLumbridgeSwampCaves"],
         "skill": ["slayer"],
         "level": [35],
         "tags": [],

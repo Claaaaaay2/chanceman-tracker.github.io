@@ -149,6 +149,7 @@ window.initItemsPage = async function () {
     const hasFlatpacks = document.getElementById("hasFlatpacks");
     const hasItemsets = document.getElementById("hasItemsets");
     const hasSuperiors = document.getElementById("hasSuperiors");
+    const isIronman = document.getElementById("isIronman");
     const overrideWoodcutting = document.getElementById("overrideWoodcutting");
     const overrideMining = document.getElementById("overrideMining");
     const overrideFishing = document.getElementById("overrideFishing");
@@ -158,7 +159,7 @@ window.initItemsPage = async function () {
     const overrideConstruction = document.getElementById("overrideConstruction");
     const grid = document.getElementById("itemGrid");
 
-    if (!searchInput || !hideRolled || !onlyUnlocked || !onlyObtainable || !hideClue || !allowOthersHouses || !hasFlatpacks || !hasItemsets || !hasSuperiors || !overrideWoodcutting || !overrideMining || !overrideFishing || !overrideCooking || !overrideFletching || !overrideCrafting || !overrideConstruction || !grid) {
+    if (!searchInput || !hideRolled || !onlyUnlocked || !onlyObtainable || !hideClue || !allowOthersHouses || !hasFlatpacks || !hasItemsets || !hasSuperiors || !isIronman || !overrideWoodcutting || !overrideMining || !overrideFishing || !overrideCooking || !overrideFletching || !overrideCrafting || !overrideConstruction || !grid) {
         setTimeout(initItemsPage, 0);
         return;
     }
@@ -173,6 +174,7 @@ window.initItemsPage = async function () {
     hasFlatpacks.checked = f.hasFlatpacks ?? true;
     hasItemsets.checked = f.hasItemsets ?? true;
     hasSuperiors.checked = f.hasSuperiors ?? false;
+    isIronman.checked = f.isIronman ?? false;
     overrideWoodcutting.checked = f.overrideWoodcutting ?? false;
     overrideMining.checked = f.overrideMining ?? false;
     overrideFishing.checked = f.overrideFishing ?? false;
@@ -193,6 +195,7 @@ window.initItemsPage = async function () {
         const hasFl = hasFlatpacks.checked;
         const hasIt = hasItemsets.checked;
         const hasSup = hasSuperiors.checked;
+        const isIron = isIronman.checked;
 
         const ranked = await computeAllRanksOnce(items, fileStore);
 
@@ -211,6 +214,9 @@ window.initItemsPage = async function () {
                 sort.rank = 8;
             }
             if (!hasSup && await isSuperiorOnlyItem(item, fileStore)) {
+                sort.rank = 8;
+            };
+            if (isIron && await isNonIronItem(item, fileStore)) {
                 sort.rank = 8;
             };
             if (onlyO && (sort.rank === 7 || sort.rank === 8)) continue;
@@ -279,6 +285,7 @@ window.initItemsPage = async function () {
             hasFlatpacks: hasFlatpacks.checked,
             hasItemsets: hasItemsets.checked,
             hasSuperiors: hasSuperiors.checked,
+            isIronman: isIronman.checked,
             overrideWoodcutting: overrideWoodcutting.checked,
             overrideMining: overrideMining.checked,
             overrideFishing: overrideFishing.checked,
@@ -330,6 +337,11 @@ window.initItemsPage = async function () {
     });
 
     hasSuperiors.addEventListener("input", () => {
+        saveFilters();
+        renderItems();
+    });
+
+    isIronman.addEventListener("input", () => {
         saveFilters();
         renderItems();
     });
@@ -485,6 +497,37 @@ async function isHouseOnlyItem(item, ctx) {
     if (hasAnyHouseSource) return true;
 
     // Otherwise not house-only
+    return false;
+}
+
+async function isNonIronItem(item, ctx) {
+    let hasAnyNonIronmanSource = false;
+    let hasReachableSource = false;
+    let hasReachableNonIronmanSource = false;
+
+    if (item.sources?.drops) {
+        for (const npcName of Object.keys(item.sources.drops)) {
+            const npc = NPC_DATA[npcName];
+            if (!npc) continue;
+
+            const isNotForIronmen = npc.tags?.includes("notForIronmen");
+            if (isNotForIronmen) hasAnyNonIronmanSource = true;
+
+            const reachable = await canReachNpc(npcName, ctx);
+            if (!reachable) continue;
+
+            hasReachableSource = true;
+            if (!isNotForIronmen) hasReachableNonIronmanSource = true;
+        }
+    }
+
+    // If there is ANY reachable non-superior source → obtainable
+    if (hasReachableNonIronmanSource) return false;
+
+    // If there are reachable sources, but ALL are superior → superior-only
+    if (hasReachableSource && hasAnyNonIronmanSource) return true;
+
+    // Otherwise not superior-only
     return false;
 }
 

@@ -58,6 +58,11 @@ export default async function ItemsPage() {
                 <input type="checkbox" id="hasSuperiors">
                 'Bigger and Badder' unlocked
             </label>
+
+            <label>
+                <input type="checkbox" id="isIronman">
+                I am an ironman
+            </label>
         </div>
 
         <p class="marginOneRem">Overrides (e.g. when you've lamped a skill or want to see what lamping one can bring you)</p>
