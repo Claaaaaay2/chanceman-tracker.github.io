@@ -39330,7 +39330,8 @@
             "all": [
               {
                 "has": 10818
-              }
+              },
+              "canCureYakHide"
             ]
           }
         }
@@ -99417,7 +99418,7 @@
               {
                 "has": 2347
               },
-              "canCompleteTheFremennikIsles",
+              "canMakeNeitiznotShield",
               "canTrainWoodcutting"
             ]
           }
@@ -128807,7 +128808,7 @@
                 "has": 10810
               },
               "canTrainWoodcutting",
-              "canCompleteTheFremennikIsles"
+              "canMakeSplitLog"
             ]
           }
         }
@@ -155303,7 +155304,7 @@
                 "has": 10820
               },
               "canTrainCrafting",
-              "canCompleteTheFremennikIsles"
+              "canMakeYakhideArmour"
             ]
           }
         }
@@ -155325,7 +155326,7 @@
                 "has": 10820
               },
               "canTrainCrafting",
-              "canCompleteTheFremennikIsles"
+              "canMakeYakhideArmour"
             ]
           }
         }
