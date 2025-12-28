@@ -426,6 +426,9 @@ export const REQUIREMENT_CHECKS = {
     canCompleteDarknessOfHallowvale(ctx) {
         return canCompleteDarknessOfHallowvale(ctx);
     },
+    canAccessNightmareZone(ctx) {
+        return canAccessNightmareZone(ctx);
+    },
     canCompleteGardenOfTranquillity(ctx) {
         return canCompleteGardenOfTranquillity(ctx);
     },
@@ -2871,6 +2874,10 @@ function canMakeAirtightPot(ctx) {
         && has(ctx, 1613) // Red topaz
         && has(ctx, 1607) // Sapphire
         && has(ctx, 4440); // Pot lid
+}
+
+function canEnterNightmareZone(ctx) {
+    return false && !ctx.filters?.isIronman; // TODO quest bosses amount
 }
 
 function canCompleteGardenOfTranquillity(ctx) {
