@@ -106,7 +106,7 @@ export async function getObtainabilityRank(item, ctx) {
 
             const npc = NPC_DATA[npcName];
 
-            if (npc?.tags?.includes("easy")) {
+            if (npc?.tags?.includes("easy") || npc?.tags?.includes("jon")) {
                 return { rank: 3, name };
             }
         }

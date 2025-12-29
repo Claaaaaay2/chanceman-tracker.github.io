@@ -510,7 +510,7 @@ async function isNonIronItem(item, ctx) {
             const npc = NPC_DATA[npcName];
             if (!npc) continue;
 
-            const isNotForIronmen = npc.tags?.includes("notForIronmen");
+            const isNotForIronmen = npc.tags?.includes("notForIronmen") || npc.tags?.includes("jon");
             if (isNotForIronmen) hasAnyNonIronmanSource = true;
 
             const reachable = await canReachNpc(npcName, ctx);

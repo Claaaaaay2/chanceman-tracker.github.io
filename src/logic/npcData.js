@@ -3726,7 +3726,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": ["deadman"],
+        "tags": ["jon"],
         "f2p": false
     },
     "Commander Zilyana": {
