@@ -42,7 +42,7 @@ export const NPC_DATA = {
     "Aberrant spectre": {
         "wiki": "https://oldschool.runescape.wiki/w/Aberrant_spectre",
         "rule": ["hasNosePeg"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [60],
         "tags": [],
         "f2p": false
@@ -50,7 +50,7 @@ export const NPC_DATA = {
     "Abhorrent spectre": {
         "wiki": "https://oldschool.runescape.wiki/w/Aberrant_spectre",
         "rule": ["hasNosePeg"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [60],
         "tags": ["superior"],
         "f2p": false
@@ -58,7 +58,7 @@ export const NPC_DATA = {
     "Abyssal Sire": {
         "wiki": "https://oldschool.runescape.wiki/w/Abyssal_Sire",
         "rule": ["canReachAbyssalSire"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [85],
         "tags": ["boss"],
         "f2p": false
@@ -66,7 +66,7 @@ export const NPC_DATA = {
     "Abyssal demon Standard": {
         "wiki": "https://oldschool.runescape.wiki/w/Abyssal_demon#Standard",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [85],
         "tags": [],
         "f2p": false
@@ -74,7 +74,7 @@ export const NPC_DATA = {
     "Abyssal demon Wilderness Slayer Cave": {
         "wiki": "https://oldschool.runescape.wiki/w/Abyssal_demon#Wilderness_Slayer_Cave",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [85],
         "tags": [],
         "f2p": false
@@ -522,7 +522,7 @@ export const NPC_DATA = {
     "Alchemical Hydra": {
         "wiki": "https://oldschool.runescape.wiki/w/Alchemical_Hydra",
         "rule": ["canEnterKaruulmSlayerDungeon"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [95],
         "tags": ["boss"],
         "f2p": false
@@ -610,7 +610,7 @@ export const NPC_DATA = {
     "Ancient Custodian": {
         "wiki": "https://oldschool.runescape.wiki/w/Ancient_Custodian",
         "rule": ["canCompleteShadowsOfCustodia"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [54],
         "tags": ["superior"],
         "f2p": false
@@ -626,7 +626,7 @@ export const NPC_DATA = {
     "Ancient Wyvern": {
         "wiki": "https://oldschool.runescape.wiki/w/Ancient_Wyvern",
         "rule": ["canKillFossilIslandWyverns"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [82],
         "tags": [],
         "f2p": false
@@ -639,7 +639,7 @@ export const NPC_DATA = {
                 "canCompleteShadowsOfCustodia"
             ]
         },
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [57],
         "tags": [],
         "f2p": false
@@ -786,7 +786,7 @@ export const NPC_DATA = {
     "Aquanite": {
         "wiki": "https://oldschool.runescape.wiki/w/Aquanite",
         "rule": ["canSailToYnysdail"],
-        "skill": ["slayer", "sailing"],
+        "skill": ["Slayer", "sailing"],
         "level": [78, 73],
         "tags": [],
         "f2p": false
@@ -794,7 +794,7 @@ export const NPC_DATA = {
     "Araxxor": {
         "wiki": "https://oldschool.runescape.wiki/w/Araxxor",
         "rule": ["canCompletePriestInPeril"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [92],
         "tags": ["boss"],
         "f2p": false
@@ -802,7 +802,7 @@ export const NPC_DATA = {
     "Araxyte Level 146": {
         "wiki": "https://oldschool.runescape.wiki/w/Araxyte#Level_146",
         "rule": ["canCompletePriestInPeril"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [92],
         "tags": [],
         "f2p": false
@@ -810,7 +810,7 @@ export const NPC_DATA = {
     "Araxyte Level 96": {
         "wiki": "https://oldschool.runescape.wiki/w/Araxyte#Level_96",
         "rule": ["canCompletePriestInPeril"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [92],
         "tags": [],
         "f2p": false
@@ -1261,7 +1261,7 @@ export const NPC_DATA = {
                 "hasEarmuffs"
             ]
         },
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [15],
         "tags": [],
         "f2p": false
@@ -1949,7 +1949,7 @@ export const NPC_DATA = {
     "Bloodveld": {
         "wiki": "https://oldschool.runescape.wiki/w/Bloodveld",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [50],
         "tags": [],
         "f2p": false
@@ -2423,7 +2423,7 @@ export const NPC_DATA = {
     "Brutal black dragon": {
         "wiki": "https://oldschool.runescape.wiki/w/Brutal_black_dragon",
         "rule": ["canKillDifficultDragons"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [77],
         "tags": [],
         "f2p": false
@@ -2480,7 +2480,7 @@ export const NPC_DATA = {
         },
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": true
     },
     "Bryophyta Members": {
@@ -2493,7 +2493,7 @@ export const NPC_DATA = {
         },
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Bucket (Misthalin Mystery)": {
@@ -2898,7 +2898,7 @@ export const NPC_DATA = {
     "Cave abomination": {
         "wiki": "https://oldschool.runescape.wiki/w/Cave_abomination",
         "rule": ["canCompleteCabinFever"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [58],
         "tags": ["superior"],
         "f2p": false
@@ -2906,7 +2906,7 @@ export const NPC_DATA = {
     "Cave bug Level 6": {
         "wiki": "https://oldschool.runescape.wiki/w/Cave_bug#Level_6",
         "rule": ["canEnterLumbridgeSwampCaves"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [7],
         "tags": [],
         "f2p": false
@@ -2914,7 +2914,7 @@ export const NPC_DATA = {
     "Cave bug Level 96": {
         "wiki": "https://oldschool.runescape.wiki/w/Cave_bug#Level_96",
         "rule": ["canCompleteDeathToTheDorgeshuun"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [7],
         "tags": [],
         "f2p": false
@@ -2922,7 +2922,7 @@ export const NPC_DATA = {
     "Cave crawler": {
         "wiki": "https://oldschool.runescape.wiki/w/Cave_crawler",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [10],
         "tags": [],
         "f2p": false
@@ -2930,7 +2930,7 @@ export const NPC_DATA = {
     "Cave crawler (Ruins of Tapoyauik)": {
         "wiki": "https://oldschool.runescape.wiki/w/Cave_crawler",
         "rule": ["canCompleteTheHeartOfDarkness"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [10],
         "tags": [],
         "f2p": false
@@ -2970,7 +2970,7 @@ export const NPC_DATA = {
     "Cave horror": {
         "wiki": "https://oldschool.runescape.wiki/w/Cave_horror",
         "rule": ["canCompleteCabinFever"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [58],
         "tags": [],
         "f2p": false
@@ -2978,7 +2978,7 @@ export const NPC_DATA = {
     "Cave kraken": {
         "wiki": "https://oldschool.runescape.wiki/w/Cave_kraken",
         "rule": ["canShortrange"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [87],
         "tags": [],
         "f2p": false
@@ -2994,7 +2994,7 @@ export const NPC_DATA = {
     "Cave slime": {
         "wiki": "https://oldschool.runescape.wiki/w/Cave_slime",
         "rule": ["canEnterLumbridgeSwampCaves"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [17],
         "tags": [],
         "f2p": false
@@ -3037,7 +3037,7 @@ export const NPC_DATA = {
     "Cerberus": {
         "wiki": "https://oldschool.runescape.wiki/w/Cerberus",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [91],
         "tags": ["boss"],
         "f2p": false
@@ -3117,7 +3117,7 @@ export const NPC_DATA = {
     "Chaotic death spawn": {
         "wiki": "https://oldschool.runescape.wiki/w/Chaotic_death_spawn",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [80],
         "tags": ["superior"],
         "f2p": false
@@ -3125,7 +3125,7 @@ export const NPC_DATA = {
     "Chasm Crawler": {
         "wiki": "https://oldschool.runescape.wiki/w/Chasm_Crawler",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [10],
         "tags": ["superior"],
         "f2p": false
@@ -3133,7 +3133,7 @@ export const NPC_DATA = {
     "Chasm crawler (Ruins of Tapoyauik)": {
         "wiki": "https://oldschool.runescape.wiki/w/Cave_crawler",
         "rule": ["canCompleteTheHeartOfDarkness"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [10],
         "tags": ["superior"],
         "f2p": false
@@ -3217,7 +3217,7 @@ export const NPC_DATA = {
         },
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": true
     },
     "Chest (Bryophyta's lair) Members": {
@@ -3230,7 +3230,7 @@ export const NPC_DATA = {
         },
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Chest (Chaos Druid Tower)": {
@@ -3354,7 +3354,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": true
     },
     "Chest (Obor's lair) (m)": {
@@ -3362,7 +3362,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Chest (Observatory Dungeon, antipoison)": {
@@ -3437,8 +3437,8 @@ export const NPC_DATA = {
                 "canTrainHerblore"
             ]
         },
-        "skill": ["herblore", "slayer"],
-        "level": [60, 76],
+        "skill": ["Slayer","herblore"],
+        "level": [76, 60],
         "tags": [],
         "f2p": false
     },
@@ -3520,7 +3520,7 @@ export const NPC_DATA = {
     "Chilled jelly": {
         "wiki": "https://oldschool.runescape.wiki/w/Chilled_jelly",
         "rule": ["canCompleteTheHeartOfDarkness"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [52],
         "tags": [],
         "f2p": false
@@ -3541,7 +3541,7 @@ export const NPC_DATA = {
                 "canLongrange"
             ]
         },
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [65],
         "tags": ["superior"],
         "f2p": false
@@ -3554,7 +3554,7 @@ export const NPC_DATA = {
                 "canLongrange"
             ]
         },
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [65],
         "tags": ["superior"],
         "f2p": false
@@ -3655,7 +3655,7 @@ export const NPC_DATA = {
                 "hasMirrorShield"
             ]
         },
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [25],
         "tags": ["superior"],
         "f2p": false
@@ -3668,7 +3668,7 @@ export const NPC_DATA = {
                 "hasMirrorShield"
             ]
         },
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [25],
         "tags": [],
         "f2p": false
@@ -3716,7 +3716,7 @@ export const NPC_DATA = {
     "Colossal Hydra": {
         "wiki": "https://oldschool.runescape.wiki/w/Colossal_Hydra",
         "rule": ["canEnterKaruulmSlayerDungeon"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [95],
         "tags": ["superior"],
         "f2p": false
@@ -4009,7 +4009,7 @@ export const NPC_DATA = {
     "Crawling Hand": {
         "wiki": "https://oldschool.runescape.wiki/w/Crawling_Hand",
         "rule": ["canCompletePriestInPeril"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [5],
         "tags": [],
         "f2p": false
@@ -4065,7 +4065,7 @@ export const NPC_DATA = {
     "Crushing hand": {
         "wiki": "https://oldschool.runescape.wiki/w/Crushing_hand",
         "rule": ["canCompletePriestInPeril"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [5],
         "tags": ["superior"],
         "f2p": false
@@ -4374,7 +4374,7 @@ export const NPC_DATA = {
     "Dark beast": {
         "wiki": "https://oldschool.runescape.wiki/w/Dark_beast",
         "rule": ["canCompleteMourningsEndPartI"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [90],
         "tags": [],
         "f2p": false
@@ -4542,7 +4542,7 @@ export const NPC_DATA = {
     "Death spawn": {
         "wiki": "https://oldschool.runescape.wiki/w/Death_spawn",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [80],
         "tags": [],
         "f2p": false
@@ -4596,7 +4596,7 @@ export const NPC_DATA = {
     "Desert Lizard": {
         "wiki": "https://oldschool.runescape.wiki/w/Desert_Lizard",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [22],
         "tags": [],
         "f2p": false
@@ -4649,7 +4649,7 @@ export const NPC_DATA = {
     "Deviant spectre": {
         "wiki": "https://oldschool.runescape.wiki/w/Deviant_spectre",
         "rule": ["hasNosePeg"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [60],
         "tags": [],
         "f2p": false
@@ -4689,7 +4689,7 @@ export const NPC_DATA = {
     "Dire gryphon": {
         "wiki": "https://oldschool.runescape.wiki/w/Dire_gryphon",
         "rule": ["canCompleteTroubledTortugans"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [51],
         "tags": ["superior"],
         "f2p": false
@@ -4697,7 +4697,7 @@ export const NPC_DATA = {
     "Dire gryphon Normal": {
         "wiki": "https://oldschool.runescape.wiki/w/Dire_gryphon#Normal",
         "rule": ["canCompleteTroubledTortugans"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [51],
         "tags": ["superior"],
         "f2p": false
@@ -4857,7 +4857,7 @@ export const NPC_DATA = {
     "Drake": {
         "wiki": "https://oldschool.runescape.wiki/w/Drake",
         "rule": ["canEnterKaruulmSlayerDungeon"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [84],
         "tags": [],
         "f2p": false
@@ -4873,7 +4873,7 @@ export const NPC_DATA = {
     "Dreadborn Araxyte": {
         "wiki": "https://oldschool.runescape.wiki/w/Dreadborn_Araxyte",
         "rule": ["canCompletePriestInPeril"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [92],
         "tags": ["superior"],
         "f2p": false
@@ -5070,7 +5070,7 @@ export const NPC_DATA = {
                 "canLongrange"
             ]
         },
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [65],
         "tags": [],
         "f2p": false
@@ -5083,7 +5083,7 @@ export const NPC_DATA = {
                 "canLongrange"
             ]
         },
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [65],
         "tags": [],
         "f2p": false
@@ -5222,7 +5222,7 @@ export const NPC_DATA = {
     "Earthen Nagua": {
         "wiki": "https://oldschool.runescape.wiki/w/Earthen_Nagua",
         "rule": ["canCompleteTheFinalDawn"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [48],
         "tags": [],
         "f2p": false
@@ -5286,7 +5286,7 @@ export const NPC_DATA = {
     "Elder aquanite": {
         "wiki": "https://oldschool.runescape.wiki/w/Elder_aquanite",
         "rule": ["canSailToYnysdail"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [78],
         "tags": ["superior"],
         "f2p": false
@@ -5294,7 +5294,7 @@ export const NPC_DATA = {
     "Elder aquanite Normal": {
         "wiki": "https://oldschool.runescape.wiki/w/Elder_aquanite#Normal",
         "rule": ["canSailToYnysdail"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [78],
         "tags": ["superior"],
         "f2p": false
@@ -5302,7 +5302,7 @@ export const NPC_DATA = {
     "Elder custodian stalker": {
         "wiki": "https://oldschool.runescape.wiki/w/Elder_custodian_stalker",
         "rule": ["canCompleteShadowsOfCustodia"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [76],
         "tags": [],
         "f2p": false
@@ -5686,7 +5686,7 @@ export const NPC_DATA = {
     "Fever spider": {
         "wiki": "https://oldschool.runescape.wiki/w/Fever_spider",
         "rule": ["canCompleteRumDeal"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [42],
         "tags": [],
         "f2p": false
@@ -6035,7 +6035,7 @@ export const NPC_DATA = {
     "Flaming pyrelord": {
         "wiki": "https://oldschool.runescape.wiki/w/Flaming_pyrelord",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [30],
         "tags": ["superior"],
         "f2p": false
@@ -6262,7 +6262,7 @@ export const NPC_DATA = {
     "Frost Nagua": {
         "wiki": "https://oldschool.runescape.wiki/w/Frost_Nagua",
         "rule": ["canCompleteTheHeartOfDarkness"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [48],
         "tags": [],
         "f2p": false
@@ -6363,7 +6363,7 @@ export const NPC_DATA = {
                 "canKillGargoyles"
             ]
         },
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [75],
         "tags": [],
         "f2p": false
@@ -6599,7 +6599,7 @@ export const NPC_DATA = {
                 "hasBagOfSalt"
             ]
         },
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [20],
         "tags": ["superior"],
         "f2p": false
@@ -7038,7 +7038,7 @@ export const NPC_DATA = {
     "Greater Nechryael Regular": {
         "wiki": "https://oldschool.runescape.wiki/w/Greater_Nechryael#Regular",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [80],
         "tags": [],
         "f2p": false
@@ -7046,7 +7046,7 @@ export const NPC_DATA = {
     "Greater Nechryael Wilderness Slayer Cave": {
         "wiki": "https://oldschool.runescape.wiki/w/Greater_Nechryael#Wilderness_Slayer_Cave",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [80],
         "tags": [],
         "f2p": false
@@ -7070,7 +7070,7 @@ export const NPC_DATA = {
     "Greater abyssal demon": {
         "wiki": "https://oldschool.runescape.wiki/w/Greater_abyssal_demon",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [85],
         "tags": ["superior"],
         "f2p": false
@@ -7078,7 +7078,7 @@ export const NPC_DATA = {
     "Greater abyssal demon Wilderness Slayer Cave superior": {
         "wiki": "https://oldschool.runescape.wiki/w/Greater_abyssal_demon#Wilderness_Slayer_Cave_superior",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [85],
         "tags": ["superior"],
         "f2p": false
@@ -7134,7 +7134,7 @@ export const NPC_DATA = {
     "Grimy Lizard": {
         "wiki": "https://oldschool.runescape.wiki/w/Grimy_Lizard",
         "rule": ["canStartPerilousMoons"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [44],
         "tags": [],
         "f2p": false
@@ -7171,7 +7171,7 @@ export const NPC_DATA = {
                 "canKillGargoyles"
             ]
         },
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [75],
         "tags": [],
         "f2p": false
@@ -7195,7 +7195,7 @@ export const NPC_DATA = {
     "Gryphon": {
         "wiki": "https://oldschool.runescape.wiki/w/Gryphon",
         "rule": ["canCompleteTroubledTortugans"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [51],
         "tags": [],
         "f2p": false
@@ -7379,7 +7379,7 @@ export const NPC_DATA = {
     "Guardian Drake": {
         "wiki": "https://oldschool.runescape.wiki/w/Guardian_Drake",
         "rule": ["canEnterKaruulmSlayerDungeon"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [84],
         "tags": ["superior"],
         "f2p": false
@@ -7482,7 +7482,7 @@ export const NPC_DATA = {
                 "hasUnlitBugLantern"
             ]
         },
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [33],
         "tags": [],
         "f2p": false
@@ -7999,7 +7999,7 @@ export const NPC_DATA = {
         "rule": ["canDoHuntersRumours"],
         "skill": ["hunter"],
         "level": [57],
-        "tags": [],
+        "tags": ["hunterRumour"],
         "f2p": false
     },
     "Hunters' loot sack (basic)": {
@@ -8007,7 +8007,7 @@ export const NPC_DATA = {
         "rule": ["canDoHuntersRumours"],
         "skill": ["hunter"],
         "level": [46],
-        "tags": [],
+        "tags": ["hunterRumour"],
         "f2p": false
     },
     "Hunters' loot sack (expert)": {
@@ -8015,7 +8015,7 @@ export const NPC_DATA = {
         "rule": ["canDoHuntersRumours"],
         "skill": ["hunter"],
         "level": [72],
-        "tags": [],
+        "tags": ["hunterRumour"],
         "f2p": false
     },
     "Hunters' loot sack (master)": {
@@ -8028,7 +8028,7 @@ export const NPC_DATA = {
         },
         "skill": ["hunter"],
         "level": [91],
-        "tags": [],
+        "tags": ["hunterRumour"],
         "f2p": false
     },
     "Hunters' loot sack (supplies)": {
@@ -8036,13 +8036,13 @@ export const NPC_DATA = {
         "rule": ["canDoHuntersRumours"],
         "skill": ["hunter"],
         "level": [46],
-        "tags": [],
+        "tags": ["hunterRumour"],
         "f2p": false
     },
     "Hydra": {
         "wiki": "https://oldschool.runescape.wiki/w/Hydra",
         "rule": ["canEnterKaruulmSlayerDungeon"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [95],
         "tags": [],
         "f2p": false
@@ -8274,7 +8274,7 @@ export const NPC_DATA = {
     "Infernal Mage": {
         "wiki": "https://oldschool.runescape.wiki/w/Infernal_Mage",
         "rule": ["canCompletePriestInPeril"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [45],
         "tags": [],
         "f2p": false
@@ -8295,7 +8295,7 @@ export const NPC_DATA = {
     "Infernal pyrelord": {
         "wiki": "https://oldschool.runescape.wiki/w/Infernal_pyrelord",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [30],
         "tags": ["superior"],
         "f2p": false
@@ -8329,7 +8329,7 @@ export const NPC_DATA = {
     "Insatiable Bloodveld": {
         "wiki": "https://oldschool.runescape.wiki/w/Insatiable_Bloodveld",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [50],
         "tags": ["superior"],
         "f2p": false
@@ -8337,7 +8337,7 @@ export const NPC_DATA = {
     "Insatiable mutated Bloodveld": {
         "wiki": "https://oldschool.runescape.wiki/w/Insatiable_mutated_Bloodveld",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [50],
         "tags": ["superior"],
         "f2p": false
@@ -8654,7 +8654,7 @@ export const NPC_DATA = {
     "Jelly Regular": {
         "wiki": "https://oldschool.runescape.wiki/w/Jelly#Regular",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [52],
         "tags": [],
         "f2p": false
@@ -8662,7 +8662,7 @@ export const NPC_DATA = {
     "Jelly Wilderness Slayer Cave": {
         "wiki": "https://oldschool.runescape.wiki/w/Jelly#Wilderness_Slayer_Cave",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [52],
         "tags": [],
         "f2p": false
@@ -8818,7 +8818,7 @@ export const NPC_DATA = {
     "Juvenile custodian stalker": {
         "wiki": "https://oldschool.runescape.wiki/w/Juvenile_custodian_stalker",
         "rule": ["canCompleteShadowsOfCustodia"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [54],
         "tags": [],
         "f2p": false
@@ -8946,7 +8946,7 @@ export const NPC_DATA = {
     "Killerwatt": {
         "wiki": "https://oldschool.runescape.wiki/w/Killerwatt",
         "rule": ["canCompleteErnestTheChicken"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [37],
         "tags": [],
         "f2p": false
@@ -8994,7 +8994,7 @@ export const NPC_DATA = {
     "King kurask": {
         "wiki": "https://oldschool.runescape.wiki/w/King_kurask",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [70],
         "tags": ["superior"],
         "f2p": false
@@ -9050,7 +9050,7 @@ export const NPC_DATA = {
     "Kraken": {
         "wiki": "https://oldschool.runescape.wiki/w/Kraken",
         "rule": ["canShortrange"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [87],
         "tags": ["boss"],
         "f2p": false
@@ -9087,7 +9087,7 @@ export const NPC_DATA = {
     "Kurask": {
         "wiki": "https://oldschool.runescape.wiki/w/Kurask",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [70],
         "tags": [],
         "f2p": false
@@ -9135,7 +9135,7 @@ export const NPC_DATA = {
     "Lava Strykewyrm": {
         "wiki": "https://oldschool.runescape.wiki/w/Lava_Strykewyrm",
         "rule": ["canEnterTheCharredDungeon"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [62],
         "tags": [],
         "f2p": false
@@ -9274,7 +9274,7 @@ export const NPC_DATA = {
     "Lizard": {
         "wiki": "https://oldschool.runescape.wiki/w/Lizard",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [22],
         "tags": [],
         "f2p": false
@@ -9362,7 +9362,7 @@ export const NPC_DATA = {
     "Long-tailed Wyvern": {
         "wiki": "https://oldschool.runescape.wiki/w/Long-tailed_Wyvern",
         "rule": ["canKillFossilIslandWyverns"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [66],
         "tags": [],
         "f2p": false
@@ -9585,7 +9585,7 @@ export const NPC_DATA = {
     "Magma strykewyrm": {
         "wiki": "https://oldschool.runescape.wiki/w/Magma_strykewyrm",
         "rule": ["canEnterTheCharredDungeon"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [62],
         "tags": ["superior"],
         "f2p": false
@@ -9593,7 +9593,7 @@ export const NPC_DATA = {
     "Magma strykewyrm Normal": {
         "wiki": "https://oldschool.runescape.wiki/w/Magma_strykewyrm#Normal",
         "rule": ["canEnterTheCharredDungeon"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [62],
         "tags": ["superior"],
         "f2p": false
@@ -9652,7 +9652,7 @@ export const NPC_DATA = {
     "Malevolent Mage": {
         "wiki": "https://oldschool.runescape.wiki/w/Malevolent_Mage",
         "rule": ["canCompletePriestInPeril"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [45],
         "tags": ["superior"],
         "f2p": false
@@ -9813,7 +9813,7 @@ export const NPC_DATA = {
                 "canKillGargoyles"
             ]
         },
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [75],
         "tags": ["superior"],
         "f2p": false
@@ -9891,7 +9891,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Mature_custodian_stalker",
         "rule": ["canCompleteShadowsOfCustodia"],
         "skill": [67],
-        "level": ["slayer"],
+        "level": ["Slayer"],
         "tags": [],
         "f2p": false
     },
@@ -10021,7 +10021,7 @@ export const NPC_DATA = {
     "Mogre": {
         "wiki": "https://oldschool.runescape.wiki/w/Mogre",
         "rule": ["canCompleteSkippyAndTheMogres"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [32],
         "tags": [],
         "f2p": false
@@ -10029,7 +10029,7 @@ export const NPC_DATA = {
     "Mogre (Sailing)": {
         "wiki": "https://oldschool.runescape.wiki/w/Mogre_(Sailing)",
         "rule": ["canShortrange"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [32],
         "tags": [],
         "f2p": false
@@ -10042,7 +10042,7 @@ export const NPC_DATA = {
                 "hasSlayerBell"
             ]
         },
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [39],
         "tags": [],
         "f2p": false
@@ -10103,7 +10103,7 @@ export const NPC_DATA = {
                 "hasMirrorShield"
             ]
         },
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [40],
         "tags": ["superior"],
         "f2p": false
@@ -10140,7 +10140,7 @@ export const NPC_DATA = {
                 "hasMirrorShield"
             ]
         },
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [25],
         "tags": [],
         "f2p": false
@@ -10360,7 +10360,7 @@ export const NPC_DATA = {
     "Mutated Bloodveld": {
         "wiki": "https://oldschool.runescape.wiki/w/Mutated_Bloodveld",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [50],
         "tags": [],
         "f2p": false
@@ -10368,7 +10368,7 @@ export const NPC_DATA = {
     "Mutated Terrorbird": {
         "wiki": "https://oldschool.runescape.wiki/w/Mutated_Terrorbird",
         "rule": ["canCompleteThePathOfGlouphrie"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [56],
         "tags": ["superior"],
         "f2p": false
@@ -10376,7 +10376,7 @@ export const NPC_DATA = {
     "Mutated Tortoise": {
         "wiki": "https://oldschool.runescape.wiki/w/Mutated_Tortoise",
         "rule": ["canCompleteThePathOfGlouphrie"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [56],
         "tags": ["superior"],
         "f2p": false
@@ -10539,7 +10539,7 @@ export const NPC_DATA = {
                 "canCompletePriestInPeril"
             ]
         },
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [80],
         "tags": [],
         "f2p": false
@@ -10552,7 +10552,7 @@ export const NPC_DATA = {
                 "canCompletePriestInPeril"
             ]
         },
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [80],
         "tags": ["superior"],
         "f2p": false
@@ -10565,14 +10565,14 @@ export const NPC_DATA = {
                 "canCompletePriestInPeril"
             ]
         },
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [80],
         "tags": ["superior"],
         "f2p": false
     },
     "Nechryarch Wilderness Slayer Cave": {
         "wiki": "https://oldschool.runescape.wiki/w/Nechryarch#Wilderness_Slayer_Cave",
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [80],
         "tags": ["superior"],
         "f2p": false
@@ -10655,7 +10655,7 @@ export const NPC_DATA = {
     "Night beast": {
         "wiki": "https://oldschool.runescape.wiki/w/Night_beast",
         "rule": ["canCompleteMourningsEndPartI"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [90],
         "tags": ["superior"],
         "f2p": false
@@ -10695,7 +10695,7 @@ export const NPC_DATA = {
     "Nuclear smoke devil": {
         "wiki": "https://oldschool.runescape.wiki/w/Nuclear_smoke_devil",
         "rule": ["hasFacemask"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [93],
         "tags": ["superior"],
         "f2p": false
@@ -11644,7 +11644,7 @@ export const NPC_DATA = {
     "Pyrefiend": {
         "wiki": "https://oldschool.runescape.wiki/w/Pyrefiend",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [30],
         "tags": [],
         "f2p": false
@@ -11652,7 +11652,7 @@ export const NPC_DATA = {
     "Pyrelord": {
         "wiki": "https://oldschool.runescape.wiki/w/Pyrelord",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [30],
         "tags": ["superior"],
         "f2p": false
@@ -11890,7 +11890,7 @@ export const NPC_DATA = {
     "Repugnant spectre": {
         "wiki": "https://oldschool.runescape.wiki/w/Repugnant_spectre",
         "rule": ["hasNosePeg"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [60],
         "tags": ["superior"],
         "f2p": false
@@ -12574,7 +12574,7 @@ export const NPC_DATA = {
                 "hasBagOfSalt"
             ]
         },
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [20],
         "tags": [],
         "f2p": false
@@ -13127,7 +13127,7 @@ export const NPC_DATA = {
     "Screaming banshee": {
         "wiki": "https://oldschool.runescape.wiki/w/Screaming_banshee",
         "rule": ["hasEarmuffs"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [15],
         "tags": ["superior"],
         "f2p": false
@@ -13135,7 +13135,7 @@ export const NPC_DATA = {
     "Screaming twisted banshee": {
         "wiki": "https://oldschool.runescape.wiki/w/Screaming_twisted_banshee",
         "rule": ["hasEarmuffs"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [15],
         "tags": ["superior"],
         "f2p": false
@@ -13380,7 +13380,7 @@ export const NPC_DATA = {
     "Shadow Wyrm": {
         "wiki": "https://oldschool.runescape.wiki/w/Shadow_Wyrm",
         "rule": ["canEnterKaruulmSlayerDungeon"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [62],
         "tags": ["superior"],
         "f2p": false
@@ -13412,7 +13412,7 @@ export const NPC_DATA = {
     "Shellbane gryphon": {
         "wiki": "https://oldschool.runescape.wiki/w/Shellbane_gryphon",
         "rule": ["canCompleteTroubledTortugans"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [51],
         "tags": ["boss"],
         "f2p": false
@@ -13604,7 +13604,7 @@ export const NPC_DATA = {
     "Skeletal Wyvern": {
         "wiki": "https://oldschool.runescape.wiki/w/Skeletal_Wyvern",
         "rule": ["hasAccessToWyvernProtection"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [72],
         "tags": [],
         "f2p": false
@@ -13934,7 +13934,7 @@ export const NPC_DATA = {
     "Small Lizard": {
         "wiki": "https://oldschool.runescape.wiki/w/Small_Lizard",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [22],
         "tags": [],
         "f2p": false
@@ -13988,7 +13988,7 @@ export const NPC_DATA = {
     "Smoke devil": {
         "wiki": "https://oldschool.runescape.wiki/w/Smoke_devil",
         "rule": ["hasFacemask"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [93],
         "tags": [],
         "f2p": false
@@ -14289,7 +14289,7 @@ export const NPC_DATA = {
     "Spiked Turoth": {
         "wiki": "https://oldschool.runescape.wiki/w/Spiked_Turoth",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [55],
         "tags": ["superior"],
         "f2p": false
@@ -14342,7 +14342,7 @@ export const NPC_DATA = {
     "Spiritual mage": {
         "wiki": "https://oldschool.runescape.wiki/w/Spiritual_mage",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [83],
         "tags": [],
         "f2p": false
@@ -14350,7 +14350,7 @@ export const NPC_DATA = {
     "Spiritual mage Zaros": {
         "wiki": "https://oldschool.runescape.wiki/w/Spiritual_mage#Zaros",
         "rule": ["canCompleteTheFrozenDoor"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [83],
         "tags": [],
         "f2p": false
@@ -14358,7 +14358,7 @@ export const NPC_DATA = {
     "Spiritual ranger": {
         "wiki": "https://oldschool.runescape.wiki/w/Spiritual_ranger",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [63],
         "tags": [],
         "f2p": false
@@ -14366,7 +14366,7 @@ export const NPC_DATA = {
     "Spiritual ranger Zaros": {
         "wiki": "https://oldschool.runescape.wiki/w/Spiritual_ranger#Zaros",
         "rule": ["canCompleteTheFrozenDoor"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [63],
         "tags": [],
         "f2p": false
@@ -14374,7 +14374,7 @@ export const NPC_DATA = {
     "Spiritual warrior": {
         "wiki": "https://oldschool.runescape.wiki/w/Spiritual_warrior",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [68],
         "tags": [],
         "f2p": false
@@ -14382,7 +14382,7 @@ export const NPC_DATA = {
     "Spiritual warrior Zaros": {
         "wiki": "https://oldschool.runescape.wiki/w/Spiritual_warrior#Zaros",
         "rule": ["canCompleteTheFrozenDoor"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [68],
         "tags": [],
         "f2p": false
@@ -14390,7 +14390,7 @@ export const NPC_DATA = {
     "Spitting Wyvern": {
         "wiki": "https://oldschool.runescape.wiki/w/Spitting_Wyvern",
         "rule": ["canKillFossilIslandWyverns"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [66],
         "tags": [],
         "f2p": false
@@ -14573,7 +14573,7 @@ export const NPC_DATA = {
     "Sulphur Lizard": {
         "wiki": "https://oldschool.runescape.wiki/w/Sulphur_Lizard",
         "rule": ["canEnterKaruulmSlayerDungeon"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [44],
         "tags": [],
         "f2p": false
@@ -14581,7 +14581,7 @@ export const NPC_DATA = {
     "Sulphur Nagua": {
         "wiki": "https://oldschool.runescape.wiki/w/Sulphur_Nagua",
         "rule": ["canStartPerilousMoons"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [48],
         "tags": [],
         "f2p": false
@@ -14717,7 +14717,7 @@ export const NPC_DATA = {
     "Taloned Wyvern": {
         "wiki": "https://oldschool.runescape.wiki/w/Taloned_Wyvern",
         "rule": ["canKillFossilIslandWyverns"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [66],
         "tags": [],
         "f2p": false
@@ -14877,7 +14877,7 @@ export const NPC_DATA = {
     "Terror dog Level 100": {
         "wiki": "https://oldschool.runescape.wiki/w/Terror_dog#Level_100",
         "rule": ["canCompleteHauntedMine"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [40],
         "tags": [],
         "f2p": false
@@ -14885,7 +14885,7 @@ export const NPC_DATA = {
     "Terror dog Level 110": {
         "wiki": "https://oldschool.runescape.wiki/w/Terror_dog#Level_110",
         "rule": ["canCompleteHauntedMine"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [40],
         "tags": [],
         "f2p": false
@@ -14973,7 +14973,7 @@ export const NPC_DATA = {
     "Thermonuclear smoke devil": {
         "wiki": "https://oldschool.runescape.wiki/w/Thermonuclear_smoke_devil",
         "rule": ["hasFacemask"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [93],
         "tags": ["boss"],
         "f2p": false
@@ -15425,7 +15425,7 @@ export const NPC_DATA = {
     "Turoth": {
         "wiki": "https://oldschool.runescape.wiki/w/Turoth",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [55],
         "tags": [],
         "f2p": false
@@ -15441,7 +15441,7 @@ export const NPC_DATA = {
     "Twisted Banshee": {
         "wiki": "https://oldschool.runescape.wiki/w/Twisted_Banshee",
         "rule": ["hasEarmuffs"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [15],
         "tags": [],
         "f2p": false
@@ -15661,7 +15661,7 @@ export const NPC_DATA = {
     "Unsired": {
         "wiki": "https://oldschool.runescape.wiki/w/Unsired",
         "rule": ["canReachAbyssalSire"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [85],
         "tags": [],
         "f2p": false
@@ -15834,7 +15834,7 @@ export const NPC_DATA = {
     "Vitreous Chilled Jelly": {
         "wiki": "https://oldschool.runescape.wiki/w/Vitreous_Chilled_Jelly",
         "rule": ["canCompleteTheHeartOfDarkness"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [52],
         "tags": ["superior"],
         "f2p": false
@@ -15842,7 +15842,7 @@ export const NPC_DATA = {
     "Vitreous Jelly": {
         "wiki": "https://oldschool.runescape.wiki/w/Vitreous_Jelly",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [52],
         "tags": ["superior"],
         "f2p": false
@@ -15850,7 +15850,7 @@ export const NPC_DATA = {
     "Vitreous Jelly Wilderness Slayer Cave superior": {
         "wiki": "https://oldschool.runescape.wiki/w/Vitreous_Jelly#Wilderness_Slayer_Cave_superior",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [52],
         "tags": ["superior"],
         "f2p": false
@@ -15858,7 +15858,7 @@ export const NPC_DATA = {
     "Vitreous Warped Jelly": {
         "wiki": "https://oldschool.runescape.wiki/w/Vitreous_Warped_Jelly",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [52],
         "tags": ["superior"],
         "f2p": false
@@ -15938,7 +15938,7 @@ export const NPC_DATA = {
     "Wall beast": {
         "wiki": "https://oldschool.runescape.wiki/w/Wall_beast",
         "rule": ["canEnterLumbridgeSwampCaves"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [35],
         "tags": [],
         "f2p": false
@@ -15970,7 +15970,7 @@ export const NPC_DATA = {
     "Warped Jelly": {
         "wiki": "https://oldschool.runescape.wiki/w/Warped_Jelly",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [52],
         "tags": [],
         "f2p": false
@@ -15978,7 +15978,7 @@ export const NPC_DATA = {
     "Warped Terrorbird": {
         "wiki": "https://oldschool.runescape.wiki/w/Warped_Terrorbird",
         "rule": ["canCompleteThePathOfGlouphrie"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [56],
         "tags": [],
         "f2p": false
@@ -15986,7 +15986,7 @@ export const NPC_DATA = {
     "Warped Tortoise": {
         "wiki": "https://oldschool.runescape.wiki/w/Warped_Tortoise",
         "rule": ["canCompleteThePathOfGlouphrie"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [56],
         "tags": [],
         "f2p": false
@@ -16506,7 +16506,7 @@ export const NPC_DATA = {
     "Wyrm": {
         "wiki": "https://oldschool.runescape.wiki/w/Wyrm",
         "rule": ["canEnterKaruulmSlayerDungeon"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [62],
         "tags": [],
         "f2p": false
@@ -16514,7 +16514,7 @@ export const NPC_DATA = {
     "Wyrmling": {
         "wiki": "https://oldschool.runescape.wiki/w/Wyrmling",
         "rule": ["canStartPerilousMoons"],
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [62],
         "tags": [],
         "f2p": false
@@ -16987,7 +16987,7 @@ export const NPC_DATA = {
     "Zygomite Level 74": {
         "wiki": "https://oldschool.runescape.wiki/w/Zygomite#Level_74",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [57],
         "tags": [],
         "f2p": false
@@ -16995,7 +16995,7 @@ export const NPC_DATA = {
     "Zygomite Level 86": {
         "wiki": "https://oldschool.runescape.wiki/w/Zygomite#Level_86",
         "rule": null,
-        "skill": ["slayer"],
+        "skill": ["Slayer"],
         "level": [57],
         "tags": [],
         "f2p": false

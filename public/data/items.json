@@ -9653,7 +9653,10 @@
           }
         },
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -20862,7 +20865,10 @@
       },
       "other": {
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -21042,7 +21048,10 @@
       },
       "other": {
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -21129,7 +21138,10 @@
       },
       "other": {
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -21297,7 +21309,10 @@
       },
       "other": {
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -21453,7 +21468,10 @@
       },
       "other": {
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -21660,7 +21678,10 @@
       },
       "other": {
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -21747,7 +21768,10 @@
       },
       "other": {
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -21840,7 +21864,10 @@
       },
       "other": {
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -23258,7 +23285,10 @@
     "sources": {
       "other": {
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -24553,7 +24583,10 @@
       },
       "other": {
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -32974,7 +33007,10 @@
           }
         },
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -35420,6 +35456,16 @@
             "all": [
               {
                 "has": 1973
+              },
+              {
+                "any": [
+                  {
+                    "has": 233
+                  },
+                  {
+                    "has": 946
+                  }
+                ]
               }
             ]
           }
@@ -35909,7 +35955,10 @@
     "sources": {
       "other": {
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -37169,7 +37218,7 @@
         }
       },
       "shops": {
-        "Yes": "canEnterNightmareZone"
+        "Yes": "canAccessNightmareZone"
       }
     }
   },
@@ -39242,7 +39291,10 @@
       },
       "other": {
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -39735,7 +39787,10 @@
           }
         },
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -45970,7 +46025,10 @@
     "sources": {
       "other": {
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -56457,7 +56515,10 @@
     "sources": {
       "other": {
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -56847,7 +56908,10 @@
           }
         },
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -59584,7 +59648,10 @@
     "sources": {
       "other": {
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -60126,7 +60193,10 @@
     "sources": {
       "other": {
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -82165,7 +82235,10 @@
           }
         },
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -84302,7 +84375,10 @@
           }
         },
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -84474,7 +84550,10 @@
     "sources": {
       "other": {
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -87297,7 +87376,10 @@
       },
       "other": {
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -88498,7 +88580,10 @@
       },
       "other": {
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -102915,7 +103000,10 @@
     "sources": {
       "other": {
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -103219,7 +103307,10 @@
           }
         },
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -114026,7 +114117,10 @@
       },
       "other": {
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -119418,7 +119512,10 @@
     "sources": {
       "other": {
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -123181,7 +123278,10 @@
     "sources": {
       "other": {
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -123787,7 +123887,10 @@
           }
         },
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -129925,7 +130028,10 @@
     "sources": {
       "other": {
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -138942,7 +139048,10 @@
     "sources": {
       "other": {
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -139261,7 +139370,10 @@
       },
       "other": {
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -139274,7 +139386,10 @@
     "sources": {
       "other": {
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -145314,7 +145429,10 @@
       },
       "other": {
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -150463,7 +150581,10 @@
     "sources": {
       "other": {
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -150552,7 +150673,10 @@
     "sources": {
       "other": {
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -152717,7 +152841,10 @@
     "sources": {
       "other": {
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -153695,7 +153822,10 @@
       },
       "other": {
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
@@ -155765,7 +155895,10 @@
     "sources": {
       "other": {
         "Special shop": {
-          "notes": "Play LMS and use the reward interface."
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }

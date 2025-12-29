@@ -63,6 +63,26 @@ export default async function ItemsPage() {
                 <input type="checkbox" id="isIronman">
                 I am an ironman
             </label>
+
+            <label>
+                <input type="checkbox" id="hideBosses">
+                Hide bosses
+            </label>
+
+            <label>
+                <input type="checkbox" id="isSlayerLocked">
+                I am slayer locked
+            </label>
+
+            <label>
+                <input type="checkbox" id="isHunterRumourLocked">
+                I am hunter rumour locked
+            </label>
+
+            <label>
+                <input type="checkbox" id="hideLMS">
+                Hide the LMS shop
+            </label>
         </div>
 
         <p class="marginOneRem">Overrides (e.g. when you've lamped a skill or want to see what lamping one can bring you)</p>

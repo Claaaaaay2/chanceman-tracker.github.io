@@ -150,6 +150,10 @@ window.initItemsPage = async function () {
     const hasItemsets = document.getElementById("hasItemsets");
     const hasSuperiors = document.getElementById("hasSuperiors");
     const isIronman = document.getElementById("isIronman");
+    const hideBosses = document.getElementById("hideBosses");
+    const isSlayerLocked = document.getElementById("isSlayerLocked");
+    const isHunterRumourLocked = document.getElementById("isHunterRumourLocked");
+    const hideLMS = document.getElementById("hideLMS");
     const overrideWoodcutting = document.getElementById("overrideWoodcutting");
     const overrideMining = document.getElementById("overrideMining");
     const overrideFishing = document.getElementById("overrideFishing");
@@ -159,7 +163,7 @@ window.initItemsPage = async function () {
     const overrideConstruction = document.getElementById("overrideConstruction");
     const grid = document.getElementById("itemGrid");
 
-    if (!searchInput || !hideRolled || !onlyUnlocked || !onlyObtainable || !hideClue || !allowOthersHouses || !hasFlatpacks || !hasItemsets || !hasSuperiors || !isIronman || !overrideWoodcutting || !overrideMining || !overrideFishing || !overrideCooking || !overrideFletching || !overrideCrafting || !overrideConstruction || !grid) {
+    if (!searchInput || !hideBosses || !isSlayerLocked  || !isHunterRumourLocked || !hideLMS || !hideRolled || !onlyUnlocked || !onlyObtainable || !hideClue || !allowOthersHouses || !hasFlatpacks || !hasItemsets || !hasSuperiors || !isIronman || !overrideWoodcutting || !overrideMining || !overrideFishing || !overrideCooking || !overrideFletching || !overrideCrafting || !overrideConstruction || !grid) {
         setTimeout(initItemsPage, 0);
         return;
     }
@@ -175,6 +179,10 @@ window.initItemsPage = async function () {
     hasItemsets.checked = f.hasItemsets ?? true;
     hasSuperiors.checked = f.hasSuperiors ?? false;
     isIronman.checked = f.isIronman ?? false;
+    hideBosses.checked = f.hideBosses ?? false;
+    isSlayerLocked.checked = f.isSlayerLocked ?? false;
+    isHunterRumourLocked.checked = f.isHunterRumourLocked ?? false;
+    hideLMS.checked = f.hideLMS ?? false;
     overrideWoodcutting.checked = f.overrideWoodcutting ?? false;
     overrideMining.checked = f.overrideMining ?? false;
     overrideFishing.checked = f.overrideFishing ?? false;
@@ -196,6 +204,10 @@ window.initItemsPage = async function () {
         const hasIt = hasItemsets.checked;
         const hasSup = hasSuperiors.checked;
         const isIron = isIronman.checked;
+        const hideBoss = hideBosses.checked;
+        const slayLock = isSlayerLocked.checked;
+        const huntRumourLock = isHunterRumourLocked.checked;
+        const hideLms = hideLMS.checked;
 
         const ranked = await computeAllRanksOnce(items, fileStore);
 
@@ -210,10 +222,10 @@ window.initItemsPage = async function () {
             if (hideR && rolled.includes(item.id)) continue;
             if (onlyU && !unlocked.includes(item.id)) continue;
             if (hideCl && item.tags?.includes("clue-reward-only")) continue;
-            if (!allowHo && await isHouseOnlyItem(item, fileStore)) {
+            if (!allowHo && await hideTag(item, fileStore, "house")) {
                 sort.rank = 8;
             }
-            if (!hasSup && await isSuperiorOnlyItem(item, fileStore)) {
+            if (!hasSup && await hideTag(item, fileStore, "superior")) {
                 sort.rank = 8;
             };
             if (isIron && await isNonIronItem(item, fileStore)) {
@@ -222,6 +234,18 @@ window.initItemsPage = async function () {
             if (onlyO && (sort.rank === 7 || sort.rank === 8)) continue;
             if (!hasFl && item.tags?.includes("flatpack")) continue;
             if (!hasIt && item.tags?.includes("itemset")) continue;
+            if (hideBoss && await hideTag(item, fileStore, "boss")) {
+                sort.rank = 8;
+            };
+            if (slayLock && await hideSkill(item, fileStore, "Slayer")) {
+                sort.rank = 8;
+            };
+            if (huntRumourLock && await hideTag(item, fileStore, "hunterRumour")) {
+                sort.rank = 8;
+            };
+            if (hideLms && await hideTag(item, fileStore, "LMS")) {
+                sort.rank = 8;
+            };
 
             filtered.push({ ...entry, sort });
         }
@@ -286,6 +310,10 @@ window.initItemsPage = async function () {
             hasItemsets: hasItemsets.checked,
             hasSuperiors: hasSuperiors.checked,
             isIronman: isIronman.checked,
+            hideBosses: hideBosses.checked,
+            isSlayerLocked: isSlayerLocked.checked,
+            isHunterRumourLocked: isHunterRumourLocked.checked,
+            hideLMS: hideLMS.checked,
             overrideWoodcutting: overrideWoodcutting.checked,
             overrideMining: overrideMining.checked,
             overrideFishing: overrideFishing.checked,
@@ -342,6 +370,26 @@ window.initItemsPage = async function () {
     });
 
     isIronman.addEventListener("input", () => {
+        saveFilters();
+        renderItems();
+    });
+
+    hideBosses.addEventListener("input", () => {
+        saveFilters();
+        renderItems();
+    });
+
+    isSlayerLocked.addEventListener("input", () => {
+        saveFilters();
+        renderItems();
+    });
+
+    isHunterRumourLocked.addEventListener("input", () => {
+        saveFilters();
+        renderItems();
+    });
+
+    hideLMS.addEventListener("input", () => {
         saveFilters();
         renderItems();
     });
@@ -452,54 +500,6 @@ async function canReachSource(source, ctx) {
     return evaluateRule(rule, ctx);
 }
 
-async function isHouseOnlyItem(item, ctx) {
-    let hasAnyHouseSource = false;
-    let hasReachableNonHouseSource = false;
-
-    // NPC drops
-    if (item.sources?.drops) {
-        for (const npcName of Object.keys(item.sources.drops)) {
-            const npc = NPC_DATA[npcName];
-            if (!npc) continue;
-
-            const isHouse = npc.tags?.includes("house");
-            if (isHouse) hasAnyHouseSource = true;
-
-            const reachable = await canReachNpc(npcName, ctx);
-            if (!reachable) continue;
-
-            if (!isHouse) hasReachableNonHouseSource = true;
-        }
-    }
-
-    // Other sources (crafting, house actions, etc)
-    if (item.sources?.other) {
-        for (const source of Object.values(item.sources.other)) {
-            const isHouse = source.tags?.includes("house");
-            if (isHouse) hasAnyHouseSource = true;
-
-            const reachable = await canReachSource(source, ctx);
-            if (!reachable) continue;
-
-            if (!isHouse) hasReachableNonHouseSource = true;
-        }
-    }
-
-    // Shops & spawns ALWAYS override house restrictions
-    if (ctx.unlocked.includes(item.id) && (item.sources?.shops || item.sources?.spawns)) {
-        return false;
-    }
-
-    // If there is ANY reachable non-house source → obtainable
-    if (hasReachableNonHouseSource) return false;
-
-    // If there are reachable sources, but ALL are house → house-only
-    if (hasAnyHouseSource) return true;
-
-    // Otherwise not house-only
-    return false;
-}
-
 async function isNonIronItem(item, ctx) {
     let hasAnyNonIronmanSource = false;
     let hasReachableSource = false;
@@ -531,10 +531,9 @@ async function isNonIronItem(item, ctx) {
     return false;
 }
 
-async function isSuperiorOnlyItem(item, ctx) {
-    let hasAnySuperiorSource = false;
-    let hasReachableSource = false;
-    let hasReachableNonSuperiorSource = false;
+async function hideTag(item, ctx, tag) {
+    let hasAnyTagSource = false;
+    let hasReachableNonTagSource = false;
 
     // NPC drops
     if (item.sources?.drops) {
@@ -542,23 +541,83 @@ async function isSuperiorOnlyItem(item, ctx) {
             const npc = NPC_DATA[npcName];
             if (!npc) continue;
 
-            const isSuperior = npc.tags?.includes("superior");
-            if (isSuperior) hasAnySuperiorSource = true;
+            const isTag = npc.tags?.includes(tag);
+            if (isTag) hasAnyTagSource = true;
 
             const reachable = await canReachNpc(npcName, ctx);
             if (!reachable) continue;
 
-            hasReachableSource = true;
-            if (!isSuperior) hasReachableNonSuperiorSource = true;
+            if (!isTag) hasReachableNonTagSource = true;
         }
     }
 
-    // If there is ANY reachable non-superior source → obtainable
-    if (hasReachableNonSuperiorSource) return false;
+    // Other sources (crafting, house actions, etc)
+    if (item.sources?.other) {
+        for (const source of Object.values(item.sources.other)) {
+            const isTag = source.tags?.includes(tag);
+            if (isTag) hasAnyTagSource = true;
 
-    // If there are reachable sources, but ALL are superior → superior-only
-    if (hasReachableSource && hasAnySuperiorSource) return true;
+            const reachable = await canReachSource(source, ctx);
+            if (!reachable) continue;
 
-    // Otherwise not superior-only
+            if (!isTag) hasReachableNonTagSource = true;
+        }
+    }
+
+    if (ctx.unlocked.includes(item.id) && (item.sources?.shops || item.sources?.spawns)) {
+        return false;
+    }
+
+    if (hasReachableNonTagSource) return false;
+
+    if (hasAnyTagSource) return true;
+
+    return false;
+}
+
+async function hideSkill(item, ctx, skill) {
+    const skillLevel = ctx.player?.levels[skill];
+    let hasAnySkillSource = false;
+    let hasSkillLevel = false;
+    let hasReachableNonSkillSource = false;
+    
+    // NPC drops
+    if (item.sources?.drops) {
+        for (const npcName of Object.keys(item.sources.drops)) {
+            const npc = NPC_DATA[npcName];
+            if (!npc) continue;
+            
+            const needsSkill = npc.skill?.includes(skill);
+            if (needsSkill) hasAnySkillSource = true;
+            if (skillLevel >= npc.level[0]) hasSkillLevel = true;
+
+            const reachable = await canReachNpc(npcName, ctx);
+            if (!reachable) continue;
+
+            if (!needsSkill) hasReachableNonSkillSource = true;
+        }
+    }
+
+    // Other sources (crafting, house actions, etc)
+    if (item.sources?.other) {
+        for (const source of Object.values(item.sources.other)) {
+            const isTag = source.skill?.includes(skill);
+            if (isTag) hasAnySkillSource = true;
+
+            const reachable = await canReachSource(source, ctx);
+            if (!reachable) continue;
+
+            if (!isTag) hasReachableNonSkillSource = true;
+        }
+    }
+
+    if (ctx.unlocked.includes(item.id) && (item.sources?.shops || item.sources?.spawns)) {
+        return false;
+    }
+
+    if (hasReachableNonSkillSource) return false;
+
+    if (hasAnySkillSource && !hasSkillLevel) return true;
+
     return false;
 }
