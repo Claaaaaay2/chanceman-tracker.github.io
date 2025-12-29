@@ -5,8 +5,19 @@ export function has(ctx, id) {
 }
 
 export const REQUIREMENT_CHECKS = {
+    has50HunterRumoursDone(ctx) {
+        return (!ctx.filters?.isHunterRumourLocked && canTrainHunter(ctx)) //
+            || ctx.filters?.hunterRumoursCompleted >= 50;
+    },
+    has25HunterRumoursDone(ctx) {
+        return (!ctx.filters?.isHunterRumourLocked && canTrainHunter(ctx)) //
+            || ctx.filters?.hunterRumoursCompleted >= 25;
+    },
     canEnterNightmareZone(ctx) {
         return canEnterNightmareZone(ctx);
+    },
+    canCompleteRecruitmentDrive(ctx) {
+        return canCompleteRecruitmentDrive(ctx);
     },
     canMakeSplitLog(ctx) {
         return canMakeSplitLog(ctx);
@@ -406,6 +417,9 @@ export const REQUIREMENT_CHECKS = {
         return canCompleteRovingElves(ctx); // TODO
     },
     canEnterTheChampionsGuild(ctx) {
+        return ctx.player.questPoints >= 32;
+    },
+    canStartDragonSlayer(ctx) {
         return ctx.player.questPoints >= 32;
     },
     canStartMourningsEndPartI(ctx) {

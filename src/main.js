@@ -153,6 +153,7 @@ window.initItemsPage = async function () {
     const hideBosses = document.getElementById("hideBosses");
     const isSlayerLocked = document.getElementById("isSlayerLocked");
     const isHunterRumourLocked = document.getElementById("isHunterRumourLocked");
+    let hunterRumoursCompleted = document.getElementById("hunterRumoursCompleted");
     const hideLMS = document.getElementById("hideLMS");
     const overrideWoodcutting = document.getElementById("overrideWoodcutting");
     const overrideMining = document.getElementById("overrideMining");
@@ -163,7 +164,7 @@ window.initItemsPage = async function () {
     const overrideConstruction = document.getElementById("overrideConstruction");
     const grid = document.getElementById("itemGrid");
 
-    if (!searchInput || !hideBosses || !isSlayerLocked  || !isHunterRumourLocked || !hideLMS || !hideRolled || !onlyUnlocked || !onlyObtainable || !hideClue || !allowOthersHouses || !hasFlatpacks || !hasItemsets || !hasSuperiors || !isIronman || !overrideWoodcutting || !overrideMining || !overrideFishing || !overrideCooking || !overrideFletching || !overrideCrafting || !overrideConstruction || !grid) {
+    if (!searchInput || !hideBosses || !isSlayerLocked  || !isHunterRumourLocked || !hunterRumoursCompleted || !hideLMS || !hideRolled || !onlyUnlocked || !onlyObtainable || !hideClue || !allowOthersHouses || !hasFlatpacks || !hasItemsets || !hasSuperiors || !isIronman || !overrideWoodcutting || !overrideMining || !overrideFishing || !overrideCooking || !overrideFletching || !overrideCrafting || !overrideConstruction || !grid) {
         setTimeout(initItemsPage, 0);
         return;
     }
@@ -182,6 +183,7 @@ window.initItemsPage = async function () {
     hideBosses.checked = f.hideBosses ?? false;
     isSlayerLocked.checked = f.isSlayerLocked ?? false;
     isHunterRumourLocked.checked = f.isHunterRumourLocked ?? false;
+    hunterRumoursCompleted.value = f.hunterRumoursCompleted ?? 0;
     hideLMS.checked = f.hideLMS ?? false;
     overrideWoodcutting.checked = f.overrideWoodcutting ?? false;
     overrideMining.checked = f.overrideMining ?? false;
@@ -313,6 +315,7 @@ window.initItemsPage = async function () {
             hideBosses: hideBosses.checked,
             isSlayerLocked: isSlayerLocked.checked,
             isHunterRumourLocked: isHunterRumourLocked.checked,
+            hunterRumoursCompleted: hunterRumoursCompleted.value,
             hideLMS: hideLMS.checked,
             overrideWoodcutting: overrideWoodcutting.checked,
             overrideMining: overrideMining.checked,
@@ -386,6 +389,13 @@ window.initItemsPage = async function () {
 
     isHunterRumourLocked.addEventListener("input", () => {
         saveFilters();
+        invalidateLogicCaches(fileStore);
+        renderItems();
+    });
+
+    hunterRumoursCompleted.addEventListener("change", () => {
+        saveFilters();
+        invalidateLogicCaches(fileStore);
         renderItems();
     });
 

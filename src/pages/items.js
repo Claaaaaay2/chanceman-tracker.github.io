@@ -79,6 +79,11 @@ export default async function ItemsPage() {
                 I am hunter rumour locked
             </label>
 
+            <div>
+                Nr of hunter rumours done:
+                <input type="number" id="hunterRumoursCompleted">
+            </div>
+
             <label>
                 <input type="checkbox" id="hideLMS">
                 Hide the LMS shop

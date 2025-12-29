@@ -14087,7 +14087,7 @@
     "image": "banana_stew.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteMonkeyMadness"
+        "Yes": "canCompleteMonkeyMadnessI"
       }
     }
   },
@@ -37218,7 +37218,7 @@
         }
       },
       "shops": {
-        "Yes": "canAccessNightmareZone"
+        "Yes": "canEnterNightmareZone"
       }
     }
   },
@@ -37550,7 +37550,8 @@
               {
                 "has": 29107
               },
-              "canTrainCooking"
+              "canTrainCooking",
+              "has50HunterRumoursDone"
             ]
           }
         }
@@ -37590,7 +37591,8 @@
               {
                 "has": 29119
               },
-              "canTrainCooking"
+              "canTrainCooking",
+              "has25HunterRumoursDone"
             ]
           }
         }
@@ -37665,7 +37667,8 @@
               {
                 "has": 29125
               },
-              "canTrainCooking"
+              "canTrainCooking",
+              "has25HunterRumoursDone"
             ]
           }
         }
@@ -37773,7 +37776,8 @@
               {
                 "has": 29113
               },
-              "canTrainCooking"
+              "canTrainCooking",
+              "has50HunterRumoursDone"
             ]
           }
         }
@@ -37841,7 +37845,8 @@
               {
                 "has": 29110
               },
-              "canTrainCooking"
+              "canTrainCooking",
+              "has25HunterRumoursDone"
             ]
           }
         }
@@ -37904,7 +37909,8 @@
               {
                 "has": 29116
               },
-              "canTrainCooking"
+              "canTrainCooking",
+              "has50HunterRumoursDone"
             ]
           }
         }
@@ -46369,7 +46375,7 @@
         }
       },
       "shops": {
-        "Yes": "canCompleteMonkeyMadness"
+        "Yes": "canCompleteMonkeyMadnessI"
       }
     }
   },
@@ -96381,7 +96387,7 @@
     "image": "monkey_bar.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteMonkeyMadness"
+        "Yes": "canCompleteMonkeyMadnessI"
       }
     }
   },
@@ -96405,7 +96411,7 @@
     "image": "monkey_nuts.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteMonkeyMadness"
+        "Yes": "canCompleteMonkeyMadnessI"
       }
     }
   },
