@@ -35409,21 +35409,11 @@
       },
       "other": {
         "Grinding": {
-          "notes": "Requires a chocolate bar and either a pestle and mortar or a knife.",
+          "notes": "Requires a chocolate bar and either a pestle and mortar or a knife (or ask Wesley in Nardah).",
           "rule": {
             "all": [
               {
                 "has": 1973
-              },
-              {
-                "any": [
-                  {
-                    "has": 233
-                  },
-                  {
-                    "has": 946
-                  }
-                ]
               }
             ]
           }
@@ -37173,7 +37163,7 @@
         }
       },
       "shops": {
-        "Yes": "canAccessNightmareZone"
+        "Yes": "canEnterNightmareZone"
       }
     }
   },

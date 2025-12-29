@@ -5,6 +5,9 @@ export function has(ctx, id) {
 }
 
 export const REQUIREMENT_CHECKS = {
+    canEnterNightmareZone(ctx) {
+        return canEnterNightmareZone(ctx);
+    },
     canMakeSplitLog(ctx) {
         return canMakeSplitLog(ctx);
     },
@@ -354,9 +357,6 @@ export const REQUIREMENT_CHECKS = {
     canCompleteRFDFreeingKingAwowogei(ctx) {
         return canCompleteRFDFreeingKingAwowogei(ctx);
     },
-    canEnterNightmareZone(ctx) {
-        return false; // TODO
-    },
     canCompleteShiloVillage(ctx) {
         return canCompleteShiloVillage(ctx);
     },
@@ -425,9 +425,6 @@ export const REQUIREMENT_CHECKS = {
     },
     canCompleteDarknessOfHallowvale(ctx) {
         return canCompleteDarknessOfHallowvale(ctx);
-    },
-    canAccessNightmareZone(ctx) {
-        return canAccessNightmareZone(ctx);
     },
     canCompleteGardenOfTranquillity(ctx) {
         return canCompleteGardenOfTranquillity(ctx);
