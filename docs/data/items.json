@@ -4779,6 +4779,9 @@
     "image": "adamant_sword.png",
     "sources": {
       "drops": {
+        "Combat path voucher (m)": {
+          "droprate": "Always"
+        },
         "Ice giant Wilderness Slayer Cave": {
           "droprate": "1/15.5"
         },
@@ -34771,6 +34774,9 @@
               {
                 "has": 1985
               },
+              {
+                "has": 2128
+              },
               "canTrainCooking"
             ]
           }
@@ -51283,6 +51289,9 @@
     "image": "energy_potion(3).png",
     "sources": {
       "drops": {
+        "Combat path voucher": {
+          "droprate": "Always"
+        },
         "Adept potion pack": {
           "droprate": "4 × 1/15.5"
         },
@@ -51336,6 +51345,9 @@
     "name": "Energy potion(4)",
     "image": "energy_potion(4).png",
     "sources": {
+        "Combat path voucher (m)": {
+          "droprate": "Always"
+        },
       "drops": {
         "Jekyll and Hyde Ranarr": {
           "droprate": "Always"
@@ -89946,6 +89958,9 @@
     "image": "maple_shortbow.png",
     "sources": {
       "drops": {
+        "Combat path voucher (m)": {
+          "droprate": "Always"
+        },
         "Maniacal monkey": {
           "droprate": "1/20"
         },
@@ -94876,6 +94891,9 @@
     "image": "mithril_platebody.png",
     "sources": {
       "drops": {
+        "Combat path voucher (m)": {
+          "droprate": "Always"
+        },
         "Hammerhead shark": {
           "droprate": "1/12.5"
         },
@@ -135363,6 +135381,9 @@
     "image": "studded_body.png",
     "sources": {
       "drops": {
+        "Combat path voucher (m)": {
+          "droprate": "Always"
+        },
         "Reward casket (easy) Standard": {
           "droprate": "1/36"
         }
@@ -155121,6 +155142,30 @@
         },
         "Tortoise With riders": {
           "droprate": "1/32"
+        }
+      },
+      "other": {
+        "Creating a worm batta": {
+          "notes": "Requires an unfinished batta and Equa leaves.",
+          "rule": {
+            "all": [
+              {
+                "has": 2171
+              },
+              {
+                "has": 1982
+              },
+              {
+                "has": 1985
+              },
+              {
+                "has": 2162
+              },
+              {
+                "has": 2128
+              }
+            ]
+          }
         }
       }
     }

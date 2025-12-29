@@ -3727,6 +3727,22 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": ["jon"],
+        "f2p": true
+    },
+    "Combat path voucher": {
+        "wiki": "https://oldschool.runescape.wiki/w/Combat_path_voucher",
+        "rule": null,
+        "skill": [],
+        "level": [],
+        "tags": ["jon"],
+        "f2p": true
+    },
+    "Combat path voucher (m)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Combat_path_voucher",
+        "rule": null,
+        "skill": [],
+        "level": [],
+        "tags": ["jon"],
         "f2p": false
     },
     "Commander Zilyana": {
