@@ -4231,7 +4231,7 @@ function canTrainConstruction(ctx) {
 
 function canTrainFletching(ctx) {
     if (ctx.filters?.overrideFletching) return true;
-    return (has(ctx, 946) && has(ctx, 1511)) // Knife & Logs
+    return ((has(ctx, 946) || hasNarwhalKnife(ctx)) && has(ctx, 1511)) // Knife & Logs
         || (has(ctx, 52) && hasAnyFeather(ctx)) // Arrow shaft & Feather
         || (has(ctx, 53) && has(ctx, 39)) // Headless arrow & Bronze arrowtip
 }
@@ -4293,7 +4293,7 @@ function canDoGnomeRestaurant(ctx) {
 
 function canDoValeTotems(ctx) {
     return canTrainFletching(ctx) //
-        && has(ctx, 946) // Knife
+        && (has(ctx, 946) || hasNarwhalKnife(ctx)) // Knife
         && ( //
             (has(ctx, 1521) // Oak logs
                 && (has(ctx, 843) // Oak shortbow

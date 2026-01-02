@@ -35473,16 +35473,6 @@
             "all": [
               {
                 "has": 1973
-              },
-              {
-                "any": [
-                  {
-                    "has": 233
-                  },
-                  {
-                    "has": 946
-                  }
-                ]
               }
             ]
           }
@@ -54098,9 +54088,12 @@
           "rule": {
             "all": [
               "hasFishForFineOffcuts",
-              {
-                "has": 946
-              }
+              { "any": [    
+                {
+                    "has": 946
+                  },
+                  "hasNarwhalKnife"
+              ]}
             ]
           }
         }
@@ -85877,7 +85870,8 @@
                   {
                     "has": 946
                   },
-                  "hasSlashWeapon"
+                  "hasSlashWeapon",
+                  "hasNarwhalKnife"
                 ]
               },
               {
@@ -85905,7 +85899,8 @@
                   {
                     "has": 946
                   },
-                  "hasSlashWeapon"
+                  "hasSlashWeapon",
+                  "hasNarwhalKnife"
                 ]
               },
               {
@@ -86159,7 +86154,8 @@
                   {
                     "has": 946
                   },
-                  "hasSlashWeapon"
+                  "hasSlashWeapon",
+                  "hasNarwhalKnife"
                 ]
               },
               {
@@ -86187,7 +86183,8 @@
                   {
                     "has": 946
                   },
-                  "hasSlashWeapon"
+                  "hasSlashWeapon",
+                  "hasNarwhalKnife"
                 ]
               },
               {
@@ -100477,9 +100474,12 @@
               {
                 "has": 1521
               },
-              {
-                "has": 1511
-              },
+              { "any": [    
+                {
+                    "has": 946
+                  },
+                  "hasNarwhalKnife"
+              ]},
               "canTrainFletching"
             ]
           }
@@ -100744,9 +100744,12 @@
               {
                 "has": 1521
               },
-              {
-                "has": 1511
-              },
+              { "any": [    
+                {
+                    "has": 946
+                  },
+                  "hasNarwhalKnife"
+              ]},
               "canTrainFletching"
             ]
           }
@@ -100809,9 +100812,12 @@
               {
                 "has": 1521
               },
-              {
-                "has": 1511
-              },
+              { "any": [    
+                {
+                    "has": 946
+                  },
+                  "hasNarwhalKnife"
+              ]},
               "canTrainFletching"
             ]
           }
@@ -126400,7 +126406,8 @@
                   {
                     "has": 946
                   },
-                  "hasSlashWeapon"
+                  "hasSlashWeapon",
+                  "hasNarwhalKnife"
                 ]
               }
             ]
@@ -154202,9 +154209,12 @@
               {
                 "has": 1519
               },
-              {
-                "has": 1511
-              },
+              { "any": [    
+                {
+                    "has": 946
+                  },
+                  "hasNarwhalKnife"
+              ]},
               "canTrainFletching"
             ]
           }
@@ -154416,9 +154426,12 @@
               {
                 "has": 1519
               },
-              {
-                "has": 1511
-              },
+              { "any": [    
+                {
+                    "has": 946
+                  },
+                  "hasNarwhalKnife"
+              ]},
               "canTrainFletching"
             ]
           }
@@ -154481,9 +154494,12 @@
               {
                 "has": 1519
               },
-              {
-                "has": 1511
-              },
+              { "any": [    
+                {
+                    "has": 946
+                  },
+                  "hasNarwhalKnife"
+              ]},
               "canTrainFletching"
             ]
           }
@@ -154508,9 +154524,12 @@
               {
                 "has": 1519
               },
-              {
-                "has": 1511
-              },
+              { "any": [    
+                {
+                    "has": 946
+                  },
+                  "hasNarwhalKnife"
+              ]},
               "canTrainFletching"
             ]
           }
