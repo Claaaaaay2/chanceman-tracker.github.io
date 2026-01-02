@@ -907,7 +907,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Asgarnian_Hops_(plant)",
         "rule": {
             "all": [
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasAsgarnianSeed"
             ]
         },
@@ -1347,7 +1347,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Barley_(plant)",
         "rule": {
             "all": [
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasBarleySeed"
             ]
         },
@@ -3821,7 +3821,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Cotton_(Farming)",
         "rule": {
             "all": [
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasCottonSeed"
             ]
         },
@@ -7465,7 +7465,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Hammerstone_Hops_(plant)",
         "rule": {
             "all": [
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasHammerstoneSeed"
             ]
         },
@@ -7595,7 +7595,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Hemp_(Farming)",
         "rule": {
             "all": [
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasHempSeed"
             ]
         },
@@ -8806,7 +8806,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Jute_(plant)",
         "rule": {
             "all": [
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasJuteSeed"
             ]
         },
@@ -9059,7 +9059,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Krandorian_Hops_(plant)",
         "rule": {
             "all": [
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasKrandorianSeed"
             ]
         },
@@ -13089,7 +13089,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Scorpia's guardian": {
@@ -13097,7 +13097,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Scorpia's offspring (monster)": {
@@ -13105,7 +13105,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Scorpion (Sailing)": {
@@ -13145,7 +13145,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Scurrius non-MVP": {
@@ -13153,7 +13153,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Sea Snake Hatchling": {
@@ -14093,7 +14093,12 @@ export const NPC_DATA = {
     },
     "Soil Level 1 digs": {
         "wiki": "https://oldschool.runescape.wiki/w/Soil#Level_1_digs",
-        "rule": ["hasCupOfTea"],
+        "rule": {
+            "all": [
+                "hasCupOfTea",
+                "hasLeatherGloves"
+            ]
+        },
         "skill": [],
         "level": [],
         "tags": [],
@@ -14101,7 +14106,12 @@ export const NPC_DATA = {
     },
     "Soil Level 2 digs": {
         "wiki": "https://oldschool.runescape.wiki/w/Soil#Level_2_digs",
-        "rule": ["hasCupOfTea"],
+        "rule": {
+            "all": [
+                "hasCupOfTea",
+                "hasLeatherGloves"
+            ]
+        },
         "skill": [],
         "level": [],
         "tags": [],
@@ -14112,6 +14122,7 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "hasCupOfTea",
+                "hasLeatherGloves",
                 "hasOpal"
             ]
         },
@@ -16258,7 +16269,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Wildblood_Hops_(plant)",
         "rule": {
             "all": [
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasWildbloodSeed"
             ]
         },
@@ -16571,7 +16582,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Yanillian_Hops_(plant)",
         "rule": {
             "all": [
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasYanillianSeed"
             ]
         },

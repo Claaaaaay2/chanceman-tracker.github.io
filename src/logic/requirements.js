@@ -645,7 +645,7 @@ export const REQUIREMENT_CHECKS = {
         return canCompleteThroneOfMiscellania(ctx);
     },
     hasLarransKey(ctx) {
-        return has(ctx, 23490);
+        return has(ctx, 23490) && canTrainSlayer(ctx);
     },
     canCompleteDeathPlateau(ctx) {
         return canCompleteDeathPlateau(ctx);
@@ -1360,6 +1360,9 @@ export const REQUIREMENT_CHECKS = {
     },
     hasCupOfTea(ctx) {
         return hasCupOfTea(ctx);
+    },
+    hasLeatherGloves(ctx) {
+        return has(ctx, 1059);
     },
     hasSlashWeapon(ctx) {
         return hasSlashWeapon(ctx);
@@ -2218,7 +2221,8 @@ function canCompleteTaiBwoWannaiTrio(ctx) {
 }
 
 function canCompleteTheFrozenDoor(ctx) {
-    return canDoKreearra(ctx) //
+    return canCompleteDesertTreasureI(ctx) //
+        && canDoKreearra(ctx) //
         && canDoGeneralGraardor(ctx) //
         && canDoCommanderZilyana(ctx) //
         && canDoKrilTsutsaroth(ctx);
@@ -4163,7 +4167,7 @@ function canTrainFishing(ctx) {
 }
 
 function canTrainSlayer(ctx) {
-    if (ctx.filters?.slayerLocked) return false; // TODO implement this filter
+    if (ctx.filters?.slayerLocked) return false;
     return true;
 }
 

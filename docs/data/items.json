@@ -23349,6 +23349,24 @@
       },
       "spawns": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Cutting a Scaly blue dragonhide": {
+          "notes": "Requires a knife and a Scaly blue dragonhide.",
+          "rule": {
+            "all": [
+              { "any": [    
+                {
+                    "has": 946
+                  },
+                  "hasNarwhalKnife"
+              ]},
+              {
+                "has": 27897
+              }
+            ]
+          }
+        }
       }
     }
   },
@@ -60002,7 +60020,7 @@
         }
       },
       "shops": {
-        "Yes": "canAccessChampionsGuild"
+        "Yes": "canCompleteDragonSlayerI"
       },
       "other": {
         "Crafting": {
@@ -73614,7 +73632,22 @@
     "tags": "itemset",
     "sources": {
       "other": {
-        "Complete a Halloween holiday event": {}
+        "Complete a Halloween holiday event": {
+          "notes": "Requires the Red, Blue and Green halloween masks.",
+          "rule": {
+            "all": [
+              {
+                "has": 1057
+              },
+              {
+                "has": 1055
+              },
+              {
+                "has": 1053
+              }
+            ]
+          }
+        }
       }
     }
   },
