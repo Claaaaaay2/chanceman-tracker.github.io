@@ -84,8 +84,7 @@ async function renderSourceTable(section, entries) {
         const rows = [];
 
         for (const [name, data] of Object.entries(entries)) {
-            const obtainable = await canReachNpc(name, fileStore);
-
+            const obtainable = await isSourceObtainable(name, fileStore);
             rows.push({
                 name,
                 data,
@@ -244,6 +243,30 @@ async function renderSourceTable(section, entries) {
             </table>
         `;
     }
+}
+
+function isSourceFiltered(sourceKey, ctx) {
+    const f = ctx.filters ?? {};
+
+    const npc = NPC_DATA[sourceKey];
+    if (!npc) return true;
+
+    if (!f.allowOthersHouses && npc.tags?.includes("house")) return true;
+    if (!f.hasSuperiors && npc.tags?.includes("superior")) return true;
+    if (f.hideClue && npc.tags?.includes("clue")) return true;
+    if (f.hideBosses && npc.tags?.includes("boss")) return true;
+    if (f.hideLMS && npc.tags?.includes("LMS")) return true;
+    if (f.isSlayerLocked && npc.skill?.includes("Slayer")) return true;
+    if (f.isHunterRumourLocked && npc.skill?.includes("hunterRumour")) return true;
+    if (f.isIronman && (npc.tags?.includes("notForIronmen") || npc.tags?.includes("jon"))) return true;
+
+    return false;
+}
+
+async function isSourceObtainable(sourceKey, ctx) {
+    if (isSourceFiltered(sourceKey, ctx)) return false;
+    if (!(await canReachNpc(sourceKey, ctx))) return false;
+    return true;
 }
 
 
