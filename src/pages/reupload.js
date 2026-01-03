@@ -1,5 +1,6 @@
 import { fetchPlayer } from "../api/playerApi.js";
 import { fileStore } from "../storage/fileStore.js";
+import { invalidateLogicCaches } from "../main.js";
 
 export default function ReuploadPage() {
     return `
@@ -62,6 +63,10 @@ document.addEventListener("click", async (e) => {
             const player = await fetchPlayer(playerNameInput.value);
             await fileStore.setPlayer(player);
         }
+
+        // Clear any state
+        invalidateLogicCaches(fileStore);
+        window.__itemsPageData = null;
 
         // Redirect to items page
         status.textContent = "Saved! Redirecting...";

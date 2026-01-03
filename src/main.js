@@ -449,7 +449,7 @@ window.initItemsPage = async function () {
     renderItems();
 };
 
-function invalidateLogicCaches(ctx) {
+export function invalidateLogicCaches(ctx) {
     rankedItemsCache = null;
     ctx.itemAvailability = new Map();
     ctx.npcReachCache = new Map();
