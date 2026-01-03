@@ -473,6 +473,15 @@ export const REQUIREMENT_CHECKS = {
     canCompleteTheFremennikIsles(ctx) {
         return canCompleteTheFremennikIsles(ctx);
     },
+    canCompletePrinceAliRescue(ctx) {
+        return canCompletePrinceAliRescue(ctx);
+    },
+    canCompleteTowerOfLife(ctx) {
+        return canCompleteTowerOfLife(ctx);
+    },
+    canCompleteEnlightenedJourney(ctx) {
+        return canCompleteEnlightenedJourney(ctx);
+    },
     canAccessCooksGuild(ctx) {
         return (has(ctx, 1949) || has(ctx, 20205)) && canTrainCooking(ctx);
     },
@@ -1545,6 +1554,13 @@ function hasAnyLantern(ctx) {
 function canCompleteContact(ctx) {
     return canCompletePrinceAliRescue(ctx) //
         && canCompleteIcthlarinsLittleHelper(ctx); //
+}
+
+function canCompleteTowerOfLife(ctx) {
+    return canTrainConstruction(ctx) //
+        && has(ctx, 2347)  // Hammer
+        && has(ctx, 8794)  // Saw
+        && has(ctx, 1917); // Beer
 }
 
 function canCompletePrinceAliRescue(ctx) {
@@ -3968,6 +3984,31 @@ function canCompleteIcthlarinsLittleHelper(ctx) {
 function canCompleteGertrudesCat(ctx) {
     return has(ctx, 1927)  // Bucket of milk
         && has(ctx, 1552); // Seasoned sardine
+}
+
+function canCompleteEnlightenedJourney(ctx) {
+    return ctx.player.questPoints >= 20 //
+        && canTrainFiremaking(ctx) //
+        && canTrainFarming(ctx) //
+        && canTrainCrafting(ctx) //
+        && has(ctx, 970)  // Papyrus
+        && has(ctx, 1759) // Ball of wool
+        && has(ctx, 5438) // Potatoes(10)
+        && has(ctx, 5418) // Empty sack
+        && hasCandle(ctx) //
+        && has(ctx, 1765) // Yellow dye
+        && has(ctx, 1763) // Red dye
+        && has(ctx, 950)  // Silk
+        && has(ctx, 1923) // Bowl
+        && has(ctx, 1511) // Logs
+        && has(ctx, 1511) // Logs
+        && has(ctx, 5933) // Willow branch
+        && has(ctx, 590); // Tinderbox
+}
+
+function hasCandle(ctx) {
+    return has(ctx, 36) // Candle
+        || has(ctx, 30) // Bucket of wax (For black candle)
 }
 
 function canCompletePriestInPeril(ctx) {

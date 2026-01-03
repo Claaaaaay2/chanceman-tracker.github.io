@@ -9647,7 +9647,7 @@
               {
                 "has": 1761
               },
-              "canCompleteDesertTreasure"
+              "canCompleteDesertTreasureI"
             ]
           }
         },
@@ -14260,7 +14260,7 @@
     "image": "bandit's_brew.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteDesertTreasure"
+        "Yes": "canCompleteDesertTreasureI"
       }
     }
   },
@@ -33019,7 +33019,7 @@
               {
                 "has": 1761
               },
-              "canCompleteDesertTreasure"
+              "canCompleteDesertTreasureI"
             ]
           }
         },
@@ -39798,7 +39798,7 @@
               {
                 "has": 1761
               },
-              "canCompleteDesertTreasure"
+              "canCompleteDesertTreasureI"
             ]
           }
         },
@@ -56934,7 +56934,7 @@
               {
                 "has": 1761
               },
-              "canCompleteDesertTreasure"
+              "canCompleteDesertTreasureI"
             ]
           }
         },
@@ -82276,7 +82276,7 @@
               {
                 "has": 1761
               },
-              "canCompleteDesertTreasure"
+              "canCompleteDesertTreasureI"
             ]
           }
         },
@@ -84416,7 +84416,7 @@
               {
                 "has": 1761
               },
-              "canCompleteDesertTreasure"
+              "canCompleteDesertTreasureI"
             ]
           }
         },
@@ -103376,7 +103376,7 @@
               {
                 "has": 1761
               },
-              "canCompleteDesertTreasure"
+              "canCompleteDesertTreasureI"
             ]
           }
         },
@@ -113863,7 +113863,7 @@
             "notes": "Requires an Ring of Dueling(1), (3) or (4).",
             "rule": {
               "any": [
-                "canCompleteDesertTreasure",
+                "canCompleteDesertTreasureI",
                 "canCompleteHauntedMine"
               ]
             }
@@ -123976,7 +123976,7 @@
               {
                 "has": 1761
               },
-              "canCompleteDesertTreasure"
+              "canCompleteDesertTreasureI"
             ]
           }
         },
