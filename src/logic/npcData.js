@@ -60,7 +60,7 @@ export const NPC_DATA = {
         "rule": ["canReachAbyssalSire"],
         "skill": ["Slayer"],
         "level": [85],
-        "tags": ["boss"],
+        "tags": ["boss", "slayer-task-only"],
         "f2p": false
     },
     "Abyssal demon Standard": {
@@ -524,7 +524,7 @@ export const NPC_DATA = {
         "rule": ["canEnterKaruulmSlayerDungeon"],
         "skill": ["Slayer"],
         "level": [95],
-        "tags": ["boss"],
+        "tags": ["boss", "slayer-task-only"],
         "f2p": false
     },
     "Alexis": {
@@ -796,7 +796,7 @@ export const NPC_DATA = {
         "rule": ["canCompletePriestInPeril"],
         "skill": ["Slayer"],
         "level": [92],
-        "tags": ["boss"],
+        "tags": ["boss", "slayer-task-only"],
         "f2p": false
     },
     "Araxyte Level 146": {
@@ -2980,7 +2980,7 @@ export const NPC_DATA = {
         "rule": ["canShortrange"],
         "skill": ["Slayer"],
         "level": [87],
-        "tags": [],
+        "tags": ["slayer-task-only"],
         "f2p": false
     },
     "Cave lizard": {
@@ -3039,7 +3039,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": ["Slayer"],
         "level": [91],
-        "tags": ["boss"],
+        "tags": ["boss", "slayer-task-only"],
         "f2p": false
     },
     "Certer": {
@@ -6384,6 +6384,22 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
+    "Gem drop table": {
+        "wiki": "https://oldschool.runescape.wiki/w/Gem_drop_table",
+        "rule": null,
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": true
+    },
+    "Gem drop table (m)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Gem_drop_table",
+        "rule": null,
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
     "Gem rocks": {
         "wiki": "https://oldschool.runescape.wiki/w/Gem_rocks",
         "rule": {
@@ -7173,7 +7189,7 @@ export const NPC_DATA = {
         },
         "skill": ["Slayer"],
         "level": [75],
-        "tags": [],
+        "tags": ["boss", "slayer-task-only"],
         "f2p": false
     },
     "Growler": {
@@ -9052,7 +9068,7 @@ export const NPC_DATA = {
         "rule": ["canShortrange"],
         "skill": ["Slayer"],
         "level": [87],
-        "tags": ["boss"],
+        "tags": ["boss", "slayer-task-only"],
         "f2p": false
     },
     "Krandorian Hops (plant)": {
@@ -11734,6 +11750,14 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
+    "Rare drop table": {
+        "wiki": "https://oldschool.runescape.wiki/w/Rare_drop_table",
+        "rule": null,
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
     "Rat Stronghold of Security": {
         "wiki": "https://oldschool.runescape.wiki/w/Rat#Stronghold_of_Security",
         "rule": null,
@@ -13081,7 +13105,7 @@ export const NPC_DATA = {
         "rule": ["canReachAbyssalSire"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["slayer-task-only"],
         "f2p": false
     },
     "Scorpia": {
@@ -13414,7 +13438,7 @@ export const NPC_DATA = {
         "rule": ["canCompleteTroubledTortugans"],
         "skill": ["Slayer"],
         "level": [51],
-        "tags": ["boss"],
+        "tags": ["boss", "slayer-task-only"],
         "f2p": false
     },
     "Shelves (Getting Ahead)": {
@@ -13990,7 +14014,7 @@ export const NPC_DATA = {
         "rule": ["hasFacemask"],
         "skill": ["Slayer"],
         "level": [93],
-        "tags": [],
+        "tags": ["slayer-task-only"],
         "f2p": false
     },
     "Snake": {
@@ -14986,7 +15010,7 @@ export const NPC_DATA = {
         "rule": ["hasFacemask"],
         "skill": ["Slayer"],
         "level": [93],
-        "tags": ["boss"],
+        "tags": ["boss", "slayer-task-only"],
         "f2p": false
     },
     "Thief": {

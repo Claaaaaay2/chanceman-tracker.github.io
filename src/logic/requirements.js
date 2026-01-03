@@ -474,7 +474,7 @@ export const REQUIREMENT_CHECKS = {
         return canCompleteTheFremennikIsles(ctx);
     },
     canAccessCooksGuild(ctx) {
-        return has(ctx, 1949) && canTrainCooking(ctx);
+        return (has(ctx, 1949) || has(ctx, 20205)) && canTrainCooking(ctx);
     },
     canCompleteRumDeal(ctx) {
         return canCompleteRumDeal(ctx);

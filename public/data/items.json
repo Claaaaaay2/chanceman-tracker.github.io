@@ -2940,6 +2940,9 @@
         "Bronze dragon Standard": {
           "droprate": "1/6.4"
         },
+        "Rare drop table": {
+          "droprate": "1/64"
+        },
         "Vardorvis": {
           "droprate": "1/100"
         }
@@ -3279,9 +3282,6 @@
         "Barrel (Shaman Caves)": {
           "droprate": "Uncommon"
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -34573,6 +34573,9 @@
         "Lava Strykewyrm": {
           "droprate": "1/32"
         },
+        "Gem drop table (m)": {
+          "droprate": "1/42.67"
+        },
         "Greater abyssal demon": {
           "droprate": "3 × 1/128"
         },
@@ -40752,6 +40755,9 @@
         "Dagannoth Prime": {
           "droprate": "1/64"
         },
+        "Rare drop table": {
+          "droprate": "1/64"
+        },
         "TzHaar-Mej": {
           "droprate": "1/64"
         },
@@ -45834,6 +45840,9 @@
         "King Black Dragon": {
           "droprate": "1/128"
         },
+        "Rare drop table": {
+          "droprate": "1/128"
+        },
         "Chest (Barrows)": {
           "droprate": "7 × 1/1012"
         },
@@ -46412,6 +46421,9 @@
         "Intricate pouch": {
           "droprate": "1/45"
         },
+        "Rare drop table": {
+          "droprate": "1/364"
+        },
         "Brutal black dragon": {
           "droprate": "1/512"
         }
@@ -46834,6 +46846,9 @@
         },
         "Dark Chest": {
           "droprate": "1/60"
+        },
+        "Rare drop table": {
+          "droprate": "1/64"
         },
         "Chest (Rogues' Castle)": {
           "droprate": "1/66"
@@ -85148,6 +85163,9 @@
         "Ice giant Regular": {
           "droprate": "1/64"
         },
+        "Rare drop table": {
+          "droprate": "1/64"
+        },
         "Skeletal miner": {
           "droprate": "1/64"
         },
@@ -87260,6 +87278,9 @@
     "image": "loop_half_of_key.png",
     "sources": {
       "drops": {
+        "Rare drop table": {
+          "droprate": "1/6.4"
+        },
         "Elven Crystal Chest": {
           "droprate": "1/8"
         },
@@ -87351,6 +87372,9 @@
           "droprate": "1/120"
         },
         "Casket": {
+          "droprate": "1/128"
+        },
+        "Gem drop table (m)": {
           "droprate": "1/128"
         },
         "Certer": {
@@ -99197,6 +99221,9 @@
         "Zombie (Tarn's Lair) High level": {
           "droprate": "1/42.667"
         },
+        "Rare drop table": {
+          "droprate": "1/42.67"
+        },
         "Reward casket (beginner)": {
           "droprate": "1/44.727"
         },
@@ -99405,6 +99432,9 @@
     "image": "nature_talisman.png",
     "sources": {
       "drops": {
+        "Gem drop table (m)": {
+          "droprate": "1/42.67"
+        },
         "Abyssal guardian": {
           "droprate": "1/128"
         },
@@ -113362,10 +113392,6 @@
               "canCompletePandemonium"
             ]
           }
-        },
-        "Questing": {
-          "notes": "Received after Pandemonium.",
-          "rule": "canCompletePandemonium"
         }
       }
     }
@@ -115656,6 +115682,9 @@
         "Spindel": {
           "droprate": "1/42.667"
         },
+        "Rare drop table": {
+          "droprate": "1/42.67"
+        },
         "Rewards Chest (Fortis Colosseum) Wave 12": {
           "droprate": "1/43.636"
         },
@@ -115929,6 +115958,9 @@
           "droprate": "1/53.5"
         },
         "Locust rider": {
+          "droprate": "1/64"
+        },
+        "Rare drop table": {
           "droprate": "1/64"
         },
         "Scarab Mage": {
@@ -116229,6 +116261,9 @@
         },
         "Chaos Elemental": {
           "droprate": "1/42.667"
+        },
+        "Rare drop table": {
+          "droprate": "1/42.67"
         },
         "Basilisk Knight": {
           "droprate": "1/52"
@@ -117793,6 +117828,9 @@
         },
         "Vyrewatch": {
           "droprate": "1/48"
+        },
+        "Gem drop table (m)": {
+          "droprate": "1/128"
         }
       },
       "other": {
@@ -118112,6 +118150,9 @@
           "droprate": "1/128"
         },
         "Black dragon Wilderness Slayer Cave": {
+          "droprate": "1/128"
+        },
+        "Rare drop table": {
           "droprate": "1/128"
         },
         "Revenant hobgoblin": {
@@ -119892,6 +119933,9 @@
         },
         "Bandosian guard": {
           "droprate": "1/128"
+        },
+        "Rare drop table": {
+          "droprate": "1/136.5"
         }
       },
       "other": {
@@ -120023,6 +120067,9 @@
         },
         "Venenatis": {
           "droprate": "1/63"
+        },
+        "Rare drop table": {
+          "droprate": "1/64"
         },
         "Locust rider": {
           "droprate": "1/128"
@@ -120590,6 +120637,9 @@
         },
         "Kalphite Queen": {
           "droprate": "1/25.2"
+        },
+        "Rare drop table": {
+          "droprate": "1/25.6"
         },
         "Reward casket (master)": {
           "droprate": "1/30.3"
@@ -124755,6 +124805,9 @@
         "Elven Crystal Chest": {
           "droprate": "1/256"
         },
+        "Rare drop table": {
+          "droprate": "1/273"
+        },
         "Dark Chest": {
           "droprate": "1/600"
         }
@@ -125490,6 +125543,9 @@
         },
         "Phantom Muspah": {
           "droprate": "2 × 1/117.5"
+        },
+        "Rare drop table": {
+          "droprate": "1/64"
         },
         "The Leviathan": {
           "droprate": "1/100"
@@ -130435,6 +130491,9 @@
           "droprate": "1/64"
         },
         "Hill Giant": {
+          "droprate": "1/64"
+        },
+        "Rare drop table": {
           "droprate": "1/64"
         },
         "Skeleton (mage)": {
@@ -143105,6 +143164,9 @@
     "image": "tooth_half_of_key.png",
     "sources": {
       "drops": {
+        "Rare drop table": {
+          "droprate": "1/6.4"
+        },
         "Elven Crystal Chest": {
           "droprate": "1/8"
         },
@@ -143196,6 +143258,9 @@
           "droprate": "1/120"
         },
         "Casket": {
+          "droprate": "1/128"
+        },
+        "Gem drop table (m)": {
           "droprate": "1/128"
         },
         "Certer": {
@@ -146864,6 +146929,9 @@
         "Casket": {
           "droprate": "1/64"
         },
+        "Gem drop table": {
+          "droprate": "1/64"
+        },
         "Skeletal Wyvern": {
           "droprate": "1/64"
         },
@@ -147146,6 +147214,9 @@
           "droprate": "1/7.529"
         },
         "Casket": {
+          "droprate": "1/8"
+        },
+        "Gem drop table": {
           "droprate": "1/8"
         },
         "Reward Chest (The Gauntlet) (Corrupted)": {
@@ -148012,6 +148083,9 @@
         "Casket": {
           "droprate": "1/16"
         },
+        "Gem drop table": {
+          "droprate": "1/16"
+        },
         "Ancient chest": {
           "droprate": "2 × 1/33"
         },
@@ -148305,6 +148379,9 @@
           "droprate": "1/4"
         },
         "Evil twin": {
+          "droprate": "1/4"
+        },
+        "Gem drop table": {
           "droprate": "1/4"
         },
         "Certer": {
