@@ -312,7 +312,7 @@ export const REQUIREMENT_CHECKS = {
         return canCompleteTaleOfTheRighteous(ctx);
     },
     canCompleteTheSlugMenace(ctx) {
-        return false; // TODO
+        return canCompleteTheSlugMenace(ctx);
     },
     canCompleteTreeGnomeVillage(ctx) {
         return canCompleteTreeGnomeVillage(ctx);
@@ -381,16 +381,16 @@ export const REQUIREMENT_CHECKS = {
         return canCompleteSwanSong(ctx);
     },
     canCompleteGrimTales(ctx) {
-        return false; // TODO
+        return canCompleteGrimTales(ctx);
     },
     canCompleteObservatoryQuest(ctx) {
-        return false; // TODO
+        return canCompleteObservatoryQuest(ctx);
     },
     canCompleteBetweenARock(ctx) {
-        return false; // TODO
+        return canCompleteBetweenARock(ctx);
     },
     canGetGoutweed(ctx) {
-        return false; // TODO
+        return canGetGoutweed(ctx);
     },
     canCompleteRegicide(ctx) {
         return canCompleteRegicide(ctx);
@@ -399,19 +399,19 @@ export const REQUIREMENT_CHECKS = {
         return canCompleteTheAscentOfArceuus(ctx);
     },
     canCompleteOlafsQuest(ctx) {
-        return false; // TODO
+        return canCompleteOlafsQuest(ctx);
     },
     canCompleteDefenderOfVarrock(ctx) {
         return canCompleteDefenderOfVarrock(ctx);
     },
     canCompleteTheCurseOfArrav(ctx) {
-        return false; // TODO
+        return canCompleteTheCurseOfArrav(ctx);
     },
     canCompleteDreamMentor(ctx) {
         return canCompleteDreamMentor(ctx);
     },
     canCompleteTrollRomance(ctx) {
-        return false; // TODO
+        return canCompleteTrollRomance(ctx);
     },
     canCompleteRovingElves(ctx) {
         return canCompleteRovingElves(ctx); // TODO
@@ -876,7 +876,7 @@ export const REQUIREMENT_CHECKS = {
         return false; // TODO
     },
     canCompleteSeaSlug(ctx) {
-        return false; // TODO
+        return canCompleteSeaSlug(ctx);
     },
     canCompleteDaddysHome(ctx) {
         return false; // TODO
@@ -2659,6 +2659,28 @@ function canCompleteATailOfTwoCats(ctx) {
         && (has(ctx, 1835) || has(ctx, 538)); // Desert robe or Druid's robe
 }
 
+function canCompleteTrollRomance(ctx) {
+    return canCompleteTrollStronghold(ctx) //
+        && has(ctx, 2351) // Iron bar
+        && (has(ctx, 1517) || has(ctx, 1515)) // Maple logs or Yew logs
+        && canReachTrollheim(ctx) //
+        && has(ctx, 30)   // Bucket of wax
+        && has(ctx, 1887) // Cake tin
+        && has(ctx, 1939) // Swamp tar
+        && has(ctx, 954); // Rope
+}
+
+function canCompleteTheCurseOfArrav(ctx) {
+    return canCompleteDefenderOfVarrock(ctx) //
+        && canCompleteTrollRomance(ctx) //
+        && canTrainMining(ctx) //
+        && canTrainSlayer(ctx) //
+        && has(ctx, 2126)  // Dwellberries
+        && has(ctx, 2570)  // Ring of life
+        && has(ctx, 9419)  // Mith grapple
+        && has(ctx, 7159); // Insulated boots
+}
+
 function canCompleteDreamMentor(ctx) {
     return canCompleteLunarDiplomacy(ctx) //
         && canCompleteEadgarsRuse(ctx) //
@@ -2812,6 +2834,35 @@ function canCompleteMakingFriendsWithMyArm(ctx) {
         && has(ctx, 1929) // Bucket of water
         && has(ctx, 2347) // Hammer
         && has(ctx, 954); // Rope
+}
+
+function canCompleteGrimTales(ctx) {
+    return canCompleteWitchsHouse(ctx) //
+        && canTrainFarming(ctx) //
+        && canTrainHerblore(ctx) //
+        && canTrainWoodcutting(ctx) //
+        && has(ctx, 95); // Tarromin potion (unf)
+}
+
+function canCompleteObservatoryQuest(ctx) {
+    return has(ctx, 2349) // Bronze bar
+        && has(ctx, 1775) // Molten glass
+        && has(ctx, 960); // Plank
+}
+
+function canGetGoutweed(ctx) {
+    return canCompleteEadgarsRuse(ctx) // Goutweed crate
+        || (has(ctx, 6311) && canTrainFarming(ctx)) // Gout tuber
+        || (canReachTrollheim(ctx) && canDoGnomeRestaurant(ctx)); // Brambickle
+}
+
+function canCompleteBetweenARock(ctx) {
+    return canCompleteDwarfCannon(ctx) //
+        && canCompleteFishingContest(ctx) //
+        && canTrainMining(ctx) //
+        && canTrainSmithing(ctx) //
+        && has(ctx, 2357)  // Gold bar
+        && has(ctx, 2347); // Hammer
 }
 
 function canCompleteSwanSong(ctx) {
@@ -3683,6 +3734,14 @@ function canCompleteWhatLiesBelow(ctx) {
         );
 }
 
+function canCompleteOlafsQuest(ctx) {
+    return canTrainFiremaking(ctx) //
+        && canTrainWoodcutting(ctx) //
+        && has(ctx, 590)  // Tinderbox
+        && has(ctx, 952)  // Spade
+        && has(ctx, 954); // Rope
+}
+
 function canCompleteDefenderOfVarrock(ctx) {
     return canCompleteTempleOfIkov(ctx) //
         && canCompleteBelowIceMountain(ctx) //
@@ -3698,6 +3757,33 @@ function canCompleteDefenderOfVarrock(ctx) {
 
 function canCompleteTreeGnomeVillage(ctx) {
     return has(ctx, 1511); // Logs
+}
+
+function canCompleteTheSlugMenace(ctx) {
+    return canCompleteWanted(ctx) //
+        && canCompleteSeaSlug(ctx) //
+        && canTrainCrafting(ctx) //
+        && canTrainRunecraft(ctx) //
+        && canTrainSlayer(ctx) //
+        && has(ctx, 1941) // Swamp paste
+        && (has(ctx, 1436) || has(ctx, 7936)) // Rune essence or Pure essence
+        && has (ctx, 1755) // Chisel
+        && (
+            canDoGuardiansOfTheRift(ctx) //
+            || canCompleteEnterTheAbyss(ctx) //
+            || (
+                (has(ctx, 1438) || has(ctx, 5527)) // Air talisman or Air tiara
+                && (has(ctx, 1444) || has(ctx, 5531)) // Water talisman or Water tiara
+                && (has(ctx, 1440) || has(ctx, 5535)) // Earth talisman or Earth tiara
+                && (has(ctx, 1442) || has(ctx, 5537)) // Fire talisman or Fire tiara
+            )
+        );
+}
+
+function canCompleteSeaSlug(ctx) {
+    return canTrainFiremaking(ctx) //
+        && has(ctx, 1941) // Swamp paste
+        && has(ctx, 596); // Unlit torch
 }
 
 function canCompleteTaleOfTheRighteous(ctx) {

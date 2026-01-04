@@ -27109,6 +27109,10 @@
         "Questing": {
           "notes": "Received during Underground Pass.",
           "rule": "canCompleteUndergroundPass"
+        },
+        "Obtained during Olaf's quest": {
+          "notes": "Only an axe and 50 woodcutting are needed.",
+          "rule": "canTrainWoodcutting"
         }
       }
     }
@@ -113946,7 +113950,11 @@
               }
             ]
           }
-        }
+        }, 
+        "Questing": {
+          "notes": "Received upon completing The Lost Tribe quest.",
+          "rule": "canCompleteTheLostTribe"
+        } 
       }
     }
   },
@@ -118963,6 +118971,12 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Completing Between a Rock...": {
+          "noted": "Quest reward",
+          "rule": "canCompleteBetweenARock"
+        }
       }
     }
   },
@@ -124416,6 +124430,10 @@
         "Trading with Bardur": {
           "notes": "Trade Fremennik blade, shield or helm after completion of Fremennik Trials.",
           "rule": "canCompleteTheFremennikTrials"
+        },
+        "Obtained during Olaf's quest": {
+          "notes": "Only an axe and 50 woodcutting are needed.",
+          "rule": "canTrainWoodcutting"
         }
       }
     }
@@ -147089,6 +147107,12 @@
           "droprate": "Rare"
         }
       }
+    },
+    "other": {
+      "Questing": {
+        "notes": "Received upon completing the Troll Romance quest.",
+        "rule": "canCompleteTrollRomance"
+      }
     }
   },
   {
@@ -147500,6 +147524,10 @@
         "Questing": {
           "notes": "Obtained after Misthalin Mystery.",
           "rule": "canCompleteMisthalinMystery"
+        },
+        "Questing 2": {
+          "notes": "Received upon completing the Troll Romance quest.",
+          "rule": "canCompleteTrollRomance"
         }
       }
     }
@@ -148340,6 +148368,10 @@
         "Questing": {
           "notes": "Obtained after Misthalin Mystery.",
           "rule": "canCompleteMisthalinMystery"
+        },
+        "Questing 2": {
+          "notes": "Received upon completing the Troll Romance quest.",
+          "rule": "canCompleteTrollRomance"
         }
       }
     }

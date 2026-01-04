@@ -511,7 +511,7 @@ async function canReachSource(source, ctx) {
 }
 
 async function isNonIronItem(item, ctx) {
-    let hasAnyNonIronmanSource = false;
+    let hasReachableIronSource = false;
     let hasReachableSource = false;
     let hasReachableNonIronmanSource = false;
 
@@ -520,24 +520,27 @@ async function isNonIronItem(item, ctx) {
             const npc = NPC_DATA[npcName];
             if (!npc) continue;
 
-            const isNotForIronmen = npc.tags?.includes("notForIronmen") || npc.tags?.includes("jon");
-            if (isNotForIronmen) hasAnyNonIronmanSource = true;
-
             const reachable = await canReachNpc(npcName, ctx);
             if (!reachable) continue;
 
             hasReachableSource = true;
-            if (!isNotForIronmen) hasReachableNonIronmanSource = true;
+
+            const isNonIron = npc.tags?.includes("notForIronmen") || npc.tags?.includes("jon");
+
+            if (isNonIron) {
+                hasReachableNonIronmanSource = true;
+            } else {
+                hasReachableIronSource = true;
+            }
         }
     }
 
-    // If there is ANY reachable non-superior source → obtainable
-    if (hasReachableNonIronmanSource) return false;
+    // If there is any reachable ironman-allowed source → keep it
+    if (hasReachableIronSource) return false;
 
-    // If there are reachable sources, but ALL are superior → superior-only
-    if (hasReachableSource && hasAnyNonIronmanSource) return true;
+    // If there are reachable sources and all of them are non-iron → hide it
+    if (hasReachableSource && hasReachableNonIronmanSource) return true;
 
-    // Otherwise not superior-only
     return false;
 }
 
