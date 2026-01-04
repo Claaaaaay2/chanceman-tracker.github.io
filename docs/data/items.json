@@ -113954,7 +113954,7 @@
         "Questing": {
           "notes": "Received upon completing The Lost Tribe quest.",
           "rule": "canCompleteTheLostTribe"
-        } 
+        }
       }
     }
   },

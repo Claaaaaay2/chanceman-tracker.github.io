@@ -414,7 +414,7 @@ export const REQUIREMENT_CHECKS = {
         return canCompleteTrollRomance(ctx);
     },
     canCompleteRovingElves(ctx) {
-        return canCompleteRovingElves(ctx); // TODO
+        return canCompleteRovingElves(ctx);
     },
     canEnterTheChampionsGuild(ctx) {
         return ctx.player.questPoints >= 32;
@@ -497,9 +497,6 @@ export const REQUIREMENT_CHECKS = {
     canCompleteHorrorFromTheDeep(ctx) {
         return canCompleteHorrorFromTheDeep(ctx);
     },
-    canCompleteMeatAndGreet(ctx) {
-        return false; // TODO
-    },
     canCompleteNatureSpirit(ctx) {
         return canCompleteNatureSpirit(ctx);
     },
@@ -516,16 +513,16 @@ export const REQUIREMENT_CHECKS = {
         return canReachPiratesCove(ctx);
     },
     canCompleteEaglesPeak(ctx) {
-        return false; // TODO
+        return canCompleteEaglesPeak(ctx);
     },
     canCompleteUndergroundPass(ctx) {
         return canCompleteUndergroundPass(ctx);
     },
     canCompleteWatchtower(ctx) {
-        return false; // TODO
+        return canCompleteWatchtower(ctx);
     },
     canCompleteFairytaleIICureAQueen(ctx) {
-        return false; // TODO
+        return canCompleteFairytaleIICureAQueen(ctx);
     },
     canCompleteRecipeForDisaster(ctx) {
         return canCompleteRecipeForDisaster(ctx);
@@ -567,7 +564,7 @@ export const REQUIREMENT_CHECKS = {
         return canCompleteTheGrandTree(ctx);
     },
     canEnterBraindeathIsland(ctx) {
-        return false; // TODO
+        return canEnterBraindeathIsland(ctx);
     },
     canDoMixology(ctx) {
         return false; // TODO
@@ -669,7 +666,7 @@ export const REQUIREMENT_CHECKS = {
         return canCompleteTheHeartOfDarkness(ctx);
     },
     canStartIcthlarinsLittleHelper(ctx) {
-        return canCompleteIcthlarinsLittleHelper(ctx); // TODO start maybe anders?
+        return canStartIcthlarinsLittleHelper(ctx);
     },
     canCompleteIcthlarinsLittleHelper(ctx) {
         return canCompleteIcthlarinsLittleHelper(ctx);
@@ -711,7 +708,7 @@ export const REQUIREMENT_CHECKS = {
         return canDoWintertodt(ctx);
     },
     canDoHallowedSepulchre(ctx) {
-        return false; // TODO
+        return canCompleteSinsOfTheFather(ctx);
     },
     canDoSalvaging(ctx) {
         return canDoSalvaging(ctx);
@@ -1708,6 +1705,24 @@ function canCompleteRegicide(ctx) {
         || has(ctx, 7223)); // Roast rabbit
 }
 
+function canCompleteEaglesPeak(ctx) {
+    return has(ctx, 1765)  // Yellow dye
+        && has(ctx, 1939); // Swamp tar
+}
+
+function canCompleteWatchtower(ctx) {
+    return canTrainHerblore(ctx) //
+        && canTrainMining(ctx) //
+        && has(ctx, 560)  // Death rune
+        && has(ctx, 2357) // Gold bar
+        && has(ctx, 536)  // Dragon bones
+        && has(ctx, 954)  // Rope
+        && has(ctx, 91)   // Guam potion (unf)
+        && has(ctx, 233)  // Pestle and mortar
+        && has(ctx, 530)  // Bat bones
+        && has(ctx, 247); // Jangerberries
+}
+
 function canCompleteUndergroundPass(ctx) {
     return canCompleteBiohazard(ctx) //
         // Bow and arrows needed, but thats a huge one... TODO
@@ -1804,7 +1819,6 @@ function canCompleteShadesOfMortton(ctx) {
             || has(ctx, 31389) // Rosewood pyre logs
         )
         && has(ctx, 3396); // Loar remains
-
 }
 
 function canBurnLoarShades(ctx) {
@@ -2498,6 +2512,13 @@ function canCompleteFairytaleIGrowingPains(ctx) {
         && has(ctx, 952)  // Spade
         // TODO other item reqs?
         ;
+}
+
+function canCompleteFairytaleIICureAQueen(ctx) {
+    return canCompleteFairytaleIGrowingPains(ctx) //
+        && canTrainFarming(ctx) //
+        && canTrainHerblore(ctx) //
+        && has(ctx, 227); // Vial of water
 }
 
 function canDoGuardiansOfTheRift(ctx) {
@@ -3330,7 +3351,6 @@ function canCompleteRFDAnotherCooksQuest(ctx) {
         && has(ctx, 1909) // Greenman's ale
         && has(ctx, 2084) // Fruit blast
         && has(ctx, 592); // Ashes
-
 }
 
 function canCompleteRFDFreeingTheMountainDwarf(ctx) {
@@ -3469,7 +3489,6 @@ function canCompleteTheGolem(ctx) {
         && has(ctx, 233)  // Pestle and mortar
         && has(ctx, 1761) // Soft clay
         && has(ctx, 970); // Papyrus
-
 }
 
 function canCompleteHorrorFromTheDeep(ctx) {
@@ -3488,6 +3507,11 @@ function canCompleteHorrorFromTheDeep(ctx) {
 
 function canCompleteTheGrandTree(ctx) {
     return true;
+}
+
+function canEnterBraindeathIsland(ctx) {
+    return canCompletePriestInPeril(ctx) //
+        && canCompleteZogreFleshEaters(ctx);
 }
 
 function canCompleteGettingAhead(ctx) {
@@ -3512,7 +3536,6 @@ function canCompleteTheFeud(ctx) {
         && has(ctx, 4593)  // Fake beard
         && has(ctx, 1917)  // Beer
         && has(ctx, 1925); // Bucket
-
 }
 
 function canMakeSplitLog(ctx) {
@@ -4055,6 +4078,10 @@ function canCompletePandemonium(ctx) {
 
 function canCompleteTheHeartOfDarkness(ctx) {
     return canTrainMining(ctx);
+}
+
+function canStartIcthlarinsLittleHelper(ctx) {
+    return true;
 }
 
 function canCompleteIcthlarinsLittleHelper(ctx) {

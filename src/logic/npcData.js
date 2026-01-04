@@ -4680,7 +4680,7 @@ export const NPC_DATA = {
     },
     "Dire Wolf Alpha": {
         "wiki": "https://oldschool.runescape.wiki/w/Dire_Wolf_Alpha",
-        "rule": ["canCompleteMeatAndGreet"],
+        "rule": null,
         "skill": [],
         "level": [],
         "tags": ["quest"],
