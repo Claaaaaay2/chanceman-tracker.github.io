@@ -36072,8 +36072,13 @@
     "name": "Clue box",
     "image": "clue_box.png",
     "sources": {
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
+        }
       }
     }
   },

@@ -567,7 +567,7 @@ export const REQUIREMENT_CHECKS = {
         return canEnterBraindeathIsland(ctx);
     },
     canDoMixology(ctx) {
-        return false; // TODO
+        return canDoMixology(ctx);
     },
     canDoMageTrainingArena(ctx) {
         return canDoMageTrainingArena(ctx);
@@ -631,6 +631,9 @@ export const REQUIREMENT_CHECKS = {
     },
     hasRabbitSnare(ctx) {
         return has(ctx, 10031);
+    },
+    hasBoxTrap(ctx) {
+        return has(ctx, 10008);
     },
     canCompleteTheFrozenDoor(ctx) {
         return canCompleteTheFrozenDoor(ctx);
@@ -714,13 +717,13 @@ export const REQUIREMENT_CHECKS = {
         return canDoSalvaging(ctx);
     },
     canCompleteMonkeyMadnessII(ctx) {
-        return false; // TODO
+        return canCompleteMonkeyMadnessII(ctx);
     },
     canCompleteMonkeyMadnessI(ctx) {
-        return false; // TODO
+        return canCompleteMonkeyMadnessI(ctx);
     },
     canCompletePryingTimes(ctx) {
-        return false; // TODO
+        return canCompletePryingTimes(ctx);
     },
     canCompleteWitchsHouse(ctx) {
         return false; // TODO
@@ -3442,6 +3445,48 @@ function canCompleteRFDFreeingKingAwowogei(ctx) {
         && has(ctx, 233); // Pestle and mortar
 }
 
+function canCompletePryingTimes(ctx) {
+    return canCompletePandemonium(ctx) //
+        && canCompleteTheKnightsSword(ctx) //
+        && canTrainSmithing(ctx) //
+        && has(ctx, 2347)  // Hammer
+        && has(ctx, 2325)  // Redberry pie
+        && has(ctx, 2353); // Steel bar
+}
+
+function canCompleteTheKnightsSword(ctx) {
+    return canTrainMining(ctx) //
+        && has(ctx, 2351)  // Iron bar
+        && has(ctx, 2325); // Redberry pie
+}
+
+function canCompleteMonkeyMadnessI(ctx) {
+    return canCompleteTheGrandTree(ctx) //
+        && canCompleteTreeGnomeVillage(ctx) //
+        && has(ctx, 2357) // Gold bar
+        && has(ctx, 1759) // Ball of wool
+        && has(ctx, 1963) // Bananas
+        && (has(ctx, 3183) || canCompleteJunglePotion(ctx)) // Monkey bones or Monkey corpse
+}
+
+function canCompleteMonkeyMadnessII(ctx) {
+    return canCompleteEnlightenedJourney(ctx) //
+        && canTrainFiremaking(ctx) //
+        && has(ctx, 1513) // Magic logs
+        && canCompleteTheEyesOfGlouphrie(ctx) //
+        && canCompleteRFDFreeingKingAwowogei(ctx) //
+        && canCompleteTrollStronghold(ctx) //
+        && canTrainSlayer(ctx) //
+        && canTrainCrafting(ctx) //
+        && canTrainHunter(ctx) //
+        && has(ctx, 2102) // Lemon
+        && has(ctx, 1987) // Grapes
+        && has(ctx, 1511) // Logs
+        && has(ctx, 2347) // Hammer
+        && has(ctx, 1755) // Chisel
+        && has(ctx, 233); // Pestle and mortar
+}
+
 function hasSlashWeapon(ctx) {
     return true; // TODO
 }
@@ -3512,6 +3557,31 @@ function canCompleteTheGrandTree(ctx) {
 function canEnterBraindeathIsland(ctx) {
     return canCompletePriestInPeril(ctx) //
         && canCompleteZogreFleshEaters(ctx);
+}
+
+function canDoMixology(ctx) {
+    return canTrainHerblore(ctx) //
+        && (
+            has(ctx, 249)    // Guam leaf
+            || has(ctx, 251) // Marrentill
+            || has(ctx, 253) // Tarromin
+            || has(ctx, 255) // Harralander
+        )
+        && (
+            has(ctx, 257)     // Ranarr weed
+            || has(ctx, 2998) // Toadflax
+            || has(ctx, 261)  // Avantoe
+            || has(ctx, 263)  // Kwuarm
+            || has(ctx, 3000) // Snapdragon
+        )
+        && (
+            has(ctx, 30097)   // Huasca
+            || has(ctx, 259)  // Irit leaf
+            || has(ctx, 265)  // Cadantine
+            || has(ctx, 2481) // Lantadyme
+            || has(ctx, 267)  // Dwarf weed
+            || has(ctx, 269)  // Torstol
+        );
 }
 
 function canCompleteGettingAhead(ctx) {
@@ -4081,7 +4151,7 @@ function canCompleteTheHeartOfDarkness(ctx) {
 }
 
 function canStartIcthlarinsLittleHelper(ctx) {
-    return true;
+    return canCompleteGertrudesCat(ctx);
 }
 
 function canCompleteIcthlarinsLittleHelper(ctx) {
@@ -4320,7 +4390,7 @@ function canTrainFishing(ctx) {
         || (has(ctx, 307) && has(ctx, 313)); // Fishing rod & Fishing bait
 }
 
-function canTrainSlayer(ctx) {
+function canTrainSlayer(ctx) { // TODO: dit gaat nu op false als je slayer locked bent, maar je kan al wel het level hebben.
     if (ctx.filters?.slayerLocked) return false;
     return true;
 }

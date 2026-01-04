@@ -1812,7 +1812,12 @@ export const NPC_DATA = {
     },
     "Black chinchompa (Hunter)": {
         "wiki": "https://oldschool.runescape.wiki/w/Black_chinchompa_(Hunter)",
-        "rule": ["canCompleteEaglesPeak"],
+        "rule": {
+            "all": [
+                "canCompleteEaglesPeak",
+                "hasBoxTrap"
+            ]
+        },
         "skill": ["hunter"],
         "level": [73],
         "tags": [],
@@ -2833,7 +2838,12 @@ export const NPC_DATA = {
     },
     "Carnivorous chinchompa": {
         "wiki": "https://oldschool.runescape.wiki/w/Carnivorous_chinchompa",
-        "rule": ["canCompleteEaglesPeak"],
+        "rule": {
+            "all": [
+                "canCompleteEaglesPeak",
+                "hasBoxTrap"
+            ]
+        },
         "skill": ["hunter"],
         "level": [63],
         "tags": [],
@@ -3527,7 +3537,12 @@ export const NPC_DATA = {
     },
     "Chinchompa (Hunter)": {
         "wiki": "https://oldschool.runescape.wiki/w/Chinchompa_(Hunter)",
-        "rule": ["canCompleteEaglesPeak"],
+        "rule": {
+            "all": [
+                "canCompleteEaglesPeak",
+                "hasBoxTrap"
+            ]
+        },
         "skill": ["hunter"],
         "level": [53],
         "tags": [],
@@ -5408,7 +5423,12 @@ export const NPC_DATA = {
     },
     "Embertailed jerboa": {
         "wiki": "https://oldschool.runescape.wiki/w/Embertailed_jerboa",
-        "rule": ["canCompleteEaglesPeak"],
+        "rule": {
+            "all": [
+                "canCompleteEaglesPeak",
+                "hasBoxTrap"
+            ]
+        },
         "skill": ["hunter"],
         "level": [39],
         "tags": [],
