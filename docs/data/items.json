@@ -150968,48 +150968,6 @@
               "canCompleteWatchtower"
             ]
           }
-        },
-        "Reward from completing the miniquest Daddy's Home": {
-          "notes": "Requires planks, bolt of cloth, any nails, a hammer and a saw.",
-          "rule": {
-            "all": [
-              {
-                "has": 960
-              },
-              {
-                "has": 8790
-              },
-              "canCompletePandemonium",
-              {
-                "any": [
-                  {
-                    "has": 4819
-                  },
-                  {
-                    "has": 4821
-                  },
-                  {
-                    "has": 4820
-                  },
-                  {
-                    "has": 1539
-                  },
-                  {
-                    "has": 4822
-                  },
-                  {
-                    "has": 4823
-                  },
-                  {
-                    "has": 4824
-                  },
-                  {
-                    "has": 31406
-                  }
-                ]
-              }
-            ]
-          }
         }
       }
     }

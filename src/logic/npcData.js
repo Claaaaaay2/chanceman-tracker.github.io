@@ -785,7 +785,7 @@ export const NPC_DATA = {
     },
     "Aquanite": {
         "wiki": "https://oldschool.runescape.wiki/w/Aquanite",
-        "rule": ["canSailToYnysdail"],
+        "rule": ["canCompletePandemonium"],
         "skill": ["Slayer", "sailing"],
         "level": [78, 73],
         "tags": [],
@@ -4650,12 +4650,7 @@ export const NPC_DATA = {
     },
     "Dessous (Nightmare Zone)": {
         "wiki": "https://oldschool.runescape.wiki/w/Dessous_(Nightmare_Zone)",
-        "rule": {
-            "all": [
-                "canCompleteDesertTreasureI",
-                "canEnterNightmareZone"
-            ]
-        },
+        "rule": ["canCompleteDesertTreasureI"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -5300,7 +5295,7 @@ export const NPC_DATA = {
     },
     "Elder aquanite": {
         "wiki": "https://oldschool.runescape.wiki/w/Elder_aquanite",
-        "rule": ["canSailToYnysdail"],
+        "rule": ["canCompletePandemonium"],
         "skill": ["Slayer"],
         "level": [78],
         "tags": ["superior"],
@@ -5308,7 +5303,7 @@ export const NPC_DATA = {
     },
     "Elder aquanite Normal": {
         "wiki": "https://oldschool.runescape.wiki/w/Elder_aquanite#Normal",
-        "rule": ["canSailToYnysdail"],
+        "rule": ["canCompletePandemonium"],
         "skill": ["Slayer"],
         "level": [78],
         "tags": ["superior"],
@@ -5756,7 +5751,7 @@ export const NPC_DATA = {
         "rule": {
             "any": [
                 "canCompleteTheFremennikTrials",
-                "canStartQueenOfThieves"
+                "canStartTheQueenOfThieves"
             ]
         },
         "skill": ["thieving"],
@@ -11914,7 +11909,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Reinforced_chest",
         "rule": {
             "any": [
-                "canSailToYnysdail",
+                "canCompletePandemonium",
                 "canSailToBrittleIsle"
             ]
         },
