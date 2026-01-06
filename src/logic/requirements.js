@@ -5,6 +5,47 @@ export function has(ctx, id) {
 }
 
 export const REQUIREMENT_CHECKS = {
+    canCompleteMisthalinMystery(ctx) {
+        return canCompleteMisthalinMystery(ctx);
+    },
+    hasFishForFineOffcuts(ctx) {
+        return has(ctx, 383)   // Raw shark
+            || has(ctx, 395)   // Raw sea turtle
+            || has(ctx, 13439) // Raw anglerfish
+            || has(ctx, 11934) // Raw dark crab
+            || has(ctx, 32325) // Raw yellowfin
+            || has(ctx, 32333) // Raw halibut
+            || has(ctx, 32341) // Raw bluefin
+            || has(ctx, 31561) // Raw jumbo squid
+            || has(ctx, 32349) // Raw marlin
+            || has(ctx, 389);  // Raw manta ray
+    },
+    hasFishForOffcuts(ctx) {
+        return has(ctx, 11328) // Leaping trout
+            || has(ctx, 11330) // Leaping salmon
+            || has(ctx, 11332) // Leaping sturgeon
+            || has(ctx, 22826) // Bluegill
+            || has(ctx, 22829) // Common tench
+            || has(ctx, 22832) // Mottled eel
+            || has(ctx, 22835) // Greater siren
+            || has(ctx, 317)   // Raw shrimps
+            || has(ctx, 321)   // Raw anchovies
+            || has(ctx, 335)   // Raw trout
+            || has(ctx, 331)   // Raw salmon
+            || has(ctx, 377)   // Raw lobster
+            || has(ctx, 341)   // Raw cod
+            || has(ctx, 349)   // Raw pike
+            || has(ctx, 353)   // Raw mackerel
+            || has(ctx, 363)   // Raw bass
+            || has(ctx, 345)   // Raw herring
+            || has(ctx, 7944)  // Raw monkfish
+            || has(ctx, 327)   // Raw sardine
+            || has(ctx, 371)   // Raw swordfish
+            || has(ctx, 32309) // Raw giant krill
+            || has(ctx, 32317) // Raw haddock
+            || has(ctx, 31553) // Raw swordtip squid
+            || has(ctx, 359);  // Raw tuna
+    },
     canCompleteTempleOfTheEye(ctx) {
         return canCompleteTempleOfTheEye(ctx);
     },
@@ -904,6 +945,9 @@ export const REQUIREMENT_CHECKS = {
     },
     canDoZulrah(ctx) {
         return canDoZulrah(ctx);
+    },
+    canStartAtFirstLight(ctx) {
+        return canStartAtFirstLight(ctx);
     },
     canCompleteAtFirstLight(ctx) {
         return canCompleteAtFirstLight(ctx);
@@ -2086,6 +2130,12 @@ function hasAnyLog(ctx) {
         || canTrainWoodcutting(ctx); // for untradable Juniper logs
 }
 
+function canCompleteMisthalinMystery(ctx) {
+    return has(ctx, 1925) // Bucket
+        && has(ctx, 590)  // Tinderbox
+        && has(ctx, 946); //
+}
+
 function hasAnyFletchableLog(ctx) {
     return has(ctx, 1511)   // Logs
         || has(ctx, 1521)   // Oak logs
@@ -2261,11 +2311,19 @@ function canDoZulrah(ctx) {
         && canCompleteRegicide(ctx);
 }
 
+function canStartAtFirstLight(ctx) {
+    return canTrainHunter(ctx) //
+        && canTrainHerblore(ctx) //
+        && canTrainConstruction(ctx) //
+        && canCompleteEaglesPeak(ctx); //
+}
+
 function canCompleteAtFirstLight(ctx) {
     return canTrainHunter(ctx) //
         && canTrainHerblore(ctx) //
         && canTrainConstruction(ctx) //
         && canCompleteEaglesPeak(ctx) //
+        && has(ctx, 4055) // Toy mouse (wound)
         && has(ctx, 29166) // Jerboa tail
         && has(ctx, 2347); // Hammer
 }
