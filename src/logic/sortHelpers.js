@@ -106,6 +106,13 @@ export async function getObtainabilityRank(item, ctx) {
 
             const npc = NPC_DATA[npcName];
 
+            if (npc.tags?.includes("jon") && ctx.filters?.hideJon) continue;
+            if (npc.tags?.includes("boss") && ctx.filters?.hideBosses) continue;
+            if (npc.tags?.includes("superior") && !ctx.filters?.hasSuperiors) continue;
+            if (npc.tags?.includes("slayer-task-only") && ctx.filters?.isSlayerLocked) continue;
+            if (npc.tags?.includes("notForIronmen") && ctx.filters?.isIronman) continue;
+            if (npc.tags?.includes("hunterRumour") && ctx.filters?.isHunterRumourLocked) continue;
+            if (npc.tags?.includes("clue") && ctx.filters?.hideClueRewardOnly) continue;
             if (npc?.tags?.includes("easy") || (npc?.tags?.includes("jon") && !ctx.filters?.isIronman)) {
                 return { rank: 3, name };
             }
@@ -123,52 +130,49 @@ export async function getObtainabilityRank(item, ctx) {
 
     // Drops handling OTHERS
     if (src.drops) {
-        let hasReachableDrop = false;
-        let hasSkillMet = false;
-        let skillNotMetYet = false;
-        let otherDropSourceNoSkillLevel = false;
+        let hasAnyReachable = false;
+        let hasAnyWithUnmetSkill = false;
 
         for (const npcName of Object.keys(src.drops)) {
             if (!(await canReachNpc(npcName, ctx))) continue;
 
-            hasReachableDrop = true;
+            hasAnyReachable = true;
 
             const npc = NPC_DATA[npcName];
+            if (npc.tags?.includes("jon") && ctx.filters?.hideJon) continue;
+            if (npc.tags?.includes("boss") && ctx.filters?.hideBosses) continue;
+            if (npc.tags?.includes("superior") && !ctx.filters?.hasSuperiors) continue;
+            if (npc.tags?.includes("slayer-task-only") && ctx.filters?.isSlayerLocked) continue;
+            if (npc.tags?.includes("notForIronmen") && ctx.filters?.isIronman) continue;
+            if (npc.tags?.includes("hunterRumour") && ctx.filters?.isHunterRumourLocked) continue;
+            if (npc.tags?.includes("clue") && ctx.filters?.hideClueRewardOnly) continue;
 
-            if (npc?.skill?.length) {
-                if (player) {
-                    if (npc.skill.length !== npc.level.length) {
-                        console.error("npc skill and level not in order: ", npc);
-                    }
-                    for (let i = 0; i < npc.skill.length; i++) {
-                        const skill = npc.skill[i];
-                        const level = npc.level[i];
-
-                        if (player.levels[capitalizeFirstLetter(skill)] >= level) { //TODO probleem: wat als je 1 skill wel hebt en 1 skill niet?
-                            hasSkillMet = true;
-                        } else {
-                            skillNotMetYet = true;
-                        }
-                    }
-                }
-            } else {
-                otherDropSourceNoSkillLevel = true;
-            }
-        }
-
-        // IMPORTANT: only classify drops if reachable
-        if (hasReachableDrop) {
-            if (otherDropSourceNoSkillLevel) {
+            // No skill required → reachable drop
+            if (!npc?.skill?.length) {
                 return { rank: 6, name };
             }
 
-            if (hasSkillMet) {
-                return { rank: 5, name };
+            if (!player) continue;
+
+            let allSkillsMet = true;
+            for (let i = 0; i < npc.skill.length; i++) {
+                const skill = npc.skill[i];
+                const level = npc.level[i];
+
+                if (player.levels[capitalizeFirstLetter(skill)] < level) {
+                    allSkillsMet = false;
+                    hasAnyWithUnmetSkill = true;
+                    break;
+                }
             }
 
-            if (skillNotMetYet) {
-                return { rank: 7, name };
+            if (allSkillsMet) {
+                return { rank: 5, name };
             }
+        }
+
+        if (hasAnyReachable && hasAnyWithUnmetSkill) {
+            return { rank: 7, name };
         }
     }
 
