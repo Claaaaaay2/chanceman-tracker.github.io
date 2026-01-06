@@ -155,6 +155,7 @@ window.initItemsPage = async function () {
     const isHunterRumourLocked = document.getElementById("isHunterRumourLocked");
     let hunterRumoursCompleted = document.getElementById("hunterRumoursCompleted");
     const hideLMS = document.getElementById("hideLMS");
+    const hideJon = document.getElementById("hideJon");
     const overrideWoodcutting = document.getElementById("overrideWoodcutting");
     const overrideMining = document.getElementById("overrideMining");
     const overrideFishing = document.getElementById("overrideFishing");
@@ -164,7 +165,7 @@ window.initItemsPage = async function () {
     const overrideConstruction = document.getElementById("overrideConstruction");
     const grid = document.getElementById("itemGrid");
 
-    if (!searchInput || !hideBosses || !isSlayerLocked  || !isHunterRumourLocked || !hunterRumoursCompleted || !hideLMS || !hideRolled || !onlyUnlocked || !onlyObtainable || !hideClue || !allowOthersHouses || !hasFlatpacks || !hasItemsets || !hasSuperiors || !isIronman || !overrideWoodcutting || !overrideMining || !overrideFishing || !overrideCooking || !overrideFletching || !overrideCrafting || !overrideConstruction || !grid) {
+    if (!searchInput || !hideJon || !hideBosses || !isSlayerLocked  || !isHunterRumourLocked || !hunterRumoursCompleted || !hideLMS || !hideRolled || !onlyUnlocked || !onlyObtainable || !hideClue || !allowOthersHouses || !hasFlatpacks || !hasItemsets || !hasSuperiors || !isIronman || !overrideWoodcutting || !overrideMining || !overrideFishing || !overrideCooking || !overrideFletching || !overrideCrafting || !overrideConstruction || !grid) {
         setTimeout(initItemsPage, 0);
         return;
     }
@@ -185,6 +186,7 @@ window.initItemsPage = async function () {
     isHunterRumourLocked.checked = f.isHunterRumourLocked ?? false;
     hunterRumoursCompleted.value = f.hunterRumoursCompleted ?? 0;
     hideLMS.checked = f.hideLMS ?? false;
+    hideJon.checked = f.hideJon ?? false;
     overrideWoodcutting.checked = f.overrideWoodcutting ?? false;
     overrideMining.checked = f.overrideMining ?? false;
     overrideFishing.checked = f.overrideFishing ?? false;
@@ -210,6 +212,7 @@ window.initItemsPage = async function () {
         const slayLock = isSlayerLocked.checked;
         const huntRumourLock = isHunterRumourLocked.checked;
         const hideLms = hideLMS.checked;
+        const hJon = hideJon.checked;
 
         const ranked = await computeAllRanksOnce(items, fileStore);
 
@@ -229,25 +232,28 @@ window.initItemsPage = async function () {
             }
             if (!hasSup && await hideTag(item, fileStore, "superior")) {
                 sort.rank = 8;
-            };
+            }
             if (isIron && await isNonIronItem(item, fileStore)) {
                 sort.rank = 8;
-            };
+            }
             if (onlyO && (sort.rank === 7 || sort.rank === 8)) continue;
             if (!hasFl && item.tags?.includes("flatpack")) continue;
             if (!hasIt && item.tags?.includes("itemset")) continue;
             if (hideBoss && await hideTag(item, fileStore, "boss")) {
                 sort.rank = 8;
-            };
+            }
             if (slayLock && await hideSkill(item, fileStore, "Slayer")) {
                 sort.rank = 8;
-            };
+            }
             if (huntRumourLock && await hideTag(item, fileStore, "hunterRumour")) {
                 sort.rank = 8;
-            };
+            }
             if (hideLms && await hideTag(item, fileStore, "LMS")) {
                 sort.rank = 8;
-            };
+            }
+            if (hJon && await hideTag(item, fileStore, "jon")) {
+                sort.rank = 8;
+            }
 
             filtered.push({ ...entry, sort });
         }
@@ -317,6 +323,7 @@ window.initItemsPage = async function () {
             isHunterRumourLocked: isHunterRumourLocked.checked,
             hunterRumoursCompleted: hunterRumoursCompleted.value,
             hideLMS: hideLMS.checked,
+            hideJon: hideJon.checked,
             overrideWoodcutting: overrideWoodcutting.checked,
             overrideMining: overrideMining.checked,
             overrideFishing: overrideFishing.checked,
@@ -400,6 +407,11 @@ window.initItemsPage = async function () {
     });
 
     hideLMS.addEventListener("input", () => {
+        saveFilters();
+        renderItems();
+    });
+
+    hideJon.addEventListener("input", () => {
         saveFilters();
         renderItems();
     });

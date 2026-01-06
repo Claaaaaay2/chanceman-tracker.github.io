@@ -5,6 +5,22 @@ export function has(ctx, id) {
 }
 
 export const REQUIREMENT_CHECKS = {
+    hasHighLevelHerb(ctx) {
+        return has(ctx, 211)  // Grimy avantoe
+            || has(ctx, 261)  // Avantoe 
+            || has(ctx, 213)  // Grimy kwuarm
+            || has(ctx, 263)  // Kwuarm
+            || has(ctx, 3051) // Grimy snapdragon
+            || has(ctx, 3000) // Snapdragon
+            || has(ctx, 215)  // Grimy cadantine
+            || has(ctx, 265)  // Cadantine
+            || has(ctx, 2485) // Grimy lantadyme
+            || has(ctx, 2481) // Lantadyme
+            || has(ctx, 217)  // Grimy dwarf weed
+            || has(ctx, 267)  // Dwarf weed
+            || has(ctx, 219)  // Grimy torstol
+            || has(ctx, 269); // Torstol
+    },
     canCompleteMisthalinMystery(ctx) {
         return canCompleteMisthalinMystery(ctx);
     },

@@ -262,6 +262,7 @@ function isSourceFiltered(sourceKey, ctx) {
             || npc.tags?.includes("superior"))) return true;
     if (f.isHunterRumourLocked && npc.skill?.includes("hunterRumour")) return true;
     if (f.isIronman && (npc.tags?.includes("notForIronmen") || npc.tags?.includes("jon"))) return true;
+    if (f.hideJon && npc.tags?.includes("jon")) return true;
 
     return false;
 }

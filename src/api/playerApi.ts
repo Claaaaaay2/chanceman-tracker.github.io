@@ -40,7 +40,7 @@ function calculateQuestPoints(quests: Record<string, number>) {
 
         const points = QUEST_POINTS[questName];
 
-        if (!points) {
+        if (!points && points !== 0) {
             console.warn("Missing quest point value for:", questName);
             continue;
         }
