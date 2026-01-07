@@ -6,8 +6,10 @@ import { router } from "./router.js";
 import { fileStore } from "./storage/fileStore.js";
 import "./styles/main.css";
 import { initTheme } from "./styles/theme.js";
+import { initFiltersOverrides } from "./styles/filtersOverrides.js";
 
 initTheme();
+initFiltersOverrides();
 
 const ITEM_SECTION_TITLES = {
     1: "Buyable shop Items",
@@ -498,6 +500,7 @@ export function afterRoute() {
 
     if (typeof initItemsPage === "function") {
         initItemsPage();
+        initFiltersOverrides();
     }
     if (typeof initBugPage === "function") {
         initBugPage();

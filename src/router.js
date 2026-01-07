@@ -9,6 +9,7 @@ import { BugPage } from "./pages/reportABug.js";
 import ReuploadPage from "./pages/reupload.js";
 import UploadPage from "./pages/upload.js";
 import { bindThemeToggle, updateThemeIcon } from "./styles/theme.js";
+import { bindFiltersOverridesToggle } from "./styles/filtersOverrides.js";
 
 export async function navigate(path) {
     history.pushState({}, "", path);
@@ -44,6 +45,7 @@ export async function router() {
         </div>
     `;
     bindThemeToggle();
+    bindFiltersOverridesToggle();
     updateThemeIcon();
 
     afterRoute();
