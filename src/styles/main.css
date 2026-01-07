@@ -1,11 +1,51 @@
 :root {
     --header-height: 19px;
     --footer-height: 17px;
+    --bg-color: #E2DBC8;
+    --highlight-color: #9B6039;
+    --section-header-color: #5A3E2B;
+    --text-color: #111111;
+    --link-color: #9B6039;
+    --card-bg: #D8CCB4;
+    --border-color: #ccc;
+    --border-color-darker: #8E8068;
+    --header-footer-color: #B8A282;
+}
+
+html.dark {
+    --bg-color: #172136;
+    --highlight-color: #CBD9F4;
+    --section-header-color: #CBD9F4;
+    --text-color: #CBD9CE;
+    --link-color: #8CABE6;
+    --card-bg: #313E59;
+    --border-color: #CBD9F4;
+    --border-color-darker: #596E96;
+    --header-footer-color: #0A1023;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+}
+
+html {
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+* {
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
 body {
     margin-top: 25px;
-    background-color: #E2DBC8;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 /* Layout container */
@@ -28,13 +68,17 @@ body {
     left: 0;
     width: 100%;
     padding: 10px 10px 10px 10px;
-    border-bottom: 1px solid #ccc;
-    background-color: #B8A282;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--header-footer-color);
     z-index: 1000;
 }
 
+.header a {
+    color: var(--link-color)
+}
+
 .header strong {
-    color: #9B6039;
+    color: var(--highlight-color);
 }
 
 .playerName {
@@ -54,8 +98,8 @@ footer {
 
     font-size: 0.8rem;
     color: white;
-    background-color: #B8A282;
-    border-top: 1px solid #ccc;
+    background-color: var(--header-footer-color);
+    border-top: 1px solid var(--border-color);
     text-align: center;
 
     z-index: 1000;
@@ -72,7 +116,7 @@ footer {
 
 .osrs-table th,
 .osrs-table td {
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     padding: 6px 10px;
     text-align: left;
 }
@@ -143,9 +187,9 @@ footer {
 .item-card {
     width: 150px;
     padding: 35px 8px 8px 8px;
-    background: #D8CCB4;
-    border: 1px solid #8E8068;
-    color: #9B6039;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color-darker);
+    color: var(--highlight-color);
     border-radius: 6px;
     position: relative;
     overflow: hidden;
@@ -186,8 +230,8 @@ footer {
     width: 100%;
     margin: 1.5rem 0 0.5rem;
     padding-bottom: 4px;
-    border-bottom: 2px solid #8E8068;
-    color: #5a3e2b;
+    border-bottom: 2px solid var(--border-color-darker);
+    color: car(--section-header-color);
 }
 
 /* End items.js */

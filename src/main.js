@@ -4,6 +4,10 @@ import { getObtainabilityRank } from "./logic/sortHelpers.js";
 import { initBugPage } from "./pages/reportABug.js";
 import { router } from "./router.js";
 import { fileStore } from "./storage/fileStore.js";
+import { initTheme } from "./styles/theme.js";
+import "./styles/main.css";
+
+initTheme();
 
 const ITEM_SECTION_TITLES = {
     1: "Buyable shop Items",
@@ -165,7 +169,7 @@ window.initItemsPage = async function () {
     const overrideConstruction = document.getElementById("overrideConstruction");
     const grid = document.getElementById("itemGrid");
 
-    if (!searchInput || !hideJon || !hideBosses || !isSlayerLocked  || !isHunterRumourLocked || !hunterRumoursCompleted || !hideLMS || !hideRolled || !onlyUnlocked || !onlyObtainable || !hideClue || !allowOthersHouses || !hasFlatpacks || !hasItemsets || !hasSuperiors || !isIronman || !overrideWoodcutting || !overrideMining || !overrideFishing || !overrideCooking || !overrideFletching || !overrideCrafting || !overrideConstruction || !grid) {
+    if (!searchInput || !hideJon || !hideBosses || !isSlayerLocked || !isHunterRumourLocked || !hunterRumoursCompleted || !hideLMS || !hideRolled || !onlyUnlocked || !onlyObtainable || !hideClue || !allowOthersHouses || !hasFlatpacks || !hasItemsets || !hasSuperiors || !isIronman || !overrideWoodcutting || !overrideMining || !overrideFishing || !overrideCooking || !overrideFletching || !overrideCrafting || !overrideConstruction || !grid) {
         setTimeout(initItemsPage, 0);
         return;
     }
@@ -605,13 +609,13 @@ async function hideSkill(item, ctx, skill) {
     let hasAnySkillSource = false;
     let hasSkillLevel = false;
     let hasReachableNonSkillSource = false;
-    
+
     // NPC drops
     if (item.sources?.drops) {
         for (const npcName of Object.keys(item.sources.drops)) {
             const npc = NPC_DATA[npcName];
             if (!npc) continue;
-            
+
             const needsSkill = npc.skill?.includes(skill);
             if (needsSkill) hasAnySkillSource = true;
             if (skillLevel >= npc.level[0]) hasSkillLevel = true;

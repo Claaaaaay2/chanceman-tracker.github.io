@@ -24,6 +24,7 @@ export async function Header() {
                 <a data-link href="/reupload">Reupload</a> |
                 <a data-link href="/bug">Report a bug</a>
             </span>
+            <button id="theme-toggle" title="Toggle dark mode">🌙</button>
             <span class="playerName">
                 ${player ? `Hello, <strong>${player.name}</strong>` : ""}
             </span>
