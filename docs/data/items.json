@@ -12242,12 +12242,14 @@
           "rule": {
             "all": [
               "hasAnyFletchableLog",
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]}
+                ]
+              }
             ]
           }
         }
@@ -12776,12 +12778,14 @@
               {
                 "has": 31032
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainFletching"
             ]
           }
@@ -23355,12 +23359,14 @@
           "notes": "Requires a knife and a Scaly blue dragonhide.",
           "rule": {
             "all": [
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               {
                 "has": 27897
               }
@@ -30761,12 +30767,14 @@
               {
                 "has": 1925
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]}
+                ]
+              }
             ]
           }
         }
@@ -32500,12 +32508,14 @@
               {
                 "has": 5980
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]}
+                ]
+              }
             ]
           }
         }
@@ -33480,12 +33490,14 @@
               {
                 "has": 11332
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]}
+                ]
+              }
             ]
           }
         }
@@ -35089,12 +35101,14 @@
               {
                 "has": 2142
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainCooking"
             ]
           }
@@ -35504,12 +35518,14 @@
               {
                 "has": 1550
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]}
+                ]
+              }
             ]
           }
         }
@@ -35533,12 +35549,14 @@
               {
                 "has": 1957
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]}
+                ]
+              }
             ]
           }
         }
@@ -35562,12 +35580,14 @@
               {
                 "has": 1982
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]}
+                ]
+              }
             ]
           }
         }
@@ -35591,12 +35611,14 @@
               {
                 "has": 361
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]}
+                ]
+              }
             ]
           }
         }
@@ -35620,12 +35642,14 @@
               {
                 "has": 1861
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]}
+                ]
+              }
             ]
           }
         }
@@ -50948,29 +50972,30 @@
                   {
                     "has": 5371
                   },
-                  { 
-                        "all": [
-                            {
-                            "has": 970
-                            },
-                            {
-                            "has": 5438
-                            },
-                            {
-                            "has": 1759
-                            },
-                            {
-                              "any": [
-                                {
-                                "has": 36
-                                },
-                                {
-                                "has": 30
-                                }
-                              ]
-                            },
-                            "canStartEnlightenedJourney"
-                    ]},
+                  {
+                    "all": [
+                      {
+                        "has": 970
+                      },
+                      {
+                        "has": 5438
+                      },
+                      {
+                        "has": 1759
+                      },
+                      {
+                        "any": [
+                          {
+                            "has": 36
+                          },
+                          {
+                            "has": 30
+                          }
+                        ]
+                      },
+                      "canStartEnlightenedJourney"
+                    ]
+                  },
                   {
                     "has": 5372
                   },
@@ -51440,9 +51465,9 @@
     "name": "Energy potion(4)",
     "image": "energy_potion(4).png",
     "sources": {
-        "Combat path voucher (m)": {
-          "droprate": "Always"
-        },
+      "Combat path voucher (m)": {
+        "droprate": "Always"
+      },
       "drops": {
         "Jekyll and Hyde Ranarr": {
           "droprate": "Always"
@@ -54112,12 +54137,14 @@
           "rule": {
             "all": [
               "hasFishForFineOffcuts",
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]}
+                ]
+              }
             ]
           }
         }
@@ -55139,12 +55166,14 @@
           "rule": {
             "all": [
               "hasFishForOffcuts",
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]}
+                ]
+              }
             ]
           }
         }
@@ -60581,12 +60610,14 @@
               {
                 "has": 1515
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainFletching"
             ]
           }
@@ -60630,12 +60661,14 @@
               {
                 "has": 1517
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainFletching"
             ]
           }
@@ -73445,12 +73478,14 @@
               {
                 "has": 32317
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]}
+                ]
+              }
             ]
           }
         }
@@ -75491,12 +75526,14 @@
               {
                 "has": 29311
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainFletching"
             ]
           }
@@ -81332,12 +81369,14 @@
               {
                 "has": 1511
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainFletching"
             ]
           }
@@ -82036,12 +82075,14 @@
               {
                 "has": 1861
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainCooking"
             ]
           }
@@ -82056,12 +82097,14 @@
               {
                 "has": 1957
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainCooking"
             ]
           }
@@ -82076,12 +82119,14 @@
               {
                 "has": 1982
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainCooking"
             ]
           }
@@ -85889,7 +85934,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "notes": "Requires a lemon and a knife or any slash weapon.",
+          "notes": "Requires a lemon and a knife.",
           "rule": {
             "all": [
               {
@@ -85897,7 +85942,6 @@
                   {
                     "has": 946
                   },
-                  "hasSlashWeapon",
                   "hasNarwhalKnife"
                 ]
               },
@@ -85926,7 +85970,6 @@
                   {
                     "has": 946
                   },
-                  "hasSlashWeapon",
                   "hasNarwhalKnife"
                 ]
               },
@@ -87267,12 +87310,14 @@
               {
                 "has": 1511
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainFletching"
             ]
           }
@@ -88048,12 +88093,14 @@
               {
                 "has": 1513
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainFletching"
             ]
           }
@@ -88525,12 +88572,14 @@
               {
                 "has": 1513
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainFletching"
             ]
           }
@@ -88589,12 +88638,14 @@
               {
                 "has": 1513
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainFletching"
             ]
           }
@@ -88719,12 +88770,14 @@
               {
                 "has": 1513
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainFletching"
             ]
           }
@@ -89432,12 +89485,14 @@
               {
                 "has": 6332
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainFletching"
             ]
           }
@@ -89885,12 +89940,14 @@
               {
                 "has": 1517
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainFletching"
             ]
           }
@@ -90091,12 +90148,14 @@
               {
                 "has": 1517
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainFletching"
             ]
           }
@@ -90162,12 +90221,14 @@
               {
                 "has": 1517
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainFletching"
             ]
           }
@@ -90192,12 +90253,14 @@
               {
                 "has": 1517
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainFletching"
             ]
           }
@@ -90383,12 +90446,14 @@
               {
                 "has": 32349
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainCooking"
             ]
           }
@@ -91385,12 +91450,14 @@
               {
                 "has": 2142
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainCooking"
             ]
           }
@@ -100513,12 +100580,14 @@
               {
                 "has": 1521
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainFletching"
             ]
           }
@@ -100783,12 +100852,14 @@
               {
                 "has": 1521
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainFletching"
             ]
           }
@@ -100851,12 +100922,14 @@
               {
                 "has": 1521
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainFletching"
             ]
           }
@@ -100881,12 +100954,14 @@
               {
                 "has": 1521
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainFletching"
             ]
           }
@@ -101391,12 +101466,14 @@
               {
                 "has": 2862
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canCompleteBigChompyBirdHunting",
               "canTrainFletching"
             ]
@@ -101664,12 +101741,14 @@
               {
                 "has": 1957
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]}
+                ]
+              }
             ]
           }
         },
@@ -101683,12 +101762,14 @@
               {
                 "has": 1982
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]}
+                ]
+              }
             ]
           }
         }
@@ -102858,12 +102939,14 @@
           "notes": "Requires an orange and a knife.",
           "rule": {
             "all": [
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               {
                 "has": 2108
               }
@@ -102874,12 +102957,14 @@
           "notes": "Requires a knife and 43 agility to get Orange (hat) (other slash weapons do NOT work)",
           "rule": {
             "all": [
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]}
+                ]
+              }
             ]
           }
         }
@@ -102996,12 +103081,14 @@
           "notes": "Requires an orange and a knife.",
           "rule": {
             "all": [
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               {
                 "has": 2108
               }
@@ -103012,12 +103099,14 @@
           "notes": "Requires a knife and 43 agility to get Orange (hat) (other slash weapons do NOT work)",
           "rule": {
             "all": [
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]}
+                ]
+              }
             ]
           }
         }
@@ -104551,12 +104640,14 @@
                   "canCompleteTheTouristTrap"
                 ]
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainCooking"
             ]
           }
@@ -104668,12 +104759,14 @@
                   "canCompleteTheTouristTrap"
                 ]
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainCooking"
             ]
           }
@@ -110043,12 +110136,14 @@
               {
                 "has": 31674
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainCooking"
             ]
           }
@@ -111038,12 +111133,14 @@
                   }
                 ]
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainCooking"
             ]
           }
@@ -111106,12 +111203,14 @@
               {
                 "has": 31671
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainCooking"
             ]
           }
@@ -112984,12 +113083,14 @@
               {
                 "has": 19669
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]}
+                ]
+              }
             ]
           }
         }
@@ -113092,12 +113193,14 @@
               {
                 "has": 19669
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]}
+                ]
+              }
             ]
           }
         }
@@ -113955,7 +114058,7 @@
               }
             ]
           }
-        }, 
+        },
         "Questing": {
           "notes": "Received upon completing The Lost Tribe quest.",
           "rule": "canCompleteTheLostTribe"
@@ -114630,12 +114733,14 @@
                   }
                 ]
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]}
+                ]
+              }
             ]
           }
         }
@@ -125011,12 +125116,14 @@
               {
                 "has": 1511
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainFletching"
             ]
           }
@@ -126512,12 +126619,14 @@
               {
                 "has": 1923
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]}
+                ]
+              }
             ]
           }
         }
@@ -129449,12 +129558,14 @@
                   }
                 ]
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]}
+                ]
+              }
             ]
           }
         }
@@ -140569,12 +140680,14 @@
               {
                 "has": 6333
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]}
+                ]
+              }
             ]
           }
         }
@@ -145669,12 +145782,14 @@
               {
                 "has": 361
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainCooking"
             ]
           }
@@ -146129,12 +146244,14 @@
               {
                 "has": 1861
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]}
+                ]
+              }
             ]
           }
         },
@@ -146148,12 +146265,14 @@
               {
                 "has": 1873
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]}
+                ]
+              }
             ]
           }
         }
@@ -146177,12 +146296,14 @@
               {
                 "has": 1861
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]}
+                ]
+              }
             ]
           }
         },
@@ -146196,12 +146317,14 @@
               {
                 "has": 1873
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]}
+                ]
+              }
             ]
           }
         }
@@ -149219,10 +149342,12 @@
                 "has": 2355
               },
               "canTrainCrafting",
-              { "any": [
-                "canCompleteObservatoryQuest",
-                "canCompleteHauntedMine"
-              ]}
+              {
+                "any": [
+                  "canCompleteObservatoryQuest",
+                  "canCompleteHauntedMine"
+                ]
+              }
             ]
           }
         }
@@ -152299,12 +152424,14 @@
           "notes": "Requires a knife and a watermelon.",
           "rule": {
             "all": [
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               {
                 "has": 5982
               }
@@ -154032,34 +154159,37 @@
               {
                 "has": 5329
               },
-              { "any": [
-                    {
+              {
+                "any": [
+                  {
                     "has": 5371
-                    },
-                    { 
-                        "all": [
-                            {
-                            "has": 970
-                            },
-                            {
-                            "has": 5438
-                            },
-                            {
-                            "has": 1759
-                            },
-                            {
-                              "any": [
-                                {
-                                "has": 36
-                                },
-                                {
-                                "has": 30
-                                }
-                              ]
-                            },
-                            "canStartEnlightenedJourney"
-                    ]}
-                ]},
+                  },
+                  {
+                    "all": [
+                      {
+                        "has": 970
+                      },
+                      {
+                        "has": 5438
+                      },
+                      {
+                        "has": 1759
+                      },
+                      {
+                        "any": [
+                          {
+                            "has": 36
+                          },
+                          {
+                            "has": 30
+                          }
+                        ]
+                      },
+                      "canStartEnlightenedJourney"
+                    ]
+                  }
+                ]
+              },
               "canTrainFarming"
             ]
           }
@@ -154110,34 +154240,37 @@
               {
                 "has": 5329
               },
-              { "any": [
-                    {
+              {
+                "any": [
+                  {
                     "has": 5371
-                    },
-                    { 
-                        "all": [
-                            {
-                            "has": 970
-                            },
-                            {
-                            "has": 5438
-                            },
-                            {
-                            "has": 1759
-                            },
-                            {
-                              "any": [
-                                {
-                                "has": 36
-                                },
-                                {
-                                "has": 30
-                                }
-                              ]
-                            },
-                            "canStartEnlightenedJourney"
-                    ]}
-                ]},
+                  },
+                  {
+                    "all": [
+                      {
+                        "has": 970
+                      },
+                      {
+                        "has": 5438
+                      },
+                      {
+                        "has": 1759
+                      },
+                      {
+                        "any": [
+                          {
+                            "has": 36
+                          },
+                          {
+                            "has": 30
+                          }
+                        ]
+                      },
+                      "canStartEnlightenedJourney"
+                    ]
+                  }
+                ]
+              },
               "canTrainFarming"
             ]
           }
@@ -154281,12 +154414,14 @@
               {
                 "has": 1519
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainFletching"
             ]
           }
@@ -154498,12 +154633,14 @@
               {
                 "has": 1519
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainFletching"
             ]
           }
@@ -154566,12 +154703,14 @@
               {
                 "has": 1519
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainFletching"
             ]
           }
@@ -154596,12 +154735,14 @@
               {
                 "has": 1519
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               "canTrainFletching"
             ]
           }
@@ -155357,12 +155498,14 @@
           "notes": "Requires logs and a knife.",
           "rule": {
             "all": [
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               {
                 "has": 1511
               },
@@ -156103,12 +156246,14 @@
               {
                 "has": 32325
               },
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]}
+                ]
+              }
             ]
           }
         }
@@ -156554,12 +156699,14 @@
           "notes": "Requires a knife and yew logs.",
           "rule": {
             "all": [
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               {
                 "has": 1515
               },
@@ -156823,12 +156970,14 @@
           "notes": "Requires a knife and yew logs.",
           "rule": {
             "all": [
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               {
                 "has": 1515
               },
@@ -156906,12 +157055,14 @@
           "notes": "Requires a knife and yew logs.",
           "rule": {
             "all": [
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               {
                 "has": 1515
               },
@@ -156933,12 +157084,14 @@
           "notes": "Requires a knife and yew logs.",
           "rule": {
             "all": [
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               {
                 "has": 1515
               },
@@ -158211,12 +158364,14 @@
           "notes": "Requires a knife, fishing rod and fishing bait.",
           "rule": {
             "all": [
-              { "any": [    
-                {
+              {
+                "any": [
+                  {
                     "has": 946
                   },
                   "hasNarwhalKnife"
-              ]},
+                ]
+              },
               {
                 "has": 307
               },

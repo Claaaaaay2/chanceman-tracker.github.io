@@ -4,8 +4,8 @@ import { getObtainabilityRank } from "./logic/sortHelpers.js";
 import { initBugPage } from "./pages/reportABug.js";
 import { router } from "./router.js";
 import { fileStore } from "./storage/fileStore.js";
-import { initTheme } from "./styles/theme.js";
 import "./styles/main.css";
+import { initTheme } from "./styles/theme.js";
 
 initTheme();
 
@@ -649,4 +649,8 @@ async function hideSkill(item, ctx, skill) {
     if (hasAnySkillSource && !hasSkillLevel) return true;
 
     return false;
+}
+
+export function capitalizeFirstLetter(val) {
+    return String(val).charAt(0).toUpperCase() + String(val).slice(1);
 }

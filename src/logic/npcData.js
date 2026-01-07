@@ -2217,7 +2217,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Brassican Mage": {
@@ -3387,7 +3387,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Chest_(Rogues%27_Castle)",
         "rule": null,
         "skill": ["thieving"],
-        "level": [54],
+        "level": [84],
         "tags": [],
         "f2p": false
     },
@@ -3395,7 +3395,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Chest_(Rogues%27_Castle)#Hard_Wilderness_Diary",
         "rule": null,
         "skill": ["thieving"],
-        "level": [54],
+        "level": [84],
         "tags": [],
         "f2p": false
     },
@@ -3403,7 +3403,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Chest_(Rogues%27_Castle)#Medium_Wilderness_Diary",
         "rule": null,
         "skill": ["thieving"],
-        "level": [54],
+        "level": [84],
         "tags": [],
         "f2p": false
     },
@@ -3447,7 +3447,7 @@ export const NPC_DATA = {
                 "canTrainHerblore"
             ]
         },
-        "skill": ["Slayer","herblore"],
+        "skill": ["Slayer", "herblore"],
         "level": [76, 60],
         "tags": [],
         "f2p": false

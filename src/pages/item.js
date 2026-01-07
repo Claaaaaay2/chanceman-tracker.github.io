@@ -1,6 +1,6 @@
 import { canDoOtherMethod, canReachNpc } from "../logic/itemAvailability.js";
 import { NPC_DATA } from "../logic/npcData.js";
-import { parseDropRate } from "../main.js";
+import { capitalizeFirstLetter, parseDropRate } from "../main.js";
 import { fileStore } from "../storage/fileStore.js";
 
 export default async function ItemPage() {
@@ -270,6 +270,19 @@ function isSourceFiltered(sourceKey, ctx) {
 async function isSourceObtainable(sourceKey, ctx) {
     if (isSourceFiltered(sourceKey, ctx)) return false;
     if (!(await canReachNpc(sourceKey, ctx))) return false;
+    if (sourceKey == 'Reward pool 35–39 Fishing' && (ctx.player.levels['Fishing'] > 39 || ctx.player.levels['Fishing'] < 35)) { // Special case: Raw herring is removed from higher fishing levels
+        return false;
+    }
+
+    const npc = NPC_DATA[sourceKey];
+    for (let i = 0; i < npc.skill.length; i++) {
+        const skill = npc.skill[i];
+        const level = npc.level[i];
+
+        if (ctx.player.levels[capitalizeFirstLetter(skill)] < level) {
+            return false;
+        }
+    }
     return true;
 }
 

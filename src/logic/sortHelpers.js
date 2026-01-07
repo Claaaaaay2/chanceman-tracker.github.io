@@ -1,3 +1,4 @@
+import { capitalizeFirstLetter } from "../main.js";
 import { fileStore } from "../storage/fileStore.js";
 import { canDoOtherMethod, canReachNpc } from "./itemAvailability.js";
 import { NPC_DATA } from "./npcData.js";
@@ -57,10 +58,6 @@ export async function isItemObtainable(item, ctx) {
     }
 
     return false;
-}
-
-function capitalizeFirstLetter(val) {
-    return String(val).charAt(0).toUpperCase() + String(val).slice(1);
 }
 
 /*
@@ -158,6 +155,12 @@ export async function getObtainabilityRank(item, ctx) {
             for (let i = 0; i < npc.skill.length; i++) {
                 const skill = npc.skill[i];
                 const level = npc.level[i];
+
+                if (npcName == 'Reward pool 35–39 Fishing' && (player.levels['Fishing'] > 39 || player.levels['Fishing'] < 35)) { // Special case: Raw herring is removed from higher fishing levels
+                    allSkillsMet = false;
+                    hasAnyWithUnmetSkill = true;
+                    break;
+                }
 
                 if (player.levels[capitalizeFirstLetter(skill)] < level) {
                     allSkillsMet = false;
