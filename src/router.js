@@ -8,7 +8,7 @@ import QuestsPage from "./pages/quests.js";
 import { BugPage } from "./pages/reportABug.js";
 import ReuploadPage from "./pages/reupload.js";
 import UploadPage from "./pages/upload.js";
-import { bindThemeToggle } from "./styles/theme.js";
+import { bindThemeToggle, updateThemeIcon } from "./styles/theme.js";
 
 export async function navigate(path) {
     history.pushState({}, "", path);
@@ -44,6 +44,7 @@ export async function router() {
         </div>
     `;
     bindThemeToggle();
+    updateThemeIcon();
 
     afterRoute();
 }

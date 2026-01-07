@@ -2,24 +2,34 @@
     --header-height: 19px;
     --footer-height: 17px;
     --bg-color: #E2DBC8;
+    --table-alternate-row: #FAFAFA;
     --highlight-color: #9B6039;
     --section-header-color: #5A3E2B;
     --text-color: #111111;
-    --link-color: #9B6039;
+    --link-color: #5A3E2B;
     --card-bg: #D8CCB4;
-    --border-color: #ccc;
+    --input-text-bg: #FFFFFF;
+    --input-text-border: #B8A282;
+    --input-button-bg: #605443;
+    --input-button-bg-hover: #7E6E58;
+    --border-color: #CCCCCC;
     --border-color-darker: #8E8068;
     --header-footer-color: #B8A282;
 }
 
 html.dark {
     --bg-color: #172136;
+    --table-alternate-row: #313E59;
     --highlight-color: #CBD9F4;
     --section-header-color: #CBD9F4;
-    --text-color: #CBD9CE;
+    --text-color: #CBD9F4;
     --link-color: #8CABE6;
     --card-bg: #313E59;
-    --border-color: #CBD9F4;
+    --input-text-bg: #384766;
+    --input-text-border: #475980;
+    --input-button-bg: #617EBC;
+    --input-button-bg-hover: #859BCB;
+    --border-color: #596e96;
     --border-color-darker: #596E96;
     --header-footer-color: #0A1023;
 }
@@ -27,6 +37,7 @@ html.dark {
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
+    font-family: 'IBM Plex Sans', 'Helvetica Neue', 'Arial', sans-serif;
 }
 
 .card {
@@ -34,18 +45,42 @@ body {
     border: 1px solid var(--border-color);
 }
 
-html {
-    transition: background-color 0.25s ease, color 0.25s ease;
-}
-
-* {
-    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
-}
-
 body {
     margin-top: 25px;
     background-color: var(--bg-color);
     color: var(--text-color);
+}
+
+a {
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--highlight-color);
+}
+
+input[type='text'],
+textarea,
+input[type='number'] {
+    background-color: var(--input-text-bg);
+    border: 1px solid var(--input-text-border);
+    color: var(--text-color);
+    margin-top: 0.1rem;
+    line-height: 1.25rem;
+}
+
+input[type='button'],
+button {
+    background-color: var(--input-button-bg);
+    border: none;
+    color: #FFFFFF;
+    line-height: 1.25rem;
+    border-radius: 5px;
+}
+
+input[type='button']:hover,
+button:hover {
+    background-color: var(--input-button-bg-hover);
 }
 
 /* Layout container */
@@ -74,7 +109,11 @@ body {
 }
 
 .header a {
-    color: var(--link-color)
+    text-decoration: none;
+}
+
+.header a:hover {
+    text-decoration: underline;
 }
 
 .header strong {
@@ -122,11 +161,11 @@ footer {
 }
 
 .osrs-table th {
-    background: #ececec;
+    background-color: var(--header-footer-color);
 }
 
 .osrs-table tr:nth-child(even) {
-    background: #fafafa;
+    background-color: var(--table-alternate-row);
 }
 
 /* End item.js */
@@ -187,7 +226,7 @@ footer {
 .item-card {
     width: 150px;
     padding: 35px 8px 8px 8px;
-    background: var(--card-bg);
+    background-color: var(--card-bg);
     border: 1px solid var(--border-color-darker);
     color: var(--highlight-color);
     border-radius: 6px;
@@ -213,15 +252,15 @@ footer {
 .badge.rolled {
     position: absolute;
     top: 4px;
-    right: 62px;
-    background: #c48aff;
+    right: 65px;
+    background-color: #c48aff;
 }
 
 .badge.unlocked {
     position: absolute;
     top: 4px;
     right: 4px;
-    background: #7bff7b;
+    background-color: #7bff7b;
 }
 
 .item-section-header {

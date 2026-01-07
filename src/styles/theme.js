@@ -36,7 +36,7 @@ function getInitialTheme() {
         : "light";
 }
 
-function updateThemeIcon() {
+export function updateThemeIcon() {
     const btn = document.getElementById("theme-toggle");
     if (!btn) return;
 

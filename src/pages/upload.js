@@ -31,7 +31,7 @@ export default function UploadPage() {
         </label>
         <br><br>
 
-        <button id="saveBtn">Save & Continue</button>
+        <button id="saveBtn" title="Save & Continue">Save & Continue</button>
 
         <p id="status"></p>
     `;
