@@ -935,6 +935,9 @@
     "id": 1317,
     "name": "Adamant 2h sword",
     "image": "adamant_2h_sword.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Coffin (Hallowed Sepulchre) Mid": {
@@ -1023,6 +1026,9 @@
     "id": 890,
     "name": "Adamant arrow",
     "image": "adamant_arrow.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Lost teak crate": {
@@ -1351,6 +1357,9 @@
     "id": 1357,
     "name": "Adamant axe",
     "image": "adamant_axe.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Mutated Tortoise": {
@@ -1494,6 +1503,9 @@
     "id": 1371,
     "name": "Adamant battleaxe",
     "image": "adamant_battleaxe.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Vitreous Chilled Jelly": {
@@ -1967,6 +1979,9 @@
     "id": 1111,
     "name": "Adamant chainbody",
     "image": "adamant_chainbody.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Insatiable mutated Bloodveld": {
@@ -2142,6 +2157,9 @@
     "id": 1211,
     "name": "Adamant dagger",
     "image": "adamant_dagger.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Reinforced chest": {
@@ -2503,6 +2521,9 @@
     "id": 1161,
     "name": "Adamant full helm",
     "image": "adamant_full_helm.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Agility dispenser Laps 16-30": {
@@ -2644,7 +2665,8 @@
     "name": "Adamant full helm (g)",
     "image": "adamant_full_helm_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -2660,7 +2682,8 @@
     "name": "Adamant full helm (t)",
     "image": "adamant_full_helm_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -2853,7 +2876,8 @@
     "name": "Adamant helm (h1)",
     "image": "adamant_helm_(h1).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -2869,7 +2893,8 @@
     "name": "Adamant helm (h2)",
     "image": "adamant_helm_(h2).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -2885,7 +2910,8 @@
     "name": "Adamant helm (h3)",
     "image": "adamant_helm_(h3).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -2901,7 +2927,8 @@
     "name": "Adamant helm (h4)",
     "image": "adamant_helm_(h4).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -2917,7 +2944,8 @@
     "name": "Adamant helm (h5)",
     "image": "adamant_helm_(h5).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -3087,6 +3115,9 @@
     "id": 1199,
     "name": "Adamant kiteshield",
     "image": "adamant_kiteshield.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Nechryarch Greater": {
@@ -3231,7 +3262,8 @@
     "name": "Adamant kiteshield (g)",
     "image": "adamant_kiteshield_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -3247,7 +3279,8 @@
     "name": "Adamant kiteshield (t)",
     "image": "adamant_kiteshield_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -3359,6 +3392,9 @@
     "id": 1301,
     "name": "Adamant longsword",
     "image": "adamant_longsword.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Dreadborn Araxyte": {
@@ -3454,6 +3490,9 @@
     "id": 1430,
     "name": "Adamant mace",
     "image": "adamant_mace.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Bull shark": {
@@ -3546,6 +3585,9 @@
     "id": 1145,
     "name": "Adamant med helm",
     "image": "adamant_med_helm.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Fever spider": {
@@ -3653,6 +3695,9 @@
     "id": 1271,
     "name": "Adamant pickaxe",
     "image": "adamant_pickaxe.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Reward Chest (The Gauntlet)": {
@@ -3678,6 +3723,9 @@
     "id": 1123,
     "name": "Adamant platebody",
     "image": "adamant_platebody.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Agility dispenser Laps 1-15": {
@@ -3876,7 +3924,8 @@
     "name": "Adamant platebody (g)",
     "image": "adamant_platebody_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -3892,7 +3941,8 @@
     "name": "Adamant platebody (h1)",
     "image": "adamant_platebody_(h1).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -3908,7 +3958,8 @@
     "name": "Adamant platebody (h2)",
     "image": "adamant_platebody_(h2).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -3924,7 +3975,8 @@
     "name": "Adamant platebody (h3)",
     "image": "adamant_platebody_(h3).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -3940,7 +3992,8 @@
     "name": "Adamant platebody (h4)",
     "image": "adamant_platebody_(h4).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -3956,7 +4009,8 @@
     "name": "Adamant platebody (h5)",
     "image": "adamant_platebody_(h5).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -3972,7 +4026,8 @@
     "name": "Adamant platebody (t)",
     "image": "adamant_platebody_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -3987,6 +4042,9 @@
     "id": 1073,
     "name": "Adamant platelegs",
     "image": "adamant_platelegs.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Agility dispenser Laps 16-30": {
@@ -4128,7 +4186,8 @@
     "name": "Adamant platelegs (g)",
     "image": "adamant_platelegs_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -4144,7 +4203,8 @@
     "name": "Adamant platelegs (t)",
     "image": "adamant_platelegs_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -4159,6 +4219,9 @@
     "id": 1091,
     "name": "Adamant plateskirt",
     "image": "adamant_plateskirt.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Reward Chest (The Gauntlet)": {
@@ -4231,7 +4294,8 @@
     "name": "Adamant plateskirt (g)",
     "image": "adamant_plateskirt_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -4247,7 +4311,8 @@
     "name": "Adamant plateskirt (t)",
     "image": "adamant_plateskirt_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -4262,6 +4327,9 @@
     "id": 1331,
     "name": "Adamant scimitar",
     "image": "adamant_scimitar.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Bandit champion": {
@@ -4428,7 +4496,8 @@
     "name": "Adamant shield (h1)",
     "image": "adamant_shield_(h1).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -4444,7 +4513,8 @@
     "name": "Adamant shield (h2)",
     "image": "adamant_shield_(h2).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -4460,7 +4530,8 @@
     "name": "Adamant shield (h3)",
     "image": "adamant_shield_(h3).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -4476,7 +4547,8 @@
     "name": "Adamant shield (h4)",
     "image": "adamant_shield_(h4).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -4492,7 +4564,8 @@
     "name": "Adamant shield (h5)",
     "image": "adamant_shield_(h5).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -4685,6 +4758,9 @@
     "id": 1183,
     "name": "Adamant sq shield",
     "image": "adamant_sq_shield.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Shadow Wyrm": {
@@ -4777,6 +4853,9 @@
     "id": 1287,
     "name": "Adamant sword",
     "image": "adamant_sword.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Combat path voucher (m)": {
@@ -4928,6 +5007,9 @@
     "id": 1345,
     "name": "Adamant warhammer",
     "image": "adamant_warhammer.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Mutated Terrorbird": {
@@ -5005,6 +5087,9 @@
     "id": 2361,
     "name": "Adamantite bar",
     "image": "adamantite_bar.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adamant dragon": {
@@ -5297,6 +5382,9 @@
     "id": 449,
     "name": "Adamantite ore",
     "image": "adamantite_ore.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adamantite rocks": {
@@ -6072,6 +6160,9 @@
     "id": 556,
     "name": "Air rune",
     "image": "air_rune.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Bringer of chaos": {
@@ -6532,6 +6623,9 @@
     "id": 1438,
     "name": "Air talisman",
     "image": "air_talisman.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Elaborate lockbox": {
@@ -6616,6 +6710,9 @@
     "id": 5527,
     "name": "Air tiara",
     "image": "air_tiara.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Crafting a tiara": {
@@ -7141,6 +7238,9 @@
     "id": 1595,
     "name": "Amulet mould",
     "image": "amulet_mould.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Tool store 4": {
@@ -7175,6 +7275,9 @@
     "id": 1478,
     "name": "Amulet of accuracy",
     "image": "amulet_of_accuracy.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Questing": {
@@ -7311,6 +7414,9 @@
     "id": 1729,
     "name": "Amulet of defence",
     "image": "amulet_of_defence.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Bronze Chest (red)": {
@@ -7352,7 +7458,8 @@
     "name": "Amulet of defence (t)",
     "image": "amulet_of_defence_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -7526,6 +7633,9 @@
     "id": 1727,
     "name": "Amulet of magic",
     "image": "amulet_of_magic.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Bringer of chaos (m)": {
@@ -7579,7 +7689,8 @@
     "name": "Amulet of magic (t)",
     "image": "amulet_of_magic_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -7594,6 +7705,9 @@
     "id": 1731,
     "name": "Amulet of power",
     "image": "amulet_of_power.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Martial salvage": {
@@ -7656,7 +7770,8 @@
     "name": "Amulet of power (t)",
     "image": "amulet_of_power_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -7693,6 +7808,9 @@
     "id": 1725,
     "name": "Amulet of strength",
     "image": "amulet_of_strength.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Body Builder (m)": {
@@ -7878,6 +7996,9 @@
     "id": 319,
     "name": "Anchovies",
     "image": "anchovies.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Baby impling": {
@@ -7906,6 +8027,9 @@
     "id": 2297,
     "name": "Anchovy pizza",
     "image": "anchovy_pizza.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Chaos Fanatic": {
@@ -8679,7 +8803,8 @@
     "name": "Ancient full helm",
     "image": "ancient_full_helm.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -8731,7 +8856,8 @@
     "name": "Ancient kiteshield",
     "image": "ancient_kiteshield.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -9030,7 +9156,8 @@
     "name": "Ancient platebody",
     "image": "ancient_platebody.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -9046,7 +9173,8 @@
     "name": "Ancient platelegs",
     "image": "ancient_platelegs.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -9062,7 +9190,8 @@
     "name": "Ancient plateskirt",
     "image": "ancient_plateskirt.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -9665,6 +9794,9 @@
     "id": 1540,
     "name": "Anti-dragon shield",
     "image": "anti-dragon_shield.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "canStartDragonSlayer"
@@ -10599,6 +10731,9 @@
     "id": 179,
     "name": "Antipoison(1)",
     "image": "antipoison(1).png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Chest (Observatory Dungeon, antipoison)": {
@@ -10636,6 +10771,9 @@
     "id": 177,
     "name": "Antipoison(2)",
     "image": "antipoison(2).png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Maniacal monkey": {
@@ -10670,6 +10808,9 @@
     "id": 175,
     "name": "Antipoison(3)",
     "image": "antipoison(3).png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adept potion pack": {
@@ -10730,6 +10871,9 @@
     "id": 2446,
     "name": "Antipoison(4)",
     "image": "antipoison(4).png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Jekyll and Hyde Marrentil": {
@@ -10861,6 +11005,9 @@
     "id": 2323,
     "name": "Apple pie",
     "image": "apple_pie.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Frost dragon": {
@@ -11733,7 +11880,8 @@
     "name": "Armadyl full helm",
     "image": "armadyl_full_helm.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -11829,7 +11977,8 @@
     "name": "Armadyl kiteshield",
     "image": "armadyl_kiteshield.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -11997,7 +12146,8 @@
     "name": "Armadyl platebody",
     "image": "armadyl_platebody.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -12013,7 +12163,8 @@
     "name": "Armadyl platelegs",
     "image": "armadyl_platelegs.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -12029,7 +12180,8 @@
     "name": "Armadyl plateskirt",
     "image": "armadyl_plateskirt.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -12264,6 +12416,9 @@
     "id": 1905,
     "name": "Asgarnian ale",
     "image": "asgarnian_ale.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Dinky the drink troll": {
@@ -12531,6 +12686,9 @@
     "id": 592,
     "name": "Ashes",
     "image": "ashes.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Abyssal guardian": {
@@ -13940,6 +14098,9 @@
     "id": 1759,
     "name": "Ball of wool",
     "image": "ball_of_wool.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Baby impling": {
@@ -14012,6 +14173,9 @@
     "id": 1963,
     "name": "Banana",
     "image": "banana.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Agrith-Na-Na": {
@@ -14482,7 +14646,8 @@
     "name": "Bandos full helm",
     "image": "bandos_full_helm.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -14550,7 +14715,8 @@
     "name": "Bandos kiteshield",
     "image": "bandos_kiteshield.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -14718,7 +14884,8 @@
     "name": "Bandos platebody",
     "image": "bandos_platebody.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -14734,7 +14901,8 @@
     "name": "Bandos platelegs",
     "image": "bandos_platelegs.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -14750,7 +14918,8 @@
     "name": "Bandos plateskirt",
     "image": "bandos_plateskirt.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -16062,7 +16231,8 @@
     "name": "Bear feet",
     "image": "bear_feet.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -16077,6 +16247,9 @@
     "id": 948,
     "name": "Bear fur",
     "image": "bear_fur.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Bear Cub": {
@@ -16131,6 +16304,9 @@
     "id": 1917,
     "name": "Beer",
     "image": "beer.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Drink troll queen": {
@@ -16255,6 +16431,9 @@
     "id": 1919,
     "name": "Beer glass",
     "image": "beer_glass.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Wooden shelves 2": {
@@ -16855,6 +17034,9 @@
     "id": 532,
     "name": "Big bones",
     "image": "big_bones.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Ancient Custodian": {
@@ -17461,6 +17643,9 @@
     "id": 1313,
     "name": "Black 2h sword",
     "image": "black_2h_sword.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Vitreous Chilled Jelly": {
@@ -17522,6 +17707,9 @@
     "id": 1361,
     "name": "Black axe",
     "image": "black_axe.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Greater abyssal demon": {
@@ -17574,6 +17762,9 @@
     "id": 1367,
     "name": "Black battleaxe",
     "image": "black_battleaxe.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Night beast": {
@@ -17617,6 +17808,9 @@
     "id": 1474,
     "name": "Black bead",
     "image": "black_bead.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Yama Junk": {
@@ -17731,6 +17925,9 @@
     "id": 1019,
     "name": "Black cape",
     "image": "black_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Highwayman No hood": {
@@ -17763,6 +17960,9 @@
     "id": 1107,
     "name": "Black chainbody",
     "image": "black_chainbody.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Former Vampyre": {
@@ -18063,6 +18263,9 @@
     "id": 1217,
     "name": "Black dagger",
     "image": "black_dagger.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Christmas cracker": {
@@ -18607,6 +18810,9 @@
     "id": 1165,
     "name": "Black full helm",
     "image": "black_full_helm.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Lesser demon Wilderness Slayer Cave": {
@@ -18654,7 +18860,8 @@
     "name": "Black full helm (g)",
     "image": "black_full_helm_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -18670,7 +18877,8 @@
     "name": "Black full helm (t)",
     "image": "black_full_helm_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -18773,7 +18981,8 @@
     "name": "Black helm (h1)",
     "image": "black_helm_(h1).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -18789,7 +18998,8 @@
     "name": "Black helm (h2)",
     "image": "black_helm_(h2).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -18805,7 +19015,8 @@
     "name": "Black helm (h3)",
     "image": "black_helm_(h3).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -18821,7 +19032,8 @@
     "name": "Black helm (h4)",
     "image": "black_helm_(h4).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -18837,7 +19049,8 @@
     "name": "Black helm (h5)",
     "image": "black_helm_(h5).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -18852,6 +19065,9 @@
     "id": 1195,
     "name": "Black kiteshield",
     "image": "black_kiteshield.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Former Vampyre": {
@@ -18905,7 +19121,8 @@
     "name": "Black kiteshield (g)",
     "image": "black_kiteshield_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -18921,7 +19138,8 @@
     "name": "Black kiteshield (t)",
     "image": "black_kiteshield_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -19077,6 +19295,9 @@
     "id": 1297,
     "name": "Black longsword",
     "image": "black_longsword.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Getting a grip": {
@@ -19144,6 +19365,9 @@
     "id": 1426,
     "name": "Black mace",
     "image": "black_mace.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Cyclops Warriors' Guild Basement": {
@@ -19225,6 +19449,9 @@
     "id": 1151,
     "name": "Black med helm",
     "image": "black_med_helm.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Insatiable mutated Bloodveld": {
@@ -19297,7 +19524,8 @@
     "name": "Black pickaxe",
     "image": "black_pickaxe.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -19315,6 +19543,9 @@
     "id": 1125,
     "name": "Black platebody",
     "image": "black_platebody.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Damaged armour": {
@@ -19371,7 +19602,8 @@
     "name": "Black platebody (g)",
     "image": "black_platebody_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -19387,7 +19619,8 @@
     "name": "Black platebody (h1)",
     "image": "black_platebody_(h1).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -19403,7 +19636,8 @@
     "name": "Black platebody (h2)",
     "image": "black_platebody_(h2).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -19419,7 +19653,8 @@
     "name": "Black platebody (h3)",
     "image": "black_platebody_(h3).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -19435,7 +19670,8 @@
     "name": "Black platebody (h4)",
     "image": "black_platebody_(h4).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -19451,7 +19687,8 @@
     "name": "Black platebody (h5)",
     "image": "black_platebody_(h5).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -19467,7 +19704,8 @@
     "name": "Black platebody (t)",
     "image": "black_platebody_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -19482,6 +19720,9 @@
     "id": 1077,
     "name": "Black platelegs",
     "image": "black_platelegs.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Repugnant spectre": {
@@ -19541,7 +19782,8 @@
     "name": "Black platelegs (g)",
     "image": "black_platelegs_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -19557,7 +19799,8 @@
     "name": "Black platelegs (t)",
     "image": "black_platelegs_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -19572,6 +19815,9 @@
     "id": 1089,
     "name": "Black plateskirt",
     "image": "black_plateskirt.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Gang boss": {
@@ -19628,7 +19874,8 @@
     "name": "Black plateskirt (g)",
     "image": "black_plateskirt_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -19644,7 +19891,8 @@
     "name": "Black plateskirt (t)",
     "image": "black_plateskirt_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -19659,6 +19907,9 @@
     "id": 581,
     "name": "Black robe",
     "image": "black_robe.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Combat path starter kit": {
@@ -19712,6 +19963,9 @@
     "id": 1327,
     "name": "Black scimitar",
     "image": "black_scimitar.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Rusty scimitar": {
@@ -19816,7 +20070,8 @@
     "name": "Black shield (h1)",
     "image": "black_shield_(h1).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -19832,7 +20087,8 @@
     "name": "Black shield (h2)",
     "image": "black_shield_(h2).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -19848,7 +20104,8 @@
     "name": "Black shield (h3)",
     "image": "black_shield_(h3).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -19864,7 +20121,8 @@
     "name": "Black shield (h4)",
     "image": "black_shield_(h4).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -19880,7 +20138,8 @@
     "name": "Black shield (h5)",
     "image": "black_shield_(h5).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -19895,6 +20154,9 @@
     "id": 1015,
     "name": "Black skirt",
     "image": "black_skirt.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Combat path starter kit": {
@@ -19915,7 +20177,8 @@
     "name": "Black skirt (g)",
     "image": "black_skirt_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -19931,7 +20194,8 @@
     "name": "Black skirt (t)",
     "image": "black_skirt_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -20115,6 +20379,9 @@
     "id": 1179,
     "name": "Black sq shield",
     "image": "black_sq_shield.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Black Chest (red)": {
@@ -20170,6 +20437,9 @@
     "id": 1283,
     "name": "Black sword",
     "image": "black_sword.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Greater abyssal demon": {
@@ -20250,6 +20520,9 @@
     "id": 2524,
     "name": "Black toy horsey",
     "image": "black_toy_horsey.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -20354,6 +20627,9 @@
     "id": 1341,
     "name": "Black warhammer",
     "image": "black_warhammer.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Lost oak crate": {
@@ -20510,7 +20786,8 @@
     "name": "Black wizard hat (g)",
     "image": "black_wizard_hat_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -20526,7 +20803,8 @@
     "name": "Black wizard hat (t)",
     "image": "black_wizard_hat_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -20542,7 +20820,8 @@
     "name": "Black wizard robe (g)",
     "image": "black_wizard_robe_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -20558,7 +20837,8 @@
     "name": "Black wizard robe (t)",
     "image": "black_wizard_robe_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -23045,6 +23325,9 @@
     "id": 1021,
     "name": "Blue cape",
     "image": "blue_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -23430,6 +23713,9 @@
     "id": 1767,
     "name": "Blue dye",
     "image": "blue_dye.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -23587,6 +23873,9 @@
     "id": 1055,
     "name": "Blue halloween mask",
     "image": "blue_halloween_mask.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Complete a Halloween holiday event": {}
@@ -23760,6 +24049,9 @@
     "id": 1042,
     "name": "Blue partyhat",
     "image": "blue_partyhat.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Complete a Christmas holiday event": {}
@@ -23798,6 +24090,9 @@
     "id": 1011,
     "name": "Blue skirt",
     "image": "blue_skirt.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -23810,7 +24105,8 @@
     "name": "Blue skirt (g)",
     "image": "blue_skirt_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -23826,7 +24122,8 @@
     "name": "Blue skirt (t)",
     "image": "blue_skirt_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -23865,6 +24162,9 @@
     "id": 579,
     "name": "Blue wizard hat",
     "image": "blue_wizard_hat.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Elaborate lockbox": {
@@ -23891,7 +24191,8 @@
     "name": "Blue wizard hat (g)",
     "image": "blue_wizard_hat_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -23907,7 +24208,8 @@
     "name": "Blue wizard hat (t)",
     "image": "blue_wizard_hat_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -23922,6 +24224,9 @@
     "id": 577,
     "name": "Blue wizard robe",
     "image": "blue_wizard_robe.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Wizard": {
@@ -23942,7 +24247,8 @@
     "name": "Blue wizard robe (g)",
     "image": "blue_wizard_robe_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -23958,7 +24264,8 @@
     "name": "Blue wizard robe (t)",
     "image": "blue_wizard_robe_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -24162,6 +24469,9 @@
     "id": 559,
     "name": "Body rune",
     "image": "body_rune.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Getting started Magic (m)": {
@@ -24373,6 +24683,9 @@
     "id": 1446,
     "name": "Body talisman",
     "image": "body_talisman.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Ornate lockbox": {
@@ -24482,6 +24795,9 @@
     "id": 5533,
     "name": "Body tiara",
     "image": "body_tiara.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Crafting a tiara": {
@@ -24747,6 +25063,9 @@
     "id": 25139,
     "name": "Bone fragments",
     "image": "bone_fragments.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Crafting": {
@@ -24792,6 +25111,9 @@
     "id": 526,
     "name": "Bones",
     "image": "bones.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "A Doubt": {
@@ -26767,6 +27089,9 @@
     "id": 1923,
     "name": "Bowl",
     "image": "bowl.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Oak shelves 1": {
@@ -26833,6 +27158,9 @@
     "id": 1921,
     "name": "Bowl of water",
     "image": "bowl_of_water.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Zombie (Tarn's Lair) Low level": {
@@ -27032,6 +27360,9 @@
     "id": 983,
     "name": "Brass key",
     "image": "brass_key.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "spawns": {
         "Yes": "No requirements"
@@ -27046,6 +27377,9 @@
     "id": 1009,
     "name": "Brass necklace",
     "image": "brass_necklace.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Cave goblin (monster)": {
@@ -27068,6 +27402,9 @@
     "id": 2309,
     "name": "Bread",
     "image": "bread.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Watchman": {
@@ -27128,6 +27465,9 @@
     "id": 2307,
     "name": "Bread dough",
     "image": "bread_dough.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Imp": {
@@ -27345,6 +27685,9 @@
     "id": 1307,
     "name": "Bronze 2h sword",
     "image": "bronze_2h_sword.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Ork": {
@@ -27377,6 +27720,9 @@
     "id": 882,
     "name": "Bronze arrow",
     "image": "bronze_arrow.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Getting started Ranged": {
@@ -27710,6 +28056,9 @@
     "id": 1351,
     "name": "Bronze axe",
     "image": "bronze_axe.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Bronze axe (Chambers of Xeric)": {
@@ -27796,6 +28145,9 @@
     "id": 2349,
     "name": "Bronze bar",
     "image": "bronze_bar.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Bronze dragon Standard": {
@@ -27873,6 +28225,9 @@
     "id": 1375,
     "name": "Bronze battleaxe",
     "image": "bronze_battleaxe.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Ork": {
@@ -27926,6 +28281,9 @@
     "id": 877,
     "name": "Bronze bolts",
     "image": "bronze_bolts.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Crossbow stall": {
@@ -28239,6 +28597,9 @@
     "id": 1103,
     "name": "Bronze chainbody",
     "image": "bronze_chainbody.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Duke Sucellus": {
@@ -28355,6 +28716,9 @@
     "id": 1205,
     "name": "Bronze dagger",
     "image": "bronze_dagger.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Minotaur": {
@@ -28643,6 +29007,9 @@
     "id": 1155,
     "name": "Bronze full helm",
     "image": "bronze_full_helm.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Giant skeleton (Tarn's Lair)": {
@@ -28691,7 +29058,8 @@
     "name": "Bronze full helm (g)",
     "image": "bronze_full_helm_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -28707,7 +29075,8 @@
     "name": "Bronze full helm (t)",
     "image": "bronze_full_helm_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -29047,6 +29416,9 @@
     "id": 1189,
     "name": "Bronze kiteshield",
     "image": "bronze_kiteshield.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Zombie (Wilderness)": {
@@ -29086,7 +29458,8 @@
     "name": "Bronze kiteshield (g)",
     "image": "bronze_kiteshield_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -29102,7 +29475,8 @@
     "name": "Bronze kiteshield (t)",
     "image": "bronze_kiteshield_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -29277,6 +29651,9 @@
     "id": 1291,
     "name": "Bronze longsword",
     "image": "bronze_longsword.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Rusty sword POH repair": {
@@ -29321,6 +29698,9 @@
     "id": 1422,
     "name": "Bronze mace",
     "image": "bronze_mace.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Skeleton (Tarn's Lair) Medium level": {
@@ -29353,6 +29733,9 @@
     "id": 1139,
     "name": "Bronze med helm",
     "image": "bronze_med_helm.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Ork": {
@@ -29497,6 +29880,9 @@
     "id": 1265,
     "name": "Bronze pickaxe",
     "image": "bronze_pickaxe.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Barrel (Ruins of Camdozaal)": {
@@ -29579,6 +29965,9 @@
     "id": 1117,
     "name": "Bronze platebody",
     "image": "bronze_platebody.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Damaged armour": {
@@ -29612,7 +30001,8 @@
     "name": "Bronze platebody (g)",
     "image": "bronze_platebody_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -29628,7 +30018,8 @@
     "name": "Bronze platebody (t)",
     "image": "bronze_platebody_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -29643,6 +30034,9 @@
     "id": 1075,
     "name": "Bronze platelegs",
     "image": "bronze_platelegs.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Broken armour": {
@@ -29676,7 +30070,8 @@
     "name": "Bronze platelegs (g)",
     "image": "bronze_platelegs_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -29692,7 +30087,8 @@
     "name": "Bronze platelegs (t)",
     "image": "bronze_platelegs_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -29707,6 +30103,9 @@
     "id": 1087,
     "name": "Bronze plateskirt",
     "image": "bronze_plateskirt.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Broken armour": {
@@ -29746,7 +30145,8 @@
     "name": "Bronze plateskirt (g)",
     "image": "bronze_plateskirt_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -29762,7 +30162,8 @@
     "name": "Bronze plateskirt (t)",
     "image": "bronze_plateskirt_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -29777,6 +30178,9 @@
     "id": 1321,
     "name": "Bronze scimitar",
     "image": "bronze_scimitar.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Rusty scimitar": {
@@ -30033,6 +30437,9 @@
     "id": 1173,
     "name": "Bronze sq shield",
     "image": "bronze_sq_shield.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Goblin Drop table 1": {
@@ -30068,6 +30475,9 @@
     "id": 1277,
     "name": "Bronze sword",
     "image": "bronze_sword.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Rusty sword POH repair": {
@@ -30179,6 +30589,9 @@
     "id": 1337,
     "name": "Bronze warhammer",
     "image": "bronze_warhammer.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Borrokar": {
@@ -30379,6 +30792,9 @@
     "id": 1757,
     "name": "Brown apron",
     "image": "brown_apron.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Tool store 3": {
@@ -30408,6 +30824,9 @@
     "id": 2520,
     "name": "Brown toy horsey",
     "image": "brown_toy_horsey.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -30460,6 +30879,9 @@
     "id": 22372,
     "name": "Bryophyta's essence",
     "image": "bryophyta's_essence.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Chest (Bryophyta's lair) Free-to-play": {
@@ -30476,6 +30898,9 @@
     "id": 22368,
     "name": "Bryophyta's staff (uncharged)",
     "image": "bryophyta's_staff_(uncharged).png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Crafting": {
@@ -30496,6 +30921,9 @@
     "id": 1925,
     "name": "Bucket",
     "image": "bucket.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Bucket (Misthalin Mystery)": {
@@ -30666,6 +31094,9 @@
     "id": 1927,
     "name": "Bucket of milk",
     "image": "bucket_of_milk.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Oak larder": {
@@ -30786,6 +31217,9 @@
     "id": 1929,
     "name": "Bucket of water",
     "image": "bucket_of_water.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Frost Crab": {
@@ -31000,6 +31434,9 @@
     "id": 528,
     "name": "Burnt bones",
     "image": "burnt_bones.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "spawns": {
         "Yes": "No requirements"
@@ -31062,6 +31499,9 @@
     "id": 1965,
     "name": "Cabbage",
     "image": "cabbage.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Cabbages (plant)": {
@@ -32279,6 +32719,9 @@
     "id": 753,
     "name": "Cadava berries",
     "image": "cadava_berries.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Cadava bush (wild)": {
@@ -32368,6 +32811,9 @@
     "id": 1891,
     "name": "Cake",
     "image": "cake.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Culinaromancer": {
@@ -32411,6 +32857,9 @@
     "id": 1887,
     "name": "Cake tin",
     "image": "cake_tin.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Wooden shelves 3": {
@@ -33301,6 +33750,9 @@
     "id": 11079,
     "name": "Castle wars bracelet(3)",
     "image": "castle_wars_bracelet.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Enchanting jewellery": {
@@ -33689,6 +34141,9 @@
     "id": 562,
     "name": "Chaos rune",
     "image": "chaos_rune.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Bringer of chaos (m)": {
@@ -34680,6 +35135,9 @@
     "id": 973,
     "name": "Charcoal",
     "image": "charcoal.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Burnt tree": {
@@ -34761,6 +35219,9 @@
     "id": 1985,
     "name": "Cheese",
     "image": "cheese.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Rat trap Cheese-loaded": {
@@ -35033,6 +35494,9 @@
     "id": 1949,
     "name": "Chef's hat",
     "image": "chef's_hat.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Teak shelves 2": {
@@ -35195,6 +35659,9 @@
     "id": 1755,
     "name": "Chisel",
     "image": "chisel.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Rogue kit": {
@@ -35342,6 +35809,9 @@
     "id": 1973,
     "name": "Chocolate bar",
     "image": "chocolate_bar.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Christmas cracker": {
@@ -35411,6 +35881,9 @@
     "id": 1897,
     "name": "Chocolate cake",
     "image": "chocolate_cake.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Christmas cracker": {
@@ -35475,6 +35948,9 @@
     "id": 1975,
     "name": "Chocolate dust",
     "image": "chocolate_dust.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Dessourt": {
@@ -35661,6 +36137,9 @@
     "id": 962,
     "name": "Christmas cracker",
     "image": "christmas_cracker.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Complete a Christmas holiday event": {}
@@ -35917,6 +36396,9 @@
     "id": 434,
     "name": "Clay",
     "image": "clay.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Clay rocks": {
@@ -36111,6 +36593,9 @@
     "id": 453,
     "name": "Coal",
     "image": "coal.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Coal pile": {
@@ -36725,6 +37210,9 @@
     "id": 1169,
     "name": "Coif",
     "image": "coif.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Sharpshooter": {
@@ -37533,6 +38021,9 @@
     "id": 2140,
     "name": "Cooked chicken",
     "image": "cooked_chicken.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Cooking": {
@@ -37744,6 +38235,9 @@
     "id": 2142,
     "name": "Cooked meat",
     "image": "cooked_meat.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Minotaur": {
@@ -38010,6 +38504,9 @@
     "id": 1955,
     "name": "Cooking apple",
     "image": "cooking_apple.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Apple tree": {
@@ -38038,6 +38535,9 @@
     "id": 436,
     "name": "Copper ore",
     "image": "copper_ore.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Getting started Mining": {
@@ -38303,6 +38803,9 @@
     "id": 564,
     "name": "Cosmic rune",
     "image": "cosmic_rune.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Striking a pose (m)": {
@@ -38805,6 +39308,9 @@
     "id": 1739,
     "name": "Cowhide",
     "image": "cowhide.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Cow": {
@@ -39037,6 +39543,9 @@
     "id": 837,
     "name": "Crossbow",
     "image": "crossbow.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -39620,6 +40129,9 @@
     "id": 29486,
     "name": "Cursed amulet of magic",
     "image": "cursed_amulet_of_magic.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Necromancer (Great Kourend)": {
@@ -40090,6 +40602,9 @@
     "id": 560,
     "name": "Death rune",
     "image": "death_rune.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Death rune pile": {
@@ -41207,7 +41722,8 @@
     "name": "Demon feet",
     "image": "demon_feet.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -41615,6 +42131,9 @@
     "id": 1601,
     "name": "Diamond",
     "image": "diamond.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Mystery box Free-to-play": {
@@ -41722,6 +42241,9 @@
     "id": 1700,
     "name": "Diamond amulet",
     "image": "diamond_amulet.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Great white shark": {
@@ -41773,6 +42295,9 @@
     "id": 1681,
     "name": "Diamond amulet (u)",
     "image": "diamond_amulet_(u).png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Crafting": {
@@ -41999,6 +42524,9 @@
     "id": 1662,
     "name": "Diamond necklace",
     "image": "diamond_necklace.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Casket (Reward pool)": {
@@ -42046,6 +42574,9 @@
     "id": 1643,
     "name": "Diamond ring",
     "image": "diamond_ring.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Albatross": {
@@ -42176,6 +42707,9 @@
     "id": 981,
     "name": "Disk of returning",
     "image": "disk_of_returning.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -47291,6 +47825,9 @@
     "id": 24034,
     "name": "Dragonstone full helm",
     "image": "dragonstone_full_helm.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Elven Crystal Chest": {
@@ -47317,6 +47854,9 @@
     "id": 24037,
     "name": "Dragonstone platebody",
     "image": "dragonstone_platebody.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Elven Crystal Chest": {
@@ -47330,6 +47870,9 @@
     "id": 24040,
     "name": "Dragonstone platelegs",
     "image": "dragonstone_platelegs.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Elven Crystal Chest": {
@@ -47597,6 +48140,9 @@
     "id": 30328,
     "name": "Dust",
     "image": "dust.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Barrel (Twilight Temple)": {
@@ -48258,6 +48804,9 @@
     "id": 1913,
     "name": "Dwarven stout",
     "image": "dwarven_stout.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Giant rockslug": {
@@ -48657,6 +49206,9 @@
     "id": 557,
     "name": "Earth rune",
     "image": "earth_rune.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Earth rune pack": {
@@ -49177,6 +49729,9 @@
     "id": 1440,
     "name": "Earth talisman",
     "image": "earth_talisman.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Earth impling": {
@@ -49328,6 +49883,9 @@
     "id": 5535,
     "name": "Earth tiara",
     "image": "earth_tiara.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Crafting a tiara": {
@@ -49372,6 +49930,9 @@
     "id": 1961,
     "name": "Easter egg",
     "image": "easter_egg.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Complete an Easter holiday event": {}
@@ -49736,6 +50297,9 @@
     "id": 1944,
     "name": "Egg",
     "image": "egg.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Chicken coop": {
@@ -50145,6 +50709,9 @@
     "id": 24024,
     "name": "Elven legwear",
     "image": "elven_legwear.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "canCompleteSongOfTheElves"
@@ -50172,6 +50739,9 @@
     "id": 24018,
     "name": "Elven skirt (white)",
     "image": "elven_skirt_(white).png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "canCompleteSongOfTheElves"
@@ -50183,6 +50753,9 @@
     "id": 24012,
     "name": "Elven skirt (yellow)",
     "image": "elven_skirt_(yellow).png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "canCompleteSongOfTheElves"
@@ -50194,6 +50767,9 @@
     "id": 24027,
     "name": "Elven top (white vest)",
     "image": "elven_top_(white_vest).png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "canCompleteSongOfTheElves"
@@ -50205,6 +50781,9 @@
     "id": 24015,
     "name": "Elven top (white)",
     "image": "elven_top_(white).png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "canCompleteSongOfTheElves"
@@ -50216,6 +50795,9 @@
     "id": 24021,
     "name": "Elven top (yellow vest)",
     "image": "elven_top_(yellow_vest).png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "canCompleteSongOfTheElves"
@@ -50227,6 +50809,9 @@
     "id": 24009,
     "name": "Elven top (yellow)",
     "image": "elven_top_(yellow).png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "canCompleteSongOfTheElves"
@@ -50276,6 +50861,9 @@
     "id": 1605,
     "name": "Emerald",
     "image": "emerald.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Casket (Pirate's Treasure)": {
@@ -50371,6 +50959,9 @@
     "id": 1696,
     "name": "Emerald amulet",
     "image": "emerald_amulet.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Small chest": {
@@ -50409,6 +51000,9 @@
     "id": 1677,
     "name": "Emerald amulet (u)",
     "image": "emerald_amulet_(u).png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Mummy (Ancient Pyramid)": {
@@ -50632,6 +51226,9 @@
     "id": 1658,
     "name": "Emerald necklace",
     "image": "emerald_necklace.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Casket (Reward pool)": {
@@ -50682,6 +51279,9 @@
     "id": 1639,
     "name": "Emerald ring",
     "image": "emerald_ring.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Tiger shark": {
@@ -51355,6 +51955,9 @@
     "id": 3014,
     "name": "Energy potion(1)",
     "image": "energy_potion(1).png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Decanting a potion": {
@@ -51381,6 +51984,9 @@
     "id": 3012,
     "name": "Energy potion(2)",
     "image": "energy_potion(2).png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Decanting a potion": {
@@ -51407,6 +52013,9 @@
     "id": 3010,
     "name": "Energy potion(3)",
     "image": "energy_potion(3).png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Combat path voucher": {
@@ -51464,6 +52073,9 @@
     "id": 3008,
     "name": "Energy potion(4)",
     "image": "energy_potion(4).png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "Combat path voucher (m)": {
         "droprate": "Always"
@@ -53350,6 +53962,9 @@
     "id": 221,
     "name": "Eye of newt",
     "image": "eye_of_newt.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Eye of newt pack": {
@@ -53710,6 +54325,9 @@
     "id": 314,
     "name": "Feather",
     "image": "feather.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Aviansie": {
@@ -53929,6 +54547,9 @@
     "id": 28177,
     "name": "Felling axe handle",
     "image": "felling_axe_handle.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Special shop": {
@@ -54004,6 +54625,9 @@
     "id": 25766,
     "name": "Fiendish ashes",
     "image": "fiendish_ashes.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Death spawn": {
@@ -54285,6 +54909,9 @@
     "id": 554,
     "name": "Fire rune",
     "image": "fire_rune.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Fire rune pack": {
@@ -54868,6 +55495,9 @@
     "id": 1442,
     "name": "Fire talisman",
     "image": "fire_talisman.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Earth impling": {
@@ -54962,6 +55592,9 @@
     "id": 5537,
     "name": "Fire tiara",
     "image": "fire_tiara.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Crafting a tiara": {
@@ -55143,6 +55776,9 @@
     "id": 272,
     "name": "Fish food",
     "image": "fish_food.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "spawns": {
         "Yes": "No requirements"
@@ -55220,6 +55856,9 @@
     "id": 313,
     "name": "Fishing bait",
     "image": "fishing_bait.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Getting started Fishing": {
@@ -55643,6 +56282,9 @@
     "id": 307,
     "name": "Fishing rod",
     "image": "fishing_rod.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Getting started Fishing": {
@@ -55896,6 +56538,9 @@
     "id": 309,
     "name": "Fly fishing rod",
     "image": "fly_fishing_rod.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -56452,7 +57097,8 @@
     "name": "Frog slippers",
     "image": "frog_slippers.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -56685,6 +57331,9 @@
     "id": 6814,
     "name": "Fur",
     "image": "fur.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Alexis": {
@@ -56865,6 +57514,9 @@
     "id": 1550,
     "name": "Garlic",
     "image": "garlic.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Closed chest (Myreque Hideout)": {
@@ -57130,7 +57782,8 @@
     "name": "Gilded 2h sword",
     "image": "gilded_2h_sword.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -57212,7 +57865,8 @@
     "name": "Gilded axe",
     "image": "gilded_axe.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -57308,7 +57962,8 @@
     "name": "Gilded chainbody",
     "image": "gilded_chainbody.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -57381,7 +58036,8 @@
     "name": "Gilded d'hide body",
     "image": "gilded_d'hide_body.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -57400,7 +58056,8 @@
     "name": "Gilded d'hide chaps",
     "image": "gilded_d'hide_chaps.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -57419,7 +58076,8 @@
     "name": "Gilded d'hide vambraces",
     "image": "gilded_d'hide_vambraces.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -57529,7 +58187,8 @@
     "name": "Gilded full helm",
     "image": "gilded_full_helm.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -57573,7 +58232,8 @@
     "name": "Gilded kiteshield",
     "image": "gilded_kiteshield.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -57624,7 +58284,8 @@
     "name": "Gilded med helm",
     "image": "gilded_med_helm.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -57646,7 +58307,8 @@
     "name": "Gilded pickaxe",
     "image": "gilded_pickaxe.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -57665,7 +58327,8 @@
     "name": "Gilded platebody",
     "image": "gilded_platebody.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -57687,7 +58350,8 @@
     "name": "Gilded platelegs",
     "image": "gilded_platelegs.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -57709,7 +58373,8 @@
     "name": "Gilded plateskirt",
     "image": "gilded_plateskirt.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -57731,7 +58396,8 @@
     "name": "Gilded scimitar",
     "image": "gilded_scimitar.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -57750,7 +58416,8 @@
     "name": "Gilded spade",
     "image": "gilded_spade.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -57791,7 +58458,8 @@
     "name": "Gilded sq shield",
     "image": "gilded_sq_shield.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -58268,6 +58936,9 @@
     "id": 288,
     "name": "Goblin mail",
     "image": "goblin_mail.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Goblin (God Wars Dungeon)": {
@@ -58521,6 +59192,9 @@
     "id": 1692,
     "name": "Gold amulet",
     "image": "gold_amulet.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Small chest": {
@@ -58562,6 +59236,9 @@
     "id": 1673,
     "name": "Gold amulet (u)",
     "image": "gold_amulet_(u).png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Mummy (Ancient Pyramid)": {
@@ -58591,6 +59268,9 @@
     "id": 2357,
     "name": "Gold bar",
     "image": "gold_bar.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Capt' Arnav's Chest": {
@@ -58916,6 +59596,9 @@
     "id": 1654,
     "name": "Gold necklace",
     "image": "gold_necklace.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Capt' Arnav's Chest": {
@@ -58969,6 +59652,9 @@
     "id": 444,
     "name": "Gold ore",
     "image": "gold_ore.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Gold rocks": {
@@ -59249,6 +59935,9 @@
     "id": 1635,
     "name": "Gold ring",
     "image": "gold_ring.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Casket (Pirate's Treasure)": {
@@ -59379,7 +60068,8 @@
     "name": "Golden apron",
     "image": "golden_apron.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -59395,7 +60085,8 @@
     "name": "Golden chef's hat",
     "image": "golden_chef's_hat.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -59565,6 +60256,9 @@
     "id": 1947,
     "name": "Grain",
     "image": "grain.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Wheat": {
@@ -59903,6 +60597,9 @@
     "id": 1987,
     "name": "Grapes",
     "image": "grapes.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Grape vine": {
@@ -60008,6 +60705,9 @@
     "id": 1027,
     "name": "Green cape",
     "image": "green_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -60032,6 +60732,9 @@
     "id": 1135,
     "name": "Green d'hide body",
     "image": "green_d'hide_body.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Spiritual ranger Zaros": {
@@ -60089,7 +60792,8 @@
     "name": "Green d'hide body (g)",
     "image": "green_d'hide_body_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -60105,7 +60809,8 @@
     "name": "Green d'hide body (t)",
     "image": "green_d'hide_body_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -60120,6 +60825,9 @@
     "id": 1099,
     "name": "Green d'hide chaps",
     "image": "green_d'hide_chaps.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Archer (Burthorpe)": {
@@ -60174,7 +60882,8 @@
     "name": "Green d'hide chaps (g)",
     "image": "green_d'hide_chaps_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -60190,7 +60899,8 @@
     "name": "Green d'hide chaps (t)",
     "image": "green_d'hide_chaps_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -60235,6 +60945,9 @@
     "id": 1065,
     "name": "Green d'hide vambraces",
     "image": "green_d'hide_vambraces.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -60371,6 +61084,9 @@
     "id": 1771,
     "name": "Green dye",
     "image": "green_dye.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -60495,6 +61211,9 @@
     "id": 1053,
     "name": "Green halloween mask",
     "image": "green_halloween_mask.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Complete a Halloween holiday event": {}
@@ -60533,6 +61252,9 @@
     "id": 1044,
     "name": "Green partyhat",
     "image": "green_partyhat.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Complete a Christmas holiday event": {}
@@ -60843,6 +61565,9 @@
     "id": 2894,
     "name": "Grey boots",
     "image": "grey_boots.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "canCompletePriestInPeril"
@@ -60854,6 +61579,9 @@
     "id": 2902,
     "name": "Grey gloves",
     "image": "grey_gloves.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "canCompletePriestInPeril"
@@ -60898,6 +61626,9 @@
     "id": 2526,
     "name": "Grey toy horsey",
     "image": "grey_toy_horsey.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -72992,7 +73723,8 @@
     "name": "Guthix full helm",
     "image": "guthix_full_helm.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -73008,7 +73740,8 @@
     "name": "Guthix kiteshield",
     "image": "guthix_kiteshield.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -73194,7 +73927,8 @@
     "name": "Guthix platebody",
     "image": "guthix_platebody.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -73210,7 +73944,8 @@
     "name": "Guthix platelegs",
     "image": "guthix_platelegs.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -73226,7 +73961,8 @@
     "name": "Guthix plateskirt",
     "image": "guthix_plateskirt.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -73633,6 +74369,9 @@
     "id": 1989,
     "name": "Half full wine jug",
     "image": "half_full_wine_jug.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Complete a birthday event": {}
@@ -73800,7 +74539,8 @@
     "name": "Ham joint",
     "image": "ham_joint.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -73887,6 +74627,9 @@
     "id": 2347,
     "name": "Hammer",
     "image": "hammer.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Crate of hammers": {
@@ -74088,6 +74831,9 @@
     "id": 1743,
     "name": "Hard leather",
     "image": "hard_leather.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Zombie (Tarn's Lair) High level": {
@@ -74149,6 +74895,9 @@
     "id": 1131,
     "name": "Hardleather body",
     "image": "hardleather_body.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Reward casket (beginner)": {
@@ -74227,6 +74976,9 @@
     "id": 311,
     "name": "Harpoon",
     "image": "harpoon.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Harpoons (Tempoross Cove)": {
@@ -74806,6 +75558,9 @@
     "id": 347,
     "name": "Herring",
     "image": "herring.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Reward casket (beginner)": {
@@ -74854,6 +75609,9 @@
     "id": 20756,
     "name": "Hill giant club",
     "image": "hill_giant_club.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Chest (Obor's lair)": {
@@ -74944,6 +75702,9 @@
     "id": 1599,
     "name": "Holy mould",
     "image": "holy_mould.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Tool store 4": {
@@ -74982,6 +75743,9 @@
     "id": 1718,
     "name": "Holy symbol",
     "image": "holy_symbol.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Christmas cracker": {
@@ -76836,6 +77600,9 @@
     "id": 1309,
     "name": "Iron 2h sword",
     "image": "iron_2h_sword.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Ice giant Regular": {
@@ -76877,6 +77644,9 @@
     "id": 884,
     "name": "Iron arrow",
     "image": "iron_arrow.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Sharpshooter": {
@@ -77123,6 +77893,9 @@
     "id": 1349,
     "name": "Iron axe",
     "image": "iron_axe.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Getting started Woodcutting": {
@@ -77200,6 +77973,9 @@
     "id": 2351,
     "name": "Iron bar",
     "image": "iron_bar.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Iron dragon Standard": {
@@ -77304,6 +78080,9 @@
     "id": 1363,
     "name": "Iron battleaxe",
     "image": "iron_battleaxe.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Magic axe": {
@@ -77638,6 +78417,9 @@
     "id": 1101,
     "name": "Iron chainbody",
     "image": "iron_chainbody.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Combat path starter kit": {
@@ -77758,6 +78540,9 @@
     "id": 1203,
     "name": "Iron dagger",
     "image": "iron_dagger.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Specimen tray": {
@@ -78219,6 +79004,9 @@
     "id": 1153,
     "name": "Iron full helm",
     "image": "iron_full_helm.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Black Knight Titan": {
@@ -78267,7 +79055,8 @@
     "name": "Iron full helm (g)",
     "image": "iron_full_helm_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -78283,7 +79072,8 @@
     "name": "Iron full helm (t)",
     "image": "iron_full_helm_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -78620,6 +79410,9 @@
     "id": 1191,
     "name": "Iron kiteshield",
     "image": "iron_kiteshield.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Angry barbarian spirit": {
@@ -78713,7 +79506,8 @@
     "name": "Iron kiteshield (g)",
     "image": "iron_kiteshield_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -78729,7 +79523,8 @@
     "name": "Iron kiteshield (t)",
     "image": "iron_kiteshield_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -78878,6 +79673,9 @@
     "id": 1293,
     "name": "Iron longsword",
     "image": "iron_longsword.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Combat path starter kit": {
@@ -78931,6 +79729,9 @@
     "id": 1420,
     "name": "Iron mace",
     "image": "iron_mace.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Screaming banshee": {
@@ -79005,6 +79806,9 @@
     "id": 1137,
     "name": "Iron med helm",
     "image": "iron_med_helm.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Combat path starter kit": {
@@ -79105,6 +79909,9 @@
     "id": 440,
     "name": "Iron ore",
     "image": "iron_ore.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Christmas cracker": {
@@ -79487,6 +80294,9 @@
     "id": 1267,
     "name": "Iron pickaxe",
     "image": "iron_pickaxe.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Getting started Mining": {
@@ -79548,6 +80358,9 @@
     "id": 1115,
     "name": "Iron platebody",
     "image": "iron_platebody.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Animated steel armour (Tarn's Lair)": {
@@ -79593,7 +80406,8 @@
     "name": "Iron platebody (g)",
     "image": "iron_platebody_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -79609,7 +80423,8 @@
     "name": "Iron platebody (t)",
     "image": "iron_platebody_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -79624,6 +80439,9 @@
     "id": 1067,
     "name": "Iron platelegs",
     "image": "iron_platelegs.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Combat path starter kit": {
@@ -79663,7 +80481,8 @@
     "name": "Iron platelegs (g)",
     "image": "iron_platelegs_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -79679,7 +80498,8 @@
     "name": "Iron platelegs (t)",
     "image": "iron_platelegs_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -79694,6 +80514,9 @@
     "id": 1081,
     "name": "Iron plateskirt",
     "image": "iron_plateskirt.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Broken armour": {
@@ -79754,7 +80577,8 @@
     "name": "Iron plateskirt (g)",
     "image": "iron_plateskirt_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -79770,7 +80594,8 @@
     "name": "Iron plateskirt (t)",
     "image": "iron_plateskirt_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -79785,6 +80610,9 @@
     "id": 1323,
     "name": "Iron scimitar",
     "image": "iron_scimitar.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Scimitar Stall": {
@@ -80053,6 +80881,9 @@
     "id": 1175,
     "name": "Iron sq shield",
     "image": "iron_sq_shield.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Simple lockbox": {
@@ -80082,6 +80913,9 @@
     "id": 1279,
     "name": "Iron sword",
     "image": "iron_sword.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Rusty sword POH repair": {
@@ -80224,6 +81058,9 @@
     "id": 1335,
     "name": "Iron warhammer",
     "image": "iron_warhammer.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Jungle horror": {
@@ -81403,7 +82240,8 @@
     "name": "Jester cape",
     "image": "jester_cape.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -81431,6 +82269,9 @@
     "id": 1935,
     "name": "Jug",
     "image": "jug.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Empty jug pack": {
@@ -81462,6 +82303,9 @@
     "id": 1937,
     "name": "Jug of water",
     "image": "jug_of_water.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Market stall (wine)": {
@@ -81490,6 +82334,9 @@
     "id": 1993,
     "name": "Jug of wine",
     "image": "jug_of_wine.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Market stall (wine)": {
@@ -82009,6 +82856,9 @@
     "id": 1971,
     "name": "Kebab",
     "image": "kebab.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Drunken Dwarf": {
@@ -82446,6 +83296,9 @@
     "id": 946,
     "name": "Knife",
     "image": "knife.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Backpack": {
@@ -84663,6 +85516,9 @@
     "id": 563,
     "name": "Law rune",
     "image": "law_rune.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Christmas cracker": {
@@ -85508,6 +86364,9 @@
     "id": 1741,
     "name": "Leather",
     "image": "leather.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Tanning": {
@@ -85531,6 +86390,9 @@
     "id": 1129,
     "name": "Leather body",
     "image": "leather_body.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Honing my aim (m)": {
@@ -85581,7 +86443,8 @@
     "name": "Leather body (g)",
     "image": "leather_body_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -85596,6 +86459,9 @@
     "id": 1061,
     "name": "Leather boots",
     "image": "leather_boots.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Getting started Strength": {
@@ -85651,6 +86517,9 @@
     "id": 1095,
     "name": "Leather chaps",
     "image": "leather_chaps.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Getting started Ranged (m)": {
@@ -85683,7 +86552,8 @@
     "name": "Leather chaps (g)",
     "image": "leather_chaps_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -85698,6 +86568,9 @@
     "id": 1167,
     "name": "Leather cowl",
     "image": "leather_cowl.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Getting started Ranged": {
@@ -85729,6 +86602,9 @@
     "id": 1059,
     "name": "Leather gloves",
     "image": "leather_gloves.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Getting started Strength": {
@@ -85787,6 +86663,9 @@
     "id": 1063,
     "name": "Leather vambraces",
     "image": "leather_vambraces.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Combat path starter kit": {
@@ -86318,6 +87197,9 @@
     "id": 225,
     "name": "Limpwurt root",
     "image": "limpwurt_root.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Limpwurt plant": {
@@ -86891,6 +87773,9 @@
     "id": 379,
     "name": "Lobster",
     "image": "lobster.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Vitreous Chilled Jelly": {
@@ -87012,6 +87897,9 @@
     "id": 301,
     "name": "Lobster pot",
     "image": "lobster_pot.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Fishing spot (The Stranglewood)": {
@@ -87105,6 +87993,9 @@
     "id": 1511,
     "name": "Logs",
     "image": "logs.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Getting started Woodcutting": {
@@ -87266,6 +88157,9 @@
     "id": 839,
     "name": "Longbow",
     "image": "longbow.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Reward casket (beginner)": {
@@ -88712,6 +89606,9 @@
     "id": 1389,
     "name": "Magic staff",
     "image": "magic_staff.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Broken staff": {
@@ -89844,6 +90741,9 @@
     "id": 1517,
     "name": "Maple logs",
     "image": "maple_logs.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Maple tree": {
@@ -89896,6 +90796,9 @@
     "id": 851,
     "name": "Maple longbow",
     "image": "maple_longbow.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Reward Chest (The Gauntlet)": {
@@ -90168,6 +91071,9 @@
     "id": 853,
     "name": "Maple shortbow",
     "image": "maple_shortbow.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Combat path voucher (m)": {
@@ -91050,6 +91956,9 @@
     "id": 2327,
     "name": "Meat pie",
     "image": "meat_pie.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Sandwich lady": {
@@ -91114,6 +92023,9 @@
     "id": 2293,
     "name": "Meat pizza",
     "image": "meat_pizza.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Young impling": {
@@ -91581,6 +92493,9 @@
     "id": 558,
     "name": "Mind rune",
     "image": "mind_rune.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Bringer of chaos": {
@@ -91948,6 +92863,9 @@
     "id": 1448,
     "name": "Mind talisman",
     "image": "mind_talisman.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Essence impling": {
@@ -92027,6 +92945,9 @@
     "id": 5529,
     "name": "Mind tiara",
     "image": "mind_tiara.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Crafting a tiara": {
@@ -92357,6 +93278,9 @@
     "id": 1315,
     "name": "Mithril 2h sword",
     "image": "mithril_2h_sword.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Green dragon Wilderness Slayer Cave": {
@@ -92422,6 +93346,9 @@
     "id": 888,
     "name": "Mithril arrow",
     "image": "mithril_arrow.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Assembler max cape": {
@@ -92690,6 +93617,9 @@
     "id": 1355,
     "name": "Mithril axe",
     "image": "mithril_axe.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Tree spirit": {
@@ -92800,6 +93730,9 @@
     "id": 2359,
     "name": "Mithril bar",
     "image": "mithril_bar.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Mithril dragon": {
@@ -92967,6 +93900,9 @@
     "id": 1369,
     "name": "Mithril battleaxe",
     "image": "mithril_battleaxe.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Insatiable mutated Bloodveld": {
@@ -93335,6 +94271,9 @@
     "id": 1109,
     "name": "Mithril chainbody",
     "image": "mithril_chainbody.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Mithril defence": {
@@ -93503,6 +94442,9 @@
     "id": 1209,
     "name": "Mithril dagger",
     "image": "mithril_dagger.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Tarnished chest": {
@@ -93838,6 +94780,9 @@
     "id": 1159,
     "name": "Mithril full helm",
     "image": "mithril_full_helm.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Mithril defence (m)": {
@@ -93919,7 +94864,8 @@
     "name": "Mithril full helm (g)",
     "image": "mithril_full_helm_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -93935,7 +94881,8 @@
     "name": "Mithril full helm (t)",
     "image": "mithril_full_helm_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -94284,6 +95231,9 @@
     "id": 1197,
     "name": "Mithril kiteshield",
     "image": "mithril_kiteshield.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Mithril defence (m)": {
@@ -94458,7 +95408,8 @@
     "name": "Mithril kiteshield (g)",
     "image": "mithril_kiteshield_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -94474,7 +95425,8 @@
     "name": "Mithril kiteshield (t)",
     "image": "mithril_kiteshield_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -94625,6 +95577,9 @@
     "id": 1299,
     "name": "Mithril longsword",
     "image": "mithril_longsword.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Weapons master": {
@@ -94708,6 +95663,9 @@
     "id": 1428,
     "name": "Mithril mace",
     "image": "mithril_mace.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Spiritual warrior": {
@@ -94791,6 +95749,9 @@
     "id": 1143,
     "name": "Mithril med helm",
     "image": "mithril_med_helm.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Moss Giant (Iorwerth Dungeon)": {
@@ -94918,6 +95879,9 @@
     "id": 447,
     "name": "Mithril ore",
     "image": "mithril_ore.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Mithril rocks": {
@@ -95072,6 +96036,9 @@
     "id": 1273,
     "name": "Mithril pickaxe",
     "image": "mithril_pickaxe.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Eclectic impling": {
@@ -95109,6 +96076,9 @@
     "id": 1121,
     "name": "Mithril platebody",
     "image": "mithril_platebody.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Combat path voucher (m)": {
@@ -95202,7 +96172,8 @@
     "name": "Mithril platebody (g)",
     "image": "mithril_platebody_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -95218,7 +96189,8 @@
     "name": "Mithril platebody (t)",
     "image": "mithril_platebody_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -95233,6 +96205,9 @@
     "id": 1071,
     "name": "Mithril platelegs",
     "image": "mithril_platelegs.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Mithril defence (m)": {
@@ -95326,7 +96301,8 @@
     "name": "Mithril platelegs (g)",
     "image": "mithril_platelegs_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -95342,7 +96318,8 @@
     "name": "Mithril platelegs (t)",
     "image": "mithril_platelegs_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -95357,6 +96334,9 @@
     "id": 1085,
     "name": "Mithril plateskirt",
     "image": "mithril_plateskirt.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Agility dispenser Laps 16-30": {
@@ -95447,7 +96427,8 @@
     "name": "Mithril plateskirt (g)",
     "image": "mithril_plateskirt_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -95463,7 +96444,8 @@
     "name": "Mithril plateskirt (t)",
     "image": "mithril_plateskirt_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -95478,6 +96460,9 @@
     "id": 1329,
     "name": "Mithril scimitar",
     "image": "mithril_scimitar.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Plundered salvage": {
@@ -95825,6 +96810,9 @@
     "id": 1181,
     "name": "Mithril sq shield",
     "image": "mithril_sq_shield.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Moss Giant (Iorwerth Dungeon)": {
@@ -95968,6 +96956,9 @@
     "id": 1285,
     "name": "Mithril sword",
     "image": "mithril_sword.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Kalphite Guardian": {
@@ -96115,6 +97106,9 @@
     "id": 1343,
     "name": "Mithril warhammer",
     "image": "mithril_warhammer.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Dagannoth Rex": {
@@ -96362,7 +97356,8 @@
     "name": "Mole slippers",
     "image": "mole_slippers.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -96412,6 +97407,9 @@
     "id": 542,
     "name": "Monk's robe",
     "image": "monk's_robe.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Hallowed sack": {
@@ -96432,7 +97430,8 @@
     "name": "Monk's robe (g)",
     "image": "monk's_robe_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -96448,7 +97447,8 @@
     "name": "Monk's robe (t)",
     "image": "monk's_robe_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -96463,6 +97463,9 @@
     "id": 544,
     "name": "Monk's robe top",
     "image": "monk's_robe_top.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Hallowed sack": {
@@ -96483,7 +97486,8 @@
     "name": "Monk's robe top (g)",
     "image": "monk's_robe_top_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -96499,7 +97503,8 @@
     "name": "Monk's robe top (t)",
     "image": "monk's_robe_top_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -96525,6 +97530,9 @@
     "id": 3183,
     "name": "Monkey bones",
     "image": "monkey_bones.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Monkey (monster)": {
@@ -97176,6 +98184,9 @@
     "id": 991,
     "name": "Muddy key",
     "image": "muddy_key.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Chaos dwarf": {
@@ -98743,6 +99754,9 @@
     "id": 561,
     "name": "Nature rune",
     "image": "nature_rune.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Chest (nature runes)": {
@@ -99611,6 +100625,9 @@
     "id": 1597,
     "name": "Necklace mould",
     "image": "necklace_mould.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Tool store 4": {
@@ -99693,6 +100710,9 @@
     "id": 1733,
     "name": "Needle",
     "image": "needle.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Crate (Elemental Workshop)": {
@@ -100488,6 +101508,9 @@
     "id": 1521,
     "name": "Oak logs",
     "image": "oak_logs.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Oak tree": {
@@ -100531,6 +101554,9 @@
     "id": 845,
     "name": "Oak longbow",
     "image": "oak_longbow.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Skeleton (Tarn's Lair) Low level": {
@@ -100875,6 +101901,9 @@
     "id": 843,
     "name": "Oak shortbow",
     "image": "oak_shortbow.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Honing my aim": {
@@ -101686,6 +102715,9 @@
     "id": 1957,
     "name": "Onion",
     "image": "onion.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Onion plant": {
@@ -102912,6 +103944,9 @@
     "id": 1031,
     "name": "Orange cape",
     "image": "orange_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Dye a cape": {
@@ -102976,6 +104011,9 @@
     "id": 1769,
     "name": "Orange dye",
     "image": "orange_dye.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Mixing a dye": {
@@ -103896,6 +104934,9 @@
     "id": 1953,
     "name": "Pastry dough",
     "image": "pastry_dough.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Cooking": {
@@ -104367,6 +105408,9 @@
     "id": 2313,
     "name": "Pie dish",
     "image": "pie_dish.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Oak shelves 2": {
@@ -104406,6 +105450,9 @@
     "id": 2315,
     "name": "Pie shell",
     "image": "pie_shell.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Cooking": {
@@ -104429,6 +105476,9 @@
     "id": 351,
     "name": "Pike",
     "image": "pike.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Cooking": {
@@ -105038,6 +106088,9 @@
     "id": 1013,
     "name": "Pink skirt",
     "image": "pink_skirt.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Skeleton Mage Level 83": {
@@ -105343,6 +106396,9 @@
     "id": 2283,
     "name": "Pizza base",
     "image": "pizza_base.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -105380,6 +106436,9 @@
     "id": 2289,
     "name": "Plain pizza",
     "image": "plain_pizza.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -105410,6 +106469,9 @@
     "id": 960,
     "name": "Plank",
     "image": "plank.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Marlo's crate": {
@@ -105565,6 +106627,9 @@
     "id": 273,
     "name": "Poison (item)",
     "image": "poison_(item).png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -106051,6 +107116,9 @@
     "id": 1931,
     "name": "Pot",
     "image": "pot.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Teak shelves 1": {
@@ -106180,6 +107248,9 @@
     "id": 1933,
     "name": "Pot of flour",
     "image": "pot_of_flour.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Oak larder": {
@@ -106232,6 +107303,9 @@
     "id": 1942,
     "name": "Potato",
     "image": "potato.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Potato plant": {
@@ -107747,6 +108821,9 @@
     "id": 428,
     "name": "Priest gown (bottom)",
     "image": "priest_gown_(bottom).png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -107758,6 +108835,9 @@
     "id": 426,
     "name": "Priest gown (top)",
     "image": "priest_gown_(top).png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -107890,6 +108970,9 @@
     "id": 1959,
     "name": "Pumpkin",
     "image": "pumpkin.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Complete a Halloween holiday event": {}
@@ -107901,6 +108984,9 @@
     "id": 7936,
     "name": "Pure essence",
     "image": "pure_essence.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Reward token": {
@@ -108140,6 +109226,9 @@
     "id": 2934,
     "name": "Purple boots",
     "image": "purple_boots.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "canCompletePriestInPeril"
@@ -108151,6 +109240,9 @@
     "id": 1029,
     "name": "Purple cape",
     "image": "purple_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Dye a cape": {
@@ -108172,6 +109264,9 @@
     "id": 1773,
     "name": "Purple dye",
     "image": "purple_dye.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -108322,6 +109417,9 @@
     "id": 2942,
     "name": "Purple gloves",
     "image": "purple_gloves.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Crushing hand": {
@@ -108352,6 +109450,9 @@
     "id": 1046,
     "name": "Purple partyhat",
     "image": "purple_partyhat.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Complete a Christmas holiday event": {}
@@ -109708,6 +110809,9 @@
     "id": 321,
     "name": "Raw anchovies",
     "image": "raw_anchovies.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Bowl of fish": {
@@ -109862,6 +110966,9 @@
     "id": 2136,
     "name": "Raw bear meat",
     "image": "raw_bear_meat.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Bear Cub": {
@@ -109975,6 +111082,9 @@
     "id": 2132,
     "name": "Raw beef",
     "image": "raw_beef.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Buffalo": {
@@ -110175,6 +111285,9 @@
     "id": 25833,
     "name": "Raw boar meat",
     "image": "raw_boar_meat.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Boar": {
@@ -110204,6 +111317,9 @@
     "id": 2138,
     "name": "Raw chicken",
     "image": "raw_chicken.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Chicken": {
@@ -110492,6 +111608,9 @@
     "id": 345,
     "name": "Raw herring",
     "image": "raw_herring.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Reward pool 35–39 Fishing": {
@@ -110627,6 +111746,9 @@
     "id": 377,
     "name": "Raw lobster",
     "image": "raw_lobster.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Fishing spot (cage, harpoon) Cage": {
@@ -111019,6 +112141,9 @@
     "id": 349,
     "name": "Raw pike",
     "image": "raw_pike.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Rod Fishing spot (lure, bait) Bait": {
@@ -111166,6 +112291,9 @@
     "id": 2134,
     "name": "Raw rat meat",
     "image": "raw_rat_meat.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Brine rat": {
@@ -111223,6 +112351,9 @@
     "id": 331,
     "name": "Raw salmon",
     "image": "raw_salmon.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Fish stall": {
@@ -111283,6 +112414,9 @@
     "id": 327,
     "name": "Raw sardine",
     "image": "raw_sardine.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Bowl of fish": {
@@ -111574,6 +112708,9 @@
     "id": 317,
     "name": "Raw shrimps",
     "image": "raw_shrimps.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Bowl of fish": {
@@ -111676,6 +112813,9 @@
     "id": 371,
     "name": "Raw swordfish",
     "image": "raw_swordfish.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Bowl of fish": {
@@ -111801,6 +112941,9 @@
     "id": 335,
     "name": "Raw trout",
     "image": "raw_trout.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Extra supply crate": {
@@ -111828,6 +112971,9 @@
     "id": 359,
     "name": "Raw tuna",
     "image": "raw_tuna.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Bowl of fish": {
@@ -112065,6 +113211,9 @@
     "id": 1470,
     "name": "Red bead",
     "image": "red_bead.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Imp": {
@@ -112110,6 +113259,9 @@
     "id": 2904,
     "name": "Red boots",
     "image": "red_boots.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "canCompletePriestInPeril"
@@ -112121,6 +113273,9 @@
     "id": 1007,
     "name": "Red cape",
     "image": "red_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Goblin (Goblin Village)": {
@@ -112544,6 +113699,9 @@
     "id": 1763,
     "name": "Red dye",
     "image": "red_dye.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Shelves (Getting Ahead)": {
@@ -112694,6 +113852,9 @@
     "id": 2912,
     "name": "Red gloves",
     "image": "red_gloves.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Crushing hand": {
@@ -112713,6 +113874,9 @@
     "id": 1057,
     "name": "Red halloween mask",
     "image": "red_halloween_mask.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Complete a Halloween holiday event": {}
@@ -112751,6 +113915,9 @@
     "id": 1038,
     "name": "Red partyhat",
     "image": "red_partyhat.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Complete a Christmas holiday event": {}
@@ -112802,6 +113969,9 @@
     "id": 223,
     "name": "Red spiders' eggs",
     "image": "red_spiders'_eggs.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Giant egg sac": {
@@ -112936,6 +114106,9 @@
     "id": 1951,
     "name": "Redberries",
     "image": "redberries.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Redberry bush": {
@@ -112960,6 +114133,9 @@
     "id": 2325,
     "name": "Redberry pie",
     "image": "redberry_pie.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": {
@@ -113885,6 +115061,9 @@
     "id": 1592,
     "name": "Ring mould",
     "image": "ring_mould.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Tool store 4": {
@@ -113926,7 +115105,8 @@
     "name": "Ring of 3rd age",
     "image": "ring_of_3rd_age.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -113945,7 +115125,8 @@
     "name": "Ring of coins",
     "image": "ring_of_coins.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -114002,6 +115183,9 @@
     "id": 2568,
     "name": "Ring of forging",
     "image": "ring_of_forging.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Magpie impling": {
@@ -114072,7 +115256,8 @@
     "name": "Ring of nature",
     "image": "ring_of_nature.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -114763,6 +115948,9 @@
     "id": 954,
     "name": "Rope",
     "image": "rope.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Rogue kit": {
@@ -115168,6 +116356,9 @@
     "id": 1603,
     "name": "Ruby",
     "image": "ruby.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Pinball": {
@@ -115263,6 +116454,9 @@
     "id": 1698,
     "name": "Ruby amulet",
     "image": "ruby_amulet.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Insatiable mutated Bloodveld": {
@@ -115307,6 +116501,9 @@
     "id": 1679,
     "name": "Ruby amulet (u)",
     "image": "ruby_amulet_(u).png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Crafting": {
@@ -115577,6 +116774,9 @@
     "id": 1660,
     "name": "Ruby necklace",
     "image": "ruby_necklace.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Hammerhead shark": {
@@ -115630,6 +116830,9 @@
     "id": 1641,
     "name": "Ruby ring",
     "image": "ruby_ring.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Frigatebird": {
@@ -115735,6 +116938,9 @@
     "id": 1319,
     "name": "Rune 2h sword",
     "image": "rune_2h_sword.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Hallowed sack": {
@@ -116244,6 +117450,9 @@
     "id": 1359,
     "name": "Rune axe",
     "image": "rune_axe.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Nechryarch Greater": {
@@ -116327,6 +117536,9 @@
     "id": 1373,
     "name": "Rune battleaxe",
     "image": "rune_battleaxe.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Lost camphor crate": {
@@ -116596,6 +117808,9 @@
     "id": 1113,
     "name": "Rune chainbody",
     "image": "rune_chainbody.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Agility dispenser Laps 61+": {
@@ -116846,6 +118061,9 @@
     "id": 1213,
     "name": "Rune dagger",
     "image": "rune_dagger.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Lost mahogany crate": {
@@ -117315,6 +118533,9 @@
     "id": 1436,
     "name": "Rune essence",
     "image": "rune_essence.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Rune Essence (rock)": {
@@ -117372,6 +118593,9 @@
     "id": 1163,
     "name": "Rune full helm",
     "image": "rune_full_helm.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Reward Chest (The Gauntlet) (Corrupted)": {
@@ -117621,7 +118845,8 @@
     "name": "Rune full helm (g)",
     "image": "rune_full_helm_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -117637,7 +118862,8 @@
     "name": "Rune full helm (t)",
     "image": "rune_full_helm_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -117836,7 +119062,8 @@
     "name": "Rune helm (h1)",
     "image": "rune_helm_(h1).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -117852,7 +119079,8 @@
     "name": "Rune helm (h2)",
     "image": "rune_helm_(h2).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -117868,7 +119096,8 @@
     "name": "Rune helm (h3)",
     "image": "rune_helm_(h3).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -117884,7 +119113,8 @@
     "name": "Rune helm (h4)",
     "image": "rune_helm_(h4).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -117900,7 +119130,8 @@
     "name": "Rune helm (h5)",
     "image": "rune_helm_(h5).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -118109,6 +119340,9 @@
     "id": 1201,
     "name": "Rune kiteshield",
     "image": "rune_kiteshield.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Agility dispenser Laps 61+": {
@@ -118316,7 +119550,8 @@
     "name": "Rune kiteshield (g)",
     "image": "rune_kiteshield_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -118332,7 +119567,8 @@
     "name": "Rune kiteshield (t)",
     "image": "rune_kiteshield_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -118510,6 +119746,9 @@
     "id": 1303,
     "name": "Rune longsword",
     "image": "rune_longsword.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Orca": {
@@ -118653,6 +119892,9 @@
     "id": 1432,
     "name": "Rune mace",
     "image": "rune_mace.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Amoxliatl": {
@@ -118730,6 +119972,9 @@
     "id": 1147,
     "name": "Rune med helm",
     "image": "rune_med_helm.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Agility dispenser Laps 1-15": {
@@ -118989,6 +120234,9 @@
     "id": 1275,
     "name": "Rune pickaxe",
     "image": "rune_pickaxe.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Reward Chest (The Gauntlet) (Corrupted)": {
@@ -119095,6 +120343,9 @@
     "id": 1127,
     "name": "Rune platebody",
     "image": "rune_platebody.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Hallowed sack": {
@@ -119269,7 +120520,8 @@
     "name": "Rune platebody (g)",
     "image": "rune_platebody_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -119285,7 +120537,8 @@
     "name": "Rune platebody (h1)",
     "image": "rune_platebody_(h1).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -119301,7 +120554,8 @@
     "name": "Rune platebody (h2)",
     "image": "rune_platebody_(h2).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -119317,7 +120571,8 @@
     "name": "Rune platebody (h3)",
     "image": "rune_platebody_(h3).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -119333,7 +120588,8 @@
     "name": "Rune platebody (h4)",
     "image": "rune_platebody_(h4).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -119349,7 +120605,8 @@
     "name": "Rune platebody (h5)",
     "image": "rune_platebody_(h5).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -119365,7 +120622,8 @@
     "name": "Rune platebody (t)",
     "image": "rune_platebody_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -119380,6 +120638,9 @@
     "id": 1079,
     "name": "Rune platelegs",
     "image": "rune_platelegs.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Reward Chest (The Gauntlet) (Corrupted)": {
@@ -119563,7 +120824,8 @@
     "name": "Rune platelegs (g)",
     "image": "rune_platelegs_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -119579,7 +120841,8 @@
     "name": "Rune platelegs (t)",
     "image": "rune_platelegs_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -119594,6 +120857,9 @@
     "id": 1093,
     "name": "Rune plateskirt",
     "image": "rune_plateskirt.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Reward Chest (The Gauntlet) (Corrupted)": {
@@ -119687,7 +120953,8 @@
     "name": "Rune plateskirt (g)",
     "image": "rune_plateskirt_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -119703,7 +120970,8 @@
     "name": "Rune plateskirt (t)",
     "image": "rune_plateskirt_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -119734,6 +121002,9 @@
     "id": 1333,
     "name": "Rune scimitar",
     "image": "rune_scimitar.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Shellbane gryphon": {
@@ -119908,7 +121179,8 @@
     "name": "Rune scimitar ornament kit (guthix)",
     "image": "rune_scimitar_ornament_kit_(guthix).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -119924,7 +121196,8 @@
     "name": "Rune scimitar ornament kit (saradomin)",
     "image": "rune_scimitar_ornament_kit_(saradomin).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -119940,7 +121213,8 @@
     "name": "Rune scimitar ornament kit (zamorak)",
     "image": "rune_scimitar_ornament_kit_(zamorak).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -119956,7 +121230,8 @@
     "name": "Rune shield (h1)",
     "image": "rune_shield_(h1).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -119972,7 +121247,8 @@
     "name": "Rune shield (h2)",
     "image": "rune_shield_(h2).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -119988,7 +121264,8 @@
     "name": "Rune shield (h3)",
     "image": "rune_shield_(h3).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -120004,7 +121281,8 @@
     "name": "Rune shield (h4)",
     "image": "rune_shield_(h4).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -120020,7 +121298,8 @@
     "name": "Rune shield (h5)",
     "image": "rune_shield_(h5).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -120157,6 +121436,9 @@
     "id": 1185,
     "name": "Rune sq shield",
     "image": "rune_sq_shield.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Nechryarch Greater": {
@@ -120228,6 +121510,9 @@
     "id": 1289,
     "name": "Rune sword",
     "image": "rune_sword.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Black demon Wilderness Slayer Cave": {
@@ -120435,6 +121720,9 @@
     "id": 1347,
     "name": "Rune warhammer",
     "image": "rune_warhammer.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Rewards Chest (Fortis Colosseum) Wave 11": {
@@ -120727,6 +122015,9 @@
     "id": 2363,
     "name": "Runite bar",
     "image": "runite_bar.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Rune dragon": {
@@ -121180,6 +122471,9 @@
     "id": 451,
     "name": "Runite ore",
     "image": "runite_ore.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Runite rocks": {
@@ -121581,6 +122875,9 @@
     "id": 329,
     "name": "Salmon",
     "image": "salmon.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Body Builder": {
@@ -121828,7 +123125,8 @@
     "name": "Sandwich lady bottom",
     "image": "sandwich_lady_bottom.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -121844,7 +123142,8 @@
     "name": "Sandwich lady hat",
     "image": "sandwich_lady_hat.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -121860,7 +123159,8 @@
     "name": "Sandwich lady top",
     "image": "sandwich_lady_top.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -122122,6 +123422,9 @@
     "id": 1050,
     "name": "Santa hat",
     "image": "santa_hat.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Complete a Christmas holiday event": {}
@@ -122133,6 +123436,9 @@
     "id": 1607,
     "name": "Sapphire",
     "image": "sapphire.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Pinball": {
@@ -122218,6 +123524,9 @@
     "id": 1694,
     "name": "Sapphire amulet",
     "image": "sapphire_amulet.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Small chest": {
@@ -122259,6 +123568,9 @@
     "id": 1675,
     "name": "Sapphire amulet (u)",
     "image": "sapphire_amulet_(u).png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Crafting": {
@@ -122531,6 +123843,9 @@
     "id": 1656,
     "name": "Sapphire necklace",
     "image": "sapphire_necklace.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Elite Black Knight": {
@@ -122587,6 +123902,9 @@
     "id": 1637,
     "name": "Sapphire ring",
     "image": "sapphire_ring.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Bird nest (ring)": {
@@ -123109,7 +124427,8 @@
     "name": "Saradomin full helm",
     "image": "saradomin_full_helm.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -123177,7 +124496,8 @@
     "name": "Saradomin kiteshield",
     "image": "saradomin_kiteshield.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -123363,7 +124683,8 @@
     "name": "Saradomin platebody",
     "image": "saradomin_platebody.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -123379,7 +124700,8 @@
     "name": "Saradomin platelegs",
     "image": "saradomin_platelegs.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -123395,7 +124717,8 @@
     "name": "Saradomin plateskirt",
     "image": "saradomin_plateskirt.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -123509,6 +124832,9 @@
     "id": 325,
     "name": "Sardine",
     "image": "sardine.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Reward casket (beginner)": {
@@ -123956,6 +125282,9 @@
     "id": 9003,
     "name": "Security book",
     "image": "security_book.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -124289,6 +125618,9 @@
     "id": 548,
     "name": "Shade robe",
     "image": "shade_robe.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Shade (m)": {
@@ -124302,6 +125634,9 @@
     "id": 546,
     "name": "Shade robe top",
     "image": "shade_robe_top.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Shade (m)": {
@@ -124328,6 +125663,9 @@
     "id": 21838,
     "name": "Shaman mask",
     "image": "shaman_mask.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Ogress Shaman": {
@@ -124895,6 +126233,9 @@
     "id": 1735,
     "name": "Shears",
     "image": "shears.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Tool store 1": {
@@ -125079,6 +126420,9 @@
     "id": 841,
     "name": "Shortbow",
     "image": "shortbow.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Giant skeleton (Tarn's Lair)": {
@@ -125170,7 +126514,8 @@
     "name": "Shoulder parrot",
     "image": "shoulder_parrot.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -125185,6 +126530,9 @@
     "id": 315,
     "name": "Shrimps",
     "image": "shrimps.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Reward casket (beginner)": {
@@ -125234,6 +126582,9 @@
     "id": 950,
     "name": "Silk",
     "image": "silk.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Christmas cracker": {
@@ -125265,6 +126616,9 @@
     "id": 2355,
     "name": "Silver bar",
     "image": "silver_bar.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Christmas cracker": {
@@ -125606,6 +126960,9 @@
     "id": 442,
     "name": "Silver ore",
     "image": "silver_ore.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Silver rocks": {
@@ -126578,6 +127935,9 @@
     "id": 3162,
     "name": "Sliced banana",
     "image": "sliced_banana.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Slicing": {
@@ -126652,6 +128012,9 @@
     "id": 303,
     "name": "Small fishing net",
     "image": "small_fishing_net.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Small fishing net (scenery)": {
@@ -128363,6 +129726,9 @@
     "id": 1761,
     "name": "Soft clay",
     "image": "soft_clay.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Soft clay pack": {
@@ -128699,6 +130065,9 @@
     "id": 952,
     "name": "Spade",
     "image": "spade.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Animated spade": {
@@ -129078,6 +130447,9 @@
     "id": 1969,
     "name": "Spinach roll",
     "image": "spinach_roll.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Christmas cracker": {
@@ -129607,6 +130979,9 @@
     "id": 1379,
     "name": "Staff",
     "image": "staff.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Combat path starter kit": {
@@ -129656,6 +131031,9 @@
     "id": 1381,
     "name": "Staff of air",
     "image": "staff_of_air.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Getting started Magic": {
@@ -129747,6 +131125,9 @@
     "id": 1385,
     "name": "Staff of earth",
     "image": "staff_of_earth.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Striking a pose": {
@@ -129799,6 +131180,9 @@
     "id": 1387,
     "name": "Staff of fire",
     "image": "staff_of_fire.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Bringer of chaos": {
@@ -129911,6 +131295,9 @@
     "id": 1383,
     "name": "Staff of water",
     "image": "staff_of_water.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Broken staff": {
@@ -129966,6 +131353,9 @@
     "id": 20590,
     "name": "Stale baguette",
     "image": "stale_baguette.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Mystery box Entrana": {
@@ -130287,6 +131677,9 @@
     "id": 1311,
     "name": "Steel 2h sword",
     "image": "steel_2h_sword.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Vitreous Jelly": {
@@ -130358,6 +131751,9 @@
     "id": 886,
     "name": "Steel arrow",
     "image": "steel_arrow.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Accumulator max cape": {
@@ -130897,6 +132293,9 @@
     "id": 1353,
     "name": "Steel axe",
     "image": "steel_axe.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Elaborate lockbox": {
@@ -131106,6 +132505,9 @@
     "id": 2353,
     "name": "Steel bar",
     "image": "steel_bar.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Marlo's crate": {
@@ -131339,6 +132741,9 @@
     "id": 1365,
     "name": "Steel battleaxe",
     "image": "steel_battleaxe.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Vitreous Jelly": {
@@ -131780,6 +133185,9 @@
     "id": 1105,
     "name": "Steel chainbody",
     "image": "steel_chainbody.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Sticks and stones": {
@@ -131923,6 +133331,9 @@
     "id": 1207,
     "name": "Steel dagger",
     "image": "steel_dagger.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Cockathrice": {
@@ -132317,6 +133728,9 @@
     "id": 1157,
     "name": "Steel full helm",
     "image": "steel_full_helm.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Flaming pyrelord": {
@@ -132430,7 +133844,8 @@
     "name": "Steel full helm (g)",
     "image": "steel_full_helm_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -132446,7 +133861,8 @@
     "name": "Steel full helm (t)",
     "image": "steel_full_helm_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -132809,6 +134225,9 @@
     "id": 1193,
     "name": "Steel kiteshield",
     "image": "steel_kiteshield.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Getting started Defence (m)": {
@@ -132908,7 +134327,8 @@
     "name": "Steel kiteshield (g)",
     "image": "steel_kiteshield_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -132924,7 +134344,8 @@
     "name": "Steel kiteshield (t)",
     "image": "steel_kiteshield_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -133128,6 +134549,9 @@
     "id": 1295,
     "name": "Steel longsword",
     "image": "steel_longsword.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Getting started Attack": {
@@ -133301,6 +134725,9 @@
     "id": 1424,
     "name": "Steel mace",
     "image": "steel_mace.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Ork": {
@@ -133396,6 +134823,9 @@
     "id": 1141,
     "name": "Steel med helm",
     "image": "steel_med_helm.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Getting started Defence": {
@@ -133527,6 +134957,9 @@
     "id": 1539,
     "name": "Steel nails",
     "image": "steel_nails.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Young impling": {
@@ -133595,6 +135028,9 @@
     "id": 1269,
     "name": "Steel pickaxe",
     "image": "steel_pickaxe.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Elaborate lockbox": {
@@ -133647,6 +135083,9 @@
     "id": 1119,
     "name": "Steel platebody",
     "image": "steel_platebody.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Mystery box Free-to-play": {
@@ -133761,7 +135200,8 @@
     "name": "Steel platebody (g)",
     "image": "steel_platebody_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -133777,7 +135217,8 @@
     "name": "Steel platebody (t)",
     "image": "steel_platebody_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -133792,6 +135233,9 @@
     "id": 1069,
     "name": "Steel platelegs",
     "image": "steel_platelegs.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Sticks and stones (m)": {
@@ -133861,7 +135305,8 @@
     "name": "Steel platelegs (g)",
     "image": "steel_platelegs_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -133877,7 +135322,8 @@
     "name": "Steel platelegs (t)",
     "image": "steel_platelegs_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -133892,6 +135338,9 @@
     "id": 1083,
     "name": "Steel plateskirt",
     "image": "steel_plateskirt.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Former Vampyre": {
@@ -133940,7 +135389,8 @@
     "name": "Steel plateskirt (g)",
     "image": "steel_plateskirt_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -133956,7 +135406,8 @@
     "name": "Steel plateskirt (t)",
     "image": "steel_plateskirt_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -133984,6 +135435,9 @@
     "id": 1325,
     "name": "Steel scimitar",
     "image": "steel_scimitar.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Scimitar Stall": {
@@ -134325,6 +135779,9 @@
     "id": 1177,
     "name": "Steel sq shield",
     "image": "steel_sq_shield.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Bandit Level 22": {
@@ -134395,6 +135852,9 @@
     "id": 1281,
     "name": "Steel sword",
     "image": "steel_sword.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Rusty sword POH repair": {
@@ -134572,6 +136032,9 @@
     "id": 1339,
     "name": "Steel warhammer",
     "image": "steel_warhammer.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Guard (Burthorpe)": {
@@ -134663,6 +136126,9 @@
     "id": 2003,
     "name": "Stew",
     "image": "stew.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -135310,7 +136776,8 @@
     "name": "Strength amulet (t)",
     "image": "strength_amulet_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -135395,6 +136862,9 @@
     "id": 119,
     "name": "Strength potion(1)",
     "image": "strength_potion(1).png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Barrel (Shaman Caves)": {
@@ -135426,6 +136896,9 @@
     "id": 117,
     "name": "Strength potion(2)",
     "image": "strength_potion(2).png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Jekyll and Hyde No herb": {
@@ -135463,6 +136936,9 @@
     "id": 115,
     "name": "Strength potion(3)",
     "image": "strength_potion(3).png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Apprentice potion pack": {
@@ -135517,6 +136993,9 @@
     "id": 113,
     "name": "Strength potion(4)",
     "image": "strength_potion(4).png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Body Builder": {
@@ -135670,6 +137149,9 @@
     "id": 9004,
     "name": "Stronghold notes",
     "image": "stronghold_notes.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Grab the book from the skeleton on the first floor of the Stronghold of Security": {
@@ -135723,6 +137205,9 @@
     "id": 1133,
     "name": "Studded body",
     "image": "studded_body.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Combat path voucher (m)": {
@@ -135743,7 +137228,8 @@
     "name": "Studded body (g)",
     "image": "studded_body_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -135759,7 +137245,8 @@
     "name": "Studded body (t)",
     "image": "studded_body_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -135774,6 +137261,9 @@
     "id": 1097,
     "name": "Studded chaps",
     "image": "studded_chaps.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Sharpshooter (m)": {
@@ -135818,7 +137308,8 @@
     "name": "Studded chaps (g)",
     "image": "studded_chaps_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -135834,7 +137325,8 @@
     "name": "Studded chaps (t)",
     "image": "studded_chaps_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -139283,6 +140775,9 @@
     "id": 24219,
     "name": "Swift blade",
     "image": "swift_blade.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Special shop": {
@@ -139299,6 +140794,9 @@
     "id": 373,
     "name": "Swordfish",
     "image": "swordfish.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Guardian Drake": {
@@ -140806,6 +142304,9 @@
     "id": 2924,
     "name": "Teal boots",
     "image": "teal_boots.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "canCompletePriestInPeril"
@@ -140817,6 +142318,9 @@
     "id": 2932,
     "name": "Teal gloves",
     "image": "teal_gloves.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Crushing hand": {
@@ -140870,7 +142374,8 @@
     "name": "Team cape i",
     "image": "team_cape_i.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -140886,7 +142391,8 @@
     "name": "Team cape x",
     "image": "team_cape_x.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -140902,7 +142408,8 @@
     "name": "Team cape zero",
     "image": "team_cape_zero.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -140917,6 +142424,9 @@
     "id": 4315,
     "name": "Team-1 cape",
     "image": "team-1_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -140928,6 +142438,9 @@
     "id": 4333,
     "name": "Team-10 cape",
     "image": "team-10_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -140939,6 +142452,9 @@
     "id": 4335,
     "name": "Team-11 cape",
     "image": "team-11_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -140950,6 +142466,9 @@
     "id": 4337,
     "name": "Team-12 cape",
     "image": "team-12_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -140961,6 +142480,9 @@
     "id": 4339,
     "name": "Team-13 cape",
     "image": "team-13_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -140972,6 +142494,9 @@
     "id": 4341,
     "name": "Team-14 cape",
     "image": "team-14_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -140983,6 +142508,9 @@
     "id": 4343,
     "name": "Team-15 cape",
     "image": "team-15_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -140994,6 +142522,9 @@
     "id": 4345,
     "name": "Team-16 cape",
     "image": "team-16_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141005,6 +142536,9 @@
     "id": 4347,
     "name": "Team-17 cape",
     "image": "team-17_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141016,6 +142550,9 @@
     "id": 4349,
     "name": "Team-18 cape",
     "image": "team-18_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141027,6 +142564,9 @@
     "id": 4351,
     "name": "Team-19 cape",
     "image": "team-19_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141038,6 +142578,9 @@
     "id": 4317,
     "name": "Team-2 cape",
     "image": "team-2_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141049,6 +142592,9 @@
     "id": 4353,
     "name": "Team-20 cape",
     "image": "team-20_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141060,6 +142606,9 @@
     "id": 4355,
     "name": "Team-21 cape",
     "image": "team-21_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141071,6 +142620,9 @@
     "id": 4357,
     "name": "Team-22 cape",
     "image": "team-22_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141082,6 +142634,9 @@
     "id": 4359,
     "name": "Team-23 cape",
     "image": "team-23_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141093,6 +142648,9 @@
     "id": 4361,
     "name": "Team-24 cape",
     "image": "team-24_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141104,6 +142662,9 @@
     "id": 4363,
     "name": "Team-25 cape",
     "image": "team-25_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141115,6 +142676,9 @@
     "id": 4365,
     "name": "Team-26 cape",
     "image": "team-26_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141126,6 +142690,9 @@
     "id": 4367,
     "name": "Team-27 cape",
     "image": "team-27_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141137,6 +142704,9 @@
     "id": 4369,
     "name": "Team-28 cape",
     "image": "team-28_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141148,6 +142718,9 @@
     "id": 4371,
     "name": "Team-29 cape",
     "image": "team-29_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141159,6 +142732,9 @@
     "id": 4319,
     "name": "Team-3 cape",
     "image": "team-3_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141170,6 +142746,9 @@
     "id": 4373,
     "name": "Team-30 cape",
     "image": "team-30_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141181,6 +142760,9 @@
     "id": 4375,
     "name": "Team-31 cape",
     "image": "team-31_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141192,6 +142774,9 @@
     "id": 4377,
     "name": "Team-32 cape",
     "image": "team-32_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141203,6 +142788,9 @@
     "id": 4379,
     "name": "Team-33 cape",
     "image": "team-33_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141214,6 +142802,9 @@
     "id": 4381,
     "name": "Team-34 cape",
     "image": "team-34_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141225,6 +142816,9 @@
     "id": 4383,
     "name": "Team-35 cape",
     "image": "team-35_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141236,6 +142830,9 @@
     "id": 4385,
     "name": "Team-36 cape",
     "image": "team-36_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141247,6 +142844,9 @@
     "id": 4387,
     "name": "Team-37 cape",
     "image": "team-37_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141258,6 +142858,9 @@
     "id": 4389,
     "name": "Team-38 cape",
     "image": "team-38_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141269,6 +142872,9 @@
     "id": 4391,
     "name": "Team-39 cape",
     "image": "team-39_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141280,6 +142886,9 @@
     "id": 4321,
     "name": "Team-4 cape",
     "image": "team-4_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141291,6 +142900,9 @@
     "id": 4393,
     "name": "Team-40 cape",
     "image": "team-40_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141302,6 +142914,9 @@
     "id": 4395,
     "name": "Team-41 cape",
     "image": "team-41_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141313,6 +142928,9 @@
     "id": 4397,
     "name": "Team-42 cape",
     "image": "team-42_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141324,6 +142942,9 @@
     "id": 4399,
     "name": "Team-43 cape",
     "image": "team-43_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141335,6 +142956,9 @@
     "id": 4401,
     "name": "Team-44 cape",
     "image": "team-44_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141346,6 +142970,9 @@
     "id": 4403,
     "name": "Team-45 cape",
     "image": "team-45_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141357,6 +142984,9 @@
     "id": 4405,
     "name": "Team-46 cape",
     "image": "team-46_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141368,6 +142998,9 @@
     "id": 4407,
     "name": "Team-47 cape",
     "image": "team-47_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141379,6 +143012,9 @@
     "id": 4409,
     "name": "Team-48 cape",
     "image": "team-48_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141390,6 +143026,9 @@
     "id": 4411,
     "name": "Team-49 cape",
     "image": "team-49_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141401,6 +143040,9 @@
     "id": 4323,
     "name": "Team-5 cape",
     "image": "team-5_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141412,6 +143054,9 @@
     "id": 4413,
     "name": "Team-50 cape",
     "image": "team-50_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141423,6 +143068,9 @@
     "id": 4325,
     "name": "Team-6 cape",
     "image": "team-6_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141434,6 +143082,9 @@
     "id": 4327,
     "name": "Team-7 cape",
     "image": "team-7_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141445,6 +143096,9 @@
     "id": 4329,
     "name": "Team-8 cape",
     "image": "team-8_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141456,6 +143110,9 @@
     "id": 4331,
     "name": "Team-9 cape",
     "image": "team-9_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141518,6 +143175,9 @@
     "id": 13658,
     "name": "Teleport card",
     "image": "teleport_card.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -141809,6 +143469,9 @@
     "id": 1734,
     "name": "Thread",
     "image": "thread.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Baby impling": {
@@ -141870,6 +143533,9 @@
     "id": 5525,
     "name": "Tiara",
     "image": "tiara.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Silver stall (Port Roberts)": {
@@ -141905,6 +143571,9 @@
     "id": 5523,
     "name": "Tiara mould",
     "image": "tiara_mould.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Tool store 4": {
@@ -141935,6 +143604,9 @@
     "id": 438,
     "name": "Tin ore",
     "image": "tin_ore.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Getting started Mining": {
@@ -142095,6 +143767,9 @@
     "id": 590,
     "name": "Tinderbox",
     "image": "tinderbox.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Camping Equipment": {
@@ -142967,6 +144642,9 @@
     "id": 1982,
     "name": "Tomato",
     "image": "tomato.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Tomato plant": {
@@ -145351,6 +147029,9 @@
     "id": 6962,
     "name": "Triangle sandwich",
     "image": "triangle_sandwich.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "'Black-eye'": {
@@ -145581,6 +147262,9 @@
     "id": 333,
     "name": "Trout",
     "image": "trout.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Building muscle": {
@@ -145701,6 +147385,9 @@
     "id": 361,
     "name": "Tuna",
     "image": "tuna.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Gourmet impling": {
@@ -146568,6 +148255,9 @@
     "id": 1716,
     "name": "Unblessed symbol",
     "image": "unblessed_symbol.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Skeleton (Tarn's Lair) Low level": {
@@ -146682,6 +148372,9 @@
     "id": 2317,
     "name": "Uncooked apple pie",
     "image": "uncooked_apple_pie.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Creating an uncooked pie": {
@@ -146706,6 +148399,9 @@
     "id": 2321,
     "name": "Uncooked berry pie",
     "image": "uncooked_berry_pie.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Creating an uncooked pie": {
@@ -146802,6 +148498,9 @@
     "id": 2319,
     "name": "Uncooked meat pie",
     "image": "uncooked_meat_pie.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Creating an uncooked pie": {
@@ -146857,6 +148556,9 @@
     "id": 1617,
     "name": "Uncut diamond",
     "image": "uncut_diamond.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Slagilith": {
@@ -147342,6 +149044,9 @@
     "id": 1621,
     "name": "Uncut emerald",
     "image": "uncut_emerald.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Chest (Anglers' Retreat)": {
@@ -148123,6 +149828,9 @@
     "id": 1619,
     "name": "Uncut ruby",
     "image": "uncut_ruby.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Glod": {
@@ -148509,6 +150217,9 @@
     "id": 1623,
     "name": "Uncut sapphire",
     "image": "uncut_sapphire.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Chest (Ardougne Castle)": {
@@ -148895,6 +150606,9 @@
     "id": 1791,
     "name": "Unfired bowl",
     "image": "unfired_bowl.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Crafting an unfired bowl": {
@@ -148935,6 +150649,9 @@
     "id": 1789,
     "name": "Unfired pie dish",
     "image": "unfired_pie_dish.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Crafting an unfired pie dish": {
@@ -148975,6 +150692,9 @@
     "id": 1787,
     "name": "Unfired pot",
     "image": "unfired_pot.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Crafting an unfired pot": {
@@ -149407,6 +151127,9 @@
     "id": 1714,
     "name": "Unstrung symbol",
     "image": "unstrung_symbol.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Skeleton (Tarn's Lair) Low level": {
@@ -149867,6 +151590,9 @@
     "id": 229,
     "name": "Vial",
     "image": "vial.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Empty vial pack": {
@@ -149988,6 +151714,9 @@
     "id": 227,
     "name": "Vial of water",
     "image": "vial_of_water.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Water elemental": {
@@ -150203,6 +151932,9 @@
     "id": 25769,
     "name": "Vile ashes",
     "image": "vile_ashes.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Agrith Naar": {
@@ -151242,6 +152974,9 @@
     "id": 555,
     "name": "Water rune",
     "image": "water_rune.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Getting started Magic": {
@@ -151735,6 +153470,9 @@
     "id": 1444,
     "name": "Water talisman",
     "image": "water_talisman.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Elaborate lockbox": {
@@ -151835,6 +153573,9 @@
     "id": 5531,
     "name": "Water tiara",
     "image": "water_tiara.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Creating a tiara": {
@@ -152761,6 +154502,9 @@
     "id": 1005,
     "name": "White apron",
     "image": "white_apron.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "spawns": {
         "Yes": "No requirements"
@@ -152791,6 +154535,9 @@
     "id": 1476,
     "name": "White bead",
     "image": "white_bead.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Imp": {
@@ -153326,6 +155073,9 @@
     "id": 1048,
     "name": "White partyhat",
     "image": "white_partyhat.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Complete a Christmas holiday event": {}
@@ -153408,6 +155158,9 @@
     "id": 2522,
     "name": "White toy horsey",
     "image": "white_toy_horsey.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -154208,7 +155961,8 @@
     "name": "Willow comp bow",
     "image": "willow_comp_bow.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -154297,6 +156051,9 @@
     "id": 1519,
     "name": "Willow logs",
     "image": "willow_logs.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Willow tree": {
@@ -154367,6 +156124,9 @@
     "id": 847,
     "name": "Willow longbow",
     "image": "willow_longbow.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Archer (Burthorpe)": {
@@ -154653,6 +156413,9 @@
     "id": 849,
     "name": "Willow shortbow",
     "image": "willow_shortbow.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Adventurer Jon Sharpshooter": {
@@ -154755,6 +156518,9 @@
     "id": 245,
     "name": "Wine of zamorak",
     "image": "wine_of_zamorak.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Chest (alchemist's signet)": {
@@ -154933,6 +156699,9 @@
     "id": 1017,
     "name": "Wizard hat",
     "image": "wizard_hat.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Combat path starter kit": {
@@ -154967,6 +156736,9 @@
     "id": 1907,
     "name": "Wizard's mind bomb",
     "image": "wizard's_mind_bomb.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Dinky the drink troll": {
@@ -154991,6 +156763,9 @@
     "id": 1793,
     "name": "Woad leaf",
     "image": "woad_leaf.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -155177,7 +156952,8 @@
     "name": "Wolf cloak",
     "image": "wolf_cloak.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -155443,6 +157219,9 @@
     "id": 1171,
     "name": "Wooden shield",
     "image": "wooden_shield.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "spawns": {
         "Yes": "No requirements"
@@ -155458,7 +157237,8 @@
     "name": "Wooden shield (g)",
     "image": "wooden_shield_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -155521,6 +157301,9 @@
     "id": 1737,
     "name": "Wool",
     "image": "wool.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Shearing sheep or alpacas": {
@@ -156116,6 +157899,9 @@
     "id": 1472,
     "name": "Yellow bead",
     "image": "yellow_bead.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Imp": {
@@ -156129,6 +157915,9 @@
     "id": 2914,
     "name": "Yellow boots",
     "image": "yellow_boots.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "shops": {
         "Yes": "canCompletePriestInPeril"
@@ -156140,6 +157929,9 @@
     "id": 1023,
     "name": "Yellow cape",
     "image": "yellow_cape.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Dye a cape": {
@@ -156180,6 +157972,9 @@
     "id": 1765,
     "name": "Yellow dye",
     "image": "yellow_dye.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Shelves_(Getting_Ahead)": {
@@ -156288,6 +158083,9 @@
     "id": 2922,
     "name": "Yellow gloves",
     "image": "yellow_gloves.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Crushing hand": {
@@ -156315,6 +158113,9 @@
     "id": 1040,
     "name": "Yellow partyhat",
     "image": "yellow_partyhat.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "other": {
         "Complete a Christmas holiday event": {}
@@ -156466,6 +158267,9 @@
     "id": 1515,
     "name": "Yew logs",
     "image": "yew_logs.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Yew tree": {
@@ -157511,7 +159315,8 @@
     "name": "Zamorak full helm",
     "image": "zamorak_full_helm.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -157579,7 +159384,8 @@
     "name": "Zamorak kiteshield",
     "image": "zamorak_kiteshield.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -157677,6 +159483,9 @@
     "id": 1033,
     "name": "Zamorak monk bottom",
     "image": "zamorak_monk_bottom.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Disciple of Iban": {
@@ -157705,6 +159514,9 @@
     "id": 1035,
     "name": "Zamorak monk top",
     "image": "zamorak_monk_top.png",
+    "tags": [
+      "f2p"
+    ],
     "sources": {
       "drops": {
         "Disciple of Iban": {
@@ -157870,7 +159682,8 @@
     "name": "Zamorak platebody",
     "image": "zamorak_platebody.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -157886,7 +159699,8 @@
     "name": "Zamorak platelegs",
     "image": "zamorak_platelegs.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -157902,7 +159716,8 @@
     "name": "Zamorak plateskirt",
     "image": "zamorak_plateskirt.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "f2p"
     ],
     "sources": {
       "drops": {
