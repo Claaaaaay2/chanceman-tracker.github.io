@@ -12644,7 +12644,7 @@ export const NPC_DATA = {
         "skill": ["fishing"],
         "level": [25],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Rod Fishing spot (lure, bait) Fly fishing": {
         "wiki": "https://oldschool.runescape.wiki/w/Rod_Fishing_spot_(lure,_bait)#Fly_fishing",
@@ -12658,7 +12658,7 @@ export const NPC_DATA = {
         "skill": ["fishing"],
         "level": [20],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Rod Fishing spot (lure, bait) Stripy feathers": {
         "wiki": "https://oldschool.runescape.wiki/w/Rod_Fishing_spot_(lure,_bait)#Stripy_feathers",

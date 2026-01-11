@@ -232,6 +232,9 @@ window.initItemsPage = async function () {
             const { item } = entry;
             let sort = { ...entry.sort };
 
+            if (f2p && !item.tags?.includes("f2p")) {
+                continue;
+            }
             if (!item.name.toLowerCase().includes(search)) continue;
             if (hideR && rolled.includes(item.id)) continue;
             if (onlyU && !unlocked.includes(item.id)) continue;
@@ -426,9 +429,10 @@ window.initItemsPage = async function () {
         renderItems();
     });
 
-    isFreeToPlay.addEventListener("input", () => {
+    isFreeToPlay.addEventListener("input", async () => {
         saveFilters();
         invalidateLogicCaches(fileStore);
+        await router();
         renderItems();
     });
 

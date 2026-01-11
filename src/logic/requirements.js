@@ -5,6 +5,13 @@ export function has(ctx, id) {
 }
 
 export const REQUIREMENT_CHECKS = {
+    canTelegrab(ctx) {
+        return has(ctx, 563) // Law rune
+            && hasAirRuneSource(ctx);
+    },
+    canEnterCraftingGuild(ctx) {
+        return canEnterCraftingGuild(ctx);
+    },
     hasHighLevelHerb(ctx) {
         return has(ctx, 211)  // Grimy avantoe
             || has(ctx, 261)  // Avantoe 
@@ -482,8 +489,8 @@ export const REQUIREMENT_CHECKS = {
     canEnterTheChampionsGuild(ctx) {
         return ctx.player.questPoints >= 32;
     },
-    canStartDragonSlayer(ctx) {
-        return ctx.player.questPoints >= 32;
+    canStartDragonSlayerI(ctx) {
+        return canStartDragonSlayerI(ctx);
     },
     canStartMourningsEndPartI(ctx) {
         return canStartMourningsEndPartI(ctx);
@@ -2146,6 +2153,12 @@ function hasAnyLog(ctx) {
         || canTrainWoodcutting(ctx); // for untradable Juniper logs
 }
 
+function canEnterCraftingGuild(ctx) {
+    return canTrainCrafting(ctx) //
+        && has(ctx, 20208) // Golden apron
+        && has(ctx, 1757); // Brown apron
+}
+
 function canCompleteMisthalinMystery(ctx) {
     return has(ctx, 1925) // Bucket
         && has(ctx, 590)  // Tinderbox
@@ -2770,6 +2783,10 @@ function canCompleteMerlinsCrystal(ctx) {
         && has(ctx, 1925) // Bucket
         && has(ctx, 28)   // Insect repellent
         && has(ctx, 530); // Bat bones
+}
+
+function canStartDragonSlayerI(ctx) {
+    return ctx.player.questPoints >= 32;
 }
 
 function canCompleteDragonSlayerI(ctx) {

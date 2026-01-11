@@ -1,7 +1,13 @@
 import { fileStore } from "../storage/fileStore.js";
 
 export default async function ItemsPage() {
-    const items = await fetch("/data/items.json").then(r => r.json());
+    const isF2P = fileStore.filters?.isFreeToPlay;
+
+    const url = isF2P
+        ? "/data/items_f2p.json"
+        : "/data/items.json";
+
+    const items = await fetch(url).then(r => r.json());
     fileStore.items = items;
 
     const rolled = fileStore.rolled || [];

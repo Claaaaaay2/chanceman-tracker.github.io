@@ -6791,7 +6791,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "Notes": "Requires pot.",
+          "notes": "Requires pot.",
           "rule": {
             "all": [
               {
@@ -7266,7 +7266,7 @@
         "Yes": "No requirements"
       },
       "spawns": {
-        "Yes": "canTrainCrafting"
+        "Yes": "canEnterCraftingGuild"
       }
     }
   },
@@ -9799,7 +9799,13 @@
     ],
     "sources": {
       "shops": {
-        "Yes": "canStartDragonSlayer"
+        "Yes": "canCompleteDragonSlayerI"
+      },
+      "other": {
+        "Questing": {
+          "notes": "Obtained during Dragon Slayer I.",
+          "rule": "canStartDragonSlayerI"
+        }
       }
     }
   },
@@ -11152,7 +11158,7 @@
     "sources": {
       "other": {
         "Smithing": {
-          "Notes": "Requires a Aquanite tendon and a mithril bar.",
+          "notes": "Requires a Aquanite tendon and a mithril bar.",
           "rule": {
             "all": [
               {
@@ -11259,7 +11265,7 @@
     "sources": {
       "other": {
         "Smithing": {
-          "Notes": "requires a blessed spirit shield and an arcane sigil",
+          "notes": "requires a blessed spirit shield and an arcane sigil",
           "rule": {
             "all": [
               {
@@ -16454,6 +16460,12 @@
         "Teak shelves 2": {
           "droprate": "Always"
         }
+      },
+      "spawns": {
+        "Yes": "No requirements"
+      },
+      "shops": {
+        "Yes": "No requirements"
       },
       "other": {
         "Searching": {
@@ -23721,10 +23733,10 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Creating dyes": {
-          "notes": "Requires woad leaves.",
+        "Make use of Aggie's or Ali the dyer's services": {
+          "notes": "Bring 3 Woad leaves and some coins.",
           "rule": {
-            "any": [
+            "all": [
               {
                 "has": 1793
               }
@@ -27366,9 +27378,6 @@
     "sources": {
       "spawns": {
         "Yes": "No requirements"
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -30800,6 +30809,9 @@
         "Tool store 3": {
           "droprate": "Always"
         }
+      },
+      "shops": {
+        "Yes": "No requirements"
       }
     }
   },
@@ -30909,7 +30921,8 @@
             "all": [
               {
                 "has": 22372
-              }
+              },
+              "canTrainCrafting"
             ]
           }
         }
@@ -32849,6 +32862,27 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Cooking": {
+          "notes": "Requires an egg, a bucket of milk, a pot of flour and a cake tin.",
+          "rule": {
+            "all": [
+              {
+                "has": 1944
+              },
+              {
+                "has": 1927
+              },
+              {
+                "has": 1933
+              },
+              {
+                "has": 1887
+              }
+            ]
+          }
+        }
       }
     }
   },
@@ -35985,7 +36019,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "Notes": "Requires a bowl, garlic, and a knife.",
+          "notes": "Requires a bowl, garlic, and a knife.",
           "rule": {
             "all": [
               {
@@ -36016,7 +36050,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "Notes": "Requires a bowl, onion, and a knife.",
+          "notes": "Requires a bowl, onion, and a knife.",
           "rule": {
             "all": [
               {
@@ -36047,7 +36081,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "Notes": "Requires a bowl, tomato, and a knife.",
+          "notes": "Requires a bowl, tomato, and a knife.",
           "rule": {
             "all": [
               {
@@ -36078,7 +36112,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "Notes": "Requires a bowl, tuna, and a knife.",
+          "notes": "Requires a bowl, tuna, and a knife.",
           "rule": {
             "all": [
               {
@@ -36109,7 +36143,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "Notes": "Requires a bowl, ugthanki meat, and a knife.",
+          "notes": "Requires a bowl, ugthanki meat, and a knife.",
           "rule": {
             "all": [
               {
@@ -37077,7 +37111,7 @@
       },
       "other": {
         "Gnome Cooking tutorial": {
-          "Notes": "Do the gnome restaurant tutorial (free roll)"
+          "notes": "Do the gnome restaurant tutorial (free roll)"
         }
       }
     }
@@ -37093,7 +37127,7 @@
       },
       "other": {
         "Gnome Cooking tutorial": {
-          "Notes": "Do the gnome restaurant tutorial (free roll)"
+          "notes": "Do the gnome restaurant tutorial (free roll)"
         }
       }
     }
@@ -37109,7 +37143,7 @@
       },
       "other": {
         "Gnome Cooking tutorial": {
-          "Notes": "Do the gnome restaurant tutorial (free roll)"
+          "notes": "Do the gnome restaurant tutorial (free roll)"
         }
       }
     }
@@ -37161,7 +37195,7 @@
       },
       "other": {
         "Cooking": {
-          "Notes": "Requires a vial and a half coconut.",
+          "notes": "Requires a vial and a half coconut.",
           "rule": {
             "all": [
               {
@@ -37192,7 +37226,7 @@
       },
       "other": {
         "Cooking": {
-          "Notes": "Requires raw cod.",
+          "notes": "Requires raw cod.",
           "rule": {
             "all": [
               {
@@ -38003,7 +38037,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "Notes": "Requires raw barb-tailed kebbit.",
+          "notes": "Requires raw barb-tailed kebbit.",
           "rule": {
             "all": [
               {
@@ -38027,7 +38061,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "Notes": "Requires raw chicken.",
+          "notes": "Requires raw chicken.",
           "rule": {
             "all": [
               {
@@ -38053,7 +38087,7 @@
       },
       "other": {
         "Cooking": {
-          "Notes": "Requires skewered chompy.",
+          "notes": "Requires skewered chompy.",
           "rule": {
             "all": [
               {
@@ -38078,7 +38112,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "Notes": "Requires raw dashing kebbit.",
+          "notes": "Requires raw dashing kebbit.",
           "rule": {
             "all": [
               {
@@ -38100,7 +38134,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "Notes": "Requires Giant crab meat.",
+          "notes": "Requires Giant crab meat.",
           "rule": {
             "all": [
               "canCompleteRFDFreeingPiratePete",
@@ -38119,7 +38153,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "Notes": "Requires raw graahk.",
+          "notes": "Requires raw graahk.",
           "rule": {
             "all": [
               {
@@ -38141,7 +38175,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "Notes": "Requires raw jubbly.",
+          "notes": "Requires raw jubbly.",
           "rule": {
             "all": [
               {
@@ -38170,7 +38204,7 @@
       },
       "other": {
         "Cooking": {
-          "Notes": "Requires raw karambwan.",
+          "notes": "Requires raw karambwan.",
           "rule": {
             "all": [
               {
@@ -38195,7 +38229,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "Notes": "Requires raw kyatt.",
+          "notes": "Requires raw kyatt.",
           "rule": {
             "all": [
               {
@@ -38217,7 +38251,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "Notes": "Requires raw larupia.",
+          "notes": "Requires raw larupia.",
           "rule": {
             "all": [
               {
@@ -38264,7 +38298,7 @@
       },
       "other": {
         "Cooking": {
-          "Notes": "Requires raw beef, bear meat, boar meat, rat meat or yak meat.",
+          "notes": "Requires raw beef, bear meat, boar meat, rat meat or yak meat.",
           "rule": {
             "all": [
               {
@@ -38285,8 +38319,7 @@
                     "has": 10816
                   }
                 ]
-              },
-              "canTrainCooking"
+              }
             ]
           }
         }
@@ -38307,7 +38340,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "Notes": "Requires raw moonlight antelope.",
+          "notes": "Requires raw moonlight antelope.",
           "rule": {
             "all": [
               {
@@ -38334,7 +38367,7 @@
       },
       "other": {
         "Cooking": {
-          "Notes": "Requires raw mystery meat.",
+          "notes": "Requires raw mystery meat.",
           "rule": {
             "all": [
               {
@@ -38355,7 +38388,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "Notes": "Requires wrapped oomlie.",
+          "notes": "Requires wrapped oomlie.",
           "rule": {
             "all": [
               {
@@ -38376,7 +38409,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "Notes": "Requires Raw pyre fox.",
+          "notes": "Requires Raw pyre fox.",
           "rule": {
             "all": [
               {
@@ -38398,7 +38431,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "Notes": "Requires Raw rabbit.",
+          "notes": "Requires Raw rabbit.",
           "rule": {
             "all": [
               {
@@ -38419,7 +38452,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "Notes": "Requires Raw slimy eel.",
+          "notes": "Requires Raw slimy eel.",
           "rule": {
             "all": [
               {
@@ -38440,7 +38473,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "Notes": "Requires Raw sunlight antelope.",
+          "notes": "Requires Raw sunlight antelope.",
           "rule": {
             "all": [
               {
@@ -38462,7 +38495,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "Notes": "Requires Sweetcorn.",
+          "notes": "Requires Sweetcorn.",
           "rule": {
             "all": [
               {
@@ -38486,7 +38519,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "Notes": "Requires raw wild kebbit.",
+          "notes": "Requires raw wild kebbit.",
           "rule": {
             "all": [
               {
@@ -39646,7 +39679,7 @@
       },
       "other": {
         "Gnome Cooking tutorial": {
-          "Notes": "Do the gnome restaurant tutorial (free roll)"
+          "notes": "Do the gnome restaurant tutorial (free roll)"
         }
       }
     }
@@ -40008,7 +40041,7 @@
       },
       "other": {
         "Cooking": {
-          "Notes": "Requires uncooked curry (bowl of water + potato + cooked meat/cooked chicken + curry leaf/spice.",
+          "notes": "Requires uncooked curry (bowl of water + potato + cooked meat/cooked chicken + curry leaf/spice.",
           "rule": {
             "all": [
               {
@@ -40435,7 +40468,7 @@
       },
       "other": {
         "Cooking": {
-          "Notes": "Requires raw dark crab.",
+          "notes": "Requires raw dark crab.",
           "rule": {
             "all": [
               {
@@ -42223,7 +42256,7 @@
       },
       "other": {
         "Cutting a gem": {
-          "Notes": "Requires an uncut diamond",
+          "notes": "Requires an uncut diamond",
           "rule": {
             "all": [
               {
@@ -42232,6 +42265,10 @@
               "canTrainCrafting"
             ]
           }
+        },
+        "Questing": {
+          "notes": "Obtained upon completion of Waterfall Quest.",
+          "rule": "canCompleteWaterfallQuest"
         }
       }
     }
@@ -42282,10 +42319,6 @@
               "canTrainCrafting"
             ]
           }
-        },
-        "Questing": {
-          "notes": "Obtained upon completion of Waterfall Quest.",
-          "rule": "canCompleteWaterfallQuest"
         }
       }
     }
@@ -45673,7 +45706,7 @@
     "sources": {
       "other": {
         "Smithing": {
-          "Notes": "Repair a broken dragon hasta.",
+          "notes": "Repair a broken dragon hasta.",
           "rule": {
             "all": [
               {
@@ -45775,7 +45808,7 @@
     "sources": {
       "other": {
         "Crafting": {
-          "Notes": "Requires a Hydra's claw and a zamorakian hasta.",
+          "notes": "Requires a Hydra's claw and a zamorakian hasta.",
           "rule": {
             "all": [
               {
@@ -46015,7 +46048,7 @@
       },
       "other": {
         "Smithing": {
-          "Notes": "Requires a Dragon metal sheet.",
+          "notes": "Requires a Dragon metal sheet.",
           "rule": {
             "all": [
               {
@@ -46037,7 +46070,7 @@
     "sources": {
       "other": {
         "Smithing": {
-          "Notes": "Requires a dragon sq shield, dragon metal slice and a dragon metal shard.",
+          "notes": "Requires a dragon sq shield, dragon metal slice and a dragon metal shard.",
           "rule": {
             "all": [
               {
@@ -46595,7 +46628,7 @@
       },
       "other": {
         "Smithing": {
-          "Notes": "Repair a broken dragon pickaxe.",
+          "notes": "Repair a broken dragon pickaxe.",
           "rule": {
             "all": [
               "canCompleteBoneVoyage",
@@ -46630,7 +46663,7 @@
     "sources": {
       "other": {
         "Smithing": {
-          "Notes": "Requires dragon chainbody, dragon metal lump and dragon metal shard.",
+          "notes": "Requires dragon chainbody, dragon metal lump and dragon metal shard.",
           "rule": {
             "all": [
               {
@@ -47074,7 +47107,7 @@
     "sources": {
       "other": {
         "Smithing": {
-          "Notes": "Requires shield left and right half.",
+          "notes": "Requires shield left and right half.",
           "rule": {
             "all": [
               {
@@ -47190,7 +47223,7 @@
     "sources": {
       "other": {
         "Smithing": {
-          "Notes": "requires an anti-dragon shield and a draconic visage.",
+          "notes": "requires an anti-dragon shield and a draconic visage.",
           "rule": {
             "all": [
               {
@@ -47213,7 +47246,7 @@
     "sources": {
       "other": {
         "Smithing": {
-          "Notes": "requires an anti-dragon shield and a skeletal visage.",
+          "notes": "requires an anti-dragon shield and a skeletal visage.",
           "rule": {
             "all": [
               {
@@ -47249,7 +47282,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "Notes": "Requires uncooked dragonfruit pie.",
+          "notes": "Requires uncooked dragonfruit pie.",
           "rule": {
             "all": [
               {
@@ -47450,7 +47483,7 @@
       },
       "other": {
         "Cutting a gem": {
-          "Notes": "Requires an uncut dragonstone",
+          "notes": "Requires an uncut dragonstone",
           "rule": {
             "all": [
               {
@@ -50331,7 +50364,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "Notes": "Requires scrambled egg and tomato",
+          "notes": "Requires scrambled egg and tomato",
           "rule": {
             "all": [
               {
@@ -50363,7 +50396,7 @@
       },
       "other": {
         "Cooking": {
-          "Notes": "Requires egg & tomato and potato with butter",
+          "notes": "Requires egg & tomato and potato with butter",
           "rule": {
             "all": [
               {
@@ -50839,7 +50872,7 @@
     "sources": {
       "other": {
         "Smithing": {
-          "Notes": "requires a blessed spirit shield and an elysian sigil",
+          "notes": "requires a blessed spirit shield and an elysian sigil",
           "rule": {
             "all": [
               {
@@ -50920,7 +50953,7 @@
       },
       "other": {
         "Cutting a gem": {
-          "Notes": "requires an uncut emerald and a chisel",
+          "notes": "requires an uncut emerald and a chisel",
           "rule": {
             "all": [
               {
@@ -50946,10 +50979,6 @@
               "canCompleteShadowOfTheStorm"
             ]
           }
-        },
-        "Questing 2": {
-          "notes": "Received after Pirate's Treasure.",
-          "rule": "canCompletePiratesTreasure"
         }
       }
     }
@@ -52077,11 +52106,11 @@
       "f2p"
     ],
     "sources": {
-      "Combat path voucher (m)": {
-        "droprate": "Always"
-      },
       "drops": {
         "Jekyll and Hyde Ranarr": {
+          "droprate": "Always"
+        },
+        "Combat path voucher (m)": {
           "droprate": "Always"
         }
       },
@@ -52818,7 +52847,7 @@
       },
       "other": {
         "Gnome Cooking tutorial": {
-          "Notes": "Do the gnome restaurant tutorial (free roll)"
+          "notes": "Do the gnome restaurant tutorial (free roll)"
         }
       }
     }
@@ -54294,7 +54323,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "Notes": "Requires fat snail",
+          "notes": "Requires fat snail",
           "rule": {
             "all": [
               {
@@ -54757,7 +54786,7 @@
     "sources": {
       "other": {
         "Murdering": {
-          "Notes": "Requires raw fish and a knife (or chum spreader)",
+          "notes": "Requires raw fish and a knife (or chum spreader)",
           "rule": {
             "all": [
               "hasFishForFineOffcuts",
@@ -55621,7 +55650,7 @@
     "sources": {
       "other": {
         "Filling a fish crate": {
-          "Notes": "Requires raw bluefin and a fish crate (empty)",
+          "notes": "Requires raw bluefin and a fish crate (empty)",
           "rule": {
             "all": [
               {
@@ -55644,7 +55673,7 @@
     "sources": {
       "other": {
         "Creating a fish crate": {
-          "Notes": "Requires a camphor crate and an ice cooler",
+          "notes": "Requires a camphor crate and an ice cooler",
           "rule": {
             "all": [
               {
@@ -55664,7 +55693,7 @@
     "sources": {
       "other": {
         "Filling a fish crate": {
-          "Notes": "Requires raw giant krill and a fish crate (empty)",
+          "notes": "Requires raw giant krill and a fish crate (empty)",
           "rule": {
             "all": [
               {
@@ -55687,7 +55716,7 @@
     "sources": {
       "other": {
         "Filling a fish crate": {
-          "Notes": "Requires raw haddock and a fish crate (empty)",
+          "notes": "Requires raw haddock and a fish crate (empty)",
           "rule": {
             "all": [
               {
@@ -55710,7 +55739,7 @@
     "sources": {
       "other": {
         "Filling a fish crate": {
-          "Notes": "Requires raw halibut and a fish crate (empty)",
+          "notes": "Requires raw halibut and a fish crate (empty)",
           "rule": {
             "all": [
               {
@@ -55733,7 +55762,7 @@
     "sources": {
       "other": {
         "Filling a fish crate": {
-          "Notes": "Requires raw marlin and a fish crate (empty)",
+          "notes": "Requires raw marlin and a fish crate (empty)",
           "rule": {
             "all": [
               {
@@ -55756,7 +55785,7 @@
     "sources": {
       "other": {
         "Filling a fish crate": {
-          "Notes": "Requires raw yellowfin and a fish crate (empty)",
+          "notes": "Requires raw yellowfin and a fish crate (empty)",
           "rule": {
             "all": [
               {
@@ -55798,7 +55827,7 @@
       },
       "other": {
         "Murdering": {
-          "Notes": "Requires raw fish and a knife (or chum spreader)",
+          "notes": "Requires raw fish and a knife (or chum spreader)",
           "rule": {
             "all": [
               "hasFishForOffcuts",
@@ -55838,7 +55867,7 @@
       },
       "other": {
         "Cooking": {
-          "Notes": "Requires raw fish pie",
+          "notes": "Requires raw fish pie",
           "rule": {
             "all": [
               {
@@ -56519,7 +56548,7 @@
     "sources": {
       "other": {
         "Fletching": {
-          "Notes": "Requires ogre arrow shafts",
+          "notes": "Requires ogre arrow shafts",
           "rule": {
             "all": [
               {
@@ -57057,7 +57086,7 @@
       },
       "other": {
         "Cooking": {
-          "Notes": "Requires sliced mushrooms",
+          "notes": "Requires sliced mushrooms",
           "rule": {
             "all": [
               {
@@ -57078,7 +57107,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "Notes": "Requires chopped onion",
+          "notes": "Requires chopped onion",
           "rule": {
             "all": [
               {
@@ -57664,7 +57693,7 @@
       },
       "other": {
         "Gnome Cooking tutorial": {
-          "Notes": "Do the gnome restaurant tutorial (free roll)"
+          "notes": "Do the gnome restaurant tutorial (free roll)"
         }
       }
     }
@@ -57680,7 +57709,7 @@
       },
       "other": {
         "Gnome Cooking tutorial": {
-          "Notes": "Do the gnome restaurant tutorial (free roll)"
+          "notes": "Do the gnome restaurant tutorial (free roll)"
         }
       }
     }
@@ -57735,7 +57764,7 @@
     "sources": {
       "other": {
         "Fishing": {
-          "Notes": "Requires raw giant krill",
+          "notes": "Requires raw giant krill",
           "rule": {
             "all": [
               {
@@ -58633,7 +58662,7 @@
       },
       "other": {
         "Gnome Cooking tutorial": {
-          "Notes": "Do the gnome restaurant tutorial (free roll)"
+          "notes": "Do the gnome restaurant tutorial (free roll)"
         }
       }
     }
@@ -58994,7 +59023,7 @@
     "sources": {
       "other": {
         "Smithing": {
-          "Notes": "requires godsword shards 1, 2 and 3",
+          "notes": "requires godsword shards 1, 2 and 3",
           "rule": {
             "all": [
               {
@@ -61320,7 +61349,7 @@
     "sources": {
       "other": {
         "Fletching": {
-          "Notes": "Requires ent branch, greenman mask, yew logs and a knife",
+          "notes": "Requires ent branch, greenman mask, yew logs and a knife",
           "rule": {
             "all": [
               {
@@ -61371,7 +61400,7 @@
     "sources": {
       "other": {
         "Fletching": {
-          "Notes": "Requires ent branch, greenman mask, maple logs and a knife",
+          "notes": "Requires ent branch, greenman mask, maple logs and a knife",
           "rule": {
             "all": [
               {
@@ -74187,7 +74216,7 @@
     "sources": {
       "other": {
         "Fishing": {
-          "Notes": "Requires raw haddock",
+          "notes": "Requires raw haddock",
           "rule": {
             "all": [
               {
@@ -74208,7 +74237,7 @@
     "sources": {
       "other": {
         "Murdering": {
-          "Notes": "Requires raw haddock and a knife (or chum spreader)",
+          "notes": "Requires raw haddock and a knife (or chum spreader)",
           "rule": {
             "all": [
               {
@@ -75386,7 +75415,7 @@
       },
       "other": {
         "Fletching": {
-          "Notes": "Requires arrow shaft and feather",
+          "notes": "Requires arrow shaft and feather",
           "rule": {
             "all": [
               {
@@ -75411,7 +75440,7 @@
     "sources": {
       "other": {
         "Fletching": {
-          "Notes": "Requires atlatl dart shaft and feather",
+          "notes": "Requires atlatl dart shaft and feather",
           "rule": {
             "all": [
               {
@@ -75433,7 +75462,7 @@
     "sources": {
       "other": {
         "Fletching": {
-          "Notes": "Requires unstrung heavy ballista and a monkey tail",
+          "notes": "Requires unstrung heavy ballista and a monkey tail",
           "rule": {
             "all": [
               {
@@ -76278,7 +76307,7 @@
     "sources": {
       "other": {
         "Fletching": {
-          "Notes": "Requires teak logs, jerboa tail, hunter spear tips and a knife",
+          "notes": "Requires teak logs, jerboa tail, hunter spear tips and a knife",
           "rule": {
             "all": [
               {
@@ -76324,7 +76353,7 @@
     "sources": {
       "other": {
         "Fletching": {
-          "Notes": "requires Sunlight antelope antler, Hunters' crossbow, and a chisel",
+          "notes": "requires Sunlight antelope antler, Hunters' crossbow, and a chisel",
           "rule": {
             "all": [
               {
@@ -76745,7 +76774,7 @@
     "sources": {
       "other": {
         "Fletching": {
-          "Notes": "requires Heavy frame and ballista limbs",
+          "notes": "requires Heavy frame and ballista limbs",
           "rule": {
             "all": [
               {
@@ -76769,7 +76798,7 @@
     "sources": {
       "other": {
         "Fletching": {
-          "Notes": "requires light frame and ballista limbs",
+          "notes": "requires light frame and ballista limbs",
           "rule": {
             "all": [
               {
@@ -76818,7 +76847,7 @@
     "sources": {
       "other": {
         "Smithing lots of infernal things": {
-          "Notes": "requires Oathplate shards and crushed infernal shale",
+          "notes": "requires Oathplate shards and crushed infernal shale",
           "rule": {
             "all": [
               {
@@ -81376,7 +81405,7 @@
       },
       "other": {
         "Cutting a gem": {
-          "Notes": "requires an uncut jade and a chisel",
+          "notes": "requires an uncut jade and a chisel",
           "rule": {
             "all": [
               {
@@ -82390,6 +82419,22 @@
       },
       "spawns": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Cooking": {
+          "notes": "Requires a Jug of water and Grapes",
+          "rule": {
+            "all": [
+              {
+                "has": 1937
+              },
+              {
+                "has": 1987
+              },
+              "canTrainCooking"
+            ]
+          }
+        }
       }
     }
   },
@@ -86430,7 +86475,8 @@
             "all": [
               {
                 "has": 1741
-              }
+              },
+              "canTrainCrafting"
             ]
           }
         }
@@ -86505,7 +86551,8 @@
             "all": [
               {
                 "has": 1741
-              }
+              },
+              "canTrainCrafting"
             ]
           }
         }
@@ -86539,7 +86586,8 @@
             "all": [
               {
                 "has": 1741
-              }
+              },
+              "canTrainCrafting"
             ]
           }
         }
@@ -86590,7 +86638,8 @@
             "all": [
               {
                 "has": 1741
-              }
+              },
+              "canTrainCrafting"
             ]
           }
         }
@@ -86651,7 +86700,8 @@
             "all": [
               {
                 "has": 1741
-              }
+              },
+              "canTrainCrafting"
             ]
           }
         }
@@ -86688,7 +86738,8 @@
             "all": [
               {
                 "has": 1741
-              }
+              },
+              "canTrainCrafting"
             ]
           }
         }
@@ -86800,7 +86851,7 @@
       },
       "other": {
         "Gnome Cooking tutorial": {
-          "Notes": "Do the gnome restaurant tutorial (free roll)"
+          "notes": "Do the gnome restaurant tutorial (free roll)"
         }
       }
     }
@@ -87889,6 +87940,19 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Cooking": {
+          "notes": "Requires a Raw lobster.",
+          "rule": {
+            "all": [
+              {
+                "has": 377
+              },
+              "canTrainCooking"
+            ]
+          }
+        }
       }
     }
   },
@@ -90750,6 +90814,9 @@
           "droprate": "Always"
         },
         "Maple tree (Farming)": {
+          "droprate": "Always"
+        },
+        "Maple tree Free-to-play": {
           "droprate": "Always"
         },
         "Barbarian Assault/Gambles Low": {
@@ -100641,7 +100708,7 @@
         "Yes": "No requirements"
       },
       "spawns": {
-        "Yes": "canTrainCrafting"
+        "Yes": "canEnterCraftingGuild"
       }
     }
   },
@@ -102750,9 +102817,6 @@
       },
       "shops": {
         "Yes": "No requirements"
-      },
-      "spawns": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -103046,7 +103110,7 @@
       },
       "other": {
         "Cutting a gem": {
-          "Notes": "requires an uncut onyx and a chisel",
+          "notes": "requires an uncut onyx and a chisel",
           "rule": {
             "all": [
               {
@@ -103523,7 +103587,7 @@
       },
       "other": {
         "Cutting a gem": {
-          "Notes": "requires an uncut opal and a chisel",
+          "notes": "requires an uncut opal and a chisel",
           "rule": {
             "all": [
               {
@@ -103918,7 +103982,7 @@
       },
       "other": {
         "Gnome Cooking tutorial": {
-          "Notes": "Do the gnome restaurant tutorial (free roll)"
+          "notes": "Do the gnome restaurant tutorial (free roll)"
         }
       }
     }
@@ -105431,6 +105495,19 @@
       },
       "spawns": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Crafting": {
+          "notes": "Requires an Unfired pie dish.",
+          "rule": {
+            "all": [
+              {
+                "has": 1789
+              },
+              "canTrainCrafting"
+            ]
+          }
+        }
       }
     }
   },
@@ -113710,6 +113787,18 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Make use of Aggie's or Ali the dyer's services": {
+          "notes": "Bring 3 Redberries and some coins.",
+          "rule": {
+            "all": [
+              {
+                "has": 1951
+              }
+            ]
+          }
+        }
       }
     }
   },
@@ -114064,7 +114153,7 @@
       },
       "other": {
         "Cutting a gem": {
-          "Notes": "requires an uncut red topaz and a chisel",
+          "notes": "requires an uncut red topaz and a chisel",
           "rule": {
             "all": [
               {
@@ -114120,11 +114209,6 @@
         "Fruit Stall": {
           "droprate": "1/20"
         }
-      },
-      "other": {
-        "Foraging": {
-          "notes": "Pick from redberry bush south of Varrock."
-        }
       }
     }
   },
@@ -114144,6 +114228,9 @@
             "canStartPerilousMoons"
           ]
         }
+      },
+      "spawns": {
+        "Yes": "No requirements"
       },
       "other": {
         "Cooking": {
@@ -115095,7 +115182,7 @@
         "Yes": "No requirements"
       },
       "spawns": {
-        "Yes": "canTrainCrafting"
+        "Yes": "canEnterCraftingGuild"
       }
     }
   },
@@ -116415,7 +116502,7 @@
       },
       "other": {
         "Cutting a gem": {
-          "Notes": "requires an uncut ruby and a chisel",
+          "notes": "requires an uncut ruby and a chisel",
           "rule": {
             "all": [
               {
@@ -116507,7 +116594,7 @@
     "sources": {
       "other": {
         "Crafting": {
-          "notes": "Requires gold bar, ruby and bracelet mould.",
+          "notes": "Requires a Gold bar, a Ruby and an Amulet mould.",
           "rule": {
             "all": [
               {
@@ -116517,7 +116604,7 @@
                 "has": 1603
               },
               {
-                "has": 11065
+                "has": 1595
               },
               "canTrainCrafting"
             ]
@@ -123489,7 +123576,7 @@
       },
       "other": {
         "Cutting a gem": {
-          "Notes": "requires an uncut sapphire and a chisel",
+          "notes": "requires an uncut sapphire and a chisel",
           "rule": {
             "all": [
               {
@@ -123548,10 +123635,7 @@
           "rule": {
             "all": [
               {
-                "has": 2357
-              },
-              {
-                "has": 1607
+                "has": 1675
               },
               {
                 "has": 1759
@@ -136118,6 +136202,19 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Smithing": {
+          "notes": "Requires a steel bar.",
+          "rule": {
+            "all": [
+              {
+                "has": 2353
+              },
+              "canTrainSmithing"
+            ]
+          }
+        }
       }
     }
   },
@@ -136140,6 +136237,29 @@
         "Questing": {
           "notes": "Received during Underground Pass.",
           "rule": "canCompleteUndergroundPass"
+        },
+        "Cooking": {
+          "notes": "Requires a Bowl of water, a Potato and Cooked meat or Cooked chicken.",
+          "rule": {
+            "all": [
+              {
+                "has": 1921
+              },
+              {
+                "has": 1942
+              },
+              {
+                "any": [
+                  {
+                    "has": 2142
+                  },
+                  {
+                    "has": 2140
+                  }
+                ]
+              }
+            ]
+          }
         }
       }
     }
@@ -137219,6 +137339,21 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Crafting": {
+          "notes": "Requires a Leather body and Steel studs",
+          "rule": {
+            "all": [
+              {
+                "has": 1129
+              },
+              {
+                "has": 2370
+              }
+            ]
+          }
+        }
       }
     }
   },
@@ -137299,6 +137434,21 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Crafting": {
+          "notes": "Requires a Leather chaps and Steel studs",
+          "rule": {
+            "all": [
+              {
+                "has": 1095
+              },
+              {
+                "has": 2370
+              }
+            ]
+          }
+        }
       }
     }
   },
@@ -143584,7 +143734,7 @@
         "Yes": "No requirements"
       },
       "spawns": {
-        "Yes": "canTrainCrafting"
+        "Yes": "canEnterCraftingGuild"
       }
     }
   },
@@ -144046,7 +144196,7 @@
           }
         },
         "Gnome Cooking tutorial": {
-          "Notes": "Do the gnome restaurant tutorial (free roll)"
+          "notes": "Do the gnome restaurant tutorial (free roll)"
         }
       }
     }
@@ -151691,7 +151841,7 @@
       },
       "other": {
         "Empty any filled vial": {
-          "Notes": "Requires any potion or filled vial"
+          "notes": "Requires any potion or filled vial"
         }
       }
     }
@@ -151842,6 +151992,14 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Filling a Vial": {
+          "notes": "Requires a Vial.",
+          "rule": {
+            "has": 229
+          }
+        }
       }
     }
   },
@@ -154506,9 +154664,6 @@
       "f2p"
     ],
     "sources": {
-      "spawns": {
-        "Yes": "No requirements"
-      },
       "shops": {
         "Yes": "No requirements"
       },
@@ -156643,6 +156798,21 @@
       },
       "spawns": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Cooking": {
+          "notes": "Requires a Jug of water and some Zamorak's grapes.",
+          "rule": {
+            "all": [
+              {
+                "has": 1937
+              },
+              {
+                "has": 20749
+              }
+            ]
+          }
+        }
       }
     }
   },
@@ -156767,12 +156937,14 @@
       "f2p"
     ],
     "sources": {
-      "shops": {
-        "Yes": "No requirements"
-      },
       "drops": {
         "Woad plant": {
           "droprate": "Always"
+        }
+      }, 
+      "other": {
+        "Purchase through dialogue": {
+          "notes": "Bought from Wyson the gardener in Falador (free roll)"
         }
       }
     }
@@ -158094,6 +158266,9 @@
         "Crawling Hand": {
           "droprate": "1/64"
         }
+      },
+      "shops": {
+        "Yes": "canCompletePriestInPeril"
       }
     }
   },
