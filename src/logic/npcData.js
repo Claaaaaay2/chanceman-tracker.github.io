@@ -15713,7 +15713,15 @@ export const NPC_DATA = {
         "rule": ["canReachAbyssalSire"],
         "skill": ["Slayer"],
         "level": [85],
-        "tags": [],
+        "tags": ["boss"],
+        "f2p": false
+    },
+    "Unsired (per part)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Unsired",
+        "rule": ["canReachAbyssalSire"],
+        "skill": ["Slayer"],
+        "level": [85],
+        "tags": ["boss"],
         "f2p": false
     },
     "Urium Shade": {

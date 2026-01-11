@@ -16313,7 +16313,8 @@
               },
               {
                 "has": 1759
-              }
+              },
+              "canTrainCrafting"
             ]
           }
         }

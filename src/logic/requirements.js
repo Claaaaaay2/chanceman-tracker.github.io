@@ -745,7 +745,10 @@ export const REQUIREMENT_CHECKS = {
         return canCompleteIcthlarinsLittleHelper(ctx);
     },
     canReachAbyssalSire(ctx) {
-        return canCompleteEnterTheAbyss(ctx) || canCompleteFairytaleIGrowingPains(ctx);
+        return !ctx.filters.slayerLocked //
+            && (canCompleteEnterTheAbyss(ctx) 
+                || canCompleteFairytaleIGrowingPains(ctx)
+            );
     },
     canReachTrollheim(ctx) {
         return canReachTrollheim(ctx);
@@ -1325,6 +1328,12 @@ export const REQUIREMENT_CHECKS = {
     },
     hasDragonfruitSapling(ctx) {
         return has(ctx, 22866);
+    },
+    hasCelastrusSapling(ctx) {
+        return has(ctx, 22856);
+    },
+    hasGrapeSeed(ctx) {
+        return has(ctx, 13657);
     },
     hasMarigoldSeed(ctx) {
         return has(ctx, 5096);
@@ -2997,7 +3006,7 @@ function canCompleteFamilyCrest(ctx) {
 }
 
 function canCompleteDragonSlayerII(ctx) {
-    return ctx.player.questPoints >= 200 //
+    return ctx.player?.questPoints >= 200 //
         && canCompleteLegendsQuest(ctx) //
         && canCompleteDreamMentor(ctx) //
         && canCompleteATailOfTwoCats(ctx) //

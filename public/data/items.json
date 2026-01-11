@@ -671,10 +671,9 @@
     "name": "Abyssal bludgeon",
     "image": "abyssal_bludgeon.png",
     "sources": {
-      "other": {
-        "Combining its 3 parts": {
-          "notes": "The Bludgeon axon, Bludgeon claw and Bludgeon spine are abailable from the Abyssal Sire.",
-          "rule": "canReachAbyssalSire"
+      "drops": {
+        "Unsired (per part)": {
+          "droprate": "1/2.065; 1/1.98"
         }
       }
     }
@@ -148424,7 +148423,8 @@
               },
               {
                 "has": 1759
-              }
+              },
+              "canTrainCrafting"
             ]
           }
         }
