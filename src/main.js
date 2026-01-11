@@ -78,6 +78,7 @@ async function computeAllRanksOnce(items, ctx) {
 
                     // ONLY consider reachable NPCs
                     if (!(await canReachNpc(npcName, ctx))) continue;
+                    if (!NPC_DATA[npcName].f2p && ctx.filters?.isFreeToPlay) continue;
 
                     if (Array.isArray(drops)) {
                         for (const d of drops) {

@@ -84,12 +84,16 @@ async function renderSourceTable(section, entries) {
         const rows = [];
 
         for (const [name, data] of Object.entries(entries)) {
-            const obtainable = await isSourceObtainable(name, fileStore);
-            rows.push({
-                name,
-                data,
-                obtainable
-            });
+            if (fileStore.filters.isFreeToPlay && !NPC_DATA[name].f2p) {
+                continue;
+            } else {
+                const obtainable = await isSourceObtainable(name, fileStore);
+                rows.push({
+                    name,
+                    data,
+                    obtainable
+                });
+            }
         }
 
         rows.sort((a, b) => {
