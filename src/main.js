@@ -240,6 +240,9 @@ window.initItemsPage = async function () {
             if (hideR && rolled.includes(item.id)) continue;
             if (onlyU && !unlocked.includes(item.id)) continue;
             if (hideCl && item.tags?.includes("clue-reward-only")) continue;
+            if (hideCl && await shouldHideForClueFilter(item, fileStore)) {
+                sort.rank = 8;
+            }
             if (!allowHo && await hideTag(item, fileStore, "house")) {
                 sort.rank = 8;
             }
@@ -520,6 +523,58 @@ export function afterRoute() {
     if (typeof initBugPage === "function") {
         initBugPage();
     }
+}
+
+async function shouldHideForClueFilter(item, ctx) {
+    let hasAnyClueSource = false;
+    let hasReachableNonClueSource = false;
+
+    // Check shops - only count if unlocked
+    if (ctx.unlocked?.includes(item.id) && item.sources?.shops) {
+        hasReachableNonClueSource = true;
+    }
+
+    // Check spawns - only count if unlocked
+    if (ctx.unlocked?.includes(item.id) && item.sources?.spawns) {
+        hasReachableNonClueSource = true;
+    }
+
+    // Check NPC drops
+    if (item.sources?.drops) {
+        for (const npcName of Object.keys(item.sources.drops)) {
+            const npc = NPC_DATA[npcName];
+            if (!npc) continue;
+
+            const isClueSource = npc.tags?.includes("clue");
+            if (isClueSource) hasAnyClueSource = true;
+
+            const reachable = await canReachNpc(npcName, ctx);
+            if (!reachable) continue;
+
+            if (!isClueSource) hasReachableNonClueSource = true;
+        }
+    }
+
+    // Check other sources
+    if (item.sources?.other) {
+        for (const source of Object.values(item.sources.other)) {
+            const isClueSource = source.tags?.includes("clue");
+            if (isClueSource) hasAnyClueSource = true;
+
+            const reachable = await canReachSource(source, ctx);
+            if (!reachable) continue;
+
+            if (!isClueSource) hasReachableNonClueSource = true;
+        }
+    }
+
+    // If there are reachable non-clue sources, don't hide
+    if (hasReachableNonClueSource) return false;
+
+    // If all sources are clue-related (or unreachable), hide it
+    if (hasAnyClueSource) return true;
+
+    return false;
 }
 
 async function canReachSource(source, ctx) {
