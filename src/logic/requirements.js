@@ -4615,7 +4615,39 @@ function canCompleteBigChompyBirdHunting(ctx) {
 
 function canTrainCrafting(ctx) {
     if (ctx.filters?.overrideCrafting) return true;
-    return true; // TODO implement this beast (true because lamps and buttons)
+    return has(ctx, 1737) // Wool
+        || has(ctx, 1761) // Soft clay
+        || (has(ctx, 1741) // Leather
+            && ctx.filters?.isFreeToPlay //
+            ? (has(ctx, 1733) && has(ctx, 1734)) // Needle and Thread
+            : true
+        ) //
+        || (has(ctx, 1775) // Molten glass
+            && has(ctx, 1785) // Glassblowing pipe
+        )
+        || (has(ctx, 1625) // Uncut jade
+            && has(ctx, 1755) // Chisel
+        )
+        || (has(ctx, 1592) // Ring mould
+            && has(ctx, 1609) // Opal
+            && has(ctx, 2355) // Silver bar
+        )
+        || (has(ctx, 1592) // Ring mould
+            && has(ctx, 2357) // Gold bar
+            && ctx.player.levels.Crafting >= 5
+        )
+        || (has(ctx, 1597) // Necklace mould
+            && has(ctx, 2357) // Gold bar
+            && ctx.player.levels.Crafting >= 6
+        )
+        || (has(ctx, 11065) // Bracelet mould
+            && has(ctx, 2357) // Gold bar
+            && ctx.player.levels.Crafting >= 7
+        )
+        || (has(ctx, 1595) // Amulet mould
+            && has(ctx, 2357) // Gold bar
+            && ctx.player.levels.Crafting >= 8
+        ); // TODO could add more.
 }
 
 function canTrainPrayer(ctx) {

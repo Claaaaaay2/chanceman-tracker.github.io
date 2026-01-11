@@ -12900,7 +12900,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": ["easy"],
-        "f2p": true
+        "f2p": false
     },
     "Sack pack": {
         "wiki": "https://oldschool.runescape.wiki/w/Sack_pack",

@@ -9263,9 +9263,6 @@
     ],
     "sources": {
       "drops": {
-        "Sack (Wilderness)": {
-          "droprate": "Always"
-        },
         "Table (Misthalin Mystery)": {
           "droprate": "Always"
         },
@@ -9281,11 +9278,6 @@
       },
       "spawns": {
         "Yes": "No requirements"
-      },
-      "other": {
-        "Questing": {
-          "notes": "Can be picked up from the table in Misthalin Mystery (even if you don't have it unlocked)."
-        }
       }
     }
   },
