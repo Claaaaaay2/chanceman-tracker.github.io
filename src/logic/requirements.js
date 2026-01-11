@@ -5,6 +5,9 @@ export function has(ctx, id) {
 }
 
 export const REQUIREMENT_CHECKS = {
+    canCompleteGoblinDiplomacy(ctx) {
+        return canCompleteGoblinDiplomacy(ctx);
+    },
     canTelegrab(ctx) {
         return has(ctx, 563) // Law rune
             && hasAirRuneSource(ctx);

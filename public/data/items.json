@@ -59463,11 +59463,11 @@
           "rule": "canCompleteWaterfallQuest"
         },
         "Questing 2": {
-          "notes": "Received after Pirate's Treasure.",
-          "rule": "canCompletePiratesTreasure"
+          "notes": "Received after Goblin Diplomacy.",
+          "rule": "canCompleteGoblinDiplomacy"
         },
         "Questing 3": {
-          "notes": "Received after The Digsite.",
+          "notes": "Received after The Dig Site.",
           "rule": "canCompleteTheDigSite"
         }
       },

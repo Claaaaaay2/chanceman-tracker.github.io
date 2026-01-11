@@ -710,6 +710,66 @@
     }
   },
   {
+    "index": 119,
+    "id": 13012,
+    "name": "Adamant set (lg)",
+    "image": "adamant_set_(lg).png",
+    "tags": "itemset",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires adamant full helm, platelegs, platebody and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 1161
+              },
+              {
+                "has": 1073
+              },
+              {
+                "has": 1123
+              },
+              {
+                "has": 1199
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "index": 120,
+    "id": 13014,
+    "name": "Adamant set (sk)",
+    "image": "adamant_set_(sk).png",
+    "tags": "itemset",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires adamant full helm, plateskirt, platebody and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 1161
+              },
+              {
+                "has": 1091
+              },
+              {
+                "has": 1123
+              },
+              {
+                "has": 1199
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
     "index": 121,
     "id": 7334,
     "name": "Adamant shield (h1)",
@@ -2467,6 +2527,66 @@
       "drops": {
         "Reward casket (beginner)": {
           "droprate": "1/805.091"
+        }
+      }
+    }
+  },
+  {
+    "index": 611,
+    "id": 12988,
+    "name": "Black set (lg)",
+    "image": "black_set_(lg).png",
+    "tags": "itemset",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires black full helm, platelegs, platebody and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 1165
+              },
+              {
+                "has": 1077
+              },
+              {
+                "has": 1125
+              },
+              {
+                "has": 1195
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "index": 612,
+    "id": 12990,
+    "name": "Black set (sk)",
+    "image": "black_set_(sk).png",
+    "tags": "itemset",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires black full helm, plateskirt, platebody and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 1165
+              },
+              {
+                "has": 1089
+              },
+              {
+                "has": 1125
+              },
+              {
+                "has": 1195
+              }
+            ]
+          }
         }
       }
     }
@@ -4358,6 +4478,66 @@
       },
       "spawns": {
         "Yes": "No requirements"
+      }
+    }
+  },
+  {
+    "index": 886,
+    "id": 12960,
+    "name": "Bronze set (lg)",
+    "image": "bronze_set_(lg).png",
+    "tags": "itemset",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires bronze full helm, platelegs, platebody and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 1155
+              },
+              {
+                "has": 1075
+              },
+              {
+                "has": 1117
+              },
+              {
+                "has": 1189
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "index": 887,
+    "id": 12962,
+    "name": "Bronze set (sk)",
+    "image": "bronze_set_(sk).png",
+    "tags": "itemset",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires bronze full helm, plateskirt, platebody and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 1155
+              },
+              {
+                "has": 1087
+              },
+              {
+                "has": 1117
+              },
+              {
+                "has": 1189
+              }
+            ]
+          }
+        }
       }
     }
   },
@@ -7191,10 +7371,6 @@
               "canTrainSmithing"
             ]
           }
-        },
-        "Questing": {
-          "notes": "Received after Pirate's Treasure.",
-          "rule": "canCompletePiratesTreasure"
         }
       },
       "spawns": {
@@ -8779,6 +8955,66 @@
                 "has": 2351
               },
               "canTrainSmithing"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "index": 2089,
+    "id": 12972,
+    "name": "Iron set (lg)",
+    "image": "iron_set_(lg).png",
+    "tags": "itemset",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires iron full helm, platebody, platelegs, and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 1153
+              },
+              {
+                "has": 1115
+              },
+              {
+                "has": 1067
+              },
+              {
+                "has": 1191
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "index": 2090,
+    "id": 12974,
+    "name": "Iron set (sk)",
+    "image": "iron_set_(sk).png",
+    "tags": "itemset",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires iron full helm, platebody, plateskirt, and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 1153
+              },
+              {
+                "has": 1115
+              },
+              {
+                "has": 1081
+              },
+              {
+                "has": 1191
+              }
             ]
           }
         }
@@ -10598,6 +10834,66 @@
     }
   },
   {
+    "index": 2509,
+    "id": 13000,
+    "name": "Mithril set (lg)",
+    "image": "mithril_set_(lg).png",
+    "tags": "itemset",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires mithril full helm, platebody, platelegs, and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 1159
+              },
+              {
+                "has": 1121
+              },
+              {
+                "has": 1071
+              },
+              {
+                "has": 1197
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "index": 2510,
+    "id": 13002,
+    "name": "Mithril set (sk)",
+    "image": "mithril_set_(sk).png",
+    "tags": "itemset",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires mithril full helm, platebody, plateskirt, and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 1159
+              },
+              {
+                "has": 1121
+              },
+              {
+                "has": 1085
+              },
+              {
+                "has": 1197
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
     "index": 2515,
     "id": 1181,
     "name": "Mithril sq shield",
@@ -12315,6 +12611,66 @@
                 "has": 2363
               },
               "canTrainSmithing"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "index": 3181,
+    "id": 13024,
+    "name": "Rune armour set (lg)",
+    "image": "rune_armour_set_(lg).png",
+    "tags": "itemset",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires Rune full helm, platebody, platelegs, and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 1163
+              },
+              {
+                "has": 1127
+              },
+              {
+                "has": 1079
+              },
+              {
+                "has": 1201
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "index": 3182,
+    "id": 13026,
+    "name": "Rune armour set (sk)",
+    "image": "rune_armour_set_(sk).png",
+    "tags": "itemset",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires Rune full helm, platebody, plateskirt, and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 1163
+              },
+              {
+                "has": 1127
+              },
+              {
+                "has": 1093
+              },
+              {
+                "has": 1201
+              }
             ]
           }
         }
@@ -14863,6 +15219,66 @@
                 "has": 2353
               },
               "canTrainSmithing"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "index": 3728,
+    "id": 12984,
+    "name": "Steel set (lg)",
+    "image": "steel_set_(lg).png",
+    "tags": "itemset",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires Steel full helm, platebody, platelegs, and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 1157
+              },
+              {
+                "has": 1119
+              },
+              {
+                "has": 1069
+              },
+              {
+                "has": 1193
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "index": 3729,
+    "id": 12986,
+    "name": "Steel set (sk)",
+    "image": "steel_set_(sk).png",
+    "tags": "itemset",
+    "sources": {
+      "other": {
+        "Creating a set at the Grand Exchange": {
+          "notes": "Requires Steel full helm, platebody, plateskirt, and kiteshield.",
+          "rule": {
+            "all": [
+              {
+                "has": 1157
+              },
+              {
+                "has": 1119
+              },
+              {
+                "has": 1083
+              },
+              {
+                "has": 1193
+              }
             ]
           }
         }
