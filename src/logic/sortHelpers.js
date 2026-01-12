@@ -148,11 +148,6 @@ export async function getObtainabilityRank(item, ctx) {
 
             // No skill required → reachable drop
             if (!npc?.skill?.length) {
-                if (name == "onyx bolts (e)") {
-                    console.log(ctx.filters);
-
-                    console.log(npc);
-                }
                 return { rank: 6, name };
             }
 
