@@ -109,7 +109,7 @@ export async function getObtainabilityRank(item, ctx) {
             if (npc.tags?.includes("slayer-task-only") && ctx.filters?.isSlayerLocked) continue;
             if (npc.tags?.includes("notForIronmen") && ctx.filters?.isIronman) continue;
             if (npc.tags?.includes("hunterRumour") && ctx.filters?.isHunterRumourLocked) continue;
-            if (npc.tags?.includes("clue") && ctx.filters?.hideClueRewardOnly) continue;
+            if (npc.tags?.includes("clue") && ctx.filters?.hideClue) continue;
             if (npc?.tags?.includes("easy") || (npc?.tags?.includes("jon") && !ctx.filters?.isIronman)) {
                 return { rank: 3, name };
             }
@@ -142,10 +142,15 @@ export async function getObtainabilityRank(item, ctx) {
             if (npc.tags?.includes("slayer-task-only") && ctx.filters?.isSlayerLocked) continue;
             if (npc.tags?.includes("notForIronmen") && ctx.filters?.isIronman) continue;
             if (npc.tags?.includes("hunterRumour") && ctx.filters?.isHunterRumourLocked) continue;
-            if (npc.tags?.includes("clue") && ctx.filters?.hideClueRewardOnly) continue;
+            if (npc.tags?.includes("clue") && ctx.filters?.hideClue) continue;
 
             // No skill required → reachable drop
             if (!npc?.skill?.length) {
+                if (name == "onyx bolts (e)") {
+                    console.log(ctx.filters);
+
+                    console.log(npc);
+                }
                 return { rank: 6, name };
             }
 
