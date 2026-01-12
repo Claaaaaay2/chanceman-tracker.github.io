@@ -259,6 +259,7 @@ function isSourceFiltered(sourceKey, ctx) {
     if (!f.hasSuperiors && npc.tags?.includes("superior")) return true;
     if (f.hideClue && npc.tags?.includes("clue")) return true;
     if (f.hideBosses && npc.tags?.includes("boss")) return true;
+    if (f.hideRaids && npc.tags?.includes("raid")) return true;
     if (f.hideLMS && npc.tags?.includes("LMS")) return true;
     if (f.isSlayerLocked //
         && ((npc.skill?.includes("Slayer") && npc.level[0] > fileStore.player.levels["Slayer"]) //

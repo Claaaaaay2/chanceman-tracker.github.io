@@ -82,6 +82,11 @@ export default async function ItemsPage() {
                 </label>
 
                 <label>
+                    <input type="checkbox" id="hideRaids">
+                    Hide raids
+                </label>
+
+                <label>
                     <input type="checkbox" id="isSlayerLocked">
                     I am slayer locked
                 </label>

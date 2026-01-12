@@ -105,6 +105,7 @@ export async function getObtainabilityRank(item, ctx) {
 
             if (npc.tags?.includes("jon") && ctx.filters?.hideJon) continue;
             if (npc.tags?.includes("boss") && ctx.filters?.hideBosses) continue;
+            if (npc.tags?.includes("raid") && ctx.filters?.hideRaids) continue;
             if (npc.tags?.includes("superior") && !ctx.filters?.hasSuperiors) continue;
             if (npc.tags?.includes("slayer-task-only") && ctx.filters?.isSlayerLocked) continue;
             if (npc.tags?.includes("notForIronmen") && ctx.filters?.isIronman) continue;
@@ -138,6 +139,7 @@ export async function getObtainabilityRank(item, ctx) {
             const npc = NPC_DATA[npcName];
             if (npc.tags?.includes("jon") && ctx.filters?.hideJon) continue;
             if (npc.tags?.includes("boss") && ctx.filters?.hideBosses) continue;
+            if (npc.tags?.includes("raid") && ctx.filters?.hideRaids) continue;
             if (npc.tags?.includes("superior") && !ctx.filters?.hasSuperiors) continue;
             if (npc.tags?.includes("slayer-task-only") && ctx.filters?.isSlayerLocked) continue;
             if (npc.tags?.includes("notForIronmen") && ctx.filters?.isIronman) continue;

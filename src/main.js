@@ -158,6 +158,7 @@ window.initItemsPage = async function () {
     const hasSuperiors = document.getElementById("hasSuperiors");
     const isIronman = document.getElementById("isIronman");
     const hideBosses = document.getElementById("hideBosses");
+    const hideRaids = document.getElementById("hideRaids");
     const isSlayerLocked = document.getElementById("isSlayerLocked");
     const isHunterRumourLocked = document.getElementById("isHunterRumourLocked");
     let hunterRumoursCompleted = document.getElementById("hunterRumoursCompleted");
@@ -173,7 +174,7 @@ window.initItemsPage = async function () {
     const overrideConstruction = document.getElementById("overrideConstruction");
     const grid = document.getElementById("itemGrid");
 
-    if (!searchInput || !isFreeToPlay || !hideJon || !hideBosses || !isSlayerLocked || !isHunterRumourLocked || !hunterRumoursCompleted || !hideLMS || !hideRolled || !onlyUnlocked || !onlyObtainable || !hideClue || !allowOthersHouses || !hasFlatpacks || !hasItemsets || !hasSuperiors || !isIronman || !overrideWoodcutting || !overrideMining || !overrideFishing || !overrideCooking || !overrideFletching || !overrideCrafting || !overrideConstruction || !grid) {
+    if (!searchInput || !isFreeToPlay || !hideJon || !hideBosses || !hideRaids || !isSlayerLocked || !isHunterRumourLocked || !hunterRumoursCompleted || !hideLMS || !hideRolled || !onlyUnlocked || !onlyObtainable || !hideClue || !allowOthersHouses || !hasFlatpacks || !hasItemsets || !hasSuperiors || !isIronman || !overrideWoodcutting || !overrideMining || !overrideFishing || !overrideCooking || !overrideFletching || !overrideCrafting || !overrideConstruction || !grid) {
         setTimeout(initItemsPage, 0);
         return;
     }
@@ -190,6 +191,7 @@ window.initItemsPage = async function () {
     hasSuperiors.checked = f.hasSuperiors ?? false;
     isIronman.checked = f.isIronman ?? false;
     hideBosses.checked = f.hideBosses ?? false;
+    hideRaids.checked = f.hideRaids ?? false;
     isSlayerLocked.checked = f.isSlayerLocked ?? false;
     isHunterRumourLocked.checked = f.isHunterRumourLocked ?? false;
     hunterRumoursCompleted.value = f.hunterRumoursCompleted ?? 0;
@@ -218,6 +220,7 @@ window.initItemsPage = async function () {
         const hasSup = hasSuperiors.checked;
         const isIron = isIronman.checked;
         const hideBoss = hideBosses.checked;
+        const hideRaid = hideRaids.checked;
         const slayLock = isSlayerLocked.checked;
         const huntRumourLock = isHunterRumourLocked.checked;
         const hideLms = hideLMS.checked;
@@ -256,6 +259,9 @@ window.initItemsPage = async function () {
             if (!hasFl && item.tags?.includes("flatpack")) continue;
             if (!hasIt && item.tags?.includes("itemset")) continue;
             if (hideBoss && await hideTag(item, fileStore, "boss")) {
+                sort.rank = 8;
+            }
+            if (hideRaid && await hideTag(item, fileStore, "raid")) {
                 sort.rank = 8;
             }
             if (slayLock && await hideSkill(item, fileStore, "Slayer")) {
@@ -335,6 +341,7 @@ window.initItemsPage = async function () {
             hasSuperiors: hasSuperiors.checked,
             isIronman: isIronman.checked,
             hideBosses: hideBosses.checked,
+            hideRaids: hideRaids.checked,
             isSlayerLocked: isSlayerLocked.checked,
             isHunterRumourLocked: isHunterRumourLocked.checked,
             hunterRumoursCompleted: hunterRumoursCompleted.value,
@@ -402,6 +409,11 @@ window.initItemsPage = async function () {
     });
 
     hideBosses.addEventListener("input", () => {
+        saveFilters();
+        renderItems();
+    });
+
+    hideRaids.addEventListener("input", () => {
         saveFilters();
         renderItems();
     });
