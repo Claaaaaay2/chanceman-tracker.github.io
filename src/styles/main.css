@@ -51,6 +51,10 @@ body {
     color: var(--text-color);
 }
 
+body.route-loading {
+    cursor: wait;
+}
+
 a {
     color: var(--link-color);
 }
@@ -237,6 +241,67 @@ footer {
     gap: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
+}
+
+.items-loading {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 2rem 1rem;
+    margin: 0 1rem;
+    border: 1px solid var(--border-color-darker);
+    background-color: var(--card-bg);
+    border-radius: 6px;
+    color: var(--highlight-color);
+}
+
+.items-loading.active {
+    display: flex;
+}
+
+body.route-loading .items-loading {
+    display: flex;
+}
+
+body.route-loading .item-grid {
+    display: none;
+}
+
+.route-loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    background-color: rgba(0, 0, 0, 0.25);
+    color: #FFFFFF;
+    z-index: 2000;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+body.route-loading .route-loading-overlay {
+    display: flex;
+}
+
+.spinner {
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--border-color-darker);
+    border-top-color: var(--highlight-color);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .item-card {

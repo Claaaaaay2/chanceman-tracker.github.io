@@ -135,6 +135,10 @@ export default async function ItemsPage() {
             </div>
         </div>
 
+        <div id="itemsLoading" class="items-loading" aria-live="polite">
+            <div class="spinner" aria-hidden="true"></div>
+            <span>Loading items...</span>
+        </div>
         <div class="item-grid" id="itemGrid"></div>
     `;
 }

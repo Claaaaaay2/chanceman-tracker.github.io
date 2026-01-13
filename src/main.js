@@ -90,6 +90,8 @@ window.initItemsPage = async function () {
     const elements = {
         searchInput: document.getElementById("itemSearch"),
         hunterRumoursCompleted: document.getElementById("hunterRumoursCompleted"),
+        filterToggle: document.getElementById("filter-overrides-toggle"),
+        loading: document.getElementById("itemsLoading"),
         grid: document.getElementById("itemGrid")
     };
 
@@ -123,7 +125,7 @@ window.initItemsPage = async function () {
         checkboxElements[config.key] = document.getElementById(config.id);
     }
 
-    const missingElement = !elements.searchInput || !elements.hunterRumoursCompleted || !elements.grid
+    const missingElement = !elements.searchInput || !elements.hunterRumoursCompleted || !elements.grid || !elements.loading
         || checkboxConfigs.some((config) => !checkboxElements[config.key]);
     if (missingElement) {
         setTimeout(initItemsPage, 0);
@@ -150,7 +152,27 @@ window.initItemsPage = async function () {
 
     const getFilters = () => readFiltersFromUI();
 
+    function setInputsDisabled(disabled) {
+        elements.searchInput.disabled = disabled;
+        elements.hunterRumoursCompleted.disabled = disabled;
+        if (elements.filterToggle) {
+            elements.filterToggle.disabled = disabled;
+        }
+        for (const config of checkboxConfigs) {
+            checkboxElements[config.key].disabled = disabled;
+        }
+    }
+
+    function setLoading(isLoading) {
+        elements.loading.classList.toggle("active", isLoading);
+        elements.grid.style.display = isLoading ? "none" : "";
+        setInputsDisabled(isLoading);
+    }
+
     async function renderItems() {
+        setLoading(true);
+        await new Promise(requestAnimationFrame);
+        try {
         const {
             search,
             hideRolled,
@@ -271,6 +293,9 @@ window.initItemsPage = async function () {
         elements.grid.innerHTML = html;
 
         setTimeout(() => initLazyImages(), 0);
+        } finally {
+            setLoading(false);
+        }
     }
 
     function saveFilters() {
@@ -286,6 +311,7 @@ window.initItemsPage = async function () {
         const element = checkboxElements[config.key];
         if (config.key === "isFreeToPlay") {
             element.addEventListener("input", async () => {
+                setLoading(true);
                 saveFilters();
                 invalidateLogicCaches(fileStore);
                 await router();
