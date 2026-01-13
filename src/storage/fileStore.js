@@ -7,7 +7,6 @@ let memory = {
         search: "",
         hideRolled: true,
         onlyUnlocked: false,
-        onlyObtainable: false,
         hideClue: true
     },
     player: null

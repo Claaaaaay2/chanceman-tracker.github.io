@@ -90,7 +90,6 @@ window.initItemsPage = async function () {
     const searchInput = document.getElementById("itemSearch");
     const hideRolled = document.getElementById("hideRolled");
     const onlyUnlocked = document.getElementById("onlyUnlocked");
-    const onlyObtainable = document.getElementById("onlyObtainable");
     const hideClue = document.getElementById("hideClueRewardOnly");
     const allowOthersHouses = document.getElementById("allowOthersHouses");
     const hasFlatpacks = document.getElementById("hasFlatpacks");
@@ -114,7 +113,7 @@ window.initItemsPage = async function () {
     const overrideConstruction = document.getElementById("overrideConstruction");
     const grid = document.getElementById("itemGrid");
 
-    if (!searchInput || !isFreeToPlay || !hideJon || !hideBosses || !hideRaids || !isSlayerLocked || !isHunterRumourLocked || !hunterRumoursCompleted || !hideLMS || !hideRolled || !onlyUnlocked || !onlyObtainable || !hideClue || !allowOthersHouses || !hasFlatpacks || !hasItemsets || !hasSuperiors || !isIronman || !overrideWoodcutting || !overrideMining || !overrideFishing || !overrideCooking || !overrideFletching || !overrideCrafting || !overrideConstruction || !grid) {
+    if (!searchInput || !isFreeToPlay || !hideJon || !hideBosses || !hideRaids || !isSlayerLocked || !isHunterRumourLocked || !hunterRumoursCompleted || !hideLMS || !hideRolled || !onlyUnlocked || !hideClue || !allowOthersHouses || !hasFlatpacks || !hasItemsets || !hasSuperiors || !isIronman || !overrideWoodcutting || !overrideMining || !overrideFishing || !overrideCooking || !overrideFletching || !overrideCrafting || !overrideConstruction || !grid) {
         setTimeout(initItemsPage, 0);
         return;
     }
@@ -123,7 +122,6 @@ window.initItemsPage = async function () {
     searchInput.value = f.search ?? "";
     hideRolled.checked = f.hideRolled ?? true;
     onlyUnlocked.checked = f.onlyUnlocked ?? false;
-    onlyObtainable.checked = f.onlyObtainable ?? false;
     hideClue.checked = f.hideClue ?? true;
     allowOthersHouses.checked = f.allowOthersHouses ?? false;
     hasFlatpacks.checked = f.hasFlatpacks ?? true;
@@ -153,7 +151,6 @@ window.initItemsPage = async function () {
         const search = searchInput.value.toLowerCase();
         const hideR = hideRolled.checked;
         const onlyU = onlyUnlocked.checked;
-        const onlyO = onlyObtainable.checked;
         const hideCl = hideClue.checked;
         const allowHo = allowOthersHouses.checked;
         const hasFl = hasFlatpacks.checked;
@@ -196,7 +193,6 @@ window.initItemsPage = async function () {
             if (isIron && await isNonIronItem(item, fileStore)) {
                 sort.rank = 8;
             }
-            if (onlyO && (sort.rank === 7 || sort.rank === 8)) continue;
             if (!hasFl && item.tags?.includes("flatpack")) continue;
             if (!hasIt && item.tags?.includes("itemset")) continue;
             if (hideBoss && await hideTag(item, fileStore, "boss")) {
@@ -274,7 +270,6 @@ window.initItemsPage = async function () {
             search: searchInput.value,
             hideRolled: hideRolled.checked,
             onlyUnlocked: onlyUnlocked.checked,
-            onlyObtainable: onlyObtainable.checked,
             hideClue: hideClue.checked,
             allowOthersHouses: allowOthersHouses.checked,
             hasFlatpacks: hasFlatpacks.checked,
@@ -310,11 +305,6 @@ window.initItemsPage = async function () {
     });
 
     onlyUnlocked.addEventListener("input", () => {
-        saveFilters();
-        renderItems();
-    });
-
-    onlyObtainable.addEventListener("input", () => {
         saveFilters();
         renderItems();
     });
