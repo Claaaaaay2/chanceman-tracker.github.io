@@ -1,6 +1,6 @@
-import { canDoOtherMethod, canReachNpc } from "../logic/itemAvailability.js";
 import { NPC_DATA } from "../logic/npcData.js";
-import { capitalizeFirstLetter, parseDropRate } from "../main.js";
+import { isNpcObtainable, isRuleObtainable } from "../logic/itemVisibility.js";
+import { parseDropRate } from "../logic/utils.js";
 import { fileStore } from "../storage/fileStore.js";
 
 export default async function ItemPage() {
@@ -15,7 +15,8 @@ export default async function ItemPage() {
 
     if (!id) return `<h1>No item selected</h1>`;
 
-    const items = await fetch("/data/items.json").then(r => r.json());
+    await fileStore.ensureItemsLoaded();
+    const items = fileStore.items;
     const item = items.find(x => x.id == id);
 
     if (!item) return `<h1>Item not found</h1>`;
@@ -84,16 +85,12 @@ async function renderSourceTable(section, entries) {
         const rows = [];
 
         for (const [name, data] of Object.entries(entries)) {
-            if (fileStore.filters.isFreeToPlay && !NPC_DATA[name].f2p) {
-                continue;
-            } else {
-                const obtainable = await isSourceObtainable(name, fileStore);
-                rows.push({
-                    name,
-                    data,
-                    obtainable
-                });
-            }
+            const obtainable = await isNpcObtainable(name, fileStore);
+            rows.push({
+                name,
+                data,
+                obtainable
+            });
         }
 
         rows.sort((a, b) => {
@@ -143,7 +140,7 @@ async function renderSourceTable(section, entries) {
         for (const [method, info] of Object.entries(entries)) {
             const { notes, rule } = info;
 
-            const obtainable = await canDoOtherMethod(rule, fileStore);
+            const obtainable = await isRuleObtainable(rule, fileStore);
 
             rows.push(`
                 <tr>
@@ -179,15 +176,11 @@ async function renderSourceTable(section, entries) {
             if (fileStore.unlocked.includes(id)) {
                 // Rule is a string
                 if (typeof rule === "string") {
-                    if (rule === "No requirements") {
-                        obtainable = true;
-                    } else {
-                        obtainable = await canDoOtherMethod(rule, fileStore);
-                    }
+                    obtainable = await isRuleObtainable(rule, fileStore);
                 }
                 // Rule is an object (e.g. any/all)
                 else if (typeof rule === "object") {
-                    obtainable = await canDoOtherMethod(rule, fileStore);
+                    obtainable = await isRuleObtainable(rule, fileStore);
                 }
             }
 
@@ -220,15 +213,11 @@ async function renderSourceTable(section, entries) {
             if (fileStore.unlocked.includes(id)) {
                 // Rule is a string
                 if (typeof rule === "string") {
-                    if (rule === "No requirements") {
-                        obtainable = true;
-                    } else {
-                        obtainable = await canDoOtherMethod(rule, fileStore);
-                    }
+                    obtainable = await isRuleObtainable(rule, fileStore);
                 }
                 // Rule is an object (e.g. any/all)
                 else if (typeof rule === "object") {
-                    obtainable = await canDoOtherMethod(rule, fileStore);
+                    obtainable = await isRuleObtainable(rule, fileStore);
                 }
             }
 
@@ -247,48 +236,6 @@ async function renderSourceTable(section, entries) {
             </table>
         `;
     }
-}
-
-function isSourceFiltered(sourceKey, ctx) {
-    const f = ctx.filters ?? {};
-
-    const npc = NPC_DATA[sourceKey];
-    if (!npc) return true;
-
-    if (!f.allowOthersHouses && npc.tags?.includes("house")) return true;
-    if (!f.hasSuperiors && npc.tags?.includes("superior")) return true;
-    if (f.hideClue && npc.tags?.includes("clue")) return true;
-    if (f.hideBosses && npc.tags?.includes("boss")) return true;
-    if (f.hideRaids && npc.tags?.includes("raid")) return true;
-    if (f.hideLMS && npc.tags?.includes("LMS")) return true;
-    if (f.isSlayerLocked //
-        && ((npc.skill?.includes("Slayer") && npc.level[0] > fileStore.player.levels["Slayer"]) //
-            || npc.tags?.includes("slayer-task-only") //
-            || npc.tags?.includes("superior"))) return true;
-    if (f.isHunterRumourLocked && npc.skill?.includes("hunterRumour")) return true;
-    if (f.isIronman && (npc.tags?.includes("notForIronmen") || npc.tags?.includes("jon"))) return true;
-    if (f.hideJon && npc.tags?.includes("jon")) return true;
-
-    return false;
-}
-
-async function isSourceObtainable(sourceKey, ctx) {
-    if (isSourceFiltered(sourceKey, ctx)) return false;
-    if (!(await canReachNpc(sourceKey, ctx))) return false;
-    if (sourceKey == 'Reward pool 35–39 Fishing' && (ctx.player.levels['Fishing'] > 39 || ctx.player.levels['Fishing'] < 35)) { // Special case: Raw herring is removed from higher fishing levels
-        return false;
-    }
-
-    const npc = NPC_DATA[sourceKey];
-    for (let i = 0; i < npc.skill.length; i++) {
-        const skill = npc.skill[i];
-        const level = npc.level[i];
-
-        if (ctx.player.levels[capitalizeFirstLetter(skill)] < level) {
-            return false;
-        }
-    }
-    return true;
 }
 
 

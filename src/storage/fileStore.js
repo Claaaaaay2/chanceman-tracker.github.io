@@ -18,11 +18,15 @@ export const fileStore = {
     rolled: null,
     unlocked: null,
     items: null,
+    itemsSource: null,
     player: null,
 
     async ensureItemsLoaded() {
-        if (!this.items) {
-            this.items = await fetch("/data/items.json").then(r => r.json());
+        const isF2P = this.filters?.isFreeToPlay;
+        const url = isF2P ? "/data/items_f2p.json" : "/data/items.json";
+        if (!this.items || this.itemsSource != url) {
+            this.items = await fetch(url).then(r => r.json());
+            this.itemsSource = url;
         }
     },
 

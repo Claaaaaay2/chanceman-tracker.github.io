@@ -1,4 +1,6 @@
 import { canReachNpc, evaluateRule } from "./logic/itemAvailability.js";
+import { isNpcObtainable } from "./logic/itemVisibility.js";
+import { parseDropRate } from "./logic/utils.js";
 import { NPC_DATA } from "./logic/npcData.js";
 import { getObtainabilityRank } from "./logic/sortHelpers.js";
 import { initBugPage } from "./pages/reportABug.js";
@@ -22,43 +24,6 @@ const ITEM_SECTION_TITLES = {
     8: "Unobtainable Items"
 };
 
-export function parseDropRate(rate) {
-    if (!rate || rate === "N/A" || rate === "Unknown") return -1;
-
-    rate = rate.trim();
-
-    if (rate === "Always" || rate === "Once") return 1_000_000;
-    if (rate.includes("Varies")) return 1 / 800;
-    if (rate === "Common") return 1 / 16;
-    if (rate === "Uncommon") return 1 / 64;
-    if (rate === "Rare") return 1 / 128;
-
-    // Remove multipliers: "3 × ~1/64" → "~1/64"
-    rate = rate.replace(/^\d+\s*×\s*/i, "");
-
-    // Handle percentages: "22.33%-28.11%"
-    if (rate.includes("%")) {
-        return 1_000_000;
-    }
-
-    // Handle multiple rates: "1/8; 1/50"
-    if (rate.includes(";")) {
-        return Math.min(
-            ...rate.split(";").map(r => parseDropRate(r))
-        );
-    }
-
-    // Handle fractions and ranges like "1/800?1/1200"
-    const matches = [...rate.matchAll(/(\d+)\s*\/\s*(\d+)/g)];
-    if (matches.length) {
-        const values = matches.map(match => Number(match[1]) / Number(match[2]));
-        return Math.max(...values);
-    }
-
-
-    return Infinity;
-}
-
 let rankedItemsCache = null;
 
 async function computeAllRanksOnce(items, ctx) {
@@ -71,9 +36,7 @@ async function computeAllRanksOnce(items, ctx) {
             if (item.sources?.drops) {
                 for (const [npcName, drops] of Object.entries(item.sources.drops)) {
 
-                    // ONLY consider reachable NPCs
-                    if (!(await canReachNpc(npcName, ctx))) continue;
-                    if (!NPC_DATA[npcName].f2p && ctx.filters?.isFreeToPlay) continue;
+                    if (!(await isNpcObtainable(npcName, ctx))) continue;
 
                     if (Array.isArray(drops)) {
                         for (const d of drops) {
@@ -103,8 +66,6 @@ async function computeAllRanksOnce(items, ctx) {
 }
 
 
-
-// Allow <a data-link href="/about"> navigation
 
 function initLazyImages() {
     const lazyImages = document.querySelectorAll("img.lazy-img");
@@ -717,6 +678,3 @@ async function hideSkill(item, ctx, skill) {
     return false;
 }
 
-export function capitalizeFirstLetter(val) {
-    return String(val).charAt(0).toUpperCase() + String(val).slice(1);
-}

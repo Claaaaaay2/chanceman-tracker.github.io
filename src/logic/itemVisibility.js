@@ -1,0 +1,72 @@
+import { canDoOtherMethod, canReachNpc } from "./itemAvailability.js";
+import { NPC_DATA } from "./npcData.js";
+import { capitalizeFirstLetter } from "./utils.js";
+
+const REWARD_POOL_35_39 = "Reward pool 35\u201339 Fishing";
+
+export function isNpcBlockedByFilters(npcName, ctx) {
+    const npc = NPC_DATA[npcName];
+    if (!npc) return true;
+
+    const f = ctx.filters ?? {};
+
+    if (f.isFreeToPlay && !npc.f2p) return true;
+    if (!f.allowOthersHouses && npc.tags?.includes("house")) return true;
+    if (!f.hasSuperiors && npc.tags?.includes("superior")) return true;
+    if (f.hideClue && npc.tags?.includes("clue")) return true;
+    if (f.hideBosses && npc.tags?.includes("boss")) return true;
+    if (f.hideRaids && npc.tags?.includes("raid")) return true;
+    if (f.hideLMS && npc.tags?.includes("LMS")) return true;
+    if (f.isHunterRumourLocked && npc.tags?.includes("hunterRumour")) return true;
+    if (f.isIronman && (npc.tags?.includes("notForIronmen") || npc.tags?.includes("jon"))) return true;
+    if (f.hideJon && npc.tags?.includes("jon")) return true;
+
+    if (f.isSlayerLocked) {
+        if (npc.tags?.includes("slayer-task-only") || npc.tags?.includes("superior")) return true;
+        if (npc.skill?.includes("Slayer")) {
+            if (!ctx.player?.levels?.Slayer && ctx.player?.levels?.Slayer !== 0) return true;
+            const slayerIndex = npc.skill.indexOf("Slayer");
+            if (slayerIndex >= 0 && ctx.player.levels.Slayer < npc.level[slayerIndex]) return true;
+        }
+    }
+
+    return false;
+}
+
+export function areNpcSkillsMet(npcName, ctx) {
+    const npc = NPC_DATA[npcName];
+    if (!npc) return false;
+
+    if (npcName == REWARD_POOL_35_39) {
+        const level = ctx.player?.levels?.Fishing;
+        if (level === undefined || level === null) return false;
+        if (level < 35 || level > 39) return false;
+    }
+
+    if (!npc.skill?.length) return true;
+    if (!ctx.player?.levels) return false;
+
+    for (let i = 0; i < npc.skill.length; i++) {
+        const skill = npc.skill[i];
+        const level = npc.level[i];
+
+        if (ctx.player.levels[capitalizeFirstLetter(skill)] < level) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+export async function isNpcObtainable(npcName, ctx) {
+    if (isNpcBlockedByFilters(npcName, ctx)) return false;
+    if (!(await canReachNpc(npcName, ctx))) return false;
+    if (!areNpcSkillsMet(npcName, ctx)) return false;
+
+    return true;
+}
+
+export async function isRuleObtainable(rule, ctx) {
+    if (!rule || rule == "No requirements") return true;
+    return await canDoOtherMethod(rule, ctx);
+}

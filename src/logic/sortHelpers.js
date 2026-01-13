@@ -1,6 +1,6 @@
-import { capitalizeFirstLetter } from "../main.js";
+import { areNpcSkillsMet, isNpcBlockedByFilters, isNpcObtainable, isRuleObtainable } from "./itemVisibility.js";
 import { fileStore } from "../storage/fileStore.js";
-import { canDoOtherMethod, canReachNpc } from "./itemAvailability.js";
+import { canReachNpc } from "./itemAvailability.js";
 import { NPC_DATA } from "./npcData.js";
 
 export async function isItemObtainable(item, ctx) {
@@ -10,35 +10,14 @@ export async function isItemObtainable(item, ctx) {
         // === Shops ===
         if (src.shops) {
             for (const rule of Object.values(src.shops)) {
-
-                // "No requirements"
-                if (rule === "No requirements") return true;
-
-                // string → single rule
-                if (typeof rule === "string") {
-                    if (await canDoOtherMethod(rule, ctx)) return true;
-                }
-
-                // object → any/all
-                if (typeof rule === "object") {
-                    if (await canDoOtherMethod(rule, ctx)) return true;
-                }
+                if (await isRuleObtainable(rule, ctx)) return true;
             }
         }
 
         // === Spawns ===
         if (src.spawns) {
             for (const rule of Object.values(src.spawns)) {
-
-                if (rule === "No requirements") return true;
-
-                if (typeof rule === "string") {
-                    if (await canDoOtherMethod(rule, ctx)) return true;
-                }
-
-                if (typeof rule === "object") {
-                    if (await canDoOtherMethod(rule, ctx)) return true;
-                }
+                if (await isRuleObtainable(rule, ctx)) return true;
             }
         }
     }
@@ -46,14 +25,14 @@ export async function isItemObtainable(item, ctx) {
     // === Drops ===
     if (src.drops) {
         for (const npc of Object.keys(src.drops)) {
-            if (await canReachNpc(npc, ctx)) return true;
+            if (await isNpcObtainable(npc, ctx)) return true;
         }
     }
 
     // === Other ===
     if (src.other) {
         for (const obj of Object.values(src.other)) {
-            if (await canDoOtherMethod(obj.rule, ctx)) return true;
+            if (await isRuleObtainable(obj.rule, ctx)) return true;
         }
     }
 
@@ -75,10 +54,7 @@ export async function getObtainabilityRank(item, ctx) {
     // 1. Shop (obtainable)
     if (unlocked && src.shops) {
         for (const rule of Object.values(src.shops)) {
-            if (rule === "No requirements") {
-                return { rank: 1, name };
-            }
-            if (await canDoOtherMethod(rule, ctx)) {
+            if (await isRuleObtainable(rule, ctx)) {
                 return { rank: 1, name };
             }
         }
@@ -87,10 +63,7 @@ export async function getObtainabilityRank(item, ctx) {
     // 2. Spawn (obtainable)
     if (unlocked && src.spawns) {
         for (const rule of Object.values(src.spawns)) {
-            if (rule === "No requirements") {
-                return { rank: 2, name };
-            }
-            if (await canDoOtherMethod(rule, ctx)) {
+            if (await isRuleObtainable(rule, ctx)) {
                 return { rank: 2, name };
             }
         }
@@ -101,16 +74,10 @@ export async function getObtainabilityRank(item, ctx) {
         for (const npcName of Object.keys(src.drops)) {
             if (!(await canReachNpc(npcName, ctx))) continue;
 
-            const npc = NPC_DATA[npcName];
+            if (isNpcBlockedByFilters(npcName, ctx)) continue;
+            if (!areNpcSkillsMet(npcName, ctx)) continue;
 
-            if (npc.tags?.includes("jon") && ctx.filters?.hideJon) continue;
-            if (npc.tags?.includes("boss") && ctx.filters?.hideBosses) continue;
-            if (npc.tags?.includes("raid") && ctx.filters?.hideRaids) continue;
-            if (npc.tags?.includes("superior") && !ctx.filters?.hasSuperiors) continue;
-            if (npc.tags?.includes("slayer-task-only") && ctx.filters?.isSlayerLocked) continue;
-            if (npc.tags?.includes("notForIronmen") && ctx.filters?.isIronman) continue;
-            if (npc.tags?.includes("hunterRumour") && ctx.filters?.isHunterRumourLocked) continue;
-            if (npc.tags?.includes("clue") && ctx.filters?.hideClue) continue;
+            const npc = NPC_DATA[npcName];
             if (npc?.tags?.includes("easy") || (npc?.tags?.includes("jon") && !ctx.filters?.isIronman)) {
                 return { rank: 3, name };
             }
@@ -120,7 +87,7 @@ export async function getObtainabilityRank(item, ctx) {
     // Other sources (crafting, etc.)
     if (src.other) {
         for (const obj of Object.values(src.other)) {
-            if (await canDoOtherMethod(obj.rule, ctx)) {
+            if (await isRuleObtainable(obj.rule, ctx)) {
                 return { rank: 4, name };
             }
         }
@@ -133,47 +100,24 @@ export async function getObtainabilityRank(item, ctx) {
 
         for (const npcName of Object.keys(src.drops)) {
             if (!(await canReachNpc(npcName, ctx))) continue;
+            if (isNpcBlockedByFilters(npcName, ctx)) continue;
 
             hasAnyReachable = true;
 
             const npc = NPC_DATA[npcName];
-            if (npc.tags?.includes("jon") && ctx.filters?.hideJon) continue;
-            if (npc.tags?.includes("boss") && ctx.filters?.hideBosses) continue;
-            if (npc.tags?.includes("raid") && ctx.filters?.hideRaids) continue;
-            if (npc.tags?.includes("superior") && !ctx.filters?.hasSuperiors) continue;
-            if (npc.tags?.includes("slayer-task-only") && ctx.filters?.isSlayerLocked) continue;
-            if (npc.tags?.includes("notForIronmen") && ctx.filters?.isIronman) continue;
-            if (npc.tags?.includes("hunterRumour") && ctx.filters?.isHunterRumourLocked) continue;
-            if (npc.tags?.includes("clue") && ctx.filters?.hideClue) continue;
 
-            // No skill required → reachable drop
+            // No skill required -> reachable drop
             if (!npc?.skill?.length) {
                 return { rank: 6, name };
             }
 
             if (!player) continue;
 
-            let allSkillsMet = true;
-            for (let i = 0; i < npc.skill.length; i++) {
-                const skill = npc.skill[i];
-                const level = npc.level[i];
-
-                if (npcName == 'Reward pool 35–39 Fishing' && (player.levels['Fishing'] > 39 || player.levels['Fishing'] < 35)) { // Special case: Raw herring is removed from higher fishing levels
-                    allSkillsMet = false;
-                    hasAnyWithUnmetSkill = true;
-                    break;
-                }
-
-                if (player.levels[capitalizeFirstLetter(skill)] < level) {
-                    allSkillsMet = false;
-                    hasAnyWithUnmetSkill = true;
-                    break;
-                }
-            }
-
-            if (allSkillsMet) {
+            if (areNpcSkillsMet(npcName, ctx)) {
                 return { rank: 5, name };
             }
+
+            hasAnyWithUnmetSkill = true;
         }
 
         if (hasAnyReachable && hasAnyWithUnmetSkill) {
