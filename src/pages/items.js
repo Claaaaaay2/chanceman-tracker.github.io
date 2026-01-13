@@ -2,16 +2,6 @@ import { fileStore } from "../storage/fileStore.js";
 
 export default async function ItemsPage() {
     await fileStore.ensureItemsLoaded();
-    const items = fileStore.items;
-
-    const rolled = fileStore.rolled || [];
-    const unlocked = fileStore.unlocked || [];
-
-    window.__itemsPageData = {
-        items,
-        rolled,
-        unlocked
-    };
 
     return `
         <div class="items-header">

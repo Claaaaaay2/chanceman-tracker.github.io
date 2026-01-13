@@ -87,9 +87,6 @@ function initLazyImages() {
 window.initItemsPage = async function () {
     await fileStore.ensureItemsLoaded();
 
-    const data = window.__itemsPageData;
-    if (!data) return;
-
     const searchInput = document.getElementById("itemSearch");
     const hideRolled = document.getElementById("hideRolled");
     const onlyUnlocked = document.getElementById("onlyUnlocked");
@@ -149,9 +146,10 @@ window.initItemsPage = async function () {
     overrideCrafting.checked = f.overrideCrafting ?? false;
     overrideConstruction.checked = f.overrideConstruction ?? false;
 
-    const { items, rolled, unlocked } = data;
-
     async function renderItems() {
+        const items = fileStore.items || [];
+        const rolled = fileStore.rolled || [];
+        const unlocked = fileStore.unlocked || [];
         const search = searchInput.value.toLowerCase();
         const hideR = hideRolled.checked;
         const onlyU = onlyUnlocked.checked;
@@ -323,11 +321,13 @@ window.initItemsPage = async function () {
 
     hideClue.addEventListener("input", () => {
         saveFilters();
+        invalidateLogicCaches(fileStore);
         renderItems();
     });
 
     allowOthersHouses.addEventListener("input", () => {
         saveFilters();
+        invalidateLogicCaches(fileStore);
         renderItems();
     });
 
@@ -343,26 +343,31 @@ window.initItemsPage = async function () {
 
     hasSuperiors.addEventListener("input", () => {
         saveFilters();
+        invalidateLogicCaches(fileStore);
         renderItems();
     });
 
     isIronman.addEventListener("input", () => {
         saveFilters();
+        invalidateLogicCaches(fileStore);
         renderItems();
     });
 
     hideBosses.addEventListener("input", () => {
         saveFilters();
+        invalidateLogicCaches(fileStore);
         renderItems();
     });
 
     hideRaids.addEventListener("input", () => {
         saveFilters();
+        invalidateLogicCaches(fileStore);
         renderItems();
     });
 
     isSlayerLocked.addEventListener("input", () => {
         saveFilters();
+        invalidateLogicCaches(fileStore);
         renderItems();
     });
 
@@ -380,11 +385,13 @@ window.initItemsPage = async function () {
 
     hideLMS.addEventListener("input", () => {
         saveFilters();
+        invalidateLogicCaches(fileStore);
         renderItems();
     });
 
     hideJon.addEventListener("input", () => {
         saveFilters();
+        invalidateLogicCaches(fileStore);
         renderItems();
     });
 
@@ -392,7 +399,6 @@ window.initItemsPage = async function () {
         saveFilters();
         invalidateLogicCaches(fileStore);
         await router();
-        renderItems();
     });
 
     overrideWoodcutting.addEventListener("input", () => {
