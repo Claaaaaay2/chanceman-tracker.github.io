@@ -87,84 +87,92 @@ function initLazyImages() {
 window.initItemsPage = async function () {
     await fileStore.ensureItemsLoaded();
 
-    const searchInput = document.getElementById("itemSearch");
-    const hideRolled = document.getElementById("hideRolled");
-    const onlyUnlocked = document.getElementById("onlyUnlocked");
-    const hideClue = document.getElementById("hideClueRewardOnly");
-    const allowOthersHouses = document.getElementById("allowOthersHouses");
-    const hasFlatpacks = document.getElementById("hasFlatpacks");
-    const hasItemsets = document.getElementById("hasItemsets");
-    const hasSuperiors = document.getElementById("hasSuperiors");
-    const isIronman = document.getElementById("isIronman");
-    const hideBosses = document.getElementById("hideBosses");
-    const hideRaids = document.getElementById("hideRaids");
-    const isSlayerLocked = document.getElementById("isSlayerLocked");
-    const isHunterRumourLocked = document.getElementById("isHunterRumourLocked");
-    let hunterRumoursCompleted = document.getElementById("hunterRumoursCompleted");
-    const hideLMS = document.getElementById("hideLMS");
-    const hideJon = document.getElementById("hideJon");
-    const isFreeToPlay = document.getElementById("isFreeToPlay");
-    const overrideWoodcutting = document.getElementById("overrideWoodcutting");
-    const overrideMining = document.getElementById("overrideMining");
-    const overrideFishing = document.getElementById("overrideFishing");
-    const overrideCooking = document.getElementById("overrideCooking");
-    const overrideFletching = document.getElementById("overrideFletching");
-    const overrideCrafting = document.getElementById("overrideCrafting");
-    const overrideConstruction = document.getElementById("overrideConstruction");
-    const grid = document.getElementById("itemGrid");
+    const elements = {
+        searchInput: document.getElementById("itemSearch"),
+        hunterRumoursCompleted: document.getElementById("hunterRumoursCompleted"),
+        grid: document.getElementById("itemGrid")
+    };
 
-    if (!searchInput || !isFreeToPlay || !hideJon || !hideBosses || !hideRaids || !isSlayerLocked || !isHunterRumourLocked || !hunterRumoursCompleted || !hideLMS || !hideRolled || !onlyUnlocked || !hideClue || !allowOthersHouses || !hasFlatpacks || !hasItemsets || !hasSuperiors || !isIronman || !overrideWoodcutting || !overrideMining || !overrideFishing || !overrideCooking || !overrideFletching || !overrideCrafting || !overrideConstruction || !grid) {
+    const checkboxConfigs = [
+        { id: "hideRolled", key: "hideRolled", defaultValue: true },
+        { id: "onlyUnlocked", key: "onlyUnlocked", defaultValue: false },
+        { id: "hideClueRewardOnly", key: "hideClue", defaultValue: true, invalidate: true },
+        { id: "allowOthersHouses", key: "allowOthersHouses", defaultValue: false, invalidate: true },
+        { id: "hasFlatpacks", key: "hasFlatpacks", defaultValue: true },
+        { id: "hasItemsets", key: "hasItemsets", defaultValue: true },
+        { id: "hasSuperiors", key: "hasSuperiors", defaultValue: false, invalidate: true },
+        { id: "isIronman", key: "isIronman", defaultValue: false, invalidate: true },
+        { id: "hideBosses", key: "hideBosses", defaultValue: false, invalidate: true },
+        { id: "hideRaids", key: "hideRaids", defaultValue: false, invalidate: true },
+        { id: "isSlayerLocked", key: "isSlayerLocked", defaultValue: false, invalidate: true },
+        { id: "isHunterRumourLocked", key: "isHunterRumourLocked", defaultValue: false, invalidate: true },
+        { id: "hideLMS", key: "hideLMS", defaultValue: false, invalidate: true },
+        { id: "hideJon", key: "hideJon", defaultValue: false, invalidate: true },
+        { id: "isFreeToPlay", key: "isFreeToPlay", defaultValue: false, invalidate: true },
+        { id: "overrideWoodcutting", key: "overrideWoodcutting", defaultValue: false, invalidate: true },
+        { id: "overrideMining", key: "overrideMining", defaultValue: false, invalidate: true },
+        { id: "overrideFishing", key: "overrideFishing", defaultValue: false, invalidate: true },
+        { id: "overrideCooking", key: "overrideCooking", defaultValue: false, invalidate: true },
+        { id: "overrideFletching", key: "overrideFletching", defaultValue: false, invalidate: true },
+        { id: "overrideCrafting", key: "overrideCrafting", defaultValue: false, invalidate: true },
+        { id: "overrideConstruction", key: "overrideConstruction", defaultValue: false, invalidate: true }
+    ];
+
+    const checkboxElements = {};
+    for (const config of checkboxConfigs) {
+        checkboxElements[config.key] = document.getElementById(config.id);
+    }
+
+    const missingElement = !elements.searchInput || !elements.hunterRumoursCompleted || !elements.grid
+        || checkboxConfigs.some((config) => !checkboxElements[config.key]);
+    if (missingElement) {
         setTimeout(initItemsPage, 0);
         return;
     }
 
     const f = fileStore.filters;
-    searchInput.value = f.search ?? "";
-    hideRolled.checked = f.hideRolled ?? true;
-    onlyUnlocked.checked = f.onlyUnlocked ?? false;
-    hideClue.checked = f.hideClue ?? true;
-    allowOthersHouses.checked = f.allowOthersHouses ?? false;
-    hasFlatpacks.checked = f.hasFlatpacks ?? true;
-    hasItemsets.checked = f.hasItemsets ?? true;
-    hasSuperiors.checked = f.hasSuperiors ?? false;
-    isIronman.checked = f.isIronman ?? false;
-    hideBosses.checked = f.hideBosses ?? false;
-    hideRaids.checked = f.hideRaids ?? false;
-    isSlayerLocked.checked = f.isSlayerLocked ?? false;
-    isHunterRumourLocked.checked = f.isHunterRumourLocked ?? false;
-    hunterRumoursCompleted.value = f.hunterRumoursCompleted ?? 0;
-    hideLMS.checked = f.hideLMS ?? false;
-    hideJon.checked = f.hideJon ?? false;
-    isFreeToPlay.checked = f.isFreeToPlay ?? false;
-    overrideWoodcutting.checked = f.overrideWoodcutting ?? false;
-    overrideMining.checked = f.overrideMining ?? false;
-    overrideFishing.checked = f.overrideFishing ?? false;
-    overrideCooking.checked = f.overrideCooking ?? false;
-    overrideFletching.checked = f.overrideFletching ?? false;
-    overrideCrafting.checked = f.overrideCrafting ?? false;
-    overrideConstruction.checked = f.overrideConstruction ?? false;
+    elements.searchInput.value = f.search ?? "";
+    elements.hunterRumoursCompleted.value = f.hunterRumoursCompleted ?? 0;
+    for (const config of checkboxConfigs) {
+        checkboxElements[config.key].checked = f[config.key] ?? config.defaultValue;
+    }
+
+    function readFiltersFromUI() {
+        const nextFilters = {
+            search: elements.searchInput.value,
+            hunterRumoursCompleted: elements.hunterRumoursCompleted.value
+        };
+        for (const config of checkboxConfigs) {
+            nextFilters[config.key] = checkboxElements[config.key].checked;
+        }
+        return nextFilters;
+    }
+
+    const getFilters = () => readFiltersFromUI();
 
     async function renderItems() {
+        const {
+            search,
+            hideRolled,
+            onlyUnlocked,
+            hideClue,
+            allowOthersHouses,
+            hasFlatpacks,
+            hasItemsets,
+            hasSuperiors,
+            isIronman,
+            hideBosses,
+            hideRaids,
+            isSlayerLocked,
+            isHunterRumourLocked,
+            hideLMS,
+            hideJon,
+            isFreeToPlay
+        } = getFilters();
+
         const items = fileStore.items || [];
         const rolled = fileStore.rolled || [];
         const unlocked = fileStore.unlocked || [];
-        const search = searchInput.value.toLowerCase();
-        const hideR = hideRolled.checked;
-        const onlyU = onlyUnlocked.checked;
-        const hideCl = hideClue.checked;
-        const allowHo = allowOthersHouses.checked;
-        const hasFl = hasFlatpacks.checked;
-        const hasIt = hasItemsets.checked;
-        const hasSup = hasSuperiors.checked;
-        const isIron = isIronman.checked;
-        const hideBoss = hideBosses.checked;
-        const hideRaid = hideRaids.checked;
-        const slayLock = isSlayerLocked.checked;
-        const huntRumourLock = isHunterRumourLocked.checked;
-        const hideLms = hideLMS.checked;
-        const hJon = hideJon.checked;
-        const f2p = isFreeToPlay.checked;
-
         const ranked = await computeAllRanksOnce(items, fileStore);
 
         // sort async
@@ -174,43 +182,43 @@ window.initItemsPage = async function () {
             const { item } = entry;
             let sort = { ...entry.sort };
 
-            if (f2p && !item.tags?.includes("f2p")) {
+            if (isFreeToPlay && !item.tags?.includes("f2p")) {
                 continue;
             }
-            if (!item.name.toLowerCase().includes(search)) continue;
-            if (hideR && rolled.includes(item.id)) continue;
-            if (onlyU && !unlocked.includes(item.id)) continue;
-            if (hideCl && item.tags?.includes("clue-reward-only")) continue;
-            if (hideCl && await shouldHideForClueFilter(item, fileStore)) {
+            if (!item.name.toLowerCase().includes(search.toLowerCase())) continue;
+            if (hideRolled && rolled.includes(item.id)) continue;
+            if (onlyUnlocked && !unlocked.includes(item.id)) continue;
+            if (hideClue && item.tags?.includes("clue-reward-only")) continue;
+            if (hideClue && await shouldHideForClueFilter(item, fileStore)) {
                 sort.rank = 8;
             }
-            if (!allowHo && await hideTag(item, fileStore, "house")) {
+            if (!allowOthersHouses && await hideTag(item, fileStore, "house")) {
                 sort.rank = 8;
             }
-            if (!hasSup && await hideTag(item, fileStore, "superior")) {
+            if (!hasSuperiors && await hideTag(item, fileStore, "superior")) {
                 sort.rank = 8;
             }
-            if (isIron && await isNonIronItem(item, fileStore)) {
+            if (isIronman && await isNonIronItem(item, fileStore)) {
                 sort.rank = 8;
             }
-            if (!hasFl && item.tags?.includes("flatpack")) continue;
-            if (!hasIt && item.tags?.includes("itemset")) continue;
-            if (hideBoss && await hideTag(item, fileStore, "boss")) {
+            if (!hasFlatpacks && item.tags?.includes("flatpack")) continue;
+            if (!hasItemsets && item.tags?.includes("itemset")) continue;
+            if (hideBosses && await hideTag(item, fileStore, "boss")) {
                 sort.rank = 8;
             }
-            if (hideRaid && await hideTag(item, fileStore, "raid")) {
+            if (hideRaids && await hideTag(item, fileStore, "raid")) {
                 sort.rank = 8;
             }
-            if (slayLock && await hideSkill(item, fileStore, "Slayer")) {
+            if (isSlayerLocked && await hideSkill(item, fileStore, "Slayer")) {
                 sort.rank = 8;
             }
-            if (huntRumourLock && await hideTag(item, fileStore, "hunterRumour")) {
+            if (isHunterRumourLocked && await hideTag(item, fileStore, "hunterRumour")) {
                 sort.rank = 8;
             }
-            if (hideLms && await hideTag(item, fileStore, "LMS")) {
+            if (hideLMS && await hideTag(item, fileStore, "LMS")) {
                 sort.rank = 8;
             }
-            if (hJon && await hideTag(item, fileStore, "jon")) {
+            if (hideJon && await hideTag(item, fileStore, "jon")) {
                 sort.rank = 8;
             }
 
@@ -260,174 +268,41 @@ window.initItemsPage = async function () {
             `;
         }
 
-        grid.innerHTML = html;
+        elements.grid.innerHTML = html;
 
         setTimeout(() => initLazyImages(), 0);
     }
 
     function saveFilters() {
-        fileStore.setFilters({
-            search: searchInput.value,
-            hideRolled: hideRolled.checked,
-            onlyUnlocked: onlyUnlocked.checked,
-            hideClue: hideClue.checked,
-            allowOthersHouses: allowOthersHouses.checked,
-            hasFlatpacks: hasFlatpacks.checked,
-            hasItemsets: hasItemsets.checked,
-            hasSuperiors: hasSuperiors.checked,
-            isIronman: isIronman.checked,
-            hideBosses: hideBosses.checked,
-            hideRaids: hideRaids.checked,
-            isSlayerLocked: isSlayerLocked.checked,
-            isHunterRumourLocked: isHunterRumourLocked.checked,
-            hunterRumoursCompleted: hunterRumoursCompleted.value,
-            hideLMS: hideLMS.checked,
-            hideJon: hideJon.checked,
-            isFreeToPlay: isFreeToPlay.checked,
-            overrideWoodcutting: overrideWoodcutting.checked,
-            overrideMining: overrideMining.checked,
-            overrideFishing: overrideFishing.checked,
-            overrideCooking: overrideCooking.checked,
-            overrideFletching: overrideFletching.checked,
-            overrideCrafting: overrideCrafting.checked,
-            overrideConstruction: overrideConstruction.checked
+        fileStore.setFilters(readFiltersFromUI());
+    }
+
+    elements.searchInput.addEventListener("input", () => {
+        saveFilters();
+        renderItems();
+    });
+
+    for (const config of checkboxConfigs) {
+        const element = checkboxElements[config.key];
+        if (config.key === "isFreeToPlay") {
+            element.addEventListener("input", async () => {
+                saveFilters();
+                invalidateLogicCaches(fileStore);
+                await router();
+            });
+            continue;
+        }
+
+        element.addEventListener("input", () => {
+            saveFilters();
+            if (config.invalidate) {
+                invalidateLogicCaches(fileStore);
+            }
+            renderItems();
         });
     }
 
-    searchInput.addEventListener("input", () => {
-        saveFilters();
-        renderItems();
-    });
-
-    hideRolled.addEventListener("input", () => {
-        saveFilters();
-        renderItems();
-    });
-
-    onlyUnlocked.addEventListener("input", () => {
-        saveFilters();
-        renderItems();
-    });
-
-    hideClue.addEventListener("input", () => {
-        saveFilters();
-        invalidateLogicCaches(fileStore);
-        renderItems();
-    });
-
-    allowOthersHouses.addEventListener("input", () => {
-        saveFilters();
-        invalidateLogicCaches(fileStore);
-        renderItems();
-    });
-
-    hasFlatpacks.addEventListener("input", () => {
-        saveFilters();
-        renderItems();
-    });
-
-    hasItemsets.addEventListener("input", () => {
-        saveFilters();
-        renderItems();
-    });
-
-    hasSuperiors.addEventListener("input", () => {
-        saveFilters();
-        invalidateLogicCaches(fileStore);
-        renderItems();
-    });
-
-    isIronman.addEventListener("input", () => {
-        saveFilters();
-        invalidateLogicCaches(fileStore);
-        renderItems();
-    });
-
-    hideBosses.addEventListener("input", () => {
-        saveFilters();
-        invalidateLogicCaches(fileStore);
-        renderItems();
-    });
-
-    hideRaids.addEventListener("input", () => {
-        saveFilters();
-        invalidateLogicCaches(fileStore);
-        renderItems();
-    });
-
-    isSlayerLocked.addEventListener("input", () => {
-        saveFilters();
-        invalidateLogicCaches(fileStore);
-        renderItems();
-    });
-
-    isHunterRumourLocked.addEventListener("input", () => {
-        saveFilters();
-        invalidateLogicCaches(fileStore);
-        renderItems();
-    });
-
-    hunterRumoursCompleted.addEventListener("change", () => {
-        saveFilters();
-        invalidateLogicCaches(fileStore);
-        renderItems();
-    });
-
-    hideLMS.addEventListener("input", () => {
-        saveFilters();
-        invalidateLogicCaches(fileStore);
-        renderItems();
-    });
-
-    hideJon.addEventListener("input", () => {
-        saveFilters();
-        invalidateLogicCaches(fileStore);
-        renderItems();
-    });
-
-    isFreeToPlay.addEventListener("input", async () => {
-        saveFilters();
-        invalidateLogicCaches(fileStore);
-        await router();
-    });
-
-    overrideWoodcutting.addEventListener("input", () => {
-        saveFilters();
-        invalidateLogicCaches(fileStore);
-        renderItems();
-    });
-
-    overrideMining.addEventListener("input", () => {
-        saveFilters();
-        invalidateLogicCaches(fileStore);
-        renderItems();
-    });
-
-    overrideFishing.addEventListener("input", () => {
-        saveFilters();
-        invalidateLogicCaches(fileStore);
-        renderItems();
-    });
-
-    overrideCooking.addEventListener("input", () => {
-        saveFilters();
-        invalidateLogicCaches(fileStore);
-        renderItems();
-    });
-
-    overrideFletching.addEventListener("input", () => {
-        saveFilters();
-        invalidateLogicCaches(fileStore);
-        renderItems();
-    });
-
-    overrideCrafting.addEventListener("input", () => {
-        saveFilters();
-        invalidateLogicCaches(fileStore);
-        renderItems();
-    });
-
-    overrideConstruction.addEventListener("input", () => {
+    elements.hunterRumoursCompleted.addEventListener("change", () => {
         saveFilters();
         invalidateLogicCaches(fileStore);
         renderItems();
