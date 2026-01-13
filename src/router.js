@@ -11,6 +11,26 @@ import UploadPage from "./pages/upload.js";
 import { bindThemeToggle, updateThemeIcon } from "./styles/theme.js";
 import { bindFiltersOverridesToggle } from "./styles/filtersOverrides.js";
 
+function ensureRouteLoadingOverlay() {
+    let overlay = document.getElementById("routeLoading");
+    if (overlay) return overlay;
+
+    overlay = document.createElement("div");
+    overlay.id = "routeLoading";
+    overlay.className = "route-loading-overlay";
+    overlay.innerHTML = `
+        <div class="spinner" aria-hidden="true"></div>
+        <span>Loading...</span>
+    `;
+    document.body.appendChild(overlay);
+    return overlay;
+}
+
+function setRouteLoading(isLoading) {
+    ensureRouteLoadingOverlay();
+    document.body.classList.toggle("route-loading", isLoading);
+}
+
 export async function navigate(path) {
     history.pushState({}, "", path);
     router();
@@ -19,6 +39,8 @@ export async function navigate(path) {
 window.navigate = navigate;
 
 export async function router() {
+    setRouteLoading(true);
+    await new Promise(requestAnimationFrame);
     const path = window.location.pathname;
 
     const basePath = path.split("?")[0];
@@ -35,19 +57,23 @@ export async function router() {
     const page = routes[basePath] || NotFoundPage;
     const app = document.getElementById("app");
 
-    app.innerHTML = `
-        <div class="layout">
-            ${await Header()}
-            <main class="content">
-                ${await page()}
-            </main>
-            ${await Footer()}
-        </div>
-    `;
-    bindThemeToggle();
-    bindFiltersOverridesToggle();
-    updateThemeIcon();
+    try {
+        app.innerHTML = `
+            <div class="layout">
+                ${await Header()}
+                <main class="content">
+                    ${await page()}
+                </main>
+                ${await Footer()}
+            </div>
+        `;
+        bindThemeToggle();
+        bindFiltersOverridesToggle();
+        updateThemeIcon();
 
-    afterRoute();
+        afterRoute();
+    } finally {
+        setRouteLoading(false);
+    }
 }
 
