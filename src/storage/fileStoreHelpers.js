@@ -16,9 +16,12 @@ export function openDB() {
 
 export async function saveToDB(key, data) {
     const db = await openDB();
-    const tx = db.transaction(STORE_NAME, "readwrite");
-    tx.objectStore(STORE_NAME).put(data, key);
-    return tx.complete;
+    return new Promise((resolve, reject) => {
+        const tx = db.transaction(STORE_NAME, "readwrite");
+        tx.oncomplete = () => resolve();
+        tx.onerror = () => reject(tx.error);
+        tx.objectStore(STORE_NAME).put(data, key);
+    });
 }
 
 export async function loadFromDB(key) {

@@ -51,4 +51,3 @@ export async function router() {
     afterRoute();
 }
 
-window.addEventListener("popstate", router);

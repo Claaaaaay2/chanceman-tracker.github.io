@@ -121,59 +121,57 @@ export const REQUIREMENT_CHECKS = {
     },
     hasAnyNormalCape(ctx) {
         return has(ctx, 1023) //
-            && has(ctx, 1007) //
-            && has(ctx, 1021) //
-            && has(ctx, 1019) //
-            && has(ctx, 1031) //
-            && has(ctx, 6959) //
-            && has(ctx, 1029) //
-            && has(ctx, 1027);//
+            || has(ctx, 1007) //
+            || has(ctx, 1021) //
+            || has(ctx, 1019) //
+            || has(ctx, 1031) //
+            || has(ctx, 6959) //
+            || has(ctx, 1029) //
+            || has(ctx, 1027);//
     },
     hasAnyCookedMeatFish(ctx) {
         return has(ctx, 315) //
-            && has(ctx, 325) //
-            && has(ctx, 2140) //
-            && has(ctx, 2142) //
-            && has(ctx, 1861) //
-            && has(ctx, 3228) //
-            && has(ctx, 325) //
-            && has(ctx, 347) //
-            && has(ctx, 355) //
-            && has(ctx, 333) //
-            && has(ctx, 351) //
-            && has(ctx, 339) //
-            && has(ctx, 2142) //
-            && has(ctx, 329) //
-            && has(ctx, 3381) //
-            && has(ctx, 361) //
-            && has(ctx, 3144) //
-            && has(ctx, 29217) //
-            && has(ctx, 10136) //
-            && has(ctx, 5003) //
-            && has(ctx, 379) //
-            && has(ctx, 7568) //
-            && has(ctx, 365) //
-            && has(ctx, 373) //
-            && has(ctx, 7946) //
-            && has(ctx, 32312) //
-            && has(ctx, 32320) //
-            && has(ctx, 32328) //
-            && has(ctx, 385) //
-            && has(ctx, 397) //
-            && has(ctx, 32336) //
-            && has(ctx, 13441) //
-            && has(ctx, 32344) //
-            && has(ctx, 11936) //
-            && has(ctx, 391) //
-            && has(ctx, 32352); //
+            || has(ctx, 325) //
+            || has(ctx, 2140) //
+            || has(ctx, 2142) //
+            || has(ctx, 1861) //
+            || has(ctx, 3228) //
+            || has(ctx, 347) //
+            || has(ctx, 355) //
+            || has(ctx, 333) //
+            || has(ctx, 351) //
+            || has(ctx, 339) //
+            || has(ctx, 329) //
+            || has(ctx, 3381) //
+            || has(ctx, 361) //
+            || has(ctx, 3144) //
+            || has(ctx, 29217) //
+            || has(ctx, 10136) //
+            || has(ctx, 5003) //
+            || has(ctx, 379) //
+            || has(ctx, 7568) //
+            || has(ctx, 365) //
+            || has(ctx, 373) //
+            || has(ctx, 7946) //
+            || has(ctx, 32312) //
+            || has(ctx, 32320) //
+            || has(ctx, 32328) //
+            || has(ctx, 385) //
+            || has(ctx, 397) //
+            || has(ctx, 32336) //
+            || has(ctx, 13441) //
+            || has(ctx, 32344) //
+            || has(ctx, 11936) //
+            || has(ctx, 391) //
+            || has(ctx, 32352); //
     },
     hasAnyLeaves(ctx) {
         return has(ctx, 6020) //
-            && has(ctx, 6030) //
-            && has(ctx, 6028) //
-            && has(ctx, 6022) //
-            && has(ctx, 6024) //
-            && has(ctx, 6026);
+            || has(ctx, 6030) //
+            || has(ctx, 6028) //
+            || has(ctx, 6022) //
+            || has(ctx, 6024) //
+            || has(ctx, 6026);
     },
     hasAnyNails(ctx) {
         return hasAnyNails(ctx);
@@ -748,7 +746,7 @@ export const REQUIREMENT_CHECKS = {
         return canCompleteIcthlarinsLittleHelper(ctx);
     },
     canReachAbyssalSire(ctx) {
-        return !ctx.filters.slayerLocked //
+        return !ctx.filters.isSlayerLocked //
             && (canCompleteEnterTheAbyss(ctx) 
                 || canCompleteFairytaleIGrowingPains(ctx)
             );
@@ -4758,7 +4756,7 @@ function canTrainFishing(ctx) {
 }
 
 function canTrainSlayer(ctx) {
-    if (ctx.filters?.slayerLocked) return false;
+    if (ctx.filters?.isSlayerLocked) return false;
     return true;
 }
 

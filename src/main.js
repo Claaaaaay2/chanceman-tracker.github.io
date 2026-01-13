@@ -48,18 +48,13 @@ export function parseDropRate(rate) {
         );
     }
 
-    // Handle ranges: "~1/800–~1/1200"
-    if (rate.includes("–")) {
-        const nums = rate.match(/\d+/g);
-        if (!nums) return Infinity;
-        return 1 / Math.min(...nums.map(Number));
+    // Handle fractions and ranges like "1/800?1/1200"
+    const matches = [...rate.matchAll(/(\d+)\s*\/\s*(\d+)/g)];
+    if (matches.length) {
+        const values = matches.map(match => Number(match[1]) / Number(match[2]));
+        return Math.max(...values);
     }
 
-    // Handle estimates "~1/42"
-    const match = rate.match(/(\d+)\s*\/\s*(\d+)/);
-    if (match) {
-        return Number(match[1]) / Number(match[2]);
-    }
 
     return Infinity;
 }
@@ -107,22 +102,9 @@ async function computeAllRanksOnce(items, ctx) {
     return rankedItemsCache;
 }
 
-window.addEventListener("DOMContentLoaded", async () => {
-    await fileStore.init(); // load from IndexedDB first
-    router();
-});
 
-window.addEventListener('DOMContentLoaded', router);
-window.addEventListener('popstate', router);
 
 // Allow <a data-link href="/about"> navigation
-document.addEventListener("click", (e) => {
-    if (e.target.matches("[data-link]")) {
-        e.preventDefault();
-        history.pushState(null, "", e.target.href);
-        router();
-    }
-});
 
 function initLazyImages() {
     const lazyImages = document.querySelectorAll("img.lazy-img");
@@ -505,24 +487,23 @@ export function invalidateLogicCaches(ctx) {
 
 window.addEventListener("DOMContentLoaded", async () => {
     await fileStore.init();
-    router();
+    await router();
 });
 
-// Re-init lazy loader after routing
-window.addEventListener("popstate", () => {
-    router();
-    setTimeout(initLazyImages, 0);
-});
+window.addEventListener("popstate", router);
 
-// Also listen for clicks that use data-link routing
+// Allow <a data-link href="/about"> navigation
 document.addEventListener("click", (e) => {
-    if (e.target.matches("[data-link]")) {
-        e.preventDefault();
-        history.pushState(null, "", e.target.href);
-        router();
-        setTimeout(initLazyImages, 0);
-    }
+    const link = e.target.closest("[data-link]");
+    if (!link) return;
+
+    e.preventDefault();
+    history.pushState(null, "", link.href);
+    router();
 });
+
+
+
 
 // Hook into router so your lazy images load after page render
 export function afterRoute() {
