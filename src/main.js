@@ -374,6 +374,9 @@ export function afterRoute() {
     if (typeof initBugPage === "function") {
         initBugPage();
     }
+    if (typeof initQuestsPage === "function") {
+        initQuestsPage();
+    }
 }
 
 async function shouldHideForClueFilter(item, ctx) {

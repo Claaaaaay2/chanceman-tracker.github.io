@@ -1,16 +1,22 @@
 export function has(ctx, id) {
     const item = ctx.items.find(i => i.id === id);
     if (!item) return false;
-    return ctx.unlocked.includes(id) && ctx.rolled.includes(id);
+    const hasItem = ctx.unlocked.includes(id) && ctx.rolled.includes(id);
+    if (!hasItem && ctx?.missing?.items) {
+        ctx.missing.items.add(id);
+    }
+    return hasItem;
 }
 
 export const REQUIREMENT_CHECKS = {
+    canCompleteDeviousMinds(ctx) {
+        canCompleteDeviousMinds(ctx);
+    },
     canCompleteGoblinDiplomacy(ctx) {
         return canCompleteGoblinDiplomacy(ctx);
     },
     canTelegrab(ctx) {
-        return has(ctx, 563) // Law rune
-            && hasAirRuneSource(ctx);
+        return canTelegrab(ctx);
     },
     canEnterCraftingGuild(ctx) {
         return canEnterCraftingGuild(ctx);
@@ -718,8 +724,65 @@ export const REQUIREMENT_CHECKS = {
     canCompleteBoneVoyage(ctx) {
         return canCompleteBoneVoyage(ctx);
     },
+    canCompleteShieldOfArrav(ctx) {
+        return canCompleteShieldOfArrav(ctx);
+    },
+    canCompleteSheepHerder(ctx) {
+        return canCompleteSheepHerder(ctx);
+    },
+    canCompleteScrambled(ctx) {
+        return canCompleteScrambled(ctx);
+    },
+    canCompleteChildrenOfTheSun(ctx) {
+        return canCompleteChildrenOfTheSun(ctx);
+    },
+    canCompleteTheRestlessGhost(ctx) {
+        return canCompleteTheRestlessGhost(ctx);
+    },
+    canCompleteRomeoAndJuliet(ctx) {
+        return canCompleteRomeoAndJuliet(ctx);
+    },
+    canCompleteRagAndBoneManI(ctx) {
+        return canCompleteRagAndBoneManI(ctx);
+    },
+    canCompleteRagAndBoneManII(ctx) {
+        return canCompleteRagAndBoneManII(ctx);
+    },
+    canCompleteTwilightsPromise(ctx) {
+        return canCompleteTwilightsPromise(ctx);
+    },
+    canCompleteTheForsakenTower(ctx) {
+        return canCompleteTheForsakenTower(ctx);
+    },
+    canCompleteTheDepthsOfDespair(ctx) {
+        return canCompleteTheDepthsOfDespair(ctx);
+    },
+    canCompleteTearsOfGuthix(ctx) {
+        return canCompleteTearsOfGuthix(ctx);
+    },
+    canCompleteSpiritsOfTheElid(ctx) {
+        return canCompleteSpiritsOfTheElid(ctx);
+    },
+    canCompleteMurderMystery(ctx) {
+        return canCompleteMurderMystery(ctx);
+    },
+    canCompleteMonksFriend(ctx) {
+        return canCompleteMonksFriend(ctx);
+    },
     canCompleteBigChompyBirdHunting(ctx) {
         return canCompleteBigChompyBirdHunting(ctx);
+    },
+    canCompleteTheGolem(ctx) {
+        return canCompleteTheGolem(ctx);
+    },
+    canCompleteSheepShearer(ctx) {
+        return canCompleteSheepShearer(ctx);
+    },
+    canCompleteATailOfTwoCats(ctx) {
+        return canCompleteATailOfTwoCats(ctx);
+    },
+    canCompleteANightAtTheTheatre(ctx) {
+        return canCompleteANightAtTheTheatre(ctx);
     },
     canCompleteThroneOfMiscellania(ctx) {
         return canCompleteThroneOfMiscellania(ctx);
@@ -829,6 +892,9 @@ export const REQUIREMENT_CHECKS = {
     canEnterKaruulmSlayerDungeon(ctx) {
         return canEnterKaruulmSlayerDungeon(ctx);
     },
+    canCompleteTheHandInTheSand(ctx) {
+        return canCompleteTheHandInTheSand(ctx);
+    },
     canCompleteWaterfallQuest(ctx) {
         return canCompleteWaterfallQuest(ctx);
     },
@@ -889,6 +955,24 @@ export const REQUIREMENT_CHECKS = {
     canCompleteDwarfCannon(ctx) {
         return canCompleteDwarfCannon(ctx);
     },
+    canCompleteTheKnightsSword(ctx) {
+        return canCompleteTheKnightsSword(ctx);
+    },
+    canCompleteBarbarianTraining(ctx) {
+        return canCompleteBarbarianTraining(ctx);
+    },
+    canCompleteTheRestlessGhost(ctx) {
+        return true;
+    },
+    canCompleteTheRibbitingTaleOfALilyPadLabourDispute(ctx) {
+        return canCompleteTheRibbitingTaleOfALilyPadLabourDispute(ctx);
+    },
+    canCompleteAlfredGrimhandsBarcrawl(ctx) {
+        return canCompleteAlfredGrimhandsBarcrawl(ctx);
+    },
+    canCompleteAnExistentialCrisis(ctx) {
+        return canCompleteAnExistentialCrisis(ctx);
+    },
     canCompleteTroubledTortugans(ctx) {
         return canCompleteTroubledTortugans(ctx);
     },
@@ -942,6 +1026,12 @@ export const REQUIREMENT_CHECKS = {
     },
     canStartTheQueenOfThieves(ctx) {
         return canStartTheQueenOfThieves(ctx);
+    },
+    canCompleteTheQueenOfThieves(ctx) {
+        canCompleteTheQueenOfThieves(ctx);
+    },
+    canCompleteTribalTotem(ctx) {
+        return true;
     },
     canCompleteThePathOfGlouphrie(ctx) {
         return canCompleteThePathOfGlouphrie(ctx);
@@ -2835,6 +2925,37 @@ function canCompleteGhostsAhoy(ctx) {
         && has(ctx, 946); // Knife
 }
 
+function canCompleteANightAtTheTheatre(ctx) {
+    return canCompleteATasteOfHope(ctx) //
+        && canTrainWoodcutting(ctx) //
+        && has(ctx, 8794); // Saw
+}
+
+function canCompleteAlfredGrimhandsBarcrawl(ctx) {
+    return true;
+}
+
+function canCompleteAnExistentialCrisis(ctx) {
+    return false; // TODO
+}
+
+function canCompleteBarbarianTraining(ctx) {
+    return canCompleteBarbarianFishing(ctx) //
+        && canCompleteBarbarianFiremaking(ctx) //
+        && canCompleteBarbarianFarming(ctx) //
+        && canCompleteBarbarianSmithing(ctx) //
+        && canCompleteBarbarianHerblore(ctx) //
+}
+
+function canCompleteBarbarianFarming(ctx) {
+    return canPlantTrees(ctx) //
+        && hasAnySapling(ctx);
+}
+
+function hasAnySapling(ctx) {
+    return false; // TODO
+}
+
 function canCompleteATailOfTwoCats(ctx) {
     return canCompleteIcthlarinsLittleHelper(ctx) //
         && has(ctx, 560)  // Death rune
@@ -3302,6 +3423,25 @@ function canCompleteColdWar(ctx) {
 
 function canCompleteRomeoAndJuliet(ctx) {
     return has(ctx, 753); // Cadava berries
+}
+
+function canCompleteRagAndBoneManI(ctx) {
+    return has(ctx, 1931) // Pot
+        && has(ctx, 590)  // Tinderbox
+        && hasAnyLog(ctx);
+}
+
+function canCompleteRagAndBoneManII(ctx) {
+    return canCompleteRagAndBoneManI(ctx) //
+        && has(ctx, 1931) // Pot
+        && has(ctx, 590)  // Tinderbox
+        && hasAnyLog(ctx) //
+        && (canTrainSlayer(ctx) || ctx.player.levels.Slayer >= 40) //
+        && (canCompleteSkippyAndTheMogres(ctx) || canShortrange(ctx)) //
+        && (canStartZogreFleshEaters(ctx) || (canTelegrab(ctx) && canShortrange(ctx))) //
+        && canCompletePriestInPeril(ctx) //
+        && canCompleteCreatureOfFenkenstrain(ctx) //
+        && canEnterLumbridgeSwampCaves(ctx); //
 }
 
 function canCompleteRatcatchers(ctx) {
@@ -3797,12 +3937,21 @@ function canCompleteMurderMystery(ctx) {
     return has(ctx, 1933); // Pot of flour
 }
 
+function canCompleteMonksFriend(ctx) {
+    return has(ctx, 1937) // Jug of water
+        && (has(ctx, 1511) || has(ctx, 960)); // Logs or Plank
+}
+
 function canCompleteShadowOfTheStorm(ctx) {
     return canCompleteDemonSlayer(ctx) //
         && canCompleteTheGolem(ctx) //
         && canTrainCrafting(ctx) //
         && (has(ctx, 229) && has(ctx, 233)) // Vial and Pestle and mortar for black dye
         && has(ctx, 2355); // Silver bar
+}
+
+function canCompleteSheepShearer(ctx) {
+    return has(ctx, 1735); // Shears
 }
 
 function canCompleteTheGolem(ctx) {
@@ -4241,6 +4390,25 @@ function canCompleteTheHandInTheSand(ctx) {
         && has(ctx, 557); // Earth rune
 }
 
+function canCompleteSpiritsOfTheElid(ctx) {
+    return canTrainMining(ctx) //
+        && canTelegrab(ctx) //
+        && has(ctx, 1733) // Needle
+        && has(ctx, 1734) // Thread
+        && has(ctx, 946) // Knife
+        && has(ctx, 954) // Rope
+        && canShortrange(ctx);
+}
+
+function canCompleteShieldOfArrav(ctx) {
+    return true;
+}
+
+function canTelegrab(ctx) {
+    return has(ctx, 563) // Law rune
+        && hasAirRuneSource(ctx);
+}
+
 function canCompleteTearsOfGuthix(ctx) {
     return ctx.player.questPoints >= 43 //
         && canTrainCrafting(ctx) //
@@ -4407,6 +4575,31 @@ function canCompleteDwarfCannon(ctx) {
     return has(ctx, 2347); // Hammer
 }
 
+function canCompleteTheRibbitingTaleOfALilyPadLabourDispute(ctx) {
+    return canTrainWoodcutting(ctx) //
+        && canCompleteChildrenOfTheSun(ctx);
+}
+
+function canCompleteChildrenOfTheSun(ctx) {
+    return true;
+}
+
+function canCompleteScrambled(ctx) {
+    return canTrainConstruction(ctx) //
+        && canTrainCooking(ctx) //
+        && canTrainSmithing(ctx) //
+        && canCompleteChildrenOfTheSun(ctx) //
+        && has(ctx, 1921) // Bowl of water
+        && hasAnyNails(ctx) //
+        && has(ctx, 2347) // Hammer
+        && has(ctx, 8794) // Saw
+        && has(ctx, 960); // Plank
+}
+
+function canCompleteTheRestlessGhost(ctx) {
+    return true;
+}
+
 function canCompleteTroubledTortugans(ctx) {
     return canTrainCrafting(ctx) //
         && canTrainHunter(ctx) //
@@ -4488,10 +4681,6 @@ function canCompletePriestInPeril(ctx) {
         && (has(ctx, 7936) // Pure essence
             || has(ctx, 1436) // or Rune essence
         );
-}
-
-function canCompleteShieldOfArrav(ctx) {
-    return true;
 }
 
 function canCompleteHazeelCult(ctx) {

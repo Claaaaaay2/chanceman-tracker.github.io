@@ -48,6 +48,9 @@
           "droprate": "1/42.667; 1/64"
         }
       },
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Fletching Adamant arrows": {
           "notes": "",
@@ -63,9 +66,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -80,7 +80,7 @@
     "sources": {
       "other": {
         "Smithing Adamant axe": {
-          "notes": "Adamantite bar and hammer needed.",
+          "notes": "Adamantite bar and Hammer needed.",
           "rule": {
             "all": [
               {
@@ -102,9 +102,12 @@
       "f2p"
     ],
     "sources": {
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Smithing Adamant battleaxe": {
-          "notes": "Adamantite bar and hammer needed.",
+          "notes": "Adamantite bar and Hammer needed.",
           "rule": {
             "all": [
               {
@@ -114,9 +117,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -129,9 +129,12 @@
       "f2p"
     ],
     "sources": {
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Smithing Adamant chainbody": {
-          "notes": "Adamantite bar and hammer needed.",
+          "notes": "Adamantite bar and Hammer needed.",
           "rule": {
             "all": [
               {
@@ -141,9 +144,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -156,9 +156,12 @@
       "f2p"
     ],
     "sources": {
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Smithing Adamant dagger": {
-          "notes": "Adamantite bar and hammer needed.",
+          "notes": "Adamantite bar and Hammer needed.",
           "rule": {
             "all": [
               {
@@ -168,9 +171,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -188,7 +188,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires an adamantite bar.",
+          "notes": "Requires an Adamantite bar.",
           "rule": {
             "all": [
               {
@@ -303,7 +303,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires an adamantite bar.",
+          "notes": "Requires an Adamantite bar.",
           "rule": {
             "all": [
               {
@@ -352,7 +352,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires an adamantite bar.",
+          "notes": "Requires an Adamantite bar.",
           "rule": {
             "all": [
               {
@@ -390,7 +390,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires an adamantite bar.",
+          "notes": "Requires an Adamantite bar.",
           "rule": {
             "all": [
               {
@@ -417,7 +417,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires an adamantite bar.",
+          "notes": "Requires an Adamantite bar.",
           "rule": {
             "all": [
               {
@@ -472,7 +472,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires an adamantite bar.",
+          "notes": "Requires an Adamantite bar.",
           "rule": {
             "all": [
               {
@@ -590,7 +590,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires an adamantite bar.",
+          "notes": "Requires an Adamantite bar.",
           "rule": {
             "all": [
               {
@@ -650,7 +650,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires an adamantite bar.",
+          "notes": "Requires an Adamantite bar.",
           "rule": {
             "all": [
               {
@@ -696,7 +696,7 @@
     "sources": {
       "other": {
         "Smithing": {
-          "notes": "Requires an adamantite bar.",
+          "notes": "Requires an Adamantite bar.",
           "rule": {
             "all": [
               {
@@ -718,7 +718,7 @@
     "sources": {
       "other": {
         "Creating a set at the Grand Exchange": {
-          "notes": "Requires adamant full helm, platelegs, platebody and kiteshield.",
+          "notes": "Requires Adamant full helm, platelegs, platebody and kiteshield.",
           "rule": {
             "all": [
               {
@@ -748,7 +748,7 @@
     "sources": {
       "other": {
         "Creating a set at the Grand Exchange": {
-          "notes": "Requires adamant full helm, plateskirt, platebody and kiteshield.",
+          "notes": "Requires Adamant full helm, plateskirt, platebody and kiteshield.",
           "rule": {
             "all": [
               {
@@ -846,7 +846,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires an adamantite bar.",
+          "notes": "Requires an Adamantite bar.",
           "rule": {
             "all": [
               {
@@ -881,7 +881,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires an adamantite bar.",
+          "notes": "Requires an Adamantite bar.",
           "rule": {
             "all": [
               {
@@ -905,7 +905,7 @@
     "sources": {
       "other": {
         "Smithing": {
-          "notes": "Requires an adamantite bar.",
+          "notes": "Requires an Adamantite bar.",
           "rule": {
             "all": [
               {
@@ -929,7 +929,7 @@
     "sources": {
       "other": {
         "Smelting": {
-          "notes": "Requires adamantite ore and coal.",
+          "notes": "Requires Adamantite ore and Coal.",
           "rule": {
             "all": [
               {
@@ -1047,10 +1047,10 @@
           "droprate": "1/64"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       }
     }
@@ -1093,7 +1093,7 @@
     "sources": {
       "other": {
         "Crafting a tiara": {
-          "notes": "Requires a tiara and an air talisman.",
+          "notes": "Requires a Tiara and an Air talisman.",
           "rule": {
             "all": [
               {
@@ -1125,11 +1125,11 @@
           "droprate": "1/128"
         }
       },
-      "shops": {
-        "Yes": "No requirements"
-      },
       "spawns": {
         "Yes": "canEnterCraftingGuild"
+      },
+      "shops": {
+        "Yes": "No requirements"
       }
     }
   },
@@ -1161,7 +1161,7 @@
     "sources": {
       "other": {
         "Enchanting jewellery": {
-          "notes": "Requires an emerald amulet.",
+          "notes": "Requires an Emerald amulet.",
           "rule": {
             "all": [
               {
@@ -1201,7 +1201,7 @@
     "sources": {
       "other": {
         "Enchanting jewellery": {
-          "notes": "Requires a sapphire amulet.",
+          "notes": "Requires a Sapphire amulet.",
           "rule": {
             "all": [
               {
@@ -1235,7 +1235,7 @@
     "sources": {
       "other": {
         "Enchanting jewellery": {
-          "notes": "Requires a diamond amulet.",
+          "notes": "Requires a Diamond amulet.",
           "rule": {
             "all": [
               {
@@ -1269,7 +1269,7 @@
     "sources": {
       "other": {
         "Enchanting jewellery": {
-          "notes": "Requires a ruby amulet.",
+          "notes": "Requires a Ruby amulet.",
           "rule": {
             "all": [
               {
@@ -1292,7 +1292,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "notes": "Requires raw anchovies.",
+          "notes": "Requires Raw anchovies.",
           "rule": {
             "all": [
               {
@@ -1315,7 +1315,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "notes": "Requires a plain pizza and anchovies.",
+          "notes": "Requires a Plain pizza and Anchovies.",
           "rule": {
             "all": [
               {
@@ -1417,7 +1417,7 @@
     "sources": {
       "other": {
         "Decanting a potion": {
-          "notes": "Decanting an antipoison(2), (3) or (4).",
+          "notes": "Decanting an Antipoison(2), (3) or (4).",
           "rule": {
             "any": [
               {
@@ -1446,7 +1446,7 @@
     "sources": {
       "other": {
         "Decanting a potion": {
-          "notes": "Decanting an antipoison(1), (3) or (4).",
+          "notes": "Decanting an Antipoison(1), (3) or (4).",
           "rule": {
             "any": [
               {
@@ -1475,7 +1475,7 @@
     "sources": {
       "other": {
         "Decanting a potion": {
-          "notes": "Decanting an antipoison(1), (2) or (4).",
+          "notes": "Decanting an Antipoison(1), (2) or (4).",
           "rule": {
             "any": [
               {
@@ -1504,7 +1504,7 @@
     "sources": {
       "other": {
         "Decanting a potion": {
-          "notes": "Decanting an antipoison(1), (2) or (3).",
+          "notes": "Decanting an Antipoison(1), (2) or (3).",
           "rule": {
             "any": [
               {
@@ -1520,7 +1520,7 @@
           }
         },
         "Apothecary": {
-          "notes": "Requires a limpwurt root and cadava berries.",
+          "notes": "Requires a Limpwurt root and Cadava berries.",
           "rule": {
             "all": [
               {
@@ -1544,9 +1544,12 @@
       "f2p"
     ],
     "sources": {
+      "shops": {
+        "Yes": "canAccessCooksGuild"
+      },
       "other": {
         "Cooking": {
-          "notes": "Requires uncooked apple pie.",
+          "notes": "Requires Uncooked apple pie.",
           "rule": {
             "all": [
               {
@@ -1556,9 +1559,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "canAccessCooksGuild"
       }
     }
   },
@@ -1700,10 +1700,10 @@
           "droprate": "1/128"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       }
     }
@@ -1848,10 +1848,10 @@
           "droprate": "1/128"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       },
       "other": {
@@ -2540,7 +2540,7 @@
     "sources": {
       "other": {
         "Creating a set at the Grand Exchange": {
-          "notes": "Requires black full helm, platelegs, platebody and kiteshield.",
+          "notes": "Requires Black full helm, platelegs, platebody and kiteshield.",
           "rule": {
             "all": [
               {
@@ -2570,7 +2570,7 @@
     "sources": {
       "other": {
         "Creating a set at the Grand Exchange": {
-          "notes": "Requires black full helm, plateskirt, platebody and kiteshield.",
+          "notes": "Requires Black full helm, plateskirt, platebody and kiteshield.",
           "rule": {
             "all": [
               {
@@ -2834,7 +2834,7 @@
       },
       "other": {
         "Dye a cape": {
-          "notes": "Requires blue dye and any normal cape.",
+          "notes": "Requires Blue dye and any normal cape.",
           "rule": {
             "all": [
               {
@@ -2893,13 +2893,13 @@
       "f2p"
     ],
     "sources": {
-      "other": {
-        "Complete a Christmas holiday event": {}
-      },
       "drops": {
         "Christmas cracker": {
           "droprate": "Always"
         }
+      },
+      "other": {
+        "Complete a Christmas holiday event": {}
       }
     }
   },
@@ -3119,10 +3119,10 @@
           "droprate": "1/64"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       }
     }
@@ -3169,7 +3169,7 @@
     "sources": {
       "other": {
         "Crafting a tiara": {
-          "notes": "Requires a tiara and a body talisman.",
+          "notes": "Requires a Tiara and a Body talisman.",
           "rule": {
             "all": [
               {
@@ -3195,7 +3195,7 @@
     "sources": {
       "other": {
         "Crafting": {
-          "notes": "Requires a chisel",
+          "notes": "Requires a Chisel.",
           "rule": {
             "all": [
               {
@@ -3496,15 +3496,15 @@
       "f2p"
     ],
     "sources": {
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       },
       "other": {
         "Crafting": {
-          "notes": "Requires an unfired bowl",
+          "notes": "Requires an Unfired bowl.",
           "rule": {
             "all": [
               {
@@ -3528,7 +3528,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "notes": "Requires bowl.",
+          "notes": "Requires Bowl.",
           "rule": {
             "all": [
               {
@@ -3595,7 +3595,7 @@
       },
       "other": {
         "Cooking": {
-          "notes": "Requires bread dough.",
+          "notes": "Requires Bread dough.",
           "rule": {
             "all": [
               {
@@ -3623,7 +3623,7 @@
       },
       "other": {
         "Cooking": {
-          "notes": "Requires a pot of flour and some water.",
+          "notes": "Requires a Pot of flour and some water.",
           "rule": {
             "all": [
               {
@@ -3659,7 +3659,7 @@
     "sources": {
       "other": {
         "Smithing": {
-          "notes": "Requires a bronze bar.",
+          "notes": "Requires a Bronze bar.",
           "rule": {
             "all": [
               {
@@ -3773,10 +3773,10 @@
           "droprate": "1/44.727"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       }
     }
@@ -3807,9 +3807,15 @@
           "droprate": "1/42.667"
         }
       },
+      "spawns": {
+        "Yes": "No requirements"
+      },
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Smithing": {
-          "notes": "Requires a bronze bar.",
+          "notes": "Requires a Bronze bar.",
           "rule": {
             "all": [
               {
@@ -3819,12 +3825,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
-      },
-      "spawns": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -3850,7 +3850,7 @@
       },
       "other": {
         "Smelting": {
-          "notes": "Requires tin ore and copper ore.",
+          "notes": "Requires Tin ore and Copper ore.",
           "rule": {
             "all": [
               {
@@ -3889,9 +3889,12 @@
           "droprate": "1/64"
         }
       },
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Smithing": {
-          "notes": "Requires a bronze bar.",
+          "notes": "Requires a Bronze bar.",
           "rule": {
             "all": [
               {
@@ -3901,9 +3904,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -3927,10 +3927,10 @@
           "droprate": "1/42.667"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       }
     }
@@ -3944,9 +3944,15 @@
       "f2p"
     ],
     "sources": {
+      "spawns": {
+        "Yes": "No requirements"
+      },
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Smithing": {
-          "notes": "Requires a bronze bar.",
+          "notes": "Requires a Bronze bar.",
           "rule": {
             "all": [
               {
@@ -3956,12 +3962,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
-      },
-      "spawns": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -3979,15 +3979,15 @@
           "droprate": "1/25.25"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       },
       "other": {
         "Smithing Bronze dagger": {
-          "notes": "Bronze bar and Hammer",
+          "notes": "Bronze bar and Hammer.",
           "rule": {
             "all": [
               {
@@ -4014,9 +4014,12 @@
           "droprate": "1/5.05"
         }
       },
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Smithing": {
-          "notes": "Requires a bronze bar.",
+          "notes": "Requires a Bronze bar.",
           "rule": {
             "all": [
               {
@@ -4026,9 +4029,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -4071,9 +4071,12 @@
           "droprate": "1/128"
         }
       },
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Smithing": {
-          "notes": "Requires a bronze bar.",
+          "notes": "Requires a Bronze bar.",
           "rule": {
             "all": [
               {
@@ -4083,9 +4086,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -4125,9 +4125,12 @@
           "droprate": "1/128"
         }
       },
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Smithing": {
-          "notes": "Requires a bronze bar.",
+          "notes": "Requires a Bronze bar.",
           "rule": {
             "all": [
               {
@@ -4137,9 +4140,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -4152,9 +4152,15 @@
       "f2p"
     ],
     "sources": {
+      "spawns": {
+        "Yes": "No requirements"
+      },
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Smithing": {
-          "notes": "Requires a bronze bar.",
+          "notes": "Requires a Bronze bar.",
           "rule": {
             "all": [
               {
@@ -4164,12 +4170,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
-      },
-      "spawns": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -4238,9 +4238,15 @@
           "droprate": "1/64"
         }
       },
+      "spawns": {
+        "Yes": "No requirements"
+      },
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Smithing": {
-          "notes": "Requires a bronze bar.",
+          "notes": "Requires a Bronze bar.",
           "rule": {
             "all": [
               {
@@ -4250,12 +4256,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
-      },
-      "spawns": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -4282,10 +4282,10 @@
           "droprate": "1/9.846"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       }
     }
@@ -4299,9 +4299,12 @@
       "f2p"
     ],
     "sources": {
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Smithing": {
-          "notes": "Requires a bronze bar.",
+          "notes": "Requires a Bronze bar.",
           "rule": {
             "all": [
               {
@@ -4311,9 +4314,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -4348,9 +4348,12 @@
       "f2p"
     ],
     "sources": {
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Smithing": {
-          "notes": "Requires a bronze bar.",
+          "notes": "Requires a Bronze bar.",
           "rule": {
             "all": [
               {
@@ -4360,9 +4363,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -4397,9 +4397,12 @@
       "f2p"
     ],
     "sources": {
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Smithing": {
-          "notes": "Requires a bronze bar.",
+          "notes": "Requires a Bronze bar.",
           "rule": {
             "all": [
               {
@@ -4409,9 +4412,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -4460,9 +4460,15 @@
           "droprate": "1/128"
         }
       },
+      "spawns": {
+        "Yes": "No requirements"
+      },
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Smithing": {
-          "notes": "Requires a bronze bar.",
+          "notes": "Requires a Bronze bar.",
           "rule": {
             "all": [
               {
@@ -4472,12 +4478,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
-      },
-      "spawns": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -4490,7 +4490,7 @@
     "sources": {
       "other": {
         "Creating a set at the Grand Exchange": {
-          "notes": "Requires bronze full helm, platelegs, platebody and kiteshield.",
+          "notes": "Requires Bronze full helm, platelegs, platebody and kiteshield.",
           "rule": {
             "all": [
               {
@@ -4520,7 +4520,7 @@
     "sources": {
       "other": {
         "Creating a set at the Grand Exchange": {
-          "notes": "Requires bronze full helm, plateskirt, platebody and kiteshield.",
+          "notes": "Requires Bronze full helm, plateskirt, platebody and kiteshield.",
           "rule": {
             "all": [
               {
@@ -4555,9 +4555,12 @@
           "droprate": "1/42.667"
         }
       },
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Smithing": {
-          "notes": "Requires a bronze bar.",
+          "notes": "Requires a Bronze bar.",
           "rule": {
             "all": [
               {
@@ -4567,9 +4570,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -4582,9 +4582,12 @@
       "f2p"
     ],
     "sources": {
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Smithing": {
-          "notes": "Requires a bronze bar.",
+          "notes": "Requires a Bronze bar.",
           "rule": {
             "all": [
               {
@@ -4594,9 +4597,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -4611,7 +4611,7 @@
     "sources": {
       "other": {
         "Smithing": {
-          "notes": "Requires a bronze bar.",
+          "notes": "Requires a Bronze bar.",
           "rule": {
             "all": [
               {
@@ -4679,7 +4679,7 @@
     "sources": {
       "other": {
         "Crafting": {
-          "notes": "Requires Bryophyta's essence",
+          "notes": "Requires Bryophyta's essence.",
           "rule": {
             "all": [
               {
@@ -4715,10 +4715,10 @@
           "droprate": "1/32"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       },
       "other": {
@@ -4737,15 +4737,15 @@
       "f2p"
     ],
     "sources": {
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       },
       "other": {
         "Milking a cow": {
-          "notes": "Requires a bucket.",
+          "notes": "Requires a Bucket.",
           "rule": {
             "all": [
               {
@@ -4771,9 +4771,12 @@
           "droprate": "1/64"
         }
       },
+      "spawns": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Filling a Bucket with water": {
-          "notes": "Requires a bucket.",
+          "notes": "Requires a Bucket.",
           "rule": {
             "all": [
               {
@@ -4782,9 +4785,6 @@
             ]
           }
         }
-      },
-      "spawns": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -4902,7 +4902,7 @@
       },
       "other": {
         "Cooking": {
-          "notes": "Requires an egg, a bucket of milk, a pot of flour and a cake tin.",
+          "notes": "Requires an Egg, a Bucket of milk, a Pot of flour and a Cake tin.",
           "rule": {
             "all": [
               {
@@ -4932,10 +4932,10 @@
       "f2p"
     ],
     "sources": {
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       }
     }
@@ -5138,10 +5138,10 @@
           "droprate": "1/135"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       }
     }
@@ -5171,10 +5171,10 @@
       "f2p"
     ],
     "sources": {
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       }
     }
@@ -5210,11 +5210,11 @@
       "f2p"
     ],
     "sources": {
-      "shops": {
-        "Yes": "No requirements"
-      },
       "spawns": {
         "Yes": "canEnterCraftingGuild"
+      },
+      "shops": {
+        "Yes": "No requirements"
       }
     }
   },
@@ -5235,11 +5235,11 @@
           "droprate": "1/7"
         }
       },
-      "shops": {
-        "Yes": "canAccessCooksGuild"
-      },
       "spawns": {
         "Yes": "No requirements"
+      },
+      "shops": {
+        "Yes": "canAccessCooksGuild"
       }
     }
   },
@@ -5259,7 +5259,7 @@
       },
       "other": {
         "Cooking": {
-          "notes": "Requires a cake and a chocolate bar or chocolate dust.",
+          "notes": "Requires a Cake and a Chocolate bar or Chocolate dust.",
           "rule": {
             "all": [
               {
@@ -5293,7 +5293,7 @@
     "sources": {
       "other": {
         "Grinding": {
-          "notes": "Requires a chocolate bar and a knife.",
+          "notes": "Requires a Chocolate bar and a Knife.",
           "rule": {
             "all": [
               {
@@ -5420,7 +5420,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "notes": "Requires raw chicken.",
+          "notes": "Requires Raw chicken.",
           "rule": {
             "all": [
               {
@@ -5459,9 +5459,12 @@
           "droprate": "1/128"
         }
       },
+      "spawns": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Cooking": {
-          "notes": "Requires raw beef, bear meat, boar meat or rat meat.",
+          "notes": "Requires Raw beef, bear meat, boar meat or rat meat.",
           "rule": {
             "all": [
               {
@@ -5483,9 +5486,6 @@
             ]
           }
         }
-      },
-      "spawns": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -5689,10 +5689,10 @@
       "f2p"
     ],
     "sources": {
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       }
     }
@@ -5804,7 +5804,7 @@
       },
       "other": {
         "Cutting a gem": {
-          "notes": "Requires an uncut diamond",
+          "notes": "Requires an Uncut diamond.",
           "rule": {
             "all": [
               {
@@ -5828,7 +5828,7 @@
     "sources": {
       "other": {
         "Crafting": {
-          "notes": "Requires diamond amulet (u) and a ball of wool.",
+          "notes": "Requires Diamond amulet (u) and a Ball of wool.",
           "rule": {
             "all": [
               {
@@ -5855,7 +5855,7 @@
     "sources": {
       "other": {
         "Crafting": {
-          "notes": "Requires gold bar, diamond and an amulet mould.",
+          "notes": "Requires Gold bar, Diamond and an Amulet mould.",
           "rule": {
             "all": [
               {
@@ -5885,7 +5885,7 @@
     "sources": {
       "other": {
         "Crafting": {
-          "notes": "Requires gold bar, diamond and necklace mould.",
+          "notes": "Requires Gold bar, Diamond and Necklace mould.",
           "rule": {
             "all": [
               {
@@ -5915,7 +5915,7 @@
     "sources": {
       "other": {
         "Crafting": {
-          "notes": "Requires gold bar, diamond and ring mould.",
+          "notes": "Requires Gold bar, Diamond and Ring mould.",
           "rule": {
             "all": [
               {
@@ -6132,10 +6132,10 @@
           "droprate": "1/128"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       }
     }
@@ -6206,7 +6206,7 @@
     "sources": {
       "other": {
         "Crafting a tiara": {
-          "notes": "Requires a tiara and an earth talisman.",
+          "notes": "Requires a Tiara and an Earth talisman.",
           "rule": {
             "all": [
               {
@@ -6349,7 +6349,7 @@
       },
       "other": {
         "Cutting a gem": {
-          "notes": "requires an uncut emerald and a chisel",
+          "notes": "Requires an Uncut emerald and a Chisel.",
           "rule": {
             "all": [
               {
@@ -6376,7 +6376,7 @@
     "sources": {
       "other": {
         "Crafting": {
-          "notes": "Requires emerald amulet (u) and a ball of wool.",
+          "notes": "Requires Emerald amulet (u) and a Ball of wool.",
           "rule": {
             "all": [
               {
@@ -6403,7 +6403,7 @@
     "sources": {
       "other": {
         "Crafting": {
-          "notes": "Requires gold bar, emerald and amulet mould.",
+          "notes": "Requires Gold bar, Emerald and Amulet mould.",
           "rule": {
             "all": [
               {
@@ -6433,7 +6433,7 @@
     "sources": {
       "other": {
         "Crafting": {
-          "notes": "Requires gold bar, emerald and necklace mould.",
+          "notes": "Requires Gold bar, Emerald and Necklace mould.",
           "rule": {
             "all": [
               {
@@ -6463,7 +6463,7 @@
     "sources": {
       "other": {
         "Crafting": {
-          "notes": "Requires gold bar, emerald and ring mould.",
+          "notes": "Requires Gold bar, Emerald and Ring mould.",
           "rule": {
             "all": [
               {
@@ -6493,7 +6493,7 @@
     "sources": {
       "other": {
         "Decanting a potion": {
-          "notes": "Decanting an energy potion(2), (3) or (4).",
+          "notes": "Decanting an Energy potion(2), (3) or (4).",
           "rule": {
             "any": [
               {
@@ -6522,7 +6522,7 @@
     "sources": {
       "other": {
         "Decanting a potion": {
-          "notes": "Decanting an energy potion(1), (3) or (4).",
+          "notes": "Decanting an Energy potion(1), (3) or (4).",
           "rule": {
             "any": [
               {
@@ -6562,7 +6562,7 @@
       },
       "other": {
         "Decanting a potion": {
-          "notes": "Decanting an energy potion(1), (2) or (4).",
+          "notes": "Decanting an Energy potion(1), (2) or (4).",
           "rule": {
             "any": [
               {
@@ -6591,7 +6591,7 @@
     "sources": {
       "other": {
         "Decanting a potion": {
-          "notes": "Decanting an energy potion(1), (2) or (3).",
+          "notes": "Decanting an Energy potion(1), (2) or (3).",
           "rule": {
             "any": [
               {
@@ -6607,7 +6607,7 @@
           }
         },
         "Apothecary": {
-          "notes": "Requires a limpwurt root and chocolate dust.",
+          "notes": "Requires a Limpwurt root and Chocolate dust.",
           "rule": {
             "all": [
               {
@@ -6686,7 +6686,7 @@
     "sources": {
       "other": {
         "Special shop": {
-          "notes": "forestry rewards - Requires oak logs.",
+          "notes": "Forestry rewards - Requires Oak logs.",
           "rule": {
             "all": [
               {
@@ -6843,10 +6843,10 @@
           "droprate": "1/128"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       }
     }
@@ -6890,7 +6890,7 @@
     "sources": {
       "other": {
         "Crafting a tiara": {
-          "notes": "Requires a tiara and a fire talisman.",
+          "notes": "Requires a Tiara and a Fire talisman.",
           "rule": {
             "all": [
               {
@@ -7300,7 +7300,7 @@
     "sources": {
       "other": {
         "Crafting": {
-          "notes": "Requires gold amulet (u) and a ball of wool.",
+          "notes": "Requires Gold amulet (u) and a Ball of wool.",
           "rule": {
             "all": [
               {
@@ -7327,7 +7327,7 @@
     "sources": {
       "other": {
         "Crafting": {
-          "notes": "Requires gold bar, and amulet mould.",
+          "notes": "Requires Gold bar, and Amulet mould.",
           "rule": {
             "all": [
               {
@@ -7360,9 +7360,12 @@
           "droprate": "1/64"
         }
       },
+      "spawns": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Smelting": {
-          "notes": "Requires gold ore.",
+          "notes": "Requires Gold ore.",
           "rule": {
             "all": [
               {
@@ -7372,9 +7375,6 @@
             ]
           }
         }
-      },
-      "spawns": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -7392,9 +7392,12 @@
           "droprate": "1/4"
         }
       },
+      "spawns": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Crafting": {
-          "notes": "Requires gold bar, and necklace mould.",
+          "notes": "Requires Gold bar, and Necklace mould.",
           "rule": {
             "all": [
               {
@@ -7407,9 +7410,6 @@
             ]
           }
         }
-      },
-      "spawns": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -7454,7 +7454,7 @@
       },
       "other": {
         "Crafting": {
-          "notes": "Requires gold bar, and ring mould.",
+          "notes": "Requires Gold bar, and Ring mould.",
           "rule": {
             "all": [
               {
@@ -7559,7 +7559,7 @@
     "sources": {
       "other": {
         "Dye a cape": {
-          "notes": "Requires green dye and any normal cape.",
+          "notes": "Requires Green dye and any normal cape.",
           "rule": {
             "all": [
               {
@@ -7669,7 +7669,7 @@
     "sources": {
       "other": {
         "Mixing a dye": {
-          "notes": "Requires yellow and blue dye.",
+          "notes": "Requires yellow and Blue dye.",
           "rule": {
             "all": [
               {
@@ -7707,13 +7707,13 @@
       "f2p"
     ],
     "sources": {
-      "other": {
-        "Complete a Christmas holiday event": {}
-      },
       "drops": {
         "Christmas cracker": {
           "droprate": "Always"
         }
+      },
+      "other": {
+        "Complete a Christmas holiday event": {}
       }
     }
   },
@@ -7863,10 +7863,10 @@
           "droprate": "1/16"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       }
     }
@@ -7882,7 +7882,7 @@
     "sources": {
       "other": {
         "Tanning": {
-          "notes": "Requires cowhide.",
+          "notes": "Requires Cowhide.",
           "rule": {
             "all": [
               {
@@ -7910,7 +7910,7 @@
       },
       "other": {
         "Crafting": {
-          "notes": "Requires hard leather",
+          "notes": "Requires Hard leather.",
           "rule": {
             "all": [
               {
@@ -7953,7 +7953,7 @@
       },
       "other": {
         "Cooking": {
-          "notes": "Requires a raw herring.",
+          "notes": "Requires a Raw herring.",
           "rule": {
             "all": [
               {
@@ -7991,11 +7991,11 @@
       "f2p"
     ],
     "sources": {
-      "shops": {
-        "Yes": "No requirements"
-      },
       "spawns": {
         "Yes": "canEnterCraftingGuild"
+      },
+      "shops": {
+        "Yes": "No requirements"
       }
     }
   },
@@ -8015,7 +8015,7 @@
       },
       "other": {
         "Crafting": {
-          "notes": "Requires an Unblessed symbol",
+          "notes": "Requires an Unblessed symbol.",
           "rule": {
             "all": [
               {
@@ -8044,7 +8044,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires an iron bar.",
+          "notes": "Requires an Iron bar.",
           "rule": {
             "all": [
               {
@@ -8121,7 +8121,7 @@
       },
       "other": {
         "Fletching Iron arrow": {
-          "notes": "Iron arrowtips and headless arrow",
+          "notes": "Iron arrowtips and headless arrow.",
           "rule": {
             "all": [
               {
@@ -8163,15 +8163,15 @@
           "droprate": "1/128"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       },
       "other": {
         "Smithing": {
-          "notes": "Requires an iron bar.",
+          "notes": "Requires an Iron bar.",
           "rule": {
             "all": [
               {
@@ -8216,9 +8216,12 @@
           "droprate": "1/128"
         }
       },
+      "spawns": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Smelting": {
-          "notes": "Requires iron ore.",
+          "notes": "Requires Iron ore.",
           "rule": {
             "all": [
               {
@@ -8228,9 +8231,6 @@
             ]
           }
         }
-      },
-      "spawns": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -8259,7 +8259,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires an iron bar.",
+          "notes": "Requires an Iron bar.",
           "rule": {
             "all": [
               {
@@ -8286,9 +8286,12 @@
           "droprate": "Always"
         }
       },
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Smithing": {
-          "notes": "Requires an iron bar.",
+          "notes": "Requires an Iron bar.",
           "rule": {
             "all": [
               {
@@ -8298,9 +8301,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -8378,15 +8378,15 @@
           "droprate": "1/128"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       },
       "other": {
         "Smithing Iron dagger": {
-          "notes": "Requires an Iron bar",
+          "notes": "Requires an Iron bar.",
           "rule": {
             "all": [
               {
@@ -8419,12 +8419,15 @@
           "droprate": "1/64"
         }
       },
+      "spawns": {
+        "Yes": "No requirements"
+      },
       "shops": {
         "Yes": "No requirements"
       },
       "other": {
         "Smithing": {
-          "notes": "Requires an iron bar.",
+          "notes": "Requires an Iron bar.",
           "rule": {
             "all": [
               {
@@ -8434,9 +8437,6 @@
             ]
           }
         }
-      },
-      "spawns": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -8482,9 +8482,12 @@
           "droprate": "1/339.062"
         }
       },
+      "spawns": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Smithing": {
-          "notes": "Requires an iron bar.",
+          "notes": "Requires an Iron bar.",
           "rule": {
             "all": [
               {
@@ -8494,9 +8497,6 @@
             ]
           }
         }
-      },
-      "spawns": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -8548,15 +8548,15 @@
           "droprate": "1/64"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       },
       "other": {
         "Smithing": {
-          "notes": "Requires an iron bar.",
+          "notes": "Requires an Iron bar.",
           "rule": {
             "all": [
               {
@@ -8601,15 +8601,15 @@
           "droprate": "1/339.062"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       },
       "other": {
         "Smithing": {
-          "notes": "Requires an iron bar.",
+          "notes": "Requires an Iron bar.",
           "rule": {
             "all": [
               {
@@ -8642,15 +8642,15 @@
           "droprate": "1/25.6"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       },
       "other": {
         "Smithing": {
-          "notes": "Requires an iron bar.",
+          "notes": "Requires an Iron bar.",
           "rule": {
             "all": [
               {
@@ -8774,7 +8774,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires an iron bar.",
+          "notes": "Requires an Iron bar.",
           "rule": {
             "all": [
               {
@@ -8834,7 +8834,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires an iron bar.",
+          "notes": "Requires an Iron bar.",
           "rule": {
             "all": [
               {
@@ -8888,7 +8888,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires an iron bar.",
+          "notes": "Requires an Iron bar.",
           "rule": {
             "all": [
               {
@@ -8940,15 +8940,15 @@
           "droprate": "1/128"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       },
       "other": {
         "Smithing": {
-          "notes": "Requires an iron bar.",
+          "notes": "Requires an Iron bar.",
           "rule": {
             "all": [
               {
@@ -8970,7 +8970,7 @@
     "sources": {
       "other": {
         "Creating a set at the Grand Exchange": {
-          "notes": "Requires iron full helm, platebody, platelegs, and kiteshield.",
+          "notes": "Requires Iron full helm, platebody, platelegs, and kiteshield.",
           "rule": {
             "all": [
               {
@@ -9000,7 +9000,7 @@
     "sources": {
       "other": {
         "Creating a set at the Grand Exchange": {
-          "notes": "Requires iron full helm, platebody, plateskirt, and kiteshield.",
+          "notes": "Requires Iron full helm, platebody, plateskirt, and kiteshield.",
           "rule": {
             "all": [
               {
@@ -9040,7 +9040,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires an iron bar.",
+          "notes": "Requires an Iron bar.",
           "rule": {
             "all": [
               {
@@ -9084,7 +9084,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires an iron bar.",
+          "notes": "Requires an Iron bar.",
           "rule": {
             "all": [
               {
@@ -9108,7 +9108,7 @@
     "sources": {
       "other": {
         "Smithing": {
-          "notes": "Requires an iron bar.",
+          "notes": "Requires an Iron bar.",
           "rule": {
             "all": [
               {
@@ -9155,10 +9155,10 @@
           "droprate": "1/64"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       }
     }
@@ -9204,7 +9204,7 @@
       },
       "other": {
         "Cooking": {
-          "notes": "Requires a Jug of water and Grapes",
+          "notes": "Requires a Jug of water and Grapes.",
           "rule": {
             "all": [
               {
@@ -9273,10 +9273,10 @@
           "droprate": "1/128"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       }
     }
@@ -9413,7 +9413,7 @@
     "sources": {
       "other": {
         "Tanning": {
-          "notes": "Requires cowhide.",
+          "notes": "Requires Cowhide.",
           "rule": {
             "all": [
               {
@@ -9439,10 +9439,10 @@
           "droprate": "1/44.727"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       },
       "other": {
@@ -9491,10 +9491,10 @@
           "droprate": "Always"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       },
       "other": {
@@ -9616,10 +9616,10 @@
           "droprate": "Always"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       },
       "other": {
@@ -9903,7 +9903,7 @@
       },
       "other": {
         "Cooking": {
-          "notes": "Requires uncooked meat pie.",
+          "notes": "Requires Uncooked meat pie.",
           "rule": {
             "all": [
               {
@@ -9927,7 +9927,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "notes": "Requires cooked meat and a plain pizza.",
+          "notes": "Requires Cooked meat and a Plain pizza.",
           "rule": {
             "all": [
               {
@@ -10095,10 +10095,10 @@
           "droprate": "1/128"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       }
     }
@@ -10136,7 +10136,7 @@
     "sources": {
       "other": {
         "Crafting a tiara": {
-          "notes": "Requires a tiara and a mind talisman.",
+          "notes": "Requires a Tiara and a Mind talisman.",
           "rule": {
             "all": [
               {
@@ -10165,7 +10165,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires a mithril bar.",
+          "notes": "Requires a Mithril bar.",
           "rule": {
             "all": [
               {
@@ -10235,7 +10235,7 @@
     "sources": {
       "other": {
         "Smithing": {
-          "notes": "Requires a mithril bar.",
+          "notes": "Requires a Mithril bar.",
           "rule": {
             "all": [
               {
@@ -10259,7 +10259,7 @@
     "sources": {
       "other": {
         "Smelting": {
-          "notes": "Requires mithril ore and coal.",
+          "notes": "Requires Mithril ore and Coal.",
           "rule": {
             "all": [
               {
@@ -10289,7 +10289,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires a mithril bar.",
+          "notes": "Requires a Mithril bar.",
           "rule": {
             "all": [
               {
@@ -10324,7 +10324,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires a mithril bar.",
+          "notes": "Requires a Mithril bar.",
           "rule": {
             "all": [
               {
@@ -10351,7 +10351,7 @@
       },
       "other": {
         "Smithing Mithril dagger": {
-          "notes": "Mithril bar and Hammer",
+          "notes": "Mithril bar and Hammer.",
           "rule": {
             "all": [
               {
@@ -10373,9 +10373,12 @@
       "f2p"
     ],
     "sources": {
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Smithing": {
-          "notes": "Requires a mithril bar.",
+          "notes": "Requires a Mithril bar.",
           "rule": {
             "all": [
               {
@@ -10385,9 +10388,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -10444,7 +10444,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires a mithril bar.",
+          "notes": "Requires a Mithril bar.",
           "rule": {
             "all": [
               {
@@ -10493,9 +10493,12 @@
           "droprate": "Always"
         }
       },
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Smithing": {
-          "notes": "Requires a mithril bar.",
+          "notes": "Requires a Mithril bar.",
           "rule": {
             "all": [
               {
@@ -10505,9 +10508,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -10537,9 +10537,12 @@
           "droprate": "1/1808.333"
         }
       },
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Smithing": {
-          "notes": "Requires a mithril bar.",
+          "notes": "Requires a Mithril bar.",
           "rule": {
             "all": [
               {
@@ -10549,9 +10552,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -10564,9 +10564,12 @@
       "f2p"
     ],
     "sources": {
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Smithing": {
-          "notes": "Requires a mithril bar.",
+          "notes": "Requires a Mithril bar.",
           "rule": {
             "all": [
               {
@@ -10576,9 +10579,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -10638,9 +10638,12 @@
           "droprate": "1/5425"
         }
       },
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Smithing": {
-          "notes": "Requires a mithril bar.",
+          "notes": "Requires a Mithril bar.",
           "rule": {
             "all": [
               {
@@ -10650,9 +10653,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -10698,9 +10698,12 @@
           "droprate": "1/3616.667"
         }
       },
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Smithing": {
-          "notes": "Requires a mithril bar.",
+          "notes": "Requires a Mithril bar.",
           "rule": {
             "all": [
               {
@@ -10710,9 +10713,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -10758,9 +10758,12 @@
           "droprate": "1/3616.667"
         }
       },
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Smithing": {
-          "notes": "Requires a mithril bar.",
+          "notes": "Requires a Mithril bar.",
           "rule": {
             "all": [
               {
@@ -10770,9 +10773,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -10812,7 +10812,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires a mithril bar.",
+          "notes": "Requires a Mithril bar.",
           "rule": {
             "all": [
               {
@@ -10834,7 +10834,7 @@
     "sources": {
       "other": {
         "Creating a set at the Grand Exchange": {
-          "notes": "Requires mithril full helm, platebody, platelegs, and kiteshield.",
+          "notes": "Requires Mithril full helm, platebody, platelegs, and kiteshield.",
           "rule": {
             "all": [
               {
@@ -10864,7 +10864,7 @@
     "sources": {
       "other": {
         "Creating a set at the Grand Exchange": {
-          "notes": "Requires mithril full helm, platebody, plateskirt, and kiteshield.",
+          "notes": "Requires Mithril full helm, platebody, plateskirt, and kiteshield.",
           "rule": {
             "all": [
               {
@@ -10913,7 +10913,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires a mithril bar.",
+          "notes": "Requires a Mithril bar.",
           "rule": {
             "all": [
               {
@@ -10952,9 +10952,12 @@
           "droprate": "1/1808.333"
         }
       },
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Smithing": {
-          "notes": "Requires a mithril bar.",
+          "notes": "Requires a Mithril bar.",
           "rule": {
             "all": [
               {
@@ -10964,9 +10967,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -10981,7 +10981,7 @@
     "sources": {
       "other": {
         "Smithing": {
-          "notes": "Requires a mithril bar.",
+          "notes": "Requires a Mithril bar.",
           "rule": {
             "all": [
               {
@@ -11263,11 +11263,11 @@
       "f2p"
     ],
     "sources": {
-      "shops": {
-        "Yes": "No requirements"
-      },
       "spawns": {
         "Yes": "canEnterCraftingGuild"
+      },
+      "shops": {
+        "Yes": "No requirements"
       }
     }
   },
@@ -11383,7 +11383,7 @@
     "sources": {
       "other": {
         "Dye a cape": {
-          "notes": "Requires orange dye and any normal cape.",
+          "notes": "Requires Orange dye and any normal cape.",
           "rule": {
             "all": [
               {
@@ -11407,7 +11407,7 @@
     "sources": {
       "other": {
         "Mixing a dye": {
-          "notes": "Requires red and yellow dye.",
+          "notes": "Requires red and Yellow dye.",
           "rule": {
             "all": [
               {
@@ -11433,7 +11433,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "notes": "Requires an pot of flour and some water.",
+          "notes": "Requires an Pot of flour and some water.",
           "rule": {
             "all": [
               {
@@ -11468,10 +11468,10 @@
       "f2p"
     ],
     "sources": {
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       },
       "other": {
@@ -11500,7 +11500,7 @@
     "sources": {
       "other": {
         "Cooking": {
-          "notes": "Requires a pastry dough and pie dish.",
+          "notes": "Requires a Pastry dough and Pie dish.",
           "rule": {
             "all": [
               {
@@ -11567,7 +11567,7 @@
       },
       "other": {
         "Cooking": {
-          "notes": "Requires an pot of flour and some water.",
+          "notes": "Requires an Pot of flour and some water.",
           "rule": {
             "all": [
               {
@@ -11673,9 +11673,15 @@
           "droprate": "1/64"
         }
       },
+      "spawns": {
+        "Yes": "No requirements"
+      },
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Crafting": {
-          "notes": "Requires an unfired pot.",
+          "notes": "Requires an Unfired pot.",
           "rule": {
             "all": [
               {
@@ -11685,12 +11691,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
-      },
-      "spawns": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -11820,7 +11820,7 @@
     "sources": {
       "other": {
         "Dye a cape": {
-          "notes": "Requires purple dye and any normal cape.",
+          "notes": "Requires Purple dye and any normal cape.",
           "rule": {
             "all": [
               {
@@ -11844,7 +11844,7 @@
     "sources": {
       "other": {
         "Mixing a dye": {
-          "notes": "Requires red and blue dye.",
+          "notes": "Requires red and Blue dye.",
           "rule": {
             "all": [
               {
@@ -11878,13 +11878,13 @@
       "f2p"
     ],
     "sources": {
-      "other": {
-        "Complete a Christmas holiday event": {}
-      },
       "drops": {
         "Christmas cracker": {
           "droprate": "Always"
         }
+      },
+      "other": {
+        "Complete a Christmas holiday event": {}
       }
     }
   },
@@ -12192,9 +12192,12 @@
           "droprate": "1/128"
         }
       },
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Dye a cape": {
-          "notes": "Requires red dye and any normal cape.",
+          "notes": "Requires Red dye and any normal cape.",
           "rule": {
             "all": [
               {
@@ -12204,9 +12207,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -12266,13 +12266,13 @@
       "f2p"
     ],
     "sources": {
-      "other": {
-        "Complete a Christmas holiday event": {}
-      },
       "drops": {
         "Christmas cracker": {
           "droprate": "Always"
         }
+      },
+      "other": {
+        "Complete a Christmas holiday event": {}
       }
     }
   },
@@ -12347,11 +12347,11 @@
           "droprate": "1/128"
         }
       },
-      "shops": {
-        "Yes": "No requirements"
-      },
       "spawns": {
         "Yes": "canEnterCraftingGuild"
+      },
+      "shops": {
+        "Yes": "No requirements"
       }
     }
   },
@@ -12415,15 +12415,15 @@
           "droprate": "1/3.2"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       },
       "other": {
         "Asking Ned": {
-          "notes": "Requires a ball of wool.",
+          "notes": "Requires a Ball of wool.",
           "rule": {
             "has": 1759
           }
@@ -12447,7 +12447,7 @@
       },
       "other": {
         "Cutting a gem": {
-          "notes": "requires an uncut ruby and a chisel",
+          "notes": "Requires an Uncut ruby and a Chisel.",
           "rule": {
             "all": [
               {
@@ -12474,7 +12474,7 @@
     "sources": {
       "other": {
         "Crafting": {
-          "notes": "Requires Ruby amulet (u) and a ball of wool.",
+          "notes": "Requires Ruby amulet (u) and a Ball of wool.",
           "rule": {
             "all": [
               {
@@ -12531,7 +12531,7 @@
     "sources": {
       "other": {
         "Crafting": {
-          "notes": "Requires gold bar, ruby and necklace mould.",
+          "notes": "Requires Gold bar, Ruby and Necklace mould.",
           "rule": {
             "all": [
               {
@@ -12561,7 +12561,7 @@
     "sources": {
       "other": {
         "Crafting": {
-          "notes": "Requires gold bar, ruby and ring mould.",
+          "notes": "Requires Gold bar, Ruby and Ring mould.",
           "rule": {
             "all": [
               {
@@ -12596,7 +12596,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires a runite bar.",
+          "notes": "Requires a Runite bar.",
           "rule": {
             "all": [
               {
@@ -12680,7 +12680,7 @@
     "sources": {
       "other": {
         "Smithing": {
-          "notes": "Requires a runite bar.",
+          "notes": "Requires a Runite bar.",
           "rule": {
             "all": [
               {
@@ -12715,7 +12715,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires a runite bar.",
+          "notes": "Requires a Runite bar.",
           "rule": {
             "all": [
               {
@@ -12745,9 +12745,12 @@
           "droprate": "1/39.333"
         }
       },
+      "shops": {
+        "Yes": "canAccessChampionsGuild"
+      },
       "other": {
         "Smithing": {
-          "notes": "Requires a runite bar.",
+          "notes": "Requires a Runite bar.",
           "rule": {
             "all": [
               {
@@ -12757,9 +12760,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "canAccessChampionsGuild"
       }
     }
   },
@@ -12774,7 +12774,7 @@
     "sources": {
       "other": {
         "Smithing Rune dagger": {
-          "notes": "Runite bar and Hammer",
+          "notes": "Runite bar and Hammer.",
           "rule": {
             "all": [
               {
@@ -12846,7 +12846,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires a runite bar.",
+          "notes": "Requires a Runite bar.",
           "rule": {
             "all": [
               {
@@ -12952,7 +12952,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires a runite bar.",
+          "notes": "Requires a Runite bar.",
           "rule": {
             "all": [
               {
@@ -13004,9 +13004,12 @@
           "droprate": "1/23.6"
         }
       },
+      "shops": {
+        "Yes": "canAccessChampionsGuild"
+      },
       "other": {
         "Smithing": {
-          "notes": "Requires a runite bar.",
+          "notes": "Requires a Runite bar.",
           "rule": {
             "all": [
               {
@@ -13016,9 +13019,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "canAccessChampionsGuild"
       }
     }
   },
@@ -13031,9 +13031,12 @@
       "f2p"
     ],
     "sources": {
+      "shops": {
+        "Yes": "canAccessChampionsGuild"
+      },
       "other": {
         "Smithing": {
-          "notes": "Requires a runite bar.",
+          "notes": "Requires a Runite bar.",
           "rule": {
             "all": [
               {
@@ -13043,9 +13046,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "canAccessChampionsGuild"
       }
     }
   },
@@ -13077,7 +13077,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires a runite bar.",
+          "notes": "Requires a Runite bar.",
           "rule": {
             "all": [
               {
@@ -13113,9 +13113,12 @@
       "f2p"
     ],
     "sources": {
+      "shops": {
+        "Yes": "canCompleteDragonSlayerI"
+      },
       "other": {
         "Smithing": {
-          "notes": "Requires a runite bar.",
+          "notes": "Requires a Runite bar.",
           "rule": {
             "all": [
               {
@@ -13125,9 +13128,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "canCompleteDragonSlayerI"
       }
     }
   },
@@ -13225,9 +13225,12 @@
           "droprate": "1/39.333"
         }
       },
+      "shops": {
+        "Yes": "canAccessChampionsGuild"
+      },
       "other": {
         "Smithing": {
-          "notes": "Requires a runite bar.",
+          "notes": "Requires a Runite bar.",
           "rule": {
             "all": [
               {
@@ -13237,9 +13240,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "canAccessChampionsGuild"
       }
     }
   },
@@ -13282,9 +13282,12 @@
           "droprate": "1/39.333"
         }
       },
+      "shops": {
+        "Yes": "canAccessChampionsGuild"
+      },
       "other": {
         "Smithing": {
-          "notes": "Requires a runite bar.",
+          "notes": "Requires a Runite bar.",
           "rule": {
             "all": [
               {
@@ -13294,9 +13297,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "canAccessChampionsGuild"
       }
     }
   },
@@ -13333,7 +13333,7 @@
     "sources": {
       "other": {
         "Smithing": {
-          "notes": "Requires a runite bar.",
+          "notes": "Requires a Runite bar.",
           "rule": {
             "all": [
               {
@@ -13468,7 +13468,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires a runite bar.",
+          "notes": "Requires a Runite bar.",
           "rule": {
             "all": [
               {
@@ -13500,7 +13500,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires a runite bar.",
+          "notes": "Requires a Runite bar.",
           "rule": {
             "all": [
               {
@@ -13524,7 +13524,7 @@
     "sources": {
       "other": {
         "Smithing": {
-          "notes": "Requires a runite bar.",
+          "notes": "Requires a Runite bar.",
           "rule": {
             "all": [
               {
@@ -13553,7 +13553,7 @@
       },
       "other": {
         "Smelting": {
-          "notes": "Requires runite ore and coal.",
+          "notes": "Requires Runite ore and Coal.",
           "rule": {
             "all": [
               {
@@ -13601,7 +13601,7 @@
       },
       "other": {
         "Cooking": {
-          "notes": "Requires raw salmon.",
+          "notes": "Requires Raw salmon.",
           "rule": {
             "all": [
               {
@@ -13692,15 +13692,15 @@
           "droprate": "1/3.333"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       },
       "other": {
         "Cutting a gem": {
-          "notes": "requires an uncut sapphire and a chisel",
+          "notes": "Requires an Uncut sapphire and a Chisel.",
           "rule": {
             "all": [
               {
@@ -13727,7 +13727,7 @@
     "sources": {
       "other": {
         "Crafting": {
-          "notes": "Requires Sapphire amulet (u) and a ball of wool.",
+          "notes": "Requires Sapphire amulet (u) and a Ball of wool.",
           "rule": {
             "all": [
               {
@@ -13754,7 +13754,7 @@
     "sources": {
       "other": {
         "Crafting": {
-          "notes": "Requires gold bar, sapphire and amulet mould.",
+          "notes": "Requires Gold bar, Sapphire and Amulet mould.",
           "rule": {
             "all": [
               {
@@ -13784,7 +13784,7 @@
     "sources": {
       "other": {
         "Crafting": {
-          "notes": "Requires gold bar, sapphire and necklace mould.",
+          "notes": "Requires Gold bar, Sapphire and Necklace mould.",
           "rule": {
             "all": [
               {
@@ -13814,7 +13814,7 @@
     "sources": {
       "other": {
         "Crafting": {
-          "notes": "Requires gold bar, sapphire and ring mould.",
+          "notes": "Requires Gold bar, Sapphire and Ring mould.",
           "rule": {
             "all": [
               {
@@ -13907,7 +13907,7 @@
       },
       "other": {
         "Cooking": {
-          "notes": "Requires raw sardine.",
+          "notes": "Requires Raw sardine.",
           "rule": {
             "all": [
               {
@@ -13991,15 +13991,15 @@
           "droprate": "1/32"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       },
       "other": {
         "Starting Sheep Shearer": {
-          "notes": "Start the Sheep sSearer quest with Fred the farmer and complete the dialogue, he'll give you shears."
+          "notes": "Start the Sheep sSearer quest with Fred the farmer and complete the dialogue, he'll give you Shears."
         }
       }
     }
@@ -14056,7 +14056,7 @@
       },
       "other": {
         "Cooking": {
-          "notes": "Requires raw shrimps.",
+          "notes": "Requires Raw shrimps.",
           "rule": {
             "all": [
               {
@@ -14109,7 +14109,7 @@
       },
       "other": {
         "Smelting": {
-          "notes": "Requires silver ore.",
+          "notes": "Requires Silver ore.",
           "rule": {
             "all": [
               {
@@ -14158,7 +14158,7 @@
     "sources": {
       "other": {
         "Slicing": {
-          "notes": "Requires bananas and a knife (or any slash weapon).",
+          "notes": "Requires bananas and a Knife (or any slash weapon).",
           "rule": {
             "all": [
               {
@@ -14192,10 +14192,10 @@
           "droprate": "Always"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       }
     }
@@ -14233,10 +14233,10 @@
           "droprate": "Always"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       }
     }
@@ -14298,10 +14298,10 @@
           "droprate": "1/32"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       }
     }
@@ -14426,7 +14426,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires a steel bar.",
+          "notes": "Requires a Steel bar.",
           "rule": {
             "all": [
               {
@@ -14531,7 +14531,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires a steel bar.",
+          "notes": "Requires a Steel bar.",
           "rule": {
             "all": [
               {
@@ -14569,7 +14569,7 @@
       },
       "other": {
         "Smelting": {
-          "notes": "Requires iron ore and coal.",
+          "notes": "Requires Iron ore and Coal.",
           "rule": {
             "all": [
               {
@@ -14602,9 +14602,12 @@
           "droprate": "1/44.727"
         }
       },
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Smithing": {
-          "notes": "Requires a steel bar.",
+          "notes": "Requires a Steel bar.",
           "rule": {
             "all": [
               {
@@ -14614,9 +14617,6 @@
             ]
           }
         }
-      },
-      "shops": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -14639,7 +14639,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires a steel bar.",
+          "notes": "Requires a Steel bar.",
           "rule": {
             "all": [
               {
@@ -14672,15 +14672,15 @@
           "droprate": "1/44.727"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       },
       "other": {
         "Smithing Steel dagger": {
-          "notes": "Steel bar and Hammer",
+          "notes": "Steel bar and Hammer.",
           "rule": {
             "all": [
               {
@@ -14771,7 +14771,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires a steel bar.",
+          "notes": "Requires a Steel bar.",
           "rule": {
             "all": [
               {
@@ -14849,7 +14849,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires a steel bar.",
+          "notes": "Requires a Steel bar.",
           "rule": {
             "all": [
               {
@@ -14887,7 +14887,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires a steel bar.",
+          "notes": "Requires a Steel bar.",
           "rule": {
             "all": [
               {
@@ -14937,7 +14937,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires a steel bar.",
+          "notes": "Requires a Steel bar.",
           "rule": {
             "all": [
               {
@@ -14961,7 +14961,7 @@
     "sources": {
       "other": {
         "Smithing": {
-          "notes": "Requires a steel bar.",
+          "notes": "Requires a Steel bar.",
           "rule": {
             "all": [
               {
@@ -15016,12 +15016,15 @@
           "droprate": "1/1356.25"
         }
       },
+      "spawns": {
+        "Yes": "No requirements"
+      },
       "shops": {
         "Yes": "No requirements"
       },
       "other": {
         "Smithing": {
-          "notes": "Requires a steel bar.",
+          "notes": "Requires a Steel bar.",
           "rule": {
             "all": [
               {
@@ -15031,9 +15034,6 @@
             ]
           }
         }
-      },
-      "spawns": {
-        "Yes": "No requirements"
       }
     }
   },
@@ -15079,15 +15079,15 @@
           "droprate": "1/904.167"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       },
       "other": {
         "Smithing": {
-          "notes": "Requires a steel bar.",
+          "notes": "Requires a Steel bar.",
           "rule": {
             "all": [
               {
@@ -15147,7 +15147,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires a steel bar.",
+          "notes": "Requires a Steel bar.",
           "rule": {
             "all": [
               {
@@ -15204,7 +15204,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires a steel bar.",
+          "notes": "Requires a Steel bar.",
           "rule": {
             "all": [
               {
@@ -15299,7 +15299,7 @@
       },
       "other": {
         "Smithing": {
-          "notes": "Requires a steel bar.",
+          "notes": "Requires a Steel bar.",
           "rule": {
             "all": [
               {
@@ -15344,15 +15344,15 @@
           "droprate": "1/493.182"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       },
       "other": {
         "Smithing": {
-          "notes": "Requires a steel bar.",
+          "notes": "Requires a Steel bar.",
           "rule": {
             "all": [
               {
@@ -15376,7 +15376,7 @@
     "sources": {
       "other": {
         "Smithing": {
-          "notes": "Requires a steel bar.",
+          "notes": "Requires a Steel bar.",
           "rule": {
             "all": [
               {
@@ -15550,7 +15550,7 @@
       },
       "other": {
         "Apothecary": {
-          "notes": "Requires a limpwurt root and red spiders' eggs.",
+          "notes": "Requires a Limpwurt root and Red spiders' eggs.",
           "rule": {
             "all": [
               {
@@ -15592,7 +15592,7 @@
     "sources": {
       "other": {
         "Grab the book from the skeleton on the first floor of the Stronghold of Security": {
-          "notes": "Grab the book from the skeleton on the first floor of the Stronghold of Security"
+          "notes": "Grab the book from the skeleton on the first floor of the Stronghold of Security."
         }
       }
     }
@@ -15701,7 +15701,7 @@
       },
       "other": {
         "Cooking": {
-          "notes": "Requires raw swordfish.",
+          "notes": "Requires Raw swordfish.",
           "rule": {
             "all": [
               {
@@ -16474,7 +16474,7 @@
     "sources": {
       "other": {
         "Crafting": {
-          "notes": "Requires a silver bar and a tiara mould.",
+          "notes": "Requires a Silver bar and a Tiara mould.",
           "rule": {
             "all": [
               {
@@ -16499,11 +16499,11 @@
       "f2p"
     ],
     "sources": {
-      "shops": {
-        "Yes": "No requirements"
-      },
       "spawns": {
         "Yes": "canEnterCraftingGuild"
+      },
+      "shops": {
+        "Yes": "No requirements"
       }
     }
   },
@@ -16660,7 +16660,7 @@
       },
       "other": {
         "Cooking": {
-          "notes": "Requires raw trout.",
+          "notes": "Requires Raw trout.",
           "rule": {
             "all": [
               {
@@ -16689,7 +16689,7 @@
       },
       "other": {
         "Cooking": {
-          "notes": "Requires raw tuna.",
+          "notes": "Requires Raw tuna.",
           "rule": {
             "all": [
               {
@@ -16713,7 +16713,7 @@
     "sources": {
       "other": {
         "Creating an unblessed symbol": {
-          "notes": "Requires an Unstrung symbol and a ball of wool",
+          "notes": "Requires an Unstrung symbol and a Ball of wool.",
           "rule": {
             "all": [
               {
@@ -16740,7 +16740,7 @@
     "sources": {
       "other": {
         "Creating an uncooked pie": {
-          "notes": "Requires a cooking apple and a pie shell.",
+          "notes": "Requires a Cooking apple and a Pie shell.",
           "rule": {
             "all": [
               {
@@ -16767,7 +16767,7 @@
     "sources": {
       "other": {
         "Creating an uncooked pie": {
-          "notes": "Requires Redberries and a pie shell.",
+          "notes": "Requires Redberries and a Pie shell.",
           "rule": {
             "all": [
               {
@@ -16794,7 +16794,7 @@
     "sources": {
       "other": {
         "Creating an uncooked pie": {
-          "notes": "Requires a cooked meat or chicken and a pie shell.",
+          "notes": "Requires a Cooked meat or chicken and a Pie shell.",
           "rule": {
             "all": [
               {
@@ -17162,7 +17162,7 @@
     "sources": {
       "other": {
         "Crafting an unfired bowl": {
-          "notes": "Requires soft clay.",
+          "notes": "Requires Soft clay.",
           "rule": {
             "all": [
               {
@@ -17186,7 +17186,7 @@
     "sources": {
       "other": {
         "Crafting an unfired pie dish": {
-          "notes": "Requires soft clay.",
+          "notes": "Requires Soft clay.",
           "rule": {
             "all": [
               {
@@ -17210,7 +17210,7 @@
     "sources": {
       "other": {
         "Crafting an unfired pot": {
-          "notes": "Requires soft clay.",
+          "notes": "Requires Soft clay.",
           "rule": {
             "all": [
               {
@@ -17234,7 +17234,7 @@
     "sources": {
       "other": {
         "Creating an unstrung symbol": {
-          "notes": "Requires a silver bar and a holy mould.",
+          "notes": "Requires a Silver bar and a Holy mould.",
           "rule": {
             "all": [
               {
@@ -17261,7 +17261,7 @@
     "sources": {
       "other": {
         "Empty any filled vial": {
-          "notes": "Requires any potion or filled vial",
+          "notes": "Requires any potion or filled Vial.",
           "rule": {
             "any": [
               {
@@ -17451,10 +17451,10 @@
           "droprate": "1/128"
         }
       },
-      "shops": {
+      "spawns": {
         "Yes": "No requirements"
       },
-      "spawns": {
+      "shops": {
         "Yes": "No requirements"
       }
     }
@@ -17498,7 +17498,7 @@
     "sources": {
       "other": {
         "Creating a tiara": {
-          "notes": "Requires a tiara and a water talisman.",
+          "notes": "Requires a Tiara and a Water talisman.",
           "rule": {
             "all": [
               {
@@ -17527,7 +17527,7 @@
       },
       "other": {
         "Picking up from the wall": {
-          "notes": "Pick up the white apron in Port Sarim."
+          "notes": "Pick up the White apron in Port Sarim."
         }
       }
     }
@@ -17557,13 +17557,13 @@
       "f2p"
     ],
     "sources": {
-      "other": {
-        "Complete a Christmas holiday event": {}
-      },
       "drops": {
         "Christmas cracker": {
           "droprate": "Always"
         }
+      },
+      "other": {
+        "Complete a Christmas holiday event": {}
       }
     }
   },
@@ -17622,7 +17622,7 @@
       },
       "other": {
         "Fletching a willow longbow": {
-          "notes": "Requires willow longbow (u) and a bow string.",
+          "notes": "Requires Willow longbow (u) and a bow string.",
           "rule": {
             "all": [
               {
@@ -17732,7 +17732,7 @@
     "sources": {
       "other": {
         "Purchase through dialogue": {
-          "notes": "Bought from Wyson the gardener in Falador (free roll)"
+          "notes": "Bought from Wyson the gardener in Falador (free roll)."
         }
       }
     }
@@ -17787,7 +17787,7 @@
     "sources": {
       "other": {
         "Shearing sheep": {
-          "notes": "Requires shears.",
+          "notes": "Requires Shears.",
           "rule": {
             "has": 1735
           }
@@ -17832,7 +17832,7 @@
     "sources": {
       "other": {
         "Dye a cape": {
-          "notes": "Requires yellow dye and any normal cape.",
+          "notes": "Requires Yellow dye and any normal cape.",
           "rule": {
             "all": [
               {
@@ -17887,13 +17887,13 @@
       "f2p"
     ],
     "sources": {
-      "other": {
-        "Complete a Christmas holiday event": {}
-      },
       "drops": {
         "Christmas cracker": {
           "droprate": "Always"
         }
+      },
+      "other": {
+        "Complete a Christmas holiday event": {}
       }
     }
   },
