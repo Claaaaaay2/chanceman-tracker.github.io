@@ -95,6 +95,9 @@ export const REQUIREMENT_CHECKS = {
     canCompleteRecruitmentDrive(ctx) {
         return canCompleteRecruitmentDrive(ctx);
     },
+    canFillFishFoodBox(ctx) {
+        return canFillFishFoodBox(ctx);
+    },
     canMakeSplitLog(ctx) {
         return canMakeSplitLog(ctx);
     },
@@ -5253,6 +5256,11 @@ function canTrainCooking(ctx) {
         || has(ctx, 2307) // Bread dough
         || has(ctx, 3142) // Raw karambwan
         || has(ctx, 345); // Raw herring
+}
+
+function canFillFishFoodBox(ctx) {
+    return has(ctx, 6681) // Ground guam
+        && has(ctx, 401); // Seaweed
 }
 
 function canTrainFarming(ctx) {

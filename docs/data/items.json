@@ -15398,6 +15398,12 @@
     "sources": {
       "spawns": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Filling an empty fish food box (untradable)": {
+          "notes": "Requires Ground guam and Seaweed.",
+          "rule": "canFillFishFoodBox"
+        }
       }
     }
   },
