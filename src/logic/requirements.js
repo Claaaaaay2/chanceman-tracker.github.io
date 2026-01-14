@@ -23,7 +23,7 @@ export const REQUIREMENT_CHECKS = {
     },
     hasHighLevelHerb(ctx) {
         return has(ctx, 211)  // Grimy avantoe
-            || has(ctx, 261)  // Avantoe 
+            || has(ctx, 261)  // Avantoe
             || has(ctx, 213)  // Grimy kwuarm
             || has(ctx, 263)  // Kwuarm
             || has(ctx, 3051) // Grimy snapdragon
@@ -136,40 +136,7 @@ export const REQUIREMENT_CHECKS = {
             || has(ctx, 1027);//
     },
     hasAnyCookedMeatFish(ctx) {
-        return has(ctx, 315) //
-            || has(ctx, 325) //
-            || has(ctx, 2140) //
-            || has(ctx, 2142) //
-            || has(ctx, 1861) //
-            || has(ctx, 3228) //
-            || has(ctx, 347) //
-            || has(ctx, 355) //
-            || has(ctx, 333) //
-            || has(ctx, 351) //
-            || has(ctx, 339) //
-            || has(ctx, 329) //
-            || has(ctx, 3381) //
-            || has(ctx, 361) //
-            || has(ctx, 3144) //
-            || has(ctx, 29217) //
-            || has(ctx, 10136) //
-            || has(ctx, 5003) //
-            || has(ctx, 379) //
-            || has(ctx, 7568) //
-            || has(ctx, 365) //
-            || has(ctx, 373) //
-            || has(ctx, 7946) //
-            || has(ctx, 32312) //
-            || has(ctx, 32320) //
-            || has(ctx, 32328) //
-            || has(ctx, 385) //
-            || has(ctx, 397) //
-            || has(ctx, 32336) //
-            || has(ctx, 13441) //
-            || has(ctx, 32344) //
-            || has(ctx, 11936) //
-            || has(ctx, 391) //
-            || has(ctx, 32352); //
+        return hasAnyCookedMeatFish(ctx);
     },
     hasAnyLeaves(ctx) {
         return has(ctx, 6020) //
@@ -301,6 +268,36 @@ export const REQUIREMENT_CHECKS = {
     canCompleteTaiBwoWannaiTrio(ctx) {
         return canCompleteTaiBwoWannaiTrio(ctx);
     },
+    canCompleteGertrudesCat(ctx) {
+        return canCompleteGertrudesCat(ctx);
+    },
+    canCompleteGhostsAhoy(ctx) {
+        return canCompleteGhostsAhoy(ctx);
+    },
+    canCompleteHazeelCult(ctx) {
+        return canCompleteHazeelCult(ctx);
+    },
+    canCompleteHisFaithfulServants(ctx) {
+        return canCompleteHisFaithfulServants(ctx);
+    },
+    canCompleteHolyGrail(ctx) {
+        return canCompleteHolyGrail(ctx);
+    },
+    canCompleteHopespearsWill(ctx) {
+        return canCompleteHopespearsWill(ctx);
+    },
+    canCompleteLandOfTheGoblins(ctx) {
+        return canCompleteLandOfTheGoblins(ctx);
+    },
+    canCompleteMageArenaII(ctx) {
+        return canCompleteMageArenaII(ctx);
+    },
+    canCompleteMakingHistory(ctx) {
+        return canCompleteMakingHistory(ctx);
+    },
+    canCompleteMeatAndGreet(ctx) {
+        return canCompleteMeatAndGreet(ctx);
+    },
     canGetKPSpears(ctx) {
         return canGetKPSpears(ctx);
     },
@@ -339,6 +336,54 @@ export const REQUIREMENT_CHECKS = {
     },
     canCompleteTheGreatBrainRobbery(ctx) {
         return canCompleteTheGreatBrainRobbery(ctx);
+    },
+    canCompleteEthicallyAcquiredAntiquities(ctx) {
+        return canCompleteEthicallyAcquiredAntiquities(ctx);
+    },
+    canCompleteBlackKnightsFortress(ctx) {
+        return canCompleteBlackKnightsFortress(ctx);
+    },
+    canCompleteBiohazard(ctx) {
+        return canCompleteBiohazard(ctx);
+    },
+    canCompleteClientOfKourend(ctx) {
+        return canCompleteClientOfKourend(ctx);
+    },
+    canCompleteCurseOfTheEmptyLord(ctx) {
+        return canCompleteCurseOfTheEmptyLord(ctx);
+    },
+    canCompleteBearYourSoul(ctx) {
+        return canCompleteBearYourSoul(ctx);
+    },
+    canCompleteFishingContest(ctx) {
+        return canCompleteFishingContest(ctx);
+    },
+    canCompleteInSearchOfKnowledge(ctx) {
+        return canCompleteInSearchOfKnowledge(ctx);
+    },
+    canCompleteKingsRansom(ctx) {
+        return canCompleteKingsRansom(ctx);
+    },
+    canCompleteLairOfTarnRazorlor(ctx) {
+        return canCompleteLairOfTarnRazorlor(ctx);
+    },
+    canCompleteIntoTheTombs(ctx) {
+        return canCompleteIntoTheTombs(ctx);
+    },
+    canCompleteTheGeneralsShadow(ctx) {
+        return canCompleteTheGeneralsShadow(ctx);
+    },
+    canCompleteValeTotems(ctx) {
+        return canDoValeTotems(ctx);
+    },
+    canCompleteVampyreSlayer(ctx) {
+        return canCompleteVampyreSlayer(ctx);
+    },
+    canCompleteWitchsPotion(ctx) {
+        return canCompleteWitchsPotion(ctx);
+    },
+    canCompleteXMarksTheSpot(ctx) {
+        return canCompleteXMarksTheSpot(ctx);
     },
     canStartATasteOfHope(ctx) {
         return canStartATasteOfHope(ctx);
@@ -409,7 +454,7 @@ export const REQUIREMENT_CHECKS = {
     canCompleteTheCorsairCurse(ctx) {
         return canCompleteTheCorsairCurse(ctx);
     },
-    hasNarwhalKnife(ctx){
+    hasNarwhalKnife(ctx) {
         return hasNarwhalKnife(ctx);
     },
     canCompleteTheEyesOfGlouphrie(ctx) {
@@ -420,6 +465,9 @@ export const REQUIREMENT_CHECKS = {
     },
     canStartHazeelCult(ctx) {
         return ctx.player.quests["Hazeel Cult"] < 2;
+    },
+    canCompleteRFDAnotherCooksQuest(ctx) {
+        return canCompleteRFDAnotherCooksQuest(ctx);
     },
     canCompleteRFDFreeingTheMountainDwarf(ctx) {
         return canCompleteRFDFreeingTheMountainDwarf(ctx);
@@ -444,6 +492,15 @@ export const REQUIREMENT_CHECKS = {
     },
     canCompleteRFDFreeingKingAwowogei(ctx) {
         return canCompleteRFDFreeingKingAwowogei(ctx);
+    },
+    canCompleteRecipeForDisasterCulinaromancer(ctx) {
+        return canCompleteRecipeForDisasterCulinaromancer(ctx);
+    },
+    canCompleteTheEnchantedKey(ctx) {
+        return canCompleteTheEnchantedKey(ctx);
+    },
+    canCompleteTheGardenOfDeath(ctx) {
+        return canCompleteTheGardenOfDeath(ctx);
     },
     canCompleteShiloVillage(ctx) {
         return canCompleteShiloVillage(ctx);
@@ -808,9 +865,39 @@ export const REQUIREMENT_CHECKS = {
     canCompleteIcthlarinsLittleHelper(ctx) {
         return canCompleteIcthlarinsLittleHelper(ctx);
     },
+    canCompleteEadgarsRuse(ctx) {
+        return canCompleteEadgarsRuse(ctx);
+    },
+    canCompleteCooksAssistant(ctx) {
+        return canCompleteCooksAssistant(ctx);
+    },
+    canCompleteContact(ctx) {
+        return canCompleteContact(ctx);
+    },
+    canCompleteClockTower(ctx) {
+        return canCompleteClockTower(ctx);
+    },
+    canCompleteDruidicRitual(ctx) {
+        return canCompleteDruidicRitual(ctx);
+    },
+    canCompleteDoricsQuest(ctx) {
+        return canCompleteDoricsQuest(ctx);
+    },
+    canCompleteDemonSlayer(ctx) {
+        return canCompleteDemonSlayer(ctx);
+    },
+    canCompleteCurrentAffairs(ctx) {
+        return canCompleteCurrentAffairs(ctx);
+    },
+    canCompleteEnterTheAbyss(ctx) {
+        return canCompleteEnterTheAbyss(ctx);
+    },
+    canCompleteForgettableTale(ctx) {
+        return canCompleteForgettableTale(ctx);
+    },
     canReachAbyssalSire(ctx) {
         return !ctx.filters.isSlayerLocked //
-            && (canCompleteEnterTheAbyss(ctx) 
+            && (canCompleteEnterTheAbyss(ctx)
                 || canCompleteFairytaleIGrowingPains(ctx)
             );
     },
@@ -972,6 +1059,18 @@ export const REQUIREMENT_CHECKS = {
     },
     canCompleteAnExistentialCrisis(ctx) {
         return canCompleteAnExistentialCrisis(ctx);
+    },
+    canCompleteImpendingChaos(ctx) {
+        return canCompleteImpendingChaos(ctx);
+    },
+    canCompleteBurialAtSea(ctx) {
+        return canCompleteBurialAtSea(ctx);
+    },
+    canCompleteTheRedReef(ctx) {
+        return canCompleteTheRedReef(ctx);
+    },
+    canCompleteFamilyPest(ctx) {
+        return canCompleteFamilyPest(ctx);
     },
     canCompleteTroubledTortugans(ctx) {
         return canCompleteTroubledTortugans(ctx);
@@ -1657,7 +1756,7 @@ export const REQUIREMENT_CHECKS = {
 };
 
 function canDoTombsOfAmascut(ctx) {
-    return canCompleteBeneathCursedSands(ctx) //
+    return canCompleteIntoTheTombs(ctx) //
         && canTrainMining(ctx);
 }
 
@@ -1875,7 +1974,7 @@ function canCompleteRegicide(ctx) {
         && has(ctx, 233)  // Pestle and mortar
         && has(ctx, 1931) // Pot
         && (has(ctx, 3228)  // Cooked rabbit
-        || has(ctx, 7223)); // Roast rabbit
+            || has(ctx, 7223)); // Roast rabbit
 }
 
 function canCompleteEaglesPeak(ctx) {
@@ -2471,6 +2570,10 @@ function canCompleteMakingHistory(ctx) {
         && has(ctx, 952); // Spade
 }
 
+function canCompleteMeatAndGreet(ctx) {
+    return canCompleteChildrenOfTheSun(ctx);
+}
+
 function canSailToTheNorthernOcean(ctx) {
     return canCompletePandemonium(ctx) //
         && canTrainConstruction(ctx) //
@@ -2706,6 +2809,20 @@ function canCompleteEnterTheAbyss(ctx) {
     return canCompleteRuneMysteries(ctx);
 }
 
+function canCompleteForgettableTale(ctx) {
+    return canCompleteTheGiantDwarf(ctx) //
+        && canCompleteFishingContest(ctx) //
+        && canTrainCooking(ctx) //
+        && canTrainFarming(ctx) //
+        && has(ctx, 6008)  // Barley malt
+        && has(ctx, 1929)  // Bucket of water
+        && has(ctx, 5341)  // Rake
+        && has(ctx, 5767)  // Ale yeast
+        && has(ctx, 1971)  // Kebab
+        && has(ctx, 1917)  // Beer
+        && has(ctx, 1919); // Beer glass
+}
+
 function canCompleteRuneMysteries(ctx) {
     return has(ctx, 1438); // Air talisman
 }
@@ -2937,6 +3054,22 @@ function canCompleteAlfredGrimhandsBarcrawl(ctx) {
 
 function canCompleteAnExistentialCrisis(ctx) {
     return false; // TODO
+}
+
+function canCompleteImpendingChaos(ctx) {
+    return false; // TODO
+}
+
+function canCompleteBurialAtSea(ctx) {
+    return false; // TODO
+}
+
+function canCompleteTheRedReef(ctx) {
+    return false; // TODO
+}
+
+function canCompleteFamilyPest(ctx) {
+    return canCompleteFamilyCrest(ctx);
 }
 
 function canCompleteBarbarianTraining(ctx) {
@@ -3332,7 +3465,33 @@ function canCompleteFightArena(ctx) {
 }
 
 function canCompleteHolyGrail(ctx) {
-    return canCompleteMerlinsCrystal(ctx); //
+    return canCompleteMerlinsCrystal(ctx);
+}
+
+function canCompleteHopespearsWill(ctx) {
+    return canCompleteTheRestlessGhost(ctx) //
+        && canCompleteDesertTreasureI(ctx) //
+        && canCompleteFairytaleIICureAQueen(ctx) //
+        && canCompleteLandOfTheGoblins(ctx) //
+        && canTrainPrayer(ctx) //
+        && has(ctx, 3002); // Toadflax potion (unf)
+}
+
+function canCompleteLandOfTheGoblins(ctx) {
+    return canCompleteAnotherSliceOfHAM(ctx) //
+        && canCompleteFishingContest(ctx) //
+        && canTrainHerblore(ctx) //
+        && canTrainFishing(ctx) //
+        && has(ctx, 3002) // Toadflax potion (unf)
+        && has(ctx, 288) // Goblin mail
+        && has(ctx, 1765) // Yellow dye
+        && has(ctx, 1767) // Blue dye
+        && has(ctx, 1769) // Orange dye
+        && has(ctx, 1773) // Purple dye
+        && has(ctx, 229)  // Vial
+        && has(ctx, 233)  // Pestle and mortar
+        && has(ctx, 3379) // Raw slimy eel
+        && has(ctx, 307); // Fishing rod
 }
 
 const NMZ_QUESTS = [
@@ -3521,6 +3680,10 @@ function canCompleteCurseOfTheEmptyLord(ctx) {
         && canTrainPrayer(ctx);
 }
 
+function canCompleteBearYourSoul(ctx) {
+    return has(ctx, 952); // Spade
+}
+
 function canCompleteDeviousMinds(ctx) {
     return canCompleteWanted(ctx) //
         && canCompleteTrollStronghold(ctx) //
@@ -3614,6 +3777,11 @@ function canCompleteTempleOfIkov(ctx) {
         );
 }
 
+function canCompleteEthicallyAcquiredAntiquities(ctx) {
+    return canCompleteChildrenOfTheSun(ctx) //
+        && canCompleteShieldOfArrav(ctx);
+}
+
 function canCompleteTheGreatBrainRobbery(ctx) {
     return canCompleteCreatureOfFenkenstrain(ctx) //
         && canCompleteCabinFever(ctx) //
@@ -3695,6 +3863,93 @@ function canCompleteFishingContest(ctx) {
         && has(ctx, 1550) // Garlic
         && has(ctx, 307)  // Fishing rod
         && has(ctx, 952); // Spade
+}
+
+function canCompleteInSearchOfKnowledge(ctx) {
+    return true; // TODO Does Draynor cabbage work?
+}
+
+function canCompleteLairOfTarnRazorlor(ctx) {
+    return canCompleteHauntedMine(ctx) //
+        && (canTrainSlayer(ctx) || ctx.player.levels.Slayer >= 40);
+}
+
+function canCompleteIntoTheTombs(ctx) {
+    return canCompleteBeneathCursedSands(ctx) //
+        && canTrainMining(ctx);
+}
+
+function canCompleteKingsRansom(ctx) {
+    return canCompleteBlackKnightsFortress(ctx) //
+        && canCompleteHolyGrail(ctx) //
+        && canCompleteMurderMystery(ctx) //
+        && canCompleteOneSmallFavour(ctx) //
+        && (has(ctx, 6979)    // Granite (500g)
+            || has(ctx, 6981) // Granite (2kg)
+            || has(ctx, 6983) // Granite (5kg)
+        ) //
+        && canTelegrab(ctx) //
+        && (
+            canCompleteWhileGuthixSleeps(ctx) // For full Elite black armour
+            || (
+                (has(ctx, 1165) || has(ctx, 2587) || has(ctx, 2595)) // Black full helm, Black full helm (t) or Black full helm (g)
+                && (has(ctx, 1125) || has(ctx, 2583) || has(ctx, 2591)) // Black platebody, Black platebody (t) or Black platebody (g)
+                && (has(ctx, 1077) || has(ctx, 2585) || has(ctx, 2593) || has(ctx, 1089) || has(ctx, 3472) || has(ctx, 3473)) // Black platelegs, Black platelegs (t), Black platelegs (g), Black plateskirt, Black plateskirt (t) or Black plateskirt (g)
+            )
+        ) //
+        && has(ctx, 1139)  // Bronze med helm
+        && has(ctx, 1101); // Iron chainbody
+}
+
+function hasAnyCookedMeatFish(ctx) {
+    return has(ctx, 315)   // Shrimps
+        || has(ctx, 325)   // Sardine
+        || has(ctx, 303)   // Small fishing net, for untradable karambwanji
+        || (has(ctx, 305) && canCompleteBelowIceMountain(ctx)) // Big fishing net, for untradable Tetra and Catfish
+        || has(ctx, 2140)  // Cooked chicken
+        || has(ctx, 2142)  // Cooked meat
+        || has(ctx, 1861)  // Ugthanki meat
+        || has(ctx, 3228)  // Cooked rabbit
+        || has(ctx, 347)   // Herring
+        || has(ctx, 355)   // Mackerel
+        || has(ctx, 333)   // Trout
+        || has(ctx, 351)   // Pike
+        || has(ctx, 339)   // Cod
+        || has(ctx, 329)   // Salmon
+        || has(ctx, 3381)  // Cooked slimy eel
+        || has(ctx, 361)   // Tuna
+        || has(ctx, 3144)  // Cooked karambwan
+        || has(ctx, 319)   // Anchovies
+        || has(ctx, 10136) // Rainbow fish
+        || has(ctx, 5003)  // Cave eel
+        || has(ctx, 379)   // Lobster
+        || has(ctx, 7568)  // Cooked jubbly
+        || has(ctx, 365)   // Bass
+        || has(ctx, 373)   // Swordfish
+        || has(ctx, 7946)  // Monkfish
+        || has(ctx, 32312) // Giant krill
+        || has(ctx, 31556) // Swordtip squid
+        || has(ctx, 31564) // Jumbo squid
+        || has(ctx, 32320) // Haddock
+        || has(ctx, 32328) // Yellowfin
+        || has(ctx, 385)   // Shark
+        || has(ctx, 397)   // Sea turtle
+        || has(ctx, 32336) // Halibut
+        || has(ctx, 13441) // Anglerfish
+        || has(ctx, 32344) // Bluefin
+        || has(ctx, 11936) // Dark crab
+        || has(ctx, 32352) // Marlin
+        || has(ctx, 391);  // Manta ray
+}
+
+function canCompleteTheEnchantedKey(ctx) {
+    return canCompleteMakingHistory(ctx) //
+        && has(ctx, 952); // Spade
+}
+
+function canCompleteTheGardenOfDeath(ctx) {
+    return canTrainFarming(ctx) //
+        && has(ctx, 5329); // Secateurs
 }
 
 function canCompleteRecipeForDisaster(ctx) {
@@ -3862,6 +4117,10 @@ function canCompleteRFDFreeingKingAwowogei(ctx) {
         && has(ctx, 233); // Pestle and mortar
 }
 
+function canCompleteRecipeForDisasterCulinaromancer(ctx) {
+    return canCompleteRecipeForDisaster(ctx);
+}
+
 function canCompletePryingTimes(ctx) {
     return canCompletePandemonium(ctx) //
         && canCompleteTheKnightsSword(ctx) //
@@ -3931,6 +4190,12 @@ function canCompletePlagueCity(ctx) {
 function canCompleteDemonSlayer(ctx) {
     return has(ctx, 1929) // Bucket of water
         && has(ctx, 526); // Bones
+}
+
+function canCompleteCurrentAffairs(ctx) {
+    return canCompletePandemonium(ctx) //
+        && canTrainFishing(ctx) //
+        && has(ctx, 973); // Charcoal
 }
 
 function canCompleteMurderMystery(ctx) {
@@ -4217,6 +4482,11 @@ function canCompleteVampyreSlayer(ctx) {
         && has(ctx, 1550); // Garlic
 }
 
+function canCompleteWitchsPotion(ctx) {
+    return has(ctx, 221)   // Eye of newt
+        && has(ctx, 1957); // Onion
+}
+
 function canCompleteSinsOfTheFather(ctx) {
     return canCompleteVampyreSlayer(ctx) //
         && canCompleteATasteOfHope(ctx) //
@@ -4235,6 +4505,12 @@ function canCompleteTrollStronghold(ctx) {
 }
 
 function canStartMageArenaII(ctx) {
+    return has(ctx, 565) // Blood rune
+        && hasAirRuneSource(ctx) //
+        && hasFireRuneSource(ctx); //
+}
+
+function canCompleteMageArenaII(ctx) {
     return has(ctx, 565) // Blood rune
         && hasAirRuneSource(ctx) //
         && hasFireRuneSource(ctx); //
@@ -4286,7 +4562,7 @@ function canCompleteTheSlugMenace(ctx) {
         && (canTrainSlayer(ctx) || ctx.player.levels.Slayer >= 30) //
         && has(ctx, 1941) // Swamp paste
         && (has(ctx, 1436) || has(ctx, 7936)) // Rune essence or Pure essence
-        && has (ctx, 1755) // Chisel
+        && has(ctx, 1755) // Chisel
         && (
             canDoGuardiansOfTheRift(ctx) //
             || canCompleteEnterTheAbyss(ctx) //
@@ -4621,6 +4897,12 @@ function canCompleteDruidicRitual(ctx) {
         && has(ctx, 2134)  // Raw rat meat
         && has(ctx, 2132)  // Raw beef
         && has(ctx, 2138); // Raw chicken
+}
+
+function canCompleteClockTower(ctx) {
+    return has(ctx, 1929) // Bucket of water
+        || has(ctx, 1937) // Jug of water
+        || canTrainMining(ctx); // For Ice gloves
 }
 
 function canCompletePandemonium(ctx) {
@@ -5133,54 +5415,54 @@ function canDoWintertodt(ctx) {
 function canDoSalvaging(ctx) {
     return canCompletePandemonium(ctx) //
         && (
-                ( // Bronze salvaging hook
-                    has(ctx, 960)      // Plank
-                    && has(ctx, 4819)  // Bronze nails
-                    && has(ctx, 2349)  // Bronze bar
-                    && has(ctx, 954)   // Rope
-                )
-                || ( // Iron salvaging hook
-                    has(ctx, 8778)     // Oak plank
-                    && has(ctx, 4820)  // Iron nails
-                    && has(ctx, 2351)  // Iron bar
-                    && has(ctx, 954)   // Rope
-                )
-                || ( // Steel salvaging hook
-                    has(ctx, 8780)     // Teak plank
-                    && has(ctx, 1539)  // Steel nails
-                    && has(ctx, 2353)  // Steel bar
-                    && has(ctx, 954)   // Rope
-                    && has(ctx, 32889) // Lead bar
-                )
-                || ( // Mithril salvaging hook
-                    has(ctx, 8782)     // Mahogany plank
-                    && has(ctx, 4822)  // Mithril nails
-                    && has(ctx, 2359)  // Mithril bar
-                    && has(ctx, 954)   // Rope
-                    && has(ctx, 32889) // Lead bar
-                )
-                || ( // Adamant salvaging hook
-                    has(ctx, 31432)    // Camphor plank
-                    && has(ctx, 4823)  // Adamantite nails
-                    && has(ctx, 2361)  // Adamantite bar
-                    && has(ctx, 954)   // Rope
-                    && has(ctx, 32889) // Lead bar
-                )
-                || ( // Rune salvaging hook
-                    has(ctx, 31435)    // Ironwood plank
-                    && has(ctx, 4824)  // Rune nails
-                    && has(ctx, 2363)  // Runite bar
-                    && has(ctx, 954)   // Rope
-                    && has(ctx, 32892) // Cupronickel bar
-                )
-                || ( // Dragon salvaging hook
-                    has(ctx, 31438)    // Rosewood plank
-                    && has(ctx, 31406) // Dragon nails
-                    && has(ctx, 31996) // Dragon metal sheet
-                    && has(ctx, 954)   // Rope
-                    && has(ctx, 32892) // Cupronickel bar
-                    && has(ctx, 31961) // Broken dragon hook
-                )
+            ( // Bronze salvaging hook
+                has(ctx, 960)      // Plank
+                && has(ctx, 4819)  // Bronze nails
+                && has(ctx, 2349)  // Bronze bar
+                && has(ctx, 954)   // Rope
+            )
+            || ( // Iron salvaging hook
+                has(ctx, 8778)     // Oak plank
+                && has(ctx, 4820)  // Iron nails
+                && has(ctx, 2351)  // Iron bar
+                && has(ctx, 954)   // Rope
+            )
+            || ( // Steel salvaging hook
+                has(ctx, 8780)     // Teak plank
+                && has(ctx, 1539)  // Steel nails
+                && has(ctx, 2353)  // Steel bar
+                && has(ctx, 954)   // Rope
+                && has(ctx, 32889) // Lead bar
+            )
+            || ( // Mithril salvaging hook
+                has(ctx, 8782)     // Mahogany plank
+                && has(ctx, 4822)  // Mithril nails
+                && has(ctx, 2359)  // Mithril bar
+                && has(ctx, 954)   // Rope
+                && has(ctx, 32889) // Lead bar
+            )
+            || ( // Adamant salvaging hook
+                has(ctx, 31432)    // Camphor plank
+                && has(ctx, 4823)  // Adamantite nails
+                && has(ctx, 2361)  // Adamantite bar
+                && has(ctx, 954)   // Rope
+                && has(ctx, 32889) // Lead bar
+            )
+            || ( // Rune salvaging hook
+                has(ctx, 31435)    // Ironwood plank
+                && has(ctx, 4824)  // Rune nails
+                && has(ctx, 2363)  // Runite bar
+                && has(ctx, 954)   // Rope
+                && has(ctx, 32892) // Cupronickel bar
+            )
+            || ( // Dragon salvaging hook
+                has(ctx, 31438)    // Rosewood plank
+                && has(ctx, 31406) // Dragon nails
+                && has(ctx, 31996) // Dragon metal sheet
+                && has(ctx, 954)   // Rope
+                && has(ctx, 32892) // Cupronickel bar
+                && has(ctx, 31961) // Broken dragon hook
+            )
         );
 }
 

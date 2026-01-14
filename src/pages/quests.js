@@ -4,6 +4,7 @@ import { fileStore } from "../storage/fileStore.js";
 
 const RFD_SUBQUEST_KEYS = {
     "Another Cook's Quest": "canCompleteRFDAnotherCooksQuest",
+    "Culinaromancer": "canCompleteRecipeForDisasterCulinaromancer",
     "Evil Dave": "canCompleteRFDFreeingEvilDave",
     "King Awowogei": "canCompleteRFDFreeingKingAwowogei",
     "Lumbridge Guide": "canCompleteRFDFreeingTheLumbridgeGuide",

@@ -6788,14 +6788,9 @@
     "name": "Ale yeast",
     "image": "ale_yeast.png",
     "sources": {
-      "shops": {
-        "Yes": {
-          "has": 1931
-        }
-      },
       "other": {
-        "Cooking": {
-          "notes": "Requires Pot.",
+        "Purchase from Blandebir, Lucrezia or Metarialus thorugh dialogue": {
+          "notes": "Requires a Pot.",
           "rule": {
             "all": [
               {
@@ -35730,6 +35725,11 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Bought from Bugs (Big Chompy Bird Hunting)": {
+          "notes": "Does not require anything."
+        }
       }
     }
   },
@@ -48955,6 +48955,10 @@
               "canTrainCooking"
             ]
           }
+        },
+        "Completing Forgettable Tale...": {
+          "notes": "Reward from completing the quest.",
+          "rule": "canCompleteForgettableTale"
         }
       }
     }
@@ -83420,6 +83424,11 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Bought from Bugs (Big Chompy Bird Hunting)": {
+          "notes": "Does not require anything."
+        }
       }
     }
   },
@@ -106024,7 +106033,7 @@
           "rule": {
             "all": [
               "hasAnyNormalCape",
-              "canCompleteHandInTheSand"
+              "canCompleteTheHandInTheSand"
             ]
           }
         }
