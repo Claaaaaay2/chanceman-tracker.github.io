@@ -7,7 +7,10 @@ let memory = {
         search: "",
         hideRolled: true,
         onlyUnlocked: false,
-        hideClue: true
+        hideClue: true,
+        hideCompletedQuests: false,
+        hideIncompletableQuests: false,
+        questSearch: ""
     },
     player: null
 };

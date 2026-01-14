@@ -64,6 +64,7 @@ a:hover {
 }
 
 input[type='text'],
+input[type='search'],
 textarea,
 input[type='number'] {
     background-color: var(--input-text-bg);
@@ -234,6 +235,12 @@ footer {
     width: 200px;
 }
 
+#questSearch {
+    padding: 6px;
+    font-size: 14px;
+    width: 200px;
+}
+
 .item-grid {
     display: flex;
     flex-wrap: wrap;
@@ -324,11 +331,20 @@ body.route-loading .route-loading-overlay {
     gap: 0.5rem;
 }
 
+.quest-filters {
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1rem;
+}
+
 .quest-filter {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin: 1rem 1rem 0 1rem;
+    margin: 0;
+    white-space: nowrap;
 }
 
 .quest-row {

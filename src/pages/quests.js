@@ -170,7 +170,10 @@ export default async function QuestsPage() {
             : "";
 
         return `
-            <div class="quest-row ${quest.statusClass}" data-completed="${quest.isCompleted ? "true" : "false"}">
+            <div class="quest-row ${quest.statusClass}"
+                data-completed="${quest.isCompleted ? "true" : "false"}"
+                data-doable="${quest.isDoable ? "true" : "false"}"
+                data-name="${quest.questName.toLowerCase()}">
                 <div class="quest-name">${quest.questName}</div>
                 <div class="quest-status">${quest.statusLabel}</div>
                 ${missingHtml}
@@ -178,12 +181,26 @@ export default async function QuestsPage() {
         `;
     });
 
+    const questSearchValue = (fileStore.filters?.questSearch ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/"/g, "&quot;");
+
     return `
         <h1>Quests</h1>
-        <label class="quest-filter">
-            <input type="checkbox" id="hideCompletedQuests" ${fileStore.filters?.hideCompletedQuests ? "checked" : ""}>
-            Hide completed quests
-        </label>
+        <div class="quest-filters">
+            <label class="quest-filter">
+                <span>Search quests</span>
+                <input type="search" id="questSearch" value="${questSearchValue}" placeholder="Quest name">
+            </label>
+            <label class="quest-filter">
+                <input type="checkbox" id="hideCompletedQuests" ${fileStore.filters?.hideCompletedQuests ? "checked" : ""}>
+                Hide completed quests
+            </label>
+            <label class="quest-filter">
+                <input type="checkbox" id="hideIncompletableQuests" ${fileStore.filters?.hideIncompletableQuests ? "checked" : ""}>
+                Hide incompletable quests
+            </label>
+        </div>
         <div class="quest-list" id="questList">
             ${rows.join("")}
         </div>
@@ -192,24 +209,46 @@ export default async function QuestsPage() {
 
 function applyQuestFilters(container) {
     const hideCompleted = fileStore.filters?.hideCompletedQuests;
+    const hideIncompletable = fileStore.filters?.hideIncompletableQuests;
+    const search = (fileStore.filters?.questSearch || "").trim().toLowerCase();
     const rows = container.querySelectorAll(".quest-row");
     for (const row of rows) {
         const isCompleted = row.dataset.completed === "true";
-        row.style.display = hideCompleted && isCompleted ? "none" : "";
+        const isDoable = row.dataset.doable === "true";
+        const questName = row.dataset.name || "";
+        const matchesSearch = !search || questName.includes(search);
+        const isIncompletable = !isCompleted && !isDoable;
+        const shouldHide = (hideCompleted && isCompleted)
+            || (hideIncompletable && isIncompletable)
+            || !matchesSearch;
+        row.style.display = shouldHide ? "none" : "";
     }
 }
 
-document.addEventListener("change", async (e) => {
-    if (e.target.id !== "hideCompletedQuests") return;
+async function updateQuestFilters(partial) {
     const nextFilters = {
         ...fileStore.filters,
-        hideCompletedQuests: e.target.checked
+        ...partial
     };
     await fileStore.setFilters(nextFilters);
     const list = document.getElementById("questList");
     if (list) {
         applyQuestFilters(list);
     }
+}
+
+document.addEventListener("change", async (e) => {
+    if (e.target.id === "hideCompletedQuests") {
+        await updateQuestFilters({ hideCompletedQuests: e.target.checked });
+    }
+    if (e.target.id === "hideIncompletableQuests") {
+        await updateQuestFilters({ hideIncompletableQuests: e.target.checked });
+    }
+});
+
+document.addEventListener("input", async (e) => {
+    if (e.target.id !== "questSearch") return;
+    await updateQuestFilters({ questSearch: e.target.value });
 });
 
 window.initQuestsPage = function () {
