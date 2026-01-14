@@ -107260,6 +107260,10 @@
               }
             ]
           }
+        },
+        "Emptying pots": {
+          "notes": "Requires a filled pot.",
+          "rule": "hasAnyFilledPot"
         }
       }
     }

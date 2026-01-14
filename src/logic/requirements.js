@@ -113,6 +113,9 @@ export const REQUIREMENT_CHECKS = {
     hasAnyFilledJug(ctx) {
         return hasAnyFilledJug(ctx);
     },
+    hasAnyFilledPot(ctx) {
+        return hasAnyFilledPot(ctx);
+    },
     hasAnyAle(ctx) {
         return hasAnyAle(ctx);
     },
@@ -5643,6 +5646,12 @@ function hasAnyFilledBucket(ctx) {
 function hasAnyFilledJug(ctx) {
     return has(ctx, 1937) // Jug of water
         || has(ctx, 1993); // Jug of wine
+}
+
+function hasAnyFilledPot(ctx) {
+    return has(ctx, 1933) // Pot of flour
+        || has(ctx, 7468) // Pot of cornflour
+        || has(ctx, 4436); // Airtight pot
 }
 
 function hasAnyAle(ctx) {
