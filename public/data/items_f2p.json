@@ -1052,6 +1052,12 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Emptying jugs": {
+          "notes": "Requires a filled jug.",
+          "rule": "hasAnyFilledJug"
+        }
       }
     }
   },
@@ -1876,6 +1882,10 @@
       "other": {
         "Searching": {
           "notes": "Search shelves in the Sorceress's house."
+        },
+        "Drinking ales": {
+          "notes": "Requires an ale or mature ale.",
+          "rule": "hasAnyAle"
         }
       }
     }
@@ -3513,6 +3523,10 @@
               "canTrainCrafting"
             ]
           }
+        },
+        "Emptying bowls": {
+          "notes": "Requires a filled bowl item.",
+          "rule": "hasAnyFilledBowl"
         }
       }
     }
@@ -4724,6 +4738,10 @@
       "other": {
         "Questing": {
           "notes": "Can be picked up from the ground in Misthalin Mystery (even if you don't have it unlocked)."
+        },
+        "Emptying buckets": {
+          "notes": "Requires a filled bucket.",
+          "rule": "hasAnyFilledBucket"
         }
       }
     }
@@ -11690,6 +11708,10 @@
               "canTrainCrafting"
             ]
           }
+        },
+        "Emptying pots": {
+          "notes": "Requires a filled pot.",
+          "rule": "hasAnyFilledPot"
         }
       }
     }
@@ -17262,49 +17284,7 @@
       "other": {
         "Empty any filled vial": {
           "notes": "Requires any potion or filled Vial.",
-          "rule": {
-            "any": [
-              {
-                "has": 119
-              },
-              {
-                "has": 117
-              },
-              {
-                "has": 115
-              },
-              {
-                "has": 113
-              },
-              {
-                "has": 3014
-              },
-              {
-                "has": 3012
-              },
-              {
-                "has": 3010
-              },
-              {
-                "has": 3008
-              },
-              {
-                "has": 179
-              },
-              {
-                "has": 177
-              },
-              {
-                "has": 175
-              },
-              {
-                "has": 2446
-              },
-              {
-                "has": 227
-              }
-            ]
-          }
+          "rule": "hasAnyFilledVial"
         }
       }
     }
