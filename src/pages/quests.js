@@ -107,8 +107,8 @@ export default async function QuestsPage() {
             } else {
                 const ctx = {
                     items: fileStore.items,
+                    obtained: fileStore.obtained || [],
                     rolled: fileStore.rolled || [],
-                    unlocked: fileStore.unlocked || [],
                     player: fileStore.player,
                     filters: fileStore.filters,
                     missing: { items: new Set() }

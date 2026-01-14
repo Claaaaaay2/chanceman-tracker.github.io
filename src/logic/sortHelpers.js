@@ -6,7 +6,7 @@ import { NPC_DATA } from "./npcData.js";
 export async function isItemObtainable(item, ctx) {
     const src = item.sources || {};
 
-    if (fileStore.unlocked.includes(item.id)) {
+    if (fileStore.rolled.includes(item.id)) {
         // === Shops ===
         if (src.shops) {
             for (const rule of Object.values(src.shops)) {
@@ -49,10 +49,10 @@ export async function getObtainabilityRank(item, ctx) {
     const id = item.id;
     const player = ctx.player;
 
-    const unlocked = fileStore.unlocked?.includes(id);
+    const rolled = fileStore.rolled?.includes(id);
 
     // 1. Shop (obtainable)
-    if (unlocked && src.shops) {
+    if (rolled && src.shops) {
         for (const rule of Object.values(src.shops)) {
             if (await isRuleObtainable(rule, ctx)) {
                 return { rank: 1, name };
@@ -61,7 +61,7 @@ export async function getObtainabilityRank(item, ctx) {
     }
 
     // 2. Spawn (obtainable)
-    if (unlocked && src.spawns) {
+    if (rolled && src.spawns) {
         for (const rule of Object.values(src.spawns)) {
             if (await isRuleObtainable(rule, ctx)) {
                 return { rank: 2, name };

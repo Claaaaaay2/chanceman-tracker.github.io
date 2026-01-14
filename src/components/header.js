@@ -1,7 +1,7 @@
 import { fileStore } from "../storage/fileStore";
 
 export async function Header() {
-    const loaded = fileStore.rolled && fileStore.unlocked
+    const loaded = fileStore.obtained && fileStore.rolled
 
     if (!loaded) {
         return `

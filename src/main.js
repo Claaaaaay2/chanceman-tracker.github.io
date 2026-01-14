@@ -96,8 +96,8 @@ window.initItemsPage = async function () {
     };
 
     const checkboxConfigs = [
-        { id: "hideRolled", key: "hideRolled", defaultValue: true },
-        { id: "onlyUnlocked", key: "onlyUnlocked", defaultValue: false },
+        { id: "hideObtained", key: "hideObtained", defaultValue: true },
+        { id: "onlyRolled", key: "onlyRolled", defaultValue: false },
         { id: "hideClueRewardOnly", key: "hideClue", defaultValue: true, invalidate: true },
         { id: "allowOthersHouses", key: "allowOthersHouses", defaultValue: false, invalidate: true },
         { id: "hasFlatpacks", key: "hasFlatpacks", defaultValue: true },
@@ -175,8 +175,8 @@ window.initItemsPage = async function () {
         try {
         const {
             search,
-            hideRolled,
-            onlyUnlocked,
+            hideObtained,
+            onlyRolled,
             hideClue,
             allowOthersHouses,
             hasFlatpacks,
@@ -193,8 +193,8 @@ window.initItemsPage = async function () {
         } = getFilters();
 
         const items = fileStore.items || [];
+        const obtained = fileStore.obtained || [];
         const rolled = fileStore.rolled || [];
-        const unlocked = fileStore.unlocked || [];
         const ranked = await computeAllRanksOnce(items, fileStore);
 
         // sort async
@@ -208,8 +208,8 @@ window.initItemsPage = async function () {
                 continue;
             }
             if (!item.name.toLowerCase().includes(search.toLowerCase())) continue;
-            if (hideRolled && rolled.includes(item.id)) continue;
-            if (onlyUnlocked && !unlocked.includes(item.id)) continue;
+            if (hideObtained && obtained.includes(item.id)) continue;
+            if (onlyRolled && !rolled.includes(item.id)) continue;
             if (hideClue && item.tags?.includes("clue-reward-only")) continue;
             if (hideClue && await shouldHideForClueFilter(item, fileStore)) {
                 sort.rank = 8;
@@ -277,8 +277,8 @@ window.initItemsPage = async function () {
                 lastRank = sort.rank;
             }
 
-            const isObtained = rolled.includes(item.id);
-            const isRolled = unlocked.includes(item.id);
+            const isObtained = obtained.includes(item.id);
+            const isRolled = rolled.includes(item.id);
 
             html += `
                 <div class="item-card" onclick="navigate('/item?id=${item.id}')">
@@ -383,13 +383,13 @@ async function shouldHideForClueFilter(item, ctx) {
     let hasAnyClueSource = false;
     let hasReachableNonClueSource = false;
 
-    // Check shops - only count if unlocked
-    if (ctx.unlocked?.includes(item.id) && item.sources?.shops) {
+    // Check shops - only count if rolled
+    if (ctx.rolled?.includes(item.id) && item.sources?.shops) {
         hasReachableNonClueSource = true;
     }
 
-    // Check spawns - only count if unlocked
-    if (ctx.unlocked?.includes(item.id) && item.sources?.spawns) {
+    // Check spawns - only count if rolled
+    if (ctx.rolled?.includes(item.id) && item.sources?.spawns) {
         hasReachableNonClueSource = true;
     }
 
@@ -520,7 +520,7 @@ async function hideTag(item, ctx, tag) {
         }
     }
 
-    if (ctx.unlocked.includes(item.id) && (item.sources?.shops || item.sources?.spawns)) {
+    if (ctx.rolled.includes(item.id) && (item.sources?.shops || item.sources?.spawns)) {
         return false;
     }
 
@@ -567,7 +567,7 @@ async function hideSkill(item, ctx, skill) {
         }
     }
 
-    if (ctx.unlocked.includes(item.id) && (item.sources?.shops || item.sources?.spawns)) {
+    if (ctx.rolled.includes(item.id) && (item.sources?.shops || item.sources?.spawns)) {
         return false;
     }
 

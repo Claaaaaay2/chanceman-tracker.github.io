@@ -4,10 +4,10 @@ import { parseDropRate } from "../logic/utils.js";
 import { fileStore } from "../storage/fileStore.js";
 
 export default async function ItemPage() {
+    const obtained = fileStore.obtained;
     const rolled = fileStore.rolled;
-    const unlocked = fileStore.unlocked;
 
-    if (!rolled || !unlocked)
+    if (!obtained || !rolled)
         return `<h1>Please upload your files on the Home page first.</h1>`;
 
     const params = new URLSearchParams(window.location.search);
@@ -173,7 +173,7 @@ async function renderSourceTable(section, entries) {
         for (const [label, rule] of Object.entries(entries)) {
             let obtainable = false;
 
-            if (fileStore.unlocked.includes(id)) {
+            if (fileStore.rolled.includes(id)) {
                 // Rule is a string
                 if (typeof rule === "string") {
                     obtainable = await isRuleObtainable(rule, fileStore);
@@ -210,7 +210,7 @@ async function renderSourceTable(section, entries) {
         for (const [label, rule] of Object.entries(entries)) {
             let obtainable = false;
 
-            if (fileStore.unlocked.includes(id)) {
+            if (fileStore.rolled.includes(id)) {
                 // Rule is a string
                 if (typeof rule === "string") {
                     obtainable = await isRuleObtainable(rule, fileStore);

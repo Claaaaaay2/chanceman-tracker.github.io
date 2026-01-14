@@ -16,12 +16,12 @@ export default async function ItemsPage() {
                 <input type="search" id="itemSearch" placeholder="Filter items..." />
 
                 <label>
-                    <input type="checkbox" id="hideRolled">
+                    <input type="checkbox" id="hideObtained">
                     Hide obtained
                 </label>
 
                 <label>
-                    <input type="checkbox" id="onlyUnlocked">
+                    <input type="checkbox" id="onlyRolled">
                     Only rolled
                 </label>
 

@@ -1,7 +1,7 @@
 export function has(ctx, id) {
     const item = ctx.items.find(i => i.id === id);
     if (!item) return false;
-    const hasItem = ctx.unlocked.includes(id) && ctx.rolled.includes(id);
+    const hasItem = ctx.rolled.includes(id) && ctx.obtained.includes(id);
     if (!hasItem && ctx?.missing?.items) {
         ctx.missing.items.add(id);
     }

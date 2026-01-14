@@ -32,8 +32,8 @@ export function initBugPage() {
             files: {
                 player: fileStore.player?.name,
                 filters: fileStore.filters,
+                obtained: fileStore.obtained,
                 rolled: fileStore.rolled,
-                unlocked: fileStore.unlocked,
             }
         };
 

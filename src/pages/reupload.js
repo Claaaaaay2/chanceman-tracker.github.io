@@ -50,12 +50,12 @@ document.addEventListener("click", async (e) => {
     try {
         if (rolledInput.files[0]) {
             const json = JSON.parse(await rolledInput.files[0].text());
-            await fileStore.setUnlocked(json);
+            await fileStore.setRolled(json);
         }
 
         if (obtainedInput.files[0]) {
             const json = JSON.parse(await obtainedInput.files[0].text());
-            await fileStore.setRolled(json);
+            await fileStore.setObtained(json);
         }
 
         if (playerNameInput.value) {

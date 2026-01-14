@@ -1,12 +1,12 @@
 import { loadFromDB, saveToDB } from "./fileStoreHelpers.js";
 
 let memory = {
+    obtained: null,
     rolled: null,
-    unlocked: null,
     filters: {
         search: "",
-        hideRolled: true,
-        onlyUnlocked: false,
+        hideObtained: true,
+        onlyRolled: false,
         hideClue: true,
         allowOthersHouses: false,
         hasFlatpacks: true,
@@ -37,8 +37,8 @@ let memory = {
 
 // ---- Public API ----
 export const fileStore = {
+    obtained: null,
     rolled: null,
-    unlocked: null,
     items: null,
     itemsSource: null,
     player: null,
@@ -53,23 +53,32 @@ export const fileStore = {
     },
 
     async init() {
-        memory.rolled = await loadFromDB("rolled");
-        memory.unlocked = await loadFromDB("unlocked");
+        memory.obtained = await loadFromDB("rolled");
+        memory.rolled = await loadFromDB("unlocked");
         memory.player = await loadFromDB("player");
 
         const loadedFilters = await loadFromDB("filters");
         if (loadedFilters) {
-            memory.filters = loadedFilters;
+            const normalizedFilters = { ...memory.filters, ...loadedFilters };
+            if (normalizedFilters.hideObtained === undefined && loadedFilters.hideRolled !== undefined) {
+                normalizedFilters.hideObtained = loadedFilters.hideRolled;
+            }
+            if (normalizedFilters.onlyRolled === undefined && loadedFilters.onlyUnlocked !== undefined) {
+                normalizedFilters.onlyRolled = loadedFilters.onlyUnlocked;
+            }
+            delete normalizedFilters.hideRolled;
+            delete normalizedFilters.onlyUnlocked;
+            memory.filters = normalizedFilters;
         }
+    },
+
+    async setObtained(json) {
+        memory.obtained = json;
+        await saveToDB("rolled", json);
     },
 
     async setRolled(json) {
         memory.rolled = json;
-        await saveToDB("rolled", json);
-    },
-
-    async setUnlocked(json) {
-        memory.unlocked = json;
         await saveToDB("unlocked", json);
     },
 
@@ -83,12 +92,12 @@ export const fileStore = {
         await saveToDB("player", player);
     },
 
-    get rolled() {
-        return memory.rolled;
+    get obtained() {
+        return memory.obtained;
     },
 
-    get unlocked() {
-        return memory.unlocked;
+    get rolled() {
+        return memory.rolled;
     },
 
     get filters() {
