@@ -1017,6 +1017,12 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Emptying jugs": {
+          "notes": "Requires a filled jug.",
+          "rule": "hasAnyFilledJug"
+        }
       }
     }
   },
@@ -31074,6 +31080,10 @@
       "other": {
         "Questing": {
           "notes": "Can be picked up from the ground in Misthalin Mystery (even if you don't have it unlocked)."
+        },
+        "Emptying buckets": {
+          "notes": "Requires a filled bucket.",
+          "rule": "hasAnyFilledBucket"
         }
       }
     }

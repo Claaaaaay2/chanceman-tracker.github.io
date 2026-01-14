@@ -107,6 +107,12 @@ export const REQUIREMENT_CHECKS = {
     hasAnyFilledCup(ctx) {
         return hasAnyFilledCup(ctx);
     },
+    hasAnyFilledBucket(ctx) {
+        return hasAnyFilledBucket(ctx);
+    },
+    hasAnyFilledJug(ctx) {
+        return hasAnyFilledJug(ctx);
+    },
     hasAnyAle(ctx) {
         return hasAnyAle(ctx);
     },
@@ -5624,6 +5630,19 @@ function hasAnyFilledCup(ctx) {
         || has(ctx, 4421) // Guthix rest(2)
         || has(ctx, 4419) // Guthix rest(3)
         || has(ctx, 4417); // Guthix rest(4)
+}
+
+function hasAnyFilledBucket(ctx) {
+    return has(ctx, 1927) // Bucket of milk
+        || has(ctx, 1783) // Bucket of sand
+        || has(ctx, 4687) // Bucket of sap
+        || has(ctx, 1929) // Bucket of water
+        || has(ctx, 30); // Bucket of wax
+}
+
+function hasAnyFilledJug(ctx) {
+    return has(ctx, 1937) // Jug of water
+        || has(ctx, 1993); // Jug of wine
 }
 
 function hasAnyAle(ctx) {
