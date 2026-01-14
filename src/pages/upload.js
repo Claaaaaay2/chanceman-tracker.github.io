@@ -5,22 +5,22 @@ export default function UploadPage() {
     return `
         <h1>Chanceman Tracker Setup</h1>
 
-        <p><strong>Upload your chanceman_rolled.json and chanceman_unlocked.json files.</strong></p>
+        <p><strong>Upload your chanceman_obtained.json and chanceman_rolled.json files.</strong></p>
 
         <p>Location:<br>
-        C:\\Users\\[user]\\.runelite\\chanceman\\[osrs-account]\\chanceman_rolled.json<br>
-        C:\\Users\\[user]\\.runelite\\chanceman\\[osrs-account]\\chanceman_unlocked.json
+        C:\\Users\\[user]\\.runelite\\chanceman\\[osrs-account]\\chanceman_obtained.json<br>
+        C:\\Users\\[user]\\.runelite\\chanceman\\[osrs-account]\\chanceman_rolled.json
         </p>
 
         <label>
-            Rolled:<br>
-            <input type="file" id="rolledInput" accept=".json">
+            Obtained:<br>
+            <input type="file" id="obtainedInput" accept=".json">
         </label>
         <br><br>
 
         <label>
-            Unlocked:<br>
-            <input type="file" id="unlockedInput" accept=".json">
+            Rolled:<br>
+            <input type="file" id="rolledInput" accept=".json">
         </label>
 
         <br><br>
@@ -43,19 +43,19 @@ document.addEventListener("click", async (e) => {
     const app = document.getElementById("app");
 
     const rolledInput = app.querySelector("#rolledInput");
-    const unlockedInput = app.querySelector("#unlockedInput");
+    const obtainedInput = app.querySelector("#obtainedInput");
     const playerNameInput = app.querySelector("#playerName");
     const status = app.querySelector("#status");
 
     try {
         if (rolledInput.files[0]) {
             const json = JSON.parse(await rolledInput.files[0].text());
-            await fileStore.setRolled(json);
+            await fileStore.setUnlocked(json);
         }
 
-        if (unlockedInput.files[0]) {
-            const json = JSON.parse(await unlockedInput.files[0].text());
-            await fileStore.setUnlocked(json);
+        if (obtainedInput.files[0]) {
+            const json = JSON.parse(await obtainedInput.files[0].text());
+            await fileStore.setRolled(json);
         }
 
         if (playerNameInput.value) {

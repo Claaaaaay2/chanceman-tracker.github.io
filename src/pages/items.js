@@ -17,12 +17,12 @@ export default async function ItemsPage() {
 
                 <label>
                     <input type="checkbox" id="hideRolled">
-                    Hide rolled
+                    Hide obtained
                 </label>
 
                 <label>
                     <input type="checkbox" id="onlyUnlocked">
-                    Only unlocked
+                    Only rolled
                 </label>
 
                 <label>
