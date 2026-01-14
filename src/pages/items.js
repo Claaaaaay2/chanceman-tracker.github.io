@@ -13,7 +13,7 @@ export default async function ItemsPage() {
 
         <div class="filters-overrides">
             <div class="item-filters">
-                <input type="text" id="itemSearch" placeholder="Filter items..." />
+                <input type="search" id="itemSearch" placeholder="Filter items..." />
 
                 <label>
                     <input type="checkbox" id="hideRolled">
