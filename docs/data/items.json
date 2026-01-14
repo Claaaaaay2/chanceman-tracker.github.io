@@ -51472,14 +51472,8 @@
           }
         },
         "Drinking a cuppa": {
-          "notes": "Requires Cup of tea.",
-          "rule": {
-            "all": [
-              {
-                "has": 1978
-              }
-            ]
-          }
+          "notes": "Requires a filled cup.",
+          "rule": "hasAnyFilledCup"
         }
       }
     }

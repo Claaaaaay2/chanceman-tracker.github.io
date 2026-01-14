@@ -104,6 +104,9 @@ export const REQUIREMENT_CHECKS = {
     hasAnyFilledVial(ctx) {
         return hasAnyFilledVial(ctx);
     },
+    hasAnyFilledCup(ctx) {
+        return hasAnyFilledCup(ctx);
+    },
     hasAnyAle(ctx) {
         return hasAnyAle(ctx);
     },
@@ -5611,6 +5614,16 @@ function hasAnyFilledVial(ctx) {
         || has(ctx, 2450) // Zamorak brew(4)
         || has(ctx, 11523) // Zamorak mix(1)
         || has(ctx, 11521); // Zamorak mix(2)
+}
+
+function hasAnyFilledCup(ctx) {
+    return has(ctx, 4460) // Cup of hot water
+        || has(ctx, 1978) // Cup of tea
+        || has(ctx, 4458) // Cup of water
+        || has(ctx, 4423) // Guthix rest(1)
+        || has(ctx, 4421) // Guthix rest(2)
+        || has(ctx, 4419) // Guthix rest(3)
+        || has(ctx, 4417); // Guthix rest(4)
 }
 
 function hasAnyAle(ctx) {
