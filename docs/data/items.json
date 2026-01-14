@@ -151859,7 +151859,8 @@
       },
       "other": {
         "Empty any filled vial": {
-          "notes": "Requires any potion or filled Vial."
+          "notes": "Requires any potion or filled Vial.",
+          "rule": "hasAnyFilledVial"
         }
       }
     }
