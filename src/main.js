@@ -277,13 +277,13 @@ window.initItemsPage = async function () {
                 lastRank = sort.rank;
             }
 
-            const isRolled = rolled.includes(item.id);
-            const isUnlocked = unlocked.includes(item.id);
+            const isObtained = rolled.includes(item.id);
+            const isRolled = unlocked.includes(item.id);
 
             html += `
                 <div class="item-card" onclick="navigate('/item?id=${item.id}')">
+                    ${isObtained ? `<span class="badge obtained">Obtained</span>` : ""}
                     ${isRolled ? `<span class="badge rolled">Rolled</span>` : ""}
-                    ${isUnlocked ? `<span class="badge unlocked">Unlocked</span>` : ""}
                     <img class="lazy-img item-image" data-src="/images/${item.image}" src="/images/placeholder.png">
                     ${item.name}
                 </div>

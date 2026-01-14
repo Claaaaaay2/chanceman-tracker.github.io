@@ -396,14 +396,14 @@ body.route-loading .route-loading-overlay {
     color: black;
 }
 
-.badge.rolled {
+.badge.obtained {
     position: absolute;
     top: 4px;
-    right: 65px;
+    right: 52px;
     background-color: #c48aff;
 }
 
-.badge.unlocked {
+.badge.rolled {
     position: absolute;
     top: 4px;
     right: 4px;
