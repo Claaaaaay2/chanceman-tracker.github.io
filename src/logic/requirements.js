@@ -98,6 +98,9 @@ export const REQUIREMENT_CHECKS = {
     canFillFishFoodBox(ctx) {
         return canFillFishFoodBox(ctx);
     },
+    hasAnyFilledBowl(ctx) {
+        return hasAnyFilledBowl(ctx);
+    },
     canMakeSplitLog(ctx) {
         return canMakeSplitLog(ctx);
     },
@@ -5261,6 +5264,24 @@ function canTrainCooking(ctx) {
 function canFillFishFoodBox(ctx) {
     return has(ctx, 6681) // Ground guam
         && has(ctx, 401); // Seaweed
+}
+
+function hasAnyFilledBowl(ctx) {
+    return has(ctx, 1921) // Bowl of water
+        || has(ctx, 4456) // Bowl of hot water
+        || has(ctx, 2003) // Stew
+        || has(ctx, 4016) // Banana stew
+        || has(ctx, 2011) // Curry
+        || has(ctx, 7074) // Chopped garlic
+        || has(ctx, 1871) // Chopped onion
+        || has(ctx, 1869) // Chopped tomato
+        || has(ctx, 7086) // Chopped tuna
+        || has(ctx, 1873) // Chopped ugthanki
+        || has(ctx, 7070) // Minced meat
+        || has(ctx, 7080) // Sliced mushrooms
+        || has(ctx, 7088) // Sweetcorn (bowl)
+        || has(ctx, 7068) // Tuna and corn
+        || has(ctx, 7076); // Uncooked egg
 }
 
 function canTrainFarming(ctx) {

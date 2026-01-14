@@ -27141,6 +27141,10 @@
               }
             ]
           }
+        },
+        "Emptying bowls": {
+          "notes": "Requires a filled bowl item.",
+          "rule": "hasAnyFilledBowl"
         }
       }
     }
