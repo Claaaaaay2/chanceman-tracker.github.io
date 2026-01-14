@@ -105516,6 +105516,9 @@
               "canTrainCrafting"
             ]
           }
+        },
+        "Eating pies": {
+          "notes": "Requires a cooked pie (White knights in Falador drop an untradable Half an apple pie)."
         }
       }
     }
