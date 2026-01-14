@@ -16484,6 +16484,10 @@
               "canTrainCrafting"
             ]
           }
+        },
+        "Drinking ales": {
+          "notes": "Requires an ale or mature ale.",
+          "rule": "hasAnyAle"
         }
       }
     }

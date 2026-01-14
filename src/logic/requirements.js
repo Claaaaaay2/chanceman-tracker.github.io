@@ -101,6 +101,9 @@ export const REQUIREMENT_CHECKS = {
     hasAnyFilledBowl(ctx) {
         return hasAnyFilledBowl(ctx);
     },
+    hasAnyAle(ctx) {
+        return hasAnyAle(ctx);
+    },
     canMakeSplitLog(ctx) {
         return canMakeSplitLog(ctx);
     },
@@ -5282,6 +5285,39 @@ function hasAnyFilledBowl(ctx) {
         || has(ctx, 7088) // Sweetcorn (bowl)
         || has(ctx, 7068) // Tuna and corn
         || has(ctx, 7076); // Uncooked egg
+}
+
+function hasAnyAle(ctx) {
+    return has(ctx, 1905) // Asgarnian ale
+        || has(ctx, 5739) // Asgarnian ale(m)
+        || has(ctx, 5751) // Axeman's folly
+        || has(ctx, 5753) // Axeman's folly(m)
+        || has(ctx, 4627) // Bandit's brew
+        || has(ctx, 1917) // Beer
+        || has(ctx, 5755) // Chef's delight
+        || has(ctx, 5757) // Chef's delight(m)
+        || has(ctx, 5763) // Cider
+        || has(ctx, 5929) // Cider(m)
+        || has(ctx, 1911) // Dragon bitter
+        || has(ctx, 5745) // Dragon bitter(m)
+        || has(ctx, 1913) // Dwarven stout
+        || has(ctx, 5747) // Dwarven stout(m)
+        || has(ctx, 1909) // Greenman's ale
+        || has(ctx, 5743) // Greenman's ale(m)
+        || has(ctx, 1915) // Grog
+        || has(ctx, 25826) // Lizardkicker
+        || has(ctx, 2955) // Moonlight mead
+        || has(ctx, 5749) // Moonlight mead(m)
+        || has(ctx, 5761) // Slayer's respite
+        || has(ctx, 5761) // Slayer's respite(m)
+        || has(ctx, 29412) // Steamforge brew
+        || has(ctx, 29409) // Sunbeam ale
+        || has(ctx, 29277) // Trapper's tipple
+        || has(ctx, 24774) // Blood pint
+        || has(ctx, 22430) // Bloody bracer
+        || has(ctx, 22430) // Wizard's mind bomb
+        || has(ctx, 5741)  // Mature wmb
+        || has(ctx, 23948); // Elven dawn
 }
 
 function canTrainFarming(ctx) {

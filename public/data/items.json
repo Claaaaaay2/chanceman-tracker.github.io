@@ -12556,7 +12556,7 @@
   {
     "index": 380,
     "id": 5865,
-    "name": "Asgarnian ale(m)",
+    "name": "Asgarnian ale(m4)",
     "image": "asgarnian_ale(m4).png",
     "sources": {
       "other": {
@@ -13784,7 +13784,7 @@
   {
     "index": 405,
     "id": 5905,
-    "name": "Axeman's folly(m)",
+    "name": "Axeman's folly(m4)",
     "image": "axeman's_folly(m4).png",
     "sources": {
       "other": {
@@ -16484,6 +16484,10 @@
               "canTrainCrafting"
             ]
           }
+        },
+        "Drinking ales": {
+          "notes": "Requires an ale or mature ale.",
+          "rule": "hasAnyAle"
         }
       }
     }
@@ -35497,7 +35501,7 @@
   {
     "index": 1001,
     "id": 5913,
-    "name": "Chef's delight(m)",
+    "name": "Chef's delight(m4)",
     "image": "chef's_delight(m4).png",
     "sources": {
       "other": {
@@ -44692,7 +44696,7 @@
   {
     "index": 1282,
     "id": 5889,
-    "name": "Dragon bitter(m)",
+    "name": "Dragon bitter(m4)",
     "image": "dragon_bitter(m4).png",
     "sources": {
       "other": {
@@ -48976,7 +48980,7 @@
   {
     "index": 1407,
     "id": 5857,
-    "name": "Dwarven stout(m)",
+    "name": "Dwarven stout(m4)",
     "image": "dwarven_stout(m4).png",
     "sources": {
       "other": {
@@ -61572,7 +61576,7 @@
   {
     "index": 1820,
     "id": 5873,
-    "name": "Greenmans ale(m)",
+    "name": "Greenmans ale(m4)",
     "image": "greenmans_ale(m4).png",
     "sources": {
       "other": {
@@ -92520,7 +92524,7 @@
   {
     "index": 2422,
     "id": 5881,
-    "name": "Mind bomb(m)",
+    "name": "Mind bomb(m4)",
     "image": "mind_bomb(m4).png",
     "sources": {
       "other": {
@@ -97917,7 +97921,7 @@
   {
     "index": 2553,
     "id": 5897,
-    "name": "Moonlight mead(m)",
+    "name": "Moonlight mead(m4)",
     "image": "moonlight_mead(m4).png",
     "sources": {
       "other": {
@@ -127974,7 +127978,7 @@
   {
     "index": 3563,
     "id": 5921,
-    "name": "Slayer's respite(m)",
+    "name": "Slayer's respite(m4)",
     "image": "slayer's_respite(m4).png",
     "sources": {
       "other": {
