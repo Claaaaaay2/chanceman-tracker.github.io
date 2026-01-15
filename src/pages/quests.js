@@ -71,7 +71,9 @@ function findRequirementFn(questName) {
 function getMissingItems(ctx, itemsById) {
     const missing = {
         items: [],
-        itemGroups: []
+        itemGroups: [],
+        questPointsRequired: ctx?.missing?.questPointsRequired ?? 0,
+        questPointsCurrent: ctx?.missing?.questPointsCurrent
     };
     if (ctx?.missing?.items?.size) {
         for (const id of ctx.missing.items) {
@@ -89,6 +91,10 @@ function getMissingItems(ctx, itemsById) {
 
 function renderQuestMissing(missing) {
     const parts = [];
+    if (missing.questPointsRequired && typeof missing.questPointsCurrent === "number") {
+        const remaining = Math.max(0, missing.questPointsRequired - missing.questPointsCurrent);
+        parts.push(`Missing quest points: ${remaining} (need ${missing.questPointsRequired}).`);
+    }
     if (missing.items.length) {
         parts.push(`Missing items: ${missing.items.join(", ")}.`);
     }
@@ -138,7 +144,13 @@ export default async function QuestsPage() {
                     rolled: fileStore.rolled || [],
                     player: fileStore.player,
                     filters: fileStore.filters,
-                    missing: { items: new Set(), itemGroups: [], itemGroupKeys: new Set() }
+                    missing: {
+                        items: new Set(),
+                        itemGroups: [],
+                        itemGroupKeys: new Set(),
+                        questPointsRequired: 0,
+                        questPointsCurrent: fileStore.player?.questPoints ?? 0
+                    }
                 };
 
                 try {

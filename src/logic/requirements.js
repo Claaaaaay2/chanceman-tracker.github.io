@@ -36,6 +36,19 @@ export function has(ctx, id) {
     return hasItem(ctx, id);
 }
 
+function hasQuestPoints(ctx, required) {
+    const current = ctx.player?.questPoints ?? 0;
+    if (current >= required) return true;
+    if (ctx?.missing) {
+        const existing = ctx.missing.questPointsRequired ?? 0;
+        if (required > existing) {
+            ctx.missing.questPointsRequired = required;
+            ctx.missing.questPointsCurrent = current;
+        }
+    }
+    return false;
+}
+
 export const REQUIREMENT_CHECKS = {
     canCompleteDeviousMinds(ctx) {
         canCompleteDeviousMinds(ctx);
@@ -613,7 +626,7 @@ export const REQUIREMENT_CHECKS = {
         return canCompleteRovingElves(ctx);
     },
     canEnterTheChampionsGuild(ctx) {
-        return ctx.player.questPoints >= 32;
+        return hasQuestPoints(ctx, 32);
     },
     canStartDragonSlayerI(ctx) {
         return canStartDragonSlayerI(ctx);
@@ -643,7 +656,7 @@ export const REQUIREMENT_CHECKS = {
         return canCompleteLostCity(ctx);
     },
     canAccessChampionsGuild(ctx) {
-        return ctx.player.questPoints >= 32;
+        return hasQuestPoints(ctx, 32);
     },
     canCompleteShadowOfTheStorm(ctx) {
         return canCompleteShadowOfTheStorm(ctx);
@@ -2315,7 +2328,7 @@ function canCompleteUndergroundPass(ctx) {
 }
 
 function canCompleteBelowIceMountain(ctx) {
-    return ctx.player.questPoints >= 16 //
+    return hasQuestPoints(ctx, 16) //
         && has(ctx, 2142) // Cooked meat
         && has(ctx, 2309) // Bread
         && has(ctx, 946)  // Knife
@@ -2985,7 +2998,7 @@ function canKillGargoyles(ctx) {
 }
 
 function canKillDifficultDragons(ctx) {
-    return ctx.player.questPoints >= 32;
+    return hasQuestPoints(ctx, 32);
 }
 
 function canEnterKaruulmSlayerDungeon(ctx) {
@@ -3298,7 +3311,7 @@ function canCompleteThroneOfMiscellania(ctx) {
 }
 
 function canCompleteHeroesQuest(ctx) {
-    return ctx.player.questPoints >= 55 //
+    return hasQuestPoints(ctx, 55) //
         && canCompleteLostCity(ctx) //
         && canCompleteMerlinsCrystal(ctx) //
         && canCompleteDragonSlayerI(ctx) //
@@ -3334,11 +3347,11 @@ function canCompleteMerlinsCrystal(ctx) {
 }
 
 function canStartDragonSlayerI(ctx) {
-    return ctx.player.questPoints >= 32;
+    return hasQuestPoints(ctx, 32);
 }
 
 function canCompleteDragonSlayerI(ctx) {
-    return ctx.player.questPoints >= 32 //
+    return hasQuestPoints(ctx, 32) //
         && has(ctx, 1791)  // Unfired bowl
         && has(ctx, 1761)  // Soft clay
         && has(ctx, 1907)  // Wizards mind bomb
@@ -3489,7 +3502,7 @@ function canCompleteSkippyAndTheMogres(ctx) {
 }
 
 function canCompleteLegendsQuest(ctx) {
-    return ctx.player.questPoints >= 107 //
+    return hasQuestPoints(ctx, 107) //
         && canTrainCrafting(ctx) //
         && canTrainHerblore(ctx) //
         && canTrainMining(ctx) //
@@ -3592,7 +3605,7 @@ function canCompleteFamilyCrest(ctx) {
 }
 
 function canCompleteDragonSlayerII(ctx) {
-    return ctx.player?.questPoints >= 200 //
+    return hasQuestPoints(ctx, 200) //
         && canCompleteLegendsQuest(ctx) //
         && canCompleteDreamMentor(ctx) //
         && canCompleteATailOfTwoCats(ctx) //
@@ -3689,7 +3702,7 @@ function canCompleteBetweenARock(ctx) {
 function canCompleteSwanSong(ctx) {
     return canCompleteOneSmallFavour(ctx) //
         && canCompleteGardenOfTranquillity(ctx) //
-        && ctx.player.questPoints >= 100
+        && hasQuestPoints(ctx, 100)
         && canTrainCooking(ctx) //
         && canTrainFishing(ctx) //
         && canTrainSmithing(ctx) //
@@ -4032,7 +4045,7 @@ function canCompleteWanted(ctx) {
         && canCompletePriestInPeril(ctx) //
         && canCompleteEnterTheAbyss(ctx)  //
         && (has(ctx, 7936) || has(ctx, 1436)) // Pure essence or Rune essence
-        && ctx.player.questPoints >= 32;
+        && hasQuestPoints(ctx, 32);
 }
 
 function canCompleteRecruitmentDrive(ctx) {
@@ -4042,7 +4055,7 @@ function canCompleteRecruitmentDrive(ctx) {
 }
 
 function canCompleteBlackKnightsFortress(ctx) {
-    return ctx.player.questPoints >= 12 //
+    return hasQuestPoints(ctx, 12) //
         && has(ctx, 1965)  // Cabbage
         && has(ctx, 1101)  // Iron chainbody
         && has(ctx, 1139); // Bronze med helm
@@ -4297,7 +4310,7 @@ function canCompleteRecipeForDisaster(ctx) {
         && canCompleteRFDFreeingKingAwowogei(ctx) //
         && canCompleteDesertTreasureI(ctx) //
         && canCompleteHorrorFromTheDeep(ctx) //
-        && ctx.player.questPoints >= 175
+        && hasQuestPoints(ctx, 175)
 }
 
 const RFD_SUBQUESTS = [
@@ -4430,7 +4443,7 @@ function canCompleteRFDFreeingSkrachUglologwee(ctx) {
 }
 
 function canCompleteRFDFreeingSirAmikVarse(ctx) {
-    return ctx.player.questPoints >= 107
+    return hasQuestPoints(ctx, 107)
         && canCompleteRFDAnotherCooksQuest(ctx) //
         && canStartLegendsQuest(ctx) //
         && canReachKharaziJungle(ctx) //
@@ -4777,7 +4790,7 @@ function canEnterHardwoodGrove(ctx) {
 }
 
 function canStartLegendsQuest(ctx) {
-    return ctx.player.questPoints >= 107 //
+    return hasQuestPoints(ctx, 107) //
         && canCompleteFamilyCrest(ctx) //
         && canCompleteHeroesQuest(ctx) //
         && canCompleteShiloVillage(ctx) //
@@ -5047,7 +5060,7 @@ function hasTelegrabRunes(ctx) {
 }
 
 function canCompleteTearsOfGuthix(ctx) {
-    return ctx.player.questPoints >= 43 //
+    return hasQuestPoints(ctx, 43) //
         && canTrainCrafting(ctx) //
         && canTrainMining(ctx) //
         && canTrainFiremaking(ctx) //
@@ -5059,7 +5072,7 @@ function canCompleteTearsOfGuthix(ctx) {
 }
 
 function canCompleteWhileGuthixSleeps(ctx) {
-    return ctx.player.questPoints >= 180 //
+    return hasQuestPoints(ctx, 180) //
         && canCompleteDefenderOfVarrock(ctx) //
         && canCompleteThePathOfGlouphrie(ctx) //
         && canCompleteDreamMentor(ctx) //
@@ -5296,7 +5309,7 @@ function canCompleteGertrudesCat(ctx) {
 }
 
 function canCompleteEnlightenedJourney(ctx) {
-    return ctx.player.questPoints >= 20 //
+    return hasQuestPoints(ctx, 20) //
         && canTrainFiremaking(ctx) //
         && canTrainFarming(ctx) //
         && canTrainCrafting(ctx) //
