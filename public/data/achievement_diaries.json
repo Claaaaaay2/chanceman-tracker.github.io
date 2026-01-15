@@ -2400,7 +2400,12 @@
                     "requirements": {
                         "skills": {},
                         "quests": {},
-                        "items": [],
+                        "items": [
+                            {
+                                "id": 231,
+                                "name": "Snape grass"
+                            }
+                        ],
                         "untracked": [],
                         "itemsAny": [],
                         "rulesAll": [],
