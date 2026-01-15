@@ -879,6 +879,9 @@
           "droprate": "1/2712.5"
         }
       },
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Smithing": {
           "notes": "Requires an Adamantite bar.",
