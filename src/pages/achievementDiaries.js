@@ -1,3 +1,4 @@
+import { REQUIREMENT_CHECKS } from "../logic/requirements.js";
 import { fileStore } from "../storage/fileStore.js";
 
 const SKILL_OVERRIDES = {
@@ -41,11 +42,28 @@ function hasItemRequirement(ctx, item) {
     return obtained.includes(item.id) && rolled.includes(item.id);
 }
 
-function evaluateRequirements(requirements, ctx) {
+function resolveItemName(item, itemsById) {
+    if (item?.name) return item.name;
+    if (item?.id && itemsById?.has(item.id)) return itemsById.get(item.id);
+    if (typeof item === "number" && itemsById?.has(item)) return itemsById.get(item);
+    return item?.id ? `Item ${item.id}` : "Unknown item";
+}
+
+function normalizeItemGroup(group) {
+    return (group || []).map((entry) => {
+        if (typeof entry === "number") return { id: entry };
+        if (typeof entry === "object") return entry;
+        return { name: String(entry) };
+    });
+}
+
+async function evaluateRequirements(requirements, ctx, itemsById) {
     const missing = {
         skills: [],
         quests: [],
         items: [],
+        itemGroups: [],
+        rules: [],
         untracked: []
     };
     let met = true;
@@ -67,7 +85,62 @@ function evaluateRequirements(requirements, ctx) {
 
     for (const item of requirements?.items || []) {
         if (!hasItemRequirement(ctx, item)) {
-            missing.items.push(item?.name ?? `Item ${item?.id ?? "unknown"}`);
+            missing.items.push(resolveItemName(item, itemsById));
+            met = false;
+        }
+    }
+
+    for (const group of requirements?.itemsAny || []) {
+        const normalizedGroup = normalizeItemGroup(group);
+        const hasAny = normalizedGroup.some((entry) => hasItemRequirement(ctx, entry));
+        if (!hasAny) {
+            const names = normalizedGroup.map((entry) => resolveItemName(entry, itemsById));
+            missing.itemGroups.push(`Any of: ${names.join(" / ")}`);
+            met = false;
+        }
+    }
+
+    for (const ruleKey of requirements?.rulesAll || []) {
+        const ruleFn = REQUIREMENT_CHECKS[ruleKey];
+        if (!ruleFn) {
+            missing.rules.push(`${ruleKey} (missing)`);
+            met = false;
+            continue;
+        }
+        try {
+            const ok = await ruleFn(ctx);
+            if (!ok) {
+                missing.rules.push(ruleKey);
+                met = false;
+            }
+        } catch (err) {
+            missing.rules.push(`${ruleKey} (error)`);
+            met = false;
+        }
+    }
+
+    const anyRules = requirements?.rulesAny || [];
+    if (anyRules.length) {
+        let anyMet = false;
+        const failed = [];
+        for (const ruleKey of anyRules) {
+            const ruleFn = REQUIREMENT_CHECKS[ruleKey];
+            if (!ruleFn) {
+                failed.push(`${ruleKey} (missing)`);
+                continue;
+            }
+            try {
+                if (await ruleFn(ctx)) {
+                    anyMet = true;
+                } else {
+                    failed.push(ruleKey);
+                }
+            } catch (err) {
+                failed.push(`${ruleKey} (error)`);
+            }
+        }
+        if (!anyMet) {
+            missing.rules.push(`Any of: ${failed.join(" / ")}`);
             met = false;
         }
     }
@@ -92,6 +165,12 @@ function renderMissing(missing) {
     if (missing.items.length) {
         parts.push(`Missing items: ${missing.items.join(", ")}.`);
     }
+    if (missing.itemGroups.length) {
+        parts.push(`Missing item options: ${missing.itemGroups.join("; ")}.`);
+    }
+    if (missing.rules.length) {
+        parts.push(`Missing rules: ${missing.rules.join(", ")}.`);
+    }
     if (missing.untracked.length) {
         parts.push(`Untracked requirements: ${missing.untracked.join(", ")}.`);
     }
@@ -106,25 +185,34 @@ export default async function AchievementDiariesPage() {
         `;
     }
 
+    await fileStore.ensureItemsLoaded();
+    const itemsById = new Map((fileStore.items || []).map(item => [item.id, item.name]));
+
     const response = await fetch("/data/achievement_diaries.json");
     const data = await response.json();
     const diaries = data?.diaries || {};
 
     const ctx = {
+        items: fileStore.items,
         player: fileStore.player,
         obtained: fileStore.obtained || [],
         rolled: fileStore.rolled || [],
-        filters: fileStore.filters
+        filters: fileStore.filters,
+        missing: { items: new Set() }
     };
 
-    const diarySections = Object.entries(diaries).map(([diaryName, tiers]) => {
-        const tierSections = TIER_ORDER.filter((tier) => tiers?.[tier]?.length).map((tier) => {
+    const diarySections = [];
+    for (const [diaryName, tiers] of Object.entries(diaries)) {
+        const tierSections = [];
+        for (const tier of TIER_ORDER.filter((candidate) => tiers?.[candidate]?.length)) {
             const tasks = tiers[tier] || [];
             let completedCount = 0;
             let readyCount = 0;
             let blockedCount = 0;
+            const rows = [];
 
-            const rows = tasks.map((task, index) => {
+            for (let index = 0; index < tasks.length; index++) {
+                const task = tasks[index];
                 const diaryState = ctx.player?.achievementDiaries?.[diaryName]?.[tier];
                 const isCompleted = Boolean(diaryState?.tasks?.[index]);
                 let statusClass = "diary-status-blocked";
@@ -136,7 +224,7 @@ export default async function AchievementDiariesPage() {
                     statusLabel = "Completed";
                     completedCount += 1;
                 } else {
-                    const { met, missing } = evaluateRequirements(task.requirements, ctx);
+                    const { met, missing } = await evaluateRequirements(task.requirements, ctx, itemsById);
                     if (met) {
                         statusClass = "diary-status-ready";
                         statusLabel = "Can complete";
@@ -147,16 +235,16 @@ export default async function AchievementDiariesPage() {
                     }
                 }
 
-                return `
+                rows.push(`
                     <div class="diary-task ${statusClass}">
                         <div class="diary-task-name">${escapeHtml(task.name)}</div>
                         <div class="diary-task-status">${statusLabel}</div>
                         ${missingHtml}
                     </div>
-                `;
-            }).join("");
+                `);
+            }
 
-            return `
+            tierSections.push(`
                 <section class="diary-tier">
                     <h3 class="diary-tier-header">
                         <span>${tier}</span>
@@ -165,24 +253,24 @@ export default async function AchievementDiariesPage() {
                         </span>
                     </h3>
                     <div class="diary-task-list">
-                        ${rows}
+                        ${rows.join("")}
                     </div>
                 </section>
-            `;
-        }).join("");
+            `);
+        }
 
-        return `
+        diarySections.push(`
             <section class="diary-region">
                 <h2>${escapeHtml(diaryName)}</h2>
-                ${tierSections}
+                ${tierSections.join("")}
             </section>
-        `;
-    }).join("");
+        `);
+    }
 
     return `
         <h1>Achievement diaries</h1>
         <div class="diary-list">
-            ${diarySections || "<p>No diary data loaded yet.</p>"}
+            ${diarySections.length ? diarySections.join("") : "<p>No diary data loaded yet.</p>"}
         </div>
     `;
 }

@@ -3,7 +3,7 @@ import { NPC_DATA } from "./npcData.js";
 import { capitalizeFirstLetter } from "./utils.js";
 
 const REWARD_POOL_35_39 = "Reward pool 35\u201339 Fishing";
-const HIDDEN_ITEM_TAGS = new Set(["deadman", "leagues"]);
+const HIDDEN_ITEM_TAGS = new Set(["deadman", "leagues", "gridmaster"]);
 
 export function isItemHiddenByTag(item) {
     const tags = item?.tags;

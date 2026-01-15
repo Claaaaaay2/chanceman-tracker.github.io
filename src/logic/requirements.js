@@ -15,9 +15,6 @@ export const REQUIREMENT_CHECKS = {
     canCompleteGoblinDiplomacy(ctx) {
         return canCompleteGoblinDiplomacy(ctx);
     },
-    canTelegrab(ctx) {
-        return canTelegrab(ctx);
-    },
     canEnterCraftingGuild(ctx) {
         return canEnterCraftingGuild(ctx);
     },
@@ -805,6 +802,12 @@ export const REQUIREMENT_CHECKS = {
     canCompleteBoneVoyage(ctx) {
         return canCompleteBoneVoyage(ctx);
     },
+    canGet50Kudos(ctx) {
+        return canGet50Kudos(ctx);
+    },
+    canGet153Kudos(ctx) {
+        return canGet153Kudos(ctx);
+    },
     canCompleteShieldOfArrav(ctx) {
         return canCompleteShieldOfArrav(ctx);
     },
@@ -1146,6 +1149,9 @@ export const REQUIREMENT_CHECKS = {
     },
     canReachKharaziJungle(ctx) {
         return canReachKharaziJungle(ctx);
+    },
+    canEnterHardwoodGrove(ctx) {
+        return canEnterHardwoodGrove(ctx);
     },
     canStartTheQueenOfThieves(ctx) {
         return canStartTheQueenOfThieves(ctx);
@@ -1669,6 +1675,9 @@ export const REQUIREMENT_CHECKS = {
     hasSlashWeapon(ctx) {
         return hasSlashWeapon(ctx);
     },
+    hasSlashWeaponOrKnife(ctx) {
+        return hasSlashWeaponOrKnife(ctx);
+    },
     hasDriftNet(ctx) {
         return has(ctx, 21652);
     },
@@ -1744,6 +1753,12 @@ export const REQUIREMENT_CHECKS = {
     canCompleteBarbarianSmithing(ctx) {
         return canCompleteBarbarianSmithing(ctx);
     },
+    canCompleteBarbarianFiremaking1(ctx) {
+        return canCompleteBarbarianFiremaking1(ctx);
+    },
+    canCompleteBarbarianFiremaking2(ctx) {
+        return canCompleteBarbarianFiremaking2(ctx);
+    },
     canTrainHerblore(ctx) {
         return canTrainHerblore(ctx);
     },
@@ -1774,10 +1789,214 @@ export const REQUIREMENT_CHECKS = {
     canBurnUriumShades(ctx) {
         return canBurnUriumShades(ctx);
     },
+    hasFremennikTrialsStartingOres(ctx) {
+        return hasFremennikTrialsStartingOres(ctx);
+    },
+    canUseFairyRings(ctx) {
+        return canCompleteFairytaleIGrowingPains(ctx);
+    },
+    hasBlightedIceSack(ctx) {
+        return has(ctx, 24607);
+    },
+    hasIceBarrageRunes(ctx) {
+        return hasWaterRuneSource(ctx) //
+            && has(ctx, 560)  // Death rune
+            && has(ctx, 565); // Blood rune
+    },
+    hasFaladorTeleportRunes(ctx) {
+        return hasWaterRuneSource(ctx) //
+            && hasAirRuneSource(ctx) //
+            && has(ctx, 563); // Law rune
+    },
+    hasVarrockTeleportRunes(ctx) {
+        return hasFireRuneSource(ctx) //
+            && hasAirRuneSource(ctx) //
+            && has(ctx, 563); // Law rune
+    },
+    hasLumbridgeTeleportRunes(ctx) {
+        return hasEarthRuneSource(ctx) //
+            && hasAirRuneSource(ctx) //
+            && has(ctx, 563); // Law rune
+    },
+    hasCamelotTeleportRunes(ctx) {
+        return hasAirRuneSource(ctx) //
+            && has(ctx, 563); // Law rune
+    },
+    hasTrollheimTeleportRunes(ctx) {
+        return hasFireRuneSource(ctx) //
+            && has(ctx, 563); // Law rune
+    },
+    hasWaterbirthIslandTeleportRunes(ctx) {
+        return hasWaterRuneSource(ctx) //
+            && has(ctx, 9075) // Astral rune
+            && has(ctx, 563); // Law rune
+    },
+    hasCatherbyTeleportRunes(ctx) {
+        return hasWaterRuneSource(ctx) //
+            && has(ctx, 9075) // Astral rune
+            && has(ctx, 563); // Law rune
+    },
+    hasHumidifyRunes(ctx) {
+        return hasWaterRuneSource(ctx) //
+            && hasFireRuneSource(ctx) //
+            && has(ctx, 9075); // Astral rune
+    },
+    hasTelegrabRunes(ctx) {
+        return hasTelegrabRunes(ctx);
+    },
+    hasChargeWaterOrbRunes(ctx) {
+        return has(ctx, 564) // Cosmic rune
+            && hasWaterRuneSource(ctx);
+    },
+    hasMonsterExamineRunes(ctx) {
+        return has(ctx, 564)  // Cosmic rune
+            && has(ctx, 9075) // Astral rune
+            && has(ctx, 558); // Mind rune
+    },
+    hasApeAtollTeleportRunes(ctx) {
+        return hasFireRuneSource(ctx) //
+            && hasWaterRuneSource(ctx) //
+            && has(ctx, 563); // Law rune
+    },
+    hasApeAtollStandardTeleportRunes(ctx) {
+        return (has(ctx, 566) || has(ctx, 30843)) // Soul rune or Aether rune
+            && has(ctx, 565)  // Blood rune
+            && has(ctx, 563); // Law rune
+    },
+    hasLvl4EnchantRunes(ctx) {
+        return (has(ctx, 564) || has(ctx, 30843)) // Cosmic rune or Aether rune
+            && hasEarthRuneSource(ctx);
+    },
+    hasTeleportToPaddewwaRunes(ctx) {
+        return hasFireRuneSource(ctx) //
+            && hasAirRuneSource(ctx) //
+            && has(ctx, 563); // Law rune
+    },
+    hasPlankMakeRunes(ctx) {
+        return has(ctx, 9075) // Astral rune
+            && has(ctx, 561); // Nature rune
+    },
+    canCastFertileSoil(ctx) {
+        return has(ctx, 561)  // Nature rune
+            && has(ctx, 9075) // Astral rune
+            && hasEarthRuneSource(ctx);
+    },
+    canEnterMindAltar(ctx) {
+        return canEnterMindAltar(ctx);
+    },
+    canEnterAirAltar(ctx) {
+        return canEnterAirAltar(ctx);
+    },
+    canEnterWaterAltar(ctx) {
+        return canEnterWaterAltar(ctx);
+    },
+    canEnterEarthAltar(ctx) {
+        return canEnterEarthAltar(ctx);
+    },
+    canEnterNatureAltar(ctx) {
+        return canEnterNatureAltar(ctx);
+    },
+    canEnterFireAltar(ctx) {
+        return canEnterFireAltar(ctx);
+    },
+    canEnterCosmicAltar(ctx) {
+        return canEnterCosmicAltar(ctx);
+    },
+    canGetFishbowlWithWater(ctx) {
+        return canGetFishbowlWithWater(ctx);
+    },
+    canKillMogreSailing(ctx) {
+        return canKillMogreSailing(ctx);
+    },
+    hasBonesForBonesToPeaches(ctx) {
+        return hasBonesForBonesToPeaches(ctx);
+    },
+    hasAFullBarrowsSet(ctx) {
+        return hasAFullBarrowsSet(ctx);
+    },
     never(ctx) {
         return false;
     }
 };
+
+function hasAFullBarrowsSet(ctx) {
+    return (has(ctx, 4757) && has(ctx, 4755) && has(ctx, 4753) && has(ctx, 4759)) //
+        || (has(ctx, 4708) && has(ctx, 4712) && has(ctx, 4714) && has(ctx, 4710)) //
+        || (has(ctx, 4732) && has(ctx, 4736) && has(ctx, 4738) && has(ctx, 4734)) //
+        || (has(ctx, 4716) && has(ctx, 4720) && has(ctx, 4722) && has(ctx, 4718)) //
+        || (has(ctx, 4745) && has(ctx, 4749) && has(ctx, 4751) && has(ctx, 4747)) //
+        || (has(ctx, 4724) && has(ctx, 4728) && has(ctx, 4730) && has(ctx, 4726));
+}
+
+function hasBonesForBonesToPeaches(ctx) {
+    return has(ctx, 526)  // Bones
+        || has(ctx, 528)  // Burnt bones
+        || has(ctx, 530)  // Bat bones
+        || canBurnLoarShades(ctx) // For bleached bones from Undead zealots
+        || has(ctx, 3125) // Jogre bones
+        || has(ctx, 2859) // Wolf bones
+        || has(ctx, 3183) // Monkey bones
+        || has(ctx, 532); // Big bones
+}
+
+function canGetFishbowlWithWater(ctx) {
+    return (canTrainSlayer(ctx) || ctx.player.levels.Slayer >= 32) //
+        || has(ctx, 6667); // Empty fishbowl
+}
+
+function canKillMogreSailing(ctx) {
+    return (canTrainSlayer(ctx) || ctx.player.levels.Slayer >= 32) //
+        || (canShortrange(ctx) || canDoSailingCombat(ctx));
+}
+
+function canEnterMindAltar(ctx) {
+    return canCompleteEnterTheAbyss(ctx) //
+        || has(ctx, 1448) // Mind talisman
+        || has(ctx, 5529) // Mind tiara
+        || canDoGuardiansOfTheRift(ctx);
+}
+
+function canEnterAirAltar(ctx) {
+    return canCompleteEnterTheAbyss(ctx) //
+        || has(ctx, 1438) // Air talisman
+        || has(ctx, 5527) // Air tiara
+        || canDoGuardiansOfTheRift(ctx);
+}
+
+function canEnterWaterAltar(ctx) {
+    return canCompleteEnterTheAbyss(ctx) //
+        || has(ctx, 1444) // Water talisman
+        || has(ctx, 5531) // Water tiara
+        || canDoGuardiansOfTheRift(ctx);
+}
+
+function canEnterEarthAltar(ctx) {
+    return canCompleteEnterTheAbyss(ctx) //
+        || has(ctx, 1440) // Earth talisman
+        || has(ctx, 5535) // Earth tiara
+        || canDoGuardiansOfTheRift(ctx);
+}
+
+function canEnterNatureAltar(ctx) {
+    return canCompleteEnterTheAbyss(ctx) //
+        || has(ctx, 1462) // Nature talisman
+        || has(ctx, 5541) // Nature tiara
+        || canDoGuardiansOfTheRift(ctx);
+}
+
+function canEnterFireAltar(ctx) {
+    return canCompleteEnterTheAbyss(ctx) //
+        || has(ctx, 1442) // Fire talisman
+        || has(ctx, 5537) // Fire tiara
+        || canDoGuardiansOfTheRift(ctx);
+}
+
+function canEnterCosmicAltar(ctx) {
+    return canCompleteEnterTheAbyss(ctx) //
+        || has(ctx, 1454) // Cosmic talisman
+        || has(ctx, 5539) // Cosmic tiara
+        || canDoGuardiansOfTheRift(ctx);
+}
 
 function canDoTombsOfAmascut(ctx) {
     return canCompleteIntoTheTombs(ctx) //
@@ -2308,19 +2527,23 @@ function canDoCommanderZilyana(ctx) {
 function canDoGeneralGraardor(ctx) {
     return canEnterGodWarsDungeon(ctx) //
         && ctx.player.levels.Strength >= 70
-        && ( // Any hammer/warhammer https://oldschool.runescape.wiki/w/Warhammer#Other_warhammers < these dont work
-            hasHammer(ctx) //
-            || has(ctx, 1345)  // Adamant warhammer
-            || has(ctx, 1341)  // Black warhammer
-            || has(ctx, 1337)  // Bronze warhammer
-            || has(ctx, 13576) // Dragon warhammer
-            || has(ctx, 1335)  // Iron warhammer
-            || has(ctx, 1343)  // Mithril warhammer
-            || has(ctx, 1347)  // Rune warhammer
-            || has(ctx, 1339)  // Steel warhammer
-            || has(ctx, 6613)  // White warhammer
-            || has(ctx, 21003) // Elder maul
-        );
+        && hasGWDBandosAreaSuitableHammer(ctx);
+}
+
+function hasGWDBandosAreaSuitableHammer(ctx) {
+    return ( // Any hammer/warhammer https://oldschool.runescape.wiki/w/Warhammer#Other_warhammers < these dont work
+        hasHammer(ctx) //
+        || has(ctx, 1345)  // Adamant warhammer
+        || has(ctx, 1341)  // Black warhammer
+        || has(ctx, 1337)  // Bronze warhammer
+        || has(ctx, 13576) // Dragon warhammer
+        || has(ctx, 1335)  // Iron warhammer
+        || has(ctx, 1343)  // Mithril warhammer
+        || has(ctx, 1347)  // Rune warhammer
+        || has(ctx, 1339)  // Steel warhammer
+        || has(ctx, 6613)  // White warhammer
+        || has(ctx, 21003) // Elder maul
+    );
 }
 
 function canDoKreearra(ctx) {
@@ -2456,10 +2679,10 @@ function canEnterKalphiteLair(ctx) {
 }
 
 function canEnterAncientCavern(ctx) {
-    return canCompleteBarbarianFiremaking(ctx);
+    return canCompleteBarbarianFiremaking1(ctx);
 }
 
-function canCompleteBarbarianFiremaking(ctx) {
+function canCompleteBarbarianFiremaking1(ctx) {
     return has(ctx, 1521) // Oak logs
         && ( //
             has(ctx, 841) // Shortbow
@@ -2477,13 +2700,19 @@ function canCompleteBarbarianFiremaking(ctx) {
         );
 }
 
+function canCompleteBarbarianFiremaking2(ctx) {
+    return canCompleteBarbarianFiremaking1(ctx) //
+        && has(ctx, 590) // Tinderbox
+        && hasAnyLog(ctx);
+}
+
 function canCompleteBarbarianFishing(ctx) {
     return canTrainFishing(ctx);
 }
 
 function canCompleteBarbarianHerblore(ctx) {
     return canCompleteDruidicRitual(ctx) //
-        && canCompleteBarbarianFiremaking(ctx) //
+        && canCompleteBarbarianFiremaking1(ctx) //
         && canCompleteBarbarianFishing(ctx) //
         && has(ctx, 123) // Attack potion(2)
         && (has(ctx, 11324) || has(ctx, 11326)); // Roe or Caviar
@@ -3098,7 +3327,7 @@ function canCompleteFamilyPest(ctx) {
 
 function canCompleteBarbarianTraining(ctx) {
     return canCompleteBarbarianFishing(ctx) //
-        && canCompleteBarbarianFiremaking(ctx) //
+        && canCompleteBarbarianFiremaking2(ctx) //
         && canCompleteBarbarianFarming(ctx) //
         && canCompleteBarbarianSmithing(ctx) //
         && canCompleteBarbarianHerblore(ctx) //
@@ -3538,7 +3767,7 @@ const NMZ_QUESTS = [
     canCompleteTheFremennikIsles,
     canCompleteTheGreatBrainRobbery,
     canCompleteHolyGrail,
-    canStartLegendsQuest,
+    canCompleteLegendsQuest,
     canCompleteMonkeyMadnessI,
     canCompleteOneSmallFavour,
     canCompleteShadowOfTheStorm,
@@ -3621,7 +3850,7 @@ function canCompleteRagAndBoneManII(ctx) {
         && hasAnyLog(ctx) //
         && (canTrainSlayer(ctx) || ctx.player.levels.Slayer >= 40) //
         && (canCompleteSkippyAndTheMogres(ctx) || canShortrange(ctx)) //
-        && (canStartZogreFleshEaters(ctx) || (canTelegrab(ctx) && canShortrange(ctx))) //
+        && (canStartZogreFleshEaters(ctx) || (hasTelegrabRunes(ctx) && canShortrange(ctx))) //
         && canCompletePriestInPeril(ctx) //
         && canCompleteCreatureOfFenkenstrain(ctx) //
         && canEnterLumbridgeSwampCaves(ctx); //
@@ -3912,7 +4141,7 @@ function canCompleteKingsRansom(ctx) {
             || has(ctx, 6981) // Granite (2kg)
             || has(ctx, 6983) // Granite (5kg)
         ) //
-        && canTelegrab(ctx) //
+        && hasTelegrabRunes(ctx) //
         && (
             canCompleteWhileGuthixSleeps(ctx) // For full Elite black armour
             || (
@@ -4191,6 +4420,10 @@ function hasSlashWeapon(ctx) {
     return true; // TODO
 }
 
+function hasSlashWeaponOrKnife(ctx) {
+    return true; // TODO
+}
+
 function canCompleteWitchsHouse(ctx) {
     return has(ctx, 1985); // Cheese
 }
@@ -4349,6 +4582,14 @@ function canMakeNeitiznotShield(ctx) {
         && has(ctx, 954);  // Rope
 }
 
+function hasFremennikTrialsStartingOres(ctx) {
+    return (ctx.player.levels.Mining === 1 //
+        ? has(ctx, 438) // Tin ore
+        : ctx.player.levels.Mining <= 54 //
+            ? has(ctx, 453) // Coal
+            : has(ctx, 447)); // Mithril ore
+}
+
 function canMakeYakhideArmour(ctx) {
     return canCompleteTheFremennikTrials(ctx) //
         && canTrainConstruction(ctx) //
@@ -4448,6 +4689,11 @@ function canReachKharaziJungle(ctx) {
     return canStartLegendsQuest(ctx)
         && canTrainWoodcutting(ctx) //
         && hasMachete(ctx);
+}
+
+function canEnterHardwoodGrove(ctx) {
+    return canCompleteJunglePotion(ctx) //
+        && has(ctx, 6306); // Trading sticks
 }
 
 function canStartLegendsQuest(ctx) {
@@ -4692,7 +4938,7 @@ function canCompleteTheHandInTheSand(ctx) {
 
 function canCompleteSpiritsOfTheElid(ctx) {
     return canTrainMining(ctx) //
-        && canTelegrab(ctx) //
+        && hasTelegrabRunes(ctx) //
         && has(ctx, 1733) // Needle
         && has(ctx, 1734) // Thread
         && has(ctx, 946) // Knife
@@ -4704,7 +4950,7 @@ function canCompleteShieldOfArrav(ctx) {
     return true;
 }
 
-function canTelegrab(ctx) {
+function hasTelegrabRunes(ctx) {
     return has(ctx, 563) // Law rune
         && hasAirRuneSource(ctx);
 }
@@ -5013,6 +5259,26 @@ const BONE_VOYAGE_KUDOS_QUESTS = [
 
 function countCompletableKudosquests(ctx) {
     return BONE_VOYAGE_KUDOS_QUESTS.filter(fn => fn(ctx)).length;
+}
+
+function canGet153Kudos(ctx) {
+    return canCompleteBoneVoyage(ctx) // 153 kudos needed
+        // 28 kudos from natural history museum quiz
+        // 50 from cleaning finds
+        // 72 from fossils
+        // 3 kudos needed = 1 quests
+        && countCompletableKudosquests(ctx) >= 1;
+}
+
+function canGet50Kudos(ctx) {
+    return ( // 50 kudos needed
+        // 28 kudos from natural history museum quiz
+        canCompleteTheDigSite(ctx) // 50 from cleaning finds
+        && has(ctx, 1059) // Leather gloves
+        && has(ctx, 1061) // Leather boots
+    ) //
+        // OR 22 kudos needed = 5 quests
+        || countCompletableKudosquests(ctx) >= 5;
 }
 
 function canCompleteBoneVoyage(ctx) {

@@ -7677,7 +7677,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Herbs_(avantoe)",
         "rule": {
             "all": [
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasAvantoeSeed"
             ]
         },
@@ -7690,7 +7690,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Herbs_(cadantine)",
         "rule": {
             "all": [
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasCadantineSeed"
             ]
         },
@@ -7703,7 +7703,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Herbs_(dwarf_weed)",
         "rule": {
             "all": [
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasDwarfWeedSeed"
             ]
         },
@@ -7716,7 +7716,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Herbs_(guam)",
         "rule": {
             "all": [
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasGuamSeed"
             ]
         },
@@ -7729,7 +7729,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Herbs_(harralander)",
         "rule": {
             "all": [
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasHarralanderSeed"
             ]
         },
@@ -7742,7 +7742,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Herbs_(huasca)",
         "rule": {
             "all": [
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasHuascaSeed"
             ]
         },
@@ -7755,7 +7755,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Herbs_(irit)",
         "rule": {
             "all": [
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasIritSeed"
             ]
         },
@@ -7768,7 +7768,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Herbs_(kwuarm)",
         "rule": {
             "all": [
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasKwuarmSeed"
             ]
         },
@@ -7781,7 +7781,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Herbs_(lantadyme)",
         "rule": {
             "all": [
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasLantadymeSeed"
             ]
         },
@@ -7794,7 +7794,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Herbs_(marrentill)",
         "rule": {
             "all": [
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasMarrentillSeed"
             ]
         },
@@ -7807,7 +7807,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Herbs_(ranarr)",
         "rule": {
             "all": [
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasRanarrSeed"
             ]
         },
@@ -7820,7 +7820,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Herbs_(snapdragon)",
         "rule": {
             "all": [
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasSnapdragonSeed"
             ]
         },
@@ -7833,7 +7833,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Herbs_(tarromin)",
         "rule": {
             "all": [
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasTarrominSeed"
             ]
         },
@@ -7846,7 +7846,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Herbs_(toadflax)",
         "rule": {
             "all": [
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasToadflaxSeed"
             ]
         },
@@ -7859,7 +7859,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Herbs_(torstol)",
         "rule": {
             "all": [
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasTorstolSeed"
             ]
         },

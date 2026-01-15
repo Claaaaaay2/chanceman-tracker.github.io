@@ -39909,6 +39909,10 @@
           "tags": [
             "LMS"
           ]
+        },
+        "Reverting a Crystal shield or Crystal bow": {
+          "notes": "Given to you as a reward from the Roving Elves quest.",
+          "rule": "canCompleteRovingElves"
         }
       }
     }
@@ -51513,6 +51517,10 @@
               "canTrainCrafting"
             ]
           }
+        },
+        "Emptying a Fishbowl (water)": {
+          "notes": "Obtained from Mogre (sailing)",
+          "rule": "canKillMogreSailing"
         }
       }
     }
@@ -157659,8 +157667,8 @@
     "image": "wrapped_oomlie.png",
     "sources": {
       "other": {
-        "Making a wrapped oomlie": {
-          "notes": "Requires a Raw oomlie.",
+        "Making a Wrapped oomlie": {
+          "notes": "Requires a Raw oomlie and a Palm leaf.",
           "rule": {
             "all": [
               {
