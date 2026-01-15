@@ -215,6 +215,7 @@ export default async function AchievementDiariesPage() {
                 const task = tasks[index];
                 const diaryState = ctx.player?.achievementDiaries?.[diaryName]?.[tier];
                 const isCompleted = Boolean(diaryState?.tasks?.[index]);
+                let isDoable = false;
                 let statusClass = "diary-status-blocked";
                 let statusLabel = "Not completed";
                 let missingHtml = "";
@@ -228,6 +229,7 @@ export default async function AchievementDiariesPage() {
                     if (met) {
                         statusClass = "diary-status-ready";
                         statusLabel = "Can complete";
+                        isDoable = true;
                         readyCount += 1;
                     } else {
                         blockedCount += 1;
@@ -236,7 +238,9 @@ export default async function AchievementDiariesPage() {
                 }
 
                 rows.push(`
-                    <div class="diary-task ${statusClass}">
+                    <div class="diary-task ${statusClass}"
+                        data-completed="${isCompleted ? "true" : "false"}"
+                        data-doable="${isDoable ? "true" : "false"}">
                         <div class="diary-task-name">${escapeHtml(task.name)}</div>
                         <div class="diary-task-status">${statusLabel}</div>
                         ${missingHtml}
@@ -269,8 +273,73 @@ export default async function AchievementDiariesPage() {
 
     return `
         <h1>Achievement diaries</h1>
-        <div class="diary-list">
+        <div class="diary-filters">
+            <label class="diary-filter">
+                <input type="checkbox" id="hideCompletedDiaries" ${fileStore.filters?.hideCompletedDiaries ? "checked" : ""}>
+                Hide completed tasks
+            </label>
+            <label class="diary-filter">
+                <input type="checkbox" id="hideIncompletableDiaries" ${fileStore.filters?.hideIncompletableDiaries ? "checked" : ""}>
+                Hide incompletable tasks
+            </label>
+        </div>
+        <div class="diary-list" id="diaryList">
             ${diarySections.length ? diarySections.join("") : "<p>No diary data loaded yet.</p>"}
         </div>
     `;
 }
+
+function applyDiaryFilters(container) {
+    const hideCompleted = fileStore.filters?.hideCompletedDiaries;
+    const hideIncompletable = fileStore.filters?.hideIncompletableDiaries;
+    const rows = container.querySelectorAll(".diary-task");
+    for (const row of rows) {
+        const isCompleted = row.dataset.completed === "true";
+        const isDoable = row.dataset.doable === "true";
+        const isIncompletable = !isCompleted && !isDoable;
+        const shouldHide = (hideCompleted && isCompleted) || (hideIncompletable && isIncompletable);
+        row.style.display = shouldHide ? "none" : "";
+    }
+
+    const tiers = container.querySelectorAll(".diary-tier");
+    for (const tier of tiers) {
+        const hasVisibleTask = Array.from(tier.querySelectorAll(".diary-task"))
+            .some((task) => task.style.display !== "none");
+        tier.style.display = hasVisibleTask ? "" : "none";
+    }
+
+    const regions = container.querySelectorAll(".diary-region");
+    for (const region of regions) {
+        const hasVisibleTier = Array.from(region.querySelectorAll(".diary-tier"))
+            .some((tier) => tier.style.display !== "none");
+        region.style.display = hasVisibleTier ? "" : "none";
+    }
+}
+
+async function updateDiaryFilters(partial) {
+    const nextFilters = {
+        ...fileStore.filters,
+        ...partial
+    };
+    await fileStore.setFilters(nextFilters);
+    const list = document.getElementById("diaryList");
+    if (list) {
+        applyDiaryFilters(list);
+    }
+}
+
+document.addEventListener("change", async (e) => {
+    if (e.target.id === "hideCompletedDiaries") {
+        await updateDiaryFilters({ hideCompletedDiaries: e.target.checked });
+    }
+    if (e.target.id === "hideIncompletableDiaries") {
+        await updateDiaryFilters({ hideIncompletableDiaries: e.target.checked });
+    }
+});
+
+window.initAchievementDiariesPage = function () {
+    const list = document.getElementById("diaryList");
+    if (list) {
+        applyDiaryFilters(list);
+    }
+};

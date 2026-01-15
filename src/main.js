@@ -424,6 +424,9 @@ export function afterRoute() {
     if (typeof initQuestsPage === "function") {
         initQuestsPage();
     }
+    if (typeof initAchievementDiariesPage === "function") {
+        initAchievementDiariesPage();
+    }
 }
 
 async function shouldHideForClueFilter(item, ctx) {
