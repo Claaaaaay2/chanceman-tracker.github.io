@@ -4197,7 +4197,9 @@ function canCompleteFishingContest(ctx) {
 }
 
 function canCompleteInSearchOfKnowledge(ctx) {
-    return true; // TODO Does Draynor cabbage work?
+    return hasAnyCookedMeatFish(ctx) //
+        || has(ctx, 6701)  // Baked potato
+        || has(ctx, 1965); // Cabbage
 }
 
 function canCompleteLairOfTarnRazorlor(ctx) {
