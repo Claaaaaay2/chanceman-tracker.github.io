@@ -1,5 +1,5 @@
 import { NPC_DATA } from "../logic/npcData.js";
-import { isNpcObtainable, isRuleObtainable } from "../logic/itemVisibility.js";
+import { isItemHiddenByTag, isNpcObtainable, isRuleObtainable } from "../logic/itemVisibility.js";
 import { parseDropRate } from "../logic/utils.js";
 import { fileStore } from "../storage/fileStore.js";
 
@@ -20,6 +20,7 @@ export default async function ItemPage() {
     const item = items.find(x => x.id == id);
 
     if (!item) return `<h1>Item not found</h1>`;
+    if (isItemHiddenByTag(item)) return `<h1>Item not found</h1>`;
 
     const sourcesHtml = await renderSources(item.sources);
     const processableHtml = renderProcessable(item.processable, items);

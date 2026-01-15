@@ -3,6 +3,16 @@ import { NPC_DATA } from "./npcData.js";
 import { capitalizeFirstLetter } from "./utils.js";
 
 const REWARD_POOL_35_39 = "Reward pool 35\u201339 Fishing";
+const HIDDEN_ITEM_TAGS = new Set(["deadman", "leagues"]);
+
+export function isItemHiddenByTag(item) {
+    const tags = item?.tags;
+    if (!tags) return false;
+    if (Array.isArray(tags)) {
+        return tags.some((tag) => HIDDEN_ITEM_TAGS.has(tag));
+    }
+    return HIDDEN_ITEM_TAGS.has(tags);
+}
 
 export function isNpcBlockedByFilters(npcName, ctx) {
     const npc = NPC_DATA[npcName];

@@ -1,5 +1,5 @@
 import { canReachNpc, evaluateRule } from "./logic/itemAvailability.js";
-import { isNpcObtainable } from "./logic/itemVisibility.js";
+import { isItemHiddenByTag, isNpcObtainable } from "./logic/itemVisibility.js";
 import { parseDropRate } from "./logic/utils.js";
 import { NPC_DATA } from "./logic/npcData.js";
 import { getObtainabilityRank } from "./logic/sortHelpers.js";
@@ -204,6 +204,9 @@ window.initItemsPage = async function () {
             const { item } = entry;
             let sort = { ...entry.sort };
 
+            if (isItemHiddenByTag(item)) {
+                continue;
+            }
             if (isFreeToPlay && !item.tags?.includes("f2p")) {
                 continue;
             }
