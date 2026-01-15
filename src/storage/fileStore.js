@@ -20,6 +20,7 @@ let memory = {
         hideLMS: false,
         hideJon: false,
         isFreeToPlay: false,
+        otherDropsSortByDroprate: true,
         overrideWoodcutting: false,
         overrideMining: false,
         overrideFishing: false,

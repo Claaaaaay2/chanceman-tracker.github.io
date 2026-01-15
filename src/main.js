@@ -140,9 +140,14 @@ window.initItemsPage = async function () {
     }
 
     function readFiltersFromUI() {
+        const otherDropsToggle = document.getElementById("otherDropsSortByDroprate");
+        const otherDropsSortByDroprate = otherDropsToggle
+            ? otherDropsToggle.checked
+            : (fileStore.filters?.otherDropsSortByDroprate ?? true);
         const nextFilters = {
             search: elements.searchInput.value,
-            hunterRumoursCompleted: elements.hunterRumoursCompleted.value
+            hunterRumoursCompleted: elements.hunterRumoursCompleted.value,
+            otherDropsSortByDroprate
         };
         for (const config of checkboxConfigs) {
             nextFilters[config.key] = checkboxElements[config.key].checked;
@@ -189,7 +194,8 @@ window.initItemsPage = async function () {
             isHunterRumourLocked,
             hideLMS,
             hideJon,
-            isFreeToPlay
+            isFreeToPlay,
+            otherDropsSortByDroprate = true
         } = getFilters();
 
         const items = fileStore.items || [];
@@ -257,7 +263,7 @@ window.initItemsPage = async function () {
             }
 
             // Secondary: droprate for drop ranks
-            if (a.sort.rank === 6) {
+            if (a.sort.rank === 6 && otherDropsSortByDroprate) {
                 if (a.bestDropRate !== b.bestDropRate) {
                     return b.bestDropRate - a.bestDropRate;
                 }
@@ -272,18 +278,41 @@ window.initItemsPage = async function () {
                 <p class="empty-state">No drops found for current filters.</p>
             `;
         } else {
+            const sectionCounts = filtered.reduce((acc, { sort }) => {
+                acc[sort.rank] = (acc[sort.rank] ?? 0) + 1;
+                return acc;
+            }, {});
             let html = "";
             let lastRank = null;
 
             for (const { item, sort } of filtered) {
                 if (sort.rank !== lastRank) {
-                    html += `
-                        <h2 class="item-section-header">
+                    const isOtherDrops = sort.rank === 6;
+                    const sortToggle = isOtherDrops
+                    ? `
+                        <label class="other-drops-sort">
+                            <span>Sort:</span>
+                            <span class="other-drops-sort-label">A-Z</span>
+                            <span class="toggle-switch">
+                                <input type="checkbox" id="otherDropsSortByDroprate" ${otherDropsSortByDroprate ? "checked" : ""}>
+                                <span class="toggle-slider" aria-hidden="true"></span>
+                            </span>
+                            <span>Droprate</span>
+                        </label>
+                    `
+                    : "";
+                const sectionCount = sectionCounts[sort.rank] ?? 0;
+                html += `
+                    <h2 class="item-section-header">
+                        <span class="item-section-title">
                             ${ITEM_SECTION_TITLES[sort.rank] ?? "Other Items"}
-                        </h2>
-                    `;
-                    lastRank = sort.rank;
-                }
+                            <span class="item-section-count">(${sectionCount})</span>
+                        </span>
+                        ${sortToggle}
+                    </h2>
+                `;
+                lastRank = sort.rank;
+            }
 
                 const isObtained = obtained.includes(item.id);
                 const isRolled = rolled.includes(item.id);
@@ -300,6 +329,15 @@ window.initItemsPage = async function () {
 
             elements.grid.innerHTML = html;
 
+            const otherDropsToggle = document.getElementById("otherDropsSortByDroprate");
+            if (otherDropsToggle) {
+                otherDropsToggle.addEventListener("input", () => {
+                    const nextFilters = readFiltersFromUI();
+                    nextFilters.otherDropsSortByDroprate = otherDropsToggle.checked;
+                    fileStore.setFilters(nextFilters);
+                    renderItems();
+                });
+            }
             setTimeout(() => initLazyImages(), 0);
         }
         } finally {
