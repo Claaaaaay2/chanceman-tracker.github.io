@@ -220,6 +220,10 @@ export default async function QuestsPage() {
                 <input type="checkbox" id="hideIncompletableQuests" ${fileStore.filters?.hideIncompletableQuests ? "checked" : ""}>
                 Hide incompletable quests
             </label>
+            <label class="quest-filter">
+                <input type="checkbox" id="hazeelCultLocked" ${fileStore.filters?.hazeelCultLocked ? "checked" : ""}>
+                Hazeel Cult locked
+            </label>
         </div>
         <div class="quest-list" id="questList">
             ${rows.join("")}
@@ -245,12 +249,16 @@ function applyQuestFilters(container) {
     }
 }
 
-async function updateQuestFilters(partial) {
+async function updateQuestFilters(partial, options = {}) {
     const nextFilters = {
         ...fileStore.filters,
         ...partial
     };
     await fileStore.setFilters(nextFilters);
+    if (options.rerender) {
+        window.dispatchEvent(new PopStateEvent("popstate"));
+        return;
+    }
     const list = document.getElementById("questList");
     if (list) {
         applyQuestFilters(list);
@@ -263,6 +271,9 @@ document.addEventListener("change", async (e) => {
     }
     if (e.target.id === "hideIncompletableQuests") {
         await updateQuestFilters({ hideIncompletableQuests: e.target.checked });
+    }
+    if (e.target.id === "hazeelCultLocked") {
+        await updateQuestFilters({ hazeelCultLocked: e.target.checked }, { rerender: true });
     }
 });
 

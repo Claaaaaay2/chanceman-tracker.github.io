@@ -5270,7 +5270,8 @@ function canCompletePandemonium(ctx) {
 }
 
 function canCompleteTheHeartOfDarkness(ctx) {
-    return canTrainMining(ctx);
+    return canTrainMining(ctx) //
+        && (canTrainSlayer(ctx) || ctx.player.levels.Slayer >= 48);
 }
 
 function canStartIcthlarinsLittleHelper(ctx) {
@@ -5325,7 +5326,10 @@ function canCompletePriestInPeril(ctx) {
 }
 
 function canCompleteHazeelCult(ctx) {
-    return true; // TODO might be uncompletable if wrong path chosen
+    if (ctx.filters?.hazeelCultLocked) {
+        return has(ctx, 273); // Poison (item)
+    }
+    return true;
 }
 
 const BONE_VOYAGE_KUDOS_QUESTS = [
