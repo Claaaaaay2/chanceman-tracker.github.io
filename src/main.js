@@ -267,35 +267,41 @@ window.initItemsPage = async function () {
             return a.sort.name.localeCompare(b.sort.name);
         });
 
-        let html = "";
-        let lastRank = null;
+        if (filtered.length === 0) {
+            elements.grid.innerHTML = `
+                <p class="empty-state">No drops found for current filters.</p>
+            `;
+        } else {
+            let html = "";
+            let lastRank = null;
 
-        for (const { item, sort } of filtered) {
-            if (sort.rank !== lastRank) {
+            for (const { item, sort } of filtered) {
+                if (sort.rank !== lastRank) {
+                    html += `
+                        <h2 class="item-section-header">
+                            ${ITEM_SECTION_TITLES[sort.rank] ?? "Other Items"}
+                        </h2>
+                    `;
+                    lastRank = sort.rank;
+                }
+
+                const isObtained = obtained.includes(item.id);
+                const isRolled = rolled.includes(item.id);
+
                 html += `
-                    <h2 class="item-section-header">
-                        ${ITEM_SECTION_TITLES[sort.rank] ?? "Other Items"}
-                    </h2>
+                    <div class="item-card" onclick="navigate('/item?id=${item.id}')">
+                        ${isObtained ? `<span class="badge obtained">Obtained</span>` : ""}
+                        ${isRolled ? `<span class="badge rolled">Rolled</span>` : ""}
+                        <img class="lazy-img item-image" data-src="/images/${item.image}" src="/images/placeholder.png">
+                        ${item.name}
+                    </div>
                 `;
-                lastRank = sort.rank;
             }
 
-            const isObtained = obtained.includes(item.id);
-            const isRolled = rolled.includes(item.id);
+            elements.grid.innerHTML = html;
 
-            html += `
-                <div class="item-card" onclick="navigate('/item?id=${item.id}')">
-                    ${isObtained ? `<span class="badge obtained">Obtained</span>` : ""}
-                    ${isRolled ? `<span class="badge rolled">Rolled</span>` : ""}
-                    <img class="lazy-img item-image" data-src="/images/${item.image}" src="/images/placeholder.png">
-                    ${item.name}
-                </div>
-            `;
+            setTimeout(() => initLazyImages(), 0);
         }
-
-        elements.grid.innerHTML = html;
-
-        setTimeout(() => initLazyImages(), 0);
         } finally {
             setLoading(false);
         }
