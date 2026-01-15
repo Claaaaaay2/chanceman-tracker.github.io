@@ -6,7 +6,7 @@
         <p id="bugStatus"></p>
     `}function Ls(){const e=document.getElementById("reportBug");e&&e.addEventListener("click",async()=>{const s=document.getElementById("bugStatus"),a=document.getElementById("bugText").value.trim();if(!a){s.textContent="Please enter a description.";return}s.textContent="Sending report...";const i={message:a,files:{player:u.player?.name,filters:u.filters,obtained:u.obtained,rolled:u.rolled}};try{if(!(await fetch("https://bug-report-relay.chanceman-tracker.workers.dev",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(i)})).ok)throw new Error("Failed to send");s.textContent="Thank you! Bug report sent."}catch(r){console.error(r),s.textContent="Failed to send bug report."}})}async function rt(){return`
         <footer>
-            <span>Version: 2026-01-15T20:14:36.755Z</span>
+            <span>Version: 2026-01-15T20:22:13.624Z</span>
         </footer>
     `}async function nt(){if(!(u.obtained&&u.rolled))return`
         <nav class="header">
