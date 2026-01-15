@@ -1,11 +1,39 @@
-export function has(ctx, id) {
+function hasItem(ctx, id, options = {}) {
     const item = ctx.items.find(i => i.id === id);
     if (!item) return false;
-    const hasItem = ctx.rolled.includes(id) && ctx.obtained.includes(id);
-    if (!hasItem && ctx?.missing?.items) {
+    const hasItemValue = ctx.rolled.includes(id) && ctx.obtained.includes(id);
+    if (!hasItemValue && options.trackMissing !== false && ctx?.missing?.items) {
         ctx.missing.items.add(id);
     }
-    return hasItem;
+    return hasItemValue;
+}
+
+function addMissingItemGroup(ctx, ids) {
+    if (!ctx?.missing) return;
+    if (!ctx.missing.itemGroups) {
+        ctx.missing.itemGroups = [];
+    }
+    if (!ctx.missing.itemGroupKeys) {
+        ctx.missing.itemGroupKeys = new Set();
+    }
+    const key = [...ids].sort((a, b) => a - b).join(",");
+    if (ctx.missing.itemGroupKeys.has(key)) return;
+    ctx.missing.itemGroupKeys.add(key);
+    ctx.missing.itemGroups.push(ids);
+}
+
+function hasAnyItems(ctx, ids) {
+    for (const id of ids) {
+        if (hasItem(ctx, id, { trackMissing: false })) {
+            return true;
+        }
+    }
+    addMissingItemGroup(ctx, ids);
+    return false;
+}
+
+export function has(ctx, id) {
+    return hasItem(ctx, id);
 }
 
 export const REQUIREMENT_CHECKS = {
@@ -147,25 +175,29 @@ export const REQUIREMENT_CHECKS = {
         return canGetWillowBlackjack(ctx);
     },
     hasAnyNormalCape(ctx) {
-        return has(ctx, 1023) //
-            || has(ctx, 1007) //
-            || has(ctx, 1021) //
-            || has(ctx, 1019) //
-            || has(ctx, 1031) //
-            || has(ctx, 6959) //
-            || has(ctx, 1029) //
-            || has(ctx, 1027);//
+        return hasAnyItems(ctx, [
+            1023,
+            1007,
+            1021,
+            1019,
+            1031,
+            6959,
+            1029,
+            1027
+        ]);
     },
     hasAnyCookedMeatFish(ctx) {
         return hasAnyCookedMeatFish(ctx);
     },
     hasAnyLeaves(ctx) {
-        return has(ctx, 6020) //
-            || has(ctx, 6030) //
-            || has(ctx, 6028) //
-            || has(ctx, 6022) //
-            || has(ctx, 6024) //
-            || has(ctx, 6026);
+        return hasAnyItems(ctx, [
+            6020,
+            6030,
+            6028,
+            6022,
+            6024,
+            6026
+        ]);
     },
     hasAnyNails(ctx) {
         return hasAnyNails(ctx);
@@ -2065,20 +2097,24 @@ function canCompleteBeneathCursedSands(ctx) {
 }
 
 function hasAnyFeather(ctx) {
-    return has(ctx, 314)    // Feather
-        || has(ctx, 10089)  // Blue feather
-        || has(ctx, 10091)  // Orange feather
-        || has(ctx, 10088)  // Red feather
-        || has(ctx, 10087)  // Stripy feather
-        || has(ctx, 10090); // Yellow feather
+    return hasAnyItems(ctx, [
+        314,   // Feather
+        10089, // Blue feather
+        10091, // Orange feather
+        10088, // Red feather
+        10087, // Stripy feather
+        10090  // Yellow feather
+    ]);
 }
 
 function hasAnyFeatherButStripy(ctx) {
-    return has(ctx, 314)    // Feather
-        || has(ctx, 10089)  // Blue feather
-        || has(ctx, 10091)  // Orange feather
-        || has(ctx, 10088)  // Red feather
-        || has(ctx, 10090); // Yellow feather
+    return hasAnyItems(ctx, [
+        314,   // Feather
+        10089, // Blue feather
+        10091, // Orange feather
+        10088, // Red feather
+        10090  // Yellow feather
+    ]);
 }
 
 function hasAnyLantern(ctx) {
@@ -2433,85 +2469,94 @@ function hasCupOfTea(ctx) {
 }
 
 function hasAnyGuthixBalance(ctx) {
-    return has(ctx, 7660) // Guthix balance(4)
-        || has(ctx, 7662) // Guthix balance(3)
-        || has(ctx, 7664) // Guthix balance(2)
-        || has(ctx, 7666) // Guthix balance(1)
+    return hasAnyItems(ctx, [
+        7660, // Guthix balance(4)
+        7662, // Guthix balance(3)
+        7664, // Guthix balance(2)
+        7666  // Guthix balance(1)
+    ]);
 }
 
 function hasAnySerum207(ctx) {
-    return has(ctx, 3408) // Serum 207(4)
-        || has(ctx, 3410) // Serum 207(3)
-        || has(ctx, 3412) // Serum 207(2)
-        || has(ctx, 3414) // Serum 207(1)
+    return hasAnyItems(ctx, [
+        3408, // Serum 207(4)
+        3410, // Serum 207(3)
+        3412, // Serum 207(2)
+        3414  // Serum 207(1)
+    ]);
 }
 
 function hasAirRuneSource(ctx) {
-    return has(ctx, 556) // Air rune
-        || has(ctx, 4696) // Dust rune
-        || has(ctx, 4697) // Smoke rune
-        || has(ctx, 4695) // Mist rune
-        || has(ctx, 1381) // Staff of air
-        || has(ctx, 1397) // Air battlestaff
-        || has(ctx, 1405) // Mystic air staff
-        || has(ctx, 20736) // Dust battlestaff
-        || has(ctx, 20739) // Mystic dust staff
-        || has(ctx, 11998) // Smoke battlestaff
-        || has(ctx, 12000) // Mystic smoke staff
-        || has(ctx, 20730) // Mist battlestaff
-        || has(ctx, 20733); // Mystic mist staff
+    return hasAnyItems(ctx, [
+        556,   // Air rune
+        4696,  // Dust rune
+        4697,  // Smoke rune
+        4695,  // Mist rune
+        1381,  // Staff of air
+        1397,  // Air battlestaff
+        1405,  // Mystic air staff
+        20736, // Dust battlestaff
+        20739, // Mystic dust staff
+        11998, // Smoke battlestaff
+        12000, // Mystic smoke staff
+        20730, // Mist battlestaff
+        20733  // Mystic mist staff
+    ]);
 }
 
 function hasWaterRuneSource(ctx) {
-    return has(ctx, 555) // Water rune
-        || has(ctx, 4698) // Mud rune
-        || has(ctx, 4694) // Steam rune
-        || has(ctx, 4695) // Mist rune
-        || has(ctx, 1383) // Staff of water
-        || has(ctx, 1395) // Water battlestaff
-        || has(ctx, 1403) // Mystic water staff
-        || has(ctx, 6562) // Mud battlestaff
-        || has(ctx, 6563) // Mystic mud staff
-        || has(ctx, 11787) // Steam battlestaff
-        || has(ctx, 11789) // Mystic steam staff
-        || has(ctx, 20730) // Mist battlestaff
-        || has(ctx, 20733) // Mystic mist staff
-        || (has(ctx, 25576) && has(ctx, 25578)); // Tome of water and Soaked page
+    return hasAnyItems(ctx, [
+        555,   // Water rune
+        4698,  // Mud rune
+        4694,  // Steam rune
+        4695,  // Mist rune
+        1383,  // Staff of water
+        1395,  // Water battlestaff
+        1403,  // Mystic water staff
+        6562,  // Mud battlestaff
+        6563,  // Mystic mud staff
+        11787, // Steam battlestaff
+        11789, // Mystic steam staff
+        20730, // Mist battlestaff
+        20733  // Mystic mist staff
+    ]) || (has(ctx, 25576) && has(ctx, 25578)); // Tome of water and Soaked page
 }
 
 function hasEarthRuneSource(ctx) {
-    return has(ctx, 557) // Earth rune
-        || has(ctx, 4696) // Dust rune
-        || has(ctx, 4698) // Mud rune
-        || has(ctx, 4699) // Lava rune
-        || has(ctx, 1385) // Staff of earth
-        || has(ctx, 1399) // Earth battlestaff
-        || has(ctx, 1407) // Mystic earth staff
-        || has(ctx, 20736) // Dust battlestaff
-        || has(ctx, 20739) // Mystic dust staff
-        || has(ctx, 6562) // Mud battlestaff
-        || has(ctx, 6563) // Mystic mud staff
-        || has(ctx, 3053) // Lava battlestaff
-        || has(ctx, 3054) // Mystic lava staff
-        || (has(ctx, 30066) && has(ctx, 30068)); // Tome of earth and Soiled page
+    return hasAnyItems(ctx, [
+        557,   // Earth rune
+        4696,  // Dust rune
+        4698,  // Mud rune
+        4699,  // Lava rune
+        1385,  // Staff of earth
+        1399,  // Earth battlestaff
+        1407,  // Mystic earth staff
+        20736, // Dust battlestaff
+        20739, // Mystic dust staff
+        6562,  // Mud battlestaff
+        6563,  // Mystic mud staff
+        3053,  // Lava battlestaff
+        3054   // Mystic lava staff
+    ]) || (has(ctx, 30066) && has(ctx, 30068)); // Tome of earth and Soiled page
 }
 
 function hasFireRuneSource(ctx) {
-    return has(ctx, 554) // Fire rune
-        || has(ctx, 4699) // Lava rune
-        || has(ctx, 4697) // Smoke rune
-        || has(ctx, 4694) // Steam rune
-        || has(ctx, 28929) // Sunfire rune
-        || has(ctx, 1387) // Staff of fire
-        || has(ctx, 1393) // Fire battlestaff
-        || has(ctx, 1401) // Mystic fire staff
-        || has(ctx, 3053) // Lava battlestaff
-        || has(ctx, 3054) // Mystic lava staff
-        || has(ctx, 11998) // Smoke battlestaff
-        || has(ctx, 12000) // Mystic smoke staff
-        || has(ctx, 11787) // Steam battlestaff
-        || has(ctx, 11789) // Mystic steam staff
-        || (has(ctx, 20716) && has(ctx, 20718)); // Tome of fire and Burnt page
+    return hasAnyItems(ctx, [
+        554,   // Fire rune
+        4699,  // Lava rune
+        4697,  // Smoke rune
+        4694,  // Steam rune
+        28929, // Sunfire rune
+        1387,  // Staff of fire
+        1393,  // Fire battlestaff
+        1401,  // Mystic fire staff
+        3053,  // Lava battlestaff
+        3054,  // Mystic lava staff
+        11998, // Smoke battlestaff
+        12000, // Mystic smoke staff
+        11787, // Steam battlestaff
+        11789  // Mystic steam staff
+    ]) || (has(ctx, 20716) && has(ctx, 20718)); // Tome of fire and Burnt page
 }
 
 function canReachTrollheim(ctx) {
@@ -2695,14 +2740,16 @@ function canCatchButterflies(ctx) {
 }
 
 function hasAnyNails(ctx) {
-    return has(ctx, 4819)  // Bronze nails
-        || has(ctx, 4820)  // Iron nails
-        || has(ctx, 1539)  // Steel nails
-        || has(ctx, 4821)  // Black nails
-        || has(ctx, 4822)  // Mithril nails
-        || has(ctx, 4823)  // Adamantite nails
-        || has(ctx, 4824)  // Rune nails
-        || has(ctx, 31406);// Dragon nails
+    return hasAnyItems(ctx, [
+        4819,  // Bronze nails
+        4820,  // Iron nails
+        1539,  // Steel nails
+        4821,  // Black nails
+        4822,  // Mithril nails
+        4823,  // Adamantite nails
+        4824,  // Rune nails
+        31406  // Dragon nails
+    ]);
 }
 
 function canEnterKalphiteLair(ctx) {
@@ -4813,7 +4860,12 @@ function canStartMageArenaII(ctx) {
 
 function canCompleteMageArenaI(ctx) {
     return hasAirRuneSource(ctx) //
-        && (has(ctx, 558) || has(ctx, 562) || has(ctx, 560) || has(ctx, 565)); // Mind rune, Chaos rune, Death rune or Blood rune
+        && hasAnyItems(ctx, [
+            558, // Mind rune
+            562, // Chaos rune
+            560, // Death rune
+            565  // Blood rune
+        ]);
 }
 
 function canCompleteMageArenaII(ctx) {
@@ -5588,21 +5640,23 @@ function canFillFishFoodBox(ctx) {
 }
 
 function hasAnyFilledBowl(ctx) {
-    return has(ctx, 1921) // Bowl of water
-        || has(ctx, 4456) // Bowl of hot water
-        || has(ctx, 2003) // Stew
-        || has(ctx, 4016) // Banana stew
-        || has(ctx, 2011) // Curry
-        || has(ctx, 7074) // Chopped garlic
-        || has(ctx, 1871) // Chopped onion
-        || has(ctx, 1869) // Chopped tomato
-        || has(ctx, 7086) // Chopped tuna
-        || has(ctx, 1873) // Chopped ugthanki
-        || has(ctx, 7070) // Minced meat
-        || has(ctx, 7080) // Sliced mushrooms
-        || has(ctx, 7088) // Sweetcorn (bowl)
-        || has(ctx, 7068) // Tuna and corn
-        || has(ctx, 7076); // Uncooked egg
+    return hasAnyItems(ctx, [
+        1921, // Bowl of water
+        4456, // Bowl of hot water
+        2003, // Stew
+        4016, // Banana stew
+        2011, // Curry
+        7074, // Chopped garlic
+        1871, // Chopped onion
+        1869, // Chopped tomato
+        7086, // Chopped tuna
+        1873, // Chopped ugthanki
+        7070, // Minced meat
+        7080, // Sliced mushrooms
+        7088, // Sweetcorn (bowl)
+        7068, // Tuna and corn
+        7076  // Uncooked egg
+    ]);
 }
 
 function hasAnyFilledVial(ctx) {
@@ -5929,65 +5983,75 @@ function hasAnyFilledVial(ctx) {
 }
 
 function hasAnyFilledCup(ctx) {
-    return has(ctx, 4460) // Cup of hot water
-        || has(ctx, 1978) // Cup of tea
-        || has(ctx, 4458) // Cup of water
-        || has(ctx, 4423) // Guthix rest(1)
-        || has(ctx, 4421) // Guthix rest(2)
-        || has(ctx, 4419) // Guthix rest(3)
-        || has(ctx, 4417); // Guthix rest(4)
+    return hasAnyItems(ctx, [
+        4460, // Cup of hot water
+        1978, // Cup of tea
+        4458, // Cup of water
+        4423, // Guthix rest(1)
+        4421, // Guthix rest(2)
+        4419, // Guthix rest(3)
+        4417  // Guthix rest(4)
+    ]);
 }
 
 function hasAnyFilledBucket(ctx) {
-    return has(ctx, 1927) // Bucket of milk
-        || has(ctx, 1783) // Bucket of sand
-        || has(ctx, 4687) // Bucket of sap
-        || has(ctx, 1929) // Bucket of water
-        || has(ctx, 30); // Bucket of wax
+    return hasAnyItems(ctx, [
+        1927, // Bucket of milk
+        1783, // Bucket of sand
+        4687, // Bucket of sap
+        1929, // Bucket of water
+        30    // Bucket of wax
+    ]);
 }
 
 function hasAnyFilledJug(ctx) {
-    return has(ctx, 1937) // Jug of water
-        || has(ctx, 1993); // Jug of wine
+    return hasAnyItems(ctx, [
+        1937, // Jug of water
+        1993  // Jug of wine
+    ]);
 }
 
 function hasAnyFilledPot(ctx) {
-    return has(ctx, 1933) // Pot of flour
-        || has(ctx, 7468) // Pot of cornflour
-        || has(ctx, 4436); // Airtight pot
+    return hasAnyItems(ctx, [
+        1933, // Pot of flour
+        7468, // Pot of cornflour
+        4436  // Airtight pot
+    ]);
 }
 
 function hasAnyAle(ctx) {
-    return has(ctx, 1905) // Asgarnian ale
-        || has(ctx, 5739) // Asgarnian ale(m)
-        || has(ctx, 5751) // Axeman's folly
-        || has(ctx, 5753) // Axeman's folly(m)
-        || has(ctx, 4627) // Bandit's brew
-        || has(ctx, 1917) // Beer
-        || has(ctx, 5755) // Chef's delight
-        || has(ctx, 5757) // Chef's delight(m)
-        || has(ctx, 5763) // Cider
-        || has(ctx, 5929) // Cider(m)
-        || has(ctx, 1911) // Dragon bitter
-        || has(ctx, 5745) // Dragon bitter(m)
-        || has(ctx, 1913) // Dwarven stout
-        || has(ctx, 5747) // Dwarven stout(m)
-        || has(ctx, 1909) // Greenman's ale
-        || has(ctx, 5743) // Greenman's ale(m)
-        || has(ctx, 1915) // Grog
-        || has(ctx, 25826) // Lizardkicker
-        || has(ctx, 2955) // Moonlight mead
-        || has(ctx, 5749) // Moonlight mead(m)
-        || has(ctx, 5761) // Slayer's respite
-        || has(ctx, 5761) // Slayer's respite(m)
-        || has(ctx, 29412) // Steamforge brew
-        || has(ctx, 29409) // Sunbeam ale
-        || has(ctx, 29277) // Trapper's tipple
-        || has(ctx, 24774) // Blood pint
-        || has(ctx, 22430) // Bloody bracer
-        || has(ctx, 22430) // Wizard's mind bomb
-        || has(ctx, 5741)  // Mature wmb
-        || has(ctx, 23948); // Elven dawn
+    return hasAnyItems(ctx, [
+        1905,  // Asgarnian ale
+        5739,  // Asgarnian ale(m)
+        5751,  // Axeman's folly
+        5753,  // Axeman's folly(m)
+        4627,  // Bandit's brew
+        1917,  // Beer
+        5755,  // Chef's delight
+        5757,  // Chef's delight(m)
+        5763,  // Cider
+        5929,  // Cider(m)
+        1911,  // Dragon bitter
+        5745,  // Dragon bitter(m)
+        1913,  // Dwarven stout
+        5747,  // Dwarven stout(m)
+        1909,  // Greenman's ale
+        5743,  // Greenman's ale(m)
+        1915,  // Grog
+        25826, // Lizardkicker
+        2955,  // Moonlight mead
+        5749,  // Moonlight mead(m)
+        5761,  // Slayer's respite
+        5761,  // Slayer's respite(m)
+        29412, // Steamforge brew
+        29409, // Sunbeam ale
+        29277, // Trapper's tipple
+        24774, // Blood pint
+        22430, // Bloody bracer
+        22430, // Wizard's mind bomb
+        5741,  // Mature wmb
+        23948  // Elven dawn
+    ]);
 }
 
 function canTrainFarming(ctx) {

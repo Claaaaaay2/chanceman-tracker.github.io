@@ -69,12 +69,39 @@ function findRequirementFn(questName) {
 }
 
 function getMissingItems(ctx, itemsById) {
-    if (!ctx?.missing?.items?.size) return [];
-    const missing = [];
-    for (const id of ctx.missing.items) {
-        missing.push(itemsById.get(id) ?? `Item ${id}`);
+    const missing = {
+        items: [],
+        itemGroups: []
+    };
+    if (ctx?.missing?.items?.size) {
+        for (const id of ctx.missing.items) {
+            missing.items.push(itemsById.get(id) ?? `Item ${id}`);
+        }
+        missing.items.sort((a, b) => a.localeCompare(b));
     }
-    return missing.sort((a, b) => a.localeCompare(b));
+    if (Array.isArray(ctx?.missing?.itemGroups)) {
+        missing.itemGroups = ctx.missing.itemGroups.map((group) =>
+            group.map((id) => itemsById.get(id) ?? `Item ${id}`)
+        );
+    }
+    return missing;
+}
+
+function renderQuestMissing(missing) {
+    const parts = [];
+    if (missing.items.length) {
+        parts.push(`Missing items: ${missing.items.join(", ")}.`);
+    }
+    if (missing.itemGroups.length) {
+        const groupText = missing.itemGroups
+            .map((group) => `Any of: ${group.join(" / ")}`)
+            .join("; ");
+        parts.push(`Missing item options: ${groupText}.`);
+    }
+    if (!parts.length) {
+        return `<div class="quest-missing">Missing requirements.</div>`;
+    }
+    return parts.map((part) => `<div class="quest-missing">${part}</div>`).join("");
 }
 
 export default async function QuestsPage() {
@@ -95,7 +122,7 @@ export default async function QuestsPage() {
         const questStatus = fileStore.player.quests?.[questName] ?? 0;
         const isCompleted = questStatus === 2;
         let isDoable = false;
-        let missingItems = [];
+        let missingItems = { items: [], itemGroups: [] };
 
         if (!isCompleted) {
             const requirementMatch = findRequirementFn(questName);
@@ -111,7 +138,7 @@ export default async function QuestsPage() {
                     rolled: fileStore.rolled || [],
                     player: fileStore.player,
                     filters: fileStore.filters,
-                    missing: { items: new Set() }
+                    missing: { items: new Set(), itemGroups: [], itemGroupKeys: new Set() }
                 };
 
                 try {
@@ -137,11 +164,7 @@ export default async function QuestsPage() {
         }
 
         const missingHtml = !isCompleted && !isDoable
-            ? `<div class="quest-missing">${
-                missingItems.length
-                    ? `Missing items: ${missingItems.join(", ")}.`
-                    : "Missing requirements."
-            }</div>`
+            ? renderQuestMissing(missingItems)
             : "";
 
         questStates.push({
@@ -163,11 +186,7 @@ export default async function QuestsPage() {
 
     const rows = questStates.map((quest) => {
         const missingHtml = !quest.isCompleted && !quest.isDoable
-            ? `<div class="quest-missing">${
-                quest.missingItems.length
-                    ? `Missing items: ${quest.missingItems.join(", ")}.`
-                    : "Missing requirements."
-            }</div>`
+            ? renderQuestMissing(quest.missingItems)
             : "";
 
         return `
