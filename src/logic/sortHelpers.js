@@ -1,4 +1,4 @@
-import { areNpcSkillsMet, isNpcBlockedByFilters, isNpcObtainable, isRuleObtainable } from "./itemVisibility.js";
+import { areNpcSkillsMet, isNpcBlockedByFilters, isNpcObtainable, isRuleObtainable, isSourceHiddenByFilters } from "./itemVisibility.js";
 import { fileStore } from "../storage/fileStore.js";
 import { canReachNpc } from "./itemAvailability.js";
 import { NPC_DATA } from "./npcData.js";
@@ -32,6 +32,7 @@ export async function isItemObtainable(item, ctx) {
     // === Other ===
     if (src.other) {
         for (const obj of Object.values(src.other)) {
+            if (isSourceHiddenByFilters(obj, ctx)) continue;
             if (await isRuleObtainable(obj.rule, ctx)) return true;
         }
     }
@@ -87,6 +88,7 @@ export async function getObtainabilityRank(item, ctx) {
     // Other sources (crafting, etc.)
     if (src.other) {
         for (const obj of Object.values(src.other)) {
+            if (isSourceHiddenByFilters(obj, ctx)) continue;
             if (await isRuleObtainable(obj.rule, ctx)) {
                 return { rank: 4, name };
             }

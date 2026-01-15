@@ -14,6 +14,12 @@ export function isItemHiddenByTag(item) {
     return HIDDEN_ITEM_TAGS.has(tags);
 }
 
+export function isSourceHiddenByFilters(source, ctx) {
+    const f = ctx.filters ?? {};
+    if (f.hideLMS && source?.tags?.includes("LMS")) return true;
+    return false;
+}
+
 export function isNpcBlockedByFilters(npcName, ctx) {
     const npc = NPC_DATA[npcName];
     if (!npc) return true;
