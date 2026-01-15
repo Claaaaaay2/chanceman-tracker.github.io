@@ -301,6 +301,12 @@ export const REQUIREMENT_CHECKS = {
     canCompleteHisFaithfulServants(ctx) {
         return canCompleteHisFaithfulServants(ctx);
     },
+    canCompleteDeathOnTheIsle(ctx) {
+        return true;
+    },
+    canCompleteFightArena(ctx) {
+        return true;
+    },
     canCompleteHolyGrail(ctx) {
         return canCompleteHolyGrail(ctx);
     },
@@ -309,6 +315,9 @@ export const REQUIREMENT_CHECKS = {
     },
     canCompleteLandOfTheGoblins(ctx) {
         return canCompleteLandOfTheGoblins(ctx);
+    },
+    canCompleteMageArenaI(ctx) {
+        return canCompleteMageArenaI(ctx);
     },
     canCompleteMageArenaII(ctx) {
         return canCompleteMageArenaII(ctx);
@@ -4802,8 +4811,14 @@ function canStartMageArenaII(ctx) {
         && hasFireRuneSource(ctx); //
 }
 
+function canCompleteMageArenaI(ctx) {
+    return hasAirRuneSource(ctx) //
+        && (has(ctx, 558) || has(ctx, 562) || has(ctx, 560) || has(ctx, 565)); // Mind rune, Chaos rune, Death rune or Blood rune
+}
+
 function canCompleteMageArenaII(ctx) {
-    return has(ctx, 565) // Blood rune
+    return canCompleteMageArenaI(ctx) //
+        && has(ctx, 565) // Blood rune
         && hasAirRuneSource(ctx) //
         && hasFireRuneSource(ctx); //
 }
