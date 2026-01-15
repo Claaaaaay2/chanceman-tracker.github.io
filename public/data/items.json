@@ -47787,6 +47787,12 @@
               }
             ]
           }
+        },
+        "Special shop": {
+          "notes": "Play LMS and use the reward interface.",
+          "tags": [
+            "LMS"
+          ]
         }
       }
     }
