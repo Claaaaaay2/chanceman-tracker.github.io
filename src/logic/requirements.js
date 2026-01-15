@@ -1836,6 +1836,10 @@ export const REQUIREMENT_CHECKS = {
             && has(ctx, 9075) // Astral rune
             && has(ctx, 563); // Law rune
     },
+    hasGhorrockTeleportRunes(ctx) {
+        return hasWaterRuneSource(ctx) //
+            && has(ctx, 563); // Law rune
+    },
     hasHumidifyRunes(ctx) {
         return hasWaterRuneSource(ctx) //
             && hasFireRuneSource(ctx) //
@@ -1847,6 +1851,14 @@ export const REQUIREMENT_CHECKS = {
     hasChargeWaterOrbRunes(ctx) {
         return has(ctx, 564) // Cosmic rune
             && hasWaterRuneSource(ctx);
+    },
+    hasChargeEarthOrbRunes(ctx) {
+        return has(ctx, 564) // Cosmic rune
+            && hasEarthRuneSource(ctx);
+    },
+    hasChargeAirOrbRunes(ctx) {
+        return has(ctx, 564) // Cosmic rune
+            && hasAirRuneSource(ctx);
     },
     hasMonsterExamineRunes(ctx) {
         return has(ctx, 564)  // Cosmic rune
@@ -1892,6 +1904,9 @@ export const REQUIREMENT_CHECKS = {
     },
     canEnterEarthAltar(ctx) {
         return canEnterEarthAltar(ctx);
+    },
+    canEnterChaosAltar(ctx) {
+        return canEnterChaosAltar(ctx);
     },
     canEnterNatureAltar(ctx) {
         return canEnterNatureAltar(ctx);
@@ -1974,6 +1989,13 @@ function canEnterEarthAltar(ctx) {
     return canCompleteEnterTheAbyss(ctx) //
         || has(ctx, 1440) // Earth talisman
         || has(ctx, 5535) // Earth tiara
+        || canDoGuardiansOfTheRift(ctx);
+}
+
+function canEnterChaosAltar(ctx) {
+    return canCompleteEnterTheAbyss(ctx) //
+        || has(ctx, 1452) // Chaos talisman
+        || has(ctx, 5543) // Chaos tiara
         || canDoGuardiansOfTheRift(ctx);
 }
 

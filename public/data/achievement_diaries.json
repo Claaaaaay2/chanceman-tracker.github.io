@@ -8548,9 +8548,7 @@
                         },
                         "quests": {},
                         "items": [],
-                        "untracked": [
-                            "alchemised"
-                        ],
+                        "untracked": [],
                         "itemsAny": [],
                         "rulesAll": [],
                         "rulesAny": []
@@ -8585,38 +8583,22 @@
                     "requirements": {
                         "skills": {},
                         "quests": {},
-                        "items": [
-                            {
-                                "id": 1452,
-                                "name": "Chaos talisman"
-                            },
-                            {
-                                "id": 5525,
-                                "name": "Tiara"
-                            },
-                            {
-                                "id": 26798,
-                                "name": "Catalytic talisman"
-                            }
-                        ],
-                        "untracked": [
-                            "Chaos Altar",
-                            "Abyss"
-                        ],
+                        "items": [],
+                        "untracked": [],
                         "itemsAny": [],
-                        "rulesAll": [],
+                        "rulesAll": [
+                            "canEnterChaosAltar"
+                        ],
                         "rulesAny": []
                     }
                 },
                 {
-                    "name": "Kill a Mammoth in the Wilderness. Note: Mammoths are found south-east of Ferox Enclave.",
+                    "name": "Kill a Mammoth in the Wilderness.",
                     "requirements": {
                         "skills": {},
                         "quests": {},
                         "items": [],
-                        "untracked": [
-                            "Weaponry"
-                        ],
+                        "untracked": [],
                         "itemsAny": [],
                         "rulesAll": [],
                         "rulesAny": []
@@ -8630,44 +8612,47 @@
                         },
                         "quests": {},
                         "items": [],
-                        "untracked": [
-                            "Weaponry"
+                        "untracked": [],
+                        "itemsAny": [],
+                        "rulesAll": [],
+                        "rulesAny": []
+                    }
+                },
+                {
+                    "name": "Restore some Prayer points at the Demonic ruins.",
+                    "requirements": {
+                        "skills": {},
+                        "quests": {},
+                        "items": [],
+                        "untracked": [],
+                        "itemsAny": [],
+                        "rulesAll": [],
+                        "rulesAny": []
+                    }
+                },
+                {
+                    "name": "Enter the King Black Dragon's lair.",
+                    "requirements": {
+                        "skills": {},
+                        "quests": {},
+                        "items": [],
+                        "untracked": [],
+                        "itemsAny": [],
+                        "rulesAll": [],
+                        "rulesAny": []
+                    }
+                },
+                {
+                    "name": "Collect 5 Red spiders' eggs from the Wilderness.",
+                    "requirements": {
+                        "skills": {},
+                        "quests": {},
+                        "items": [
+                            {
+                                "id": 223,
+                                "name": "Red spiders' eggs"
+                            }
                         ],
-                        "itemsAny": [],
-                        "rulesAll": [],
-                        "rulesAny": []
-                    }
-                },
-                {
-                    "name": "Restore some prayer points at the demonic ruins.",
-                    "requirements": {
-                        "skills": {},
-                        "quests": {},
-                        "items": [],
-                        "untracked": [],
-                        "itemsAny": [],
-                        "rulesAll": [],
-                        "rulesAny": []
-                    }
-                },
-                {
-                    "name": "Enter the King Black Dragon's lair. Note: This lair is located beneath the Lava Maze.",
-                    "requirements": {
-                        "skills": {},
-                        "quests": {},
-                        "items": [],
-                        "untracked": [],
-                        "itemsAny": [],
-                        "rulesAll": [],
-                        "rulesAny": []
-                    }
-                },
-                {
-                    "name": "Collect 5 Red spiders' eggs from the Wilderness Note: These can be found in the northern part of the Edgeville Dungeon. You can also bring eggs into the wilderness, fulfilling the diary by dropping and picking them up five times.",
-                    "requirements": {
-                        "skills": {},
-                        "quests": {},
-                        "items": [],
                         "untracked": [],
                         "itemsAny": [],
                         "rulesAll": [],
@@ -8682,11 +8667,11 @@
                         },
                         "quests": {},
                         "items": [],
-                        "untracked": [
-                            "pickaxe"
-                        ],
+                        "untracked": [],
                         "itemsAny": [],
-                        "rulesAll": [],
+                        "rulesAll": [
+                            "canTrainMining"
+                        ],
                         "rulesAny": []
                     }
                 },
@@ -8705,15 +8690,69 @@
                     }
                 },
                 {
-                    "name": "Equip any team cape in the Wilderness. Note: Entering the Wilderness with one already equipped does not count for this task.",
+                    "name": "Equip any team cape in the Wilderness.",
                     "requirements": {
                         "skills": {},
                         "quests": {},
                         "items": [],
-                        "untracked": [
-                            "team cape"
+                        "untracked": [],
+                        "itemsAny": [
+                            [
+                                20217,
+                                20214,
+                                20211,
+                                4315,
+                                4333,
+                                4335,
+                                4337,
+                                4339,
+                                4341,
+                                4343,
+                                4345,
+                                4347,
+                                4349,
+                                4351,
+                                4317,
+                                4353,
+                                4355,
+                                4357,
+                                4359,
+                                4361,
+                                4363,
+                                4365,
+                                4367,
+                                4369,
+                                4371,
+                                4319,
+                                4373,
+                                4375,
+                                4377,
+                                4379,
+                                4381,
+                                4383,
+                                4385,
+                                4387,
+                                4389,
+                                4391,
+                                4321,
+                                4393,
+                                4395,
+                                4397,
+                                4399,
+                                4401,
+                                4403,
+                                4405,
+                                4407,
+                                4409,
+                                4411,
+                                4323,
+                                4413,
+                                4325,
+                                4327,
+                                4329,
+                                4331
+                            ]
                         ],
-                        "itemsAny": [],
                         "rulesAll": [],
                         "rulesAny": []
                     }
@@ -8728,33 +8767,32 @@
                         },
                         "quests": {},
                         "items": [],
-                        "untracked": [
-                            "pickaxe"
-                        ],
+                        "untracked": [],
                         "itemsAny": [],
-                        "rulesAll": [],
+                        "rulesAll": [
+                            "canTrainMining"
+                        ],
                         "rulesAny": []
                     }
                 },
                 {
-                    "name": "Chop some yew logs from a fallen Ent. Note: This must be done within the Wilderness. You can find ents north and east of the chaos temple with the elder chaos druids.",
+                    "name": "Chop some Yew logs from a fallen Ent.",
                     "requirements": {
                         "skills": {
                             "Woodcutting": 61
                         },
                         "quests": {},
                         "items": [],
-                        "untracked": [
-                            "axe",
-                            "weapon"
-                        ],
+                        "untracked": [],
                         "itemsAny": [],
-                        "rulesAll": [],
+                        "rulesAll": [
+                            "canTrainWoodcutting"
+                        ],
                         "rulesAny": []
                     }
                 },
                 {
-                    "name": "Enter the Wilderness Godwars Dungeon. Note: While you're here, with a high enough Slayer level you can also complete another medium task and a hard task by killing a bloodveld and spiritual warrior, respectively.",
+                    "name": "Enter the Wilderness Godwars Dungeon.",
                     "requirements": {
                         "skills": {
                             "Agility": 60,
@@ -8762,9 +8800,7 @@
                         },
                         "quests": {},
                         "items": [],
-                        "untracked": [
-                            "God equipment"
-                        ],
+                        "untracked": [],
                         "itemsAny": [],
                         "rulesAll": [],
                         "rulesAny": []
@@ -8785,15 +8821,12 @@
                     }
                 },
                 {
-                    "name": "Kill a Green Dragon. Note: This must be done within the Wilderness.",
+                    "name": "Kill a Green Dragon.",
                     "requirements": {
                         "skills": {},
                         "quests": {},
                         "items": [],
-                        "untracked": [
-                            "dragonfire",
-                            "weapon"
-                        ],
+                        "untracked": [],
                         "itemsAny": [],
                         "rulesAll": [],
                         "rulesAny": []
@@ -8805,9 +8838,7 @@
                         "skills": {},
                         "quests": {},
                         "items": [],
-                        "untracked": [
-                            "Weaponry"
-                        ],
+                        "untracked": [],
                         "itemsAny": [],
                         "rulesAll": [],
                         "rulesAny": []
@@ -8826,16 +8857,16 @@
                                 "name": "Unpowered orb"
                             }
                         ],
-                        "untracked": [
-                            "Charge Earth Orb"
-                        ],
+                        "untracked": [],
                         "itemsAny": [],
-                        "rulesAll": [],
+                        "rulesAll": [
+                            "hasChargeEarthOrbRunes"
+                        ],
                         "rulesAny": []
                     }
                 },
                 {
-                    "name": "Kill a Bloodveld in the Wilderness Godwars Dungeon. Note: Can be safespotted in the south-west corner while having a Saradomin and Zamorak item equipped.",
+                    "name": "Kill a Bloodveld in the Wilderness Godwars Dungeon.",
                     "requirements": {
                         "skills": {
                             "Agility": 60,
@@ -8844,10 +8875,7 @@
                         },
                         "quests": {},
                         "items": [],
-                        "untracked": [
-                            "Weaponry",
-                            "god equipment"
-                        ],
+                        "untracked": [],
                         "itemsAny": [],
                         "rulesAll": [],
                         "rulesAny": []
@@ -8866,13 +8894,13 @@
                     }
                 },
                 {
-                    "name": "Smith a Golden helmet in the Resource Area. Note: You cannot do this while you already have a gold helmet in your inventory or bank, this must be dropped first. With 75 Smithing, you can bring 2 adamantite bars here as well to smith an adamant scimitar for a hard task.",
+                    "name": "Smith a Golden helmet in the Resource Area.",
                     "requirements": {
                         "skills": {
                             "Smithing": 50
                         },
                         "quests": {
-                            "Between a Rock...": "started"
+                            "Between a Rock...": "completed"
                         },
                         "items": [
                             {
@@ -8884,35 +8912,24 @@
                                 "name": "Hammer"
                             }
                         ],
-                        "untracked": [
-                            "coins"
-                        ],
+                        "untracked": [],
                         "itemsAny": [],
                         "rulesAll": [],
                         "rulesAny": []
                     }
                 },
                 {
-                    "name": "Open the Muddy Chest in the lava maze. Note: With 53 Fishing, you can bring an oily fishing rod and fishing bait to catch a raw lava eel for a hard task.",
+                    "name": "Open the Muddy Chest in the lava maze.",
                     "requirements": {
-                        "skills": {
-                            "Agility": 82
-                        },
+                        "skills": {},
                         "quests": {},
                         "items": [
                             {
                                 "id": 991,
                                 "name": "Muddy key"
-                            },
-                            {
-                                "id": 946,
-                                "name": "Knife"
                             }
                         ],
-                        "untracked": [
-                            "Wilderness sword 1",
-                            "slashing weapon"
-                        ],
+                        "untracked": [],
                         "itemsAny": [],
                         "rulesAll": [],
                         "rulesAny": []
@@ -8921,7 +8938,7 @@
             ],
             "Hard": [
                 {
-                    "name": "Cast any of the 3 God spells against another player in the Wilderness. Note: You have to successfully hit the player, so multiple casts are recommended. God spells must first be cast 100 times inside the Mage Arena before they can be cast elsewhere, but this task is just as completable inside the arena.",
+                    "name": "Cast any of the 3 God spells against another player in the Wilderness.",
                     "requirements": {
                         "skills": {
                             "Magic": 60
@@ -8930,12 +8947,11 @@
                             "Mage Arena I": "completed"
                         },
                         "items": [],
-                        "untracked": [
-                            "god staff",
-                            "god spell"
-                        ],
+                        "untracked": [],
                         "itemsAny": [],
-                        "rulesAll": [],
+                        "rulesAll": [
+                            "canStartMageArenaII"
+                        ],
                         "rulesAny": []
                     }
                 },
@@ -8952,11 +8968,11 @@
                                 "name": "Unpowered orb"
                             }
                         ],
-                        "untracked": [
-                            "Charge Air Orb"
-                        ],
+                        "untracked": [],
                         "itemsAny": [],
-                        "rulesAll": [],
+                        "rulesAll": [
+                            "hasChargeAirOrbRunes"
+                        ],
                         "rulesAny": []
                     }
                 },
@@ -8984,7 +9000,7 @@
                     }
                 },
                 {
-                    "name": "Smith an Adamant scimitar in the Resource Area. Note: With 75 Woodcutting and 75 Firemaking, you can bring any axe and a tinderbox to cut and burn some magic logs for an elite task.",
+                    "name": "Smith an Adamant scimitar in the Resource Area.",
                     "requirements": {
                         "skills": {
                             "Smithing": 75
@@ -9000,26 +9016,19 @@
                                 "name": "Adamantite bar"
                             }
                         ],
-                        "untracked": [
-                            "coins",
-                            "Resource Area",
-                            "medium tasks"
-                        ],
+                        "untracked": [],
                         "itemsAny": [],
                         "rulesAll": [],
                         "rulesAny": []
                     }
                 },
                 {
-                    "name": "Kill a Lava Dragon. Note: Lava dragons are found on Lava Dragon Isle.",
+                    "name": "Kill a Lava Dragon.",
                     "requirements": {
                         "skills": {},
                         "quests": {},
                         "items": [],
-                        "untracked": [
-                            "dragonfire",
-                            "weapon"
-                        ],
+                        "untracked": [],
                         "itemsAny": [],
                         "rulesAll": [],
                         "rulesAny": []
@@ -9031,51 +9040,42 @@
                         "skills": {},
                         "quests": {},
                         "items": [],
-                        "untracked": [
-                            "strategy guide"
-                        ],
+                        "untracked": [],
                         "itemsAny": [],
                         "rulesAll": [],
                         "rulesAny": []
                     }
                 },
                 {
-                    "name": "Kill the Crazy Arc.<!--do not change is verbatim from in-game-->, Chaos Fanatic & Scorpia. Note: While these bosses can be killed in any order, completing or updating any other task in-between will reset the progress for this task.",
+                    "name": "Kill the Crazy Arc., Chaos Fanatic & Scorpia.",
                     "requirements": {
                         "skills": {},
                         "quests": {},
                         "items": [],
-                        "untracked": [
-                            "Crazy archaeologist",
-                            "Chaos Fanatic",
-                            "Scorpia"
-                        ],
+                        "untracked": [],
                         "itemsAny": [],
                         "rulesAll": [],
                         "rulesAny": []
                     }
                 },
                 {
-                    "name": "Take the agility shortcut from Trollheim into the Wilderness. Note: Not to be confused with the rocky shortcut further north. The shortcut for this task goes in one direction, and cannot be used to leave the Wilderness again.",
+                    "name": "Take the agility shortcut from Trollheim into the Wilderness.",
                     "requirements": {
                         "skills": {
                             "Agility": 64
                         },
-                        "quests": {
-                            "Troll Stronghold": "started"
-                        },
+                        "quests": {},
                         "items": [],
-                        "untracked": [
-                            "Easy Combat Achievements",
-                            "Ghommal's hilt 1"
-                        ],
+                        "untracked": [],
                         "itemsAny": [],
-                        "rulesAll": [],
+                        "rulesAll": [
+                            "canReachTrollheim"
+                        ],
                         "rulesAny": []
                     }
                 },
                 {
-                    "name": "Kill a Spiritual warrior in the Wilderness Godwars Dungeon. Note: With 83 Slayer, you can also kill a spiritual mage here to complete an elite task",
+                    "name": "Kill a Spiritual warrior in the Wilderness Godwars Dungeon.",
                     "requirements": {
                         "skills": {
                             "Agility": 60,
@@ -9084,10 +9084,7 @@
                         },
                         "quests": {},
                         "items": [],
-                        "untracked": [
-                            "Weaponry",
-                            "god equipment"
-                        ],
+                        "untracked": [],
                         "itemsAny": [],
                         "rulesAll": [],
                         "rulesAny": []
@@ -9100,23 +9097,16 @@
                             "Fishing": 53,
                             "Herblore": 25
                         },
-                        "quests": {},
+                        "quests": {
+                            "Heroes' Quest": "completed"
+                        },
                         "items": [
                             {
                                 "id": 313,
                                 "name": "Fishing bait"
-                            },
-                            {
-                                "id": 946,
-                                "name": "Knife"
                             }
                         ],
-                        "untracked": [
-                            "Oily fishing rod",
-                            "Wilderness sword 1",
-                            "2",
-                            "slashing weapon"
-                        ],
+                        "untracked": [],
                         "itemsAny": [],
                         "rulesAll": [],
                         "rulesAny": []
@@ -9125,19 +9115,12 @@
             ],
             "Elite": [
                 {
-                    "name": "Kill Callisto, Venenatis & Vet'ion. Note: The lesser versions of these bosses (Artio, Spindel, and Calvar'ion) also count towards this task. You must have claimed the rewards from the medium diary tasks before you can access these lesser bosses. While these bosses can be killed in any order, completing or updating any other task in-between will reset the progress for this task.",
+                    "name": "Kill Callisto, Venenatis & Vet'ion.",
                     "requirements": {
                         "skills": {},
                         "quests": {},
                         "items": [],
-                        "untracked": [
-                            "Callisto",
-                            "Venenatis",
-                            "Vet'ion",
-                            "Artio",
-                            "Spindel",
-                            "Calvar'ion"
-                        ],
+                        "untracked": [],
                         "itemsAny": [],
                         "rulesAll": [],
                         "rulesAny": []
@@ -9153,12 +9136,11 @@
                             "Desert Treasure I": "completed"
                         },
                         "items": [],
-                        "untracked": [
-                            "Ancient Magicks",
-                            "Ghorrock Teleport"
-                        ],
+                        "untracked": [],
                         "itemsAny": [],
-                        "rulesAll": [],
+                        "rulesAll": [
+                            "hasGhorrockTeleportRunes"
+                        ],
                         "rulesAny": []
                     }
                 },
@@ -9178,21 +9160,20 @@
                             {
                                 "id": 11940,
                                 "name": "Dark fishing bait"
+                            },
+                            {
+                                "id": 11934,
+                                "name": "Raw dark crab"
                             }
                         ],
-                        "untracked": [
-                            "coins",
-                            "Resource Area",
-                            "medium tasks",
-                            "hard tasks"
-                        ],
+                        "untracked": [],
                         "itemsAny": [],
                         "rulesAll": [],
                         "rulesAny": []
                     }
                 },
                 {
-                    "name": "Smith a rune scimitar from scratch in the Resource Area. Note: You must kill two Runite Golems and mine them for runite ores, smelt two runite bars in the nearby furnace, then smith the rune scimitar on the anvil. The step for mining the ore is still completed if it is destroyed by an infernal pickaxe. Completing or updating any other task in-between these steps will reset the progress for this task.",
+                    "name": "Smith a Rune scimitar from scratch in the Resource Area.",
                     "requirements": {
                         "skills": {
                             "Mining": 85,
@@ -9207,20 +9188,26 @@
                             {
                                 "id": 453,
                                 "name": "Coal"
+                            },
+                            {
+                                "id": 451,
+                                "name": "Runite ore"
+                            },
+                            {
+                                "id": 2363,
+                                "name": "Runite bar"
                             }
                         ],
-                        "untracked": [
-                            "Weaponry",
-                            "pickaxe",
-                            "coins"
-                        ],
+                        "untracked": [],
                         "itemsAny": [],
-                        "rulesAll": [],
+                        "rulesAll": [
+                            "canTrainMining"
+                        ],
                         "rulesAny": []
                     }
                 },
                 {
-                    "name": "Steal from the Rogues' chest. Note: You must right-click the chest to search for traps. You'll then be attacked by all nearby rogues.",
+                    "name": "Steal from the Rogues' chest.",
                     "requirements": {
                         "skills": {
                             "Thieving": 84
@@ -9234,7 +9221,7 @@
                     }
                 },
                 {
-                    "name": "Slay a spiritual mage inside the wilderness Godwars Dungeon<!--Do not change, is verbatim from in-game.-->.",
+                    "name": "Slay a Spiritual mage inside the Wilderness Godwars Dungeon.",
                     "requirements": {
                         "skills": {
                             "Agility": 60,
@@ -9243,17 +9230,14 @@
                         },
                         "quests": {},
                         "items": [],
-                        "untracked": [
-                            "Weaponry",
-                            "god equipment"
-                        ],
+                        "untracked": [],
                         "itemsAny": [],
                         "rulesAll": [],
                         "rulesAny": []
                     }
                 },
                 {
-                    "name": "Cut and burn some magic logs in the Resource Area. Note: Logs burnt by an infernal axe do not count towards this task. Completing or updating any other task in-between these steps will reset the progress for this task.",
+                    "name": "Cut and burn some Magic logs in the Resource Area.",
                     "requirements": {
                         "skills": {
                             "Woodcutting": 75,
@@ -9264,14 +9248,17 @@
                             {
                                 "id": 590,
                                 "name": "Tinderbox"
+                            },
+                            {
+                                "id": 1513,
+                                "name": "Magic logs"
                             }
                         ],
-                        "untracked": [
-                            "axe",
-                            "coins"
-                        ],
+                        "untracked": [],
                         "itemsAny": [],
-                        "rulesAll": [],
+                        "rulesAll": [
+                            "canTrainWoodcutting"
+                        ],
                         "rulesAny": []
                     }
                 }
