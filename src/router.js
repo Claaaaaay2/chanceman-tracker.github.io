@@ -5,6 +5,7 @@ import ItemPage from "./pages/item.js";
 import ItemsPage from "./pages/items.js";
 import NotFoundPage from "./pages/notFound.js";
 import QuestsPage from "./pages/quests.js";
+import AchievementDiariesPage from "./pages/achievementDiaries.js";
 import { BugPage } from "./pages/reportABug.js";
 import ReuploadPage from "./pages/reupload.js";
 import UploadPage from "./pages/upload.js";
@@ -49,6 +50,7 @@ export async function router() {
         "/": UploadPage,
         "/items": ItemsPage,
         "/item": ItemPage,
+        "/achievement-diaries": AchievementDiariesPage,
         "/quests": QuestsPage,
         "/reupload": ReuploadPage,
         "/bug": BugPage,
