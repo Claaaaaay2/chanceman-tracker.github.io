@@ -248,8 +248,10 @@ export default async function AchievementDiariesPage() {
                 `);
             }
 
+            const tierFullyCompletable = blockedCount === 0;
+
             tierSections.push(`
-                <section class="diary-tier">
+                <section class="diary-tier" data-fully-completable="${tierFullyCompletable ? "true" : "false"}">
                     <h3 class="diary-tier-header">
                         <button class="diary-toggle diary-tier-toggle" type="button" aria-expanded="true">Hide</button>
                         <span>${tier}</span>
@@ -290,6 +292,7 @@ export default async function AchievementDiariesPage() {
                 <input type="checkbox" id="hideIncompletableDiaries" ${fileStore.filters?.hideIncompletableDiaries ? "checked" : ""}>
                 Hide incompletable tasks
             </label>
+            <button class="diary-action" type="button" id="toggleCompletableTiers"></button>
             <button class="diary-action" type="button" id="foldAllDiaries">Hide all</button>
             <button class="diary-action" type="button" id="unfoldAllDiaries">Show all</button>
         </div>
@@ -302,6 +305,7 @@ export default async function AchievementDiariesPage() {
 function applyDiaryFilters(container) {
     const hideCompleted = fileStore.filters?.hideCompletedDiaries;
     const hideIncompletable = fileStore.filters?.hideIncompletableDiaries;
+    const showOnlyCompletableTiers = fileStore.filters?.showOnlyCompletableTiers;
     const rows = container.querySelectorAll(".diary-task");
     for (const row of rows) {
         const isCompleted = row.dataset.completed === "true";
@@ -313,6 +317,10 @@ function applyDiaryFilters(container) {
 
     const tiers = container.querySelectorAll(".diary-tier");
     for (const tier of tiers) {
+        if (showOnlyCompletableTiers && tier.dataset.fullyCompletable !== "true") {
+            tier.style.display = "none";
+            continue;
+        }
         const hasVisibleTask = Array.from(tier.querySelectorAll(".diary-task"))
             .some((task) => task.style.display !== "none");
         tier.style.display = hasVisibleTask ? "" : "none";
@@ -368,7 +376,7 @@ function setTierCollapsed(tier, collapsed) {
     }
 }
 
-document.addEventListener("click", (e) => {
+document.addEventListener("click", async (e) => {
     if (e.target.id === "foldAllDiaries") {
         document.querySelectorAll(".diary-region").forEach((region) => setRegionCollapsed(region, true));
         document.querySelectorAll(".diary-tier").forEach((tier) => setTierCollapsed(tier, true));
@@ -391,11 +399,24 @@ document.addEventListener("click", (e) => {
             setTierCollapsed(tier, !tier.classList.contains("is-collapsed"));
         }
     }
+    if (e.target.id === "toggleCompletableTiers") {
+        const nextValue = !fileStore.filters?.showOnlyCompletableTiers;
+        await updateDiaryFilters({ showOnlyCompletableTiers: nextValue });
+        setCompletableTiersButton(e.target, nextValue);
+    }
 });
+
+function setCompletableTiersButton(button, isEnabled) {
+    button.textContent = isEnabled ? "Show all tiers" : "Show only completable tiers";
+}
 
 window.initAchievementDiariesPage = function () {
     const list = document.getElementById("diaryList");
     if (list) {
         applyDiaryFilters(list);
+    }
+    const toggleButton = document.getElementById("toggleCompletableTiers");
+    if (toggleButton) {
+        setCompletableTiersButton(toggleButton, Boolean(fileStore.filters?.showOnlyCompletableTiers));
     }
 };
