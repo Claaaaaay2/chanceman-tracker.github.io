@@ -35,6 +35,14 @@ function buildExpectedRequirementName(value) {
     return `canComplete${cleaned}`;
 }
 
+function formatRequirementName(value) {
+    const withoutPrefix = value.replace(/^canComplete/, "");
+    return withoutPrefix
+        .replace(/([a-z0-9])([A-Z])/g, "$1 $2")
+        .replace(/([A-Z])([A-Z][a-z])/g, "$1 $2")
+        .trim();
+}
+
 const REQUIREMENT_INDEX = new Map(
     Object.entries(REQUIREMENT_CHECKS)
         .filter(([key]) => key.startsWith("canComplete"))
@@ -73,6 +81,7 @@ function getMissingItems(ctx, itemsById) {
         skills: [],
         items: [],
         itemGroups: [],
+        prereqQuests: [],
         questPointsRequired: ctx?.missing?.questPointsRequired ?? 0,
         questPointsCurrent: ctx?.missing?.questPointsCurrent
     };
@@ -90,11 +99,18 @@ function getMissingItems(ctx, itemsById) {
             group.map((id) => itemsById.get(id) ?? `Item ${id}`)
         );
     }
+    if (Array.isArray(ctx?.missing?.prereqQuests)) {
+        missing.prereqQuests = [...ctx.missing.prereqQuests].sort((a, b) => a.localeCompare(b));
+    }
     return missing;
 }
 
 function renderQuestMissing(missing) {
     const parts = [];
+    if (missing.prereqQuests.length) {
+        const questNames = missing.prereqQuests.map(formatRequirementName);
+        parts.push(`Missing prerequisite quests: ${questNames.join(", ")}.`);
+    }
     if (missing.questPointsRequired && typeof missing.questPointsCurrent === "number") {
         const remaining = Math.max(0, missing.questPointsRequired - missing.questPointsCurrent);
         parts.push(`Missing quest points: ${remaining} (need ${missing.questPointsRequired}).`);
@@ -157,6 +173,8 @@ export default async function QuestsPage() {
                         itemGroupKeys: new Set(),
                         skills: [],
                         skillKeys: new Set(),
+                        prereqQuests: [],
+                        prereqQuestKeys: new Set(),
                         questPointsRequired: 0,
                         questPointsCurrent: fileStore.player?.questPoints ?? 0
                     }
