@@ -73,10 +73,7 @@ export async function getObtainabilityRank(item, ctx) {
     // Drops handling EASY
     if (src.drops) {
         for (const npcName of Object.keys(src.drops)) {
-            if (!(await canReachNpc(npcName, ctx))) continue;
-
-            if (isNpcBlockedByFilters(npcName, ctx)) continue;
-            if (!areNpcSkillsMet(npcName, ctx)) continue;
+            if (!(await isNpcObtainable(npcName, ctx))) continue;
 
             const npc = NPC_DATA[npcName];
             if (npc?.tags?.includes("easy") || (npc?.tags?.includes("jon") && !ctx.filters?.isIronman)) {

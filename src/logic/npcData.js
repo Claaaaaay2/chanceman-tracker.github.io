@@ -2249,7 +2249,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": ["slayer"],
+        "tags": ["slayer-task-only"],
         "f2p": false
     },
     "Brine rat": {

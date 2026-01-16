@@ -2086,7 +2086,7 @@ function canGetFishbowlWithWater(ctx) {
 
 function canKillMogreSailing(ctx) {
     return (canTrainSlayer(ctx) || ctx.player.levels.Slayer >= 32) //
-        || (canShortrange(ctx) || canDoSailingCombat(ctx));
+        && (canShortrange(ctx) || canDoSailingCombat(ctx));
 }
 
 function canEnterMindAltar(ctx) {
@@ -4803,7 +4803,7 @@ function canCompleteShadowOfTheStorm(ctx) {
 }
 
 function canCompleteSheepShearer(ctx) {
-    return has(ctx, 1735); // Shears
+    return has(ctx, 1759); // Ball of wool
 }
 
 function canCompleteTheGolem(ctx) {
@@ -5171,10 +5171,11 @@ function canCompleteOlafsQuest(ctx) {
     return allTrue([
         hasSkillLevel(ctx, "Firemaking", 40),
         hasSkillLevel(ctx, "Woodcutting", 50),
+        requiresQuest(ctx, "canCompleteTheFremennikTrials", canCompleteTheFremennikTrials),
         has(ctx, 590), // Tinderbox
         has(ctx, 952), // Spade
-        has(ctx, 954),
-    ]); // Rope
+        has(ctx, 954), // Rope
+    ]);
 }
 
 function canCompleteDefenderOfVarrock(ctx) {

@@ -98,6 +98,7 @@ window.initItemsPage = async function () {
     const checkboxConfigs = [
         { id: "hideObtained", key: "hideObtained", defaultValue: true },
         { id: "onlyRolled", key: "onlyRolled", defaultValue: false },
+        { id: "hideUnobtainable", key: "hideUnobtainable", defaultValue: true },
         { id: "hideClueRewardOnly", key: "hideClue", defaultValue: true, invalidate: true },
         { id: "allowOthersHouses", key: "allowOthersHouses", defaultValue: false, invalidate: true },
         { id: "hasFlatpacks", key: "hasFlatpacks", defaultValue: true },
@@ -182,6 +183,7 @@ window.initItemsPage = async function () {
             search,
             hideObtained,
             onlyRolled,
+            hideUnobtainable,
             hideClue,
             allowOthersHouses,
             hasFlatpacks,
@@ -252,6 +254,7 @@ window.initItemsPage = async function () {
             if (hideJon && await hideTag(item, fileStore, "jon")) {
                 sort.rank = 8;
             }
+            if (hideUnobtainable && sort.rank === 8) continue;
 
             filtered.push({ ...entry, sort });
         }
@@ -593,9 +596,11 @@ async function hideSkill(item, ctx, skill) {
             const npc = NPC_DATA[npcName];
             if (!npc) continue;
 
-            const needsSkill = npc.skill?.includes(skill);
+            const isSlayerLockTag = skill === "Slayer"
+                && (npc.tags?.includes("slayer-task-only") || npc.tags?.includes("superior"));
+            const needsSkill = npc.skill?.includes(skill) || isSlayerLockTag;
             if (needsSkill) hasAnySkillSource = true;
-            if (skillLevel >= npc.level[0]) hasSkillLevel = true;
+            if (!ctx.filters?.isSlayerLocked && skillLevel >= npc.level[0]) hasSkillLevel = true;
 
             const reachable = await canReachNpc(npcName, ctx);
             if (!reachable) continue;
