@@ -70,11 +70,15 @@ function findRequirementFn(questName) {
 
 function getMissingItems(ctx, itemsById) {
     const missing = {
+        skills: [],
         items: [],
         itemGroups: [],
         questPointsRequired: ctx?.missing?.questPointsRequired ?? 0,
         questPointsCurrent: ctx?.missing?.questPointsCurrent
     };
+    if (Array.isArray(ctx?.missing?.skills) && ctx.missing.skills.length) {
+        missing.skills = [...ctx.missing.skills].sort((a, b) => a.localeCompare(b));
+    }
     if (ctx?.missing?.items?.size) {
         for (const id of ctx.missing.items) {
             missing.items.push(itemsById.get(id) ?? `Item ${id}`);
@@ -94,6 +98,9 @@ function renderQuestMissing(missing) {
     if (missing.questPointsRequired && typeof missing.questPointsCurrent === "number") {
         const remaining = Math.max(0, missing.questPointsRequired - missing.questPointsCurrent);
         parts.push(`Missing quest points: ${remaining} (need ${missing.questPointsRequired}).`);
+    }
+    if (missing.skills.length) {
+        parts.push(`Missing levels: ${missing.skills.join(", ")}.`);
     }
     if (missing.items.length) {
         parts.push(`Missing items: ${missing.items.join(", ")}.`);
@@ -148,6 +155,8 @@ export default async function QuestsPage() {
                         items: new Set(),
                         itemGroups: [],
                         itemGroupKeys: new Set(),
+                        skills: [],
+                        skillKeys: new Set(),
                         questPointsRequired: 0,
                         questPointsCurrent: fileStore.player?.questPoints ?? 0
                     }
