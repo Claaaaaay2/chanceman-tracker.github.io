@@ -1,6 +1,6 @@
 :root {
     --header-height: 19px;
-    --footer-height: 17px;
+    --footer-height: 22px;
     --bg-color: #E2DBC8;
     --table-alternate-row: #FAFAFA;
     --highlight-color: #9B6039;
@@ -161,8 +161,17 @@ footer {
     background-color: var(--header-footer-color);
     border-top: 1px solid var(--border-color);
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
 
     z-index: 1000;
+}
+
+.footer-link {
+    color: inherit;
+    text-decoration: underline;
 }
 
 /* End footer.js */

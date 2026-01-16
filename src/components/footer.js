@@ -3,7 +3,9 @@ export async function Footer() {
 
     return `
         <footer>
-            <span>Version: ${chancemanTrackerVersion}</span>
+        <a class="footer-link" href="https://ko-fi.com/kryen" target="_blank" rel="noopener noreferrer">☕ Support on Ko-fi ☕</a>
+        <span class="footer-separator">|</span>
+        <span>Version: ${chancemanTrackerVersion}</span>
         </footer>
     `;
 }

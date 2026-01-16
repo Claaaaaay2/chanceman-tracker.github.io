@@ -6,7 +6,9 @@
         <p id="bugStatus"></p>
     `}function Na(){const e=document.getElementById("reportBug");e&&e.addEventListener("click",async()=>{const s=document.getElementById("bugStatus"),r=document.getElementById("bugText").value.trim();if(!r){s.textContent="Please enter a description.";return}s.textContent="Sending report...";const t={message:r,files:{player:k.player?.name,filters:k.filters,obtained:k.obtained,rolled:k.rolled}};try{if(!(await fetch("https://bug-report-relay.chanceman-tracker.workers.dev",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(t)})).ok)throw new Error("Failed to send");s.textContent="Thank you! Bug report sent."}catch(u){console.error(u),s.textContent="Failed to send bug report."}})}async function ko(){return`
         <footer>
-            <span>Version: 2026-01-16T15:48:39.415Z</span>
+        <a class="footer-link" href="https://ko-fi.com/kryen" target="_blank" rel="noopener noreferrer">☕ Support on Ko-fi ☕</a>
+        <span class="footer-separator">|</span>
+        <span>Version: 2026-01-16T16:11:34.638Z</span>
         </footer>
     `}async function wo(){if(!(k.obtained&&k.rolled))return`
         <nav class="header">
