@@ -5660,7 +5660,15 @@ const BONE_VOYAGE_KUDOS_QUESTS = [
 ];
 
 function countCompletableKudosquests(ctx) {
-    return BONE_VOYAGE_KUDOS_QUESTS.filter(fn => fn(ctx)).length;
+    const nestedCtx = {
+        ...ctx,
+        suppressMissing: true,
+        missing: {
+            ...ctx.missing,
+            suppressMissing: true
+        }
+    };
+    return BONE_VOYAGE_KUDOS_QUESTS.filter(fn => fn(nestedCtx)).length;
 }
 
 function canGet153Kudos(ctx) {
