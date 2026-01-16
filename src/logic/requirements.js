@@ -5523,7 +5523,7 @@ function canTrainPrayer(ctx) {
         || has(ctx, 4832) // Raurg bones
         || has(ctx, 3123) // Shaikahan bones
         || has(ctx, 31726) // Strykewyrm bones
-        || has(ctx, 22124) // Superior dragon bones
+        || (has(ctx, 22124) && ctx.player.levels.Prayer >= 70) // Superior dragon bones
         || has(ctx, 2859) // Wolf bones
         || has(ctx, 22780) // Wyrm bones
         || has(ctx, 28899) // Wyrmling bones
@@ -5599,15 +5599,72 @@ function canTrainRunecraft(ctx) {
 
 function canTrainWoodcutting(ctx) {
     if (ctx.filters?.overrideWoodcutting) return true;
-    return has(ctx, 1351)  // Bronze axe
-        || has(ctx, 1349); // Iron axe
+    const level = ctx.player?.levels?.Woodcutting ?? 1;
+    const usableAxeIds = [];
+    if (level >= 1) {
+        usableAxeIds.push(
+            1351, // Bronze axe
+            1349  // Iron axe
+        );
+    }
+    if (level >= 6) {
+        usableAxeIds.push(1353); // Steel axe
+    }
+    if (level >= 11) {
+        usableAxeIds.push(1361); // Black axe
+    }
+    if (level >= 21) {
+        usableAxeIds.push(1355); // Mithril axe
+    }
+    if (level >= 31) {
+        usableAxeIds.push(1357); // Adamant axe
+    }
+    if (level >= 41) {
+        usableAxeIds.push(1359); // Rune axe
+    }
+    if (level >= 61) {
+        usableAxeIds.push(
+            6739,  // Dragon axe
+            20011  // 3rd age axe
+        );
+    }
+    if (usableAxeIds.length === 0) return false;
+    return hasAnyItems(ctx, usableAxeIds);
 }
 
 function canTrainMining(ctx) {
     if (ctx.filters?.overrideMining) return true;
-    return has(ctx, 1265)  // Bronze pickaxe
-        || has(ctx, 1267)  // Iron pickaxe
-        || has(ctx, 1269); // Steel pickaxe
+    const level = ctx.player?.levels?.Mining ?? 1;
+    const usablePickaxeIds = [];
+    if (level >= 1) {
+        usablePickaxeIds.push(
+            1265, // Bronze pickaxe
+            1267  // Iron pickaxe
+        );
+    }
+    if (level >= 6) {
+        usablePickaxeIds.push(1269); // Steel pickaxe
+    }
+    if (level >= 11) {
+        usablePickaxeIds.push(12297); // Black pickaxe
+    }
+    if (level >= 21) {
+        usablePickaxeIds.push(1273); // Mithril pickaxe
+    }
+    if (level >= 31) {
+        usablePickaxeIds.push(1271); // Adamant pickaxe
+    }
+    if (level >= 41) {
+        usablePickaxeIds.push(1275); // Rune pickaxe
+    }
+    if (level >= 61) {
+        usablePickaxeIds.push(
+            11920, // Dragon pickaxe
+            20014  // 3rd age pickaxe
+        );
+    }
+    if (usablePickaxeIds.length === 0) return false;
+    return hasAnyItems(ctx, usablePickaxeIds);
 }
 
 function canTrainHerblore(ctx) {
