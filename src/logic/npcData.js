@@ -3214,7 +3214,7 @@ export const NPC_DATA = {
         },
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Chest (Bryophyta's lair) Free-to-play": {
@@ -9467,7 +9467,7 @@ export const NPC_DATA = {
         "rule": ["canCompletePerilousMoons"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Lundail Easy Wilderness diary": {
