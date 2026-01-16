@@ -17057,5 +17057,141 @@ export const NPC_DATA = {
         "level": [57],
         "tags": [],
         "f2p": false
-    }
+    },
+    "Brutal green dragon (After Monkey Madness II)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Brutal_green_dragon",
+        "rule": ["canCompleteMonkeyMadnessII"],
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
+    "Red dragon (After Monkey Madness II)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Red_dragon",
+        "rule": ["canCompleteMonkeyMadnessII"],
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
+    "Adamant dragon (After Monkey Madness II)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Adamant_dragon",
+        "rule": ["canCompleteMonkeyMadnessII"],
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
+    "Lava dragon (After Monkey Madness II)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Lava_dragon",
+        "rule": ["canCompleteMonkeyMadnessII"],
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
+    "Mithril dragon (After Monkey Madness II)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Mithril_dragon",
+        "rule": ["canCompleteMonkeyMadnessII"],
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
+    "Dragon impling (After Monkey Madness II)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Dragon_impling",
+        "rule": ["canCompleteMonkeyMadnessII"],
+        "skill": ["hunter"],
+        "level": [93],
+        "tags": [],
+        "f2p": false
+    },
+    "Dragon impling jar (After Monkey Madness II)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Dragon_impling_jar",
+        "rule": ["canCompleteMonkeyMadnessII"],
+        "skill": ["hunter"],
+        "level": [83],
+        "tags": [],
+        "f2p": false
+    },
+    "Demonic gorilla (After Monkey Madness II)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Demonic_gorilla",
+        "rule": ["canCompleteMonkeyMadnessII"],
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
+    "Black dragon Regular (After Monkey Madness II)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Black_dragon#Regular",
+        "rule": ["canCompleteMonkeyMadnessII"],
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
+    "Black dragon Wilderness Slayer Cave (After Monkey Madness II)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Black_dragon#Wilderness_Slayer_Cave",
+        "rule": ["canCompleteMonkeyMadnessII"],
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
+    "Tortured gorilla (After Monkey Madness II)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Tortured_gorilla",
+        "rule": ["canCompleteMonkeyMadnessII"],
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
+    "Rune dragon (After Monkey Madness II)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Rune_dragon",
+        "rule": ["canCompleteMonkeyMadnessII"],
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
+    "King Black Dragon (After Monkey Madness II)": {
+        "wiki": "https://oldschool.runescape.wiki/w/King_Black_Dragon",
+        "rule": ["canCompleteMonkeyMadnessII"],
+        "skill": [],
+        "level": [],
+        "tags": ["boss"],
+        "f2p": false
+    },
+    "Steel dragon Standard (After Monkey Madness II)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Steel_dragon#Standard",
+        "rule": ["canCompleteMonkeyMadnessII"],
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
+    "Brutal black dragon (After Monkey Madness II)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Brutal_black_dragon",
+        "rule": ["canCompleteMonkeyMadnessII"],
+        "skill": ["Slayer"],
+        "level": [77],
+        "tags": [],
+        "f2p": false
+    },
+    "Brutal red dragon (After Monkey Madness II)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Brutal_red_dragon",
+        "rule": ["canCompleteMonkeyMadnessII"],
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
+    "Brutal blue dragon (After Monkey Madness II)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Brutal_blue_dragon",
+        "rule": ["canCompleteMonkeyMadnessII"],
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
 };
