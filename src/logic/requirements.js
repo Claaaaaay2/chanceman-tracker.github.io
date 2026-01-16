@@ -112,7 +112,7 @@ function requiresQuest(ctx, questKey, fn) {
 
 export const REQUIREMENT_CHECKS = {
     canCompleteDeviousMinds(ctx) {
-        canCompleteDeviousMinds(ctx);
+        return canCompleteDeviousMinds(ctx);
     },
     canCompleteGoblinDiplomacy(ctx) {
         return canCompleteGoblinDiplomacy(ctx);
