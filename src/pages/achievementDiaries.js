@@ -251,13 +251,16 @@ export default async function AchievementDiariesPage() {
             tierSections.push(`
                 <section class="diary-tier">
                     <h3 class="diary-tier-header">
+                        <button class="diary-toggle diary-tier-toggle" type="button" aria-expanded="true">Hide</button>
                         <span>${tier}</span>
                         <span class="diary-tier-counts">
                             (${completedCount} done, ${readyCount} can complete, ${blockedCount} blocked)
                         </span>
                     </h3>
-                    <div class="diary-task-list">
-                        ${rows.join("")}
+                    <div class="diary-tier-body">
+                        <div class="diary-task-list">
+                            ${rows.join("")}
+                        </div>
                     </div>
                 </section>
             `);
@@ -265,8 +268,13 @@ export default async function AchievementDiariesPage() {
 
         diarySections.push(`
             <section class="diary-region">
-                <h2>${escapeHtml(diaryName)}</h2>
-                ${tierSections.join("")}
+                <div class="diary-region-header">
+                    <button class="diary-toggle diary-region-toggle" type="button" aria-expanded="true">Hide</button>
+                    <h2>${escapeHtml(diaryName)}</h2>
+                </div>
+                <div class="diary-region-body">
+                    ${tierSections.join("")}
+                </div>
             </section>
         `);
     }
@@ -282,6 +290,8 @@ export default async function AchievementDiariesPage() {
                 <input type="checkbox" id="hideIncompletableDiaries" ${fileStore.filters?.hideIncompletableDiaries ? "checked" : ""}>
                 Hide incompletable tasks
             </label>
+            <button class="diary-action" type="button" id="foldAllDiaries">Hide all</button>
+            <button class="diary-action" type="button" id="unfoldAllDiaries">Show all</button>
         </div>
         <div class="diary-list" id="diaryList">
             ${diarySections.length ? diarySections.join("") : "<p>No diary data loaded yet.</p>"}
@@ -334,6 +344,52 @@ document.addEventListener("change", async (e) => {
     }
     if (e.target.id === "hideIncompletableDiaries") {
         await updateDiaryFilters({ hideIncompletableDiaries: e.target.checked });
+    }
+});
+
+function setToggleState(toggle, collapsed) {
+    toggle.textContent = collapsed ? "Show" : "Hide";
+    toggle.setAttribute("aria-expanded", collapsed ? "false" : "true");
+}
+
+function setRegionCollapsed(region, collapsed) {
+    region.classList.toggle("is-collapsed", collapsed);
+    const toggle = region.querySelector(".diary-region-toggle");
+    if (toggle) {
+        setToggleState(toggle, collapsed);
+    }
+}
+
+function setTierCollapsed(tier, collapsed) {
+    tier.classList.toggle("is-collapsed", collapsed);
+    const toggle = tier.querySelector(".diary-tier-toggle");
+    if (toggle) {
+        setToggleState(toggle, collapsed);
+    }
+}
+
+document.addEventListener("click", (e) => {
+    if (e.target.id === "foldAllDiaries") {
+        document.querySelectorAll(".diary-region").forEach((region) => setRegionCollapsed(region, true));
+        document.querySelectorAll(".diary-tier").forEach((tier) => setTierCollapsed(tier, true));
+        return;
+    }
+    if (e.target.id === "unfoldAllDiaries") {
+        document.querySelectorAll(".diary-region").forEach((region) => setRegionCollapsed(region, false));
+        document.querySelectorAll(".diary-tier").forEach((tier) => setTierCollapsed(tier, false));
+        return;
+    }
+    if (e.target.classList.contains("diary-region-toggle")) {
+        const region = e.target.closest(".diary-region");
+        if (region) {
+            setRegionCollapsed(region, !region.classList.contains("is-collapsed"));
+        }
+    }
+    if (e.target.classList.contains("diary-tier-toggle")) {
+        const tier = e.target.closest(".diary-tier");
+        if (tier) {
+            setTierCollapsed(tier, !tier.classList.contains("is-collapsed"));
+        }
     }
 });
 
