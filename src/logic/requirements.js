@@ -2503,51 +2503,51 @@ function canBurnRiylShades(ctx) {
     return canBurnPhrinShades(ctx) //
         && has(ctx, 3400) // Riyl remains
         && hasAnyItems(ctx, [
-                            3442,
-                            6211,
-                            10808,
-                            3444,
-                            6213,
-                            31383,
-                            3446,
-                            3448,
-                            31386,
-                            19672,
-                            31389,
-                        ]);
+            3442,
+            6211,
+            10808,
+            3444,
+            6213,
+            31383,
+            3446,
+            3448,
+            31386,
+            19672,
+            31389,
+        ]);
 }
 
 function canBurnAsynShades(ctx) {
     return canBurnRiylShades(ctx) //
         && has(ctx, 3402) // Asyn remains
         && hasAnyItems(ctx, [
-                            31383,
-                            3446,
-                            3448,
-                            31386,
-                            19672,
-                            31389,
-                        ]);
+            31383,
+            3446,
+            3448,
+            31386,
+            19672,
+            31389,
+        ]);
 }
 
 function canBurnFiyrShades(ctx) {
     return canBurnAsynShades(ctx) //
         && has(ctx, 3404) // Fiyr remains
         && hasAnyItems(ctx, [
-                            3448,
-                            31386,
-                            19672,
-                            31389,
-                        ]);
+            3448,
+            31386,
+            19672,
+            31389,
+        ]);
 }
 
 function canBurnUriumShades(ctx) {
     return canBurnFiyrShades(ctx) //
         && has(ctx, 25419) // Urium remains
         && hasAnyItems(ctx, [
-                            19672,
-                            31389,
-                        ]);
+            19672,
+            31389,
+        ]);
 }
 
 function hasCupOfTea(ctx) {
@@ -4844,26 +4844,26 @@ function canEnterBraindeathIsland(ctx) {
 function canDoMixology(ctx) {
     return canTrainHerblore(ctx) //
         && hasAnyItems(ctx, [
-                            249,
-                            251,
-                            253,
-                            255,
-                        ])
+            249,
+            251,
+            253,
+            255,
+        ])
         && hasAnyItems(ctx, [
-                            257,
-                            2998,
-                            261,
-                            263,
-                            3000,
-                        ])
+            257,
+            2998,
+            261,
+            263,
+            3000,
+        ])
         && hasAnyItems(ctx, [
-                            30097,
-                            259,
-                            265,
-                            2481,
-                            267,
-                            269,
-                        ]);
+            30097,
+            259,
+            265,
+            2481,
+            267,
+            269,
+        ]);
 }
 
 function canCompleteGettingAhead(ctx) {
@@ -5572,6 +5572,10 @@ function canCompletePandemonium(ctx) {
 
 function canCompleteTheHeartOfDarkness(ctx) {
     return allTrue([
+        hasSkillLevel(ctx, "Mining", 55),
+        hasSkillLevel(ctx, "Thieving", 48),
+        hasSkillLevel(ctx, "Slayer", 48),
+        hasSkillLevel(ctx, "Agility", 46)
     ]);
 }
 
@@ -5924,10 +5928,10 @@ function canTrainPrayer(ctx) {
 
 function canTrainRunecraft(ctx) {
     return requiresQuest(ctx, "canCompleteRuneMysteries", canCompleteRuneMysteries) && hasAnyItems(ctx, [
-                            5525,
-                            1436,
-                            7936,
-                        ]);
+        5525,
+        1436,
+        7936,
+    ]);
 }
 
 function canTrainWoodcutting(ctx) {
