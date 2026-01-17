@@ -2061,6 +2061,2541 @@ export const REQUIREMENT_CHECKS = {
     }
 };
 
+function canCompleteAKingdomDivided(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteTheDepthsOfDespair", canCompleteTheDepthsOfDespair), //
+        requiresQuest(ctx, "canCompleteTheQueenOfThieves", canCompleteTheQueenOfThieves), //
+        requiresQuest(ctx, "canCompleteTheAscentOfArceuus", canCompleteTheAscentOfArceuus), //
+        requiresQuest(ctx, "canCompleteTheForsakenTower", canCompleteTheForsakenTower), //
+        requiresQuest(ctx, "canCompleteTaleOfTheRighteous", canCompleteTaleOfTheRighteous), //
+        hasSkillLevel(ctx, "Agility", 54), //
+        hasSkillLevel(ctx, "Thieving", 52), //
+        hasSkillLevel(ctx, "Woodcutting", 52), //
+        hasSkillLevel(ctx, "Herblore", 50), //
+        hasSkillLevel(ctx, "Mining", 42), //
+        hasSkillLevel(ctx, "Crafting", 38), //
+        hasSkillLevel(ctx, "Magic", 35), //
+        hasAirRuneSource(ctx), //
+        hasFireRuneSource(ctx), //
+        hasAnyItems(ctx, [558, 562, 560, 565]),
+        hasAnyItems(ctx, [133, 2432]),
+        hasAnyItems(ctx, [2126, 4164]),
+        has(ctx, 1775), // Molten glass
+        has(ctx, 1755), // Chisel
+        hasUsableAxe(ctx),
+        hasUsablePickaxe(ctx), //
+    ]);
+}
+
+function canCompleteAlfredGrimhandsBarcrawl(ctx) {
+    return true;
+}
+
+function canCompleteAnExistentialCrisis(ctx) {
+    return false; // TODO
+}
+
+function canCompleteANightAtTheTheatre(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteATasteOfHope", canCompleteATasteOfHope), //
+        has(ctx, 8794), // Saw
+    ]);
+}
+
+function canCompleteAnimalMagnetism(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Slayer", 18),
+        hasSkillLevel(ctx, "Crafting", 19),
+        hasSkillLevel(ctx, "Ranged", 30),
+        hasSkillLevel(ctx, "Woodcutting", 35),
+        requiresQuest(ctx, "canCompleteErnestTheChicken", canCompleteErnestTheChicken), //
+        requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
+        has(ctx, 1355), // Mithril axe
+        has(ctx, 2351), // Iron bar
+        has(ctx, 2347), // Hammer
+        has(ctx, 1743), // Hard leather
+        has(ctx, 1718), // Holy symbol
+        has(ctx, 10496), // Polished buttons
+        has(ctx, 1931), // Pot
+    ]);
+}
+
+function canCompleteAnotherSliceOfHAM(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Attack", 15),
+        hasSkillLevel(ctx, "Prayer", 25),
+        requiresQuest(ctx, "canCompleteDeathToTheDorgeshuun", canCompleteDeathToTheDorgeshuun), //
+        requiresQuest(ctx, "canCompleteTheGiantDwarf", canCompleteTheGiantDwarf), //
+        requiresQuest(ctx, "canCompleteTheDigSite", canCompleteTheDigSite), //
+    ]); //
+}
+
+function canCompleteAPorcineOfInterest(ctx) {
+    return has(ctx, 954); // Rope
+}
+
+function canCompleteASoulsBane(ctx) {
+    return has(ctx, 954); // Rope
+}
+
+function canCompleteATailOfTwoCats(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteIcthlarinsLittleHelper", canCompleteIcthlarinsLittleHelper), //
+        has(ctx, 560), // Death rune
+        has(ctx, 1897), // Chocolate cake
+        has(ctx, 1511), // Logs
+        has(ctx, 590), // Tinderbox
+        has(ctx, 1927), // Bucket of milk
+        has(ctx, 1735), // Shears
+        has(ctx, 5318), // Potato seed
+        has(ctx, 5341), // Rake
+        has(ctx, 227), // Vial of water
+        hasAnyItems(ctx, [1833, 540]), //
+        hasAnyItems(ctx, [1835, 538]), // Desert robe or Druid's robe
+    ]);
+}
+
+function canCompleteATasteOfHope(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteDarknessOfHallowvale", canCompleteDarknessOfHallowvale), //
+        has(ctx, 1605), // Emerald
+        has(ctx, 1755), // Chisel
+        has(ctx, 233), // Pestle and mortar
+        has(ctx, 227), // Vial of water
+        hasAnyItems(ctx, [946, 2961]), // Knife or Silver sickle
+    ]);
+}
+
+function canCompleteAtFirstLight(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Hunter", 46),
+        hasSkillLevel(ctx, "Herblore", 30),
+        hasSkillLevel(ctx, "Construction", 27),
+        requiresQuest(ctx, "canCompleteEaglesPeak", canCompleteEaglesPeak), //
+        has(ctx, 4055), // Toy mouse (wound)
+        has(ctx, 29166), // Jerboa tail
+        has(ctx, 2347), // Hammer
+    ]);
+}
+
+function canCompleteBarbarianFarming(ctx) {
+    return allTrue([
+        canPlantTrees(ctx), //
+        hasAnySapling(ctx),
+    ]);
+}
+
+function canCompleteBarbarianFiremaking1(ctx) {
+    return allTrue([
+        has(ctx, 1521), // Oak logs
+        hasAnyItems(ctx, [841, 839, 843, 845, 849, 847, 853, 851, 857, 855, 861, 859]),
+    ]);
+}
+
+function canCompleteBarbarianFiremaking2(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteBarbarianFiremaking1", canCompleteBarbarianFiremaking1), //
+        has(ctx, 590), // Tinderbox
+        hasAnyLog(ctx),
+    ]);
+}
+
+function canCompleteBarbarianFishing(ctx) {
+    return allTrue([
+        has(ctx, 11323), // Barbarian rod
+        hasAnyFeather(ctx),
+    ]);
+}
+
+function canCompleteBarbarianHerblore(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteDruidicRitual", canCompleteDruidicRitual), //
+        requiresQuest(ctx, "canCompleteBarbarianFiremaking1", canCompleteBarbarianFiremaking1), //
+        requiresQuest(ctx, "canCompleteBarbarianFishing", canCompleteBarbarianFishing), //
+        has(ctx, 123), // Attack potion(2)
+        hasAnyItems(ctx, [11324, 11326]), // Roe or Caviar
+    ]);
+}
+
+function canCompleteBarbarianSmithing(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteBarbarianFishing", canCompleteBarbarianFishing), //
+        requiresQuest(ctx, "canCompleteTaiBwoWannaiTrio", canCompleteTaiBwoWannaiTrio), //
+        ( //
+            (has(ctx, 2349) && has(ctx, 1511)) // Bronze bar & Logs
+            || (has(ctx, 2351) && has(ctx, 1521)) // Iron bar & Oak Logs
+            || (has(ctx, 2353) && has(ctx, 1519)) // Steel bar & Willow Logs
+            || (has(ctx, 2359) && has(ctx, 1517)) // Mithril bar & Maple Logs
+            || (has(ctx, 2361) && has(ctx, 1515)) // Adamantite bar & Yew Logs
+            || (has(ctx, 2363) && has(ctx, 1513)) // Runite bar & Magic Logs
+        ),
+    ]);
+}
+
+function canCompleteBarbarianTraining(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteBarbarianFishing", canCompleteBarbarianFishing), //
+        requiresQuest(ctx, "canCompleteBarbarianFiremaking2", canCompleteBarbarianFiremaking2), //
+        requiresQuest(ctx, "canCompleteBarbarianFarming", canCompleteBarbarianFarming), //
+        requiresQuest(ctx, "canCompleteBarbarianSmithing", canCompleteBarbarianSmithing), //
+        requiresQuest(ctx, "canCompleteBarbarianHerblore", canCompleteBarbarianHerblore), //
+    ]);
+}
+
+function canCompleteBearYourSoul(ctx) {
+    return has(ctx, 952); // Spade
+}
+
+function canCompleteBelowIceMountain(ctx) {
+    return allTrue([
+        hasQuestPoints(ctx, 16), //
+        has(ctx, 2142), // Cooked meat
+        has(ctx, 2309), // Bread
+        has(ctx, 946), // Knife
+        hasAnyItems(ctx, [1917, 1905, 1913, 1907]), // Beer, Asgarnian ale, Dwarven stout or Wizard's mind bomb
+    ]);
+}
+
+function canCompleteBeneathCursedSands(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Agility", 62),
+        hasSkillLevel(ctx, "Crafting", 55),
+        hasSkillLevel(ctx, "Firemaking", 55),
+        requiresQuest(ctx, "canCompleteContact", canCompleteContact), //
+        has(ctx, 453), // Coal
+        has(ctx, 2351), // Iron bar
+        has(ctx, 590), // Tinderbox
+        has(ctx, 952), // Spade
+        hasAnyItems(ctx, [2136, 2134, 2132, 2138, 3226, 25833, 1859, 9978]),
+    ]);
+}
+
+function canCompleteBetweenARock(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Defence", 30),
+        hasSkillLevel(ctx, "Mining", 40),
+        hasSkillLevel(ctx, "Smithing", 50),
+        requiresQuest(ctx, "canCompleteDwarfCannon", canCompleteDwarfCannon), //
+        requiresQuest(ctx, "canCompleteFishingContest", canCompleteFishingContest), //
+        has(ctx, 2357), // Gold bar
+        has(ctx, 2347), // Hammer
+        hasUsablePickaxe(ctx), //
+    ]);
+}
+
+function canCompleteBigChompyBirdHunting(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Fletching", 5),
+        hasSkillLevel(ctx, "Cooking", 30),
+        hasSkillLevel(ctx, "Ranged", 30),
+        has(ctx, 314), // Feather
+        has(ctx, 946), // Knife
+        has(ctx, 1755), // Chisel
+        has(ctx, 1965), // Cabbage
+        has(ctx, 1982), // Tomato
+        has(ctx, 1957), // Onion
+        has(ctx, 1942), // Potato
+        has(ctx, 2128), // Equa leaves
+        has(ctx, 1573), // Doogle leaves
+        has(ctx, 2862), // Achey tree logs
+        has(ctx, 2864), // Ogre arrow shaft
+        has(ctx, 2865), // Flighted ogre arrow
+        has(ctx, 2859), // Wolf bones
+        has(ctx, 2861), // Wolfbone arrowtips
+        has(ctx, 2866), // Ogre arrow
+        has(ctx, 2876), // Raw chompy
+    ]);
+}
+
+function canCompleteBiohazard(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompletePlagueCity", canCompletePlagueCity), //
+        has(ctx, 428), // Priest gown (bottom)
+        has(ctx, 426), // Priest gown (top)
+    ]);
+}
+
+function canCompleteBlackKnightsFortress(ctx) {
+    return allTrue([
+        hasQuestPoints(ctx, 12), //
+        has(ctx, 1965), // Cabbage
+        has(ctx, 1101), // Iron chainbody
+        has(ctx, 1139), // Bronze med helm
+    ]);
+}
+
+function canCompleteBoneVoyage(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteTheDigSite", canCompleteTheDigSite), //
+        has(ctx, 2015), // Vodka
+        has(ctx, 93)   // Marrentill potion (unf)
+        // 100 kudos needed
+        // 28 kudos from natural history museum quiz
+        , // 50 from cleaning finds
+        has(ctx, 1059), // Leather gloves
+        has(ctx, 1061) // Leather boots
+        , // 22 kudos needed = 5 quests
+        countCompletableKudosquests(ctx) >= 5,
+    ]);
+}
+
+function canCompleteBurialAtSea(ctx) {
+    return false; // TODO
+}
+
+function canCompleteCabinFever(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Agility", 42),
+        hasSkillLevel(ctx, "Crafting", 45),
+        hasSkillLevel(ctx, "Smithing", 50),
+        hasSkillLevel(ctx, "Ranged", 40),
+        requiresQuest(ctx, "canCompletePiratesTreasure", canCompletePiratesTreasure), //
+        requiresQuest(ctx, "canCompleteRumDeal", canCompleteRumDeal), //
+        has(ctx, 590), // Tinderbox
+        has(ctx, 2347), // Hammer
+        has(ctx, 1941), // Swamp paste
+        has(ctx, 954), // Rope
+    ]);
+}
+
+function canCompleteChildrenOfTheSun(ctx) {
+    return true;
+}
+
+function canCompleteClientOfKourend(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteXMarksTheSpot", canCompleteXMarksTheSpot), //
+        hasAnyFeather(ctx),
+    ]);
+}
+
+function canCompleteClockTower(ctx) {
+    return hasAnyItems(ctx, [1929, 1937]); // Bucket of water or Jug of water
+}
+
+function canCompleteColdWar(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Hunter", 10),
+        hasSkillLevel(ctx, "Agility", 30),
+        hasSkillLevel(ctx, "Crafting", 30),
+        hasSkillLevel(ctx, "Construction", 34),
+        hasSkillLevel(ctx, "Thieving", 15),
+        has(ctx, 8778), // Oak plank
+        has(ctx, 1539), // Steel nails
+        has(ctx, 2347), // Hammer
+        has(ctx, 952), // Spade
+        has(ctx, 8792), // Clockwork
+        has(ctx, 960), // Plank
+        has(ctx, 950), // Silk
+        (has(ctx, 341) || requiresQuest(ctx, "canCompleteGardenOfTranquillity", canCompleteGardenOfTranquillity)), // Raw cod or Ring of Charos (a)
+        has(ctx, 1939), // Swamp tar
+        has(ctx, 8782), // Mahogany plank
+        has(ctx, 1741), // Leather
+        has(ctx, 2347), // Hammer
+        has(ctx, 314), // Feather
+    ]);
+}
+
+function canCompleteContact(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompletePrinceAliRescue", canCompletePrinceAliRescue), //
+        requiresQuest(ctx, "canCompleteIcthlarinsLittleHelper", canCompleteIcthlarinsLittleHelper), //
+    ]);
+}
+
+function canCompleteCooksAssistant(ctx) {
+    return allTrue([
+        has(ctx, 1944), // Egg
+        has(ctx, 1927), // Bucket of milk
+        has(ctx, 1933), // Pot of flour
+    ]);
+}
+
+function canCompleteCreatureOfFenkenstrain(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Crafting", 20),
+        hasSkillLevel(ctx, "Thieving", 25),
+        requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
+        has(ctx, 2355), // Silver bar
+        has(ctx, 1794), // Bronze wire
+        has(ctx, 1733), // Needle
+        has(ctx, 1734), // Thread
+        has(ctx, 952), // Spade
+    ]);
+}
+
+function canCompleteCurrentAffairs(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompletePandemonium", canCompletePandemonium), //
+        has(ctx, 973), // Charcoal
+    ]);
+}
+
+function canCompleteCurseOfTheEmptyLord(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Prayer", 31),
+        hasSkillLevel(ctx, "Thieving", 53),
+        requiresQuest(ctx, "canCompleteDesertTreasureI", canCompleteDesertTreasureI), //
+    ]);
+}
+
+function canCompleteDaddysHome(ctx) {
+    return allTrue([
+        has(ctx, 960), // Plank
+        has(ctx, 8790), // Bolt of cloth
+        hasAnyNails(ctx), //
+        has(ctx, 2347), // Hammer
+        has(ctx, 8794), // Saw
+    ]);
+}
+
+function canCompleteDarknessOfHallowvale(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Construction", 5),
+        hasSkillLevel(ctx, "Mining", 20),
+        hasSkillLevel(ctx, "Thieving", 22),
+        hasSkillLevel(ctx, "Agility", 26),
+        hasSkillLevel(ctx, "Crafting", 32),
+        hasSkillLevel(ctx, "Magic", 33),
+        hasSkillLevel(ctx, "Strength", 40),
+        requiresQuest(ctx, "canCompleteInAidOfTheMyreque", canCompleteInAidOfTheMyreque), //
+        hasAnyNails(ctx), //
+        has(ctx, 960), // Plank
+        has(ctx, 2347), // Hammer
+        has(ctx, 946), // Knife
+        hasAirRuneSource(ctx), //
+        has(ctx, 563), // Law rune
+        hasUsablePickaxe(ctx), //
+    ]);
+}
+
+function canCompleteDeathPlateau(ctx) {
+    return allTrue([
+        has(ctx, 2309), // Bread
+        has(ctx, 333), // Trout
+        has(ctx, 2351), // Iron bar
+        has(ctx, 1905), // Asgarnian ale
+        has(ctx, 3105), // Climbing boots
+    ]);
+}
+
+function canCompleteDeathToTheDorgeshuun(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Agility", 23),
+        hasSkillLevel(ctx, "Thieving", 23),
+        requiresQuest(ctx, "canCompleteTheLostTribe", canCompleteTheLostTribe), //
+        has(ctx, 4310), // Ham boots
+        has(ctx, 4304), // Ham cloak
+        has(ctx, 4308), // Ham gloves
+        has(ctx, 4302), // Ham hood
+        has(ctx, 4306), // Ham logo
+        has(ctx, 4300), // Ham robe
+        has(ctx, 4298), // Ham shirt
+    ]);
+}
+
+function canCompleteDefenderOfVarrock(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Smithing", 55),
+        hasSkillLevel(ctx, "Hunter", 52),
+        requiresQuest(ctx, "canCompleteTempleOfIkov", canCompleteTempleOfIkov), //
+        requiresQuest(ctx, "canCompleteBelowIceMountain", canCompleteBelowIceMountain), //
+        requiresQuest(ctx, "canCompleteFamilyCrest", canCompleteFamilyCrest), //
+        requiresQuest(ctx, "canCompleteGardenOfTranquillity", canCompleteGardenOfTranquillity), //
+        requiresQuest(ctx, "canCompleteWhatLiesBelow", canCompleteWhatLiesBelow), //
+        requiresQuest(ctx, "canCompleteRomeoAndJuliet", canCompleteRomeoAndJuliet), //
+        requiresQuest(ctx, "canCompleteDemonSlayer", canCompleteDemonSlayer), //
+    ]);
+}
+
+function canCompleteDemonSlayer(ctx) {
+    return allTrue([
+        has(ctx, 1929), // Bucket of water
+        has(ctx, 526), // Bones
+    ]);
+}
+
+function canCompleteDesertTreasureI(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteTheDigSite", canCompleteTheDigSite), //
+        requiresQuest(ctx, "canCompleteTempleOfIkov", canCompleteTempleOfIkov), //
+        requiresQuest(ctx, "canCompleteTheTouristTrap", canCompleteTheTouristTrap), //
+        requiresQuest(ctx, "canCompleteTrollStronghold", canCompleteTrollStronghold), //
+        requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
+        requiresQuest(ctx, "canCompleteWaterfallQuest", canCompleteWaterfallQuest), //
+        canReachTrollheim(ctx),
+        hasAnyItems(ctx, [2126, 4164]),
+        has(ctx, 1513), // Magic logs
+        has(ctx, 2353), // Steel bar
+        has(ctx, 1775), // Molten glass
+        has(ctx, 592), // Ashes
+        has(ctx, 973), // Charcoal
+        has(ctx, 565), // Blood rune
+        has(ctx, 526), // Bones
+        has(ctx, 2355), // Silver bar
+        has(ctx, 4668), // Garlic powder
+        has(ctx, 2007), // Spice
+        has(ctx, 3107), // Spiked boots
+        has(ctx, 1523), // Lockpick
+        has(ctx, 590), // Tinderbox
+    ]);
+}
+
+function canCompleteDesertTreasureII(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteDesertTreasureI", canCompleteDesertTreasureI), //
+        requiresQuest(ctx, "canCompleteSecretsOfTheNorth", canCompleteSecretsOfTheNorth), //
+        requiresQuest(ctx, "canCompleteEnakhrasLament", canCompleteEnakhrasLament), //
+        requiresQuest(ctx, "canCompleteTempleOfTheEye", canCompleteTempleOfTheEye), //
+        requiresQuest(ctx, "canCompleteGardenOfDeath", canCompleteGardenOfDeath), //
+        requiresQuest(ctx, "canCompleteBelowIceMountain", canCompleteBelowIceMountain), //
+        requiresQuest(ctx, "canCompleteHisFaithfulServants", canCompleteHisFaithfulServants), //
+        has(ctx, 560), // Death rune
+        has(ctx, 565), // Blood rune
+        has(ctx, 562), // Chaos rune
+        has(ctx, 566), // Soul rune
+        hasAirRuneSource(ctx), //
+        hasWaterRuneSource(ctx), //
+        hasFireRuneSource(ctx), //
+        has(ctx, 590), // Tinderbox
+        has(ctx, 4164), // Facemask
+        has(ctx, 233), // Pestle and mortar
+    ]);
+}
+
+function canCompleteDeviousMinds(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Smithing", 65),
+        hasSkillLevel(ctx, "Runecraft", 50),
+        hasSkillLevel(ctx, "Fletching", 50),
+        requiresQuest(ctx, "canCompleteWanted", canCompleteWanted), //
+        requiresQuest(ctx, "canCompleteTrollStronghold", canCompleteTrollStronghold), //
+        requiresQuest(ctx, "canCompleteDoricsQuest", canCompleteDoricsQuest), //
+        has(ctx, 1315), // Mithril 2h sword
+        has(ctx, 1777), // Bow string
+    ]);
+}
+
+function canCompleteDoricsQuest(ctx) {
+    return allTrue([
+        has(ctx, 440), // Iron ore
+        has(ctx, 436), // Copper ore
+        has(ctx, 434), // Clay
+    ]);
+}
+
+function canCompleteDragonSlayerI(ctx) {
+    return allTrue([
+        hasQuestPoints(ctx, 32), //
+        has(ctx, 1791), // Unfired bowl
+        has(ctx, 1761), // Soft clay
+        has(ctx, 1907), // Wizards mind bomb
+        has(ctx, 301), // Lobster pot
+        has(ctx, 950), // Silk
+        has(ctx, 1540), // Anti-dragon shield
+        has(ctx, 2347), // Hammer
+        has(ctx, 1539), // Steel nails
+        has(ctx, 960), // Plank
+    ]);
+}
+
+function canCompleteDragonSlayerII(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Magic", 75),
+        hasSkillLevel(ctx, "Smithing", 70),
+        hasSkillLevel(ctx, "Mining", 68),
+        hasSkillLevel(ctx, "Crafting", 62),
+        hasSkillLevel(ctx, "Agility", 60),
+        hasSkillLevel(ctx, "Thieving", 60),
+        hasSkillLevel(ctx, "Construction", 50),
+        hasSkillLevel(ctx, "Hitpoints", 50),
+        hasQuestPoints(ctx, 200), //
+        requiresQuest(ctx, "canCompleteLegendsQuest", canCompleteLegendsQuest), //
+        requiresQuest(ctx, "canCompleteDreamMentor", canCompleteDreamMentor), //
+        requiresQuest(ctx, "canCompleteATailOfTwoCats", canCompleteATailOfTwoCats), //
+        requiresQuest(ctx, "canCompleteAnimalMagnetism", canCompleteAnimalMagnetism), //
+        requiresQuest(ctx, "canCompleteGhostsAhoy", canCompleteGhostsAhoy), //
+        requiresQuest(ctx, "canCompleteBoneVoyage", canCompleteBoneVoyage), //
+        requiresQuest(ctx, "canCompleteClientOfKourend", canCompleteClientOfKourend), //
+        canEnterAncientCavern(ctx), //
+        has(ctx, 8778), // Oak plank
+        has(ctx, 1941), // Swamp paste
+        hasAnyNails(ctx), //
+        has(ctx, 2347), // Hammer
+        has(ctx, 975), // Machete
+        has(ctx, 8794), // Saw
+        has(ctx, 1615), // Dragonstone
+        has(ctx, 1775), // Molten glass
+        has(ctx, 1785), // Glassblowing pipe
+        has(ctx, 952), // Spade
+        has(ctx, 9075), // Astral rune
+        has(ctx, 590), // Tinderbox
+        has(ctx, 233), // Pestle and mortar
+        hasFireRuneSource(ctx), //
+        hasAirRuneSource(ctx), //
+        has(ctx, 565), // Blood rune
+        hasUsablePickaxe(ctx), //
+    ]);
+}
+
+function canCompleteDreamMentor(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteLunarDiplomacy", canCompleteLunarDiplomacy), //
+        requiresQuest(ctx, "canCompleteEadgarsRuse", canCompleteEadgarsRuse), //
+        has(ctx, 9075), // Astral rune
+        has(ctx, 590), // Tinderbox
+        has(ctx, 2347), // Hammer
+        has(ctx, 233), // Pestle and mortar
+    ]);
+}
+
+function canCompleteDruidicRitual(ctx) {
+    return allTrue([
+        has(ctx, 2136), // Raw bear meat
+        has(ctx, 2134), // Raw rat meat
+        has(ctx, 2132), // Raw beef
+        has(ctx, 2138), // Raw chicken
+    ]);
+}
+
+function canCompleteDwarfCannon(ctx) {
+    return has(ctx, 2347); // Hammer
+}
+
+function canCompleteEadgarsRuse(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Herblore", 31),
+        requiresQuest(ctx, "canCompleteDruidicRitual", canCompleteDruidicRitual), //
+        requiresQuest(ctx, "canCompleteTrollStronghold", canCompleteTrollStronghold), //
+        has(ctx, 3105), // Climbing boots
+        has(ctx, 2015), // Vodka
+        has(ctx, 2116), // Pineapple chunks
+        has(ctx, 1511), // Logs
+        has(ctx, 1947), // Grain
+        has(ctx, 2138), // Raw chicken
+        has(ctx, 233), // Pestle and mortar
+        has(ctx, 99), // Rannar potion (unf)
+    ]);
+}
+
+function canCompleteEaglesPeak(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Hunter", 27),
+        has(ctx, 1765), // Yellow dye
+        has(ctx, 1939), // Swamp tar
+    ]);
+}
+
+function canCompleteElementalWorkshopI(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Smithing", 20),
+        hasSkillLevel(ctx, "Crafting", 20),
+        has(ctx, 2347), // Hammer
+        has(ctx, 1733), // Needle
+        has(ctx, 1734), // Thread
+        has(ctx, 1741), // Leather
+        has(ctx, 453), // Coal
+    ]);
+}
+
+function canCompleteElementalWorkshopII(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Magic", 20),
+        hasSkillLevel(ctx, "Smithing", 30),
+        requiresQuest(ctx, "canCompleteElementalWorkshopI", canCompleteElementalWorkshopI),
+    ]);
+}
+
+function canCompleteEnakhrasLament(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Crafting", 50),
+        hasSkillLevel(ctx, "Firemaking", 45),
+        hasSkillLevel(ctx, "Prayer", 43),
+        hasSkillLevel(ctx, "Magic", 39),
+        has(ctx, 1755), // Chisel
+        has(ctx, 590), // Tinderbox
+        has(ctx, 36), // Candle
+        has(ctx, 1511), // Logs
+        has(ctx, 1521), // Oak logs
+        has(ctx, 1519), // Willow logs
+        has(ctx, 1517), // Maple logs
+        has(ctx, 1761), // Soft clay
+        has(ctx, 453), // Coal
+        hasAnyItems(ctx, [6977, 6971, 6973, 6975]),
+        has(ctx, 6983), // Granite (5kg)
+        hasAirRuneSource(ctx), //
+        hasFireRuneSource(ctx), //
+        hasEarthRuneSource(ctx), //
+        has(ctx, 562), // Chaos rune
+    ]);
+}
+
+function canCompleteEnlightenedJourney(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Firemaking", 20),
+        hasSkillLevel(ctx, "Farming", 30),
+        hasSkillLevel(ctx, "Crafting", 36),
+        hasQuestPoints(ctx, 20), //
+        has(ctx, 970), // Papyrus
+        has(ctx, 1759), // Ball of wool
+        has(ctx, 5438), // Potatoes(10)
+        has(ctx, 5418), // Empty sack
+        hasCandle(ctx), //
+        has(ctx, 1765), // Yellow dye
+        has(ctx, 1763), // Red dye
+        has(ctx, 950), // Silk
+        has(ctx, 1923), // Bowl
+        has(ctx, 1511), // Logs
+        has(ctx, 1511), // Logs
+        has(ctx, 5933), // Willow branch
+        has(ctx, 590), // Tinderbox
+    ]);
+}
+
+function canCompleteEnterTheAbyss(ctx) {
+    return requiresQuest(ctx, "canCompleteRuneMysteries", canCompleteRuneMysteries);
+}
+
+function canCompleteErnestTheChicken(ctx) {
+    return allTrue([
+        has(ctx, 952), // Spade
+        has(ctx, 272), // Fish food
+        has(ctx, 273), // Poison (item)
+    ]);
+}
+
+function canCompleteEthicallyAcquiredAntiquities(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Thieving", 25),
+        requiresQuest(ctx, "canCompleteChildrenOfTheSun", canCompleteChildrenOfTheSun), //
+        requiresQuest(ctx, "canCompleteShieldOfArrav", canCompleteShieldOfArrav),
+    ]);
+}
+
+function canCompleteFairytaleIGrowingPains(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteLostCity", canCompleteLostCity), //
+        requiresQuest(ctx, "canCompleteNatureSpirit", canCompleteNatureSpirit), //
+        has(ctx, 5329), // Secateurs
+        has(ctx, 952)  // Spade
+        , // TODO other item reqs?
+    ]);
+}
+
+function canCompleteFairytaleIICureAQueen(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Thieving", 40),
+        hasSkillLevel(ctx, "Farming", 49),
+        hasSkillLevel(ctx, "Herblore", 57),
+        requiresQuest(ctx, "canCompleteFairytaleIGrowingPains", canCompleteFairytaleIGrowingPains), //
+        has(ctx, 227), // Vial of water
+    ]);
+}
+
+function canCompleteFamilyCrest(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Mining", 40),
+        hasSkillLevel(ctx, "Smithing", 40),
+        hasSkillLevel(ctx, "Magic", 59),
+        hasSkillLevel(ctx, "Crafting", 40),
+        has(ctx, 315), // Shrimps
+        has(ctx, 329), // Salmon
+        has(ctx, 361), // Tuna
+        has(ctx, 365), // Bass
+        has(ctx, 373), // Swordfish
+        has(ctx, 1603), // Ruby
+        has(ctx, 1592), // Ring mould
+        has(ctx, 1597), // Necklace mould
+        has(ctx, 560), // Death rune
+        hasAirRuneSource(ctx), //
+        hasWaterRuneSource(ctx), //
+        hasEarthRuneSource(ctx), //
+        hasFireRuneSource(ctx), //
+        hasAnyItems(ctx, [185, 183, 181, 2448, 11475, 11473, 11435, 11433, 179, 177, 175, 2446, 5949, 5947, 5945, 5943, 5958, 5956, 5954, 5952, 11503, 11501, 10931, 10929, 10927, 10925, 464, 29784, 12911, 12909, 12907, 12905, 12919, 12917, 12915, 12913, 29833, 29830, 29827, 29824]),
+        hasUsablePickaxe(ctx), //
+    ]);
+}
+
+function canCompleteFamilyPest(ctx) {
+    return requiresQuest(ctx, "canCompleteFamilyCrest", canCompleteFamilyCrest);
+}
+
+function canCompleteFightArena(ctx) {
+    return true;
+}
+
+function canCompleteFishingContest(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Fishing", 10),
+        has(ctx, 1550), // Garlic
+        has(ctx, 307), // Fishing rod
+        has(ctx, 952), // Spade
+    ]);
+}
+
+function canCompleteForgettableTale(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteTheGiantDwarf", canCompleteTheGiantDwarf), //
+        requiresQuest(ctx, "canCompleteFishingContest", canCompleteFishingContest), //
+        has(ctx, 6008), // Barley malt
+        has(ctx, 1929), // Bucket of water
+        has(ctx, 5341), // Rake
+        has(ctx, 5767), // Ale yeast
+        has(ctx, 1971), // Kebab
+        has(ctx, 1917), // Beer
+        has(ctx, 1919), // Beer glass
+    ]);
+}
+
+function canCompleteGardenOfDeath(ctx) {
+    return allTrue([
+        has(ctx, 5329),
+    ]);
+}
+
+function canCompleteGardenOfTranquillity(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteCreatureOfFenkenstrain", canCompleteCreatureOfFenkenstrain), //
+        has(ctx, 5341), // Rake
+        has(ctx, 952), // Spade
+        has(ctx, 5329), // Secateurs
+        has(ctx, 5331), // Watering can
+        has(ctx, 5325), // Gardening trowel
+        has(ctx, 6036), // Plant cure
+        has(ctx, 5096), // Marigold seed
+        has(ctx, 5324), // Cabbage seed
+        has(ctx, 5319), // Onion seed
+        has(ctx, 2347), // Hammer
+        hasAnyItems(ctx, [7936, 1436]),
+        has(ctx, 233), // Pestle and mortar
+        has(ctx, 5354), // Filled plant pot
+        hasAnyItems(ctx, [6032, 6034, 21483]), // Compost, Supercompost or Ultracompost
+    ]);
+}
+
+function canCompleteGertrudesCat(ctx) {
+    return allTrue([
+        has(ctx, 1927), // Bucket of milk
+        has(ctx, 1552), // Seasoned sardine
+    ]);
+}
+
+function canCompleteGettingAhead(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Crafting", 30),
+        hasSkillLevel(ctx, "Construction", 26),
+        hasAnyItems(ctx, [948, 6814, 958]),
+        has(ctx, 1761), // Soft clay
+        has(ctx, 2347), // Hammer
+        has(ctx, 8794), // Saw
+        has(ctx, 960), // Plank
+        hasAnyNails(ctx), //
+        has(ctx, 1763), // Red dye
+        has(ctx, 1933), // Pot of flour
+        has(ctx, 946), // Knife
+    ]);
+}
+
+function canCompleteGhostsAhoy(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Agility", 25),
+        hasSkillLevel(ctx, "Cooking", 20),
+        requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
+        has(ctx, 1927), // Bucket of milk
+        has(ctx, 950), // Silk
+        has(ctx, 1763), // Red dye
+        has(ctx, 1765), // Yellow dye
+        has(ctx, 1767), // Blue dye
+        has(ctx, 952), // Spade
+        has(ctx, 845), // Oak longbow
+        has(ctx, 1921), // Bowl of water for Nettle tea
+        has(ctx, 946), // Knife
+    ]);
+}
+
+function canCompleteGoblinDiplomacy(ctx) {
+    return allTrue([
+        has(ctx, 288), // Goblin mail
+        has(ctx, 1769), // Orange dye
+        has(ctx, 1767), // Blue dye
+    ]);
+}
+
+function canCompleteGrimTales(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Farming", 45),
+        hasSkillLevel(ctx, "Herblore", 52),
+        hasSkillLevel(ctx, "Thieving", 58),
+        hasSkillLevel(ctx, "Agility", 59),
+        hasSkillLevel(ctx, "Woodcutting", 71),
+        requiresQuest(ctx, "canCompleteWitchsHouse", canCompleteWitchsHouse), //
+        has(ctx, 95), // Tarromin potion (unf)
+        hasUsableAxe(ctx),
+    ]);
+}
+
+function canCompleteHauntedMine(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Crafting", 35),
+        requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
+        has(ctx, 1755), // Chisel
+    ]);
+}
+
+function canCompleteHazeelCult(ctx) {
+    if (ctx.filters?.hazeelCultLocked) {
+        return has(ctx, 273); // Poison (item)
+    }
+    return true;
+}
+
+function canCompleteHeroesQuest(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Cooking", 53),
+        hasSkillLevel(ctx, "Fishing", 53),
+        hasSkillLevel(ctx, "Herblore", 25),
+        hasSkillLevel(ctx, "Mining", 50),
+        hasQuestPoints(ctx, 55), //
+        requiresQuest(ctx, "canCompleteLostCity", canCompleteLostCity), //
+        requiresQuest(ctx, "canCompleteMerlinsCrystal", canCompleteMerlinsCrystal), //
+        requiresQuest(ctx, "canCompleteDragonSlayerI", canCompleteDragonSlayerI), //
+        has(ctx, 307), // Fishing rod
+        has(ctx, 313), // Fishing bait
+        has(ctx, 97), // Harralander potion (unf)
+        has(ctx, 255), // Harralander
+        has(ctx, 227), // Vial of water
+        hasUsablePickaxe(ctx), //
+    ]);
+}
+
+function canCompleteHisFaithfulServants(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
+        has(ctx, 952), // Spade
+    ]);
+}
+
+function canCompleteHolyGrail(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Attack", 20),
+        requiresQuest(ctx, "canCompleteMerlinsCrystal", canCompleteMerlinsCrystal),
+    ]);
+}
+
+function canCompleteHopespearsWill(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Prayer", 50),
+        requiresQuest(ctx, "canCompleteTheRestlessGhost", canCompleteTheRestlessGhost), //
+        requiresQuest(ctx, "canCompleteDesertTreasureI", canCompleteDesertTreasureI), //
+        requiresQuest(ctx, "canCompleteFairytaleIICureAQueen", canCompleteFairytaleIICureAQueen), //
+        requiresQuest(ctx, "canCompleteLandOfTheGoblins", canCompleteLandOfTheGoblins), //
+        has(ctx, 3002), // Toadflax potion (unf)
+    ]);
+}
+
+function canCompleteHorrorFromTheDeep(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Agility", 35),
+        has(ctx, 556), // Air rune
+        has(ctx, 555), // Water rune
+        has(ctx, 557), // Earth rune
+        has(ctx, 554)  // Fire rune
+        , // This assumes ice arrows can be used and swords/longsword from an event/castle wars
+        has(ctx, 1775), // Molten glass
+        has(ctx, 590), // Tinderbox
+        has(ctx, 2347), // Hammer
+        has(ctx, 1539), // Steel nails
+        has(ctx, 1939), // Swamp tar
+        has(ctx, 960), // Plank
+    ]);
+}
+
+function canCompleteIcthlarinsLittleHelper(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteGertrudesCat", canCompleteGertrudesCat), //
+        has(ctx, 590), // Tinderbox
+        has(ctx, 1519), // Willow logs
+        (has(ctx, 4161) || (has(ctx, 1925) && has(ctx, 4689))), // Bag of salt or (Bucket and Pile of salt)
+        has(ctx, 4687), // Bucket of sap
+        has(ctx, 1823), // Waterskin(4)
+        has(ctx, 4684), // Linen
+    ]);
+}
+
+function canCompleteImpCatcher(ctx) {
+    return allTrue([
+        has(ctx, 1470), // Red bead
+        has(ctx, 1472), // Yellow bead
+        has(ctx, 1474), // Black bead
+        has(ctx, 1476), // White bead
+    ]);
+}
+
+function canCompleteImpendingChaos(ctx) {
+    return false; // TODO
+}
+
+function canCompleteInAidOfTheMyreque(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Agility", 25),
+        hasSkillLevel(ctx, "Crafting", 25),
+        hasSkillLevel(ctx, "Mining", 15),
+        hasSkillLevel(ctx, "Magic", 7),
+        requiresQuest(ctx, "canCompleteInSearchOfTheMyreque", canCompleteInSearchOfTheMyreque), //
+        has(ctx, 952), // Spade
+        has(ctx, 1925), // Bucket
+        has(ctx, 2347), // Hammer
+        has(ctx, 960), // Plank
+        hasAnyNails(ctx), //
+        has(ctx, 1941), // Swamp paste
+        hasAnyItems(ctx, [353, 355, 3363, 3365, 3367]),
+        has(ctx, 1351), // Bronze axe
+        has(ctx, 590), // Tinderbox
+        has(ctx, 2353), // Steel bar
+        has(ctx, 453), // Coal
+        has(ctx, 1761), // Soft clay
+        has(ctx, 2355), // Silver bar
+        has(ctx, 2359), // Mithril bar
+        has(ctx, 1607), // Sapphire
+        has(ctx, 954), // Rope
+        hasUsablePickaxe(ctx),
+    ]);
+}
+
+function canCompleteInSearchOfKnowledge(ctx) {
+    return hasAnyCookedMeatFish(ctx) //
+        || hasAnyItems(ctx, [6701, 1965]); // Baked potato or Cabbage
+}
+
+function canCompleteInSearchOfTheMyreque(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Agility", 25),
+        requiresQuest(ctx, "canCompleteNatureSpirit", canCompleteNatureSpirit), //
+        has(ctx, 1295), // Steel longsword
+        has(ctx, 1281), // Stel sword
+        has(ctx, 1424), // Steel mace
+        has(ctx, 1339), // Steel warhammer
+        has(ctx, 1207), // Steel dagger
+        has(ctx, 1539), // Steel nails
+        has(ctx, 2347), // Hammer
+        has(ctx, 960), // Plank
+    ]);
+}
+
+function canCompleteIntoTheTombs(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteBeneathCursedSands", canCompleteBeneathCursedSands), //
+    ]);
+}
+
+function canCompleteJunglePotion(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Herblore", 3),
+        requiresQuest(ctx, "canCompleteDruidicRitual", canCompleteDruidicRitual),
+    ]);
+}
+
+function canCompleteKingsRansom(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Magic", 45),
+        hasSkillLevel(ctx, "Defence", 65),
+        requiresQuest(ctx, "canCompleteBlackKnightsFortress", canCompleteBlackKnightsFortress), //
+        requiresQuest(ctx, "canCompleteHolyGrail", canCompleteHolyGrail), //
+        requiresQuest(ctx, "canCompleteMurderMystery", canCompleteMurderMystery), //
+        requiresQuest(ctx, "canCompleteOneSmallFavour", canCompleteOneSmallFavour), //
+        hasAnyItems(ctx, [6979, 6981, 6983]),
+        hasTelegrabRunes(ctx), //
+        (
+            requiresQuest(ctx, "canCompleteWhileGuthixSleeps", canCompleteWhileGuthixSleeps) // For full Elite black armour
+            || (
+                hasAnyItems(ctx, [1165, 2587, 2595]) // Black full helm, Black full helm (t) or Black full helm (g)
+                && hasAnyItems(ctx, [1125, 2583, 2591]) // Black platebody, Black platebody (t) or Black platebody (g)
+                && hasAnyItems(ctx, [1077, 2585, 2593, 1089, 3472, 3473]) // Black platelegs, Black platelegs (t), Black platelegs (g), Black plateskirt, Black plateskirt (t) or Black plateskirt (g)
+            )
+        ), //
+        has(ctx, 1139), // Bronze med helm
+        has(ctx, 1101), // Iron chainbody
+    ]);
+}
+
+function canCompleteLairOfTarnRazorlor(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Slayer", 40),
+        requiresQuest(ctx, "canCompleteHauntedMine", canCompleteHauntedMine), //
+    ]);
+}
+
+function canCompleteLandOfTheGoblins(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Agility", 38),
+        hasSkillLevel(ctx, "Fishing", 40),
+        hasSkillLevel(ctx, "Thieving", 45),
+        hasSkillLevel(ctx, "Herblore", 48),
+        requiresQuest(ctx, "canCompleteAnotherSliceOfHAM", canCompleteAnotherSliceOfHAM), //
+        requiresQuest(ctx, "canCompleteFishingContest", canCompleteFishingContest), //
+        has(ctx, 3002), // Toadflax potion (unf)
+        has(ctx, 288), // Goblin mail
+        has(ctx, 1765), // Yellow dye
+        has(ctx, 1767), // Blue dye
+        has(ctx, 1769), // Orange dye
+        has(ctx, 1773), // Purple dye
+        has(ctx, 229), // Vial
+        has(ctx, 233), // Pestle and mortar
+        has(ctx, 3379), // Raw slimy eel
+        has(ctx, 307), // Fishing rod
+    ]);
+}
+
+function canCompleteLegendsQuest(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Agility", 50),
+        hasSkillLevel(ctx, "Crafting", 50),
+        hasSkillLevel(ctx, "Herblore", 45),
+        hasSkillLevel(ctx, "Magic", 56),
+        hasSkillLevel(ctx, "Mining", 52),
+        hasSkillLevel(ctx, "Prayer", 42),
+        hasSkillLevel(ctx, "Smithing", 50),
+        hasSkillLevel(ctx, "Strength", 50),
+        hasSkillLevel(ctx, "Thieving", 50),
+        hasSkillLevel(ctx, "Woodcutting", 50),
+        hasQuestPoints(ctx, 107), //
+        requiresQuest(ctx, "canCompleteFamilyCrest", canCompleteFamilyCrest), //
+        requiresQuest(ctx, "canCompleteHeroesQuest", canCompleteHeroesQuest), //
+        requiresQuest(ctx, "canCompleteShiloVillage", canCompleteShiloVillage), //
+        requiresQuest(ctx, "canCompleteUndergroundPass", canCompleteUndergroundPass), //
+        requiresQuest(ctx, "canCompleteWaterfallQuest", canCompleteWaterfallQuest), //
+        hasMachete(ctx), //
+        has(ctx, 2357), // Gold bar
+        has(ctx, 2347), // Hammer
+        has(ctx, 954), // Rope
+        hasAnyItems(ctx, [1359, 6739]),
+        has(ctx, 973), // Charcoal
+        has(ctx, 970), // Papyrus
+        has(ctx, 1523), // Lockpick
+        has(ctx, 227), // Vial of water
+        has(ctx, 1607), // Sapphire
+        has(ctx, 1605), // Emerald
+        has(ctx, 1603), // Ruby
+        has(ctx, 1601), // Diamond
+        has(ctx, 1611), // Jade
+        has(ctx, 1609), // Opal
+        has(ctx, 1613), // Red topaz
+        has(ctx, 566), // Soul rune
+        has(ctx, 558), // Mind rune
+        has(ctx, 563), // Law rune
+        has(ctx, 557), // Earth rune
+        has(ctx, 567), // Unpowered orb
+        has(ctx, 564), // Cosmic rune
+        (hasAirRuneSource(ctx) || hasFireRuneSource(ctx) || hasWaterRuneSource(ctx)), //
+        hasUsablePickaxe(ctx), //
+    ]);
+}
+
+function canCompleteLostCity(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Crafting", 31),
+        hasSkillLevel(ctx, "Woodcutting", 36),
+        has(ctx, 1351), // Bronze axe
+        has(ctx, 946), // Knife
+    ]);
+}
+
+function canCompleteLunarDiplomacy(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Herblore", 5),
+        hasSkillLevel(ctx, "Crafting", 61),
+        hasSkillLevel(ctx, "Defence", 40),
+        hasSkillLevel(ctx, "Firemaking", 49),
+        hasSkillLevel(ctx, "Magic", 65),
+        hasSkillLevel(ctx, "Mining", 60),
+        hasSkillLevel(ctx, "Woodcutting", 55),
+        requiresQuest(ctx, "canCompleteTheFremennikTrials", canCompleteTheFremennikTrials), //
+        requiresQuest(ctx, "canCompleteLostCity", canCompleteLostCity), //
+        requiresQuest(ctx, "canCompleteRuneMysteries", canCompleteRuneMysteries), //
+        requiresQuest(ctx, "canCompleteShiloVillage", canCompleteShiloVillage), //
+        has(ctx, 590), // Tinderbox
+        has(ctx, 249), // Guam leaf
+        has(ctx, 251), // Marrentill
+        has(ctx, 233), // Pestle and mortar
+        has(ctx, 2347), // Hammer
+        has(ctx, 952), // Spade
+        has(ctx, 4548), // Bullseye lantern
+        hasUsableAxe(ctx), //
+        hasUsablePickaxe(ctx), //
+        (canDoGuardiansOfTheRift(ctx) //
+            || requiresQuest(ctx, "canCompleteEnterTheAbyss", canCompleteEnterTheAbyss) //
+            || (
+                hasAnyItems(ctx, [1438, 5527]) // Air talisman or Air tiara
+                && hasAnyItems(ctx, [1444, 5531]) // Water talisman or Water tiara
+                && hasAnyItems(ctx, [1440, 5535]) // Earth talisman or Earth tiara
+                && hasAnyItems(ctx, [1442, 5537]) // Fire talisman or Fire tiara
+            )
+        ),
+    ]);
+}
+
+function canCompleteMageArenaI(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Magic", 60),
+        hasAirRuneSource(ctx), //
+        hasAnyItems(ctx, [
+            558,
+            562,
+            560,
+            565,
+        ]),
+    ]);
+}
+
+function canCompleteMageArenaII(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Magic", 75),
+        requiresQuest(ctx, "canCompleteMageArenaI", canCompleteMageArenaI), //
+        has(ctx, 565), // Blood rune
+        hasAirRuneSource(ctx), //
+        hasFireRuneSource(ctx), //
+    ]);
+}
+
+function canCompleteMakingFriendsWithMyArm(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Firemaking", 66),
+        hasSkillLevel(ctx, "Mining", 72),
+        hasSkillLevel(ctx, "Construction", 35),
+        hasSkillLevel(ctx, "Agility", 68),
+        requiresQuest(ctx, "canCompleteMyArmsBigAdventure", canCompleteMyArmsBigAdventure), //
+        requiresQuest(ctx, "canCompleteSwanSong", canCompleteSwanSong), //
+        requiresQuest(ctx, "canCompleteColdWar", canCompleteColdWar), //
+        requiresQuest(ctx, "canCompleteRomeoAndJuliet", canCompleteRomeoAndJuliet), //
+        has(ctx, 1925), // Bucket
+        has(ctx, 8794), // Saw
+        has(ctx, 8790), // Bolt of cloth
+        has(ctx, 8782), // Mahogany plank
+        has(ctx, 753), // Cadava berries
+        has(ctx, 1929), // Bucket of water
+        has(ctx, 2347), // Hammer
+        has(ctx, 954), // Rope
+        hasUsablePickaxe(ctx), //
+    ]);
+}
+
+function canCompleteMakingHistory(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril),
+        has(ctx, 1694), // Sapphire amulet
+        has(ctx, 952), // Spade
+    ]);
+}
+
+function canCompleteMeatAndGreet(ctx) {
+    return requiresQuest(ctx, "canCompleteChildrenOfTheSun", canCompleteChildrenOfTheSun);
+}
+
+function canCompleteMerlinsCrystal(ctx) {
+    return allTrue([
+        has(ctx, 2309), // Bread
+        has(ctx, 590), // Tinderbox
+        has(ctx, 30), // Bucket of wax
+        has(ctx, 1925), // Bucket
+        has(ctx, 28), // Insect repellent
+        has(ctx, 530), // Bat bones
+    ]);
+}
+
+function canCompleteMisthalinMystery(ctx) {
+    return allTrue([
+        has(ctx, 1925), // Bucket
+        has(ctx, 590), // Tinderbox
+        has(ctx, 946), //
+    ]);
+}
+
+function canCompleteMonkeyMadnessI(ctx) {
+    return requiresQuest(ctx, "canCompleteTheGrandTree", canCompleteTheGrandTree) //
+        && requiresQuest(ctx, "canCompleteTreeGnomeVillage", canCompleteTreeGnomeVillage) //
+        && has(ctx, 2357) // Gold bar
+        && has(ctx, 1759) // Ball of wool
+        && has(ctx, 1963) // Bananas
+        && (has(ctx, 3183) || requiresQuest(ctx, "canCompleteJunglePotion", canCompleteJunglePotion)) // Monkey bones or Monkey corpse
+}
+
+function canCompleteMonkeyMadnessII(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Slayer", 69),
+        hasSkillLevel(ctx, "Crafting", 70),
+        hasSkillLevel(ctx, "Hunter", 60),
+        hasSkillLevel(ctx, "Agility", 55),
+        hasSkillLevel(ctx, "Thieving", 55),
+        hasSkillLevel(ctx, "Firemaking", 60),
+        requiresQuest(ctx, "canCompleteEnlightenedJourney", canCompleteEnlightenedJourney), //
+        has(ctx, 1513), // Magic logs
+        requiresQuest(ctx, "canCompleteTheEyesOfGlouphrie", canCompleteTheEyesOfGlouphrie), //
+        requiresQuest(ctx, "canCompleteRFDFreeingKingAwowogei", canCompleteRFDFreeingKingAwowogei), //
+        requiresQuest(ctx, "canCompleteTrollStronghold", canCompleteTrollStronghold), //
+        has(ctx, 2102), // Lemon
+        has(ctx, 1987), // Grapes
+        has(ctx, 1511), // Logs
+        has(ctx, 2347), // Hammer
+        has(ctx, 1755), // Chisel
+        has(ctx, 233), // Pestle and mortar
+    ]);
+}
+
+function canCompleteMonksFriend(ctx) {
+    return allTrue([
+        has(ctx, 1937), // Jug of water
+        hasAnyItems(ctx, [1511, 960]), // Logs or Plank
+    ]);
+}
+
+function canCompleteMountainDaughter(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Agility", 20),
+        has(ctx, 954), // Rope
+        has(ctx, 960), // Plank
+    ]);
+}
+
+function canCompleteMourningsEndPartI(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Ranged", 60),
+        hasSkillLevel(ctx, "Thieving", 50),
+        canStartMourningsEndPartI(ctx), //
+        has(ctx, 948), // Bear fur
+        has(ctx, 950), // Silk
+        has(ctx, 1763), // Red dye
+        has(ctx, 1765), // Yellow dye
+        has(ctx, 1771), // Green dye
+        has(ctx, 1767), // Blue dye
+        has(ctx, 1929), // Bucket of water
+        has(ctx, 314), // Feather
+        hasAnyItems(ctx, [2217, 2243]),
+        has(ctx, 1513), // Magic logs
+        has(ctx, 1741), // Leather
+        has(ctx, 3216), // Barrel
+        has(ctx, 453), // Coal
+    ]);
+}
+
+function canCompleteMourningsEndPartII(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteMourningsEndPartI", canCompleteMourningsEndPartI), //
+        has(ctx, 1755), // Chisel
+        has(ctx, 954), // Rope
+        hasDeathTalismanSource(ctx),
+    ]);
+}
+
+function canCompleteMurderMystery(ctx) {
+    return has(ctx, 1933); // Pot of flour
+}
+
+function canCompleteMyArmsBigAdventure(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Farming", 29),
+        hasSkillLevel(ctx, "Woodcutting", 10),
+        requiresQuest(ctx, "canCompleteEadgarsRuse", canCompleteEadgarsRuse), //
+        requiresQuest(ctx, "canCompleteTheFeud", canCompleteTheFeud), //
+        requiresQuest(ctx, "canCompleteJunglePotion", canCompleteJunglePotion), //
+        hasMachete(ctx), //
+        has(ctx, 1925), // Bucket
+        has(ctx, 6034), // Supercompost
+        has(ctx, 952), // Spade
+        has(ctx, 5341), // Rake
+        has(ctx, 5343), // Seed dibber
+        canReachTrollheim(ctx),
+    ]);
+}
+
+function canCompleteNatureSpirit(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
+        hasAnyItems(ctx, [2970, 2974, 2972]),
+        has(ctx, 2961), // Silver sickle
+        has(ctx, 2355), // Silver bar
+        has(ctx, 2976), // Sickle mould
+    ]);
+}
+
+function canCompleteObservatoryQuest(ctx) {
+    return allTrue([
+        has(ctx, 2349), // Bronze bar
+        has(ctx, 1775), // Molten glass
+        has(ctx, 960), // Plank
+    ]);
+}
+
+function canCompleteOlafsQuest(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Firemaking", 40),
+        hasSkillLevel(ctx, "Woodcutting", 50),
+        requiresQuest(ctx, "canCompleteTheFremennikTrials", canCompleteTheFremennikTrials),
+        has(ctx, 590), // Tinderbox
+        has(ctx, 952), // Spade
+        has(ctx, 954), // Rope
+        hasUsableAxe(ctx),
+    ]);
+}
+
+function canCompleteOneSmallFavour(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Agility", 36),
+        hasSkillLevel(ctx, "Crafting", 25),
+        hasSkillLevel(ctx, "Herblore", 18),
+        hasSkillLevel(ctx, "Smithing", 30),
+        requiresQuest(ctx, "canCompleteRuneMysteries", canCompleteRuneMysteries), //
+        requiresQuest(ctx, "canCompleteShiloVillage", canCompleteShiloVillage), //
+        has(ctx, 2353), // Steel bar
+        has(ctx, 2349), // Bronze bar
+        has(ctx, 2351), // Iron bar
+        has(ctx, 1755), // Chisel
+        has(ctx, 4419), // Guthix rest(3)
+        has(ctx, 2347), // Hammer
+        has(ctx, 1931), // Pot
+        has(ctx, 1761), // Soft clay
+        has(ctx, 1609), // Opal
+        has(ctx, 1611), // Jade
+        has(ctx, 1613), // Red topaz
+        has(ctx, 1607), // Sapphire
+        has(ctx, 4436), // Airtight pot
+    ]);
+}
+
+function canCompletePandemonium(ctx) {
+    return allTrue([
+        has(ctx, 2347), // Hammer
+        has(ctx, 8794), // Saw
+    ]);
+}
+
+function canCompletePerilousMoons(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Slayer", 48),
+        hasSkillLevel(ctx, "Hunter", 20),
+        hasSkillLevel(ctx, "Fishing", 20),
+        hasSkillLevel(ctx, "Runecraft", 20),
+        hasSkillLevel(ctx, "Construction", 10),
+        canStartPerilousMoons(ctx), //
+        has(ctx, 946), // Knife
+        has(ctx, 305), // Big fishing net
+        has(ctx, 954), // Rope
+        has(ctx, 233), // Pestle and mortar
+    ]);
+}
+
+function canCompletePiratesTreasure(ctx) {
+    return allTrue([
+        has(ctx, 1005), // White apron
+        has(ctx, 952), // Spade
+        has(ctx, 1963), // Banana
+    ]);
+}
+
+function canCompletePlagueCity(ctx) {
+    return allTrue([
+        has(ctx, 2126), // Dwellberries
+        has(ctx, 952), // Spade
+        has(ctx, 1929), // Bucket of water
+        has(ctx, 1927), // Bucket of milk
+        has(ctx, 1975), // Chocolate dust
+        has(ctx, 231), // Snape grass
+        has(ctx, 954), // Rope
+    ]);
+}
+
+function canCompletePriestInPeril(ctx) {
+    return allTrue([
+        has(ctx, 1925), // Bucket
+        hasAnyItems(ctx, [7936, 1436]),
+    ]);
+}
+
+function canCompletePrinceAliRescue(ctx) {
+    return allTrue([
+        has(ctx, 1761), // Soft clay
+        has(ctx, 1759), // Ball of wool
+        has(ctx, 1765), // Yellow dye
+        has(ctx, 1951), // Redberries
+        has(ctx, 592), // Ashes
+        hasAnyItems(ctx, [1929, 1937, 1921]),
+        has(ctx, 1933), // Pot of flour
+        has(ctx, 2349), // Bronze bar
+        has(ctx, 1013), // Pink skirt
+        has(ctx, 1917), // Beer
+        has(ctx, 954), // Rope
+    ]);
+}
+
+function canCompletePryingTimes(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompletePandemonium", canCompletePandemonium), //
+        requiresQuest(ctx, "canCompleteTheKnightsSword", canCompleteTheKnightsSword), //
+        has(ctx, 2347), // Hammer
+        has(ctx, 2325), // Redberry pie
+        has(ctx, 2353), // Steel bar
+    ]);
+}
+
+function canCompleteRagAndBoneManI(ctx) {
+    return allTrue([
+        has(ctx, 1931), // Pot
+        has(ctx, 590), // Tinderbox
+        hasAnyLog(ctx),
+    ]);
+}
+
+function canCompleteRagAndBoneManII(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Slayer", 40),
+        hasSkillLevel(ctx, "Defence", 20),
+        requiresQuest(ctx, "canCompleteRagAndBoneManI", canCompleteRagAndBoneManI), //
+        has(ctx, 1931), // Pot
+        has(ctx, 590), // Tinderbox
+        hasAnyLog(ctx), //
+        (requiresQuest(ctx, "canCompleteSkippyAndTheMogres", canCompleteSkippyAndTheMogres) || canShortrange(ctx)), //
+        (canStartZogreFleshEaters(ctx) || (hasTelegrabRunes(ctx) && canShortrange(ctx))), //
+        requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
+        requiresQuest(ctx, "canCompleteCreatureOfFenkenstrain", canCompleteCreatureOfFenkenstrain), //
+        canEnterLumbridgeSwampCaves(ctx), //
+    ]);
+}
+
+function canCompleteRatcatchers(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteIcthlarinsLittleHelper", canCompleteIcthlarinsLittleHelper), //
+        has(ctx, 1985), // Cheese
+        has(ctx, 251), // Marrentill
+        has(ctx, 235), // Unicorn horn dust
+        has(ctx, 1927), // Bucket of milk
+        has(ctx, 6055), // Weeds
+        has(ctx, 1931), // Pot
+        has(ctx, 590), // Tinderbox
+    ]);
+}
+
+function canCompleteRecipeForDisaster(ctx) {
+    return requiresQuest(ctx, "canCompleteRFDAnotherCooksQuest", canCompleteRFDAnotherCooksQuest) //
+        && requiresQuest(ctx, "canCompleteRFDFreeingTheMountainDwarf", canCompleteRFDFreeingTheMountainDwarf) //
+        && requiresQuest(ctx, "canCompleteRFDFreeingTheGoblinGenerals", canCompleteRFDFreeingTheGoblinGenerals) //
+        && requiresQuest(ctx, "canCompleteRFDFreeingPiratePete", canCompleteRFDFreeingPiratePete) //
+        && requiresQuest(ctx, "canCompleteRFDFreeingTheLumbridgeGuide", canCompleteRFDFreeingTheLumbridgeGuide) //
+        && requiresQuest(ctx, "canCompleteRFDFreeingEvilDave", canCompleteRFDFreeingEvilDave) //
+        && requiresQuest(ctx, "canCompleteRFDFreeingSkrachUglologwee", canCompleteRFDFreeingSkrachUglologwee) //
+        && requiresQuest(ctx, "canCompleteRFDFreeingSirAmikVarse", canCompleteRFDFreeingSirAmikVarse) //
+        && requiresQuest(ctx, "canCompleteRFDFreeingKingAwowogei", canCompleteRFDFreeingKingAwowogei) //
+        && requiresQuest(ctx, "canCompleteDesertTreasureI", canCompleteDesertTreasureI) //
+        && requiresQuest(ctx, "canCompleteHorrorFromTheDeep", canCompleteHorrorFromTheDeep) //
+        && hasQuestPoints(ctx, 175)
+}
+
+function canCompleteRecipeForDisaster0(ctx) {
+    return requiresQuest(ctx, "canCompleteRFDAnotherCooksQuest", canCompleteRFDAnotherCooksQuest);
+}
+
+function canCompleteRecipeForDisaster1(ctx) {
+    return countCompletableRFDSubquests(ctx) >= 1;
+}
+
+function canCompleteRecipeForDisaster2(ctx) {
+    return countCompletableRFDSubquests(ctx) >= 2;
+}
+
+function canCompleteRecipeForDisaster3(ctx) {
+    return countCompletableRFDSubquests(ctx) >= 3;
+}
+
+function canCompleteRecipeForDisaster4(ctx) {
+    return countCompletableRFDSubquests(ctx) >= 4;
+}
+
+function canCompleteRecipeForDisaster5(ctx) {
+    return countCompletableRFDSubquests(ctx) >= 5;
+}
+
+function canCompleteRecipeForDisaster6(ctx) {
+    return countCompletableRFDSubquests(ctx) >= 6;
+}
+
+function canCompleteRecipeForDisaster7(ctx) {
+    return countCompletableRFDSubquests(ctx) >= 7;
+}
+
+function canCompleteRecipeForDisaster8(ctx) {
+    return countCompletableRFDSubquests(ctx) >= 8;
+}
+
+function canCompleteRecipeForDisasterCulinaromancer(ctx) {
+    return requiresQuest(ctx, "canCompleteRecipeForDisaster", canCompleteRecipeForDisaster);
+}
+
+function canCompleteRecruitmentDrive(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteBlackKnightsFortress", canCompleteBlackKnightsFortress), //
+        requiresQuest(ctx, "canCompleteDruidicRitual", canCompleteDruidicRitual), //
+        hasAnyItems(ctx, [946, 1755, 1794]), // Knife, Chisel or Bronze wire
+    ]);
+}
+
+function canCompleteRegicide(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Crafting", 10),
+        hasSkillLevel(ctx, "Agility", 56),
+        requiresQuest(ctx, "canCompleteUndergroundPass", canCompleteUndergroundPass), //
+        , // Bow and arrows needed, but thats a huge one... TODO
+        has(ctx, 453), // Coal
+        has(ctx, 954), // Rope
+        has(ctx, 952), // Spade
+        has(ctx, 3211), // Limestone
+        has(ctx, 590), // Tinderbox
+        has(ctx, 1759), // Ball of wool
+        has(ctx, 233), // Pestle and mortar
+        has(ctx, 1931), // Pot
+        hasAnyItems(ctx, [3228, 7223]), // Cooked rabbit or Roast rabbit
+    ]);
+}
+
+function canCompleteRFDAnotherCooksQuest(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteCooksAssistant", canCompleteCooksAssistant), //
+        has(ctx, 221), // Eye of newt
+        has(ctx, 1909), // Greenman's ale
+        has(ctx, 2084), // Fruit blast
+        has(ctx, 592), // Ashes
+    ]);
+}
+
+function canCompleteRFDFreeingEvilDave(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteRFDAnotherCooksQuest", canCompleteRFDAnotherCooksQuest), //
+        requiresQuest(ctx, "canCompleteGertrudesCat", canCompleteGertrudesCat), //
+        requiresQuest(ctx, "canCompleteShadowOfTheStorm", canCompleteShadowOfTheStorm), //
+        has(ctx, 2003), // Stew
+    ]);
+}
+
+function canCompleteRFDFreeingKingAwowogei(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Cooking", 70),
+        hasSkillLevel(ctx, "Agility", 48),
+        requiresQuest(ctx, "canCompleteRFDAnotherCooksQuest", canCompleteRFDAnotherCooksQuest), //
+        requiresQuest(ctx, "canCompleteMonkeyMadnessI", canCompleteMonkeyMadnessI), //
+        has(ctx, 954), // Rope
+        hasSlashWeapon(ctx), //
+        has(ctx, 233), // Pestle and mortar
+    ]);
+}
+
+function canCompleteRFDFreeingPiratePete(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Cooking", 31),
+        requiresQuest(ctx, "canCompleteRFDAnotherCooksQuest", canCompleteRFDAnotherCooksQuest), //
+        has(ctx, 341), // Raw cod
+        has(ctx, 233), // Pestle and mortar
+        has(ctx, 2309), // Bread
+        has(ctx, 6667), // Empty fishbowl
+        has(ctx, 1794), // Bronze wire
+        has(ctx, 1733), // Needle
+        has(ctx, 946), // Knife
+    ]);
+}
+
+function canCompleteRFDFreeingSirAmikVarse(ctx) {
+    return allTrue([
+        hasQuestPoints(ctx, 107),
+        requiresQuest(ctx, "canCompleteRFDAnotherCooksQuest", canCompleteRFDAnotherCooksQuest), //
+        canStartLegendsQuest(ctx), //
+        canReachKharaziJungle(ctx), //
+        has(ctx, 1927), // Bucket of milk
+        has(ctx, 2130), // Pot of cream
+        has(ctx, 7468), // Pot of cornflour
+        has(ctx, 2138), // Raw chicken
+        has(ctx, 233), // Pestle and mortar
+    ]);
+}
+
+function canCompleteRFDFreeingSkrachUglologwee(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Cooking", 41),
+        hasSkillLevel(ctx, "Firemaking", 20),
+        requiresQuest(ctx, "canCompleteRFDAnotherCooksQuest", canCompleteRFDAnotherCooksQuest), //
+        requiresQuest(ctx, "canCompleteBigChompyBirdHunting", canCompleteBigChompyBirdHunting), //
+        has(ctx, 2876), // Raw chompy
+        has(ctx, 7225), // Iron spit
+        has(ctx, 1759), // Ball of wool
+        has(ctx, 7566), // Raw Jubbly
+    ]);
+}
+
+function canCompleteRFDFreeingTheGoblinGenerals(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteRFDAnotherCooksQuest", canCompleteRFDAnotherCooksQuest), //
+        requiresQuest(ctx, "canCompleteGoblinDiplomacy", canCompleteGoblinDiplomacy), //
+        has(ctx, 2309), // Bread
+        has(ctx, 2112), // Orange slices
+        (hasAnyItems(ctx, [1767, 1771, 1773]) || (has(ctx, 229) && has(ctx, 233))), // Blue dye, Green dye, Purple dye or a Vial and Pestle and mortar for black dye
+        hasAnyItems(ctx, [2007, 2169]),
+        has(ctx, 313), // Fishing bait
+        has(ctx, 1929), // Bucket of water
+        has(ctx, 973), // Charcoal
+    ]);
+}
+
+function canCompleteRFDFreeingTheLumbridgeGuide(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Cooking", 40),
+        requiresQuest(ctx, "canCompleteRFDAnotherCooksQuest", canCompleteRFDAnotherCooksQuest), //
+        requiresQuest(ctx, "canCompleteBigChompyBirdHunting", canCompleteBigChompyBirdHunting), //
+        requiresQuest(ctx, "canCompleteBiohazard", canCompleteBiohazard), //
+        requiresQuest(ctx, "canCompleteDemonSlayer", canCompleteDemonSlayer), //
+        requiresQuest(ctx, "canCompleteMurderMystery", canCompleteMurderMystery), //
+        requiresQuest(ctx, "canCompleteNatureSpirit", canCompleteNatureSpirit), //
+        requiresQuest(ctx, "canCompleteWitchsHouse", canCompleteWitchsHouse), //
+        has(ctx, 1927), // Bucket of milk
+        has(ctx, 1944), // Egg
+        has(ctx, 1933), // Pot of flour
+        has(ctx, 1887), // Cake tin
+    ]);
+}
+
+function canCompleteRFDFreeingTheMountainDwarf(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteRFDAnotherCooksQuest", canCompleteRFDAnotherCooksQuest), //
+        requiresQuest(ctx, "canCompleteFishingContest", canCompleteFishingContest), //
+        has(ctx, 1944), // Egg
+        has(ctx, 1927), // Bucket of milk
+        has(ctx, 1933), // Pot of flour
+        has(ctx, 1921), // Bowl of water
+        has(ctx, 1905), // Asgarnian ale
+    ]);
+}
+
+function canCompleteRogueTrader(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteTheFeud", canCompleteTheFeud), //
+        requiresQuest(ctx, "canCompleteRuneMysteries", canCompleteRuneMysteries), //
+        requiresQuest(ctx, "canCompleteIcthlarinsLittleHelper", canCompleteIcthlarinsLittleHelper), //
+        countDyes(ctx) >= 3, //
+        hasAnyItems(ctx, [1739, 958, 6289, 948, 1737]),
+    ]);
+}
+
+function canCompleteRomeoAndJuliet(ctx) {
+    return has(ctx, 753); // Cadava berries
+}
+
+function canCompleteRovingElves(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteRegicide", canCompleteRegicide), //
+        requiresQuest(ctx, "canCompleteWaterfallQuest", canCompleteWaterfallQuest), //
+        has(ctx, 952), // Spade
+        has(ctx, 954), // Rope
+    ]);
+}
+
+function canCompleteRoyalTrouble(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteThroneOfMiscellania", canCompleteThroneOfMiscellania), //
+        has(ctx, 954), // Rope
+        has(ctx, 453), // Coal
+        has(ctx, 960), // Plank
+    ]);
+}
+
+function canCompleteRumDeal(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Crafting", 42),
+        hasSkillLevel(ctx, "Farming", 40),
+        hasSkillLevel(ctx, "Prayer", 47),
+        hasSkillLevel(ctx, "Slayer", 42),
+        hasSkillLevel(ctx, "Fishing", 50),
+        requiresQuest(ctx, "canCompleteZogreFleshEaters", canCompleteZogreFleshEaters), //
+        requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
+        has(ctx, 5341), // Rake
+        has(ctx, 1925), // Bucket
+    ]);
+}
+
+function canCompleteRuneMysteries(ctx) {
+    return has(ctx, 1438); // Air talisman
+}
+
+function canCompleteScorpionCatcher(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Prayer", 31),
+    ]);
+}
+
+function canCompleteScrambled(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Construction", 38),
+        hasSkillLevel(ctx, "Cooking", 36),
+        hasSkillLevel(ctx, "Smithing", 35),
+        requiresQuest(ctx, "canCompleteChildrenOfTheSun", canCompleteChildrenOfTheSun), //
+        has(ctx, 1921), // Bowl of water
+        hasAnyNails(ctx), //
+        has(ctx, 2347), // Hammer
+        has(ctx, 8794), // Saw
+        has(ctx, 960), // Plank
+    ]);
+}
+
+function canCompleteSeaSlug(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Firemaking", 30),
+        has(ctx, 1941), // Swamp paste
+        has(ctx, 596), // Unlit torch
+    ]);
+}
+
+function canCompleteSecretsOfTheNorth(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Agility", 69),
+        hasSkillLevel(ctx, "Thieving", 64),
+        hasSkillLevel(ctx, "Hunter", 56),
+        requiresQuest(ctx, "canCompleteMakingFriendsWithMyArm", canCompleteMakingFriendsWithMyArm), //
+        requiresQuest(ctx, "canCompleteTheGeneralsShadow", canCompleteTheGeneralsShadow), //
+        requiresQuest(ctx, "canCompleteDeviousMinds", canCompleteDeviousMinds), //
+        has(ctx, 1523), // Lockpick
+        has(ctx, 590), // Tinderbox
+    ]);
+}
+
+function canCompleteShadesOfMortton(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Crafting", 20),
+        hasSkillLevel(ctx, "Herblore", 15),
+        hasSkillLevel(ctx, "Firemaking", 5),
+        requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
+        has(ctx, 3410), // Serum 207 (3)
+        has(ctx, 95), // Tarromin potion (unf) (might not be needed?)
+        has(ctx, 592), // Ashes (might not be needed?)
+        has(ctx, 590), // Tinderbox (might not be needed?)
+        has(ctx, 1511), // Logs (might not be needed?)
+        hasAnyItems(ctx, [2347, 3678]),
+        hasAnyItems(ctx, [3438, 3440, 3442, 6211, 10808, 3444, 6213, 31383, 3446, 3448, 31386, 19672, 31389]),
+        has(ctx, 3396), // Loar remains
+    ]);
+}
+
+function canCompleteShadowOfTheStorm(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Crafting", 30),
+        requiresQuest(ctx, "canCompleteDemonSlayer", canCompleteDemonSlayer), //
+        requiresQuest(ctx, "canCompleteTheGolem", canCompleteTheGolem), //
+        (has(ctx, 229) && has(ctx, 233)), // Vial and Pestle and mortar for black dye
+        has(ctx, 2355), // Silver bar
+    ]);
+}
+
+function canCompleteShadowsOfCustodia(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Slayer", 54),
+        hasSkillLevel(ctx, "Fishing", 45),
+        hasSkillLevel(ctx, "Construction", 41),
+        hasSkillLevel(ctx, "Hunter", 36),
+        has(ctx, 847), // Willow longbow
+        has(ctx, 1517), // Maple logs
+        has(ctx, 2347), // Hammer
+        has(ctx, 307), // Fishing rod
+    ]);
+}
+
+function canCompleteSheepHerder(ctx) {
+    return true;
+}
+
+function canCompleteSheepShearer(ctx) {
+    return has(ctx, 1759); // Ball of wool
+}
+
+function canCompleteShieldOfArrav(ctx) {
+    return true;
+}
+
+function canCompleteShiloVillage(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Crafting", 20),
+        hasSkillLevel(ctx, "Agility", 32),
+        requiresQuest(ctx, "canCompleteJunglePotion", canCompleteJunglePotion), //
+        has(ctx, 952), // Spade
+        has(ctx, 954), // Rope
+        has(ctx, 1794), // Bronze wire
+        has(ctx, 1755), // Chisel
+        has(ctx, 526), // Bones
+    ]);
+}
+
+function canCompleteSinsOfTheFather(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Woodcutting", 62),
+        hasSkillLevel(ctx, "Fletching", 60),
+        hasSkillLevel(ctx, "Crafting", 56),
+        hasSkillLevel(ctx, "Agility", 52),
+        hasSkillLevel(ctx, "Attack", 50),
+        hasSkillLevel(ctx, "Slayer", 50),
+        hasSkillLevel(ctx, "Magic", 49),
+        requiresQuest(ctx, "canCompleteVampyreSlayer", canCompleteVampyreSlayer), //
+        requiresQuest(ctx, "canCompleteATasteOfHope", canCompleteATasteOfHope), //
+        has(ctx, 1603), // Ruby
+        has(ctx, 1755), // Chisel
+        has(ctx, 2347), // Hammer
+        has(ctx, 946), // Knife
+        hasUsableAxe(ctx),
+    ]);
+}
+
+function canCompleteSkippyAndTheMogres(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Cooking", 20),
+        has(ctx, 1929), // Bucket of water
+        has(ctx, 1927), // Bucket of milk
+        has(ctx, 1975), // Chocolate dust
+        has(ctx, 1921), // Bowl of water
+        has(ctx, 231), // Snape grass
+    ]);
+}
+
+function canCompleteSleepingGiants(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Smithing", 15),
+        hasAnyNails(ctx), //
+        has(ctx, 2142), // Oak logs
+        has(ctx, 2309), // Wool
+        has(ctx, 2347), // Hammer
+        has(ctx, 1755), // Chisel
+        (has(ctx, 1929) || hasAnyPickaxe(ctx)),  // Bucket of water or Ice gloves
+    ]);
+}
+
+function canCompleteSongOfTheElves(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Agility", 70),
+        hasSkillLevel(ctx, "Construction", 70),
+        hasSkillLevel(ctx, "Farming", 70),
+        hasSkillLevel(ctx, "Herblore", 70),
+        hasSkillLevel(ctx, "Hunter", 70),
+        hasSkillLevel(ctx, "Mining", 70),
+        hasSkillLevel(ctx, "Smithing", 70),
+        hasSkillLevel(ctx, "Woodcutting", 70),
+        requiresQuest(ctx, "canCompleteMourningsEndPartII", canCompleteMourningsEndPartII), //
+        requiresQuest(ctx, "canCompleteMakingHistory", canCompleteMakingHistory), //
+        requiresQuest(ctx, "canCompleteDruidicRitual", canCompleteDruidicRitual), //
+        has(ctx, 1157), // Steel full helm
+        has(ctx, 1119), // Steel platebody
+        has(ctx, 1069), // Steel platelegs
+        has(ctx, 1763), // Red dye
+        has(ctx, 1773), // Purple dye
+        has(ctx, 950), // Silk
+        has(ctx, 2363), // Runite bar
+        has(ctx, 3420), // Limestone brick
+        has(ctx, 590), // Tinderbox
+        has(ctx, 954), // Rope
+        has(ctx, 561), // Nature rune
+        hasAnyItems(ctx, [2472, 2462, 2466, 2464, 2470, 2468, 2460, 2476, 2474, 259]),
+        has(ctx, 1111), // Adamant chainbody
+        hasAnyItems(ctx, [245, 2450]),
+        hasAnyItems(ctx, [869, 1217]),
+        has(ctx, 5301), // Cadantine seed
+        has(ctx, 227), // Vial of water
+        has(ctx, 233), // Pestle and mortar
+        has(ctx, 2347), // Hammer
+        has(ctx, 8794), // Saw
+        has(ctx, 952), // Spade
+        hasUsableAxe(ctx),
+        hasUsablePickaxe(ctx), //
+    ]);
+}
+
+function canCompleteSpiritsOfTheElid(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Magic", 33),
+        hasSkillLevel(ctx, "Ranged", 37),
+        hasSkillLevel(ctx, "Mining", 37),
+        hasSkillLevel(ctx, "Thieving", 37),
+        hasTelegrabRunes(ctx), //
+        has(ctx, 1733), // Needle
+        has(ctx, 1734), // Thread
+        has(ctx, 946), // Knife
+        has(ctx, 954), // Rope
+        canShortrange(ctx),
+        hasUsablePickaxe(ctx), //
+    ]);
+}
+
+function canCompleteSwanSong(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Magic", 66),
+        hasSkillLevel(ctx, "Cooking", 62),
+        hasSkillLevel(ctx, "Fishing", 62),
+        hasSkillLevel(ctx, "Smithing", 45),
+        hasSkillLevel(ctx, "Firemaking", 42),
+        hasSkillLevel(ctx, "Crafting", 40),
+        requiresQuest(ctx, "canCompleteOneSmallFavour", canCompleteOneSmallFavour), //
+        requiresQuest(ctx, "canCompleteGardenOfTranquillity", canCompleteGardenOfTranquillity), //
+        hasQuestPoints(ctx, 100),
+        has(ctx, 4695), // Mist rune
+        has(ctx, 4699), // Lava rune
+        has(ctx, 565), // Blood rune
+        has(ctx, 4436), // Airtight pot
+        has(ctx, 2351), // Iron bar
+        hasAnyLog(ctx), //
+        has(ctx, 590), // Tinderbox
+        has(ctx, 2347), // Hammer
+        has(ctx, 303), // Small fishing net
+        has(ctx, 1757), // Brown apron
+        has(ctx, 7944), // Raw monkfish
+        has(ctx, 526), // Bones
+    ]);
+}
+
+function canCompleteTaiBwoWannaiTrio(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteJunglePotion", canCompleteJunglePotion), //
+        hasSlashWeapon(ctx), //
+        has(ctx, 3162), // Sliced banana
+        has(ctx, 303)  // Small fishing net
+        , // && has(ctx, 233) // Pestle and mortar not needed because crusher guy in Nardah
+        has(ctx, 3032), // Agility potion(4)
+        canShortrange(ctx), //
+        has(ctx, 3125), // Jogre bones
+        has(ctx, 401), // Seaweed
+        (
+            has(ctx, 1239)    // Iron spear
+            && has(ctx, 1241) // Steel spear
+            && has(ctx, 1243) // Mithril spear
+            && has(ctx, 1245) // Adamant spear
+            && has(ctx, 1247) // Rune spear
+            && has(ctx, 1249) // Dragon spear
+        ),
+        has(ctx, 3157), // Karambwan vessel
+        has(ctx, 3159), // Karambwan vessel (baited)
+        has(ctx, 3142), // Raw Karambwan
+    ]);
+}
+
+function canCompleteTaleOfTheRighteous(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteClientOfKourend", canCompleteClientOfKourend), //
+        has(ctx, 954), // Rope
+        hasAirRuneSource(ctx), //
+        hasAnyItems(ctx, [558, 562, 560, 565]), // Mind rune, Chaos rune, Death rune or Blood rune
+        hasUsablePickaxe(ctx), //
+    ]);
+}
+
+function canCompleteTearsOfGuthix(ctx) {
+    return allTrue([
+        hasQuestPoints(ctx, 43), //
+        has(ctx, 4548), // Bullseye lantern
+        has(ctx, 1607), // Sapphire
+        has(ctx, 1755), // Chisel
+        has(ctx, 590), // Tinderbox
+        canEnterLumbridgeSwampCaves(ctx), //
+        hasUsablePickaxe(ctx), //
+    ]);
+}
+
+function canCompleteTempleOfIkov(ctx) {
+    return allTrue([
+        has(ctx, 225), // Limpwurt root
+        hasAnyItems(ctx, [864, 870, 863, 865, 869, 866, 867, 868, 5667, 22804, 806, 807, 813, 808, 3093, 809, 810, 816, 811, 817, 11230, 6522, 10033, 10034, 11959, 800, 801, 802, 803, 804, 805, 20849, 857, 855, 10282, 861, 859, 10284, 11235]),
+    ]);
+}
+
+function canCompleteTempleOfTheEye(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteRuneMysteries", canCompleteRuneMysteries), //
+        has(ctx, 1929), // Bucket of water
+        has(ctx, 1755), // Chisel
+    ]);
+}
+
+function canCompleteTheAscentOfArceuus(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteClientOfKourend", canCompleteClientOfKourend),
+    ]);
+}
+
+function canCompleteTheCorsairCurse(ctx) {
+    return allTrue([
+        has(ctx, 590), // Tinderbox
+        has(ctx, 952), // Spade
+    ]);
+}
+
+function canCompleteTheCurseOfArrav(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteDefenderOfVarrock", canCompleteDefenderOfVarrock), //
+        requiresQuest(ctx, "canCompleteTrollRomance", canCompleteTrollRomance), //
+        has(ctx, 2126), // Dwellberries
+        has(ctx, 2570), // Ring of life
+        has(ctx, 9419), // Mith grapple
+        has(ctx, 7159), // Insulated boots
+        hasUsablePickaxe(ctx), //
+    ]);
+}
+
+function canCompleteTheDepthsOfDespair(ctx) {
+    return requiresQuest(ctx, "canCompleteClientOfKourend", canCompleteClientOfKourend);
+}
+
+function canCompleteTheDigSite(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteDruidicRitual", canCompleteDruidicRitual), //
+        has(ctx, 233), // Pestle and mortar
+        has(ctx, 229), // Vial
+        has(ctx, 590), // Tinderbox
+        hasCupOfTea(ctx), //
+        has(ctx, 954), // Rope
+        hasAnyItems(ctx, [1609, 1625]),
+        has(ctx, 973), // Charcoal
+    ]);
+}
+
+function canCompleteTheEnchantedKey(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteMakingHistory", canCompleteMakingHistory), //
+        has(ctx, 952), // Spade
+    ]);
+}
+
+function canCompleteTheEyesOfGlouphrie(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteTheGrandTree", canCompleteTheGrandTree), //
+        has(ctx, 4687), // Bucket of sap
+        has(ctx, 4698), // Mud rune
+        has(ctx, 1517), // Maple logs
+        has(ctx, 1521), // Oak logs
+        has(ctx, 2347), // Hammer
+        has(ctx, 8794), // Saw
+        has(ctx, 233), // Pestle and mortar
+    ]);
+}
+
+function canCompleteTheFeud(ctx) {
+    return allTrue([
+        has(ctx, 4591), // Kharidian headpiece
+        has(ctx, 4593), // Fake beard
+        has(ctx, 1917), // Beer
+        has(ctx, 1925), // Bucket
+    ]);
+}
+
+function canCompleteTheFinalDawn(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteTheHeartOfDarkness", canCompleteTheHeartOfDarkness), //
+        requiresQuest(ctx, "canCompletePerilousMoons", canCompletePerilousMoons), //
+        has(ctx, 946), // Knife
+        has(ctx, 1917), // Beer
+        hasAnyItems(ctx, [3183, 4834, 4832, 3123, 31726, 22124, 2859, 22780, 28899, 6812, 4812, 534, 530, 532, 526, 528, 6729, 536, 22783, 4830, 31729, 22786, 3125, 11943, 2136, 2134, 2132, 25833, 10816, 2142]),
+    ]);
+}
+
+function canCompleteTheForsakenTower(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteClientOfKourend", canCompleteClientOfKourend),
+        has(ctx, 590), // Tinderbox
+    ]);
+}
+
+function canCompleteTheFremennikExiles(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteTheFremennikIsles", canCompleteTheFremennikIsles), //
+        requiresQuest(ctx, "canCompleteLunarDiplomacy", canCompleteLunarDiplomacy), //
+        requiresQuest(ctx, "canCompleteMountainDaughter", canCompleteMountainDaughter), //
+        requiresQuest(ctx, "canCompleteHeroesQuest", canCompleteHeroesQuest), //
+        has(ctx, 4156), // Mirror shield
+        has(ctx, 3801), // Keg of beer
+        has(ctx, 1775), // Molten glass
+        has(ctx, 9075), // Astral rune
+        hasAnyItems(ctx, [307, 309]),
+        has(ctx, 2347), // Hammer
+        has(ctx, 1785), // Glassblowing pipe
+    ]);
+}
+
+function canCompleteTheFremennikIsles(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteTheFremennikTrials", canCompleteTheFremennikTrials), //
+        has(ctx, 359), // Raw tuna
+        (ctx.player.levels.Mining === 1 //
+            ? has(ctx, 438) // Tin ore
+            : ctx.player.levels.Mining <= 54 //
+                ? has(ctx, 453) // Coal
+                : has(ctx, 447)), // Mithril ore
+        has(ctx, 10812), // Split log
+        has(ctx, 10826), // Neitiznot shield
+        has(ctx, 10824), // Yak-hide armour (legs)
+        has(ctx, 10822), // Yak-hide armour (top)
+        has(ctx, 954), // Rope
+    ]);
+}
+
+function canCompleteTheFremennikTrials(ctx) {
+    return has(ctx, 1917) // Beer
+        && has(ctx, 590)  // Tinderbox
+        && hasAnyItems(ctx, [383, 389, 395]); // Raw shark, Raw sea turtle or Raw manta ray
+}
+
+function canCompleteTheFrozenDoor(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteDesertTreasureI", canCompleteDesertTreasureI), //
+        canDoKreearra(ctx), //
+        canDoGeneralGraardor(ctx), //
+        canDoCommanderZilyana(ctx), //
+        canDoKrilTsutsaroth(ctx),
+    ]);
+}
+
+function canCompleteTheGardenOfDeath(ctx) {
+    return allTrue([
+        has(ctx, 5329), // Secateurs
+    ]);
+}
+
+function canCompleteTheGeneralsShadow(ctx) {
+    return requiresQuest(ctx, "canCompleteCurseOfTheEmptyLord", canCompleteCurseOfTheEmptyLord);
+}
+
+function canCompleteTheGiantDwarf(ctx) {
+    return allTrue([
+        has(ctx, 563), // Law rune
+        hasAirRuneSource(ctx), //
+        hasAnyLog(ctx), //
+        has(ctx, 453), // Coal
+        has(ctx, 2351), // Iron bar
+        has(ctx, 1607), // Sapphire
+        has(ctx, 2325), // Redberry pie
+        has(ctx, 590), // Tinderbox
+    ]);
+}
+
+function canCompleteTheGolem(ctx) {
+    return allTrue([
+        has(ctx, 229), // Vial
+        has(ctx, 233), // Pestle and mortar
+        has(ctx, 1761), // Soft clay
+        has(ctx, 970), // Papyrus
+    ]);
+}
+
+function canCompleteTheGrandTree(ctx) {
+    return true;
+}
+
+function canCompleteTheGreatBrainRobbery(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteCreatureOfFenkenstrain", canCompleteCreatureOfFenkenstrain), //
+        requiresQuest(ctx, "canCompleteCabinFever", canCompleteCabinFever), //
+        requiresQuest(ctx, "canCompleteRFDFreeingPiratePete", canCompleteRFDFreeingPiratePete), //
+        has(ctx, 10891), // Wooden cat
+        has(ctx, 2347), // Hammer
+        hasAnyNails(ctx), //
+        has(ctx, 960), // Plank
+        has(ctx, 1718), // Holy symbol
+    ]);
+}
+
+function canCompleteTheHandInTheSand(ctx) {
+    return allTrue([
+        has(ctx, 1917), // Beer
+        has(ctx, 229), // Vial
+        has(ctx, 1951), // Redberries
+        has(ctx, 239), // White berries
+        has(ctx, 4542), // Lantern lens
+        has(ctx, 1783), // Bucket of sand
+        has(ctx, 557), // Earth rune
+    ]);
+}
+
+function canCompleteTheHeartOfDarkness(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Mining", 55), //
+        hasSkillLevel(ctx, "Thieving", 48), //
+        hasSkillLevel(ctx, "Slayer", 48), //
+        hasSkillLevel(ctx, "Agility", 46), //
+        hasUsablePickaxe(ctx), //
+    ]);
+}
+
+function canCompleteTheKnightsSword(ctx) {
+    return allTrue([
+        has(ctx, 2351), // Iron bar
+        has(ctx, 2325), // Redberry pie
+        hasUsablePickaxe(ctx),
+    ]);
+}
+
+function canCompleteTheLostTribe(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Agility", 13),
+        hasSkillLevel(ctx, "Thieving", 13),
+        hasSkillLevel(ctx, "Mining", 17),
+        requiresQuest(ctx, "canCompleteGoblinDiplomacy", canCompleteGoblinDiplomacy), //
+        requiresQuest(ctx, "canCompleteRuneMysteries", canCompleteRuneMysteries), //
+        hasUsablePickaxe(ctx), //
+    ]); //
+}
+
+function canCompleteThePathOfGlouphrie(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteTheEyesOfGlouphrie", canCompleteTheEyesOfGlouphrie), //
+        requiresQuest(ctx, "canCompleteWaterfallQuest", canCompleteWaterfallQuest), //
+        requiresQuest(ctx, "canCompleteTreeGnomeVillage", canCompleteTreeGnomeVillage), //
+        has(ctx, 9419), // Mith Grapple (Phoenix crossbow is available)
+    ]);
+}
+
+function canCompleteTheQueenOfThieves(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteClientOfKourend", canCompleteClientOfKourend),
+        has(ctx, 2003), // Stew
+    ]);
+}
+
+function canCompleteTheRedReef(ctx) {
+    return false; // TODO
+}
+
+function canCompleteTheRestlessGhost(ctx) {
+    return true;
+}
+
+function canCompleteTheRibbitingTaleOfALilyPadLabourDispute(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Woodcutting", 15),
+        requiresQuest(ctx, "canCompleteChildrenOfTheSun", canCompleteChildrenOfTheSun),
+        hasUsableAxe(ctx),
+    ]);
+}
+
+function canCompleteTheSlugMenace(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteWanted", canCompleteWanted), //
+        requiresQuest(ctx, "canCompleteSeaSlug", canCompleteSeaSlug), //
+        has(ctx, 1941), // Swamp paste
+        hasAnyItems(ctx, [1436, 7936]),
+        has(ctx, 1755), // Chisel
+        (
+            canDoGuardiansOfTheRift(ctx) //
+            || requiresQuest(ctx, "canCompleteEnterTheAbyss", canCompleteEnterTheAbyss) //
+            || (
+                hasAnyItems(ctx, [1438, 5527]) // Air talisman or Air tiara
+                && hasAnyItems(ctx, [1444, 5531]) // Water talisman or Water tiara
+                && hasAnyItems(ctx, [1440, 5535]) // Earth talisman or Earth tiara
+                && hasAnyItems(ctx, [1442, 5537]) // Fire talisman or Fire tiara
+            )
+        ),
+    ]);
+}
+
+function canCompleteTheTouristTrap(ctx) {
+    return allTrue([
+        has(ctx, 1833), // Desert shirt
+        has(ctx, 1835), // Desert robe
+        has(ctx, 1837), // Desert boots
+        has(ctx, 2347), // Hammer
+        has(ctx, 2349), // Bronze bar
+        has(ctx, 314), // Feather
+    ]);
+}
+
+function canCompleteThroneOfMiscellania(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteHeroesQuest", canCompleteHeroesQuest), //
+        requiresQuest(ctx, "canCompleteTheFremennikTrials", canCompleteTheFremennikTrials), //
+        has(ctx, 2351), // Iron bar
+        hasAnyItems(ctx, [1635, 1637, 1639, 1641, 1643]),
+        has(ctx, 1511), // Logs
+    ]);
+}
+
+function canCompleteTowerOfLife(ctx) {
+    return allTrue([
+        has(ctx, 2347), // Hammer
+        has(ctx, 8794), // Saw
+        has(ctx, 1917), // Beer
+    ]);
+}
+
+function canCompleteTreeGnomeVillage(ctx) {
+    return has(ctx, 1511); // Logs
+}
+
+function canCompleteTrollRomance(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteTrollStronghold", canCompleteTrollStronghold), //
+        has(ctx, 2351), // Iron bar
+        hasAnyItems(ctx, [1517, 1515]),
+        canReachTrollheim(ctx), //
+        has(ctx, 30), // Bucket of wax
+        has(ctx, 1887), // Cake tin
+        has(ctx, 1939), // Swamp tar
+        has(ctx, 954), // Rope
+    ]);
+}
+
+function canCompleteTrollStronghold(ctx) {
+    return requiresQuest(ctx, "canCompleteDeathPlateau", canCompleteDeathPlateau);
+}
+
+function canCompleteTroubledTortugans(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompletePandemonium", canCompletePandemonium), //
+        hasUsableAxe(ctx),
+        has(ctx, 401), // Seaweed
+    ]);
+}
+
+function canCompleteTwilightsPromise(ctx) {
+    return canShortrange(ctx);
+}
+
+function canCompleteUndergroundPass(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Ranged", 25),
+        requiresQuest(ctx, "canCompleteBiohazard", canCompleteBiohazard) //
+        , // Bow and arrows needed, but thats a huge one... TODO
+        has(ctx, 954), // Rope
+        has(ctx, 952), // Spade
+        has(ctx, 1925), // Bucket
+        has(ctx, 590), // Tinderbox
+    ]);
+}
+
+function canCompleteVampyreSlayer(ctx) {
+    return allTrue([
+        has(ctx, 1917), // Beer
+        has(ctx, 2347), // Hammer
+        has(ctx, 1550), // Garlic
+    ]);
+}
+
+function canCompleteWanted(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteRecruitmentDrive", canCompleteRecruitmentDrive), //
+        requiresQuest(ctx, "canCompleteTheLostTribe", canCompleteTheLostTribe), //
+        requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
+        requiresQuest(ctx, "canCompleteEnterTheAbyss", canCompleteEnterTheAbyss), //
+        hasAnyItems(ctx, [7936, 1436]),
+        hasQuestPoints(ctx, 32),
+    ]);
+}
+
+function canCompleteWatchtower(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Magic", 14),
+        hasSkillLevel(ctx, "Thieving", 15),
+        hasSkillLevel(ctx, "Agility", 25),
+        hasSkillLevel(ctx, "Herblore", 14),
+        hasSkillLevel(ctx, "Mining", 40),
+        has(ctx, 560), // Death rune
+        has(ctx, 2357), // Gold bar
+        has(ctx, 536), // Dragon bones
+        has(ctx, 954), // Rope
+        has(ctx, 91), // Guam potion (unf)
+        has(ctx, 233), // Pestle and mortar
+        has(ctx, 530), // Bat bones
+        has(ctx, 247), // Jangerberries
+        hasUsablePickaxe(ctx), //
+    ]);
+}
+
+function canCompleteWaterfallQuest(ctx) {
+    return allTrue([
+        has(ctx, 556), // Air rune
+        has(ctx, 555), // Water rune
+        has(ctx, 557), // Earth rune
+        has(ctx, 954), // Rope
+    ]);
+}
+
+function canCompleteWhatLiesBelow(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Runecraft", 35),
+        requiresQuest(ctx, "canCompleteRuneMysteries", canCompleteRuneMysteries), //
+        has(ctx, 1923), // Bowl
+        has(ctx, 562), // Chaos rune
+        (
+            hasAnyItems(ctx, [1452, 5543]) // Chaos talisman or Chaos tiara
+            || requiresQuest(ctx, "canCompleteEnterTheAbyss", canCompleteEnterTheAbyss) //
+            || canDoGuardiansOfTheRift(ctx)
+        ),
+    ]);
+}
+
+function canCompleteWhileGuthixSleeps(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Thieving", 72),
+        hasSkillLevel(ctx, "Magic", 67),
+        hasSkillLevel(ctx, "Agility", 66),
+        hasSkillLevel(ctx, "Farming", 65),
+        hasSkillLevel(ctx, "Herblore", 65),
+        hasSkillLevel(ctx, "Hunter", 62),
+        hasQuestPoints(ctx, 180), //
+        requiresQuest(ctx, "canCompleteDefenderOfVarrock", canCompleteDefenderOfVarrock), //
+        requiresQuest(ctx, "canCompleteThePathOfGlouphrie", canCompleteThePathOfGlouphrie), //
+        requiresQuest(ctx, "canCompleteDreamMentor", canCompleteDreamMentor), //
+        requiresQuest(ctx, "canCompleteTheHandInTheSand", canCompleteTheHandInTheSand), //
+        requiresQuest(ctx, "canCompleteWanted", canCompleteWanted), //
+        requiresQuest(ctx, "canCompleteTempleOfTheEye", canCompleteTempleOfTheEye), //
+        requiresQuest(ctx, "canCompleteTearsOfGuthix", canCompleteTearsOfGuthix), //
+        requiresQuest(ctx, "canCompleteNatureSpirit", canCompleteNatureSpirit), //
+        requiresQuest(ctx, "canCompleteATailOfTwoCats", canCompleteATailOfTwoCats), //
+        has(ctx, 946), // Knife
+        has(ctx, 4542), // Lantern lens
+        has(ctx, 567), // Unpowered orb
+        has(ctx, 1139), // Bronze med helm
+        has(ctx, 1101), // Iron chainbody
+        has(ctx, 4548), // Bullseye lantern
+        has(ctx, 1607), // Sapphire
+        has(ctx, 1951), // Redberries
+        has(ctx, 239), // White berries
+        hasAirRuneSource(ctx), //
+        has(ctx, 564), // Cosmic rune
+        has(ctx, 9075), // Astral rune
+        hasWaterRuneSource(ctx), //
+        hasEarthRuneSource(ctx), //
+        hasFireRuneSource(ctx), //
+        hasAnyItems(ctx, [559, 566]),
+        has(ctx, 561), // Nature rune
+        has(ctx, 563), // Law rune
+        has(ctx, 558), // Mind rune
+        has(ctx, 560), // Death rune
+        has(ctx, 2970), // Mort myre fungus
+        hasAnyLog(ctx), //
+        has(ctx, 5300), // Snapdragon seed
+        has(ctx, 2430), // Restore potion(4)
+        has(ctx, 970), // Papyrus
+        has(ctx, 973), // Charcoal
+    ]);
+}
+
+function canCompleteWitchsHouse(ctx) {
+    return has(ctx, 1985); // Cheese
+}
+
+function canCompleteWitchsPotion(ctx) {
+    return allTrue([
+        has(ctx, 221), // Eye of newt
+        has(ctx, 1957), // Onion
+    ]);
+}
+
+function canCompleteXMarksTheSpot(ctx) {
+    return has(ctx, 952); // Spade
+}
+
+function canCompleteZogreFleshEaters(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Smithing", 4),
+        hasSkillLevel(ctx, "Herblore", 8),
+        hasSkillLevel(ctx, "Ranged", 30),
+        requiresQuest(ctx, "canCompleteBigChompyBirdHunting", canCompleteBigChompyBirdHunting), //
+        requiresQuest(ctx, "canCompleteJunglePotion", canCompleteJunglePotion), //
+    ]);
+}
+
 function hasAFullBarrowsSet(ctx) {
     return (has(ctx, 4757) && has(ctx, 4755) && has(ctx, 4753) && has(ctx, 4759)) //
         || (has(ctx, 4708) && has(ctx, 4712) && has(ctx, 4714) && has(ctx, 4710)) //
@@ -2182,20 +4717,6 @@ function canDoMageTrainingArena(ctx) {
         && hasFireRuneSource(ctx);
 }
 
-function canCompleteBeneathCursedSands(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Agility", 62),
-        hasSkillLevel(ctx, "Crafting", 55),
-        hasSkillLevel(ctx, "Firemaking", 55),
-        requiresQuest(ctx, "canCompleteContact", canCompleteContact), //
-        has(ctx, 453), // Coal
-        has(ctx, 2351), // Iron bar
-        has(ctx, 590), // Tinderbox
-        has(ctx, 952), // Spade
-        hasAnyItems(ctx, [2136, 2134, 2132, 2138, 3226, 25833, 1859, 9978]),
-    ]);
-}
-
 function hasAnyFeather(ctx) {
     return hasAnyItems(ctx, [
         314,
@@ -2232,45 +4753,6 @@ function hasAnyLantern(ctx) {
         );
 }
 
-function canCompleteContact(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompletePrinceAliRescue", canCompletePrinceAliRescue), //
-        requiresQuest(ctx, "canCompleteIcthlarinsLittleHelper", canCompleteIcthlarinsLittleHelper), //
-    ]);
-}
-
-function canCompleteTowerOfLife(ctx) {
-    return allTrue([
-        has(ctx, 2347), // Hammer
-        has(ctx, 8794), // Saw
-        has(ctx, 1917), // Beer
-    ]);
-}
-
-function canCompletePrinceAliRescue(ctx) {
-    return allTrue([
-        has(ctx, 1761), // Soft clay
-        has(ctx, 1759), // Ball of wool
-        has(ctx, 1765), // Yellow dye
-        has(ctx, 1951), // Redberries
-        has(ctx, 592), // Ashes
-        hasAnyItems(ctx, [1929, 1937, 1921]),
-        has(ctx, 1933), // Pot of flour
-        has(ctx, 2349), // Bronze bar
-        has(ctx, 1013), // Pink skirt
-        has(ctx, 1917), // Beer
-        has(ctx, 954), // Rope
-    ]);
-}
-
-function canCompleteHauntedMine(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Crafting", 35),
-        requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
-        has(ctx, 1755), // Chisel
-    ]);
-}
-
 function canEnterLumbridgeSwampCaves(ctx) {
     return has(ctx, 954) // Rope
         || canStartTheLostTribe(ctx) && canTrainMining(ctx);
@@ -2287,36 +4769,6 @@ function canStartMourningsEndPartI(ctx) {
         && requiresQuest(ctx, "canCompleteRovingElves", canCompleteRovingElves) //
         && requiresQuest(ctx, "canCompleteBigChompyBirdHunting", canCompleteBigChompyBirdHunting) //
         && requiresQuest(ctx, "canCompleteSheepHerder", canCompleteSheepHerder);
-}
-
-function canCompleteMourningsEndPartI(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Ranged", 60),
-        hasSkillLevel(ctx, "Thieving", 50),
-        canStartMourningsEndPartI(ctx), //
-        has(ctx, 948), // Bear fur
-        has(ctx, 950), // Silk
-        has(ctx, 1763), // Red dye
-        has(ctx, 1765), // Yellow dye
-        has(ctx, 1771), // Green dye
-        has(ctx, 1767), // Blue dye
-        has(ctx, 1929), // Bucket of water
-        has(ctx, 314), // Feather
-        hasAnyItems(ctx, [2217, 2243]),
-        has(ctx, 1513), // Magic logs
-        has(ctx, 1741), // Leather
-        has(ctx, 3216), // Barrel
-        has(ctx, 453), // Coal
-    ]);
-}
-
-function canCompleteMourningsEndPartII(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteMourningsEndPartI", canCompleteMourningsEndPartI), //
-        has(ctx, 1755), // Chisel
-        has(ctx, 954), // Rope
-        hasDeathTalismanSource(ctx),
-    ]);
 }
 
 function hasDeathTalismanSource(ctx) {
@@ -2375,125 +4827,6 @@ function has50JunkItems(ctx) {
         && has(ctx, 227)  // Vial of water
         && has(ctx, 1005) // White apron
         && has(ctx, 239); // White berries
-}
-
-function canCompleteSheepHerder(ctx) {
-    return true;
-}
-
-function canCompleteRovingElves(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteRegicide", canCompleteRegicide), //
-        requiresQuest(ctx, "canCompleteWaterfallQuest", canCompleteWaterfallQuest), //
-        has(ctx, 952), // Spade
-        has(ctx, 954), // Rope
-    ]);
-}
-
-function canCompleteRegicide(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Crafting", 10),
-        hasSkillLevel(ctx, "Agility", 56),
-        requiresQuest(ctx, "canCompleteUndergroundPass", canCompleteUndergroundPass), //
-        , // Bow and arrows needed, but thats a huge one... TODO
-        has(ctx, 453), // Coal
-        has(ctx, 954), // Rope
-        has(ctx, 952), // Spade
-        has(ctx, 3211), // Limestone
-        has(ctx, 590), // Tinderbox
-        has(ctx, 1759), // Ball of wool
-        has(ctx, 233), // Pestle and mortar
-        has(ctx, 1931), // Pot
-        hasAnyItems(ctx, [3228, 7223]), // Cooked rabbit or Roast rabbit
-    ]);
-}
-
-function canCompleteEaglesPeak(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Hunter", 27),
-        has(ctx, 1765), // Yellow dye
-        has(ctx, 1939), // Swamp tar
-    ]);
-}
-
-function canCompleteWatchtower(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Magic", 14),
-        hasSkillLevel(ctx, "Thieving", 15),
-        hasSkillLevel(ctx, "Agility", 25),
-        hasSkillLevel(ctx, "Herblore", 14),
-        hasSkillLevel(ctx, "Mining", 40),
-        has(ctx, 560), // Death rune
-        has(ctx, 2357), // Gold bar
-        has(ctx, 536), // Dragon bones
-        has(ctx, 954), // Rope
-        has(ctx, 91), // Guam potion (unf)
-        has(ctx, 233), // Pestle and mortar
-        has(ctx, 530), // Bat bones
-        has(ctx, 247), // Jangerberries
-        hasUsablePickaxe(ctx), //
-    ]);
-}
-
-function canCompleteUndergroundPass(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Ranged", 25),
-        requiresQuest(ctx, "canCompleteBiohazard", canCompleteBiohazard) //
-        , // Bow and arrows needed, but thats a huge one... TODO
-        has(ctx, 954), // Rope
-        has(ctx, 952), // Spade
-        has(ctx, 1925), // Bucket
-        has(ctx, 590), // Tinderbox
-    ]);
-}
-
-function canCompleteBelowIceMountain(ctx) {
-    return allTrue([
-        hasQuestPoints(ctx, 16), //
-        has(ctx, 2142), // Cooked meat
-        has(ctx, 2309), // Bread
-        has(ctx, 946), // Knife
-        hasAnyItems(ctx, [1917, 1905, 1913, 1907]), // Beer, Asgarnian ale, Dwarven stout or Wizard's mind bomb
-    ]);
-}
-
-function canCompleteSleepingGiants(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Smithing", 15),
-        hasAnyNails(ctx), //
-        has(ctx, 2142), // Oak logs
-        has(ctx, 2309), // Wool
-        has(ctx, 2347), // Hammer
-        has(ctx, 1755), // Chisel
-        (has(ctx, 1929) || hasAnyPickaxe(ctx)),  // Bucket of water or Ice gloves
-    ]);
-}
-
-function canCompleteTheFinalDawn(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteTheHeartOfDarkness", canCompleteTheHeartOfDarkness), //
-        requiresQuest(ctx, "canCompletePerilousMoons", canCompletePerilousMoons), //
-        has(ctx, 946), // Knife
-        has(ctx, 1917), // Beer
-        hasAnyItems(ctx, [3183, 4834, 4832, 3123, 31726, 22124, 2859, 22780, 28899, 6812, 4812, 534, 530, 532, 526, 528, 6729, 536, 22783, 4830, 31729, 22786, 3125, 11943, 2136, 2134, 2132, 25833, 10816, 2142]),
-    ]);
-}
-
-function canCompleteShadesOfMortton(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Crafting", 20),
-        hasSkillLevel(ctx, "Herblore", 15),
-        hasSkillLevel(ctx, "Firemaking", 5),
-        requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
-        has(ctx, 3410), // Serum 207 (3)
-        has(ctx, 95), // Tarromin potion (unf) (might not be needed?)
-        has(ctx, 592), // Ashes (might not be needed?)
-        has(ctx, 590), // Tinderbox (might not be needed?)
-        has(ctx, 1511), // Logs (might not be needed?)
-        hasAnyItems(ctx, [2347, 3678]),
-        hasAnyItems(ctx, [3438, 3440, 3442, 6211, 10808, 3444, 6213, 31383, 3446, 3448, 31386, 19672, 31389]),
-        has(ctx, 3396), // Loar remains
-    ]);
 }
 
 function canBurnLoarShades(ctx) {
@@ -2770,14 +5103,6 @@ function canEnterCraftingGuild(ctx) {
         && has(ctx, 1757); // Brown apron
 }
 
-function canCompleteMisthalinMystery(ctx) {
-    return allTrue([
-        has(ctx, 1925), // Bucket
-        has(ctx, 590), // Tinderbox
-        has(ctx, 946), //
-    ]);
-}
-
 function hasAnyFletchableLog(ctx) {
     return hasAnyItems(ctx, [
         1511,
@@ -2855,53 +5180,6 @@ function canEnterAncientCavern(ctx) {
     return requiresQuest(ctx, "canCompleteBarbarianFiremaking1", canCompleteBarbarianFiremaking1);
 }
 
-function canCompleteBarbarianFiremaking1(ctx) {
-    return allTrue([
-        has(ctx, 1521), // Oak logs
-        hasAnyItems(ctx, [841, 839, 843, 845, 849, 847, 853, 851, 857, 855, 861, 859]),
-    ]);
-}
-
-function canCompleteBarbarianFiremaking2(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteBarbarianFiremaking1", canCompleteBarbarianFiremaking1), //
-        has(ctx, 590), // Tinderbox
-        hasAnyLog(ctx),
-    ]);
-}
-
-function canCompleteBarbarianFishing(ctx) {
-    return allTrue([
-        has(ctx, 11323), // Barbarian rod
-        hasAnyFeather(ctx),
-    ]);
-}
-
-function canCompleteBarbarianHerblore(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteDruidicRitual", canCompleteDruidicRitual), //
-        requiresQuest(ctx, "canCompleteBarbarianFiremaking1", canCompleteBarbarianFiremaking1), //
-        requiresQuest(ctx, "canCompleteBarbarianFishing", canCompleteBarbarianFishing), //
-        has(ctx, 123), // Attack potion(2)
-        hasAnyItems(ctx, [11324, 11326]), // Roe or Caviar
-    ]);
-}
-
-function canCompleteBarbarianSmithing(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteBarbarianFishing", canCompleteBarbarianFishing), //
-        requiresQuest(ctx, "canCompleteTaiBwoWannaiTrio", canCompleteTaiBwoWannaiTrio), //
-        ( //
-            (has(ctx, 2349) && has(ctx, 1511)) // Bronze bar & Logs
-            || (has(ctx, 2351) && has(ctx, 1521)) // Iron bar & Oak Logs
-            || (has(ctx, 2353) && has(ctx, 1519)) // Steel bar & Willow Logs
-            || (has(ctx, 2359) && has(ctx, 1517)) // Mithril bar & Maple Logs
-            || (has(ctx, 2361) && has(ctx, 1515)) // Adamantite bar & Yew Logs
-            || (has(ctx, 2363) && has(ctx, 1513)) // Runite bar & Magic Logs
-        ),
-    ]);
-}
-
 function canFishKarambwan(ctx) {
     return requiresQuest(ctx, "canCompleteJunglePotion", canCompleteJunglePotion) //
         && has(ctx, 3157) // Karambwan vessel
@@ -2933,31 +5211,6 @@ function canGetKPSpears(ctx) {
         )
 }
 
-function canCompleteTaiBwoWannaiTrio(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteJunglePotion", canCompleteJunglePotion), //
-        hasSlashWeapon(ctx), //
-        has(ctx, 3162), // Sliced banana
-        has(ctx, 303)  // Small fishing net
-        , // && has(ctx, 233) // Pestle and mortar not needed because crusher guy in Nardah
-        has(ctx, 3032), // Agility potion(4)
-        canShortrange(ctx), //
-        has(ctx, 3125), // Jogre bones
-        has(ctx, 401), // Seaweed
-        (
-            has(ctx, 1239)    // Iron spear
-            && has(ctx, 1241) // Steel spear
-            && has(ctx, 1243) // Mithril spear
-            && has(ctx, 1245) // Adamant spear
-            && has(ctx, 1247) // Rune spear
-            && has(ctx, 1249) // Dragon spear
-        ),
-        has(ctx, 3157), // Karambwan vessel
-        has(ctx, 3159), // Karambwan vessel (baited)
-        has(ctx, 3142), // Raw Karambwan
-    ]);
-}
-
 function canDoZulrah(ctx) {
     return canShortrange(ctx) //
         && requiresQuest(ctx, "canCompleteRegicide", canCompleteRegicide);
@@ -2968,40 +5221,6 @@ function canStartAtFirstLight(ctx) {
         && canTrainHerblore(ctx) //
         && canTrainConstruction(ctx) //
         && requiresQuest(ctx, "canCompleteEaglesPeak", canCompleteEaglesPeak); //
-}
-
-function canCompleteAtFirstLight(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Hunter", 46),
-        hasSkillLevel(ctx, "Herblore", 30),
-        hasSkillLevel(ctx, "Construction", 27),
-        requiresQuest(ctx, "canCompleteEaglesPeak", canCompleteEaglesPeak), //
-        has(ctx, 4055), // Toy mouse (wound)
-        has(ctx, 29166), // Jerboa tail
-        has(ctx, 2347), // Hammer
-    ]);
-}
-
-function canCompleteTheFrozenDoor(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteDesertTreasureI", canCompleteDesertTreasureI), //
-        canDoKreearra(ctx), //
-        canDoGeneralGraardor(ctx), //
-        canDoCommanderZilyana(ctx), //
-        canDoKrilTsutsaroth(ctx),
-    ]);
-}
-
-function canCompleteMakingHistory(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril),
-        has(ctx, 1694), // Sapphire amulet
-        has(ctx, 952), // Spade
-    ]);
-}
-
-function canCompleteMeatAndGreet(ctx) {
-    return requiresQuest(ctx, "canCompleteChildrenOfTheSun", canCompleteChildrenOfTheSun);
 }
 
 function canSailToTheNorthernOcean(ctx) {
@@ -3109,66 +5328,6 @@ function hasAccessToWyvernProtection(ctx) {
         );
 }
 
-function canCompleteAnimalMagnetism(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Slayer", 18),
-        hasSkillLevel(ctx, "Crafting", 19),
-        hasSkillLevel(ctx, "Ranged", 30),
-        hasSkillLevel(ctx, "Woodcutting", 35),
-        requiresQuest(ctx, "canCompleteErnestTheChicken", canCompleteErnestTheChicken), //
-        requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
-        has(ctx, 1355), // Mithril axe
-        has(ctx, 2351), // Iron bar
-        has(ctx, 2347), // Hammer
-        has(ctx, 1743), // Hard leather
-        has(ctx, 1718), // Holy symbol
-        has(ctx, 10496), // Polished buttons
-        has(ctx, 1931), // Pot
-    ]);
-}
-
-function canCompleteErnestTheChicken(ctx) {
-    return allTrue([
-        has(ctx, 952), // Spade
-        has(ctx, 272), // Fish food
-        has(ctx, 273), // Poison (item)
-    ]);
-}
-
-function canCompleteDeathToTheDorgeshuun(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Agility", 23),
-        hasSkillLevel(ctx, "Thieving", 23),
-        requiresQuest(ctx, "canCompleteTheLostTribe", canCompleteTheLostTribe), //
-        has(ctx, 4310), // Ham boots
-        has(ctx, 4304), // Ham cloak
-        has(ctx, 4308), // Ham gloves
-        has(ctx, 4302), // Ham hood
-        has(ctx, 4306), // Ham logo
-        has(ctx, 4300), // Ham robe
-        has(ctx, 4298), // Ham shirt
-    ]);
-}
-
-function canCompleteTheLostTribe(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Agility", 13),
-        hasSkillLevel(ctx, "Thieving", 13),
-        hasSkillLevel(ctx, "Mining", 17),
-        requiresQuest(ctx, "canCompleteGoblinDiplomacy", canCompleteGoblinDiplomacy), //
-        requiresQuest(ctx, "canCompleteRuneMysteries", canCompleteRuneMysteries), //
-        hasUsablePickaxe(ctx), //
-    ]); //
-}
-
-function canCompleteGoblinDiplomacy(ctx) {
-    return allTrue([
-        has(ctx, 288), // Goblin mail
-        has(ctx, 1769), // Orange dye
-        has(ctx, 1767), // Blue dye
-    ]);
-}
-
 function canStartPerilousMoons(ctx) {
     return requiresQuest(ctx, "canCompleteTwilightsPromise", canCompleteTwilightsPromise) //
         && canTrainHunter(ctx) //
@@ -3177,71 +5336,10 @@ function canStartPerilousMoons(ctx) {
         && canTrainConstruction(ctx);
 }
 
-function canCompleteTwilightsPromise(ctx) {
-    return canShortrange(ctx);
-}
-
-function canCompletePerilousMoons(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Slayer", 48),
-        hasSkillLevel(ctx, "Hunter", 20),
-        hasSkillLevel(ctx, "Fishing", 20),
-        hasSkillLevel(ctx, "Runecraft", 20),
-        hasSkillLevel(ctx, "Construction", 10),
-        canStartPerilousMoons(ctx), //
-        has(ctx, 946), // Knife
-        has(ctx, 305), // Big fishing net
-        has(ctx, 954), // Rope
-        has(ctx, 233), // Pestle and mortar
-    ]);
-}
-
-function canCompletePiratesTreasure(ctx) {
-    return allTrue([
-        has(ctx, 1005), // White apron
-        has(ctx, 952), // Spade
-        has(ctx, 1963), // Banana
-    ]);
-}
-
 function canReachGemRocks(ctx) {
     return requiresQuest(ctx, "canCompletePandemonium", canCompletePandemonium) //
         || requiresQuest(ctx, "canCompleteShiloVillage", canCompleteShiloVillage) //
         || canReachLunarIsle(ctx);
-}
-
-function canCompleteLunarDiplomacy(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Herblore", 5),
-        hasSkillLevel(ctx, "Crafting", 61),
-        hasSkillLevel(ctx, "Defence", 40),
-        hasSkillLevel(ctx, "Firemaking", 49),
-        hasSkillLevel(ctx, "Magic", 65),
-        hasSkillLevel(ctx, "Mining", 60),
-        hasSkillLevel(ctx, "Woodcutting", 55),
-        requiresQuest(ctx, "canCompleteTheFremennikTrials", canCompleteTheFremennikTrials), //
-        requiresQuest(ctx, "canCompleteLostCity", canCompleteLostCity), //
-        requiresQuest(ctx, "canCompleteRuneMysteries", canCompleteRuneMysteries), //
-        requiresQuest(ctx, "canCompleteShiloVillage", canCompleteShiloVillage), //
-        has(ctx, 590), // Tinderbox
-        has(ctx, 249), // Guam leaf
-        has(ctx, 251), // Marrentill
-        has(ctx, 233), // Pestle and mortar
-        has(ctx, 2347), // Hammer
-        has(ctx, 952), // Spade
-        has(ctx, 4548), // Bullseye lantern
-        hasUsableAxe(ctx), //
-        hasUsablePickaxe(ctx), //
-        (canDoGuardiansOfTheRift(ctx) //
-            || requiresQuest(ctx, "canCompleteEnterTheAbyss", canCompleteEnterTheAbyss) //
-            || (
-                hasAnyItems(ctx, [1438, 5527]) // Air talisman or Air tiara
-                && hasAnyItems(ctx, [1444, 5531]) // Water talisman or Water tiara
-                && hasAnyItems(ctx, [1440, 5535]) // Earth talisman or Earth tiara
-                && hasAnyItems(ctx, [1442, 5537]) // Fire talisman or Fire tiara
-            )
-        ),
-    ]);
 }
 
 function canReachLunarIsle(ctx) {
@@ -3261,19 +5359,6 @@ function canReachPiratesCove(ctx) {
         && canTrainWoodcutting(ctx); //
 }
 
-function canCompleteShiloVillage(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Crafting", 20),
-        hasSkillLevel(ctx, "Agility", 32),
-        requiresQuest(ctx, "canCompleteJunglePotion", canCompleteJunglePotion), //
-        has(ctx, 952), // Spade
-        has(ctx, 954), // Rope
-        has(ctx, 1794), // Bronze wire
-        has(ctx, 1755), // Chisel
-        has(ctx, 526), // Bones
-    ]);
-}
-
 function canFishFromRewardPool(ctx) {
     return hasAnyItems(ctx, [
         305,
@@ -3281,70 +5366,11 @@ function canFishFromRewardPool(ctx) {
     ]) // Small fishing net
 }
 
-function canCompleteEnterTheAbyss(ctx) {
-    return requiresQuest(ctx, "canCompleteRuneMysteries", canCompleteRuneMysteries);
-}
-
-function canCompleteForgettableTale(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteTheGiantDwarf", canCompleteTheGiantDwarf), //
-        requiresQuest(ctx, "canCompleteFishingContest", canCompleteFishingContest), //
-        has(ctx, 6008), // Barley malt
-        has(ctx, 1929), // Bucket of water
-        has(ctx, 5341), // Rake
-        has(ctx, 5767), // Ale yeast
-        has(ctx, 1971), // Kebab
-        has(ctx, 1917), // Beer
-        has(ctx, 1919), // Beer glass
-    ]);
-}
-
-function canCompleteRuneMysteries(ctx) {
-    return has(ctx, 1438); // Air talisman
-}
-
-function canCompleteFairytaleIGrowingPains(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteLostCity", canCompleteLostCity), //
-        requiresQuest(ctx, "canCompleteNatureSpirit", canCompleteNatureSpirit), //
-        has(ctx, 5329), // Secateurs
-        has(ctx, 952)  // Spade
-        , // TODO other item reqs?
-    ]);
-}
-
-function canCompleteFairytaleIICureAQueen(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Thieving", 40),
-        hasSkillLevel(ctx, "Farming", 49),
-        hasSkillLevel(ctx, "Herblore", 57),
-        requiresQuest(ctx, "canCompleteFairytaleIGrowingPains", canCompleteFairytaleIGrowingPains), //
-        has(ctx, 227), // Vial of water
-    ]);
-}
-
 function canDoGuardiansOfTheRift(ctx) {
     return requiresQuest(ctx, "canCompleteTempleOfTheEye", canCompleteTempleOfTheEye);
 }
 
-function canCompleteLostCity(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Crafting", 31),
-        hasSkillLevel(ctx, "Woodcutting", 36),
-        has(ctx, 1351), // Bronze axe
-        has(ctx, 946), // Knife
-    ]);
-}
 
-function canCompleteNatureSpirit(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
-        hasAnyItems(ctx, [2970, 2974, 2972]),
-        has(ctx, 2961), // Silver sickle
-        has(ctx, 2355), // Silver bar
-        has(ctx, 2976), // Sickle mould
-    ]);
-}
 
 const DYES = [
     hasRedDye,
@@ -3383,16 +5409,6 @@ function countDyes(ctx) {
     return DYES.filter(fn => fn(ctx)).length;
 }
 
-function canCompleteRogueTrader(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteTheFeud", canCompleteTheFeud), //
-        requiresQuest(ctx, "canCompleteRuneMysteries", canCompleteRuneMysteries), //
-        requiresQuest(ctx, "canCompleteIcthlarinsLittleHelper", canCompleteIcthlarinsLittleHelper), //
-        countDyes(ctx) >= 3, //
-        hasAnyItems(ctx, [1739, 958, 6289, 948, 1737]),
-    ]);
-}
-
 function canUseSilverSickle(ctx) {
     return requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril) //
         && canTrainCrafting(ctx) //
@@ -3401,190 +5417,8 @@ function canUseSilverSickle(ctx) {
         && has(ctx, 2976); // Sickle mould
 }
 
-function canCompleteTempleOfTheEye(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteRuneMysteries", canCompleteRuneMysteries), //
-        has(ctx, 1929), // Bucket of water
-        has(ctx, 1755), // Chisel
-    ]);
-}
-
-function canCompleteDeathPlateau(ctx) {
-    return allTrue([
-        has(ctx, 2309), // Bread
-        has(ctx, 333), // Trout
-        has(ctx, 2351), // Iron bar
-        has(ctx, 1905), // Asgarnian ale
-        has(ctx, 3105), // Climbing boots
-    ]);
-}
-
-function canCompleteRoyalTrouble(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteThroneOfMiscellania", canCompleteThroneOfMiscellania), //
-        has(ctx, 954), // Rope
-        has(ctx, 453), // Coal
-        has(ctx, 960), // Plank
-    ]);
-}
-
-function canCompleteTheTouristTrap(ctx) {
-    return allTrue([
-        has(ctx, 1833), // Desert shirt
-        has(ctx, 1835), // Desert robe
-        has(ctx, 1837), // Desert boots
-        has(ctx, 2347), // Hammer
-        has(ctx, 2349), // Bronze bar
-        has(ctx, 314), // Feather
-    ]);
-}
-
-function canCompleteThroneOfMiscellania(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteHeroesQuest", canCompleteHeroesQuest), //
-        requiresQuest(ctx, "canCompleteTheFremennikTrials", canCompleteTheFremennikTrials), //
-        has(ctx, 2351), // Iron bar
-        hasAnyItems(ctx, [1635, 1637, 1639, 1641, 1643]),
-        has(ctx, 1511), // Logs
-    ]);
-}
-
-function canCompleteHeroesQuest(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Cooking", 53),
-        hasSkillLevel(ctx, "Fishing", 53),
-        hasSkillLevel(ctx, "Herblore", 25),
-        hasSkillLevel(ctx, "Mining", 50),
-        hasQuestPoints(ctx, 55), //
-        requiresQuest(ctx, "canCompleteLostCity", canCompleteLostCity), //
-        requiresQuest(ctx, "canCompleteMerlinsCrystal", canCompleteMerlinsCrystal), //
-        requiresQuest(ctx, "canCompleteDragonSlayerI", canCompleteDragonSlayerI), //
-        has(ctx, 307), // Fishing rod
-        has(ctx, 313), // Fishing bait
-        has(ctx, 97), // Harralander potion (unf)
-        has(ctx, 255), // Harralander
-        has(ctx, 227), // Vial of water
-        hasUsablePickaxe(ctx), //
-    ]);
-}
-
-function canCompleteTheDigSite(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteDruidicRitual", canCompleteDruidicRitual), //
-        has(ctx, 233), // Pestle and mortar
-        has(ctx, 229), // Vial
-        has(ctx, 590), // Tinderbox
-        hasCupOfTea(ctx), //
-        has(ctx, 954), // Rope
-        hasAnyItems(ctx, [1609, 1625]),
-        has(ctx, 973), // Charcoal
-    ]);
-}
-
-function canCompleteMerlinsCrystal(ctx) {
-    return allTrue([
-        has(ctx, 2309), // Bread
-        has(ctx, 590), // Tinderbox
-        has(ctx, 30), // Bucket of wax
-        has(ctx, 1925), // Bucket
-        has(ctx, 28), // Insect repellent
-        has(ctx, 530), // Bat bones
-    ]);
-}
-
 function canStartDragonSlayerI(ctx) {
     return hasQuestPoints(ctx, 32);
-}
-
-function canCompleteDragonSlayerI(ctx) {
-    return allTrue([
-        hasQuestPoints(ctx, 32), //
-        has(ctx, 1791), // Unfired bowl
-        has(ctx, 1761), // Soft clay
-        has(ctx, 1907), // Wizards mind bomb
-        has(ctx, 301), // Lobster pot
-        has(ctx, 950), // Silk
-        has(ctx, 1540), // Anti-dragon shield
-        has(ctx, 2347), // Hammer
-        has(ctx, 1539), // Steel nails
-        has(ctx, 960), // Plank
-    ]);
-}
-
-function canCompleteXMarksTheSpot(ctx) {
-    return has(ctx, 952); // Spade
-}
-
-function canCompleteClientOfKourend(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteXMarksTheSpot", canCompleteXMarksTheSpot), //
-        hasAnyFeather(ctx),
-    ]);
-}
-
-function canCompleteGhostsAhoy(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Agility", 25),
-        hasSkillLevel(ctx, "Cooking", 20),
-        requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
-        has(ctx, 1927), // Bucket of milk
-        has(ctx, 950), // Silk
-        has(ctx, 1763), // Red dye
-        has(ctx, 1765), // Yellow dye
-        has(ctx, 1767), // Blue dye
-        has(ctx, 952), // Spade
-        has(ctx, 845), // Oak longbow
-        has(ctx, 1921), // Bowl of water for Nettle tea
-        has(ctx, 946), // Knife
-    ]);
-}
-
-function canCompleteANightAtTheTheatre(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteATasteOfHope", canCompleteATasteOfHope), //
-        has(ctx, 8794), // Saw
-    ]);
-}
-
-function canCompleteAlfredGrimhandsBarcrawl(ctx) {
-    return true;
-}
-
-function canCompleteAnExistentialCrisis(ctx) {
-    return false; // TODO
-}
-
-function canCompleteImpendingChaos(ctx) {
-    return false; // TODO
-}
-
-function canCompleteBurialAtSea(ctx) {
-    return false; // TODO
-}
-
-function canCompleteTheRedReef(ctx) {
-    return false; // TODO
-}
-
-function canCompleteFamilyPest(ctx) {
-    return requiresQuest(ctx, "canCompleteFamilyCrest", canCompleteFamilyCrest);
-}
-
-function canCompleteBarbarianTraining(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteBarbarianFishing", canCompleteBarbarianFishing), //
-        requiresQuest(ctx, "canCompleteBarbarianFiremaking2", canCompleteBarbarianFiremaking2), //
-        requiresQuest(ctx, "canCompleteBarbarianFarming", canCompleteBarbarianFarming), //
-        requiresQuest(ctx, "canCompleteBarbarianSmithing", canCompleteBarbarianSmithing), //
-        requiresQuest(ctx, "canCompleteBarbarianHerblore", canCompleteBarbarianHerblore), //
-    ]);
-}
-
-function canCompleteBarbarianFarming(ctx) {
-    return allTrue([
-        canPlantTrees(ctx), //
-        hasAnySapling(ctx),
-    ]);
 }
 
 function hasAnySapling(ctx) {
@@ -3619,301 +5453,14 @@ function hasAnySapling(ctx) {
         || (hasAnyItems(ctx, hardwoodSaplings) && canPlantHardwoodTrees(ctx));
 }
 
-function canCompleteATailOfTwoCats(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteIcthlarinsLittleHelper", canCompleteIcthlarinsLittleHelper), //
-        has(ctx, 560), // Death rune
-        has(ctx, 1897), // Chocolate cake
-        has(ctx, 1511), // Logs
-        has(ctx, 590), // Tinderbox
-        has(ctx, 1927), // Bucket of milk
-        has(ctx, 1735), // Shears
-        has(ctx, 5318), // Potato seed
-        has(ctx, 5341), // Rake
-        has(ctx, 227), // Vial of water
-        hasAnyItems(ctx, [1833, 540]), //
-        hasAnyItems(ctx, [1835, 538]), // Desert robe or Druid's robe
-    ]);
-}
-
-function canCompleteTrollRomance(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteTrollStronghold", canCompleteTrollStronghold), //
-        has(ctx, 2351), // Iron bar
-        hasAnyItems(ctx, [1517, 1515]),
-        canReachTrollheim(ctx), //
-        has(ctx, 30), // Bucket of wax
-        has(ctx, 1887), // Cake tin
-        has(ctx, 1939), // Swamp tar
-        has(ctx, 954), // Rope
-    ]);
-}
-
-function canCompleteTheCurseOfArrav(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteDefenderOfVarrock", canCompleteDefenderOfVarrock), //
-        requiresQuest(ctx, "canCompleteTrollRomance", canCompleteTrollRomance), //
-        has(ctx, 2126), // Dwellberries
-        has(ctx, 2570), // Ring of life
-        has(ctx, 9419), // Mith grapple
-        has(ctx, 7159), // Insulated boots
-        hasUsablePickaxe(ctx), //
-    ]);
-}
-
-function canCompleteDreamMentor(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteLunarDiplomacy", canCompleteLunarDiplomacy), //
-        requiresQuest(ctx, "canCompleteEadgarsRuse", canCompleteEadgarsRuse), //
-        has(ctx, 9075), // Astral rune
-        has(ctx, 590), // Tinderbox
-        has(ctx, 2347), // Hammer
-        has(ctx, 233), // Pestle and mortar
-    ]);
-}
-
-function canCompleteEadgarsRuse(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Herblore", 31),
-        requiresQuest(ctx, "canCompleteDruidicRitual", canCompleteDruidicRitual), //
-        requiresQuest(ctx, "canCompleteTrollStronghold", canCompleteTrollStronghold), //
-        has(ctx, 3105), // Climbing boots
-        has(ctx, 2015), // Vodka
-        has(ctx, 2116), // Pineapple chunks
-        has(ctx, 1511), // Logs
-        has(ctx, 1947), // Grain
-        has(ctx, 2138), // Raw chicken
-        has(ctx, 233), // Pestle and mortar
-        has(ctx, 99), // Rannar potion (unf)
-    ]);
-}
-
-function canCompleteSkippyAndTheMogres(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Cooking", 20),
-        has(ctx, 1929), // Bucket of water
-        has(ctx, 1927), // Bucket of milk
-        has(ctx, 1975), // Chocolate dust
-        has(ctx, 1921), // Bowl of water
-        has(ctx, 231), // Snape grass
-    ]);
-}
-
-function canCompleteLegendsQuest(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Agility", 50),
-        hasSkillLevel(ctx, "Crafting", 50),
-        hasSkillLevel(ctx, "Herblore", 45),
-        hasSkillLevel(ctx, "Magic", 56),
-        hasSkillLevel(ctx, "Mining", 52),
-        hasSkillLevel(ctx, "Prayer", 42),
-        hasSkillLevel(ctx, "Smithing", 50),
-        hasSkillLevel(ctx, "Strength", 50),
-        hasSkillLevel(ctx, "Thieving", 50),
-        hasSkillLevel(ctx, "Woodcutting", 50),
-        hasQuestPoints(ctx, 107), //
-        requiresQuest(ctx, "canCompleteFamilyCrest", canCompleteFamilyCrest), //
-        requiresQuest(ctx, "canCompleteHeroesQuest", canCompleteHeroesQuest), //
-        requiresQuest(ctx, "canCompleteShiloVillage", canCompleteShiloVillage), //
-        requiresQuest(ctx, "canCompleteUndergroundPass", canCompleteUndergroundPass), //
-        requiresQuest(ctx, "canCompleteWaterfallQuest", canCompleteWaterfallQuest), //
-        hasMachete(ctx), //
-        has(ctx, 2357), // Gold bar
-        has(ctx, 2347), // Hammer
-        has(ctx, 954), // Rope
-        hasAnyItems(ctx, [1359, 6739]),
-        has(ctx, 973), // Charcoal
-        has(ctx, 970), // Papyrus
-        has(ctx, 1523), // Lockpick
-        has(ctx, 227), // Vial of water
-        has(ctx, 1607), // Sapphire
-        has(ctx, 1605), // Emerald
-        has(ctx, 1603), // Ruby
-        has(ctx, 1601), // Diamond
-        has(ctx, 1611), // Jade
-        has(ctx, 1609), // Opal
-        has(ctx, 1613), // Red topaz
-        has(ctx, 566), // Soul rune
-        has(ctx, 558), // Mind rune
-        has(ctx, 563), // Law rune
-        has(ctx, 557), // Earth rune
-        has(ctx, 567), // Unpowered orb
-        has(ctx, 564), // Cosmic rune
-        (hasAirRuneSource(ctx) || hasFireRuneSource(ctx) || hasWaterRuneSource(ctx)), //
-        hasUsablePickaxe(ctx), //
-    ]);
-}
-
 function hasMachete(ctx) {
     return hasAnyItems(ctx, [975, 6313, 6315, 6317]);
-}
-
-function canCompleteFamilyCrest(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Mining", 40),
-        hasSkillLevel(ctx, "Smithing", 40),
-        hasSkillLevel(ctx, "Magic", 59),
-        hasSkillLevel(ctx, "Crafting", 40),
-        has(ctx, 315), // Shrimps
-        has(ctx, 329), // Salmon
-        has(ctx, 361), // Tuna
-        has(ctx, 365), // Bass
-        has(ctx, 373), // Swordfish
-        has(ctx, 1603), // Ruby
-        has(ctx, 1592), // Ring mould
-        has(ctx, 1597), // Necklace mould
-        has(ctx, 560), // Death rune
-        hasAirRuneSource(ctx), //
-        hasWaterRuneSource(ctx), //
-        hasEarthRuneSource(ctx), //
-        hasFireRuneSource(ctx), //
-        hasAnyItems(ctx, [185, 183, 181, 2448, 11475, 11473, 11435, 11433, 179, 177, 175, 2446, 5949, 5947, 5945, 5943, 5958, 5956, 5954, 5952, 11503, 11501, 10931, 10929, 10927, 10925, 464, 29784, 12911, 12909, 12907, 12905, 12919, 12917, 12915, 12913, 29833, 29830, 29827, 29824]),
-        hasUsablePickaxe(ctx), //
-    ]);
-}
-
-function canCompleteDragonSlayerII(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Magic", 75),
-        hasSkillLevel(ctx, "Smithing", 70),
-        hasSkillLevel(ctx, "Mining", 68),
-        hasSkillLevel(ctx, "Crafting", 62),
-        hasSkillLevel(ctx, "Agility", 60),
-        hasSkillLevel(ctx, "Thieving", 60),
-        hasSkillLevel(ctx, "Construction", 50),
-        hasSkillLevel(ctx, "Hitpoints", 50),
-        hasQuestPoints(ctx, 200), //
-        requiresQuest(ctx, "canCompleteLegendsQuest", canCompleteLegendsQuest), //
-        requiresQuest(ctx, "canCompleteDreamMentor", canCompleteDreamMentor), //
-        requiresQuest(ctx, "canCompleteATailOfTwoCats", canCompleteATailOfTwoCats), //
-        requiresQuest(ctx, "canCompleteAnimalMagnetism", canCompleteAnimalMagnetism), //
-        requiresQuest(ctx, "canCompleteGhostsAhoy", canCompleteGhostsAhoy), //
-        requiresQuest(ctx, "canCompleteBoneVoyage", canCompleteBoneVoyage), //
-        requiresQuest(ctx, "canCompleteClientOfKourend", canCompleteClientOfKourend), //
-        canEnterAncientCavern(ctx), //
-        has(ctx, 8778), // Oak plank
-        has(ctx, 1941), // Swamp paste
-        hasAnyNails(ctx), //
-        has(ctx, 2347), // Hammer
-        has(ctx, 975), // Machete
-        has(ctx, 8794), // Saw
-        has(ctx, 1615), // Dragonstone
-        has(ctx, 1775), // Molten glass
-        has(ctx, 1785), // Glassblowing pipe
-        has(ctx, 952), // Spade
-        has(ctx, 9075), // Astral rune
-        has(ctx, 590), // Tinderbox
-        has(ctx, 233), // Pestle and mortar
-        hasFireRuneSource(ctx), //
-        hasAirRuneSource(ctx), //
-        has(ctx, 565), // Blood rune
-        hasUsablePickaxe(ctx), //
-    ]);
-}
-
-function canCompleteMyArmsBigAdventure(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Farming", 29),
-        hasSkillLevel(ctx, "Woodcutting", 10),
-        requiresQuest(ctx, "canCompleteEadgarsRuse", canCompleteEadgarsRuse), //
-        requiresQuest(ctx, "canCompleteTheFeud", canCompleteTheFeud), //
-        requiresQuest(ctx, "canCompleteJunglePotion", canCompleteJunglePotion), //
-        hasMachete(ctx), //
-        has(ctx, 1925), // Bucket
-        has(ctx, 6034), // Supercompost
-        has(ctx, 952), // Spade
-        has(ctx, 5341), // Rake
-        has(ctx, 5343), // Seed dibber
-        canReachTrollheim(ctx),
-    ]);
-}
-
-function canCompleteMakingFriendsWithMyArm(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Firemaking", 66),
-        hasSkillLevel(ctx, "Mining", 72),
-        hasSkillLevel(ctx, "Construction", 35),
-        hasSkillLevel(ctx, "Agility", 68),
-        requiresQuest(ctx, "canCompleteMyArmsBigAdventure", canCompleteMyArmsBigAdventure), //
-        requiresQuest(ctx, "canCompleteSwanSong", canCompleteSwanSong), //
-        requiresQuest(ctx, "canCompleteColdWar", canCompleteColdWar), //
-        requiresQuest(ctx, "canCompleteRomeoAndJuliet", canCompleteRomeoAndJuliet), //
-        has(ctx, 1925), // Bucket
-        has(ctx, 8794), // Saw
-        has(ctx, 8790), // Bolt of cloth
-        has(ctx, 8782), // Mahogany plank
-        has(ctx, 753), // Cadava berries
-        has(ctx, 1929), // Bucket of water
-        has(ctx, 2347), // Hammer
-        has(ctx, 954), // Rope
-        hasUsablePickaxe(ctx), //
-    ]);
-}
-
-function canCompleteGrimTales(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Farming", 45),
-        hasSkillLevel(ctx, "Herblore", 52),
-        hasSkillLevel(ctx, "Thieving", 58),
-        hasSkillLevel(ctx, "Agility", 59),
-        hasSkillLevel(ctx, "Woodcutting", 71),
-        requiresQuest(ctx, "canCompleteWitchsHouse", canCompleteWitchsHouse), //
-        has(ctx, 95), // Tarromin potion (unf)
-        hasUsableAxe(ctx),
-    ]);
-}
-
-function canCompleteObservatoryQuest(ctx) {
-    return allTrue([
-        has(ctx, 2349), // Bronze bar
-        has(ctx, 1775), // Molten glass
-        has(ctx, 960), // Plank
-    ]);
 }
 
 function canGetGoutweed(ctx) {
     return requiresQuest(ctx, "canCompleteEadgarsRuse", canCompleteEadgarsRuse) // Goutweed crate
         || (has(ctx, 6311) && canTrainFarming(ctx)) // Gout tuber
         || (canReachTrollheim(ctx) && canDoGnomeRestaurant(ctx)); // Brambickle
-}
-
-function canCompleteBetweenARock(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Defence", 30),
-        hasSkillLevel(ctx, "Mining", 40),
-        hasSkillLevel(ctx, "Smithing", 50),
-        requiresQuest(ctx, "canCompleteDwarfCannon", canCompleteDwarfCannon), //
-        requiresQuest(ctx, "canCompleteFishingContest", canCompleteFishingContest), //
-        has(ctx, 2357), // Gold bar
-        has(ctx, 2347), // Hammer
-        hasUsablePickaxe(ctx), //
-    ]);
-}
-
-function canCompleteSwanSong(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Magic", 66),
-        hasSkillLevel(ctx, "Cooking", 62),
-        hasSkillLevel(ctx, "Fishing", 62),
-        hasSkillLevel(ctx, "Smithing", 45),
-        hasSkillLevel(ctx, "Firemaking", 42),
-        hasSkillLevel(ctx, "Crafting", 40),
-        requiresQuest(ctx, "canCompleteOneSmallFavour", canCompleteOneSmallFavour), //
-        requiresQuest(ctx, "canCompleteGardenOfTranquillity", canCompleteGardenOfTranquillity), //
-        hasQuestPoints(ctx, 100),
-        has(ctx, 4695), // Mist rune
-        has(ctx, 4699), // Lava rune
-        has(ctx, 565), // Blood rune
-        has(ctx, 4436), // Airtight pot
-        has(ctx, 2351), // Iron bar
-        hasAnyLog(ctx), //
-        has(ctx, 590), // Tinderbox
-        has(ctx, 2347), // Hammer
-        has(ctx, 303), // Small fishing net
-        has(ctx, 1757), // Brown apron
-        has(ctx, 7944), // Raw monkfish
-        has(ctx, 526), // Bones
-    ]);
 }
 
 function canDoMahoganyHomes(ctx) {
@@ -3927,30 +5474,6 @@ function canDoMahoganyHomes(ctx) {
             8780,
             8782,
         ]);
-}
-
-function canCompleteOneSmallFavour(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Agility", 36),
-        hasSkillLevel(ctx, "Crafting", 25),
-        hasSkillLevel(ctx, "Herblore", 18),
-        hasSkillLevel(ctx, "Smithing", 30),
-        requiresQuest(ctx, "canCompleteRuneMysteries", canCompleteRuneMysteries), //
-        requiresQuest(ctx, "canCompleteShiloVillage", canCompleteShiloVillage), //
-        has(ctx, 2353), // Steel bar
-        has(ctx, 2349), // Bronze bar
-        has(ctx, 2351), // Iron bar
-        has(ctx, 1755), // Chisel
-        has(ctx, 4419), // Guthix rest(3)
-        has(ctx, 2347), // Hammer
-        has(ctx, 1931), // Pot
-        has(ctx, 1761), // Soft clay
-        has(ctx, 1609), // Opal
-        has(ctx, 1611), // Jade
-        has(ctx, 1613), // Red topaz
-        has(ctx, 1607), // Sapphire
-        has(ctx, 4436), // Airtight pot
-    ]);
 }
 
 function canMakeGuthixRests(ctx) {
@@ -4002,48 +5525,9 @@ function canMakeAirtightPot(ctx) {
         && has(ctx, 4440); // Pot lid
 }
 
-function canCompleteFightArena(ctx) {
-    return true;
-}
 
-function canCompleteHolyGrail(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Attack", 20),
-        requiresQuest(ctx, "canCompleteMerlinsCrystal", canCompleteMerlinsCrystal),
-    ]);
-}
 
-function canCompleteHopespearsWill(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Prayer", 50),
-        requiresQuest(ctx, "canCompleteTheRestlessGhost", canCompleteTheRestlessGhost), //
-        requiresQuest(ctx, "canCompleteDesertTreasureI", canCompleteDesertTreasureI), //
-        requiresQuest(ctx, "canCompleteFairytaleIICureAQueen", canCompleteFairytaleIICureAQueen), //
-        requiresQuest(ctx, "canCompleteLandOfTheGoblins", canCompleteLandOfTheGoblins), //
-        has(ctx, 3002), // Toadflax potion (unf)
-    ]);
-}
 
-function canCompleteLandOfTheGoblins(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Agility", 38),
-        hasSkillLevel(ctx, "Fishing", 40),
-        hasSkillLevel(ctx, "Thieving", 45),
-        hasSkillLevel(ctx, "Herblore", 48),
-        requiresQuest(ctx, "canCompleteAnotherSliceOfHAM", canCompleteAnotherSliceOfHAM), //
-        requiresQuest(ctx, "canCompleteFishingContest", canCompleteFishingContest), //
-        has(ctx, 3002), // Toadflax potion (unf)
-        has(ctx, 288), // Goblin mail
-        has(ctx, 1765), // Yellow dye
-        has(ctx, 1767), // Blue dye
-        has(ctx, 1769), // Orange dye
-        has(ctx, 1773), // Purple dye
-        has(ctx, 229), // Vial
-        has(ctx, 233), // Pestle and mortar
-        has(ctx, 3379), // Raw slimy eel
-        has(ctx, 307), // Fishing rod
-    ]);
-}
 
 const NMZ_QUESTS = [
     canCompleteTheAscentOfArceuus,
@@ -4094,381 +5578,10 @@ function canEnterNightmareZone(ctx) {
     return (countCompletableNMZQuests(ctx) >= 5) && !ctx.filters?.isIronman;
 }
 
-function canCompleteGardenOfTranquillity(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteCreatureOfFenkenstrain", canCompleteCreatureOfFenkenstrain), //
-        has(ctx, 5341), // Rake
-        has(ctx, 952), // Spade
-        has(ctx, 5329), // Secateurs
-        has(ctx, 5331), // Watering can
-        has(ctx, 5325), // Gardening trowel
-        has(ctx, 6036), // Plant cure
-        has(ctx, 5096), // Marigold seed
-        has(ctx, 5324), // Cabbage seed
-        has(ctx, 5319), // Onion seed
-        has(ctx, 2347), // Hammer
-        hasAnyItems(ctx, [7936, 1436]),
-        has(ctx, 233), // Pestle and mortar
-        has(ctx, 5354), // Filled plant pot
-        hasAnyItems(ctx, [6032, 6034, 21483]), // Compost, Supercompost or Ultracompost
-    ]);
-}
-
-function canCompleteColdWar(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Hunter", 10),
-        hasSkillLevel(ctx, "Agility", 30),
-        hasSkillLevel(ctx, "Crafting", 30),
-        hasSkillLevel(ctx, "Construction", 34),
-        hasSkillLevel(ctx, "Thieving", 15),
-        has(ctx, 8778), // Oak plank
-        has(ctx, 1539), // Steel nails
-        has(ctx, 2347), // Hammer
-        has(ctx, 952), // Spade
-        has(ctx, 8792), // Clockwork
-        has(ctx, 960), // Plank
-        has(ctx, 950), // Silk
-        (has(ctx, 341) || requiresQuest(ctx, "canCompleteGardenOfTranquillity", canCompleteGardenOfTranquillity)), // Raw cod or Ring of Charos (a)
-        has(ctx, 1939), // Swamp tar
-        has(ctx, 8782), // Mahogany plank
-        has(ctx, 1741), // Leather
-        has(ctx, 2347), // Hammer
-        has(ctx, 314), // Feather
-    ]);
-}
-
-function canCompleteRomeoAndJuliet(ctx) {
-    return has(ctx, 753); // Cadava berries
-}
-
-function canCompleteRagAndBoneManI(ctx) {
-    return allTrue([
-        has(ctx, 1931), // Pot
-        has(ctx, 590), // Tinderbox
-        hasAnyLog(ctx),
-    ]);
-}
-
-function canCompleteRagAndBoneManII(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Slayer", 40),
-        hasSkillLevel(ctx, "Defence", 20),
-        requiresQuest(ctx, "canCompleteRagAndBoneManI", canCompleteRagAndBoneManI), //
-        has(ctx, 1931), // Pot
-        has(ctx, 590), // Tinderbox
-        hasAnyLog(ctx), //
-        (requiresQuest(ctx, "canCompleteSkippyAndTheMogres", canCompleteSkippyAndTheMogres) || canShortrange(ctx)), //
-        (canStartZogreFleshEaters(ctx) || (hasTelegrabRunes(ctx) && canShortrange(ctx))), //
-        requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
-        requiresQuest(ctx, "canCompleteCreatureOfFenkenstrain", canCompleteCreatureOfFenkenstrain), //
-        canEnterLumbridgeSwampCaves(ctx), //
-    ]);
-}
-
-function canCompleteRatcatchers(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteIcthlarinsLittleHelper", canCompleteIcthlarinsLittleHelper), //
-        has(ctx, 1985), // Cheese
-        has(ctx, 251), // Marrentill
-        has(ctx, 235), // Unicorn horn dust
-        has(ctx, 1927), // Bucket of milk
-        has(ctx, 6055), // Weeds
-        has(ctx, 1931), // Pot
-        has(ctx, 590), // Tinderbox
-    ]);
-}
-
-function canCompleteDesertTreasureI(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteTheDigSite", canCompleteTheDigSite), //
-        requiresQuest(ctx, "canCompleteTempleOfIkov", canCompleteTempleOfIkov), //
-        requiresQuest(ctx, "canCompleteTheTouristTrap", canCompleteTheTouristTrap), //
-        requiresQuest(ctx, "canCompleteTrollStronghold", canCompleteTrollStronghold), //
-        requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
-        requiresQuest(ctx, "canCompleteWaterfallQuest", canCompleteWaterfallQuest), //
-        canReachTrollheim(ctx),
-        hasAnyItems(ctx, [2126, 4164]),
-        has(ctx, 1513), // Magic logs
-        has(ctx, 2353), // Steel bar
-        has(ctx, 1775), // Molten glass
-        has(ctx, 592), // Ashes
-        has(ctx, 973), // Charcoal
-        has(ctx, 565), // Blood rune
-        has(ctx, 526), // Bones
-        has(ctx, 2355), // Silver bar
-        has(ctx, 4668), // Garlic powder
-        has(ctx, 2007), // Spice
-        has(ctx, 3107), // Spiked boots
-        has(ctx, 1523), // Lockpick
-        has(ctx, 590), // Tinderbox
-    ]);
-}
-
-function canCompleteDesertTreasureII(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteDesertTreasureI", canCompleteDesertTreasureI), //
-        requiresQuest(ctx, "canCompleteSecretsOfTheNorth", canCompleteSecretsOfTheNorth), //
-        requiresQuest(ctx, "canCompleteEnakhrasLament", canCompleteEnakhrasLament), //
-        requiresQuest(ctx, "canCompleteTempleOfTheEye", canCompleteTempleOfTheEye), //
-        requiresQuest(ctx, "canCompleteGardenOfDeath", canCompleteGardenOfDeath), //
-        requiresQuest(ctx, "canCompleteBelowIceMountain", canCompleteBelowIceMountain), //
-        requiresQuest(ctx, "canCompleteHisFaithfulServants", canCompleteHisFaithfulServants), //
-        has(ctx, 560), // Death rune
-        has(ctx, 565), // Blood rune
-        has(ctx, 562), // Chaos rune
-        has(ctx, 566), // Soul rune
-        hasAirRuneSource(ctx), //
-        hasWaterRuneSource(ctx), //
-        hasFireRuneSource(ctx), //
-        has(ctx, 590), // Tinderbox
-        has(ctx, 4164), // Facemask
-        has(ctx, 233), // Pestle and mortar
-    ]);
-}
-
-function canCompleteSecretsOfTheNorth(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Agility", 69),
-        hasSkillLevel(ctx, "Thieving", 64),
-        hasSkillLevel(ctx, "Hunter", 56),
-        requiresQuest(ctx, "canCompleteMakingFriendsWithMyArm", canCompleteMakingFriendsWithMyArm), //
-        requiresQuest(ctx, "canCompleteTheGeneralsShadow", canCompleteTheGeneralsShadow), //
-        requiresQuest(ctx, "canCompleteDeviousMinds", canCompleteDeviousMinds), //
-        has(ctx, 1523), // Lockpick
-        has(ctx, 590), // Tinderbox
-    ]);
-}
-
-function canCompleteTheGeneralsShadow(ctx) {
-    return requiresQuest(ctx, "canCompleteCurseOfTheEmptyLord", canCompleteCurseOfTheEmptyLord);
-}
-
-function canCompleteCurseOfTheEmptyLord(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Prayer", 31),
-        hasSkillLevel(ctx, "Thieving", 53),
-        requiresQuest(ctx, "canCompleteDesertTreasureI", canCompleteDesertTreasureI), //
-    ]);
-}
-
-function canCompleteBearYourSoul(ctx) {
-    return has(ctx, 952); // Spade
-}
-
-function canCompleteDeviousMinds(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Smithing", 65),
-        hasSkillLevel(ctx, "Runecraft", 50),
-        hasSkillLevel(ctx, "Fletching", 50),
-        requiresQuest(ctx, "canCompleteWanted", canCompleteWanted), //
-        requiresQuest(ctx, "canCompleteTrollStronghold", canCompleteTrollStronghold), //
-        requiresQuest(ctx, "canCompleteDoricsQuest", canCompleteDoricsQuest), //
-        has(ctx, 1315), // Mithril 2h sword
-        has(ctx, 1777), // Bow string
-    ]);
-}
-
-function canCompleteWanted(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteRecruitmentDrive", canCompleteRecruitmentDrive), //
-        requiresQuest(ctx, "canCompleteTheLostTribe", canCompleteTheLostTribe), //
-        requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
-        requiresQuest(ctx, "canCompleteEnterTheAbyss", canCompleteEnterTheAbyss), //
-        hasAnyItems(ctx, [7936, 1436]),
-        hasQuestPoints(ctx, 32),
-    ]);
-}
-
-function canCompleteRecruitmentDrive(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteBlackKnightsFortress", canCompleteBlackKnightsFortress), //
-        requiresQuest(ctx, "canCompleteDruidicRitual", canCompleteDruidicRitual), //
-        hasAnyItems(ctx, [946, 1755, 1794]), // Knife, Chisel or Bronze wire
-    ]);
-}
-
-function canCompleteBlackKnightsFortress(ctx) {
-    return allTrue([
-        hasQuestPoints(ctx, 12), //
-        has(ctx, 1965), // Cabbage
-        has(ctx, 1101), // Iron chainbody
-        has(ctx, 1139), // Bronze med helm
-    ]);
-}
-
-function canCompleteDoricsQuest(ctx) {
-    return allTrue([
-        has(ctx, 440), // Iron ore
-        has(ctx, 436), // Copper ore
-        has(ctx, 434), // Clay
-    ]);
-}
-
-function canCompleteGardenOfDeath(ctx) {
-    return allTrue([
-        has(ctx, 5329),
-    ]);
-}
-
-function canCompleteHisFaithfulServants(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
-        has(ctx, 952), // Spade
-    ]);
-}
-
-function canCompleteTempleOfIkov(ctx) {
-    return allTrue([
-        has(ctx, 225), // Limpwurt root
-        hasAnyItems(ctx, [864, 870, 863, 865, 869, 866, 867, 868, 5667, 22804, 806, 807, 813, 808, 3093, 809, 810, 816, 811, 817, 11230, 6522, 10033, 10034, 11959, 800, 801, 802, 803, 804, 805, 20849, 857, 855, 10282, 861, 859, 10284, 11235]),
-    ]);
-}
-
-function canCompleteEthicallyAcquiredAntiquities(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Thieving", 25),
-        requiresQuest(ctx, "canCompleteChildrenOfTheSun", canCompleteChildrenOfTheSun), //
-        requiresQuest(ctx, "canCompleteShieldOfArrav", canCompleteShieldOfArrav),
-    ]);
-}
-
-function canCompleteTheGreatBrainRobbery(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteCreatureOfFenkenstrain", canCompleteCreatureOfFenkenstrain), //
-        requiresQuest(ctx, "canCompleteCabinFever", canCompleteCabinFever), //
-        requiresQuest(ctx, "canCompleteRFDFreeingPiratePete", canCompleteRFDFreeingPiratePete), //
-        has(ctx, 10891), // Wooden cat
-        has(ctx, 2347), // Hammer
-        hasAnyNails(ctx), //
-        has(ctx, 960), // Plank
-        has(ctx, 1718), // Holy symbol
-    ]);
-}
-
-function canCompleteCreatureOfFenkenstrain(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Crafting", 20),
-        hasSkillLevel(ctx, "Thieving", 25),
-        requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
-        has(ctx, 2355), // Silver bar
-        has(ctx, 1794), // Bronze wire
-        has(ctx, 1733), // Needle
-        has(ctx, 1734), // Thread
-        has(ctx, 952), // Spade
-    ]);
-}
-
 function hasNarwhalKnife(ctx) {
     return canTrainCrafting(ctx) //
         && has(ctx, 31954) // Narwhal horn
         && has(ctx, 1755); // Chisel
-}
-
-function canCompleteTheEyesOfGlouphrie(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteTheGrandTree", canCompleteTheGrandTree), //
-        has(ctx, 4687), // Bucket of sap
-        has(ctx, 4698), // Mud rune
-        has(ctx, 1517), // Maple logs
-        has(ctx, 1521), // Oak logs
-        has(ctx, 2347), // Hammer
-        has(ctx, 8794), // Saw
-        has(ctx, 233), // Pestle and mortar
-    ]);
-}
-
-function canCompleteTheCorsairCurse(ctx) {
-    return allTrue([
-        has(ctx, 590), // Tinderbox
-        has(ctx, 952), // Spade
-    ]);
-}
-
-function canCompleteCabinFever(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Agility", 42),
-        hasSkillLevel(ctx, "Crafting", 45),
-        hasSkillLevel(ctx, "Smithing", 50),
-        hasSkillLevel(ctx, "Ranged", 40),
-        requiresQuest(ctx, "canCompletePiratesTreasure", canCompletePiratesTreasure), //
-        requiresQuest(ctx, "canCompleteRumDeal", canCompleteRumDeal), //
-        has(ctx, 590), // Tinderbox
-        has(ctx, 2347), // Hammer
-        has(ctx, 1941), // Swamp paste
-        has(ctx, 954), // Rope
-    ]);
-}
-
-function canCompleteRumDeal(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Crafting", 42),
-        hasSkillLevel(ctx, "Farming", 40),
-        hasSkillLevel(ctx, "Prayer", 47),
-        hasSkillLevel(ctx, "Slayer", 42),
-        hasSkillLevel(ctx, "Fishing", 50),
-        requiresQuest(ctx, "canCompleteZogreFleshEaters", canCompleteZogreFleshEaters), //
-        requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
-        has(ctx, 5341), // Rake
-        has(ctx, 1925), // Bucket
-    ]);
-}
-
-function canCompleteCooksAssistant(ctx) {
-    return allTrue([
-        has(ctx, 1944), // Egg
-        has(ctx, 1927), // Bucket of milk
-        has(ctx, 1933), // Pot of flour
-    ]);
-}
-
-function canCompleteFishingContest(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Fishing", 10),
-        has(ctx, 1550), // Garlic
-        has(ctx, 307), // Fishing rod
-        has(ctx, 952), // Spade
-    ]);
-}
-
-function canCompleteInSearchOfKnowledge(ctx) {
-    return hasAnyCookedMeatFish(ctx) //
-        || hasAnyItems(ctx, [6701, 1965]); // Baked potato or Cabbage
-}
-
-function canCompleteLairOfTarnRazorlor(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Slayer", 40),
-        requiresQuest(ctx, "canCompleteHauntedMine", canCompleteHauntedMine), //
-    ]);
-}
-
-function canCompleteIntoTheTombs(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteBeneathCursedSands", canCompleteBeneathCursedSands), //
-    ]);
-}
-
-function canCompleteKingsRansom(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Magic", 45),
-        hasSkillLevel(ctx, "Defence", 65),
-        requiresQuest(ctx, "canCompleteBlackKnightsFortress", canCompleteBlackKnightsFortress), //
-        requiresQuest(ctx, "canCompleteHolyGrail", canCompleteHolyGrail), //
-        requiresQuest(ctx, "canCompleteMurderMystery", canCompleteMurderMystery), //
-        requiresQuest(ctx, "canCompleteOneSmallFavour", canCompleteOneSmallFavour), //
-        hasAnyItems(ctx, [6979, 6981, 6983]),
-        hasTelegrabRunes(ctx), //
-        (
-            requiresQuest(ctx, "canCompleteWhileGuthixSleeps", canCompleteWhileGuthixSleeps) // For full Elite black armour
-            || (
-                hasAnyItems(ctx, [1165, 2587, 2595]) // Black full helm, Black full helm (t) or Black full helm (g)
-                && hasAnyItems(ctx, [1125, 2583, 2591]) // Black platebody, Black platebody (t) or Black platebody (g)
-                && hasAnyItems(ctx, [1077, 2585, 2593, 1089, 3472, 3473]) // Black platelegs, Black platelegs (t), Black platelegs (g), Black plateskirt, Black plateskirt (t) or Black plateskirt (g)
-            )
-        ), //
-        has(ctx, 1139), // Bronze med helm
-        has(ctx, 1101), // Iron chainbody
-    ]);
 }
 
 function hasAnyCookedMeatFish(ctx) {
@@ -4516,33 +5629,8 @@ function hasAnyCookedMeatFish(ctx) {
         ]) // Manta ray
 }
 
-function canCompleteTheEnchantedKey(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteMakingHistory", canCompleteMakingHistory), //
-        has(ctx, 952), // Spade
-    ]);
-}
 
-function canCompleteTheGardenOfDeath(ctx) {
-    return allTrue([
-        has(ctx, 5329), // Secateurs
-    ]);
-}
 
-function canCompleteRecipeForDisaster(ctx) {
-    return requiresQuest(ctx, "canCompleteRFDAnotherCooksQuest", canCompleteRFDAnotherCooksQuest) //
-        && requiresQuest(ctx, "canCompleteRFDFreeingTheMountainDwarf", canCompleteRFDFreeingTheMountainDwarf) //
-        && requiresQuest(ctx, "canCompleteRFDFreeingTheGoblinGenerals", canCompleteRFDFreeingTheGoblinGenerals) //
-        && requiresQuest(ctx, "canCompleteRFDFreeingPiratePete", canCompleteRFDFreeingPiratePete) //
-        && requiresQuest(ctx, "canCompleteRFDFreeingTheLumbridgeGuide", canCompleteRFDFreeingTheLumbridgeGuide) //
-        && requiresQuest(ctx, "canCompleteRFDFreeingEvilDave", canCompleteRFDFreeingEvilDave) //
-        && requiresQuest(ctx, "canCompleteRFDFreeingSkrachUglologwee", canCompleteRFDFreeingSkrachUglologwee) //
-        && requiresQuest(ctx, "canCompleteRFDFreeingSirAmikVarse", canCompleteRFDFreeingSirAmikVarse) //
-        && requiresQuest(ctx, "canCompleteRFDFreeingKingAwowogei", canCompleteRFDFreeingKingAwowogei) //
-        && requiresQuest(ctx, "canCompleteDesertTreasureI", canCompleteDesertTreasureI) //
-        && requiresQuest(ctx, "canCompleteHorrorFromTheDeep", canCompleteHorrorFromTheDeep) //
-        && hasQuestPoints(ctx, 175)
-}
 
 const RFD_SUBQUESTS = [
     canCompleteRFDFreeingTheMountainDwarf,
@@ -4559,309 +5647,12 @@ function countCompletableRFDSubquests(ctx) {
     return RFD_SUBQUESTS.filter(fn => fn(ctx)).length;
 }
 
-function canCompleteRecipeForDisaster0(ctx) {
-    return requiresQuest(ctx, "canCompleteRFDAnotherCooksQuest", canCompleteRFDAnotherCooksQuest);
-}
-
-function canCompleteRecipeForDisaster1(ctx) {
-    return countCompletableRFDSubquests(ctx) >= 1;
-}
-
-function canCompleteRecipeForDisaster2(ctx) {
-    return countCompletableRFDSubquests(ctx) >= 2;
-}
-
-function canCompleteRecipeForDisaster3(ctx) {
-    return countCompletableRFDSubquests(ctx) >= 3;
-}
-
-function canCompleteRecipeForDisaster4(ctx) {
-    return countCompletableRFDSubquests(ctx) >= 4;
-}
-
-function canCompleteRecipeForDisaster5(ctx) {
-    return countCompletableRFDSubquests(ctx) >= 5;
-}
-
-function canCompleteRecipeForDisaster6(ctx) {
-    return countCompletableRFDSubquests(ctx) >= 6;
-}
-
-function canCompleteRecipeForDisaster7(ctx) {
-    return countCompletableRFDSubquests(ctx) >= 7;
-}
-
-function canCompleteRecipeForDisaster8(ctx) {
-    return countCompletableRFDSubquests(ctx) >= 8;
-}
-
-
-function canCompleteRFDAnotherCooksQuest(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteCooksAssistant", canCompleteCooksAssistant), //
-        has(ctx, 221), // Eye of newt
-        has(ctx, 1909), // Greenman's ale
-        has(ctx, 2084), // Fruit blast
-        has(ctx, 592), // Ashes
-    ]);
-}
-
-function canCompleteRFDFreeingTheMountainDwarf(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteRFDAnotherCooksQuest", canCompleteRFDAnotherCooksQuest), //
-        requiresQuest(ctx, "canCompleteFishingContest", canCompleteFishingContest), //
-        has(ctx, 1944), // Egg
-        has(ctx, 1927), // Bucket of milk
-        has(ctx, 1933), // Pot of flour
-        has(ctx, 1921), // Bowl of water
-        has(ctx, 1905), // Asgarnian ale
-    ]);
-}
-
-function canCompleteRFDFreeingTheGoblinGenerals(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteRFDAnotherCooksQuest", canCompleteRFDAnotherCooksQuest), //
-        requiresQuest(ctx, "canCompleteGoblinDiplomacy", canCompleteGoblinDiplomacy), //
-        has(ctx, 2309), // Bread
-        has(ctx, 2112), // Orange slices
-        (hasAnyItems(ctx, [1767, 1771, 1773]) || (has(ctx, 229) && has(ctx, 233))), // Blue dye, Green dye, Purple dye or a Vial and Pestle and mortar for black dye
-        hasAnyItems(ctx, [2007, 2169]),
-        has(ctx, 313), // Fishing bait
-        has(ctx, 1929), // Bucket of water
-        has(ctx, 973), // Charcoal
-    ]);
-}
-function canCompleteRFDFreeingPiratePete(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Cooking", 31),
-        requiresQuest(ctx, "canCompleteRFDAnotherCooksQuest", canCompleteRFDAnotherCooksQuest), //
-        has(ctx, 341), // Raw cod
-        has(ctx, 233), // Pestle and mortar
-        has(ctx, 2309), // Bread
-        has(ctx, 6667), // Empty fishbowl
-        has(ctx, 1794), // Bronze wire
-        has(ctx, 1733), // Needle
-        has(ctx, 946), // Knife
-    ]);
-}
-
-function canCompleteRFDFreeingTheLumbridgeGuide(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Cooking", 40),
-        requiresQuest(ctx, "canCompleteRFDAnotherCooksQuest", canCompleteRFDAnotherCooksQuest), //
-        requiresQuest(ctx, "canCompleteBigChompyBirdHunting", canCompleteBigChompyBirdHunting), //
-        requiresQuest(ctx, "canCompleteBiohazard", canCompleteBiohazard), //
-        requiresQuest(ctx, "canCompleteDemonSlayer", canCompleteDemonSlayer), //
-        requiresQuest(ctx, "canCompleteMurderMystery", canCompleteMurderMystery), //
-        requiresQuest(ctx, "canCompleteNatureSpirit", canCompleteNatureSpirit), //
-        requiresQuest(ctx, "canCompleteWitchsHouse", canCompleteWitchsHouse), //
-        has(ctx, 1927), // Bucket of milk
-        has(ctx, 1944), // Egg
-        has(ctx, 1933), // Pot of flour
-        has(ctx, 1887), // Cake tin
-    ]);
-}
-
-function canCompleteRFDFreeingEvilDave(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteRFDAnotherCooksQuest", canCompleteRFDAnotherCooksQuest), //
-        requiresQuest(ctx, "canCompleteGertrudesCat", canCompleteGertrudesCat), //
-        requiresQuest(ctx, "canCompleteShadowOfTheStorm", canCompleteShadowOfTheStorm), //
-        has(ctx, 2003), // Stew
-    ]);
-}
-
-function canCompleteRFDFreeingSkrachUglologwee(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Cooking", 41),
-        hasSkillLevel(ctx, "Firemaking", 20),
-        requiresQuest(ctx, "canCompleteRFDAnotherCooksQuest", canCompleteRFDAnotherCooksQuest), //
-        requiresQuest(ctx, "canCompleteBigChompyBirdHunting", canCompleteBigChompyBirdHunting), //
-        has(ctx, 2876), // Raw chompy
-        has(ctx, 7225), // Iron spit
-        has(ctx, 1759), // Ball of wool
-        has(ctx, 7566), // Raw Jubbly
-    ]);
-}
-
-function canCompleteRFDFreeingSirAmikVarse(ctx) {
-    return allTrue([
-        hasQuestPoints(ctx, 107),
-        requiresQuest(ctx, "canCompleteRFDAnotherCooksQuest", canCompleteRFDAnotherCooksQuest), //
-        canStartLegendsQuest(ctx), //
-        canReachKharaziJungle(ctx), //
-        has(ctx, 1927), // Bucket of milk
-        has(ctx, 2130), // Pot of cream
-        has(ctx, 7468), // Pot of cornflour
-        has(ctx, 2138), // Raw chicken
-        has(ctx, 233), // Pestle and mortar
-    ]);
-}
-
-function canCompleteRFDFreeingKingAwowogei(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Cooking", 70),
-        hasSkillLevel(ctx, "Agility", 48),
-        requiresQuest(ctx, "canCompleteRFDAnotherCooksQuest", canCompleteRFDAnotherCooksQuest), //
-        requiresQuest(ctx, "canCompleteMonkeyMadnessI", canCompleteMonkeyMadnessI), //
-        has(ctx, 954), // Rope
-        hasSlashWeapon(ctx), //
-        has(ctx, 233), // Pestle and mortar
-    ]);
-}
-
-function canCompleteRecipeForDisasterCulinaromancer(ctx) {
-    return requiresQuest(ctx, "canCompleteRecipeForDisaster", canCompleteRecipeForDisaster);
-}
-
-function canCompletePryingTimes(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompletePandemonium", canCompletePandemonium), //
-        requiresQuest(ctx, "canCompleteTheKnightsSword", canCompleteTheKnightsSword), //
-        has(ctx, 2347), // Hammer
-        has(ctx, 2325), // Redberry pie
-        has(ctx, 2353), // Steel bar
-    ]);
-}
-
-function canCompleteTheKnightsSword(ctx) {
-    return allTrue([
-        has(ctx, 2351), // Iron bar
-        has(ctx, 2325), // Redberry pie
-        hasUsablePickaxe(ctx),
-    ]);
-}
-
-function canCompleteMonkeyMadnessI(ctx) {
-    return requiresQuest(ctx, "canCompleteTheGrandTree", canCompleteTheGrandTree) //
-        && requiresQuest(ctx, "canCompleteTreeGnomeVillage", canCompleteTreeGnomeVillage) //
-        && has(ctx, 2357) // Gold bar
-        && has(ctx, 1759) // Ball of wool
-        && has(ctx, 1963) // Bananas
-        && (has(ctx, 3183) || requiresQuest(ctx, "canCompleteJunglePotion", canCompleteJunglePotion)) // Monkey bones or Monkey corpse
-}
-
-function canCompleteMonkeyMadnessII(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Slayer", 69),
-        hasSkillLevel(ctx, "Crafting", 70),
-        hasSkillLevel(ctx, "Hunter", 60),
-        hasSkillLevel(ctx, "Agility", 55),
-        hasSkillLevel(ctx, "Thieving", 55),
-        hasSkillLevel(ctx, "Firemaking", 60),
-        requiresQuest(ctx, "canCompleteEnlightenedJourney", canCompleteEnlightenedJourney), //
-        has(ctx, 1513), // Magic logs
-        requiresQuest(ctx, "canCompleteTheEyesOfGlouphrie", canCompleteTheEyesOfGlouphrie), //
-        requiresQuest(ctx, "canCompleteRFDFreeingKingAwowogei", canCompleteRFDFreeingKingAwowogei), //
-        requiresQuest(ctx, "canCompleteTrollStronghold", canCompleteTrollStronghold), //
-        has(ctx, 2102), // Lemon
-        has(ctx, 1987), // Grapes
-        has(ctx, 1511), // Logs
-        has(ctx, 2347), // Hammer
-        has(ctx, 1755), // Chisel
-        has(ctx, 233), // Pestle and mortar
-    ]);
-}
-
 function hasSlashWeapon(ctx) {
     return true; // TODO
 }
 
 function hasSlashWeaponOrKnife(ctx) {
     return true; // TODO
-}
-
-function canCompleteWitchsHouse(ctx) {
-    return has(ctx, 1985); // Cheese
-}
-
-function canCompleteBiohazard(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompletePlagueCity", canCompletePlagueCity), //
-        has(ctx, 428), // Priest gown (bottom)
-        has(ctx, 426), // Priest gown (top)
-    ]);
-}
-
-function canCompletePlagueCity(ctx) {
-    return allTrue([
-        has(ctx, 2126), // Dwellberries
-        has(ctx, 952), // Spade
-        has(ctx, 1929), // Bucket of water
-        has(ctx, 1927), // Bucket of milk
-        has(ctx, 1975), // Chocolate dust
-        has(ctx, 231), // Snape grass
-        has(ctx, 954), // Rope
-    ]);
-}
-
-function canCompleteDemonSlayer(ctx) {
-    return allTrue([
-        has(ctx, 1929), // Bucket of water
-        has(ctx, 526), // Bones
-    ]);
-}
-
-function canCompleteCurrentAffairs(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompletePandemonium", canCompletePandemonium), //
-        has(ctx, 973), // Charcoal
-    ]);
-}
-
-function canCompleteMurderMystery(ctx) {
-    return has(ctx, 1933); // Pot of flour
-}
-
-function canCompleteMonksFriend(ctx) {
-    return allTrue([
-        has(ctx, 1937), // Jug of water
-        hasAnyItems(ctx, [1511, 960]), // Logs or Plank
-    ]);
-}
-
-function canCompleteShadowOfTheStorm(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Crafting", 30),
-        requiresQuest(ctx, "canCompleteDemonSlayer", canCompleteDemonSlayer), //
-        requiresQuest(ctx, "canCompleteTheGolem", canCompleteTheGolem), //
-        (has(ctx, 229) && has(ctx, 233)), // Vial and Pestle and mortar for black dye
-        has(ctx, 2355), // Silver bar
-    ]);
-}
-
-function canCompleteSheepShearer(ctx) {
-    return has(ctx, 1759); // Ball of wool
-}
-
-function canCompleteTheGolem(ctx) {
-    return allTrue([
-        has(ctx, 229), // Vial
-        has(ctx, 233), // Pestle and mortar
-        has(ctx, 1761), // Soft clay
-        has(ctx, 970), // Papyrus
-    ]);
-}
-
-function canCompleteHorrorFromTheDeep(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Agility", 35),
-        has(ctx, 556), // Air rune
-        has(ctx, 555), // Water rune
-        has(ctx, 557), // Earth rune
-        has(ctx, 554)  // Fire rune
-        , // This assumes ice arrows can be used and swords/longsword from an event/castle wars
-        has(ctx, 1775), // Molten glass
-        has(ctx, 590), // Tinderbox
-        has(ctx, 2347), // Hammer
-        has(ctx, 1539), // Steel nails
-        has(ctx, 1939), // Swamp tar
-        has(ctx, 960), // Plank
-    ]);
-}
-
-function canCompleteTheGrandTree(ctx) {
-    return true;
 }
 
 function canEnterBraindeathIsland(ctx) {
@@ -4892,31 +5683,6 @@ function canDoMixology(ctx) {
             267,
             269,
         ]);
-}
-
-function canCompleteGettingAhead(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Crafting", 30),
-        hasSkillLevel(ctx, "Construction", 26),
-        hasAnyItems(ctx, [948, 6814, 958]),
-        has(ctx, 1761), // Soft clay
-        has(ctx, 2347), // Hammer
-        has(ctx, 8794), // Saw
-        has(ctx, 960), // Plank
-        hasAnyNails(ctx), //
-        has(ctx, 1763), // Red dye
-        has(ctx, 1933), // Pot of flour
-        has(ctx, 946), // Knife
-    ]);
-}
-
-function canCompleteTheFeud(ctx) {
-    return allTrue([
-        has(ctx, 4591), // Kharidian headpiece
-        has(ctx, 4593), // Fake beard
-        has(ctx, 1917), // Beer
-        has(ctx, 1925), // Bucket
-    ]);
 }
 
 function canMakeSplitLog(ctx) {
@@ -4979,77 +5745,6 @@ function canCureYakHide(ctx) {
         && has(ctx, 954);  // Rope
 }
 
-function canCompleteTheFremennikIsles(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteTheFremennikTrials", canCompleteTheFremennikTrials), //
-        has(ctx, 359), // Raw tuna
-        (ctx.player.levels.Mining === 1 //
-            ? has(ctx, 438) // Tin ore
-            : ctx.player.levels.Mining <= 54 //
-                ? has(ctx, 453) // Coal
-                : has(ctx, 447)), // Mithril ore
-        has(ctx, 10812), // Split log
-        has(ctx, 10826), // Neitiznot shield
-        has(ctx, 10824), // Yak-hide armour (legs)
-        has(ctx, 10822), // Yak-hide armour (top)
-        has(ctx, 954), // Rope
-    ]);
-}
-
-function canCompleteMountainDaughter(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Agility", 20),
-        has(ctx, 954), // Rope
-        has(ctx, 960), // Plank
-    ]);
-}
-
-function canCompleteTheFremennikExiles(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteTheFremennikIsles", canCompleteTheFremennikIsles), //
-        requiresQuest(ctx, "canCompleteLunarDiplomacy", canCompleteLunarDiplomacy), //
-        requiresQuest(ctx, "canCompleteMountainDaughter", canCompleteMountainDaughter), //
-        requiresQuest(ctx, "canCompleteHeroesQuest", canCompleteHeroesQuest), //
-        has(ctx, 4156), // Mirror shield
-        has(ctx, 3801), // Keg of beer
-        has(ctx, 1775), // Molten glass
-        has(ctx, 9075), // Astral rune
-        hasAnyItems(ctx, [307, 309]),
-        has(ctx, 2347), // Hammer
-        has(ctx, 1785), // Glassblowing pipe
-    ]);
-}
-
-function canCompleteScorpionCatcher(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Prayer", 31),
-    ]);
-}
-
-function canCompleteEnakhrasLament(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Crafting", 50),
-        hasSkillLevel(ctx, "Firemaking", 45),
-        hasSkillLevel(ctx, "Prayer", 43),
-        hasSkillLevel(ctx, "Magic", 39),
-        has(ctx, 1755), // Chisel
-        has(ctx, 590), // Tinderbox
-        has(ctx, 36), // Candle
-        has(ctx, 1511), // Logs
-        has(ctx, 1521), // Oak logs
-        has(ctx, 1519), // Willow logs
-        has(ctx, 1517), // Maple logs
-        has(ctx, 1761), // Soft clay
-        has(ctx, 453), // Coal
-        hasAnyItems(ctx, [6977, 6971, 6973, 6975]),
-        has(ctx, 6983), // Granite (5kg)
-        hasAirRuneSource(ctx), //
-        hasFireRuneSource(ctx), //
-        hasEarthRuneSource(ctx), //
-        has(ctx, 562), // Chaos rune
-    ]);
-}
-
 function canReachKharaziJungle(ctx) {
     return canStartLegendsQuest(ctx)
         && canTrainWoodcutting(ctx) //
@@ -5077,26 +5772,6 @@ function canStartDarknessOfHallowvale(ctx) {
         && canTrainCrafting(ctx); //
 }
 
-function canCompleteDarknessOfHallowvale(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Construction", 5),
-        hasSkillLevel(ctx, "Mining", 20),
-        hasSkillLevel(ctx, "Thieving", 22),
-        hasSkillLevel(ctx, "Agility", 26),
-        hasSkillLevel(ctx, "Crafting", 32),
-        hasSkillLevel(ctx, "Magic", 33),
-        hasSkillLevel(ctx, "Strength", 40),
-        requiresQuest(ctx, "canCompleteInAidOfTheMyreque", canCompleteInAidOfTheMyreque), //
-        hasAnyNails(ctx), //
-        has(ctx, 960), // Plank
-        has(ctx, 2347), // Hammer
-        has(ctx, 946), // Knife
-        hasAirRuneSource(ctx), //
-        has(ctx, 563), // Law rune
-        hasUsablePickaxe(ctx), //
-    ]);
-}
-
 function canStartATasteOfHope(ctx) {
     return requiresQuest(ctx, "canCompleteDarknessOfHallowvale", canCompleteDarknessOfHallowvale) //
         && canTrainCrafting(ctx) //
@@ -5105,277 +5780,14 @@ function canStartATasteOfHope(ctx) {
         && canTrainMining(ctx); //
 }
 
-function canCompleteATasteOfHope(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteDarknessOfHallowvale", canCompleteDarknessOfHallowvale), //
-        has(ctx, 1605), // Emerald
-        has(ctx, 1755), // Chisel
-        has(ctx, 233), // Pestle and mortar
-        has(ctx, 227), // Vial of water
-        hasAnyItems(ctx, [946, 2961]), // Knife or Silver sickle
-    ]);
-}
-
-function canCompleteVampyreSlayer(ctx) {
-    return allTrue([
-        has(ctx, 1917), // Beer
-        has(ctx, 2347), // Hammer
-        has(ctx, 1550), // Garlic
-    ]);
-}
-
-function canCompleteWitchsPotion(ctx) {
-    return allTrue([
-        has(ctx, 221), // Eye of newt
-        has(ctx, 1957), // Onion
-    ]);
-}
-
-function canCompleteSinsOfTheFather(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Woodcutting", 62),
-        hasSkillLevel(ctx, "Fletching", 60),
-        hasSkillLevel(ctx, "Crafting", 56),
-        hasSkillLevel(ctx, "Agility", 52),
-        hasSkillLevel(ctx, "Attack", 50),
-        hasSkillLevel(ctx, "Slayer", 50),
-        hasSkillLevel(ctx, "Magic", 49),
-        requiresQuest(ctx, "canCompleteVampyreSlayer", canCompleteVampyreSlayer), //
-        requiresQuest(ctx, "canCompleteATasteOfHope", canCompleteATasteOfHope), //
-        has(ctx, 1603), // Ruby
-        has(ctx, 1755), // Chisel
-        has(ctx, 2347), // Hammer
-        has(ctx, 946), // Knife
-        hasUsableAxe(ctx),
-    ]);
-}
-
-function canCompleteTrollStronghold(ctx) {
-    return requiresQuest(ctx, "canCompleteDeathPlateau", canCompleteDeathPlateau);
-}
-
 function canStartMageArenaII(ctx) {
     return has(ctx, 565) // Blood rune
         && hasAirRuneSource(ctx) //
         && hasFireRuneSource(ctx); //
 }
 
-function canCompleteMageArenaI(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Magic", 60),
-        hasAirRuneSource(ctx), //
-        hasAnyItems(ctx, [
-            558,
-            562,
-            560,
-            565,
-        ]),
-    ]);
-}
-
-function canCompleteMageArenaII(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Magic", 75),
-        requiresQuest(ctx, "canCompleteMageArenaI", canCompleteMageArenaI), //
-        has(ctx, 565), // Blood rune
-        hasAirRuneSource(ctx), //
-        hasFireRuneSource(ctx), //
-    ]);
-}
-
-function canCompleteWhatLiesBelow(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Runecraft", 35),
-        requiresQuest(ctx, "canCompleteRuneMysteries", canCompleteRuneMysteries), //
-        has(ctx, 1923), // Bowl
-        has(ctx, 562), // Chaos rune
-        (
-            hasAnyItems(ctx, [1452, 5543]) // Chaos talisman or Chaos tiara
-            || requiresQuest(ctx, "canCompleteEnterTheAbyss", canCompleteEnterTheAbyss) //
-            || canDoGuardiansOfTheRift(ctx)
-        ),
-    ]);
-}
-
-function canCompleteOlafsQuest(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Firemaking", 40),
-        hasSkillLevel(ctx, "Woodcutting", 50),
-        requiresQuest(ctx, "canCompleteTheFremennikTrials", canCompleteTheFremennikTrials),
-        has(ctx, 590), // Tinderbox
-        has(ctx, 952), // Spade
-        has(ctx, 954), // Rope
-        hasUsableAxe(ctx),
-    ]);
-}
-
-function canCompleteDefenderOfVarrock(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Smithing", 55),
-        hasSkillLevel(ctx, "Hunter", 52),
-        requiresQuest(ctx, "canCompleteTempleOfIkov", canCompleteTempleOfIkov), //
-        requiresQuest(ctx, "canCompleteBelowIceMountain", canCompleteBelowIceMountain), //
-        requiresQuest(ctx, "canCompleteFamilyCrest", canCompleteFamilyCrest), //
-        requiresQuest(ctx, "canCompleteGardenOfTranquillity", canCompleteGardenOfTranquillity), //
-        requiresQuest(ctx, "canCompleteWhatLiesBelow", canCompleteWhatLiesBelow), //
-        requiresQuest(ctx, "canCompleteRomeoAndJuliet", canCompleteRomeoAndJuliet), //
-        requiresQuest(ctx, "canCompleteDemonSlayer", canCompleteDemonSlayer), //
-    ]);
-}
-
-function canCompleteTreeGnomeVillage(ctx) {
-    return has(ctx, 1511); // Logs
-}
-
-function canCompleteTheSlugMenace(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteWanted", canCompleteWanted), //
-        requiresQuest(ctx, "canCompleteSeaSlug", canCompleteSeaSlug), //
-        has(ctx, 1941), // Swamp paste
-        hasAnyItems(ctx, [1436, 7936]),
-        has(ctx, 1755), // Chisel
-        (
-            canDoGuardiansOfTheRift(ctx) //
-            || requiresQuest(ctx, "canCompleteEnterTheAbyss", canCompleteEnterTheAbyss) //
-            || (
-                hasAnyItems(ctx, [1438, 5527]) // Air talisman or Air tiara
-                && hasAnyItems(ctx, [1444, 5531]) // Water talisman or Water tiara
-                && hasAnyItems(ctx, [1440, 5535]) // Earth talisman or Earth tiara
-                && hasAnyItems(ctx, [1442, 5537]) // Fire talisman or Fire tiara
-            )
-        ),
-    ]);
-}
-
-function canCompleteDaddysHome(ctx) {
-    return allTrue([
-        has(ctx, 960), // Plank
-        has(ctx, 8790), // Bolt of cloth
-        hasAnyNails(ctx), //
-        has(ctx, 2347), // Hammer
-        has(ctx, 8794), // Saw
-    ]);
-}
-
-function canCompleteSeaSlug(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Firemaking", 30),
-        has(ctx, 1941), // Swamp paste
-        has(ctx, 596), // Unlit torch
-    ]);
-}
-
-function canCompleteTaleOfTheRighteous(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteClientOfKourend", canCompleteClientOfKourend), //
-        has(ctx, 954), // Rope
-        hasAirRuneSource(ctx), //
-        hasAnyItems(ctx, [558, 562, 560, 565]), // Mind rune, Chaos rune, Death rune or Blood rune
-        hasUsablePickaxe(ctx), //
-    ]);
-}
-
-function canCompleteTheDepthsOfDespair(ctx) {
-    return requiresQuest(ctx, "canCompleteClientOfKourend", canCompleteClientOfKourend);
-}
-
 function canStartTheQueenOfThieves(ctx) {
     return requiresQuest(ctx, "canCompleteClientOfKourend", canCompleteClientOfKourend);
-}
-
-function canCompleteTheQueenOfThieves(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteClientOfKourend", canCompleteClientOfKourend),
-        has(ctx, 2003), // Stew
-    ]);
-}
-
-function canCompleteTheAscentOfArceuus(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteClientOfKourend", canCompleteClientOfKourend),
-    ]);
-}
-
-function canCompleteTheForsakenTower(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteClientOfKourend", canCompleteClientOfKourend),
-        has(ctx, 590), // Tinderbox
-    ]);
-}
-
-function canCompleteASoulsBane(ctx) {
-    return has(ctx, 954); // Rope
-}
-
-function canCompleteAPorcineOfInterest(ctx) {
-    return has(ctx, 954); // Rope
-}
-
-function canCompleteAKingdomDivided(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteTheDepthsOfDespair", canCompleteTheDepthsOfDespair), //
-        requiresQuest(ctx, "canCompleteTheQueenOfThieves", canCompleteTheQueenOfThieves), //
-        requiresQuest(ctx, "canCompleteTheAscentOfArceuus", canCompleteTheAscentOfArceuus), //
-        requiresQuest(ctx, "canCompleteTheForsakenTower", canCompleteTheForsakenTower), //
-        requiresQuest(ctx, "canCompleteTaleOfTheRighteous", canCompleteTaleOfTheRighteous), //
-        hasSkillLevel(ctx, "Agility", 54), //
-        hasSkillLevel(ctx, "Thieving", 52), //
-        hasSkillLevel(ctx, "Woodcutting", 52), //
-        hasSkillLevel(ctx, "Herblore", 50), //
-        hasSkillLevel(ctx, "Mining", 42), //
-        hasSkillLevel(ctx, "Crafting", 38), //
-        hasSkillLevel(ctx, "Magic", 35), //
-        hasAirRuneSource(ctx), //
-        hasFireRuneSource(ctx), //
-        hasAnyItems(ctx, [558, 562, 560, 565]),
-        hasAnyItems(ctx, [133, 2432]),
-        hasAnyItems(ctx, [2126, 4164]),
-        has(ctx, 1775), // Molten glass
-        has(ctx, 1755), // Chisel
-        hasUsableAxe(ctx),
-        hasUsablePickaxe(ctx), //
-    ]);
-}
-
-function canCompleteThePathOfGlouphrie(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteTheEyesOfGlouphrie", canCompleteTheEyesOfGlouphrie), //
-        requiresQuest(ctx, "canCompleteWaterfallQuest", canCompleteWaterfallQuest), //
-        requiresQuest(ctx, "canCompleteTreeGnomeVillage", canCompleteTreeGnomeVillage), //
-        has(ctx, 9419), // Mith Grapple (Phoenix crossbow is available)
-    ]);
-}
-
-function canCompleteTheHandInTheSand(ctx) {
-    return allTrue([
-        has(ctx, 1917), // Beer
-        has(ctx, 229), // Vial
-        has(ctx, 1951), // Redberries
-        has(ctx, 239), // White berries
-        has(ctx, 4542), // Lantern lens
-        has(ctx, 1783), // Bucket of sand
-        has(ctx, 557), // Earth rune
-    ]);
-}
-
-function canCompleteSpiritsOfTheElid(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Magic", 33),
-        hasSkillLevel(ctx, "Ranged", 37),
-        hasSkillLevel(ctx, "Mining", 37),
-        hasSkillLevel(ctx, "Thieving", 37),
-        hasTelegrabRunes(ctx), //
-        has(ctx, 1733), // Needle
-        has(ctx, 1734), // Thread
-        has(ctx, 946), // Knife
-        has(ctx, 954), // Rope
-        canShortrange(ctx),
-        hasUsablePickaxe(ctx), //
-    ]);
-}
-
-function canCompleteShieldOfArrav(ctx) {
-    return true;
 }
 
 function hasTelegrabRunes(ctx) {
@@ -5383,289 +5795,8 @@ function hasTelegrabRunes(ctx) {
         && hasAirRuneSource(ctx);
 }
 
-function canCompleteTearsOfGuthix(ctx) {
-    return allTrue([
-        hasQuestPoints(ctx, 43), //
-        has(ctx, 4548), // Bullseye lantern
-        has(ctx, 1607), // Sapphire
-        has(ctx, 1755), // Chisel
-        has(ctx, 590), // Tinderbox
-        canEnterLumbridgeSwampCaves(ctx), //
-        hasUsablePickaxe(ctx), //
-    ]);
-}
-
-function canCompleteWhileGuthixSleeps(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Thieving", 72),
-        hasSkillLevel(ctx, "Magic", 67),
-        hasSkillLevel(ctx, "Agility", 66),
-        hasSkillLevel(ctx, "Farming", 65),
-        hasSkillLevel(ctx, "Herblore", 65),
-        hasSkillLevel(ctx, "Hunter", 62),
-        hasQuestPoints(ctx, 180), //
-        requiresQuest(ctx, "canCompleteDefenderOfVarrock", canCompleteDefenderOfVarrock), //
-        requiresQuest(ctx, "canCompleteThePathOfGlouphrie", canCompleteThePathOfGlouphrie), //
-        requiresQuest(ctx, "canCompleteDreamMentor", canCompleteDreamMentor), //
-        requiresQuest(ctx, "canCompleteTheHandInTheSand", canCompleteTheHandInTheSand), //
-        requiresQuest(ctx, "canCompleteWanted", canCompleteWanted), //
-        requiresQuest(ctx, "canCompleteTempleOfTheEye", canCompleteTempleOfTheEye), //
-        requiresQuest(ctx, "canCompleteTearsOfGuthix", canCompleteTearsOfGuthix), //
-        requiresQuest(ctx, "canCompleteNatureSpirit", canCompleteNatureSpirit), //
-        requiresQuest(ctx, "canCompleteATailOfTwoCats", canCompleteATailOfTwoCats), //
-        has(ctx, 946), // Knife
-        has(ctx, 4542), // Lantern lens
-        has(ctx, 567), // Unpowered orb
-        has(ctx, 1139), // Bronze med helm
-        has(ctx, 1101), // Iron chainbody
-        has(ctx, 4548), // Bullseye lantern
-        has(ctx, 1607), // Sapphire
-        has(ctx, 1951), // Redberries
-        has(ctx, 239), // White berries
-        hasAirRuneSource(ctx), //
-        has(ctx, 564), // Cosmic rune
-        has(ctx, 9075), // Astral rune
-        hasWaterRuneSource(ctx), //
-        hasEarthRuneSource(ctx), //
-        hasFireRuneSource(ctx), //
-        hasAnyItems(ctx, [559, 566]),
-        has(ctx, 561), // Nature rune
-        has(ctx, 563), // Law rune
-        has(ctx, 558), // Mind rune
-        has(ctx, 560), // Death rune
-        has(ctx, 2970), // Mort myre fungus
-        hasAnyLog(ctx), //
-        has(ctx, 5300), // Snapdragon seed
-        has(ctx, 2430), // Restore potion(4)
-        has(ctx, 970), // Papyrus
-        has(ctx, 973), // Charcoal
-    ]);
-}
-
-function canCompleteSongOfTheElves(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Agility", 70),
-        hasSkillLevel(ctx, "Construction", 70),
-        hasSkillLevel(ctx, "Farming", 70),
-        hasSkillLevel(ctx, "Herblore", 70),
-        hasSkillLevel(ctx, "Hunter", 70),
-        hasSkillLevel(ctx, "Mining", 70),
-        hasSkillLevel(ctx, "Smithing", 70),
-        hasSkillLevel(ctx, "Woodcutting", 70),
-        requiresQuest(ctx, "canCompleteMourningsEndPartII", canCompleteMourningsEndPartII), //
-        requiresQuest(ctx, "canCompleteMakingHistory", canCompleteMakingHistory), //
-        requiresQuest(ctx, "canCompleteDruidicRitual", canCompleteDruidicRitual), //
-        has(ctx, 1157), // Steel full helm
-        has(ctx, 1119), // Steel platebody
-        has(ctx, 1069), // Steel platelegs
-        has(ctx, 1763), // Red dye
-        has(ctx, 1773), // Purple dye
-        has(ctx, 950), // Silk
-        has(ctx, 2363), // Runite bar
-        has(ctx, 3420), // Limestone brick
-        has(ctx, 590), // Tinderbox
-        has(ctx, 954), // Rope
-        has(ctx, 561), // Nature rune
-        hasAnyItems(ctx, [2472, 2462, 2466, 2464, 2470, 2468, 2460, 2476, 2474, 259]),
-        has(ctx, 1111), // Adamant chainbody
-        hasAnyItems(ctx, [245, 2450]),
-        hasAnyItems(ctx, [869, 1217]),
-        has(ctx, 5301), // Cadantine seed
-        has(ctx, 227), // Vial of water
-        has(ctx, 233), // Pestle and mortar
-        has(ctx, 2347), // Hammer
-        has(ctx, 8794), // Saw
-        has(ctx, 952), // Spade
-        hasUsableAxe(ctx),
-        hasUsablePickaxe(ctx), //
-    ]);
-}
-
-function canCompleteShadowsOfCustodia(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Slayer", 54),
-        hasSkillLevel(ctx, "Fishing", 45),
-        hasSkillLevel(ctx, "Construction", 41),
-        hasSkillLevel(ctx, "Hunter", 36),
-        has(ctx, 847), // Willow longbow
-        has(ctx, 1517), // Maple logs
-        has(ctx, 2347), // Hammer
-        has(ctx, 307), // Fishing rod
-    ]);
-}
-
-function canCompleteInAidOfTheMyreque(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Agility", 25),
-        hasSkillLevel(ctx, "Crafting", 25),
-        hasSkillLevel(ctx, "Mining", 15),
-        hasSkillLevel(ctx, "Magic", 7),
-        requiresQuest(ctx, "canCompleteInSearchOfTheMyreque", canCompleteInSearchOfTheMyreque), //
-        has(ctx, 952), // Spade
-        has(ctx, 1925), // Bucket
-        has(ctx, 2347), // Hammer
-        has(ctx, 960), // Plank
-        hasAnyNails(ctx), //
-        has(ctx, 1941), // Swamp paste
-        hasAnyItems(ctx, [353, 355, 3363, 3365, 3367]),
-        has(ctx, 1351), // Bronze axe
-        has(ctx, 590), // Tinderbox
-        has(ctx, 2353), // Steel bar
-        has(ctx, 453), // Coal
-        has(ctx, 1761), // Soft clay
-        has(ctx, 2355), // Silver bar
-        has(ctx, 2359), // Mithril bar
-        has(ctx, 1607), // Sapphire
-        has(ctx, 954), // Rope
-        hasUsablePickaxe(ctx),
-    ]);
-}
-
-function canCompleteInSearchOfTheMyreque(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Agility", 25),
-        requiresQuest(ctx, "canCompleteNatureSpirit", canCompleteNatureSpirit), //
-        has(ctx, 1295), // Steel longsword
-        has(ctx, 1281), // Stel sword
-        has(ctx, 1424), // Steel mace
-        has(ctx, 1339), // Steel warhammer
-        has(ctx, 1207), // Steel dagger
-        has(ctx, 1539), // Steel nails
-        has(ctx, 2347), // Hammer
-        has(ctx, 960), // Plank
-    ]);
-}
-
-function canCompleteWaterfallQuest(ctx) {
-    return allTrue([
-        has(ctx, 556), // Air rune
-        has(ctx, 555), // Water rune
-        has(ctx, 557), // Earth rune
-        has(ctx, 954), // Rope
-    ]);
-}
-
-function canCompleteDwarfCannon(ctx) {
-    return has(ctx, 2347); // Hammer
-}
-
-function canCompleteTheRibbitingTaleOfALilyPadLabourDispute(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Woodcutting", 15),
-        requiresQuest(ctx, "canCompleteChildrenOfTheSun", canCompleteChildrenOfTheSun),
-        hasUsableAxe(ctx),
-    ]);
-}
-
-function canCompleteChildrenOfTheSun(ctx) {
-    return true;
-}
-
-function canCompleteScrambled(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Construction", 38),
-        hasSkillLevel(ctx, "Cooking", 36),
-        hasSkillLevel(ctx, "Smithing", 35),
-        requiresQuest(ctx, "canCompleteChildrenOfTheSun", canCompleteChildrenOfTheSun), //
-        has(ctx, 1921), // Bowl of water
-        hasAnyNails(ctx), //
-        has(ctx, 2347), // Hammer
-        has(ctx, 8794), // Saw
-        has(ctx, 960), // Plank
-    ]);
-}
-
-function canCompleteTheRestlessGhost(ctx) {
-    return true;
-}
-
-function canCompleteTroubledTortugans(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompletePandemonium", canCompletePandemonium), //
-        hasUsableAxe(ctx),
-        has(ctx, 401), // Seaweed
-    ]);
-}
-
-function canCompleteTheFremennikTrials(ctx) {
-    return has(ctx, 1917) // Beer
-        && has(ctx, 590)  // Tinderbox
-        && hasAnyItems(ctx, [383, 389, 395]); // Raw shark, Raw sea turtle or Raw manta ray
-}
-
-function canCompleteDruidicRitual(ctx) {
-    return allTrue([
-        has(ctx, 2136), // Raw bear meat
-        has(ctx, 2134), // Raw rat meat
-        has(ctx, 2132), // Raw beef
-        has(ctx, 2138), // Raw chicken
-    ]);
-}
-
-function canCompleteClockTower(ctx) {
-    return hasAnyItems(ctx, [1929, 1937]); // Bucket of water or Jug of water
-}
-
-function canCompletePandemonium(ctx) {
-    return allTrue([
-        has(ctx, 2347), // Hammer
-        has(ctx, 8794), // Saw
-    ]);
-}
-
-function canCompleteTheHeartOfDarkness(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Mining", 55), //
-        hasSkillLevel(ctx, "Thieving", 48), //
-        hasSkillLevel(ctx, "Slayer", 48), //
-        hasSkillLevel(ctx, "Agility", 46), //
-        hasUsablePickaxe(ctx), //
-    ]);
-}
-
 function canStartIcthlarinsLittleHelper(ctx) {
     return requiresQuest(ctx, "canCompleteGertrudesCat", canCompleteGertrudesCat);
-}
-
-function canCompleteIcthlarinsLittleHelper(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteGertrudesCat", canCompleteGertrudesCat), //
-        has(ctx, 590), // Tinderbox
-        has(ctx, 1519), // Willow logs
-        (has(ctx, 4161) || (has(ctx, 1925) && has(ctx, 4689))), // Bag of salt or (Bucket and Pile of salt)
-        has(ctx, 4687), // Bucket of sap
-        has(ctx, 1823), // Waterskin(4)
-        has(ctx, 4684), // Linen
-    ]);
-}
-
-function canCompleteGertrudesCat(ctx) {
-    return allTrue([
-        has(ctx, 1927), // Bucket of milk
-        has(ctx, 1552), // Seasoned sardine
-    ]);
-}
-
-function canCompleteEnlightenedJourney(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Firemaking", 20),
-        hasSkillLevel(ctx, "Farming", 30),
-        hasSkillLevel(ctx, "Crafting", 36),
-        hasQuestPoints(ctx, 20), //
-        has(ctx, 970), // Papyrus
-        has(ctx, 1759), // Ball of wool
-        has(ctx, 5438), // Potatoes(10)
-        has(ctx, 5418), // Empty sack
-        hasCandle(ctx), //
-        has(ctx, 1765), // Yellow dye
-        has(ctx, 1763), // Red dye
-        has(ctx, 950), // Silk
-        has(ctx, 1923), // Bowl
-        has(ctx, 1511), // Logs
-        has(ctx, 1511), // Logs
-        has(ctx, 5933), // Willow branch
-        has(ctx, 590), // Tinderbox
-    ]);
 }
 
 function hasCandle(ctx) {
@@ -5675,19 +5806,7 @@ function hasCandle(ctx) {
     ])
 }
 
-function canCompletePriestInPeril(ctx) {
-    return allTrue([
-        has(ctx, 1925), // Bucket
-        hasAnyItems(ctx, [7936, 1436]),
-    ]);
-}
 
-function canCompleteHazeelCult(ctx) {
-    if (ctx.filters?.hazeelCultLocked) {
-        return has(ctx, 273); // Poison (item)
-    }
-    return true;
-}
 
 const BONE_VOYAGE_KUDOS_QUESTS = [
     canCompleteDemonSlayer,
@@ -5739,117 +5858,9 @@ function canGet50Kudos(ctx) {
         || countCompletableKudosquests(ctx) >= 5;
 }
 
-function canCompleteBoneVoyage(ctx) {
-    return allTrue([
-        requiresQuest(ctx, "canCompleteTheDigSite", canCompleteTheDigSite), //
-        has(ctx, 2015), // Vodka
-        has(ctx, 93)   // Marrentill potion (unf)
-        // 100 kudos needed
-        // 28 kudos from natural history museum quiz
-        , // 50 from cleaning finds
-        has(ctx, 1059), // Leather gloves
-        has(ctx, 1061) // Leather boots
-        , // 22 kudos needed = 5 quests
-        countCompletableKudosquests(ctx) >= 5,
-    ]);
-}
-
-function canCompleteElementalWorkshopI(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Smithing", 20),
-        hasSkillLevel(ctx, "Crafting", 20),
-        has(ctx, 2347), // Hammer
-        has(ctx, 1733), // Needle
-        has(ctx, 1734), // Thread
-        has(ctx, 1741), // Leather
-        has(ctx, 453), // Coal
-    ]);
-}
-
-function canCompleteElementalWorkshopII(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Magic", 20),
-        hasSkillLevel(ctx, "Smithing", 30),
-        requiresQuest(ctx, "canCompleteElementalWorkshopI", canCompleteElementalWorkshopI),
-    ]);
-}
-
-function canCompleteAnotherSliceOfHAM(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Attack", 15),
-        hasSkillLevel(ctx, "Prayer", 25),
-        requiresQuest(ctx, "canCompleteDeathToTheDorgeshuun", canCompleteDeathToTheDorgeshuun), //
-        requiresQuest(ctx, "canCompleteTheGiantDwarf", canCompleteTheGiantDwarf), //
-        requiresQuest(ctx, "canCompleteTheDigSite", canCompleteTheDigSite), //
-    ]); //
-}
-
-function canCompleteTheGiantDwarf(ctx) {
-    return allTrue([
-        has(ctx, 563), // Law rune
-        hasAirRuneSource(ctx), //
-        hasAnyLog(ctx), //
-        has(ctx, 453), // Coal
-        has(ctx, 2351), // Iron bar
-        has(ctx, 1607), // Sapphire
-        has(ctx, 2325), // Redberry pie
-        has(ctx, 590), // Tinderbox
-    ]);
-}
-
-function canCompleteImpCatcher(ctx) {
-    return allTrue([
-        has(ctx, 1470), // Red bead
-        has(ctx, 1472), // Yellow bead
-        has(ctx, 1474), // Black bead
-        has(ctx, 1476), // White bead
-    ]);
-}
-
-function canCompleteZogreFleshEaters(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Smithing", 4),
-        hasSkillLevel(ctx, "Herblore", 8),
-        hasSkillLevel(ctx, "Ranged", 30),
-        requiresQuest(ctx, "canCompleteBigChompyBirdHunting", canCompleteBigChompyBirdHunting), //
-        requiresQuest(ctx, "canCompleteJunglePotion", canCompleteJunglePotion), //
-    ]);
-}
-
 function canStartZogreFleshEaters(ctx) {
     return requiresQuest(ctx, "canCompleteBigChompyBirdHunting", canCompleteBigChompyBirdHunting) //
         && requiresQuest(ctx, "canCompleteJunglePotion", canCompleteJunglePotion);
-}
-
-function canCompleteJunglePotion(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Herblore", 3),
-        requiresQuest(ctx, "canCompleteDruidicRitual", canCompleteDruidicRitual),
-    ]);
-}
-
-function canCompleteBigChompyBirdHunting(ctx) {
-    return allTrue([
-        hasSkillLevel(ctx, "Fletching", 5),
-        hasSkillLevel(ctx, "Cooking", 30),
-        hasSkillLevel(ctx, "Ranged", 30),
-        has(ctx, 314), // Feather
-        has(ctx, 946), // Knife
-        has(ctx, 1755), // Chisel
-        has(ctx, 1965), // Cabbage
-        has(ctx, 1982), // Tomato
-        has(ctx, 1957), // Onion
-        has(ctx, 1942), // Potato
-        has(ctx, 2128), // Equa leaves
-        has(ctx, 1573), // Doogle leaves
-        has(ctx, 2862), // Achey tree logs
-        has(ctx, 2864), // Ogre arrow shaft
-        has(ctx, 2865), // Flighted ogre arrow
-        has(ctx, 2859), // Wolf bones
-        has(ctx, 2861), // Wolfbone arrowtips
-        has(ctx, 2866), // Ogre arrow
-        has(ctx, 2876), // Raw chompy
-    ]);
 }
 
 function canTrainCrafting(ctx) {
