@@ -2235,16 +2235,16 @@ function hasAnyLantern(ctx) {
 function canCompleteContact(ctx) {
     return allTrue([
         requiresQuest(ctx, "canCompletePrinceAliRescue", canCompletePrinceAliRescue), //
-        requiresQuest(ctx, "canCompleteIcthlarinsLittleHelper", canCompleteIcthlarinsLittleHelper),
-    ]); //
+        requiresQuest(ctx, "canCompleteIcthlarinsLittleHelper", canCompleteIcthlarinsLittleHelper), //
+    ]);
 }
 
 function canCompleteTowerOfLife(ctx) {
     return allTrue([
         has(ctx, 2347), // Hammer
         has(ctx, 8794), // Saw
-        has(ctx, 1917),
-    ]); // Beer
+        has(ctx, 1917), // Beer
+    ]);
 }
 
 function canCompletePrinceAliRescue(ctx) {
@@ -2259,16 +2259,16 @@ function canCompletePrinceAliRescue(ctx) {
         has(ctx, 2349), // Bronze bar
         has(ctx, 1013), // Pink skirt
         has(ctx, 1917), // Beer
-        has(ctx, 954),
-    ]); //  Rope
+        has(ctx, 954), // Rope
+    ]);
 }
 
 function canCompleteHauntedMine(ctx) {
     return allTrue([
         hasSkillLevel(ctx, "Crafting", 35),
         requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
-        has(ctx, 1755),
-    ]); // Chisel
+        has(ctx, 1755), // Chisel
+    ]);
 }
 
 function canEnterLumbridgeSwampCaves(ctx) {
@@ -2306,8 +2306,8 @@ function canCompleteMourningsEndPartI(ctx) {
         has(ctx, 1513), // Magic logs
         has(ctx, 1741), // Leather
         has(ctx, 3216), // Barrel
-        has(ctx, 453),
-    ]); // Coal
+        has(ctx, 453), // Coal
+    ]);
 }
 
 function canCompleteMourningsEndPartII(ctx) {
@@ -2386,8 +2386,8 @@ function canCompleteRovingElves(ctx) {
         requiresQuest(ctx, "canCompleteRegicide", canCompleteRegicide), //
         requiresQuest(ctx, "canCompleteWaterfallQuest", canCompleteWaterfallQuest), //
         has(ctx, 952), // Spade
-        has(ctx, 954),
-    ]); // Rope
+        has(ctx, 954), // Rope
+    ]);
 }
 
 function canCompleteRegicide(ctx) {
@@ -2404,16 +2404,16 @@ function canCompleteRegicide(ctx) {
         has(ctx, 1759), // Ball of wool
         has(ctx, 233), // Pestle and mortar
         has(ctx, 1931), // Pot
-        hasAnyItems(ctx, [3228, 7223]),
-    ]); // Roast rabbit
+        hasAnyItems(ctx, [3228, 7223]), // Cooked rabbit or Roast rabbit
+    ]);
 }
 
 function canCompleteEaglesPeak(ctx) {
     return allTrue([
         hasSkillLevel(ctx, "Hunter", 27),
         has(ctx, 1765), // Yellow dye
-        has(ctx, 1939),
-    ]); // Swamp tar
+        has(ctx, 1939), // Swamp tar
+    ]);
 }
 
 function canCompleteWatchtower(ctx) {
@@ -2443,8 +2443,8 @@ function canCompleteUndergroundPass(ctx) {
         has(ctx, 954), // Rope
         has(ctx, 952), // Spade
         has(ctx, 1925), // Bucket
-        has(ctx, 590),
-    ]); // Tinderbox
+        has(ctx, 590), // Tinderbox
+    ]);
 }
 
 function canCompleteBelowIceMountain(ctx) {
@@ -2453,8 +2453,8 @@ function canCompleteBelowIceMountain(ctx) {
         has(ctx, 2142), // Cooked meat
         has(ctx, 2309), // Bread
         has(ctx, 946), // Knife
-        hasAnyItems(ctx, [1917, 1905, 1913, 1907]),
-    ]); // Beer, Asgarnian ale, Dwarven stout or Wizard's mind bomb
+        hasAnyItems(ctx, [1917, 1905, 1913, 1907]), // Beer, Asgarnian ale, Dwarven stout or Wizard's mind bomb
+    ]);
 }
 
 function canCompleteSleepingGiants(ctx) {
@@ -2465,8 +2465,7 @@ function canCompleteSleepingGiants(ctx) {
         has(ctx, 2309), // Wool
         has(ctx, 2347), // Hammer
         has(ctx, 1755), // Chisel
-        (has(ctx, 1929)  // Bucket of water
-        ),
+        (has(ctx, 1929) || hasAnyPickaxe(ctx)),  // Bucket of water or Ice gloves
     ]);
 }
 
@@ -2493,8 +2492,8 @@ function canCompleteShadesOfMortton(ctx) {
         has(ctx, 1511), // Logs (might not be needed?)
         hasAnyItems(ctx, [2347, 3678]),
         hasAnyItems(ctx, [3438, 3440, 3442, 6211, 10808, 3444, 6213, 31383, 3446, 3448, 31386, 19672, 31389]),
-        has(ctx, 3396),
-    ]); // Loar remains
+        has(ctx, 3396), // Loar remains
+    ]);
 }
 
 function canBurnLoarShades(ctx) {
@@ -2775,8 +2774,8 @@ function canCompleteMisthalinMystery(ctx) {
     return allTrue([
         has(ctx, 1925), // Bucket
         has(ctx, 590), // Tinderbox
-        has(ctx, 946),
-    ]); //
+        has(ctx, 946), //
+    ]);
 }
 
 function hasAnyFletchableLog(ctx) {
@@ -2884,8 +2883,8 @@ function canCompleteBarbarianHerblore(ctx) {
         requiresQuest(ctx, "canCompleteBarbarianFiremaking1", canCompleteBarbarianFiremaking1), //
         requiresQuest(ctx, "canCompleteBarbarianFishing", canCompleteBarbarianFishing), //
         has(ctx, 123), // Attack potion(2)
-        hasAnyItems(ctx, [11324, 11326]),
-    ]); // Roe or Caviar
+        hasAnyItems(ctx, [11324, 11326]), // Roe or Caviar
+    ]);
 }
 
 function canCompleteBarbarianSmithing(ctx) {
@@ -2955,8 +2954,8 @@ function canCompleteTaiBwoWannaiTrio(ctx) {
         ),
         has(ctx, 3157), // Karambwan vessel
         has(ctx, 3159), // Karambwan vessel (baited)
-        has(ctx, 3142),
-    ]); // Raw Karambwan
+        has(ctx, 3142), // Raw Karambwan
+    ]);
 }
 
 function canDoZulrah(ctx) {
@@ -2979,8 +2978,8 @@ function canCompleteAtFirstLight(ctx) {
         requiresQuest(ctx, "canCompleteEaglesPeak", canCompleteEaglesPeak), //
         has(ctx, 4055), // Toy mouse (wound)
         has(ctx, 29166), // Jerboa tail
-        has(ctx, 2347),
-    ]); // Hammer
+        has(ctx, 2347), // Hammer
+    ]);
 }
 
 function canCompleteTheFrozenDoor(ctx) {
@@ -2997,8 +2996,8 @@ function canCompleteMakingHistory(ctx) {
     return allTrue([
         requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril),
         has(ctx, 1694), // Sapphire amulet
-        has(ctx, 952),
-    ]); // Spade
+        has(ctx, 952), // Spade
+    ]);
 }
 
 function canCompleteMeatAndGreet(ctx) {
@@ -3124,16 +3123,16 @@ function canCompleteAnimalMagnetism(ctx) {
         has(ctx, 1743), // Hard leather
         has(ctx, 1718), // Holy symbol
         has(ctx, 10496), // Polished buttons
-        has(ctx, 1931),
-    ]); // Pot
+        has(ctx, 1931), // Pot
+    ]);
 }
 
 function canCompleteErnestTheChicken(ctx) {
     return allTrue([
         has(ctx, 952), // Spade
         has(ctx, 272), // Fish food
-        has(ctx, 273),
-    ]); // Poison (item)
+        has(ctx, 273), // Poison (item)
+    ]);
 }
 
 function canCompleteDeathToTheDorgeshuun(ctx) {
@@ -3147,8 +3146,8 @@ function canCompleteDeathToTheDorgeshuun(ctx) {
         has(ctx, 4302), // Ham hood
         has(ctx, 4306), // Ham logo
         has(ctx, 4300), // Ham robe
-        has(ctx, 4298),
-    ]); // Ham shirt
+        has(ctx, 4298), // Ham shirt
+    ]);
 }
 
 function canCompleteTheLostTribe(ctx) {
@@ -3166,8 +3165,8 @@ function canCompleteGoblinDiplomacy(ctx) {
     return allTrue([
         has(ctx, 288), // Goblin mail
         has(ctx, 1769), // Orange dye
-        has(ctx, 1767),
-    ]); // Blue dye
+        has(ctx, 1767), // Blue dye
+    ]);
 }
 
 function canStartPerilousMoons(ctx) {
@@ -3193,16 +3192,16 @@ function canCompletePerilousMoons(ctx) {
         has(ctx, 946), // Knife
         has(ctx, 305), // Big fishing net
         has(ctx, 954), // Rope
-        has(ctx, 233),
-    ]); // Pestle and mortar
+        has(ctx, 233), // Pestle and mortar
+    ]);
 }
 
 function canCompletePiratesTreasure(ctx) {
     return allTrue([
         has(ctx, 1005), // White apron
         has(ctx, 952), // Spade
-        has(ctx, 1963),
-    ]); // Banana
+        has(ctx, 1963), // Banana
+    ]);
 }
 
 function canReachGemRocks(ctx) {
@@ -3271,8 +3270,8 @@ function canCompleteShiloVillage(ctx) {
         has(ctx, 954), // Rope
         has(ctx, 1794), // Bronze wire
         has(ctx, 1755), // Chisel
-        has(ctx, 526),
-    ]); // Bones
+        has(ctx, 526), // Bones
+    ]);
 }
 
 function canFishFromRewardPool(ctx) {
@@ -3296,8 +3295,8 @@ function canCompleteForgettableTale(ctx) {
         has(ctx, 5767), // Ale yeast
         has(ctx, 1971), // Kebab
         has(ctx, 1917), // Beer
-        has(ctx, 1919),
-    ]); // Beer glass
+        has(ctx, 1919), // Beer glass
+    ]);
 }
 
 function canCompleteRuneMysteries(ctx) {
@@ -3320,8 +3319,8 @@ function canCompleteFairytaleIICureAQueen(ctx) {
         hasSkillLevel(ctx, "Farming", 49),
         hasSkillLevel(ctx, "Herblore", 57),
         requiresQuest(ctx, "canCompleteFairytaleIGrowingPains", canCompleteFairytaleIGrowingPains), //
-        has(ctx, 227),
-    ]); // Vial of water
+        has(ctx, 227), // Vial of water
+    ]);
 }
 
 function canDoGuardiansOfTheRift(ctx) {
@@ -3333,8 +3332,8 @@ function canCompleteLostCity(ctx) {
         hasSkillLevel(ctx, "Crafting", 31),
         hasSkillLevel(ctx, "Woodcutting", 36),
         has(ctx, 1351), // Bronze axe
-        has(ctx, 946),
-    ]); // Knife
+        has(ctx, 946), // Knife
+    ]);
 }
 
 function canCompleteNatureSpirit(ctx) {
@@ -3343,8 +3342,8 @@ function canCompleteNatureSpirit(ctx) {
         hasAnyItems(ctx, [2970, 2974, 2972]),
         has(ctx, 2961), // Silver sickle
         has(ctx, 2355), // Silver bar
-        has(ctx, 2976),
-    ]); // Sickle mould
+        has(ctx, 2976), // Sickle mould
+    ]);
 }
 
 const DYES = [
@@ -3416,8 +3415,8 @@ function canCompleteDeathPlateau(ctx) {
         has(ctx, 333), // Trout
         has(ctx, 2351), // Iron bar
         has(ctx, 1905), // Asgarnian ale
-        has(ctx, 3105),
-    ]); // Climbing boots
+        has(ctx, 3105), // Climbing boots
+    ]);
 }
 
 function canCompleteRoyalTrouble(ctx) {
@@ -3425,8 +3424,8 @@ function canCompleteRoyalTrouble(ctx) {
         requiresQuest(ctx, "canCompleteThroneOfMiscellania", canCompleteThroneOfMiscellania), //
         has(ctx, 954), // Rope
         has(ctx, 453), // Coal
-        has(ctx, 960),
-    ]); // Plank
+        has(ctx, 960), // Plank
+    ]);
 }
 
 function canCompleteTheTouristTrap(ctx) {
@@ -3436,8 +3435,8 @@ function canCompleteTheTouristTrap(ctx) {
         has(ctx, 1837), // Desert boots
         has(ctx, 2347), // Hammer
         has(ctx, 2349), // Bronze bar
-        has(ctx, 314),
-    ]); // Feather
+        has(ctx, 314), // Feather
+    ]);
 }
 
 function canCompleteThroneOfMiscellania(ctx) {
@@ -3446,8 +3445,8 @@ function canCompleteThroneOfMiscellania(ctx) {
         requiresQuest(ctx, "canCompleteTheFremennikTrials", canCompleteTheFremennikTrials), //
         has(ctx, 2351), // Iron bar
         hasAnyItems(ctx, [1635, 1637, 1639, 1641, 1643]),
-        has(ctx, 1511),
-    ]); // Logs
+        has(ctx, 1511), // Logs
+    ]);
 }
 
 function canCompleteHeroesQuest(ctx) {
@@ -3478,8 +3477,8 @@ function canCompleteTheDigSite(ctx) {
         hasCupOfTea(ctx), //
         has(ctx, 954), // Rope
         hasAnyItems(ctx, [1609, 1625]),
-        has(ctx, 973),
-    ]); // Charcoal
+        has(ctx, 973), // Charcoal
+    ]);
 }
 
 function canCompleteMerlinsCrystal(ctx) {
@@ -3489,8 +3488,8 @@ function canCompleteMerlinsCrystal(ctx) {
         has(ctx, 30), // Bucket of wax
         has(ctx, 1925), // Bucket
         has(ctx, 28), // Insect repellent
-        has(ctx, 530),
-    ]); // Bat bones
+        has(ctx, 530), // Bat bones
+    ]);
 }
 
 function canStartDragonSlayerI(ctx) {
@@ -3508,8 +3507,8 @@ function canCompleteDragonSlayerI(ctx) {
         has(ctx, 1540), // Anti-dragon shield
         has(ctx, 2347), // Hammer
         has(ctx, 1539), // Steel nails
-        has(ctx, 960),
-    ]);  // Plank
+        has(ctx, 960), // Plank
+    ]);
 }
 
 function canCompleteXMarksTheSpot(ctx) {
@@ -3536,15 +3535,15 @@ function canCompleteGhostsAhoy(ctx) {
         has(ctx, 952), // Spade
         has(ctx, 845), // Oak longbow
         has(ctx, 1921), // Bowl of water for Nettle tea
-        has(ctx, 946),
-    ]); // Knife
+        has(ctx, 946), // Knife
+    ]);
 }
 
 function canCompleteANightAtTheTheatre(ctx) {
     return allTrue([
         requiresQuest(ctx, "canCompleteATasteOfHope", canCompleteATasteOfHope), //
-        has(ctx, 8794),
-    ]); // Saw
+        has(ctx, 8794), // Saw
+    ]);
 }
 
 function canCompleteAlfredGrimhandsBarcrawl(ctx) {
@@ -3632,9 +3631,9 @@ function canCompleteATailOfTwoCats(ctx) {
         has(ctx, 5318), // Potato seed
         has(ctx, 5341), // Rake
         has(ctx, 227), // Vial of water
-        hasAnyItems(ctx, [1833, 540]),
-        hasAnyItems(ctx, [1835, 538]),
-    ]); // Desert robe or Druid's robe
+        hasAnyItems(ctx, [1833, 540]), //
+        hasAnyItems(ctx, [1835, 538]), // Desert robe or Druid's robe
+    ]);
 }
 
 function canCompleteTrollRomance(ctx) {
@@ -3646,8 +3645,8 @@ function canCompleteTrollRomance(ctx) {
         has(ctx, 30), // Bucket of wax
         has(ctx, 1887), // Cake tin
         has(ctx, 1939), // Swamp tar
-        has(ctx, 954),
-    ]); // Rope
+        has(ctx, 954), // Rope
+    ]);
 }
 
 function canCompleteTheCurseOfArrav(ctx) {
@@ -3669,8 +3668,8 @@ function canCompleteDreamMentor(ctx) {
         has(ctx, 9075), // Astral rune
         has(ctx, 590), // Tinderbox
         has(ctx, 2347), // Hammer
-        has(ctx, 233),
-    ]); // Pestle and mortar
+        has(ctx, 233), // Pestle and mortar
+    ]);
 }
 
 function canCompleteEadgarsRuse(ctx) {
@@ -3685,8 +3684,8 @@ function canCompleteEadgarsRuse(ctx) {
         has(ctx, 1947), // Grain
         has(ctx, 2138), // Raw chicken
         has(ctx, 233), // Pestle and mortar
-        has(ctx, 99),
-    ]);  // Rannar potion (unf)
+        has(ctx, 99), // Rannar potion (unf)
+    ]);
 }
 
 function canCompleteSkippyAndTheMogres(ctx) {
@@ -3696,8 +3695,8 @@ function canCompleteSkippyAndTheMogres(ctx) {
         has(ctx, 1927), // Bucket of milk
         has(ctx, 1975), // Chocolate dust
         has(ctx, 1921), // Bowl of water
-        has(ctx, 231),
-    ]); // Snape grass
+        has(ctx, 231), // Snape grass
+    ]);
 }
 
 function canCompleteLegendsQuest(ctx) {
@@ -3913,8 +3912,8 @@ function canCompleteSwanSong(ctx) {
         has(ctx, 303), // Small fishing net
         has(ctx, 1757), // Brown apron
         has(ctx, 7944), // Raw monkfish
-        has(ctx, 526),
-    ]); // Bones
+        has(ctx, 526), // Bones
+    ]);
 }
 
 function canDoMahoganyHomes(ctx) {
@@ -3950,8 +3949,8 @@ function canCompleteOneSmallFavour(ctx) {
         has(ctx, 1611), // Jade
         has(ctx, 1613), // Red topaz
         has(ctx, 1607), // Sapphire
-        has(ctx, 4436),
-    ]); // Airtight pot
+        has(ctx, 4436), // Airtight pot
+    ]);
 }
 
 function canMakeGuthixRests(ctx) {
@@ -4021,8 +4020,8 @@ function canCompleteHopespearsWill(ctx) {
         requiresQuest(ctx, "canCompleteDesertTreasureI", canCompleteDesertTreasureI), //
         requiresQuest(ctx, "canCompleteFairytaleIICureAQueen", canCompleteFairytaleIICureAQueen), //
         requiresQuest(ctx, "canCompleteLandOfTheGoblins", canCompleteLandOfTheGoblins), //
-        has(ctx, 3002),
-    ]); // Toadflax potion (unf)
+        has(ctx, 3002), // Toadflax potion (unf)
+    ]);
 }
 
 function canCompleteLandOfTheGoblins(ctx) {
@@ -4042,8 +4041,8 @@ function canCompleteLandOfTheGoblins(ctx) {
         has(ctx, 229), // Vial
         has(ctx, 233), // Pestle and mortar
         has(ctx, 3379), // Raw slimy eel
-        has(ctx, 307),
-    ]); // Fishing rod
+        has(ctx, 307), // Fishing rod
+    ]);
 }
 
 const NMZ_QUESTS = [
@@ -4111,8 +4110,8 @@ function canCompleteGardenOfTranquillity(ctx) {
         hasAnyItems(ctx, [7936, 1436]),
         has(ctx, 233), // Pestle and mortar
         has(ctx, 5354), // Filled plant pot
-        hasAnyItems(ctx, [6032, 6034, 21483]),
-    ]); // Compost, Supercompost or Ultracompost
+        hasAnyItems(ctx, [6032, 6034, 21483]), // Compost, Supercompost or Ultracompost
+    ]);
 }
 
 function canCompleteColdWar(ctx) {
@@ -4134,8 +4133,8 @@ function canCompleteColdWar(ctx) {
         has(ctx, 8782), // Mahogany plank
         has(ctx, 1741), // Leather
         has(ctx, 2347), // Hammer
-        has(ctx, 314),
-    ]); // Feather
+        has(ctx, 314), // Feather
+    ]);
 }
 
 function canCompleteRomeoAndJuliet(ctx) {
@@ -4162,8 +4161,8 @@ function canCompleteRagAndBoneManII(ctx) {
         (canStartZogreFleshEaters(ctx) || (hasTelegrabRunes(ctx) && canShortrange(ctx))), //
         requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
         requiresQuest(ctx, "canCompleteCreatureOfFenkenstrain", canCompleteCreatureOfFenkenstrain), //
-        canEnterLumbridgeSwampCaves(ctx),
-    ]); //
+        canEnterLumbridgeSwampCaves(ctx), //
+    ]);
 }
 
 function canCompleteRatcatchers(ctx) {
@@ -4175,8 +4174,8 @@ function canCompleteRatcatchers(ctx) {
         has(ctx, 1927), // Bucket of milk
         has(ctx, 6055), // Weeds
         has(ctx, 1931), // Pot
-        has(ctx, 590),
-    ]); // Tinderbox
+        has(ctx, 590), // Tinderbox
+    ]);
 }
 
 function canCompleteDesertTreasureI(ctx) {
@@ -4201,8 +4200,8 @@ function canCompleteDesertTreasureI(ctx) {
         has(ctx, 2007), // Spice
         has(ctx, 3107), // Spiked boots
         has(ctx, 1523), // Lockpick
-        has(ctx, 590),
-    ]); // Tinderbox
+        has(ctx, 590), // Tinderbox
+    ]);
 }
 
 function canCompleteDesertTreasureII(ctx) {
@@ -4223,8 +4222,8 @@ function canCompleteDesertTreasureII(ctx) {
         hasFireRuneSource(ctx), //
         has(ctx, 590), // Tinderbox
         has(ctx, 4164), // Facemask
-        has(ctx, 233),
-    ]); // Pestle and mortar
+        has(ctx, 233), // Pestle and mortar
+    ]);
 }
 
 function canCompleteSecretsOfTheNorth(ctx) {
@@ -4236,8 +4235,8 @@ function canCompleteSecretsOfTheNorth(ctx) {
         requiresQuest(ctx, "canCompleteTheGeneralsShadow", canCompleteTheGeneralsShadow), //
         requiresQuest(ctx, "canCompleteDeviousMinds", canCompleteDeviousMinds), //
         has(ctx, 1523), // Lockpick
-        has(ctx, 590),
-    ]); // Tinderbox
+        has(ctx, 590), // Tinderbox
+    ]);
 }
 
 function canCompleteTheGeneralsShadow(ctx) {
@@ -4265,8 +4264,8 @@ function canCompleteDeviousMinds(ctx) {
         requiresQuest(ctx, "canCompleteTrollStronghold", canCompleteTrollStronghold), //
         requiresQuest(ctx, "canCompleteDoricsQuest", canCompleteDoricsQuest), //
         has(ctx, 1315), // Mithril 2h sword
-        has(ctx, 1777),
-    ]); // Bow string
+        has(ctx, 1777), // Bow string
+    ]);
 }
 
 function canCompleteWanted(ctx) {
@@ -4284,8 +4283,8 @@ function canCompleteRecruitmentDrive(ctx) {
     return allTrue([
         requiresQuest(ctx, "canCompleteBlackKnightsFortress", canCompleteBlackKnightsFortress), //
         requiresQuest(ctx, "canCompleteDruidicRitual", canCompleteDruidicRitual), //
-        hasAnyItems(ctx, [946, 1755, 1794]),
-    ]); // Knife, Chisel or Bronze wire
+        hasAnyItems(ctx, [946, 1755, 1794]), // Knife, Chisel or Bronze wire
+    ]);
 }
 
 function canCompleteBlackKnightsFortress(ctx) {
@@ -4293,16 +4292,16 @@ function canCompleteBlackKnightsFortress(ctx) {
         hasQuestPoints(ctx, 12), //
         has(ctx, 1965), // Cabbage
         has(ctx, 1101), // Iron chainbody
-        has(ctx, 1139),
-    ]); // Bronze med helm
+        has(ctx, 1139), // Bronze med helm
+    ]);
 }
 
 function canCompleteDoricsQuest(ctx) {
     return allTrue([
         has(ctx, 440), // Iron ore
         has(ctx, 436), // Copper ore
-        has(ctx, 434),
-    ]); // Clay
+        has(ctx, 434), // Clay
+    ]);
 }
 
 function canCompleteGardenOfDeath(ctx) {
@@ -4314,8 +4313,8 @@ function canCompleteGardenOfDeath(ctx) {
 function canCompleteHisFaithfulServants(ctx) {
     return allTrue([
         requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
-        has(ctx, 952),
-    ]); // Spade
+        has(ctx, 952), // Spade
+    ]);
 }
 
 function canCompleteTempleOfIkov(ctx) {
@@ -4342,8 +4341,8 @@ function canCompleteTheGreatBrainRobbery(ctx) {
         has(ctx, 2347), // Hammer
         hasAnyNails(ctx), //
         has(ctx, 960), // Plank
-        has(ctx, 1718),
-    ]);  // Holy symbol
+        has(ctx, 1718), // Holy symbol
+    ]);
 }
 
 function canCompleteCreatureOfFenkenstrain(ctx) {
@@ -4355,8 +4354,8 @@ function canCompleteCreatureOfFenkenstrain(ctx) {
         has(ctx, 1794), // Bronze wire
         has(ctx, 1733), // Needle
         has(ctx, 1734), // Thread
-        has(ctx, 952),
-    ]); // Spade
+        has(ctx, 952), // Spade
+    ]);
 }
 
 function hasNarwhalKnife(ctx) {
@@ -4374,15 +4373,15 @@ function canCompleteTheEyesOfGlouphrie(ctx) {
         has(ctx, 1521), // Oak logs
         has(ctx, 2347), // Hammer
         has(ctx, 8794), // Saw
-        has(ctx, 233),
-    ]); // Pestle and mortar
+        has(ctx, 233), // Pestle and mortar
+    ]);
 }
 
 function canCompleteTheCorsairCurse(ctx) {
     return allTrue([
         has(ctx, 590), // Tinderbox
-        has(ctx, 952),
-    ]); // Spade
+        has(ctx, 952), // Spade
+    ]);
 }
 
 function canCompleteCabinFever(ctx) {
@@ -4396,8 +4395,8 @@ function canCompleteCabinFever(ctx) {
         has(ctx, 590), // Tinderbox
         has(ctx, 2347), // Hammer
         has(ctx, 1941), // Swamp paste
-        has(ctx, 954),
-    ]); // Rope
+        has(ctx, 954), // Rope
+    ]);
 }
 
 function canCompleteRumDeal(ctx) {
@@ -4410,16 +4409,16 @@ function canCompleteRumDeal(ctx) {
         requiresQuest(ctx, "canCompleteZogreFleshEaters", canCompleteZogreFleshEaters), //
         requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
         has(ctx, 5341), // Rake
-        has(ctx, 1925),
-    ]); // Bucket
+        has(ctx, 1925), // Bucket
+    ]);
 }
 
 function canCompleteCooksAssistant(ctx) {
     return allTrue([
         has(ctx, 1944), // Egg
         has(ctx, 1927), // Bucket of milk
-        has(ctx, 1933),
-    ]); // Pot of flour
+        has(ctx, 1933), // Pot of flour
+    ]);
 }
 
 function canCompleteFishingContest(ctx) {
@@ -4427,8 +4426,8 @@ function canCompleteFishingContest(ctx) {
         hasSkillLevel(ctx, "Fishing", 10),
         has(ctx, 1550), // Garlic
         has(ctx, 307), // Fishing rod
-        has(ctx, 952),
-    ]); // Spade
+        has(ctx, 952), // Spade
+    ]);
 }
 
 function canCompleteInSearchOfKnowledge(ctx) {
@@ -4468,8 +4467,8 @@ function canCompleteKingsRansom(ctx) {
             )
         ), //
         has(ctx, 1139), // Bronze med helm
-        has(ctx, 1101),
-    ]); // Iron chainbody
+        has(ctx, 1101), // Iron chainbody
+    ]);
 }
 
 function hasAnyCookedMeatFish(ctx) {
@@ -4514,20 +4513,20 @@ function hasAnyCookedMeatFish(ctx) {
             11936,
             32352,
             391,
-        ]) // Manta ray;  // Manta ray
+        ]) // Manta ray
 }
 
 function canCompleteTheEnchantedKey(ctx) {
     return allTrue([
         requiresQuest(ctx, "canCompleteMakingHistory", canCompleteMakingHistory), //
-        has(ctx, 952),
-    ]); // Spade
+        has(ctx, 952), // Spade
+    ]);
 }
 
 function canCompleteTheGardenOfDeath(ctx) {
     return allTrue([
-        has(ctx, 5329),
-    ]); // Secateurs
+        has(ctx, 5329), // Secateurs
+    ]);
 }
 
 function canCompleteRecipeForDisaster(ctx) {
@@ -4603,8 +4602,8 @@ function canCompleteRFDAnotherCooksQuest(ctx) {
         has(ctx, 221), // Eye of newt
         has(ctx, 1909), // Greenman's ale
         has(ctx, 2084), // Fruit blast
-        has(ctx, 592),
-    ]); // Ashes
+        has(ctx, 592), // Ashes
+    ]);
 }
 
 function canCompleteRFDFreeingTheMountainDwarf(ctx) {
@@ -4615,8 +4614,8 @@ function canCompleteRFDFreeingTheMountainDwarf(ctx) {
         has(ctx, 1927), // Bucket of milk
         has(ctx, 1933), // Pot of flour
         has(ctx, 1921), // Bowl of water
-        has(ctx, 1905),
-    ]); // Asgarnian ale
+        has(ctx, 1905), // Asgarnian ale
+    ]);
 }
 
 function canCompleteRFDFreeingTheGoblinGenerals(ctx) {
@@ -4629,8 +4628,8 @@ function canCompleteRFDFreeingTheGoblinGenerals(ctx) {
         hasAnyItems(ctx, [2007, 2169]),
         has(ctx, 313), // Fishing bait
         has(ctx, 1929), // Bucket of water
-        has(ctx, 973),
-    ]); // Charcoal
+        has(ctx, 973), // Charcoal
+    ]);
 }
 function canCompleteRFDFreeingPiratePete(ctx) {
     return allTrue([
@@ -4642,8 +4641,8 @@ function canCompleteRFDFreeingPiratePete(ctx) {
         has(ctx, 6667), // Empty fishbowl
         has(ctx, 1794), // Bronze wire
         has(ctx, 1733), // Needle
-        has(ctx, 946),
-    ]); // Knife
+        has(ctx, 946), // Knife
+    ]);
 }
 
 function canCompleteRFDFreeingTheLumbridgeGuide(ctx) {
@@ -4659,8 +4658,8 @@ function canCompleteRFDFreeingTheLumbridgeGuide(ctx) {
         has(ctx, 1927), // Bucket of milk
         has(ctx, 1944), // Egg
         has(ctx, 1933), // Pot of flour
-        has(ctx, 1887),
-    ]); // Cake tin
+        has(ctx, 1887), // Cake tin
+    ]);
 }
 
 function canCompleteRFDFreeingEvilDave(ctx) {
@@ -4668,8 +4667,8 @@ function canCompleteRFDFreeingEvilDave(ctx) {
         requiresQuest(ctx, "canCompleteRFDAnotherCooksQuest", canCompleteRFDAnotherCooksQuest), //
         requiresQuest(ctx, "canCompleteGertrudesCat", canCompleteGertrudesCat), //
         requiresQuest(ctx, "canCompleteShadowOfTheStorm", canCompleteShadowOfTheStorm), //
-        has(ctx, 2003),
-    ]); // Stew
+        has(ctx, 2003), // Stew
+    ]);
 }
 
 function canCompleteRFDFreeingSkrachUglologwee(ctx) {
@@ -4681,8 +4680,8 @@ function canCompleteRFDFreeingSkrachUglologwee(ctx) {
         has(ctx, 2876), // Raw chompy
         has(ctx, 7225), // Iron spit
         has(ctx, 1759), // Ball of wool
-        has(ctx, 7566),
-    ]); // Raw Jubbly
+        has(ctx, 7566), // Raw Jubbly
+    ]);
 }
 
 function canCompleteRFDFreeingSirAmikVarse(ctx) {
@@ -4695,8 +4694,8 @@ function canCompleteRFDFreeingSirAmikVarse(ctx) {
         has(ctx, 2130), // Pot of cream
         has(ctx, 7468), // Pot of cornflour
         has(ctx, 2138), // Raw chicken
-        has(ctx, 233),
-    ]); // Pestle and mortar
+        has(ctx, 233), // Pestle and mortar
+    ]);
 }
 
 function canCompleteRFDFreeingKingAwowogei(ctx) {
@@ -4707,8 +4706,8 @@ function canCompleteRFDFreeingKingAwowogei(ctx) {
         requiresQuest(ctx, "canCompleteMonkeyMadnessI", canCompleteMonkeyMadnessI), //
         has(ctx, 954), // Rope
         hasSlashWeapon(ctx), //
-        has(ctx, 233),
-    ]); // Pestle and mortar
+        has(ctx, 233), // Pestle and mortar
+    ]);
 }
 
 function canCompleteRecipeForDisasterCulinaromancer(ctx) {
@@ -4721,8 +4720,8 @@ function canCompletePryingTimes(ctx) {
         requiresQuest(ctx, "canCompleteTheKnightsSword", canCompleteTheKnightsSword), //
         has(ctx, 2347), // Hammer
         has(ctx, 2325), // Redberry pie
-        has(ctx, 2353),
-    ]); // Steel bar
+        has(ctx, 2353), // Steel bar
+    ]);
 }
 
 function canCompleteTheKnightsSword(ctx) {
@@ -4760,8 +4759,8 @@ function canCompleteMonkeyMadnessII(ctx) {
         has(ctx, 1511), // Logs
         has(ctx, 2347), // Hammer
         has(ctx, 1755), // Chisel
-        has(ctx, 233),
-    ]); // Pestle and mortar
+        has(ctx, 233), // Pestle and mortar
+    ]);
 }
 
 function hasSlashWeapon(ctx) {
@@ -4780,8 +4779,8 @@ function canCompleteBiohazard(ctx) {
     return allTrue([
         requiresQuest(ctx, "canCompletePlagueCity", canCompletePlagueCity), //
         has(ctx, 428), // Priest gown (bottom)
-        has(ctx, 426),
-    ]); // Priest gown (top)
+        has(ctx, 426), // Priest gown (top)
+    ]);
 }
 
 function canCompletePlagueCity(ctx) {
@@ -4792,22 +4791,22 @@ function canCompletePlagueCity(ctx) {
         has(ctx, 1927), // Bucket of milk
         has(ctx, 1975), // Chocolate dust
         has(ctx, 231), // Snape grass
-        has(ctx, 954),
-    ]); // Rope
+        has(ctx, 954), // Rope
+    ]);
 }
 
 function canCompleteDemonSlayer(ctx) {
     return allTrue([
         has(ctx, 1929), // Bucket of water
-        has(ctx, 526),
-    ]); // Bones
+        has(ctx, 526), // Bones
+    ]);
 }
 
 function canCompleteCurrentAffairs(ctx) {
     return allTrue([
         requiresQuest(ctx, "canCompletePandemonium", canCompletePandemonium), //
-        has(ctx, 973),
-    ]); // Charcoal
+        has(ctx, 973), // Charcoal
+    ]);
 }
 
 function canCompleteMurderMystery(ctx) {
@@ -4817,8 +4816,8 @@ function canCompleteMurderMystery(ctx) {
 function canCompleteMonksFriend(ctx) {
     return allTrue([
         has(ctx, 1937), // Jug of water
-        hasAnyItems(ctx, [1511, 960]),
-    ]); // Logs or Plank
+        hasAnyItems(ctx, [1511, 960]), // Logs or Plank
+    ]);
 }
 
 function canCompleteShadowOfTheStorm(ctx) {
@@ -4827,8 +4826,8 @@ function canCompleteShadowOfTheStorm(ctx) {
         requiresQuest(ctx, "canCompleteDemonSlayer", canCompleteDemonSlayer), //
         requiresQuest(ctx, "canCompleteTheGolem", canCompleteTheGolem), //
         (has(ctx, 229) && has(ctx, 233)), // Vial and Pestle and mortar for black dye
-        has(ctx, 2355),
-    ]); // Silver bar
+        has(ctx, 2355), // Silver bar
+    ]);
 }
 
 function canCompleteSheepShearer(ctx) {
@@ -4840,8 +4839,8 @@ function canCompleteTheGolem(ctx) {
         has(ctx, 229), // Vial
         has(ctx, 233), // Pestle and mortar
         has(ctx, 1761), // Soft clay
-        has(ctx, 970),
-    ]); // Papyrus
+        has(ctx, 970), // Papyrus
+    ]);
 }
 
 function canCompleteHorrorFromTheDeep(ctx) {
@@ -4857,8 +4856,8 @@ function canCompleteHorrorFromTheDeep(ctx) {
         has(ctx, 2347), // Hammer
         has(ctx, 1539), // Steel nails
         has(ctx, 1939), // Swamp tar
-        has(ctx, 960),
-    ]); // Plank
+        has(ctx, 960), // Plank
+    ]);
 }
 
 function canCompleteTheGrandTree(ctx) {
@@ -4907,8 +4906,8 @@ function canCompleteGettingAhead(ctx) {
         hasAnyNails(ctx), //
         has(ctx, 1763), // Red dye
         has(ctx, 1933), // Pot of flour
-        has(ctx, 946),
-    ]); // Knife
+        has(ctx, 946), // Knife
+    ]);
 }
 
 function canCompleteTheFeud(ctx) {
@@ -4916,8 +4915,8 @@ function canCompleteTheFeud(ctx) {
         has(ctx, 4591), // Kharidian headpiece
         has(ctx, 4593), // Fake beard
         has(ctx, 1917), // Beer
-        has(ctx, 1925),
-    ]); // Bucket
+        has(ctx, 1925), // Bucket
+    ]);
 }
 
 function canMakeSplitLog(ctx) {
@@ -4993,16 +4992,16 @@ function canCompleteTheFremennikIsles(ctx) {
         has(ctx, 10826), // Neitiznot shield
         has(ctx, 10824), // Yak-hide armour (legs)
         has(ctx, 10822), // Yak-hide armour (top)
-        has(ctx, 954),
-    ]);  // Rope
+        has(ctx, 954), // Rope
+    ]);
 }
 
 function canCompleteMountainDaughter(ctx) {
     return allTrue([
         hasSkillLevel(ctx, "Agility", 20),
         has(ctx, 954), // Rope
-        has(ctx, 960),
-    ]); // Plank
+        has(ctx, 960), // Plank
+    ]);
 }
 
 function canCompleteTheFremennikExiles(ctx) {
@@ -5017,8 +5016,8 @@ function canCompleteTheFremennikExiles(ctx) {
         has(ctx, 9075), // Astral rune
         hasAnyItems(ctx, [307, 309]),
         has(ctx, 2347), // Hammer
-        has(ctx, 1785),
-    ]); // Glassblowing pipe
+        has(ctx, 1785), // Glassblowing pipe
+    ]);
 }
 
 function canCompleteScorpionCatcher(ctx) {
@@ -5047,8 +5046,8 @@ function canCompleteEnakhrasLament(ctx) {
         hasAirRuneSource(ctx), //
         hasFireRuneSource(ctx), //
         hasEarthRuneSource(ctx), //
-        has(ctx, 562),
-    ]); // Chaos rune
+        has(ctx, 562), // Chaos rune
+    ]);
 }
 
 function canReachKharaziJungle(ctx) {
@@ -5113,23 +5112,23 @@ function canCompleteATasteOfHope(ctx) {
         has(ctx, 1755), // Chisel
         has(ctx, 233), // Pestle and mortar
         has(ctx, 227), // Vial of water
-        hasAnyItems(ctx, [946, 2961]),
-    ]); // Knife or Silver sickle
+        hasAnyItems(ctx, [946, 2961]), // Knife or Silver sickle
+    ]);
 }
 
 function canCompleteVampyreSlayer(ctx) {
     return allTrue([
         has(ctx, 1917), // Beer
         has(ctx, 2347), // Hammer
-        has(ctx, 1550),
-    ]); // Garlic
+        has(ctx, 1550), // Garlic
+    ]);
 }
 
 function canCompleteWitchsPotion(ctx) {
     return allTrue([
         has(ctx, 221), // Eye of newt
-        has(ctx, 1957),
-    ]); // Onion
+        has(ctx, 1957), // Onion
+    ]);
 }
 
 function canCompleteSinsOfTheFather(ctx) {
@@ -5180,8 +5179,8 @@ function canCompleteMageArenaII(ctx) {
         requiresQuest(ctx, "canCompleteMageArenaI", canCompleteMageArenaI), //
         has(ctx, 565), // Blood rune
         hasAirRuneSource(ctx), //
-        hasFireRuneSource(ctx),
-    ]); //
+        hasFireRuneSource(ctx), //
+    ]);
 }
 
 function canCompleteWhatLiesBelow(ctx) {
@@ -5254,16 +5253,16 @@ function canCompleteDaddysHome(ctx) {
         has(ctx, 8790), // Bolt of cloth
         hasAnyNails(ctx), //
         has(ctx, 2347), // Hammer
-        has(ctx, 8794),
-    ]);  // Saw
+        has(ctx, 8794), // Saw
+    ]);
 }
 
 function canCompleteSeaSlug(ctx) {
     return allTrue([
         hasSkillLevel(ctx, "Firemaking", 30),
         has(ctx, 1941), // Swamp paste
-        has(ctx, 596),
-    ]); // Unlit torch
+        has(ctx, 596), // Unlit torch
+    ]);
 }
 
 function canCompleteTaleOfTheRighteous(ctx) {
@@ -5272,7 +5271,7 @@ function canCompleteTaleOfTheRighteous(ctx) {
         has(ctx, 954), // Rope
         hasAirRuneSource(ctx), //
         hasAnyItems(ctx, [558, 562, 560, 565]), // Mind rune, Chaos rune, Death rune or Blood rune
-        hasUsablePickaxe(ctx),
+        hasUsablePickaxe(ctx), //
     ]);
 }
 
@@ -5287,8 +5286,8 @@ function canStartTheQueenOfThieves(ctx) {
 function canCompleteTheQueenOfThieves(ctx) {
     return allTrue([
         requiresQuest(ctx, "canCompleteClientOfKourend", canCompleteClientOfKourend),
-        has(ctx, 2003),
-    ]); // Stew
+        has(ctx, 2003), // Stew
+    ]);
 }
 
 function canCompleteTheAscentOfArceuus(ctx) {
@@ -5300,8 +5299,8 @@ function canCompleteTheAscentOfArceuus(ctx) {
 function canCompleteTheForsakenTower(ctx) {
     return allTrue([
         requiresQuest(ctx, "canCompleteClientOfKourend", canCompleteClientOfKourend),
-        has(ctx, 590),
-    ]); // Tinderbox
+        has(ctx, 590), // Tinderbox
+    ]);
 }
 
 function canCompleteASoulsBane(ctx) {
@@ -5343,8 +5342,8 @@ function canCompleteThePathOfGlouphrie(ctx) {
         requiresQuest(ctx, "canCompleteTheEyesOfGlouphrie", canCompleteTheEyesOfGlouphrie), //
         requiresQuest(ctx, "canCompleteWaterfallQuest", canCompleteWaterfallQuest), //
         requiresQuest(ctx, "canCompleteTreeGnomeVillage", canCompleteTreeGnomeVillage), //
-        has(ctx, 9419),
-    ]); // Mith Grapple (phoenix crossbow is available)
+        has(ctx, 9419), // Mith Grapple (Phoenix crossbow is available)
+    ]);
 }
 
 function canCompleteTheHandInTheSand(ctx) {
@@ -5355,8 +5354,8 @@ function canCompleteTheHandInTheSand(ctx) {
         has(ctx, 239), // White berries
         has(ctx, 4542), // Lantern lens
         has(ctx, 1783), // Bucket of sand
-        has(ctx, 557),
-    ]); // Earth rune
+        has(ctx, 557), // Earth rune
+    ]);
 }
 
 function canCompleteSpiritsOfTheElid(ctx) {
@@ -5439,8 +5438,8 @@ function canCompleteWhileGuthixSleeps(ctx) {
         has(ctx, 5300), // Snapdragon seed
         has(ctx, 2430), // Restore potion(4)
         has(ctx, 970), // Papyrus
-        has(ctx, 973),
-    ]); // Charcoal
+        has(ctx, 973), // Charcoal
+    ]);
 }
 
 function canCompleteSongOfTheElves(ctx) {
@@ -5491,8 +5490,8 @@ function canCompleteShadowsOfCustodia(ctx) {
         has(ctx, 847), // Willow longbow
         has(ctx, 1517), // Maple logs
         has(ctx, 2347), // Hammer
-        has(ctx, 307),
-    ]); // Fishing rod
+        has(ctx, 307), // Fishing rod
+    ]);
 }
 
 function canCompleteInAidOfTheMyreque(ctx) {
@@ -5533,8 +5532,8 @@ function canCompleteInSearchOfTheMyreque(ctx) {
         has(ctx, 1207), // Steel dagger
         has(ctx, 1539), // Steel nails
         has(ctx, 2347), // Hammer
-        has(ctx, 960),
-    ]); // Plank
+        has(ctx, 960), // Plank
+    ]);
 }
 
 function canCompleteWaterfallQuest(ctx) {
@@ -5542,8 +5541,8 @@ function canCompleteWaterfallQuest(ctx) {
         has(ctx, 556), // Air rune
         has(ctx, 555), // Water rune
         has(ctx, 557), // Earth rune
-        has(ctx, 954),
-    ]); // Rope
+        has(ctx, 954), // Rope
+    ]);
 }
 
 function canCompleteDwarfCannon(ctx) {
@@ -5572,8 +5571,8 @@ function canCompleteScrambled(ctx) {
         hasAnyNails(ctx), //
         has(ctx, 2347), // Hammer
         has(ctx, 8794), // Saw
-        has(ctx, 960),
-    ]); // Plank
+        has(ctx, 960), // Plank
+    ]);
 }
 
 function canCompleteTheRestlessGhost(ctx) {
@@ -5599,8 +5598,8 @@ function canCompleteDruidicRitual(ctx) {
         has(ctx, 2136), // Raw bear meat
         has(ctx, 2134), // Raw rat meat
         has(ctx, 2132), // Raw beef
-        has(ctx, 2138),
-    ]); // Raw chicken
+        has(ctx, 2138), // Raw chicken
+    ]);
 }
 
 function canCompleteClockTower(ctx) {
@@ -5610,8 +5609,8 @@ function canCompleteClockTower(ctx) {
 function canCompletePandemonium(ctx) {
     return allTrue([
         has(ctx, 2347), // Hammer
-        has(ctx, 8794),
-    ]); // Saw
+        has(ctx, 8794), // Saw
+    ]);
 }
 
 function canCompleteTheHeartOfDarkness(ctx) {
@@ -5636,15 +5635,15 @@ function canCompleteIcthlarinsLittleHelper(ctx) {
         (has(ctx, 4161) || (has(ctx, 1925) && has(ctx, 4689))), // Bag of salt or (Bucket and Pile of salt)
         has(ctx, 4687), // Bucket of sap
         has(ctx, 1823), // Waterskin(4)
-        has(ctx, 4684),
-    ]); // Linen
+        has(ctx, 4684), // Linen
+    ]);
 }
 
 function canCompleteGertrudesCat(ctx) {
     return allTrue([
         has(ctx, 1927), // Bucket of milk
-        has(ctx, 1552),
-    ]); // Seasoned sardine
+        has(ctx, 1552), // Seasoned sardine
+    ]);
 }
 
 function canCompleteEnlightenedJourney(ctx) {
@@ -5665,8 +5664,8 @@ function canCompleteEnlightenedJourney(ctx) {
         has(ctx, 1511), // Logs
         has(ctx, 1511), // Logs
         has(ctx, 5933), // Willow branch
-        has(ctx, 590),
-    ]); // Tinderbox
+        has(ctx, 590), // Tinderbox
+    ]);
 }
 
 function hasCandle(ctx) {
@@ -5763,8 +5762,8 @@ function canCompleteElementalWorkshopI(ctx) {
         has(ctx, 1733), // Needle
         has(ctx, 1734), // Thread
         has(ctx, 1741), // Leather
-        has(ctx, 453),
-    ]); // Coal
+        has(ctx, 453), // Coal
+    ]);
 }
 
 function canCompleteElementalWorkshopII(ctx) {
@@ -5794,8 +5793,8 @@ function canCompleteTheGiantDwarf(ctx) {
         has(ctx, 2351), // Iron bar
         has(ctx, 1607), // Sapphire
         has(ctx, 2325), // Redberry pie
-        has(ctx, 590),
-    ]); // Tinderbox
+        has(ctx, 590), // Tinderbox
+    ]);
 }
 
 function canCompleteImpCatcher(ctx) {
@@ -5803,8 +5802,8 @@ function canCompleteImpCatcher(ctx) {
         has(ctx, 1470), // Red bead
         has(ctx, 1472), // Yellow bead
         has(ctx, 1474), // Black bead
-        has(ctx, 1476),
-    ]); // White bead
+        has(ctx, 1476), // White bead
+    ]);
 }
 
 function canCompleteZogreFleshEaters(ctx) {
@@ -5849,8 +5848,8 @@ function canCompleteBigChompyBirdHunting(ctx) {
         has(ctx, 2859), // Wolf bones
         has(ctx, 2861), // Wolfbone arrowtips
         has(ctx, 2866), // Ogre arrow
-        has(ctx, 2876),
-    ]);// Raw chompy
+        has(ctx, 2876), // Raw chompy
+    ]);
 }
 
 function canTrainCrafting(ctx) {
