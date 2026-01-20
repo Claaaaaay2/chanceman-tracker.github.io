@@ -835,6 +835,578 @@
                     "rulesAll": [],
                     "rulesAny": []
                 }
+            },
+            {
+                "description": "00 degrees 05 minutes south,\n01 degrees 13 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "00 degrees 13 minutes south,\n13 degrees 58 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "00 degrees 18 minutes south,\n09 degrees 28 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "00 degrees 20 minutes south,\n23 degrees 15 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "00 degrees 30 minutes north,\n24 degrees 16 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "00 degrees 31 minutes south,\n17 degrees 43 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "01 degrees 18 minutes south,\n14 degrees 15 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "01 degrees 26 minutes north,\n08 degrees 01 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "01 degrees 33 minutes south,\n24 degrees 24 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "01 degrees 35 minutes south,\n07 degrees 28 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "02 degrees 16 minutes north,\n12 degrees 07 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "02 degrees 43 minutes south,\n33 degrees 26 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "02 degrees 48 minutes north,\n22 degrees 30 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "02 degrees 50 minutes north,\n06 degrees 20 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "03 degrees 07 minutes south,\n03 degrees 41 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "03 degrees 35 minutes south,\n13 degrees 35 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "04 degrees 00 minutes south,\n12 degrees 46 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "04 degrees 13 minutes north,\n12 degrees 45 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "05 degrees 20 minutes south,\n04 degrees 28 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "05 degrees 43 minutes north,\n23 degrees 05 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "06 degrees 31 minutes north,\n01 degrees 46 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "06 degrees 41 minutes north,\n27 degrees 15 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "06 degrees 58 minutes north,\n21 degrees 16 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "07 degrees 05 minutes north,\n30 degrees 56 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "07 degrees 33 minutes north,\n15 degrees 00 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "08 degrees 11 minutes south,\n04 degrees 48 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "08 degrees 33 minutes north,\n01 degrees 39 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "09 degrees 33 minutes north,\n02 degrees 15 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "09 degrees 35 minutes north,\n01 degrees 50 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "09 degrees 48 minutes north,\n17 degrees 39 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "10 degrees 45 minutes north,\n04 degrees 31 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "11 degrees 03 minutes north,\n31 degrees 20 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "11 degrees 05 minutes north,\n00 degrees 45 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "11 degrees 18 minutes north,\n30 degrees 54 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "11 degrees 33 minutes north,\n02 degrees 24 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "11 degrees 41 minutes north,\n14 degrees 58 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "12 degrees 28 minutes north,\n34 degrees 37 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "12 degrees 39 minutes north,\n30 degrees 07 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "14 degrees 54 minutes north,\n9 degrees 13 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "15 degrees 22 minutes north,\n07 degrees 31 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "17 degrees 39 minutes north,\n37 degrees 16 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "22 degrees 07 minutes south,\n23 degrees 13 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "22 degrees 30 minutes north,\n03 degrees 01 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "23 degrees 05 minutes north,\n41 degrees 22 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
             }
         ],
         "Hard": [
@@ -1214,6 +1786,708 @@
                     "rulesAll": [],
                     "rulesAny": []
                 }
+            },
+            {
+                "description": "00 degrees 00 minutes north,\n07 degrees 13 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "01 degrees 24 minutes north,\n08 degrees 05 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "01 degrees 30 minutes north,\n20 degrees 01 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "02 degrees 39 minutes north,\n29 degrees 58 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "02 degrees 48 minutes north,\n08 degrees 05 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "02 degrees 48 minutes north,\n34 degrees 33 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "02 degrees 58 minutes north,\n34 degrees 30 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "03 degrees 18 minutes north,\n12 degrees 31 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "03 degrees 45 minutes south,\n22 degrees 45 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "04 degrees 03 minutes south,\n03 degrees 11 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "04 degrees 05 minutes south,\n04 degrees 24 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "04 degrees 16 minutes south,\n16 degrees 16 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "04 degrees 41 minutes north,\n03 degrees 09 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "05 degrees 03 minutes north,\n34 degrees 58 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "05 degrees 37 minutes north,\n31 degrees 15 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "05 degrees 50 minutes south,\n10 degrees 05 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "06 degrees 00 minutes south,\n21 degrees 48 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "06 degrees 11 minutes south,\n15 degrees 07 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "07 degrees 43 minutes south,\n12 degrees 26 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "08 degrees 03 minutes north,\n31 degrees 16 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "08 degrees 05 minutes south,\n15 degrees 56 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "08 degrees 26 minutes south,\n10 degrees 28 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "10 degrees 03 minutes north,\n32 degrees 13 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "12 degrees 05 minutes south,\n38 degrees 58 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "13 degrees 46 minutes north,\n21 degrees 01 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "16 degrees 03 minutes north,\n14 degrees 07 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "16 degrees 07 minutes north,\n22 degrees 45 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "16 degrees 31 minutes north,\n12 degrees 54 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "16 degrees 35 minutes north,\n27 degrees 01 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "16 degrees 43 minutes north,\n19 degrees 13 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "16 degrees 43 minutes north,\n26 degrees 56 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "16 degrees 45 minutes north,\n03 degrees 05 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "16 degrees 48 minutes north,\n30 degrees 01 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "17 degrees 50 minutes north,\n08 degrees 30 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "18 degrees 22 minutes north,\n16 degrees 33 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "18 degrees 50 minutes north,\n20 degrees 26 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "19 degrees 00 minutes north,\n27 degrees 13 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "19 degrees 09 minutes north,\n21 degrees 58 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "19 degrees 24 minutes north,\n30 degrees 37 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "19 degrees 43 minutes north,\n25 degrees 07 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "20 degrees 05 minutes north,\n21 degrees 52 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "20 degrees 33 minutes north,\n15 degrees 48 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "20 degrees 45 minutes north,\n41 degrees 35 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "21 degrees 24 minutes north,\n17 degrees 54 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "22 degrees 35 minutes north,\n19 degrees 18 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "22 degrees 45 minutes north,\n26 degrees 33 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "23 degrees 03 minutes north,\n41 degrees 24 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "23 degrees 03 minutes north,\n02 degrees 01 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "23 degrees 30 minutes north,\n16 degrees 33 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "24 degrees 24 minutes north,\n26 degrees 24 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "24 degrees 56 minutes north,\n22 degrees 28 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "24 degrees 58 minutes north,\n18 degrees 43 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "25 degrees 03 minutes north,\n17 degrees 05 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "25 degrees 03 minutes north,\n23 degrees 24 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
             }
         ],
         "Elite": [
@@ -1363,6 +2637,539 @@
             {
                 "description": "UNLEASH NIGHT MIST (Sigli the Huntsman)",
                 "type": "Anagrams",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "00 degrees 18 minutes south,\n02 degrees 35 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "00 degrees 35 minutes north,\n35 degrees 50 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "00 degrees 41 minutes north,\n27 degrees 35 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "00 degrees 43 minutes north,\n11 degrees 13 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "02 degrees 35 minutes south,\n11 degrees 52 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "02 degrees 37 minutes north,\n27 degrees 09 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "03 degrees 09 minutes south,\n42 degrees 50 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "03 degrees 46 minutes north,\n08 degrees 07 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "05 degrees 07 minutes south,\n13 degrees 26 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "05 degrees 18 minutes north,\n6 degrees 48 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "05 degrees 24 minutes south,\n26 degrees 56 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "05 degrees 39 minutes south,\n02 degrees 13 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "06 degrees 28 minutes south,\n03 degrees 48 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "06 degrees 35 minutes north,\n09 degrees 07 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "08 degrees 15 minutes north,\n35 degrees 24 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "08 degrees 30 minutes south,\n10 degrees 48 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "09 degrees 46 minutes south,\n43 degrees 22 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "10 degrees 05 minutes south,\n24 degrees 31 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "10 degrees 52 minutes north,\n30 degrees 54 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "10 degrees 54 minutes north,\n20 degrees 50 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "12 degrees 31 minutes north,\n43 degrees 11 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "12 degrees 35 minutes north,\n36 degrees 20 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "13 degrees 45 minutes south,\n15 degrees 30 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "14 degrees 13 minutes south,\n27 degrees 26 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "14 degrees 15 minutes south,\n08 degrees 01 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "16 degrees 09 minutes north,\n10 degrees 33 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "17 degrees 58 minutes north,\n19 degrees 05 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "18 degrees 05 minutes north,\n12 degrees 05 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "19 degrees 56 minutes north,\n02 degrees 31 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "20 degrees 11 minutes north,\n07 degrees 41 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "20 degrees 13 minutes north,\n08 degrees 07 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "20 degrees 24 minutes north,\n03 degrees 52 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "21 degrees 03 minutes north,\n24 degrees 13 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "22 degrees 54 minutes north,\n29 degrees 01 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "23 degrees 48 minutes north,\n11 degrees 43 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "24 degrees 07 minutes north,\n23 degrees 22 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "24 degrees 15 minutes north,\n13 degrees 30 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "24 degrees 20 minutes north,\n18 degrees 50 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "25 degrees 03 minutes north,\n29 degrees 22 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "25 degrees 48 minutes north,\n35 degrees 00 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "26 degrees 43 minutes north,\n01 degrees 22 minutes east",
+                "type": "Coordinates",
                 "requirements": {
                     "skills": {},
                     "quests": {},
@@ -1573,6 +3380,357 @@
             {
                 "description": "Twenty Cure Iron (New Recruit Tony)",
                 "type": "Anagrams",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "01 degrees 30 minutes north,\n08 degrees 11 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "01 degrees 54 minutes south,\n08 degrees 54 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "02 degrees 09 minutes south,\n06 degrees 58 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "03 degrees 09 minutes south,\n43 degrees 26 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "03 degrees 26 minutes north,\n12 degrees 18 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "03 degrees 50 minutes north,\n09 degrees 07 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "04 degrees 58 minutes north,\n36 degrees 56 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "05 degrees 13 minutes north,\n04 degrees 16 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "07 degrees 37 minutes north,\n35 degrees 18 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "08 degrees 01 minutes north,\n20 degrees 58 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "08 degrees 11 minutes north,\n12 degrees 30 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "12 degrees 35 minutes north,\n36 degrees 22 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "12 degrees 45 minutes north,\n20 degrees 09 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "13 degrees 33 minutes south,\n15 degrees 26 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "16 degrees 41 minutes north,\n30 degrees 54 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "18 degrees 03 minutes north,\n03 degrees 03 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "18 degrees 26 minutes north,\n37 degrees 15 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "19 degrees 43 minutes north,\n23 degrees 11 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "20 degrees 35 minutes north,\n15 degrees 58 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "20 degrees 45 minutes north,\n07 degrees 26 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "21 degrees 37 minutes north,\n21 degrees 13 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "21 degrees 56 minutes north,\n10 degrees 56 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "22 degrees 24 minutes north,\n31 degrees 11 minutes west",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "24 degrees 00 minutes north,\n29 degrees 22 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "24 degrees 18 minutes north,\n23 degrees 22 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "24 degrees 22 minutes north,\n27 degrees 00 minutes east",
+                "type": "Coordinates",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "23 degrees 58 minutes north,\n18 degrees 22 minutes east",
+                "type": "Coordinates",
                 "requirements": {
                     "skills": {},
                     "quests": {},
