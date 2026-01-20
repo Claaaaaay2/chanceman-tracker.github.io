@@ -56622,7 +56622,7 @@
     "sources": {
       "other": {
         "Combining leaves with a cooked type of meat": {
-          "notes": "Requires any Leaves and most Cooked meat/fish.",
+          "notes": "Requires any Leaves and most Cooked meat/fish, along with 35 Woodcutting and 35 Cooking.",
           "rule": {
             "all": [
               "hasAnyLeaves",
