@@ -195,6 +195,111 @@
                     "rulesAll": [],
                     "rulesAny": []
                 }
+            },
+            {
+                "description": "Blow a raspberry at Aris in her tent.\n\nEquip a gold ring and a gold necklace.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1635,
+                            "name": "Gold ring"
+                        },
+                        {
+                            "id": 1654,
+                            "name": "Gold necklace"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Bow to Brugsen Bursen at the Grand Exchange.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Cheer at Iffie Nitter.\n\nEquip a chef's hat and a red cape.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1949,
+                            "name": "Chef's hat"
+                        },
+                        {
+                            "id": 1007,
+                            "name": "Red cape"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Clap at Bob's Brilliant Axes.\n\nEquip a bronze axe and leather boots.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1351,
+                            "name": "Bronze axe"
+                        },
+                        {
+                            "id": 1061,
+                            "name": "Leather boots"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Panic at Al Kharid mine.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Spin at Flynn's Mace Shop.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
             }
         ],
         "Easy": [
@@ -1765,6 +1870,830 @@
                     "skills": {},
                     "quests": {},
                     "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Blow a raspberry at the monkey cage in Ardougne Zoo.\n\nEquip a studded leather body, bronze platelegs and a normal staff with no orb.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1133,
+                            "name": "Studded body"
+                        },
+                        {
+                            "id": 1075,
+                            "name": "Bronze platelegs"
+                        },
+                        {
+                            "id": 1379,
+                            "name": "Staff"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Blow raspberries outside the entrance to Keep Le Faye.\n\nEquip a coif, an iron platebody and leather gloves.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1169,
+                            "name": "Coif"
+                        },
+                        {
+                            "id": 1115,
+                            "name": "Iron platebody"
+                        },
+                        {
+                            "id": 1059,
+                            "name": "Leather gloves"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Bow in the office of the Emir's Arena.\n\nEquip an iron chain body, leather chaps and coif.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1101,
+                            "name": "Iron chainbody"
+                        },
+                        {
+                            "id": 1095,
+                            "name": "Leather chaps"
+                        },
+                        {
+                            "id": 1169,
+                            "name": "Coif"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Bow outside the entrance to the Legends' Guild.\n\nEquip iron platelegs, an emerald amulet and an oak longbow.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1067,
+                            "name": "Iron platelegs"
+                        },
+                        {
+                            "id": 1696,
+                            "name": "Emerald amulet"
+                        },
+                        {
+                            "id": 845,
+                            "name": "Oak longbow"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Cheer at the Druids' Circle.\n\nEquip a blue wizard hat, a bronze two-handed sword and HAM boots.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 579,
+                            "name": "Blue wizard hat"
+                        },
+                        {
+                            "id": 1307,
+                            "name": "Bronze 2h sword"
+                        },
+                        {
+                            "id": 4310,
+                            "name": "Ham boots"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Cheer at the games room.\n\nHave nothing equipped at all when you do.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Cheer for the monks at Port Sarim.\n\nEquip a coif, steel plateskirt and a sapphire necklace.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1169,
+                            "name": "Coif"
+                        },
+                        {
+                            "id": 1083,
+                            "name": "Steel plateskirt"
+                        },
+                        {
+                            "id": 1656,
+                            "name": "Sapphire necklace"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Clap in the main exam room in the Exam Centre.\n\nEquip a white apron, green gnome boots and leather gloves.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1005,
+                            "name": "White apron"
+                        },
+                        {
+                            "id": 628,
+                            "name": "Green boots"
+                        },
+                        {
+                            "id": 1059,
+                            "name": "Leather gloves"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Clap on the causeway to the Wizards' Tower.\n\nEquip an iron medium helmet, emerald ring and a white apron.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1137,
+                            "name": "Iron med helm"
+                        },
+                        {
+                            "id": 1639,
+                            "name": "Emerald ring"
+                        },
+                        {
+                            "id": 1005,
+                            "name": "White apron"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Clap on the top level of the mill, north of East Ardougne.\n\nEquip a blue gnome robe top, HAM robe bottom and an unenchanted tiara.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 640,
+                            "name": "Blue robe top"
+                        },
+                        {
+                            "id": 4300,
+                            "name": "Ham robe"
+                        },
+                        {
+                            "id": 5525,
+                            "name": "Tiara"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Dance a jig behind the bar on the Pandemonium.\n\nEquip a right eye patch and a bronze scimitar.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1025,
+                            "name": "Right eye patch"
+                        },
+                        {
+                            "id": 1321,
+                            "name": "Bronze scimitar"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Dance a jig by the entrance to the Fishing Guild.\n\nEquip an emerald ring, a sapphire amulet, and a bronze chain body.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1639,
+                            "name": "Emerald ring"
+                        },
+                        {
+                            "id": 1694,
+                            "name": "Sapphire amulet"
+                        },
+                        {
+                            "id": 1103,
+                            "name": "Bronze chainbody"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Dance at the crossroads north of Draynor.\n\nEquip an iron chain body, a sapphire ring and a longbow.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1101,
+                            "name": "Iron chainbody"
+                        },
+                        {
+                            "id": 1637,
+                            "name": "Sapphire ring"
+                        },
+                        {
+                            "id": 839,
+                            "name": "Longbow"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Dance at the entrance to the Grand Exchange.\n\nEquip a pink skirt, pink robe top and a body tiara.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1013,
+                            "name": "Pink skirt"
+                        },
+                        {
+                            "id": 636,
+                            "name": "Pink robe top"
+                        },
+                        {
+                            "id": 5533,
+                            "name": "Body tiara"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Dance in the Party Room.\n\nEquip a steel full helmet, steel platebody and an iron plateskirt.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1157,
+                            "name": "Steel full helm"
+                        },
+                        {
+                            "id": 1119,
+                            "name": "Steel platebody"
+                        },
+                        {
+                            "id": 1081,
+                            "name": "Iron plateskirt"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Dance in the shack in Lumbridge Swamp.\n\nEquip a bronze dagger, iron full helmet and a gold ring.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1205,
+                            "name": "Bronze dagger"
+                        },
+                        {
+                            "id": 1153,
+                            "name": "Iron full helm"
+                        },
+                        {
+                            "id": 1635,
+                            "name": "Gold ring"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Do a jig in Varrock's rune store.\n\nEquip an air tiara and a staff of water.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 5527,
+                            "name": "Air tiara"
+                        },
+                        {
+                            "id": 1383,
+                            "name": "Staff of water"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Headbang in the mine north of Al Kharid.\n\nEquip a desert shirt, leather gloves and leather boots.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1833,
+                            "name": "Desert shirt"
+                        },
+                        {
+                            "id": 1059,
+                            "name": "Leather gloves"
+                        },
+                        {
+                            "id": 1061,
+                            "name": "Leather boots"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Jump for joy at the beehives.\n\nEquip a desert shirt, green gnome robe bottoms and a steel axe.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1833,
+                            "name": "Desert shirt"
+                        },
+                        {
+                            "id": 648,
+                            "name": "Green robe bottoms"
+                        },
+                        {
+                            "id": 1353,
+                            "name": "Steel axe"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Laugh at the crossroads south of the Sinclair mansion.\n\nEquip a cowl, a blue wizard robe top and an iron scimitar.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1167,
+                            "name": "Leather cowl"
+                        },
+                        {
+                            "id": 577,
+                            "name": "Blue wizard robe"
+                        },
+                        {
+                            "id": 1323,
+                            "name": "Iron scimitar"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Panic in the Limestone Mine.\n\nEquip bronze platelegs, a steel pickaxe and a steel medium helmet.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1075,
+                            "name": "Bronze platelegs"
+                        },
+                        {
+                            "id": 1269,
+                            "name": "Steel pickaxe"
+                        },
+                        {
+                            "id": 1141,
+                            "name": "Steel med helm"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Panic on the pier where you catch the Fishing trawler.\n\nHave nothing equipped at all when you do.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Shrug in the mine near Rimmington.\n\nEquip a gold necklace, a gold ring and a bronze spear.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1654,
+                            "name": "Gold necklace"
+                        },
+                        {
+                            "id": 1635,
+                            "name": "Gold ring"
+                        },
+                        {
+                            "id": 1237,
+                            "name": "Bronze spear"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Spin at the crossroads north of Rimmington.\n\nEquip a green gnome hat, cream gnome top and leather chaps.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 658,
+                            "name": "Green hat"
+                        },
+                        {
+                            "id": 642,
+                            "name": "Cream robe top"
+                        },
+                        {
+                            "id": 1095,
+                            "name": "Leather chaps"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Spin in Draynor Manor by the fountain.\n\nEquip an iron platebody, studded leather chaps and a bronze full helmet.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1115,
+                            "name": "Iron platebody"
+                        },
+                        {
+                            "id": 1097,
+                            "name": "Studded chaps"
+                        },
+                        {
+                            "id": 1155,
+                            "name": "Bronze full helm"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Spin in the Varrock Castle courtyard.\n\nEquip a black axe, a coif and a ruby ring.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1361,
+                            "name": "Black axe"
+                        },
+                        {
+                            "id": 1169,
+                            "name": "Coif"
+                        },
+                        {
+                            "id": 1641,
+                            "name": "Ruby ring"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Think in middle of the wheat field by the Lumbridge mill.\n\nEquip a blue gnome robetop, a turquoise gnome robe bottom and an oak shortbow.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 640,
+                            "name": "Blue robe top"
+                        },
+                        {
+                            "id": 654,
+                            "name": "Turquoise robe bottoms"
+                        },
+                        {
+                            "id": 843,
+                            "name": "Oak shortbow"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Wave along the south fence of the Lumber Yard.\n\nEquip a hard leather body, leather chaps and a bronze axe.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1131,
+                            "name": "Hardleather body"
+                        },
+                        {
+                            "id": 1095,
+                            "name": "Leather chaps"
+                        },
+                        {
+                            "id": 1351,
+                            "name": "Bronze axe"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Wave in the Falador gem store.\n\nEquip a Mithril pickaxe, Black platebody and an Iron Kiteshield.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1273,
+                            "name": "Mithril pickaxe"
+                        },
+                        {
+                            "id": 1125,
+                            "name": "Black platebody"
+                        },
+                        {
+                            "id": 1191,
+                            "name": "Iron kiteshield"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Wave on Mudskipper Point.\n\nEquip a black cape, leather chaps and a steel mace.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1019,
+                            "name": "Black cape"
+                        },
+                        {
+                            "id": 1095,
+                            "name": "Leather chaps"
+                        },
+                        {
+                            "id": 1424,
+                            "name": "Steel mace"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Yawn in Draynor Marketplace.\n\nEquip studded leather chaps, an iron kiteshield and a steel longsword.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1097,
+                            "name": "Studded chaps"
+                        },
+                        {
+                            "id": 1191,
+                            "name": "Iron kiteshield"
+                        },
+                        {
+                            "id": 1295,
+                            "name": "Steel longsword"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Yawn in the Fortis Grand Museum.\n\nEquip an emerald necklace, blue skirt, and turquoise gnome robe top.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1658,
+                            "name": "Emerald necklace"
+                        },
+                        {
+                            "id": 1011,
+                            "name": "Blue skirt"
+                        },
+                        {
+                            "id": 644,
+                            "name": "Turquoise robe top"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Yawn in the Varrock library.\n\nEquip a green gnome robe top, HAM robe bottom and an iron warhammer.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 638,
+                            "name": "Green robe top"
+                        },
+                        {
+                            "id": 4300,
+                            "name": "Ham robe"
+                        },
+                        {
+                            "id": 1335,
+                            "name": "Iron warhammer"
+                        }
+                    ],
                     "untracked": [],
                     "itemsAny": [],
                     "rulesAll": [],
@@ -3418,6 +4347,644 @@
                     "skills": {},
                     "quests": {},
                     "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Beckon in Tai Bwo Wannai. Clap before you talk to me.\n\nEquip green d'hide chaps, a ring of dueling and a mithril med helm.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1099,
+                            "name": "Green d'hide chaps"
+                        },
+                        {
+                            "id": 2552,
+                            "name": "Ring of dueling(8)"
+                        },
+                        {
+                            "id": 1143,
+                            "name": "Mithril med helm"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Beckon in the Digsite, near the eastern winch. Bow before you talk to me.\n\nEquip a green hat, snakeskin boots and an iron pickaxe.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 658,
+                            "name": "Green hat"
+                        },
+                        {
+                            "id": 6328,
+                            "name": "Snakeskin boots"
+                        },
+                        {
+                            "id": 1267,
+                            "name": "Iron pickaxe"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Beckon in the Shayzien Combat Ring. Show your anger before you talk to me.\n\nEquip an adamant platebody, adamant full helm and adamant platelegs.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1123,
+                            "name": "Adamant platebody"
+                        },
+                        {
+                            "id": 1161,
+                            "name": "Adamant full helm"
+                        },
+                        {
+                            "id": 1073,
+                            "name": "Adamant platelegs"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Cheer in the Barbarian Agility Arena. Headbang before you talk to me.\n\nEquip a steel platebody, maple shortbow and a Wilderness cape.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1119,
+                            "name": "Steel platebody"
+                        },
+                        {
+                            "id": 853,
+                            "name": "Maple shortbow"
+                        }
+                    ],
+                    "untracked": [
+                        "Item missing in items.json: Wilderness cape"
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Cheer in the Edgeville general store. Dance before you talk to me.\n\nEquip a brown apron, leather boots and leather gloves.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1757,
+                            "name": "Brown apron"
+                        },
+                        {
+                            "id": 1061,
+                            "name": "Leather boots"
+                        },
+                        {
+                            "id": 1059,
+                            "name": "Leather gloves"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Cheer in the Ogre Pen in the Training Camp. Show you are angry before you talk to me.\n\nEquip a green d'hide body and chaps and a steel square shield.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1135,
+                            "name": "Green d'hide body"
+                        },
+                        {
+                            "id": 1099,
+                            "name": "Green d'hide chaps"
+                        },
+                        {
+                            "id": 1177,
+                            "name": "Steel sq shield"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Clap in Seers court house. Spin before you talk to me.\n\nEquip an adamant halberd, blue mystic robe bottom and a diamond ring.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 3200,
+                            "name": "Adamant halberd"
+                        },
+                        {
+                            "id": 4093,
+                            "name": "Mystic robe bottom"
+                        },
+                        {
+                            "id": 1643,
+                            "name": "Diamond ring"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Clap your hands north of Mount Karuulm. Spin before you talk to me.\n\nEquip an adamant warhammer, mithril boots and a ring of life.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1345,
+                            "name": "Adamant warhammer"
+                        },
+                        {
+                            "id": 4127,
+                            "name": "Mithril boots"
+                        },
+                        {
+                            "id": 2570,
+                            "name": "Ring of life"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Cry in the Catherby Ranging shop. Bow before you talk to me.\n\nEquip blue gnome boots, a hard leather body and an unblessed silver sickle.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 630,
+                            "name": "Blue boots"
+                        },
+                        {
+                            "id": 1131,
+                            "name": "Hardleather body"
+                        },
+                        {
+                            "id": 2961,
+                            "name": "Silver sickle"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Cry in the Draynor Village jail. Jump for joy before you talk to me.\n\nEquip an adamant sword, a sapphire amulet and an adamant plateskirt.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1287,
+                            "name": "Adamant sword"
+                        },
+                        {
+                            "id": 1694,
+                            "name": "Sapphire amulet"
+                        },
+                        {
+                            "id": 1091,
+                            "name": "Adamant plateskirt"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Cry on the shore of Catherby beach. Laugh before you talk to me.\n\nEquip an adamant sq shield, a bone dagger and mithril platebody.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1183,
+                            "name": "Adamant sq shield"
+                        },
+                        {
+                            "id": 8872,
+                            "name": "Bone dagger"
+                        },
+                        {
+                            "id": 1121,
+                            "name": "Mithril platebody"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Cry on top of the western tree in the Gnome Agility Arena. Indicate 'no' before you talk to me.\n\nEquip a steel kiteshield, ring of forging, and green d'hide chaps.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1193,
+                            "name": "Steel kiteshield"
+                        },
+                        {
+                            "id": 2568,
+                            "name": "Ring of forging"
+                        },
+                        {
+                            "id": 1099,
+                            "name": "Green d'hide chaps"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Dance a jig under Shantay's Awning. Bow before you talk to me.\n\nEquip a bruise blue snelm, an air staff and a bronze square shield.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 3343,
+                            "name": "Pointed bruise blue snelm"
+                        },
+                        {
+                            "id": 1381,
+                            "name": "Staff of air"
+                        },
+                        {
+                            "id": 1173,
+                            "name": "Bronze sq shield"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Dance in the centre of Canifis. Bow before you talk to me.\n\nEquip a green gnome robe top, mithril platelegs and an iron two-handed sword.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 638,
+                            "name": "Green robe top"
+                        },
+                        {
+                            "id": 1071,
+                            "name": "Mithril platelegs"
+                        },
+                        {
+                            "id": 1309,
+                            "name": "Iron 2h sword"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Dance in the dark caves beneath Lumbridge Swamp. Blow a kiss before you talk to me.\n\nEquip an air staff, bronze full helm and an amulet of power.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1381,
+                            "name": "Staff of air"
+                        },
+                        {
+                            "id": 1155,
+                            "name": "Bronze full helm"
+                        },
+                        {
+                            "id": 1731,
+                            "name": "Amulet of power"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Jump for Joy in the mine near the Twilight Temple. Bow before you talk to me.\n\nEquip a maple longbow, a ruby amulet and some steel platelegs.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 851,
+                            "name": "Maple longbow"
+                        },
+                        {
+                            "id": 1698,
+                            "name": "Ruby amulet"
+                        },
+                        {
+                            "id": 1069,
+                            "name": "Steel platelegs"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Jump for joy in the TzHaar sword shop. Shrug before you talk to me.\n\nEquip a steel longsword, blue d'hide body and blue mystic gloves.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1295,
+                            "name": "Steel longsword"
+                        },
+                        {
+                            "id": 2499,
+                            "name": "Blue d'hide body"
+                        },
+                        {
+                            "id": 4095,
+                            "name": "Mystic gloves"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Jump for joy in Yanille bank. Dance a jig before you talk to me.\n\nEquip a brown apron, adamantite medium helm and snakeskin chaps.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1757,
+                            "name": "Brown apron"
+                        },
+                        {
+                            "id": 1145,
+                            "name": "Adamant med helm"
+                        },
+                        {
+                            "id": 6324,
+                            "name": "Snakeskin chaps"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Nod your head where the River Ortus meets the Proudspire. Indicate 'no' before you talk to me.\n\nEquip a blue wizard hat, a blue wizard robe and wear nothing on your legs.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 579,
+                            "name": "Blue wizard hat"
+                        },
+                        {
+                            "id": 577,
+                            "name": "Blue wizard robe"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Panic by the mausoleum in Morytania. Wave before you speak to me.\n\nEquip a mithril plate skirt, maple longbow and no boots.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1085,
+                            "name": "Mithril plateskirt"
+                        },
+                        {
+                            "id": 851,
+                            "name": "Maple longbow"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Shrug in Catherby bank. Yawn before you talk to me.\n\nEquip a maple longbow, green d'hide chaps and an iron med helm.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 851,
+                            "name": "Maple longbow"
+                        },
+                        {
+                            "id": 1099,
+                            "name": "Green d'hide chaps"
+                        },
+                        {
+                            "id": 1137,
+                            "name": "Iron med helm"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Spin on the bridge by the Barbarian Village. Salute before you talk to me.\n\nEquip purple gloves, a steel kiteshield and a mithril full helm.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 2942,
+                            "name": "Purple gloves"
+                        },
+                        {
+                            "id": 1193,
+                            "name": "Steel kiteshield"
+                        },
+                        {
+                            "id": 1159,
+                            "name": "Mithril full helm"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Think in the centre of the Observatory. Spin before you talk to me.\n\nEquip a mithril chainbody, green dragonhide chaps and a ruby amulet.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1109,
+                            "name": "Mithril chainbody"
+                        },
+                        {
+                            "id": 1099,
+                            "name": "Green d'hide chaps"
+                        },
+                        {
+                            "id": 1698,
+                            "name": "Ruby amulet"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Yawn in the Castle Wars lobby. Shrug before you talk to me.\n\nEquip a ruby amulet, a mithril scimitar and a Wilderness cape.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1698,
+                            "name": "Ruby amulet"
+                        },
+                        {
+                            "id": 1329,
+                            "name": "Mithril scimitar"
+                        }
+                    ],
+                    "untracked": [
+                        "Item missing in items.json: Wilderness cape"
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Yawn in the centre of Arceuus library. Nod your head before you talk to me.\n\nEquip blue dragonhide vambraces, adamant boots and an adamant dagger.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 2487,
+                            "name": "Blue d'hide vambraces"
+                        },
+                        {
+                            "id": 4129,
+                            "name": "Adamant boots"
+                        },
+                        {
+                            "id": 1211,
+                            "name": "Adamant dagger"
+                        }
+                    ],
                     "untracked": [],
                     "itemsAny": [],
                     "rulesAll": [],
@@ -5414,6 +6981,415 @@
                     "rulesAll": [],
                     "rulesAny": []
                 }
+            },
+            {
+                "description": "Beckon on the east coast of the Kharazi Jungle. Beware of double agents!\n\nEquip any vestment stole and a heraldic rune shield.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 10470,
+                            "name": "Saradomin stole"
+                        },
+                        {
+                            "id": 2621,
+                            "name": "Rune kiteshield (g)"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Blow a kiss between the tables in Shilo Village bank. Beware of double agents!\n\nEquip a blue mystic hat, bone spear and rune platebody.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 4089,
+                            "name": "Mystic hat"
+                        },
+                        {
+                            "id": 5016,
+                            "name": "Bone spear"
+                        },
+                        {
+                            "id": 1127,
+                            "name": "Rune platebody"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Blow a raspberry in the Fishing Guild bank. Beware of double agents!\n\nEquip an elemental shield, blue d'hide chaps and a rune warhammer.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 2890,
+                            "name": "Elemental shield"
+                        },
+                        {
+                            "id": 2493,
+                            "name": "Blue d'hide chaps"
+                        },
+                        {
+                            "id": 1347,
+                            "name": "Rune warhammer"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Bow at the top of the lighthouse. Beware of double agents!\n\nEquip a blue d'hide body, blue d'hide vambraces and no jewellery.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 2499,
+                            "name": "Blue d'hide body"
+                        },
+                        {
+                            "id": 2487,
+                            "name": "Blue d'hide vambraces"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Cheer at the top of the agility pyramid. Beware of double agents!\n\nEquip a blue mystic robe top, and any rune heraldic shield.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 4091,
+                            "name": "Mystic robe top"
+                        },
+                        {
+                            "id": 2621,
+                            "name": "Rune kiteshield (g)"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Dance at the cat-doored pyramid in Sophanem. Beware of double agents!\n\nEquip a ring of life, an uncharged amulet of glory and an adamant two-handed sword.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 2570,
+                            "name": "Ring of life"
+                        },
+                        {
+                            "id": 1712,
+                            "name": "Amulet of glory(4)"
+                        },
+                        {
+                            "id": 1317,
+                            "name": "Adamant 2h sword"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Headbang at the exam centre. Beware of double agents!\n\nEquip a mystic fire staff, a diamond bracelet and rune boots.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1401,
+                            "name": "Mystic fire staff"
+                        },
+                        {
+                            "id": 11092,
+                            "name": "Diamond bracelet"
+                        },
+                        {
+                            "id": 4131,
+                            "name": "Rune boots"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Jig at Jiggig. Beware of double agents!\n\nEquip a rune spear, rune platelegs and any rune heraldic helm.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1247,
+                            "name": "Rune spear"
+                        },
+                        {
+                            "id": 1079,
+                            "name": "Rune platelegs"
+                        },
+                        {
+                            "id": 2619,
+                            "name": "Rune full helm (g)"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Laugh in Jokul's tent in the Mountain Camp. Beware of double agents!\n\nEquip a rune full helmet, blue d'hide chaps and a fire battlestaff.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1163,
+                            "name": "Rune full helm"
+                        },
+                        {
+                            "id": 2493,
+                            "name": "Blue d'hide chaps"
+                        },
+                        {
+                            "id": 1393,
+                            "name": "Fire battlestaff"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Panic by the pilot on White Wolf Mountain. Beware of double agents!\n\nEquip mithril platelegs, a ring of life, and a rune axe.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1071,
+                            "name": "Mithril platelegs"
+                        },
+                        {
+                            "id": 2570,
+                            "name": "Ring of life"
+                        },
+                        {
+                            "id": 1359,
+                            "name": "Rune axe"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Panic in the heart of the Haunted Woods. Beware of double agents!\n\nHave no items equipped when you do.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Panic on the Wilderness volcano bridge. Beware of double agents!\n\nEquip any headband and crozier.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 12301,
+                            "name": "Blue headband"
+                        },
+                        {
+                            "id": 10440,
+                            "name": "Saradomin crozier"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Panic outside the Twilight Temple. Beware of double agents!\n\nEquip a rune longsword, rune platebody and a rune plateskirt.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1303,
+                            "name": "Rune longsword"
+                        },
+                        {
+                            "id": 1127,
+                            "name": "Rune platebody"
+                        },
+                        {
+                            "id": 1093,
+                            "name": "Rune plateskirt"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Salute in the banana plantation. Beware of double agents!\n\nEquip a diamond ring, amulet of power, and nothing on your chest and legs.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1643,
+                            "name": "Diamond ring"
+                        },
+                        {
+                            "id": 1731,
+                            "name": "Amulet of power"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Salute in the centre of the mess hall. Beware of double agents!\n\nEquip a rune halberd, rune platebody and an amulet of strength.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 3202,
+                            "name": "Rune halberd"
+                        },
+                        {
+                            "id": 1127,
+                            "name": "Rune platebody"
+                        },
+                        {
+                            "id": 1725,
+                            "name": "Amulet of strength"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Shrug in the woods east of the Level 19 Wilderness Obelisk. Beware of double agents!\n\nEquip rune platelegs, an iron platebody and blue d'hide vambraces.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1079,
+                            "name": "Rune platelegs"
+                        },
+                        {
+                            "id": 1115,
+                            "name": "Iron platebody"
+                        },
+                        {
+                            "id": 2487,
+                            "name": "Blue d'hide vambraces"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Yawn in the rogues' general store. Beware of double agents!\n\nEquip an adamant square shield, blue dragon vambraces and a rune pickaxe.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1183,
+                            "name": "Adamant sq shield"
+                        },
+                        {
+                            "id": 2487,
+                            "name": "Blue d'hide vambraces"
+                        },
+                        {
+                            "id": 1275,
+                            "name": "Rune pickaxe"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
             }
         ],
         "Elite": [
@@ -6677,6 +8653,444 @@
                     "rulesAll": [],
                     "rulesAny": []
                 }
+            },
+            {
+                "description": "Blow a kiss in the heart of the lava maze.\n\nEquip black d'hide chaps, a spotted cape and a rolling pin.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 2497,
+                            "name": "Black d'hide chaps"
+                        },
+                        {
+                            "id": 10069,
+                            "name": "Spotted cape"
+                        },
+                        {
+                            "id": 7445,
+                            "name": "Rolling pin"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Bow on the ground floor of the Legend's guild.\n\nEquip Legend's cape, a dragon battleaxe and an amulet of glory.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1377,
+                            "name": "Dragon battleaxe"
+                        },
+                        {
+                            "id": 1704,
+                            "name": "Amulet of glory"
+                        }
+                    ],
+                    "untracked": [
+                        "Item missing in items.json: Cape of legends"
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Bow upstairs in the Edgeville Monastery.\n\nEquip a completed prayer book.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [
+                        "Item missing in items.json: Holy book"
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Bow within the temple in Civitas illa Fortis.\n\nEquip any piece of sunfire fanatic armour.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 28933,
+                            "name": "Sunfire fanatic helm"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Cheer in the Shadow dungeon.\n\nEquip a rune crossbow, climbing boots and any mitre.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 9185,
+                            "name": "Rune crossbow"
+                        },
+                        {
+                            "id": 3105,
+                            "name": "Climbing boots"
+                        },
+                        {
+                            "id": 10452,
+                            "name": "Saradomin mitre"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Dance on the Fishing Platform.\n\nEquip barrows gloves, an amulet of glory and a dragon med helm.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1704,
+                            "name": "Amulet of glory"
+                        },
+                        {
+                            "id": 1149,
+                            "name": "Dragon med helm"
+                        }
+                    ],
+                    "untracked": [
+                        "Item missing in items.json: Barrows gloves"
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Do the crab dance by the monument on Wintumber Island.\n\nEquip a crab helmet and a crab claw.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [
+                        "Item missing in items.json: Crab helmet",
+                        "Item missing in items.json: Crab claw"
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Headbang at the top of the Slayer Tower.\n\nEquip a seercull, a combat bracelet, and helm of neitiznot.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 6724,
+                            "name": "Seercull"
+                        },
+                        {
+                            "id": 11126,
+                            "name": "Combat bracelet"
+                        },
+                        {
+                            "id": 10828,
+                            "name": "Helm of neitiznot"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Headbang in the Fight Arena pub.\n\nEquip a pirate bandana, a dragonstone necklace and a magic longbow.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 7130,
+                            "name": "Pirate bandana (blue)"
+                        },
+                        {
+                            "id": 859,
+                            "name": "Magic longbow"
+                        }
+                    ],
+                    "untracked": [
+                        "Item missing in items.json: Dragonstone necklace"
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Jump for joy at the Neitiznot rune rock.\n\nEquip rune boots, a proselyte hauberk and a dragonstone ring.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 4131,
+                            "name": "Rune boots"
+                        },
+                        {
+                            "id": 9674,
+                            "name": "Proselyte hauberk"
+                        },
+                        {
+                            "id": 1645,
+                            "name": "Dragonstone ring"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Jump for joy in the Ancient Cavern.\n\nEquip a granite shield, splitbark body, and any rune heraldic helm.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 3122,
+                            "name": "Granite shield"
+                        },
+                        {
+                            "id": 3387,
+                            "name": "Splitbark body"
+                        },
+                        {
+                            "id": 2619,
+                            "name": "Rune full helm (g)"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Laugh by the fountain of heroes.\n\nEquip splitbark legs, dragon boots and a rune longsword.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 3389,
+                            "name": "Splitbark legs"
+                        },
+                        {
+                            "id": 11840,
+                            "name": "Dragon boots"
+                        },
+                        {
+                            "id": 1303,
+                            "name": "Rune longsword"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Laugh in front of the gem store in Ardougne market.\n\nEquip a Castle wars bracelet, a dragonstone amulet and a ring of forging.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 11079,
+                            "name": "Castle wars bracelet(3)"
+                        },
+                        {
+                            "id": 1702,
+                            "name": "Dragonstone amulet"
+                        },
+                        {
+                            "id": 2568,
+                            "name": "Ring of forging"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Panic at the area flowers meet snow.\n\nEquip blue d'hide vambraces, a dragon spear and a rune plateskirt.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 2487,
+                            "name": "Blue d'hide vambraces"
+                        },
+                        {
+                            "id": 1249,
+                            "name": "Dragon spear"
+                        },
+                        {
+                            "id": 1093,
+                            "name": "Rune plateskirt"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Salute by the Charcoal Burners.\n\nEquip a Farmer's strawhat, Shayzien body (5), and Pyromancer robes.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [
+                        "Item missing in items.json: Farmer's strawhat",
+                        "Item missing in items.json: Shayzien body (5)",
+                        "Item missing in items.json: Pyromancer robe"
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Salute in the warriors' guild bank.\n\nEquip only a black salamander.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 10148,
+                            "name": "Black salamander"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Shrug in the Shayzien war tent.\n\nEquip a blue mystic robe bottom, a rune kiteshield and any bob shirt.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 4093,
+                            "name": "Mystic robe bottom"
+                        },
+                        {
+                            "id": 1201,
+                            "name": "Rune kiteshield"
+                        },
+                        {
+                            "id": 10318,
+                            "name": "Bob's blue shirt"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Spin in West Ardougne Church.\n\nEquip a dragon spear and red d'hide chaps.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1249,
+                            "name": "Dragon spear"
+                        },
+                        {
+                            "id": 2495,
+                            "name": "Red d'hide chaps"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Yawn at the top of Trollheim.\n\nEquip a lava battlestaff, black d'hide vambraces and a mind shield.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 3053,
+                            "name": "Lava battlestaff"
+                        },
+                        {
+                            "id": 2491,
+                            "name": "Black d'hide vambraces"
+                        },
+                        {
+                            "id": 9731,
+                            "name": "Mind shield"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
             }
         ],
         "Master": [
@@ -7662,6 +10076,582 @@
                     "skills": {},
                     "quests": {},
                     "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Beckon by a collection of crystalline maple trees. Beware of double agents!\n\nEquip Bryophyta's staff and a nature tiara.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 22368,
+                            "name": "Bryophyta's staff (uncharged)"
+                        },
+                        {
+                            "id": 5541,
+                            "name": "Nature tiara"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Blow a kiss outside K'ril Tsutsaroth's chamber. Beware of double agents!\n\nEquip a Zamorak full helm and the Shadow sword.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 2657,
+                            "name": "Zamorak full helm"
+                        }
+                    ],
+                    "untracked": [
+                        "Item missing in items.json: Shadow sword"
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Blow a raspberry at the bank of the Warrior's guild. Beware of double agents!\n\nEquip a dragon battleaxe, a slayer helm of any kind and a dragon defender or avernic defender.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1377,
+                            "name": "Dragon battleaxe"
+                        }
+                    ],
+                    "untracked": [
+                        "Item missing in items.json: Slayer helmet",
+                        "Item missing in items.json: Dragon defender"
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Bow in front of the cave on Brittle Isle. Beware of double agents!\n\nEquip a medallion of the deep and a rosewood blowpipe.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 31585,
+                            "name": "Rosewood blowpipe (empty)"
+                        }
+                    ],
+                    "untracked": [
+                        "Item missing in items.json: Medallion of the deep"
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Bow in the Iorwerth Camp. Beware of double agents!\n\nEquip a charged crystal bow.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [
+                        "Item missing in items.json: Crystal bow"
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Cheer in the Entrana church. Beware of double agents!\n\nEquip a set of full black dragonhide armour.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 2503,
+                            "name": "Black d'hide body"
+                        },
+                        {
+                            "id": 2497,
+                            "name": "Black d'hide chaps"
+                        },
+                        {
+                            "id": 2491,
+                            "name": "Black d'hide vambraces"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Clap in the magic axe hut. Beware of double agents!\n\nEquip only flared trousers.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 10394,
+                            "name": "Flared trousers"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Cry in the Tzhaar gem store. Beware of the double agents!\n\nEquip a fire cape and a TokTz-Xil-Ul.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 6522,
+                            "name": "Toktz-xil-ul"
+                        }
+                    ],
+                    "untracked": [
+                        "Item missing in items.json: Fire cape"
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Dance in Iban's temple. Beware of double agents!\n\nEquip Iban's staff, a black mystic top, and a black mystic bottom.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 4101,
+                            "name": "Mystic robe top (dark)"
+                        },
+                        {
+                            "id": 4103,
+                            "name": "Mystic robe bottom (dark)"
+                        }
+                    ],
+                    "untracked": [
+                        "Item missing in items.json: Iban's staff"
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Dance in the King Black Dragon's lair. Beware of double agents!\n\nEquip a black d'hide body, black d'hide vambraces and a black dragon mask.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 2503,
+                            "name": "Black d'hide body"
+                        },
+                        {
+                            "id": 2491,
+                            "name": "Black d'hide vambraces"
+                        },
+                        {
+                            "id": 12524,
+                            "name": "Black dragon mask"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Do a jig at the Barrows chest. Beware of double agents!\n\nEquip any full barrows set.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 12881,
+                            "name": "Ahrim's armour set"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Flap at the Death Altar. Beware of double agents!\n\nEquip a death tiara, a legend's cape and any ring of wealth.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 5547,
+                            "name": "Death tiara"
+                        },
+                        {
+                            "id": 2572,
+                            "name": "Ring of wealth"
+                        }
+                    ],
+                    "untracked": [
+                        "Item missing in items.json: Cape of legends"
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Goblin Salute at the Goblin Village. Beware of double agents!\n\nEquip a Bandos platebody, Bandos cloak and Bandos godsword.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 12480,
+                            "name": "Bandos platebody"
+                        },
+                        {
+                            "id": 12273,
+                            "name": "Bandos cloak"
+                        },
+                        {
+                            "id": 11804,
+                            "name": "Bandos godsword"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Jump for joy in the centre of Zul-Andra. Beware of double agents!\n\nEquip a dragon 2h sword, Bandos boots and an obsidian cape.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 7158,
+                            "name": "Dragon 2h sword"
+                        },
+                        {
+                            "id": 11836,
+                            "name": "Bandos boots"
+                        },
+                        {
+                            "id": 6568,
+                            "name": "Obsidian cape"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Panic by the big egg where no one dare goes and the ground is burnt. Beware of double agents!\n\nEquip a dragon med helm, a TokTz-Ket-Xil, a brine sabre, rune platebody and an uncharged amulet of glory.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1149,
+                            "name": "Dragon med helm"
+                        },
+                        {
+                            "id": 6524,
+                            "name": "Toktz-ket-xil"
+                        },
+                        {
+                            "id": 11037,
+                            "name": "Brine sabre"
+                        },
+                        {
+                            "id": 1127,
+                            "name": "Rune platebody"
+                        },
+                        {
+                            "id": 1712,
+                            "name": "Amulet of glory(4)"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Salute outside the gates of Cam Torum. Beware of double agents!\n\nEquip a full set of blue moon equipment.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 29019,
+                            "name": "Blue moon helm"
+                        },
+                        {
+                            "id": 29013,
+                            "name": "Blue moon chestplate"
+                        },
+                        {
+                            "id": 29016,
+                            "name": "Blue moon tassets"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Show your anger at the Wise old man. Beware of double agents!\n\nEquip an abyssal whip, a legend's cape and some spined chaps.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 4151,
+                            "name": "Abyssal whip"
+                        },
+                        {
+                            "id": 6135,
+                            "name": "Spined chaps"
+                        }
+                    ],
+                    "untracked": [
+                        "Item missing in items.json: Cape of legends"
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Show your anger towards the Statue of Saradomin in Ellamaria's garden. Beware of double agents!\n\nEquip a Zamorak godsword.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 11808,
+                            "name": "Zamorak godsword"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Slap your head in the centre of the Kourend catacombs. Beware of double agents!\n\nEquip arclight or emberlight along with the amulet of the damned.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 12851,
+                            "name": "Amulet of the damned (full)"
+                        }
+                    ],
+                    "untracked": [
+                        "Item missing in items.json: Arclight"
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Spin in front of the Soul Altar. Beware of double agents!\n\nEquip a dragon pickaxe, helm of neitiznot and a pair of rune boots.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 11920,
+                            "name": "Dragon pickaxe"
+                        },
+                        {
+                            "id": 10828,
+                            "name": "Helm of neitiznot"
+                        },
+                        {
+                            "id": 4131,
+                            "name": "Rune boots"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Stamp in the Enchanted valley west of the waterfall. Beware of double agents!\n\nEquip a dragon axe.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 6739,
+                            "name": "Dragon axe"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Swing a bullroarer at the top of the watchtower. Beware of double agents!\n\nEquip a dragon plateskirt, climbing boots and a dragon chainbody.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 4585,
+                            "name": "Dragon plateskirt"
+                        },
+                        {
+                            "id": 3105,
+                            "name": "Climbing boots"
+                        },
+                        {
+                            "id": 3140,
+                            "name": "Dragon chainbody"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Wave on the northern wall of the Castle Drakan. Beware of double agents!\n\nWear a dragon sq shield, splitbark body and any boater.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1187,
+                            "name": "Dragon sq shield"
+                        },
+                        {
+                            "id": 3387,
+                            "name": "Splitbark body"
+                        },
+                        {
+                            "id": 7325,
+                            "name": "Blue boater"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Yawn in the 7th room of Pyramid Plunder. Beware of double agents!\n\nEquip a pharaoh's sceptre and a full set of menaphite robes.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 26945,
+                            "name": "Pharaoh's sceptre (uncharged)"
+                        },
+                        {
+                            "id": 6402,
+                            "name": "Menaphite red top"
+                        },
+                        {
+                            "id": 6404,
+                            "name": "Menaphite red robe"
+                        },
+                        {
+                            "id": 6400,
+                            "name": "Menaphite red hat"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Think on the western coast of Salvager Overlook. Beware of double agents!\n\nEquip a Hueycoatl hide coif and some Hueycoatl hide vambraces.",
+                "type": "Emote clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 30073,
+                            "name": "Hueycoatl hide coif"
+                        },
+                        {
+                            "id": 30082,
+                            "name": "Hueycoatl hide vambraces"
+                        }
+                    ],
                     "untracked": [],
                     "itemsAny": [],
                     "rulesAll": [],
