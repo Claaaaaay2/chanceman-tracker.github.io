@@ -250,6 +250,12 @@ footer {
     width: 200px;
 }
 
+#clueSearch {
+    padding: 6px;
+    font-size: 14px;
+    width: 200px;
+}
+
 .item-grid {
     display: flex;
     flex-wrap: wrap;
@@ -628,4 +634,116 @@ body.route-loading .route-loading-overlay {
 
 .diary-status-blocked {
     border-color: #B33A3A;
+}
+
+
+
+
+
+
+.clue-filters {
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1rem;
+}
+
+.clue-filter {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+    white-space: nowrap;
+}
+
+
+.clue-list {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.clue-tier {
+    margin-bottom: 1rem;
+}
+
+.clue-tier-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin: 0.75rem 0 0.5rem;
+    border-bottom: 1px solid var(--border-color-darker);
+    padding-bottom: 0.25rem;
+}
+
+.clue-tier.is-collapsed .clue-tier-body {
+    display: none;
+}
+
+.clue-tier-counts {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.clue-toggle {
+    border: 1px solid var(--border-color-darker);
+    background: var(--card-bg);
+    color: inherit;
+    padding: 0.1rem 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.clue-step-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.clue-step {
+    border: 3px solid var(--border-color-darker);
+    background-color: var(--card-bg);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.5rem 1rem;
+}
+
+.clue-step-name {
+    font-weight: 600;
+}
+
+.clue-step-status {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.clue-step-type {
+    grid-column: 1 / -1;
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+.clue-missing {
+    grid-column: 1 / -1;
+    font-size: 0.9rem;
+}
+
+.clue-status-ready {
+    border-color: #2E8B57;
+}
+
+.clue-status-blocked {
+    border-color: #B33A3A;
+}
+
+
+.clue-warning {
+    margin: 1rem;
+    font-weight: 600;
+    color: var(--highlight-color);
 }

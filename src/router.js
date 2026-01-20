@@ -6,6 +6,7 @@ import ItemsPage from "./pages/items.js";
 import NotFoundPage from "./pages/notFound.js";
 import QuestsPage from "./pages/quests.js";
 import AchievementDiariesPage from "./pages/achievementDiaries.js";
+import ClueStepsPage from "./pages/clueSteps.js";
 import { BugPage } from "./pages/reportABug.js";
 import ReuploadPage from "./pages/reupload.js";
 import UploadPage from "./pages/upload.js";
@@ -51,6 +52,7 @@ export async function router() {
         "/items": ItemsPage,
         "/item": ItemPage,
         "/achievement-diaries": AchievementDiariesPage,
+        "/clue-steps": ClueStepsPage,
         "/quests": QuestsPage,
         "/reupload": ReuploadPage,
         "/bug": BugPage,

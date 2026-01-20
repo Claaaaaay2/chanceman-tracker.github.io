@@ -32,9 +32,12 @@ let memory = {
         hunterRumoursCompleted: 0,
         hideCompletedQuests: false,
         hideIncompletableQuests: false,
-        questSearch: ""
+        questSearch: "",
+        clueSearch: "",
+        hideCompletableClues: false,
+        hideIncompletableClues: false
     },
-    player: null
+    player: null,
 };
 
 // ---- Public API ----
@@ -89,6 +92,7 @@ export const fileStore = {
         await saveToDB("filters", filters);
     },
 
+
     async setPlayer(player) {
         memory.player = player;
         await saveToDB("player", player);
@@ -105,6 +109,7 @@ export const fileStore = {
     get filters() {
         return memory.filters;
     },
+
 
     get player() {
         return memory.player;

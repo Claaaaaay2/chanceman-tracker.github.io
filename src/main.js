@@ -430,6 +430,9 @@ export function afterRoute() {
     if (typeof initAchievementDiariesPage === "function") {
         initAchievementDiariesPage();
     }
+    if (typeof initClueStepsPage === "function") {
+        initClueStepsPage();
+    }
 }
 
 async function shouldHideForClueFilter(item, ctx) {
