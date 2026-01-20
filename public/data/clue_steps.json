@@ -9624,6 +9624,620 @@
                     "rulesAll": [],
                     "rulesAny": []
                 }
+            },
+            {
+                "description": "Equip a Dragon Scimitar.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Attack": 60
+                    },
+                    "quests": {
+                        "Monkey Madness I": "completed"
+                    },
+                    "items": [],
+                    "untracked": [
+                        "Item missing in items.json: Dragon scimitar (or)"
+                    ],
+                    "itemsAny": [
+                        [
+                            {
+                                "id": 4587,
+                                "name": "Dragon scimitar"
+                            }
+                        ]
+                    ],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Enchant a piece of dragonstone jewellery.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Magic": 68
+                    },
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 555,
+                            "name": "Water rune"
+                        },
+                        {
+                            "id": 557,
+                            "name": "Earth rune"
+                        },
+                        {
+                            "id": 564,
+                            "name": "Cosmic rune"
+                        }
+                    ],
+                    "untracked": [
+                        "Requires any unenchanted dragonstone jewellery.",
+                        "Enchant dragonstone tablet does not count."
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Craft a nature rune.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Runecraft": 44
+                    },
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 7936,
+                            "name": "Pure essence"
+                        }
+                    ],
+                    "untracked": [
+                        "Item missing in items.json: Hat of the eye",
+                        "Guardians of the Rift and Ourania altar do not work."
+                    ],
+                    "itemsAny": [
+                        [
+                            {
+                                "id": 1462,
+                                "name": "Nature talisman"
+                            },
+                            {
+                                "id": 5541,
+                                "name": "Nature tiara"
+                            },
+                            {
+                                "id": 26801,
+                                "name": "Catalytic tiara"
+                            }
+                        ]
+                    ],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Catch a mottled eel with aerial fishing in Lake Molch.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Fishing": 73,
+                        "Hunter": 68
+                    },
+                    "quests": {},
+                    "items": [],
+                    "untracked": [
+                        "Item missing in items.json: King worms"
+                    ],
+                    "itemsAny": [
+                        [
+                            {
+                                "id": 11334,
+                                "name": "Fish offcuts"
+                            },
+                            {
+                                "id": 32307,
+                                "name": "Fine fish offcuts"
+                            }
+                        ]
+                    ],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Score a goal in skullball.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Agility": 25
+                    },
+                    "quests": {
+                        "Priest in Peril": "completed"
+                    },
+                    "items": [],
+                    "untracked": [
+                        "Item missing in items.json: Ring of charos"
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Complete a lap of Ape Atoll agility course.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Agility": 48
+                    },
+                    "quests": {
+                        "Monkey Madness I": "started"
+                    },
+                    "items": [],
+                    "untracked": [
+                        "Item missing in items.json: Ninja monkey greegree",
+                        "Item missing in items.json: Kruk monkey greegree"
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Create a super defence potion.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Herblore": 66
+                    },
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 107,
+                            "name": "Cadantine potion (unf)"
+                        },
+                        {
+                            "id": 239,
+                            "name": "White berries"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Steal from a chest in Ardougne Castle.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Thieving": 72
+                    },
+                    "quests": {},
+                    "items": [],
+                    "untracked": [
+                        "Chest on 2nd floor requires lockpick."
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Craft a green dragonhide body.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Crafting": 63
+                    },
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1733,
+                            "name": "Needle"
+                        },
+                        {
+                            "id": 1734,
+                            "name": "Thread"
+                        },
+                        {
+                            "id": 1745,
+                            "name": "Green dragon leather"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "String a yew longbow.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Fletching": 70
+                    },
+                    "quests": {},
+                    "items": [],
+                    "untracked": [
+                        "Item missing in items.json: Unstrung yew longbow"
+                    ],
+                    "itemsAny": [
+                        [
+                            {
+                                "id": 1777,
+                                "name": "Bow string"
+                            }
+                        ],
+                        [
+                            {
+                                "id": 946,
+                                "name": "Knife"
+                            },
+                            {
+                                "id": 1515,
+                                "name": "Yew logs"
+                            }
+                        ]
+                    ],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Slay a dust devil.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Slayer": 65
+                    },
+                    "quests": {},
+                    "items": [],
+                    "untracked": [
+                        "Item missing in items.json: Slayer helmet",
+                        "Any weapon required."
+                    ],
+                    "itemsAny": [
+                        [
+                            {
+                                "id": 4164,
+                                "name": "Facemask"
+                            }
+                        ]
+                    ],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Catch a black warlock.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Hunter": 45
+                    },
+                    "quests": {},
+                    "items": [],
+                    "untracked": [
+                        "Barehanded option requires 55 Hunter."
+                    ],
+                    "itemsAny": [
+                        [
+                            {
+                                "id": 10010,
+                                "name": "Butterfly net"
+                            },
+                            {
+                                "id": 10012,
+                                "name": "Butterfly jar"
+                            }
+                        ]
+                    ],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Catch a red chinchompa.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Hunter": 63
+                    },
+                    "quests": {
+                        "Eagles' Peak": "completed"
+                    },
+                    "items": [
+                        {
+                            "id": 10008,
+                            "name": "Box trap"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Mine a mithril ore.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Mining": 55
+                    },
+                    "quests": {},
+                    "items": [],
+                    "untracked": [
+                        "Item missing in items.json: Pickaxe"
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Smith a Mithril 2h Sword.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Smithing": 64
+                    },
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 2347,
+                            "name": "Hammer"
+                        },
+                        {
+                            "id": 2359,
+                            "name": "Mithril bar"
+                        }
+                    ],
+                    "untracked": [
+                        "Requires 3 mithril bars."
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Catch a raw shark.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Fishing": 76
+                    },
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 311,
+                            "name": "Harpoon"
+                        }
+                    ],
+                    "untracked": [
+                        "Big shark does not count."
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Cut a yew log.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Woodcutting": 60
+                    },
+                    "quests": {},
+                    "items": [],
+                    "untracked": [
+                        "Item missing in items.json: Axe"
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Fix a magical lamp in Dorgesh-Kaan.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Firemaking": 52,
+                        "Crafting": 52
+                    },
+                    "quests": {
+                        "Death to the Dorgeshuun": "completed"
+                    },
+                    "items": [
+                        {
+                            "id": 10973,
+                            "name": "Light orb"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Burn a yew log.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Firemaking": 60
+                    },
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 590,
+                            "name": "Tinderbox"
+                        },
+                        {
+                            "id": 1515,
+                            "name": "Yew logs"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Cook a swordfish",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Cooking": 45
+                    },
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 371,
+                            "name": "Raw swordfish"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Craft multiple cosmic runes from a single essence.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Runecraft": 59
+                    },
+                    "quests": {
+                        "Lost City": "completed"
+                    },
+                    "items": [
+                        {
+                            "id": 7936,
+                            "name": "Pure essence"
+                        }
+                    ],
+                    "untracked": [
+                        "Item missing in items.json: Hat of the eye",
+                        "Guardians of the Rift does not work."
+                    ],
+                    "itemsAny": [
+                        [
+                            {
+                                "id": 1454,
+                                "name": "Cosmic talisman"
+                            },
+                            {
+                                "id": 5539,
+                                "name": "Cosmic tiara"
+                            },
+                            {
+                                "id": 26801,
+                                "name": "Catalytic tiara"
+                            }
+                        ]
+                    ],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Plant a watermelon seed.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Farming": 47
+                    },
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 5341,
+                            "name": "Rake"
+                        },
+                        {
+                            "id": 5343,
+                            "name": "Seed dibber"
+                        },
+                        {
+                            "id": 5321,
+                            "name": "Watermelon seed"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Activate the Chivalry prayer.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Defence": 65,
+                        "Prayer": 60
+                    },
+                    "quests": {},
+                    "items": [],
+                    "untracked": [
+                        "Requires Camelot training room unlock."
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Smith a tier 2 or above Shayzien platebody.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Mining": 65,
+                        "Smithing": 63
+                    },
+                    "quests": {},
+                    "items": [],
+                    "untracked": [
+                        "Item missing in items.json: Lovakite bar",
+                        "Requires 4 Lovakite bars total."
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Mine a nickel ore.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Mining": 74,
+                        "Sailing": 67
+                    },
+                    "quests": {},
+                    "items": [],
+                    "untracked": [
+                        "Item missing in items.json: Pickaxe",
+                        "Attuned to catalytic tiara."
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
             }
         ],
         "Master": [
@@ -13286,6 +13900,630 @@
                         }
                     ],
                     "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Equip an abyssal whip in front of the abyssal demons of the Slayer Tower.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Attack": 70
+                    },
+                    "quests": {
+                        "Priest in Peril": "completed"
+                    },
+                    "items": [
+                        {
+                            "id": 4151,
+                            "name": "Abyssal whip"
+                        }
+                    ],
+                    "untracked": [
+                        "Abyssal tentacle/variant works."
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Smith a runite med helm.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Smithing": 88
+                    },
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 2347,
+                            "name": "Hammer"
+                        },
+                        {
+                            "id": 2363,
+                            "name": "Runite bar"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Teleport to a spirit tree you planted yourself.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Farming": 83
+                    },
+                    "quests": {
+                        "Tree Gnome Village": "completed"
+                    },
+                    "items": [
+                        {
+                            "id": 952,
+                            "name": "Spade"
+                        }
+                    ],
+                    "untracked": [
+                        "Item missing in items.json: Spirit sapling",
+                        "Item missing in items.json: Trowel",
+                        "Must be your planted spirit tree."
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Create a Barrows teleport tablet.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Magic": 83
+                    },
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 566,
+                            "name": "Soul rune"
+                        },
+                        {
+                            "id": 563,
+                            "name": "Law rune"
+                        },
+                        {
+                            "id": 565,
+                            "name": "Blood rune"
+                        }
+                    ],
+                    "untracked": [
+                        "Item missing in items.json: Dark essence block",
+                        "Requires Arceuus spellbook."
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Slay a Nechryael in the Slayer Tower.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Slayer": 80
+                    },
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Kill the spiritual, magic and godly whilst representing their own god.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Slayer": 83
+                    },
+                    "quests": {
+                        "Troll Stronghold": "started"
+                    },
+                    "items": [],
+                    "untracked": [
+                        "Requires god item aligned with mage."
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Create an unstrung dragonstone amulet at a furnace.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Crafting": 80
+                    },
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 2357,
+                            "name": "Gold bar"
+                        },
+                        {
+                            "id": 1615,
+                            "name": "Dragonstone"
+                        },
+                        {
+                            "id": 1595,
+                            "name": "Amulet mould"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Burn a magic log.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Firemaking": 75
+                    },
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 590,
+                            "name": "Tinderbox"
+                        },
+                        {
+                            "id": 1513,
+                            "name": "Magic logs"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Burn a redwood log.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Firemaking": 90
+                    },
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 590,
+                            "name": "Tinderbox"
+                        },
+                        {
+                            "id": 19669,
+                            "name": "Redwood logs"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Catch a tecu salamander.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Hunter": 79
+                    },
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 303,
+                            "name": "Small fishing net"
+                        },
+                        {
+                            "id": 954,
+                            "name": "Rope"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Complete a lap of the Rellekka rooftop agility course whilst sporting the finest amount of grace.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Agility": 80
+                    },
+                    "quests": {},
+                    "items": [],
+                    "untracked": [
+                        "Item missing in items.json: Graceful hood",
+                        "Item missing in items.json: Graceful top",
+                        "Item missing in items.json: Graceful legs",
+                        "Any full graceful outfit; Agility cape can substitute."
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Mix an anti-venom potion.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Herblore": 87
+                    },
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 12934,
+                            "name": "Zulrah's scales"
+                        }
+                    ],
+                    "untracked": [
+                        "Item missing in items.json: Antidote++",
+                        "Requires 5-20 scales."
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Mine a piece of runite ore whilst sporting the finest mining gear.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Mining": 85
+                    },
+                    "quests": {},
+                    "items": [],
+                    "untracked": [
+                        "Item missing in items.json: Pickaxe",
+                        "Prospector kit or golden prospector kit required; Varrock armour 4 can substitute. Blast Mine does not work."
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Steal a gem from the Ardougne market.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Thieving": 75
+                    },
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Pickpocket an elf.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Thieving": 85
+                    },
+                    "quests": {
+                        "Mourning's End Part I": "started"
+                    },
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Bind a blood rune at the Blood Altar.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Runecraft": 77
+                    },
+                    "quests": {
+                        "Sins of the Father": "completed"
+                    },
+                    "items": [],
+                    "untracked": [
+                        "Item missing in items.json: Dark essence fragments",
+                        "Item missing in items.json: Daeyalt essence"
+                    ],
+                    "itemsAny": [
+                        [
+                            {
+                                "id": 7936,
+                                "name": "Pure essence"
+                            }
+                        ]
+                    ],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Mix a ranging mix potion.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Herblore": 80
+                    },
+                    "quests": {
+                        "Barbarian Training": "completed"
+                    },
+                    "items": [
+                        {
+                            "id": 171,
+                            "name": "Ranging potion(2)"
+                        },
+                        {
+                            "id": 11326,
+                            "name": "Caviar"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Fletch a rune dart.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Fletching": 81
+                    },
+                    "quests": {
+                        "The Tourist Trap": "started"
+                    },
+                    "items": [
+                        {
+                            "id": 824,
+                            "name": "Rune dart tip"
+                        },
+                        {
+                            "id": 314,
+                            "name": "Feather"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Cremate a set of fiyr remains.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Firemaking": 80
+                    },
+                    "quests": {
+                        "Shades of Mort'ton": "completed"
+                    },
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [
+                        [
+                            {
+                                "id": 3448,
+                                "name": "Magic pyre logs"
+                            },
+                            {
+                                "id": 19672,
+                                "name": "Redwood pyre logs"
+                            }
+                        ],
+                        [
+                            {
+                                "id": 590,
+                                "name": "Tinderbox"
+                            }
+                        ],
+                        [
+                            {
+                                "id": 3404,
+                                "name": "Fiyr remains"
+                            }
+                        ]
+                    ],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Dissect a sacred eel.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Fishing": 87,
+                        "Cooking": 72
+                    },
+                    "quests": {
+                        "Regicide": "started"
+                    },
+                    "items": [
+                        {
+                            "id": 946,
+                            "name": "Knife"
+                        }
+                    ],
+                    "untracked": [
+                        "Item missing in items.json: Sacred eel"
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Kill a lizardman shaman.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [
+                        "Combat equipment required."
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Angle for an Anglerfish in your finest fishing gear.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Fishing": 82
+                    },
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 307,
+                            "name": "Fishing rod"
+                        },
+                        {
+                            "id": 13431,
+                            "name": "Sandworms"
+                        }
+                    ],
+                    "untracked": [
+                        "Angler's or spirit angler's outfit required."
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Chop a redwood log whilst sporting the finest lumberjack gear.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Woodcutting": 90
+                    },
+                    "quests": {},
+                    "items": [],
+                    "untracked": [
+                        "Item missing in items.json: Axe",
+                        "Lumberjack or forestry outfit required; forestry kit/basket counts."
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Craft a light orb in the Dorgesh-Kaan bank.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Crafting": 87
+                    },
+                    "quests": {
+                        "Death to the Dorgeshuun": "completed"
+                    },
+                    "items": [],
+                    "untracked": [
+                        "Item missing in items.json: Empty light orb"
+                    ],
+                    "itemsAny": [
+                        [
+                            {
+                                "id": 10981,
+                                "name": "Cave goblin wire"
+                            }
+                        ],
+                        [
+                            {
+                                "id": 1785,
+                                "name": "Glassblowing pipe"
+                            },
+                            {
+                                "id": 1775,
+                                "name": "Molten glass"
+                            }
+                        ]
+                    ],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Kill a reanimated abyssal.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Magic": 90,
+                        "Slayer": 85
+                    },
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 13508,
+                            "name": "Ensouled abyssal head"
+                        },
+                        {
+                            "id": 566,
+                            "name": "Soul rune"
+                        },
+                        {
+                            "id": 565,
+                            "name": "Blood rune"
+                        },
+                        {
+                            "id": 561,
+                            "name": "Nature rune"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Kill a Fiyr shade inside Mort'tons shade catacombs.",
+                "type": "Sherlock",
+                "requirements": {
+                    "skills": {
+                        "Firemaking": 65
+                    },
+                    "quests": {
+                        "Shades of Mort'ton": "completed"
+                    },
+                    "items": [],
+                    "untracked": [
+                        "Requires silver or gold shade key.",
+                        "Combat equipment required."
+                    ],
                     "itemsAny": [],
                     "rulesAll": [],
                     "rulesAny": []
