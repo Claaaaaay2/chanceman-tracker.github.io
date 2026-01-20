@@ -8450,7 +8450,7 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canTrainWoodcutting",
-                "canCompletePandemonium"
+                "canAccessSunbleakIsland"
             ]
         },
         "skill": ["woodcutting"],
@@ -17189,6 +17189,69 @@ export const NPC_DATA = {
     "Brutal blue dragon (After Monkey Madness II)": {
         "wiki": "https://oldschool.runescape.wiki/w/Brutal_blue_dragon",
         "rule": ["canCompleteMonkeyMadnessII"],
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
+    "Brutal black dragon (Before Barbarian training)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Brutal_black_dragon",
+        "rule": ["canKillDifficultDragons"],
+        "skill": ["Slayer"],
+        "level": [77],
+        "tags": [],
+        "f2p": false
+    },
+    "Brutal red dragon (Before Barbarian training)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Brutal_red_dragon",
+        "rule": ["canKillDifficultDragons"],
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
+    "Brutal blue dragon (Before Barbarian training)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Brutal_blue_dragon",
+        "rule": ["canKillDifficultDragons"],
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
+    "Brutal black dragon (After Barbarian training)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Brutal_black_dragon",
+        "rule": {
+            "all": [
+                "canKillDifficultDragons",
+                "canCompleteBarbarianTraining",
+            ]
+        },
+        "skill": ["Slayer"],
+        "level": [77],
+        "tags": [],
+        "f2p": false
+    },
+    "Brutal red dragon (After Barbarian training)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Brutal_red_dragon",
+        "rule": {
+            "all": [
+                "canKillDifficultDragons",
+                "canCompleteBarbarianTraining",
+            ]
+        },
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
+    "Brutal blue dragon (After Barbarian training)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Brutal_blue_dragon",
+        "rule": {
+            "all": [
+                "canKillDifficultDragons",
+                "canCompleteBarbarianTraining",
+            ]
+        },
         "skill": [],
         "level": [],
         "tags": [],

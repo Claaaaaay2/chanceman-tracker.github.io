@@ -6220,12 +6220,7 @@
                         "quests": {
                             "Priest in Peril": "completed"
                         },
-                        "items": [
-                            {
-                                "id": 4166,
-                                "name": "Earmuffs"
-                            }
-                        ],
+                        "items": [],
                         "untracked": [],
                         "itemsAny": [],
                         "rulesAll": [],

@@ -2784,7 +2784,7 @@
     "image": "adamant_hasta.png",
     "sources": {
       "drops": {
-        "Brutal blue dragon": {
+        "Brutal blue dragon (After Barbarian training)": {
           "droprate": "1/12.8"
         }
       },
@@ -4587,7 +4587,7 @@
     "image": "adamant_spear.png",
     "sources": {
       "drops": {
-        "Brutal blue dragon": {
+        "Brutal blue dragon (Before Barbarian training)": {
           "droprate": "1/12.8"
         },
         "Silver Chest (red)": {
@@ -119091,10 +119091,10 @@
     "image": "rune_hasta.png",
     "sources": {
       "drops": {
-        "Brutal black dragon": {
+        "Brutal black dragon (After Barbarian training)": {
           "droprate": "1/12.8"
         },
-        "Brutal red dragon": {
+        "Brutal red dragon (After Barbarian training)": {
           "droprate": "1/12.8"
         }
       },
@@ -121445,10 +121445,10 @@
     "image": "rune_spear.png",
     "sources": {
       "drops": {
-        "Brutal black dragon": {
+        "Brutal black dragon (Before Barbarian training)": {
           "droprate": "1/12.8"
         },
-        "Brutal red dragon": {
+        "Brutal red dragon (Before Barbarian training)": {
           "droprate": "1/12.8"
         },
         "Basilisk Sentinel": {

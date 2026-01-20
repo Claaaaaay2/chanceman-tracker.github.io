@@ -111,6 +111,9 @@ function requiresQuest(ctx, questKey, fn) {
 }
 
 export const REQUIREMENT_CHECKS = {
+    canAccessSunbleakIsland(ctx) {
+        return canAccessSunbleakIsland(ctx);
+    },
     canCompleteDeviousMinds(ctx) {
         return canCompleteDeviousMinds(ctx);
     },
@@ -5777,6 +5780,24 @@ function hasSlashWeaponOrKnife(ctx) {
 function canEnterBraindeathIsland(ctx) {
     return requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril) //
         && requiresQuest(ctx, "canCompleteZogreFleshEaters", canCompleteZogreFleshEaters);
+}
+
+function canAccessSunbleakIsland(ctx) {
+    return requiresQuest(ctx, "canCompletePandemonium", canCompletePandemonium) //
+        && (
+            ( // Adamant helm
+                has(ctx, 31432) // Camphor plank
+                && has(ctx, 2361) // Adamantite bar
+                && hasSkillLevel(ctx, "Sailing", 72) //
+                && hasSkillLevel(ctx, "Construction", 59) //
+            ) // Rune helm
+            || (
+                has(ctx, 31435) // Ironwood plank
+                && has(ctx, 2363) // Runite bar
+                && hasSkillLevel(ctx, "Sailing", 87) //
+                && hasSkillLevel(ctx, "Construction", 81) //
+            )
+        );
 }
 
 function canDoMixology(ctx) {
