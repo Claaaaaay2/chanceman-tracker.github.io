@@ -300,6 +300,71 @@
                     "rulesAll": [],
                     "rulesAny": []
                 }
+            },
+            {
+                "description": "West of the Champions' Guild",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "At the standing stones north of Falador",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "South of Draynor Village bank",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "South-east Varrock mine",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Directly behind the Wizards' Tower",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
             }
         ],
         "Easy": [
@@ -2699,6 +2764,97 @@
                     "rulesAll": [],
                     "rulesAny": []
                 }
+            },
+            {
+                "description": "West of the Champions' Guild",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Just north of Al Kharid, in the centre of the mine",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Directly behind the Wizards' Tower",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "One tile west of the north door of Galahad's house",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "At the standing stones north of Falador",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "South-east Varrock mine",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "The statue is located at the crossroads north of Falador",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
             }
         ],
         "Medium": [
@@ -4985,6 +5141,149 @@
                             "name": "Adamant dagger"
                         }
                     ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Search the crate by the Clock Tower",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Inside McGrubor's Wood, west of Seers' Village",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Road between Rellekka and the Lighthouse",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "By the entrance to the Ourania Cave",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "South of the path to Mort'ton",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Just south of East Ardougne",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "On Miscellania, one of the Fremennik Isles, just east of the castle",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Just west of the Chemist's house in Rimmington",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "West of the Crafting Guild",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "North of Seers' Village",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "South of Draynor Village bank",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
                     "untracked": [],
                     "itemsAny": [],
                     "rulesAll": [],
@@ -7390,6 +7689,97 @@
                     "rulesAll": [],
                     "rulesAny": []
                 }
+            },
+            {
+                "description": "Search the crate inside the Lumberyard",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "North-east of the Observatory",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "In level 14 Wilderness, at the Dark Warriors' Fortress",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "South of Yanille bank",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Level 50 Wilderness, near Wilderness Agility Course",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "The picnic tables south of the Legends' Guild",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Located in West Ardougne, dig inside one of the destroyed buildings",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
             }
         ],
         "Elite": [
@@ -9086,6 +9476,84 @@
                             "name": "Mind shield"
                         }
                     ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "In the south-west coast of Ape Atoll",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "East of the small building in Zul-Andra",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "East of the Burgh de Rott furnace",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Directly south of the Soul Altar",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Inside the mudskipper cave west of the Mogre Camp",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "North east of Castle Wars",
+                "type": "Maps",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
                     "untracked": [],
                     "itemsAny": [],
                     "rulesAll": [],
