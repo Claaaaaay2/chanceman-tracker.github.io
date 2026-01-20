@@ -12945,6 +12945,351 @@
                     "rulesAll": [],
                     "rulesAny": []
                 }
+            },
+            {
+                "description": "A blood red weapon, a strong curved sword, found on the island of primate lords.",
+                "type": "Falo the Bard",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [
+                        "Item missing in items.json: Dragon scimitar (or)",
+                        "Item missing in items.json: Dragon scimitar (cr)"
+                    ],
+                    "itemsAny": [
+                        [
+                            {
+                                "id": 4587,
+                                "name": "Dragon scimitar"
+                            }
+                        ]
+                    ],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "A book that preaches of some great figure, lending strength, might and vigour.",
+                "type": "Falo the Bard",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [
+                        "Item missing in items.json: God book",
+                        "Item missing in items.json: God book (or)"
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "A bow of elven craft was made, it shimmers bright, but will soon fade.",
+                "type": "Falo the Bard",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [
+                        "Item missing in items.json: Crystal bow",
+                        "Item missing in items.json: Bow of faerdhinen"
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "A fiery axe of great inferno, when you use it, you'll wonder where the logs go.",
+                "type": "Falo the Bard",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [
+                        "Item missing in items.json: Infernal axe",
+                        "Item missing in items.json: Infernal axe (or)"
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "A mark used to increase one's grace, found atop a seer's place.",
+                "type": "Falo the Bard",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [
+                        "Item missing in items.json: Mark of grace"
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "A molten beast with fiery breath, you acquire these with its death.",
+                "type": "Falo the Bard",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 11943,
+                            "name": "Lava dragon bones"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "A shiny helmet of flight, to obtain this with melee, struggle you might.",
+                "type": "Falo the Bard",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 11826,
+                            "name": "Armadyl helmet"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "A sword held in the other hand, red its colour, Cyclops strength you must withstand.",
+                "type": "Falo the Bard",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [
+                        "Item missing in items.json: Dragon defender",
+                        "Item missing in items.json: Dragon defender (t)",
+                        "Item missing in items.json: Avernic defender"
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "A token used to kill mythical beasts, in hopes of a blade or just for an xp feast.",
+                "type": "Falo the Bard",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [
+                        "Item missing in items.json: Warrior guild token"
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Green is my favourite, mature ale I do love, this takes your herblore above.",
+                "type": "Falo the Bard",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 5743,
+                            "name": "Greenman's ale(m)"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "It can hold down a boat or crush a goat, this object, you see, is quite heavy.",
+                "type": "Falo the Bard",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [
+                        "Item missing in items.json: Barrelchest anchor",
+                        "Item missing in items.json: Barrelchest anchor (bh)"
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "It comes from the ground, underneath the snowy plain. Trolls aplenty, with what looks like a mane.",
+                "type": "Falo the Bard",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 22603,
+                            "name": "Basalt"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "No attack to wield, only strength is required, made of obsidian, but with no room for a shield.",
+                "type": "Falo the Bard",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [
+                        "Item missing in items.json: Tzhaar-ket-om (t)"
+                    ],
+                    "itemsAny": [
+                        [
+                            {
+                                "id": 6528,
+                                "name": "Tzhaar-ket-om"
+                            }
+                        ]
+                    ],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Penance healers runners and more, obtaining this body often gives much deplore.",
+                "type": "Falo the Bard",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [
+                        "Item missing in items.json: Fighter torso",
+                        "Item missing in items.json: Fighter torso (or)"
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Strangely found in a chest, many believe these gloves are the best.",
+                "type": "Falo the Bard",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [
+                        "Item missing in items.json: Barrows gloves"
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "These gloves of white won't help you fight, but aid in cooking, they just might.",
+                "type": "Falo the Bard",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [
+                        "Item missing in items.json: Cooking gauntlets"
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "They come from some time ago, from a land unto the east. Fossilised they have become, this small and gentle beast.",
+                "type": "Falo the Bard",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 21555,
+                            "name": "Numulite"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "To slay a dragon you must first do, before this chest piece can be put on you.",
+                "type": "Falo the Bard",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 1127,
+                            "name": "Rune platebody"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Vampyres are agile opponents, damaged best with a weapon of many components.",
+                "type": "Falo the Bard",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [
+                        "Item missing in items.json: Ivandis flail",
+                        "Item missing in items.json: Rod of ivandis",
+                        "Item missing in items.json: Blisterwood flail"
+                    ],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "You won't bring me to heel, unless you have a bright red keel.",
+                "type": "Falo the Bard",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 32017,
+                            "name": "Dragon keel parts"
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
             }
         ]
     }
