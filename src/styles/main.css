@@ -763,6 +763,25 @@ body.route-loading .route-loading-overlay {
     gap: 0.5rem;
 }
 
+.clue-type {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.clue-type:last-child {
+    margin-bottom: 0;
+}
+
+.clue-type-header {
+    margin: 0.5rem 0 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--section-header-color);
+}
+
 .clue-step {
     border: 3px solid var(--border-color-darker);
     background-color: var(--card-bg);
@@ -780,12 +799,6 @@ body.route-loading .route-loading-overlay {
 .clue-step-status {
     text-align: right;
     white-space: nowrap;
-}
-
-.clue-step-type {
-    grid-column: 1 / -1;
-    font-size: 0.9rem;
-    opacity: 0.85;
 }
 
 .clue-missing {

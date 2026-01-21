@@ -194,7 +194,8 @@ export default async function ClueStepsPage() {
         if (!steps.length) continue;
 
         let doableCount = 0;
-        const rows = [];
+        const typesInOrder = [];
+        const rowsByType = new Map();
 
         for (const step of steps) {
             const description = step.description || step.name || "Untitled step";
@@ -228,13 +229,17 @@ export default async function ClueStepsPage() {
                 statusLabel = "Requires player data";
             }
 
-            rows.push(`
+            if (!rowsByType.has(type)) {
+                rowsByType.set(type, []);
+                typesInOrder.push(type);
+            }
+
+            rowsByType.get(type).push(`
                 <div class="clue-step ${statusClass}"
                     data-doable="${isDoable ? "true" : "false"}"
                     data-description="${escapeHtml(description).toLowerCase()}">
                     <div class="clue-step-name">${escapeHtml(description)}</div>
                     <div class="clue-step-status">${statusLabel}</div>
-                    <div class="clue-step-type">Type: ${escapeHtml(type)}</div>
                     ${missingHtml}
                 </div>
             `);
@@ -254,7 +259,12 @@ export default async function ClueStepsPage() {
                 </h3>
                 <div class="clue-tier-body">
                     <div class="clue-step-list">
-                        ${rows.join("")}
+                        ${typesInOrder.map((type) => `
+                            <section class="clue-type" data-type="${escapeHtml(type)}">
+                                <h4 class="clue-type-header">${escapeHtml(type)}</h4>
+                                ${rowsByType.get(type).join("")}
+                            </section>
+                        `).join("")}
                     </div>
                 </div>
             </section>
@@ -311,6 +321,13 @@ function applyClueFilters(container) {
             || (hideIncompletable && isIncompletable)
             || !matchesSearch;
         row.style.display = shouldHide ? "none" : "";
+    }
+
+    const types = container.querySelectorAll(".clue-type");
+    for (const type of types) {
+        const hasVisibleStep = Array.from(type.querySelectorAll(".clue-step"))
+            .some((step) => step.style.display !== "none");
+        type.style.display = hasVisibleStep ? "" : "none";
     }
 
     const tiers = container.querySelectorAll(".clue-tier");
