@@ -22,6 +22,7 @@ export async function Header() {
                 <a data-link href="/items">Items</a> |
                 <a data-link href="/item-history">Item history</a> |
                 <a data-link href="/achievement-diaries">Achievement diaries</a> |
+                <a data-link href="/clue-steps">Clue steps</a> |
                 <a data-link href="/quests">Quests</a> |
                 <a data-link href="/reupload">Reupload</a> |
                 <a data-link href="/bug">Report a bug</a>
