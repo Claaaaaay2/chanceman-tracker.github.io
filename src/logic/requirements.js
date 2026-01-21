@@ -1149,9 +1149,6 @@ export const REQUIREMENT_CHECKS = {
     canMakePotLids(ctx) {
         return canMakePotLids(ctx);
     },
-    canMakeAirtightPot(ctx) {
-        return canMakeAirtightPot(ctx);
-    },
     canMakeGuthixRests(ctx) {
         return canMakeGuthixRests(ctx);
     },
@@ -5656,31 +5653,6 @@ function canMakePotLids(ctx) {
         && has(ctx, 1613) // Red topaz
         && has(ctx, 1607); // Sapphire
 }
-
-function canMakeAirtightPot(ctx) {
-    return requiresQuest(ctx, "canCompleteRuneMysteries", canCompleteRuneMysteries) //
-        && requiresQuest(ctx, "canCompleteShiloVillage", canCompleteShiloVillage) //
-        && canTrainCrafting(ctx) //
-        && canTrainHerblore(ctx) //
-        && canTrainSmithing(ctx) //
-        && has(ctx, 2353) // Steel bar
-        && has(ctx, 2349) // Bronze bar
-        && has(ctx, 2351) // Iron bar
-        && has(ctx, 1755) // Chisel
-        && has(ctx, 4419) // Guthix rest(3)
-        && has(ctx, 2347) // Hammer
-        && has(ctx, 1931) // Pot
-        && has(ctx, 1761) // Soft clay
-        && has(ctx, 1609) // Opal
-        && has(ctx, 1611) // Jade
-        && has(ctx, 1613) // Red topaz
-        && has(ctx, 1607) // Sapphire
-        && has(ctx, 4440); // Pot lid
-}
-
-
-
-
 
 const NMZ_QUESTS = [
     canCompleteTheAscentOfArceuus,

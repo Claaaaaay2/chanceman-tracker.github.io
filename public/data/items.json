@@ -6744,7 +6744,7 @@
     "sources": {
       "other": {
         "Crafting": {
-          "notes": "Requires a Pot and a Pot lid, and starting one small favour.",
+          "notes": "Requires a Pot and a Pot lid.",
           "rule": {
             "all": [
               {
@@ -6753,7 +6753,6 @@
               {
                 "has": 4440
               },
-              "canMakeAirtightPot",
               "canTrainCrafting"
             ]
           }
