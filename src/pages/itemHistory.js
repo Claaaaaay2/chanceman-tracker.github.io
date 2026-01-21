@@ -53,6 +53,69 @@ function renderSection(title, ids, itemsById) {
     `;
 }
 
+function renderHistoryItem(id, itemsById, emptyLabel) {
+    if (id === undefined || id === null || id === "") {
+        return `
+            <div class="history-panel-item is-empty">
+                <img class="history-panel-image" src="/images/placeholder.png" alt="${escapeHtml(emptyLabel)}">
+                <span class="history-panel-name">${escapeHtml(emptyLabel)}</span>
+            </div>
+        `;
+    }
+
+    const item = itemsById.get(id);
+    const label = escapeHtml(item?.name ?? `Unknown item (${id})`);
+    const content = item
+        ? `<a onclick="navigate('/item?id=${id}')">${label}</a>`
+        : label;
+    const image = item?.image ? `/images/${item.image}` : "/images/placeholder.png";
+    const imgAttrs = item?.image
+        ? `class="lazy-img history-panel-image" data-src="${image}" src="/images/placeholder.png"`
+        : `class="history-panel-image" src="/images/placeholder.png"`;
+
+    return `
+        <div class="history-panel-item">
+            <img ${imgAttrs} alt="${label}">
+            <span class="history-panel-name">${content}</span>
+        </div>
+    `;
+}
+
+function renderHistoryPanels(obtainedIds, rolledIds, itemsById) {
+    const total = Math.max(obtainedIds.length, rolledIds.length);
+
+    if (!total) {
+        return `<p class="roll-empty">No items yet.</p>`;
+    }
+
+    const panels = Array.from({ length: total }, (_, index) => {
+        const obtainedId = obtainedIds[index];
+        const rolledId = rolledIds[index];
+
+        return `
+            <div class="history-panel card">
+                <div class="history-panel-column">
+                    <div class="history-panel-label">Obtained</div>
+                    ${renderHistoryItem(obtainedId, itemsById, "Not obtained")}
+                </div>
+                <div class="history-panel-column">
+                    <div class="history-panel-label">Rolled</div>
+                    ${renderHistoryItem(rolledId, itemsById, "Not rolled")}
+                </div>
+            </div>
+        `;
+    });
+
+    return `<div class="history-grid">${panels.join("")}</div>`;
+}
+
+function renderClassicHistory(obtainedIds, rolledIds, itemsById) {
+    return `
+        ${renderSection("Obtained", obtainedIds, itemsById)}
+        ${renderSection("Rolled", rolledIds, itemsById)}
+    `;
+}
+
 export default async function ItemHistoryPage() {
     const obtained = fileStore.obtained;
     const rolled = fileStore.rolled;
@@ -71,9 +134,49 @@ export default async function ItemHistoryPage() {
     const rolledIds = normalizeIds(rolled);
 
     return `
-        <h1>Item history</h1>
-        <p class="roll-intro">Items are shown in the same order as your uploaded files.</p>
-        ${renderSection("Obtained", obtainedIds, itemsById)}
-        ${renderSection("Rolled", rolledIds, itemsById)}
+        <div class="history-header">
+            <h1>Item history</h1>
+            <label class="history-view-toggle">
+                <span class="history-view-option">Panels</span>
+                <span class="toggle-switch">
+                    <input type="checkbox" id="itemHistoryViewToggle" aria-label="Toggle item history view">
+                    <span class="toggle-slider" aria-hidden="true"></span>
+                </span>
+                <span class="history-view-option">List</span>
+            </label>
+        </div>
+        <p class="roll-intro">Items are paired by position in your uploaded files. If one list is shorter, that side is left blank.</p>
+        <div class="history-view history-view-panels is-active">
+            ${renderHistoryPanels(obtainedIds, rolledIds, itemsById)}
+        </div>
+        <div class="history-view history-view-list">
+            ${renderClassicHistory(obtainedIds, rolledIds, itemsById)}
+        </div>
     `;
 }
+
+window.initItemHistoryPage = function () {
+    const toggle = document.getElementById("itemHistoryViewToggle");
+    const panelView = document.querySelector(".history-view-panels");
+    const listView = document.querySelector(".history-view-list");
+
+    if (!toggle || !panelView || !listView) return;
+
+    const storageKey = "itemHistoryView";
+    const stored = localStorage.getItem(storageKey);
+    const initialView = stored === "list" ? "list" : "panel";
+
+    function setView(view) {
+        const isList = view === "list";
+        toggle.checked = isList;
+        panelView.classList.toggle("is-active", !isList);
+        listView.classList.toggle("is-active", isList);
+        localStorage.setItem(storageKey, isList ? "list" : "panel");
+    }
+
+    setView(initialView);
+
+    toggle.addEventListener("input", () => {
+        setView(toggle.checked ? "list" : "panel");
+    });
+};

@@ -433,6 +433,9 @@ export function afterRoute() {
     if (typeof initClueStepsPage === "function") {
         initClueStepsPage();
     }
+    if (typeof initItemHistoryPage === "function") {
+        initItemHistoryPage();
+    }
 }
 
 async function shouldHideForClueFilter(item, ctx) {
