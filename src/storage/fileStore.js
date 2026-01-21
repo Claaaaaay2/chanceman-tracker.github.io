@@ -35,7 +35,8 @@ let memory = {
         questSearch: "",
         clueSearch: "",
         hideCompletableClues: false,
-        hideIncompletableClues: false
+        hideIncompletableClues: false,
+        hasDoneEasterEvent: false
     },
     player: null,
 };

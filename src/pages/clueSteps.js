@@ -285,6 +285,10 @@ export default async function ClueStepsPage() {
                 <input type="checkbox" id="hideIncompletableClues" ${fileStore.filters?.hideIncompletableClues ? "checked" : ""}>
                 Hide incompletable steps
             </label>
+            <label class="clue-filter">
+                <input type="checkbox" id="hasDoneEasterEvent" ${fileStore.filters?.hasDoneEasterEvent ? "checked" : ""}>
+                Has done Easter event (Eastfloor spade)
+            </label>
         </div>
         <div class="clue-list" id="clueList">
             ${tierSections.length ? tierSections.join("") : "<p>No clue data loaded yet.</p>"}
@@ -329,12 +333,25 @@ async function updateClueFilters(partial) {
     }
 }
 
+async function updateClueFiltersAndRerender(partial) {
+    const nextFilters = {
+        ...fileStore.filters,
+        ...partial
+    };
+    await fileStore.setFilters(nextFilters);
+    const { router } = await import("../router.js");
+    await router();
+}
+
 document.addEventListener("change", async (e) => {
     if (e.target.id === "hideCompletableClues") {
         await updateClueFilters({ hideCompletableClues: e.target.checked });
     }
     if (e.target.id === "hideIncompletableClues") {
         await updateClueFilters({ hideIncompletableClues: e.target.checked });
+    }
+    if (e.target.id === "hasDoneEasterEvent") {
+        await updateClueFiltersAndRerender({ hasDoneEasterEvent: e.target.checked });
     }
 });
 

@@ -36,6 +36,13 @@ function hasAnyItems(ctx, ids) {
     return false;
 }
 
+function hasClueSpadeRequirement(ctx) {
+    if (ctx.filters?.hasDoneEasterEvent) return true;
+    return hasAnyItems(ctx, [
+        952,    // Spade
+    ]);
+}
+
 function allTrue(checks) {
     let ok = true;
     for (const check of checks) {
@@ -140,6 +147,9 @@ export const REQUIREMENT_CHECKS = {
             219,
             269,
         ]) // Torstol
+    },
+    hasClueSpade(ctx) {
+        return hasClueSpadeRequirement(ctx);
     },
     canCompleteMisthalinMystery(ctx) {
         return canCompleteMisthalinMystery(ctx);
