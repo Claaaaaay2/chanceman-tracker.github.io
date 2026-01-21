@@ -392,7 +392,7 @@ body.route-loading .route-loading-overlay {
 .roll-name-list {
     margin: 0 0 1rem;
     padding-left: 1.5rem;
-    column-width: 220px;
+    column-width: 288px;
     column-gap: 2rem;
 }
 
@@ -789,7 +789,7 @@ body.route-loading .route-loading-overlay {
     inset: 0;
     border-radius: 999px;
     background-color: var(--input-text-border);
-    border: 1px solid var(--border-color-darker);
+    border: 1.5px solid var(--border-color-darker);
     transition: background-color 0.2s ease, border-color 0.2s ease;
     cursor: pointer;
 }
