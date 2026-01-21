@@ -192,8 +192,8 @@ export default async function ItemHistoryPage() {
             </label>
         </div>
         ${rangeFilter}
-        <p class="roll-intro">Items are paired by position in your uploaded files. If one list is shorter, that side is left blank.</p>
         <div class="history-view history-view-panels is-active">
+        <p class="roll-intro">Items are paired by position in your uploaded files. If one list is shorter, that side is left blank.</p>
             ${renderHistoryPanels(obtainedIds, rolledIds, itemsById)}
         </div>
         <div class="history-view history-view-list">
