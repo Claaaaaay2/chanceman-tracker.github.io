@@ -1,5 +1,6 @@
 import { REQUIREMENT_CHECKS } from "../logic/requirements.js";
 import { fileStore } from "../storage/fileStore.js";
+import { router } from "../router.js";
 
 const CLUE_TIERS = ["Beginner", "Easy", "Medium", "Hard", "Elite", "Master"];
 function escapeHtml(value) {
@@ -356,7 +357,6 @@ async function updateClueFiltersAndRerender(partial) {
         ...partial
     };
     await fileStore.setFilters(nextFilters);
-    const { router } = await import("../router.js");
     await router();
 }
 
