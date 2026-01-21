@@ -339,6 +339,66 @@ body.route-loading .route-loading-overlay {
     text-overflow: ellipsis;
 }
 
+.roll-intro {
+    margin: 0 1rem 1rem;
+    font-weight: 600;
+}
+
+.roll-section {
+    margin: 1rem;
+}
+
+.roll-section h2 {
+    margin-bottom: 0.5rem;
+}
+
+.roll-count {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.roll-name-list {
+    margin: 0 0 1rem;
+    padding-left: 1.5rem;
+    column-width: 288px;
+    column-gap: 2rem;
+}
+
+.roll-name-list li {
+    break-inside: avoid;
+    margin: 0 0 0.25rem;
+}
+
+.roll-item-row {
+    list-style-position: outside;
+    margin-left: 1.5rem;
+    padding-left: 0;
+    line-height: 24px;
+}
+
+.roll-item-row-content {
+    display: inline;
+}
+
+.roll-inline-image {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+.roll-empty {
+    margin: 0 0 1rem;
+    font-style: italic;
+}
+
+@media (max-width: 600px) {
+    .roll-name-list {
+        column-width: auto;
+    }
+}
+
 .quest-list {
     margin: 1rem;
     display: flex;
