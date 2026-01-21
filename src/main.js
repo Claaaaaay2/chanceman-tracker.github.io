@@ -537,6 +537,22 @@ async function isNonIronItem(item, ctx) {
         }
     }
 
+    if (item.sources?.other) {
+        for (const source of Object.values(item.sources.other)) {
+            const reachable = await canReachSource(source, ctx);
+            if (!reachable) continue;
+
+            hasReachableSource = true;
+
+            const isNonIron = source.tags?.includes("notForIronmen") || source.tags?.includes("jon");
+            if (isNonIron) {
+                hasReachableNonIronmanSource = true;
+            } else {
+                hasReachableIronSource = true;
+            }
+        }
+    }
+
     // If there is any reachable ironman-allowed source → keep it
     if (hasReachableIronSource) return false;
 
