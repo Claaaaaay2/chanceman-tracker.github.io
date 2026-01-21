@@ -140,7 +140,9 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "hasClueSpade"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -176,7 +178,32 @@
                 "requirements": {
                     "skills": {},
                     "quests": {},
-                    "items": [],
+                    "items": [
+                        {
+                            "id": 440
+                        },
+                        {
+                            "id": 1203
+                        },
+                        {
+                            "id": 345
+                        },
+                        {
+                            "id": 335
+                        },
+                        {
+                            "id": 333
+                        },
+                        {
+                            "id": 351
+                        },
+                        {
+                            "id": 1129
+                        },
+                        {
+                            "id": 1095
+                        }
+                    ],
                     "untracked": [],
                     "itemsAny": [],
                     "rulesAll": [],
@@ -310,7 +337,9 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "hasClueSpade"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -323,7 +352,9 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "hasClueSpade"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -336,7 +367,9 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "hasClueSpade"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -349,7 +382,9 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "hasClueSpade"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -362,7 +397,9 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "hasClueSpade"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -375,7 +412,9 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "hasClueSpade"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -388,7 +427,9 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "hasClueSpade"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -401,7 +442,9 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "hasClueSpade"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -414,7 +457,9 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "hasClueSpade"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -427,7 +472,9 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "hasClueSpade"
+                    ],
                     "rulesAny": []
                 }
             }
@@ -468,7 +515,10 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "hasClueSpade",
+                        "canCompleteChildrenOfTheSun"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -481,7 +531,9 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "hasClueSpade"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -494,7 +546,9 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "hasClueSpade"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -507,7 +561,9 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "hasClueSpade"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -520,7 +576,9 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "hasClueSpade"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -533,7 +591,10 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "hasClueSpade",
+                        "canCompleteChildrenOfTheSun"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -546,7 +607,9 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "hasClueSpade"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -559,7 +622,9 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "hasClueSpade"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -572,12 +637,79 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
+                    "rulesAll": [
+                        "canCompleteChildrenOfTheSun"
+                    ],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "I'd like to hear some music. Come and see me on the bridge in Falador Park, and play: Alone\n\nThanks, Cecilia",
+                "type": "Cryptic clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
                     "rulesAll": [],
                     "rulesAny": []
                 }
             },
             {
-                "description": "I'd like to hear some music. Come and see me on the bridge in Falador Park, and play: <some music>\n\nThanks, Cecilia",
+                "description": "I'd like to hear some music. Come and see me on the bridge in Falador Park, and play: On the Shore\n\nThanks, Cecilia",
+                "type": "Cryptic clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "I'd like to hear some music. Come and see me on the bridge in Falador Park, and play: Rugged Terrain\n\nThanks, Cecilia",
+                "type": "Cryptic clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "I'd like to hear some music. Come and see me on the bridge in Falador Park, and play: The Forlorn Homestead\n\nThanks, Cecilia",
+                "type": "Cryptic clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "I'd like to hear some music. Come and see me on the bridge in Falador Park, and play: Tiptoe\n\nThanks, Cecilia",
+                "type": "Cryptic clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "I'd like to hear some music. Come and see me on the bridge in Falador Park, and play: Vision\n\nThanks, Cecilia",
                 "type": "Cryptic clues",
                 "requirements": {
                     "skills": {},
@@ -806,7 +938,9 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "canCompleteChildrenOfTheSun"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -1092,7 +1226,9 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "canCompletePriestInPeril"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -2010,7 +2146,10 @@
                 "description": "Blow a raspberry at the monkey cage in Ardougne Zoo.\n\nEquip a studded leather body, bronze platelegs and a normal staff with no orb.",
                 "type": "Emote clues",
                 "requirements": {
-                    "skills": {},
+                    "skills": {
+                        "Defence": 20,
+                        "Ranged": 20
+                    },
                     "quests": {},
                     "items": [
                         {
@@ -2036,7 +2175,9 @@
                 "description": "Blow raspberries outside the entrance to Keep Le Faye.\n\nEquip a coif, an iron platebody and leather gloves.",
                 "type": "Emote clues",
                 "requirements": {
-                    "skills": {},
+                    "skills": {
+                        "Ranged": 20
+                    },
                     "quests": {},
                     "items": [
                         {
@@ -2062,7 +2203,9 @@
                 "description": "Bow in the office of the Emir's Arena.\n\nEquip an iron chain body, leather chaps and coif.",
                 "type": "Emote clues",
                 "requirements": {
-                    "skills": {},
+                    "skills": {
+                        "Ranged": 20
+                    },
                     "quests": {},
                     "items": [
                         {
@@ -2088,7 +2231,9 @@
                 "description": "Bow outside the entrance to the Legends' Guild.\n\nEquip iron platelegs, an emerald amulet and an oak longbow.",
                 "type": "Emote clues",
                 "requirements": {
-                    "skills": {},
+                    "skills": {
+                        "Ranged": 5
+                    },
                     "quests": {},
                     "items": [
                         {
@@ -2153,7 +2298,10 @@
                 "description": "Cheer for the monks at Port Sarim.\n\nEquip a coif, steel plateskirt and a sapphire necklace.",
                 "type": "Emote clues",
                 "requirements": {
-                    "skills": {},
+                    "skills": {
+                        "Ranged": 20,
+                        "Defence": 5
+                    },
                     "quests": {},
                     "items": [
                         {
@@ -2357,7 +2505,9 @@
                 "description": "Dance in the Party Room.\n\nEquip a steel full helmet, steel platebody and an iron plateskirt.",
                 "type": "Emote clues",
                 "requirements": {
-                    "skills": {},
+                    "skills": {
+                        "Defence": 5
+                    },
                     "quests": {},
                     "items": [
                         {
@@ -2457,7 +2607,9 @@
                 "description": "Jump for joy at the beehives.\n\nEquip a desert shirt, green gnome robe bottoms and a steel axe.",
                 "type": "Emote clues",
                 "requirements": {
-                    "skills": {},
+                    "skills": {
+                        "Attack": 5
+                    },
                     "quests": {},
                     "items": [
                         {
@@ -2509,7 +2661,10 @@
                 "description": "Panic in the Limestone Mine.\n\nEquip bronze platelegs, a steel pickaxe and a steel medium helmet.",
                 "type": "Emote clues",
                 "requirements": {
-                    "skills": {},
+                    "skills": {
+                        "Defence": 5,
+                        "Attack": 5
+                    },
                     "quests": {},
                     "items": [
                         {
@@ -2600,7 +2755,9 @@
                 "description": "Spin in Draynor Manor by the fountain.\n\nEquip an iron platebody, studded leather chaps and a bronze full helmet.",
                 "type": "Emote clues",
                 "requirements": {
-                    "skills": {},
+                    "skills": {
+                        "Ranged": 20
+                    },
                     "quests": {},
                     "items": [
                         {
@@ -2626,7 +2783,10 @@
                 "description": "Spin in the Varrock Castle courtyard.\n\nEquip a black axe, a coif and a ruby ring.",
                 "type": "Emote clues",
                 "requirements": {
-                    "skills": {},
+                    "skills": {
+                        "Attack": 10,
+                        "Ranged": 20
+                    },
                     "quests": {},
                     "items": [
                         {
@@ -2652,7 +2812,9 @@
                 "description": "Think in middle of the wheat field by the Lumbridge mill.\n\nEquip a blue gnome robetop, a turquoise gnome robe bottom and an oak shortbow.",
                 "type": "Emote clues",
                 "requirements": {
-                    "skills": {},
+                    "skills": {
+                        "Ranged": 5
+                    },
                     "quests": {},
                     "items": [
                         {
@@ -2678,7 +2840,9 @@
                 "description": "Wave along the south fence of the Lumber Yard.\n\nEquip a hard leather body, leather chaps and a bronze axe.",
                 "type": "Emote clues",
                 "requirements": {
-                    "skills": {},
+                    "skills": {
+                        "Defence": 10
+                    },
                     "quests": {},
                     "items": [
                         {
@@ -2704,7 +2868,10 @@
                 "description": "Wave in the Falador gem store.\n\nEquip a Mithril pickaxe, Black platebody and an Iron Kiteshield.",
                 "type": "Emote clues",
                 "requirements": {
-                    "skills": {},
+                    "skills": {
+                        "Attack": 20,
+                        "Defence": 10
+                    },
                     "quests": {},
                     "items": [
                         {
@@ -2730,7 +2897,9 @@
                 "description": "Wave on Mudskipper Point.\n\nEquip a black cape, leather chaps and a steel mace.",
                 "type": "Emote clues",
                 "requirements": {
-                    "skills": {},
+                    "skills": {
+                        "Attack": 5
+                    },
                     "quests": {},
                     "items": [
                         {
@@ -2756,7 +2925,10 @@
                 "description": "Yawn in Draynor Marketplace.\n\nEquip studded leather chaps, an iron kiteshield and a steel longsword.",
                 "type": "Emote clues",
                 "requirements": {
-                    "skills": {},
+                    "skills": {
+                        "Ranged": 20,
+                        "Attack": 5
+                    },
                     "quests": {},
                     "items": [
                         {
@@ -2800,7 +2972,9 @@
                     ],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "canCompleteChildrenOfTheSun"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -2839,7 +3013,9 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "hasClueSpade"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -2852,7 +3028,9 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "hasClueSpade"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -2865,7 +3043,9 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "hasClueSpade"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -2878,7 +3058,9 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "hasClueSpade"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -2891,7 +3073,9 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "hasClueSpade"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -2904,7 +3088,9 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "hasClueSpade"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -2917,7 +3103,9 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "hasClueSpade"
+                    ],
                     "rulesAny": []
                 }
             }
