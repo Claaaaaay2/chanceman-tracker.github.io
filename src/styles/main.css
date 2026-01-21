@@ -347,7 +347,7 @@ body.route-loading .route-loading-overlay {
 .history-header {
     margin: 0 1rem 0.5rem;
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-between;
     gap: 1rem;
 }
