@@ -17,6 +17,8 @@ export function isItemHiddenByTag(item) {
 export function isSourceHiddenByFilters(source, ctx) {
     const f = ctx.filters ?? {};
     if (f.hideLMS && source?.tags?.includes("LMS")) return true;
+    if (f.hideJon && source?.tags?.includes("jon")) return true;
+    if (f.isIronman && (source?.tags?.includes("notForIronmen") || source?.tags?.includes("jon"))) return true;
     return false;
 }
 

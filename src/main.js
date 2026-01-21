@@ -1,5 +1,5 @@
 import { canReachNpc, evaluateRule } from "./logic/itemAvailability.js";
-import { isItemHiddenByTag, isNpcObtainable } from "./logic/itemVisibility.js";
+import { isItemHiddenByTag, isNpcBlockedByFilters, isNpcObtainable, isSourceHiddenByFilters } from "./logic/itemVisibility.js";
 import { parseDropRate } from "./logic/utils.js";
 import { NPC_DATA } from "./logic/npcData.js";
 import { getObtainabilityRank } from "./logic/sortHelpers.js";
@@ -457,6 +457,7 @@ async function shouldHideForClueFilter(item, ctx) {
         for (const npcName of Object.keys(item.sources.drops)) {
             const npc = NPC_DATA[npcName];
             if (!npc) continue;
+            if (isNpcBlockedByFilters(npcName, ctx)) continue;
 
             const isClueSource = npc.tags?.includes("clue");
             if (isClueSource) hasAnyClueSource = true;
@@ -471,6 +472,7 @@ async function shouldHideForClueFilter(item, ctx) {
     // Check other sources
     if (item.sources?.other) {
         for (const source of Object.values(item.sources.other)) {
+            if (isSourceHiddenByFilters(source, ctx)) continue;
             const isClueSource = source.tags?.includes("clue");
             if (isClueSource) hasAnyClueSource = true;
 
@@ -571,6 +573,7 @@ async function hideTag(item, ctx, tag) {
         for (const npcName of Object.keys(item.sources.drops)) {
             const npc = NPC_DATA[npcName];
             if (!npc) continue;
+            if (isNpcBlockedByFilters(npcName, ctx)) continue;
 
             const isTag = npc.tags?.includes(tag);
             if (isTag) hasAnyTagSource = true;
@@ -585,6 +588,12 @@ async function hideTag(item, ctx, tag) {
     // Other sources (crafting, house actions, etc)
     if (item.sources?.other) {
         for (const source of Object.values(item.sources.other)) {
+            const isHiddenByFilters = isSourceHiddenByFilters(source, ctx);
+            const isIgnoredTagSource = (tag === "LMS" && source.tags?.includes("LMS"))
+                || (tag === "jon" && source.tags?.includes("jon"));
+
+            if (isHiddenByFilters && !isIgnoredTagSource) continue;
+
             const isTag = source.tags?.includes(tag);
             if (isTag) hasAnyTagSource = true;
 
@@ -617,6 +626,7 @@ async function hideSkill(item, ctx, skill) {
         for (const npcName of Object.keys(item.sources.drops)) {
             const npc = NPC_DATA[npcName];
             if (!npc) continue;
+            if (isNpcBlockedByFilters(npcName, ctx)) continue;
 
             const isSlayerLockTag = skill === "Slayer"
                 && (npc.tags?.includes("slayer-task-only") || npc.tags?.includes("superior"));
@@ -634,6 +644,8 @@ async function hideSkill(item, ctx, skill) {
     // Other sources (crafting, house actions, etc)
     if (item.sources?.other) {
         for (const source of Object.values(item.sources.other)) {
+            if (isSourceHiddenByFilters(source, ctx)) continue;
+
             const isTag = source.skill?.includes(skill);
             if (isTag) hasAnySkillSource = true;
 

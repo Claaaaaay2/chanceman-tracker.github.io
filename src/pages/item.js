@@ -1,5 +1,5 @@
 import { NPC_DATA } from "../logic/npcData.js";
-import { isItemHiddenByTag, isNpcObtainable, isRuleObtainable, isSourceHiddenByFilters } from "../logic/itemVisibility.js";
+import { isItemHiddenByTag, isNpcBlockedByFilters, isNpcObtainable, isRuleObtainable, isSourceHiddenByFilters } from "../logic/itemVisibility.js";
 import { parseDropRate } from "../logic/utils.js";
 import { fileStore } from "../storage/fileStore.js";
 
@@ -86,6 +86,14 @@ async function renderSourceTable(section, entries) {
         const rows = [];
 
         for (const [name, data] of Object.entries(entries)) {
+            if (isNpcBlockedByFilters(name, fileStore)) {
+                rows.push({
+                    name,
+                    data,
+                    obtainable: false
+                });
+                continue;
+            }
             const obtainable = await isNpcObtainable(name, fileStore);
             rows.push({
                 name,
