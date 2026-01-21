@@ -94,6 +94,7 @@ function renderHistoryPanels(obtainedIds, rolledIds, itemsById) {
 
         return `
             <div class="history-panel card">
+                <div class="history-panel-index">${index + 1}</div>
                 <div class="history-panel-column">
                     <div class="history-panel-label">Obtained</div>
                     ${renderHistoryItem(obtainedId, itemsById, "Not obtained")}
