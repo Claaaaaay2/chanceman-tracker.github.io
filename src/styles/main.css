@@ -392,7 +392,7 @@ body.route-loading .route-loading-overlay {
 .roll-name-list {
     margin: 0 0 1rem;
     padding-left: 1.5rem;
-    column-width: 288px;
+    column-width: 220px;
     column-gap: 2rem;
 }
 
@@ -402,14 +402,15 @@ body.route-loading .route-loading-overlay {
 }
 
 .roll-item-row {
-    list-style-position: outside;
     margin-left: 1.5rem;
     padding-left: 0;
+    display: flex;
+    gap: 0.5rem;
     line-height: 24px;
 }
 
-.roll-item-row-content {
-    display: inline;
+.roll-item-row::before {
+    content: attr(value) ".";
 }
 
 .history-item-link {

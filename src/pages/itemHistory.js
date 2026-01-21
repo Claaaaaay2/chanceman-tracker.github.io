@@ -43,7 +43,7 @@ function renderItemList(ids, itemsById) {
 
         return `
             <li class="roll-item-row" data-history-index="${index + 1}" value="${index + 1}">
-                <span class="roll-item-row-content">
+                <span>
                     ${contentMarkup}
                 </span>
             </li>
