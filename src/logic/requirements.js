@@ -612,6 +612,9 @@ export const REQUIREMENT_CHECKS = {
     hasNarwhalKnife(ctx) {
         return hasNarwhalKnife(ctx);
     },
+    hasKnifeOrNarwhalKnife(ctx) {
+        return hasKnifeOrNarwhalKnife(ctx);
+    },
     canCompleteTheEyesOfGlouphrie(ctx) {
         return canCompleteTheEyesOfGlouphrie(ctx);
     },
@@ -2277,7 +2280,7 @@ function canCompleteBelowIceMountain(ctx) {
         hasQuestPoints(ctx, 16), //
         has(ctx, 2142), // Cooked meat
         has(ctx, 2309), // Bread
-        has(ctx, 946), // Knife
+        hasKnifeOrNarwhalKnife(ctx), // Knife or Narwhal knife
         hasAnyItems(ctx, [1917, 1905, 1913, 1907]), // Beer, Asgarnian ale, Dwarven stout or Wizard's mind bomb
     ]);
 }
@@ -3249,7 +3252,7 @@ function canCompleteLostCity(ctx) {
         hasSkillLevel(ctx, "Crafting", 31),
         hasSkillLevel(ctx, "Woodcutting", 36),
         hasAnyItems(ctx, [1351, 1353, 1361, 1357, 1359]), // Bronze axe, Steel axe, Black axe, Adamant axe, Rune axe (clue boxes)
-        has(ctx, 946), // Knife
+        hasKnifeOrNarwhalKnife(ctx), // Knife or Narwhal knife
     ]);
 }
 
@@ -5708,6 +5711,18 @@ function countCompletableNMZQuests(ctx) {
 
 function canEnterNightmareZone(ctx) {
     return (countCompletableNMZQuests(ctx) >= 5) && !ctx.filters?.isIronman;
+}
+
+function hasKnifeOrNarwhalKnife(ctx) {
+    if (hasItem(ctx, 946, { trackMissing: false })) return true; // Knife
+
+    const hasHorn = hasItem(ctx, 31954, { trackMissing: false }); // Narwhal horn
+    if (hasHorn) {
+        return canTrainCrafting(ctx) && has(ctx, 1755); // Chisel
+    }
+
+    addMissingItemGroup(ctx, [946, 31954]);
+    return false;
 }
 
 function hasNarwhalKnife(ctx) {
