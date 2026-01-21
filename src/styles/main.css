@@ -507,6 +507,119 @@ body.route-loading .route-loading-overlay {
     object-fit: contain;
 }
 
+.history-filter {
+    margin: 0 1rem 1rem;
+    padding: 0.75rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.history-filter-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    text-align: center;
+    gap: 0.5rem 1rem;
+}
+
+.history-filter-help {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.history-filter-row {
+    display: grid;
+    grid-template-columns: auto minmax(140px, 1fr) auto;
+    align-items: center;
+    gap: 0.75rem 1rem;
+}
+
+.history-filter-field {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+}
+
+.history-filter-field input[type="number"] {
+    width: 90px;
+}
+
+.history-filter-slider {
+    position: relative;
+    height: 28px;
+}
+
+@media (max-width: 600px) {
+    .history-filter-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+.history-filter-track {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 6px;
+    transform: translateY(-50%);
+    background-color: var(--input-text-border);
+    border-radius: 999px;
+}
+
+.history-filter-range {
+    position: absolute;
+    top: 50%;
+    height: 6px;
+    transform: translateY(-50%);
+    background-color: var(--input-button-bg);
+    border-radius: 999px;
+    left: var(--range-start);
+    right: calc(100% - var(--range-end));
+}
+
+.history-filter-slider input[type="range"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 28px;
+    margin: 0;
+    background: transparent;
+    pointer-events: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.history-filter-slider input[type="range"]::-webkit-slider-thumb {
+    pointer-events: auto;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--input-text-bg);
+    border: 2px solid var(--input-button-bg);
+    -webkit-appearance: none;
+}
+
+.history-filter-slider input[type="range"]::-moz-range-thumb {
+    pointer-events: auto;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--input-text-bg);
+    border: 2px solid var(--input-button-bg);
+}
+
+.history-filter-slider input[type="range"]::-moz-range-track {
+    background: transparent;
+    border: none;
+}
+
+.history-range-hidden {
+    display: none !important;
+}
 @media (max-width: 600px) {
     .roll-name-list {
         column-width: auto;
@@ -938,3 +1051,4 @@ body.route-loading .route-loading-overlay {
     font-weight: 600;
     color: var(--highlight-color);
 }
+
