@@ -29,12 +29,18 @@ function renderItemList(ids, itemsById) {
         const imgAttrs = item?.image
             ? `class="lazy-img roll-inline-image" data-src="${image}" src="/images/placeholder.png"`
             : `class="roll-inline-image" src="/images/placeholder.png"`;
+        const imageMarkup = item
+            ? `<a onclick="navigate('/item?id=${id}')"><img ${imgAttrs} alt="${label}"></a>`
+            : `<img ${imgAttrs} alt="${label}">`;
+        const contentMarkup = item
+            ? `<a onclick="navigate('/item?id=${id}')">${label}</a>`
+            : label;
 
         return `
             <li class="roll-item-row">
                 <span class="roll-item-row-content">
-                    <img ${imgAttrs} alt="${label}">
-                    ${content}
+                    ${imageMarkup}
+                    ${contentMarkup}
                 </span>
             </li>
         `;
@@ -72,10 +78,13 @@ function renderHistoryItem(id, itemsById, emptyLabel) {
     const imgAttrs = item?.image
         ? `class="lazy-img history-panel-image" data-src="${image}" src="/images/placeholder.png"`
         : `class="history-panel-image" src="/images/placeholder.png"`;
+    const imageMarkup = item
+        ? `<a onclick="navigate('/item?id=${id}')"><img ${imgAttrs} alt="${label}"></a>`
+        : `<img ${imgAttrs} alt="${label}">`;
 
     return `
         <div class="history-panel-item">
-            <img ${imgAttrs} alt="${label}">
+            ${imageMarkup}
             <span class="history-panel-name">${content}</span>
         </div>
     `;
