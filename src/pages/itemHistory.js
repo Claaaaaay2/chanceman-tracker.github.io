@@ -29,17 +29,21 @@ function renderItemList(ids, itemsById) {
         const imgAttrs = item?.image
             ? `class="lazy-img roll-inline-image" data-src="${image}" src="/images/placeholder.png"`
             : `class="roll-inline-image" src="/images/placeholder.png"`;
-        const imageMarkup = item
-            ? `<a onclick="navigate('/item?id=${id}')"><img ${imgAttrs} alt="${label}"></a>`
-            : `<img ${imgAttrs} alt="${label}">`;
         const contentMarkup = item
-            ? `<a onclick="navigate('/item?id=${id}')">${label}</a>`
-            : label;
+            ? `
+                <a class="history-item-link history-item-link-list" onclick="navigate('/item?id=${id}')">
+                    <img ${imgAttrs} alt="${label}">
+                    <span class="history-item-text">${label}</span>
+                </a>
+            `
+            : `
+                <img ${imgAttrs} alt="${label}">
+                <span class="history-item-text">${label}</span>
+            `;
 
         return `
             <li class="roll-item-row">
                 <span class="roll-item-row-content">
-                    ${imageMarkup}
                     ${contentMarkup}
                 </span>
             </li>
@@ -71,21 +75,25 @@ function renderHistoryItem(id, itemsById, emptyLabel) {
 
     const item = itemsById.get(id);
     const label = escapeHtml(item?.name ?? `Unknown item (${id})`);
-    const content = item
-        ? `<a onclick="navigate('/item?id=${id}')">${label}</a>`
-        : label;
     const image = item?.image ? `/images/${item.image}` : "/images/placeholder.png";
     const imgAttrs = item?.image
         ? `class="lazy-img history-panel-image" data-src="${image}" src="/images/placeholder.png"`
         : `class="history-panel-image" src="/images/placeholder.png"`;
-    const imageMarkup = item
-        ? `<a onclick="navigate('/item?id=${id}')"><img ${imgAttrs} alt="${label}"></a>`
-        : `<img ${imgAttrs} alt="${label}">`;
+    const content = item
+        ? `
+            <a class="history-item-link history-item-link-panel" onclick="navigate('/item?id=${id}')">
+                <img ${imgAttrs} alt="${label}">
+                <span class="history-item-text">${label}</span>
+            </a>
+        `
+        : `
+            <img ${imgAttrs} alt="${label}">
+            <span class="history-item-text">${label}</span>
+        `;
 
     return `
         <div class="history-panel-item">
-            ${imageMarkup}
-            <span class="history-panel-name">${content}</span>
+            ${content}
         </div>
     `;
 }

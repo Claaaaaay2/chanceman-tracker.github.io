@@ -412,6 +412,28 @@ body.route-loading .route-loading-overlay {
     display: inline;
 }
 
+.history-item-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.history-item-link:hover .history-item-text {
+    text-decoration: underline;
+}
+
+.history-item-link-list {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.history-item-link-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+}
+
 .roll-inline-image {
     width: 24px;
     height: 24px;
@@ -471,6 +493,10 @@ body.route-loading .route-loading-overlay {
     gap: 0.35rem;
 }
 
+.history-panel-item .history-item-text {
+    font-size: 0.95rem;
+}
+
 .history-panel-item.is-empty {
     opacity: 0.6;
 }
@@ -479,10 +505,6 @@ body.route-loading .route-loading-overlay {
     width: 48px;
     height: 48px;
     object-fit: contain;
-}
-
-.history-panel-name {
-    font-size: 0.95rem;
 }
 
 @media (max-width: 600px) {
