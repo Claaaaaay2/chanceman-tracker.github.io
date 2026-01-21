@@ -88,16 +88,36 @@ function getMissingItems(ctx, itemsById) {
     if (Array.isArray(ctx?.missing?.skills) && ctx.missing.skills.length) {
         missing.skills = [...ctx.missing.skills].sort((a, b) => a.localeCompare(b));
     }
+    const itemGroupIds = new Set();
+    if (Array.isArray(ctx?.missing?.itemGroups)) {
+        missing.itemGroups = ctx.missing.itemGroups.map((group) => {
+            if (Array.isArray(group)) {
+                for (const id of group) {
+                    itemGroupIds.add(id);
+                }
+                return group.map((id) => itemsById.get(id) ?? `Item ${id}`);
+            }
+            if (group?.options) {
+                for (const option of group.options) {
+                    if (option.length === 1) {
+                        itemGroupIds.add(option[0]);
+                    }
+                }
+                return {
+                    options: group.options.map((option) =>
+                        option.map((id) => itemsById.get(id) ?? `Item ${id}`)
+                    )
+                };
+            }
+            return [];
+        });
+    }
     if (ctx?.missing?.items?.size) {
         for (const id of ctx.missing.items) {
+            if (itemGroupIds.has(id)) continue;
             missing.items.push(itemsById.get(id) ?? `Item ${id}`);
         }
         missing.items.sort((a, b) => a.localeCompare(b));
-    }
-    if (Array.isArray(ctx?.missing?.itemGroups)) {
-        missing.itemGroups = ctx.missing.itemGroups.map((group) =>
-            group.map((id) => itemsById.get(id) ?? `Item ${id}`)
-        );
     }
     if (Array.isArray(ctx?.missing?.prereqQuests)) {
         missing.prereqQuests = [...ctx.missing.prereqQuests].sort((a, b) => a.localeCompare(b));
@@ -123,7 +143,22 @@ function renderQuestMissing(missing) {
     }
     if (missing.itemGroups.length) {
         const groupText = missing.itemGroups
-            .map((group) => `Any of: ${group.join(" / ")}`)
+            .map((group) => {
+                if (Array.isArray(group)) {
+                    return `Any of: ${group.join(" / ")}`;
+                }
+                if (group?.options) {
+                    const optionText = group.options
+                        .map((option) => option.length > 1
+                            ? `(${option.join(" + ")})`
+                            : option[0]
+                        )
+                        .join(" / ");
+                    return `Any of: ${optionText}`;
+                }
+                return "";
+            })
+            .filter(Boolean)
             .join("; ");
         parts.push(`Missing item options: ${groupText}.`);
     }

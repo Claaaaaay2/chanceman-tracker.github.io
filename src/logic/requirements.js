@@ -25,6 +25,24 @@ function addMissingItemGroup(ctx, ids) {
     ctx.missing.itemGroupKeys.add(key);
     ctx.missing.itemGroups.push(ids);
 }
+function addMissingItemOptionGroup(ctx, options) {
+    if (!ctx?.missing || !shouldTrackMissing(ctx)) return;
+    if (!ctx.missing.itemGroups) {
+        ctx.missing.itemGroups = [];
+    }
+    if (!ctx.missing.itemGroupKeys) {
+        ctx.missing.itemGroupKeys = new Set();
+    }
+    const normalized = options
+        .map((option) => [...option].sort((a, b) => a - b).join(","))
+        .sort()
+        .join("|");
+    const key = `options:${normalized}`;
+    if (ctx.missing.itemGroupKeys.has(key)) return;
+    ctx.missing.itemGroupKeys.add(key);
+    ctx.missing.itemGroups.push({ options });
+}
+
 
 function hasAnyItems(ctx, ids) {
     for (const id of ids) {
@@ -2318,7 +2336,7 @@ function canCompleteBigChompyBirdHunting(ctx) {
         hasSkillLevel(ctx, "Cooking", 30),
         hasSkillLevel(ctx, "Ranged", 30),
         has(ctx, 314), // Feather
-        has(ctx, 946), // Knife
+        hasKnifeOrNarwhalKnife(ctx), // Knife
         has(ctx, 1755), // Chisel
         has(ctx, 1965), // Cabbage
         has(ctx, 1982), // Tomato
@@ -2515,7 +2533,7 @@ function canCompleteDarknessOfHallowvale(ctx) {
         hasAnyNails(ctx), //
         has(ctx, 960), // Plank
         has(ctx, 2347), // Hammer
-        has(ctx, 946), // Knife
+        hasKnifeOrNarwhalKnife(ctx), // Knife
         hasAirRuneSource(ctx), //
         has(ctx, 563), // Law rune
         hasUsablePickaxe(ctx), //
@@ -2947,7 +2965,7 @@ function canCompleteGettingAhead(ctx) {
         hasAnyNails(ctx), //
         has(ctx, 1763), // Red dye
         has(ctx, 1933), // Pot of flour
-        has(ctx, 946), // Knife
+        hasKnifeOrNarwhalKnife(ctx), // Knife
     ]);
 }
 
@@ -2964,7 +2982,7 @@ function canCompleteGhostsAhoy(ctx) {
         has(ctx, 952), // Spade
         has(ctx, 845), // Oak longbow
         has(ctx, 1921), // Bowl of water for Nettle tea
-        has(ctx, 946), // Knife
+        hasKnifeOrNarwhalKnife(ctx), // Knife
     ]);
 }
 
@@ -3360,7 +3378,7 @@ function canCompleteMisthalinMystery(ctx) {
     return allTrue([
         has(ctx, 1925), // Bucket
         has(ctx, 590), // Tinderbox
-        has(ctx, 946), // Knife
+        hasKnifeOrNarwhalKnife(ctx), // Knife
     ]);
 }
 
@@ -3530,7 +3548,7 @@ function canCompletePerilousMoons(ctx) {
         hasSkillLevel(ctx, "Runecraft", 20),
         hasSkillLevel(ctx, "Construction", 10),
         canStartPerilousMoons(ctx), //
-        has(ctx, 946), // Knife
+        hasKnifeOrNarwhalKnife(ctx), // Knife
         has(ctx, 305), // Big fishing net
         has(ctx, 954), // Rope
         has(ctx, 233), // Pestle and mortar
@@ -3751,7 +3769,7 @@ function canCompleteRFDFreeingPiratePete(ctx) {
         has(ctx, 6667), // Empty fishbowl
         has(ctx, 1794), // Bronze wire
         has(ctx, 1733), // Needle
-        has(ctx, 946), // Knife
+        hasKnifeOrNarwhalKnife(ctx), // Knife
     ]);
 }
 
@@ -3996,7 +4014,7 @@ function canCompleteSinsOfTheFather(ctx) {
         has(ctx, 1603), // Ruby
         has(ctx, 1755), // Chisel
         has(ctx, 2347), // Hammer
-        has(ctx, 946), // Knife
+        hasKnifeOrNarwhalKnife(ctx), // Knife
         hasUsableAxe(ctx),
     ]);
 }
@@ -4072,7 +4090,7 @@ function canCompleteSpiritsOfTheElid(ctx) {
         hasTelegrabRunes(ctx), //
         has(ctx, 1733), // Needle
         has(ctx, 1734), // Thread
-        has(ctx, 946), // Knife
+        hasKnifeOrNarwhalKnife(ctx), // Knife
         has(ctx, 954), // Rope
         canShortrange(ctx),
         hasUsablePickaxe(ctx), //
@@ -4263,7 +4281,7 @@ function canCompleteTheFinalDawn(ctx) {
         hasSkillLevel(ctx, "Fletching", 52),
         requiresQuest(ctx, "canCompleteTheHeartOfDarkness", canCompleteTheHeartOfDarkness), //
         requiresQuest(ctx, "canCompletePerilousMoons", canCompletePerilousMoons), //
-        has(ctx, 946), // Knife
+        hasKnifeOrNarwhalKnife(ctx), // Knife
         has(ctx, 1917), // Beer
         hasAnyItems(ctx, [3183, 4834, 4832, 3123, 31726, 22124, 2859, 22780, 28899, 6812, 4812, 534, 530, 532, 526, 528, 6729, 536, 22783, 4830, 31729, 22786, 3125, 11943, 2136, 2134, 2132, 25833, 10816, 2142]),
     ]);
@@ -4676,7 +4694,7 @@ function canCompleteWhileGuthixSleeps(ctx) {
         requiresQuest(ctx, "canCompleteTearsOfGuthix", canCompleteTearsOfGuthix), //
         requiresQuest(ctx, "canCompleteNatureSpirit", canCompleteNatureSpirit), //
         requiresQuest(ctx, "canCompleteATailOfTwoCats", canCompleteATailOfTwoCats), //
-        has(ctx, 946), // Knife
+        hasKnifeOrNarwhalKnife(ctx), // Knife
         has(ctx, 4542), // Lantern lens
         has(ctx, 567), // Unpowered orb
         has(ctx, 1139), // Bronze med helm
@@ -5209,7 +5227,7 @@ function canCatchImplingsInJars(ctx) {
 
 function canDeadfallTrap(ctx) {
     return canTrainHunter(ctx) //
-        && has(ctx, 946) // Knife
+        && hasKnifeOrNarwhalKnife(ctx) // Knife
         && hasAnyLog(ctx);
 }
 
@@ -5251,7 +5269,7 @@ function hasAnyFletchableLog(ctx) {
 
 function canPitfallTrap(ctx) {
     return canTrainHunter(ctx) //
-        && has(ctx, 946) // Knife
+        && hasKnifeOrNarwhalKnife(ctx) // Knife
         && hasAnyItems(ctx, [10029, 29305]) // Teasing stick of Hunter's spear
         && (
             hasAnyItems(ctx, [
@@ -5721,7 +5739,7 @@ function hasKnifeOrNarwhalKnife(ctx) {
         return canTrainCrafting(ctx) && has(ctx, 1755); // Chisel
     }
 
-    addMissingItemGroup(ctx, [946, 31954]);
+    addMissingItemOptionGroup(ctx, [[946], [31954, 1755]]);
     return false;
 }
 
@@ -6751,7 +6769,7 @@ function canTrainConstruction(ctx) {
 
 function canTrainFletching(ctx) {
     if (ctx.filters?.overrideFletching) return true;
-    return ((has(ctx, 946) || hasNarwhalKnife(ctx)) && has(ctx, 1511)) // Knife & Logs
+    return (hasKnifeOrNarwhalKnife(ctx) && has(ctx, 1511)) // Knife & Logs
         || (has(ctx, 52) && hasAnyFeather(ctx)) // Arrow shaft & Feather
         || (has(ctx, 53) && has(ctx, 39)) // Headless arrow & Bronze arrowtip
 }
@@ -6814,7 +6832,7 @@ function canDoGnomeRestaurant(ctx) {
 function canDoValeTotems(ctx) {
     return canTrainFletching(ctx) //
         && requiresQuest(ctx, "canCompleteChildrenOfTheSun", canCompleteChildrenOfTheSun) //
-        && (has(ctx, 946) || hasNarwhalKnife(ctx)) // Knife
+        && hasKnifeOrNarwhalKnife(ctx) //
         && ( //
             (has(ctx, 1521) // Oak logs
                 && hasAnyItems(ctx, [
