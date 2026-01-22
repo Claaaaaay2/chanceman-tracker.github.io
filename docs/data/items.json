@@ -32875,6 +32875,9 @@
         },
         "Warrior (Rellekka)": {
           "droprate": "1/32"
+        },
+        "Nest (nice) Adamant scimitar": {
+          "droprate": "Always"
         }
       },
       "shops": {
@@ -38081,6 +38084,11 @@
       "f2p"
     ],
     "sources": {
+      "drops": {
+        "Nest (nice) Raw chicken": {
+          "droprate": "Always"
+        }
+      },
       "other": {
         "Cooking": {
           "notes": "Requires Raw chicken.",
@@ -50388,6 +50396,9 @@
         },
         "Imp": {
           "droprate": "1/25.6"
+        },
+        "Nest (nice) Dragon claws": {
+          "droprate": "Always"
         }
       },
       "spawns": {
@@ -59485,7 +59496,7 @@
         }
       },
       "spawns": {
-        "Yes": "No requirements"
+        "Yes": "hasTelegrabRunesOrCompleteDragonSlayerI"
       },
       "other": {
         "Smelting": {
@@ -61639,7 +61650,7 @@
     ],
     "sources": {
       "shops": {
-        "Yes": "canCompletePriestInPeril"
+        "Yes": "No requirements"
       }
     }
   },
@@ -80412,6 +80423,9 @@
         },
         "Guard (H.A.M. Storerooms)": {
           "droprate": "1/55.556"
+        },
+        "Nest (nice) Gnome spice": {
+          "droprate": "Always"
         }
       },
       "spawns": {
@@ -86725,6 +86739,9 @@
         },
         "Fishing spot (big net, harpoon) Big net": {
           "droprate": "Uncommon"
+        },
+        "Nest (nice) Rope": {
+          "droprate": "Always"
         }
       },
       "spawns": {
@@ -94499,6 +94516,11 @@
     "name": "Mithril crossbow",
     "image": "mithril_crossbow.png",
     "sources": {
+      "drops": {
+        "Nest (nice) Mithril limbs": {
+          "droprate": "Always"
+        }
+      },
       "other": {
         "Fletching a crossbow": {
           "notes": "Requires Mithril crossbow (u) and Crossbow string.",
@@ -102482,6 +102504,11 @@
     "name": "Ochre snelm",
     "image": "ochre_snelm.png",
     "sources": {
+      "drops": {
+        "Nest (nice) Steel dagger": {
+          "droprate": "Always"
+        }
+      },
       "other": {
         "Creating snelms": {
           "notes": "Requires a Chisel and a Blamish ochre shell (round).",
@@ -122336,6 +122363,9 @@
         },
         "Revenant imp": {
           "droprate": "1/1008.33"
+        },
+        "Nest (nice) Rune platelegs": {
+          "droprate": "Always"
         }
       },
       "other": {
@@ -154574,6 +154604,9 @@
         },
         "Skeleton (Tarn's Lair) Medium level": {
           "droprate": "1/128"
+        },
+        "Nest (nice) Kwuarm potion (unf)": {
+          "droprate": "Always"
         }
       },
       "other": {

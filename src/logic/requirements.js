@@ -136,6 +136,9 @@ function requiresQuest(ctx, questKey, fn) {
 }
 
 export const REQUIREMENT_CHECKS = {
+    hasTelegrabRunesOrCompleteDragonSlayerI(ctx) {
+        return hasTelegrabRunes(ctx) || canCompleteDragonSlayerI(ctx);
+    },
     canAccessSunbleakIsland(ctx) {
         return canAccessSunbleakIsland(ctx);
     },

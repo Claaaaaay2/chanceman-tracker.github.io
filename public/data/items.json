@@ -59496,7 +59496,7 @@
         }
       },
       "spawns": {
-        "Yes": "No requirements"
+        "Yes": "hasTelegrabRunesOrCompleteDragonSlayerI"
       },
       "other": {
         "Smelting": {

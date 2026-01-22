@@ -4918,9 +4918,6 @@
       "f2p"
     ],
     "sources": {
-      "shops": {
-        "Yes": "No requirements"
-      },
       "other": {
         "Cooking": {
           "notes": "Requires an Egg, a Bucket of milk, a Pot of flour and a Cake tin.",
@@ -7382,7 +7379,7 @@
         }
       },
       "spawns": {
-        "Yes": "No requirements"
+        "Yes": "hasTelegrabRunesOrCompleteDragonSlayerI"
       },
       "other": {
         "Smelting": {
@@ -10181,9 +10178,6 @@
       "f2p"
     ],
     "sources": {
-      "shops": {
-        "Yes": "No requirements"
-      },
       "other": {
         "Smithing": {
           "notes": "Requires a Mithril bar.",
@@ -11271,7 +11265,7 @@
         }
       },
       "spawns": {
-        "Yes": "canTelegrab"
+        "Yes": "hasTelegrabRunes"
       }
     }
   },
