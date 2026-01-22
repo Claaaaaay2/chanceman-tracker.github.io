@@ -17257,4 +17257,121 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
+    "Nest (nice) Raw chicken": {
+        "wiki": "https://oldschool.runescape.wiki/w/Raw_chicken",
+        "rule": {
+            "all": [
+                "canCompleteChildrenOfTheSun",
+                "hasRawChicken",
+            ]
+        },
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": true
+    },
+    "Nest (nice) Gnome spice": {
+        "wiki": "https://oldschool.runescape.wiki/w/Gnome_spice",
+        "rule": {
+            "all": [
+                "canCompleteChildrenOfTheSun",
+                "hasGnomeSpice",
+            ]
+        },
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
+    "Nest (nice) Rope": {
+        "wiki": "https://oldschool.runescape.wiki/w/Rope",
+        "rule": {
+            "all": [
+                "canCompleteChildrenOfTheSun",
+                "hasRope",
+            ]
+        },
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": true
+    },
+    "Nest (nice) Dragon claws": {
+        "wiki": "https://oldschool.runescape.wiki/w/Dragon_claws",
+        "rule": {
+            "all": [
+                "canCompleteChildrenOfTheSun",
+                "hasDragonClaws",
+            ]
+        },
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
+    "Nest (nice) Rune platelegs": {
+        "wiki": "https://oldschool.runescape.wiki/w/Rune_platelegs",
+        "rule": {
+            "all": [
+                "canCompleteChildrenOfTheSun",
+                "hasRunePlatelegs",
+            ]
+        },
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": true
+    },
+    "Nest (nice) Adamant scimitar": {
+        "wiki": "https://oldschool.runescape.wiki/w/Adamant_scimitar",
+        "rule": {
+            "all": [
+                "canCompleteChildrenOfTheSun",
+                "hasAdamantScimitar",
+            ]
+        },
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": true
+    },
+    "Nest (nice) Mithril limbs": {
+        "wiki": "https://oldschool.runescape.wiki/w/Mithril_limbs",
+        "rule": {
+            "all": [
+                "canCompleteChildrenOfTheSun",
+                "hasMithrilLimbs",
+            ]
+        },
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
+    "Nest (nice) Steel dagger": {
+        "wiki": "https://oldschool.runescape.wiki/w/Steel_dagger",
+        "rule": {
+            "all": [
+                "canCompleteChildrenOfTheSun",
+                "hasSteelDagger",
+            ]
+        },
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": true
+    },
+    "Nest (nice) Kwuarm potion (unf)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Kwuarm_potion_(unf)",
+        "rule": {
+            "all": [
+                "canCompleteChildrenOfTheSun",
+                "hasKwuarmPotionUnf",
+            ]
+        },
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
 };

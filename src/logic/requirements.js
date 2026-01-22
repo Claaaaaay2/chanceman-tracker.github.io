@@ -1395,6 +1395,27 @@ export const REQUIREMENT_CHECKS = {
     hasRawChicken(ctx) {
         return has(ctx, 2138);
     },
+    hasGnomeSpice(ctx) {
+        return has(ctx, 2169);
+    },
+    hasDragonClaws(ctx) {
+        return has(ctx, 13652);
+    },
+    hasRunePlatelegs(ctx) {
+        return has(ctx, 1079);
+    },
+    hasAdamantScimitar(ctx) {
+        return has(ctx, 1331);
+    },
+    hasMithrilLimbs(ctx) {
+        return has(ctx, 9427);
+    },
+    hasSteelDagger(ctx) {
+        return has(ctx, 1207);
+    },
+    hasKwuarmPotionUnf(ctx) {
+        return has(ctx, 105);
+    },
     hasCowhide(ctx) {
         return has(ctx, 1739);
     },
