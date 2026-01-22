@@ -61650,7 +61650,7 @@
     ],
     "sources": {
       "shops": {
-        "Yes": "canCompletePriestInPeril"
+        "Yes": "No requirements"
       }
     }
   },
