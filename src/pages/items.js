@@ -124,6 +124,11 @@ export default async function ItemsPage() {
                 </label>
 
                 <label>
+                    <input type="checkbox" id="overrideFarming">
+                    Override farming
+                </label>
+
+                <label>
                     <input type="checkbox" id="overrideFletching">
                     Override fletching
                 </label>

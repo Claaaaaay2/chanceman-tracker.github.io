@@ -6,6 +6,7 @@ const SKILL_OVERRIDES = {
     Mining: "overrideMining",
     Fishing: "overrideFishing",
     Cooking: "overrideCooking",
+    Farming: "overrideFarming",
     Fletching: "overrideFletching",
     Crafting: "overrideCrafting",
     Construction: "overrideConstruction"

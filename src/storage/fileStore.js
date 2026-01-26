@@ -26,6 +26,7 @@ let memory = {
         overrideMining: false,
         overrideFishing: false,
         overrideCooking: false,
+        overrideFarming: false,
         overrideFletching: false,
         overrideCrafting: false,
         overrideConstruction: false,

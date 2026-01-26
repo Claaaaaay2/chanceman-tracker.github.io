@@ -6789,6 +6789,7 @@ function hasAnyAle(ctx) {
 }
 
 function canTrainFarming(ctx) {
+    if (ctx.filters?.overrideFarming) return true;
     return hasAnyItems(ctx, [
         5341,
         8431,

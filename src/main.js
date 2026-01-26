@@ -116,6 +116,7 @@ window.initItemsPage = async function () {
         { id: "overrideMining", key: "overrideMining", defaultValue: false, invalidate: true },
         { id: "overrideFishing", key: "overrideFishing", defaultValue: false, invalidate: true },
         { id: "overrideCooking", key: "overrideCooking", defaultValue: false, invalidate: true },
+        { id: "overrideFarming", key: "overrideFarming", defaultValue: false, invalidate: true },
         { id: "overrideFletching", key: "overrideFletching", defaultValue: false, invalidate: true },
         { id: "overrideCrafting", key: "overrideCrafting", defaultValue: false, invalidate: true },
         { id: "overrideConstruction", key: "overrideConstruction", defaultValue: false, invalidate: true }
