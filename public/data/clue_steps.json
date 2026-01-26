@@ -173,7 +173,7 @@
                 }
             },
             {
-                "description": "Talk to Charlie the Tramp in Varrock.",
+                "description": "Talk to Charlie the Tramp in Varrock. (Iron ore)",
                 "type": "Cryptic clues",
                 "requirements": {
                     "skills": {},
@@ -181,25 +181,123 @@
                     "items": [
                         {
                             "id": 440
-                        },
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Talk to Charlie the Tramp in Varrock. (Iron dagger)",
+                "type": "Cryptic clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
                         {
                             "id": 1203
-                        },
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Talk to Charlie the Tramp in Varrock. (Raw herring)",
+                "type": "Cryptic clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
                         {
                             "id": 345
-                        },
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Talk to Charlie the Tramp in Varrock. (Raw trout)",
+                "type": "Cryptic clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
                         {
                             "id": 335
-                        },
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Talk to Charlie the Tramp in Varrock. (Trout)",
+                "type": "Cryptic clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
                         {
                             "id": 333
-                        },
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Talk to Charlie the Tramp in Varrock. (Pike)",
+                "type": "Cryptic clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
                         {
                             "id": 351
-                        },
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Talk to Charlie the Tramp in Varrock. (Leahter body)",
+                "type": "Cryptic clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
                         {
                             "id": 1129
-                        },
+                        }
+                    ],
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [],
+                    "rulesAny": []
+                }
+            },
+            {
+                "description": "Talk to Charlie the Tramp in Varrock. (Leather chaps)",
+                "type": "Cryptic clues",
+                "requirements": {
+                    "skills": {},
+                    "quests": {},
+                    "items": [
                         {
                             "id": 1095
                         }

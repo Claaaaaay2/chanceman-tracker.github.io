@@ -9583,9 +9583,9 @@
         "Deep sea trawling": {
           "notes": "Avast me hearties yo-ho.",
           "rule": {
-            "all": [
-              "canCompletePandemonium",
-              "canTrainFishing"
+            "any": [
+              "canMakeTrawlingNet",
+              "canDeepSeaFish"
             ]
           }
         }
@@ -11392,7 +11392,7 @@
     "sources": {
       "other": {
         "Crafting": {
-          "notes": "Requires an Archers ring and a Chisel.",
+          "notes": "Requires an Archers ring and a Chisel and completion of Desert Treasure II.",
           "rule": {
             "all": [
               {
@@ -11401,7 +11401,8 @@
               {
                 "has": 1755
               },
-              "canTrainCrafting"
+              "canTrainCrafting",
+              "canCompleteDesertTreasureII"
             ]
           }
         }
@@ -16985,7 +16986,7 @@
     "sources": {
       "other": {
         "Crafting": {
-          "notes": "Requires a Berserker ring and a Chisel.",
+          "notes": "Requires a Berserker ring and a Chisel and completion of Desert Treasure II.",
           "rule": {
             "all": [
               {
@@ -16994,7 +16995,8 @@
               {
                 "has": 1755
               },
-              "canTrainCrafting"
+              "canTrainCrafting",
+              "canCompleteDesertTreasureII"
             ]
           }
         }
@@ -35856,7 +35858,11 @@
               },
               {
                 "has": 1975
-              }
+              },
+              {
+                "has": 2169
+              },
+              "canTrainCooking"
             ]
           }
         }
@@ -37305,8 +37311,10 @@
     "name": "Colossal wyrm teleport scroll",
     "image": "colossal_wyrm_teleport_scroll.png",
     "sources": {
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "From the Colossal Wyrm Agility Course."
+        }
       }
     }
   },
@@ -90937,11 +90945,11 @@
       },
       "other": {
         "Fletching": {
-          "notes": "Requires Maple shortbow (u) and a Bow string.",
+          "notes": "Requires Maple longbow (u) and a Bow string.",
           "rule": {
             "all": [
               {
-                "has": 64
+                "has": 62
               },
               {
                 "has": 1777
@@ -97868,10 +97876,11 @@
     "name": "Moonlight mead",
     "image": "moonlight_mead.png",
     "sources": {
-      "shops": {
-        "Yes": "canCompletePriestInPeril"
-      },
       "other": {
+        "Purchasing through dialogue": {
+          "notes": "Purchase from the Hair of the Dog tavern in Canifis.",
+          "rule": "canCompletePriestInPeril"
+        },
         "Brewing": {
           "notes": "Requires a Bucket of water, Beer glass, Ale yeast, Barley malt and Mushroom.",
           "rule": {
@@ -101945,17 +101954,17 @@
     "sources": {
       "other": {
         "Creating a sapling": {
-          "notes": "Requires a Filled plant pot and an oak seed, and a Gardening trowel.",
+          "notes": "Requires a Filled plant pot, an Acorn and a Gardening trowel.",
           "rule": {
             "all": [
               {
                 "has": 5354
               },
               {
-                "has": 5325
+                "has": 5312
               },
               {
-                "has": 8598
+                "has": 5325
               },
               "canTrainFarming"
             ]
@@ -102667,6 +102676,30 @@
     "name": "Oil lamp",
     "image": "oil_lamp.png",
     "sources": {
+      "other": {
+        "Crafting": {
+          "notes": "Requires an Empty oil lamp and Swamp tar.",
+          "rule": {
+            "all": [
+              {
+                "has": 4525
+              },
+              {
+                "has": 1939
+              },
+              "canTrainCrafting"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "index": 2705,
+    "id": 4537,
+    "name": "Oil lantern",
+    "image": "oil_lantern.png",
+    "sources": {
       "drops": {
         "Cave goblin guard": {
           "droprate": "1/6.4"
@@ -102684,36 +102717,12 @@
           "droprate": "1/23"
         }
       },
-      "other": {
-        "Crafting": {
-          "notes": "Requires an Empty oil lamp and a Tinderbox.",
-          "rule": {
-            "all": [
-              {
-                "has": 4525
-              },
-              {
-                "has": 590
-              },
-              "canTrainCrafting"
-            ]
-          }
-        }
-      }
-    }
-  },
-  {
-    "index": 2705,
-    "id": 4537,
-    "name": "Oil lantern",
-    "image": "oil_lantern.png",
-    "sources": {
       "spawns": {
         "Yes": "No requirements"
       },
       "other": {
         "Crafting": {
-          "notes": "Requires an Empty oil lantern and Swamp tar to make lamp oil.",
+          "notes": "Requires an Empty oil lantern and Swamp tar.",
           "rule": {
             "all": [
               {
@@ -111494,9 +111503,9 @@
         "Deep sea trawling": {
           "notes": "Avast me hearties yo-ho.",
           "rule": {
-            "all": [
-              "canCompletePandemonium",
-              "canTrainFishing"
+            "any": [
+              "canMakeTrawlingNet",
+              "canDeepSeaFish"
             ]
           }
         }
@@ -111766,9 +111775,9 @@
         "Deep sea trawling": {
           "notes": "Avast me hearties yo-ho.",
           "rule": {
-            "all": [
-              "canCompletePandemonium",
-              "canTrainFishing"
+            "any": [
+              "canMakeTrawlingNet",
+              "canDeepSeaFish"
             ]
           }
         }
@@ -111798,9 +111807,9 @@
         "Deep sea trawling": {
           "notes": "Avast me hearties yo-ho.",
           "rule": {
-            "all": [
-              "canCompletePandemonium",
-              "canTrainFishing"
+            "any": [
+              "canMakeTrawlingNet",
+              "canDeepSeaFish"
             ]
           }
         }
@@ -111817,9 +111826,9 @@
         "Deep sea trawling": {
           "notes": "Avast me hearties yo-ho.",
           "rule": {
-            "all": [
-              "canCompletePandemonium",
-              "canTrainFishing"
+            "any": [
+              "canMakeTrawlingNet",
+              "canDeepSeaFish"
             ]
           }
         }
@@ -111894,15 +111903,9 @@
     "name": "Raw jumbo squid",
     "image": "raw_jumbo_squid.png",
     "sources": {
-      "other": {
-        "Lantern harpooning": {
-          "notes": "Avast me hearties yo-ho.",
-          "rule": {
-            "all": [
-              "canCompletePandemonium",
-              "canTrainFishing"
-            ]
-          }
+      "drops": {
+        "Fishing spot (lantern) Harpoon": {
+          "droprate": "Common"
         }
       }
     }
@@ -112228,9 +112231,9 @@
         "Deep sea trawling": {
           "notes": "Avast me hearties yo-ho.",
           "rule": {
-            "all": [
-              "canCompletePandemonium",
-              "canTrainFishing"
+            "any": [
+              "canMakeTrawlingNet",
+              "canDeepSeaFish"
             ]
           }
         }
@@ -113398,9 +113401,9 @@
         "Deep sea trawling": {
           "notes": "Avast me hearties yo-ho.",
           "rule": {
-            "all": [
-              "canCompletePandemonium",
-              "canTrainFishing"
+            "any": [
+              "canMakeTrawlingNet",
+              "canDeepSeaFish"
             ]
           }
         }
@@ -114367,9 +114370,6 @@
       "f2p"
     ],
     "sources": {
-      "spawns": {
-        "Yes": "No requirements"
-      },
       "shops": {
         "Yes": {
           "any": [
@@ -125575,7 +125575,7 @@
     "sources": {
       "other": {
         "Crafting": {
-          "notes": "Requires a Seers ring and a Chisel.",
+          "notes": "Requires a Seers ring and a Chisel and completion of Desert Treasure II.",
           "rule": {
             "all": [
               {
@@ -125584,7 +125584,8 @@
               {
                 "has": 1755
               },
-              "canTrainCrafting"
+              "canTrainCrafting",
+              "canCompleteDesertTreasureII"
             ]
           }
         }
@@ -130444,7 +130445,11 @@
               },
               {
                 "has": 2128
-              }
+              },
+              {
+                "has": 2169
+              },
+              "canTrainCooking"
             ]
           }
         }
@@ -144314,7 +144319,11 @@
                 },
                 {
                   "has": 2128
-                }
+                },
+                {
+                  "has": 2169
+                },
+                "canTrainCooking"
               ]
             }
           }
@@ -147302,8 +147311,11 @@
       "spawns": {
         "Yes": "canTrainHunter"
       },
-      "shops": {
-        "Yes": "canTrainHunter"
+      "other": {
+        "Purchasing through dialogue": {
+          "notes": "Purchase from the The Burrow pub in the Hunter Guild.",
+          "rule": "canTrainHunter"
+        }
       }
     }
   },
@@ -153083,7 +153095,7 @@
     "sources": {
       "other": {
         "Creating a warrior icon": {
-          "notes": "Requires a Chisel and a Warrior ring.",
+          "notes": "Requires a Chisel and a Warrior ring and completion of Desert Treasure II.",
           "rule": {
             "all": [
               {
@@ -153091,7 +153103,9 @@
               },
               {
                 "has": 6735
-              }
+              },
+              "canTrainCrafting",
+              "canCompleteDesertTreasureII"
             ]
           }
         }
@@ -156570,10 +156584,10 @@
                 "has": 5354
               },
               {
-                "has": 5325
+                "has": 5313
               },
               {
-                "has": 5313
+                "has": 5325
               },
               "canTrainFarming"
             ]
@@ -157703,6 +157717,9 @@
               },
               {
                 "has": 2162
+              },
+              {
+                "has": 2169
               },
               "canTrainCooking"
             ]
@@ -160522,7 +160539,8 @@
               {
                 "has": 313
               },
-              "canTrainFishing"
+              "canTrainFishing",
+              "canCompleteRegicide"
             ]
           }
         }

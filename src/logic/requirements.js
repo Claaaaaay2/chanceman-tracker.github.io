@@ -1500,6 +1500,12 @@ export const REQUIREMENT_CHECKS = {
     hasHarpoon(ctx) {
         return hasAnyItems(ctx, [311, 10129, 21028]);
     },
+    canMakeTrawlingNet(ctx) {
+        return canMakeTrawlingNet(ctx);
+    },
+    canDeepSeaFish(ctx) {
+        return canDeepSeaFish(ctx);
+    },
     hasAnyLantern(ctx) {
         return hasAnyLantern(ctx);
     },
@@ -3570,6 +3576,10 @@ function canCompletePerilousMoons(ctx) {
         hasSkillLevel(ctx, "Construction", 10),
         canStartPerilousMoons(ctx), //
         hasKnifeOrNarwhalKnife(ctx), // Knife
+        has(ctx, 2347), // Hammer
+        has(ctx, 8794), // Saw
+        has(ctx, 1444), // Water talisman
+        has(ctx, 1440), // Earth talisman
         has(ctx, 305), // Big fishing net
         has(ctx, 954), // Rope
         has(ctx, 233), // Pestle and mortar
@@ -4923,6 +4933,57 @@ function hasAnyLantern(ctx) {
                 4537,
             ])
             || requiresQuest(ctx, "canCompleteDesertTreasureII", canCompleteDesertTreasureII) //
+        );
+}
+
+function canDeepSeaFish(ctx) {
+    return requiresQuest(ctx, "canCompletePandemonium", canCompletePandemonium) //
+        && canTrainFishing(ctx) //
+        && has(ctx, 307) // Fishing rod
+        && (has(ctx, 11334) || has(ctx, 32307)); // Fish offcuts or Fine fish offcuts
+}
+
+function canMakeTrawlingNet(ctx) {
+    return requiresQuest(ctx, "canCompletePandemonium", canCompletePandemonium) //
+        && canTrainFishing(ctx) //
+        && (
+            ( // Rope trawling net
+                has(ctx, 954) // Rope
+                && has(ctx, 8780) // Teak plank
+                && has(ctx, 2353) // Steel bar
+                && has(ctx, 32889) // Lead bar
+                && hasSkillLevel(ctx, "Sailing", 56) //
+                && hasSkillLevel(ctx, "Construction", 45) //
+            )
+            || ( // Linen trawling net
+                has(ctx, 31463) // Linen yarn
+                && has(ctx, 8782) // Mahogany plank
+                && has(ctx, 954) // Rope
+                && has(ctx, 2359) // Mithril bar
+                && has(ctx, 32889) // Lead bar
+                && hasSkillLevel(ctx, "Sailing", 65) //
+                && hasSkillLevel(ctx, "Construction", 61) //
+            )
+            || ( // Hemp trawling net
+                has(ctx, 31466) // Hemp yarn
+                && has(ctx, 31432) // Camphor plank
+                && has(ctx, 954) // Rope
+                && has(ctx, 2361) // Adamantite bar
+                && has(ctx, 32892) // Cupronickel bar
+                && has(ctx, 31959) // Ray barbs
+                && hasSkillLevel(ctx, "Sailing", 76) //
+                && hasSkillLevel(ctx, "Construction", 70) //
+            )
+            || ( // Cotton trawling net
+                has(ctx, 31469) // Cotton yarn
+                && has(ctx, 31435) // Ironwood plank
+                && has(ctx, 954) // Rope
+                && has(ctx, 2363) // Runite bar
+                && has(ctx, 32892) // Cupronickel bar
+                && has(ctx, 31959) // Ray barbs
+                && hasSkillLevel(ctx, "Sailing", 84) //
+                && hasSkillLevel(ctx, "Construction", 73) //
+            )
         );
 }
 
@@ -6731,7 +6792,7 @@ function canTrainFarming(ctx) {
     return hasAnyItems(ctx, [
         5341,
         8431,
-    ]) // Bagged plant 1;// Bagged plant 1
+    ]); // Rake or Bagged plant 1
 }
 
 function canPlantTrees(ctx) {

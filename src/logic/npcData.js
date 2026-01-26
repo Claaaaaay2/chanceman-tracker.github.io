@@ -2062,7 +2062,7 @@ export const NPC_DATA = {
     },
     "Bottle of headless unicornman's heady beer": {
         "wiki": "https://oldschool.runescape.wiki/w/Bottle_of_headless_unicornman%27s_heady_beer",
-        "rule": ["canCompletePandemonium"],
+        "rule": ["canCompletePryingTimes"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -9409,7 +9409,7 @@ export const NPC_DATA = {
     "Lost ironwood crate": {
         "wiki": "https://oldschool.runescape.wiki/w/Lost_ironwood_crate",
         "rule": ["canCompletePandemonium"],
-        "skill": [],
+        "skill": ["sailing"],
         "level": [95],
         "tags": [],
         "f2p": false

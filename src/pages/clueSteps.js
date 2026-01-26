@@ -1,6 +1,6 @@
 import { REQUIREMENT_CHECKS } from "../logic/requirements.js";
-import { fileStore } from "../storage/fileStore.js";
 import { router } from "../router.js";
+import { fileStore } from "../storage/fileStore.js";
 
 const CLUE_TIERS = ["Beginner", "Easy", "Medium", "Hard", "Elite", "Master"];
 function escapeHtml(value) {
