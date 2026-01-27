@@ -38,6 +38,7 @@ Bug report relay (`bug-report-relay/`):
 - The app is deployed to GitHub Pages at `https://chanceman-tracker.github.io/`.
 - `npm run build` outputs static files to `docs/` (see `vite.config.ts`), and pushing `docs/` publishes the site.
 - Verify the app works from a static host by running `npm run build` + `npm run preview`.
+- Treat `docs/` as build output only. Do not edit files in `docs/` directly; update sources in `src/` or `public/` only.
 
 ## Configuration Tips
 - Static assets in `public/` are served verbatim; avoid runtime writes there.
