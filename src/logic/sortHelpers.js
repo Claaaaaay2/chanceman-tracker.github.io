@@ -1,6 +1,6 @@
 import { areNpcSkillsMet, isNpcBlockedByFilters, isNpcObtainable, isRuleObtainable, isSourceHiddenByFilters } from "./itemVisibility.js";
 import { fileStore } from "../storage/fileStore.js";
-import { canReachNpc } from "./itemAvailability.js";
+import { canReachNpc, evaluateRule } from "./itemAvailability.js";
 import { NPC_DATA } from "./npcData.js";
 
 export async function isItemObtainable(item, ctx) {
@@ -88,6 +88,30 @@ export async function getObtainabilityRank(item, ctx) {
             if (isSourceHiddenByFilters(obj, ctx)) continue;
             if (await isRuleObtainable(obj.rule, ctx)) {
                 return { rank: 4, name };
+            }
+        }
+    }
+
+    // Other sources that are trainable but level-gated
+    if (src.other) {
+        const levelIgnoredCtx = {
+            ...ctx,
+            ignoreSkillLevels: true,
+            suppressMissing: true,
+            missing: {
+                ...ctx.missing,
+                suppressMissing: true,
+            },
+        };
+
+        for (const obj of Object.values(src.other)) {
+            if (isSourceHiddenByFilters(obj, ctx)) continue;
+            if (!obj?.rule) continue;
+
+            // If the rule becomes obtainable when we ignore skill levels but
+            // still require trainability, treat it like rank 7 (level-gated).
+            if (await evaluateRule(obj.rule, levelIgnoredCtx)) {
+                return { rank: 7, name };
             }
         }
     }

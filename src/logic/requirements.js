@@ -71,9 +71,55 @@ function allTrue(checks) {
     return ok;
 }
 
-function hasSkillLevel(ctx, skill, level, options = {}) {
+function canTrainSkill(ctx, skill) {
+    switch (skill) {
+        case "Construction":
+            return canTrainConstruction(ctx);
+        case "Cooking":
+            return canTrainCooking(ctx);
+        case "Crafting":
+            return canTrainCrafting(ctx);
+        case "Farming":
+            return canTrainFarming(ctx);
+        case "Firemaking":
+            return canTrainFiremaking(ctx);
+        case "Fishing":
+            return canTrainFishing(ctx);
+        case "Fletching":
+            return canTrainFletching(ctx);
+        case "Herblore":
+            return canTrainHerblore(ctx);
+        case "Hunter":
+            return canTrainHunter(ctx);
+        case "Mining":
+            return canTrainMining(ctx);
+        case "Prayer":
+            return canTrainPrayer(ctx);
+        case "Runecraft":
+            return canTrainRunecraft(ctx);
+        case "Slayer":
+            return canTrainSlayer(ctx);
+        case "Smithing":
+            return canTrainSmithing(ctx);
+        case "Woodcutting":
+            return canTrainWoodcutting(ctx);
+        default:
+            // Most skills are assumed trainable without special item gates.
+            return true;
+    }
+}
+
+export function hasSkillLevel(ctx, skill, level, options = {}) {
     const overrideKey = options.overrideKey;
     if (overrideKey && ctx.filters?.[overrideKey]) return true;
+
+    // In "ignore skill levels" mode, treat skill checks as satisfied only if the
+    // player can train that skill at all. This lets sorting distinguish between
+    // "trainable but level-gated" (rank 7) and "fully unobtainable" (rank 8).
+    if (ctx?.ignoreSkillLevels) {
+        return canTrainSkill(ctx, skill);
+    }
+
     const current = ctx.player?.levels?.[skill] ?? 1;
     if (typeof current === "number" && current >= level) return true;
     if (ctx?.missing && shouldTrackMissing(ctx)) {

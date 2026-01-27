@@ -1055,12 +1055,6 @@
       },
       "shops": {
         "Yes": "No requirements"
-      },
-      "other": {
-        "Emptying jugs": {
-          "notes": "Requires a filled jug.",
-          "rule": "hasAnyFilledJug"
-        }
       }
     }
   },
@@ -9178,6 +9172,12 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Emptying jugs": {
+          "notes": "Requires a filled jug.",
+          "rule": "hasAnyFilledJug"
+        }
       }
     }
   },

@@ -200,7 +200,7 @@
     ],
     "sources": {
       "other": {
-        "Creating a 3rd age felling axe": {
+        "Smithing a 3rd age felling axe": {
           "notes": "Requires a 3rd age axe and a Felling axe handle.",
           "rule": {
             "all": [
@@ -209,6 +209,10 @@
               },
               {
                 "has": 28177
+              },
+              {
+                "skill": "Smithing",
+                "level": 61
               }
             ]
           }
@@ -691,6 +695,10 @@
             "all": [
               {
                 "has": 11092
+              },
+              {
+                "skill": "Magic",
+                "level": 57
               }
             ]
           }
@@ -839,7 +847,7 @@
     "image": "accursed_sceptre_(u).png",
     "sources": {
       "other": {
-        "Combining": {
+        "Combining the Skull of Vet'ion with a Thammaron's sceptre (u)": {
           "notes": "Combining the Skull of vet'ion and a Thammaron's sceptre (u).",
           "rule": {
             "all": [
@@ -848,6 +856,10 @@
               },
               {
                 "has": 22552
+              },
+              {
+                "skill": "Crafting",
+                "level": 85
               }
             ]
           }
@@ -1019,9 +1031,19 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Emptying jugs": {
-          "notes": "Requires a filled jug.",
-          "rule": "hasAnyFilledJug"
+        "Smithing an Adamant 2h sword": {
+          "notes": "Requires an Adamantite bar and Hammer.",
+          "rule": {
+            "all": [
+              {
+                "has": 2361
+              },
+              {
+                "skill": "Smithing",
+                "level": 84
+              }
+            ]
+          }
         }
       }
     }
@@ -1192,7 +1214,7 @@
       },
       "other": {
         "Fletching Adamant arrows": {
-          "notes": "",
+          "notes": "Requires an Arrow shaft and Adamant arrowtips.",
           "rule": {
             "all": [
               {
@@ -1201,7 +1223,10 @@
               {
                 "has": 43
               },
-              "canTrainFletching"
+              {
+                "skill": "Fletching",
+                "level": 60
+              }
             ]
           }
         }
@@ -1347,7 +1372,10 @@
               {
                 "has": 2361
               },
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 75
+              }
             ]
           }
         }
@@ -1486,14 +1514,17 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Smithing Adamant axe": {
+        "Smithing an Adamant axe": {
           "notes": "Adamantite bar and Hammer needed.",
           "rule": {
             "all": [
               {
                 "has": 2361
               },
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 71
+              }
             ]
           }
         }
@@ -1644,14 +1675,17 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Smithing Adamant battleaxe": {
+        "Smithing an Adamant battleaxe": {
           "notes": "Adamantite bar and Hammer needed.",
           "rule": {
             "all": [
               {
                 "has": 2361
               },
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 80
+              }
             ]
           }
         }
@@ -1735,7 +1769,10 @@
               {
                 "has": 9380
               },
-              "canTrainFletching"
+              {
+                "skill": "Fletching",
+                "level": 61
+              }
             ]
           }
         }
@@ -1843,7 +1880,10 @@
               {
                 "has": 2361
               },
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 73
+              }
             ]
           }
         }
@@ -1879,7 +1919,7 @@
     "image": "adamant_brutal.png",
     "sources": {
       "other": {
-        "Fletching Adamant brutal": {
+        "Fletching Adamant brutals": {
           "notes": "Flighted ogre arrow, Adamantite nails and Hammer needed.",
           "rule": {
             "all": [
@@ -1892,7 +1932,10 @@
               {
                 "has": 2347
               },
-              "canTrainFletching",
+              {
+                "skill": "Fletching",
+                "level": 62
+              },
               "canCompleteZogreFleshEaters"
             ]
           }
@@ -1964,14 +2007,17 @@
         }
       },
       "other": {
-        "Smithing Adamant cannonball": {
+        "Smithing Adamant cannonballs": {
           "notes": "Adamantite bar needed.",
           "rule": {
             "all": [
               {
                 "has": 2361
               },
-              "canTrainSmithing",
+              {
+                "skill": "Smithing",
+                "level": 75
+              },
               "canCompleteDwarfCannon"
             ]
           }
@@ -2048,14 +2094,17 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Smithing Adamant chainbody": {
+        "Smithing an Adamant chainbody": {
           "notes": "Adamantite bar and Hammer needed.",
           "rule": {
             "all": [
               {
                 "has": 2361
               },
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 81
+              }
             ]
           }
         }
@@ -2076,7 +2125,10 @@
               {
                 "has": 2361
               },
-              "canTrainSmithing",
+              {
+                "skill": "Smithing",
+                "level": 83
+              },
               "canCompleteDeathPlateau"
             ]
           }
@@ -2099,7 +2151,7 @@
         }
       },
       "other": {
-        "Fletching Adamant crossbow": {
+        "Fletching an Adamant crossbow": {
           "notes": "Adamant crossbow (u) and Crossbow string needed.",
           "rule": {
             "all": [
@@ -2109,7 +2161,10 @@
               {
                 "has": 9438
               },
-              "canTrainFletching"
+              {
+                "skill": "Fletching",
+                "level": 61
+              }
             ]
           }
         }
@@ -2134,7 +2189,7 @@
         }
       },
       "other": {
-        "Smithing Adamant crowssbow (u)": {
+        "Fletching an Adamant crowssbow (u)": {
           "notes": "Adamantite limbs, Mahogany stock and Hammer needed.",
           "rule": {
             "all": [
@@ -2147,7 +2202,10 @@
               {
                 "has": 2347
               },
-              "canTrainFletching"
+              {
+                "skill": "Fletching",
+                "level": 61
+              }
             ]
           }
         }
@@ -2214,14 +2272,17 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Smithing Adamant dagger": {
+        "Smithing an Adamant dagger": {
           "notes": "Adamantite bar and Hammer needed.",
           "rule": {
             "all": [
               {
                 "has": 2361
               },
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 70
+              }
             ]
           }
         }
@@ -2345,7 +2406,10 @@
                 "has": 823
               },
               "hasAnyFeather",
-              "canTrainFletching"
+              {
+                "skill": "Fletching",
+                "level": 67
+              }
             ]
           }
         }
@@ -2385,7 +2449,10 @@
               {
                 "has": 2361
               },
-              "canTrainSmithing",
+              {
+                "skill": "Smithing",
+                "level": 74
+              },
               "canCompleteTheTouristTrap"
             ]
           }
@@ -2505,7 +2572,7 @@
     "image": "adamant_felling_axe.png",
     "sources": {
       "other": {
-        "Creating an Adamant felling axe": {
+        "Smithing an Adamant felling axe": {
           "notes": "Requires an Adamant axe and a Felling axe handle.",
           "rule": {
             "all": [
@@ -2514,6 +2581,10 @@
               },
               {
                 "has": 28177
+              },
+              {
+                "skill": "Smithing",
+                "level": 31
               }
             ]
           }
@@ -2650,14 +2721,17 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Smithing": {
+        "Smithing an Adamant full helm": {
           "notes": "Requires an Adamantite bar.",
           "rule": {
             "all": [
               {
                 "has": 2361
               },
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 77
+              }
             ]
           }
         }
@@ -2789,7 +2863,7 @@
         }
       },
       "other": {
-        "Barbarian smithing": {
+        "Barbarian smithing an Adamant hasta": {
           "notes": "Requires an Adamantite bar and Yew logs.",
           "rule": {
             "all": [
@@ -2799,7 +2873,11 @@
               {
                 "has": 1515
               },
-              "canCompleteBarbarianSmithing"
+              "canCompleteBarbarianSmithing",
+              {
+                "skill": "Smithing",
+                "level": 75
+              }
             ]
           }
         }
@@ -2981,7 +3059,7 @@
         }
       },
       "other": {
-        "Fletching a javelin": {
+        "Fletching an Adamant javelin": {
           "notes": "Requires Adamant javelin tips and Javelin shaft.",
           "rule": {
             "all": [
@@ -2991,7 +3069,10 @@
               {
                 "has": 19584
               },
-              "canTrainFletching"
+              {
+                "skill": "Fletching",
+                "level": 62
+              }
             ]
           }
         }
@@ -3010,14 +3091,17 @@
         }
       },
       "other": {
-        "Smithing": {
+        "Smithing Adamant javelin tips": {
           "notes": "Requires an Adamantite bar.",
           "rule": {
             "all": [
               {
                 "has": 2361
               },
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 61
+              }
             ]
           }
         }
@@ -3100,14 +3184,17 @@
     "image": "adamant_keel_parts.png",
     "sources": {
       "other": {
-        "Smithing": {
+        "Smithing Adamant keel parts": {
           "notes": "Requires an Adamantite bar.",
           "rule": {
             "all": [
               {
                 "has": 2361
               },
-              "canTrainSmithing",
+              {
+                "skill": "Smithing",
+                "level": 74
+              },
               "canCompletePandemonium"
             ]
           }
@@ -3247,14 +3334,17 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Smithing": {
+        "Smithing an Adamant kiteshield": {
           "notes": "Requires an Adamantite bar.",
           "rule": {
             "all": [
               {
                 "has": 2361
               },
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 61
+              }
             ]
           }
         }
@@ -3319,6 +3409,22 @@
         },
         "Barrel (Shaman Caves)": {
           "droprate": "Uncommon"
+        }
+      },
+      "other": {
+        "Smithing Adamant knives": {
+          "notes": "Requires an Adamantite bar.",
+          "rule": {
+            "all": [
+              {
+                "has": 2361
+              },
+              {
+                "skill": "Smithing",
+                "level": 77
+              }
+            ]
+          }
         }
       }
     }
@@ -3476,14 +3582,17 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Smithing": {
+        "Smithing an Adamant longsword": {
           "notes": "Requires an Adamantite bar.",
           "rule": {
             "all": [
               {
                 "has": 2361
               },
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 76
+              }
             ]
           }
         }
@@ -3571,14 +3680,17 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Smithing": {
+        "Smithing an Adamant mace": {
           "notes": "Requires an Adamantite bar.",
           "rule": {
             "all": [
               {
                 "has": 2361
               },
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 72
+              }
             ]
           }
         }
@@ -3681,14 +3793,17 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Smithing": {
+        "Smithing an Adamant med helm": {
           "notes": "Requires an Adamantite bar.",
           "rule": {
             "all": [
               {
                 "has": 2361
               },
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 73
+              }
             ]
           }
         }
@@ -3909,14 +4024,17 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Smithing": {
+        "Smithing an Adamant platebody": {
           "notes": "Requires an Adamantite bar.",
           "rule": {
             "all": [
               {
                 "has": 2361
               },
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 88
+              }
             ]
           }
         }
@@ -4171,14 +4289,17 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Smithing": {
+        "Smithing Adamant platlegs": {
           "notes": "Requires an Adamantite bar.",
           "rule": {
             "all": [
               {
                 "has": 2361
               },
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 86
+              }
             ]
           }
         }
@@ -4279,14 +4400,17 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Smithing": {
+        "Smithing an Adamant Plateskirt": {
           "notes": "Requires an Adamantite bar.",
           "rule": {
             "all": [
               {
                 "has": 2361
               },
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 86
+              }
             ]
           }
         }
@@ -4402,14 +4526,17 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Smithing": {
+        "Smithing an Adamant scimitar": {
           "notes": "Requires an Adamantite bar.",
           "rule": {
             "all": [
               {
                 "has": 2361
               },
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 75
+              }
             ]
           }
         }
@@ -4640,7 +4767,7 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Barbarian smithing": {
+        "Barbarian smithing an Adamant spear": {
           "notes": "Requires an Adamantite bar and Yew logs.",
           "rule": {
             "all": [
@@ -4650,7 +4777,11 @@
               {
                 "has": 1515
               },
-              "canCompleteBarbarianSmithing"
+              "canCompleteBarbarianSmithing",
+              {
+                "skill": "Smithing",
+                "level": 75
+              }
             ]
           }
         }
@@ -4839,14 +4970,17 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Smithing": {
+        "Smithing an Adamant sq shield": {
           "notes": "Requires an Adamantite bar.",
           "rule": {
             "all": [
               {
                 "has": 2361
               },
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 78
+              }
             ]
           }
         }
@@ -4922,14 +5056,17 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Smithing": {
+        "Smithing an Adamant sword": {
           "notes": "Requires an Adamantite bar.",
           "rule": {
             "all": [
               {
                 "has": 2361
               },
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 74
+              }
             ]
           }
         }
@@ -5073,14 +5210,17 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Smithing": {
+        "Smithing an Adamant warhammer": {
           "notes": "Requires an Adamantite bar.",
           "rule": {
             "all": [
               {
                 "has": 2361
               },
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 79
+              }
             ]
           }
         }
@@ -5315,7 +5455,7 @@
         }
       },
       "other": {
-        "Smelting": {
+        "Smelting an Adamantite bar": {
           "notes": "Requires Adamantite ore and Coal.",
           "rule": {
             "all": [
@@ -5325,7 +5465,10 @@
               {
                 "has": 453
               },
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 70
+              }
             ]
           }
         }
@@ -5339,14 +5482,17 @@
     "image": "adamantite_limbs.png",
     "sources": {
       "other": {
-        "Smithing": {
+        "Smithing Adamantite limbs": {
           "notes": "Requires an Adamantite bar.",
           "rule": {
             "all": [
               {
                 "has": 2361
               },
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 76
+              }
             ]
           }
         }
@@ -5368,7 +5514,7 @@
         }
       },
       "other": {
-        "Smithing": {
+        "Smithing Adamantite nails": {
           "notes": "Requires an Adamantite bar.",
           "rule": {
             "all": [
@@ -5603,14 +5749,17 @@
     "image": "admiral_pie.png",
     "sources": {
       "other": {
-        "Cooking": {
+        "Cooking an Admiral pie": {
           "notes": "Requires Raw admiral pie.",
           "rule": {
             "all": [
               {
                 "has": 7196
               },
-              "canTrainCooking"
+              {
+                "skill": "Cooking",
+                "level": 70
+              }
             ]
           }
         }
@@ -5677,7 +5826,11 @@
                   }
                 ]
               },
-              "canCompleteLunarDiplomacy"
+              "canCompleteLunarDiplomacy",
+              {
+                "skill": "Runecraft",
+                "level": 90
+              }
             ]
           }
         }
@@ -5707,8 +5860,8 @@
     "image": "agility_mix(1).png",
     "sources": {
       "other": {
-        "Drinking or decanting a barbarian potion": {
-          "notes": "Drinking or decanting an Agility mix(2).",
+        "Decanting a barbarian potion": {
+          "notes": "Decanting an Agility mix(2).",
           "rule": {
             "all": [
               {
@@ -5737,6 +5890,20 @@
               },
               {
                 "has": 11326
+              },
+              {
+                "skill": "Herblore",
+                "level": 37
+              }
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting an Agility mix(1).",
+          "rule": {
+            "all": [
+              {
+                "has": 11463
               }
             ]
           }
@@ -5826,7 +5993,10 @@
               {
                 "has": 2152
               },
-              "canTrainHerblore"
+              {
+                "skill": "Herblore",
+                "level": 34
+              }
             ]
           }
         },
@@ -5874,7 +6044,10 @@
               {
                 "has": 2152
               },
-              "canTrainHerblore"
+              {
+                "skill": "Herblore",
+                "level": 34
+              }
             ]
           }
         },
@@ -5906,7 +6079,7 @@
     "sources": {
       "other": {
         "Creating a set at the Grand Exchange": {
-          "notes": "Requires Ahrim's hood, robetop, robeskirt and Staff.",
+          "notes": "Requires Ahrim's hood, robetop, robeskirt and staff.",
           "rule": {
             "all": [
               {
@@ -6141,7 +6314,7 @@
         }
       },
       "other": {
-        "Creating an orb": {
+        "Creating an Air orb": {
           "notes": "Requires an Unpowered orb, an Air rune and a Cosmic rune.",
           "rule": {
             "all": [
@@ -6153,6 +6326,10 @@
               },
               {
                 "has": 564
+              },
+              {
+                "skill": "Magic",
+                "level": 66
               }
             ]
           }
@@ -6743,7 +6920,7 @@
     "image": "airtight_pot.png",
     "sources": {
       "other": {
-        "Crafting": {
+        "Crafting an Airtight pot": {
           "notes": "Requires a Pot and a Pot lid.",
           "rule": {
             "all": [
@@ -6752,8 +6929,7 @@
               },
               {
                 "has": 4440
-              },
-              "canTrainCrafting"
+              }
             ]
           }
         }
@@ -6842,7 +7018,10 @@
               {
                 "has": 53
               },
-              "canTrainFletching"
+              {
+                "skill": "Fletching",
+                "level": 82
+              }
             ]
           }
         }
@@ -6930,7 +7109,7 @@
     "image": "amethyst_arrowtips.png",
     "sources": {
       "other": {
-        "Crafting": {
+        "Crafting Amethyst arrowtips": {
           "notes": "Requires an Amethyst and a Chisel.",
           "rule": {
             "all": [
@@ -6940,7 +7119,10 @@
               {
                 "has": 1755
               },
-              "canTrainCrafting"
+              {
+                "skill": "Crafting",
+                "level": 85
+              }
             ]
           }
         }
@@ -6964,7 +7146,10 @@
               {
                 "has": 1755
               },
-              "canTrainCrafting"
+              {
+                "skill": "Crafting",
+                "level": 83
+              }
             ]
           }
         }
@@ -6988,7 +7173,10 @@
               {
                 "has": 11875
               },
-              "canTrainFletching"
+              {
+                "skill": "Herblore",
+                "level": 76
+              }
             ]
           }
         }
@@ -7010,7 +7198,10 @@
                 "has": 25853
               },
               "hasAnyFeather",
-              "canTrainFletching"
+              {
+                "skill": "Fletching",
+                "level": 90
+              }
             ]
           }
         }
@@ -7039,7 +7230,10 @@
               {
                 "has": 1755
               },
-              "canTrainCrafting"
+              {
+                "skill": "Crafting",
+                "level": 89
+              }
             ]
           }
         }
@@ -7132,7 +7326,10 @@
               {
                 "has": 19584
               },
-              "canTrainFletching"
+              {
+                "skill": "Fletching",
+                "level": 84
+              }
             ]
           }
         }
@@ -7156,7 +7353,10 @@
               {
                 "has": 1755
               },
-              "canTrainCrafting"
+              {
+                "skill": "Crafting",
+                "level": 87
+              }
             ]
           }
         }
@@ -7381,6 +7581,10 @@
             "all": [
               {
                 "has": 21108
+              },
+              {
+                "skill": "Magic",
+                "level": 7
               }
             ]
           }
@@ -7401,6 +7605,10 @@
             "all": [
               {
                 "has": 21111
+              },
+              {
+                "skill": "Magic",
+                "level": 27
               }
             ]
           }
@@ -7444,6 +7652,10 @@
             "all": [
               {
                 "has": 1696
+              },
+              {
+                "skill": "Magic",
+                "level": 27
               }
             ]
           }
@@ -7502,6 +7714,10 @@
             "all": [
               {
                 "has": 6581
+              },
+              {
+                "skill": "Magic",
+                "level": 87
               }
             ]
           }
@@ -7530,6 +7746,10 @@
             "all": [
               {
                 "has": 1702
+              },
+              {
+                "skill": "Magic",
+                "level": 68
               }
             ]
           }
@@ -7675,6 +7895,10 @@
             "all": [
               {
                 "has": 1694
+              },
+              {
+                "skill": "Magic",
+                "level": 7
               }
             ]
           }
@@ -7756,6 +7980,10 @@
             "all": [
               {
                 "has": 1700
+              },
+              {
+                "skill": "Magic",
+                "level": 47
               }
             ]
           }
@@ -7795,7 +8023,10 @@
                 "has": 19553
               },
               "canCompletePriestInPeril",
-              "canTrainCrafting"
+              {
+                "skill": "Crafting",
+                "level": 86
+              }
             ]
           }
         }
@@ -82386,6 +82617,12 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Emptying jugs": {
+          "notes": "Requires a filled jug.",
+          "rule": "hasAnyFilledJug"
+        }
       }
     }
   },
@@ -99873,14 +100110,26 @@
     "image": "nature_offerings.png",
     "sources": {
       "other": {
-        "Crafting a tiara": {
+        "Making Nature offerings": {
           "notes": "Requires Ritual mulch and an herb.",
           "rule": {
             "all": [
               {
                 "has": 28154
               },
-              "hasHighLevelHerb"
+              "hasHighLevelHerb",
+              {
+                "skills": [
+                  {
+                    "skill": "Farming",
+                    "level": 50
+                  },
+                  {
+                    "skill": "Woodcutting",
+                    "level": 68
+                  }
+                ]
+              }
             ]
           }
         }

@@ -1,5 +1,6 @@
 import { NPC_DATA } from "./npcData.js";
-import { REQUIREMENT_CHECKS, has } from "./requirements.js";
+import { REQUIREMENT_CHECKS, has, hasSkillLevel } from "./requirements.js";
+import { capitalizeFirstLetter } from "./utils.js";
 
 /* ===========================================================
    NPC ACCESS
@@ -69,6 +70,22 @@ export async function evaluateRule(rule, ctx) {
         // has {id}
         if (rule.has !== undefined) {
             return has(ctx, rule.has)
+        }
+
+        // skill level requirement: { skill: "Farming", level: 50 }
+        if (rule.skill && rule.level !== undefined) {
+            const skillName = capitalizeFirstLetter(rule.skill);
+            return hasSkillLevel(ctx, skillName, rule.level);
+        }
+
+        // skill level requirements list: { skills: [{ skill, level }, ...] }
+        if (Array.isArray(rule.skills)) {
+            for (const req of rule.skills) {
+                if (!req?.skill || req.level === undefined) return false;
+                const skillName = capitalizeFirstLetter(req.skill);
+                if (!hasSkillLevel(ctx, skillName, req.level)) return false;
+            }
+            return true;
         }
 
         // any
