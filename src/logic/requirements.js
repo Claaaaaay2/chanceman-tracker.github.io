@@ -5384,15 +5384,13 @@ function canEnterCraftingGuild(ctx) {
 }
 
 function hasAnyFletchableLog(ctx) {
-    return hasAnyItems(ctx, [
-        1511,
-        1521,
-        1519,
-        1517,
-        1515,
-        1513,
-        19669,
-    ]) // Redwood logs
+    return has(ctx, 1511) // Logs
+        || (has(ctx, 1521) && hasSkillLevel(ctx, "Fletching", 15)) // Oak logs
+        || (has(ctx, 1519) && hasSkillLevel(ctx, "Fletching", 30)) // Willow logs
+        || (has(ctx, 1517) && hasSkillLevel(ctx, "Fletching", 45)) // Maple logs
+        || (has(ctx, 1515) && hasSkillLevel(ctx, "Fletching", 60)) // Yew logs
+        || (has(ctx, 1513) && hasSkillLevel(ctx, "Fletching", 75)) // Magic logs
+        || (has(ctx, 19669) && hasSkillLevel(ctx, "Fletching", 90)); // Redwood logs
 }
 
 function canPitfallTrap(ctx) {

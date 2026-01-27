@@ -8075,6 +8075,10 @@
             "all": [
               {
                 "has": 1698
+              },
+              {
+                "skill": "Magic",
+                "level": 49
               }
             ]
           }
@@ -8135,6 +8139,10 @@
             "all": [
               {
                 "has": 19541
+              },
+              {
+                "skill": "Magic",
+                "level": 93
               }
             ]
           }
@@ -8283,7 +8291,10 @@
               {
                 "has": 319
               },
-              "canTrainCooking"
+              {
+                "skill": "Cooking",
+                "level": 55
+              }
             ]
           }
         }
@@ -8428,7 +8439,10 @@
               {
                 "has": 26368
               },
-              "canTrainHerblore"
+              {
+                "skill": "Herblore",
+                "level": 85
+              }
             ]
           }
         },
@@ -8468,7 +8482,10 @@
               {
                 "has": 26368
               },
-              "canTrainHerblore"
+              {
+                "skill": "Herblore",
+                "level": 85
+              }
             ]
           }
         },
@@ -9014,7 +9031,7 @@
       },
       "other": {
         "Grinding": {
-          "notes": "Requires an ancient icon or Venator shard and a Pestle and mortar.",
+          "notes": "Requires an Ancient icon or Venator shard and a Pestle and mortar.",
           "rule": {
             "all": [
               {
@@ -9207,8 +9224,8 @@
     "image": "ancient_mix(1).png",
     "sources": {
       "other": {
-        "Drinking or decanting a barbarian potion": {
-          "notes": "Drinking or decanting an Ancient mix(2).",
+        "Decanting a barbarian potion": {
+          "notes": "Decanting an Ancient mix(2).",
           "rule": {
             "all": [
               {
@@ -9237,6 +9254,20 @@
               },
               {
                 "has": 11326
+              },
+              {
+                "skill": "Herblore",
+                "level": 92
+              }
+            ]
+          }
+        },
+        "Decanting a barbarian potion": {
+          "notes": "Decanting an Ancient mix(1).",
+          "rule": {
+            "all": [
+              {
+                "has": 26353
               }
             ]
           }
@@ -9797,7 +9828,18 @@
               {
                 "has": 21637
               },
-              "canTrainSmithing"
+              {
+                "skills": [
+                  {
+                    "skill": "Smithing",
+                    "level": 66
+                  },
+                  {
+                    "skill": "Magic",
+                    "level": 66
+                  }
+                ]
+              }
             ]
           }
         }
@@ -9845,7 +9887,10 @@
               {
                 "has": 13439
               },
-              "canTrainCooking"
+              {
+                "skill": "Cooking",
+                "level": 84
+              }
             ]
           }
         }
@@ -10006,7 +10051,11 @@
               {
                 "has": 1761
               },
-              "canCompleteDesertTreasureI"
+              "canCompleteDesertTreasureI",
+              {
+                "skill": "Magic",
+                "level": 90
+              }
             ]
           }
         },
@@ -10059,7 +10108,10 @@
               {
                 "has": 233
               },
-              "canTrainHerblore"
+              {
+                "skill": "Herblore",
+                "level": 49
+              }
             ]
           }
         }
@@ -10073,8 +10125,8 @@
     "image": "anti-poison_supermix(1).png",
     "sources": {
       "other": {
-        "Drinking or decanting a barbarian potion": {
-          "notes": "Drinking or decanting an antipoison supermix(2).",
+        "Decanting a barbarian potion": {
+          "notes": "Decanting an Anti-poison supermix(2).",
           "rule": {
             "all": [
               {
@@ -10111,6 +10163,20 @@
               },
               {
                 "has": 11326
+              },
+              {
+                "skill": "Herblore",
+                "level": 51
+              }
+            ]
+          }
+        },
+        "Decanting a barbarian potion": {
+          "notes": "Decanting an Anti-poison supermix(1).",
+          "rule": {
+            "all": [
+              {
+                "has": 11475
               }
             ]
           }
@@ -10135,12 +10201,15 @@
               {
                 "has": 12934
               },
-              "canTrainHerblore"
+              {
+                "skill": "Herblore",
+                "level": 87
+              }
             ]
           }
         },
         "Decanting a potion": {
-          "notes": "Decanting an anti-venom potion(2), (3) or (4).",
+          "notes": "Decanting an Anti-venom potion(2), (3) or (4).",
           "rule": {
             "any": [
               {
@@ -10175,12 +10244,15 @@
               {
                 "has": 12934
               },
-              "canTrainHerblore"
+              {
+                "skill": "Herblore",
+                "level": 87
+              }
             ]
           }
         },
         "Decanting a potion": {
-          "notes": "Decanting an anti-venom potion(1), (3) or (4).",
+          "notes": "Decanting an Anti-venom potion(1), (3) or (4).",
           "rule": {
             "any": [
               {
@@ -10215,12 +10287,15 @@
               {
                 "has": 12934
               },
-              "canTrainHerblore"
+              {
+                "skill": "Herblore",
+                "level": 87
+              }
             ]
           }
         },
         "Decanting a potion": {
-          "notes": "Decanting an anti-venom potion(1), (2) or (4).",
+          "notes": "Decanting an Anti-venom potion(1), (2) or (4).",
           "rule": {
             "any": [
               {
@@ -10255,12 +10330,15 @@
               {
                 "has": 12934
               },
-              "canTrainHerblore"
+              {
+                "skill": "Herblore",
+                "level": 87
+              }
             ]
           }
         },
         "Decanting a potion": {
-          "notes": "Decanting an anti-venom potion(1), (2) or (3).",
+          "notes": "Decanting an Anti-venom potion(1), (2) or (3).",
           "rule": {
             "any": [
               {
@@ -10369,7 +10447,7 @@
       },
       "other": {
         "Mixing a potion": {
-          "notes": "Requires Anti-venom(4) and a Torstol.",
+          "notes": "Requires Anti-venom(4) and a Torstol or a Torstol potion (unf).",
           "rule": {
             "all": [
               {
@@ -10385,7 +10463,10 @@
                   }
                 ]
               },
-              "canTrainHerblore"
+              {
+                "skill": "Herblore",
+                "level": 84
+              }
             ]
           }
         },
@@ -10415,8 +10496,8 @@
     "image": "antidote+_mix(1).png",
     "sources": {
       "other": {
-        "Drinking or decanting a barbarian potion": {
-          "notes": "Drinking or decanting an Antidote+ mix(2).",
+        "Decanting a barbarian potion": {
+          "notes": "Decanting an Antidote+ mix(2).",
           "rule": {
             "all": [
               {
@@ -10445,6 +10526,20 @@
               },
               {
                 "has": 11326
+              },
+              {
+                "skill": "Herblore",
+                "level": 74
+              }
+            ]
+          }
+        },
+        "Decanting a barbarian potion": {
+          "notes": "Decanting an Antidote+ mix(1).",
+          "rule": {
+            "all": [
+              {
+                "has": 11503
               }
             ]
           }
@@ -10550,7 +10645,10 @@
               {
                 "has": 6049
               },
-              "canTrainHerblore"
+              {
+                "skill": "Herblore",
+                "level": 68
+              }
             ]
           }
         },
@@ -10696,7 +10794,10 @@
               {
                 "has": 6051
               },
-              "canTrainHerblore"
+              {
+                "skill": "Herblore",
+                "level": 79
+              }
             ]
           }
         },
@@ -10734,8 +10835,8 @@
         }
       },
       "other": {
-        "Drinking or decanting a barbarian potion": {
-          "notes": "Drinking or decanting an Antifire mix(2).",
+        "Decanting a barbarian potion": {
+          "notes": "Decanting an Antifire mix(2).",
           "rule": {
             "all": [
               {
@@ -10764,6 +10865,20 @@
               },
               {
                 "has": 11326
+              },
+              {
+                "skill": "Herblore",
+                "level": 75
+              }
+            ]
+          }
+        },
+        "Decanting a barbarian potion": {
+          "notes": "Decanting an Antifire mix(1).",
+          "rule": {
+            "all": [
+              {
+                "has": 11507
               }
             ]
           }
@@ -10850,7 +10965,10 @@
               {
                 "has": 241
               },
-              "canTrainHerblore"
+              {
+                "skill": "Herblore",
+                "level": 69
+              }
             ]
           }
         },
@@ -10895,7 +11013,10 @@
               {
                 "has": 241
               },
-              "canTrainHerblore"
+              {
+                "skill": "Herblore",
+                "level": 69
+              }
             ]
           }
         },
@@ -10925,8 +11046,8 @@
     "image": "antipoison_mix(1).png",
     "sources": {
       "other": {
-        "Drinking or decanting a barbarian potion": {
-          "notes": "Drinking or decanting an Antipoison mix(2).",
+        "Decanting a barbarian potion": {
+          "notes": "Decanting an Antipoison mix(2).",
           "rule": {
             "all": [
               {
@@ -10955,6 +11076,20 @@
               },
               {
                 "has": 11324
+              },
+              {
+                "skill": "Herblore",
+                "level": 6
+              }
+            ]
+          }
+        },
+        "Decanting a barbarian potion": {
+          "notes": "Decanting an Antipoison mix(1).",
+          "rule": {
+            "all": [
+              {
+                "has": 11435
               }
             ]
           }
@@ -11079,7 +11214,10 @@
               {
                 "has": 235
               },
-              "canTrainHerblore"
+              {
+                "skill": "Herblore",
+                "level": 5
+              }
             ]
           }
         },
@@ -11127,7 +11265,10 @@
               {
                 "has": 235
               },
-              "canTrainHerblore"
+              {
+                "skill": "Herblore",
+                "level": 5
+              }
             ]
           }
         },
@@ -11190,7 +11331,7 @@
     "sources": {
       "other": {
         "Crafting an Arceuus teleport tablet": {
-          "notes": "Requires a Law rune, Soul rune, Blood rune and a dark essence block (which requires a Chisel and pickaxe).",
+          "notes": "Requires a Law rune, Soul rune, Blood rune and a Dark essence block (which requires a Chisel and a Pickaxe).",
           "rule": {
             "all": [
               {
@@ -11205,7 +11346,19 @@
               {
                 "has": 1755
               },
-              "canTrainMining"
+              {
+                "skills": [
+                  {
+                    "skill": "Magic",
+                    "level": 90
+                  },
+                  {
+                    "skill": "Mining",
+                    "level": 38
+                  }
+                ]
+              },
+              "hasUsablePickaxe"
             ]
           }
         }
@@ -11229,7 +11382,10 @@
               {
                 "has": 1955
               },
-              "canTrainCooking"
+              {
+                "skill": "Cooking",
+                "level": 14
+              }
             ]
           }
         }
@@ -11261,7 +11417,10 @@
               {
                 "has": 2317
               },
-              "canTrainCooking"
+              {
+                "skill": "Cooking",
+                "level": 30
+              }
             ]
           }
         },
@@ -11292,7 +11451,10 @@
               {
                 "has": 5283
               },
-              "canTrainFarming"
+              {
+                "skill": "Farming",
+                "level": 27
+              }
             ]
           }
         }
@@ -11397,7 +11559,10 @@
               {
                 "has": 2359
               },
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 60
+              }
             ]
           }
         }
@@ -11504,8 +11669,18 @@
               {
                 "has": 12827
               },
-              "canTrainPrayer",
-              "canTrainSmithing"
+              {
+                "skills": [
+                  {
+                    "skill": "Prayer",
+                    "level": 90
+                  },
+                  {
+                    "skill": "Smithing",
+                    "level": 85
+                  }
+                ]
+              }
             ]
           }
         }
@@ -11564,7 +11739,19 @@
               {
                 "has": 1755
               },
-              "canTrainMining"
+              {
+                "skills": [
+                  {
+                    "skill": "Magic",
+                    "level": 6
+                  },
+                  {
+                    "skill": "Mining",
+                    "level": 38
+                  }
+                ]
+              },
+              "hasUsablePickaxe"
             ]
           }
         }
@@ -11632,7 +11819,10 @@
               {
                 "has": 1755
               },
-              "canTrainCrafting",
+              {
+                "skill": "Crafting",
+                "level": 80
+              },
               "canCompleteDesertTreasureII"
             ]
           }
@@ -11660,12 +11850,16 @@
     "image": "archery_ticket.png",
     "sources": {
       "other": {
-        "Target range in ranging guild": {
-          "notes": "Requires bronze arrows.",
+        "Target range in the Ranging guild": {
+          "notes": "Requires Bronze arrows.",
           "rule": {
             "all": [
               {
                 "has": 882
+              },
+              {
+                "skill": "Ranged",
+                "level": 40
               }
             ]
           }
@@ -11733,7 +11927,7 @@
     "sources": {
       "other": {
         "Crafting a teleport tablet": {
-          "notes": "Requires a Law rune, Water rune and Soft clay.",
+          "notes": "Requires a Law rune, Water rune and Soft clay and completion of Plague city.",
           "rule": {
             "all": [
               {
@@ -11744,6 +11938,11 @@
               },
               {
                 "has": 1761
+              },
+              "canCompletePlagueCity",
+              {
+                "skill": "Magic",
+                "level": 51
               }
             ]
           }
@@ -11759,7 +11958,7 @@
     "sources": {
       "other": {
         "Purchasing through dialogue": {
-          "notes": "Purchase from mage training arena through dialogue."
+          "notes": "Purchase from the Mage training arena through dialogue."
         }
       }
     }
@@ -11849,7 +12048,10 @@
               {
                 "has": 31710
               },
-              "canTrainHerblore"
+              {
+                "skill": "Herblore",
+                "level": 89
+              }
             ]
           }
         },
@@ -11889,7 +12091,10 @@
               {
                 "has": 31710
               },
-              "canTrainHerblore"
+              {
+                "skill": "Herblore",
+                "level": 89
+              }
             ]
           }
         },
@@ -12562,6 +12767,10 @@
               },
               {
                 "has": 2347
+              },
+              {
+                "skill": "Crafting",
+                "level": 90
               }
             ]
           }
@@ -12688,7 +12897,10 @@
               {
                 "has": 5996
               },
-              "canTrainCooking"
+              {
+                "skill": "Cooking",
+                "level": 24
+              }
             ]
           }
         }
@@ -12704,7 +12916,7 @@
     "sources": {
       "other": {
         "Constructing a flatpack": {
-          "notes": "Requires oak planks and Asgarnian ale.",
+          "notes": "Requires Oak planks and Asgarnian ale.",
           "rule": {
             "all": [
               {
@@ -12713,7 +12925,19 @@
               {
                 "has": 1905
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 18
+                  },
+                  {
+                    "skill": "Cooking",
+                    "level": 24
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -12750,7 +12974,10 @@
               {
                 "has": 5996
               },
-              "canTrainCooking"
+              {
+                "skill": "Cooking",
+                "level": 24
+              }
             ]
           }
         }
@@ -12783,7 +13010,10 @@
               {
                 "has": 5996
               },
-              "canTrainCooking"
+              {
+                "skill": "Cooking",
+                "level": 24
+              }
             ]
           }
         }
@@ -12816,7 +13046,10 @@
               {
                 "has": 5996
               },
-              "canTrainCooking"
+              {
+                "skill": "Herblore",
+                "level": 24
+              }
             ]
           }
         }
@@ -13038,7 +13271,7 @@
     "sources": {
       "other": {
         "Harvesting": {
-          "notes": "Requires mithril or Adamant seeds.",
+          "notes": "Requires Mithril seeds or Adamant seeds.",
           "rule": {
             "any": [
               {
@@ -13096,7 +13329,7 @@
       },
       "other": {
         "Runecrafting": {
-          "notes": "Requires Pure essence or daeyalt essence.",
+          "notes": "Requires Pure essence or Daeyalt essence.",
           "rule": {
             "all": [
               {
@@ -13107,7 +13340,11 @@
                   "canCompleteSinsOfTheFather"
                 ]
               },
-              "canReachLunarIsle"
+              "canReachLunarIsle",
+              {
+                "skill": "Runecraft",
+                "level": 40
+              }
             ]
           }
         }
@@ -13143,7 +13380,7 @@
       },
       "other": {
         "Fletching": {
-          "notes": "Requires Atlatl dart shaft and tips.",
+          "notes": "Requires Headless atlatl darts and Atlatl dart tips.",
           "rule": {
             "all": [
               {
@@ -13152,7 +13389,10 @@
               {
                 "has": 30998
               },
-              "canTrainFletching"
+              {
+                "skill": "Fletching",
+                "level": 74
+              }
             ]
           }
         }
@@ -13167,7 +13407,7 @@
     "sources": {
       "other": {
         "Fletching": {
-          "notes": "Requires ent branches and a Knife.",
+          "notes": "Requires an Ent branch and a Knife.",
           "rule": {
             "all": [
               {
@@ -13181,7 +13421,10 @@
                   "hasNarwhalKnife"
                 ]
               },
-              "canTrainFletching"
+              {
+                "skill": "Fletching",
+                "level": 74
+              }
             ]
           }
         }
@@ -13196,7 +13439,7 @@
     "sources": {
       "other": {
         "Fletching": {
-          "notes": "Requires Broken antler and a Chisel.",
+          "notes": "Requires a Broken antler and a Chisel.",
           "rule": {
             "all": [
               {
@@ -13205,7 +13448,10 @@
               {
                 "has": 1755
               },
-              "canTrainFletching"
+              {
+                "skill": "Fletching",
+                "level": 74
+              }
             ]
           }
         }
@@ -13219,8 +13465,8 @@
     "image": "attack_mix(1).png",
     "sources": {
       "other": {
-        "Drinking or decanting a barbarian potion": {
-          "notes": "Drinking or decanting an Attack mix(2).",
+        "Decanting a barbarian potion": {
+          "notes": "Decanting an Attack mix(2).",
           "rule": {
             "all": [
               {
@@ -13249,6 +13495,20 @@
               },
               {
                 "has": 11324
+              },
+              {
+                "skill": "Herblore",
+                "level": 4
+              }
+            ]
+          }
+        },
+        "Decanting a barbarian potion": {
+          "notes": "Decanting an Attack mix(1).",
+          "rule": {
+            "all": [
+              {
+                "has": 11431
               }
             ]
           }
@@ -13345,7 +13605,10 @@
               {
                 "has": 221
               },
-              "canTrainHerblore"
+              {
+                "skill": "Herblore",
+                "level": 3
+              }
             ]
           }
         },
@@ -13393,7 +13656,10 @@
               {
                 "has": 221
               },
-              "canTrainHerblore"
+              {
+                "skill": "Herblore",
+                "level": 3
+              }
             ]
           }
         },
@@ -13438,7 +13704,7 @@
       },
       "other": {
         "Cleaning a herb": {
-          "notes": "Can be cleaned in Nardah. Requires a grimy version of herb.",
+          "notes": "Can be cleaned in Nardah. Requires a Grimy avantoe.",
           "rule": {
             "all": [
               {
@@ -13467,7 +13733,10 @@
               {
                 "has": 261
               },
-              "canTrainHerblore"
+              {
+                "skill": "Herblore",
+                "level": 50
+              }
             ]
           }
         }
@@ -13945,7 +14214,10 @@
               {
                 "has": 6043
               },
-              "canTrainCooking"
+              {
+                "skill": "Cooking",
+                "level": 49
+              }
             ]
           }
         }
@@ -13978,7 +14250,10 @@
               {
                 "has": 6043
               },
-              "canTrainCooking"
+              {
+                "skill": "Cooking",
+                "level": 49
+              }
             ]
           }
         }
@@ -14011,7 +14286,10 @@
               {
                 "has": 6043
               },
-              "canTrainCooking"
+              {
+                "skill": "Cooking",
+                "level": 49
+              }
             ]
           }
         }
@@ -14044,7 +14322,10 @@
               {
                 "has": 6043
               },
-              "canTrainCooking"
+              {
+                "skill": "Cooking",
+                "level": 49
+              }
             ]
           }
         }
@@ -14065,7 +14346,10 @@
               {
                 "has": 11260
               },
-              "canTrainHunter"
+              {
+                "skill": "Hunter",
+                "level": 27
+              }
             ]
           }
         }
@@ -14304,13 +14588,16 @@
     "sources": {
       "other": {
         "Cooking": {
-          "notes": "Requires Potato.",
+          "notes": "Requires a Potato.",
           "rule": {
             "all": [
               {
                 "has": 1942
               },
-              "canTrainCooking"
+              {
+                "skill": "Cooking",
+                "level": 7
+              }
             ]
           }
         }
@@ -14477,7 +14764,10 @@
               {
                 "has": 5284
               },
-              "canTrainFarming"
+              {
+                "skill": "Farming",
+                "level": 33
+              }
             ]
           }
         }
@@ -15375,7 +15665,11 @@
               {
                 "has": 1761
               },
-              "canCompleteLunarDiplomacy"
+              "canCompleteLunarDiplomacy",
+              {
+                "skill": "Magic",
+                "level": 75
+              }
             ]
           }
         }
@@ -15399,7 +15693,10 @@
               {
                 "has": 47
               },
-              "canTrainFletching"
+              {
+                "skill": "Fletching",
+                "level": 51
+              }
             ]
           }
         }
@@ -15635,12 +15932,6 @@
     "sources": {
       "spawns": {
         "Yes": "No requirements"
-      },
-      "other": {
-        "Filling an empty fish food box (untradable)": {
-          "notes": "Requires Ground guam and Seaweed.",
-          "rule": "canFillFishFoodBox"
-        }
       }
     }
   },
@@ -15680,7 +15971,19 @@
               {
                 "has": 1755
               },
-              "canTrainMining"
+              {
+                "skills": [
+                  {
+                    "skill": "Magic",
+                    "level": 83
+                  },
+                  {
+                    "skill": "Mining",
+                    "level": 38
+                  }
+                ]
+              },
+              "hasUsablePickaxe"
             ]
           }
         }
@@ -15747,7 +16050,10 @@
               {
                 "has": 5933
               },
-              "canTrainCrafting"
+              {
+                "skill": "Crafting",
+                "level": 36
+              }
             ]
           }
         }
@@ -15845,7 +16151,10 @@
               {
                 "has": 363
               },
-              "canTrainCooking"
+              {
+                "skill": "Cooking",
+                "level": 43
+              }
             ]
           }
         }
@@ -15921,7 +16230,10 @@
               {
                 "has": 245
               },
-              "canTrainHerblore"
+              {
+                "skill": "Herblore",
+                "level": 80
+              }
             ]
           }
         },
@@ -15961,7 +16273,10 @@
               {
                 "has": 245
               },
-              "canTrainHerblore"
+              {
+                "skill": "Herblore",
+                "level": 80
+              }
             ]
           }
         },
@@ -16048,7 +16363,19 @@
               {
                 "has": 1755
               },
-              "canTrainMining"
+              {
+                "skills": [
+                  {
+                    "skill": "Magic",
+                    "level": 23
+                  },
+                  {
+                    "skill": "Mining",
+                    "level": 38
+                  }
+                ]
+              },
+              "hasUsablePickaxe"
             ]
           }
         }
@@ -16124,7 +16451,10 @@
               {
                 "has": 3138
               },
-              "canTrainHerblore"
+              {
+                "skill": "Herblore",
+                "level": 80
+              }
             ]
           }
         },
@@ -16164,7 +16494,10 @@
               {
                 "has": 3138
               },
-              "canTrainHerblore"
+              {
+                "skill": "Herblore",
+                "level": 80
+              }
             ]
           }
         },
@@ -16658,7 +16991,19 @@
                 "has": 960
               },
               "hasAnyNails",
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 7
+                  },
+                  {
+                    "skill": "Cooking",
+                    "level": 5
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -16717,8 +17062,7 @@
               },
               {
                 "has": 1785
-              },
-              "canTrainCrafting"
+              }
             ]
           }
         },
@@ -17130,8 +17474,8 @@
     "image": "bellator_ring.png",
     "sources": {
       "other": {
-        "Creating an magus ring": {
-          "notes": "Requires a bellator icon and a Chromium ingot.",
+        "Creating an Bellator ring": {
+          "notes": "Requires a Bellator icon and a Chromium ingot.",
           "rule": {
             "all": [
               {
@@ -17143,7 +17487,19 @@
               {
                 "has": 28276
               },
-              "canTrainCrafting"
+              {
+                "skills": [
+                  {
+                    "skill": "Magic",
+                    "level": 90
+                  },
+                  {
+                    "skill": "Crafting",
+                    "level": 80
+                  }
+                ]
+              },
+              "canCompleteDesertTreasureII"
             ]
           }
         }
@@ -17164,7 +17520,10 @@
               {
                 "has": 31245
               },
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 70
+              }
             ]
           }
         }
@@ -17226,7 +17585,10 @@
               {
                 "has": 1755
               },
-              "canTrainCrafting",
+              {
+                "skill": "Crafting",
+                "level": 80
+              },
               "canCompleteDesertTreasureII"
             ]
           }
@@ -17247,6 +17609,10 @@
             "all": [
               {
                 "has": 6577
+              },
+              {
+                "skill": "Magic",
+                "level": 87
               }
             ]
           }
@@ -17760,6 +18126,10 @@
             "all": [
               {
                 "has": 1658
+              },
+              {
+                "skill": "Magic",
+                "level": 27
               }
             ]
           }
@@ -17790,7 +18160,10 @@
               {
                 "has": 2347
               },
-              "canTrainCrafting"
+              {
+                "skill": "Crafting",
+                "level": 5
+              }
             ]
           }
         }
@@ -18150,7 +18523,10 @@
               {
                 "has": 2347
               },
-              "canTrainFletching",
+              {
+                "skill": "Fletching",
+                "level": 38
+              },
               "canCompleteZogreFleshEaters"
             ]
           }
@@ -18330,7 +18706,10 @@
               {
                 "has": 2509
               },
-              "canTrainCrafting"
+              {
+                "skill": "Crafting",
+                "level": 84
+              }
             ]
           }
         }
@@ -18394,7 +18773,10 @@
               {
                 "has": 2509
               },
-              "canTrainCrafting"
+              {
+                "skill": "Crafting",
+                "level": 82
+              }
             ]
           }
         }
@@ -18458,7 +18840,10 @@
               {
                 "has": 4824
               },
-              "canTrainCrafting"
+              {
+                "skill": "Crafting",
+                "level": 83
+              }
             ]
           }
         }
@@ -18505,7 +18890,10 @@
               {
                 "has": 2509
               },
-              "canTrainCrafting"
+              {
+                "skill": "Crafting",
+                "level": 79
+              }
             ]
           }
         }
@@ -19029,6 +19417,10 @@
               },
               {
                 "has": 28177
+              },
+              {
+                "skill": "Smithing",
+                "level": 11
               }
             ]
           }
@@ -19044,7 +19436,7 @@
     "sources": {
       "other": {
         "Harvesting": {
-          "notes": "Requires mithril or Adamant seeds.",
+          "notes": "Requires Mithril seeds or Adamant seeds.",
           "rule": {
             "any": [
               {
@@ -20621,7 +21013,10 @@
               {
                 "has": 2491
               },
-              "canTrainCrafting"
+              {
+                "skill": "Crafting",
+                "level": 32
+              }
             ]
           }
         }
@@ -20789,7 +21184,10 @@
               {
                 "has": 960
               },
-              "canTrainCrafting"
+              {
+                "skill": "Crafting",
+                "level": 10
+              }
             ]
           },
           "tags": [
@@ -20999,8 +21397,8 @@
     "image": "black_warlock_mix_(1).png",
     "sources": {
       "other": {
-        "Drinking or decanting a barbarian potion": {
-          "notes": "Drinking or decanting a black warlor mix(2).",
+        "Decanting a potion": {
+          "notes": "Decanting a black warlock mix(2).",
           "rule": {
             "all": [
               {
@@ -21019,7 +21417,7 @@
     "image": "black_warlock_mix_(2).png",
     "sources": {
       "other": {
-        "Mixing a barbarian potion": {
+        "Mixing a potion": {
           "notes": "Mixing a Black warlock (item) with some raw hunter creature meat.",
           "rule": {
             "all": [
@@ -21028,6 +21426,16 @@
                 "has": 10014
               },
               "hasHunterMeat"
+            ]
+          }
+        },
+        "Decanting a potion": {
+          "notes": "Decanting a black warlock mix(1).",
+          "rule": {
+            "all": [
+              {
+                "has": 29207
+              }
             ]
           }
         }
@@ -21283,7 +21691,10 @@
               {
                 "has": 12833
               },
-              "canTrainPrayer"
+              {
+                "skill": "Prayer",
+                "level": 85
+              }
             ]
           }
         }
@@ -23341,7 +23752,10 @@
               {
                 "has": 1755
               },
-              "canTrainCrafting"
+              {
+                "skill": "Crafting",
+                "level": 15
+              }
             ]
           }
         }
@@ -23389,7 +23803,7 @@
     "sources": {
       "other": {
         "Crafting bloodbark armour": {
-          "notes": "Requires Splitbark body, blood runes, and you need to have read Runescroll of bloodbark.",
+          "notes": "Requires Splitbark body, Blood runes, and you need to have read Runescroll of bloodbark.",
           "rule": {
             "all": [
               {
@@ -23400,6 +23814,10 @@
               },
               {
                 "has": 25481
+              },
+              {
+                "skill": "Runecraft",
+                "level": 81
               }
             ]
           }
@@ -23415,7 +23833,7 @@
     "sources": {
       "other": {
         "Crafting bloodbark armour": {
-          "notes": "Requires Splitbark boots, blood runes, and you need to have read Runescroll of bloodbark.",
+          "notes": "Requires Splitbark boots, Blood runes, and you need to have read Runescroll of bloodbark.",
           "rule": {
             "all": [
               {
@@ -23426,6 +23844,10 @@
               },
               {
                 "has": 25481
+              },
+              {
+                "skill": "Runecraft",
+                "level": 77
               }
             ]
           }
@@ -23441,7 +23863,7 @@
     "sources": {
       "other": {
         "Crafting bloodbark armour": {
-          "notes": "Requires Splitbark gauntlets, blood runes, and you need to have read Runescroll of bloodbark.",
+          "notes": "Requires Splitbark gauntlets, Blood runes, and you need to have read Runescroll of bloodbark.",
           "rule": {
             "all": [
               {
@@ -23452,6 +23874,10 @@
               },
               {
                 "has": 25481
+              },
+              {
+                "skill": "Runecraft",
+                "level": 77
               }
             ]
           }
@@ -23467,7 +23893,7 @@
     "sources": {
       "other": {
         "Crafting bloodbark armour": {
-          "notes": "Requires Splitbark helm, blood runes, and you need to have read Runescroll of bloodbark.",
+          "notes": "Requires Splitbark helm, Blood runes, and you need to have read Runescroll of bloodbark.",
           "rule": {
             "all": [
               {
@@ -23478,6 +23904,10 @@
               },
               {
                 "has": 25481
+              },
+              {
+                "skill": "Runecraft",
+                "level": 79
               }
             ]
           }
@@ -23493,7 +23923,7 @@
     "sources": {
       "other": {
         "Crafting bloodbark armour": {
-          "notes": "Requires Splitbark legs, blood runes, and you need to have read Runescroll of bloodbark.",
+          "notes": "Requires Splitbark legs, Blood runes, and you need to have read Runescroll of bloodbark.",
           "rule": {
             "all": [
               {
@@ -23504,6 +23934,10 @@
               },
               {
                 "has": 25481
+              },
+              {
+                "skill": "Runecraft",
+                "level": 81
               }
             ]
           }
@@ -23632,7 +24066,10 @@
               {
                 "has": 31692
               },
-              "canTrainCooking"
+              {
+                "skill": "Cooking",
+                "level": 48
+              }
             ]
           }
         }
@@ -23658,7 +24095,10 @@
               {
                 "has": 2505
               },
-              "canTrainCrafting"
+              {
+                "skill": "Crafting",
+                "level": 71
+              }
             ]
           }
         }
@@ -23719,7 +24159,10 @@
               {
                 "has": 2505
               },
-              "canTrainCrafting"
+              {
+                "skill": "Crafting",
+                "level": 68
+              }
             ]
           }
         }
@@ -23778,7 +24221,10 @@
               {
                 "has": 4822
               },
-              "canTrainCrafting"
+              {
+                "skill": "Crafting",
+                "level": 69
+              }
             ]
           }
         }
@@ -23810,7 +24256,10 @@
               {
                 "has": 2505
               },
-              "canTrainCrafting"
+              {
+                "skill": "Crafting",
+                "level": 66
+              }
             ]
           }
         }
@@ -24107,7 +24556,7 @@
     "sources": {
       "other": {
         "Harvesting": {
-          "notes": "Requires mithril or Adamant seeds.",
+          "notes": "Requires Mithril seeds or Adamant seeds.",
           "rule": {
             "any": [
               {
@@ -24404,7 +24853,10 @@
               {
                 "has": 2487
               },
-              "canTrainCrafting"
+              {
+                "skill": "Crafting",
+                "level": 32
+              }
             ]
           }
         }
@@ -24543,7 +24995,10 @@
               {
                 "has": 32341
               },
-              "canTrainCooking"
+              {
+                "skill": "Cooking",
+                "level": 87
+              }
             ]
           }
         }
@@ -24579,7 +25034,7 @@
       },
       "other": {
         "Gnome cooking": {
-          "notes": "Requires a mixed special, Lemon and ornage chunks, Equa leaves, Lime slices.",
+          "notes": "Requires Vodka, Gin, Brandy, Lemon, Orange, Lemon chunks, Orange chunks, Equa leaves, Lime slices and a Cocktail glass.",
           "rule": {
             "all": [
               {
@@ -24612,7 +25067,10 @@
               {
                 "has": 2124
               },
-              "canTrainCooking"
+              {
+                "skill": "Cooking",
+                "level": 37
+              }
             ]
           }
         }
@@ -25095,7 +25553,10 @@
               {
                 "has": 31466
               },
-              "canTrainCrafting"
+              {
+                "skill": "Crafting",
+                "level": 39
+              }
             ]
           }
         }
@@ -25135,7 +25596,10 @@
               {
                 "has": 31469
               },
-              "canTrainCrafting"
+              {
+                "skill": "Crafting",
+                "level": 73
+              }
             ]
           }
         }
@@ -25156,7 +25620,10 @@
               {
                 "has": 31463
               },
-              "canTrainCrafting"
+              {
+                "skill": "Crafting",
+                "level": 12
+              }
             ]
           }
         }
@@ -26874,7 +27341,12 @@
               },
               {
                 "has": 1761
-              }
+              },
+              {
+                "skill": "Magic",
+                "level": 15
+              },
+              "canDoMageTrainingArena"
             ]
           }
         }
@@ -26903,6 +27375,10 @@
               },
               {
                 "has": 1761
+              },
+              {
+                "skill": "Magic",
+                "level": 60
               }
             ]
           }
@@ -27039,14 +27515,18 @@
     "sources": {
       "other": {
         "Constructing a flatpack": {
-          "notes": "Requires planks and any nails.",
+          "notes": "Requires Planks and any nails.",
           "rule": {
             "all": [
               {
                 "has": 960
               },
               "hasAnyNails",
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Construction",
+                "level": 4
+              }
             ]
           },
           "tags": [
@@ -27121,7 +27601,10 @@
               {
                 "has": 19656
               },
-              "canTrainCooking"
+              {
+                "skill": "Cooking",
+                "level": 52
+              }
             ]
           }
         }
@@ -27331,7 +27814,10 @@
               {
                 "has": 1779
               },
-              "canTrainCrafting"
+              {
+                "skill": "Crafting",
+                "level": 10
+              }
             ]
           }
         }
@@ -27521,6 +28007,10 @@
             "all": [
               {
                 "has": 11072
+              },
+              {
+                "skill": "Magic",
+                "level": 7
               }
             ]
           }
@@ -27587,6 +28077,10 @@
             "all": [
               {
                 "has": 21123
+              },
+              {
+                "skill": "Magic",
+                "level": 49
               }
             ]
           }
@@ -27873,7 +28367,10 @@
               {
                 "has": 1755
               },
-              "canTrainCrafting"
+              {
+                "skill": "Crafting",
+                "level": 15
+              }
             ]
           }
         }
@@ -27963,7 +28460,10 @@
               {
                 "has": 2349
               },
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 14
+              }
             ]
           }
         }
@@ -28192,8 +28692,7 @@
               },
               {
                 "has": 53
-              },
-              "canTrainFletching"
+              }
             ]
           }
         }
@@ -28299,7 +28798,10 @@
               {
                 "has": 2349
               },
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 5
+              }
             ]
           }
         }
@@ -28387,8 +28889,7 @@
             "all": [
               {
                 "has": 2349
-              },
-              "canTrainSmithing"
+              }
             ]
           }
         }
@@ -28467,8 +28968,7 @@
               },
               {
                 "has": 436
-              },
-              "canTrainSmithing"
+              }
             ]
           }
         }
@@ -28524,7 +29024,10 @@
               {
                 "has": 2349
               },
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 10
+              }
             ]
           }
         }
@@ -28647,7 +29150,10 @@
                 "has": 9375
               },
               "hasAnyFeather",
-              "canTrainFletching"
+              {
+                "skill": "Fletching",
+                "level": 9
+              }
             ]
           }
         }
@@ -28752,7 +29258,10 @@
               {
                 "has": 2349
               },
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 3
+              }
             ]
           }
         }
@@ -28783,7 +29292,7 @@
     "sources": {
       "other": {
         "Fletching arrows": {
-          "notes": "Requires flighted ogre arrows, Bronze nails and a Hammer.",
+          "notes": "Requires Flighted ogre arrows, Bronze nails and a Hammer.",
           "rule": {
             "all": [
               {
@@ -28795,7 +29304,10 @@
               {
                 "has": 2347
               },
-              "canTrainFletching",
+              {
+                "skill": "Fletching",
+                "level": 7
+              },
               "canCompleteZogreFleshEaters"
             ]
           }
@@ -28833,14 +29345,18 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Smithing": {
+        "Smithing Bronze cannonballs": {
           "notes": "Requires a Bronze bar.",
           "rule": {
             "all": [
               {
                 "has": 2349
               },
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 5
+              },
+              "canCompleteDwarfCannon"
             ]
           }
         }
@@ -28871,14 +29387,17 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Smithing": {
+        "Smithing a Bronze chainbody": {
           "notes": "Requires a Bronze bar.",
           "rule": {
             "all": [
               {
                 "has": 2349
               },
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 11
+              }
             ]
           }
         }
@@ -28895,7 +29414,7 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Smithing": {
+        "Smithing Bronze claws": {
           "notes": "Requires a Bronze bar.",
           "rule": {
             "all": [
@@ -28903,7 +29422,10 @@
                 "has": 2349
               },
               "canCompleteDeathPlateau",
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 13
+              }
             ]
           }
         }
@@ -28932,7 +29454,10 @@
               {
                 "has": 9438
               },
-              "canTrainFletching"
+              {
+                "skill": "Fletching",
+                "level": 9
+              }
             ]
           }
         }
@@ -28959,7 +29484,10 @@
               {
                 "has": 2347
               },
-              "canTrainFletching"
+              {
+                "skill": "Fletching",
+                "level": 9
+              }
             ]
           }
         }
@@ -28999,14 +29527,13 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Smithing Bronze dagger": {
-          "notes": "Bronze bar and Hammer.",
+        "Smithing a Bronze dagger": {
+          "notes": "Requires a Bronze bar and a Hammer.",
           "rule": {
             "all": [
               {
                 "has": 2349
-              },
-              "canTrainSmithing"
+              }
             ]
           }
         }
@@ -29108,14 +29635,17 @@
       },
       "other": {
         "Fletching Bronze darts": {
-          "notes": "Bronze dart tip and Feather.",
+          "notes": "Requires a Bronze dart tip and any Feather.",
           "rule": {
             "all": [
               {
                 "has": 819
               },
               "hasAnyFeather",
-              "canTrainFletching"
+              {
+                "skill": "Fletching",
+                "level": 10
+              }
             ]
           }
         }
@@ -29134,14 +29664,17 @@
     "image": "bronze_dart_tip.png",
     "sources": {
       "other": {
-        "Smithing": {
+        "Smithing Bronze dart tips": {
           "notes": "Requires a Bronze bar.",
           "rule": {
             "all": [
               {
                 "has": 2349
               },
-              "canTrainSmithing",
+              {
+                "skill": "Smithing",
+                "level": 4
+              },
               "canCompleteTheTouristTrap"
             ]
           }
@@ -29242,7 +29775,7 @@
     "sources": {
       "other": {
         "Creating an Bronze felling axe": {
-          "notes": "Requires a Bronze axe and a Felling axe handle.",
+          "notes": "Requires a Bronze axe, a Felling axe handle and a Hammer.",
           "rule": {
             "all": [
               {
@@ -29293,14 +29826,17 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Smithing": {
+        "Smithing a Bronze full helm": {
           "notes": "Requires a Bronze bar.",
           "rule": {
             "all": [
               {
                 "has": 2349
               },
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 7
+              }
             ]
           }
         }
@@ -29424,7 +29960,7 @@
     "image": "bronze_hasta.png",
     "sources": {
       "other": {
-        "Barbarian smithing": {
+        "Barbarian smithing a Bronze hasta": {
           "notes": "Requires a Bronze bar and Logs.",
           "rule": {
             "all": [
@@ -29434,7 +29970,11 @@
               {
                 "has": 1511
               },
-              "canCompleteBarbarianSmithing"
+              "canCompleteBarbarianSmithing",
+              {
+                "skill": "Smithing",
+                "level": 5
+              }
             ]
           }
         }
@@ -29448,7 +29988,7 @@
     "image": "bronze_hasta(p).png",
     "sources": {
       "other": {
-        "Poisoning": {
+        "Poisoning a Bronze hasta": {
           "notes": "Requires a Bronze hasta and a Weapon poison.",
           "rule": {
             "all": [
@@ -29471,7 +30011,7 @@
     "image": "bronze_hasta(p+).png",
     "sources": {
       "other": {
-        "Poisoning": {
+        "Poisoning a Bronze hasta": {
           "notes": "Requires a Bronze hasta and a Weapon poison(+).",
           "rule": {
             "all": [
@@ -29494,7 +30034,7 @@
     "image": "bronze_hasta(p++).png",
     "sources": {
       "other": {
-        "Poisoning": {
+        "Poisoning a Bronze hasta": {
           "notes": "Requires a Bronze hasta and a Weapon poison(++).",
           "rule": {
             "all": [
@@ -29537,8 +30077,8 @@
         }
       },
       "other": {
-        "Fletching a javelin": {
-          "notes": "Requires Bronze javelin tips and Javelin shaft.",
+        "Fletching a Bronze javelin": {
+          "notes": "Requires Bronze javelin tips and a Javelin shaft.",
           "rule": {
             "all": [
               {
@@ -29547,7 +30087,10 @@
               {
                 "has": 19584
               },
-              "canTrainFletching"
+              {
+                "skill": "Fletching",
+                "level": 3
+              }
             ]
           }
         }
@@ -29561,14 +30104,17 @@
     "image": "bronze_javelin_tips.png",
     "sources": {
       "other": {
-        "Smithing": {
+        "Smithing Bronze javelin tips": {
           "notes": "Requires a Bronze bar.",
           "rule": {
             "all": [
               {
                 "has": 2349
               },
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 6
+              }
             ]
           }
         }
@@ -29582,7 +30128,7 @@
     "image": "bronze_javelin(p).png",
     "sources": {
       "other": {
-        "Poisoning": {
+        "Poisoning a Bronze javelin": {
           "notes": "Requires a Bronze javelin and a Weapon poison.",
           "rule": {
             "all": [
@@ -29605,7 +30151,7 @@
     "image": "bronze_javelin(p+).png",
     "sources": {
       "other": {
-        "Poisoning": {
+        "Poisoning a Bronze javelin": {
           "notes": "Requires a Bronze javelin and a Weapon poison(+).",
           "rule": {
             "all": [
@@ -29628,7 +30174,7 @@
     "image": "bronze_javelin(p++).png",
     "sources": {
       "other": {
-        "Poisoning": {
+        "Poisoning a Bronze javelin": {
           "notes": "Requires a Bronze javelin and a Weapon poison(++).",
           "rule": {
             "all": [
@@ -29651,14 +30197,17 @@
     "image": "bronze_keel_parts.png",
     "sources": {
       "other": {
-        "Smithing": {
+        "Smithing Bronze keel parts": {
           "notes": "Requires a Bronze bar.",
           "rule": {
             "all": [
               {
                 "has": 2349
               },
-              "canTrainSmithing",
+              {
+                "skill": "Smithing",
+                "level": 3
+              },
               "canCompletePandemonium"
             ]
           }
@@ -29693,14 +30242,17 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Smithing": {
+        "Smithing a Bronze kiteshield": {
           "notes": "Requires a Bronze bar.",
           "rule": {
             "all": [
               {
                 "has": 2349
               },
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 12
+              }
             ]
           }
         }
@@ -29756,14 +30308,17 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Smithing": {
+        "Smithing Bronze knives": {
           "notes": "Requires a Bronze bar.",
           "rule": {
             "all": [
               {
                 "has": 2349
               },
-              "canTrainSmithing"
+              {
+                "skill": "Smithing",
+                "level": 7
+              }
             ]
           }
         }
@@ -29782,7 +30337,7 @@
         }
       },
       "other": {
-        "Poisoning": {
+        "Poisoning a Bronze knife": {
           "notes": "Requires a Bronze knife and a Weapon poison.",
           "rule": {
             "all": [
@@ -29805,7 +30360,7 @@
     "image": "bronze_knife(p+).png",
     "sources": {
       "other": {
-        "Poisoning": {
+        "Poisoning a Bronze knife": {
           "notes": "Requires a Bronze knife and a Weapon poison(+).",
           "rule": {
             "all": [
@@ -29828,7 +30383,7 @@
     "image": "bronze_knife(p++).png",
     "sources": {
       "other": {
-        "Poisoning": {
+        "Poisoning a Bronze knife": {
           "notes": "Requires a Bronze knife and a Weapon poison(++).",
           "rule": {
             "all": [
@@ -56098,6 +56653,12 @@
     "sources": {
       "spawns": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Filling an empty fish food box (untradable)": {
+          "notes": "Requires Ground guam and Seaweed.",
+          "rule": "canFillFishFoodBox"
+        }
       }
     }
   },
