@@ -15716,24 +15716,24 @@ export const NPC_DATA = {
     "Void Knights' Reward Options Herb pack": {
         "wiki": "https://oldschool.runescape.wiki/w/Void_Knights%27_Reward_Options#Herb_pack",
         "rule": null,
-        "skill": [],
-        "level": [],
+        "skill": ["Herblore"],
+        "level": [25],
         "tags": [],
         "f2p": false
     },
     "Void Knights' Reward Options Mineral pack": {
         "wiki": "https://oldschool.runescape.wiki/w/Void_Knights%27_Reward_Options#Mineral_pack",
         "rule": null,
-        "skill": [],
-        "level": [],
+        "skill": ["Mining"],
+        "level": [25],
         "tags": [],
         "f2p": false
     },
     "Void Knights' Reward Options Seed pack": {
         "wiki": "https://oldschool.runescape.wiki/w/Void_Knights%27_Reward_Options#Seed_pack",
         "rule": null,
-        "skill": [],
-        "level": [],
+        "skill": ["Farming"],
+        "level": [25],
         "tags": [],
         "f2p": false
     },
