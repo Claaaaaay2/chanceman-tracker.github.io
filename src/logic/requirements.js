@@ -319,6 +319,9 @@ function requiresQuest(ctx, questKey, fn) {
 }
 
 export const REQUIREMENT_CHECKS = {
+    canCompleteTutorialIsland(ctx) {
+        return true;
+    },
     hasTelegrabRunesOrCompleteDragonSlayerI(ctx) {
         return hasTelegrabRunes(ctx) || canCompleteDragonSlayerI(ctx);
     },
