@@ -21917,12 +21917,6 @@
         "Chest (Rogues' Castle)": {
           "droprate": "1/33"
         },
-        "Chest (Rogues' Castle) Hard Wilderness Diary": {
-          "droprate": "1/33"
-        },
-        "Chest (Rogues' Castle) Medium Wilderness Diary": {
-          "droprate": "1/33"
-        },
         "Muddy chest (m)": {
           "droprate": "1/93.333"
         },
@@ -22098,12 +22092,6 @@
           "droprate": "1/31.5"
         },
         "Chest (Rogues' Castle)": {
-          "droprate": "1/66"
-        },
-        "Chest (Rogues' Castle) Hard Wilderness Diary": {
-          "droprate": "1/66"
-        },
-        "Chest (Rogues' Castle) Medium Wilderness Diary": {
           "droprate": "1/66"
         },
         "Muddy chest (m)": {
@@ -22518,12 +22506,6 @@
           "droprate": "1/31.5"
         },
         "Chest (Rogues' Castle)": {
-          "droprate": "1/66"
-        },
-        "Chest (Rogues' Castle) Hard Wilderness Diary": {
-          "droprate": "1/66"
-        },
-        "Chest (Rogues' Castle) Medium Wilderness Diary": {
           "droprate": "1/66"
         },
         "Muddy chest (m)": {
@@ -35955,12 +35937,6 @@
         "Chest (Rogues' Castle)": {
           "droprate": "1/66"
         },
-        "Chest (Rogues' Castle) Hard Wilderness Diary": {
-          "droprate": "1/66"
-        },
-        "Chest (Rogues' Castle) Medium Wilderness Diary": {
-          "droprate": "1/66"
-        },
         "Zombie pirate Diary": {
           "droprate": "1/94.5"
         },
@@ -37887,12 +37863,6 @@
           "droprate": "3 × 1/21.333"
         },
         "Chest (Rogues' Castle)": {
-          "droprate": "1/8.25"
-        },
-        "Chest (Rogues' Castle) Hard Wilderness Diary": {
-          "droprate": "1/8.25"
-        },
-        "Chest (Rogues' Castle) Medium Wilderness Diary": {
           "droprate": "1/8.25"
         },
         "Elaborate lockbox": {
@@ -42669,12 +42639,6 @@
           "droprate": "1/64"
         },
         "Chest (Rogues' Castle)": {
-          "droprate": "1/66"
-        },
-        "Chest (Rogues' Castle) Hard Wilderness Diary": {
-          "droprate": "1/66"
-        },
-        "Chest (Rogues' Castle) Medium Wilderness Diary": {
           "droprate": "1/66"
         },
         "Bandit Level 130": {
@@ -47550,7 +47514,7 @@
       },
       "other": {
         "Smithing some Dragon keel parts": {
-          "notes": "Requires a Dragon metal sheet and a Hammer.",
+          "notes": "Requires a Dragon metal sheet, a Hammer and completion of Dragon Slayer II.",
           "rule": {
             "all": [
               {
@@ -47560,6 +47524,10 @@
               "canCompletePandemonium",
               {
                 "has": 2347
+              },
+              {
+                "skill": "Smithing",
+                "level": 94
               }
             ]
           }
@@ -48991,12 +48959,6 @@
           "droprate": "1/64"
         },
         "Chest (Rogues' Castle)": {
-          "droprate": "1/66"
-        },
-        "Chest (Rogues' Castle) Hard Wilderness Diary": {
-          "droprate": "1/66"
-        },
-        "Chest (Rogues' Castle) Medium Wilderness Diary": {
           "droprate": "1/66"
         },
         "Elite Black Knight": {
@@ -58201,6 +58163,11 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Trading Grandpa Jack": {
+          "notes": "Free roll."
+        }
       }
     }
   },
@@ -82477,12 +82444,6 @@
         "Chest (Rogues' Castle)": {
           "droprate": "1/66"
         },
-        "Chest (Rogues' Castle) Hard Wilderness Diary": {
-          "droprate": "1/66"
-        },
-        "Chest (Rogues' Castle) Medium Wilderness Diary": {
-          "droprate": "1/66"
-        },
         "Guard (H.A.M. Storerooms)": {
           "droprate": "1/83.333"
         },
@@ -83968,13 +83929,22 @@
     "name": "Jade machete",
     "image": "jade_machete.png",
     "sources": {
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
+      },
       "other": {
-        "Trading with Gabooty": {
-          "notes": "Requires Trading sticks.",
+        "Trading with Safta Doc": {
+          "notes": "Requires Trading sticks, a Gout tuber, a Jade and completion of Jungle potion",
           "rule": {
             "all": [
               {
                 "has": 6306
+              },
+              {
+                "has": 6311
+              },
+              {
+                "has": 1611
               },
               "canCompleteJunglePotion"
             ]
@@ -86998,13 +86968,20 @@
     "sources": {
       "other": {
         "Constructing Large adamant keel parts": {
-          "notes": "Requires Adamant keel parts.",
+          "notes": "Requires Adamant keel parts and a Hammer.",
           "rule": {
             "all": [
               {
                 "has": 32011
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Smithing",
+                "level": 74
+              },
+              {
+                "has": 2347
+              }
             ]
           }
         }
@@ -87019,13 +86996,20 @@
     "sources": {
       "other": {
         "Constructing Large bronze keel parts": {
-          "notes": "Requires Bronze keel parts.",
+          "notes": "Requires Bronze keel parts and a Hammer.",
           "rule": {
             "all": [
               {
                 "has": 31999
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Smithing",
+                "level": 10
+              },
+              {
+                "has": 2347
+              }
             ]
           }
         }
@@ -87072,13 +87056,20 @@
       },
       "other": {
         "Constructing Large dragon keel parts": {
-          "notes": "Requires Dragon keel parts.",
+          "notes": "Requires Dragon keel parts, a Hammer and completion of Dragon Slayer II.",
           "rule": {
             "all": [
               {
                 "has": 32017
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Smithing",
+                "level": 94
+              },
+              {
+                "has": 2347
+              }
             ]
           }
         }
@@ -87093,13 +87084,20 @@
     "sources": {
       "other": {
         "Constructing Large iron keel parts": {
-          "notes": "Requires Iron keel parts.",
+          "notes": "Requires Iron keel parts and a Hammer.",
           "rule": {
             "all": [
               {
                 "has": 32002
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Smithing",
+                "level": 22
+              },
+              {
+                "has": 2347
+              }
             ]
           }
         }
@@ -87156,13 +87154,20 @@
     "sources": {
       "other": {
         "Constructing Large mithril keel parts": {
-          "notes": "Requires Mithril keel parts.",
+          "notes": "Requires Mithril keel parts and a Hammer.",
           "rule": {
             "all": [
               {
                 "has": 32008
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Smithing",
+                "level": 56
+              },
+              {
+                "has": 2347
+              }
             ]
           }
         }
@@ -87248,13 +87253,20 @@
     "sources": {
       "other": {
         "Constructing Large rune keel parts": {
-          "notes": "Requires Rune keel parts.",
+          "notes": "Requires Rune keel parts and a Hammer.",
           "rule": {
             "all": [
               {
                 "has": 32014
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Smithing",
+                "level": 86
+              },
+              {
+                "has": 2347
+              }
             ]
           }
         }
@@ -87269,13 +87281,20 @@
     "sources": {
       "other": {
         "Constructing Large steel keel parts": {
-          "notes": "Requires Steel keel parts.",
+          "notes": "Requires Steel keel parts and a Hammer.",
           "rule": {
             "all": [
               {
                 "has": 32005
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Smithing",
+                "level": 38
+              },
+              {
+                "has": 2347
+              }
             ]
           }
         }
@@ -87996,12 +88015,6 @@
           "droprate": "1/5.627"
         },
         "Chest (Rogues' Castle)": {
-          "droprate": "1/6.6"
-        },
-        "Chest (Rogues' Castle) Hard Wilderness Diary": {
-          "droprate": "1/6.6"
-        },
-        "Chest (Rogues' Castle) Medium Wilderness Diary": {
           "droprate": "1/6.6"
         },
         "Lundail Easy Wilderness diary": {
@@ -102730,12 +102743,6 @@
         "Chest (Rogues' Castle)": {
           "droprate": "1/6"
         },
-        "Chest (Rogues' Castle) Hard Wilderness Diary": {
-          "droprate": "1/6"
-        },
-        "Chest (Rogues' Castle) Medium Wilderness Diary": {
-          "droprate": "1/6"
-        },
         "Lundail Easy Wilderness diary": {
           "droprate": "1/7"
         },
@@ -106940,13 +106947,22 @@
           "droprate": "1/19"
         }
       },
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
+      },
       "other": {
-        "Trading with Gabooty": {
-          "notes": "Requires Trading sticks.",
+        "Trading with Safta Doc": {
+          "notes": "Requires Trading sticks, a Gout tuber, an Opal and completion of Jungle potion",
           "rule": {
             "all": [
               {
                 "has": 6306
+              },
+              {
+                "has": 6311
+              },
+              {
+                "has": 1609
               },
               "canCompleteJunglePotion"
             ]
@@ -111460,12 +111476,6 @@
           "droprate": "1/14.222"
         },
         "Chest (Rogues' Castle)": {
-          "droprate": "1/33"
-        },
-        "Chest (Rogues' Castle) Hard Wilderness Diary": {
-          "droprate": "1/33"
-        },
-        "Chest (Rogues' Castle) Medium Wilderness Diary": {
           "droprate": "1/33"
         },
         "Tormented Demon": {
@@ -117316,12 +117326,6 @@
         "Chest (Rogues' Castle)": {
           "droprate": "1/6.6"
         },
-        "Chest (Rogues' Castle) Hard Wilderness Diary": {
-          "droprate": "1/6.6"
-        },
-        "Chest (Rogues' Castle) Medium Wilderness Diary": {
-          "droprate": "1/6.6"
-        },
         "Temple Spider": {
           "droprate": "1/12.5"
         },
@@ -117425,13 +117429,22 @@
     "name": "Red topaz machete",
     "image": "red_topaz_machete.png",
     "sources": {
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
+      },
       "other": {
-        "Trading with Gabooty": {
-          "notes": "Requires Trading sticks.",
+        "Trading with Safta Doc": {
+          "notes": "Requires Trading sticks, a Gout tuber, a Red topaz and completion of Jungle potion",
           "rule": {
             "all": [
               {
                 "has": 6306
+              },
+              {
+                "has": 6311
+              },
+              {
+                "has": 1613
               },
               "canCompleteJunglePotion"
             ]
@@ -150888,7 +150901,8 @@
       },
       "other": {
         "Sell gems to Gabooty": {
-          "notes": "Requires any gems."
+          "notes": "Requires any of: Uncut red topaz, Uncut opal, Uncut jade, Jade, Opal, Red topaz, or a Gout tuber.",
+          "rule": "canSellGemsToGabooty"
         },
         "Tai Bwo Wannai Cleanup": {
           "notes": "Reward from the minigame."
@@ -151425,18 +151439,8 @@
     "name": "Tribal top (blue)",
     "image": "tribal_top_(blue).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -151446,18 +151450,8 @@
     "name": "Tribal top (brown)",
     "image": "tribal_top_(brown).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -151467,18 +151461,8 @@
     "name": "Tribal top (pink)",
     "image": "tribal_top_(pink).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -151488,18 +151472,8 @@
     "name": "Tribal top (yellow)",
     "image": "tribal_top_(yellow).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -153080,12 +153054,6 @@
         "Chest (Rogues' Castle)": {
           "droprate": "1/22"
         },
-        "Chest (Rogues' Castle) Hard Wilderness Diary": {
-          "droprate": "1/22"
-        },
-        "Chest (Rogues' Castle) Medium Wilderness Diary": {
-          "droprate": "1/22"
-        },
         "Chest (Obor's lair)": {
           "droprate": "1/23.6"
         },
@@ -153590,12 +153558,6 @@
           "droprate": "1/32"
         },
         "Chest (Rogues' Castle)": {
-          "droprate": "1/33"
-        },
-        "Chest (Rogues' Castle) Hard Wilderness Diary": {
-          "droprate": "1/33"
-        },
-        "Chest (Rogues' Castle) Medium Wilderness Diary": {
           "droprate": "1/33"
         },
         "Phosani's Nightmare": {
@@ -154787,12 +154749,6 @@
           "droprate": "1/50"
         },
         "Chest (Rogues' Castle)": {
-          "droprate": "1/66"
-        },
-        "Chest (Rogues' Castle) Hard Wilderness Diary": {
-          "droprate": "1/66"
-        },
-        "Chest (Rogues' Castle) Medium Wilderness Diary": {
           "droprate": "1/66"
         },
         "Waterfiend": {
@@ -156429,12 +156385,6 @@
         },
         "Chest (Rogues' Castle)": {
           "droprate": "1/22"
-        },
-        "Chest (Rogues' Castle) Hard Wilderness Diary": {
-          "droprate": "1/22"
-        },
-        "Chest (Rogues' Castle) Medium Wilderness Diary": {
-          "droprate": "1/22"
         }
       }
     }
@@ -156445,18 +156395,8 @@
     "name": "Villager armband (blue)",
     "image": "villager_armband_(blue).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -156466,18 +156406,8 @@
     "name": "Villager armband (brown)",
     "image": "villager_armband_(brown).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -156487,18 +156417,8 @@
     "name": "Villager armband (pink)",
     "image": "villager_armband_(pink).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -156508,18 +156428,8 @@
     "name": "Villager armband (yellow)",
     "image": "villager_armband_(yellow).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -156529,18 +156439,8 @@
     "name": "Villager hat (blue)",
     "image": "villager_hat_(blue).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -156550,18 +156450,8 @@
     "name": "Villager hat (brown)",
     "image": "villager_hat_(brown).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -156571,18 +156461,8 @@
     "name": "Villager hat (pink)",
     "image": "villager_hat_(pink).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -156592,18 +156472,8 @@
     "name": "Villager hat (yellow)",
     "image": "villager_hat_(yellow).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -156613,18 +156483,8 @@
     "name": "Villager robe (blue)",
     "image": "villager_robe_(blue).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -156634,18 +156494,8 @@
     "name": "Villager robe (brown)",
     "image": "villager_robe_(brown).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -156655,18 +156505,8 @@
     "name": "Villager robe (pink)",
     "image": "villager_robe_(pink).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -156676,18 +156516,8 @@
     "name": "Villager robe (yellow)",
     "image": "villager_robe_(yellow).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -156697,18 +156527,8 @@
     "name": "Villager sandals (blue)",
     "image": "villager_sandals_(blue).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -156718,18 +156538,8 @@
     "name": "Villager sandals (brown)",
     "image": "villager_sandals_(brown).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -156739,18 +156549,8 @@
     "name": "Villager sandals (pink)",
     "image": "villager_sandals_(pink).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -156760,18 +156560,8 @@
     "name": "Villager sandals (yellow)",
     "image": "villager_sandals_(yellow).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
