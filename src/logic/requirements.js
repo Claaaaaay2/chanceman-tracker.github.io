@@ -1275,6 +1275,10 @@ export const REQUIREMENT_CHECKS = {
     canCompleteForgettableTale(ctx) {
         return canCompleteForgettableTale(ctx);
     },
+    canBuyFromGabootysStore(ctx) {
+        return has(ctx, 6306) //
+            && canCompleteJunglePotion(ctx);
+    },
     canReachAbyssalSire(ctx) {
         return !ctx.filters.isSlayerLocked //
             && (canCompleteEnterTheAbyss(ctx)

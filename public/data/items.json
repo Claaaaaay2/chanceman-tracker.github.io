@@ -83924,18 +83924,8 @@
     "name": "Jade machete",
     "image": "jade_machete.png",
     "sources": {
-      "other": {
-        "Trading with Gabooty": {
-          "notes": "Requires Trading sticks.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -106933,18 +106923,8 @@
           "droprate": "1/19"
         }
       },
-      "other": {
-        "Trading with Gabooty": {
-          "notes": "Requires Trading sticks.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -117406,18 +117386,8 @@
     "name": "Red topaz machete",
     "image": "red_topaz_machete.png",
     "sources": {
-      "other": {
-        "Trading with Gabooty": {
-          "notes": "Requires Trading sticks.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -151406,18 +151376,8 @@
     "name": "Tribal top (blue)",
     "image": "tribal_top_(blue).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -151427,18 +151387,8 @@
     "name": "Tribal top (brown)",
     "image": "tribal_top_(brown).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -151448,18 +151398,8 @@
     "name": "Tribal top (pink)",
     "image": "tribal_top_(pink).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -151469,18 +151409,8 @@
     "name": "Tribal top (yellow)",
     "image": "tribal_top_(yellow).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -156402,18 +156332,8 @@
     "name": "Villager armband (blue)",
     "image": "villager_armband_(blue).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -156423,18 +156343,8 @@
     "name": "Villager armband (brown)",
     "image": "villager_armband_(brown).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -156444,18 +156354,8 @@
     "name": "Villager armband (pink)",
     "image": "villager_armband_(pink).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -156465,18 +156365,8 @@
     "name": "Villager armband (yellow)",
     "image": "villager_armband_(yellow).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -156486,18 +156376,8 @@
     "name": "Villager hat (blue)",
     "image": "villager_hat_(blue).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -156507,18 +156387,8 @@
     "name": "Villager hat (brown)",
     "image": "villager_hat_(brown).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -156528,18 +156398,8 @@
     "name": "Villager hat (pink)",
     "image": "villager_hat_(pink).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -156549,18 +156409,8 @@
     "name": "Villager hat (yellow)",
     "image": "villager_hat_(yellow).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -156570,18 +156420,8 @@
     "name": "Villager robe (blue)",
     "image": "villager_robe_(blue).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -156591,18 +156431,8 @@
     "name": "Villager robe (brown)",
     "image": "villager_robe_(brown).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -156612,18 +156442,8 @@
     "name": "Villager robe (pink)",
     "image": "villager_robe_(pink).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -156633,18 +156453,8 @@
     "name": "Villager robe (yellow)",
     "image": "villager_robe_(yellow).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -156654,18 +156464,8 @@
     "name": "Villager sandals (blue)",
     "image": "villager_sandals_(blue).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -156675,18 +156475,8 @@
     "name": "Villager sandals (brown)",
     "image": "villager_sandals_(brown).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -156696,18 +156486,8 @@
     "name": "Villager sandals (pink)",
     "image": "villager_sandals_(pink).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
@@ -156717,18 +156497,8 @@
     "name": "Villager sandals (yellow)",
     "image": "villager_sandals_(yellow).png",
     "sources": {
-      "other": {
-        "Puchasing from Gabooty's store": {
-          "notes": "Requires Trading sticks and the completion of jungle potion.",
-          "rule": {
-            "all": [
-              {
-                "has": 6306
-              },
-              "canCompleteJunglePotion"
-            ]
-          }
-        }
+      "shops": {
+        "Yes": "canBuyFromGabootysStore"
       }
     }
   },
