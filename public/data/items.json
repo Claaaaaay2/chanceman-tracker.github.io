@@ -7584,77 +7584,41 @@
     "image": "amulet_of_avarice.png",
     "sources": {
       "drops": {
-        "Revenant cyclops Off-task": {
+        "Revenant cyclops": {
           "droprate": "1/16266.87; 1/8946.87"
         },
-        "Revenant cyclops On-task": {
-          "droprate": "1/3253.13; 1/1789.13"
-        },
-        "Revenant dark beast Off-task": {
+        "Revenant dark beast": {
           "droprate": "1/14666.85; 1/8066.85"
         },
-        "Revenant dark beast On-task": {
-          "droprate": "1/2933.15; 1/1613.15"
-        },
-        "Revenant demon Off-task": {
+        "Revenant demon": {
           "droprate": "1/16266.87; 1/8946.87"
         },
-        "Revenant demon On-task": {
-          "droprate": "1/3253.13; 1/1789.13"
-        },
-        "Revenant dragon Off-task": {
+        "Revenant dragon": {
           "droprate": "1/13333.5; 1/7333.5"
         },
-        "Revenant dragon On-task": {
-          "droprate": "1/2666.5; 1/1466.5"
-        },
-        "Revenant goblin Off-task": {
+        "Revenant goblin": {
           "droprate": "1/48867.28; 1/26877.28"
         },
-        "Revenant goblin On-task": {
-          "droprate": "1/9772.72; 1/5374.72"
-        },
-        "Revenant hellhound Off-task": {
+        "Revenant hellhound": {
           "droprate": "1/16266.87; 1/8946.87"
         },
-        "Revenant hellhound On-task": {
-          "droprate": "1/3253.13; 1/1789.13"
-        },
-        "Revenant hobgoblin Off-task": {
+        "Revenant hobgoblin": {
           "droprate": "1/20933.6; 1/11513.6"
         },
-        "Revenant hobgoblin On-task": {
-          "droprate": "1/4186.41; 1/2302.41"
-        },
-        "Revenant imp Off-task": {
+        "Revenant imp": {
           "droprate": "1/73334.25; 1/40334.25"
         },
-        "Revenant imp On-task": {
-          "droprate": "1/14665.75; 1/8065.75"
-        },
-        "Revenant knight Off-task": {
+        "Revenant knight": {
           "droprate": "1/13333.5; 1/7333.5"
         },
-        "Revenant knight On-task": {
-          "droprate": "1/2666.5; 1/1466.5"
-        },
-        "Revenant maledictus Off-task": {
+        "Revenant maledictus": {
           "droprate": "1/13333.5; 1/7333.5"
         },
-        "Revenant maledictus On-task": {
-          "droprate": "1/2666.5; 1/1466.5"
-        },
-        "Revenant ork Off-task": {
+        "Revenant ork": {
           "droprate": "1/14666.85; 1/8066.85"
         },
-        "Revenant ork On-task": {
-          "droprate": "1/2933.15; 1/1613.15"
-        },
-        "Revenant pyrefiend Off-task": {
+        "Revenant pyrefiend": {
           "droprate": "1/20933.6; 1/11513.6"
-        },
-        "Revenant pyrefiend On-task": {
-          "droprate": "1/4186.41; 1/2302.41"
         }
       }
     }
@@ -40678,77 +40642,41 @@
     "image": "craw's_bow_(u).png",
     "sources": {
       "drops": {
-        "Revenant cyclops Off-task": {
+        "Revenant cyclops": {
           "droprate": "1/32533.74; 1/17893.74"
         },
-        "Revenant cyclops On-task": {
-          "droprate": "1/6506.26; 1/3578.26"
-        },
-        "Revenant dark beast Off-task": {
+        "Revenant dark beast": {
           "droprate": "1/29333.7; 1/16133.7"
         },
-        "Revenant dark beast On-task": {
-          "droprate": "1/5866.3; 1/3226.3"
-        },
-        "Revenant demon Off-task": {
+        "Revenant demon": {
           "droprate": "1/32533.74; 1/17893.74"
         },
-        "Revenant demon On-task": {
-          "droprate": "1/6506.26; 1/3578.26"
-        },
-        "Revenant dragon Off-task": {
+        "Revenant dragon": {
           "droprate": "1/26667; 1/14667"
         },
-        "Revenant dragon On-task": {
-          "droprate": "1/5333; 1/2933"
-        },
-        "Revenant goblin Off-task": {
+        "Revenant goblin": {
           "droprate": "1/97734.56; 1/53754.56"
         },
-        "Revenant goblin On-task": {
-          "droprate": "1/19545.45; 1/10749.45"
-        },
-        "Revenant hellhound Off-task": {
+        "Revenant hellhound": {
           "droprate": "1/32533.74; 1/17893.74"
         },
-        "Revenant hellhound On-task": {
-          "droprate": "1/6506.26; 1/3578.26"
-        },
-        "Revenant hobgoblin Off-task": {
+        "Revenant hobgoblin": {
           "droprate": "1/41867.19; 1/23027.19"
         },
-        "Revenant hobgoblin On-task": {
-          "droprate": "1/8372.81; 1/4604.81"
-        },
-        "Revenant imp Off-task": {
+        "Revenant imp": {
           "droprate": "1/146668.5; 1/80668.5"
         },
-        "Revenant imp On-task": {
-          "droprate": "1/29331.5; 1/16131.5"
-        },
-        "Revenant knight Off-task": {
+        "Revenant knight": {
           "droprate": "1/26667; 1/14667"
         },
-        "Revenant knight On-task": {
-          "droprate": "1/5333; 1/2933"
-        },
-        "Revenant maledictus Off-task": {
+        "Revenant maledictus": {
           "droprate": "1/26667; 1/14667"
         },
-        "Revenant maledictus On-task": {
-          "droprate": "1/5333; 1/2933"
-        },
-        "Revenant ork Off-task": {
+        "Revenant ork": {
           "droprate": "1/29333.7; 1/16133.7"
         },
-        "Revenant ork On-task": {
-          "droprate": "1/5866.3; 1/3226.3"
-        },
-        "Revenant pyrefiend Off-task": {
+        "Revenant pyrefiend": {
           "droprate": "1/41867.19; 1/23027.19"
-        },
-        "Revenant pyrefiend On-task": {
-          "droprate": "1/8372.81; 1/4604.81"
         }
       }
     }
@@ -147538,77 +147466,41 @@
     "image": "thammaron's_sceptre_(u).png",
     "sources": {
       "drops": {
-        "Revenant cyclops Off-task": {
+        "Revenant cyclops": {
           "droprate": "1/32533.74; 1/17893.74"
         },
-        "Revenant cyclops On-task": {
-          "droprate": "1/6506.26; 1/3578.26"
-        },
-        "Revenant dark beast Off-task": {
+        "Revenant dark beast": {
           "droprate": "1/29333.7; 1/16133.7"
         },
-        "Revenant dark beast On-task": {
-          "droprate": "1/5866.3; 1/3226.3"
-        },
-        "Revenant demon Off-task": {
+        "Revenant demon": {
           "droprate": "1/32533.74; 1/17893.74"
         },
-        "Revenant demon On-task": {
-          "droprate": "1/6506.26; 1/3578.26"
-        },
-        "Revenant dragon Off-task": {
+        "Revenant dragon": {
           "droprate": "1/26667; 1/14667"
         },
-        "Revenant dragon On-task": {
-          "droprate": "1/5333; 1/2933"
-        },
-        "Revenant goblin Off-task": {
+        "Revenant goblin": {
           "droprate": "1/97734.56; 1/53754.56"
         },
-        "Revenant goblin On-task": {
-          "droprate": "1/19545.45; 1/10749.45"
-        },
-        "Revenant hellhound Off-task": {
+        "Revenant hellhound": {
           "droprate": "1/32533.74; 1/17893.74"
         },
-        "Revenant hellhound On-task": {
-          "droprate": "1/6506.26; 1/3578.26"
-        },
-        "Revenant hobgoblin Off-task": {
+        "Revenant hobgoblin": {
           "droprate": "1/41867.19; 1/23027.19"
         },
-        "Revenant hobgoblin On-task": {
-          "droprate": "1/8372.81; 1/4604.81"
-        },
-        "Revenant imp Off-task": {
+        "Revenant imp": {
           "droprate": "1/146668.5; 1/80668.5"
         },
-        "Revenant imp On-task": {
-          "droprate": "1/29331.5; 1/16131.5"
-        },
-        "Revenant knight Off-task": {
+        "Revenant knight": {
           "droprate": "1/26667; 1/14667"
         },
-        "Revenant knight On-task": {
-          "droprate": "1/5333; 1/2933"
-        },
-        "Revenant maledictus Off-task": {
+        "Revenant maledictus": {
           "droprate": "1/26667; 1/14667"
         },
-        "Revenant maledictus On-task": {
-          "droprate": "1/5333; 1/2933"
-        },
-        "Revenant ork Off-task": {
+        "Revenant ork": {
           "droprate": "1/29333.7; 1/16133.7"
         },
-        "Revenant ork On-task": {
-          "droprate": "1/5866.3; 1/3226.3"
-        },
-        "Revenant pyrefiend Off-task": {
+        "Revenant pyrefiend": {
           "droprate": "1/41867.19; 1/23027.19"
-        },
-        "Revenant pyrefiend On-task": {
-          "droprate": "1/8372.81; 1/4604.81"
         }
       }
     }
@@ -156235,77 +156127,41 @@
     "image": "viggora's_chainmace_(u).png",
     "sources": {
       "drops": {
-        "Revenant cyclops Off-task": {
+        "Revenant cyclops": {
           "droprate": "1/32533.74; 1/17893.74"
         },
-        "Revenant cyclops On-task": {
-          "droprate": "1/6506.26; 1/3578.26"
-        },
-        "Revenant dark beast Off-task": {
+        "Revenant dark beast": {
           "droprate": "1/29333.7; 1/16133.7"
         },
-        "Revenant dark beast On-task": {
-          "droprate": "1/5866.3; 1/3226.3"
-        },
-        "Revenant demon Off-task": {
+        "Revenant demon": {
           "droprate": "1/32533.74; 1/17893.74"
         },
-        "Revenant demon On-task": {
-          "droprate": "1/6506.26; 1/3578.26"
-        },
-        "Revenant dragon Off-task": {
+        "Revenant dragon": {
           "droprate": "1/26667; 1/14667"
         },
-        "Revenant dragon On-task": {
-          "droprate": "1/5333; 1/2933"
-        },
-        "Revenant goblin Off-task": {
+        "Revenant goblin": {
           "droprate": "1/97734.56; 1/53754.56"
         },
-        "Revenant goblin On-task": {
-          "droprate": "1/19545.45; 1/10749.45"
-        },
-        "Revenant hellhound Off-task": {
+        "Revenant hellhound": {
           "droprate": "1/32533.74; 1/17893.74"
         },
-        "Revenant hellhound On-task": {
-          "droprate": "1/6506.26; 1/3578.26"
-        },
-        "Revenant hobgoblin Off-task": {
+        "Revenant hobgoblin": {
           "droprate": "1/41867.19; 1/23027.19"
         },
-        "Revenant hobgoblin On-task": {
-          "droprate": "1/8372.81; 1/4604.81"
-        },
-        "Revenant imp Off-task": {
+        "Revenant imp": {
           "droprate": "1/146668.5; 1/80668.5"
         },
-        "Revenant imp On-task": {
-          "droprate": "1/29331.5; 1/16131.5"
-        },
-        "Revenant knight Off-task": {
+        "Revenant knight": {
           "droprate": "1/26667; 1/14667"
         },
-        "Revenant knight On-task": {
-          "droprate": "1/5333; 1/2933"
-        },
-        "Revenant maledictus Off-task": {
+        "Revenant maledictus": {
           "droprate": "1/26667; 1/14667"
         },
-        "Revenant maledictus On-task": {
-          "droprate": "1/5333; 1/2933"
-        },
-        "Revenant ork Off-task": {
+        "Revenant ork": {
           "droprate": "1/29333.7; 1/16133.7"
         },
-        "Revenant ork On-task": {
-          "droprate": "1/5866.3; 1/3226.3"
-        },
-        "Revenant pyrefiend Off-task": {
+        "Revenant pyrefiend": {
           "droprate": "1/41867.19; 1/23027.19"
-        },
-        "Revenant pyrefiend On-task": {
-          "droprate": "1/8372.81; 1/4604.81"
         }
       }
     }

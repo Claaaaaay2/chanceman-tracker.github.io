@@ -35,6 +35,7 @@ let memory = {
         hideIncompletableQuests: false,
         questSearch: "",
         clueSearch: "",
+        npcSearch: "",
         hideCompletableClues: false,
         hideIncompletableClues: false,
         hideCompletedDiaries: false,

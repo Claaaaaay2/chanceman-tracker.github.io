@@ -11926,40 +11926,8 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
-    "Revenant cyclops Off-task": {
-        "wiki": "https://oldschool.runescape.wiki/w/Revenant_cyclops#Off-task",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
-    "Revenant cyclops On-task": {
-        "wiki": "https://oldschool.runescape.wiki/w/Revenant_cyclops#On-task",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
     "Revenant dark beast": {
         "wiki": "https://oldschool.runescape.wiki/w/Revenant_dark_beast",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
-    "Revenant dark beast Off-task": {
-        "wiki": "https://oldschool.runescape.wiki/w/Revenant_dark_beast#Off-task",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
-    "Revenant dark beast On-task": {
-        "wiki": "https://oldschool.runescape.wiki/w/Revenant_dark_beast#On-task",
         "rule": null,
         "skill": [],
         "level": [],
@@ -11974,40 +11942,8 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
-    "Revenant demon Off-task": {
-        "wiki": "https://oldschool.runescape.wiki/w/Revenant_demon#Off-task",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
-    "Revenant demon On-task": {
-        "wiki": "https://oldschool.runescape.wiki/w/Revenant_demon#On-task",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
     "Revenant dragon": {
         "wiki": "https://oldschool.runescape.wiki/w/Revenant_dragon",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
-    "Revenant dragon Off-task": {
-        "wiki": "https://oldschool.runescape.wiki/w/Revenant_dragon#Off-task",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
-    "Revenant dragon On-task": {
-        "wiki": "https://oldschool.runescape.wiki/w/Revenant_dragon#On-task",
         "rule": null,
         "skill": [],
         "level": [],
@@ -12022,40 +11958,8 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
-    "Revenant goblin Off-task": {
-        "wiki": "https://oldschool.runescape.wiki/w/Revenant_goblin#Off-task",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
-    "Revenant goblin On-task": {
-        "wiki": "https://oldschool.runescape.wiki/w/Revenant_goblin#On-task",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
     "Revenant hellhound": {
         "wiki": "https://oldschool.runescape.wiki/w/Revenant_hellhound",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
-    "Revenant hellhound Off-task": {
-        "wiki": "https://oldschool.runescape.wiki/w/Revenant_hellhound#Off-task",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
-    "Revenant hellhound On-task": {
-        "wiki": "https://oldschool.runescape.wiki/w/Revenant_hellhound#On-task",
         "rule": null,
         "skill": [],
         "level": [],
@@ -12070,40 +11974,8 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
-    "Revenant hobgoblin Off-task": {
-        "wiki": "https://oldschool.runescape.wiki/w/Revenant_hobgoblin#Off-task",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
-    "Revenant hobgoblin On-task": {
-        "wiki": "https://oldschool.runescape.wiki/w/Revenant_hobgoblin#On-task",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
     "Revenant imp": {
         "wiki": "https://oldschool.runescape.wiki/w/Revenant_imp",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
-    "Revenant imp Off-task": {
-        "wiki": "https://oldschool.runescape.wiki/w/Revenant_imp#Off-task",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
-    "Revenant imp On-task": {
-        "wiki": "https://oldschool.runescape.wiki/w/Revenant_imp#On-task",
         "rule": null,
         "skill": [],
         "level": [],
@@ -12118,40 +11990,8 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
-    "Revenant knight Off-task": {
-        "wiki": "https://oldschool.runescape.wiki/w/Revenant_knight#Off-task",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
-    "Revenant knight On-task": {
-        "wiki": "https://oldschool.runescape.wiki/w/Revenant_knight#On-task",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
     "Revenant maledictus": {
         "wiki": "https://oldschool.runescape.wiki/w/Revenant_maledictus",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
-    "Revenant maledictus Off-task": {
-        "wiki": "https://oldschool.runescape.wiki/w/Revenant_maledictus#Off-task",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
-    "Revenant maledictus On-task": {
-        "wiki": "https://oldschool.runescape.wiki/w/Revenant_maledictus#On-task",
         "rule": null,
         "skill": [],
         "level": [],
@@ -12166,40 +12006,8 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
-    "Revenant ork Off-task": {
-        "wiki": "https://oldschool.runescape.wiki/w/Revenant_ork#Off-task",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
-    "Revenant ork On-task": {
-        "wiki": "https://oldschool.runescape.wiki/w/Revenant_ork#On-task",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
     "Revenant pyrefiend": {
         "wiki": "https://oldschool.runescape.wiki/w/Revenant_pyrefiend",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
-    "Revenant pyrefiend Off-task": {
-        "wiki": "https://oldschool.runescape.wiki/w/Revenant_pyrefiend#Off-task",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
-    "Revenant pyrefiend On-task": {
-        "wiki": "https://oldschool.runescape.wiki/w/Revenant_pyrefiend#On-task",
         "rule": null,
         "skill": [],
         "level": [],

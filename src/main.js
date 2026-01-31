@@ -521,6 +521,9 @@ export function afterRoute() {
     if (typeof initItemHistoryPage === "function") {
         initItemHistoryPage();
     }
+    if (typeof initNpcsPage === "function") {
+        initNpcsPage();
+    }
 }
 
 async function shouldHideForClueFilter(item, ctx) {

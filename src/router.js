@@ -3,6 +3,7 @@ import { Header } from "./components/header.js";
 import { afterRoute } from "./main.js";
 import ItemPage from "./pages/item.js";
 import ItemsPage from "./pages/items.js";
+import NpcsPage from "./pages/npcs.js";
 import NotFoundPage from "./pages/notFound.js";
 import QuestsPage from "./pages/quests.js";
 import AchievementDiariesPage from "./pages/achievementDiaries.js";
@@ -51,6 +52,7 @@ export async function router() {
     const routes = {
         "/": UploadPage,
         "/items": ItemsPage,
+        "/npcs": NpcsPage,
         "/item": ItemPage,
         "/item-history": ItemHistoryPage,
         "/achievement-diaries": AchievementDiariesPage,
