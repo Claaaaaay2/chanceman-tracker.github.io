@@ -150839,7 +150839,8 @@
       },
       "other": {
         "Sell gems to Gabooty": {
-          "notes": "Requires any gems."
+          "notes": "Requires any of: Uncut red topaz, Uncut opal, Uncut jade, Jade, Opal, Red topaz, or a Gout tuber.",
+          "rule": "canSellGemsToGabooty"
         },
         "Tai Bwo Wannai Cleanup": {
           "notes": "Reward from the minigame."

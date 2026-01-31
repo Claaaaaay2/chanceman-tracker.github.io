@@ -1279,6 +1279,17 @@ export const REQUIREMENT_CHECKS = {
         return has(ctx, 6306) //
             && canCompleteJunglePotion(ctx);
     },
+    canSellGemsToGabooty(ctx) {
+        return hasAnyItems(ctx, [
+            1629, // Uncut red topaz
+            1625, // Uncut opal
+            1627, // Uncut jade
+            1611, // Jade
+            1609, // Opal
+            1613, // Red topaz
+            6311  // Gout tuber
+        ]);
+    },
     canReachAbyssalSire(ctx) {
         return !ctx.filters.isSlayerLocked //
             && (canCompleteEnterTheAbyss(ctx)
