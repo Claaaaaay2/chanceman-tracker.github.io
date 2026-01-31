@@ -408,8 +408,13 @@ body.route-loading .route-loading-overlay {
     color: var(--highlight-color);
     border-radius: 6px;
     position: relative;
+    overflow: visible;
+}
+
+.item-card-name {
+    display: block;
+    white-space: nowrap;
     overflow: hidden;
-    text-wrap: nowrap;
     text-overflow: ellipsis;
 }
 
@@ -892,6 +897,51 @@ body.route-loading .route-loading-overlay {
 .toggle-switch input:focus+.toggle-slider {
     outline: 2px solid var(--highlight-color);
     outline-offset: 2px;
+}
+
+
+.item-tooltip {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    margin-top: 6px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color-darker);
+    border-radius: 6px;
+    padding: 0.5rem 0.6rem;
+    width: 240px;
+    max-width: 260px;
+    z-index: 20;
+    color: var(--text-color);
+    pointer-events: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.item-card:hover .item-tooltip {
+    display: block;
+}
+
+.item-tooltip-title {
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+    color: var(--highlight-color);
+}
+
+.item-tooltip-list {
+    margin: 0;
+    padding-left: 1.1rem;
+    font-size: 0.8rem;
+}
+
+.item-tooltip-list li {
+    margin: 0;
+}
+
+.item-tooltip-empty {
+    font-size: 0.8rem;
+    opacity: 0.8;
 }
 
 /* End items.js */

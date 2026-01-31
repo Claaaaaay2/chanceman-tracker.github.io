@@ -115,6 +115,14 @@ async function computeAllRanksOnce(items, ctx) {
 
 
 
+function escapeHtml(value) {
+    return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+}
+
 function initLazyImages() {
     const lazyImages = document.querySelectorAll("img.lazy-img");
 
@@ -229,6 +237,80 @@ window.initItemsPage = async function () {
         for (const config of checkboxConfigs) {
             checkboxElements[config.key].disabled = disabled;
         }
+    }
+
+    function getOtherSourceRule(source) {
+        if (!source) return null;
+        let rule = source.rule;
+        if (source.tags?.includes("house") && source.houseRule && !fileStore.filters.allowOthersHouses) {
+            rule = {
+                all: [
+                    rule,
+                    source.houseRule
+                ]
+            };
+        }
+        return rule;
+    }
+
+    async function getObtainableSources(item, ctx, rolled) {
+        const sources = [];
+
+        if (item.sources?.drops) {
+            for (const npcName of Object.keys(item.sources.drops)) {
+                if (await isNpcObtainable(npcName, ctx)) {
+                    sources.push(`Drop: ${npcName}`);
+                }
+            }
+        }
+
+        if (item.sources?.other) {
+            for (const [name, source] of Object.entries(item.sources.other)) {
+                if (isSourceHiddenByFilters(source, ctx)) continue;
+                const rule = getOtherSourceRule(source);
+                if (!rule || rule === "No requirements" || await evaluateRule(rule, ctx)) {
+                    sources.push(name);
+                }
+            }
+        }
+
+        if (rolled.includes(item.id) && item.sources?.shops) {
+            for (const shopName of Object.keys(item.sources.shops)) {
+                sources.push(`Shop: ${shopName}`);
+            }
+        }
+
+        if (rolled.includes(item.id) && item.sources?.spawns) {
+            for (const spawnName of Object.keys(item.sources.spawns)) {
+                sources.push(`Spawn: ${spawnName}`);
+            }
+        }
+
+        return sources;
+    }
+
+    async function buildTooltipHtml(item, ctx, rolled) {
+        const sources = await getObtainableSources(item, ctx, rolled);
+        if (!sources.length) {
+            return `
+                <div class="item-tooltip">
+                    <div class="item-tooltip-title">Obtainable sources</div>
+                    <div class="item-tooltip-empty">None for current filters</div>
+                </div>
+            `;
+        }
+
+        const list = sources
+            .sort((a, b) => a.localeCompare(b))
+            .map((source) => `<li>${escapeHtml(source)}</li>`)
+            .join("");
+
+        return `
+            <div class="item-tooltip">
+                <div class="item-tooltip-title">Obtainable sources</div>
+                <ul class="item-tooltip-list">${list}</ul>
+            </div>
+        `;
     }
 
     function setLoading(isLoading) {
@@ -439,12 +521,14 @@ window.initItemsPage = async function () {
                 const isObtained = obtained.includes(item.id);
                 const isRolled = rolled.includes(item.id);
 
+                const tooltipHtml = await buildTooltipHtml(item, fileStore, rolled);
                 html += `
                     <div class="item-card" onclick="navigate('/item?id=${item.id}')">
                         ${isObtained ? `<span class="badge obtained">Obtained</span>` : ""}
                         ${isRolled ? `<span class="badge rolled">Rolled</span>` : ""}
                         <img class="lazy-img item-image" data-src="/images/${item.image}" src="/images/placeholder.png">
-                        ${item.name}
+                        <span class="item-card-name">${item.name}</span>
+                        ${tooltipHtml}
                     </div>
                 `;
             }
