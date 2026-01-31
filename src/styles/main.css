@@ -111,6 +111,15 @@ button:hover {
     border-bottom: 1px solid var(--border-color);
     background-color: var(--header-footer-color);
     z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem 0.8rem;
+}
+
+.header-nav {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
 }
 
 .header a {
@@ -125,10 +134,68 @@ button:hover {
     color: var(--highlight-color);
 }
 
-.playerName {
-    float: right;
-    margin-right: 20px;
+.header-separator {
+    display: none;
 }
+
+.nav-menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.2rem 0.5rem;
+    line-height: 1.2;
+}
+
+.menu-caret {
+    font-size: 0.85em;
+    opacity: 0.8;
+}
+
+.header-links {
+    display: none;
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    min-width: 220px;
+    width: max-content;
+    max-width: calc(100vw - 20px);
+    background: var(--header-footer-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 0.25rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    z-index: 1100;
+    overflow: hidden;
+}
+
+
+.header-links a {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0.35rem 0.5rem;
+    border-radius: 4px;
+    color: inherit;
+}
+
+.header-links a:hover {
+    background-color: var(--table-alternate-row);
+}
+.header.is-menu-open .header-links {
+    display: flex;
+}
+
+.playerName {
+    margin-left: auto;
+    margin-right: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
 
 .items-header {
     display: flex;
