@@ -3114,7 +3114,7 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
+        "f2p": true
     },
     "Chaos rune pack": {
         "wiki": "https://oldschool.runescape.wiki/w/Chaos_rune_pack",
