@@ -83926,6 +83926,25 @@
     "sources": {
       "shops": {
         "Yes": "canBuyFromGabootysStore"
+      },
+      "other": {
+        "Trading with Safta Doc": {
+          "notes": "Requires Trading sticks, a Gout tuber, a Jade and completion of Jungle potion",
+          "rule": {
+            "all": [
+              {
+                "has": 6306
+              },
+              {
+                "has": 6311
+              },
+              {
+                "has": 1611
+              },
+              "canCompleteJunglePotion"
+            ]
+          }
+        }
       }
     }
   },
@@ -106925,6 +106944,25 @@
       },
       "shops": {
         "Yes": "canBuyFromGabootysStore"
+      },
+      "other": {
+        "Trading with Safta Doc": {
+          "notes": "Requires Trading sticks, a Gout tuber, an Opal and completion of Jungle potion",
+          "rule": {
+            "all": [
+              {
+                "has": 6306
+              },
+              {
+                "has": 6311
+              },
+              {
+                "has": 1609
+              },
+              "canCompleteJunglePotion"
+            ]
+          }
+        }
       }
     }
   },
@@ -117388,6 +117426,25 @@
     "sources": {
       "shops": {
         "Yes": "canBuyFromGabootysStore"
+      },
+      "other": {
+        "Trading with Safta Doc": {
+          "notes": "Requires Trading sticks, a Gout tuber, a Red topaz and completion of Jungle potion",
+          "rule": {
+            "all": [
+              {
+                "has": 6306
+              },
+              {
+                "has": 6311
+              },
+              {
+                "has": 1613
+              },
+              "canCompleteJunglePotion"
+            ]
+          }
+        }
       }
     }
   },
