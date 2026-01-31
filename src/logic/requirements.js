@@ -61,6 +61,143 @@ function hasClueSpadeRequirement(ctx) {
     ]);
 }
 
+const DIARY_SKILL_OVERRIDES = {
+    Woodcutting: "overrideWoodcutting",
+    Mining: "overrideMining",
+    Fishing: "overrideFishing",
+    Cooking: "overrideCooking",
+    Farming: "overrideFarming",
+    Fletching: "overrideFletching",
+    Crafting: "overrideCrafting",
+    Construction: "overrideConstruction"
+};
+
+let achievementDiaryDataPromise = null;
+
+async function loadAchievementDiaryData() {
+    if (achievementDiaryDataPromise) return achievementDiaryDataPromise;
+    achievementDiaryDataPromise = (async () => {
+        try {
+            const response = await fetch("/data/achievement_diaries.json");
+            if (!response.ok) return null;
+            return await response.json();
+        } catch (err) {
+            return null;
+        }
+    })();
+    return achievementDiaryDataPromise;
+}
+
+function hasDiarySkillRequirement(ctx, skill, level) {
+    const overrideKey = DIARY_SKILL_OVERRIDES[skill];
+    if (overrideKey && ctx.filters?.[overrideKey]) return true;
+    const current = ctx.player?.levels?.[skill];
+    return typeof current === "number" && current >= level;
+}
+
+function hasDiaryQuestRequirement(ctx, questName, requirementType) {
+    const status = ctx.player?.quests?.[questName] ?? 0;
+    if (requirementType === "completed") return status === 2;
+    if (requirementType === "started") return status > 0;
+    return false;
+}
+
+function hasDiaryItemRequirement(ctx, item) {
+    if (!item?.id) return false;
+    const obtained = ctx.obtained || [];
+    const rolled = ctx.rolled || [];
+    return obtained.includes(item.id) && rolled.includes(item.id);
+}
+
+function normalizeDiaryItemGroup(group) {
+    return (group || []).map((entry) => {
+        if (typeof entry === "number") return { id: entry };
+        if (typeof entry === "object") return entry;
+        return { name: String(entry) };
+    });
+}
+
+async function diaryRequirementsMet(requirements, ctx) {
+    for (const [skill, level] of Object.entries(requirements?.skills || {})) {
+        if (!hasDiarySkillRequirement(ctx, skill, level)) {
+            return false;
+        }
+    }
+
+    for (const [questName, requirementType] of Object.entries(requirements?.quests || {})) {
+        if (!hasDiaryQuestRequirement(ctx, questName, requirementType)) {
+            return false;
+        }
+    }
+
+    for (const item of requirements?.items || []) {
+        if (!hasDiaryItemRequirement(ctx, item)) {
+            return false;
+        }
+    }
+
+    for (const group of requirements?.itemsAny || []) {
+        const normalizedGroup = normalizeDiaryItemGroup(group);
+        const hasAny = normalizedGroup.some((entry) => hasDiaryItemRequirement(ctx, entry));
+        if (!hasAny) {
+            return false;
+        }
+    }
+
+    for (const ruleKey of requirements?.rulesAll || []) {
+        const ruleFn = REQUIREMENT_CHECKS[ruleKey];
+        if (!ruleFn) return false;
+        if (!(await ruleFn(ctx))) {
+            return false;
+        }
+    }
+
+    const anyRules = requirements?.rulesAny || [];
+    if (anyRules.length) {
+        let anyMet = false;
+        for (const ruleKey of anyRules) {
+            const ruleFn = REQUIREMENT_CHECKS[ruleKey];
+            if (!ruleFn) continue;
+            if (await ruleFn(ctx)) {
+                anyMet = true;
+                break;
+            }
+        }
+        if (!anyMet) {
+            return false;
+        }
+    }
+
+    if (requirements?.untracked?.length) {
+        return false;
+    }
+
+    return true;
+}
+
+async function canCompleteDiaryTier(ctx, diaryName, tierName) {
+    if (!ctx?.player) return false;
+
+    const diaryState = ctx.player?.achievementDiaries?.[diaryName]?.[tierName];
+    if (diaryState?.complete) return true;
+
+    const data = await loadAchievementDiaryData();
+    const tasks = data?.diaries?.[diaryName]?.[tierName];
+    if (!Array.isArray(tasks) || !tasks.length) {
+        return false;
+    }
+
+    for (let index = 0; index < tasks.length; index++) {
+        const task = tasks[index];
+        const isCompleted = Boolean(diaryState?.tasks?.[index]);
+        if (isCompleted) continue;
+        const met = await diaryRequirementsMet(task?.requirements, ctx);
+        if (!met) return false;
+    }
+
+    return true;
+}
+
 function allTrue(checks) {
     let ok = true;
     for (const check of checks) {
@@ -931,29 +1068,41 @@ export const REQUIREMENT_CHECKS = {
     canDoMageTrainingArena(ctx) {
         return canDoMageTrainingArena(ctx);
     },
-    canCompleteVarrockDiaryEasy(ctx) {
-        return ctx.player.achievementDiaries.Varrock.Easy.complete;
+    async canCompleteVarrockDiaryEasy(ctx) {
+        return await canCompleteDiaryTier(ctx, "Varrock", "Easy");
     },
-    canCompleteVarrockDiaryMedium(ctx) {
-        return ctx.player.achievementDiaries.Varrock.Medium.complete;
+    async canCompleteVarrockDiaryMedium(ctx) {
+        return await canCompleteDiaryTier(ctx, "Varrock", "Easy")
+            && await canCompleteDiaryTier(ctx, "Varrock", "Medium");
     },
-    canCompleteVarrockDiaryHard(ctx) {
-        return ctx.player.achievementDiaries.Varrock.Hard.complete;
+    async canCompleteVarrockDiaryHard(ctx) {
+        return await canCompleteDiaryTier(ctx, "Varrock", "Easy")
+            && await canCompleteDiaryTier(ctx, "Varrock", "Medium")
+            && await canCompleteDiaryTier(ctx, "Varrock", "Hard");
     },
-    canCompleteVarrockDiaryElite(ctx) {
-        return ctx.player.achievementDiaries.Varrock.Elite.complete;
+    async canCompleteVarrockDiaryElite(ctx) {
+        return await canCompleteDiaryTier(ctx, "Varrock", "Easy")
+            && await canCompleteDiaryTier(ctx, "Varrock", "Medium")
+            && await canCompleteDiaryTier(ctx, "Varrock", "Hard")
+            && await canCompleteDiaryTier(ctx, "Varrock", "Elite");
     },
-    canCompleteWildernessDiaryEasy(ctx) {
-        return ctx.player.achievementDiaries.Wilderness.Easy.complete;
+    async canCompleteWildernessDiaryEasy(ctx) {
+        return await canCompleteDiaryTier(ctx, "Wilderness", "Easy");
     },
-    canCompleteWildernessDiaryMedium(ctx) {
-        return ctx.player.achievementDiaries.Wilderness.Medium.complete;
+    async canCompleteWildernessDiaryMedium(ctx) {
+        return await canCompleteDiaryTier(ctx, "Wilderness", "Easy")
+            && await canCompleteDiaryTier(ctx, "Wilderness", "Medium");
     },
-    canCompleteWildernessDiaryHard(ctx) {
-        return ctx.player.achievementDiaries.Wilderness.Hard.complete;
+    async canCompleteWildernessDiaryHard(ctx) {
+        return await canCompleteDiaryTier(ctx, "Wilderness", "Easy")
+            && await canCompleteDiaryTier(ctx, "Wilderness", "Medium")
+            && await canCompleteDiaryTier(ctx, "Wilderness", "Hard");
     },
-    canCompleteWildernessDiaryElite(ctx) {
-        return ctx.player.achievementDiaries.Wilderness.Elite.complete;
+    async canCompleteWildernessDiaryElite(ctx) {
+        return await canCompleteDiaryTier(ctx, "Wilderness", "Easy")
+            && await canCompleteDiaryTier(ctx, "Wilderness", "Medium")
+            && await canCompleteDiaryTier(ctx, "Wilderness", "Hard")
+            && await canCompleteDiaryTier(ctx, "Wilderness", "Elite");
     },
     canDoTombsOfAmascut(ctx) {
         return canDoTombsOfAmascut(ctx);
