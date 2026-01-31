@@ -897,7 +897,7 @@ export const NPC_DATA = {
     },
     "Artio": {
         "wiki": "https://oldschool.runescape.wiki/w/Artio",
-        "rule": ["canCompleteWildernessDiaryMedium"],
+        "rule": ["canCompleteWildernessDiaryHard"],
         "skill": [],
         "level": [],
         "tags": ["boss"],
@@ -2689,7 +2689,7 @@ export const NPC_DATA = {
     },
     "Callisto": {
         "wiki": "https://oldschool.runescape.wiki/w/Callisto",
-        "rule": null,
+        "rule": ["canCompleteWildernessDiaryMedium"],
         "skill": [],
         "level": [],
         "tags": ["boss"],
@@ -2724,7 +2724,7 @@ export const NPC_DATA = {
     },
     "Calvar'ion": {
         "wiki": "https://oldschool.runescape.wiki/w/Calvar%27ion",
-        "rule": ["canCompleteWildernessDiaryMedium"],
+        "rule": ["canCompleteWildernessDiaryHard"],
         "skill": [],
         "level": [],
         "tags": ["boss"],
@@ -3385,23 +3385,7 @@ export const NPC_DATA = {
     },
     "Chest (Rogues' Castle)": {
         "wiki": "https://oldschool.runescape.wiki/w/Chest_(Rogues%27_Castle)",
-        "rule": null,
-        "skill": ["thieving"],
-        "level": [84],
-        "tags": [],
-        "f2p": false
-    },
-    "Chest (Rogues' Castle) Hard Wilderness Diary": {
-        "wiki": "https://oldschool.runescape.wiki/w/Chest_(Rogues%27_Castle)#Hard_Wilderness_Diary",
-        "rule": null,
-        "skill": ["thieving"],
-        "level": [84],
-        "tags": [],
-        "f2p": false
-    },
-    "Chest (Rogues' Castle) Medium Wilderness Diary": {
-        "wiki": "https://oldschool.runescape.wiki/w/Chest_(Rogues%27_Castle)#Medium_Wilderness_Diary",
-        "rule": null,
+        "rule": ["canCompleteWildernessDiaryMedium"],
         "skill": ["thieving"],
         "level": [84],
         "tags": [],
@@ -14346,7 +14330,7 @@ export const NPC_DATA = {
     },
     "Spindel": {
         "wiki": "https://oldschool.runescape.wiki/w/Spindel",
-        "rule": ["canCompleteWildernessDiaryMedium"],
+        "rule": ["canCompleteWildernessDiaryHard"],
         "skill": [],
         "level": [],
         "tags": ["boss"],
@@ -15859,7 +15843,7 @@ export const NPC_DATA = {
     },
     "Venenatis": {
         "wiki": "https://oldschool.runescape.wiki/w/Venenatis",
-        "rule": null,
+        "rule": ["canCompleteWildernessDiaryMedium"],
         "skill": [],
         "level": [],
         "tags": ["boss"],
@@ -15875,7 +15859,7 @@ export const NPC_DATA = {
     },
     "Vet'ion": {
         "wiki": "https://oldschool.runescape.wiki/w/Vet%27ion",
-        "rule": null,
+        "rule": ["canCompleteWildernessDiaryMedium"],
         "skill": [],
         "level": [],
         "tags": ["boss"],
