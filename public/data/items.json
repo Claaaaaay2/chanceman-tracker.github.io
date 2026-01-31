@@ -58163,6 +58163,11 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Trading Grandpa Jack": {
+          "notes": "Free roll."
+        }
       }
     }
   },
