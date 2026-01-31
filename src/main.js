@@ -91,6 +91,8 @@ window.initItemsPage = async function () {
         searchInput: document.getElementById("itemSearch"),
         hunterRumoursCompleted: document.getElementById("hunterRumoursCompleted"),
         filterToggle: document.getElementById("filter-overrides-toggle"),
+        importButton: document.getElementById("import-item-filters"),
+        importInput: document.getElementById("import-item-filters-input"),
         loading: document.getElementById("itemsLoading"),
         grid: document.getElementById("itemGrid")
     };
@@ -128,18 +130,23 @@ window.initItemsPage = async function () {
     }
 
     const missingElement = !elements.searchInput || !elements.hunterRumoursCompleted || !elements.grid || !elements.loading
+        || !elements.importButton || !elements.importInput
         || checkboxConfigs.some((config) => !checkboxElements[config.key]);
     if (missingElement) {
         setTimeout(initItemsPage, 0);
         return;
     }
 
-    const f = fileStore.filters;
-    elements.searchInput.value = f.search ?? "";
-    elements.hunterRumoursCompleted.value = f.hunterRumoursCompleted ?? 0;
-    for (const config of checkboxConfigs) {
-        checkboxElements[config.key].checked = f[config.key] ?? config.defaultValue;
+    function applyFiltersToUI(filters) {
+        elements.searchInput.value = filters.search ?? "";
+        elements.hunterRumoursCompleted.value = filters.hunterRumoursCompleted ?? 0;
+        for (const config of checkboxConfigs) {
+            checkboxElements[config.key].checked = filters[config.key] ?? config.defaultValue;
+        }
     }
+
+    const f = fileStore.filters;
+    applyFiltersToUI(f);
 
     function readFiltersFromUI() {
         const otherDropsToggle = document.getElementById("otherDropsSortByDroprate");
@@ -165,6 +172,12 @@ window.initItemsPage = async function () {
         if (elements.filterToggle) {
             elements.filterToggle.disabled = disabled;
         }
+        if (elements.importButton) {
+            elements.importButton.disabled = disabled;
+        }
+        if (elements.importInput) {
+            elements.importInput.disabled = disabled;
+        }
         for (const config of checkboxConfigs) {
             checkboxElements[config.key].disabled = disabled;
         }
@@ -174,6 +187,63 @@ window.initItemsPage = async function () {
         elements.loading.classList.toggle("active", isLoading);
         elements.grid.style.display = isLoading ? "none" : "";
         setInputsDisabled(isLoading);
+    }
+
+    async function importFiltersFromFile(file) {
+        let parsed = null;
+        try {
+            parsed = JSON.parse(await file.text());
+        } catch (err) {
+            alert("Could not parse that file. Please import a valid JSON filters file.");
+            return;
+        }
+
+        if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
+            alert("The imported filters file must be a JSON object.");
+            return;
+        }
+
+        const previousFilters = fileStore.filters || {};
+        const nextFilters = { ...previousFilters, ...parsed };
+
+        if (typeof nextFilters.hunterRumoursCompleted === "string") {
+            const trimmed = nextFilters.hunterRumoursCompleted.trim();
+            if (trimmed === "") {
+                nextFilters.hunterRumoursCompleted = 0;
+            } else {
+                const parsedNumber = Number(trimmed);
+                nextFilters.hunterRumoursCompleted = Number.isNaN(parsedNumber)
+                    ? (previousFilters.hunterRumoursCompleted ?? 0)
+                    : parsedNumber;
+            }
+        }
+
+        await fileStore.setFilters(nextFilters);
+        applyFiltersToUI(nextFilters);
+
+        const f2pChanged = previousFilters.isFreeToPlay !== nextFilters.isFreeToPlay;
+        const hunterChanged = (previousFilters.hunterRumoursCompleted ?? 0) != (nextFilters.hunterRumoursCompleted ?? 0);
+        let shouldInvalidate = hunterChanged;
+
+        for (const config of checkboxConfigs) {
+            if (!config.invalidate) continue;
+            if (previousFilters[config.key] !== nextFilters[config.key]) {
+                shouldInvalidate = true;
+                break;
+            }
+        }
+
+        if (f2pChanged) {
+            invalidateLogicCaches(fileStore);
+            await router();
+            return;
+        }
+
+        if (shouldInvalidate) {
+            invalidateLogicCaches(fileStore);
+        }
+
+        renderItems();
     }
 
     async function renderItems() {
@@ -356,6 +426,20 @@ window.initItemsPage = async function () {
     elements.searchInput.addEventListener("input", () => {
         saveFilters();
         renderItems();
+    });
+
+    elements.importButton.addEventListener("click", () => {
+        elements.importInput.click();
+    });
+
+    elements.importInput.addEventListener("change", async () => {
+        const file = elements.importInput.files?.[0];
+        if (!file) return;
+        try {
+            await importFiltersFromFile(file);
+        } finally {
+            elements.importInput.value = "";
+        }
     });
 
     for (const config of checkboxConfigs) {

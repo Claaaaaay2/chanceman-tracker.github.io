@@ -146,6 +146,13 @@ button:hover {
     align-self: end;
 }
 
+#import-item-filters {
+    padding: 0.25rem 0.5rem;
+    margin-bottom: 0.33rem;
+    line-height: 1.2;
+    align-self: end;
+}
+
 /* End header.js */
 
 /* For footer.js */

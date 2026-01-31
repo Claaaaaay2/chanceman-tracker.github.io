@@ -37,6 +37,10 @@ let memory = {
         clueSearch: "",
         hideCompletableClues: false,
         hideIncompletableClues: false,
+        hideCompletedDiaries: false,
+        showOnlyCompletableTiers: false,
+        hazeelCultLocked: false,
+        hideIncompletableDiaries: false,
         hasDoneEasterEvent: false
     },
     player: null,

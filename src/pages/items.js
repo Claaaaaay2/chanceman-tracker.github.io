@@ -9,6 +9,15 @@ export default async function ItemsPage() {
             <button id="filter-overrides-toggle" title="Toggle filters and overrides">
                 Hide filters and overrides
             </button>
+            <button id="import-item-filters" title="Import item filters from a file">
+                Import filters
+            </button>
+            <input
+                type="file"
+                id="import-item-filters-input"
+                accept="application/json,.json,.txt"
+                style="display: none;"
+            />
         </div>
 
         <div class="filters-overrides">

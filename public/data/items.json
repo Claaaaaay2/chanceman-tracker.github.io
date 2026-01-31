@@ -47550,7 +47550,7 @@
       },
       "other": {
         "Smithing some Dragon keel parts": {
-          "notes": "Requires a Dragon metal sheet and a Hammer.",
+          "notes": "Requires a Dragon metal sheet, a Hammer and completion of Dragon Slayer II.",
           "rule": {
             "all": [
               {
@@ -47560,6 +47560,10 @@
               "canCompletePandemonium",
               {
                 "has": 2347
+              },
+              {
+                "skill": "Smithing",
+                "level": 94
               }
             ]
           }
@@ -86998,13 +87002,20 @@
     "sources": {
       "other": {
         "Constructing Large adamant keel parts": {
-          "notes": "Requires Adamant keel parts.",
+          "notes": "Requires Adamant keel parts and a Hammer.",
           "rule": {
             "all": [
               {
                 "has": 32011
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Smithing",
+                "level": 74
+              },
+              {
+                "has": 2347
+              }
             ]
           }
         }
@@ -87019,13 +87030,20 @@
     "sources": {
       "other": {
         "Constructing Large bronze keel parts": {
-          "notes": "Requires Bronze keel parts.",
+          "notes": "Requires Bronze keel parts and a Hammer.",
           "rule": {
             "all": [
               {
                 "has": 31999
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Smithing",
+                "level": 10
+              },
+              {
+                "has": 2347
+              }
             ]
           }
         }
@@ -87072,13 +87090,20 @@
       },
       "other": {
         "Constructing Large dragon keel parts": {
-          "notes": "Requires Dragon keel parts.",
+          "notes": "Requires Dragon keel parts, a Hammer and completion of Dragon Slayer II.",
           "rule": {
             "all": [
               {
                 "has": 32017
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Smithing",
+                "level": 94
+              },
+              {
+                "has": 2347
+              }
             ]
           }
         }
@@ -87093,13 +87118,20 @@
     "sources": {
       "other": {
         "Constructing Large iron keel parts": {
-          "notes": "Requires Iron keel parts.",
+          "notes": "Requires Iron keel parts and a Hammer.",
           "rule": {
             "all": [
               {
                 "has": 32002
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Smithing",
+                "level": 22
+              },
+              {
+                "has": 2347
+              }
             ]
           }
         }
@@ -87156,13 +87188,20 @@
     "sources": {
       "other": {
         "Constructing Large mithril keel parts": {
-          "notes": "Requires Mithril keel parts.",
+          "notes": "Requires Mithril keel parts and a Hammer.",
           "rule": {
             "all": [
               {
                 "has": 32008
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Smithing",
+                "level": 56
+              },
+              {
+                "has": 2347
+              }
             ]
           }
         }
@@ -87248,13 +87287,20 @@
     "sources": {
       "other": {
         "Constructing Large rune keel parts": {
-          "notes": "Requires Rune keel parts.",
+          "notes": "Requires Rune keel parts and a Hammer.",
           "rule": {
             "all": [
               {
                 "has": 32014
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Smithing",
+                "level": 86
+              },
+              {
+                "has": 2347
+              }
             ]
           }
         }
@@ -87269,13 +87315,20 @@
     "sources": {
       "other": {
         "Constructing Large steel keel parts": {
-          "notes": "Requires Steel keel parts.",
+          "notes": "Requires Steel keel parts and a Hammer.",
           "rule": {
             "all": [
               {
                 "has": 32005
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Smithing",
+                "level": 38
+              },
+              {
+                "has": 2347
+              }
             ]
           }
         }
