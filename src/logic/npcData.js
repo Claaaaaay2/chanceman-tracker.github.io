@@ -4658,7 +4658,7 @@ export const NPC_DATA = {
     },
     "Dinky the drink troll": {
         "wiki": "https://oldschool.runescape.wiki/w/Dinky_the_drink_troll",
-        "rule": ["canCompletePandemonium"],
+        "rule": ["canCompletePryingTimes"],
         "skill": [],
         "level": [],
         "tags": [],
