@@ -6161,7 +6161,7 @@ function canTrainCrafting(ctx) {
         || (has(ctx, 1775) // Molten glass
             && has(ctx, 1785) // Glassblowing pipe
         )
-        || (has(ctx, 1625) // Uncut jade
+        || (has(ctx, 1625) // Uncut opal
             && has(ctx, 1755) // Chisel
         )
         || (has(ctx, 1592) // Ring mould

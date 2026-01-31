@@ -54604,6 +54604,18 @@
               },
               {
                 "has": 13227
+              },
+              {
+                "skills": [
+                  {
+                    "skill": "Magic",
+                    "level": 60
+                  },
+                  {
+                    "skill": "Runecraft",
+                    "level": 60
+                  }
+                ]
               }
             ]
           }
@@ -84811,7 +84823,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 35
               }
             ]
           }
@@ -84835,7 +84847,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 71
               }
             ]
           }
@@ -85361,10 +85373,6 @@
                   },
                   "hasNarwhalKnife"
                 ]
-              },
-              {
-                "skill": "Cooking",
-                "level":
               }
             ]
           }
@@ -85386,10 +85394,6 @@
                   },
                   "hasNarwhalKnife"
                 ]
-              },
-              {
-                "skill": "Cooking",
-                "level":
               }
             ]
           }
@@ -85411,10 +85415,6 @@
                   },
                   "hasNarwhalKnife"
                 ]
-              },
-              {
-                "skill": "Cooking",
-                "level":
               }
             ]
           }
@@ -85441,7 +85441,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 32
               }
             ]
           }
@@ -86070,7 +86070,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 55
               }
             ]
           }
@@ -86571,7 +86571,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 69
               }
             ]
           }
@@ -86982,7 +86982,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 49
               }
             ]
           }
@@ -88674,7 +88674,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 25
               }
             ]
           }
@@ -88768,7 +88768,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 17
               }
             ]
           }
@@ -88889,7 +88889,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 14
               }
             ]
           }
@@ -88968,7 +88968,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 7
               }
             ]
           }
@@ -89006,7 +89006,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 18
               }
             ]
           }
@@ -89061,7 +89061,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 9
               }
             ]
           }
@@ -89126,10 +89126,6 @@
             "all": [
               {
                 "has": 1741
-              },
-              {
-                "skill": "Crafting",
-                "level":
               }
             ]
           }
@@ -89170,7 +89166,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 11
               }
             ]
           }
@@ -89395,7 +89391,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 47
               }
             ]
           }
@@ -90197,7 +90193,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 12
               }
             ]
           }
@@ -90389,7 +90385,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 40
               }
             ]
           }
@@ -90487,9 +90483,18 @@
                 "has": 1515
               },
               {
-                "skill": "Woodcutting",
-                "level":
-              }
+                "skills": [
+                  {
+                    "skill": "Smithing",
+                    "level": 75
+                  },
+                  {
+                    "skill": "Woodcutting",
+                    "level": 75
+                  }
+                ]
+              },
+              "hasUsableAxe"
             ]
           }
         }
@@ -90631,7 +90636,7 @@
     "sources": {
       "other": {
         "Fletching some Long kebbit bolts": {
-          "notes": "Requires Long kebbit spike and a Chisel.",
+          "notes": "Requires a Long kebbit spike and a Chisel.",
           "rule": {
             "all": [
               {
@@ -90642,7 +90647,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 42
               }
             ]
           }
@@ -90685,7 +90690,7 @@
       },
       "other": {
         "Fletching a Longbow": {
-          "notes": "Requires Longbow (u) and a Bow string.",
+          "notes": "Requires a Longbow (u) and a Bow string.",
           "rule": {
             "all": [
               {
@@ -90696,7 +90701,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 10
               }
             ]
           }
@@ -90728,7 +90733,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 10
               }
             ]
           }
@@ -91144,7 +91149,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 75
               }
             ]
           }
@@ -91483,7 +91488,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 85
               }
             ]
           }
@@ -91520,7 +91525,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 85
               }
             ]
           }
@@ -91664,7 +91669,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 76
               }
             ]
           }
@@ -91715,7 +91720,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 76
               }
             ]
           }
@@ -91801,7 +91806,7 @@
               },
               {
                 "skill": "Farming",
-                "level":
+                "level": 75
               }
             ]
           }
@@ -92011,7 +92016,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 87
               }
             ]
           }
@@ -92046,7 +92051,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 80
               }
             ]
           }
@@ -92083,7 +92088,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 80
               }
             ]
           }
@@ -92221,7 +92226,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 78
               }
             ]
           }
@@ -92256,7 +92261,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 19
               }
             ]
           }
@@ -92280,7 +92285,7 @@
               },
               {
                 "skill": "Hunter",
-                "level":
+                "level": 65
               }
             ]
           }
@@ -92309,8 +92314,16 @@
                 "has": 28276
               },
               {
-                "skill": "Crafting",
-                "level":
+                "skills": [
+                  {
+                    "skill": "Magic",
+                    "level": 90
+                  },
+                  {
+                    "skill": "Crafting",
+                    "level": 80
+                  }
+                ]
               }
             ]
           }
@@ -92421,7 +92434,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 50
               }
             ]
           }
@@ -92843,7 +92856,7 @@
               },
               {
                 "skill": "Farming",
-                "level":
+                "level": 55
               }
             ]
           }
@@ -92960,7 +92973,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 61
               }
             ]
           }
@@ -93217,7 +93230,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 91
               }
             ]
           }
@@ -93250,7 +93263,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 45
               }
             ]
           }
@@ -93404,7 +93417,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 55
               }
             ]
           }
@@ -93436,7 +93449,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 55
               }
             ]
           }
@@ -93509,7 +93522,7 @@
               },
               {
                 "skill": "Farming",
-                "level":
+                "level": 45
               }
             ]
           }
@@ -93650,7 +93663,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 57
               }
             ]
           }
@@ -93700,7 +93713,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 50
               }
             ]
           }
@@ -93732,7 +93745,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 50
               }
             ]
           }
@@ -93767,7 +93780,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 54
               }
             ]
           }
@@ -93934,7 +93947,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 91
               }
             ]
           }
@@ -93963,10 +93976,6 @@
                   },
                   "hasNarwhalKnife"
                 ]
-              },
-              {
-                "skill": "Cooking",
-                "level":
               }
             ]
           }
@@ -94027,7 +94036,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 5
               }
             ]
           }
@@ -94291,7 +94300,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 31
               }
             ]
           }
@@ -94374,7 +94383,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 90
               }
             ]
           }
@@ -94417,7 +94426,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 90
               }
             ]
           }
@@ -94460,7 +94469,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 90
               }
             ]
           }
@@ -94535,7 +94544,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 14
               }
             ]
           }
@@ -94571,7 +94580,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 34
               }
             ]
           }
@@ -94633,7 +94642,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 20
               }
             ]
           }
@@ -94685,7 +94694,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 45
               }
             ]
           }
@@ -94863,7 +94872,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 88
               }
             ]
           }
@@ -94906,7 +94915,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 88
               }
             ]
           }
@@ -94955,10 +94964,6 @@
               },
               {
                 "has": 32096
-              },
-              {
-                "skill": "Cooking",
-                "level":
               }
             ]
           }
@@ -95012,10 +95017,6 @@
                   },
                   "hasNarwhalKnife"
                 ]
-              },
-              {
-                "skill": "Cooking",
-                "level":
               }
             ]
           }
@@ -95094,7 +95095,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 34
               }
             ]
           }
@@ -95130,7 +95131,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 34
               }
             ]
           }
@@ -95893,6 +95894,25 @@
         "Skeleton warlord": {
           "droprate": "1/42.667"
         }
+      },
+      "other": {
+        "Fletching a Mith grapple": {
+          "notes": "Requires a Mithril grapple (unf) and a Rope",
+          "rule": {
+            "all": [
+              {
+                "has": 9418
+              },
+              {
+                "has": 954
+              },
+              {
+                "skill": "Fletching",
+                "level": 59
+              }
+            ]
+          }
+        }
       }
     }
   },
@@ -95904,7 +95924,7 @@
     "sources": {
       "other": {
         "Fletching a Mith grapple (unf)": {
-          "notes": "Requires a mithril grapple tip and Mithril bolts.",
+          "notes": "Requires a Mithril grapple tip and some Mithril bolts.",
           "rule": {
             "all": [
               {
@@ -95914,8 +95934,8 @@
                 "has": 9142
               },
               {
-                "skill": "Smithing",
-                "level":
+                "skill": "Fletching",
+                "level": 59
               }
             ]
           }
@@ -95939,7 +95959,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 59
               },
               {
                 "has": 2347
@@ -96013,7 +96033,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 64
               },
               {
                 "has": 2347
@@ -96147,7 +96167,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 45
               }
             ]
           }
@@ -96293,7 +96313,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 55
               },
               {
                 "has": 2347
@@ -96412,7 +96432,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 51
               },
               {
                 "has": 2347
@@ -96588,7 +96608,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 50
               }
             ]
           }
@@ -96671,7 +96691,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 60
               },
               {
                 "has": 2347
@@ -96761,7 +96781,7 @@
               "hasAnyFeather",
               {
                 "skill": "Fletching",
-                "level":
+                "level": 54
               }
             ]
           }
@@ -96861,7 +96881,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 53
               },
               {
                 "has": 2347
@@ -96925,7 +96945,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 49
               },
               "canCompleteZogreFleshEaters"
             ]
@@ -96979,7 +96999,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 55
               },
               "canCompleteDwarfCannon"
             ]
@@ -97081,7 +97101,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 61
               },
               {
                 "has": 2347
@@ -97108,7 +97128,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 63
               },
               "canCompleteDeathPlateau",
               {
@@ -97144,7 +97164,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 54
               }
             ]
           }
@@ -97174,7 +97194,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 54
               }
             ]
           }
@@ -97245,7 +97265,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 50
               },
               {
                 "has": 2347
@@ -97381,7 +97401,7 @@
               "hasAnyFeather",
               {
                 "skill": "Fletching",
-                "level":
+                "level": 52
               }
             ]
           }
@@ -97415,7 +97435,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 54
               },
               "canCompleteTheTouristTrap",
               {
@@ -97531,7 +97551,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 21
               },
               {
                 "has": 2347
@@ -97620,7 +97640,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 57
               },
               {
                 "has": 2347
@@ -97763,6 +97783,10 @@
               },
               "canCompleteBarbarianSmithing",
               {
+                "skill": "Smithing",
+                "level": 55
+              },
+              {
                 "has": 2347
               }
             ]
@@ -97885,7 +97909,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 47
               }
             ]
           }
@@ -97909,7 +97933,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 56
               },
               {
                 "has": 2347
@@ -98005,7 +98029,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 56
               },
               "canCompletePandemonium",
               {
@@ -98188,7 +98212,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 62
               },
               {
                 "has": 2347
@@ -98266,7 +98290,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 57
               },
               {
                 "has": 2347
@@ -98370,7 +98394,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 56
               },
               {
                 "has": 2347
@@ -98462,7 +98486,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 56
               },
               {
                 "has": 2347
@@ -98554,7 +98578,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 52
               },
               {
                 "has": 2347
@@ -98652,7 +98676,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 53
               },
               {
                 "has": 2347
@@ -98696,7 +98720,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 54
               },
               {
                 "has": 2347
@@ -98994,7 +99018,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 68
               },
               {
                 "has": 2347
@@ -99129,7 +99153,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 66
               },
               {
                 "has": 2347
@@ -99261,7 +99285,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 66
               },
               {
                 "has": 2347
@@ -99384,7 +99408,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 55
               },
               {
                 "has": 2347
@@ -99567,6 +99591,10 @@
                 "has": 1517
               },
               "canCompleteBarbarianSmithing",
+              {
+                "skill": "Smithing",
+                "level": 55
+              },
               {
                 "has": 2347
               }
@@ -99806,7 +99834,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 58
               },
               {
                 "has": 2347
@@ -99886,7 +99914,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 54
               },
               {
                 "has": 2347
@@ -100036,7 +100064,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 59
               },
               {
                 "has": 2347
@@ -100272,10 +100300,6 @@
               },
               {
                 "has": 1783
-              },
-              {
-                "skill": "Crafting",
-                "level":
               }
             ]
           }
@@ -100609,7 +100633,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 72
               }
             ]
           }
@@ -100649,7 +100673,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 44
               }
             ]
           }
@@ -100682,6 +100706,10 @@
               },
               {
                 "has": 6004
+              },
+              {
+                "skill": "Cooking",
+                "level": 44
               }
             ]
           }
@@ -100717,7 +100745,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 44
               }
             ]
           }
@@ -100750,6 +100778,10 @@
               },
               {
                 "has": 6004
+              },
+              {
+                "skill": "Cooking",
+                "level": 44
               }
             ]
           }
@@ -101004,7 +101036,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 29
               }
             ]
           }
@@ -101207,7 +101239,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 57
               }
             ]
           }
@@ -101231,7 +101263,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 60
               }
             ]
           }
@@ -101275,7 +101307,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 64
               }
             ]
           }
@@ -102626,7 +102658,7 @@
               },
               {
                 "skill": "Hunter",
-                "level":
+                "level": 58
               }
             ]
           }
@@ -103707,7 +103739,7 @@
               "canMakeNeitiznotShield",
               {
                 "skill": "Woodcutting",
-                "level":
+                "level": 56
               }
             ]
           }
@@ -103838,7 +103870,7 @@
               },
               {
                 "skill": "Hunter",
-                "level":
+                "level": 74
               }
             ]
           }
@@ -103888,11 +103920,11 @@
                 "skills": [
                   {
                     "skill": "Smithing",
-                    "level":
+                    "level": 72
                   },
                   {
                     "skill": "Crafting",
-                    "level":
+                    "level": 72
                   }
                 ]
               },
@@ -104127,7 +104159,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 15
               }
             ]
           }
@@ -104519,7 +104551,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 25
               }
             ]
           }
@@ -104556,7 +104588,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 25
               }
             ]
           }
@@ -104779,7 +104811,7 @@
               },
               {
                 "skill": "Farming",
-                "level":
+                "level": 15
               }
             ]
           }
@@ -104843,7 +104875,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 27
               }
             ]
           }
@@ -104887,7 +104919,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 20
               }
             ]
           }
@@ -104919,7 +104951,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 20
               }
             ]
           }
@@ -104954,7 +104986,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 24
               }
             ]
           }
@@ -105094,7 +105126,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 83
               },
               {
                 "has": 2347
@@ -105132,7 +105164,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 83
               },
               {
                 "has": 2347
@@ -105170,7 +105202,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 83
               },
               {
                 "has": 2347
@@ -105452,7 +105484,7 @@
     "sources": {
       "other": {
         "Fletching arrows": {
-          "notes": "Requires flighted ogre arrows and Wolfbone arrowtips.",
+          "notes": "Requires Dlighted ogre arrows and Wolfbone arrowtips.",
           "rule": {
             "all": [
               {
@@ -105463,7 +105495,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 5
               }
             ]
           }
@@ -105496,7 +105528,7 @@
               "canCompleteBigChompyBirdHunting",
               {
                 "skill": "Fletching",
-                "level":
+                "level": 5
               }
             ]
           }
@@ -105536,10 +105568,6 @@
               },
               {
                 "has": 1939
-              },
-              {
-                "skill": "Crafting",
-                "level":
               }
             ]
           }
@@ -105583,10 +105611,6 @@
               },
               {
                 "has": 1939
-              },
-              {
-                "skill": "Crafting",
-                "level":
               }
             ]
           }
@@ -105615,7 +105639,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 26
               },
               {
                 "has": 2347
@@ -106131,7 +106155,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 67
               }
             ]
           }
@@ -106155,10 +106179,6 @@
               },
               {
                 "has": 1759
-              },
-              {
-                "skill": "Crafting",
-                "level":
               }
             ]
           }
@@ -106188,7 +106208,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 90
               }
             ]
           }
@@ -106358,7 +106378,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 73
               }
             ]
           }
@@ -106429,7 +106449,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 73
               }
             ]
           }
@@ -106467,6 +106487,10 @@
             "all": [
               {
                 "has": 9342
+              },
+              {
+                "skill": "Magic",
+                "level": 87
               }
             ]
           }
@@ -106496,7 +106520,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 84
               }
             ]
           }
@@ -106523,7 +106547,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 84
               }
             ]
           }
@@ -106544,6 +106568,10 @@
             "all": [
               {
                 "has": 21973
+              },
+              {
+                "skill": "Magic",
+                "level": 87
               }
             ]
           }
@@ -106573,7 +106601,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 82
               }
             ]
           }
@@ -106603,7 +106631,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 67
               }
             ]
           }
@@ -106632,10 +106660,6 @@
               },
               {
                 "has": 1755
-              },
-              {
-                "skill": "Crafting",
-                "level":
               }
             ]
           }
@@ -106659,10 +106683,6 @@
               },
               {
                 "has": 1759
-              },
-              {
-                "skill": "Crafting",
-                "level":
               }
             ]
           }
@@ -106692,7 +106712,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 27
               }
             ]
           }
@@ -106766,7 +106786,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 11
               }
             ]
           }
@@ -106793,7 +106813,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 11
               }
             ]
           }
@@ -106814,6 +106834,10 @@
             "all": [
               {
                 "has": 879
+              },
+              {
+                "skill": "Magic",
+                "level": 4
               }
             ]
           }
@@ -106843,7 +106867,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 22
               }
             ]
           }
@@ -106870,7 +106894,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 84
               }
             ]
           }
@@ -106891,6 +106915,10 @@
             "all": [
               {
                 "has": 21955
+              },
+              {
+                "skill": "Magic",
+                "level": 4
               }
             ]
           }
@@ -106954,7 +106982,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 16
               }
             ]
           }
@@ -106981,10 +107009,6 @@
               },
               {
                 "has": 1592
-              },
-              {
-                "skill": "Crafting",
-                "level":
               }
             ]
           }
@@ -107231,7 +107255,7 @@
               },
               {
                 "skill": "Farming",
-                "level":
+                "level": 39
               }
             ]
           }
@@ -107678,7 +107702,7 @@
               },
               {
                 "skill": "Farming",
-                "level":
+                "level": 68
               }
             ]
           }
@@ -107873,7 +107897,7 @@
               },
               {
                 "skill": "Farming",
-                "level":
+                "level": 57
               }
             ]
           }
@@ -108095,10 +108119,6 @@
                     "has": 1937
                   }
                 ]
-              },
-              {
-                "skill": "Cooking",
-                "level":
               }
             ]
           }
@@ -108135,7 +108155,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 38
               }
             ]
           }
@@ -108232,7 +108252,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 41
               }
             ]
           }
@@ -108262,7 +108282,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 41
               }
             ]
           }
@@ -108283,6 +108303,10 @@
             "all": [
               {
                 "has": 880
+              },
+              {
+                "skill": "Magic",
+                "level": 24
               }
             ]
           }
@@ -108309,7 +108333,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 84
               }
             ]
           }
@@ -108330,6 +108354,10 @@
             "all": [
               {
                 "has": 21959
+              },
+              {
+                "skill": "Magic",
+                "level": 24
               }
             ]
           }
@@ -108353,6 +108381,18 @@
               },
               {
                 "has": 2577
+              },
+              {
+                "skills": [
+                  {
+                    "skill": "Magic",
+                    "level": 60
+                  },
+                  {
+                    "skill": "Runecraft",
+                    "level": 60
+                  }
+                ]
               }
             ]
           }
@@ -108594,7 +108634,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 7
               }
             ]
           }
@@ -108661,7 +108701,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 20
               }
             ]
           }
@@ -108797,7 +108837,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 62
               }
             ]
           }
@@ -108855,8 +108895,8 @@
     "image": "pineapple_chunks.png",
     "sources": {
       "other": {
-        "Cooking some Pineapple chunks": {
-          "notes": "Requires a Pineapple or tenti Pineapple (tourist trap) and a Knife.",
+        "Slicing a Pineapple": {
+          "notes": "Requires a Pineapple or Tenti pineapple (tourist trap) and a Knife.",
           "rule": {
             "all": [
               {
@@ -108874,10 +108914,6 @@
                   },
                   "hasNarwhalKnife"
                 ]
-              },
-              {
-                "skill": "Cooking",
-                "level":
               }
             ]
           }
@@ -108919,7 +108955,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 65
               }
             ]
           }
@@ -108966,6 +109002,10 @@
               },
               {
                 "has": 2026
+              },
+              {
+                "skill": "Cooking",
+                "level": 8
               }
             ]
           }
@@ -108980,8 +109020,8 @@
     "image": "pineapple_ring.png",
     "sources": {
       "other": {
-        "Cooking a Pineapple ring": {
-          "notes": "Requires a Pineapple or tenti Pineapple (tourist trap) and a Knife.",
+        "Slicing a Pineapple": {
+          "notes": "Requires a Pineapple or Tenti pineapple (tourist trap) and a Knife.",
           "rule": {
             "all": [
               {
@@ -108999,10 +109039,6 @@
                   },
                   "hasNarwhalKnife"
                 ]
-              },
-              {
-                "skill": "Cooking",
-                "level":
               }
             ]
           }
@@ -109032,7 +109068,7 @@
               },
               {
                 "skill": "Farming",
-                "level":
+                "level": 51
               }
             ]
           }
@@ -109575,7 +109611,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 58
               }
             ]
           }
@@ -109618,7 +109654,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 35
               }
             ]
           }
@@ -109654,7 +109690,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 35
               }
             ]
           }
@@ -110303,10 +110339,10 @@
     "sources": {
       "other": {
         "Crafting some Polished buttons": {
-          "notes": "Requires crafting level 3.",
+          "notes": "Requires untradable Buttons.",
           "rule": {
             "skill": "Crafting",
-            "level":
+            "level": 3
           }
         }
       }
@@ -110443,7 +110479,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 21
               }
             ]
           }
@@ -111179,7 +111215,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 39
               }
             ]
           }
@@ -111217,7 +111253,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 47
               }
             ]
           }
@@ -111535,7 +111571,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 38
               }
             ]
           }
@@ -111647,7 +111683,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 38
               }
             ]
           }
@@ -111755,7 +111791,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 58
               }
             ]
           }
@@ -111798,7 +111834,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 58
               }
             ]
           }
@@ -112086,6 +112122,18 @@
               },
               {
                 "has": 13231
+              },
+              {
+                "skills": [
+                  {
+                    "skill": "Magic",
+                    "level": 60
+                  },
+                  {
+                    "skill": "Runecraft",
+                    "level": 60
+                  }
+                ]
               }
             ]
           }
@@ -113154,7 +113202,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 77
               }
             ]
           }
@@ -113188,10 +113236,6 @@
               },
               {
                 "has": 233
-              },
-              {
-                "skill": "Cooking",
-                "level":
               }
             ]
           }
@@ -113276,7 +113320,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 30
               }
             ]
           }
@@ -113930,7 +113974,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 72
               }
             ]
           }
@@ -113978,7 +114022,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 72
               }
             ]
           }
@@ -114040,7 +114084,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 70
               }
             ]
           }
@@ -114500,7 +114544,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 48
               }
             ]
           }
@@ -114745,7 +114789,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 47
               }
             ]
           }
@@ -114778,7 +114822,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 34
               }
             ]
           }
@@ -115351,7 +115395,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 29
               }
             ]
           }
@@ -115518,7 +115562,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 77
               }
             ]
           }
@@ -115594,7 +115638,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 21
               }
             ]
           }
@@ -116034,7 +116078,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 95
               }
             ]
           }
@@ -116406,7 +116450,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 85
               }
             ]
           }
@@ -116629,7 +116673,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 21
               }
             ]
           }
@@ -116679,7 +116723,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 77
               }
             ]
           }
@@ -116746,7 +116790,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 75
               }
             ]
           }
@@ -116811,7 +116855,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 76
               }
             ]
           }
@@ -116855,7 +116899,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 73
               }
             ]
           }
@@ -117332,7 +117376,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 32
               }
             ]
           }
@@ -117367,7 +117411,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 16
               }
             ]
           }
@@ -117445,7 +117489,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 10
               }
             ]
           }
@@ -117533,7 +117577,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 90
               }
             ]
           }
@@ -117562,6 +117606,10 @@
                   },
                   "hasNarwhalKnife"
                 ]
+              },
+              {
+                "skill": "Fletching",
+                "level": 90
               }
             ]
           }
@@ -117646,7 +117694,7 @@
               },
               {
                 "skill": "Farming",
-                "level":
+                "level": 90
               }
             ]
           }
@@ -117675,6 +117723,10 @@
                   },
                   "hasNarwhalKnife"
                 ]
+              },
+              {
+                "skill": "Fletching",
+                "level": 92
               }
             ]
           }
@@ -117852,7 +117904,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 8
               },
               "canCompleteZogreFleshEaters"
             ]
@@ -117893,7 +117945,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 8
               },
               "canCompleteZogreFleshEaters"
             ]
@@ -118126,7 +118178,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 22
               }
             ]
           }
@@ -118174,7 +118226,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 22
               }
             ]
           }
@@ -118827,10 +118879,7 @@
               {
                 "has": 1517
               },
-              {
-                "skill": "Woodcutting",
-                "level":
-              }
+              "hasUsableAxe"
             ]
           }
         }
@@ -118872,7 +118921,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 21
               }
             ]
           }
@@ -118898,8 +118947,16 @@
                 "has": 7225
               },
               {
-                "skill": "Cooking",
-                "level":
+                "skills": [
+                  {
+                    "skill": "Cooking",
+                    "level": 11
+                  },
+                  {
+                    "skill": "Firemaking",
+                    "level": 20
+                  }
+                ]
               }
             ]
           }
@@ -118926,7 +118983,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 16
               }
             ]
           }
@@ -119323,8 +119380,8 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Crafting from yak hair": {
-          "notes": "Requires Hair (sorry baldies).",
+        "Crafting from Hair": {
+          "notes": "Requires Hair.",
           "rule": {
             "all": [
               {
@@ -119332,7 +119389,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 30
               }
             ]
           }
@@ -119445,7 +119502,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 84
               }
             ]
           }
@@ -119461,11 +119518,17 @@
     "sources": {
       "other": {
         "Creating a sapling": {
-          "notes": "Requires rosewood planks.",
+          "notes": "Requires some Rosewood planks, a Hammer and a Saw.",
           "rule": {
             "all": [
               {
                 "has": 31438
+              },
+              {
+                "has": 2347
+              },
+              {
+                "has": 8794
               },
               "canCompletePandemonium"
             ]
@@ -119583,7 +119646,7 @@
               },
               {
                 "skill": "Farming",
-                "level":
+                "level": 92
               }
             ]
           }
@@ -119764,7 +119827,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 34
               }
             ]
           }
@@ -119829,10 +119892,6 @@
               },
               {
                 "has": 1759
-              },
-              {
-                "skill": "Crafting",
-                "level":
               }
             ]
           }
@@ -119865,7 +119924,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 50
               }
             ]
           }
@@ -119933,7 +119992,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 63
               }
             ]
           }
@@ -119960,7 +120019,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 63
               }
             ]
           }
@@ -119981,6 +120040,10 @@
             "all": [
               {
                 "has": 9339
+              },
+              {
+                "skill": "Magic",
+                "level": 49
               }
             ]
           }
@@ -120018,7 +120081,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 42
               }
             ]
           }
@@ -120045,7 +120108,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 84
               }
             ]
           }
@@ -120066,6 +120129,10 @@
             "all": [
               {
                 "has": 21967
+              },
+              {
+                "skill": "Magic",
+                "level": 49
               }
             ]
           }
@@ -120179,7 +120246,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 40
               }
             ]
           }
@@ -120265,7 +120332,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 34
               }
             ]
           }
@@ -120412,7 +120479,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 99
               },
               {
                 "has": 2347
@@ -120687,7 +120754,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 75
               }
             ]
           }
@@ -120814,7 +120881,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 90
               },
               {
                 "has": 2347
@@ -120906,7 +120973,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 86
               },
               {
                 "has": 2347
@@ -121040,7 +121107,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 95
               },
               {
                 "has": 2347
@@ -121098,7 +121165,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 77
               },
               "canCompleteZogreFleshEaters"
             ]
@@ -121192,7 +121259,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 90
               },
               "canCompleteDwarfCannon"
             ]
@@ -121381,7 +121448,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 96
               },
               {
                 "has": 2347
@@ -121419,7 +121486,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 98
               },
               "canCompleteDeathPlateau",
               {
@@ -121461,7 +121528,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 69
               }
             ]
           }
@@ -121636,7 +121703,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 85
               },
               {
                 "has": 2347
@@ -121789,7 +121856,7 @@
               "hasAnyFeather",
               {
                 "skill": "Fletching",
-                "level":
+                "level": 81
               }
             ]
           }
@@ -121832,7 +121899,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 89
               },
               "canCompleteTheTouristTrap",
               {
@@ -122012,7 +122079,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 41
               },
               {
                 "has": 2347
@@ -122269,7 +122336,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 92
               },
               {
                 "has": 2347
@@ -122422,6 +122489,10 @@
                 "has": 1513
               },
               "canCompleteBarbarianSmithing",
+              {
+                "skill": "Smithing",
+                "level": 90
+              },
               {
                 "has": 2347
               }
@@ -122639,7 +122710,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 77
               }
             ]
           }
@@ -122686,7 +122757,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 91
               },
               {
                 "has": 2347
@@ -122782,7 +122853,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 86
               },
               "canCompletePandemonium",
               {
@@ -122998,7 +123069,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 97
               },
               {
                 "has": 2347
@@ -123124,7 +123195,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 92
               },
               {
                 "has": 2347
@@ -123353,7 +123424,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 91
               },
               {
                 "has": 2347
@@ -123439,7 +123510,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 87
               },
               {
                 "has": 2347
@@ -123678,7 +123749,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 88
               },
               {
                 "has": 2347
@@ -123713,7 +123784,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 89
               },
               {
                 "has": 2347
@@ -124004,7 +124075,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 99
               },
               {
                 "has": 2347
@@ -124314,7 +124385,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 99
               },
               {
                 "has": 2347
@@ -124449,7 +124520,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 99
               },
               {
                 "has": 2347
@@ -124681,7 +124752,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 90
               },
               {
                 "has": 2347
@@ -124876,6 +124947,10 @@
               },
               "canCompleteBarbarianSmithing",
               {
+                "skill": "Smithing",
+                "level": 90
+              },
+              {
                 "has": 2347
               }
             ]
@@ -125022,7 +125097,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 93
               },
               {
                 "has": 2347
@@ -125138,7 +125213,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 89
               },
               {
                 "has": 2347
@@ -125399,7 +125474,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 94
               },
               {
                 "has": 2347
@@ -125688,7 +125763,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 85
               }
             ]
           }
@@ -125820,7 +125895,7 @@
               "hasAnyFeather",
               {
                 "skill": "Fletching",
-                "level":
+                "level": 69
               }
             ]
           }
@@ -125931,7 +126006,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 88
               },
               {
                 "has": 2347
@@ -125975,7 +126050,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 69
               }
             ]
           }
@@ -126019,7 +126094,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 91
               },
               {
                 "has": 2347
@@ -126800,7 +126875,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 65
               }
             ]
           }
@@ -126846,7 +126921,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 65
               }
             ]
           }
@@ -126900,7 +126975,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 65
               }
             ]
           }
@@ -126969,7 +127044,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 65
               }
             ]
           }
@@ -127092,7 +127167,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 20
               }
             ]
           }
@@ -127147,10 +127222,6 @@
               },
               {
                 "has": 1759
-              },
-              {
-                "skill": "Crafting",
-                "level":
               }
             ]
           }
@@ -127183,7 +127254,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 24
               }
             ]
           }
@@ -127251,7 +127322,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 56
               }
             ]
           }
@@ -127283,7 +127354,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 56
               }
             ]
           }
@@ -127304,6 +127375,10 @@
             "all": [
               {
                 "has": 9337
+              },
+              {
+                "skill": "Magic",
+                "level": 7
               }
             ]
           }
@@ -127338,7 +127413,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 23
               }
             ]
           }
@@ -127365,7 +127440,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 84
               }
             ]
           }
@@ -127386,6 +127461,10 @@
             "all": [
               {
                 "has": 21963
+              },
+              {
+                "skill": "Magic",
+                "level": 7
               }
             ]
           }
@@ -127502,7 +127581,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 22
               }
             ]
           }
@@ -127624,7 +127703,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 20
               }
             ]
           }
@@ -127817,7 +127896,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 81
               }
             ]
           }
@@ -127877,7 +127956,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 81
               }
             ]
           }
@@ -128871,11 +128950,11 @@
                 "skills": [
                   {
                     "skill": "Woodcutting",
-                    "level":
+                    "level": 35
                   },
                   {
                     "skill": "Smithing",
-                    "level":
+                    "level": 35
                   }
                 ]
               }
@@ -128902,10 +128981,7 @@
               {
                 "has": 1519
               },
-              {
-                "skill": "Woodcutting",
-                "level":
-              }
+              "hasUsableAxe"
             ]
           }
         }
@@ -128988,7 +129064,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 80
               },
               "canCompleteDesertTreasureII"
             ]
@@ -129100,7 +129176,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 52
               }
             ]
           }
@@ -129192,7 +129268,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 15
               },
               "canCompleteShadesOfMortton"
             ]
@@ -129236,7 +129312,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 15
               },
               "canCompleteShadesOfMortton"
             ]
@@ -129521,7 +129597,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 80
               }
             ]
           }
@@ -129533,8 +129609,13 @@
         "Obtained during Olaf's quest": {
           "notes": "Only an axe and 50 woodcutting are needed.",
           "rule": {
-            "skill": "Woodcutting",
-            "level":
+            "all": [
+              "hasUsableAxe",
+              {
+                "skill": "Woodcutting",
+                "level": 50
+              }
+            ]
           }
         }
       }
@@ -130097,6 +130178,25 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Fletching bows": {
+          "notes": "Requires a Shortbow (u) and a Bowstring.",
+          "rule": {
+            "all": [
+              {
+                "has": 50
+              },
+              {
+                "has": 1777
+              },
+              {
+                "skill": "Fletching",
+                "level": 5
+              }
+            ]
+          }
+        }
       }
     }
   },
@@ -130124,7 +130224,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 5
               }
             ]
           }
@@ -130403,7 +130503,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 20
               }
             ]
           }
@@ -130466,7 +130566,7 @@
               "hasAnyFeather",
               {
                 "skill": "Fletching",
-                "level":
+                "level": 43
               }
             ]
           }
@@ -130567,7 +130667,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 21
               }
             ]
           }
@@ -130743,7 +130843,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 18
               }
             ]
           }
@@ -131470,7 +131570,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 59
               }
             ]
           }
@@ -131503,6 +131603,10 @@
               },
               {
                 "has": 6002
+              },
+              {
+                "skill": "Cooking",
+                "level": 59
               }
             ]
           }
@@ -131538,7 +131642,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 59
               }
             ]
           }
@@ -131571,6 +131675,10 @@
               },
               {
                 "has": 6002
+              },
+              {
+                "skill": "Cooking",
+                "level": 59
               }
             ]
           }
@@ -131876,7 +131984,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 48
               }
             ]
           }
@@ -131900,7 +132008,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 53
               }
             ]
           }
@@ -131932,7 +132040,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 45
               }
             ]
           }
@@ -131964,7 +132072,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 51
               }
             ]
           }
@@ -131994,7 +132102,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 56
               }
             ]
           }
@@ -132018,7 +132126,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 47
               }
             ]
           }
@@ -132132,7 +132240,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 63
               }
             ]
           }
@@ -133850,11 +133958,11 @@
                 "skills": [
                   {
                     "skill": "Prayer",
-                    "level":
+                    "level": 90
                   },
                   {
                     "skill": "Smithing",
-                    "level":
+                    "level": 85
                   }
                 ]
               }
@@ -133923,7 +134031,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 12
               }
             ]
           }
@@ -134062,7 +134170,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 16
               }
             ]
           }
@@ -134089,7 +134197,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 16
               }
             ]
           }
@@ -134156,7 +134264,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 32
               }
             ]
           }
@@ -134415,7 +134523,7 @@
               },
               {
                 "skill": "Woodcutting",
-                "level":
+                "level": 56
               },
               "canMakeSplitLog"
             ]
@@ -134448,7 +134556,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 62
               }
             ]
           }
@@ -134475,7 +134583,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 60
               }
             ]
           }
@@ -134510,7 +134618,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 60
               }
             ]
           }
@@ -134545,7 +134653,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 61
               }
             ]
           }
@@ -134577,7 +134685,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 62
               }
             ]
           }
@@ -135176,7 +135284,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 77
               }
             ]
           }
@@ -135224,7 +135332,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 77
               }
             ]
           }
@@ -135267,7 +135375,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 77
               }
             ]
           }
@@ -135315,7 +135423,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 77
               }
             ]
           }
@@ -135493,7 +135601,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 44
               },
               {
                 "has": 2347
@@ -135832,7 +135940,7 @@
       },
       "other": {
         "Fletching Steel arrow": {
-          "notes": "Steel arrowtips and Headless arrow.",
+          "notes": "Requires some Steel arrowtips and some Headless arrows.",
           "rule": {
             "all": [
               {
@@ -135843,7 +135951,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 30
               }
             ]
           }
@@ -136044,7 +136152,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 35
               },
               {
                 "has": 2347
@@ -136262,7 +136370,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 31
               },
               {
                 "has": 2347
@@ -136504,7 +136612,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 30
               }
             ]
           }
@@ -136614,7 +136722,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 40
               },
               {
                 "has": 2347
@@ -136650,7 +136758,7 @@
               "hasAnyFeather",
               {
                 "skill": "Fletching",
-                "level":
+                "level": 46
               }
             ]
           }
@@ -136760,7 +136868,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 33
               },
               {
                 "has": 2347
@@ -136818,7 +136926,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 33
               },
               "canCompleteZogreFleshEaters"
             ]
@@ -136968,7 +137076,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 35
               },
               "canCompleteDwarfCannon"
             ]
@@ -137046,7 +137154,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 41
               },
               {
                 "has": 2347
@@ -137070,6 +137178,34 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Questing": {
+          "notes": "Given to you as a reward from Death Plateau.",
+          "rule": {
+            "all": [
+              "canCompleteDeathPlateau"
+            ]
+          }
+        },
+        "Smithing some Steel claws": {
+          "notes": "Requires a Steel bar, a Hammer and completon of Death Plateau.",
+          "rule": {
+            "all": [
+              {
+                "has": 2353
+              },
+              {
+                "skill": "Smithing",
+                "level": 41
+              },
+              "canCompleteDeathPlateau",
+              {
+                "has": 2347
+              }
+            ]
+          }
+        }
       }
     }
   },
@@ -137097,7 +137233,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 46
               }
             ]
           }
@@ -137127,7 +137263,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 46
               }
             ]
           }
@@ -137219,7 +137355,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 30
               },
               {
                 "has": 2347
@@ -137398,7 +137534,7 @@
               "hasAnyFeather",
               {
                 "skill": "Fletching",
-                "level":
+                "level": 37
               }
             ]
           }
@@ -137427,7 +137563,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 34
               },
               "canCompleteTheTouristTrap",
               {
@@ -137543,7 +137679,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 6
               },
               {
                 "has": 2347
@@ -137923,7 +138059,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 36
               }
             ]
           }
@@ -137947,7 +138083,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 36
               },
               {
                 "has": 2347
@@ -138054,7 +138190,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 38
               },
               "canCompletePandemonium",
               {
@@ -138162,7 +138298,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 42
               },
               {
                 "has": 2347
@@ -138273,7 +138409,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 37
               },
               {
                 "has": 2347
@@ -138372,7 +138508,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 36
               },
               {
                 "has": 2347
@@ -138579,7 +138715,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 36
               },
               {
                 "has": 2347
@@ -138683,7 +138819,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 32
               },
               {
                 "has": 2347
@@ -138823,7 +138959,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 33
               },
               {
                 "has": 2347
@@ -138900,7 +139036,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 34
               },
               {
                 "has": 2347
@@ -139077,7 +139213,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 48
               },
               {
                 "has": 2347
@@ -139188,7 +139324,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 46
               },
               {
                 "has": 2347
@@ -139278,7 +139414,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 46
               },
               {
                 "has": 2347
@@ -139462,7 +139598,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 35
               },
               {
                 "has": 2347
@@ -139722,7 +139858,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 38
               },
               {
                 "has": 2347
@@ -139760,7 +139896,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 36
               },
               {
                 "has": 2347
@@ -139870,7 +140006,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 34
               },
               {
                 "has": 2347
@@ -140059,7 +140195,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 39
               },
               {
                 "has": 2347
@@ -140109,6 +140245,10 @@
                     "has": 2140
                   }
                 ]
+              },
+              {
+                "skill": "Cooking",
+                "level": 25
               }
             ]
           }
@@ -140939,7 +141079,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 12
               }
             ]
           }
@@ -141024,7 +141164,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 12
               }
             ]
           }
@@ -141157,7 +141297,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 37
               }
             ]
           }
@@ -141372,11 +141512,11 @@
                 "skills": [
                   {
                     "skill": "Woodcutting",
-                    "level":
+                    "level": 75
                   },
                   {
                     "skill": "Smithing",
-                    "level":
+                    "level": 75
                   }
                 ]
               },
@@ -141457,7 +141597,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 95
               }
             ]
           }
@@ -141786,7 +141926,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 62
               }
             ]
           }
@@ -141990,7 +142130,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 92
               },
               "canCompleteDragonSlayerII"
             ]
@@ -142130,7 +142270,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 45
               }
             ]
           }
@@ -142181,7 +142321,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 45
               }
             ]
           }
@@ -142360,6 +142500,10 @@
               },
               {
                 "has": 269
+              },
+              {
+                "skill": "Herblore",
+                "level": 90
               }
             ]
           }
@@ -142568,7 +142712,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 66
               }
             ]
           }
@@ -142619,7 +142763,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 66
               }
             ]
           }
@@ -142766,7 +142910,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 52
               }
             ]
           }
@@ -142817,7 +142961,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 52
               }
             ]
           }
@@ -142912,7 +143056,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 62
               }
             ]
           }
@@ -142955,7 +143099,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 62
               }
             ]
           }
@@ -143050,7 +143194,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 67
               }
             ]
           }
@@ -143093,7 +143237,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 67
               }
             ]
           }
@@ -143320,7 +143464,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 63
               }
             ]
           }
@@ -143430,7 +143574,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 63
               }
             ]
           }
@@ -143654,7 +143798,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 55
               }
             ]
           }
@@ -143705,7 +143849,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 55
               }
             ]
           }
@@ -143837,7 +143981,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 48
               }
             ]
           }
@@ -143880,7 +144024,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 48
               }
             ]
           }
@@ -144024,7 +144168,7 @@
               },
               {
                 "skill": "Farming",
-                "level":
+                "level": 35
               }
             ]
           }
@@ -144628,10 +144772,6 @@
               },
               {
                 "has": 1923
-              },
-              {
-                "skill": "Cooking",
-                "level":
               }
             ]
           }
@@ -144957,7 +145097,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 45
               }
             ]
           }
@@ -145017,7 +145157,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 56
               }
             ]
           }
@@ -145282,7 +145422,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 12
               }
             ]
           }
@@ -145544,7 +145684,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 39
               }
             ]
           }
@@ -145721,7 +145861,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 35
               }
             ]
           }
@@ -146185,7 +146325,7 @@
               },
               {
                 "skill": "Farming",
-                "level":
+                "level": 35
               }
             ]
           }
@@ -147559,7 +147699,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 12
               }
             ]
           }
@@ -147675,7 +147815,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 23
               }
             ]
           }
@@ -148138,7 +148278,7 @@
                 },
                 {
                   "skill": "Cooking",
-                  "level":
+                  "level": 10
                 }
               ]
             }
@@ -148285,7 +148425,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 34
               }
             ]
           }
@@ -149272,10 +149412,6 @@
               },
               {
                 "has": 1759
-              },
-              {
-                "skill": "Crafting",
-                "level":
               }
             ]
           }
@@ -149310,7 +149446,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 45
               }
             ]
           }
@@ -149357,7 +149493,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 48
               }
             ]
           }
@@ -149384,7 +149520,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 48
               }
             ]
           }
@@ -149405,6 +149541,10 @@
             "all": [
               {
                 "has": 9336
+              },
+              {
+                "skill": "Magic",
+                "level": 29
               }
             ]
           }
@@ -149434,7 +149574,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 38
               }
             ]
           }
@@ -149461,7 +149601,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 84
               }
             ]
           }
@@ -149482,6 +149622,10 @@
             "all": [
               {
                 "has": 21961
+              },
+              {
+                "skill": "Magic",
+                "level": 29
               }
             ]
           }
@@ -149511,7 +149655,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 32
               }
             ]
           }
@@ -149541,7 +149685,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 16
               }
             ]
           }
@@ -149749,8 +149893,8 @@
                 "has": 565
               },
               {
-                "skill": "Crafting",
-                "level":
+                "skill": "Magic",
+                "level": 93
               }
             ]
           }
@@ -149856,7 +150000,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 78
               }
             ]
           }
@@ -150474,7 +150618,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 78
               }
             ]
           }
@@ -150504,7 +150648,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 59
               }
             ]
           }
@@ -150531,7 +150675,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 16
               }
             ]
           },
@@ -150562,7 +150706,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 18
               }
             ]
           },
@@ -150624,7 +150768,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 33
               }
             ]
           },
@@ -150690,7 +150834,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 13
               }
             ]
           },
@@ -151186,7 +151330,7 @@
           "notes": "Purchase from the The Burrow pub in the Hunter Guild.",
           "rule": {
             "skill": "Hunter",
-            "level":
+            "level": 46
           }
         }
       }
@@ -151492,7 +151636,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 15
               }
             ]
           }
@@ -151630,7 +151774,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 30
               }
             ]
           }
@@ -151669,7 +151813,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 67
               }
             ]
           }
@@ -151686,7 +151830,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 67
               }
             ]
           }
@@ -151703,7 +151847,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 67
               }
             ]
           }
@@ -151756,7 +151900,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 68
               }
             ]
           }
@@ -152310,8 +152454,16 @@
                 "has": 28276
               },
               {
-                "skill": "Crafting",
-                "level":
+                "skills": [
+                  {
+                    "skill": "Magic",
+                    "level": 90
+                  },
+                  {
+                    "skill": "Crafting",
+                    "level": 80
+                  }
+                ]
               }
             ]
           }
@@ -152450,7 +152602,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 89
               }
             ]
           }
@@ -152482,10 +152634,6 @@
               },
               {
                 "has": 1759
-              },
-              {
-                "skill": "Crafting",
-                "level":
               }
             ]
           }
@@ -152515,7 +152663,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 59
               }
             ]
           }
@@ -152604,7 +152752,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 30
               }
             ]
           }
@@ -152634,7 +152782,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 10
               }
             ]
           }
@@ -152661,7 +152809,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 52
               }
             ]
           }
@@ -152688,7 +152836,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 73
               }
             ]
           }
@@ -152715,7 +152863,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 13
               }
             ]
           }
@@ -152752,7 +152900,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 20
               }
             ]
           }
@@ -152779,7 +152927,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 60
               }
             ]
           }
@@ -154784,7 +154932,7 @@
     "sources": {
       "other": {
         "Crafting an Uncut zenyte": {
-          "notes": "Requires an Onyx and a Zenyte shard.",
+          "notes": "Requires an Onyx, a Zenyte shard and completion of Monkey Madness II.",
           "rule": {
             "all": [
               {
@@ -154795,8 +154943,9 @@
               },
               {
                 "skill": "Crafting",
-                "level":
-              }
+                "level": 70
+              },
+              "canCompleteMonkeyMadnessII"
             ]
           }
         }
@@ -155239,7 +155388,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 46
               }
             ]
           }
@@ -155282,7 +155431,11 @@
           "notes": "Requires Achey tree logs and Wolf bones.",
           "rule": {
             "all": [
-              "canCompleteZogreFleshEaters"
+              "canCompleteZogreFleshEaters",
+              {
+                "skill": "Fletching",
+                "level": 30
+              }
             ]
           }
         }
@@ -155297,7 +155450,7 @@
     "sources": {
       "other": {
         "Creating an unstrung emblem": {
-          "notes": "Requires a Silver bar and an unholy mould.",
+          "notes": "Requires a Silver bar and an Unholy mould.",
           "rule": {
             "all": [
               {
@@ -155305,7 +155458,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 17
               },
               {
                 "any": [
@@ -155338,7 +155491,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 72
               }
             ]
           }
@@ -155365,7 +155518,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 47
               }
             ]
           }
@@ -155403,7 +155556,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 16
               }
             ]
           }
@@ -155655,8 +155808,16 @@
                 "has": 28276
               },
               {
-                "skill": "Crafting",
-                "level":
+                "skills": [
+                  {
+                    "skill": "Magic",
+                    "level": 90
+                  },
+                  {
+                    "skill": "Crafting",
+                    "level": 80
+                  }
+                ]
               }
             ]
           }
@@ -157051,7 +157212,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 80
               },
               "canCompleteDesertTreasureII"
             ]
@@ -158582,7 +158743,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 60
               }
             ]
           }
@@ -158626,7 +158787,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 73
               }
             ]
           }
@@ -158667,7 +158828,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 82
               }
             ]
           }
@@ -160149,7 +160310,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 25
               }
             ]
           }
@@ -160250,7 +160411,7 @@
               },
               {
                 "skill": "Farming",
-                "level":
+                "level": 30
               }
             ]
           }
@@ -160293,67 +160454,6 @@
         },
         "Struggling sapling (Forestry event)": {
           "droprate": "1/6"
-        }
-      },
-      "other": {
-        "Chopping Willow logs with a Forestry kit": {
-          "notes": "Willow tree.",
-          "rule": {
-            "skill": "Woodcutting",
-            "level":
-          }
-        },
-        "Forestry events": {
-          "notes": "Struggling Sapling or Friendly Ent.",
-          "rule": {
-            "skill": "Woodcutting",
-            "level":
-          }
-        },
-        "Using Secateurs to cure a planted Willow tree": {
-          "notes": "Diseased planted willow tree.",
-          "rule": {
-            "all": [
-              {
-                "has": 5329
-              },
-              {
-                "any": [
-                  {
-                    "has": 5371
-                  },
-                  {
-                    "all": [
-                      {
-                        "has": 970
-                      },
-                      {
-                        "has": 5438
-                      },
-                      {
-                        "has": 1759
-                      },
-                      {
-                        "any": [
-                          {
-                            "has": 36
-                          },
-                          {
-                            "has": 30
-                          }
-                        ]
-                      },
-                      "canStartEnlightenedJourney"
-                    ]
-                  }
-                ]
-              },
-              {
-                "skill": "Farming",
-                "level":
-              }
-            ]
-          }
         }
       }
     }
@@ -160467,7 +160567,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 40
               }
             ]
           }
@@ -160499,7 +160599,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 40
               }
             ]
           }
@@ -160572,7 +160672,7 @@
               },
               {
                 "skill": "Farming",
-                "level":
+                "level": 30
               }
             ]
           }
@@ -160710,7 +160810,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 42
               }
             ]
           }
@@ -160757,7 +160857,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 35
               }
             ]
           }
@@ -160789,7 +160889,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 35
               }
             ]
           }
@@ -160824,7 +160924,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 39
               }
             ]
           }
@@ -160992,7 +161092,7 @@
         }
       },
       "other": {
-        "Making a wizard blizzard": {
+        "Making a Wizard blizzard": {
           "notes": "Requires Pineapple chunks, Lime slices and a Cocktail glass.",
           "rule": {
             "all": [
@@ -161007,7 +161107,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 18
               }
             ]
           }
@@ -161336,8 +161436,16 @@
                 "has": 1755
               },
               {
-                "skill": "Fletching",
-                "level":
+                "skills": [
+                  {
+                    "skill": "Crafting",
+                    "level": 5
+                  },
+                  {
+                    "skill": "Fletching",
+                    "level": 5
+                  }
+                ]
               }
             ]
           }
@@ -161485,7 +161593,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 16
               },
               "canCompleteTheGreatBrainRobbery",
               {
@@ -161619,7 +161727,7 @@
         }
       },
       "other": {
-        "Fletching a wooden stock": {
+        "Fletching a Wooden stock": {
           "notes": "Requires Logs and a Knife.",
           "rule": {
             "all": [
@@ -161636,7 +161744,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 9
               }
             ]
           }
@@ -161731,7 +161839,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 14
               }
             ]
           }
@@ -161826,7 +161934,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 50
               }
             ]
           }
@@ -162052,7 +162160,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 14
               }
             ]
           }
@@ -162076,7 +162184,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 17
               }
             ]
           }
@@ -162100,7 +162208,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 22
               }
             ]
           }
@@ -162140,7 +162248,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 43
               },
               "canMakeYakhideArmour"
             ]
@@ -162165,7 +162273,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 46
               },
               "canMakeYakhideArmour"
             ]
@@ -162380,22 +162488,6 @@
         "Golden warbler": {
           "droprate": "Always"
         }
-      },
-      "other": {
-        "Catching a Golden Warbler": {
-          "notes": "Catch a Golden warbler with a Bird snare.",
-          "rule": {
-            "all": [
-              {
-                "has": 10006
-              },
-              {
-                "skill": "Hunter",
-                "level":
-              }
-            ]
-          }
-        }
       }
     }
   },
@@ -162540,7 +162632,7 @@
               },
               {
                 "skill": "Cooking",
-                "level":
+                "level": 79
               }
             ]
           }
@@ -162573,7 +162665,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 60
               }
             ]
           }
@@ -162615,39 +162707,6 @@
         },
         "Struggling sapling (Forestry event)": {
           "droprate": "1/6"
-        }
-      },
-      "other": {
-        "Chopping Yew logs with a Forestry kit": {
-          "notes": "Yew tree.",
-          "rule": {
-            "skill": "Woodcutting",
-            "level":
-          }
-        },
-        "Forestry events": {
-          "notes": "Struggling Sapling or Friendly Ent.",
-          "rule": {
-            "skill": "Woodcutting",
-            "level":
-          }
-        },
-        "Using Secateurs to cure a planted yew tree": {
-          "notes": "Diseased planted yew tree.",
-          "rule": {
-            "all": [
-              {
-                "has": 5329
-              },
-              {
-                "has": 5373
-              },
-              {
-                "skill": "Farming",
-                "level":
-              }
-            ]
-          }
         }
       }
     }
@@ -162860,7 +162919,7 @@
         "Yes": "canCompleteSongOfTheElves"
       },
       "other": {
-        "Fletching a yew longbow": {
+        "Fletching a Yew longbow": {
           "notes": "Requires a Yew longbow (u) and a Bow string.",
           "rule": {
             "all": [
@@ -162872,7 +162931,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 70
               }
             ]
           }
@@ -162892,7 +162951,7 @@
         }
       },
       "other": {
-        "Fletching a yew longbow (u)": {
+        "Fletching a Yew longbow (u)": {
           "notes": "Requires a Knife and Yew logs.",
           "rule": {
             "all": [
@@ -162909,7 +162968,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 70
               }
             ]
           }
@@ -162982,7 +163041,7 @@
               },
               {
                 "skill": "Farming",
-                "level":
+                "level": 60
               }
             ]
           }
@@ -163186,7 +163245,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 72
               }
             ]
           }
@@ -163233,7 +163292,7 @@
         }
       },
       "other": {
-        "Fletching a yew shortbow": {
+        "Fletching a Yew shortbow": {
           "notes": "Requires a Yew shortbow (u) and a Bow string.",
           "rule": {
             "all": [
@@ -163245,7 +163304,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 65
               }
             ]
           }
@@ -163260,7 +163319,7 @@
     "image": "yew_shortbow_(u).png",
     "sources": {
       "other": {
-        "Fletching a yew shortbow (u)": {
+        "Fletching a Yew shortbow (u)": {
           "notes": "Requires a Knife and Yew logs.",
           "rule": {
             "all": [
@@ -163277,7 +163336,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 65
               }
             ]
           }
@@ -163309,7 +163368,7 @@
               },
               {
                 "skill": "Fletching",
-                "level":
+                "level": 69
               }
             ]
           }
@@ -163333,7 +163392,7 @@
               },
               {
                 "skill": "Hunter",
-                "level":
+                "level": 22
               }
             ]
           }
@@ -163520,7 +163579,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 78
               }
             ]
           }
@@ -163563,7 +163622,7 @@
               },
               {
                 "skill": "Herblore",
-                "level":
+                "level": 78
               }
             ]
           }
@@ -164321,7 +164380,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 89
               }
             ]
           }
@@ -164345,10 +164404,6 @@
               },
               {
                 "has": 1759
-              },
-              {
-                "skill": "Crafting",
-                "level":
               }
             ]
           }
@@ -164378,7 +164433,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 98
               }
             ]
           }
@@ -164408,7 +164463,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 95
               }
             ]
           }
@@ -164438,7 +164493,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 92
               }
             ]
           }
@@ -164468,7 +164523,7 @@
               },
               {
                 "skill": "Crafting",
-                "level":
+                "level": 89
               }
             ]
           }
@@ -164530,7 +164585,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 70
               },
               {
                 "has": 2347
@@ -164573,7 +164628,7 @@
               },
               {
                 "skill": "Smithing",
-                "level":
+                "level": 70
               },
               {
                 "has": 2347
@@ -164644,8 +164699,16 @@
                 "has": 313
               },
               {
-                "skill": "Fishing",
-                "level":
+                "skills": [
+                  {
+                    "skill": "Fishing",
+                    "level": 87
+                  },
+                  {
+                    "skill": "Cooking",
+                    "level": 72
+                  }
+                ]
               },
               "canCompleteRegicide"
             ]
