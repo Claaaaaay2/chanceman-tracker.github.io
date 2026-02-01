@@ -253,13 +253,35 @@ window.initItemsPage = async function () {
         return rule;
     }
 
+    function getDropRateLabel(drops) {
+        if (!drops) return "";
+        let best = null;
+        let bestValue = 0;
+
+        if (Array.isArray(drops)) {
+            for (const drop of drops) {
+                if (!drop?.droprate) continue;
+                const value = parseDropRate(drop.droprate);
+                if (value > bestValue) {
+                    bestValue = value;
+                    best = drop.droprate;
+                }
+            }
+        } else if (drops?.droprate) {
+            best = drops.droprate;
+        }
+
+        return best ? ` (${best})` : "";
+    }
+
     async function getObtainableSources(item, ctx, rolled) {
         const sources = [];
 
         if (item.sources?.drops) {
-            for (const npcName of Object.keys(item.sources.drops)) {
+            for (const [npcName, drops] of Object.entries(item.sources.drops)) {
                 if (await isNpcObtainable(npcName, ctx)) {
-                    sources.push(`Drop: ${npcName}`);
+                    const rateLabel = getDropRateLabel(drops);
+                    sources.push(`Drop: ${npcName}${rateLabel}`);
                 }
             }
         }
