@@ -10097,7 +10097,7 @@
       },
       "other": {
         "Crafting an Ancient teleport tablet": {
-          "notes": "Requires a Law rune, Blood rune and Soft clay.",
+          "notes": "Requires a Law rune, Blood rune, Soft clay and completion of Desert Treasure I.",
           "rule": {
             "all": [
               {
@@ -11795,15 +11795,13 @@
     "sources": {
       "other": {
         "Crafting an Arceuus teleport tablet": {
-          "notes": "Requires a Law rune, Earth rune and a dark essence block (which requires a Chisel and pickaxe).",
+          "notes": "Requires a Law rune, Earth rune and a Dark essence block (which requires a Chisel and Pickaxe).",
           "rule": {
             "all": [
               {
                 "has": 563
               },
-              {
-                "has": 557
-              },
+              "hasEarthRuneSource",
               {
                 "has": 1755
               },
@@ -12005,9 +12003,7 @@
               {
                 "has": 563
               },
-              {
-                "has": 555
-              },
+              "hasWaterRuneSource",
               {
                 "has": 1761
               },
@@ -12016,6 +12012,16 @@
                 "skill": "Magic",
                 "level": 51
               }
+            ]
+          },
+          "tags": [
+            "house"
+          ],
+          "houseRule": {
+            "any": [
+              "canMakeTeakEagleLectern",
+              "canMakeMahoganyEagleLectern",
+              "canMakeMarbleLectern"
             ]
           }
         }
@@ -15722,15 +15728,13 @@
     "sources": {
       "other": {
         "Crafting a Lunar teleport tablet": {
-          "notes": "Requires a Law rune, Fire rune, Astral rune and Soft clay.",
+          "notes": "Requires a Law rune, Fire rune, Astral rune, Soft clay and completion of Lunar Diplomacy.",
           "rule": {
             "all": [
               {
                 "has": 563
               },
-              {
-                "has": 554
-              },
+              "hasFireRuneSource",
               {
                 "has": 9075
               },
@@ -16028,7 +16032,7 @@
     "sources": {
       "other": {
         "Crafting an Arceuus teleport tablet": {
-          "notes": "Requires a Law rune, Soul rune, Blood rune and a dark essence block (which requires a Chisel and pickaxe).",
+          "notes": "Requires a Law rune, Soul rune, Blood rune and a Dark essence block (which requires a Chisel and Pickaxe).",
           "rule": {
             "all": [
               {
@@ -16424,18 +16428,14 @@
     "sources": {
       "other": {
         "Crafting an Arceuus teleport tablet": {
-          "notes": "Requires a Law rune, Earth rune, Fire rune and a dark essence block (which requires a Chisel and pickaxe).",
+          "notes": "Requires a Law rune, Earth rune, Fire rune and a Dark essence block (which requires a Chisel and Pickaxe).",
           "rule": {
             "all": [
               {
                 "has": 563
               },
-              {
-                "has": 557
-              },
-              {
-                "has": 554
-              },
+              "hasEarthRuneSource",
+              "hasFireRuneSource",
               {
                 "has": 1755
               },
@@ -27405,20 +27405,26 @@
               {
                 "has": 561
               },
-              {
-                "has": 557
-              },
-              {
-                "has": 555
-              },
+              "hasEarthRuneSource",
+              "hasWaterRuneSource",
               {
                 "has": 1761
               },
               {
                 "skill": "Magic",
                 "level": 15
-              },
-              "canDoMageTrainingArena"
+              }
+            ]
+          },
+          "tags": [
+            "house"
+          ],
+          "houseRule": {
+            "any": [
+              "canMakeDemonLectern",
+              "canMakeTeakDemonLectern",
+              "canMakeMahoganyDemonLectern",
+              "canMakeMarbleLectern"
             ]
           }
         }
@@ -27433,25 +27439,31 @@
     "sources": {
       "other": {
         "Crafting a tablet": {
-          "notes": "Requires a Nature rune, Earth rune, Water rune and Soft clay.",
+          "notes": "Requires a Nature rune, Earth rune, Water rune, Soft clay and be able to play the Mage Training Arena.",
           "rule": {
             "all": [
               {
                 "has": 561
               },
-              {
-                "has": 557
-              },
-              {
-                "has": 555
-              },
+              "hasEarthRuneSource",
+              "hasWaterRuneSource",
               {
                 "has": 1761
               },
+              "canDoMageTrainingArena",
               {
                 "skill": "Magic",
                 "level": 60
               }
+            ]
+          },
+          "tags": [
+            "house"
+          ],
+          "houseRule": {
+            "any": [
+              "canMakeMahoganyDemonLectern",
+              "canMakeMarbleLectern"
             ]
           }
         }
@@ -34113,12 +34125,24 @@
               {
                 "has": 563
               },
-              {
-                "has": 556
-              },
+              "hasAirRuneSource",
               {
                 "has": 1761
+              },
+              {
+                "skill": "Magic",
+                "level": 45
               }
+            ]
+          },
+          "tags": [
+            "house"
+          ],
+          "houseRule": {
+            "any": [
+              "canMakeTeakEagleLectern",
+              "canMakeMahoganyEagleLectern",
+              "canMakeMarbleLectern"
             ]
           }
         }
@@ -34558,7 +34582,7 @@
       },
       "other": {
         "Crafting an Ancient teleport tablet": {
-          "notes": "Requires a Law rune, Soul rune and Soft clay.",
+          "notes": "Requires a Law rune, Soul rune, Soft clay and completion of Desert Treasure I.",
           "rule": {
             "all": [
               {
@@ -34570,7 +34594,11 @@
               {
                 "has": 1761
               },
-              "canCompleteDesertTreasureI"
+              "canCompleteDesertTreasureI",
+              {
+                "skill": "Magic",
+                "level": 84
+              }
             ]
           }
         },
@@ -34916,22 +34944,24 @@
     "sources": {
       "other": {
         "Crafting a Lunar teleport tablet": {
-          "notes": "Requires a Law rune, Water rune, Astral rune and Soft clay.",
+          "notes": "Requires a Law rune, Water rune, Astral rune, Soft clay and completion of Lunar Diplomacy.",
           "rule": {
             "all": [
               {
                 "has": 563
               },
-              {
-                "has": 555
-              },
+              "hasWaterRuneSource",
               {
                 "has": 9075
               },
               {
                 "has": 1761
               },
-              "canCompleteLunarDiplomacy"
+              "canCompleteLunarDiplomacy",
+              {
+                "skill": "Magic",
+                "level": 87
+              }
             ]
           }
         }
@@ -35183,7 +35213,7 @@
     "sources": {
       "other": {
         "Crafting an Arceuus teleport tablet": {
-          "notes": "Requires a Law rune, Soul rune, Blood rune and a dark essence block (which requires a Chisel and pickaxe).",
+          "notes": "Requires a Law rune, Soul rune, Blood rune and a Dark essence block (which requires a Chisel and Pickaxe).",
           "rule": {
             "all": [
               {
@@ -37526,16 +37556,24 @@
               {
                 "has": 563
               },
-              {
-                "has": 557
-              },
-              {
-                "has": 554
-              },
+              "hasEarthRuneSource",
+              "hasFireRuneSource",
               {
                 "has": 1761
               },
-              "canCompleteTwilightsPromise"
+              {
+                "skill": "Magic",
+                "level": 54
+              }
+            ]
+          },
+          "tags": [
+            "house"
+          ],
+          "houseRule": {
+            "any": [
+              "canMakeMahoganyEagleLectern",
+              "canMakeMarbleLectern"
             ]
           }
         }
@@ -41582,22 +41620,22 @@
       },
       "other": {
         "Crafting an Ancient teleport tablet": {
-          "notes": "Requires a Law rune, Air rune, Fire rune and Soft clay.",
+          "notes": "Requires a Law rune, Air rune, Fire rune, Soft clay and completion of Desert Treasure I.",
           "rule": {
             "all": [
               {
                 "has": 563
               },
-              {
-                "has": 556
-              },
-              {
-                "has": 554
-              },
+              "hasAirRuneSource",
+              "hasFireRuneSource",
               {
                 "has": 1761
               },
-              "canCompleteDesertTreasureI"
+              "canCompleteDesertTreasureI",
+              {
+                "skill": "Magic",
+                "level": 78
+              }
             ]
           }
         },
@@ -49490,18 +49528,14 @@
     "sources": {
       "other": {
         "Crafting an Arceuus teleport tablet": {
-          "notes": "Requires a Law rune, Earth rune, Water rune and a dark essence block (which requires a Chisel and pickaxe).",
+          "notes": "Requires a Law rune, Earth rune, Water rune and a Dark essence block (which requires a Chisel and Pickaxe).",
           "rule": {
             "all": [
               {
                 "has": 563
               },
-              {
-                "has": 557
-              },
-              {
-                "has": 555
-              },
+              "hasEarthRuneSource",
+              "hasWaterRuneSource",
               {
                 "has": 1755
               },
@@ -53335,12 +53369,20 @@
               {
                 "has": 564
               },
-              {
-                "has": 557
-              },
+              "hasEarthRuneSource",
               {
                 "has": 1761
               }
+            ]
+          },
+          "tags": [
+            "house"
+          ],
+          "houseRule": {
+            "any": [
+              "canMakeTeakDemonLectern",
+              "canMakeMahoganyDemonLectern",
+              "canMakeMarbleLectern"
             ]
           }
         }
@@ -53361,15 +53403,20 @@
               {
                 "has": 564
               },
-              {
-                "has": 557
-              },
-              {
-                "has": 555
-              },
+              "hasEarthRuneSource",
+              "hasWaterRuneSource",
               {
                 "has": 1761
               }
+            ]
+          },
+          "tags": [
+            "house"
+          ],
+          "houseRule": {
+            "any": [
+              "canMakeMahoganyDemonLectern",
+              "canMakeMarbleLectern"
             ]
           }
         }
@@ -53390,12 +53437,21 @@
               {
                 "has": 564
               },
-              {
-                "has": 556
-              },
+              "hasAirRuneSource",
               {
                 "has": 1761
               }
+            ]
+          },
+          "tags": [
+            "house"
+          ],
+          "houseRule": {
+            "any": [
+              "canMakeDemonLectern",
+              "canMakeTeakDemonLectern",
+              "canMakeMahoganyDemonLectern",
+              "canMakeMarbleLectern"
             ]
           }
         }
@@ -53416,15 +53472,20 @@
               {
                 "has": 564
               },
-              {
-                "has": 554
-              },
-              {
-                "has": 557
-              },
+              "hasEarthRuneSource",
+              "hasFireRuneSource",
               {
                 "has": 1761
               }
+            ]
+          },
+          "tags": [
+            "house"
+          ],
+          "houseRule": {
+            "any": [
+              "canMakeMahoganyDemonLectern",
+              "canMakeMarbleLectern"
             ]
           }
         }
@@ -53445,12 +53506,20 @@
               {
                 "has": 564
               },
-              {
-                "has": 554
-              },
+              "hasFireRuneSource",
               {
                 "has": 1761
               }
+            ]
+          },
+          "tags": [
+            "house"
+          ],
+          "houseRule": {
+            "any": [
+              "canMakeTeakDemonLectern",
+              "canMakeMahoganyDemonLectern",
+              "canMakeMarbleLectern"
             ]
           }
         }
@@ -53471,12 +53540,25 @@
               {
                 "has": 564
               },
-              {
-                "has": 555
-              },
+              "hasWaterRuneSource",
               {
                 "has": 1761
               }
+            ]
+          },
+          "tags": [
+            "house"
+          ],
+          "houseRule": {
+            "any": [
+              "canMakeOakLectern",
+              "canMakeEagleLectern",
+              "canMakeDemonLectern",
+              "canMakeTeakEagleLectern",
+              "canMakeTeakDemonLectern",
+              "canMakeMahoganyEagleLectern",
+              "canMakeMahoganyDemonLectern",
+              "canMakeMarbleLectern"
             ]
           }
         }
@@ -55897,15 +55979,26 @@
               {
                 "has": 563
               },
-              {
-                "has": 556
-              },
-              {
-                "has": 555
-              },
+              "hasAirRuneSource",
+              "hasWaterRuneSource",
               {
                 "has": 1761
+              },
+              {
+                "skill": "Magic",
+                "level": 37
               }
+            ]
+          },
+          "tags": [
+            "house"
+          ],
+          "houseRule": {
+            "any": [
+              "canMakeEagleLectern",
+              "canMakeTeakEagleLectern",
+              "canMakeMahoganyEagleLectern",
+              "canMakeMarbleLectern"
             ]
           }
         }
@@ -56328,7 +56421,7 @@
     "sources": {
       "other": {
         "Crafting an Arceuus teleport tablet": {
-          "notes": "Requires a Law rune, Soul rune, Earth rune and a dark essence block (which requires a Chisel and pickaxe).",
+          "notes": "Requires a Law rune, Soul rune, Earth rune and a Dark essence block (which requires a Chisel and Pickaxe).",
           "rule": {
             "all": [
               {
@@ -56337,9 +56430,7 @@
               {
                 "has": 566
               },
-              {
-                "has": 557
-              },
+              "hasEarthRuneSource",
               {
                 "has": 1755
               },
@@ -57832,22 +57923,24 @@
     "sources": {
       "other": {
         "Crafting a Lunar teleport tablet": {
-          "notes": "Requires a Law rune, Water rune, Astral rune and Soft clay.",
+          "notes": "Requires a Law rune, Water rune, Astral rune, Soft clay and completion of Lunar Diplomacy.",
           "rule": {
             "all": [
               {
                 "has": 563
               },
-              {
-                "has": 555
-              },
+              "hasWaterRuneSource",
               {
                 "has": 9075
               },
               {
                 "has": 1761
               },
-              "canCompleteLunarDiplomacy"
+              "canCompleteLunarDiplomacy",
+              {
+                "skill": "Magic",
+                "level": 85
+              }
             ]
           }
         }
@@ -59434,19 +59527,21 @@
       },
       "other": {
         "Crafting an Ancient teleport tablet": {
-          "notes": "Requires a Law rune, Water rune and Soft clay.",
+          "notes": "Requires a Law rune, Water rune, Soft clay and completion of Desert Treasure I.",
           "rule": {
             "all": [
               {
                 "has": 563
               },
-              {
-                "has": 555
-              },
+              "hasWaterRuneSource",
               {
                 "has": 1761
               },
-              "canCompleteDesertTreasureI"
+              "canCompleteDesertTreasureI",
+              {
+                "skill": "Magic",
+                "level": 96
+              }
             ]
           }
         },
@@ -76932,7 +77027,7 @@
     "sources": {
       "other": {
         "Crafting an Arceuus teleport tablet": {
-          "notes": "Requires a Law rune, Soul rune, Nature rune and a dark essence block (which requires a Chisel and pickaxe).",
+          "notes": "Requires a Law rune, Soul rune, Nature rune and a Dark essence block (which requires a Chisel and Pickaxe).",
           "rule": {
             "all": [
               {
@@ -78518,22 +78613,24 @@
     "sources": {
       "other": {
         "Crafting a Lunar teleport tablet": {
-          "notes": "Requires a Law rune, Water rune, Astral rune and Soft clay.",
+          "notes": "Requires a Law rune, Water rune, Astral rune, Soft clay and completion of Lunar Diplomacy.",
           "rule": {
             "all": [
               {
                 "has": 563
               },
-              {
-                "has": 555
-              },
+              "hasWaterRuneSource",
               {
                 "has": 9075
               },
               {
                 "has": 1761
               },
-              "canCompleteLunarDiplomacy"
+              "canCompleteLunarDiplomacy",
+              {
+                "skill": "Magic",
+                "level": 89
+              }
             ]
           }
         }
@@ -85507,7 +85604,7 @@
       },
       "other": {
         "Crafting an Ancient teleport tablet": {
-          "notes": "Requires a Law rune, Blood rune and Soft clay.",
+          "notes": "Requires a Law rune, Blood rune, Soft clay and completion of Desert Treasure I.",
           "rule": {
             "all": [
               {
@@ -85519,7 +85616,11 @@
               {
                 "has": 1761
               },
-              "canCompleteDesertTreasureI"
+              "canCompleteDesertTreasureI",
+              {
+                "skill": "Magic",
+                "level": 66
+              }
             ]
           }
         },
@@ -85540,22 +85641,24 @@
     "sources": {
       "other": {
         "Crafting a Lunar teleport tablet": {
-          "notes": "Requires a Law rune, Water rune, Astral rune and Soft clay.",
+          "notes": "Requires a Law rune, Water rune, Astral rune, Soft clay and completion of Lunar Diplomacy.",
           "rule": {
             "all": [
               {
                 "has": 563
               },
-              {
-                "has": 555
-              },
+              "hasWaterRuneSource",
               {
                 "has": 9075
               },
               {
                 "has": 1761
               },
-              "canCompleteLunarDiplomacy"
+              "canCompleteLunarDiplomacy",
+              {
+                "skill": "Magic",
+                "level": 78
+              }
             ]
           }
         }
@@ -85773,15 +85876,25 @@
               {
                 "has": 563
               },
-              {
-                "has": 555
-              },
-              {
-                "has": 554
-              },
+              "hasWaterRuneSource",
+              "hasFireRuneSource",
               {
                 "has": 1761
+              },
+              {
+                "skill": "Magic",
+                "level": 48
               }
+            ]
+          },
+          "tags": [
+            "house"
+          ],
+          "houseRule": {
+            "any": [
+              "canMakeTeakEagleLectern",
+              "canMakeMahoganyEagleLectern",
+              "canMakeMarbleLectern"
             ]
           }
         }
@@ -87708,19 +87821,21 @@
       },
       "other": {
         "Crafting an Ancient teleport tablet": {
-          "notes": "Requires a Law rune, Water rune and Soft clay.",
+          "notes": "Requires a Law rune, Water rune, Soft clay and completion of Desert Treasure I.",
           "rule": {
             "all": [
               {
                 "has": 563
               },
-              {
-                "has": 556
-              },
+              "hasWaterRuneSource",
               {
                 "has": 1761
               },
-              "canCompleteDesertTreasureI"
+              "canCompleteDesertTreasureI",
+              {
+                "skill": "Magic",
+                "level": 72
+              }
             ]
           }
         },
@@ -90950,15 +91065,26 @@
               {
                 "has": 563
               },
-              {
-                "has": 556
-              },
-              {
-                "has": 557
-              },
+              "hasAirRuneSource",
+              "hasEarthRuneSource",
               {
                 "has": 1761
+              },
+              {
+                "skill": "Magic",
+                "level": 31
               }
+            ]
+          },
+          "tags": [
+            "house"
+          ],
+          "houseRule": {
+            "any": [
+              "canMakeEagleLectern",
+              "canMakeTeakEagleLectern",
+              "canMakeMahoganyEagleLectern",
+              "canMakeMarbleLectern"
             ]
           }
         }
@@ -94973,7 +95099,7 @@
     "sources": {
       "other": {
         "Crafting an Arceuus teleport tablet": {
-          "notes": "Requires a Law rune, Mind rune and a dark essence block (which requires a Chisel and pickaxe).",
+          "notes": "Requires a Law rune, Mind rune and a Dark essence block (which requires a Chisel and Pickaxe).",
           "rule": {
             "all": [
               {
@@ -100504,22 +100630,24 @@
     "sources": {
       "other": {
         "Crafting a Lunar teleport tablet": {
-          "notes": "Requires a Law rune, Earth rune, Astral rune and Soft clay.",
+          "notes": "Requires a Law rune, Earth rune, Astral rune, Soft clay and completion of Lunar Diplomacy.",
           "rule": {
             "all": [
               {
                 "has": 563
               },
-              {
-                "has": 557
-              },
+              "hasEarthRuneSource",
               {
                 "has": 9075
               },
               {
                 "has": 1761
               },
-              "canCompleteLunarDiplomacy"
+              "canCompleteLunarDiplomacy",
+              {
+                "skill": "Magic",
+                "level": 69
+              }
             ]
           }
         }
@@ -107338,22 +107466,24 @@
     "sources": {
       "other": {
         "Crafting a Lunar teleport tablet": {
-          "notes": "Requires a Law rune, Earth rune, Astral rune and Soft clay.",
+          "notes": "Requires a Law rune, Earth rune, Astral rune, Soft clay and completion of Lunar Diplomacy.",
           "rule": {
             "all": [
               {
                 "has": 563
               },
-              {
-                "has": 557
-              },
+              "hasEarthRuneSource",
               {
                 "has": 9075
               },
               {
                 "has": 1761
               },
-              "canCompleteLunarDiplomacy"
+              "canCompleteLunarDiplomacy",
+              {
+                "skill": "Magic",
+                "level": 71
+              }
             ]
           }
         }
@@ -107596,22 +107726,22 @@
       },
       "other": {
         "Crafting an Ancient teleport tablet": {
-          "notes": "Requires a Law rune, Air rune, Fire rune and Soft clay.",
+          "notes": "Requires a Law rune, Air rune, Fire rune, Soft clay and completion of Desert Treasure I.",
           "rule": {
             "all": [
               {
                 "has": 563
               },
-              {
-                "has": 556
-              },
-              {
-                "has": 554
-              },
+              "hasAirRuneSource",
+              "hasFireRuneSource",
               {
                 "has": 1761
               },
-              "canCompleteDesertTreasureI"
+              "canCompleteDesertTreasureI",
+              {
+                "skill": "Magic",
+                "level": 54
+              }
             ]
           }
         },
@@ -126535,7 +126665,7 @@
     "sources": {
       "other": {
         "Crafting an Arceuus teleport tablet": {
-          "notes": "Requires a Law rune, Soul rune and a dark essence block (which requires a Chisel and pickaxe).",
+          "notes": "Requires a Law rune, Soul rune and a Dark essence block (which requires a Chisel and Pickaxe).",
           "rule": {
             "all": [
               {
@@ -129073,7 +129203,7 @@
       },
       "other": {
         "Crafting an Ancient teleport tablet": {
-          "notes": "Requires a Law rune, Soul rune and Soft clay.",
+          "notes": "Requires a Law rune, Soul rune, Soft clay and completion of Desert Treasure I.",
           "rule": {
             "all": [
               {
@@ -129085,7 +129215,11 @@
               {
                 "has": 1761
               },
-              "canCompleteDesertTreasureI"
+              "canCompleteDesertTreasureI",
+              {
+                "skill": "Magic",
+                "level": 60
+              }
             ]
           }
         },
@@ -141560,15 +141694,24 @@
               {
                 "has": 563
               },
-              {
-                "has": 555
-              },
-              {
-                "has": 557
-              },
+              "hasWaterRuneSource",
+              "hasEarthRuneSource",
               {
                 "has": 1761
+              },
+              {
+                "skill": "Magic",
+                "level": 56
               }
+            ]
+          },
+          "tags": [
+            "house"
+          ],
+          "houseRule": {
+            "any": [
+              "canMakeMahoganyEagleLectern",
+              "canMakeMarbleLectern"
             ]
           }
         }
@@ -147390,15 +147533,24 @@
               {
                 "has": 563
               },
-              {
-                "has": 555
-              },
-              {
-                "has": 557
-              },
+              "hasWaterRuneSource",
+              "hasEarthRuneSource",
               {
                 "has": 1761
+              },
+              {
+                "skill": "Magic",
+                "level": 67
               }
+            ]
+          },
+          "tags": [
+            "house"
+          ],
+          "houseRule": {
+            "any": [
+              "canMakeMahoganyEagleLectern",
+              "canMakeMarbleLectern"
             ]
           }
         }
@@ -147424,15 +147576,24 @@
               {
                 "has": 563
               },
-              {
-                "has": 556
-              },
-              {
-                "has": 557
-              },
+              "hasAirRuneSource",
+              "hasEarthRuneSource",
               {
                 "has": 1761
+              },
+              {
+                "skill": "Magic",
+                "level": 40
               }
+            ]
+          },
+          "tags": [
+            "house"
+          ],
+          "houseRule": {
+            "any": [
+              "canMakeMahoganyEagleLectern",
+              "canMakeMarbleLectern"
             ]
           }
         }
@@ -155527,15 +155688,30 @@
               {
                 "has": 563
               },
-              {
-                "has": 556
-              },
-              {
-                "has": 554
-              },
+              "hasAirRuneSource",
+              "hasFireRuneSource",
               {
                 "has": 1761
+              },
+              {
+                "skill": "Magic",
+                "level": 25
               }
+            ]
+          },
+          "tags": [
+            "house"
+          ],
+          "houseRule": {
+            "any": [
+              "canMakeOakLectern",
+              "canMakeEagleLectern",
+              "canMakeDemonLectern",
+              "canMakeTeakEagleLectern",
+              "canMakeTeakDemonLectern",
+              "canMakeMahoganyEagleLectern",
+              "canMakeMahoganyDemonLectern",
+              "canMakeMarbleLectern"
             ]
           }
         }
@@ -156888,19 +157064,30 @@
     "sources": {
       "other": {
         "Crafting a teleport tablet": {
-          "notes": "Requires a Law rune, Earth rune and Soft clay.",
+          "notes": "Requires a Law rune, Earth rune, Soft clay and completion of Watchtower.",
           "rule": {
             "all": [
               {
                 "has": 563
               },
-              {
-                "has": 557
-              },
+              "hasEarthRuneSource",
               {
                 "has": 1761
               },
-              "canCompleteWatchtower"
+              "canCompleteWatchtower",
+              {
+                "skill": "Magic",
+                "level": 58
+              }
+            ]
+          },
+          "tags": [
+            "house"
+          ],
+          "houseRule": {
+            "any": [
+              "canMakeMahoganyEagleLectern",
+              "canMakeMarbleLectern"
             ]
           }
         }
@@ -157678,22 +157865,24 @@
     "sources": {
       "other": {
         "Crafting a Lunar teleport tablet": {
-          "notes": "Requires a Law rune, Water rune, Astral rune and Soft clay.",
+          "notes": "Requires a Law rune, Water rune, Astral rune, Soft clay and completion of Lunar Diplomacy.",
           "rule": {
             "all": [
               {
                 "has": 563
               },
-              {
-                "has": 555
-              },
+              "hasWaterRuneSource",
               {
                 "has": 9075
               },
               {
                 "has": 1761
               },
-              "canCompleteLunarDiplomacy"
+              "canCompleteLunarDiplomacy",
+              {
+                "skill": "Magic",
+                "level": 72
+              }
             ]
           }
         }
@@ -158533,7 +158722,7 @@
     "sources": {
       "other": {
         "Crafting an Arceuus teleport tablet": {
-          "notes": "Requires a Law rune, Soul rune and a dark essence block (which requires a Chisel and pickaxe).",
+          "notes": "Requires a Law rune, Soul rune and a Dark essence block (which requires a Chisel and Pickaxe).",
           "rule": {
             "all": [
               {

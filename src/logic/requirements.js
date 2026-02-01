@@ -522,6 +522,58 @@ export const REQUIREMENT_CHECKS = {
             && has(ctx, 8778)  // Oak plank
             && has(ctx, 2353); // Steel bar
     },
+    canMakeOakLectern(ctx) {
+        return canTrainConstruction(ctx) //
+            && has(ctx, 8794)  // Saw
+            && has(ctx, 2347)  // Hammer
+            && has(ctx, 8778); // Oak plank
+    },
+    canMakeEagleLectern(ctx) {
+        return canTrainConstruction(ctx) //
+            && has(ctx, 8794)  // Saw
+            && has(ctx, 2347)  // Hammer
+            && has(ctx, 8778); // Oak plank
+    },
+    canMakeDemonLectern(ctx) {
+        return canTrainConstruction(ctx) //
+            && has(ctx, 8794)  // Saw
+            && has(ctx, 2347)  // Hammer
+            && has(ctx, 8778); // Oak plank
+    },
+    canMakeTeakEagleLectern(ctx) {
+        return canTrainConstruction(ctx) //
+            && has(ctx, 8794)  // Saw
+            && has(ctx, 2347)  // Hammer
+            && has(ctx, 8780); // Teak plank
+    },
+    canMakeTeakDemonLectern(ctx) {
+        return canTrainConstruction(ctx) //
+            && has(ctx, 8794)  // Saw
+            && has(ctx, 2347)  // Hammer
+            && has(ctx, 8780); // Teak plank
+    },
+    canMakeMahoganyEagleLectern(ctx) {
+        return canTrainConstruction(ctx) //
+            && has(ctx, 8794)  // Saw
+            && has(ctx, 2347)  // Hammer
+            && has(ctx, 8782)  // Mahogany plank
+            && has(ctx, 8784); // Gold leaf
+    },
+    canMakeMahoganyDemonLectern(ctx) {
+        return canTrainConstruction(ctx) //
+            && has(ctx, 8794)  // Saw
+            && has(ctx, 2347)  // Hammer
+            && has(ctx, 8782)  // Mahogany plank
+            && has(ctx, 8784); // Gold leaf
+    },
+    canMakeMarbleLectern(ctx) {
+        return canTrainConstruction(ctx) //
+            && has(ctx, 8794)  // Saw
+            && has(ctx, 2347)  // Hammer
+            && has(ctx, 8786)  // Marble block
+            && has(ctx, 8788)  // Magic stone
+            && has(ctx, 8784); // Gold leaf
+    },
     canMakeCraftingTableI(ctx) {
         return canTrainConstruction(ctx) //
             && has(ctx, 8794)  // Saw
