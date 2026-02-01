@@ -23,6 +23,19 @@ function getDropRateLabel(drops) {
     return best ? ` (${best})` : "";
 }
 
+function normalizeRateScore(value) {
+    if (!Number.isFinite(value) || value <= 0) return 0;
+    return value > 1 ? 1 : value;
+}
+
+function formatCumulativeRate(value) {
+    if (!Number.isFinite(value) || value <= 0) return "0%";
+    const clamped = Math.min(value, 1);
+    const percent = clamped * 100;
+    if (value > 1) return ">=100%";
+    return `${percent.toFixed(2)}%`;
+}
+
 function escapeHtml(value) {
     return String(value)
         .replace(/&/g, "&amp;")
@@ -81,10 +94,31 @@ export default async function NpcsPage() {
     for (const [npcName, npcItems] of itemsByNpc.entries()) {
         if (!npcItems.length) continue;
         if (!(await isNpcObtainable(npcName, ctx))) continue;
-        results.push({ npcName, items: npcItems });
+
+        let totalRateScore = 0;
+        for (const item of npcItems) {
+            const drops = item.sources?.drops?.[npcName];
+            if (!drops) continue;
+            let bestRate = -Infinity;
+            if (Array.isArray(drops)) {
+                for (const drop of drops) {
+                    if (!drop?.droprate) continue;
+                    bestRate = Math.max(bestRate, parseDropRate(drop.droprate));
+                }
+            } else if (drops?.droprate) {
+                bestRate = parseDropRate(drops.droprate);
+            }
+            totalRateScore += normalizeRateScore(bestRate);
+        }
+
+        results.push({ npcName, items: npcItems, totalRateScore });
     }
 
     results.sort((a, b) => {
+        if (filters.npcSortByRate) {
+            const rateDiff = b.totalRateScore - a.totalRateScore;
+            if (rateDiff !== 0) return rateDiff;
+        }
         const countDiff = b.items.length - a.items.length;
         if (countDiff !== 0) return countDiff;
         return a.npcName.localeCompare(b.npcName);
@@ -122,6 +156,7 @@ export default async function NpcsPage() {
                     <h2 class="npc-drop-name">${escapeHtml(entry.npcName)}</h2>
                     <span class="npc-drop-count">${itemCount} ${itemLabel}</span>
                 </header>
+                <div class="npc-drop-rate">Chance to get a new roll: ${formatCumulativeRate(entry.totalRateScore)}</div>
                 <div class="npc-drop-items">
                     ${itemsHtml}
                 </div>
@@ -137,6 +172,15 @@ export default async function NpcsPage() {
             <label class="npc-drop-filter">
                 <span>Search NPCs or items:</span>
                 <input type="search" id="npcSearch" value="${escapeHtml(filters.npcSearch ?? "")}" placeholder="NPC or item name">
+            </label>
+            <label class="npc-drop-sort">
+                <span class="npc-drop-sort-title">Sort by:</span>
+                <span class="npc-drop-sort-label">Amount of new rolls</span>
+                <span class="toggle-switch npc-sort-toggle">
+                    <input type="checkbox" id="npcSortToggle" aria-label="Toggle NPC sort order">
+                    <span class="toggle-slider" aria-hidden="true"></span>
+                </span>
+                <span class="npc-drop-sort-label">Chance for new roll</span>
             </label>
         </div>
         <p class="empty-state" id="npcEmptyState" style="display: ${emptyDisplay};">No reachable NPCs with remaining drops for your current filters.</p>
@@ -188,4 +232,21 @@ window.initNpcsPage = function () {
     if (list) {
         applyNpcSearch(list);
     }
+    const toggle = document.getElementById("npcSortToggle");
+    if (toggle) {
+        toggle.checked = Boolean(fileStore.filters?.npcSortByRate);
+    }
 };
+
+function setNpcSortToggle(button, isEnabled) {
+    }
+
+document.addEventListener("input", async (e) => {
+    if (e.target.id !== "npcSortToggle") return;
+    const nextValue = !fileStore.filters?.npcSortByRate;
+    await fileStore.setFilters({
+        ...fileStore.filters,
+        npcSortByRate: nextValue
+    });
+    window.dispatchEvent(new PopStateEvent("popstate"));
+});

@@ -1029,6 +1029,36 @@ body.route-loading .route-loading-overlay {
     color: var(--text-color);
 }
 
+
+.npc-drop-rate {
+    font-size: 0.85rem;
+    opacity: 0.85;
+    margin-top: -0.35rem;
+}
+
+
+.npc-drop-sort {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.npc-drop-sort-title {
+    font-weight: 700;
+    opacity: 0.9;
+}
+
+.npc-drop-sort-label {
+    opacity: 0.8;
+}
+
+
+.npc-sort-toggle .toggle-slider::before {
+    top: 0.5px;
+}
+
 /* End NPC drops */
 
 .diary-list {
