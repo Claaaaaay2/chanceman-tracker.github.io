@@ -1,5 +1,27 @@
 import { isItemHiddenByTag, isNpcObtainable } from "../logic/itemVisibility.js";
+import { parseDropRate } from "../logic/utils.js";
 import { fileStore } from "../storage/fileStore.js";
+
+function getDropRateLabel(drops) {
+    if (!drops) return "";
+    let best = null;
+    let bestValue = 0;
+
+    if (Array.isArray(drops)) {
+        for (const drop of drops) {
+            if (!drop?.droprate) continue;
+            const value = parseDropRate(drop.droprate);
+            if (value > bestValue) {
+                bestValue = value;
+                best = drop.droprate;
+            }
+        }
+    } else if (drops?.droprate) {
+        best = drops.droprate;
+    }
+
+    return best ? ` (${best})` : "";
+}
 
 function escapeHtml(value) {
     return String(value)
@@ -80,12 +102,16 @@ export default async function NpcsPage() {
         const itemLabel = itemCount === 1 ? "item" : "items";
         const itemsHtml = entry.items
             .sort((a, b) => a.name.localeCompare(b.name))
-            .map((item) => `
+            .map((item) => {
+                const drops = item.sources?.drops?.[entry.npcName];
+                const rateLabel = getDropRateLabel(drops);
+                return `
                 <div class="npc-drop-item" onclick="navigate('/item?id=${item.id}')">
                     <img class="npc-drop-item-image" src="/images/${item.image}" alt="${escapeHtml(item.name)}">
-                    <span class="npc-drop-item-name">${escapeHtml(item.name)}</span>
+                    <span class="npc-drop-item-name">${escapeHtml(item.name)}${escapeHtml(rateLabel)}</span>
                 </div>
-            `)
+            `;
+            })
             .join("");
 
         const itemNames = entry.items.map((item) => item.name.toLowerCase()).join(" ");
