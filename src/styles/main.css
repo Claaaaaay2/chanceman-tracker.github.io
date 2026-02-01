@@ -47,6 +47,7 @@ body {
 
 body {
     margin-top: 25px;
+    margin-bottom: 35px;
     background-color: var(--bg-color);
     color: var(--text-color);
 }
