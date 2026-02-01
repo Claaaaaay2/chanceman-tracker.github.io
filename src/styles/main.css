@@ -1061,6 +1061,102 @@ body.route-loading .route-loading-overlay {
 
 /* End NPC drops */
 
+
+/* Unlocks page */
+.unlock-filters {
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1rem;
+}
+
+.unlock-filter {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.unlock-list {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.unlock-section {
+    border: 1px solid var(--border-color-darker);
+    background-color: var(--card-bg);
+    border-radius: 6px;
+    padding: 0.75rem;
+}
+
+.unlock-section.is-collapsed .unlock-section-body {
+    display: none;
+}
+
+.unlock-section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+}
+
+.unlock-section-header h2 {
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+.unlock-toggle {
+    border: 1px solid var(--border-color-darker);
+    background: var(--card-bg);
+    color: inherit;
+    padding: 0.1rem 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.unlock-count {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.unlock-grid {
+    margin-top: 0.75rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 0.5rem 0.75rem;
+}
+
+.unlock-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.35rem;
+    border-radius: 4px;
+}
+
+.unlock-item-image {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.unlock-item-name {
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.unlock-empty {
+    margin: 0;
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+/* End unlocks page */
+
 .diary-list {
     margin: 1rem;
     display: flex;

@@ -678,6 +678,9 @@ export function afterRoute() {
     if (typeof initNpcsPage === "function") {
         initNpcsPage();
     }
+    if (typeof initSkillUnlocksPage === "function") {
+        initSkillUnlocksPage();
+    }
     initNavMenu();
 }
 

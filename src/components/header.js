@@ -31,6 +31,7 @@ export async function Header() {
                 </button>
                 <span class="header-links">
                     <a data-link href="/items">Items</a><span class="header-separator">|</span>
+                <a data-link href="/unlocks">Unlocks</a><span class="header-separator">|</span>
                     <a data-link href="/npcs">NPC drops</a><span class="header-separator">|</span>
                     <a data-link href="/item-history">Item history</a><span class="header-separator">|</span>
                     <a data-link href="/achievement-diaries">Achievement diaries</a><span class="header-separator">|</span>
