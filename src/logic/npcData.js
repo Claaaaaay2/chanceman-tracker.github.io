@@ -6220,6 +6220,14 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
+    "Friendly Ent (Forestry event) 75 Woodcutting": {
+        "wiki": "https://oldschool.runescape.wiki/w/Friendly_Ent_(Forestry_event)",
+        "rule": ["canTrainWoodcutting"],
+        "skill": ["woodcutting"],
+        "level": [75],
+        "tags": [],
+        "f2p": false
+    },
     "Frigatebird": {
         "wiki": "https://oldschool.runescape.wiki/w/Frigatebird",
         "rule": ["canDoSailingCombat"],
@@ -14396,6 +14404,14 @@ export const NPC_DATA = {
         "rule": ["canTrainWoodcutting"],
         "skill": [],
         "level": [],
+        "tags": [],
+        "f2p": false
+    },
+    "Struggling sapling (Forestry event) 75 Woodcutting": {
+        "wiki": "https://oldschool.runescape.wiki/w/Struggling_sapling_(Forestry_event)",
+        "rule": ["canTrainWoodcutting"],
+        "skill": ["Woodcutting"],
+        "level": [75],
         "tags": [],
         "f2p": false
     },
