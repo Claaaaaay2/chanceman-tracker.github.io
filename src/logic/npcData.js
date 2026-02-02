@@ -6563,7 +6563,7 @@ export const NPC_DATA = {
         "rule": ["hasSlashWeapon"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Giant frog Level 13": {
