@@ -11,7 +11,8 @@ const SECTION_ORDER = [
     "Woodcutting",
     "Mining",
     "Fishing",
-    "Hunter"
+    "Hunter",
+    "Food"
 ];
 
 function escapeHtml(value) {

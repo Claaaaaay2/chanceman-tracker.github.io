@@ -6082,7 +6082,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 141,
@@ -8649,7 +8652,8 @@
     "name": "Anchovies",
     "image": "anchovies.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "drops": {
@@ -8680,7 +8684,8 @@
     "name": "Anchovy pizza",
     "image": "anchovy_pizza.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "drops": {
@@ -10344,7 +10349,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 267,
@@ -11857,7 +11865,8 @@
     "name": "Apple pie",
     "image": "apple_pie.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "drops": {
@@ -15151,7 +15160,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 426,
@@ -15247,7 +15259,8 @@
     "name": "Banana",
     "image": "banana.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "drops": {
@@ -15332,7 +15345,10 @@
       "shops": {
         "Yes": "canCompleteMonkeyMadnessI"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 434,
@@ -15506,7 +15522,10 @@
       "shops": {
         "Yes": "canCompleteDesertTreasureI"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 441,
@@ -16745,7 +16764,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 489,
@@ -17684,7 +17706,10 @@
           "notes": "A tankard is an untradable spawn and can be filled at a Barrel with a tap on it."
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 508,
@@ -24875,7 +24900,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 695,
@@ -25853,7 +25881,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 742,
@@ -25925,7 +25956,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 744,
@@ -28514,7 +28548,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 779,
@@ -28530,7 +28567,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 780,
@@ -29063,7 +29103,8 @@
     "name": "Bread",
     "image": "bread.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "drops": {
@@ -33580,7 +33621,8 @@
     "name": "Cabbage",
     "image": "cabbage.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "drops": {
@@ -34898,7 +34940,8 @@
     "name": "Cake",
     "image": "cake.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "drops": {
@@ -36057,7 +36100,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 982,
@@ -36118,7 +36164,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 984,
@@ -37404,7 +37453,8 @@
     "name": "Cheese",
     "image": "cheese.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "drops": {
@@ -37505,7 +37555,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 997,
@@ -37802,7 +37855,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1006,
@@ -37852,7 +37908,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1007,
@@ -37978,7 +38037,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1011,
@@ -37997,7 +38059,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1012,
@@ -38033,7 +38098,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1013,
@@ -38041,7 +38109,8 @@
     "name": "Chocolate bar",
     "image": "chocolate_bar.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "drops": {
@@ -38108,7 +38177,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1015,
@@ -38116,7 +38188,8 @@
     "name": "Chocolate cake",
     "image": "chocolate_cake.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "drops": {
@@ -38274,7 +38347,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1019,
@@ -38305,7 +38381,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1020,
@@ -38336,7 +38415,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1021,
@@ -39488,7 +39570,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1051,
@@ -40341,7 +40426,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1085,
@@ -40349,7 +40437,8 @@
     "name": "Cooked chicken",
     "image": "cooked_chicken.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "drops": {
@@ -40402,7 +40491,10 @@
           "rule": "canStartZogreFleshEaters"
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1088,
@@ -40427,7 +40519,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1089,
@@ -40449,7 +40544,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1090,
@@ -40474,7 +40572,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1091,
@@ -40498,7 +40599,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1092,
@@ -40534,7 +40638,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1093,
@@ -40559,7 +40666,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1094,
@@ -40583,7 +40693,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1095,
@@ -40591,7 +40704,8 @@
     "name": "Cooked meat",
     "image": "cooked_meat.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "drops": {
@@ -40676,7 +40790,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1097,
@@ -40701,7 +40818,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1098,
@@ -40725,7 +40845,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1099,
@@ -40750,7 +40873,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1100,
@@ -40770,7 +40896,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1101,
@@ -40794,7 +40923,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1102,
@@ -40819,7 +40951,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1103,
@@ -40846,7 +40981,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1104,
@@ -40870,7 +41008,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1105,
@@ -42291,7 +42432,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1150,
@@ -42429,7 +42573,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1154,
@@ -42857,7 +43004,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1171,
@@ -50097,7 +50247,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1367,
@@ -50121,7 +50274,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1368,
@@ -51044,7 +51200,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1394,
@@ -51966,7 +52125,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1409,
@@ -52925,7 +53087,8 @@
     "name": "Easter egg",
     "image": "easter_egg.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "other": {
@@ -53268,7 +53431,10 @@
       "spawns": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1437,
@@ -53362,7 +53528,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1441,
@@ -53397,7 +53566,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1442,
@@ -56072,7 +56244,10 @@
           "notes": "Do the gnome restaurant tutorial (free roll)."
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1531,
@@ -57701,7 +57876,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1577,
@@ -59283,7 +59461,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1607,
@@ -60549,7 +60730,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1655,
@@ -60573,7 +60757,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1656,
@@ -60771,7 +60958,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1664,
@@ -60812,7 +61002,10 @@
           "rule": "canCompleteTheDigSite"
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1665,
@@ -60980,7 +61173,10 @@
       "shops": {
         "Yes": "canAccessCooksGuild"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1671,
@@ -61232,7 +61428,10 @@
           "droprate": "1/2"
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1682,
@@ -61256,7 +61455,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1683,
@@ -63774,7 +63976,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1760,
@@ -77937,7 +78142,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1902,
@@ -78154,7 +78362,8 @@
     "name": "Half full wine jug",
     "image": "half_full_wine_jug.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "other": {
@@ -78200,7 +78409,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 1912,
@@ -79400,7 +79612,8 @@
     "name": "Herring",
     "image": "herring.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "drops": {
@@ -86149,7 +86362,10 @@
           "droprate": "1/256"
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2124,
@@ -86736,7 +86952,8 @@
     "name": "Jug of wine",
     "image": "jug_of_wine.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "drops": {
@@ -86835,7 +87052,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2146,
@@ -87312,7 +87532,8 @@
     "name": "Kebab",
     "image": "kebab.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "drops": {
@@ -87554,7 +87775,10 @@
       "shops": {
         "Yes": "canCompleteTheFremennikTrials"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2178,
@@ -87718,7 +87942,8 @@
     },
     "tags": [
       "Fishing",
-      "Hunter"
+      "Hunter",
+      "Food"
     ]
   },
   {
@@ -90885,7 +91110,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2241,
@@ -91401,7 +91629,10 @@
           "notes": "Do the gnome restaurant tutorial (free roll)."
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2256,
@@ -91429,7 +91660,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2257,
@@ -91457,7 +91691,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2258,
@@ -91692,7 +91929,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2272,
@@ -91721,7 +91961,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2273,
@@ -91750,7 +91993,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2274,
@@ -92384,7 +92630,8 @@
     "name": "Lobster",
     "image": "lobster.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "drops": {
@@ -92589,7 +92836,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2287,
@@ -93258,7 +93508,10 @@
           "droprate": "1/128"
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2304,
@@ -95445,7 +95698,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2362,
@@ -96175,7 +96431,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2384,
@@ -96839,7 +97098,8 @@
     "name": "Meat pie",
     "image": "meat_pie.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "drops": {
@@ -96909,7 +97169,8 @@
     "name": "Meat pizza",
     "image": "meat_pizza.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "drops": {
@@ -97270,7 +97531,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2420,
@@ -102870,7 +103134,10 @@
       "shops": {
         "Yes": "canCompleteMonkeyMadnessI"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2540,
@@ -102898,7 +103165,10 @@
       "shops": {
         "Yes": "canCompleteMonkeyMadnessI"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2542,
@@ -102969,7 +103239,10 @@
           "droprate": "1/42.667"
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2544,
@@ -103127,7 +103400,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2551,
@@ -103699,7 +103975,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2576,
@@ -103723,7 +104002,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2577,
@@ -103767,7 +104049,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2578,
@@ -108459,7 +108744,8 @@
     "name": "Onion",
     "image": "onion.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "drops": {
@@ -108546,7 +108832,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2715,
@@ -109753,7 +110042,10 @@
           "notes": "Do the gnome restaurant tutorial (free roll)."
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2742,
@@ -109836,7 +110128,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2745,
@@ -109984,7 +110279,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2751,
@@ -110561,7 +110859,10 @@
           "droprate": "1/100"
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2766,
@@ -111396,7 +111697,8 @@
     "name": "Pike",
     "image": "pike.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "other": {
@@ -111594,7 +111896,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2797,
@@ -111627,7 +111932,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2798,
@@ -111669,7 +111977,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2799,
@@ -111719,7 +112030,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2800,
@@ -111752,7 +112066,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2801,
@@ -112379,7 +112696,8 @@
     "name": "Plain pizza",
     "image": "plain_pizza.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "shops": {
@@ -112602,7 +112920,10 @@
           "notes": "Free roll."
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2843,
@@ -113197,7 +113518,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2855,
@@ -113260,7 +113584,8 @@
     "name": "Potato",
     "image": "potato.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "drops": {
@@ -113933,7 +114258,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2861,
@@ -113971,7 +114299,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2862,
@@ -114573,7 +114904,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2876,
@@ -114584,7 +114918,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2877,
@@ -114595,7 +114932,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2878,
@@ -114606,7 +114946,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2879,
@@ -114617,7 +114960,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2880,
@@ -114628,7 +114974,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2881,
@@ -114639,7 +114988,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2882,
@@ -114650,7 +115002,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2883,
@@ -114661,7 +115016,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2884,
@@ -114672,7 +115030,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2885,
@@ -114683,7 +115044,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2886,
@@ -114694,7 +115058,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2887,
@@ -114705,7 +115072,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2888,
@@ -114716,7 +115086,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2889,
@@ -114727,7 +115100,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2890,
@@ -114738,7 +115114,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2891,
@@ -114749,7 +115128,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2892,
@@ -114760,7 +115142,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2893,
@@ -114771,7 +115156,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2894,
@@ -114782,7 +115170,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2895,
@@ -114966,7 +115357,8 @@
     "name": "Pumpkin",
     "image": "pumpkin.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "other": {
@@ -115487,7 +115879,8 @@
     "name": "Purple sweets",
     "image": "purple_sweets.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Food"
     ],
     "sources": {
       "drops": {
@@ -115939,7 +116332,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2959,
@@ -115994,7 +116390,10 @@
           "droprate": "1/100"
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 2961,
@@ -119426,7 +119825,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 3049,
@@ -120242,7 +120644,8 @@
     "name": "Redberry pie",
     "image": "redberry_pie.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "shops": {
@@ -121716,7 +122119,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 3130,
@@ -121751,7 +122157,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 3131,
@@ -121778,7 +122187,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 3132,
@@ -122127,7 +122539,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 3149,
@@ -129529,7 +129944,8 @@
     "name": "Salmon",
     "image": "salmon.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "drops": {
@@ -131597,7 +132013,8 @@
     "name": "Sardine",
     "image": "sardine.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "drops": {
@@ -131732,7 +132149,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 3373,
@@ -131767,7 +132187,10 @@
       "shops": {
         "Yes": "canCompletePriestInPeril"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 3375,
@@ -132710,7 +133133,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 3400,
@@ -133243,7 +133669,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 3437,
@@ -133384,7 +133813,8 @@
     "name": "Shrimps",
     "image": "shrimps.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "drops": {
@@ -134844,7 +135274,8 @@
     "name": "Sliced banana",
     "image": "sliced_banana.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "other": {
@@ -137209,7 +137640,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 3603,
@@ -137239,7 +137673,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 3604,
@@ -137262,7 +137699,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 3605,
@@ -137292,7 +137732,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 3606,
@@ -137348,7 +137791,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 3609,
@@ -137375,7 +137821,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 3610,
@@ -137454,7 +137903,8 @@
     "name": "Spinach roll",
     "image": "spinach_roll.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "drops": {
@@ -143605,7 +144055,8 @@
     "name": "Stew",
     "image": "stew.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "shops": {
@@ -143885,7 +144336,10 @@
       "spawns": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 3751,
@@ -145015,7 +145469,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 3778,
@@ -146711,7 +147168,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 3828,
@@ -148475,7 +148935,8 @@
     "name": "Swordfish",
     "image": "swordfish.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "drops": {
@@ -148616,7 +149077,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 3871,
@@ -148731,7 +149195,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 3876,
@@ -151197,7 +151664,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 3984,
@@ -151734,7 +152204,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 3992,
@@ -151777,7 +152250,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 3993,
@@ -151805,7 +152281,10 @@
           "notes": "Do the gnome restaurant tutorial (free roll)."
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 3994,
@@ -152417,7 +152896,8 @@
     "name": "Tomato",
     "image": "tomato.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "drops": {
@@ -154928,7 +155408,8 @@
     "name": "Triangle sandwich",
     "image": "triangle_sandwich.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "drops": {
@@ -155124,7 +155605,8 @@
     "name": "Trout",
     "image": "trout.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "drops": {
@@ -155253,7 +155735,8 @@
     "name": "Tuna",
     "image": "tuna.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Food"
     ],
     "sources": {
       "drops": {
@@ -155389,7 +155872,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 4128,
@@ -155442,7 +155928,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 4129,
@@ -155971,7 +156460,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 4164,
@@ -155991,7 +156483,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 4165,
@@ -159228,7 +159723,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 4220,
@@ -159304,7 +159802,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 4222,
@@ -159345,7 +159846,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 4223,
@@ -162073,7 +162577,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 4292,
@@ -163468,7 +163975,10 @@
           "droprate": "1/100"
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 4345,
@@ -164661,7 +165171,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 4368,
@@ -165375,7 +165888,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 4393,
@@ -165411,7 +165927,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 4394,
@@ -165443,7 +165962,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 4395,
@@ -166234,7 +166756,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 4429,
