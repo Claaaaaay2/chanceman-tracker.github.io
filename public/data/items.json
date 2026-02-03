@@ -18784,7 +18784,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Hunter"
+    ]
   },
   {
     "index": 523,
@@ -33527,7 +33530,10 @@
           "notes": "Requires 50 Runecraft to convert the untradable dessicated pages."
         }
       }
-    }
+    },
+    "tags": [
+      "Magic"
+    ]
   },
   {
     "index": 927,
@@ -38734,9 +38740,9 @@
           ]
         }
       },
-    "tags": [
-      "Melee armours"
-    ]
+      "tags": [
+        "Melee armours"
+      ]
     }
   },
   {
@@ -53482,7 +53488,10 @@
           "droprate": "1/960–1/548.7"
         }
       }
-    }
+    },
+    "tags": [
+      "Melee"
+    ]
   },
   {
     "index": 1448,
@@ -78731,7 +78740,10 @@
           "droprate": "1/960–1/548.7"
         }
       }
-    }
+    },
+    "tags": [
+      "Magic"
+    ]
   },
   {
     "index": 1928,
@@ -93290,7 +93302,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Hunter"
+    ]
   },
   {
     "index": 2306,
@@ -94606,7 +94621,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Hunter"
+    ]
   },
   {
     "index": 2340,
@@ -95460,7 +95478,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Hunter"
+    ]
   },
   {
     "index": 2363,
@@ -106714,7 +106735,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Hunter"
+    ]
   },
   {
     "index": 2653,
@@ -107720,9 +107744,9 @@
           }
         }
       },
-    "tags": [
-      "Melee armours"
-    ]
+      "tags": [
+        "Melee armours"
+      ]
     }
   },
   {
@@ -120333,7 +120357,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Hunter"
+    ]
   },
   {
     "index": 3085,
@@ -121501,7 +121528,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Melee"
+    ]
   },
   {
     "index": 3122,
@@ -121756,7 +121786,8 @@
     "name": "Robe bottom of darkness",
     "image": "robe_bottom_of_darkness.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Magic armours"
     ],
     "sources": {
       "drops": {
@@ -121772,7 +121803,8 @@
     "name": "Robe top of darkness",
     "image": "robe_top_of_darkness.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Magic armours"
     ],
     "sources": {
       "drops": {
@@ -121789,7 +121821,7 @@
     "image": "robin_hood_hat.png",
     "tags": [
       "clue-reward-only",
-      "Magic armours"
+      "Ranged armours"
     ],
     "sources": {
       "drops": {
@@ -121808,10 +121840,7 @@
       "shops": {
         "Yes": "No requirements"
       }
-    },
-    "tags": [
-      "Hunter"
-    ]
+    }
   },
   {
     "index": 3136,
@@ -121822,10 +121851,7 @@
       "shops": {
         "Yes": "No requirements"
       }
-    },
-    "tags": [
-      "Hunter"
-    ]
+    }
   },
   {
     "index": 3138,
@@ -121876,7 +121902,10 @@
           "droprate": "1/64"
         }
       }
-    }
+    },
+    "tags": [
+      "Melee armours"
+    ]
   },
   {
     "index": 3140,
@@ -121908,7 +121937,10 @@
           "droprate": "1/64"
         }
       }
-    }
+    },
+    "tags": [
+      "Melee armours"
+    ]
   },
   {
     "index": 3142,
@@ -121964,7 +121996,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Melee armours"
+    ]
   },
   {
     "index": 3144,
@@ -121993,7 +122028,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Melee armours"
+    ]
   },
   {
     "index": 3145,
@@ -122100,7 +122138,10 @@
       "shops": {
         "Yes": "canCompleteRecipeForDisaster6"
       }
-    }
+    },
+    "tags": [
+      "Melee"
+    ]
   },
   {
     "index": 3150,
@@ -122378,10 +122419,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Hunter"
-    ]
+    }
   },
   {
     "index": 3158,
@@ -122528,8 +122566,7 @@
     "name": "Royal sceptre",
     "image": "royal_sceptre.png",
     "tags": [
-      "clue-reward-only",
-      "Magic"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -122785,10 +122822,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Ranged"
-    ]
+    }
   },
   {
     "index": 3169,
@@ -123709,10 +123743,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Ranged"
-    ]
+    }
   },
   {
     "index": 3188,
@@ -123815,8 +123846,7 @@
     "image": "rune_battleaxe.png",
     "tags": [
       "f2p",
-      "Melee",
-      "Woodcutting"
+      "Melee"
     ],
     "sources": {
       "drops": {
@@ -123967,7 +123997,10 @@
           "droprate": "1/128"
         }
       }
-    }
+    },
+    "tags": [
+      "Melee armours"
+    ]
   },
   {
     "index": 3191,
@@ -123998,7 +124031,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Ranged"
+    ]
   },
   {
     "index": 3192,
@@ -124755,10 +124791,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Ranged"
-    ]
+    }
   },
   {
     "index": 3203,
@@ -124855,8 +124888,7 @@
     "name": "Rune defender ornament kit",
     "image": "rune_defender_ornament_kit.png",
     "tags": [
-      "clue-reward-only",
-      "Melee armours"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -125659,10 +125691,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Ranged"
-    ]
+    }
   },
   {
     "index": 3227,
@@ -126114,8 +126143,7 @@
       }
     },
     "tags": [
-      "Ranged",
-      "Hunter"
+      "Ranged"
     ]
   },
   {
@@ -126141,8 +126169,7 @@
       }
     },
     "tags": [
-      "Ranged",
-      "Hunter"
+      "Ranged"
     ]
   },
   {
@@ -126168,8 +126195,7 @@
       }
     },
     "tags": [
-      "Ranged",
-      "Hunter"
+      "Ranged"
     ]
   },
   {
@@ -126203,8 +126229,7 @@
       }
     },
     "tags": [
-      "Ranged",
-      "Hunter"
+      "Ranged"
     ]
   },
   {
@@ -126733,7 +126758,6 @@
     "tags": [
       "f2p",
       "Melee",
-      "Woodcutting",
       "Mining"
     ],
     "sources": {
@@ -127526,7 +127550,10 @@
           ]
         }
       }
-    }
+    },
+    "tags": [
+      "Magic"
+    ]
   },
   {
     "index": 3258,
@@ -127718,8 +127745,7 @@
     "image": "rune_scimitar_ornament_kit_(guthix).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
-      "Melee"
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -127736,8 +127762,7 @@
     "image": "rune_scimitar_ornament_kit_(saradomin).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
-      "Melee"
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -127754,8 +127779,7 @@
     "image": "rune_scimitar_ornament_kit_(zamorak).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
-      "Melee"
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -128234,9 +128258,7 @@
       }
     },
     "tags": [
-      "Melee",
-      "Ranged",
-      "Woodcutting"
+      "Ranged"
     ]
   },
   {
@@ -128310,8 +128332,7 @@
     "image": "rune_warhammer.png",
     "tags": [
       "f2p",
-      "Melee",
-      "Hunter"
+      "Melee"
     ],
     "sources": {
       "drops": {
@@ -128534,10 +128555,7 @@
           "droprate": "1/1217.32; 1/1213.9"
         }
       }
-    },
-    "tags": [
-      "Magic armours"
-    ]
+    }
   },
   {
     "index": 3278,
@@ -128607,10 +128625,7 @@
           "droprate": "1/1217.32; 1/1213.9"
         }
       }
-    },
-    "tags": [
-      "Magic armours"
-    ]
+    }
   },
   {
     "index": 3279,
@@ -129014,10 +129029,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Ranged"
-    ]
+    }
   },
   {
     "index": 3285,
@@ -129058,10 +129070,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Ranged"
-    ]
+    }
   },
   {
     "index": 3286,
@@ -129653,7 +129662,8 @@
     "name": "Samurai boots",
     "image": "samurai_boots.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Melee armours"
     ],
     "sources": {
       "drops": {
@@ -129669,7 +129679,8 @@
     "name": "Samurai gloves",
     "image": "samurai_gloves.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Melee armours"
     ],
     "sources": {
       "drops": {
@@ -129685,7 +129696,8 @@
     "name": "Samurai greaves",
     "image": "samurai_greaves.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Melee armours"
     ],
     "sources": {
       "drops": {
@@ -129701,7 +129713,8 @@
     "name": "Samurai kasa",
     "image": "samurai_kasa.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Melee armours"
     ],
     "sources": {
       "drops": {
@@ -129717,7 +129730,8 @@
     "name": "Samurai shirt",
     "image": "samurai_shirt.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Melee armours"
     ],
     "sources": {
       "drops": {
@@ -129803,8 +129817,7 @@
     "image": "sandwich_lady_hat.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
-      "Magic armours"
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -130102,8 +130115,7 @@
     "name": "Santa hat",
     "image": "santa_hat.png",
     "tags": [
-      "f2p",
-      "Magic armours"
+      "f2p"
     ],
     "sources": {
       "other": {
@@ -130341,10 +130353,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Ranged"
-    ]
+    }
   },
   {
     "index": 3321,
@@ -130750,7 +130759,10 @@
           "droprate": "1/384"
         }
       }
-    }
+    },
+    "tags": [
+      "Melee"
+    ]
   },
   {
     "index": 3332,
@@ -130822,7 +130834,8 @@
     "name": "Saradomin bracers",
     "image": "saradomin_bracers.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Ranged armours"
     ],
     "sources": {
       "drops": {
@@ -131018,7 +131031,8 @@
     "name": "Saradomin chaps",
     "image": "saradomin_chaps.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Ranged armours"
     ],
     "sources": {
       "drops": {
@@ -131118,7 +131132,6 @@
     "image": "saradomin_d'hide_shield.png",
     "tags": [
       "clue-reward-only",
-      "Melee armours",
       "Ranged armours"
     ],
     "sources": {
@@ -131135,8 +131148,7 @@
     "name": "Saradomin dragonhide set",
     "image": "saradomin_dragonhide_set.png",
     "tags": [
-      "itemset",
-      "Ranged armours"
+      "itemset"
     ],
     "sources": {
       "other": {
@@ -131212,8 +131224,7 @@
     "name": "Saradomin godsword ornament kit",
     "image": "saradomin_godsword_ornament_kit.png",
     "tags": [
-      "clue-reward-only",
-      "Melee"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -131638,7 +131649,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Magic"
+    ]
   },
   {
     "index": 3369,
@@ -131676,10 +131690,7 @@
           "notes": "From Forestry rewards interface."
         }
       }
-    },
-    "tags": [
-      "Hunter"
-    ]
+    }
   },
   {
     "index": 3371,
@@ -131701,10 +131712,7 @@
           "droprate": "1/100"
         }
       }
-    },
-    "tags": [
-      "Ranged armours"
-    ]
+    }
   },
   {
     "index": 3372,
@@ -131782,7 +131790,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Magic"
+    ]
   },
   {
     "index": 3376,
@@ -132151,7 +132162,10 @@
           "droprate": "1/128"
         }
       }
-    }
+    },
+    "tags": [
+      "Magic"
+    ]
   },
   {
     "index": 3387,
@@ -132767,8 +132781,7 @@
     "name": "Shattered banner",
     "image": "shattered_banner.png",
     "tags": [
-      "leagues",
-      "Magic armours"
+      "leagues"
     ]
   },
   {
@@ -132777,8 +132790,7 @@
     "name": "Shattered boots (t1)",
     "image": "shattered_boots_(t1).png",
     "tags": [
-      "leagues",
-      "Magic armours"
+      "leagues"
     ]
   },
   {
@@ -132787,8 +132799,7 @@
     "name": "Shattered boots (t2)",
     "image": "shattered_boots_(t2).png",
     "tags": [
-      "leagues",
-      "Magic armours"
+      "leagues"
     ]
   },
   {
@@ -132797,8 +132808,7 @@
     "name": "Shattered boots (t3)",
     "image": "shattered_boots_(t3).png",
     "tags": [
-      "leagues",
-      "Magic armours"
+      "leagues"
     ]
   },
   {
@@ -132807,8 +132817,7 @@
     "name": "Shattered cane",
     "image": "shattered_cane.png",
     "tags": [
-      "leagues",
-      "Magic armours"
+      "leagues"
     ]
   },
   {
@@ -132817,8 +132826,7 @@
     "name": "Shattered cannon ornament kit",
     "image": "shattered_cannon_ornament_kit.png",
     "tags": [
-      "leagues",
-      "Magic armours"
+      "leagues"
     ]
   },
   {
@@ -132827,8 +132835,7 @@
     "name": "Shattered hood (t1)",
     "image": "shattered_hood_(t1).png",
     "tags": [
-      "leagues",
-      "Magic armours"
+      "leagues"
     ]
   },
   {
@@ -132837,8 +132844,7 @@
     "name": "Shattered hood (t2)",
     "image": "shattered_hood_(t2).png",
     "tags": [
-      "leagues",
-      "Magic armours"
+      "leagues"
     ]
   },
   {
@@ -132847,8 +132853,7 @@
     "name": "Shattered hood (t3)",
     "image": "shattered_hood_(t3).png",
     "tags": [
-      "leagues",
-      "Magic armours"
+      "leagues"
     ]
   },
   {
@@ -132858,8 +132863,7 @@
     "image": "shattered_relic_hunter_(t1)_armour_set.png",
     "tags": [
       "leagues",
-      "itemset",
-      "Magic armours"
+      "itemset"
     ]
   },
   {
@@ -132869,8 +132873,7 @@
     "image": "shattered_relic_hunter_(t2)_armour_set.png",
     "tags": [
       "leagues",
-      "itemset",
-      "Magic armours"
+      "itemset"
     ]
   },
   {
@@ -132880,8 +132883,7 @@
     "image": "shattered_relic_hunter_(t3)_armour_set.png",
     "tags": [
       "leagues",
-      "itemset",
-      "Magic armours"
+      "itemset"
     ]
   },
   {
@@ -132890,8 +132892,7 @@
     "name": "Shattered relics mystic ornament kit",
     "image": "shattered_relics_mystic_ornament_kit.png",
     "tags": [
-      "leagues",
-      "Magic armours"
+      "leagues"
     ]
   },
   {
@@ -132900,8 +132901,7 @@
     "name": "Shattered relics variety ornament kit",
     "image": "shattered_relics_variety_ornament_kit.png",
     "tags": [
-      "leagues",
-      "Magic armours"
+      "leagues"
     ]
   },
   {
@@ -132910,8 +132910,7 @@
     "name": "Shattered relics void ornament kit",
     "image": "shattered_relics_void_ornament_kit.png",
     "tags": [
-      "leagues",
-      "Magic armours"
+      "leagues"
     ]
   },
   {
@@ -132920,8 +132919,7 @@
     "name": "Shattered teleport scroll",
     "image": "shattered_teleport_scroll.png",
     "tags": [
-      "leagues",
-      "Magic armours"
+      "leagues"
     ]
   },
   {
@@ -132930,8 +132928,7 @@
     "name": "Shattered top (t1)",
     "image": "shattered_top_(t1).png",
     "tags": [
-      "leagues",
-      "Magic armours"
+      "leagues"
     ]
   },
   {
@@ -132940,8 +132937,7 @@
     "name": "Shattered top (t2)",
     "image": "shattered_top_(t2).png",
     "tags": [
-      "leagues",
-      "Magic armours"
+      "leagues"
     ]
   },
   {
@@ -132950,8 +132946,7 @@
     "name": "Shattered top (t3)",
     "image": "shattered_top_(t3).png",
     "tags": [
-      "leagues",
-      "Magic armours"
+      "leagues"
     ]
   },
   {
@@ -132960,8 +132955,7 @@
     "name": "Shattered trousers (t1)",
     "image": "shattered_trousers_(t1).png",
     "tags": [
-      "leagues",
-      "Magic armours"
+      "leagues"
     ]
   },
   {
@@ -132970,8 +132964,7 @@
     "name": "Shattered trousers (t2)",
     "image": "shattered_trousers_(t2).png",
     "tags": [
-      "leagues",
-      "Magic armours"
+      "leagues"
     ]
   },
   {
@@ -132980,8 +132973,7 @@
     "name": "Shattered trousers (t3)",
     "image": "shattered_trousers_(t3).png",
     "tags": [
-      "leagues",
-      "Magic armours"
+      "leagues"
     ]
   },
   {
@@ -133117,10 +133109,7 @@
           "droprate": "1/600"
         }
       }
-    },
-    "tags": [
-      "Melee armours"
-    ]
+    }
   },
   {
     "index": 3430,
@@ -133136,10 +133125,7 @@
           ]
         }
       }
-    },
-    "tags": [
-      "Melee armours"
-    ]
+    }
   },
   {
     "index": 3431,
@@ -133340,10 +133326,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Ranged"
-    ]
+    }
   },
   {
     "index": 3439,
@@ -133798,10 +133781,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Ranged"
-    ]
+    }
   },
   {
     "index": 3535,
@@ -134105,7 +134085,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Magic armours"
+    ]
   },
   {
     "index": 3544,
@@ -134144,7 +134127,7 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Magic armours"
     ]
   },
   {
@@ -134174,7 +134157,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Magic armours"
+    ]
   },
   {
     "index": 3547,
@@ -134198,7 +134184,10 @@
       "shops": {
         "Yes": "canCompleteRecipeForDisaster5"
       }
-    }
+    },
+    "tags": [
+      "Melee"
+    ]
   },
   {
     "index": 3549,
@@ -135134,7 +135123,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Ranged armours"
+    ]
   },
   {
     "index": 3577,
@@ -135158,7 +135150,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Ranged armours"
+    ]
   },
   {
     "index": 3578,
@@ -135190,7 +135185,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Ranged armours"
+    ]
   },
   {
     "index": 3579,
@@ -135222,7 +135220,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Ranged armours"
+    ]
   },
   {
     "index": 3580,
@@ -135254,7 +135255,7 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Ranged armours"
     ]
   },
   {
@@ -136633,7 +136634,10 @@
           "notes": "Requires 50 Runecraft to convert the untradable dessicated pages."
         }
       }
-    }
+    },
+    "tags": [
+      "Magic"
+    ]
   },
   {
     "index": 3591,
@@ -136749,7 +136753,10 @@
           "notes": "Requires 50 Runecraft to convert the untradable dessicated pages."
         }
       }
-    }
+    },
+    "tags": [
+      "Magic"
+    ]
   },
   {
     "index": 3594,
@@ -136994,7 +137001,10 @@
           "droprate": "1/300"
         }
       }
-    }
+    },
+    "tags": [
+      "Melee"
+    ]
   },
   {
     "index": 3596,
@@ -137017,8 +137027,7 @@
       }
     },
     "tags": [
-      "Melee",
-      "Woodcutting"
+      "Melee"
     ]
   },
   {
@@ -137079,7 +137088,10 @@
       "shops": {
         "Yes": "canCompleteRecipeForDisaster3"
       }
-    }
+    },
+    "tags": [
+      "Melee"
+    ]
   },
   {
     "index": 3599,
@@ -137395,7 +137407,8 @@
     "name": "Spiked manacles",
     "image": "spiked_manacles.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Melee armours"
     ],
     "sources": {
       "drops": {
@@ -137567,7 +137580,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Ranged armours"
+    ]
   },
   {
     "index": 3616,
@@ -137609,7 +137625,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Ranged armours"
+    ]
   },
   {
     "index": 3618,
@@ -137648,7 +137667,7 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Ranged armours"
     ]
   },
   {
@@ -137844,7 +137863,6 @@
       }
     },
     "tags": [
-      "Melee armours",
       "Magic armours"
     ]
   },
@@ -137892,7 +137910,10 @@
       "shops": {
         "Yes": "canCompleteRecipeForDisaster2"
       }
-    }
+    },
+    "tags": [
+      "Melee"
+    ]
   },
   {
     "index": 3629,
@@ -138153,8 +138174,7 @@
     "name": "Staff of bob the cat",
     "image": "staff_of_bob_the_cat.png",
     "tags": [
-      "clue-reward-only",
-      "Magic"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -138663,8 +138683,7 @@
       }
     },
     "tags": [
-      "Melee",
-      "Hunter"
+      "deadman"
     ]
   },
   {
@@ -138734,10 +138753,7 @@
           ]
         }
       }
-    },
-    "tags": [
-      "Magic"
-    ]
+    }
   },
   {
     "index": 3654,
@@ -139390,10 +139406,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Ranged"
-    ]
+    }
   },
   {
     "index": 3661,
@@ -139861,8 +139874,7 @@
     "image": "steel_battleaxe.png",
     "tags": [
       "f2p",
-      "Melee",
-      "Woodcutting"
+      "Melee"
     ],
     "sources": {
       "drops": {
@@ -140125,10 +140137,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Ranged"
-    ]
+    }
   },
   {
     "index": 3669,
@@ -140153,7 +140162,10 @@
           "droprate": "1/128"
         }
       }
-    }
+    },
+    "tags": [
+      "Melee armours"
+    ]
   },
   {
     "index": 3670,
@@ -140184,7 +140196,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Ranged"
+    ]
   },
   {
     "index": 3671,
@@ -140527,10 +140542,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Ranged"
-    ]
+    }
   },
   {
     "index": 3676,
@@ -140847,10 +140859,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Ranged"
-    ]
+    }
   },
   {
     "index": 3682,
@@ -141407,10 +141416,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Ranged"
-    ]
+    }
   },
   {
     "index": 3699,
@@ -141750,8 +141756,7 @@
       }
     },
     "tags": [
-      "Ranged",
-      "Hunter"
+      "Ranged"
     ]
   },
   {
@@ -141777,8 +141782,7 @@
       }
     },
     "tags": [
-      "Ranged",
-      "Hunter"
+      "Ranged"
     ]
   },
   {
@@ -141804,8 +141808,7 @@
       }
     },
     "tags": [
-      "Ranged",
-      "Hunter"
+      "Ranged"
     ]
   },
   {
@@ -141831,8 +141834,7 @@
       }
     },
     "tags": [
-      "Ranged",
-      "Hunter"
+      "Ranged"
     ]
   },
   {
@@ -142405,7 +142407,6 @@
     "tags": [
       "f2p",
       "Melee",
-      "Woodcutting",
       "Mining"
     ],
     "sources": {
@@ -142832,7 +142833,10 @@
           "droprate": "1/43.667"
         }
       }
-    }
+    },
+    "tags": [
+      "Melee armours"
+    ]
   },
   {
     "index": 3727,
@@ -143414,9 +143418,7 @@
       }
     },
     "tags": [
-      "Melee",
-      "Ranged",
-      "Woodcutting"
+      "Ranged"
     ]
   },
   {
@@ -143490,8 +143492,7 @@
     "image": "steel_warhammer.png",
     "tags": [
       "f2p",
-      "Melee",
-      "Hunter"
+      "Melee"
     ],
     "sources": {
       "drops": {
@@ -144281,7 +144282,8 @@
     "image": "strength_amulet_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p"
+      "f2p",
+      "Melee armours"
     ],
     "sources": {
       "drops": {
@@ -144698,7 +144700,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Woodcutting"
+    ]
   },
   {
     "index": 3767,
@@ -144725,7 +144730,8 @@
     "name": "Studded body",
     "image": "studded_body.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Ranged armours"
     ],
     "sources": {
       "drops": {
@@ -144763,7 +144769,8 @@
     "image": "studded_body_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p"
+      "f2p",
+      "Ranged armours"
     ],
     "sources": {
       "drops": {
@@ -144780,7 +144787,8 @@
     "image": "studded_body_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p"
+      "f2p",
+      "Ranged armours"
     ],
     "sources": {
       "drops": {
@@ -144796,7 +144804,8 @@
     "name": "Studded chaps",
     "image": "studded_chaps.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Ranged armours"
     ],
     "sources": {
       "drops": {
@@ -144858,7 +144867,8 @@
     "image": "studded_chaps_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p"
+      "f2p",
+      "Ranged armours"
     ],
     "sources": {
       "drops": {
@@ -144875,7 +144885,8 @@
     "image": "studded_chaps_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p"
+      "f2p",
+      "Ranged armours"
     ],
     "sources": {
       "drops": {
@@ -145210,10 +145221,7 @@
           "droprate": "1/620"
         }
       }
-    },
-    "tags": [
-      "Melee armours"
-    ]
+    }
   },
   {
     "index": 3785,
@@ -147994,8 +148002,7 @@
     "name": "Swampbark armour set",
     "image": "swampbark_armour_set.png",
     "tags": [
-      "itemset",
-      "Magic armours"
+      "itemset"
     ],
     "sources": {
       "other": {
@@ -148222,10 +148229,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Ranged"
-    ]
+    }
   },
   {
     "index": 3862,
@@ -148443,10 +148447,7 @@
           "droprate": "1/29.1"
         }
       }
-    },
-    "tags": [
-      "Fishing"
-    ]
+    }
   },
   {
     "index": 3864,
@@ -148454,7 +148455,8 @@
     "name": "Swift blade",
     "image": "swift_blade.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Melee"
     ],
     "sources": {
       "other": {
@@ -148473,8 +148475,7 @@
     "name": "Swordfish",
     "image": "swordfish.png",
     "tags": [
-      "f2p",
-      "Melee"
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -148563,8 +148564,7 @@
     "name": "Swords and emblem",
     "image": "swords_and_emblem.png",
     "tags": [
-      "gridmaster",
-      "Melee"
+      "gridmaster"
     ]
   },
   {
@@ -148573,8 +148573,7 @@
     "name": "Swords and emblem (b)",
     "image": "swords_and_emblem_(b).png",
     "tags": [
-      "gridmaster",
-      "Melee"
+      "gridmaster"
     ]
   },
   {
@@ -148583,8 +148582,7 @@
     "name": "Swords and emblem (g)",
     "image": "swords_and_emblem_(g).png",
     "tags": [
-      "gridmaster",
-      "Melee"
+      "gridmaster"
     ]
   },
   {
@@ -148593,8 +148591,7 @@
     "name": "Swords and emblem (p)",
     "image": "swords_and_emblem_(p).png",
     "tags": [
-      "gridmaster",
-      "Melee"
+      "gridmaster"
     ]
   },
   {
@@ -148619,10 +148616,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Melee"
-    ]
+    }
   },
   {
     "index": 3871,
@@ -149335,7 +149329,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Hunter"
+    ]
   },
   {
     "index": 3892,
@@ -151106,10 +151103,7 @@
           "droprate": "Always"
         }
       }
-    },
-    "tags": [
-      "Magic armours"
-    ]
+    }
   },
   {
     "index": 3979,
@@ -151122,10 +151116,7 @@
           "droprate": "Always"
         }
       }
-    },
-    "tags": [
-      "Magic armours"
-    ]
+    }
   },
   {
     "index": 3980,
@@ -151138,10 +151129,7 @@
           "droprate": "Always"
         }
       }
-    },
-    "tags": [
-      "Magic armours"
-    ]
+    }
   },
   {
     "index": 3981,
@@ -152342,7 +152330,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Melee armours"
+    ]
   },
   {
     "index": 3998,
@@ -152687,7 +152678,10 @@
           "droprate": "1/90"
         }
       }
-    }
+    },
+    "tags": [
+      "Magic"
+    ]
   },
   {
     "index": 4006,
@@ -152700,7 +152694,10 @@
           "droprate": "1/1000"
         }
       }
-    }
+    },
+    "tags": [
+      "Magic"
+    ]
   },
   {
     "index": 4007,
@@ -152713,7 +152710,10 @@
           "droprate": "1/1600"
         }
       }
-    }
+    },
+    "tags": [
+      "Magic"
+    ]
   },
   {
     "index": 4008,
@@ -152881,8 +152881,7 @@
     "name": "Top hat",
     "image": "top_hat.png",
     "tags": [
-      "clue-reward-only",
-      "Magic armours"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -152914,10 +152913,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Magic armours"
-    ]
+    }
   },
   {
     "index": 4013,
@@ -153022,10 +153018,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Ranged"
-    ]
+    }
   },
   {
     "index": 4016,
@@ -153290,7 +153283,7 @@
       }
     },
     "tags": [
-      "Hunter"
+      "Melee"
     ]
   },
   {
@@ -153311,10 +153304,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Hunter"
-    ]
+    }
   },
   {
     "index": 4027,
@@ -153350,10 +153340,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Melee armours"
-    ]
+    }
   },
   {
     "index": 4029,
@@ -153389,10 +153376,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Melee armours"
-    ]
+    }
   },
   {
     "index": 4031,
@@ -153428,10 +153412,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Melee armours"
-    ]
+    }
   },
   {
     "index": 4033,
@@ -153464,7 +153445,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Magic"
+    ]
   },
   {
     "index": 4034,
@@ -154114,10 +154098,7 @@
           "droprate": "1/258"
         }
       }
-    },
-    "tags": [
-      "Melee armours"
-    ]
+    }
   },
   {
     "index": 4045,
@@ -154146,10 +154127,7 @@
           "droprate": "1/258"
         }
       }
-    },
-    "tags": [
-      "Melee armours"
-    ]
+    }
   },
   {
     "index": 4047,
@@ -154178,10 +154156,7 @@
           "droprate": "1/258"
         }
       }
-    },
-    "tags": [
-      "Melee armours"
-    ]
+    }
   },
   {
     "index": 4049,
@@ -154631,8 +154606,7 @@
     "name": "Trailblazer reloaded blowpipe ornament kit",
     "image": "trailblazer_reloaded_blowpipe_ornament_kit.png",
     "tags": [
-      "leagues",
-      "Ranged"
+      "leagues"
     ]
   },
   {
@@ -154943,7 +154917,10 @@
           "droprate": "1/716"
         }
       }
-    }
+    },
+    "tags": [
+      "Melee armours"
+    ]
   },
   {
     "index": 4107,
@@ -155615,7 +155592,10 @@
           "droprate": "1/17.25"
         }
       }
-    }
+    },
+    "tags": [
+      "Ranged armours"
+    ]
   },
   {
     "index": 4141,
@@ -155659,8 +155639,7 @@
     "name": "Twisted hat (t1)",
     "image": "twisted_hat_(t1).png",
     "tags": [
-      "leagues",
-      "Magic armours"
+      "leagues"
     ]
   },
   {
@@ -155669,8 +155648,7 @@
     "name": "Twisted hat (t2)",
     "image": "twisted_hat_(t2).png",
     "tags": [
-      "leagues",
-      "Magic armours"
+      "leagues"
     ]
   },
   {
@@ -155679,8 +155657,7 @@
     "name": "Twisted hat (t3)",
     "image": "twisted_hat_(t3).png",
     "tags": [
-      "leagues",
-      "Magic armours"
+      "leagues"
     ]
   },
   {
@@ -155772,7 +155749,10 @@
           "droprate": "1/716"
         }
       }
-    }
+    },
+    "tags": [
+      "Melee armours"
+    ]
   },
   {
     "index": 4157,
@@ -155830,8 +155810,7 @@
     "name": "Tzhaar-ket-om ornament kit",
     "image": "tzhaar-ket-om_ornament_kit.png",
     "tags": [
-      "clue-reward-only",
-      "Melee"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -156050,7 +156029,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Melee armours"
+    ]
   },
   {
     "index": 4166,
@@ -156292,7 +156274,10 @@
           "droprate": "1/200"
         }
       }
-    }
+    },
+    "tags": [
+      "Magic"
+    ]
   },
   {
     "index": 4174,
@@ -156315,7 +156300,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Magic"
+    ]
   },
   {
     "index": 4175,
@@ -158532,10 +158520,7 @@
           "droprate": "Always"
         }
       }
-    },
-    "tags": [
-      "Ranged"
-    ]
+    }
   },
   {
     "index": 4193,
@@ -158567,8 +158552,7 @@
     "name": "Unfired bowl",
     "image": "unfired_bowl.png",
     "tags": [
-      "f2p",
-      "Ranged"
+      "f2p"
     ],
     "sources": {
       "other": {
@@ -158969,7 +158953,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Magic"
+    ]
   },
   {
     "index": 4208,
@@ -159015,10 +159002,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Ranged"
-    ]
+    }
   },
   {
     "index": 4210,
@@ -159075,10 +159059,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Ranged"
-    ]
+    }
   },
   {
     "index": 4212,
@@ -159105,10 +159086,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Ranged"
-    ]
+    }
   },
   {
     "index": 4213,
@@ -159154,8 +159132,7 @@
     "name": "Uri's hat",
     "image": "uri's_hat.png",
     "tags": [
-      "clue-reward-only",
-      "Magic armours"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -159429,7 +159406,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Ranged armours"
+    ]
   },
   {
     "index": 4225,
@@ -159445,7 +159425,10 @@
           "droprate": "1/500"
         }
       }
-    }
+    },
+    "tags": [
+      "Ranged"
+    ]
   },
   {
     "index": 4226,
@@ -159490,7 +159473,10 @@
           "droprate": "7 × 1/2448"
         }
       }
-    }
+    },
+    "tags": [
+      "Melee armours"
+    ]
   },
   {
     "index": 4228,
@@ -159523,7 +159509,10 @@
           "droprate": "7 × 1/2448"
         }
       }
-    }
+    },
+    "tags": [
+      "Melee"
+    ]
   },
   {
     "index": 4230,
@@ -159579,10 +159568,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Melee armours"
-    ]
+    }
   },
   {
     "index": 4233,
@@ -159618,10 +159604,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Melee armours"
-    ]
+    }
   },
   {
     "index": 4237,
@@ -159947,7 +159930,8 @@
     "name": "Vile ashes",
     "image": "vile_ashes.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Prayer"
     ],
     "sources": {
       "drops": {
@@ -160257,7 +160241,10 @@
           "droprate": "1/3264"
         }
       }
-    }
+    },
+    "tags": [
+      "Magic armours"
+    ]
   },
   {
     "index": 4260,
@@ -160279,7 +160266,10 @@
           "droprate": "1/3264"
         }
       }
-    }
+    },
+    "tags": [
+      "Magic armours"
+    ]
   },
   {
     "index": 4261,
@@ -160301,7 +160291,10 @@
           "droprate": "1/3264"
         }
       }
-    }
+    },
+    "tags": [
+      "Magic armours"
+    ]
   },
   {
     "index": 4262,
@@ -160365,10 +160358,7 @@
           "droprate": "1/912"
         }
       }
-    },
-    "tags": [
-      "Melee"
-    ]
+    }
   },
   {
     "index": 4265,
@@ -160384,10 +160374,7 @@
           "droprate": "1/912"
         }
       }
-    },
-    "tags": [
-      "Melee"
-    ]
+    }
   },
   {
     "index": 4266,
@@ -160403,10 +160390,7 @@
           "droprate": "1/912"
         }
       }
-    },
-    "tags": [
-      "Melee"
-    ]
+    }
   },
   {
     "index": 4267,
@@ -160422,7 +160406,10 @@
           "droprate": "1/960–1/548.7"
         }
       }
-    }
+    },
+    "tags": [
+      "Magic"
+    ]
   },
   {
     "index": 4268,
@@ -160688,7 +160675,10 @@
           "droprate": "1/128"
         }
       }
-    }
+    },
+    "tags": [
+      "Melee armours"
+    ]
   },
   {
     "index": 4281,
@@ -162464,8 +162454,7 @@
       }
     },
     "tags": [
-      "Melee",
-      "Woodcutting"
+      "Melee"
     ]
   },
   {
@@ -162637,7 +162626,10 @@
       "shops": {
         "Yes": "canCompleteWanted"
       }
-    }
+    },
+    "tags": [
+      "Melee armours"
+    ]
   },
   {
     "index": 4310,
@@ -162794,10 +162786,7 @@
           ]
         }
       }
-    },
-    "tags": [
-      "Ranged"
-    ]
+    }
   },
   {
     "index": 4318,
@@ -162911,7 +162900,10 @@
       "shops": {
         "Yes": "canCompleteWanted"
       }
-    }
+    },
+    "tags": [
+      "Melee armours"
+    ]
   },
   {
     "index": 4324,
@@ -163054,8 +163046,7 @@
     "name": "White partyhat",
     "image": "white_partyhat.png",
     "tags": [
-      "f2p",
-      "Magic armours"
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -163213,8 +163204,7 @@
       }
     },
     "tags": [
-      "Melee",
-      "Hunter"
+      "Melee"
     ]
   },
   {
@@ -163864,7 +163854,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Hunter"
+    ]
   },
   {
     "index": 4349,
@@ -164156,10 +164149,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Ranged"
-    ]
+    }
   },
   {
     "index": 4358,
@@ -164183,10 +164173,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Hunter"
-    ]
+    }
   },
   {
     "index": 4359,
@@ -164375,7 +164362,7 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Ranged armours"
     ]
   },
   {
@@ -164456,10 +164443,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Ranged"
-    ]
+    }
   },
   {
     "index": 4365,
@@ -164677,10 +164661,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Magic armours"
-    ]
+    }
   },
   {
     "index": 4368,
@@ -164743,8 +164724,7 @@
     "name": "Wizard's mind bomb",
     "image": "wizard's_mind_bomb.png",
     "tags": [
-      "f2p",
-      "Magic armours"
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -165024,10 +165004,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Ranged"
-    ]
+    }
   },
   {
     "index": 4377,
@@ -165296,7 +165273,10 @@
       "shops": {
         "Yes": "canCompleteRecipeForDisaster0"
       }
-    }
+    },
+    "tags": [
+      "Melee"
+    ]
   },
   {
     "index": 4390,
@@ -165740,10 +165720,7 @@
           "droprate": "1/14.5"
         }
       }
-    },
-    "tags": [
-      "Magic armours"
-    ]
+    }
   },
   {
     "index": 4407,
@@ -165865,7 +165842,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Melee armours"
+    ]
   },
   {
     "index": 4412,
@@ -165890,7 +165870,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Melee armours"
+    ]
   },
   {
     "index": 4413,
@@ -166055,10 +166038,7 @@
           ]
         }
       }
-    },
-    "tags": [
-      "Ranged"
-    ]
+    }
   },
   {
     "index": 4419,
@@ -166189,10 +166169,7 @@
       "shops": {
         "Yes": "canCompletePriestInPeril"
       }
-    },
-    "tags": [
-      "Magic armours"
-    ]
+    }
   },
   {
     "index": 4425,
@@ -166200,8 +166177,7 @@
     "name": "Yellow partyhat",
     "image": "yellow_partyhat.png",
     "tags": [
-      "f2p",
-      "Magic armours"
+      "f2p"
     ],
     "sources": {
       "drops": {
@@ -166291,7 +166267,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Hunter"
+    ]
   },
   {
     "index": 4430,
@@ -166599,10 +166578,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Ranged"
-    ]
+    }
   },
   {
     "index": 4435,
@@ -166626,10 +166602,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Hunter"
-    ]
+    }
   },
   {
     "index": 4436,
@@ -166884,7 +166857,7 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Ranged armours"
     ]
   },
   {
@@ -166979,10 +166952,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Ranged"
-    ]
+    }
   },
   {
     "index": 4442,
@@ -167038,10 +167008,7 @@
           }
         }
       }
-    },
-    "tags": [
-      "Hunter"
-    ]
+    }
   },
   {
     "index": 4444,
@@ -167126,7 +167093,8 @@
     "name": "Zamorak bracers",
     "image": "zamorak_bracers.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Ranged armours"
     ],
     "sources": {
       "drops": {
@@ -167299,7 +167267,8 @@
     "name": "Zamorak chaps",
     "image": "zamorak_chaps.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Ranged armours"
     ],
     "sources": {
       "drops": {
@@ -167399,7 +167368,6 @@
     "image": "zamorak_d'hide_shield.png",
     "tags": [
       "clue-reward-only",
-      "Melee armours",
       "Ranged armours"
     ],
     "sources": {
@@ -167416,8 +167384,7 @@
     "name": "Zamorak dragonhide set",
     "image": "zamorak_dragonhide_set.png",
     "tags": [
-      "itemset",
-      "Ranged armours"
+      "itemset"
     ],
     "sources": {
       "other": {
@@ -167493,8 +167460,7 @@
     "name": "Zamorak godsword ornament kit",
     "image": "zamorak_godsword_ornament_kit.png",
     "tags": [
-      "clue-reward-only",
-      "Melee"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -168275,8 +168241,7 @@
       }
     },
     "tags": [
-      "Melee",
-      "Woodcutting"
+      "Melee"
     ]
   },
   {
@@ -168412,8 +168377,7 @@
     "name": "Zuriel's staff",
     "image": "zuriel's_staff.png",
     "tags": [
-      "deadman",
-      "Magic"
+      "deadman"
     ]
   }
 ]
