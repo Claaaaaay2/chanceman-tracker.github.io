@@ -5846,7 +5846,8 @@
       }
     },
     "tags": [
-      "Hunter"
+      "Hunter",
+      "Construction"
     ]
   },
   {
@@ -21127,7 +21128,8 @@
       }
     },
     "tags": [
-      "Hunter"
+      "Hunter",
+      "Construction"
     ]
   },
   {
@@ -26703,7 +26705,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Construction"
+    ]
   },
   {
     "index": 756,
@@ -32089,7 +32094,8 @@
       }
     },
     "tags": [
-      "Hunter"
+      "Hunter",
+      "Construction"
     ]
   },
   {
@@ -35602,7 +35608,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Construction"
+    ]
   },
   {
     "index": 955,
@@ -40471,7 +40480,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Construction"
+    ]
   },
   {
     "index": 1072,
@@ -49929,7 +49941,8 @@
       }
     },
     "tags": [
-      "Hunter"
+      "Hunter",
+      "Construction"
     ]
   },
   {
@@ -63942,7 +63955,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Construction"
+    ]
   },
   {
     "index": 1747,
@@ -79281,7 +79297,8 @@
     "image": "hammer.png",
     "tags": [
       "f2p",
-      "Hunter"
+      "Hunter",
+      "Construction"
     ],
     "sources": {
       "drops": {
@@ -85051,7 +85068,8 @@
       }
     },
     "tags": [
-      "Hunter"
+      "Hunter",
+      "Construction"
     ]
   },
   {
@@ -86458,7 +86476,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Construction"
+    ]
   },
   {
     "index": 2106,
@@ -92742,7 +92763,10 @@
       "shops": {
         "Yes": "canCompleteShadesOfMortton"
       }
-    }
+    },
+    "tags": [
+      "Construction"
+    ]
   },
   {
     "index": 2275,
@@ -92767,7 +92791,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Construction"
+    ]
   },
   {
     "index": 2276,
@@ -95980,7 +96007,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Construction"
+    ]
   },
   {
     "index": 2348,
@@ -97049,7 +97079,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Construction"
+    ]
   },
   {
     "index": 2379,
@@ -102174,7 +102207,8 @@
       }
     },
     "tags": [
-      "Hunter"
+      "Hunter",
+      "Construction"
     ]
   },
   {
@@ -108407,7 +108441,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Construction"
+    ]
   },
   {
     "index": 2671,
@@ -113592,7 +113629,8 @@
     "image": "plank.png",
     "tags": [
       "f2p",
-      "Hunter"
+      "Hunter",
+      "Construction"
     ],
     "sources": {
       "drops": {
@@ -123788,7 +123826,8 @@
       }
     },
     "tags": [
-      "Hunter"
+      "Hunter",
+      "Construction"
     ]
   },
   {
@@ -128157,7 +128196,8 @@
       }
     },
     "tags": [
-      "Hunter"
+      "Hunter",
+      "Construction"
     ]
   },
   {
@@ -133122,7 +133162,8 @@
       }
     },
     "tags": [
-      "Hunter"
+      "Hunter",
+      "Construction"
     ]
   },
   {
@@ -138192,7 +138233,8 @@
     "image": "soft_clay.png",
     "tags": [
       "f2p",
-      "Crafting"
+      "Crafting",
+      "Construction"
     ],
     "sources": {
       "drops": {
@@ -141179,7 +141221,8 @@
     "name": "Steel bar",
     "image": "steel_bar.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Construction"
     ],
     "sources": {
       "drops": {
@@ -143873,7 +143916,8 @@
     "image": "steel_nails.png",
     "tags": [
       "f2p",
-      "Hunter"
+      "Hunter",
+      "Construction"
     ],
     "sources": {
       "drops": {
@@ -151474,7 +151518,8 @@
       }
     },
     "tags": [
-      "Hunter"
+      "Hunter",
+      "Construction"
     ]
   },
   {
