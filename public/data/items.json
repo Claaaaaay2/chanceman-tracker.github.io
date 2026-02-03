@@ -994,7 +994,10 @@
     },
     "processable": {
       "5370": "5354, 5325"
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 39,
@@ -12061,7 +12064,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 313,
@@ -12104,7 +12110,10 @@
           "rule": "canCompleteGardenOfTranquillity"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 314,
@@ -13836,7 +13845,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 383,
@@ -14843,7 +14855,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 399,
@@ -15499,7 +15514,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 433,
@@ -15541,7 +15559,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 435,
@@ -16610,7 +16631,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 480,
@@ -18280,7 +18304,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 510,
@@ -28853,7 +28880,10 @@
           "droprate": "1/35"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 785,
@@ -33232,7 +33262,8 @@
     "image": "bucket.png",
     "tags": [
       "f2p",
-      "Hunter"
+      "Hunter",
+      "Farming"
     ],
     "sources": {
       "drops": {
@@ -34191,7 +34222,10 @@
           "droprate": "Common"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 932,
@@ -34568,7 +34602,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 934,
@@ -35054,7 +35091,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 939,
@@ -35146,7 +35186,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 941,
@@ -35366,7 +35409,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 948,
@@ -35391,7 +35437,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 949,
@@ -35648,7 +35697,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 958,
@@ -35685,7 +35737,10 @@
           "droprate": "1/2215"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 959,
@@ -36424,7 +36479,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 986,
@@ -36509,7 +36567,10 @@
           "droprate": "1/8187.5"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 987,
@@ -40235,7 +40296,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 1067,
@@ -40263,7 +40327,8 @@
       }
     },
     "tags": [
-      "Potion"
+      "Potion",
+      "Farming"
     ]
   },
   {
@@ -40292,7 +40357,8 @@
       }
     },
     "tags": [
-      "Potion"
+      "Potion",
+      "Farming"
     ]
   },
   {
@@ -40338,7 +40404,8 @@
       }
     },
     "tags": [
-      "Potion"
+      "Potion",
+      "Farming"
     ]
   },
   {
@@ -40391,7 +40458,8 @@
       }
     },
     "tags": [
-      "Potion"
+      "Potion",
+      "Farming"
     ]
   },
   {
@@ -42051,7 +42119,10 @@
           "droprate": "1/443"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 1121,
@@ -42885,7 +42956,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 1156,
@@ -42913,7 +42987,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 1157,
@@ -50676,7 +50753,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 1369,
@@ -50767,7 +50847,10 @@
           "droprate": "1/17735.98"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 1370,
@@ -52269,7 +52352,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 1403,
@@ -52555,7 +52641,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 1410,
@@ -54236,7 +54325,10 @@
           "droprate": "1/221.5"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 1456,
@@ -58716,7 +58808,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 1588,
@@ -60612,7 +60707,10 @@
           "droprate": "1/150"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 1623,
@@ -61690,7 +61788,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 1673,
@@ -64915,7 +65016,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 1781,
@@ -77499,7 +77603,10 @@
           "rule": "canCompleteGardenOfTranquillity"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 1856,
@@ -79370,7 +79477,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 1924,
@@ -79891,7 +80001,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 1933,
@@ -80127,7 +80240,10 @@
           "droprate": "1/250"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 1942,
@@ -80590,7 +80706,10 @@
           "droprate": "1/124"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 1962,
@@ -82322,7 +82441,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2016,
@@ -86431,7 +86553,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2109,
@@ -86468,7 +86593,10 @@
           "droprate": "1/2430"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2110,
@@ -87189,7 +87317,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2125,
@@ -87861,7 +87992,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2157,
@@ -88869,7 +89003,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2194,
@@ -89315,7 +89452,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2197,
@@ -89807,7 +89947,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2204,
@@ -93127,7 +93270,10 @@
           "droprate": "Rare"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2279,
@@ -94838,7 +94984,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2325,
@@ -95016,7 +95165,10 @@
           "droprate": "1/3140; 1/1727"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2326,
@@ -95923,7 +96075,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2351,
@@ -96005,7 +96160,10 @@
           "droprate": "Varies"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2352,
@@ -96612,7 +96770,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2373,
@@ -96721,7 +96882,10 @@
           "droprate": "Varies"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2374,
@@ -97008,7 +97172,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2382,
@@ -97363,7 +97530,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2388,
@@ -104922,7 +105092,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2579,
@@ -106102,7 +106275,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2621,
@@ -108340,7 +108516,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2675,
@@ -109677,7 +109856,10 @@
           "droprate": "Common"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2716,
@@ -110885,7 +111067,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2750,
@@ -110959,7 +111144,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2752,
@@ -111343,7 +111531,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2763,
@@ -111470,7 +111661,10 @@
           "droprate": "1/38315.61"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2764,
@@ -111541,7 +111735,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2767,
@@ -111641,7 +111838,10 @@
           "droprate": "1/2339.3"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2768,
@@ -112475,7 +112675,10 @@
           "droprate": "1/1107.5"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2795,
@@ -112748,7 +112951,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2802,
@@ -112806,7 +113012,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2803,
@@ -113441,7 +113650,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2837,
@@ -113958,7 +114170,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2845,
@@ -114664,7 +114879,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2859,
@@ -114875,7 +115093,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2860,
@@ -117103,7 +117324,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2962,
@@ -117508,7 +117732,10 @@
           "droprate": "1/268.75–1/555.83"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 2964,
@@ -121430,7 +121657,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 3084,
@@ -121586,7 +121816,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 3089,
@@ -121703,7 +121936,10 @@
           "droprate": "1/8187.5"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 3091,
@@ -123451,7 +123687,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 3153,
@@ -123631,7 +123870,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 3160,
@@ -123665,7 +123907,10 @@
           "droprate": "1/2980"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 3161,
@@ -133190,7 +133435,10 @@
       "shops": {
         "Yes": "canCompleteBoneVoyage"
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 3379,
@@ -133209,7 +133457,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 3380,
@@ -133312,7 +133563,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 3384,
@@ -137118,7 +137372,10 @@
           "droprate": "1/1854.4–1/3835.23"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 3585,
@@ -137798,7 +138055,10 @@
           "droprate": "Rare"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 3587,
@@ -138283,7 +138543,8 @@
     "name": "Spade",
     "image": "spade.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Farming"
     ],
     "sources": {
       "drops": {
@@ -145564,7 +145825,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 3752,
@@ -149232,7 +149496,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 3848,
@@ -149906,7 +150173,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 3863,
@@ -150592,7 +150862,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 3882,
@@ -151300,7 +151573,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 3906,
@@ -151382,7 +151658,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 3907,
@@ -153804,7 +154083,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 3997,
@@ -154136,7 +154418,10 @@
           "droprate": "Common"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 4004,
@@ -155496,7 +155781,10 @@
           "droprate": "1/9271.98–1/19176.14"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 4040,
@@ -157564,7 +157852,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 4167,
@@ -157653,7 +157944,10 @@
           "droprate": "1/1280"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 4169,
@@ -163600,7 +163894,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 4291,
@@ -164549,7 +164846,10 @@
           "droprate": "1/90"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 4329,
@@ -165013,7 +165313,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 4344,
@@ -165322,7 +165625,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 4347,
@@ -165798,7 +166104,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 4361,
@@ -165904,7 +166213,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 4362,
@@ -166404,7 +166716,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 4373,
@@ -167557,7 +167872,10 @@
           "droprate": "Uncommon"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 4415,
@@ -168249,7 +168567,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 4438,
@@ -168421,7 +168742,10 @@
           "droprate": "1/3140; 1/1727"
         }
       }
-    }
+    },
+    "tags": [
+      "Farming"
+    ]
   },
   {
     "index": 4439,

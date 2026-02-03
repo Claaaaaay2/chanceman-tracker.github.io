@@ -14,7 +14,8 @@ const SECTION_ORDER = [
     "Hunter",
     "Crafting",
     "Food",
-    "Potion"
+    "Potion",
+    "Farming"
 ];
 
 function escapeHtml(value) {
