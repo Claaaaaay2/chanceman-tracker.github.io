@@ -6692,7 +6692,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 161,
@@ -7352,7 +7355,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 169,
@@ -7835,7 +7841,8 @@
     "name": "Amulet mould",
     "image": "amulet_mould.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Crafting"
     ],
     "sources": {
       "drops": {
@@ -15341,7 +15348,8 @@
     "name": "Ball of wool",
     "image": "ball_of_wool.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Crafting"
     ],
     "sources": {
       "drops": {
@@ -16484,7 +16492,10 @@
           "droprate": "Common"
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 477,
@@ -17577,7 +17588,8 @@
       }
     },
     "tags": [
-      "Magic"
+      "Magic",
+      "Crafting"
     ]
   },
   {
@@ -20119,7 +20131,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 559,
@@ -25340,7 +25355,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 705,
@@ -26612,7 +26630,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 754,
@@ -29133,7 +29154,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 795,
@@ -38125,7 +38149,8 @@
     "name": "Chisel",
     "image": "chisel.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Crafting"
     ],
     "sources": {
       "drops": {
@@ -41983,7 +42008,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 1120,
@@ -42047,7 +42075,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 1122,
@@ -42723,7 +42754,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 1153,
@@ -44952,7 +44986,8 @@
     "name": "Diamond",
     "image": "diamond.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Crafting"
     ],
     "sources": {
       "drops": {
@@ -50812,7 +50847,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 1371,
@@ -52685,7 +52723,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 1415,
@@ -54431,7 +54472,8 @@
     "name": "Emerald",
     "image": "emerald.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Crafting"
     ],
     "sources": {
       "drops": {
@@ -58744,7 +58786,10 @@
           "droprate": "1/1679.42; 1/62.235"
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 1589,
@@ -58904,7 +58949,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 1593,
@@ -60521,7 +60569,10 @@
           "droprate": "1/100"
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 1622,
@@ -62746,7 +62797,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 1717,
@@ -63485,7 +63539,8 @@
     "name": "Gold bar",
     "image": "gold_bar.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Crafting"
     ],
     "sources": {
       "drops": {
@@ -65301,7 +65356,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 1797,
@@ -78836,7 +78894,10 @@
       "shops": {
         "Yes": "canCompleteTheFremennikIsles"
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 1909,
@@ -79317,7 +79378,8 @@
     "name": "Hard leather",
     "image": "hard_leather.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Crafting"
     ],
     "sources": {
       "drops": {
@@ -80022,7 +80084,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 1941,
@@ -80086,7 +80151,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 1943,
@@ -80535,7 +80603,10 @@
           "droprate": "1/28.636"
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 1963,
@@ -86453,7 +86524,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 2113,
@@ -87702,7 +87776,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 2156,
@@ -88198,7 +88275,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 2174,
@@ -91660,7 +91740,8 @@
     "name": "Leather",
     "image": "leather.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Crafting"
     ],
     "sources": {
       "other": {
@@ -93070,7 +93151,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 2280,
@@ -94721,7 +94805,10 @@
           "droprate": "1/55.417"
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 2324,
@@ -96492,7 +96579,10 @@
           "droprate": "1/83.125"
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 2372,
@@ -103547,7 +103637,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 2533,
@@ -106953,7 +107046,8 @@
     "name": "Necklace mould",
     "image": "necklace_mould.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Crafting"
     ],
     "sources": {
       "drops": {
@@ -107041,7 +107135,8 @@
     "name": "Needle",
     "image": "needle.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Crafting"
     ],
     "sources": {
       "drops": {
@@ -108212,7 +108307,10 @@
           "droprate": "1/25"
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 2674,
@@ -109637,7 +109735,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 2718,
@@ -110153,7 +110254,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 2729,
@@ -120691,7 +120795,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 3058,
@@ -121174,7 +121281,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 3080,
@@ -122249,7 +122359,8 @@
     "name": "Ring mould",
     "image": "ring_mould.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Crafting"
     ],
     "sources": {
       "drops": {
@@ -123626,7 +123737,8 @@
     "name": "Ruby",
     "image": "ruby.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Crafting"
     ],
     "sources": {
       "drops": {
@@ -131195,7 +131307,8 @@
     "name": "Sapphire",
     "image": "sapphire.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Crafting"
     ],
     "sources": {
       "drops": {
@@ -134541,7 +134654,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 3528,
@@ -134583,7 +134699,8 @@
     "name": "Silver bar",
     "image": "silver_bar.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Crafting"
     ],
     "sources": {
       "drops": {
@@ -135099,7 +135216,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 3540,
@@ -136213,7 +136333,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 3576,
@@ -137808,7 +137931,8 @@
     "name": "Soft clay",
     "image": "soft_clay.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Crafting"
     ],
     "sources": {
       "drops": {
@@ -144449,7 +144573,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 3736,
@@ -152571,7 +152698,8 @@
     "name": "Thread",
     "image": "thread.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Crafting"
     ],
     "sources": {
       "drops": {
@@ -152676,7 +152804,8 @@
     "name": "Tiara mould",
     "image": "tiara_mould.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Crafting"
     ],
     "sources": {
       "drops": {
@@ -157896,7 +158025,8 @@
     "name": "Uncut diamond",
     "image": "uncut_diamond.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Crafting"
     ],
     "sources": {
       "drops": {
@@ -158370,7 +158500,10 @@
           "droprate": "Unknown"
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 4184,
@@ -158378,7 +158511,8 @@
     "name": "Uncut emerald",
     "image": "uncut_emerald.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Crafting"
     ],
     "sources": {
       "drops": {
@@ -158824,7 +158958,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 4186,
@@ -158861,7 +158998,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 4187,
@@ -158998,7 +159138,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 4188,
@@ -159148,7 +159291,10 @@
           "notes": "Various decorative scenery objects can be searched for a 1/1,000 chance to receive an Uncut red topaz."
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 4189,
@@ -159156,7 +159302,8 @@
     "name": "Uncut ruby",
     "image": "uncut_ruby.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Crafting"
     ],
     "sources": {
       "drops": {
@@ -159545,7 +159692,8 @@
     "name": "Uncut sapphire",
     "image": "uncut_sapphire.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Crafting"
     ],
     "sources": {
       "drops": {
@@ -159887,7 +160035,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 4192,
@@ -159932,7 +160083,8 @@
     "name": "Unfired bowl",
     "image": "unfired_bowl.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Crafting"
     ],
     "sources": {
       "other": {
@@ -159967,7 +160119,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 4196,
@@ -159975,7 +160130,8 @@
     "name": "Unfired pie dish",
     "image": "unfired_pie_dish.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Crafting"
     ],
     "sources": {
       "other": {
@@ -160010,7 +160166,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 4198,
@@ -160018,7 +160177,8 @@
     "name": "Unfired pot",
     "image": "unfired_pot.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Crafting"
     ],
     "sources": {
       "other": {
@@ -160054,7 +160214,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 4200,
@@ -162246,7 +162409,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 4284,
@@ -165362,7 +165528,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 4353,
@@ -165596,7 +165765,10 @@
           "droprate": "1/83.125"
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 4360,
@@ -166731,7 +166903,8 @@
     "name": "Wool",
     "image": "wool.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Crafting"
     ],
     "sources": {
       "other": {
@@ -167136,7 +167309,10 @@
           "droprate": "1/14.5"
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 4407,
@@ -168040,7 +168216,10 @@
           "droprate": "1/55.417"
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 4437,
@@ -169465,7 +169644,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 4487,

@@ -12,6 +12,7 @@ const SECTION_ORDER = [
     "Mining",
     "Fishing",
     "Hunter",
+    "Crafting",
     "Food",
     "Potion"
 ];
