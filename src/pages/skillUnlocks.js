@@ -32,6 +32,14 @@ function escapeHtml(value) {
         .replace(/"/g, "&quot;");
 }
 
+function slugifySection(value) {
+    return String(value)
+        .toLowerCase()
+        .trim()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/(^-|-$)/g, "");
+}
+
 export default async function SkillUnlocksPage() {
     const obtained = fileStore.obtained;
     const rolled = fileStore.rolled;
@@ -49,7 +57,20 @@ export default async function SkillUnlocksPage() {
     const obtainedSet = new Set(obtained);
     const rolledSet = new Set(rolled);
 
-    const sections = SECTION_ORDER.map((tag) => {
+    const sectionIdCounts = new Map();
+    const sectionMeta = SECTION_ORDER.map((tag) => {
+        const base = slugifySection(tag) || "section";
+        const count = sectionIdCounts.get(base) || 0;
+        sectionIdCounts.set(base, count + 1);
+        const id = count ? `${base}-${count + 1}` : base;
+        return { tag, id };
+    });
+
+    const jumpLinks = sectionMeta.map(({ tag, id }) => `
+        <a class="unlock-jump-link" href="#${escapeHtml(id)}">${escapeHtml(tag)}</a>
+    `).join("");
+
+    const sections = sectionMeta.map(({ tag, id }) => {
         const tagged = items.filter((item) => {
             const tags = item.tags || [];
             const hasTag = Array.isArray(tags) ? tags.includes(tag) : tags === tag;
@@ -67,7 +88,7 @@ export default async function SkillUnlocksPage() {
         `).join("");
 
         return `
-            <section class="unlock-section" data-section="${escapeHtml(tag)}">
+            <section class="unlock-section" id="${escapeHtml(id)}" data-section="${escapeHtml(tag)}">
                 <header class="unlock-section-header">
                     <button class="unlock-toggle" type="button" aria-expanded="true">Hide</button>
                     <h2>${escapeHtml(tag)}</h2>
@@ -90,6 +111,12 @@ export default async function SkillUnlocksPage() {
                 <input type="search" id="unlockSearch" placeholder="Item name">
             </label>
         </div>
+        <nav class="unlock-jump" aria-label="Jump to section">
+            <div class="unlock-jump-label">Jump to section</div>
+            <div class="unlock-jump-list">
+                ${jumpLinks}
+            </div>
+        </nav>
         <div class="unlock-list" id="unlockList">
             ${sections}
         </div>
