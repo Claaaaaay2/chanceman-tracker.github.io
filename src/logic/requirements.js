@@ -5827,11 +5827,14 @@ function hasAccessToWyvernProtection(ctx) {
 }
 
 function canStartPerilousMoons(ctx) {
-    return requiresQuest(ctx, "canCompleteTwilightsPromise", canCompleteTwilightsPromise) //
-        && canTrainHunter(ctx) //
-        && canTrainFishing(ctx) //
-        && canTrainRunecraft(ctx) //
-        && canTrainConstruction(ctx);
+    return allTrue([
+        requiresQuest(ctx, "canCompleteTwilightsPromise", canCompleteTwilightsPromise), //
+        hasSkillLevel(ctx, "Hunter", 20), //
+        hasSkillLevel(ctx, "Slayer", 48), //
+        hasSkillLevel(ctx, "Fishing", 20), //
+        hasSkillLevel(ctx, "Runecraft", 20), //
+        hasSkillLevel(ctx, "Construction", 10) //
+    ]);
 }
 
 function canReachGemRocks(ctx) {

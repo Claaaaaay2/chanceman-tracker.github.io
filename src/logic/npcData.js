@@ -16852,7 +16852,7 @@ export const NPC_DATA = {
     },
     "Zygomite Level 74": {
         "wiki": "https://oldschool.runescape.wiki/w/Zygomite#Level_74",
-        "rule": null,
+        "rule": ["canCompleteLostCity"],
         "skill": ["Slayer"],
         "level": [57],
         "tags": [],
@@ -16860,7 +16860,7 @@ export const NPC_DATA = {
     },
     "Zygomite Level 86": {
         "wiki": "https://oldschool.runescape.wiki/w/Zygomite#Level_86",
-        "rule": null,
+        "rule": ["canCompleteLostCity"],
         "skill": ["Slayer"],
         "level": [57],
         "tags": [],
