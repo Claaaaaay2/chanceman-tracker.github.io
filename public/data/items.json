@@ -5558,7 +5558,8 @@
     "name": "Adamantite bar",
     "image": "adamantite_bar.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Smithing"
     ],
     "sources": {
       "drops": {
@@ -5872,7 +5873,8 @@
     "name": "Adamantite ore",
     "image": "adamantite_ore.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Smithing"
     ],
     "sources": {
       "drops": {
@@ -30215,7 +30217,8 @@
     "name": "Bronze bar",
     "image": "bronze_bar.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Smithing"
     ],
     "sources": {
       "drops": {
@@ -39352,7 +39355,8 @@
     "name": "Coal",
     "image": "coal.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Smithing"
     ],
     "sources": {
       "drops": {
@@ -41478,7 +41482,8 @@
     "name": "Copper ore",
     "image": "copper_ore.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Smithing"
     ],
     "sources": {
       "drops": {
@@ -64202,7 +64207,8 @@
     "name": "Gold ore",
     "image": "gold_ore.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Smithing"
     ],
     "sources": {
       "drops": {
@@ -79450,7 +79456,8 @@
     "tags": [
       "f2p",
       "Hunter",
-      "Construction"
+      "Construction",
+      "Smithing"
     ],
     "sources": {
       "drops": {
@@ -83075,7 +83082,8 @@
     "name": "Iron bar",
     "image": "iron_bar.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Smithing"
     ],
     "sources": {
       "drops": {
@@ -85263,7 +85271,8 @@
     "name": "Iron ore",
     "image": "iron_ore.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Smithing"
     ],
     "sources": {
       "drops": {
@@ -91969,7 +91978,10 @@
           "droprate": "1/1135"
         }
       }
-    }
+    },
+    "tags": [
+      "Smithing"
+    ]
   },
   {
     "index": 2237,
@@ -100060,7 +100072,8 @@
     "name": "Mithril bar",
     "image": "mithril_bar.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Smithing"
     ],
     "sources": {
       "drops": {
@@ -102470,7 +102483,8 @@
     "name": "Mithril ore",
     "image": "mithril_ore.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Smithing"
     ],
     "sources": {
       "drops": {
@@ -107722,7 +107736,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Smithing"
+    ]
   },
   {
     "index": 2636,
@@ -123051,7 +123068,8 @@
     "name": "Ring of forging",
     "image": "ring_of_forging.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Smithing"
     ],
     "sources": {
       "drops": {
@@ -130392,7 +130410,8 @@
     "name": "Runite bar",
     "image": "runite_bar.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Smithing"
     ],
     "sources": {
       "drops": {
@@ -130890,7 +130909,8 @@
     "name": "Runite ore",
     "image": "runite_ore.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Smithing"
     ],
     "sources": {
       "drops": {
@@ -135684,7 +135704,8 @@
     "name": "Silver ore",
     "image": "silver_ore.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Smithing"
     ],
     "sources": {
       "drops": {
@@ -141552,7 +141573,8 @@
     "image": "steel_bar.png",
     "tags": [
       "f2p",
-      "Construction"
+      "Construction",
+      "Smithing"
     ],
     "sources": {
       "drops": {
@@ -153519,7 +153541,8 @@
     "name": "Tin ore",
     "image": "tin_ore.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Smithing"
     ],
     "sources": {
       "drops": {
