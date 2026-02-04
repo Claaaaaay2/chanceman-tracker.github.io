@@ -932,7 +932,8 @@
       }
     },
     "tags": [
-      "Hunter"
+      "Hunter",
+      "Fletching"
     ]
   },
   {
@@ -1458,7 +1459,10 @@
     },
     "processable": {
       "890": "53"
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 45,
@@ -1990,7 +1994,10 @@
     },
     "processable": {
       "9143": "314"
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 52,
@@ -2331,7 +2338,10 @@
     },
     "processable": {
       "9183": "9438"
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 60,
@@ -2598,7 +2608,10 @@
     },
     "processable": {
       "810": "314"
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 66,
@@ -3298,7 +3311,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 88,
@@ -7507,7 +7523,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 174,
@@ -7534,7 +7553,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 175,
@@ -7624,7 +7646,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 178,
@@ -7759,7 +7784,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 183,
@@ -13550,7 +13578,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 376,
@@ -14162,7 +14193,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 390,
@@ -15416,7 +15450,10 @@
           "droprate": "1/5000"
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 430,
@@ -15432,7 +15469,10 @@
           "droprate": "1/5000"
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 431,
@@ -16411,7 +16451,10 @@
           "has": 1464
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 473,
@@ -25596,7 +25639,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 715,
@@ -29016,7 +29062,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 789,
@@ -29527,7 +29576,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 807,
@@ -30044,7 +30096,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 820,
@@ -30525,7 +30580,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 828,
@@ -30773,7 +30831,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 835,
@@ -30980,7 +31041,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 841,
@@ -31468,7 +31532,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 858,
@@ -31817,7 +31884,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 870,
@@ -35582,7 +35652,8 @@
       }
     },
     "tags": [
-      "Hunter"
+      "Hunter",
+      "Fletching"
     ]
   },
   {
@@ -36458,7 +36529,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 985,
@@ -38220,7 +38294,8 @@
     "image": "chisel.png",
     "tags": [
       "f2p",
-      "Crafting"
+      "Crafting",
+      "Fletching"
     ],
     "sources": {
       "drops": {
@@ -42434,7 +42509,8 @@
       }
     },
     "tags": [
-      "Ranged"
+      "Ranged",
+      "Fletching"
     ]
   },
   {
@@ -45338,7 +45414,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 1221,
@@ -47673,7 +47752,8 @@
       }
     },
     "tags": [
-      "Ranged"
+      "Ranged",
+      "Fletching"
     ]
   },
   {
@@ -48073,7 +48153,10 @@
           "droprate": "Common"
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 1288,
@@ -48427,7 +48510,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 1299,
@@ -48767,7 +48853,10 @@
           "droprate": "1/50"
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 1305,
@@ -49273,7 +49362,10 @@
           "droprate": "1/128"
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 1324,
@@ -49588,7 +49680,10 @@
           "droprate": "1/1000"
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 1336,
@@ -51161,7 +51256,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 1375,
@@ -54816,7 +54914,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 1474,
@@ -58455,7 +58556,8 @@
     "image": "feather.png",
     "tags": [
       "f2p",
-      "Fishing"
+      "Fishing",
+      "Fletching"
     ],
     "sources": {
       "drops": {
@@ -80138,7 +80240,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 1937,
@@ -80184,7 +80289,10 @@
           "droprate": "1/15000"
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 1939,
@@ -81068,7 +81176,10 @@
           "droprate": "7 × 1/12"
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 1973,
@@ -81595,7 +81706,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 1991,
@@ -81622,7 +81736,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 1992,
@@ -82810,7 +82927,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2023,
@@ -83271,7 +83391,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2031,
@@ -83532,7 +83655,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2038,
@@ -83942,7 +84068,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2045,
@@ -84401,7 +84530,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2061,
@@ -84803,7 +84935,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2073,
@@ -86450,7 +86585,8 @@
       }
     },
     "tags": [
-      "Hunter"
+      "Hunter",
+      "Fletching"
     ]
   },
   {
@@ -86776,7 +86912,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2116,
@@ -87553,7 +87692,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2139,
@@ -87566,7 +87708,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2140,
@@ -88446,7 +88591,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2175,
@@ -88731,7 +88879,8 @@
     "image": "knife.png",
     "tags": [
       "f2p",
-      "Hunter"
+      "Hunter",
+      "Fletching"
     ],
     "sources": {
       "drops": {
@@ -92533,7 +92682,10 @@
           "droprate": "1/7500"
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2263,
@@ -93641,7 +93793,8 @@
     "image": "logs.png",
     "tags": [
       "f2p",
-      "Hunter"
+      "Hunter",
+      "Fletching"
     ],
     "sources": {
       "drops": {
@@ -93803,7 +93956,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2291,
@@ -93877,7 +94033,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2293,
@@ -94636,7 +94795,8 @@
       }
     },
     "tags": [
-      "Hunter"
+      "Hunter",
+      "Fletching"
     ]
   },
   {
@@ -94709,7 +94869,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2316,
@@ -95305,7 +95468,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2329,
@@ -95447,7 +95613,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2332,
@@ -95881,7 +96050,8 @@
       }
     },
     "tags": [
-      "Hunter"
+      "Hunter",
+      "Fletching"
     ]
   },
   {
@@ -96228,7 +96398,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2353,
@@ -96600,7 +96773,8 @@
     "image": "maple_logs.png",
     "tags": [
       "f2p",
-      "Hunter"
+      "Hunter",
+      "Fletching"
     ],
     "sources": {
       "drops": {
@@ -96724,7 +96898,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2370,
@@ -97033,7 +97210,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2377,
@@ -97068,7 +97248,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2378,
@@ -99693,7 +99876,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2442,
@@ -100276,7 +100462,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2450,
@@ -100599,7 +100788,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2457,
@@ -100857,7 +101049,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2463,
@@ -101391,7 +101586,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2480,
@@ -101876,7 +102074,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2492,
@@ -104020,7 +104221,10 @@
           "droprate": "1/15000"
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2543,
@@ -104147,7 +104351,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2548,
@@ -108205,7 +108412,8 @@
     "image": "oak_logs.png",
     "tags": [
       "f2p",
-      "Hunter"
+      "Hunter",
+      "Fletching"
     ],
     "sources": {
       "drops": {
@@ -108322,7 +108530,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2669,
@@ -108702,7 +108913,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2679,
@@ -108737,7 +108951,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2680,
@@ -109320,7 +109537,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2703,
@@ -110180,7 +110400,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2721,
@@ -110603,7 +110826,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2732,
@@ -111038,7 +111264,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2747,
@@ -112135,7 +112364,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 2775,
@@ -121253,7 +121485,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 3067,
@@ -121799,7 +122034,8 @@
       }
     },
     "tags": [
-      "Hunter"
+      "Hunter",
+      "Fletching"
     ]
   },
   {
@@ -123803,7 +124039,8 @@
       }
     },
     "tags": [
-      "Hunter"
+      "Hunter",
+      "Fletching"
     ]
   },
   {
@@ -124262,7 +124499,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 3169,
@@ -125192,7 +125432,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 3188,
@@ -126240,7 +126483,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 3203,
@@ -127140,7 +127386,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 3227,
@@ -130479,7 +130728,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 3285,
@@ -130520,7 +130772,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 3286,
@@ -131817,7 +132072,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 3321,
@@ -134846,7 +135104,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 3439,
@@ -135306,7 +135567,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 3535,
@@ -139570,7 +139834,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 3633,
@@ -140993,7 +141260,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 3661,
@@ -141725,7 +141995,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 3669,
@@ -142130,7 +142403,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 3676,
@@ -142447,7 +142723,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 3682,
@@ -143004,7 +143283,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 3699,
@@ -143453,7 +143735,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 3711,
@@ -146221,7 +146506,8 @@
       }
     },
     "tags": [
-      "Fishing"
+      "Fishing",
+      "Fletching"
     ]
   },
   {
@@ -146930,7 +147216,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 3788,
@@ -150537,7 +150826,10 @@
           "droprate": "2 × 1/1024"
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 3877,
@@ -151420,7 +151712,8 @@
       }
     },
     "tags": [
-      "Hunter"
+      "Hunter",
+      "Fletching"
     ]
   },
   {
@@ -151737,7 +152030,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 3908,
@@ -154842,7 +155138,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 4016,
@@ -160390,7 +160689,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 4193,
@@ -160884,7 +161186,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 4210,
@@ -160941,7 +161246,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 4212,
@@ -160968,7 +161276,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 4213,
@@ -165931,7 +166242,8 @@
     "image": "willow_logs.png",
     "tags": [
       "f2p",
-      "Hunter"
+      "Hunter",
+      "Fletching"
     ],
     "sources": {
       "drops": {
@@ -166073,7 +166385,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 4358,
@@ -166376,7 +166691,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 4365,
@@ -166411,7 +166729,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 4366,
@@ -166874,7 +167195,8 @@
       }
     },
     "tags": [
-      "Prayer"
+      "Prayer",
+      "Fletching"
     ]
   },
   {
@@ -166943,7 +167265,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 4377,
@@ -168039,7 +168364,8 @@
       }
     },
     "tags": [
-      "Fishing"
+      "Fishing",
+      "Fletching"
     ]
   },
   {
@@ -168276,7 +168602,8 @@
     "image": "yew_logs.png",
     "tags": [
       "f2p",
-      "Hunter"
+      "Hunter",
+      "Fletching"
     ],
     "sources": {
       "drops": {
@@ -168536,7 +168863,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 4435,
@@ -168919,7 +169249,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 4442,
@@ -168951,7 +169284,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Fletching"
+    ]
   },
   {
     "index": 4443,
