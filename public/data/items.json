@@ -7187,7 +7187,8 @@
     "name": "Air talisman",
     "image": "air_talisman.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Runecraft"
     ],
     "sources": {
       "drops": {
@@ -7274,7 +7275,8 @@
     "name": "Air tiara",
     "image": "air_tiara.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Runecraft"
     ],
     "sources": {
       "other": {
@@ -19040,7 +19042,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Runecraft"
+    ]
   },
   {
     "index": 522,
@@ -23915,7 +23920,10 @@
           "droprate": "1/200"
         }
       }
-    }
+    },
+    "tags": [
+      "Runecraft"
+    ]
   },
   {
     "index": 669,
@@ -24795,7 +24803,10 @@
       "shops": {
         "Yes": "canCompleteTempleOfTheEye"
       }
-    }
+    },
+    "tags": [
+      "Runecraft"
+    ]
   },
   {
     "index": 680,
@@ -24819,7 +24830,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Runecraft"
+    ]
   },
   {
     "index": 681,
@@ -26564,7 +26578,8 @@
     "name": "Body talisman",
     "image": "body_talisman.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Runecraft"
     ],
     "sources": {
       "drops": {
@@ -26676,7 +26691,8 @@
     "name": "Body tiara",
     "image": "body_tiara.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Runecraft"
     ],
     "sources": {
       "other": {
@@ -36346,7 +36362,10 @@
           "droprate": "1/200"
         }
       }
-    }
+    },
+    "tags": [
+      "Runecraft"
+    ]
   },
   {
     "index": 978,
@@ -36369,7 +36388,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Runecraft"
+    ]
   },
   {
     "index": 979,
@@ -37696,7 +37718,10 @@
       "shops": {
         "Yes": "canCompleteTempleOfTheEye"
       }
-    }
+    },
+    "tags": [
+      "Runecraft"
+    ]
   },
   {
     "index": 991,
@@ -37719,7 +37744,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Runecraft"
+    ]
   },
   {
     "index": 992,
@@ -42126,7 +42154,10 @@
       "shops": {
         "Yes": "canCompleteTempleOfTheEye"
       }
-    }
+    },
+    "tags": [
+      "Runecraft"
+    ]
   },
   {
     "index": 1118,
@@ -42150,7 +42181,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Runecraft"
+    ]
   },
   {
     "index": 1119,
@@ -44429,7 +44463,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Runecraft"
+    ]
   },
   {
     "index": 1181,
@@ -44453,7 +44490,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Runecraft"
+    ]
   },
   {
     "index": 1182,
@@ -53458,7 +53498,8 @@
     "name": "Earth talisman",
     "image": "earth_talisman.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Runecraft"
     ],
     "sources": {
       "drops": {
@@ -53612,7 +53653,8 @@
     "name": "Earth tiara",
     "image": "earth_tiara.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Runecraft"
     ],
     "sources": {
       "drops": {
@@ -54302,7 +54344,10 @@
           "droprate": "1/306.25; 1/273.438"
         }
       }
-    }
+    },
+    "tags": [
+      "Runecraft"
+    ]
   },
   {
     "index": 1452,
@@ -54325,7 +54370,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Runecraft"
+    ]
   },
   {
     "index": 1453,
@@ -59757,7 +59805,8 @@
     "name": "Fire talisman",
     "image": "fire_talisman.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Runecraft"
     ],
     "sources": {
       "drops": {
@@ -59854,7 +59903,8 @@
     "name": "Fire tiara",
     "image": "fire_tiara.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Runecraft"
     ],
     "sources": {
       "other": {
@@ -99064,7 +99114,8 @@
     "name": "Mind talisman",
     "image": "mind_talisman.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Runecraft"
     ],
     "sources": {
       "drops": {
@@ -99146,7 +99197,8 @@
     "name": "Mind tiara",
     "image": "mind_tiara.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Runecraft"
     ],
     "sources": {
       "other": {
@@ -107408,7 +107460,10 @@
       "shops": {
         "Yes": "canCompleteTempleOfTheEye"
       }
-    }
+    },
+    "tags": [
+      "Runecraft"
+    ]
   },
   {
     "index": 2626,
@@ -107439,7 +107494,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Runecraft"
+    ]
   },
   {
     "index": 2627,
@@ -116542,7 +116600,8 @@
     "name": "Pure essence",
     "image": "pure_essence.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Runecraft"
     ],
     "sources": {
       "drops": {
@@ -126615,7 +126674,8 @@
     "name": "Rune essence",
     "image": "rune_essence.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Runecraft"
     ],
     "sources": {
       "drops": {
@@ -153383,7 +153443,8 @@
     "name": "Tiara",
     "image": "tiara.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Runecraft"
     ],
     "sources": {
       "drops": {
@@ -163567,7 +163628,8 @@
     "name": "Water talisman",
     "image": "water_talisman.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Runecraft"
     ],
     "sources": {
       "drops": {
@@ -163670,7 +163732,8 @@
     "name": "Water tiara",
     "image": "water_tiara.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Runecraft"
     ],
     "sources": {
       "other": {
@@ -167854,7 +167917,10 @@
           "droprate": "1/127"
         }
       }
-    }
+    },
+    "tags": [
+      "Runecraft"
+    ]
   },
   {
     "index": 4401,
@@ -167878,7 +167944,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Runecraft"
+    ]
   },
   {
     "index": 4402,

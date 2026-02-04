@@ -17,7 +17,8 @@ const SECTION_ORDER = [
     "Construction",
     "Crafting",
     "Farming",
-    "Fletching"
+    "Fletching",
+    "Runecraft"
 ];
 
 function escapeHtml(value) {
