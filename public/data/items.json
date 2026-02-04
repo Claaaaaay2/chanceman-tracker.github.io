@@ -8118,7 +8118,8 @@
     "tags": [
       "Melee armours",
       "Ranged armours",
-      "Magic armours"
+      "Magic armours",
+      "Teleports"
     ]
   },
   {
@@ -8213,7 +8214,8 @@
       "clue-reward-only",
       "Melee armours",
       "Ranged armours",
-      "Magic armours"
+      "Magic armours",
+      "Teleports"
     ],
     "sources": {
       "drops": {
@@ -8232,7 +8234,8 @@
       "clue-reward-only",
       "Melee armours",
       "Ranged armours",
-      "Magic armours"
+      "Magic armours",
+      "Teleports"
     ],
     "sources": {
       "drops": {
@@ -8265,7 +8268,8 @@
     "tags": [
       "Melee armours",
       "Ranged armours",
-      "Magic armours"
+      "Magic armours",
+      "Teleports"
     ]
   },
   {
@@ -8291,7 +8295,8 @@
     "tags": [
       "Melee armours",
       "Ranged armours",
-      "Magic armours"
+      "Magic armours",
+      "Teleports"
     ]
   },
   {
@@ -8714,7 +8719,8 @@
     "image": "anchovies.png",
     "tags": [
       "f2p",
-      "Food"
+      "Food",
+      "Cooking"
     ],
     "sources": {
       "drops": {
@@ -10602,7 +10608,10 @@
           ]
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 274,
@@ -12000,7 +12009,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 310,
@@ -12422,7 +12434,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 326,
@@ -12631,7 +12646,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 334,
@@ -16506,7 +16524,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 475,
@@ -16833,7 +16854,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 485,
@@ -17243,7 +17267,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 496,
@@ -29491,7 +29518,8 @@
     "name": "Bread dough",
     "image": "bread_dough.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Cooking"
     ],
     "sources": {
       "drops": {
@@ -33842,7 +33870,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 923,
@@ -35573,7 +35604,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 950,
@@ -36051,7 +36085,10 @@
           ]
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 968,
@@ -36426,7 +36463,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 980,
@@ -36724,7 +36764,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 988,
@@ -37834,7 +37877,10 @@
           "droprate": "1/23.777"
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 995,
@@ -37843,7 +37889,8 @@
     "image": "cheese.png",
     "tags": [
       "f2p",
-      "Food"
+      "Food",
+      "Cooking"
     ],
     "sources": {
       "drops": {
@@ -38501,7 +38548,8 @@
     "image": "chocolate_bar.png",
     "tags": [
       "f2p",
-      "Food"
+      "Food",
+      "Cooking"
     ],
     "sources": {
       "drops": {
@@ -38650,7 +38698,8 @@
     "name": "Chocolate dust",
     "image": "chocolate_dust.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Cooking"
     ],
     "sources": {
       "drops": {
@@ -39102,7 +39151,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 1034,
@@ -40017,7 +40069,10 @@
           "notes": "From the Colossal Wyrm Agility Course."
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 1053,
@@ -40058,7 +40113,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 1055,
@@ -40079,7 +40137,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 1056,
@@ -41137,7 +41198,8 @@
     "image": "cooked_meat.png",
     "tags": [
       "f2p",
-      "Food"
+      "Food",
+      "Cooking"
     ],
     "sources": {
       "drops": {
@@ -43364,7 +43426,10 @@
           ]
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 1167,
@@ -45772,7 +45837,8 @@
     "name": "Digsite teleport",
     "image": "digsite_teleport.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Teleports"
     ],
     "sources": {
       "drops": {
@@ -51710,7 +51776,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 1390,
@@ -58427,7 +58496,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 1570,
@@ -58785,7 +58857,8 @@
     "name": "Feldip hills teleport",
     "image": "feldip_hills_teleport.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Teleports"
     ],
     "sources": {
       "drops": {
@@ -58892,7 +58965,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 1584,
@@ -60410,7 +60486,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 1609,
@@ -61656,7 +61735,10 @@
           "droprate": "Rare"
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 1662,
@@ -61901,7 +61983,10 @@
           "notes": "Requires a games necklace (2) (drop from Skeleton (tarn's lair)) (well 4 of them actually)."
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 1670,
@@ -62091,7 +62176,10 @@
           ]
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 1676,
@@ -64896,7 +64984,10 @@
           "droprate": "1/22.261"
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 1766,
@@ -65201,7 +65292,8 @@
     "name": "Grapes",
     "image": "grapes.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Cooking"
     ],
     "sources": {
       "drops": {
@@ -78927,7 +79019,10 @@
           "droprate": "1/12"
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 1901,
@@ -79831,7 +79926,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 1929,
@@ -81487,7 +81585,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 1984,
@@ -82157,7 +82258,8 @@
     "name": "Iorwerth camp teleport",
     "image": "iorwerth_camp_teleport.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Teleports"
     ],
     "sources": {
       "drops": {
@@ -87851,7 +87953,8 @@
     "name": "Jug of water",
     "image": "jug_of_water.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Cooking"
     ],
     "sources": {
       "drops": {
@@ -88733,7 +88836,10 @@
           "droprate": "1/65"
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 2179,
@@ -88819,7 +88925,10 @@
           ]
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 2181,
@@ -88851,7 +88960,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 2182,
@@ -89102,7 +89214,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 2189,
@@ -91062,7 +91177,10 @@
           ]
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 2227,
@@ -93580,7 +93698,10 @@
           "droprate": "1/12.5; 1/13.158"
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 2282,
@@ -94326,7 +94447,8 @@
     "name": "Lumberyard teleport",
     "image": "lumberyard_teleport.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Teleports"
     ],
     "sources": {
       "drops": {
@@ -94392,7 +94514,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 2300,
@@ -94400,7 +94525,8 @@
     "name": "Lunar isle teleport",
     "image": "lunar_isle_teleport.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Teleports"
     ],
     "sources": {
       "drops": {
@@ -98651,7 +98777,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 2421,
@@ -104404,7 +104533,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 2547,
@@ -104763,7 +104895,8 @@
     "name": "Mort'ton teleport",
     "image": "mort'ton_teleport.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Teleports"
     ],
     "sources": {
       "drops": {
@@ -104797,7 +104930,8 @@
     "name": "Mos le'harmless teleport",
     "image": "mos_le'harmless_teleport.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Teleports"
     ],
     "sources": {
       "drops": {
@@ -106479,7 +106613,8 @@
     "name": "Nardah teleport",
     "image": "nardah_teleport.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Teleports"
     ],
     "sources": {
       "drops": {
@@ -107616,7 +107751,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 2632,
@@ -111575,7 +111713,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 2757,
@@ -111842,7 +111983,10 @@
           ]
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 2762,
@@ -112650,7 +112794,8 @@
     "name": "Pest control teleport",
     "image": "pest_control_teleport.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Teleports"
     ],
     "sources": {
       "drops": {
@@ -112761,7 +112906,8 @@
       }
     },
     "tags": [
-      "Magic"
+      "Magic",
+      "Teleports"
     ]
   },
   {
@@ -112864,7 +113010,8 @@
     "name": "Pie shell",
     "image": "pie_shell.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Cooking"
     ],
     "sources": {
       "other": {
@@ -113130,7 +113277,8 @@
       }
     },
     "tags": [
-      "Food"
+      "Food",
+      "Cooking"
     ]
   },
   {
@@ -113264,7 +113412,8 @@
       }
     },
     "tags": [
-      "Food"
+      "Food",
+      "Cooking"
     ]
   },
   {
@@ -113768,7 +113917,8 @@
     "name": "Piscatoris teleport",
     "image": "piscatoris_teleport.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Teleports"
     ],
     "sources": {
       "drops": {
@@ -113855,7 +114005,8 @@
     "name": "Pizza base",
     "image": "pizza_base.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Cooking"
     ],
     "sources": {
       "shops": {
@@ -113899,7 +114050,8 @@
     "image": "plain_pizza.png",
     "tags": [
       "f2p",
-      "Food"
+      "Food",
+      "Cooking"
     ],
     "sources": {
       "shops": {
@@ -114794,7 +114946,8 @@
     "image": "potato.png",
     "tags": [
       "f2p",
-      "Food"
+      "Food",
+      "Cooking"
     ],
     "sources": {
       "drops": {
@@ -118497,7 +118650,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 2977,
@@ -118505,7 +118661,8 @@
     "name": "Raw anchovies",
     "image": "raw_anchovies.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Cooking"
     ],
     "sources": {
       "drops": {
@@ -118580,7 +118737,10 @@
           "droprate": "1/93"
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 2979,
@@ -118593,7 +118753,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 2980,
@@ -118654,7 +118817,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 2981,
@@ -118662,7 +118828,8 @@
     "name": "Raw bear meat",
     "image": "raw_bear_meat.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Cooking"
     ],
     "sources": {
       "drops": {
@@ -118770,7 +118937,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 2983,
@@ -118778,7 +118948,8 @@
     "name": "Raw beef",
     "image": "raw_beef.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Cooking"
     ],
     "sources": {
       "drops": {
@@ -118925,7 +119096,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 2985,
@@ -118957,7 +119131,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 2986,
@@ -118976,7 +119153,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 2987,
@@ -118984,7 +119164,8 @@
     "name": "Raw boar meat",
     "image": "raw_boar_meat.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Cooking"
     ],
     "sources": {
       "drops": {
@@ -119008,7 +119189,10 @@
           "droprate": "Common"
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 2989,
@@ -119016,7 +119200,8 @@
     "name": "Raw chicken",
     "image": "raw_chicken.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Cooking"
     ],
     "sources": {
       "drops": {
@@ -119127,7 +119312,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 2991,
@@ -119143,7 +119331,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 2992,
@@ -119156,7 +119347,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 2993,
@@ -119169,7 +119363,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 2994,
@@ -119202,7 +119399,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 2995,
@@ -119235,7 +119435,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 2996,
@@ -119254,7 +119457,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 2997,
@@ -119267,7 +119473,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 2998,
@@ -119286,7 +119495,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 2999,
@@ -119305,7 +119517,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 3000,
@@ -119313,7 +119528,8 @@
     "name": "Raw herring",
     "image": "raw_herring.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Cooking"
     ],
     "sources": {
       "drops": {
@@ -119367,7 +119583,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 3002,
@@ -119380,7 +119599,10 @@
           "droprate": "Common"
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 3003,
@@ -119396,7 +119618,10 @@
       "shops": {
         "Yes": "canCompleteTaiBwoWannaiTrio"
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 3004,
@@ -119424,7 +119649,10 @@
           "droprate": "7 × 1/12"
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 3005,
@@ -119437,7 +119665,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 3006,
@@ -119445,7 +119676,8 @@
     "name": "Raw lobster",
     "image": "raw_lobster.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Cooking"
     ],
     "sources": {
       "drops": {
@@ -119637,7 +119869,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 3008,
@@ -119686,7 +119921,10 @@
           "droprate": "1/5.158; 1/5.15"
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 3009,
@@ -119710,7 +119948,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 3010,
@@ -119753,7 +119994,10 @@
       "shops": {
         "Yes": "canCompleteSwanSong"
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 3011,
@@ -119775,7 +120019,10 @@
           "droprate": "9 × 1/15"
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 3012,
@@ -119808,7 +120055,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 3013,
@@ -119819,7 +120069,10 @@
       "shops": {
         "Yes": "canCompleteSinsOfTheFather"
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 3014,
@@ -119835,7 +120088,10 @@
           "droprate": "1/22.261"
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 3015,
@@ -119843,7 +120099,8 @@
     "name": "Raw pike",
     "image": "raw_pike.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Cooking"
     ],
     "sources": {
       "drops": {
@@ -119911,7 +120168,10 @@
           "droprate": "7 × 1/12"
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 3017,
@@ -119933,7 +120193,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 3018,
@@ -119977,7 +120240,8 @@
       }
     },
     "tags": [
-      "Ranged"
+      "Ranged",
+      "Cooking"
     ]
   },
   {
@@ -119993,7 +120257,8 @@
       }
     },
     "tags": [
-      "Ranged"
+      "Ranged",
+      "Cooking"
     ]
   },
   {
@@ -120002,7 +120267,8 @@
     "name": "Raw rat meat",
     "image": "raw_rat_meat.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Cooking"
     ],
     "sources": {
       "drops": {
@@ -120057,7 +120323,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 3022,
@@ -120065,7 +120334,8 @@
     "name": "Raw salmon",
     "image": "raw_salmon.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Cooking"
     ],
     "sources": {
       "drops": {
@@ -120128,7 +120398,8 @@
     "name": "Raw sardine",
     "image": "raw_sardine.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Cooking"
     ],
     "sources": {
       "drops": {
@@ -120245,7 +120516,10 @@
           "droprate": "Varies"
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 3025,
@@ -120414,7 +120688,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 3026,
@@ -120422,7 +120699,8 @@
     "name": "Raw shrimps",
     "image": "raw_shrimps.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Cooking"
     ],
     "sources": {
       "drops": {
@@ -120464,7 +120742,10 @@
           "droprate": "Common"
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 3028,
@@ -120497,7 +120778,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 3029,
@@ -120522,7 +120806,10 @@
           "droprate": "7 × 1/12"
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 3030,
@@ -120530,7 +120817,8 @@
     "name": "Raw swordfish",
     "image": "raw_swordfish.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Cooking"
     ],
     "sources": {
       "drops": {
@@ -120650,7 +120938,10 @@
           "droprate": "Common"
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 3032,
@@ -120658,7 +120949,8 @@
     "name": "Raw trout",
     "image": "raw_trout.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Cooking"
     ],
     "sources": {
       "drops": {
@@ -120688,7 +120980,8 @@
     "name": "Raw tuna",
     "image": "raw_tuna.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Cooking"
     ],
     "sources": {
       "drops": {
@@ -120823,7 +121116,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 3035,
@@ -120836,7 +121132,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 3036,
@@ -120869,7 +121168,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 3037,
@@ -120882,7 +121184,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 3038,
@@ -120901,7 +121206,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 3039,
@@ -122844,7 +123152,10 @@
           "droprate": "1/48.6"
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 3106,
@@ -123047,7 +123358,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 3113,
@@ -123328,7 +123642,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 3126,
@@ -131427,7 +131744,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 3297,
@@ -134080,7 +134400,10 @@
           ]
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 3388,
@@ -136132,7 +136455,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 3552,
@@ -136153,7 +136479,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 3553,
@@ -139228,7 +139557,10 @@
           "droprate": "1/14.375"
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 3608,
@@ -150357,7 +150689,10 @@
       "spawns": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 3861,
@@ -150785,7 +151120,8 @@
     "name": "Tai bwo wannai teleport",
     "image": "tai_bwo_wannai_teleport.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Teleports"
     ],
     "sources": {
       "drops": {
@@ -153112,7 +153448,8 @@
     "name": "Teleport card",
     "image": "teleport_card.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Teleports"
     ],
     "sources": {
       "shops": {
@@ -154618,7 +154955,8 @@
     "image": "tomato.png",
     "tags": [
       "f2p",
-      "Food"
+      "Food",
+      "Cooking"
     ],
     "sources": {
       "drops": {
@@ -158542,7 +158880,8 @@
     "name": "Uncooked apple pie",
     "image": "uncooked_apple_pie.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Cooking"
     ],
     "sources": {
       "other": {
@@ -158572,7 +158911,8 @@
     "name": "Uncooked berry pie",
     "image": "uncooked_berry_pie.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Cooking"
     ],
     "sources": {
       "other": {
@@ -158621,7 +158961,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 4178,
@@ -158648,7 +158991,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 4179,
@@ -158675,7 +159021,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 4180,
@@ -158683,7 +159032,8 @@
     "name": "Uncooked meat pie",
     "image": "uncooked_meat_pie.png",
     "tags": [
-      "f2p"
+      "f2p",
+      "Cooking"
     ],
     "sources": {
       "other": {
@@ -158739,7 +159089,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 4182,
@@ -161552,7 +161905,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 4221,
@@ -163002,7 +163358,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 4282,
@@ -163806,7 +164165,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 4288,
@@ -164456,7 +164818,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 4295,
@@ -164692,7 +165057,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 4301,
@@ -170733,7 +171101,10 @@
           "droprate": "2 × 1/16.6"
         }
       }
-    }
+    },
+    "tags": [
+      "Teleports"
+    ]
   },
   {
     "index": 4499,

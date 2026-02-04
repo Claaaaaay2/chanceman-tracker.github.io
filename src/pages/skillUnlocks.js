@@ -9,6 +9,7 @@ const SECTION_ORDER = [
     "Magic armours",
     "Food",
     "Potion",
+    "Teleports",
     "Prayer",
     "Woodcutting",
     "Mining",
@@ -19,7 +20,8 @@ const SECTION_ORDER = [
     "Farming",
     "Fletching",
     "Runecraft",
-    "Smithing"
+    "Smithing",
+    "Cooking"
 ];
 
 function escapeHtml(value) {
