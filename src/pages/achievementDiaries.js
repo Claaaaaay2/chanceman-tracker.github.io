@@ -1,4 +1,4 @@
-import { REQUIREMENT_CHECKS } from "../logic/requirements.js";
+import { REQUIREMENT_CHECKS, canTrainSkill } from "../logic/requirements.js";
 import { fileStore } from "../storage/fileStore.js";
 
 const SKILL_OVERRIDES = {
@@ -25,6 +25,9 @@ function escapeHtml(value) {
 function hasSkillRequirement(ctx, skill, level) {
     const overrideKey = SKILL_OVERRIDES[skill];
     if (overrideKey && ctx.filters?.[overrideKey]) return true;
+    if (ctx?.ignoreSkillLevels) {
+        return canTrainSkill(ctx, skill);
+    }
     const current = ctx.player?.levels?.[skill];
     return typeof current === "number" && current >= level;
 }
@@ -178,6 +181,18 @@ function renderMissing(missing) {
     return parts.map((part) => `<div class="diary-missing">${escapeHtml(part)}</div>`).join("");
 }
 
+function buildRequirementContext(options = {}) {
+    return {
+        items: fileStore.items,
+        player: fileStore.player,
+        obtained: fileStore.obtained || [],
+        rolled: fileStore.rolled || [],
+        filters: fileStore.filters,
+        ignoreSkillLevels: Boolean(options.ignoreSkillLevels),
+        missing: { items: new Set() }
+    };
+}
+
 export default async function AchievementDiariesPage() {
     if (!fileStore.player) {
         return `
@@ -193,15 +208,6 @@ export default async function AchievementDiariesPage() {
     const data = await response.json();
     const diaries = data?.diaries || {};
 
-    const ctx = {
-        items: fileStore.items,
-        player: fileStore.player,
-        obtained: fileStore.obtained || [],
-        rolled: fileStore.rolled || [],
-        filters: fileStore.filters,
-        missing: { items: new Set() }
-    };
-
     const diarySections = [];
     for (const [diaryName, tiers] of Object.entries(diaries)) {
         const tierSections = [];
@@ -209,14 +215,16 @@ export default async function AchievementDiariesPage() {
             const tasks = tiers[tier] || [];
             let completedCount = 0;
             let readyCount = 0;
+            let trainableCount = 0;
             let blockedCount = 0;
             const rows = [];
 
             for (let index = 0; index < tasks.length; index++) {
                 const task = tasks[index];
-                const diaryState = ctx.player?.achievementDiaries?.[diaryName]?.[tier];
+                const diaryState = fileStore.player?.achievementDiaries?.[diaryName]?.[tier];
                 const isCompleted = Boolean(diaryState?.tasks?.[index]);
                 let isDoable = false;
+                let isTrainable = false;
                 let statusClass = "diary-status-blocked";
                 let statusLabel = "Not completed";
                 let missingHtml = "";
@@ -226,6 +234,7 @@ export default async function AchievementDiariesPage() {
                     statusLabel = "Completed";
                     completedCount += 1;
                 } else {
+                    const ctx = buildRequirementContext();
                     const { met, missing } = await evaluateRequirements(task.requirements, ctx, itemsById);
                     if (met) {
                         statusClass = "diary-status-ready";
@@ -233,7 +242,16 @@ export default async function AchievementDiariesPage() {
                         isDoable = true;
                         readyCount += 1;
                     } else {
-                        blockedCount += 1;
+                        const trainableCtx = buildRequirementContext({ ignoreSkillLevels: true });
+                        const { met: trainableMet } = await evaluateRequirements(task.requirements, trainableCtx, itemsById);
+                        if (trainableMet) {
+                            statusClass = "diary-status-trainable";
+                            statusLabel = "Train levels";
+                            isTrainable = true;
+                            trainableCount += 1;
+                        } else {
+                            blockedCount += 1;
+                        }
                         missingHtml = renderMissing(missing);
                     }
                 }
@@ -241,7 +259,8 @@ export default async function AchievementDiariesPage() {
                 rows.push(`
                     <div class="diary-task ${statusClass}"
                         data-completed="${isCompleted ? "true" : "false"}"
-                        data-doable="${isDoable ? "true" : "false"}">
+                        data-doable="${isDoable ? "true" : "false"}"
+                        data-trainable="${isTrainable ? "true" : "false"}">
                         <div class="diary-task-name">${escapeHtml(task.name)}</div>
                         <div class="diary-task-status">${statusLabel}</div>
                         ${missingHtml}
@@ -249,7 +268,7 @@ export default async function AchievementDiariesPage() {
                 `);
             }
 
-            const tierFullyCompletable = blockedCount === 0;
+            const tierFullyCompletable = blockedCount === 0 && trainableCount === 0;
 
             tierSections.push(`
                 <section class="diary-tier" data-fully-completable="${tierFullyCompletable ? "true" : "false"}">
@@ -257,7 +276,7 @@ export default async function AchievementDiariesPage() {
                         <button class="diary-toggle diary-tier-toggle" type="button" aria-expanded="true">Hide</button>
                         <span>${tier}</span>
                         <span class="diary-tier-counts">
-                            (${completedCount} done, ${readyCount} can complete, ${blockedCount} blocked)
+                            (${completedCount} done, ${readyCount} can complete, ${trainableCount} trainable, ${blockedCount} blocked)
                         </span>
                     </h3>
                     <div class="diary-tier-body">
@@ -311,7 +330,8 @@ function applyDiaryFilters(container) {
     for (const row of rows) {
         const isCompleted = row.dataset.completed === "true";
         const isDoable = row.dataset.doable === "true";
-        const isIncompletable = !isCompleted && !isDoable;
+        const isTrainable = row.dataset.trainable === "true";
+        const isIncompletable = !isCompleted && !isDoable && !isTrainable;
         const shouldHide = (hideCompleted && isCompleted) || (hideIncompletable && isIncompletable);
         row.style.display = shouldHide ? "none" : "";
     }

@@ -208,7 +208,7 @@ function allTrue(checks) {
     return ok;
 }
 
-function canTrainSkill(ctx, skill) {
+export function canTrainSkill(ctx, skill) {
     switch (skill) {
         case "Construction":
             return canTrainConstruction(ctx);

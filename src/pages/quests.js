@@ -168,6 +168,28 @@ function renderQuestMissing(missing) {
     return parts.map((part) => `<div class="quest-missing">${part}</div>`).join("");
 }
 
+function buildRequirementContext({ ignoreSkillLevels = false } = {}) {
+    return {
+        items: fileStore.items,
+        obtained: fileStore.obtained || [],
+        rolled: fileStore.rolled || [],
+        player: fileStore.player,
+        filters: fileStore.filters,
+        ignoreSkillLevels,
+        missing: {
+            items: new Set(),
+            itemGroups: [],
+            itemGroupKeys: new Set(),
+            skills: [],
+            skillKeys: new Set(),
+            prereqQuests: [],
+            prereqQuestKeys: new Set(),
+            questPointsRequired: 0,
+            questPointsCurrent: fileStore.player?.questPoints ?? 0
+        }
+    };
+}
+
 export default async function QuestsPage() {
     if (!fileStore.player) {
         return `
@@ -186,6 +208,7 @@ export default async function QuestsPage() {
         const questStatus = fileStore.player.quests?.[questName] ?? 0;
         const isCompleted = questStatus === 2;
         let isDoable = false;
+        let isTrainable = false;
         let missingItems = { items: [], itemGroups: [] };
 
         if (!isCompleted) {
@@ -196,24 +219,7 @@ export default async function QuestsPage() {
                     `[quests] Missing requirement check for: ${questName}. Expected one of: ${expectedNames.join(", ")}`
                 );
             } else {
-                const ctx = {
-                    items: fileStore.items,
-                    obtained: fileStore.obtained || [],
-                    rolled: fileStore.rolled || [],
-                    player: fileStore.player,
-                    filters: fileStore.filters,
-                    missing: {
-                        items: new Set(),
-                        itemGroups: [],
-                        itemGroupKeys: new Set(),
-                        skills: [],
-                        skillKeys: new Set(),
-                        prereqQuests: [],
-                        prereqQuestKeys: new Set(),
-                        questPointsRequired: 0,
-                        questPointsCurrent: fileStore.player?.questPoints ?? 0
-                    }
-                };
+                const ctx = buildRequirementContext();
 
                 try {
                     isDoable = await requirementMatch.fn(ctx);
@@ -223,6 +229,12 @@ export default async function QuestsPage() {
 
                 if (!isDoable) {
                     missingItems = getMissingItems(ctx, itemsById);
+                    try {
+                        const trainableCtx = buildRequirementContext({ ignoreSkillLevels: true });
+                        isTrainable = await requirementMatch.fn(trainableCtx);
+                    } catch (err) {
+                        console.warn(`[quests] Failed trainable requirement check for: ${questName}`, err);
+                    }
                 }
             }
         }
@@ -235,6 +247,9 @@ export default async function QuestsPage() {
         } else if (isDoable) {
             statusClass = "quest-status-ready";
             statusLabel = "Can complete";
+        } else if (isTrainable) {
+            statusClass = "quest-status-trainable";
+            statusLabel = "Train levels";
         }
 
         const missingHtml = !isCompleted && !isDoable
@@ -245,6 +260,7 @@ export default async function QuestsPage() {
             questName,
             isCompleted,
             isDoable,
+            isTrainable,
             missingItems,
             statusClass,
             statusLabel
@@ -252,8 +268,12 @@ export default async function QuestsPage() {
     }
 
     questStates.sort((a, b) => {
-        const aPriority = a.isDoable && !a.isCompleted ? 0 : 1;
-        const bPriority = b.isDoable && !b.isCompleted ? 0 : 1;
+        const aPriority = a.isDoable && !a.isCompleted
+            ? 0
+            : (a.isTrainable && !a.isCompleted ? 1 : 2);
+        const bPriority = b.isDoable && !b.isCompleted
+            ? 0
+            : (b.isTrainable && !b.isCompleted ? 1 : 2);
         if (aPriority !== bPriority) return aPriority - bPriority;
         return a.questName.localeCompare(b.questName);
     });
@@ -267,6 +287,7 @@ export default async function QuestsPage() {
             <div class="quest-row ${quest.statusClass}"
                 data-completed="${quest.isCompleted ? "true" : "false"}"
                 data-doable="${quest.isDoable ? "true" : "false"}"
+                data-trainable="${quest.isTrainable ? "true" : "false"}"
                 data-name="${quest.questName.toLowerCase()}">
                 <div class="quest-name">${quest.questName}</div>
                 <div class="quest-status">${quest.statusLabel}</div>
@@ -313,9 +334,10 @@ function applyQuestFilters(container) {
     for (const row of rows) {
         const isCompleted = row.dataset.completed === "true";
         const isDoable = row.dataset.doable === "true";
+        const isTrainable = row.dataset.trainable === "true";
         const questName = row.dataset.name || "";
         const matchesSearch = !search || questName.includes(search);
-        const isIncompletable = !isCompleted && !isDoable;
+        const isIncompletable = !isCompleted && !isDoable && !isTrainable;
         const shouldHide = (hideCompleted && isCompleted)
             || (hideIncompletable && isIncompletable)
             || !matchesSearch;

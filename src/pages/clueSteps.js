@@ -1,4 +1,4 @@
-import { REQUIREMENT_CHECKS } from "../logic/requirements.js";
+import { REQUIREMENT_CHECKS, canTrainSkill } from "../logic/requirements.js";
 import { router } from "../router.js";
 import { fileStore } from "../storage/fileStore.js";
 
@@ -12,6 +12,9 @@ function escapeHtml(value) {
 }
 
 function hasSkillRequirement(ctx, skill, level) {
+    if (ctx?.ignoreSkillLevels) {
+        return canTrainSkill(ctx, skill);
+    }
     const current = ctx.player?.levels?.[skill];
     return typeof current === "number" && current >= level;
 }
@@ -164,6 +167,18 @@ function renderMissing(missing) {
     return parts.map((part) => `<div class="clue-missing">${escapeHtml(part)}</div>`).join("");
 }
 
+function buildRequirementContext(options = {}) {
+    return {
+        items: fileStore.items,
+        player: fileStore.player,
+        obtained: fileStore.obtained || [],
+        rolled: fileStore.rolled || [],
+        filters: fileStore.filters,
+        ignoreSkillLevels: Boolean(options.ignoreSkillLevels),
+        missing: { items: new Set() }
+    };
+}
+
 function normalizeSearch(value) {
     return String(value || "").trim().toLowerCase();
 }
@@ -202,19 +217,14 @@ export default async function ClueStepsPage() {
             const description = step.description || step.name || "Untitled step";
             const type = step.type || "Unknown";
             let isDoable = false;
+            let isTrainable = false;
             let statusClass = "clue-status-blocked";
             let statusLabel = "Incompletable";
             let missingHtml = "";
 
             if (hasPlayer) {
-                const { met, missing } = await evaluateRequirements(step.requirements, {
-                    items: fileStore.items,
-                    player: fileStore.player,
-                    obtained: fileStore.obtained || [],
-                    rolled: fileStore.rolled || [],
-                    filters: fileStore.filters,
-                    missing: { items: new Set() }
-                }, itemsById);
+                const ctx = buildRequirementContext();
+                const { met, missing } = await evaluateRequirements(step.requirements, ctx, itemsById);
 
                 if (met) {
                     statusClass = "clue-status-ready";
@@ -222,6 +232,13 @@ export default async function ClueStepsPage() {
                     isDoable = true;
                     doableCount += 1;
                 } else {
+                    const trainableCtx = buildRequirementContext({ ignoreSkillLevels: true });
+                    const { met: trainableMet } = await evaluateRequirements(step.requirements, trainableCtx, itemsById);
+                    if (trainableMet) {
+                        statusClass = "clue-status-trainable";
+                        statusLabel = "Train levels";
+                        isTrainable = true;
+                    }
                     missingHtml = renderMissing(missing);
                 }
             }
@@ -238,6 +255,7 @@ export default async function ClueStepsPage() {
             rowsByType.get(type).push(`
                 <div class="clue-step ${statusClass}"
                     data-doable="${isDoable ? "true" : "false"}"
+                    data-trainable="${isTrainable ? "true" : "false"}"
                     data-description="${escapeHtml(description).toLowerCase()}">
                     <div class="clue-step-name">${escapeHtml(description)}</div>
                     <div class="clue-step-status">${statusLabel}</div>
@@ -315,9 +333,10 @@ function applyClueFilters(container) {
     const rows = container.querySelectorAll(".clue-step");
     for (const row of rows) {
         const isDoable = row.dataset.doable === "true";
+        const isTrainable = row.dataset.trainable === "true";
         const description = row.dataset.description || "";
         const matchesSearch = !search || description.includes(search);
-        const isIncompletable = !isDoable;
+        const isIncompletable = !isDoable && !isTrainable;
         const shouldHide = (hideCompletable && isDoable)
             || (hideIncompletable && isIncompletable)
             || !matchesSearch;
