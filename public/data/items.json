@@ -123400,7 +123400,7 @@
     "image": "repair_kit.png",
     "sources": {
       "shops": {
-        "Yes": "No requirements"
+        "Yes": "canCompletePandemonium"
       },
       "other": {
         "Smithing a Repair kit": {
