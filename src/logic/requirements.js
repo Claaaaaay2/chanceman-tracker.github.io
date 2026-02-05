@@ -319,6 +319,9 @@ function requiresQuest(ctx, questKey, fn) {
 }
 
 export const REQUIREMENT_CHECKS = {
+    canEnterWizardsGuild(ctx) {
+        return hasSkillLevel(ctx, "Magic", 66);
+    },
     canCompleteTutorialIsland(ctx) {
         return true;
     },
