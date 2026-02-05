@@ -21,6 +21,11 @@ export async function canReachNpc(npcName, ctx) {
         return false;
     }
 
+    if (ctx.filters?.allowOthersHouses && npc.tags?.includes("house")) {
+        ctx.npcReachCache.set(npcName, true);
+        return true;
+    }
+
     const rule = npc.rule;
     const result = !rule ? true : await evaluateRule(rule, ctx);
 
