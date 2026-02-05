@@ -291,41 +291,57 @@ window.initItemsPage = async function () {
         return capitalizeFirstLetter(String(skill).trim());
     }
 
-    function collectSkillsFromRule(rule, skills) {
+    function addSkill(skills, skill, level) {
+        const label = normalizeSkillLabel(skill);
+        if (!label) return;
+        if (level === undefined || level === null || Number.isNaN(level)) {
+            if (!skills.has(label)) {
+                skills.set(label, null);
+            }
+            return;
+        }
+        const existing = skills.get(label);
+        if (existing === null || existing === undefined || level > existing) {
+            skills.set(label, level);
+        }
+    }
+
+    function collectSkillsFromRule(rule, skills, includeLevels) {
         if (!rule) return;
         if (typeof rule === "string") return;
         if (Array.isArray(rule)) {
             for (const sub of rule) {
-                collectSkillsFromRule(sub, skills);
+                collectSkillsFromRule(sub, skills, includeLevels);
             }
             return;
         }
         if (typeof rule !== "object") return;
 
         if (rule.skill && rule.level !== undefined) {
-            skills.add(normalizeSkillLabel(rule.skill));
+            addSkill(skills, rule.skill, includeLevels ? rule.level : null);
         }
 
         if (Array.isArray(rule.skills)) {
             for (const req of rule.skills) {
                 if (!req?.skill || req.level === undefined) continue;
-                skills.add(normalizeSkillLabel(req.skill));
+                addSkill(skills, req.skill, includeLevels ? req.level : null);
             }
         }
 
         if (rule.any) {
-            collectSkillsFromRule(rule.any, skills);
+            collectSkillsFromRule(rule.any, skills, includeLevels);
         }
 
         if (rule.all) {
-            collectSkillsFromRule(rule.all, skills);
+            collectSkillsFromRule(rule.all, skills, includeLevels);
         }
     }
 
     async function getItemSkillLabels(item, ctx, rank) {
         if (rank !== 5 && rank !== 7) return [];
 
-        const skills = new Set();
+        const skills = new Map();
+        const includeLevels = rank === 7;
 
         if (item.sources?.drops) {
             for (const npcName of Object.keys(item.sources.drops)) {
@@ -339,12 +355,14 @@ window.initItemsPage = async function () {
                 if (rank === 5 && !skillsMet) continue;
                 if (rank === 7 && skillsMet) continue;
 
-                for (const skill of npc.skill) {
-                    skills.add(normalizeSkillLabel(skill));
+                for (let i = 0; i < npc.skill.length; i++) {
+                    const skill = npc.skill[i];
+                    const level = npc.level?.[i];
+                    addSkill(skills, skill, includeLevels ? level : null);
                 }
 
                 if (rank === 5 && npc?.rule) {
-                    collectSkillsFromRule(npc.rule, skills);
+                    collectSkillsFromRule(npc.rule, skills, false);
                 }
             }
         }
@@ -370,15 +388,19 @@ window.initItemsPage = async function () {
 
                 if (Array.isArray(source.skill)) {
                     for (const skill of source.skill) {
-                        skills.add(normalizeSkillLabel(skill));
+                        addSkill(skills, skill, includeLevels ? source.level : null);
                     }
                 }
 
-                collectSkillsFromRule(source.rule, skills);
+                collectSkillsFromRule(source.rule, skills, includeLevels);
             }
         }
 
-        return [...skills].sort((a, b) => a.localeCompare(b));
+        return [...skills.entries()]
+            .sort(([a], [b]) => a.localeCompare(b))
+            .map(([skill, level]) => (includeLevels && level !== null && level !== undefined)
+                ? `${level} ${skill}`
+                : skill);
     }
 
     async function getObtainableSources(item, ctx, rolled) {
