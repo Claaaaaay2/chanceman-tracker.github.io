@@ -1,6 +1,6 @@
 import { canReachNpc, evaluateRule } from "./logic/itemAvailability.js";
-import { isItemHiddenByTag, isNpcBlockedByFilters, isNpcObtainable, isSourceHiddenByFilters } from "./logic/itemVisibility.js";
-import { parseDropRate } from "./logic/utils.js";
+import { areNpcSkillsMet, isItemHiddenByTag, isNpcBlockedByFilters, isNpcObtainable, isSourceHiddenByFilters } from "./logic/itemVisibility.js";
+import { capitalizeFirstLetter, parseDropRate } from "./logic/utils.js";
 import { NPC_DATA } from "./logic/npcData.js";
 import { getObtainabilityRank } from "./logic/sortHelpers.js";
 import { initBugPage } from "./pages/reportABug.js";
@@ -275,6 +275,112 @@ window.initItemsPage = async function () {
         return best ? ` (${best})` : "";
     }
 
+    function getLevelIgnoredCtx(ctx) {
+        return {
+            ...ctx,
+            ignoreSkillLevels: true,
+            suppressMissing: true,
+            missing: {
+                ...(ctx?.missing ?? {}),
+                suppressMissing: true,
+            },
+        };
+    }
+
+    function normalizeSkillLabel(skill) {
+        return capitalizeFirstLetter(String(skill).trim());
+    }
+
+    function collectSkillsFromRule(rule, skills) {
+        if (!rule) return;
+        if (typeof rule === "string") return;
+        if (Array.isArray(rule)) {
+            for (const sub of rule) {
+                collectSkillsFromRule(sub, skills);
+            }
+            return;
+        }
+        if (typeof rule !== "object") return;
+
+        if (rule.skill && rule.level !== undefined) {
+            skills.add(normalizeSkillLabel(rule.skill));
+        }
+
+        if (Array.isArray(rule.skills)) {
+            for (const req of rule.skills) {
+                if (!req?.skill || req.level === undefined) continue;
+                skills.add(normalizeSkillLabel(req.skill));
+            }
+        }
+
+        if (rule.any) {
+            collectSkillsFromRule(rule.any, skills);
+        }
+
+        if (rule.all) {
+            collectSkillsFromRule(rule.all, skills);
+        }
+    }
+
+    async function getItemSkillLabels(item, ctx, rank) {
+        if (rank !== 5 && rank !== 7) return [];
+
+        const skills = new Set();
+
+        if (item.sources?.drops) {
+            for (const npcName of Object.keys(item.sources.drops)) {
+                if (isNpcBlockedByFilters(npcName, ctx)) continue;
+                if (!(await canReachNpc(npcName, ctx))) continue;
+
+                const npc = NPC_DATA[npcName];
+                if (!npc?.skill?.length) continue;
+
+                const skillsMet = areNpcSkillsMet(npcName, ctx);
+                if (rank === 5 && !skillsMet) continue;
+                if (rank === 7 && skillsMet) continue;
+
+                for (const skill of npc.skill) {
+                    skills.add(normalizeSkillLabel(skill));
+                }
+
+                if (rank === 5 && npc?.rule) {
+                    collectSkillsFromRule(npc.rule, skills);
+                }
+            }
+        }
+
+        if (item.sources?.other) {
+            const levelIgnoredCtx = getLevelIgnoredCtx(ctx);
+            for (const source of Object.values(item.sources.other)) {
+                if (isSourceHiddenByFilters(source, ctx)) continue;
+                if (!source?.rule) continue;
+
+                if (rank === 7) {
+                    const obtainableWithIgnoredLevels = await evaluateRule(source.rule, levelIgnoredCtx);
+                    if (!obtainableWithIgnoredLevels) continue;
+
+                    const obtainableNow = await evaluateRule(source.rule, ctx);
+                    if (obtainableNow) continue;
+                } else if (rank === 5) {
+                    const obtainableNow = await evaluateRule(source.rule, ctx);
+                    if (!obtainableNow) continue;
+                } else {
+                    continue;
+                }
+
+                if (Array.isArray(source.skill)) {
+                    for (const skill of source.skill) {
+                        skills.add(normalizeSkillLabel(skill));
+                    }
+                }
+
+                collectSkillsFromRule(source.rule, skills);
+            }
+        }
+
+        return [...skills].sort((a, b) => a.localeCompare(b));
+    }
+
     async function getObtainableSources(item, ctx, rolled) {
         const sources = [];
 
@@ -543,6 +649,14 @@ window.initItemsPage = async function () {
 
                 const isObtained = obtained.includes(item.id);
                 const isRolled = rolled.includes(item.id);
+                const skillLabels = await getItemSkillLabels(item, fileStore, sort.rank);
+                const skillHtml = skillLabels.length
+                    ? `
+                        <div class="item-skill-tags">
+                            ${skillLabels.map((skill) => `<span class="item-skill-tag">${escapeHtml(skill)}</span>`).join("")}
+                        </div>
+                    `
+                    : "";
 
                 const tooltipHtml = await buildTooltipHtml(item, fileStore, rolled);
                 html += `
@@ -551,6 +665,7 @@ window.initItemsPage = async function () {
                         ${isRolled ? `<span class="badge rolled">Rolled</span>` : ""}
                         <img class="lazy-img item-image" data-src="/images/${item.image}" src="/images/placeholder.png">
                         <span class="item-card-name">${item.name}</span>
+                        ${skillHtml}
                         ${tooltipHtml}
                     </div>
                 `;

@@ -447,6 +447,23 @@ body.route-loading .route-loading-overlay {
     text-overflow: ellipsis;
 }
 
+.item-skill-tags {
+    margin-top: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.item-skill-tag {
+    padding: 2px 5px;
+    font-size: 0.65rem;
+    line-height: 1;
+    border-radius: 4px;
+    border: 1px solid var(--border-color-darker);
+    background-color: var(--input-text-bg);
+    color: var(--section-header-color);
+}
+
 .roll-intro {
     margin: 0 1rem 1rem;
     font-weight: 600;
