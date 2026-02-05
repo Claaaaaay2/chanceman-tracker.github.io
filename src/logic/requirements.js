@@ -3315,6 +3315,15 @@ function canCompleteHazeelCult(ctx) {
 }
 
 function canCompleteHeroesQuest(ctx) {
+    const heroesQuestGang = ctx.filters?.heroesQuestGang ?? "phoenix";
+    const isBlackArmGang = heroesQuestGang === "black_arm";
+    const gangRequirement = isBlackArmGang
+        ? (
+            has(ctx, 1165) // Black full helm
+            && has(ctx, 1125) // Black platebody
+            && has(ctx, 1077) // Black platelegs
+        )
+        : canShortrange(ctx);
     return allTrue([
         hasSkillLevel(ctx, "Cooking", 53),
         hasSkillLevel(ctx, "Fishing", 53),
@@ -3329,6 +3338,7 @@ function canCompleteHeroesQuest(ctx) {
         has(ctx, 97), // Harralander potion (unf)
         has(ctx, 255), // Harralander
         has(ctx, 227), // Vial of water
+        gangRequirement,
         hasUsablePickaxe(ctx), //
     ]);
 }

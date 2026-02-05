@@ -299,6 +299,9 @@ export default async function QuestsPage() {
     const questSearchValue = (fileStore.filters?.questSearch ?? "")
         .replace(/&/g, "&amp;")
         .replace(/"/g, "&quot;");
+    const shieldOfArravCompleted = fileStore.player?.quests?.["Shield of Arrav"] === 2;
+    const heroesQuestGang = fileStore.filters?.heroesQuestGang ?? "phoenix";
+    const isPhoenixGang = heroesQuestGang !== "black_arm";
 
     return `
         <h1>Quests</h1>
@@ -319,6 +322,16 @@ export default async function QuestsPage() {
                 <input type="checkbox" id="hazeelCultLocked" ${fileStore.filters?.hazeelCultLocked ? "checked" : ""}>
                 Hazeel Cult locked
             </label>
+            ${shieldOfArravCompleted ? `
+                <label class="quest-filter quest-filter-gang">
+                    <span>Black arm gang</span>
+                    <span class="toggle-switch">
+                        <input type="checkbox" id="heroesQuestGangToggle" ${isPhoenixGang ? "checked" : ""} aria-label="Which Shield of Arrav gang?">
+                        <span class="toggle-slider" aria-hidden="true"></span>
+                    </span>
+                    <span>Phoenix gang</span>
+                </label>
+            ` : ""}
         </div>
         <div class="quest-list" id="questList">
             ${rows.join("")}
@@ -370,6 +383,12 @@ document.addEventListener("change", async (e) => {
     }
     if (e.target.id === "hazeelCultLocked") {
         await updateQuestFilters({ hazeelCultLocked: e.target.checked }, { rerender: true });
+    }
+    if (e.target.id === "heroesQuestGangToggle") {
+        await updateQuestFilters(
+            { heroesQuestGang: e.target.checked ? "phoenix" : "black_arm" },
+            { rerender: true }
+        );
     }
 });
 

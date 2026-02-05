@@ -734,6 +734,10 @@ body.route-loading .route-loading-overlay {
     white-space: nowrap;
 }
 
+.quest-filter-gang .toggle-switch {
+    transform: translateY(-0.5px);
+}
+
 .diary-filters {
     margin: 1rem;
     display: flex;
