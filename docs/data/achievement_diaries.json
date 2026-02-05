@@ -954,9 +954,7 @@
                         "skills": {},
                         "quests": {},
                         "items": [],
-                        "untracked": [
-                            "waterskin"
-                        ],
+                        "untracked": [],
                         "itemsAny": [],
                         "rulesAll": [],
                         "rulesAny": []
@@ -7051,14 +7049,104 @@
                     "requirements": {
                         "skills": {},
                         "quests": {},
-                        "items": [
-                            {
-                                "id": 526,
-                                "name": "Bones"
-                            }
-                        ],
+                        "items": [],
                         "untracked": [],
-                        "itemsAny": [],
+                        "itemsAny": [
+                            [
+                                {
+                                    "id": 534,
+                                    "name": "Babydragon bones"
+                                },
+                                {
+                                    "id": 530,
+                                    "name": "Bat bones"
+                                },
+                                {
+                                    "id": 532,
+                                    "name": "Big bones"
+                                },
+                                {
+                                    "id": 526,
+                                    "name": "Bones"
+                                },
+                                {
+                                    "id": 528,
+                                    "name": "Burnt bones"
+                                },
+                                {
+                                    "id": 6729,
+                                    "name": "Dagannoth bones"
+                                },
+                                {
+                                    "id": 536,
+                                    "name": "Dragon bones"
+                                },
+                                {
+                                    "id": 22783,
+                                    "name": "Drake bones"
+                                },
+                                {
+                                    "id": 4830,
+                                    "name": "Fayrg bones"
+                                },
+                                {
+                                    "id": 31729,
+                                    "name": "Frost dragon bones"
+                                },
+                                {
+                                    "id": 22786,
+                                    "name": "Hydra bones"
+                                },
+                                {
+                                    "id": 3125,
+                                    "name": "Jogre bones"
+                                },
+                                {
+                                    "id": 11943,
+                                    "name": "Lava dragon bones"
+                                },
+                                {
+                                    "id": 3183,
+                                    "name": "Monkey bones"
+                                },
+                                {
+                                    "id": 4834,
+                                    "name": "Ourg bones"
+                                },
+                                {
+                                    "id": 4832,
+                                    "name": "Raurg bones"
+                                },
+                                {
+                                    "id": 31726,
+                                    "name": "Strykewyrm bones"
+                                },
+                                {
+                                    "id": 22124,
+                                    "name": "Superior dragon bones"
+                                },
+                                {
+                                    "id": 2859,
+                                    "name": "Wolf bones"
+                                },
+                                {
+                                    "id": 22780,
+                                    "name": "Wyrm bones"
+                                },
+                                {
+                                    "id": 28899,
+                                    "name": "Wyrmling bones"
+                                },
+                                {
+                                    "id": 6812,
+                                    "name": "Wyvern bones"
+                                },
+                                {
+                                    "id": 4812,
+                                    "name": "Zogre bones"
+                                }
+                            ]
+                        ],
                         "rulesAll": [],
                         "rulesAny": []
                     }
