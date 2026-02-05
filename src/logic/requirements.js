@@ -447,6 +447,9 @@ export const REQUIREMENT_CHECKS = {
     hasAnyAle(ctx) {
         return hasAnyAle(ctx);
     },
+    hasAnyGnomeCocktail(ctx) {
+        return hasAnyGnomeCocktail(ctx);
+    },
     canMakeSplitLog(ctx) {
         return canMakeSplitLog(ctx);
     },
@@ -7070,6 +7073,25 @@ function hasAnyAle(ctx) {
         22430,
         5741,
         23948,
+    ]);
+}
+
+function hasAnyGnomeCocktail(ctx) {
+    return hasAnyItems(ctx, [
+        2084, // Fruit blast
+        2034, // Premade fr' blast
+        2048, // Pineapple punch
+        2036, // Premade p' punch
+        2054, // Wizard blizzard
+        2040, // Premade wiz blz'd
+        2080, // Short green guy
+        2038, // Premade sgg
+        2092, // Drunk dragon
+        2032, // Premade dr' dragon
+        2074, // Choc saturday
+        2030, // Premade choc s'dy
+        2064, // Blurberry special
+        2028, // Premade blurb' sp.
     ]);
 }
 

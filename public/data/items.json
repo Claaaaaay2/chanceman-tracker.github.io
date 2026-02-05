@@ -39978,6 +39978,10 @@
       "other": {
         "Gnome Cooking tutorial": {
           "notes": "Do the gnome restaurant tutorial (free roll)."
+        },
+        "Drinking any gnome cocktail": {
+          "notes": "Requires any gnome cocktail (including premade).",
+          "rule": "hasAnyGnomeCocktail"
         }
       }
     }
