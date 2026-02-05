@@ -77,6 +77,7 @@ export async function router() {
                 ${await Footer()}
             </div>
         `;
+        window.scrollTo(0, 0);
         bindThemeToggle();
         bindFiltersOverridesToggle();
         updateThemeIcon();
