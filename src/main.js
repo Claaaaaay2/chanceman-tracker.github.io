@@ -210,6 +210,7 @@ window.initItemsPage = async function () {
             ? otherDropsToggle.checked
             : (fileStore.filters?.otherDropsSortByDroprate ?? true);
         const nextFilters = {
+            ...fileStore.filters,
             search: elements.searchInput.value,
             hunterRumoursCompleted: elements.hunterRumoursCompleted.value,
             otherDropsSortByDroprate

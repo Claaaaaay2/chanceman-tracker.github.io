@@ -25508,6 +25508,17 @@
       "spawns": {
         "Yes": "No requirements"
       },
+      "shops": {
+        "Yes": {
+          "all": [
+            "canCompletePandemonium",
+            {
+              "skill": "Sailing",
+              "level": 67
+            }
+          ]
+        }
+      },
       "other": {
         "Cutting a Scaly blue dragonhide": {
           "notes": "Requires a Knife and a Scaly blue dragonhide.",
@@ -40070,6 +40081,9 @@
           "droprate": "1/27"
         }
       },
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Cooking a Cod": {
           "notes": "Requires Raw cod.",
@@ -41529,7 +41543,7 @@
     "image": "cooked_sweetcorn.png",
     "sources": {
       "spawns": {
-        "Yes": "No requirements"
+        "Yes": "hasTelegrabRunes"
       },
       "other": {
         "Cooking a Cooked sweetcorn": {
@@ -61004,6 +61018,17 @@
         "Baby impling jar": {
           "droprate": "1/100"
         }
+      },
+      "shops": {
+        "Yes": {
+          "all": [
+            "canCompletePandemonium",
+            {
+              "skill": "Sailing",
+              "level": 67
+            }
+          ]
+        }
       }
     },
     "tags": [
@@ -64206,6 +64231,17 @@
       },
       "spawns": {
         "Yes": "hasTelegrabRunesOrCompleteDragonSlayerI"
+      },
+      "shops": {
+        "Yes": {
+          "all": [
+            "canCompletePandemonium",
+            {
+              "skill": "Sailing",
+              "level": 67
+            }
+          ]
+        }
       },
       "other": {
         "Smelting a Gold bar": {
@@ -83812,7 +83848,15 @@
         }
       },
       "shops": {
-        "Yes": "canCompletePandemonium"
+        "Yes": {
+          "all": [
+            "canCompletePandemonium",
+            {
+              "skill": "Sailing",
+              "level": 50
+            }
+          ]
+        }
       },
       "other": {
         "Smithing an Iron cannonball": {
@@ -89570,7 +89614,7 @@
                 "has": 227
               },
               {
-                "has": 255
+                "has": 263
               },
               {
                 "skill": "Herblore",
@@ -92935,7 +92979,7 @@
     "sources": {
       "other": {
         "Cooking some Lemon slices": {
-          "notes": "Requires a Lemon and a Knife or any slash weapon.",
+          "notes": "Requires a Lemon and a Knife or a Narwhal knife.",
           "rule": {
             "all": [
               {
@@ -93207,7 +93251,7 @@
     "sources": {
       "other": {
         "Cooking some Lime chunks": {
-          "notes": "Requires a Lime and a Knife or any slash weapon.",
+          "notes": "Requires a Lime and a Knife or a Narwhal knife.",
           "rule": {
             "all": [
               {
@@ -93215,7 +93259,6 @@
                   {
                     "has": 946
                   },
-                  "hasSlashWeapon",
                   "hasNarwhalKnife"
                 ]
               },
@@ -93239,7 +93282,7 @@
     "sources": {
       "other": {
         "Cooking some Lime slices": {
-          "notes": "Requires a Lime and a Knife or any slash weapon.",
+          "notes": "Requires a Lime and a Knife or a Narwhal knife.",
           "rule": {
             "all": [
               {
@@ -93247,7 +93290,6 @@
                   {
                     "has": 946
                   },
-                  "hasSlashWeapon",
                   "hasNarwhalKnife"
                 ]
               },
@@ -101070,7 +101112,15 @@
         }
       },
       "shops": {
-        "Yes": "canCompletePandemonium"
+        "Yes": {
+          "all": [
+            "canCompletePandemonium",
+            {
+              "skill": "Sailing",
+              "level": 50
+            }
+          ]
+        }
       },
       "other": {
         "Smithing a Mithril cannonball": {
@@ -104906,7 +104956,15 @@
         }
       },
       "shops": {
-        "Yes": "canCompletePandemonium"
+        "Yes": {
+          "all": [
+            "canCompletePandemonium",
+            {
+              "skill": "Sailing",
+              "level": 67
+            }
+          ]
+        }
       }
     }
   },
@@ -111912,7 +111970,7 @@
           }
         },
         "Cutting an Orange (hat)": {
-          "notes": "Requires a Knife and 43 agility to get Orange (hat) (other slash weapons do NOT work).",
+          "notes": "Requires a Knife or a Narwhal knife and 43 agility to get Orange (hat).",
           "rule": {
             "all": [
               {
@@ -112069,7 +112127,7 @@
           }
         },
         "Cutting an Orange (hat)": {
-          "notes": "Requires a Knife and 43 agility to get Orange (hat) (other slash weapons do NOT work).",
+          "notes": "Requires a Knife or a Narwhal knife and 43 agility to get Orange (hat).",
           "rule": {
             "all": [
               {
@@ -131058,7 +131116,15 @@
         }
       },
       "shops": {
-        "Yes": "canCompletePandemonium"
+        "Yes": {
+          "all": [
+            "canCompletePandemonium",
+            {
+              "skill": "Sailing",
+              "level": 67
+            }
+          ]
+        }
       },
       "other": {
         "Smithing a Rune warhammer": {
@@ -134332,7 +134398,8 @@
     "sources": {
       "other": {
         "Special shop": {
-          "notes": "From Forestry rewards interface."
+          "notes": "From Forestry rewards interface.",
+          "rule": "hasUsableAxe"
         }
       }
     }
@@ -137568,7 +137635,7 @@
     "sources": {
       "other": {
         "Slicing a Banana": {
-          "notes": "Requires a Banana and a Knife (or any slash weapon).",
+          "notes": "Requires a Banana and a Knife, a Narwhal knife or any slash weapon.",
           "rule": {
             "all": [
               {

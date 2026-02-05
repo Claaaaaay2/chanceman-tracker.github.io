@@ -1117,9 +1117,9 @@ export const NPC_DATA = {
     "Balfrug Kreeyath": {
         "wiki": "https://oldschool.runescape.wiki/w/Balfrug_Kreeyath",
         "rule": ["canDoKrilTsutsaroth"],
-        "skill": [],
-        "level": [],
-        "tags": [],
+        "skill": ["hitpoints"],
+        "level": [70],
+        "tags": ["boss"],
         "f2p": false
     },
     "Banana tree": {
@@ -2233,7 +2233,7 @@ export const NPC_DATA = {
         "rule": ["canDoCommanderZilyana"],
         "skill": ["agility"],
         "level": [70],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Breoca": {
@@ -3743,7 +3743,7 @@ export const NPC_DATA = {
         "rule": ["canDoCommanderZilyana"],
         "skill": ["agility"],
         "level": [70],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Common kebbit": {
@@ -6070,7 +6070,7 @@ export const NPC_DATA = {
         "rule": ["canDoKreearra"],
         "skill": ["ranged"],
         "level": [70],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Flockleader Geerin": {
@@ -6078,7 +6078,7 @@ export const NPC_DATA = {
         "rule": ["canDoKreearra"],
         "skill": ["ranged"],
         "level": [70],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Flowering Tree (Forestry event)": {
@@ -6443,7 +6443,7 @@ export const NPC_DATA = {
         "rule": ["canDoGeneralGraardor"],
         "skill": ["strength"],
         "level": [70],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "General Stall": {
@@ -7198,7 +7198,7 @@ export const NPC_DATA = {
         "rule": ["canDoCommanderZilyana"],
         "skill": ["agility"],
         "level": [70],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Grubby Chest": {
@@ -8845,7 +8845,7 @@ export const NPC_DATA = {
         "rule": ["canDoKrilTsutsaroth"],
         "skill": ["hitpoints"],
         "level": [70],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Kalphite Guardian": {
@@ -9090,7 +9090,7 @@ export const NPC_DATA = {
         "rule": ["canDoKreearra"],
         "skill": ["ranged"],
         "level": [70],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Ksenia": {
@@ -13133,7 +13133,7 @@ export const NPC_DATA = {
         "rule": ["canDoGeneralGraardor"],
         "skill": ["strength"],
         "level": [70],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Sergeant Steelwill": {
@@ -13141,7 +13141,7 @@ export const NPC_DATA = {
         "rule": ["canDoGeneralGraardor"],
         "skill": ["strength"],
         "level": [70],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Sergeant Strongstack": {
@@ -13149,7 +13149,7 @@ export const NPC_DATA = {
         "rule": ["canDoGeneralGraardor"],
         "skill": ["strength"],
         "level": [70],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Serum 207": {
@@ -14268,7 +14268,7 @@ export const NPC_DATA = {
         "rule": ["canDoCommanderZilyana"],
         "skill": ["agility"],
         "level": [70],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Steel Chest (black)": {
@@ -15271,7 +15271,7 @@ export const NPC_DATA = {
         "rule": ["canDoKrilTsutsaroth"],
         "skill": ["hitpoints"],
         "level": [70],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Turoth": {
@@ -16203,7 +16203,7 @@ export const NPC_DATA = {
         "rule": ["canDoKreearra"],
         "skill": ["ranged"],
         "level": [70],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Wingstone": {
@@ -16540,7 +16540,7 @@ export const NPC_DATA = {
         "rule": ["canDoKrilTsutsaroth"],
         "skill": ["hitpoints"],
         "level": [70],
-        "tags": [],
+        "tags": ["boss"],
         "f2p": false
     },
     "Zalcano": {

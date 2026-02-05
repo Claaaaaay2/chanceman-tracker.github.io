@@ -4330,8 +4330,8 @@ function canCompleteSleepingGiants(ctx) {
     return allTrue([
         hasSkillLevel(ctx, "Smithing", 15),
         hasAnyNails(ctx), //
-        has(ctx, 2142), // Oak logs
-        has(ctx, 2309), // Wool
+        has(ctx, 1521), // Oak logs
+        has(ctx, 1737), // Wool
         has(ctx, 2347), // Hammer
         has(ctx, 1755), // Chisel
         (has(ctx, 1929) || hasUsablePickaxe(ctx)),  // Bucket of water or Ice gloves
