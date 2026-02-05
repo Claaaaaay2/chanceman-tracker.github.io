@@ -174,6 +174,17 @@ function renderQuestMissing(missing) {
     return parts.map((part) => `<div class="quest-missing">${part}</div>`).join("");
 }
 
+function countMissingItems(missing) {
+    if (!missing) return 0;
+    const items = Array.isArray(missing.items) ? missing.items.length : 0;
+    const itemGroups = Array.isArray(missing.itemGroups) ? missing.itemGroups.length : 0;
+    return items + itemGroups;
+}
+
+function hasMissingPrereqQuests(missing) {
+    return Array.isArray(missing?.prereqQuests) && missing.prereqQuests.length > 0;
+}
+
 function buildRequirementContext({ ignoreSkillLevels = false } = {}) {
     return {
         items: fileStore.items,
@@ -273,7 +284,19 @@ export default async function QuestsPage() {
         });
     }
 
+    const questSortByMissingItems = Boolean(fileStore.filters?.questSortByMissingItems);
+
     questStates.sort((a, b) => {
+        if (questSortByMissingItems) {
+            const aHasPrereq = hasMissingPrereqQuests(a.missingItems);
+            const bHasPrereq = hasMissingPrereqQuests(b.missingItems);
+            if (aHasPrereq !== bHasPrereq) {
+                return aHasPrereq ? 1 : -1;
+            }
+            const aMissing = countMissingItems(a.missingItems);
+            const bMissing = countMissingItems(b.missingItems);
+            if (aMissing !== bMissing) return aMissing - bMissing;
+        }
         const aPriority = a.isDoable && !a.isCompleted
             ? 0
             : (a.isTrainable && !a.isCompleted ? 1 : 2);
@@ -327,6 +350,14 @@ export default async function QuestsPage() {
             <label class="quest-filter">
                 <input type="checkbox" id="hazeelCultLocked" ${fileStore.filters?.hazeelCultLocked ? "checked" : ""}>
                 Hazeel Cult locked
+            </label>
+            <label class="quest-filter">
+                <span>Sort A-Z</span>
+                <span class="toggle-switch">
+                    <input type="checkbox" id="questSortToggle" ${questSortByMissingItems ? "checked" : ""} aria-label="Sort quests by least missing items">
+                    <span class="toggle-slider" aria-hidden="true"></span>
+                </span>
+                <span>Least missing items</span>
             </label>
             ${shieldOfArravCompleted ? `
                 <label class="quest-filter quest-filter-gang">
@@ -393,6 +424,12 @@ document.addEventListener("change", async (e) => {
     if (e.target.id === "heroesQuestGangToggle") {
         await updateQuestFilters(
             { heroesQuestGang: e.target.checked ? "phoenix" : "black_arm" },
+            { rerender: true }
+        );
+    }
+    if (e.target.id === "questSortToggle") {
+        await updateQuestFilters(
+            { questSortByMissingItems: e.target.checked },
             { rerender: true }
         );
     }
