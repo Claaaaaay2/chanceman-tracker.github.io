@@ -89,6 +89,34 @@ button:hover {
     background-color: var(--input-button-bg-hover);
 }
 
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.form-loading {
+    display: none;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: var(--highlight-color);
+}
+
+.form-loading.active {
+    display: inline-flex;
+}
+
+#app.upload-busy {
+    cursor: wait;
+}
+
+#app.upload-busy input,
+#app.upload-busy button {
+    opacity: 0.7;
+}
+
 /* Layout container */
 .layout {
     min-height: calc(100vh - var(--header-height) - var(--footer-height));

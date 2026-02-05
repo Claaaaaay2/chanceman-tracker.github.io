@@ -31,7 +31,13 @@ export default function UploadPage() {
         </label>
         <br><br>
 
-        <button id="saveBtn" title="Save & Continue">Save & Continue</button>
+        <div class="form-actions">
+            <button id="saveBtn" title="Save & Continue">Save & Continue</button>
+            <span id="formLoading" class="form-loading" aria-live="polite">
+                <span class="spinner" aria-hidden="true"></span>
+                <span>Processing files...</span>
+            </span>
+        </div>
 
         <p id="status"></p>
     `;
@@ -46,15 +52,39 @@ document.addEventListener("click", async (e) => {
     const obtainedInput = app.querySelector("#obtainedInput");
     const playerNameInput = app.querySelector("#playerName");
     const status = app.querySelector("#status");
+    const loading = app.querySelector("#formLoading");
+    const inputs = [
+        rolledInput,
+        obtainedInput,
+        playerNameInput,
+        app.querySelector("#saveBtn"),
+    ];
+
+    const rolledFile = rolledInput.files[0];
+    const obtainedFile = obtainedInput.files[0];
+
+    const setBusy = (isBusy, message) => {
+        app.classList.toggle("upload-busy", isBusy);
+        loading.classList.toggle("active", isBusy);
+        inputs.forEach((input) => {
+            input.disabled = isBusy;
+        });
+        if (message !== undefined) {
+            status.textContent = message;
+        }
+    };
 
     try {
-        if (rolledInput.files[0]) {
-            const json = JSON.parse(await rolledInput.files[0].text());
+        setBusy(true, "Reading files...");
+        await new Promise(requestAnimationFrame);
+
+        if (rolledFile) {
+            const json = JSON.parse(await rolledFile.text());
             await fileStore.setRolled(json);
         }
 
-        if (obtainedInput.files[0]) {
-            const json = JSON.parse(await obtainedInput.files[0].text());
+        if (obtainedFile) {
+            const json = JSON.parse(await obtainedFile.text());
             await fileStore.setObtained(json);
         }
 
@@ -71,5 +101,6 @@ document.addEventListener("click", async (e) => {
     } catch (err) {
         console.error(err);
         status.textContent = err.message || "Error reading files!";
+        setBusy(false);
     }
 });
