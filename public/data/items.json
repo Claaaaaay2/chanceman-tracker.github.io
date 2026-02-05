@@ -33991,6 +33991,15 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Received from Elnock Inquisitor in Puro-Puro": {
+          "notes": "Free roll.",
+          "rule": {
+            "skill": "Hunter",
+            "level": 17
+          }
+        }
       }
     },
     "tags": [
@@ -82033,6 +82042,15 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Received from Elnock Inquisitor in Puro-Puro": {
+          "notes": "Free roll.",
+          "rule": {
+            "skill": "Hunter",
+            "level": 17
+          }
+        }
       }
     },
     "tags": [
