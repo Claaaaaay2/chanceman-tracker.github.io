@@ -25,6 +25,7 @@ export function initBugPage() {
             return;
         }
 
+        btn.disabled = true;
         status.textContent = "Sending report...";
 
         const payload = {
@@ -46,10 +47,13 @@ export function initBugPage() {
 
             if (!res.ok) throw new Error("Failed to send");
 
+            document.getElementById("bugText").value = "";
             status.textContent = "Thank you! Bug report sent.";
         } catch (e) {
             console.error(e);
             status.textContent = "Failed to send bug report.";
+        } finally {
+            btn.disabled = false;
         }
     });
 }
