@@ -36107,7 +36107,15 @@
               {
                 "has": 8778
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 31
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -36135,7 +36143,15 @@
               {
                 "has": 8778
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 51
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -36163,7 +36179,15 @@
               {
                 "has": 8778
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 31
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -36191,7 +36215,15 @@
               {
                 "has": 8780
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 44
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -36219,7 +36251,15 @@
               {
                 "has": 8780
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 69
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -36250,7 +36290,15 @@
               {
                 "has": 8790
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 45
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -38063,7 +38111,19 @@
               {
                 "has": 5833
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 48
+                  },
+                  {
+                    "skill": "Cooking",
+                    "level": 44
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -38998,7 +39058,19 @@
               {
                 "has": 5763
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 12
+                  },
+                  {
+                    "skill": "Cooking",
+                    "level": 14
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -47986,7 +48058,19 @@
               {
                 "has": 1911
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 36
+                  },
+                  {
+                    "skill": "Cooking",
+                    "level": 39
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -58532,7 +58616,15 @@
               {
                 "has": 1775
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 56
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -61239,7 +61331,15 @@
               {
                 "has": 8790
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 53
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -62462,7 +62562,15 @@
               {
                 "has": 8784
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 61
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -62513,7 +62621,15 @@
               {
                 "has": 8784
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 81
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -62571,7 +62687,15 @@
               {
                 "has": 8784
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 85
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -62717,7 +62841,15 @@
               {
                 "has": 8784
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 74
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -62751,7 +62883,15 @@
               {
                 "has": 8784
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 60
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -62853,7 +62993,15 @@
               {
                 "has": 8784
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 87
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -63090,7 +63238,15 @@
               {
                 "has": 8784
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 87
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -66193,8 +66349,16 @@
               },
               "canCompletePandemonium",
               {
-                "skill": "Cooking",
-                "level": 29
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 26
+                  },
+                  {
+                    "skill": "Cooking",
+                    "level": 29
+                  }
+                ]
               }
             ]
           },
@@ -89032,7 +89196,15 @@
                 "has": 960
               },
               "hasAnyNails",
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 12
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -90562,7 +90734,15 @@
               {
                 "has": 8790
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 34
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -90691,7 +90871,15 @@
               {
                 "has": 8790
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 45
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -94571,7 +94759,15 @@
               {
                 "has": 8782
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 84
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -94700,7 +94896,15 @@
               {
                 "has": 8788
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 99
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -95923,7 +96127,15 @@
               {
                 "has": 8782
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 50
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -95951,7 +96163,15 @@
               {
                 "has": 8782
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 82
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -95979,7 +96199,15 @@
               {
                 "has": 8782
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 52
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -96043,7 +96271,15 @@
               {
                 "has": 8782
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 40
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -96071,7 +96307,15 @@
               {
                 "has": 8782
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 72
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -96102,7 +96346,15 @@
               {
                 "has": 1775
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 64
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -96130,7 +96382,15 @@
               {
                 "has": 8782
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 80
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -96259,7 +96519,15 @@
               {
                 "has": 8782
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 78
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -96608,7 +96876,15 @@
               {
                 "has": 8782
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 52
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -96636,7 +96912,15 @@
               {
                 "has": 8782
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 86
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -96664,7 +96948,15 @@
               {
                 "has": 8782
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 75
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -97472,7 +97764,15 @@
               {
                 "has": 8786
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 90
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -97500,7 +97800,15 @@
               {
                 "has": 8786
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 96
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -104071,9 +104379,17 @@
     "sources": {
       "other": {
         "Crafting hunter armour": {
-          "notes": "Requires Sunlight antelope fur.",
+          "notes": "Requires Sunlight antelope fur and 69 Crafting.",
           "rule": {
-            "has": 29177
+            "all": [
+              {
+                "has": 29177
+              },
+              {
+                "skill": "Crafting",
+                "level": 69
+              }
+            ]
           }
         }
       }
@@ -104091,9 +104407,17 @@
     "sources": {
       "other": {
         "Crafting hunter armour": {
-          "notes": "Requires Jaguar fur.",
+          "notes": "Requires Jaguar fur and 68 Crafting.",
           "rule": {
-            "has": 29218
+            "all": [
+              {
+                "has": 29218
+              },
+              {
+                "skill": "Crafting",
+                "level": 68
+              }
+            ]
           }
         }
       }
@@ -104111,9 +104435,17 @@
     "sources": {
       "other": {
         "Crafting hunter armour": {
-          "notes": "Requires Fox fur.",
+          "notes": "Requires Fox fur and 71 Crafting.",
           "rule": {
-            "has": 29163
+            "all": [
+              {
+                "has": 29163
+              },
+              {
+                "skill": "Crafting",
+                "level": 71
+              }
+            ]
           }
         }
       }
@@ -104131,9 +104463,17 @@
     "sources": {
       "other": {
         "Crafting hunter armour": {
-          "notes": "Requires Sunlight antelope fur.",
+          "notes": "Requires Sunlight antelope fur and 72 Crafting.",
           "rule": {
-            "has": 29177
+            "all": [
+              {
+                "has": 29177
+              },
+              {
+                "skill": "Crafting",
+                "level": 72
+              }
+            ]
           }
         }
       }
@@ -108161,7 +108501,15 @@
               {
                 "has": 8778
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 26
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -108189,7 +108537,15 @@
               {
                 "has": 8778
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 46
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -108220,7 +108576,15 @@
               {
                 "has": 8790
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 30
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -108248,7 +108612,15 @@
               {
                 "has": 8778
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 22
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -108334,7 +108706,15 @@
               {
                 "has": 8778
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 29
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -108362,7 +108742,15 @@
               {
                 "has": 8778
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 54
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -108390,7 +108778,15 @@
               {
                 "has": 8778
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 19
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -108421,7 +108817,15 @@
               {
                 "has": 8792
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 25
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -108449,7 +108853,15 @@
               {
                 "has": 8778
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 22
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -108477,7 +108889,15 @@
               {
                 "has": 8778
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 27
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -108508,7 +108928,15 @@
               {
                 "has": 1775
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 37
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -108536,7 +108964,15 @@
               {
                 "has": 8778
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 44
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -108585,7 +109021,15 @@
               {
                 "has": 8778
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 32
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -108765,7 +109209,15 @@
               {
                 "has": 8778
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 42
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -109002,7 +109454,15 @@
               {
                 "has": 1775
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 29
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -109186,7 +109646,15 @@
               {
                 "has": 8778
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 50
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -109214,7 +109682,15 @@
               {
                 "has": 8778
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 48
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -109242,7 +109718,15 @@
               {
                 "has": 8778
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 39
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -111316,7 +111800,15 @@
               {
                 "has": 8786
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 72
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -124139,7 +124631,15 @@
                 "has": 960
               },
               "hasAnyNails",
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 14
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -135175,7 +135675,15 @@
               {
                 "has": 1775
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 21
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -135372,7 +135880,15 @@
                 "has": 960
               },
               "hasAnyNails",
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 20
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -151734,7 +152250,15 @@
               {
                 "has": 8780
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 35
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -151762,7 +152286,15 @@
               {
                 "has": 8780
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 64
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -151793,7 +152325,15 @@
               {
                 "has": 8790
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 40
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -151857,7 +152397,15 @@
               {
                 "has": 8780
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 63
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -151888,7 +152436,15 @@
               {
                 "has": 8792
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 55
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -151916,7 +152472,15 @@
               {
                 "has": 8780
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 38
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -151944,7 +152508,15 @@
               {
                 "has": 8780
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 51
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -151975,7 +152547,15 @@
               {
                 "has": 8780
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 46
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -152003,7 +152583,15 @@
               {
                 "has": 8780
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 62
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -152052,7 +152640,15 @@
               {
                 "has": 8780
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 52
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -152151,7 +152747,15 @@
               {
                 "has": 8780
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 60
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -152470,7 +153074,15 @@
               {
                 "has": 8780
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 38
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -152498,7 +153110,15 @@
               {
                 "has": 8780
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 68
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -152526,7 +153146,15 @@
               {
                 "has": 8780
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 66
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -152554,7 +153182,15 @@
               {
                 "has": 8780
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 63
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -167782,7 +168418,15 @@
                 "has": 960
               },
               "hasAnyNails",
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 10
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -167814,7 +168458,15 @@
               {
                 "has": 8790
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 20
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -167843,7 +168495,15 @@
                 "has": 960
               },
               "hasAnyNails",
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 10
+                  }
+                ]
+              }
             ]
           },
           "tags": [
@@ -167914,7 +168574,15 @@
                 "has": 960
               },
               "hasAnyNails",
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skills": [
+                  {
+                    "skill": "Construction",
+                    "level": 8
+                  }
+                ]
+              }
             ]
           },
           "tags": [

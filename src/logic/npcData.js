@@ -3438,13 +3438,7 @@ export const NPC_DATA = {
     },
     "Chest (moon key)": {
         "wiki": "https://oldschool.runescape.wiki/w/Chest_(moon_key)",
-        "rule": {
-            "any": [
-                "canTrainMining",
-                "canTrainWoodcutting",
-                "canTrainFishing"
-            ]
-        },
+        "rule": ["canCompleteTheHeartOfDarkness"],
         "skill": [],
         "level": [],
         "tags": [],
