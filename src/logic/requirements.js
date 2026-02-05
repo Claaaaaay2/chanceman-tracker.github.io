@@ -2206,6 +2206,12 @@ export const REQUIREMENT_CHECKS = {
     canCompleteBarbarianSmithing(ctx) {
         return canCompleteBarbarianSmithing(ctx);
     },
+    canCompleteBarbarianFishing(ctx) {
+        return canCompleteBarbarianFishing(ctx);
+    },
+    canCompleteBarbarianFarming(ctx) {
+        return canCompleteBarbarianFarming(ctx);
+    },
     canCompleteBarbarianFiremaking1(ctx) {
         return canCompleteBarbarianFiremaking1(ctx);
     },

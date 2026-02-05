@@ -126,23 +126,29 @@ function getMissingItems(ctx, itemsById) {
 }
 
 function renderQuestMissing(missing) {
+    const prereqQuests = Array.isArray(missing?.prereqQuests) ? missing.prereqQuests : [];
+    const skills = Array.isArray(missing?.skills) ? missing.skills : [];
+    const items = Array.isArray(missing?.items) ? missing.items : [];
+    const itemGroups = Array.isArray(missing?.itemGroups) ? missing.itemGroups : [];
+    const questPointsRequired = missing?.questPointsRequired ?? 0;
+    const questPointsCurrent = missing?.questPointsCurrent;
     const parts = [];
-    if (missing.prereqQuests.length) {
-        const questNames = missing.prereqQuests.map(formatRequirementName);
+    if (prereqQuests.length) {
+        const questNames = prereqQuests.map(formatRequirementName);
         parts.push(`Missing prerequisite quests: ${questNames.join(", ")}.`);
     }
-    if (missing.questPointsRequired && typeof missing.questPointsCurrent === "number") {
-        const remaining = Math.max(0, missing.questPointsRequired - missing.questPointsCurrent);
-        parts.push(`Missing quest points: ${remaining} (need ${missing.questPointsRequired}).`);
+    if (questPointsRequired && typeof questPointsCurrent === "number") {
+        const remaining = Math.max(0, questPointsRequired - questPointsCurrent);
+        parts.push(`Missing quest points: ${remaining} (need ${questPointsRequired}).`);
     }
-    if (missing.skills.length) {
-        parts.push(`Missing levels: ${missing.skills.join(", ")}.`);
+    if (skills.length) {
+        parts.push(`Missing levels: ${skills.join(", ")}.`);
     }
-    if (missing.items.length) {
-        parts.push(`Missing items: ${missing.items.join(", ")}.`);
+    if (items.length) {
+        parts.push(`Missing items: ${items.join(", ")}.`);
     }
-    if (missing.itemGroups.length) {
-        const groupText = missing.itemGroups
+    if (itemGroups.length) {
+        const groupText = itemGroups
             .map((group) => {
                 if (Array.isArray(group)) {
                     return `Any of: ${group.join(" / ")}`;
