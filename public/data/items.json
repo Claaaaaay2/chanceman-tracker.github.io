@@ -88586,10 +88586,13 @@
       },
       "other": {
         "Obtaining from Quest": {
-          "notes": "Obtained during Tai Bwo Wannai Trio + add Raw karambwanji.",
+          "notes": "Obtained during Tai Bwo Wannai Trio + add Raw karambwanji (Requires a Karambwan vessel and a Small fishing net).",
           "rule": {
             "all": [
               "canGetKarambwanVessel",
+              {
+                "has": 3157
+              },
               {
                 "has": 303
               }
@@ -171437,12 +171440,21 @@
         }
       },
       "other": {
-        "Harvesting a grape vine": {
-          "notes": "Requires a bologa's blessing from Tithe Farm.",
+        "Harvesting a Grape vine": {
+          "notes": "Requires a Grape seed, a Bologa's blessing from Tithe Farm, some Saltpetre and a Gardening trowel.",
           "rule": {
             "all": [
               {
                 "has": 13657
+              },
+              {
+                "has": 13421
+              },
+              {
+                "has": 952
+              },
+              {
+                "has": 5325
               }
             ]
           }
