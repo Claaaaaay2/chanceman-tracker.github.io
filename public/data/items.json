@@ -165464,8 +165464,8 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Emptying a waterskin(3) (untradable, purchasable in Pollnivneach) by standing in the desert": {
-          "notes": "You can train agility to level 66 to access the desert."
+        "Decanting a Waterskin": {
+          "notes": "You can purchase an untradable Waterskin(3) from Ali Morrisane."
         }
       }
     }
@@ -165497,8 +165497,8 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Filling a waterskin(3) (untradable, purchasable in Pollnivneach) on a water source": {
-          "notes": "You can train agility to level 66 to access the desert."
+        "Decanting a Waterskin": {
+          "notes": "You can purchase an untradable Waterskin(3) from Ali Morrisane."
         }
       }
     }
