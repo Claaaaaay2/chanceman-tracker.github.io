@@ -26054,7 +26054,7 @@
     "image": "bluegill.png",
     "sources": {
       "drops": {
-        "Fishing spot (aerial fishing)": {
+        "Fishing spot (aerial fishing) (Bluegill)": {
           "droprate": "Varies"
         }
       }
@@ -40246,7 +40246,7 @@
     "image": "common_tench.png",
     "sources": {
       "drops": {
-        "Fishing spot (aerial fishing)": {
+        "Fishing spot (aerial fishing) (Common tench)": {
           "droprate": "Varies"
         }
       }
@@ -65156,7 +65156,7 @@
     "image": "greater_siren.png",
     "sources": {
       "drops": {
-        "Fishing spot (aerial fishing)": {
+        "Fishing spot (aerial fishing) (Greater siren)": {
           "droprate": "Varies"
         }
       }
@@ -104823,7 +104823,7 @@
     "image": "mottled_eel.png",
     "sources": {
       "drops": {
-        "Fishing spot (aerial fishing)": {
+        "Fishing spot (aerial fishing) (Mottled eel)": {
           "droprate": "Varies"
         }
       }

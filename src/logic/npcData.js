@@ -5796,17 +5796,35 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
-    "Fishing spot (aerial fishing)": {
+    "Fishing spot (aerial fishing) (Common tench)": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(aerial_fishing)",
-        "rule": {
-            "all": [
-                "canTrainFishing",
-                "canTrainHunter",
-                "canAerialFish"
-            ]
-        },
+        "rule": ["canAerialFish"],
+        "skill": ["fishing", "hunter"],
+        "level": [56, 51],
+        "tags": [],
+        "f2p": false
+    },
+    "Fishing spot (aerial fishing) (Bluegill)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(aerial_fishing)",
+        "rule": ["canAerialFish"],
         "skill": ["fishing", "hunter"],
         "level": [43, 35],
+        "tags": [],
+        "f2p": false
+    },
+    "Fishing spot (aerial fishing) (Mottled eel)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(aerial_fishing)",
+        "rule": ["canAerialFish"],
+        "skill": ["fishing", "hunter"],
+        "level": [73, 68],
+        "tags": [],
+        "f2p": false
+    },
+    "Fishing spot (aerial fishing) (Greater siren)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(aerial_fishing)",
+        "rule": ["canAerialFish"],
+        "skill": ["fishing", "hunter"],
+        "level": [91, 87],
         "tags": [],
         "f2p": false
     },
