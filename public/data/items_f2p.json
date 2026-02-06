@@ -12,25 +12,25 @@
         "Yes": "No requirements"
       }
     },
-      "other": {
-        "Smithing an Adamant 2h sword": {
-          "notes": "Requires an Adamantite bar and a Hammer.",
-          "rule": {
-            "all": [
-              {
-                "has": 2361
-              },
-              {
-                "skill": "Smithing",
-                "level": 84
-              },
-              {
-                "has": 2347
-              }
-            ]
-          }
+    "other": {
+      "Smithing an Adamant 2h sword": {
+        "notes": "Requires an Adamantite bar and a Hammer.",
+        "rule": {
+          "all": [
+            {
+              "has": 2361
+            },
+            {
+              "skill": "Smithing",
+              "level": 84
+            },
+            {
+              "has": 2347
+            }
+          ]
         }
       }
+    }
   },
   {
     "index": 40,
@@ -84,7 +84,7 @@
     "sources": {
       "other": {
         "Smithing an Adamant axe": {
-          "notes": "Requires an Adamantite bar and a Hammer.",
+          "notes": "Requires an Adamantite bar and a Hammer and level 71 Smithing.",
           "rule": {
             "all": [
               {
@@ -117,7 +117,7 @@
       },
       "other": {
         "Smithing an Adamant battleaxe": {
-          "notes": "Requires an Adamantite bar and a Hammer.",
+          "notes": "Requires an Adamantite bar and a Hammer and level 80 Smithing.",
           "rule": {
             "all": [
               {
@@ -150,7 +150,7 @@
       },
       "other": {
         "Smithing an Adamant chainbody": {
-          "notes": "Requires an Adamantite bar and a Hammer.",
+          "notes": "Requires an Adamantite bar and a Hammer and level 81 Smithing.",
           "rule": {
             "all": [
               {
@@ -183,7 +183,7 @@
       },
       "other": {
         "Smithing an Adamant dagger": {
-          "notes": "Requires an Adamantite bar and a Hammer.",
+          "notes": "Requires an Adamantite bar and a Hammer and level 70 Smithing.",
           "rule": {
             "all": [
               {
@@ -216,7 +216,7 @@
       },
       "other": {
         "Smithing an Adamant full helm": {
-          "notes": "Requires an Adamantite bar and a Hammer.",
+          "notes": "Requires an Adamantite bar and a Hammer and level 77 Smithing.",
           "rule": {
             "all": [
               {
@@ -330,7 +330,7 @@
       },
       "other": {
         "Smithing an Adamant kiteshield": {
-          "notes": "Requires an Adamantite bar and a Hammer.",
+          "notes": "Requires an Adamantite bar and a Hammer and level 61 Smithing.",
           "rule": {
             "all": [
               {
@@ -383,7 +383,7 @@
       },
       "other": {
         "Smithing an Adamant longsword": {
-          "notes": "Requires an Adamantite bar and a Hammer.",
+          "notes": "Requires an Adamantite bar and a Hammer and level 76 Smithing.",
           "rule": {
             "all": [
               {
@@ -427,7 +427,7 @@
       },
       "other": {
         "Smithing an Adamant mace": {
-          "notes": "Requires an Adamantite bar and a Hammer.",
+          "notes": "Requires an Adamantite bar and a Hammer and level 72 Smithing.",
           "rule": {
             "all": [
               {
@@ -460,7 +460,7 @@
       },
       "other": {
         "Smithing an Adamant med helm": {
-          "notes": "Requires an Adamantite bar and a Hammer.",
+          "notes": "Requires an Adamantite bar and a Hammer and level 73 Smithing.",
           "rule": {
             "all": [
               {
@@ -522,7 +522,7 @@
       },
       "other": {
         "Smithing an Adamant platebody": {
-          "notes": "Requires an Adamantite bar and a Hammer.",
+          "notes": "Requires an Adamantite bar and a Hammer and level 88 Smithing.",
           "rule": {
             "all": [
               {
@@ -639,7 +639,7 @@
       },
       "other": {
         "Smithing Adamant platelegs": {
-          "notes": "Requires an Adamantite bar and a Hammer.",
+          "notes": "Requires an Adamantite bar and a Hammer and level 86 Smithing.",
           "rule": {
             "all": [
               {
@@ -703,7 +703,7 @@
       },
       "other": {
         "Smithing an Adamant Plateskirt": {
-          "notes": "Requires an Adamantite bar and a Hammer.",
+          "notes": "Requires an Adamantite bar and a Hammer and level 86 Smithing.",
           "rule": {
             "all": [
               {
@@ -753,7 +753,7 @@
     "sources": {
       "other": {
         "Smithing an Adamant scimitar": {
-          "notes": "Requires an Adamantite bar and a Hammer.",
+          "notes": "Requires an Adamantite bar and a Hammer and level 75 Smithing.",
           "rule": {
             "all": [
               {
@@ -908,7 +908,7 @@
       },
       "other": {
         "Smithing an Adamant sq shield": {
-          "notes": "Requires an Adamantite bar and a Hammer.",
+          "notes": "Requires an Adamantite bar and a Hammer and level 78 Smithing.",
           "rule": {
             "all": [
               {
@@ -952,7 +952,7 @@
       },
       "other": {
         "Smithing an Adamant sword": {
-          "notes": "Requires an Adamantite bar and a Hammer.",
+          "notes": "Requires an Adamantite bar and a Hammer and level 74 Smithing.",
           "rule": {
             "all": [
               {
@@ -982,7 +982,7 @@
     "sources": {
       "other": {
         "Smithing an Adamant warhammer": {
-          "notes": "Requires an Adamantite bar and a Hammer.",
+          "notes": "Requires an Adamantite bar and a Hammer and level 79 Smithing.",
           "rule": {
             "all": [
               {
@@ -1012,7 +1012,7 @@
     "sources": {
       "other": {
         "Smelting an Adamantite bar": {
-          "notes": "Requires Adamantite ore and Coal.",
+          "notes": "Requires Adamantite ore and Coal and level 70 Smithing.",
           "rule": {
             "all": [
               {
@@ -1246,7 +1246,7 @@
     "sources": {
       "other": {
         "Enchanting jewellery": {
-          "notes": "Requires an Emerald amulet, a Cosmic rune and a source of Air runes.",
+          "notes": "Requires an Emerald amulet, a Cosmic rune and a source of Air runes and level 27 Magic.",
           "rule": {
             "all": [
               {
@@ -1296,7 +1296,7 @@
     "sources": {
       "other": {
         "Enchanting jewellery": {
-          "notes": "Requires a Sapphire amulet, a Cosmic rune and a source of Water runes.",
+          "notes": "Requires a Sapphire amulet, a Cosmic rune and a source of Water runes and level 7 Magic.",
           "rule": {
             "all": [
               {
@@ -1339,7 +1339,7 @@
     "sources": {
       "other": {
         "Enchanting jewellery": {
-          "notes": "Requires a Diamond amulet, a Cosmic rune and a source of Earth runes.",
+          "notes": "Requires a Diamond amulet, a Cosmic rune and a source of Earth runes and level 47 Magic.",
           "rule": {
             "all": [
               {
@@ -1382,7 +1382,7 @@
     "sources": {
       "other": {
         "Enchanting jewellery": {
-          "notes": "Requires a Ruby amulet, a Cosmic rune and a source of Fire runes.",
+          "notes": "Requires a Ruby amulet, a Cosmic rune and a source of Fire runes and level 49 Magic.",
           "rule": {
             "all": [
               {
@@ -1437,7 +1437,7 @@
     "sources": {
       "other": {
         "Cooking an Anchovy pizza": {
-          "notes": "Requires a Plain pizza and Anchovies.",
+          "notes": "Requires a Plain pizza and Anchovies and level 55 Cooking.",
           "rule": {
             "all": [
               {
@@ -1669,7 +1669,7 @@
       },
       "other": {
         "Cooking an Apple pie": {
-          "notes": "Requires Uncooked apple pie.",
+          "notes": "Requires Uncooked apple pie and level 30 Cooking.",
           "rule": {
             "all": [
               {
@@ -3688,7 +3688,7 @@
     "sources": {
       "other": {
         "Smithing a Bronze 2h sword": {
-          "notes": "Requires a Bronze bar and a Hammer.",
+          "notes": "Requires a Bronze bar and a Hammer and level 14 Smithing.",
           "rule": {
             "all": [
               {
@@ -3930,7 +3930,7 @@
       },
       "other": {
         "Smithing a Bronze battleaxe": {
-          "notes": "Requires a Bronze bar and a Hammer.",
+          "notes": "Requires a Bronze bar and a Hammer and level 10 Smithing.",
           "rule": {
             "all": [
               {
@@ -3994,7 +3994,7 @@
       },
       "other": {
         "Smithing a Bronze chainbody": {
-          "notes": "Requires a Bronze bar and a Hammer.",
+          "notes": "Requires a Bronze bar and a Hammer and level 11 Smithing.",
           "rule": {
             "all": [
               {
@@ -4069,7 +4069,7 @@
       },
       "other": {
         "Smithing a Bronze full helm": {
-          "notes": "Requires a Bronze bar and a Hammer.",
+          "notes": "Requires a Bronze bar and a Hammer and level 7 Smithing.",
           "rule": {
             "all": [
               {
@@ -4130,7 +4130,7 @@
       },
       "other": {
         "Smithing a Bronze kiteshield": {
-          "notes": "Requires a Bronze bar and a Hammer.",
+          "notes": "Requires a Bronze bar and a Hammer and level 12 Smithing.",
           "rule": {
             "all": [
               {
@@ -4188,7 +4188,7 @@
       },
       "other": {
         "Smithing a Bronze longsword": {
-          "notes": "Requires a Bronze bar and a Hammer.",
+          "notes": "Requires a Bronze bar and a Hammer and level 6 Smithing.",
           "rule": {
             "all": [
               {
@@ -4224,7 +4224,7 @@
       },
       "other": {
         "Smithing a Bronze mace": {
-          "notes": "Requires a Bronze bar and a Hammer.",
+          "notes": "Requires a Bronze bar and a Hammer and level 2 Smithing.",
           "rule": {
             "all": [
               {
@@ -4316,7 +4316,7 @@
       },
       "other": {
         "Smithing a Bronze med helm": {
-          "notes": "Requires a Bronze bar and a Hammer.",
+          "notes": "Requires a Bronze bar and a Hammer and level 3 Smithing.",
           "rule": {
             "all": [
               {
@@ -4380,7 +4380,7 @@
       },
       "other": {
         "Smithing a Bronze platebody": {
-          "notes": "Requires a Bronze bar and a Hammer.",
+          "notes": "Requires a Bronze bar and a Hammer and level 18 Smithing.",
           "rule": {
             "all": [
               {
@@ -4433,7 +4433,7 @@
       },
       "other": {
         "Smithing some Bronze platelegs": {
-          "notes": "Requires a Bronze bar and a Hammer.",
+          "notes": "Requires a Bronze bar and a Hammer and level 16 Smithing.",
           "rule": {
             "all": [
               {
@@ -4486,7 +4486,7 @@
       },
       "other": {
         "Smithing a Bronze plateskirt": {
-          "notes": "Requires a Bronze bar and a Hammer.",
+          "notes": "Requires a Bronze bar and a Hammer and level 16 Smithing.",
           "rule": {
             "all": [
               {
@@ -4556,7 +4556,7 @@
       },
       "other": {
         "Smithing a Bronze scimitar": {
-          "notes": "Requires a Bronze bar and a Hammer.",
+          "notes": "Requires a Bronze bar and a Hammer and level 5 Smithing.",
           "rule": {
             "all": [
               {
@@ -4658,7 +4658,7 @@
       },
       "other": {
         "Smithing a Bronze sq shield": {
-          "notes": "Requires a Bronze bar and a Hammer.",
+          "notes": "Requires a Bronze bar and a Hammer and level 8 Smithing.",
           "rule": {
             "all": [
               {
@@ -4691,7 +4691,7 @@
       },
       "other": {
         "Smithing a Bronze sword": {
-          "notes": "Requires a Bronze bar and a Hammer.",
+          "notes": "Requires a Bronze bar and a Hammer and level 4 Smithing.",
           "rule": {
             "all": [
               {
@@ -4721,7 +4721,7 @@
     "sources": {
       "other": {
         "Smithing a Bronze warhammer": {
-          "notes": "Requires a Bronze bar and a Hammer.",
+          "notes": "Requires a Bronze bar and a Hammer and level 9 Smithing.",
           "rule": {
             "all": [
               {
@@ -5003,7 +5003,7 @@
     "sources": {
       "other": {
         "Cooking a Cake": {
-          "notes": "Requires an Egg, a Bucket of milk, a Pot of flour and a Cake tin.",
+          "notes": "Requires an Egg, a Bucket of milk, a Pot of flour and a Cake tin and level 40 Cooking.",
           "rule": {
             "all": [
               {
@@ -5354,7 +5354,7 @@
       },
       "other": {
         "Cooking a Chocolate cake": {
-          "notes": "Requires a Cake and a Chocolate bar or Chocolate dust.",
+          "notes": "Requires a Cake and a Chocolate bar or Chocolate dust and level 50 Cooking.",
           "rule": {
             "all": [
               {
@@ -5889,7 +5889,7 @@
       },
       "other": {
         "Cutting an Uncut diamond": {
-          "notes": "Requires an Uncut diamond.",
+          "notes": "Requires an Uncut diamond and level 43 Crafting.",
           "rule": {
             "all": [
               {
@@ -5936,7 +5936,7 @@
     "sources": {
       "other": {
         "Crafting a Diamond amulet (u)": {
-          "notes": "Requires Gold bar, Diamond and an Amulet mould.",
+          "notes": "Requires Gold bar, Diamond and an Amulet mould and level 70 Crafting.",
           "rule": {
             "all": [
               {
@@ -5966,7 +5966,7 @@
     "sources": {
       "other": {
         "Crafting a Diamond necklace": {
-          "notes": "Requires Gold bar, Diamond and Necklace mould.",
+          "notes": "Requires Gold bar, Diamond and Necklace mould and level 56 Crafting.",
           "rule": {
             "all": [
               {
@@ -5996,7 +5996,7 @@
     "sources": {
       "other": {
         "Crafting a Diamond ring": {
-          "notes": "Requires Gold bar, Diamond and Ring mould.",
+          "notes": "Requires Gold bar, Diamond and Ring mould and level 43 Crafting.",
           "rule": {
             "all": [
               {
@@ -6400,7 +6400,7 @@
       },
       "other": {
         "Cutting an Uncut emerald": {
-          "notes": "Requires an Uncut emerald and a Chisel.",
+          "notes": "Requires an Uncut emerald and a Chisel and level 27 Crafting.",
           "rule": {
             "all": [
               {
@@ -6450,7 +6450,7 @@
     "sources": {
       "other": {
         "Crafting an Emerald amulet (u)": {
-          "notes": "Requires Gold bar, Emerald and Amulet mould.",
+          "notes": "Requires Gold bar, Emerald and Amulet mould and level 31 Crafting.",
           "rule": {
             "all": [
               {
@@ -6480,7 +6480,7 @@
     "sources": {
       "other": {
         "Crafting an Emerald necklace": {
-          "notes": "Requires Gold bar, Emerald and Necklace mould.",
+          "notes": "Requires Gold bar, Emerald and Necklace mould and level 29 Crafting.",
           "rule": {
             "all": [
               {
@@ -6510,7 +6510,7 @@
     "sources": {
       "other": {
         "Crafting an Emerald ring": {
-          "notes": "Requires Gold bar, Emerald and Ring mould.",
+          "notes": "Requires Gold bar, Emerald and Ring mould and level 27 Crafting.",
           "rule": {
             "all": [
               {
@@ -7334,7 +7334,7 @@
     "sources": {
       "other": {
         "Crafting a Gold amulet (u)": {
-          "notes": "Requires Gold bar and Amulet mould.",
+          "notes": "Requires Gold bar and Amulet mould and level 8 Crafting.",
           "rule": {
             "all": [
               {
@@ -7375,7 +7375,7 @@
       },
       "other": {
         "Smelting a Gold bar": {
-          "notes": "Requires Gold ore.",
+          "notes": "Requires Gold ore and level 40 Smithing.",
           "rule": {
             "all": [
               {
@@ -7407,7 +7407,7 @@
       },
       "other": {
         "Crafting a Gold necklace": {
-          "notes": "Requires Gold bar and Necklace mould.",
+          "notes": "Requires Gold bar and Necklace mould and level 6 Crafting.",
           "rule": {
             "all": [
               {
@@ -7464,7 +7464,7 @@
       },
       "other": {
         "Crafting a Gold ring": {
-          "notes": "Requires Gold bar and Ring mould.",
+          "notes": "Requires Gold bar and Ring mould and level 5 Crafting.",
           "rule": {
             "all": [
               {
@@ -7881,7 +7881,7 @@
       },
       "other": {
         "Crafting a Hardleather body": {
-          "notes": "Requires Hard leather.",
+          "notes": "Requires Hard leather and level 28 Crafting.",
           "rule": {
             "all": [
               {
@@ -7927,7 +7927,7 @@
       },
       "other": {
         "Cooking a Herring": {
-          "notes": "Requires a Raw herring.",
+          "notes": "Requires a Raw herring and level 5 Cooking.",
           "rule": {
             "all": [
               {
@@ -7986,7 +7986,7 @@
       },
       "other": {
         "Crafting a Holy symbol": {
-          "notes": "Requires an Unblessed symbol.",
+          "notes": "Requires an Unblessed symbol and level 31 Prayer.",
           "rule": {
             "all": [
               {
@@ -8018,7 +8018,7 @@
       },
       "other": {
         "Smithing an Iron 2h sword": {
-          "notes": "Requires an Iron bar and a Hammer.",
+          "notes": "Requires an Iron bar and a Hammer and level 29 Smithing.",
           "rule": {
             "all": [
               {
@@ -8135,7 +8135,7 @@
       },
       "other": {
         "Smithing an Iron axe": {
-          "notes": "Requires an Iron bar and a Hammer.",
+          "notes": "Requires an Iron bar and a Hammer and level 16 Smithing.",
           "rule": {
             "all": [
               {
@@ -8191,7 +8191,7 @@
       },
       "other": {
         "Smelting an Iron bar": {
-          "notes": "Requires Iron ore.",
+          "notes": "Requires Iron ore and level 15 Smithing.",
           "rule": {
             "all": [
               {
@@ -8232,7 +8232,7 @@
       },
       "other": {
         "Smithing an Iron battleaxe": {
-          "notes": "Requires an Iron bar and a Hammer.",
+          "notes": "Requires an Iron bar and a Hammer and level 25 Smithing.",
           "rule": {
             "all": [
               {
@@ -8270,7 +8270,7 @@
       },
       "other": {
         "Smithing an Iron chainbody": {
-          "notes": "Requires an Iron bar and a Hammer.",
+          "notes": "Requires an Iron bar and a Hammer and level 26 Smithing.",
           "rule": {
             "all": [
               {
@@ -8371,7 +8371,7 @@
       },
       "other": {
         "Smithing Iron dagger": {
-          "notes": "Requires an Iron bar and a Hammer.",
+          "notes": "Requires an Iron bar and a Hammer and level 15 Smithing.",
           "rule": {
             "all": [
               {
@@ -8418,7 +8418,7 @@
       },
       "other": {
         "Smithing an Iron full helm": {
-          "notes": "Requires an Iron bar and a Hammer.",
+          "notes": "Requires an Iron bar and a Hammer and level 22 Smithing.",
           "rule": {
             "all": [
               {
@@ -8482,7 +8482,7 @@
       },
       "other": {
         "Smithing an Iron kiteshield": {
-          "notes": "Requires an Iron bar and a Hammer.",
+          "notes": "Requires an Iron bar and a Hammer and level 27 Smithing.",
           "rule": {
             "all": [
               {
@@ -8555,7 +8555,7 @@
       },
       "other": {
         "Smithing an Iron longsword": {
-          "notes": "Requires an Iron bar and a Hammer.",
+          "notes": "Requires an Iron bar and a Hammer and level 21 Smithing.",
           "rule": {
             "all": [
               {
@@ -8614,7 +8614,7 @@
       },
       "other": {
         "Smithing an Iron mace": {
-          "notes": "Requires an Iron bar and a Hammer.",
+          "notes": "Requires an Iron bar and a Hammer and level 17 Smithing.",
           "rule": {
             "all": [
               {
@@ -8661,7 +8661,7 @@
       },
       "other": {
         "Smithing an Iron med helm": {
-          "notes": "Requires an Iron bar and a Hammer.",
+          "notes": "Requires an Iron bar and a Hammer and level 18 Smithing.",
           "rule": {
             "all": [
               {
@@ -8791,7 +8791,7 @@
       },
       "other": {
         "Smithing an Iron platebody": {
-          "notes": "Requires an Iron bar and a Hammer.",
+          "notes": "Requires an Iron bar and a Hammer and level 33 Smithing.",
           "rule": {
             "all": [
               {
@@ -8855,7 +8855,7 @@
       },
       "other": {
         "Smithing some Iron platelegs": {
-          "notes": "Requires an Iron bar and a Hammer.",
+          "notes": "Requires an Iron bar and a Hammer and level 31 Smithing.",
           "rule": {
             "all": [
               {
@@ -8913,7 +8913,7 @@
       },
       "other": {
         "Smithing an Iron plateskirt": {
-          "notes": "Requires an Iron bar and a Hammer.",
+          "notes": "Requires an Iron bar and a Hammer and level 31 Smithing.",
           "rule": {
             "all": [
               {
@@ -8977,7 +8977,7 @@
       },
       "other": {
         "Smithing an Iron scimitar": {
-          "notes": "Requires an Iron bar and a Hammer.",
+          "notes": "Requires an Iron bar and a Hammer and level 20 Smithing.",
           "rule": {
             "all": [
               {
@@ -9079,7 +9079,7 @@
       },
       "other": {
         "Smithing an Iron sq shield": {
-          "notes": "Requires an Iron bar and a Hammer.",
+          "notes": "Requires an Iron bar and a Hammer and level 23 Smithing.",
           "rule": {
             "all": [
               {
@@ -9129,7 +9129,7 @@
       },
       "other": {
         "Smithing an Iron sword": {
-          "notes": "Requires an Iron bar and a Hammer.",
+          "notes": "Requires an Iron bar and a Hammer and level 19 Smithing.",
           "rule": {
             "all": [
               {
@@ -9159,7 +9159,7 @@
     "sources": {
       "other": {
         "Smithing an Iron warhammer": {
-          "notes": "Requires an Iron bar and a Hammer.",
+          "notes": "Requires an Iron bar and a Hammer and level 24 Smithing.",
           "rule": {
             "all": [
               {
@@ -9263,7 +9263,7 @@
       },
       "other": {
         "Cooking a Jug of wine": {
-          "notes": "Requires a Jug of water and Grapes.",
+          "notes": "Requires a Jug of water and Grapes and level 35 Cooking.",
           "rule": {
             "all": [
               {
@@ -9506,7 +9506,7 @@
       },
       "other": {
         "Crafting a Leather body": {
-          "notes": "Requires Leather.",
+          "notes": "Requires Leather and level 14 Crafting.",
           "rule": {
             "all": [
               {
@@ -9554,7 +9554,7 @@
       },
       "other": {
         "Crafting some Leather boots": {
-          "notes": "Requires Leather.",
+          "notes": "Requires Leather and level 7 Crafting.",
           "rule": {
             "all": [
               {
@@ -9586,7 +9586,7 @@
       },
       "other": {
         "Crafting some Leather chaps": {
-          "notes": "Requires Leather.",
+          "notes": "Requires Leather and level 18 Crafting.",
           "rule": {
             "all": [
               {
@@ -9631,7 +9631,7 @@
       },
       "other": {
         "Crafting a Leather cowl": {
-          "notes": "Requires Leather.",
+          "notes": "Requires Leather and level 9 Crafting.",
           "rule": {
             "all": [
               {
@@ -9700,7 +9700,7 @@
       },
       "other": {
         "Crafting some Leather vambraces": {
-          "notes": "Requires Leather.",
+          "notes": "Requires Leather and level 11 Crafting.",
           "rule": {
             "all": [
               {
@@ -9758,7 +9758,7 @@
     "sources": {
       "other": {
         "Cooking a Lobster": {
-          "notes": "Requires a Raw lobster.",
+          "notes": "Requires a Raw lobster and level 40 Cooking.",
           "rule": {
             "all": [
               {
@@ -9932,7 +9932,7 @@
       },
       "other": {
         "Cooking a Meat pie": {
-          "notes": "Requires Uncooked meat pie.",
+          "notes": "Requires Uncooked meat pie and level 20 Cooking.",
           "rule": {
             "all": [
               {
@@ -9959,7 +9959,7 @@
     "sources": {
       "other": {
         "Cooking a Meat pizza": {
-          "notes": "Requires Cooked meat and a Plain pizza.",
+          "notes": "Requires Cooked meat and a Plain pizza and level 45 Cooking.",
           "rule": {
             "all": [
               {
@@ -10197,7 +10197,7 @@
     "sources": {
       "other": {
         "Smithing a Mithril 2h sword": {
-          "notes": "Requires a Mithril bar and a Hammer.",
+          "notes": "Requires a Mithril bar and a Hammer and level 64 Smithing.",
           "rule": {
             "all": [
               {
@@ -10274,7 +10274,7 @@
     "sources": {
       "other": {
         "Smithing a Mithril axe": {
-          "notes": "Requires a Mithril bar and a Hammer.",
+          "notes": "Requires a Mithril bar and a Hammer and level 51 Smithing.",
           "rule": {
             "all": [
               {
@@ -10304,7 +10304,7 @@
     "sources": {
       "other": {
         "Smelting a Mithril bar": {
-          "notes": "Requires Mithril ore and Coal.",
+          "notes": "Requires Mithril ore and Coal and level 50 Smithing.",
           "rule": {
             "all": [
               {
@@ -10337,7 +10337,7 @@
       },
       "other": {
         "Smithing a Mithril battleaxe": {
-          "notes": "Requires a Mithril bar and a Hammer.",
+          "notes": "Requires a Mithril bar and a Hammer and level 60 Smithing.",
           "rule": {
             "all": [
               {
@@ -10378,7 +10378,7 @@
       },
       "other": {
         "Smithing a Mithril chainbody": {
-          "notes": "Requires a Mithril bar and a Hammer.",
+          "notes": "Requires a Mithril bar and a Hammer and level 61 Smithing.",
           "rule": {
             "all": [
               {
@@ -10411,7 +10411,7 @@
       },
       "other": {
         "Smithing a Mithril dagger": {
-          "notes": "Requires a Mithril bar and a Hammer.",
+          "notes": "Requires a Mithril bar and a Hammer and level 50 Smithing.",
           "rule": {
             "all": [
               {
@@ -10444,7 +10444,7 @@
       },
       "other": {
         "Smithing a Mithril full helm": {
-          "notes": "Requires a Mithril bar and a Hammer.",
+          "notes": "Requires a Mithril bar and a Hammer and level 57 Smithing.",
           "rule": {
             "all": [
               {
@@ -10514,7 +10514,7 @@
       },
       "other": {
         "Smithing a Mithril kiteshield": {
-          "notes": "Requires a Mithril bar and a Hammer.",
+          "notes": "Requires a Mithril bar and a Hammer and level 62 Smithing.",
           "rule": {
             "all": [
               {
@@ -10572,7 +10572,7 @@
       },
       "other": {
         "Smithing a Mithril longsword": {
-          "notes": "Requires a Mithril bar and a Hammer.",
+          "notes": "Requires a Mithril bar and a Hammer and level 56 Smithing.",
           "rule": {
             "all": [
               {
@@ -10622,7 +10622,7 @@
       },
       "other": {
         "Smithing a Mithril mace": {
-          "notes": "Requires a Mithril bar and a Hammer.",
+          "notes": "Requires a Mithril bar and a Hammer and level 52 Smithing.",
           "rule": {
             "all": [
               {
@@ -10655,7 +10655,7 @@
       },
       "other": {
         "Smithing a Mithril med helm": {
-          "notes": "Requires a Mithril bar and a Hammer.",
+          "notes": "Requires a Mithril bar and a Hammer and level 53 Smithing.",
           "rule": {
             "all": [
               {
@@ -10736,7 +10736,7 @@
       },
       "other": {
         "Smithing a Mithril platebody": {
-          "notes": "Requires a Mithril bar and a Hammer.",
+          "notes": "Requires a Mithril bar and a Hammer and level 68 Smithing.",
           "rule": {
             "all": [
               {
@@ -10800,7 +10800,7 @@
       },
       "other": {
         "Smithing some Mithril platelegs": {
-          "notes": "Requires a Mithril bar and a Hammer.",
+          "notes": "Requires a Mithril bar and a Hammer and level 66 Smithing.",
           "rule": {
             "all": [
               {
@@ -10864,7 +10864,7 @@
       },
       "other": {
         "Smithing a Mithril plateskirt": {
-          "notes": "Requires a Mithril bar and a Hammer.",
+          "notes": "Requires a Mithril bar and a Hammer and level 66 Smithing.",
           "rule": {
             "all": [
               {
@@ -10917,7 +10917,7 @@
       },
       "other": {
         "Smithing a Mithril scimitar": {
-          "notes": "Requires a Mithril bar and a Hammer.",
+          "notes": "Requires a Mithril bar and a Hammer and level 55 Smithing.",
           "rule": {
             "all": [
               {
@@ -11028,7 +11028,7 @@
       },
       "other": {
         "Smithing a Mithril sq shield": {
-          "notes": "Requires a Mithril bar and a Hammer.",
+          "notes": "Requires a Mithril bar and a Hammer and level 58 Smithing.",
           "rule": {
             "all": [
               {
@@ -11078,7 +11078,7 @@
       },
       "other": {
         "Smithing a Mithril sword": {
-          "notes": "Requires a Mithril bar and a Hammer.",
+          "notes": "Requires a Mithril bar and a Hammer and level 54 Smithing.",
           "rule": {
             "all": [
               {
@@ -11108,7 +11108,7 @@
     "sources": {
       "other": {
         "Smithing a Mithril warhammer": {
-          "notes": "Requires a Mithril bar and a Hammer.",
+          "notes": "Requires a Mithril bar and a Hammer and level 59 Smithing.",
           "rule": {
             "all": [
               {
@@ -11573,7 +11573,7 @@
       },
       "other": {
         "Crafting a Pie dish": {
-          "notes": "Requires an Unfired pie dish.",
+          "notes": "Requires an Unfired pie dish and level 7 Crafting.",
           "rule": {
             "all": [
               {
@@ -11626,7 +11626,7 @@
     "sources": {
       "other": {
         "Cooking a Pike": {
-          "notes": "Requires a Raw pike.",
+          "notes": "Requires a Raw pike and level 20 Cooking.",
           "rule": {
             "all": [
               {
@@ -11667,7 +11667,7 @@
       },
       "other": {
         "Cooking a Pizza base": {
-          "notes": "Requires an Pot of flour and some water.",
+          "notes": "Requires an Pot of flour and some water and level 35 Cooking.",
           "rule": {
             "all": [
               {
@@ -11708,7 +11708,7 @@
     "sources": {
       "other": {
         "Cooking a Plain pizza": {
-          "notes": "Requires an Uncooked pizza.",
+          "notes": "Requires an Uncooked pizza and level 35 Cooking.",
           "rule": {
             "all": [
               {
@@ -12372,7 +12372,7 @@
       },
       "other": {
         "Cooking a Redberry pie": {
-          "notes": "Requires Uncooked berry pie.",
+          "notes": "Requires Uncooked berry pie and level 10 Cooking.",
           "rule": {
             "all": [
               {
@@ -12487,7 +12487,7 @@
       },
       "other": {
         "Cutting an Uncut ruby": {
-          "notes": "Requires an Uncut ruby and a Chisel.",
+          "notes": "Requires an Uncut ruby and a Chisel and level 34 Crafting.",
           "rule": {
             "all": [
               {
@@ -12537,7 +12537,7 @@
     "sources": {
       "other": {
         "Crafting a Ruby amulet (u)": {
-          "notes": "Requires a Gold bar, a Ruby and an Amulet mould.",
+          "notes": "Requires a Gold bar, a Ruby and an Amulet mould and level 50 Crafting.",
           "rule": {
             "all": [
               {
@@ -12567,7 +12567,7 @@
     "sources": {
       "other": {
         "Crafting a Ruby necklace": {
-          "notes": "Requires Gold bar, Ruby and Necklace mould.",
+          "notes": "Requires Gold bar, Ruby and Necklace mould and level 40 Crafting.",
           "rule": {
             "all": [
               {
@@ -12597,7 +12597,7 @@
     "sources": {
       "other": {
         "Crafting a Ruby ring": {
-          "notes": "Requires Gold bar, Ruby and Ring mould.",
+          "notes": "Requires Gold bar, Ruby and Ring mould and level 34 Crafting.",
           "rule": {
             "all": [
               {
@@ -12635,7 +12635,7 @@
       },
       "other": {
         "Smithing a Rune 2h sword": {
-          "notes": "Requires a Runite bar and a Hammer.",
+          "notes": "Requires a Runite bar and a Hammer and level 99 Smithing.",
           "rule": {
             "all": [
               {
@@ -12730,7 +12730,7 @@
     "sources": {
       "other": {
         "Smithing a Rune axe": {
-          "notes": "Requires a Runite bar and a Hammer.",
+          "notes": "Requires a Runite bar and a Hammer and level 86 Smithing.",
           "rule": {
             "all": [
               {
@@ -12771,7 +12771,7 @@
       },
       "other": {
         "Smithing a Rune battleaxe": {
-          "notes": "Requires a Runite bar and a Hammer.",
+          "notes": "Requires a Runite bar and a Hammer and level 95 Smithing.",
           "rule": {
             "all": [
               {
@@ -12812,7 +12812,7 @@
       },
       "other": {
         "Smithing a Rune chainbody": {
-          "notes": "Requires a Runite bar and a Hammer.",
+          "notes": "Requires a Runite bar and a Hammer and level 96 Smithing.",
           "rule": {
             "all": [
               {
@@ -12842,7 +12842,7 @@
     "sources": {
       "other": {
         "Smithing Rune dagger": {
-          "notes": "Requires a Runite bar and a Hammer.",
+          "notes": "Requires a Runite bar and a Hammer and level 85 Smithing.",
           "rule": {
             "all": [
               {
@@ -12920,7 +12920,7 @@
       },
       "other": {
         "Smithing a Rune full helm": {
-          "notes": "Requires a Runite bar and a Hammer.",
+          "notes": "Requires a Runite bar and a Hammer and level 92 Smithing.",
           "rule": {
             "all": [
               {
@@ -13025,7 +13025,7 @@
       },
       "other": {
         "Smithing a Rune kiteshield": {
-          "notes": "Requires a Runite bar and a Hammer.",
+          "notes": "Requires a Runite bar and a Hammer and level 97 Smithing.",
           "rule": {
             "all": [
               {
@@ -13086,7 +13086,7 @@
       },
       "other": {
         "Smithing a Rune longsword": {
-          "notes": "Requires a Runite bar and a Hammer.",
+          "notes": "Requires a Runite bar and a Hammer and level 91 Smithing.",
           "rule": {
             "all": [
               {
@@ -13119,7 +13119,7 @@
       },
       "other": {
         "Smithing a Rune mace": {
-          "notes": "Requires a Runite bar and a Hammer.",
+          "notes": "Requires a Runite bar and a Hammer and level 87 Smithing.",
           "rule": {
             "all": [
               {
@@ -13166,7 +13166,7 @@
       },
       "other": {
         "Smithing a Rune med helm": {
-          "notes": "Requires a Runite bar and a Hammer.",
+          "notes": "Requires a Runite bar and a Hammer and level 88 Smithing.",
           "rule": {
             "all": [
               {
@@ -13214,7 +13214,7 @@
       },
       "other": {
         "Smithing a Rune platebody": {
-          "notes": "Requires a Runite bar and a Hammer.",
+          "notes": "Requires a Runite bar and a Hammer and level 99 Smithing.",
           "rule": {
             "all": [
               {
@@ -13325,7 +13325,7 @@
       },
       "other": {
         "Smithing some Rune platelegs": {
-          "notes": "Requires a Runite bar and a Hammer.",
+          "notes": "Requires a Runite bar and a Hammer and level 99 Smithing.",
           "rule": {
             "all": [
               {
@@ -13386,7 +13386,7 @@
       },
       "other": {
         "Smithing a Rune plateskirt": {
-          "notes": "Requires a Runite bar and a Hammer.",
+          "notes": "Requires a Runite bar and a Hammer and level 99 Smithing.",
           "rule": {
             "all": [
               {
@@ -13436,7 +13436,7 @@
     "sources": {
       "other": {
         "Smithing a Rune scimitar": {
-          "notes": "Requires a Runite bar and a Hammer.",
+          "notes": "Requires a Runite bar and a Hammer and level 90 Smithing.",
           "rule": {
             "all": [
               {
@@ -13569,7 +13569,7 @@
       },
       "other": {
         "Smithing a Rune sq shield": {
-          "notes": "Requires a Runite bar and a Hammer.",
+          "notes": "Requires a Runite bar and a Hammer and level 93 Smithing.",
           "rule": {
             "all": [
               {
@@ -13607,7 +13607,7 @@
       },
       "other": {
         "Smithing a Rune sword": {
-          "notes": "Requires a Runite bar and a Hammer.",
+          "notes": "Requires a Runite bar and a Hammer and level 89 Smithing.",
           "rule": {
             "all": [
               {
@@ -13637,7 +13637,7 @@
     "sources": {
       "other": {
         "Smithing a Rune warhammer": {
-          "notes": "Requires a Runite bar and a Hammer.",
+          "notes": "Requires a Runite bar and a Hammer and level 94 Smithing.",
           "rule": {
             "all": [
               {
@@ -13672,7 +13672,7 @@
       },
       "other": {
         "Smelting a Runite bar": {
-          "notes": "Requires Runite ore and Coal.",
+          "notes": "Requires Runite ore and Coal and level 85 Smithing.",
           "rule": {
             "all": [
               {
@@ -13816,7 +13816,7 @@
       },
       "other": {
         "Cutting an Uncut sapphire": {
-          "notes": "Requires an Uncut sapphire and a Chisel.",
+          "notes": "Requires an Uncut sapphire and a Chisel and level 20 Crafting.",
           "rule": {
             "all": [
               {
@@ -13866,7 +13866,7 @@
     "sources": {
       "other": {
         "Crafting a Sapphire amulet (u)": {
-          "notes": "Requires Gold bar, Sapphire and Amulet mould.",
+          "notes": "Requires Gold bar, Sapphire and Amulet mould and level 24 Crafting.",
           "rule": {
             "all": [
               {
@@ -13896,7 +13896,7 @@
     "sources": {
       "other": {
         "Crafting a Sapphire necklace": {
-          "notes": "Requires Gold bar, Sapphire and Necklace mould.",
+          "notes": "Requires Gold bar, Sapphire and Necklace mould and level 22 Crafting.",
           "rule": {
             "all": [
               {
@@ -13926,7 +13926,7 @@
     "sources": {
       "other": {
         "Crafting a Sapphire ring": {
-          "notes": "Requires Gold bar, Sapphire and Ring mould.",
+          "notes": "Requires Gold bar, Sapphire and Ring mould and level 20 Crafting.",
           "rule": {
             "all": [
               {
@@ -14200,7 +14200,7 @@
       },
       "other": {
         "Smelting a Silver bar": {
-          "notes": "Requires Silver ore.",
+          "notes": "Requires Silver ore and level 20 Smithing.",
           "rule": {
             "all": [
               {
@@ -14515,7 +14515,7 @@
       },
       "other": {
         "Smithing a Steel 2h sword": {
-          "notes": "Requires a Steel bar and a Hammer.",
+          "notes": "Requires a Steel bar and a Hammer and level 44 Smithing.",
           "rule": {
             "all": [
               {
@@ -14627,7 +14627,7 @@
       },
       "other": {
         "Smithing a Steel axe": {
-          "notes": "Requires a Steel bar and a Hammer.",
+          "notes": "Requires a Steel bar and a Hammer and level 31 Smithing.",
           "rule": {
             "all": [
               {
@@ -14671,7 +14671,7 @@
       },
       "other": {
         "Smelting a Steel bar": {
-          "notes": "Requires Iron ore and Coal.",
+          "notes": "Requires Iron ore and Coal and level 30 Smithing.",
           "rule": {
             "all": [
               {
@@ -14712,7 +14712,7 @@
       },
       "other": {
         "Smithing a Steel battleaxe": {
-          "notes": "Requires a Steel bar and a Hammer.",
+          "notes": "Requires a Steel bar and a Hammer and level 40 Smithing.",
           "rule": {
             "all": [
               {
@@ -14750,7 +14750,7 @@
       },
       "other": {
         "Smithing a Steel chainbody": {
-          "notes": "Requires a Steel bar and a Hammer.",
+          "notes": "Requires a Steel bar and a Hammer and level 41 Smithing.",
           "rule": {
             "all": [
               {
@@ -14797,7 +14797,7 @@
       },
       "other": {
         "Smithing Steel dagger": {
-          "notes": "Steel bar and a Hammer.",
+          "notes": "Steel bar and a Hammer and level 30 Smithing.",
           "rule": {
             "all": [
               {
@@ -14892,7 +14892,7 @@
       },
       "other": {
         "Smithing a Steel kiteshield": {
-          "notes": "Requires a Steel bar and a Hammer.",
+          "notes": "Requires a Steel bar and a Hammer and level 42 Smithing.",
           "rule": {
             "all": [
               {
@@ -14974,7 +14974,7 @@
       },
       "other": {
         "Smithing a Steel longsword": {
-          "notes": "Requires a Steel bar and a Hammer.",
+          "notes": "Requires a Steel bar and a Hammer and level 36 Smithing.",
           "rule": {
             "all": [
               {
@@ -15018,7 +15018,7 @@
       },
       "other": {
         "Smithing a Steel mace": {
-          "notes": "Requires a Steel bar and a Hammer.",
+          "notes": "Requires a Steel bar and a Hammer and level 32 Smithing.",
           "rule": {
             "all": [
               {
@@ -15074,7 +15074,7 @@
       },
       "other": {
         "Smithing a Steel med helm": {
-          "notes": "Requires a Steel bar and a Hammer.",
+          "notes": "Requires a Steel bar and a Hammer and level 33 Smithing.",
           "rule": {
             "all": [
               {
@@ -15101,7 +15101,7 @@
     "sources": {
       "other": {
         "Smithing some Steel nails": {
-          "notes": "Requires a Steel bar and a Hammer.",
+          "notes": "Requires a Steel bar and a Hammer and level 34 Smithing.",
           "rule": {
             "all": [
               {
@@ -15171,7 +15171,7 @@
       },
       "other": {
         "Smithing a Steel platebody": {
-          "notes": "Requires a Steel bar and a Hammer.",
+          "notes": "Requires a Steel bar and a Hammer and level 48 Smithing.",
           "rule": {
             "all": [
               {
@@ -15238,7 +15238,7 @@
       },
       "other": {
         "Smithing some Steel platelegs": {
-          "notes": "Requires a Steel bar and a Hammer.",
+          "notes": "Requires a Steel bar and a Hammer and level 46 Smithing.",
           "rule": {
             "all": [
               {
@@ -15302,7 +15302,7 @@
       },
       "other": {
         "Smithing a Steel plateskirt": {
-          "notes": "Requires a Steel bar and a Hammer.",
+          "notes": "Requires a Steel bar and a Hammer and level 46 Smithing.",
           "rule": {
             "all": [
               {
@@ -15363,7 +15363,7 @@
       },
       "other": {
         "Smithing a Steel scimitar": {
-          "notes": "Requires a Steel bar and a Hammer.",
+          "notes": "Requires a Steel bar and a Hammer and level 35 Smithing.",
           "rule": {
             "all": [
               {
@@ -15468,7 +15468,7 @@
       },
       "other": {
         "Smithing a Steel sq shield": {
-          "notes": "Requires a Steel bar and a Hammer.",
+          "notes": "Requires a Steel bar and a Hammer and level 38 Smithing.",
           "rule": {
             "all": [
               {
@@ -15527,7 +15527,7 @@
       },
       "other": {
         "Smithing a Steel sword": {
-          "notes": "Requires a Steel bar and a Hammer.",
+          "notes": "Requires a Steel bar and a Hammer and level 34 Smithing.",
           "rule": {
             "all": [
               {
@@ -15557,7 +15557,7 @@
     "sources": {
       "other": {
         "Smithing a Steel warhammer": {
-          "notes": "Requires a Steel bar and a Hammer.",
+          "notes": "Requires a Steel bar and a Hammer and level 39 Smithing.",
           "rule": {
             "all": [
               {
@@ -15587,7 +15587,7 @@
     "sources": {
       "other": {
         "Cooking a Stew": {
-          "notes": "Requires a Bowl of water, a Potato and Cooked meat or Cooked chicken.",
+          "notes": "Requires a Bowl of water, a Potato and Cooked meat or Cooked chicken and level 25 Cooking.",
           "rule": {
             "all": [
               {
@@ -15884,7 +15884,7 @@
       },
       "other": {
         "Cooking a Swordfish": {
-          "notes": "Requires Raw swordfish.",
+          "notes": "Requires Raw swordfish and level 45 Cooking.",
           "rule": {
             "all": [
               {
@@ -16492,7 +16492,7 @@
     "sources": {
       "other": {
         "Crafting a Tiara": {
-          "notes": "Requires a Silver bar and a Tiara mould.",
+          "notes": "Requires a Silver bar and a Tiara mould and level 23 Crafting.",
           "rule": {
             "all": [
               {
@@ -16679,7 +16679,7 @@
       },
       "other": {
         "Cooking a Trout": {
-          "notes": "Requires Raw trout.",
+          "notes": "Requires Raw trout and level 15 Cooking.",
           "rule": {
             "all": [
               {
@@ -16711,7 +16711,7 @@
       },
       "other": {
         "Cooking a Tuna": {
-          "notes": "Requires Raw tuna.",
+          "notes": "Requires Raw tuna and level 30 Cooking.",
           "rule": {
             "all": [
               {
@@ -16761,7 +16761,7 @@
     "sources": {
       "other": {
         "Creating an uncooked pie": {
-          "notes": "Requires a Cooking apple and a Pie shell.",
+          "notes": "Requires a Cooking apple and a Pie shell and level 30 Cooking.",
           "rule": {
             "all": [
               {
@@ -16791,7 +16791,7 @@
     "sources": {
       "other": {
         "Creating an uncooked pie": {
-          "notes": "Requires Redberries and a Pie shell.",
+          "notes": "Requires Redberries and a Pie shell and level 10 Cooking.",
           "rule": {
             "all": [
               {
@@ -16821,7 +16821,7 @@
     "sources": {
       "other": {
         "Creating an uncooked pie": {
-          "notes": "Requires a Cooked meat or chicken and a Pie shell.",
+          "notes": "Requires a Cooked meat or chicken and a Pie shell and level 20 Cooking.",
           "rule": {
             "all": [
               {
@@ -17258,7 +17258,7 @@
     "sources": {
       "other": {
         "Creating an unstrung symbol": {
-          "notes": "Requires a Silver bar and a Holy mould.",
+          "notes": "Requires a Silver bar and a Holy mould and level 16 Crafting.",
           "rule": {
             "all": [
               {
