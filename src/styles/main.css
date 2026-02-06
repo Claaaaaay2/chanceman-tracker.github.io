@@ -331,6 +331,10 @@ footer {
     white-space: nowrap;
 }
 
+[hidden] {
+    display: none !important;
+}
+
 .marginOneRem {
     margin: 1rem 1rem 0rem 1rem;
 }
