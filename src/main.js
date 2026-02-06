@@ -72,6 +72,29 @@ const ITEM_SECTION_TITLES = {
     8: "Unobtainable Items"
 };
 
+const NPC_META = new Map(
+    Object.entries(NPC_DATA).map(([npcName, npc]) => {
+        const tags = new Set(npc?.tags || []);
+        return [
+            npcName,
+            {
+                tags,
+                isClue: tags.has("clue"),
+                isHouse: tags.has("house"),
+                isSuperior: tags.has("superior"),
+                isBoss: tags.has("boss"),
+                isRaid: tags.has("raid"),
+                isLMS: tags.has("LMS"),
+                isHunterRumour: tags.has("hunterRumour"),
+                isJon: tags.has("jon"),
+                isNotForIron: tags.has("notForIronmen"),
+                skills: npc?.skill || [],
+                levels: npc?.level || []
+            }
+        ];
+    })
+);
+
 let rankedItemsCache = null;
 
 function isItemProfilingEnabled() {
@@ -318,7 +341,8 @@ window.initItemsPage = async function () {
         return best ? ` (${best})` : "";
     }
 
-    function hasAnyItemSource(item) {
+    function hasAnyItemSource(item, meta) {
+        if (meta?.hasAnySource !== undefined) return meta.hasAnySource;
         const sources = item?.sources;
         if (!sources || typeof sources !== "object") return false;
         const hasEntries = (value) => value && typeof value === "object" && Object.keys(value).length > 0;
@@ -662,6 +686,7 @@ window.initItemsPage = async function () {
         } = getFilters();
 
         const items = fileStore.items || [];
+        const itemMeta = fileStore.itemMeta;
         const obtainedSet = new Set(fileStore.obtained || []);
         const rolledSet = new Set(fileStore.rolled || []);
         const searchLower = String(search || "").toLowerCase();
@@ -675,18 +700,21 @@ window.initItemsPage = async function () {
 
         for (const entry of ranked) {
             const { item } = entry;
+            const meta = itemMeta?.get(item.id);
             let sort = { ...entry.sort };
 
             if (isItemHiddenByTag(item)) {
                 continue;
             }
-            if (isFreeToPlay && hideSourcelessItems && !hasAnyItemSource(item)) {
+            if (isFreeToPlay && hideSourcelessItems && !hasAnyItemSource(item, meta)) {
                 continue;
             }
-            if (!item.name.toLowerCase().includes(searchLower)) continue;
+            const itemNameLower = meta?.nameLower ?? item.name.toLowerCase();
+            if (!itemNameLower.includes(searchLower)) continue;
             if (hideObtained && obtainedSet.has(item.id)) continue;
             if (onlyRolled && !rolledSet.has(item.id)) continue;
-            if (hideClue && item.tags?.includes("clue-reward-only")) continue;
+            const isClueRewardOnly = meta?.isClueRewardOnly ?? item.tags?.includes("clue-reward-only");
+            if (hideClue && isClueRewardOnly) continue;
             if (hideClue && await shouldHideForClueFilter(item, fileStore, rolledSet)) {
                 sort.rank = 8;
             }
@@ -699,8 +727,10 @@ window.initItemsPage = async function () {
             if (isIronman && await isNonIronItem(item, fileStore, rolledSet)) {
                 sort.rank = 8;
             }
-            if (!hasFlatpacks && item.tags?.includes("flatpack")) continue;
-            if (!hasItemsets && item.tags?.includes("itemset")) continue;
+            const hasFlatpackTag = meta?.hasFlatpack ?? item.tags?.includes("flatpack");
+            if (!hasFlatpacks && hasFlatpackTag) continue;
+            const hasItemsetTag = meta?.hasItemset ?? item.tags?.includes("itemset");
+            if (!hasItemsets && hasItemsetTag) continue;
             if (hideBosses && await hideTag(item, fileStore, "boss", rolledSet)) {
                 sort.rank = 8;
             }
@@ -952,6 +982,9 @@ export function afterRoute() {
 async function shouldHideForClueFilter(item, ctx, rolledSet) {
     let hasAnyClueSource = false;
     let hasReachableNonClueSource = false;
+    const meta = fileStore.itemMeta?.get(item.id);
+    const dropNpcs = meta?.dropNpcs ?? (item.sources?.drops ? Object.keys(item.sources.drops) : []);
+    const otherSources = meta?.otherSources ?? (item.sources?.other ? Object.values(item.sources.other) : []);
 
     // Check shops - only count if rolled
     if (rolledSet?.has(item.id) && item.sources?.shops) {
@@ -964,13 +997,14 @@ async function shouldHideForClueFilter(item, ctx, rolledSet) {
     }
 
     // Check NPC drops
-    if (item.sources?.drops) {
-        for (const npcName of Object.keys(item.sources.drops)) {
+    if (dropNpcs.length) {
+        for (const npcName of dropNpcs) {
+            const npcMeta = NPC_META.get(npcName);
             const npc = NPC_DATA[npcName];
             if (!npc) continue;
             if (isNpcBlockedByFilters(npcName, ctx)) continue;
 
-            const isClueSource = npc.tags?.includes("clue");
+            const isClueSource = npcMeta?.isClue ?? npc.tags?.includes("clue");
             if (isClueSource) hasAnyClueSource = true;
 
             const reachable = await canReachNpc(npcName, ctx);
@@ -981,8 +1015,8 @@ async function shouldHideForClueFilter(item, ctx, rolledSet) {
     }
 
     // Check other sources
-    if (item.sources?.other) {
-        for (const source of Object.values(item.sources.other)) {
+    if (otherSources.length) {
+        for (const source of otherSources) {
             if (isSourceHiddenByFilters(source, ctx)) continue;
             const isClueSource = source.tags?.includes("clue");
             if (isClueSource) hasAnyClueSource = true;
@@ -1029,9 +1063,13 @@ async function isNonIronItem(item, ctx, rolledSet) {
     let hasReachableIronSource = false;
     let hasReachableSource = false;
     let hasReachableNonIronmanSource = false;
+    const meta = fileStore.itemMeta?.get(item.id);
+    const dropNpcs = meta?.dropNpcs ?? (item.sources?.drops ? Object.keys(item.sources.drops) : []);
+    const otherSources = meta?.otherSources ?? (item.sources?.other ? Object.values(item.sources.other) : []);
 
-    if (item.sources?.drops) {
-        for (const npcName of Object.keys(item.sources.drops)) {
+    if (dropNpcs.length) {
+        for (const npcName of dropNpcs) {
+            const npcMeta = NPC_META.get(npcName);
             const npc = NPC_DATA[npcName];
             if (!npc) continue;
 
@@ -1040,7 +1078,9 @@ async function isNonIronItem(item, ctx, rolledSet) {
 
             hasReachableSource = true;
 
-            const isNonIron = npc.tags?.includes("notForIronmen") || npc.tags?.includes("jon");
+            const isNonIron = npcMeta
+                ? (npcMeta.isNotForIron || npcMeta.isJon)
+                : (npc.tags?.includes("notForIronmen") || npc.tags?.includes("jon"));
 
             if (isNonIron) {
                 hasReachableNonIronmanSource = true;
@@ -1050,8 +1090,8 @@ async function isNonIronItem(item, ctx, rolledSet) {
         }
     }
 
-    if (item.sources?.other) {
-        for (const source of Object.values(item.sources.other)) {
+    if (otherSources.length) {
+        for (const source of otherSources) {
             const reachable = await canReachSource(source, ctx);
             if (!reachable) continue;
 
@@ -1078,15 +1118,19 @@ async function isNonIronItem(item, ctx, rolledSet) {
 async function hideTag(item, ctx, tag, rolledSet) {
     let hasAnyTagSource = false;
     let hasReachableNonTagSource = false;
+    const meta = fileStore.itemMeta?.get(item.id);
+    const dropNpcs = meta?.dropNpcs ?? (item.sources?.drops ? Object.keys(item.sources.drops) : []);
+    const otherSources = meta?.otherSources ?? (item.sources?.other ? Object.values(item.sources.other) : []);
 
     // NPC drops
-    if (item.sources?.drops) {
-        for (const npcName of Object.keys(item.sources.drops)) {
+    if (dropNpcs.length) {
+        for (const npcName of dropNpcs) {
+            const npcMeta = NPC_META.get(npcName);
             const npc = NPC_DATA[npcName];
             if (!npc) continue;
             if (isNpcBlockedByFilters(npcName, ctx)) continue;
 
-            const isTag = npc.tags?.includes(tag);
+            const isTag = npcMeta?.tags?.has(tag) ?? npc.tags?.includes(tag);
             if (isTag) hasAnyTagSource = true;
 
             const reachable = await canReachNpc(npcName, ctx);
@@ -1097,8 +1141,8 @@ async function hideTag(item, ctx, tag, rolledSet) {
     }
 
     // Other sources (crafting, house actions, etc)
-    if (item.sources?.other) {
-        for (const source of Object.values(item.sources.other)) {
+    if (otherSources.length) {
+        for (const source of otherSources) {
             const isHiddenByFilters = isSourceHiddenByFilters(source, ctx);
             const isIgnoredTagSource = (tag === "LMS" && source.tags?.includes("LMS"))
                 || (tag === "jon" && source.tags?.includes("jon"));
@@ -1131,19 +1175,26 @@ async function hideSkill(item, ctx, skill, rolledSet) {
     let hasAnySkillSource = false;
     let hasSkillLevel = false;
     let hasReachableNonSkillSource = false;
+    const meta = fileStore.itemMeta?.get(item.id);
+    const dropNpcs = meta?.dropNpcs ?? (item.sources?.drops ? Object.keys(item.sources.drops) : []);
+    const otherSources = meta?.otherSources ?? (item.sources?.other ? Object.values(item.sources.other) : []);
 
     // NPC drops
-    if (item.sources?.drops) {
-        for (const npcName of Object.keys(item.sources.drops)) {
+    if (dropNpcs.length) {
+        for (const npcName of dropNpcs) {
+            const npcMeta = NPC_META.get(npcName);
             const npc = NPC_DATA[npcName];
             if (!npc) continue;
             if (isNpcBlockedByFilters(npcName, ctx)) continue;
 
             const isSlayerLockTag = skill === "Slayer"
-                && (npc.tags?.includes("slayer-task-only") || npc.tags?.includes("superior"));
-            const needsSkill = npc.skill?.includes(skill) || isSlayerLockTag;
+                && (npcMeta?.tags?.has("slayer-task-only") || npcMeta?.isSuperior
+                    || npc.tags?.includes("slayer-task-only") || npc.tags?.includes("superior"));
+            const skills = npcMeta?.skills ?? npc.skill;
+            const levels = npcMeta?.levels ?? npc.level;
+            const needsSkill = skills?.includes(skill) || isSlayerLockTag;
             if (needsSkill) hasAnySkillSource = true;
-            if (!ctx.filters?.isSlayerLocked && skillLevel >= npc.level[0]) hasSkillLevel = true;
+            if (!ctx.filters?.isSlayerLocked && levels?.length && skillLevel >= levels[0]) hasSkillLevel = true;
 
             const reachable = await canReachNpc(npcName, ctx);
             if (!reachable) continue;
@@ -1153,8 +1204,8 @@ async function hideSkill(item, ctx, skill, rolledSet) {
     }
 
     // Other sources (crafting, house actions, etc)
-    if (item.sources?.other) {
-        for (const source of Object.values(item.sources.other)) {
+    if (otherSources.length) {
+        for (const source of otherSources) {
             if (isSourceHiddenByFilters(source, ctx)) continue;
 
             const isTag = source.skill?.includes(skill);

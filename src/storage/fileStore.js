@@ -56,6 +56,7 @@ export const fileStore = {
     rolled: null,
     items: null,
     itemsSource: null,
+    itemMeta: null,
     player: null,
 
     async ensureItemsLoaded() {
@@ -64,6 +65,33 @@ export const fileStore = {
         if (!this.items || this.itemsSource != url) {
             this.items = await fetch(url).then(r => r.json());
             this.itemsSource = url;
+            this.itemMeta = new Map(
+                (this.items || []).map((item) => {
+                    const tags = item?.tags
+                        ? (Array.isArray(item.tags) ? item.tags : [item.tags])
+                        : [];
+                    const tagsSet = new Set(tags);
+                    const sources = item?.sources || {};
+                    const drops = sources.drops || null;
+                    const shops = sources.shops || null;
+                    const spawns = sources.spawns || null;
+                    const other = sources.other || null;
+                    const hasEntries = (value) => value && typeof value === "object" && Object.keys(value).length > 0;
+                    return [
+                        item.id,
+                        {
+                            nameLower: String(item?.name || "").toLowerCase(),
+                            tagsSet,
+                            hasFlatpack: tagsSet.has("flatpack"),
+                            hasItemset: tagsSet.has("itemset"),
+                            isClueRewardOnly: tagsSet.has("clue-reward-only"),
+                            hasAnySource: hasEntries(drops) || hasEntries(shops) || hasEntries(spawns) || hasEntries(other),
+                            dropNpcs: drops ? Object.keys(drops) : [],
+                            otherSources: other ? Object.values(other) : []
+                        }
+                    ];
+                })
+            );
         }
     },
 
