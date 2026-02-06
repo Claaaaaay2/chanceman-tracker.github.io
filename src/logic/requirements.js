@@ -319,6 +319,9 @@ function requiresQuest(ctx, questKey, fn) {
 }
 
 export const REQUIREMENT_CHECKS = {
+    canGetRingOfDuelling(ctx) {
+        return has(ctx, 2552) || canCompleteHauntedMine(ctx);
+    },
     canEnterWizardsGuild(ctx) {
         return hasSkillLevel(ctx, "Magic", 66);
     },
@@ -754,6 +757,9 @@ export const REQUIREMENT_CHECKS = {
     canCompleteWhileGuthixSleeps(ctx) {
         return canCompleteWhileGuthixSleeps(ctx);
     },
+    canStartTheGreatBrainRobbery(ctx) {
+        return canStartTheGreatBrainRobbery(ctx);
+    },
     canCompleteTheGreatBrainRobbery(ctx) {
         return canCompleteTheGreatBrainRobbery(ctx);
     },
@@ -1039,8 +1045,8 @@ export const REQUIREMENT_CHECKS = {
     canCompleteEnlightenedJourney(ctx) {
         return canCompleteEnlightenedJourney(ctx);
     },
-    canAccessCooksGuild(ctx) {
-        return hasAnyItems(ctx, [1949, 20205]) && canTrainCooking(ctx);
+    async canAccessCooksGuild(ctx) {
+        return (hasAnyItems(ctx, [1949, 20205]) && canTrainCooking(ctx)) || await canCompleteVarrockDiaryHard(ctx);
     },
     canCompleteRumDeal(ctx) {
         return canCompleteRumDeal(ctx);
@@ -1137,9 +1143,7 @@ export const REQUIREMENT_CHECKS = {
             && await canCompleteDiaryTier(ctx, "Varrock", "Medium");
     },
     async canCompleteVarrockDiaryHard(ctx) {
-        return await canCompleteDiaryTier(ctx, "Varrock", "Easy")
-            && await canCompleteDiaryTier(ctx, "Varrock", "Medium")
-            && await canCompleteDiaryTier(ctx, "Varrock", "Hard");
+        return await canCompleteVarrockDiaryHard(ctx);
     },
     async canCompleteVarrockDiaryElite(ctx) {
         return await canCompleteDiaryTier(ctx, "Varrock", "Easy")
@@ -1771,6 +1775,9 @@ export const REQUIREMENT_CHECKS = {
     hasHarpoon(ctx) {
         return hasAnyItems(ctx, [311, 10129, 21028]);
     },
+    has96FishingForBarbarianFishing(ctx) {
+        return hasSkillLevel(ctx, "Fishing", 96);
+    },
     canMakeTrawlingNet(ctx) {
         return canMakeTrawlingNet(ctx);
     },
@@ -1839,6 +1846,9 @@ export const REQUIREMENT_CHECKS = {
     },
     hasSpinyHelmet(ctx) {
         return has(ctx, 4551);
+    },
+    canMakeAdamantKeel(ctx) {
+        return canMakeAdamantKeel(ctx);
     },
     hasNosePeg(ctx) {
         return has(ctx, 4168);
@@ -2218,6 +2228,9 @@ export const REQUIREMENT_CHECKS = {
     canCompleteBarbarianFarming(ctx) {
         return canCompleteBarbarianFarming(ctx);
     },
+    hasTinderbox(ctx) {
+        return has(ctx, 590);
+    },
     canCompleteBarbarianFiremaking1(ctx) {
         return canCompleteBarbarianFiremaking1(ctx);
     },
@@ -2375,6 +2388,9 @@ export const REQUIREMENT_CHECKS = {
     },
     canEnterNatureAltar(ctx) {
         return canEnterNatureAltar(ctx);
+    },
+    canEnterNatureAltarNoGuardiansOfTheRift(ctx) {
+        return canEnterNatureAltarNoGuardiansOfTheRift(ctx);
     },
     canEnterFireAltar(ctx) {
         return canEnterFireAltar(ctx);
@@ -2656,6 +2672,12 @@ function canCompleteBigChompyBirdHunting(ctx) {
         has(ctx, 2866), // Ogre arrow
         has(ctx, 2876), // Raw chompy
     ]);
+}
+
+async function canCompleteVarrockDiaryHard(ctx) {
+    return await canCompleteDiaryTier(ctx, "Varrock", "Easy")
+        && await canCompleteDiaryTier(ctx, "Varrock", "Medium")
+        && await canCompleteDiaryTier(ctx, "Varrock", "Hard");
 }
 
 function canCompleteBiohazard(ctx) {
@@ -4722,9 +4744,9 @@ function canCompleteTheGrandTree(ctx) {
 
 function canCompleteTheGreatBrainRobbery(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Crafting", 16),
-        hasSkillLevel(ctx, "Construction", 30),
-        hasSkillLevel(ctx, "Prayer", 50),
+        hasSkillLevel(ctx, "Crafting", 16), //
+        hasSkillLevel(ctx, "Construction", 30), //
+        hasSkillLevel(ctx, "Prayer", 50), //
         requiresQuest(ctx, "canCompleteCreatureOfFenkenstrain", canCompleteCreatureOfFenkenstrain), //
         requiresQuest(ctx, "canCompleteCabinFever", canCompleteCabinFever), //
         requiresQuest(ctx, "canCompleteRFDFreeingPiratePete", canCompleteRFDFreeingPiratePete), //
@@ -4733,6 +4755,17 @@ function canCompleteTheGreatBrainRobbery(ctx) {
         hasAnyNails(ctx), //
         has(ctx, 960), // Plank
         has(ctx, 1718), // Holy symbol
+    ]);
+}
+
+function canStartTheGreatBrainRobbery(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Crafting", 16), //
+        hasSkillLevel(ctx, "Construction", 30), //
+        hasSkillLevel(ctx, "Prayer", 50), //
+        requiresQuest(ctx, "canCompleteCreatureOfFenkenstrain", canCompleteCreatureOfFenkenstrain), //
+        requiresQuest(ctx, "canCompleteCabinFever", canCompleteCabinFever), //
+        requiresQuest(ctx, "canCompleteRFDFreeingPiratePete", canCompleteRFDFreeingPiratePete) //
     ]);
 }
 
@@ -5114,6 +5147,8 @@ function canEnterAirAltar(ctx) {
         || hasAnyItems(ctx, [
             1438,
             5527,
+            5516,
+            26804,
         ])
         || canDoGuardiansOfTheRift(ctx);
 }
@@ -5123,6 +5158,8 @@ function canEnterWaterAltar(ctx) {
         || hasAnyItems(ctx, [
             1444,
             5531,
+            5516,
+            26804,
         ])
         || canDoGuardiansOfTheRift(ctx);
 }
@@ -5132,6 +5169,8 @@ function canEnterEarthAltar(ctx) {
         || hasAnyItems(ctx, [
             1440,
             5535,
+            5516,
+            26804,
         ])
         || canDoGuardiansOfTheRift(ctx);
 }
@@ -5150,8 +5189,20 @@ function canEnterNatureAltar(ctx) {
         || hasAnyItems(ctx, [
             1462,
             5541,
+            26798,
+            26801,
         ])
         || canDoGuardiansOfTheRift(ctx);
+}
+
+function canEnterNatureAltarNoGuardiansOfTheRift(ctx) {
+    return requiresQuest(ctx, "canCompleteEnterTheAbyss", canCompleteEnterTheAbyss) //
+        || hasAnyItems(ctx, [
+            1462,
+            5541,
+            26798,
+            26801,
+        ]);
 }
 
 function canEnterFireAltar(ctx) {
@@ -5159,6 +5210,8 @@ function canEnterFireAltar(ctx) {
         || hasAnyItems(ctx, [
             1442,
             5537,
+            5516,
+            26804,
         ])
         || canDoGuardiansOfTheRift(ctx);
 }
@@ -5168,6 +5221,8 @@ function canEnterCosmicAltar(ctx) {
         || hasAnyItems(ctx, [
             1454,
             5539,
+            26798,
+            26801,
         ])
         || canDoGuardiansOfTheRift(ctx);
 }
@@ -7314,6 +7369,21 @@ function canDoSalvaging(ctx) {
                 && has(ctx, 31961) // Broken dragon hook
             )
         );
+}
+
+function canMakeAdamantKeel(ctx) {
+    return (
+        (has(ctx, 32889) // Lead bar
+            && (has(ctx, 32011) // Adamant keel parts
+                || has(ctx, 32032)) // Large adamant keel parts
+        ) || (has(ctx, 32892) // Cupronickel bar
+            || (has(ctx, 32014) // Rune keel parts
+                || has(ctx, 32035)) // Large rune keel parts
+        ) || (has(ctx, 32892) // Cupronickel bar
+            || (has(ctx, 32017) // Dragon keel parts
+                || has(ctx, 32038)) // Large dragon keel parts
+        )
+    );
 }
 
 function canDoSailingCombat(ctx) {

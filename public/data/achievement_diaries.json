@@ -6636,11 +6636,7 @@
                         "skills": {
                             "Farming": 47
                         },
-                        "quests": {
-                            "Creature of Fenkenstrain": "completed",
-                            "Cabin Fever": "completed",
-                            "Recipe for Disaster - Pirate Pete": "completed"
-                        },
+                        "quests": {},
                         "items": [
                             {
                                 "id": 5321,
@@ -6657,7 +6653,9 @@
                         ],
                         "untracked": [],
                         "itemsAny": [],
-                        "rulesAll": [],
+                        "rulesAll": [
+                            "canStartTheGreatBrainRobbery"
+                        ],
                         "rulesAny": []
                     }
                 },
