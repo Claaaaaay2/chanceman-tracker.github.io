@@ -1324,9 +1324,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [
-                        "canCompletePriestInPeril"
-                    ],
+                    "rulesAll": [],
                     "rulesAny": []
                 }
             },
