@@ -7085,6 +7085,7 @@ function hasAnyFilledJug(ctx) {
     return hasAnyItems(ctx, [
         1937,
         1993,
+        1989,
     ]);
 }
 

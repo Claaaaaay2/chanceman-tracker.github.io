@@ -1006,7 +1006,6 @@
     "name": "Adamant 2h sword",
     "image": "adamant_2h_sword.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -1117,7 +1116,6 @@
     "name": "Adamant arrow",
     "image": "adamant_arrow.png",
     "tags": [
-      "f2p",
       "Ranged"
     ],
     "sources": {
@@ -1470,7 +1468,6 @@
     "name": "Adamant axe",
     "image": "adamant_axe.png",
     "tags": [
-      "f2p",
       "Melee",
       "Woodcutting"
     ],
@@ -1624,7 +1621,6 @@
     "name": "Adamant battleaxe",
     "image": "adamant_battleaxe.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -2143,7 +2139,6 @@
     "name": "Adamant chainbody",
     "image": "adamant_chainbody.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -2349,7 +2344,6 @@
     "name": "Adamant dagger",
     "image": "adamant_dagger.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -2764,7 +2758,6 @@
     "name": "Adamant full helm",
     "image": "adamant_full_helm.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -2915,7 +2908,6 @@
     "image": "adamant_full_helm_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -2933,7 +2925,6 @@
     "image": "adamant_full_helm_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -3154,7 +3145,6 @@
     "image": "adamant_helm_(h1).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -3172,7 +3162,6 @@
     "image": "adamant_helm_(h2).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -3190,7 +3179,6 @@
     "image": "adamant_helm_(h3).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -3208,7 +3196,6 @@
     "image": "adamant_helm_(h4).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -3226,7 +3213,6 @@
     "image": "adamant_helm_(h5).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -3428,7 +3414,6 @@
     "name": "Adamant kiteshield",
     "image": "adamant_kiteshield.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -3582,7 +3567,6 @@
     "image": "adamant_kiteshield_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -3600,7 +3584,6 @@
     "image": "adamant_kiteshield_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -3745,7 +3728,6 @@
     "name": "Adamant longsword",
     "image": "adamant_longsword.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -3850,7 +3832,6 @@
     "name": "Adamant mace",
     "image": "adamant_mace.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -3952,7 +3933,6 @@
     "name": "Adamant med helm",
     "image": "adamant_med_helm.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -4069,7 +4049,6 @@
     "name": "Adamant pickaxe",
     "image": "adamant_pickaxe.png",
     "tags": [
-      "f2p",
       "Melee",
       "Mining"
     ],
@@ -4099,7 +4078,6 @@
     "name": "Adamant platebody",
     "image": "adamant_platebody.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -4307,7 +4285,6 @@
     "image": "adamant_platebody_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -4325,7 +4302,6 @@
     "image": "adamant_platebody_(h1).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -4343,7 +4319,6 @@
     "image": "adamant_platebody_(h2).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -4361,7 +4336,6 @@
     "image": "adamant_platebody_(h3).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -4379,7 +4353,6 @@
     "image": "adamant_platebody_(h4).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -4397,7 +4370,6 @@
     "image": "adamant_platebody_(h5).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -4415,7 +4387,6 @@
     "image": "adamant_platebody_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -4432,7 +4403,6 @@
     "name": "Adamant platelegs",
     "image": "adamant_platelegs.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -4556,7 +4526,7 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Smithing Adamant platlegs": {
+        "Smithing Adamant platelegs": {
           "notes": "Requires an Adamantite bar and a Hammer.",
           "rule": {
             "all": [
@@ -4583,7 +4553,6 @@
     "image": "adamant_platelegs_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -4601,7 +4570,6 @@
     "image": "adamant_platelegs_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -4618,7 +4586,6 @@
     "name": "Adamant plateskirt",
     "image": "adamant_plateskirt.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -4700,7 +4667,6 @@
     "image": "adamant_plateskirt_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -4718,7 +4684,6 @@
     "image": "adamant_plateskirt_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -4735,7 +4700,6 @@
     "name": "Adamant scimitar",
     "image": "adamant_scimitar.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -4915,7 +4879,6 @@
     "image": "adamant_shield_(h1).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -4933,7 +4896,6 @@
     "image": "adamant_shield_(h2).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -4951,7 +4913,6 @@
     "image": "adamant_shield_(h3).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -4969,7 +4930,6 @@
     "image": "adamant_shield_(h4).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -4987,7 +4947,6 @@
     "image": "adamant_shield_(h5).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -5201,7 +5160,6 @@
     "name": "Adamant sq shield",
     "image": "adamant_sq_shield.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -5303,7 +5261,6 @@
     "name": "Adamant sword",
     "image": "adamant_sword.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -5471,7 +5428,6 @@
     "name": "Adamant warhammer",
     "image": "adamant_warhammer.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -5558,7 +5514,6 @@
     "name": "Adamantite bar",
     "image": "adamantite_bar.png",
     "tags": [
-      "f2p",
       "Smithing"
     ],
     "sources": {
@@ -5873,7 +5828,6 @@
     "name": "Adamantite ore",
     "image": "adamantite_ore.png",
     "tags": [
-      "f2p",
       "Smithing"
     ],
     "sources": {
@@ -6725,7 +6679,6 @@
     "name": "Air rune",
     "image": "air_rune.png",
     "tags": [
-      "f2p",
       "Magic"
     ],
     "sources": {
@@ -7189,7 +7142,6 @@
     "name": "Air talisman",
     "image": "air_talisman.png",
     "tags": [
-      "f2p",
       "Runecraft"
     ],
     "sources": {
@@ -7277,7 +7229,6 @@
     "name": "Air tiara",
     "image": "air_tiara.png",
     "tags": [
-      "f2p",
       "Runecraft"
     ],
     "sources": {
@@ -7877,7 +7828,6 @@
     "name": "Amulet mould",
     "image": "amulet_mould.png",
     "tags": [
-      "f2p",
       "Crafting"
     ],
     "sources": {
@@ -7914,9 +7864,6 @@
     "id": 1478,
     "name": "Amulet of accuracy",
     "image": "amulet_of_accuracy.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "other": {
         "Questing": {
@@ -8031,7 +7978,6 @@
     "name": "Amulet of defence",
     "image": "amulet_of_defence.png",
     "tags": [
-      "f2p",
       "Melee armours",
       "Ranged armours",
       "Magic armours"
@@ -8082,7 +8028,6 @@
     "image": "amulet_of_defence_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours",
       "Ranged armours",
       "Magic armours"
@@ -8305,7 +8250,6 @@
     "name": "Amulet of magic",
     "image": "amulet_of_magic.png",
     "tags": [
-      "f2p",
       "Magic armours"
     ],
     "sources": {
@@ -8366,7 +8310,6 @@
     "image": "amulet_of_magic_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Magic armours"
     ],
     "sources": {
@@ -8383,7 +8326,6 @@
     "name": "Amulet of power",
     "image": "amulet_of_power.png",
     "tags": [
-      "f2p",
       "Melee armours",
       "Ranged armours",
       "Magic armours"
@@ -8455,7 +8397,6 @@
     "image": "amulet_of_power_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours",
       "Ranged armours",
       "Magic armours"
@@ -8502,7 +8443,6 @@
     "name": "Amulet of strength",
     "image": "amulet_of_strength.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -8718,7 +8658,6 @@
     "name": "Anchovies",
     "image": "anchovies.png",
     "tags": [
-      "f2p",
       "Food",
       "Cooking"
     ],
@@ -8751,7 +8690,6 @@
     "name": "Anchovy pizza",
     "image": "anchovy_pizza.png",
     "tags": [
-      "f2p",
       "Food"
     ],
     "sources": {
@@ -9560,7 +9498,6 @@
     "image": "ancient_full_helm.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -9617,7 +9554,6 @@
     "image": "ancient_kiteshield.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -9941,7 +9877,6 @@
     "image": "ancient_platebody.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -9959,7 +9894,6 @@
     "image": "ancient_platelegs.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -9977,7 +9911,6 @@
     "image": "ancient_plateskirt.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -10619,7 +10552,6 @@
     "name": "Anti-dragon shield",
     "image": "anti-dragon_shield.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -11736,7 +11668,6 @@
     "name": "Antipoison(1)",
     "image": "antipoison(1).png",
     "tags": [
-      "f2p",
       "Potion"
     ],
     "sources": {
@@ -11777,7 +11708,6 @@
     "name": "Antipoison(2)",
     "image": "antipoison(2).png",
     "tags": [
-      "f2p",
       "Potion"
     ],
     "sources": {
@@ -11815,7 +11745,6 @@
     "name": "Antipoison(3)",
     "image": "antipoison(3).png",
     "tags": [
-      "f2p",
       "Potion"
     ],
     "sources": {
@@ -11882,7 +11811,6 @@
     "name": "Antipoison(4)",
     "image": "antipoison(4).png",
     "tags": [
-      "f2p",
       "Potion"
     ],
     "sources": {
@@ -12047,7 +11975,6 @@
     "name": "Apple pie",
     "image": "apple_pie.png",
     "tags": [
-      "f2p",
       "Food"
     ],
     "sources": {
@@ -13053,7 +12980,6 @@
     "image": "armadyl_full_helm.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -13157,7 +13083,6 @@
     "image": "armadyl_kiteshield.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -13327,7 +13252,6 @@
     "image": "armadyl_platebody.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -13345,7 +13269,6 @@
     "image": "armadyl_platelegs.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -13363,7 +13286,6 @@
     "image": "armadyl_plateskirt.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -13610,9 +13532,6 @@
     "id": 1905,
     "name": "Asgarnian ale",
     "image": "asgarnian_ale.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Dinky the drink troll": {
@@ -13909,9 +13828,6 @@
     "id": 592,
     "name": "Ashes",
     "image": "ashes.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Abyssal guardian": {
@@ -15420,7 +15336,6 @@
     "name": "Ball of wool",
     "image": "ball_of_wool.png",
     "tags": [
-      "f2p",
       "Crafting"
     ],
     "sources": {
@@ -15455,6 +15370,14 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Crafting a Ball of wool": {
+          "notes": "Requires some Wool.",
+          "rule": {
+            "has": 1737
+          }
+        }
       }
     }
   },
@@ -15502,7 +15425,6 @@
     "name": "Banana",
     "image": "banana.png",
     "tags": [
-      "f2p",
       "Food"
     ],
     "sources": {
@@ -16005,7 +15927,6 @@
     "image": "bandos_full_helm.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -16078,7 +15999,6 @@
     "image": "bandos_kiteshield.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -16248,7 +16168,6 @@
     "image": "bandos_platebody.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -16266,7 +16185,6 @@
     "image": "bandos_platelegs.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -16284,7 +16202,6 @@
     "image": "bandos_plateskirt.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -17713,8 +17630,7 @@
     "name": "Bear feet",
     "image": "bear_feet.png",
     "tags": [
-      "clue-reward-only",
-      "f2p"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -17729,9 +17645,6 @@
     "id": 948,
     "name": "Bear fur",
     "image": "bear_fur.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Bear Cub": {
@@ -17786,9 +17699,6 @@
     "id": 1917,
     "name": "Beer",
     "image": "beer.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Drink troll queen": {
@@ -17878,6 +17788,11 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Purchasing through dialogue": {
+          "notes": "Purchase from a bartender with dialogue."
+        }
       }
     }
   },
@@ -17927,9 +17842,6 @@
     "id": 1919,
     "name": "Beer glass",
     "image": "beer_glass.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Wooden shelves 2": {
@@ -18587,7 +18499,6 @@
     "name": "Big bones",
     "image": "big_bones.png",
     "tags": [
-      "f2p",
       "Prayer"
     ],
     "sources": {
@@ -19216,7 +19127,6 @@
     "name": "Black 2h sword",
     "image": "black_2h_sword.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -19281,7 +19191,6 @@
     "name": "Black axe",
     "image": "black_axe.png",
     "tags": [
-      "f2p",
       "Melee",
       "Woodcutting"
     ],
@@ -19338,7 +19247,6 @@
     "name": "Black battleaxe",
     "image": "black_battleaxe.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -19384,9 +19292,6 @@
     "id": 1474,
     "name": "Black bead",
     "image": "black_bead.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Yama Junk": {
@@ -19507,9 +19412,6 @@
     "id": 1019,
     "name": "Black cape",
     "image": "black_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Highwayman No hood": {
@@ -19543,7 +19445,6 @@
     "name": "Black chainbody",
     "image": "black_chainbody.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -19881,7 +19782,6 @@
     "name": "Black dagger",
     "image": "black_dagger.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -20465,7 +20365,6 @@
     "name": "Black full helm",
     "image": "black_full_helm.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -20516,7 +20415,6 @@
     "image": "black_full_helm_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -20534,7 +20432,6 @@
     "image": "black_full_helm_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -20646,7 +20543,6 @@
     "image": "black_helm_(h1).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -20664,7 +20560,6 @@
     "image": "black_helm_(h2).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -20682,7 +20577,6 @@
     "image": "black_helm_(h3).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -20700,7 +20594,6 @@
     "image": "black_helm_(h4).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -20718,7 +20611,6 @@
     "image": "black_helm_(h5).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -20735,7 +20627,6 @@
     "name": "Black kiteshield",
     "image": "black_kiteshield.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -20792,7 +20683,6 @@
     "image": "black_kiteshield_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -20810,7 +20700,6 @@
     "image": "black_kiteshield_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -20980,7 +20869,6 @@
     "name": "Black longsword",
     "image": "black_longsword.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -21051,7 +20939,6 @@
     "name": "Black mace",
     "image": "black_mace.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -21136,7 +21023,6 @@
     "name": "Black med helm",
     "image": "black_med_helm.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -21216,7 +21102,6 @@
     "image": "black_pickaxe.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee",
       "Mining"
     ],
@@ -21237,7 +21122,6 @@
     "name": "Black platebody",
     "image": "black_platebody.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -21297,7 +21181,6 @@
     "image": "black_platebody_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -21315,7 +21198,6 @@
     "image": "black_platebody_(h1).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -21333,7 +21215,6 @@
     "image": "black_platebody_(h2).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -21351,7 +21232,6 @@
     "image": "black_platebody_(h3).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -21369,7 +21249,6 @@
     "image": "black_platebody_(h4).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -21387,7 +21266,6 @@
     "image": "black_platebody_(h5).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -21405,7 +21283,6 @@
     "image": "black_platebody_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -21422,7 +21299,6 @@
     "name": "Black platelegs",
     "image": "black_platelegs.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -21485,7 +21361,6 @@
     "image": "black_platelegs_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -21503,7 +21378,6 @@
     "image": "black_platelegs_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -21520,7 +21394,6 @@
     "name": "Black plateskirt",
     "image": "black_plateskirt.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -21580,7 +21453,6 @@
     "image": "black_plateskirt_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -21598,7 +21470,6 @@
     "image": "black_plateskirt_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -21614,9 +21485,6 @@
     "id": 581,
     "name": "Black robe",
     "image": "black_robe.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Combat path starter kit": {
@@ -21671,7 +21539,6 @@
     "name": "Black scimitar",
     "image": "black_scimitar.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -21783,7 +21650,6 @@
     "image": "black_shield_(h1).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -21801,7 +21667,6 @@
     "image": "black_shield_(h2).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -21819,7 +21684,6 @@
     "image": "black_shield_(h3).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -21837,7 +21701,6 @@
     "image": "black_shield_(h4).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -21855,7 +21718,6 @@
     "image": "black_shield_(h5).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -21871,9 +21733,6 @@
     "id": 1015,
     "name": "Black skirt",
     "image": "black_skirt.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Combat path starter kit": {
@@ -21894,8 +21753,7 @@
     "name": "Black skirt (g)",
     "image": "black_skirt_(g).png",
     "tags": [
-      "clue-reward-only",
-      "f2p"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -21911,8 +21769,7 @@
     "name": "Black skirt (t)",
     "image": "black_skirt_(t).png",
     "tags": [
-      "clue-reward-only",
-      "f2p"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -22115,7 +21972,6 @@
     "name": "Black sq shield",
     "image": "black_sq_shield.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -22174,7 +22030,6 @@
     "name": "Black sword",
     "image": "black_sword.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -22257,9 +22112,6 @@
     "id": 2524,
     "name": "Black toy horsey",
     "image": "black_toy_horsey.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -22372,7 +22224,6 @@
     "name": "Black warhammer",
     "image": "black_warhammer.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -22551,7 +22402,6 @@
     "image": "black_wizard_hat_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Magic armours"
     ],
     "sources": {
@@ -22569,7 +22419,6 @@
     "image": "black_wizard_hat_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Magic armours"
     ],
     "sources": {
@@ -22587,7 +22436,6 @@
     "image": "black_wizard_robe_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Magic armours"
     ],
     "sources": {
@@ -22605,7 +22453,6 @@
     "image": "black_wizard_robe_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Magic armours"
     ],
     "sources": {
@@ -25159,9 +25006,6 @@
     "id": 1021,
     "name": "Blue cape",
     "image": "blue_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -25597,9 +25441,6 @@
     "id": 1767,
     "name": "Blue dye",
     "image": "blue_dye.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -25760,9 +25601,6 @@
     "id": 1055,
     "name": "Blue halloween mask",
     "image": "blue_halloween_mask.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "other": {
         "Complete a Halloween holiday event": {}
@@ -25958,9 +25796,6 @@
     "id": 1042,
     "name": "Blue partyhat",
     "image": "blue_partyhat.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Christmas cracker": {
@@ -25999,9 +25834,6 @@
     "id": 1011,
     "name": "Blue skirt",
     "image": "blue_skirt.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -26014,8 +25846,7 @@
     "name": "Blue skirt (g)",
     "image": "blue_skirt_(g).png",
     "tags": [
-      "clue-reward-only",
-      "f2p"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -26031,8 +25862,7 @@
     "name": "Blue skirt (t)",
     "image": "blue_skirt_(t).png",
     "tags": [
-      "clue-reward-only",
-      "f2p"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -26078,7 +25908,6 @@
     "name": "Blue wizard hat",
     "image": "blue_wizard_hat.png",
     "tags": [
-      "f2p",
       "Magic armours"
     ],
     "sources": {
@@ -26108,7 +25937,6 @@
     "image": "blue_wizard_hat_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Magic armours"
     ],
     "sources": {
@@ -26126,7 +25954,6 @@
     "image": "blue_wizard_hat_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Magic armours"
     ],
     "sources": {
@@ -26143,7 +25970,6 @@
     "name": "Blue wizard robe",
     "image": "blue_wizard_robe.png",
     "tags": [
-      "f2p",
       "Magic armours"
     ],
     "sources": {
@@ -26167,7 +25993,6 @@
     "image": "blue_wizard_robe_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Magic armours"
     ],
     "sources": {
@@ -26185,7 +26010,6 @@
     "image": "blue_wizard_robe_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Magic armours"
     ],
     "sources": {
@@ -26403,7 +26227,6 @@
     "name": "Body rune",
     "image": "body_rune.png",
     "tags": [
-      "f2p",
       "Magic"
     ],
     "sources": {
@@ -26618,7 +26441,6 @@
     "name": "Body talisman",
     "image": "body_talisman.png",
     "tags": [
-      "f2p",
       "Runecraft"
     ],
     "sources": {
@@ -26731,7 +26553,6 @@
     "name": "Body tiara",
     "image": "body_tiara.png",
     "tags": [
-      "f2p",
       "Runecraft"
     ],
     "sources": {
@@ -27035,9 +26856,6 @@
     "id": 25139,
     "name": "Bone fragments",
     "image": "bone_fragments.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "other": {
         "Crafting some Bone fragments": {
@@ -27087,7 +26905,6 @@
     "name": "Bones",
     "image": "bones.png",
     "tags": [
-      "f2p",
       "Prayer"
     ],
     "sources": {
@@ -29128,9 +28945,6 @@
     "id": 1923,
     "name": "Bowl",
     "image": "bowl.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Oak shelves 1": {
@@ -29201,9 +29015,6 @@
     "id": 1921,
     "name": "Bowl of water",
     "image": "bowl_of_water.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Zombie (Tarn's Lair) Low level": {
@@ -29417,9 +29228,6 @@
     "id": 983,
     "name": "Brass key",
     "image": "brass_key.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "spawns": {
         "Yes": "No requirements"
@@ -29431,9 +29239,6 @@
     "id": 1009,
     "name": "Brass necklace",
     "image": "brass_necklace.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Cave goblin (monster)": {
@@ -29457,7 +29262,6 @@
     "name": "Bread",
     "image": "bread.png",
     "tags": [
-      "f2p",
       "Food"
     ],
     "sources": {
@@ -29529,7 +29333,6 @@
     "name": "Bread dough",
     "image": "bread_dough.png",
     "tags": [
-      "f2p",
       "Cooking"
     ],
     "sources": {
@@ -29768,7 +29571,6 @@
     "name": "Bronze 2h sword",
     "image": "bronze_2h_sword.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -29810,7 +29612,6 @@
     "name": "Bronze arrow",
     "image": "bronze_arrow.png",
     "tags": [
-      "f2p",
       "Ranged"
     ],
     "sources": {
@@ -30164,7 +29965,6 @@
     "name": "Bronze axe",
     "image": "bronze_axe.png",
     "tags": [
-      "f2p",
       "Woodcutting"
     ],
     "sources": {
@@ -30256,7 +30056,6 @@
     "name": "Bronze bar",
     "image": "bronze_bar.png",
     "tags": [
-      "f2p",
       "Smithing"
     ],
     "sources": {
@@ -30336,7 +30135,6 @@
     "name": "Bronze battleaxe",
     "image": "bronze_battleaxe.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -30399,7 +30197,6 @@
     "name": "Bronze bolts",
     "image": "bronze_bolts.png",
     "tags": [
-      "f2p",
       "Ranged"
     ],
     "sources": {
@@ -30753,7 +30550,6 @@
     "name": "Bronze chainbody",
     "image": "bronze_chainbody.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -30900,7 +30696,6 @@
     "name": "Bronze dagger",
     "image": "bronze_dagger.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -31233,7 +31028,6 @@
     "name": "Bronze full helm",
     "image": "bronze_full_helm.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -31291,7 +31085,6 @@
     "image": "bronze_full_helm_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -31309,7 +31102,6 @@
     "image": "bronze_full_helm_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -31707,7 +31499,6 @@
     "name": "Bronze kiteshield",
     "image": "bronze_kiteshield.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -31756,7 +31547,6 @@
     "image": "bronze_kiteshield_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -31774,7 +31564,6 @@
     "image": "bronze_kiteshield_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -31978,7 +31767,6 @@
     "name": "Bronze longsword",
     "image": "bronze_longsword.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -32032,7 +31820,6 @@
     "name": "Bronze mace",
     "image": "bronze_mace.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -32074,7 +31861,6 @@
     "name": "Bronze med helm",
     "image": "bronze_med_helm.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -32232,7 +32018,6 @@
     "name": "Bronze pickaxe",
     "image": "bronze_pickaxe.png",
     "tags": [
-      "f2p",
       "Mining"
     ],
     "sources": {
@@ -32318,7 +32103,6 @@
     "name": "Bronze platebody",
     "image": "bronze_platebody.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -32361,7 +32145,6 @@
     "image": "bronze_platebody_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -32379,7 +32162,6 @@
     "image": "bronze_platebody_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -32396,7 +32178,6 @@
     "name": "Bronze platelegs",
     "image": "bronze_platelegs.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -32439,7 +32220,6 @@
     "image": "bronze_platelegs_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -32457,7 +32237,6 @@
     "image": "bronze_platelegs_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -32474,7 +32253,6 @@
     "name": "Bronze plateskirt",
     "image": "bronze_plateskirt.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -32523,7 +32301,6 @@
     "image": "bronze_plateskirt_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -32541,7 +32318,6 @@
     "image": "bronze_plateskirt_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -32558,7 +32334,6 @@
     "name": "Bronze scimitar",
     "image": "bronze_scimitar.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -32840,7 +32615,6 @@
     "name": "Bronze sq shield",
     "image": "bronze_sq_shield.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -32885,7 +32659,6 @@
     "name": "Bronze sword",
     "image": "bronze_sword.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -33013,7 +32786,6 @@
     "name": "Bronze warhammer",
     "image": "bronze_warhammer.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -33255,9 +33027,6 @@
     "id": 1757,
     "name": "Brown apron",
     "image": "brown_apron.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Tool store 3": {
@@ -33290,9 +33059,6 @@
     "id": 2520,
     "name": "Brown toy horsey",
     "image": "brown_toy_horsey.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -33351,9 +33117,6 @@
     "id": 22372,
     "name": "Bryophyta's essence",
     "image": "bryophyta's_essence.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Chest (Bryophyta's lair) Free-to-play": {
@@ -33371,7 +33134,6 @@
     "name": "Bryophyta's staff (uncharged)",
     "image": "bryophyta's_staff_(uncharged).png",
     "tags": [
-      "f2p",
       "Magic"
     ],
     "sources": {
@@ -33395,7 +33157,6 @@
     "name": "Bucket",
     "image": "bucket.png",
     "tags": [
-      "f2p",
       "Hunter",
       "Farming"
     ],
@@ -33574,7 +33335,7 @@
     "name": "Bucket of milk",
     "image": "bucket_of_milk.png",
     "tags": [
-      "f2p"
+      "Cooking"
     ],
     "sources": {
       "drops": {
@@ -33661,7 +33422,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 916,
@@ -33697,7 +33461,7 @@
     "name": "Bucket of water",
     "image": "bucket_of_water.png",
     "tags": [
-      "f2p"
+      "Cooking"
     ],
     "sources": {
       "drops": {
@@ -33928,7 +33692,6 @@
     "name": "Burnt bones",
     "image": "burnt_bones.png",
     "tags": [
-      "f2p",
       "Prayer"
     ],
     "sources": {
@@ -34012,7 +33775,6 @@
     "name": "Cabbage",
     "image": "cabbage.png",
     "tags": [
-      "f2p",
       "Food"
     ],
     "sources": {
@@ -35247,9 +35009,6 @@
     "id": 753,
     "name": "Cadava berries",
     "image": "cadava_berries.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Cadava bush (wild)": {
@@ -35343,7 +35102,6 @@
     "name": "Cake",
     "image": "cake.png",
     "tags": [
-      "f2p",
       "Food"
     ],
     "sources": {
@@ -35401,6 +35159,10 @@
               },
               {
                 "has": 1887
+              },
+              {
+                "skill": "Cooking",
+                "level": 40
               }
             ]
           }
@@ -35413,9 +35175,6 @@
     "id": 1887,
     "name": "Cake tin",
     "image": "cake_tin.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Wooden shelves 3": {
@@ -36425,9 +36184,6 @@
     "id": 11079,
     "name": "Castle wars bracelet(3)",
     "image": "castle_wars_bracelet.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "other": {
         "Enchanting jewellery": {
@@ -36874,7 +36630,6 @@
     "name": "Chaos rune",
     "image": "chaos_rune.png",
     "tags": [
-      "f2p",
       "Magic"
     ],
     "sources": {
@@ -37868,9 +37623,6 @@
     "id": 973,
     "name": "Charcoal",
     "image": "charcoal.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Burnt tree": {
@@ -37956,7 +37708,6 @@
     "name": "Cheese",
     "image": "cheese.png",
     "tags": [
-      "f2p",
       "Food",
       "Cooking"
     ],
@@ -38267,9 +38018,6 @@
     "id": 1949,
     "name": "Chef's hat",
     "image": "chef's_hat.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Teak shelves 2": {
@@ -38451,7 +38199,6 @@
     "name": "Chisel",
     "image": "chisel.png",
     "tags": [
-      "f2p",
       "Crafting",
       "Fletching"
     ],
@@ -38627,7 +38374,6 @@
     "name": "Chocolate bar",
     "image": "chocolate_bar.png",
     "tags": [
-      "f2p",
       "Food",
       "Cooking"
     ],
@@ -38707,7 +38453,6 @@
     "name": "Chocolate cake",
     "image": "chocolate_cake.png",
     "tags": [
-      "f2p",
       "Food"
     ],
     "sources": {
@@ -38778,7 +38523,6 @@
     "name": "Chocolate dust",
     "image": "chocolate_dust.png",
     "tags": [
-      "f2p",
       "Cooking"
     ],
     "sources": {
@@ -38976,9 +38720,6 @@
     "id": 962,
     "name": "Christmas cracker",
     "image": "christmas_cracker.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "other": {
         "Complete a Christmas holiday event": {}
@@ -39269,9 +39010,6 @@
     "id": 434,
     "name": "Clay",
     "image": "clay.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Clay rocks": {
@@ -39499,7 +39237,6 @@
     "name": "Coal",
     "image": "coal.png",
     "tags": [
-      "f2p",
       "Smithing"
     ],
     "sources": {
@@ -40124,7 +39861,6 @@
     "name": "Coif",
     "image": "coif.png",
     "tags": [
-      "f2p",
       "Ranged armours"
     ],
     "sources": {
@@ -41029,7 +40765,6 @@
     "name": "Cooked chicken",
     "image": "cooked_chicken.png",
     "tags": [
-      "f2p",
       "Food"
     ],
     "sources": {
@@ -41296,7 +41031,6 @@
     "name": "Cooked meat",
     "image": "cooked_meat.png",
     "tags": [
-      "f2p",
       "Food",
       "Cooking"
     ],
@@ -41332,7 +41066,7 @@
       },
       "other": {
         "Cooking a Cooked meat": {
-          "notes": "Requires Raw beef, bear meat, boar meat, rat meat or yak meat.",
+          "notes": "Requires Raw beef, Raw bear meat, Raw boar meat or Raw rat meat.",
           "rule": {
             "all": [
               {
@@ -41611,9 +41345,6 @@
     "id": 1955,
     "name": "Cooking apple",
     "image": "cooking_apple.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Apple tree": {
@@ -41643,7 +41374,6 @@
     "name": "Copper ore",
     "image": "copper_ore.png",
     "tags": [
-      "f2p",
       "Smithing"
     ],
     "sources": {
@@ -41920,7 +41650,6 @@
     "name": "Cosmic rune",
     "image": "cosmic_rune.png",
     "tags": [
-      "f2p",
       "Magic"
     ],
     "sources": {
@@ -42443,9 +42172,6 @@
     "id": 1739,
     "name": "Cowhide",
     "image": "cowhide.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Cow": {
@@ -42646,7 +42372,6 @@
     "name": "Crossbow",
     "image": "crossbow.png",
     "tags": [
-      "f2p",
       "Ranged"
     ],
     "sources": {
@@ -43286,7 +43011,6 @@
     "name": "Cursed amulet of magic",
     "image": "cursed_amulet_of_magic.png",
     "tags": [
-      "f2p",
       "Magic armours"
     ],
     "sources": {
@@ -43789,7 +43513,6 @@
     "name": "Death rune",
     "image": "death_rune.png",
     "tags": [
-      "f2p",
       "Magic"
     ],
     "sources": {
@@ -44933,8 +44656,7 @@
     "name": "Demon feet",
     "image": "demon_feet.png",
     "tags": [
-      "clue-reward-only",
-      "f2p"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -45360,7 +45082,6 @@
     "name": "Diamond",
     "image": "diamond.png",
     "tags": [
-      "f2p",
       "Crafting"
     ],
     "sources": {
@@ -45477,9 +45198,6 @@
     "id": 1700,
     "name": "Diamond amulet",
     "image": "diamond_amulet.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Great white shark": {
@@ -45526,9 +45244,6 @@
     "id": 1681,
     "name": "Diamond amulet (u)",
     "image": "diamond_amulet_(u).png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "other": {
         "Crafting a Diamond amulet (u)": {
@@ -45793,9 +45508,6 @@
     "id": 1662,
     "name": "Diamond necklace",
     "image": "diamond_necklace.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Casket (Reward pool)": {
@@ -45846,9 +45558,6 @@
     "id": 1643,
     "name": "Diamond ring",
     "image": "diamond_ring.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Albatross": {
@@ -45986,9 +45695,6 @@
     "id": 981,
     "name": "Disk of returning",
     "image": "disk_of_returning.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -51676,7 +51382,6 @@
     "name": "Dragonstone full helm",
     "image": "dragonstone_full_helm.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -51709,7 +51414,6 @@
     "name": "Dragonstone platebody",
     "image": "dragonstone_platebody.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -51726,7 +51430,6 @@
     "name": "Dragonstone platelegs",
     "image": "dragonstone_platelegs.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -52034,9 +51737,6 @@
     "id": 30328,
     "name": "Dust",
     "image": "dust.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Barrel (Twilight Temple)": {
@@ -52715,9 +52415,6 @@
     "id": 1913,
     "name": "Dwarven stout",
     "image": "dwarven_stout.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Giant rockslug": {
@@ -53159,7 +52856,6 @@
     "name": "Earth rune",
     "image": "earth_rune.png",
     "tags": [
-      "f2p",
       "Magic"
     ],
     "sources": {
@@ -53683,7 +53379,6 @@
     "name": "Earth talisman",
     "image": "earth_talisman.png",
     "tags": [
-      "f2p",
       "Runecraft"
     ],
     "sources": {
@@ -53838,7 +53533,6 @@
     "name": "Earth tiara",
     "image": "earth_tiara.png",
     "tags": [
-      "f2p",
       "Runecraft"
     ],
     "sources": {
@@ -53888,9 +53582,6 @@
     "id": 1961,
     "name": "Easter egg",
     "image": "easter_egg.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "other": {
         "Complete an Easter holiday event": {}
@@ -54276,7 +53967,7 @@
     "name": "Egg",
     "image": "egg.png",
     "tags": [
-      "f2p"
+      "Cooking"
     ],
     "sources": {
       "drops": {
@@ -54738,9 +54429,6 @@
     "id": 24024,
     "name": "Elven legwear",
     "image": "elven_legwear.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "canCompleteSongOfTheElves"
@@ -54768,9 +54456,6 @@
     "id": 24018,
     "name": "Elven skirt (white)",
     "image": "elven_skirt_(white).png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "canCompleteSongOfTheElves"
@@ -54782,9 +54467,6 @@
     "id": 24012,
     "name": "Elven skirt (yellow)",
     "image": "elven_skirt_(yellow).png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "canCompleteSongOfTheElves"
@@ -54796,9 +54478,6 @@
     "id": 24027,
     "name": "Elven top (white vest)",
     "image": "elven_top_(white_vest).png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "canCompleteSongOfTheElves"
@@ -54810,9 +54489,6 @@
     "id": 24015,
     "name": "Elven top (white)",
     "image": "elven_top_(white).png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "canCompleteSongOfTheElves"
@@ -54824,9 +54500,6 @@
     "id": 24021,
     "name": "Elven top (yellow vest)",
     "image": "elven_top_(yellow_vest).png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "canCompleteSongOfTheElves"
@@ -54838,9 +54511,6 @@
     "id": 24009,
     "name": "Elven top (yellow)",
     "image": "elven_top_(yellow).png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "canCompleteSongOfTheElves"
@@ -54907,7 +54577,6 @@
     "name": "Emerald",
     "image": "emerald.png",
     "tags": [
-      "f2p",
       "Crafting"
     ],
     "sources": {
@@ -55004,9 +54673,6 @@
     "id": 1696,
     "name": "Emerald amulet",
     "image": "emerald_amulet.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Small chest": {
@@ -55044,9 +54710,6 @@
     "id": 1677,
     "name": "Emerald amulet (u)",
     "image": "emerald_amulet_(u).png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Mummy (Ancient Pyramid)": {
@@ -55308,9 +54971,6 @@
     "id": 1658,
     "name": "Emerald necklace",
     "image": "emerald_necklace.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Casket (Reward pool)": {
@@ -55364,9 +55024,6 @@
     "id": 1639,
     "name": "Emerald ring",
     "image": "emerald_ring.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Tiger shark": {
@@ -56120,7 +55777,6 @@
     "name": "Energy potion(1)",
     "image": "energy_potion(1).png",
     "tags": [
-      "f2p",
       "Potion"
     ],
     "sources": {
@@ -56150,7 +55806,6 @@
     "name": "Energy potion(2)",
     "image": "energy_potion(2).png",
     "tags": [
-      "f2p",
       "Potion"
     ],
     "sources": {
@@ -56180,7 +55835,6 @@
     "name": "Energy potion(3)",
     "image": "energy_potion(3).png",
     "tags": [
-      "f2p",
       "Potion"
     ],
     "sources": {
@@ -56244,7 +55898,6 @@
     "name": "Energy potion(4)",
     "image": "energy_potion(4).png",
     "tags": [
-      "f2p",
       "Potion"
     ],
     "sources": {
@@ -58398,9 +58051,6 @@
     "id": 221,
     "name": "Eye of newt",
     "image": "eye_of_newt.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Eye of newt pack": {
@@ -58798,7 +58448,6 @@
     "name": "Feather",
     "image": "feather.png",
     "tags": [
-      "f2p",
       "Fishing",
       "Fletching"
     ],
@@ -59022,9 +58671,6 @@
     "id": 28177,
     "name": "Felling axe handle",
     "image": "felling_axe_handle.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "other": {
         "Special shop": {
@@ -59118,7 +58764,6 @@
     "name": "Fiendish ashes",
     "image": "fiendish_ashes.png",
     "tags": [
-      "f2p",
       "Prayer"
     ],
     "sources": {
@@ -59417,7 +59062,6 @@
     "name": "Fire rune",
     "image": "fire_rune.png",
     "tags": [
-      "f2p",
       "Magic"
     ],
     "sources": {
@@ -60004,7 +59648,6 @@
     "name": "Fire talisman",
     "image": "fire_talisman.png",
     "tags": [
-      "f2p",
       "Runecraft"
     ],
     "sources": {
@@ -60102,7 +59745,6 @@
     "name": "Fire tiara",
     "image": "fire_tiara.png",
     "tags": [
-      "f2p",
       "Runecraft"
     ],
     "sources": {
@@ -60286,9 +59928,6 @@
     "id": 272,
     "name": "Fish food",
     "image": "fish_food.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "spawns": {
         "Yes": "No requirements"
@@ -60383,7 +60022,6 @@
     "name": "Fishing bait",
     "image": "fishing_bait.png",
     "tags": [
-      "f2p",
       "Fishing"
     ],
     "sources": {
@@ -60839,7 +60477,6 @@
     "name": "Fishing rod",
     "image": "fishing_rod.png",
     "tags": [
-      "f2p",
       "Fishing"
     ],
     "sources": {
@@ -61121,7 +60758,6 @@
     "name": "Fly fishing rod",
     "image": "fly_fishing_rod.png",
     "tags": [
-      "f2p",
       "Fishing"
     ],
     "sources": {
@@ -61737,8 +61373,7 @@
     "name": "Frog slippers",
     "image": "frog_slippers.png",
     "tags": [
-      "clue-reward-only",
-      "f2p"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -61998,9 +61633,6 @@
     "id": 6814,
     "name": "Fur",
     "image": "fur.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Alexis": {
@@ -62190,9 +61822,6 @@
     "id": 1550,
     "name": "Garlic",
     "image": "garlic.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Closed chest (Myreque Hideout)": {
@@ -62476,7 +62105,6 @@
     "image": "gilded_2h_sword.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -62564,7 +62192,6 @@
     "image": "gilded_axe.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee",
       "Woodcutting"
     ],
@@ -62684,7 +62311,6 @@
     "image": "gilded_chainbody.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -62770,7 +62396,6 @@
     "image": "gilded_d'hide_body.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Ranged armours"
     ],
     "sources": {
@@ -62791,7 +62416,6 @@
     "image": "gilded_d'hide_chaps.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Ranged armours"
     ],
     "sources": {
@@ -62812,7 +62436,6 @@
     "image": "gilded_d'hide_vambraces.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Ranged armours"
     ],
     "sources": {
@@ -62946,7 +62569,6 @@
     "image": "gilded_full_helm.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -62993,7 +62615,6 @@
     "image": "gilded_kiteshield.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -63056,7 +62677,6 @@
     "image": "gilded_med_helm.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -63080,7 +62700,6 @@
     "image": "gilded_pickaxe.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee",
       "Mining"
     ],
@@ -63102,7 +62721,6 @@
     "image": "gilded_platebody.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -63126,7 +62744,6 @@
     "image": "gilded_platelegs.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -63150,7 +62767,6 @@
     "image": "gilded_plateskirt.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -63174,7 +62790,6 @@
     "image": "gilded_scimitar.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -63194,8 +62809,7 @@
     "name": "Gilded spade",
     "image": "gilded_spade.png",
     "tags": [
-      "clue-reward-only",
-      "f2p"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -63238,7 +62852,6 @@
     "image": "gilded_sq_shield.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -63750,9 +63363,6 @@
     "id": 288,
     "name": "Goblin mail",
     "image": "goblin_mail.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Goblin (God Wars Dungeon)": {
@@ -64012,9 +63622,6 @@
     "id": 1692,
     "name": "Gold amulet",
     "image": "gold_amulet.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Small chest": {
@@ -64055,9 +63662,6 @@
     "id": 1673,
     "name": "Gold amulet (u)",
     "image": "gold_amulet_(u).png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Mummy (Ancient Pyramid)": {
@@ -64091,7 +63695,6 @@
     "name": "Gold bar",
     "image": "gold_bar.png",
     "tags": [
-      "f2p",
       "Crafting"
     ],
     "sources": {
@@ -64439,9 +64042,6 @@
     "id": 1654,
     "name": "Gold necklace",
     "image": "gold_necklace.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Capt' Arnav's Chest": {
@@ -64499,7 +64099,6 @@
     "name": "Gold ore",
     "image": "gold_ore.png",
     "tags": [
-      "f2p",
       "Smithing"
     ],
     "sources": {
@@ -64782,9 +64381,6 @@
     "id": 1635,
     "name": "Gold ring",
     "image": "gold_ring.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Casket (Pirate's Treasure)": {
@@ -64921,8 +64517,7 @@
     "name": "Golden apron",
     "image": "golden_apron.png",
     "tags": [
-      "clue-reward-only",
-      "f2p"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -64938,8 +64533,7 @@
     "name": "Golden chef's hat",
     "image": "golden_chef's_hat.png",
     "tags": [
-      "clue-reward-only",
-      "f2p"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -65115,9 +64709,6 @@
     "id": 1947,
     "name": "Grain",
     "image": "grain.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Wheat": {
@@ -65496,7 +65087,6 @@
     "name": "Grapes",
     "image": "grapes.png",
     "tags": [
-      "f2p",
       "Cooking"
     ],
     "sources": {
@@ -65604,9 +65194,6 @@
     "id": 1027,
     "name": "Green cape",
     "image": "green_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -65632,7 +65219,6 @@
     "name": "Green d'hide body",
     "image": "green_d'hide_body.png",
     "tags": [
-      "f2p",
       "Ranged armours"
     ],
     "sources": {
@@ -65696,7 +65282,6 @@
     "image": "green_d'hide_body_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Ranged armours"
     ],
     "sources": {
@@ -65714,7 +65299,6 @@
     "image": "green_d'hide_body_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Ranged armours"
     ],
     "sources": {
@@ -65731,7 +65315,6 @@
     "name": "Green d'hide chaps",
     "image": "green_d'hide_chaps.png",
     "tags": [
-      "f2p",
       "Ranged armours"
     ],
     "sources": {
@@ -65792,7 +65375,6 @@
     "image": "green_d'hide_chaps_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Ranged armours"
     ],
     "sources": {
@@ -65810,7 +65392,6 @@
     "image": "green_d'hide_chaps_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Ranged armours"
     ],
     "sources": {
@@ -65863,7 +65444,6 @@
     "name": "Green d'hide vambraces",
     "image": "green_d'hide_vambraces.png",
     "tags": [
-      "f2p",
       "Ranged armours"
     ],
     "sources": {
@@ -66010,9 +65590,6 @@
     "id": 1771,
     "name": "Green dye",
     "image": "green_dye.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -66137,9 +65714,6 @@
     "id": 1053,
     "name": "Green halloween mask",
     "image": "green_halloween_mask.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "other": {
         "Complete a Halloween holiday event": {}
@@ -66178,9 +65752,6 @@
     "id": 1044,
     "name": "Green partyhat",
     "image": "green_partyhat.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Christmas cracker": {
@@ -66531,9 +66102,6 @@
     "id": 2894,
     "name": "Grey boots",
     "image": "grey_boots.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -66545,9 +66113,6 @@
     "id": 2902,
     "name": "Grey gloves",
     "image": "grey_gloves.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "canCompletePriestInPeril"
@@ -66592,9 +66157,6 @@
     "id": 2526,
     "name": "Grey toy horsey",
     "image": "grey_toy_horsey.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -78755,7 +78317,6 @@
     "image": "guthix_full_helm.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -78773,7 +78334,6 @@
     "image": "guthix_kiteshield.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -78961,7 +78521,6 @@
     "image": "guthix_platebody.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -78979,7 +78538,6 @@
     "image": "guthix_platelegs.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -78997,7 +78555,6 @@
     "image": "guthix_plateskirt.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -79493,7 +79050,6 @@
     "name": "Half full wine jug",
     "image": "half_full_wine_jug.png",
     "tags": [
-      "f2p",
       "Food"
     ],
     "sources": {
@@ -79672,7 +79228,6 @@
     "image": "ham_joint.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -79761,7 +79316,6 @@
     "name": "Hammer",
     "image": "hammer.png",
     "tags": [
-      "f2p",
       "Hunter",
       "Construction",
       "Smithing"
@@ -79971,7 +79525,6 @@
     "name": "Hard leather",
     "image": "hard_leather.png",
     "tags": [
-      "f2p",
       "Crafting"
     ],
     "sources": {
@@ -80042,7 +79595,6 @@
     "name": "Hardleather body",
     "image": "hardleather_body.png",
     "tags": [
-      "f2p",
       "Ranged armours"
     ],
     "sources": {
@@ -80149,7 +79701,6 @@
     "name": "Harpoon",
     "image": "harpoon.png",
     "tags": [
-      "f2p",
       "Fishing"
     ],
     "sources": {
@@ -80770,7 +80321,6 @@
     "name": "Herring",
     "image": "herring.png",
     "tags": [
-      "f2p",
       "Food"
     ],
     "sources": {
@@ -80825,7 +80375,6 @@
     "name": "Hill giant club",
     "image": "hill_giant_club.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -80920,9 +80469,6 @@
     "id": 1599,
     "name": "Holy mould",
     "image": "holy_mould.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Tool store 4": {
@@ -80961,9 +80507,6 @@
     "id": 1718,
     "name": "Holy symbol",
     "image": "holy_symbol.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Christmas cracker": {
@@ -82996,7 +82539,6 @@
     "name": "Iron 2h sword",
     "image": "iron_2h_sword.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -83047,7 +82589,6 @@
     "name": "Iron arrow",
     "image": "iron_arrow.png",
     "tags": [
-      "f2p",
       "Ranged"
     ],
     "sources": {
@@ -83318,7 +82859,6 @@
     "name": "Iron axe",
     "image": "iron_axe.png",
     "tags": [
-      "f2p",
       "Woodcutting"
     ],
     "sources": {
@@ -83405,7 +82945,6 @@
     "name": "Iron bar",
     "image": "iron_bar.png",
     "tags": [
-      "f2p",
       "Smithing"
     ],
     "sources": {
@@ -83516,7 +83055,6 @@
     "name": "Iron battleaxe",
     "image": "iron_battleaxe.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -83904,7 +83442,6 @@
     "name": "Iron chainbody",
     "image": "iron_chainbody.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -84055,7 +83592,6 @@
     "name": "Iron dagger",
     "image": "iron_dagger.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -84565,7 +84101,6 @@
     "name": "Iron full helm",
     "image": "iron_full_helm.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -84623,7 +84158,6 @@
     "image": "iron_full_helm_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -84641,7 +84175,6 @@
     "image": "iron_full_helm_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -85036,7 +84569,6 @@
     "name": "Iron kiteshield",
     "image": "iron_kiteshield.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -85139,7 +84671,6 @@
     "image": "iron_kiteshield_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -85157,7 +84688,6 @@
     "image": "iron_kiteshield_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -85335,7 +84865,6 @@
     "name": "Iron longsword",
     "image": "iron_longsword.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -85398,7 +84927,6 @@
     "name": "Iron mace",
     "image": "iron_mace.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -85482,7 +85010,6 @@
     "name": "Iron med helm",
     "image": "iron_med_helm.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -85602,7 +85129,6 @@
     "name": "Iron ore",
     "image": "iron_ore.png",
     "tags": [
-      "f2p",
       "Smithing"
     ],
     "sources": {
@@ -85982,7 +85508,6 @@
     "name": "Iron pickaxe",
     "image": "iron_pickaxe.png",
     "tags": [
-      "f2p",
       "Mining"
     ],
     "sources": {
@@ -86050,7 +85575,6 @@
     "name": "Iron platebody",
     "image": "iron_platebody.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -86105,7 +85629,6 @@
     "image": "iron_platebody_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -86123,7 +85646,6 @@
     "image": "iron_platebody_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -86140,7 +85662,6 @@
     "name": "Iron platelegs",
     "image": "iron_platelegs.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -86189,7 +85710,6 @@
     "image": "iron_platelegs_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -86207,7 +85727,6 @@
     "image": "iron_platelegs_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -86224,7 +85743,6 @@
     "name": "Iron plateskirt",
     "image": "iron_plateskirt.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -86294,7 +85812,6 @@
     "image": "iron_plateskirt_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -86312,7 +85829,6 @@
     "image": "iron_plateskirt_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -86329,7 +85845,6 @@
     "name": "Iron scimitar",
     "image": "iron_scimitar.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -86632,7 +86147,6 @@
     "name": "Iron sq shield",
     "image": "iron_sq_shield.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -86671,7 +86185,6 @@
     "name": "Iron sword",
     "image": "iron_sword.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -86830,7 +86343,6 @@
     "name": "Iron warhammer",
     "image": "iron_warhammer.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -88109,8 +87621,7 @@
     "name": "Jester cape",
     "image": "jester_cape.png",
     "tags": [
-      "clue-reward-only",
-      "f2p"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -88141,9 +87652,6 @@
     "id": 1935,
     "name": "Jug",
     "image": "jug.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Empty jug pack": {
@@ -88182,7 +87690,6 @@
     "name": "Jug of water",
     "image": "jug_of_water.png",
     "tags": [
-      "f2p",
       "Cooking"
     ],
     "sources": {
@@ -88214,7 +87721,6 @@
     "name": "Jug of wine",
     "image": "jug_of_wine.png",
     "tags": [
-      "f2p",
       "Food"
     ],
     "sources": {
@@ -88803,7 +88309,6 @@
     "name": "Kebab",
     "image": "kebab.png",
     "tags": [
-      "f2p",
       "Food"
     ],
     "sources": {
@@ -89289,7 +88794,6 @@
     "name": "Knife",
     "image": "knife.png",
     "tags": [
-      "f2p",
       "Hunter",
       "Fletching"
     ],
@@ -91628,7 +91132,6 @@
     "name": "Law rune",
     "image": "law_rune.png",
     "tags": [
-      "f2p",
       "Magic"
     ],
     "sources": {
@@ -92489,7 +91992,6 @@
     "name": "Leather",
     "image": "leather.png",
     "tags": [
-      "f2p",
       "Crafting"
     ],
     "sources": {
@@ -92516,7 +92018,6 @@
     "name": "Leather body",
     "image": "leather_body.png",
     "tags": [
-      "f2p",
       "Ranged armours"
     ],
     "sources": {
@@ -92574,7 +92075,6 @@
     "image": "leather_body_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Ranged armours"
     ],
     "sources": {
@@ -92591,7 +92091,6 @@
     "name": "Leather boots",
     "image": "leather_boots.png",
     "tags": [
-      "f2p",
       "Ranged armours"
     ],
     "sources": {
@@ -92654,7 +92153,6 @@
     "name": "Leather chaps",
     "image": "leather_chaps.png",
     "tags": [
-      "f2p",
       "Ranged armours"
     ],
     "sources": {
@@ -92694,7 +92192,6 @@
     "image": "leather_chaps_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Ranged armours"
     ],
     "sources": {
@@ -92711,7 +92208,6 @@
     "name": "Leather cowl",
     "image": "leather_cowl.png",
     "tags": [
-      "f2p",
       "Ranged armours"
     ],
     "sources": {
@@ -92750,7 +92246,6 @@
     "name": "Leather gloves",
     "image": "leather_gloves.png",
     "tags": [
-      "f2p",
       "Ranged armours"
     ],
     "sources": {
@@ -92815,7 +92310,6 @@
     "name": "Leather vambraces",
     "image": "leather_vambraces.png",
     "tags": [
-      "f2p",
       "Ranged armours"
     ],
     "sources": {
@@ -93387,9 +92881,6 @@
     "id": 225,
     "name": "Limpwurt root",
     "image": "limpwurt_root.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Limpwurt plant": {
@@ -93976,7 +93467,6 @@
     "name": "Lobster",
     "image": "lobster.png",
     "tags": [
-      "f2p",
       "Food"
     ],
     "sources": {
@@ -94117,7 +93607,6 @@
     "name": "Lobster pot",
     "image": "lobster_pot.png",
     "tags": [
-      "f2p",
       "Fishing"
     ],
     "sources": {
@@ -94229,7 +93718,6 @@
     "name": "Logs",
     "image": "logs.png",
     "tags": [
-      "f2p",
       "Hunter",
       "Fletching"
     ],
@@ -94404,7 +93892,6 @@
     "name": "Longbow",
     "image": "longbow.png",
     "tags": [
-      "f2p",
       "Ranged"
     ],
     "sources": {
@@ -95994,7 +95481,6 @@
     "name": "Magic staff",
     "image": "magic_staff.png",
     "tags": [
-      "f2p",
       "Magic"
     ],
     "sources": {
@@ -97318,7 +96804,6 @@
     "name": "Maple logs",
     "image": "maple_logs.png",
     "tags": [
-      "f2p",
       "Hunter",
       "Fletching"
     ],
@@ -97378,7 +96863,6 @@
     "name": "Maple longbow",
     "image": "maple_longbow.png",
     "tags": [
-      "f2p",
       "Ranged"
     ],
     "sources": {
@@ -97681,7 +97165,6 @@
     "name": "Maple shortbow",
     "image": "maple_shortbow.png",
     "tags": [
-      "f2p",
       "Ranged"
     ],
     "sources": {
@@ -98660,7 +98143,6 @@
     "name": "Meat pie",
     "image": "meat_pie.png",
     "tags": [
-      "f2p",
       "Food"
     ],
     "sources": {
@@ -98731,7 +98213,6 @@
     "name": "Meat pizza",
     "image": "meat_pizza.png",
     "tags": [
-      "f2p",
       "Food"
     ],
     "sources": {
@@ -99255,7 +98736,6 @@
     "name": "Mind rune",
     "image": "mind_rune.png",
     "tags": [
-      "f2p",
       "Magic"
     ],
     "sources": {
@@ -99629,7 +99109,6 @@
     "name": "Mind talisman",
     "image": "mind_talisman.png",
     "tags": [
-      "f2p",
       "Runecraft"
     ],
     "sources": {
@@ -99712,7 +99191,6 @@
     "name": "Mind tiara",
     "image": "mind_tiara.png",
     "tags": [
-      "f2p",
       "Runecraft"
     ],
     "sources": {
@@ -100086,7 +99564,6 @@
     "name": "Mithril 2h sword",
     "image": "mithril_2h_sword.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -100161,7 +99638,6 @@
     "name": "Mithril arrow",
     "image": "mithril_arrow.png",
     "tags": [
-      "f2p",
       "Ranged"
     ],
     "sources": {
@@ -100454,7 +99930,6 @@
     "name": "Mithril axe",
     "image": "mithril_axe.png",
     "tags": [
-      "f2p",
       "Melee",
       "Woodcutting"
     ],
@@ -100575,7 +100050,6 @@
     "name": "Mithril bar",
     "image": "mithril_bar.png",
     "tags": [
-      "f2p",
       "Smithing"
     ],
     "sources": {
@@ -100749,7 +100223,6 @@
     "name": "Mithril battleaxe",
     "image": "mithril_battleaxe.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -101171,7 +100644,6 @@
     "name": "Mithril chainbody",
     "image": "mithril_chainbody.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -101375,7 +100847,6 @@
     "name": "Mithril dagger",
     "image": "mithril_dagger.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -101763,7 +101234,6 @@
     "name": "Mithril full helm",
     "image": "mithril_full_helm.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -101854,7 +101324,6 @@
     "image": "mithril_full_helm_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -101872,7 +101341,6 @@
     "image": "mithril_full_helm_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -102279,7 +101747,6 @@
     "name": "Mithril kiteshield",
     "image": "mithril_kiteshield.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -102463,7 +101930,6 @@
     "image": "mithril_kiteshield_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -102481,7 +101947,6 @@
     "image": "mithril_kiteshield_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -102661,7 +102126,6 @@
     "name": "Mithril longsword",
     "image": "mithril_longsword.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -102754,7 +102218,6 @@
     "name": "Mithril mace",
     "image": "mithril_mace.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -102847,7 +102310,6 @@
     "name": "Mithril med helm",
     "image": "mithril_med_helm.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -102994,7 +102456,6 @@
     "name": "Mithril ore",
     "image": "mithril_ore.png",
     "tags": [
-      "f2p",
       "Smithing"
     ],
     "sources": {
@@ -103152,7 +102613,6 @@
     "name": "Mithril pickaxe",
     "image": "mithril_pickaxe.png",
     "tags": [
-      "f2p",
       "Melee",
       "Mining"
     ],
@@ -103194,7 +102654,6 @@
     "name": "Mithril platebody",
     "image": "mithril_platebody.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -103297,7 +102756,6 @@
     "image": "mithril_platebody_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -103315,7 +102773,6 @@
     "image": "mithril_platebody_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -103332,7 +102789,6 @@
     "name": "Mithril platelegs",
     "image": "mithril_platelegs.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -103435,7 +102891,6 @@
     "image": "mithril_platelegs_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -103453,7 +102908,6 @@
     "image": "mithril_platelegs_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -103470,7 +102924,6 @@
     "name": "Mithril plateskirt",
     "image": "mithril_plateskirt.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -103570,7 +103023,6 @@
     "image": "mithril_plateskirt_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -103588,7 +103040,6 @@
     "image": "mithril_plateskirt_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -103605,7 +103056,6 @@
     "name": "Mithril scimitar",
     "image": "mithril_scimitar.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -103985,7 +103435,6 @@
     "name": "Mithril sq shield",
     "image": "mithril_sq_shield.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -104138,7 +103587,6 @@
     "name": "Mithril sword",
     "image": "mithril_sword.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -104302,7 +103750,6 @@
     "name": "Mithril warhammer",
     "image": "mithril_warhammer.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -104608,8 +104055,7 @@
     "name": "Mole slippers",
     "image": "mole_slippers.png",
     "tags": [
-      "clue-reward-only",
-      "f2p"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -104661,9 +104107,6 @@
     "id": 542,
     "name": "Monk's robe",
     "image": "monk's_robe.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Hallowed sack": {
@@ -104684,8 +104127,7 @@
     "name": "Monk's robe (g)",
     "image": "monk's_robe_(g).png",
     "tags": [
-      "clue-reward-only",
-      "f2p"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -104701,8 +104143,7 @@
     "name": "Monk's robe (t)",
     "image": "monk's_robe_(t).png",
     "tags": [
-      "clue-reward-only",
-      "f2p"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -104717,9 +104158,6 @@
     "id": 544,
     "name": "Monk's robe top",
     "image": "monk's_robe_top.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Hallowed sack": {
@@ -104740,8 +104178,7 @@
     "name": "Monk's robe top (g)",
     "image": "monk's_robe_top_(g).png",
     "tags": [
-      "clue-reward-only",
-      "f2p"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -104757,8 +104194,7 @@
     "name": "Monk's robe top (t)",
     "image": "monk's_robe_top_(t).png",
     "tags": [
-      "clue-reward-only",
-      "f2p"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -104788,7 +104224,6 @@
     "name": "Monkey bones",
     "image": "monkey_bones.png",
     "tags": [
-      "f2p",
       "Prayer"
     ],
     "sources": {
@@ -105511,9 +104946,6 @@
     "id": 991,
     "name": "Muddy key",
     "image": "muddy_key.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Chaos dwarf": {
@@ -107223,7 +106655,6 @@
     "name": "Nature rune",
     "image": "nature_rune.png",
     "tags": [
-      "f2p",
       "Magic"
     ],
     "sources": {
@@ -108095,7 +107526,6 @@
     "name": "Necklace mould",
     "image": "necklace_mould.png",
     "tags": [
-      "f2p",
       "Crafting"
     ],
     "sources": {
@@ -108187,7 +107617,6 @@
     "name": "Needle",
     "image": "needle.png",
     "tags": [
-      "f2p",
       "Crafting"
     ],
     "sources": {
@@ -109153,7 +108582,6 @@
     "name": "Oak logs",
     "image": "oak_logs.png",
     "tags": [
-      "f2p",
       "Hunter",
       "Fletching"
     ],
@@ -109201,7 +108629,6 @@
     "name": "Oak longbow",
     "image": "oak_longbow.png",
     "tags": [
-      "f2p",
       "Ranged"
     ],
     "sources": {
@@ -109602,7 +109029,6 @@
     "name": "Oak shortbow",
     "image": "oak_shortbow.png",
     "tags": [
-      "f2p",
       "Ranged"
     ],
     "sources": {
@@ -110605,7 +110031,6 @@
     "name": "Onion",
     "image": "onion.png",
     "tags": [
-      "f2p",
       "Food"
     ],
     "sources": {
@@ -111952,9 +111377,6 @@
     "id": 1031,
     "name": "Orange cape",
     "image": "orange_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "other": {
         "Dye a cape": {
@@ -112022,9 +111444,6 @@
     "id": 1769,
     "name": "Orange dye",
     "image": "orange_dye.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "other": {
         "Mixing a dye": {
@@ -112997,9 +112416,6 @@
     "id": 1953,
     "name": "Pastry dough",
     "image": "pastry_dough.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "other": {
         "Cooking a Pastry dough": {
@@ -113525,9 +112941,6 @@
     "id": 2313,
     "name": "Pie dish",
     "image": "pie_dish.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Oak shelves 2": {
@@ -113587,7 +113000,6 @@
     "name": "Pie shell",
     "image": "pie_shell.png",
     "tags": [
-      "f2p",
       "Cooking"
     ],
     "sources": {
@@ -113614,7 +113026,6 @@
     "name": "Pike",
     "image": "pike.png",
     "tags": [
-      "f2p",
       "Food"
     ],
     "sources": {
@@ -114266,9 +113677,6 @@
     "id": 1013,
     "name": "Pink skirt",
     "image": "pink_skirt.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Skeleton Mage Level 83": {
@@ -114582,7 +113990,6 @@
     "name": "Pizza base",
     "image": "pizza_base.png",
     "tags": [
-      "f2p",
       "Cooking"
     ],
     "sources": {
@@ -114626,7 +114033,6 @@
     "name": "Plain pizza",
     "image": "plain_pizza.png",
     "tags": [
-      "f2p",
       "Food",
       "Cooking"
     ],
@@ -114664,7 +114070,6 @@
     "name": "Plank",
     "image": "plank.png",
     "tags": [
-      "f2p",
       "Hunter",
       "Construction"
     ],
@@ -114826,9 +114231,6 @@
     "id": 273,
     "name": "Poison (item)",
     "image": "poison_(item).png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "spawns": {
         "Yes": "No requirements"
@@ -115324,9 +114726,6 @@
     "id": 1931,
     "name": "Pot",
     "image": "pot.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Teak shelves 1": {
@@ -115466,9 +114865,6 @@
     "id": 1933,
     "name": "Pot of flour",
     "image": "pot_of_flour.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Oak larder": {
@@ -115522,7 +114918,6 @@
     "name": "Potato",
     "image": "potato.png",
     "tags": [
-      "f2p",
       "Food",
       "Cooking"
     ],
@@ -117155,9 +116550,6 @@
     "id": 428,
     "name": "Priest gown (bottom)",
     "image": "priest_gown_(bottom).png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -117169,9 +116561,6 @@
     "id": 426,
     "name": "Priest gown (top)",
     "image": "priest_gown_(top).png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -117332,7 +116721,6 @@
     "name": "Pumpkin",
     "image": "pumpkin.png",
     "tags": [
-      "f2p",
       "Food"
     ],
     "sources": {
@@ -117347,7 +116735,6 @@
     "name": "Pure essence",
     "image": "pure_essence.png",
     "tags": [
-      "f2p",
       "Runecraft"
     ],
     "sources": {
@@ -117589,9 +116976,6 @@
     "id": 2934,
     "name": "Purple boots",
     "image": "purple_boots.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "canCompletePriestInPeril"
@@ -117603,9 +116987,6 @@
     "id": 1029,
     "name": "Purple cape",
     "image": "purple_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "other": {
         "Dye a cape": {
@@ -117627,9 +117008,6 @@
     "id": 1773,
     "name": "Purple dye",
     "image": "purple_dye.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "spawns": {
         "Yes": "No requirements"
@@ -117780,9 +117158,6 @@
     "id": 2942,
     "name": "Purple gloves",
     "image": "purple_gloves.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Crushing hand": {
@@ -117813,9 +117188,6 @@
     "id": 1046,
     "name": "Purple partyhat",
     "image": "purple_partyhat.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Christmas cracker": {
@@ -119238,7 +118610,6 @@
     "name": "Raw anchovies",
     "image": "raw_anchovies.png",
     "tags": [
-      "f2p",
       "Cooking"
     ],
     "sources": {
@@ -119405,7 +118776,6 @@
     "name": "Raw bear meat",
     "image": "raw_bear_meat.png",
     "tags": [
-      "f2p",
       "Cooking"
     ],
     "sources": {
@@ -119525,7 +118895,6 @@
     "name": "Raw beef",
     "image": "raw_beef.png",
     "tags": [
-      "f2p",
       "Cooking"
     ],
     "sources": {
@@ -119741,7 +119110,6 @@
     "name": "Raw boar meat",
     "image": "raw_boar_meat.png",
     "tags": [
-      "f2p",
       "Cooking"
     ],
     "sources": {
@@ -119777,7 +119145,6 @@
     "name": "Raw chicken",
     "image": "raw_chicken.png",
     "tags": [
-      "f2p",
       "Cooking"
     ],
     "sources": {
@@ -120105,7 +119472,6 @@
     "name": "Raw herring",
     "image": "raw_herring.png",
     "tags": [
-      "f2p",
       "Cooking"
     ],
     "sources": {
@@ -120253,7 +119619,6 @@
     "name": "Raw lobster",
     "image": "raw_lobster.png",
     "tags": [
-      "f2p",
       "Cooking"
     ],
     "sources": {
@@ -120676,7 +120041,6 @@
     "name": "Raw pike",
     "image": "raw_pike.png",
     "tags": [
-      "f2p",
       "Cooking"
     ],
     "sources": {
@@ -120844,7 +120208,6 @@
     "name": "Raw rat meat",
     "image": "raw_rat_meat.png",
     "tags": [
-      "f2p",
       "Cooking"
     ],
     "sources": {
@@ -120911,7 +120274,6 @@
     "name": "Raw salmon",
     "image": "raw_salmon.png",
     "tags": [
-      "f2p",
       "Cooking"
     ],
     "sources": {
@@ -120975,7 +120337,6 @@
     "name": "Raw sardine",
     "image": "raw_sardine.png",
     "tags": [
-      "f2p",
       "Cooking"
     ],
     "sources": {
@@ -121276,7 +120637,6 @@
     "name": "Raw shrimps",
     "image": "raw_shrimps.png",
     "tags": [
-      "f2p",
       "Cooking"
     ],
     "sources": {
@@ -121394,7 +120754,6 @@
     "name": "Raw swordfish",
     "image": "raw_swordfish.png",
     "tags": [
-      "f2p",
       "Cooking"
     ],
     "sources": {
@@ -121526,7 +120885,6 @@
     "name": "Raw trout",
     "image": "raw_trout.png",
     "tags": [
-      "f2p",
       "Cooking"
     ],
     "sources": {
@@ -121557,7 +120915,6 @@
     "name": "Raw tuna",
     "image": "raw_tuna.png",
     "tags": [
-      "f2p",
       "Cooking"
     ],
     "sources": {
@@ -121815,9 +121172,6 @@
     "id": 1470,
     "name": "Red bead",
     "image": "red_bead.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Imp": {
@@ -121863,9 +121217,6 @@
     "id": 2904,
     "name": "Red boots",
     "image": "red_boots.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "canCompletePriestInPeril"
@@ -121877,9 +121228,6 @@
     "id": 1007,
     "name": "Red cape",
     "image": "red_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Goblin (Goblin Village)": {
@@ -122345,9 +121693,6 @@
     "id": 1763,
     "name": "Red dye",
     "image": "red_dye.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Shelves (Getting Ahead)": {
@@ -122513,9 +121858,6 @@
     "id": 2912,
     "name": "Red gloves",
     "image": "red_gloves.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Crushing hand": {
@@ -122535,9 +121877,6 @@
     "id": 1057,
     "name": "Red halloween mask",
     "image": "red_halloween_mask.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "other": {
         "Complete a Halloween holiday event": {}
@@ -122576,9 +121915,6 @@
     "id": 1038,
     "name": "Red partyhat",
     "image": "red_partyhat.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Christmas cracker": {
@@ -122630,9 +121966,6 @@
     "id": 223,
     "name": "Red spiders' eggs",
     "image": "red_spiders'_eggs.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Giant egg sac": {
@@ -122785,9 +122118,6 @@
     "id": 1951,
     "name": "Redberries",
     "image": "redberries.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Redberry bush": {
@@ -122808,7 +122138,6 @@
     "name": "Redberry pie",
     "image": "redberry_pie.png",
     "tags": [
-      "f2p",
       "Food"
     ],
     "sources": {
@@ -123833,7 +123162,6 @@
     "name": "Ring mould",
     "image": "ring_mould.png",
     "tags": [
-      "f2p",
       "Crafting"
     ],
     "sources": {
@@ -123877,8 +123205,7 @@
     "name": "Ring of 3rd age",
     "image": "ring_of_3rd_age.png",
     "tags": [
-      "clue-reward-only",
-      "f2p"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -123897,8 +123224,7 @@
     "name": "Ring of coins",
     "image": "ring_of_coins.png",
     "tags": [
-      "clue-reward-only",
-      "f2p"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -123959,7 +123285,6 @@
     "name": "Ring of forging",
     "image": "ring_of_forging.png",
     "tags": [
-      "f2p",
       "Smithing"
     ],
     "sources": {
@@ -124032,8 +123357,7 @@
     "name": "Ring of nature",
     "image": "ring_of_nature.png",
     "tags": [
-      "clue-reward-only",
-      "f2p"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -124793,7 +124117,6 @@
     "name": "Rope",
     "image": "rope.png",
     "tags": [
-      "f2p",
       "Hunter"
     ],
     "sources": {
@@ -125237,7 +124560,6 @@
     "name": "Ruby",
     "image": "ruby.png",
     "tags": [
-      "f2p",
       "Crafting"
     ],
     "sources": {
@@ -125338,9 +124660,6 @@
     "id": 1698,
     "name": "Ruby amulet",
     "image": "ruby_amulet.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Insatiable mutated Bloodveld": {
@@ -125384,9 +124703,6 @@
     "id": 1679,
     "name": "Ruby amulet (u)",
     "image": "ruby_amulet_(u).png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "other": {
         "Crafting a Ruby amulet (u)": {
@@ -125704,9 +125020,6 @@
     "id": 1660,
     "name": "Ruby necklace",
     "image": "ruby_necklace.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Hammerhead shark": {
@@ -125763,9 +125076,6 @@
     "id": 1641,
     "name": "Ruby ring",
     "image": "ruby_ring.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Frigatebird": {
@@ -125875,7 +125185,6 @@
     "name": "Rune 2h sword",
     "image": "rune_2h_sword.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -126422,7 +125731,6 @@
     "name": "Rune axe",
     "image": "rune_axe.png",
     "tags": [
-      "f2p",
       "Melee",
       "Woodcutting"
     ],
@@ -126516,7 +125824,6 @@
     "name": "Rune battleaxe",
     "image": "rune_battleaxe.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -126807,7 +126114,6 @@
     "name": "Rune chainbody",
     "image": "rune_chainbody.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -127082,7 +126388,6 @@
     "name": "Rune dagger",
     "image": "rune_dagger.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -127594,7 +126899,6 @@
     "name": "Rune essence",
     "image": "rune_essence.png",
     "tags": [
-      "f2p",
       "Runecraft"
     ],
     "sources": {
@@ -127666,7 +126970,6 @@
     "name": "Rune full helm",
     "image": "rune_full_helm.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -127925,7 +127228,6 @@
     "image": "rune_full_helm_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -127943,7 +127245,6 @@
     "image": "rune_full_helm_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -128170,7 +127471,6 @@
     "image": "rune_helm_(h1).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -128188,7 +127488,6 @@
     "image": "rune_helm_(h2).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -128206,7 +127505,6 @@
     "image": "rune_helm_(h3).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -128224,7 +127522,6 @@
     "image": "rune_helm_(h4).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -128242,7 +127539,6 @@
     "image": "rune_helm_(h5).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -128483,7 +127779,6 @@
     "name": "Rune kiteshield",
     "image": "rune_kiteshield.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -128700,7 +127995,6 @@
     "image": "rune_kiteshield_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -128718,7 +128012,6 @@
     "image": "rune_kiteshield_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -128916,7 +128209,6 @@
     "name": "Rune longsword",
     "image": "rune_longsword.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -129069,7 +128361,6 @@
     "name": "Rune mace",
     "image": "rune_mace.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -129156,7 +128447,6 @@
     "name": "Rune med helm",
     "image": "rune_med_helm.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -129435,7 +128725,6 @@
     "name": "Rune pickaxe",
     "image": "rune_pickaxe.png",
     "tags": [
-      "f2p",
       "Melee",
       "Mining"
     ],
@@ -129546,7 +128835,6 @@
     "name": "Rune platebody",
     "image": "rune_platebody.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -129730,7 +129018,6 @@
     "image": "rune_platebody_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -129748,7 +129035,6 @@
     "image": "rune_platebody_(h1).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -129766,7 +129052,6 @@
     "image": "rune_platebody_(h2).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -129784,7 +129069,6 @@
     "image": "rune_platebody_(h3).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -129802,7 +129086,6 @@
     "image": "rune_platebody_(h4).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -129820,7 +129103,6 @@
     "image": "rune_platebody_(h5).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -129838,7 +129120,6 @@
     "image": "rune_platebody_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -129855,7 +129136,6 @@
     "name": "Rune platelegs",
     "image": "rune_platelegs.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -130048,7 +129328,6 @@
     "image": "rune_platelegs_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -130066,7 +129345,6 @@
     "image": "rune_platelegs_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -130083,7 +129361,6 @@
     "name": "Rune plateskirt",
     "image": "rune_plateskirt.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -130186,7 +129463,6 @@
     "image": "rune_plateskirt_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -130204,7 +129480,6 @@
     "image": "rune_plateskirt_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -130240,7 +129515,6 @@
     "name": "Rune scimitar",
     "image": "rune_scimitar.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -130423,8 +129697,7 @@
     "name": "Rune scimitar ornament kit (guthix)",
     "image": "rune_scimitar_ornament_kit_(guthix).png",
     "tags": [
-      "clue-reward-only",
-      "f2p"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -130440,8 +129713,7 @@
     "name": "Rune scimitar ornament kit (saradomin)",
     "image": "rune_scimitar_ornament_kit_(saradomin).png",
     "tags": [
-      "clue-reward-only",
-      "f2p"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -130457,8 +129729,7 @@
     "name": "Rune scimitar ornament kit (zamorak)",
     "image": "rune_scimitar_ornament_kit_(zamorak).png",
     "tags": [
-      "clue-reward-only",
-      "f2p"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -130475,7 +129746,6 @@
     "image": "rune_shield_(h1).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -130493,7 +129763,6 @@
     "image": "rune_shield_(h2).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -130511,7 +129780,6 @@
     "image": "rune_shield_(h3).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -130529,7 +129797,6 @@
     "image": "rune_shield_(h4).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -130547,7 +129814,6 @@
     "image": "rune_shield_(h5).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -130705,7 +129971,6 @@
     "name": "Rune sq shield",
     "image": "rune_sq_shield.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -130786,7 +130051,6 @@
     "name": "Rune sword",
     "image": "rune_sword.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -131010,7 +130274,6 @@
     "name": "Rune warhammer",
     "image": "rune_warhammer.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -131320,7 +130583,6 @@
     "name": "Runite bar",
     "image": "runite_bar.png",
     "tags": [
-      "f2p",
       "Smithing"
     ],
     "sources": {
@@ -131819,7 +131081,6 @@
     "name": "Runite ore",
     "image": "runite_ore.png",
     "tags": [
-      "f2p",
       "Smithing"
     ],
     "sources": {
@@ -132224,7 +131485,6 @@
     "name": "Salmon",
     "image": "salmon.png",
     "tags": [
-      "f2p",
       "Food"
     ],
     "sources": {
@@ -132498,8 +131758,7 @@
     "name": "Sandwich lady bottom",
     "image": "sandwich_lady_bottom.png",
     "tags": [
-      "clue-reward-only",
-      "f2p"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -132515,8 +131774,7 @@
     "name": "Sandwich lady hat",
     "image": "sandwich_lady_hat.png",
     "tags": [
-      "clue-reward-only",
-      "f2p"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -132532,8 +131790,7 @@
     "name": "Sandwich lady top",
     "image": "sandwich_lady_top.png",
     "tags": [
-      "clue-reward-only",
-      "f2p"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -132825,9 +132082,6 @@
     "id": 1050,
     "name": "Santa hat",
     "image": "santa_hat.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "other": {
         "Complete a Christmas holiday event": {}
@@ -132840,7 +132094,6 @@
     "name": "Sapphire",
     "image": "sapphire.png",
     "tags": [
-      "f2p",
       "Crafting"
     ],
     "sources": {
@@ -132931,9 +132184,6 @@
     "id": 1694,
     "name": "Sapphire amulet",
     "image": "sapphire_amulet.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Small chest": {
@@ -132971,9 +132221,6 @@
     "id": 1675,
     "name": "Sapphire amulet (u)",
     "image": "sapphire_amulet_(u).png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "other": {
         "Crafting a Sapphire amulet (u)": {
@@ -133293,9 +132540,6 @@
     "id": 1656,
     "name": "Sapphire necklace",
     "image": "sapphire_necklace.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Elite Black Knight": {
@@ -133355,9 +132599,6 @@
     "id": 1637,
     "name": "Sapphire ring",
     "image": "sapphire_ring.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Bird nest (ring)": {
@@ -133917,7 +133158,6 @@
     "image": "saradomin_full_helm.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -133990,7 +133230,6 @@
     "image": "saradomin_kiteshield.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -134178,7 +133417,6 @@
     "image": "saradomin_platebody.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -134196,7 +133434,6 @@
     "image": "saradomin_platelegs.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -134214,7 +133451,6 @@
     "image": "saradomin_plateskirt.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -134333,7 +133569,6 @@
     "name": "Sardine",
     "image": "sardine.png",
     "tags": [
-      "f2p",
       "Food"
     ],
     "sources": {
@@ -134819,9 +134054,6 @@
     "id": 9003,
     "name": "Security book",
     "image": "security_book.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -135199,9 +134431,6 @@
     "id": 548,
     "name": "Shade robe",
     "image": "shade_robe.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Shade (m)": {
@@ -135215,9 +134444,6 @@
     "id": 546,
     "name": "Shade robe top",
     "image": "shade_robe_top.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Shade (m)": {
@@ -135247,9 +134473,6 @@
     "id": 21838,
     "name": "Shaman mask",
     "image": "shaman_mask.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Ogress Shaman": {
@@ -135841,9 +135064,6 @@
     "id": 1735,
     "name": "Shears",
     "image": "shears.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Tool store 1": {
@@ -136042,7 +135262,6 @@
     "name": "Shortbow",
     "image": "shortbow.png",
     "tags": [
-      "f2p",
       "Ranged"
     ],
     "sources": {
@@ -136161,8 +135380,7 @@
     "name": "Shoulder parrot",
     "image": "shoulder_parrot.png",
     "tags": [
-      "clue-reward-only",
-      "f2p"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -136178,7 +135396,6 @@
     "name": "Shrimps",
     "image": "shrimps.png",
     "tags": [
-      "f2p",
       "Food"
     ],
     "sources": {
@@ -136233,9 +135450,6 @@
     "id": 950,
     "name": "Silk",
     "image": "silk.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Christmas cracker": {
@@ -136268,7 +135482,6 @@
     "name": "Silver bar",
     "image": "silver_bar.png",
     "tags": [
-      "f2p",
       "Crafting"
     ],
     "sources": {
@@ -136637,7 +135850,6 @@
     "name": "Silver ore",
     "image": "silver_ore.png",
     "tags": [
-      "f2p",
       "Smithing"
     ],
     "sources": {
@@ -137656,7 +136868,6 @@
     "name": "Sliced banana",
     "image": "sliced_banana.png",
     "tags": [
-      "f2p",
       "Food"
     ],
     "sources": {
@@ -137734,7 +136945,6 @@
     "name": "Small fishing net",
     "image": "small_fishing_net.png",
     "tags": [
-      "f2p",
       "Fishing",
       "Hunter"
     ],
@@ -139508,7 +138718,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Crafting"
+    ]
   },
   {
     "index": 3592,
@@ -139516,7 +138729,6 @@
     "name": "Soft clay",
     "image": "soft_clay.png",
     "tags": [
-      "f2p",
       "Crafting",
       "Construction"
     ],
@@ -139869,7 +139081,6 @@
     "name": "Spade",
     "image": "spade.png",
     "tags": [
-      "f2p",
       "Farming"
     ],
     "sources": {
@@ -140309,7 +139520,6 @@
     "name": "Spinach roll",
     "image": "spinach_roll.png",
     "tags": [
-      "f2p",
       "Food"
     ],
     "sources": {
@@ -140898,7 +140108,6 @@
     "name": "Staff",
     "image": "staff.png",
     "tags": [
-      "f2p",
       "Magic"
     ],
     "sources": {
@@ -140951,7 +140160,6 @@
     "name": "Staff of air",
     "image": "staff_of_air.png",
     "tags": [
-      "f2p",
       "Magic"
     ],
     "sources": {
@@ -141049,7 +140257,6 @@
     "name": "Staff of earth",
     "image": "staff_of_earth.png",
     "tags": [
-      "f2p",
       "Magic"
     ],
     "sources": {
@@ -141105,7 +140312,6 @@
     "name": "Staff of fire",
     "image": "staff_of_fire.png",
     "tags": [
-      "f2p",
       "Magic"
     ],
     "sources": {
@@ -141227,7 +140433,6 @@
     "name": "Staff of water",
     "image": "staff_of_water.png",
     "tags": [
-      "f2p",
       "Magic"
     ],
     "sources": {
@@ -141285,9 +140490,6 @@
     "id": 20590,
     "name": "Stale baguette",
     "image": "stale_baguette.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Mystery box Entrana": {
@@ -141649,7 +140851,6 @@
     "name": "Steel 2h sword",
     "image": "steel_2h_sword.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -141730,7 +140931,6 @@
     "name": "Steel arrow",
     "image": "steel_arrow.png",
     "tags": [
-      "f2p",
       "Ranged"
     ],
     "sources": {
@@ -142294,7 +141494,6 @@
     "name": "Steel axe",
     "image": "steel_axe.png",
     "tags": [
-      "f2p",
       "Melee",
       "Woodcutting"
     ],
@@ -142514,7 +141713,6 @@
     "name": "Steel bar",
     "image": "steel_bar.png",
     "tags": [
-      "f2p",
       "Construction",
       "Smithing"
     ],
@@ -142755,7 +141953,6 @@
     "name": "Steel battleaxe",
     "image": "steel_battleaxe.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -143242,7 +142439,6 @@
     "name": "Steel chainbody",
     "image": "steel_chainbody.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -143438,7 +142634,6 @@
     "name": "Steel dagger",
     "image": "steel_dagger.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -143886,7 +143081,6 @@
     "name": "Steel full helm",
     "image": "steel_full_helm.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -144003,7 +143197,6 @@
     "image": "steel_full_helm_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -144021,7 +143214,6 @@
     "image": "steel_full_helm_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -144435,7 +143627,6 @@
     "name": "Steel kiteshield",
     "image": "steel_kiteshield.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -144544,7 +143735,6 @@
     "image": "steel_kiteshield_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -144562,7 +143752,6 @@
     "image": "steel_kiteshield_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -144795,7 +143984,6 @@
     "name": "Steel longsword",
     "image": "steel_longsword.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -144978,7 +144166,6 @@
     "name": "Steel mace",
     "image": "steel_mace.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -145083,7 +144270,6 @@
     "name": "Steel med helm",
     "image": "steel_med_helm.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -145224,7 +144410,6 @@
     "name": "Steel nails",
     "image": "steel_nails.png",
     "tags": [
-      "f2p",
       "Hunter",
       "Construction"
     ],
@@ -145303,7 +144488,6 @@
     "name": "Steel pickaxe",
     "image": "steel_pickaxe.png",
     "tags": [
-      "f2p",
       "Melee",
       "Mining"
     ],
@@ -145360,7 +144544,6 @@
     "name": "Steel platebody",
     "image": "steel_platebody.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -145484,7 +144667,6 @@
     "image": "steel_platebody_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -145502,7 +144684,6 @@
     "image": "steel_platebody_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -145519,7 +144700,6 @@
     "name": "Steel platelegs",
     "image": "steel_platelegs.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -145598,7 +144778,6 @@
     "image": "steel_platelegs_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -145616,7 +144795,6 @@
     "image": "steel_platelegs_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -145633,7 +144811,6 @@
     "name": "Steel plateskirt",
     "image": "steel_plateskirt.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -145691,7 +144868,6 @@
     "image": "steel_plateskirt_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -145709,7 +144885,6 @@
     "image": "steel_plateskirt_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -145742,7 +144917,6 @@
     "name": "Steel scimitar",
     "image": "steel_scimitar.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -146109,7 +145283,6 @@
     "name": "Steel sq shield",
     "image": "steel_sq_shield.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -146198,7 +145371,6 @@
     "name": "Steel sword",
     "image": "steel_sword.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -146392,7 +145564,6 @@
     "name": "Steel warhammer",
     "image": "steel_warhammer.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -146506,7 +145677,6 @@
     "name": "Stew",
     "image": "stew.png",
     "tags": [
-      "f2p",
       "Food"
     ],
     "sources": {
@@ -147190,7 +146360,6 @@
     "image": "strength_amulet_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -147283,7 +146452,6 @@
     "name": "Strength potion(1)",
     "image": "strength_potion(1).png",
     "tags": [
-      "f2p",
       "Potion"
     ],
     "sources": {
@@ -147318,7 +146486,6 @@
     "name": "Strength potion(2)",
     "image": "strength_potion(2).png",
     "tags": [
-      "f2p",
       "Potion"
     ],
     "sources": {
@@ -147359,7 +146526,6 @@
     "name": "Strength potion(3)",
     "image": "strength_potion(3).png",
     "tags": [
-      "f2p",
       "Potion"
     ],
     "sources": {
@@ -147420,7 +146586,6 @@
     "name": "Strength potion(4)",
     "image": "strength_potion(4).png",
     "tags": [
-      "f2p",
       "Potion"
     ],
     "sources": {
@@ -147583,9 +146748,6 @@
     "id": 9004,
     "name": "Stronghold notes",
     "image": "stronghold_notes.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "other": {
         "Grab the book from the skeleton on the first floor of the Stronghold of Security": {
@@ -147649,7 +146811,6 @@
     "name": "Studded body",
     "image": "studded_body.png",
     "tags": [
-      "f2p",
       "Ranged armours"
     ],
     "sources": {
@@ -147688,7 +146849,6 @@
     "image": "studded_body_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Ranged armours"
     ],
     "sources": {
@@ -147706,7 +146866,6 @@
     "image": "studded_body_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Ranged armours"
     ],
     "sources": {
@@ -147723,7 +146882,6 @@
     "name": "Studded chaps",
     "image": "studded_chaps.png",
     "tags": [
-      "f2p",
       "Ranged armours"
     ],
     "sources": {
@@ -147786,7 +146944,6 @@
     "image": "studded_chaps_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Ranged armours"
     ],
     "sources": {
@@ -147804,7 +146961,6 @@
     "image": "studded_chaps_(t).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Ranged armours"
     ],
     "sources": {
@@ -151557,7 +150713,6 @@
     "name": "Swift blade",
     "image": "swift_blade.png",
     "tags": [
-      "f2p",
       "Melee"
     ],
     "sources": {
@@ -151577,7 +150732,6 @@
     "name": "Swordfish",
     "image": "swordfish.png",
     "tags": [
-      "f2p",
       "Food"
     ],
     "sources": {
@@ -153300,9 +152454,6 @@
     "id": 2924,
     "name": "Teal boots",
     "image": "teal_boots.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "canCompletePriestInPeril"
@@ -153314,9 +152465,6 @@
     "id": 2932,
     "name": "Teal gloves",
     "image": "teal_gloves.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Crushing hand": {
@@ -153373,8 +152521,7 @@
     "name": "Team cape i",
     "image": "team_cape_i.png",
     "tags": [
-      "clue-reward-only",
-      "f2p"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -153390,8 +152537,7 @@
     "name": "Team cape x",
     "image": "team_cape_x.png",
     "tags": [
-      "clue-reward-only",
-      "f2p"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -153407,8 +152553,7 @@
     "name": "Team cape zero",
     "image": "team_cape_zero.png",
     "tags": [
-      "clue-reward-only",
-      "f2p"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -153423,9 +152568,6 @@
     "id": 4315,
     "name": "Team-1 cape",
     "image": "team-1_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153437,9 +152579,6 @@
     "id": 4333,
     "name": "Team-10 cape",
     "image": "team-10_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153451,9 +152590,6 @@
     "id": 4335,
     "name": "Team-11 cape",
     "image": "team-11_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153465,9 +152601,6 @@
     "id": 4337,
     "name": "Team-12 cape",
     "image": "team-12_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153479,9 +152612,6 @@
     "id": 4339,
     "name": "Team-13 cape",
     "image": "team-13_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153493,9 +152623,6 @@
     "id": 4341,
     "name": "Team-14 cape",
     "image": "team-14_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153507,9 +152634,6 @@
     "id": 4343,
     "name": "Team-15 cape",
     "image": "team-15_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153521,9 +152645,6 @@
     "id": 4345,
     "name": "Team-16 cape",
     "image": "team-16_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153535,9 +152656,6 @@
     "id": 4347,
     "name": "Team-17 cape",
     "image": "team-17_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153549,9 +152667,6 @@
     "id": 4349,
     "name": "Team-18 cape",
     "image": "team-18_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153563,9 +152678,6 @@
     "id": 4351,
     "name": "Team-19 cape",
     "image": "team-19_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153577,9 +152689,6 @@
     "id": 4317,
     "name": "Team-2 cape",
     "image": "team-2_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153591,9 +152700,6 @@
     "id": 4353,
     "name": "Team-20 cape",
     "image": "team-20_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153605,9 +152711,6 @@
     "id": 4355,
     "name": "Team-21 cape",
     "image": "team-21_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153619,9 +152722,6 @@
     "id": 4357,
     "name": "Team-22 cape",
     "image": "team-22_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153633,9 +152733,6 @@
     "id": 4359,
     "name": "Team-23 cape",
     "image": "team-23_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153647,9 +152744,6 @@
     "id": 4361,
     "name": "Team-24 cape",
     "image": "team-24_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153661,9 +152755,6 @@
     "id": 4363,
     "name": "Team-25 cape",
     "image": "team-25_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153675,9 +152766,6 @@
     "id": 4365,
     "name": "Team-26 cape",
     "image": "team-26_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153689,9 +152777,6 @@
     "id": 4367,
     "name": "Team-27 cape",
     "image": "team-27_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153703,9 +152788,6 @@
     "id": 4369,
     "name": "Team-28 cape",
     "image": "team-28_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153717,9 +152799,6 @@
     "id": 4371,
     "name": "Team-29 cape",
     "image": "team-29_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153731,9 +152810,6 @@
     "id": 4319,
     "name": "Team-3 cape",
     "image": "team-3_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153745,9 +152821,6 @@
     "id": 4373,
     "name": "Team-30 cape",
     "image": "team-30_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153759,9 +152832,6 @@
     "id": 4375,
     "name": "Team-31 cape",
     "image": "team-31_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153773,9 +152843,6 @@
     "id": 4377,
     "name": "Team-32 cape",
     "image": "team-32_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153787,9 +152854,6 @@
     "id": 4379,
     "name": "Team-33 cape",
     "image": "team-33_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153801,9 +152865,6 @@
     "id": 4381,
     "name": "Team-34 cape",
     "image": "team-34_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153815,9 +152876,6 @@
     "id": 4383,
     "name": "Team-35 cape",
     "image": "team-35_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153829,9 +152887,6 @@
     "id": 4385,
     "name": "Team-36 cape",
     "image": "team-36_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153843,9 +152898,6 @@
     "id": 4387,
     "name": "Team-37 cape",
     "image": "team-37_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153857,9 +152909,6 @@
     "id": 4389,
     "name": "Team-38 cape",
     "image": "team-38_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153871,9 +152920,6 @@
     "id": 4391,
     "name": "Team-39 cape",
     "image": "team-39_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153885,9 +152931,6 @@
     "id": 4321,
     "name": "Team-4 cape",
     "image": "team-4_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153899,9 +152942,6 @@
     "id": 4393,
     "name": "Team-40 cape",
     "image": "team-40_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153913,9 +152953,6 @@
     "id": 4395,
     "name": "Team-41 cape",
     "image": "team-41_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153927,9 +152964,6 @@
     "id": 4397,
     "name": "Team-42 cape",
     "image": "team-42_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153941,9 +152975,6 @@
     "id": 4399,
     "name": "Team-43 cape",
     "image": "team-43_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153955,9 +152986,6 @@
     "id": 4401,
     "name": "Team-44 cape",
     "image": "team-44_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153969,9 +152997,6 @@
     "id": 4403,
     "name": "Team-45 cape",
     "image": "team-45_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153983,9 +153008,6 @@
     "id": 4405,
     "name": "Team-46 cape",
     "image": "team-46_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -153997,9 +153019,6 @@
     "id": 4407,
     "name": "Team-47 cape",
     "image": "team-47_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -154011,9 +153030,6 @@
     "id": 4409,
     "name": "Team-48 cape",
     "image": "team-48_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -154025,9 +153041,6 @@
     "id": 4411,
     "name": "Team-49 cape",
     "image": "team-49_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -154039,9 +153052,6 @@
     "id": 4323,
     "name": "Team-5 cape",
     "image": "team-5_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -154053,9 +153063,6 @@
     "id": 4413,
     "name": "Team-50 cape",
     "image": "team-50_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -154067,9 +153074,6 @@
     "id": 4325,
     "name": "Team-6 cape",
     "image": "team-6_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -154081,9 +153085,6 @@
     "id": 4327,
     "name": "Team-7 cape",
     "image": "team-7_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -154095,9 +153096,6 @@
     "id": 4329,
     "name": "Team-8 cape",
     "image": "team-8_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -154109,9 +153107,6 @@
     "id": 4331,
     "name": "Team-9 cape",
     "image": "team-9_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -154178,7 +153173,6 @@
     "name": "Teleport card",
     "image": "teleport_card.png",
     "tags": [
-      "f2p",
       "Teleports"
     ],
     "sources": {
@@ -154467,7 +153461,6 @@
     "name": "Thread",
     "image": "thread.png",
     "tags": [
-      "f2p",
       "Crafting"
     ],
     "sources": {
@@ -154532,7 +153525,6 @@
     "name": "Tiara",
     "image": "tiara.png",
     "tags": [
-      "f2p",
       "Runecraft"
     ],
     "sources": {
@@ -154574,7 +153566,6 @@
     "name": "Tiara mould",
     "image": "tiara_mould.png",
     "tags": [
-      "f2p",
       "Crafting"
     ],
     "sources": {
@@ -154608,7 +153599,6 @@
     "name": "Tin ore",
     "image": "tin_ore.png",
     "tags": [
-      "f2p",
       "Smithing"
     ],
     "sources": {
@@ -154771,9 +153761,6 @@
     "id": 590,
     "name": "Tinderbox",
     "image": "tinderbox.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Camping Equipment": {
@@ -155684,7 +154671,6 @@
     "name": "Tomato",
     "image": "tomato.png",
     "tags": [
-      "f2p",
       "Food",
       "Cooking"
     ],
@@ -158206,7 +157192,6 @@
     "name": "Triangle sandwich",
     "image": "triangle_sandwich.png",
     "tags": [
-      "f2p",
       "Food"
     ],
     "sources": {
@@ -158403,7 +157388,6 @@
     "name": "Trout",
     "image": "trout.png",
     "tags": [
-      "f2p",
       "Food"
     ],
     "sources": {
@@ -158533,7 +157517,6 @@
     "name": "Tuna",
     "image": "tuna.png",
     "tags": [
-      "f2p",
       "Food"
     ],
     "sources": {
@@ -159477,9 +158460,6 @@
     "id": 1716,
     "name": "Unblessed symbol",
     "image": "unblessed_symbol.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Skeleton (Tarn's Lair) Low level": {
@@ -159610,7 +158590,6 @@
     "name": "Uncooked apple pie",
     "image": "uncooked_apple_pie.png",
     "tags": [
-      "f2p",
       "Cooking"
     ],
     "sources": {
@@ -159641,7 +158620,6 @@
     "name": "Uncooked berry pie",
     "image": "uncooked_berry_pie.png",
     "tags": [
-      "f2p",
       "Cooking"
     ],
     "sources": {
@@ -159762,7 +158740,6 @@
     "name": "Uncooked meat pie",
     "image": "uncooked_meat_pie.png",
     "tags": [
-      "f2p",
       "Cooking"
     ],
     "sources": {
@@ -159830,7 +158807,6 @@
     "name": "Uncut diamond",
     "image": "uncut_diamond.png",
     "tags": [
-      "f2p",
       "Crafting"
     ],
     "sources": {
@@ -160316,7 +159292,6 @@
     "name": "Uncut emerald",
     "image": "uncut_emerald.png",
     "tags": [
-      "f2p",
       "Crafting"
     ],
     "sources": {
@@ -161107,7 +160082,6 @@
     "name": "Uncut ruby",
     "image": "uncut_ruby.png",
     "tags": [
-      "f2p",
       "Crafting"
     ],
     "sources": {
@@ -161497,7 +160471,6 @@
     "name": "Uncut sapphire",
     "image": "uncut_sapphire.png",
     "tags": [
-      "f2p",
       "Crafting"
     ],
     "sources": {
@@ -161891,7 +160864,6 @@
     "name": "Unfired bowl",
     "image": "unfired_bowl.png",
     "tags": [
-      "f2p",
       "Crafting"
     ],
     "sources": {
@@ -161938,7 +160910,6 @@
     "name": "Unfired pie dish",
     "image": "unfired_pie_dish.png",
     "tags": [
-      "f2p",
       "Crafting"
     ],
     "sources": {
@@ -161985,7 +160956,6 @@
     "name": "Unfired pot",
     "image": "unfired_pot.png",
     "tags": [
-      "f2p",
       "Crafting"
     ],
     "sources": {
@@ -162453,9 +161423,6 @@
     "id": 1714,
     "name": "Unstrung symbol",
     "image": "unstrung_symbol.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Skeleton (Tarn's Lair) Low level": {
@@ -162983,9 +161950,6 @@
     "id": 229,
     "name": "Vial",
     "image": "vial.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Empty vial pack": {
@@ -163108,9 +162072,6 @@
     "id": 227,
     "name": "Vial of water",
     "image": "vial_of_water.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Water elemental": {
@@ -163302,7 +162263,6 @@
     "name": "Vile ashes",
     "image": "vile_ashes.png",
     "tags": [
-      "f2p",
       "Prayer"
     ],
     "sources": {
@@ -164243,7 +163203,6 @@
     "name": "Water rune",
     "image": "water_rune.png",
     "tags": [
-      "f2p",
       "Magic"
     ],
     "sources": {
@@ -164740,7 +163699,6 @@
     "name": "Water talisman",
     "image": "water_talisman.png",
     "tags": [
-      "f2p",
       "Runecraft"
     ],
     "sources": {
@@ -164844,7 +163802,6 @@
     "name": "Water tiara",
     "image": "water_tiara.png",
     "tags": [
-      "f2p",
       "Runecraft"
     ],
     "sources": {
@@ -165833,9 +164790,6 @@
     "id": 1005,
     "name": "White apron",
     "image": "white_apron.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -165866,9 +164820,6 @@
     "id": 1476,
     "name": "White bead",
     "image": "white_bead.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Imp": {
@@ -166452,9 +165403,6 @@
     "id": 1048,
     "name": "White partyhat",
     "image": "white_partyhat.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Christmas cracker": {
@@ -166555,9 +165503,6 @@
     "id": 2522,
     "name": "White toy horsey",
     "image": "white_toy_horsey.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -167386,7 +166331,6 @@
     "image": "willow_comp_bow.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Ranged"
     ],
     "sources": {
@@ -167425,7 +166369,6 @@
     "name": "Willow logs",
     "image": "willow_logs.png",
     "tags": [
-      "f2p",
       "Hunter",
       "Fletching"
     ],
@@ -167500,7 +166443,6 @@
     "name": "Willow longbow",
     "image": "willow_longbow.png",
     "tags": [
-      "f2p",
       "Ranged"
     ],
     "sources": {
@@ -167803,7 +166745,6 @@
     "name": "Willow shortbow",
     "image": "willow_shortbow.png",
     "tags": [
-      "f2p",
       "Ranged"
     ],
     "sources": {
@@ -167923,9 +166864,6 @@
     "id": 245,
     "name": "Wine of zamorak",
     "image": "wine_of_zamorak.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Chest (alchemist's signet)": {
@@ -168127,7 +167065,6 @@
     "name": "Wizard hat",
     "image": "wizard_hat.png",
     "tags": [
-      "f2p",
       "Magic armours"
     ],
     "sources": {
@@ -168164,9 +167101,6 @@
     "id": 1907,
     "name": "Wizard's mind bomb",
     "image": "wizard's_mind_bomb.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Dinky the drink troll": {
@@ -168191,9 +167125,6 @@
     "id": 1793,
     "name": "Woad leaf",
     "image": "woad_leaf.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Woad plant": {
@@ -168389,8 +167320,7 @@
     "name": "Wolf cloak",
     "image": "wolf_cloak.png",
     "tags": [
-      "clue-reward-only",
-      "f2p"
+      "clue-reward-only"
     ],
     "sources": {
       "drops": {
@@ -168714,7 +167644,6 @@
     "name": "Wooden shield",
     "image": "wooden_shield.png",
     "tags": [
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -168733,7 +167662,6 @@
     "image": "wooden_shield_(g).png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -168804,7 +167732,6 @@
     "name": "Wool",
     "image": "wool.png",
     "tags": [
-      "f2p",
       "Crafting"
     ],
     "sources": {
@@ -169474,9 +168401,6 @@
     "id": 1472,
     "name": "Yellow bead",
     "image": "yellow_bead.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Imp": {
@@ -169490,9 +168414,6 @@
     "id": 2914,
     "name": "Yellow boots",
     "image": "yellow_boots.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "canCompletePriestInPeril"
@@ -169504,9 +168425,6 @@
     "id": 1023,
     "name": "Yellow cape",
     "image": "yellow_cape.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "shops": {
         "Yes": "No requirements"
@@ -169547,9 +168465,6 @@
     "id": 1765,
     "name": "Yellow dye",
     "image": "yellow_dye.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Shelves (Getting Ahead)": {
@@ -169646,9 +168561,6 @@
     "id": 2922,
     "name": "Yellow gloves",
     "image": "yellow_gloves.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Crushing hand": {
@@ -169679,9 +168591,6 @@
     "id": 1040,
     "name": "Yellow partyhat",
     "image": "yellow_partyhat.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Christmas cracker": {
@@ -169823,7 +168732,6 @@
     "name": "Yew logs",
     "image": "yew_logs.png",
     "tags": [
-      "f2p",
       "Hunter",
       "Fletching"
     ],
@@ -170954,7 +169862,6 @@
     "image": "zamorak_full_helm.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -171027,7 +169934,6 @@
     "image": "zamorak_kiteshield.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -171132,9 +170038,6 @@
     "id": 1033,
     "name": "Zamorak monk bottom",
     "image": "zamorak_monk_bottom.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Disciple of Iban": {
@@ -171163,9 +170066,6 @@
     "id": 1035,
     "name": "Zamorak monk top",
     "image": "zamorak_monk_top.png",
-    "tags": [
-      "f2p"
-    ],
     "sources": {
       "drops": {
         "Disciple of Iban": {
@@ -171332,7 +170232,6 @@
     "image": "zamorak_platebody.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -171350,7 +170249,6 @@
     "image": "zamorak_platelegs.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
@@ -171368,7 +170266,6 @@
     "image": "zamorak_plateskirt.png",
     "tags": [
       "clue-reward-only",
-      "f2p",
       "Melee armours"
     ],
     "sources": {
