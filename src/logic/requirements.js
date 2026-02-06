@@ -1214,6 +1214,9 @@ export const REQUIREMENT_CHECKS = {
     canStartPerilousMoons(ctx) {
         return canStartPerilousMoons(ctx);
     },
+    canStartPerilousMoonsAndReachWyrmlings(ctx) {
+        return canStartPerilousMoonsAndReachWyrmlings(ctx);
+    },
     canCompleteFairytaleIGrowingPains(ctx) {
         return canCompleteFairytaleIGrowingPains(ctx)
     },
@@ -5911,6 +5914,21 @@ function canStartPerilousMoons(ctx) {
         hasSkillLevel(ctx, "Fishing", 20), //
         hasSkillLevel(ctx, "Runecraft", 20), //
         hasSkillLevel(ctx, "Construction", 10) //
+    ]);
+}
+
+function canStartPerilousMoonsAndReachWyrmlings(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteTwilightsPromise", canCompleteTwilightsPromise), //
+        hasSkillLevel(ctx, "Hunter", 20), //
+        hasSkillLevel(ctx, "Slayer", 48), //
+        hasSkillLevel(ctx, "Fishing", 20), //
+        hasSkillLevel(ctx, "Runecraft", 20), //
+        hasSkillLevel(ctx, "Construction", 10), //
+        has(ctx, 2347), // Hammer
+        has(ctx, 8794), // Saw
+        has(ctx, 1440), // Earth talisman
+        has(ctx, 1444), // Water talisman
     ]);
 }
 

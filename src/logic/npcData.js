@@ -16391,7 +16391,7 @@ export const NPC_DATA = {
     },
     "Wyrmling": {
         "wiki": "https://oldschool.runescape.wiki/w/Wyrmling",
-        "rule": ["canStartPerilousMoons"],
+        "rule": ["canStartPerilousMoonsAndReachWyrmlings"],
         "skill": ["Slayer"],
         "level": [62],
         "tags": [],
