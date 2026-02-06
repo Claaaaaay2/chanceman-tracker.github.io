@@ -21,6 +21,7 @@ let memory = {
         hideLMS: false,
         hideJon: false,
         isFreeToPlay: false,
+        hideSourcelessItems: false,
         otherDropsSortByDroprate: true,
         overrideWoodcutting: false,
         overrideMining: false,

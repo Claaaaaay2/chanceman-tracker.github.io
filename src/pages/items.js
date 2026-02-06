@@ -108,6 +108,11 @@ export default async function ItemsPage() {
                     <input type="checkbox" id="isFreeToPlay">
                     I am free to play
                 </label>
+
+                <label id="hideSourcelessItemsRow">
+                    <input type="checkbox" id="hideSourcelessItems">
+                    Hide sourceless items
+                </label>
             </div>
 
             <p class="marginOneRem">Overrides (e.g. when you've lamped a skill or want to see what lamping one can bring you)</p>

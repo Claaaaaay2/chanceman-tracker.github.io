@@ -150,6 +150,7 @@ window.initItemsPage = async function () {
         importButton: document.getElementById("import-item-filters"),
         importInput: document.getElementById("import-item-filters-input"),
         loading: document.getElementById("itemsLoading"),
+        f2pSourcelessRow: document.getElementById("hideSourcelessItemsRow"),
         grid: document.getElementById("itemGrid")
     };
 
@@ -170,6 +171,7 @@ window.initItemsPage = async function () {
         { id: "hideLMS", key: "hideLMS", defaultValue: false, invalidate: true },
         { id: "hideJon", key: "hideJon", defaultValue: false, invalidate: true },
         { id: "isFreeToPlay", key: "isFreeToPlay", defaultValue: false, invalidate: true },
+        { id: "hideSourcelessItems", key: "hideSourcelessItems", defaultValue: false },
         { id: "overrideWoodcutting", key: "overrideWoodcutting", defaultValue: false, invalidate: true },
         { id: "overrideMining", key: "overrideMining", defaultValue: false, invalidate: true },
         { id: "overrideFishing", key: "overrideFishing", defaultValue: false, invalidate: true },
@@ -187,6 +189,7 @@ window.initItemsPage = async function () {
 
     const missingElement = !elements.searchInput || !elements.hunterRumoursCompleted || !elements.grid || !elements.loading
         || !elements.importButton || !elements.importInput
+        || !elements.f2pSourcelessRow
         || checkboxConfigs.some((config) => !checkboxElements[config.key]);
     if (missingElement) {
         setTimeout(initItemsPage, 0);
@@ -199,10 +202,16 @@ window.initItemsPage = async function () {
         for (const config of checkboxConfigs) {
             checkboxElements[config.key].checked = filters[config.key] ?? config.defaultValue;
         }
+        updateF2pDependentFilters(filters);
     }
 
     const f = fileStore.filters;
     applyFiltersToUI(f);
+
+    function updateF2pDependentFilters(filters) {
+        if (!elements.f2pSourcelessRow) return;
+        elements.f2pSourcelessRow.hidden = !filters?.isFreeToPlay;
+    }
 
     function readFiltersFromUI() {
         const otherDropsToggle = document.getElementById("otherDropsSortByDroprate");
@@ -273,6 +282,16 @@ window.initItemsPage = async function () {
         }
 
         return best ? ` (${best})` : "";
+    }
+
+    function hasAnyItemSource(item) {
+        const sources = item?.sources;
+        if (!sources || typeof sources !== "object") return false;
+        const hasEntries = (value) => value && typeof value === "object" && Object.keys(value).length > 0;
+        return hasEntries(sources.drops)
+            || hasEntries(sources.shops)
+            || hasEntries(sources.spawns)
+            || hasEntries(sources.other);
     }
 
     function getLevelIgnoredCtx(ctx) {
@@ -549,6 +568,7 @@ window.initItemsPage = async function () {
             hideLMS,
             hideJon,
             isFreeToPlay,
+            hideSourcelessItems,
             otherDropsSortByDroprate = true
         } = getFilters();
 
@@ -568,6 +588,9 @@ window.initItemsPage = async function () {
                 continue;
             }
             if (isFreeToPlay && !item.tags?.includes("f2p")) {
+                continue;
+            }
+            if (isFreeToPlay && hideSourcelessItems && !hasAnyItemSource(item)) {
                 continue;
             }
             if (!item.name.toLowerCase().includes(search.toLowerCase())) continue;
