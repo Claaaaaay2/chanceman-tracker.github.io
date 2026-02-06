@@ -17719,7 +17719,7 @@
     ],
     "sources": {
       "other": {
-        "Shearing sheep or alpacas": {
+        "Shearing sheep": {
           "notes": "Requires Shears.",
           "rule": {
             "has": 1735

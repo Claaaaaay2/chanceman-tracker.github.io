@@ -587,9 +587,6 @@ window.initItemsPage = async function () {
             if (isItemHiddenByTag(item)) {
                 continue;
             }
-            if (isFreeToPlay && !item.tags?.includes("f2p")) {
-                continue;
-            }
             if (isFreeToPlay && hideSourcelessItems && !hasAnyItemSource(item)) {
                 continue;
             }
