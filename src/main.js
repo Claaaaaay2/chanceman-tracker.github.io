@@ -153,6 +153,9 @@ window.initItemsPage = async function () {
         f2pSourcelessRow: document.getElementById("hideSourcelessItemsRow"),
         grid: document.getElementById("itemGrid")
     };
+    let currentItemsById = new Map();
+    let currentRolledSet = new Set();
+    let tooltipCache = new Map();
 
     const checkboxConfigs = [
         { id: "hideObtained", key: "hideObtained", defaultValue: true },
@@ -423,7 +426,7 @@ window.initItemsPage = async function () {
                 : skill);
     }
 
-    async function getObtainableSources(item, ctx, rolled) {
+    async function getObtainableSources(item, ctx, rolledSet) {
         const sources = [];
 
         if (item.sources?.drops) {
@@ -445,13 +448,13 @@ window.initItemsPage = async function () {
             }
         }
 
-        if (rolled.includes(item.id) && item.sources?.shops) {
+        if (rolledSet?.has(item.id) && item.sources?.shops) {
             for (const shopName of Object.keys(item.sources.shops)) {
                 sources.push(`Shop: ${shopName}`);
             }
         }
 
-        if (rolled.includes(item.id) && item.sources?.spawns) {
+        if (rolledSet?.has(item.id) && item.sources?.spawns) {
             for (const spawnName of Object.keys(item.sources.spawns)) {
                 sources.push(`Spawn: ${spawnName}`);
             }
@@ -460,8 +463,8 @@ window.initItemsPage = async function () {
         return sources;
     }
 
-    async function buildTooltipHtml(item, ctx, rolled) {
-        const sources = await getObtainableSources(item, ctx, rolled);
+    async function buildTooltipHtml(item, ctx, rolledSet) {
+        const sources = await getObtainableSources(item, ctx, rolledSet);
         if (!sources.length) {
             return `
                 <div class="item-tooltip">
@@ -488,6 +491,49 @@ window.initItemsPage = async function () {
         elements.loading.classList.toggle("active", isLoading);
         elements.grid.style.display = isLoading ? "none" : "";
         setInputsDisabled(isLoading);
+    }
+
+    function initTooltipLoader() {
+        if (!elements.grid || elements.grid.dataset.tooltipBound) return;
+        elements.grid.dataset.tooltipBound = "true";
+
+        const handleTooltipTrigger = async (event) => {
+            const card = event.target.closest(".item-card");
+            if (!card) return;
+            if (card.dataset.tooltipLoaded === "true" || card.dataset.tooltipLoading === "true") return;
+
+            const itemId = Number(card.dataset.itemId);
+            if (!itemId) return;
+
+            const cached = tooltipCache.get(itemId);
+            if (cached) {
+                const tooltip = card.querySelector(".item-tooltip");
+                if (tooltip) {
+                    tooltip.outerHTML = cached;
+                }
+                card.dataset.tooltipLoaded = "true";
+                return;
+            }
+
+            const item = currentItemsById.get(itemId);
+            if (!item) return;
+
+            card.dataset.tooltipLoading = "true";
+            try {
+                const html = await buildTooltipHtml(item, fileStore, currentRolledSet);
+                tooltipCache.set(itemId, html);
+                const tooltip = card.querySelector(".item-tooltip");
+                if (tooltip) {
+                    tooltip.outerHTML = html;
+                }
+                card.dataset.tooltipLoaded = "true";
+            } finally {
+                card.dataset.tooltipLoading = "false";
+            }
+        };
+
+        elements.grid.addEventListener("mouseenter", handleTooltipTrigger, true);
+        elements.grid.addEventListener("focusin", handleTooltipTrigger);
     }
 
     async function importFiltersFromFile(file) {
@@ -574,8 +620,12 @@ window.initItemsPage = async function () {
         } = getFilters();
 
         const items = fileStore.items || [];
-        const obtained = fileStore.obtained || [];
-        const rolled = fileStore.rolled || [];
+        const obtainedSet = new Set(fileStore.obtained || []);
+        const rolledSet = new Set(fileStore.rolled || []);
+        const searchLower = String(search || "").toLowerCase();
+        currentItemsById = new Map(items.map(item => [item.id, item]));
+        currentRolledSet = rolledSet;
+        tooltipCache = new Map();
         const ranked = await computeAllRanksOnce(items, fileStore);
 
         // sort async
@@ -591,40 +641,40 @@ window.initItemsPage = async function () {
             if (isFreeToPlay && hideSourcelessItems && !hasAnyItemSource(item)) {
                 continue;
             }
-            if (!item.name.toLowerCase().includes(search.toLowerCase())) continue;
-            if (hideObtained && obtained.includes(item.id)) continue;
-            if (onlyRolled && !rolled.includes(item.id)) continue;
+            if (!item.name.toLowerCase().includes(searchLower)) continue;
+            if (hideObtained && obtainedSet.has(item.id)) continue;
+            if (onlyRolled && !rolledSet.has(item.id)) continue;
             if (hideClue && item.tags?.includes("clue-reward-only")) continue;
-            if (hideClue && await shouldHideForClueFilter(item, fileStore)) {
+            if (hideClue && await shouldHideForClueFilter(item, fileStore, rolledSet)) {
                 sort.rank = 8;
             }
-            if (!allowOthersHouses && await hideTag(item, fileStore, "house")) {
+            if (!allowOthersHouses && await hideTag(item, fileStore, "house", rolledSet)) {
                 sort.rank = 8;
             }
-            if (!hasSuperiors && await hideTag(item, fileStore, "superior")) {
+            if (!hasSuperiors && await hideTag(item, fileStore, "superior", rolledSet)) {
                 sort.rank = 8;
             }
-            if (isIronman && await isNonIronItem(item, fileStore)) {
+            if (isIronman && await isNonIronItem(item, fileStore, rolledSet)) {
                 sort.rank = 8;
             }
             if (!hasFlatpacks && item.tags?.includes("flatpack")) continue;
             if (!hasItemsets && item.tags?.includes("itemset")) continue;
-            if (hideBosses && await hideTag(item, fileStore, "boss")) {
+            if (hideBosses && await hideTag(item, fileStore, "boss", rolledSet)) {
                 sort.rank = 8;
             }
-            if (hideRaids && await hideTag(item, fileStore, "raid")) {
+            if (hideRaids && await hideTag(item, fileStore, "raid", rolledSet)) {
                 sort.rank = 8;
             }
-            if (isSlayerLocked && await hideSkill(item, fileStore, "Slayer")) {
+            if (isSlayerLocked && await hideSkill(item, fileStore, "Slayer", rolledSet)) {
                 sort.rank = 8;
             }
-            if (isHunterRumourLocked && await hideTag(item, fileStore, "hunterRumour")) {
+            if (isHunterRumourLocked && await hideTag(item, fileStore, "hunterRumour", rolledSet)) {
                 sort.rank = 8;
             }
-            if (hideLMS && await hideTag(item, fileStore, "LMS")) {
+            if (hideLMS && await hideTag(item, fileStore, "LMS", rolledSet)) {
                 sort.rank = 8;
             }
-            if (hideJon && await hideTag(item, fileStore, "jon")) {
+            if (hideJon && await hideTag(item, fileStore, "jon", rolledSet)) {
                 sort.rank = 8;
             }
             if (hideUnobtainable && sort.rank === 8) continue;
@@ -690,8 +740,8 @@ window.initItemsPage = async function () {
                 lastRank = sort.rank;
             }
 
-                const isObtained = obtained.includes(item.id);
-                const isRolled = rolled.includes(item.id);
+                const isObtained = obtainedSet.has(item.id);
+                const isRolled = rolledSet.has(item.id);
                 const skillLabels = await getItemSkillLabels(item, fileStore, sort.rank);
                 const skillHtml = skillLabels.length
                     ? `
@@ -701,9 +751,14 @@ window.initItemsPage = async function () {
                     `
                     : "";
 
-                const tooltipHtml = await buildTooltipHtml(item, fileStore, rolled);
+                const tooltipHtml = `
+                    <div class="item-tooltip item-tooltip-loading">
+                        <div class="item-tooltip-title">Obtainable sources</div>
+                        <div class="item-tooltip-empty">Hover to load</div>
+                    </div>
+                `;
                 html += `
-                    <div class="item-card" onclick="navigate('/item?id=${item.id}')">
+                    <div class="item-card" data-item-id="${item.id}" onclick="navigate('/item?id=${item.id}')">
                         ${isObtained ? `<span class="badge obtained">Obtained</span>` : ""}
                         ${isRolled ? `<span class="badge rolled">Rolled</span>` : ""}
                         <img class="lazy-img item-image" data-src="/images/${item.image}" src="/images/placeholder.png">
@@ -725,6 +780,7 @@ window.initItemsPage = async function () {
                     renderItems();
                 });
             }
+            initTooltipLoader();
             setTimeout(() => initLazyImages(), 0);
         }
         } finally {
@@ -843,17 +899,17 @@ export function afterRoute() {
     initNavMenu();
 }
 
-async function shouldHideForClueFilter(item, ctx) {
+async function shouldHideForClueFilter(item, ctx, rolledSet) {
     let hasAnyClueSource = false;
     let hasReachableNonClueSource = false;
 
     // Check shops - only count if rolled
-    if (ctx.rolled?.includes(item.id) && item.sources?.shops) {
+    if (rolledSet?.has(item.id) && item.sources?.shops) {
         hasReachableNonClueSource = true;
     }
 
     // Check spawns - only count if rolled
-    if (ctx.rolled?.includes(item.id) && item.sources?.spawns) {
+    if (rolledSet?.has(item.id) && item.sources?.spawns) {
         hasReachableNonClueSource = true;
     }
 
@@ -919,7 +975,7 @@ async function canReachSource(source, ctx) {
     return evaluateRule(rule, ctx);
 }
 
-async function isNonIronItem(item, ctx) {
+async function isNonIronItem(item, ctx, rolledSet) {
     let hasReachableIronSource = false;
     let hasReachableSource = false;
     let hasReachableNonIronmanSource = false;
@@ -969,7 +1025,7 @@ async function isNonIronItem(item, ctx) {
     return false;
 }
 
-async function hideTag(item, ctx, tag) {
+async function hideTag(item, ctx, tag, rolledSet) {
     let hasAnyTagSource = false;
     let hasReachableNonTagSource = false;
 
@@ -1009,7 +1065,7 @@ async function hideTag(item, ctx, tag) {
         }
     }
 
-    if (ctx.rolled.includes(item.id) && (item.sources?.shops || item.sources?.spawns)) {
+    if (rolledSet?.has(item.id) && (item.sources?.shops || item.sources?.spawns)) {
         return false;
     }
 
@@ -1020,7 +1076,7 @@ async function hideTag(item, ctx, tag) {
     return false;
 }
 
-async function hideSkill(item, ctx, skill) {
+async function hideSkill(item, ctx, skill, rolledSet) {
     const skillLevel = ctx.player?.levels[skill];
     let hasAnySkillSource = false;
     let hasSkillLevel = false;
@@ -1061,7 +1117,7 @@ async function hideSkill(item, ctx, skill) {
         }
     }
 
-    if (ctx.rolled.includes(item.id) && (item.sources?.shops || item.sources?.spawns)) {
+    if (rolledSet?.has(item.id) && (item.sources?.shops || item.sources?.spawns)) {
         return false;
     }
 
