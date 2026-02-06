@@ -6449,13 +6449,13 @@ function canStartZogreFleshEaters(ctx) {
 function canTrainCrafting(ctx) {
     if (ctx.filters?.overrideCrafting) return true;
     return hasAnyItems(ctx, [
-        1737,
-        1761,
+        1737, // Wool
+        1761, // Soft clay
     ])
         || (has(ctx, 1741) // Leather
-            && ctx.filters?.isFreeToPlay //
-            ? (has(ctx, 1733) && has(ctx, 1734)) // Needle and Thread
-            : true
+            && (ctx.filters?.isFreeToPlay
+                ? (has(ctx, 1733) && has(ctx, 1734)) // Needle and Thread
+                : true)
         ) //
         || (has(ctx, 1775) // Molten glass
             && has(ctx, 1785) // Glassblowing pipe
