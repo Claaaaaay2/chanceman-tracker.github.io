@@ -74,8 +74,33 @@ const ITEM_SECTION_TITLES = {
 
 let rankedItemsCache = null;
 
+function isItemProfilingEnabled() {
+    return typeof window !== "undefined" && window.__profileItems === true;
+}
+
 async function computeAllRanksOnce(items, ctx) {
     if (rankedItemsCache) return rankedItemsCache;
+
+    const profileItems = isItemProfilingEnabled();
+    const ranksStart = profileItems ? performance.now() : 0;
+
+    ctx.npcObtainableCache ??= new Map();
+    const npcNames = new Set();
+    for (const item of items) {
+        const drops = item.sources?.drops;
+        if (!drops) continue;
+        for (const npcName of Object.keys(drops)) {
+            if (!ctx.npcObtainableCache.has(npcName)) {
+                npcNames.add(npcName);
+            }
+        }
+    }
+
+    if (npcNames.size) {
+        await Promise.all(
+            [...npcNames].map((npcName) => isNpcObtainable(npcName, ctx))
+        );
+    }
 
     rankedItemsCache = await Promise.all(
         items.map(async item => {
@@ -109,6 +134,11 @@ async function computeAllRanksOnce(items, ctx) {
             };
         })
     );
+
+    if (profileItems) {
+        const ranksElapsed = performance.now() - ranksStart;
+        console.log(`[Items] computeAllRanksOnce: ${ranksElapsed.toFixed(1)}ms`);
+    }
 
     return rankedItemsCache;
 }
@@ -303,6 +333,7 @@ window.initItemsPage = async function () {
             ...ctx,
             ignoreSkillLevels: true,
             suppressMissing: true,
+            ruleEvalKey: `${ctx.ruleEvalKey || "base"}:ignoreLevels`,
             missing: {
                 ...(ctx?.missing ?? {}),
                 suppressMissing: true,
@@ -596,7 +627,18 @@ window.initItemsPage = async function () {
     async function renderItems() {
         setLoading(true);
         await new Promise(requestAnimationFrame);
+        let previousCacheRules;
+        let previousRuleEvalCache;
+        let previousRuleEvalKey;
         try {
+        const profileItems = isItemProfilingEnabled();
+        const renderStart = profileItems ? performance.now() : 0;
+        previousCacheRules = fileStore.cacheRules;
+        previousRuleEvalCache = fileStore.ruleEvalCache;
+        previousRuleEvalKey = fileStore.ruleEvalKey;
+        fileStore.cacheRules = true;
+        fileStore.ruleEvalCache = new Map();
+        fileStore.ruleEvalKey = "base";
         const {
             search,
             hideObtained,
@@ -783,7 +825,14 @@ window.initItemsPage = async function () {
             initTooltipLoader();
             setTimeout(() => initLazyImages(), 0);
         }
+        if (profileItems) {
+            const renderElapsed = performance.now() - renderStart;
+            console.log(`[Items] renderItems: ${renderElapsed.toFixed(1)}ms`);
+        }
         } finally {
+            fileStore.cacheRules = previousCacheRules;
+            fileStore.ruleEvalCache = previousRuleEvalCache;
+            fileStore.ruleEvalKey = previousRuleEvalKey;
             setLoading(false);
         }
     }
@@ -845,6 +894,7 @@ export function invalidateLogicCaches(ctx) {
     rankedItemsCache = null;
     ctx.itemAvailability = new Map();
     ctx.npcReachCache = new Map();
+    ctx.npcObtainableCache = new Map();
 }
 
 window.addEventListener("DOMContentLoaded", async () => {

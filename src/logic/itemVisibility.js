@@ -77,10 +77,25 @@ export function areNpcSkillsMet(npcName, ctx) {
 }
 
 export async function isNpcObtainable(npcName, ctx) {
-    if (isNpcBlockedByFilters(npcName, ctx)) return false;
-    if (!(await canReachNpc(npcName, ctx))) return false;
-    if (!areNpcSkillsMet(npcName, ctx)) return false;
+    ctx.npcObtainableCache ??= new Map();
+    if (ctx.npcObtainableCache.has(npcName)) {
+        return ctx.npcObtainableCache.get(npcName);
+    }
 
+    if (isNpcBlockedByFilters(npcName, ctx)) {
+        ctx.npcObtainableCache.set(npcName, false);
+        return false;
+    }
+    if (!(await canReachNpc(npcName, ctx))) {
+        ctx.npcObtainableCache.set(npcName, false);
+        return false;
+    }
+    if (!areNpcSkillsMet(npcName, ctx)) {
+        ctx.npcObtainableCache.set(npcName, false);
+        return false;
+    }
+
+    ctx.npcObtainableCache.set(npcName, true);
     return true;
 }
 

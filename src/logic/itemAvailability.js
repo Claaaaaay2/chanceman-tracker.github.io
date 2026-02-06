@@ -48,68 +48,96 @@ export async function canDoOtherMethod(rule, ctx) {
    =========================================================== */
 
 export async function evaluateRule(rule, ctx) {
-    // Empty or null = always allowed
-    if (!rule) return true;
+    const ruleCache = ctx?.cacheRules ? ctx?.ruleEvalCache : null;
+    const ruleCacheKey = ctx?.ruleEvalKey || "base";
+    if (ruleCache) {
+        const cachedByRule = ruleCache.get(rule);
+        if (cachedByRule?.has(ruleCacheKey)) {
+            return cachedByRule.get(ruleCacheKey);
+        }
+    }
 
-    // String → requirement function
-    if (typeof rule === "string") {
+    let result = false;
+
+    // Empty or null = always allowed
+    if (!rule) {
+        result = true;
+    } else if (typeof rule === "string") {
+        // String -> requirement function
         const fn = REQUIREMENT_CHECKS[rule];
         if (!fn) {
             console.warn("Unknown rule:", rule);
-            return false;
+            result = false;
+        } else {
+            result = await fn(ctx);
         }
-        return await fn(ctx);
-    }
-
-    // Array → OR
-    if (Array.isArray(rule)) {
+    } else if (Array.isArray(rule)) {
+        // Array -> OR
         for (const r of rule) {
-            if (await evaluateRule(r, ctx)) return true;
+            if (await evaluateRule(r, ctx)) {
+                result = true;
+                break;
+            }
         }
-        return false;
-    }
-
-    // Object structures
-    if (typeof rule === "object") {
+    } else if (typeof rule === "object") {
+        // Object structures
 
         // has {id}
         if (rule.has !== undefined) {
-            return has(ctx, rule.has)
-        }
-
-        // skill level requirement: { skill: "Farming", level: 50 }
-        if (rule.skill && rule.level !== undefined) {
+            result = has(ctx, rule.has);
+        } else if (rule.skill && rule.level !== undefined) {
+            // skill level requirement: { skill: "Farming", level: 50 }
             const skillName = capitalizeFirstLetter(rule.skill);
-            return hasSkillLevel(ctx, skillName, rule.level);
-        }
-
-        // skill level requirements list: { skills: [{ skill, level }, ...] }
-        if (Array.isArray(rule.skills)) {
+            result = hasSkillLevel(ctx, skillName, rule.level);
+        } else if (Array.isArray(rule.skills)) {
+            // skill level requirements list: { skills: [{ skill, level }, ...] }
+            result = true;
             for (const req of rule.skills) {
-                if (!req?.skill || req.level === undefined) return false;
+                if (!req?.skill || req.level === undefined) {
+                    result = false;
+                    break;
+                }
                 const skillName = capitalizeFirstLetter(req.skill);
-                if (!hasSkillLevel(ctx, skillName, req.level)) return false;
+                if (!hasSkillLevel(ctx, skillName, req.level)) {
+                    result = false;
+                    break;
+                }
             }
-            return true;
-        }
-
-        // any
-        if (rule.any) {
+        } else if (rule.any) {
+            // any
             for (const sub of rule.any) {
-                if (await evaluateRule(sub, ctx)) return true;
+                if (await evaluateRule(sub, ctx)) {
+                    result = true;
+                    break;
+                }
             }
-            return false;
-        }
-
-        // all
-        if (rule.all) {
+        } else if (rule.all) {
+            // all
+            result = true;
             for (const sub of rule.all) {
-                if (!(await evaluateRule(sub, ctx))) return false;
+                if (!(await evaluateRule(sub, ctx))) {
+                    result = false;
+                    break;
+                }
             }
-            return true;
+        } else {
+            console.warn("Unknown rule structure:", rule);
+            result = false;
         }
+    } else {
+        console.warn("Unknown rule structure:", rule);
+        result = false;
     }
 
-    console.warn("Unknown rule structure:", rule);
-    return false;
+    if (ruleCache) {
+        let cachedByRule = ruleCache.get(rule);
+        if (!cachedByRule) {
+            cachedByRule = new Map();
+            ruleCache.set(rule, cachedByRule);
+        }
+        cachedByRule.set(ruleCacheKey, result);
+    }
+
+    return result;
 }
+
