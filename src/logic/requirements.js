@@ -5565,8 +5565,9 @@ function hasFireRuneSource(ctx) {
 }
 
 function canReachTrollheim(ctx) {
+    if (ctx.filters?.hasEasyCasCompleted) return true;
     return requiresQuest(ctx, "canCompleteDeathPlateau", canCompleteDeathPlateau) //
-        || ctx.player?.combatAchievements.length >= 38;
+        || (ctx.player?.combatAchievements?.length ?? 0) >= 38;
 }
 
 function hasHunterMeat(ctx) {

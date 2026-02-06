@@ -113,6 +113,11 @@ export default async function ItemsPage() {
                     <input type="checkbox" id="hideSourcelessItems">
                     Hide sourceless items
                 </label>
+
+                <label>
+                    <input type="checkbox" id="hasEasyCasCompleted">
+                    Easy CA's completed
+                </label>
             </div>
 
             <p class="marginOneRem">Overrides (e.g. when you've lamped a skill or want to see what lamping one can bring you)</p>

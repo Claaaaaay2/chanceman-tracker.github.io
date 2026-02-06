@@ -172,6 +172,7 @@ window.initItemsPage = async function () {
         { id: "hideJon", key: "hideJon", defaultValue: false, invalidate: true },
         { id: "isFreeToPlay", key: "isFreeToPlay", defaultValue: false, invalidate: true },
         { id: "hideSourcelessItems", key: "hideSourcelessItems", defaultValue: false },
+        { id: "hasEasyCasCompleted", key: "hasEasyCasCompleted", defaultValue: false, invalidate: true },
         { id: "overrideWoodcutting", key: "overrideWoodcutting", defaultValue: false, invalidate: true },
         { id: "overrideMining", key: "overrideMining", defaultValue: false, invalidate: true },
         { id: "overrideFishing", key: "overrideFishing", defaultValue: false, invalidate: true },
