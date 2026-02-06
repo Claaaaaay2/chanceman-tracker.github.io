@@ -101,6 +101,7 @@ document.addEventListener("click", async (e) => {
     } catch (err) {
         console.error(err);
         status.textContent = err.message || "Error reading files!";
+    } finally {
         setBusy(false);
     }
 });
