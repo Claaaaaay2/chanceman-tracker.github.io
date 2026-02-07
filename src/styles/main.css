@@ -476,6 +476,11 @@ body.route-loading .route-loading-overlay {
     color: var(--section-header-color);
 }
 
+.item-skill-tag--warn {
+    border-color: var(--highlight-color);
+    color: var(--highlight-color);
+}
+
 .roll-intro {
     margin: 0 1rem 1rem;
     font-weight: 600;

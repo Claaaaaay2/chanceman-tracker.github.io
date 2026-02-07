@@ -482,6 +482,41 @@ window.initItemsPage = async function () {
                 : skill);
     }
 
+    async function getDeferredSkillLabels(item, ctx, rank) {
+        if (rank !== 6) return [];
+        if (!item?.sources?.other) return [];
+
+        const levelIgnoredCtx = getLevelIgnoredCtx(ctx);
+        const skills = new Map();
+
+        for (const source of Object.values(item.sources.other)) {
+            if (isSourceHiddenByFilters(source, ctx)) continue;
+            if (!source?.rule) continue;
+
+            const obtainableWithIgnoredLevels = await evaluateRule(source.rule, levelIgnoredCtx);
+            if (!obtainableWithIgnoredLevels) continue;
+
+            const obtainableNow = await evaluateRule(source.rule, ctx);
+            if (obtainableNow) continue;
+
+            if (Array.isArray(source.skill)) {
+                for (const skill of source.skill) {
+                    addSkill(skills, skill, source.level);
+                }
+            } else if (source.skill) {
+                addSkill(skills, source.skill, source.level);
+            }
+
+            collectSkillsFromRule(source.rule, skills, true);
+        }
+
+        return [...skills.entries()]
+            .sort(([a], [b]) => a.localeCompare(b))
+            .map(([skill, level]) => (level !== null && level !== undefined)
+                ? `${level} ${skill}`
+                : skill);
+    }
+
     async function getObtainableSources(item, ctx, rolledSet) {
         const sources = [];
 
@@ -816,10 +851,21 @@ window.initItemsPage = async function () {
                 const isObtained = obtainedSet.has(item.id);
                 const isRolled = rolledSet.has(item.id);
                 const skillLabels = await getItemSkillLabels(item, fileStore, sort.rank);
-                const skillHtml = skillLabels.length
+                const deferredSkillLabels = await getDeferredSkillLabels(item, fileStore, sort.rank);
+                const combinedSkillLabels = new Map();
+                for (const label of skillLabels) {
+                    combinedSkillLabels.set(label, false);
+                }
+                for (const label of deferredSkillLabels) {
+                    combinedSkillLabels.set(label, true);
+                }
+                const skillHtml = combinedSkillLabels.size
                     ? `
                         <div class="item-skill-tags">
-                            ${skillLabels.map((skill) => `<span class="item-skill-tag">${escapeHtml(skill)}</span>`).join("")}
+                            ${[...combinedSkillLabels.entries()]
+                                .map(([label, isDeferred]) => `
+                                <span class="item-skill-tag${isDeferred ? " item-skill-tag--warn" : ""}">${escapeHtml(label)}</span>
+                            `).join("")}
                         </div>
                     `
                     : "";
