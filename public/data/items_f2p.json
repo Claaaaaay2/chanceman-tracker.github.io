@@ -12184,7 +12184,7 @@
     ],
     "sources": {
       "drops": {
-        "Fishing spot (cage, harpoon) Harpoon": {
+        "Fishing spot (cage, harpoon) Harpoon (Swordfish)": {
           "droprate": "Common"
         }
       }
@@ -12216,7 +12216,7 @@
     ],
     "sources": {
       "drops": {
-        "Fishing spot (cage, harpoon) Harpoon": {
+        "Fishing spot (cage, harpoon) Harpoon (Tuna)": {
           "droprate": "Common"
         }
       },

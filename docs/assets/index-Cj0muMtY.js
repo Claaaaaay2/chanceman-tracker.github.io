@@ -8,7 +8,7 @@
         <footer>
         <a class="footer-link" href="https://ko-fi.com/kryen" target="_blank" rel="noopener noreferrer">☕ Support on Ko-fi ☕</a>
         <span class="footer-separator">|</span>
-        <span>Version: 2026-02-07T07:45:26.627Z</span>
+        <span>Version: 2026-02-07T07:48:08.449Z</span>
         </footer>
     `}async function Wu(){if(!(h.obtained&&h.rolled))return`
         <nav class="header">
