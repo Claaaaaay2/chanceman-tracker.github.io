@@ -25616,7 +25616,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Magic armours"
+    ]
   },
   {
     "index": 719,
@@ -42294,7 +42297,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Magic armours"
+    ]
   },
   {
     "index": 1127,
@@ -61201,7 +61207,10 @@
       "shops": {
         "Yes": "canCompleteTheFremennikTrials"
       }
-    }
+    },
+    "tags": [
+      "Magic armours"
+    ]
   },
   {
     "index": 1645,
@@ -65729,7 +65738,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Magic armours"
+    ]
   },
   {
     "index": 1808,
@@ -66128,7 +66140,10 @@
       "shops": {
         "Yes": "canCompletePriestInPeril"
       }
-    }
+    },
+    "tags": [
+      "Magic armours"
+    ]
   },
   {
     "index": 1824,
@@ -113622,7 +113637,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Magic armours"
+    ]
   },
   {
     "index": 2811,
@@ -117181,7 +117199,10 @@
       "shops": {
         "Yes": "canCompletePriestInPeril"
       }
-    }
+    },
+    "tags": [
+      "Magic armours"
+    ]
   },
   {
     "index": 2920,
@@ -121892,7 +121913,10 @@
       "shops": {
         "Yes": "canCompletePriestInPeril"
       }
-    }
+    },
+    "tags": [
+      "Magic armours"
+    ]
   },
   {
     "index": 3072,
@@ -168584,7 +168608,10 @@
       "shops": {
         "Yes": "canCompletePriestInPeril"
       }
-    }
+    },
+    "tags": [
+      "Magic armours"
+    ]
   },
   {
     "index": 4425,
@@ -170059,7 +170086,10 @@
           "droprate": "1/354.75"
         }
       }
-    }
+    },
+    "tags": [
+      "Magic armours"
+    ]
   },
   {
     "index": 4470,
@@ -170087,7 +170117,10 @@
           "droprate": "1/354.75"
         }
       }
-    }
+    },
+    "tags": [
+      "Magic armours"
+    ]
   },
   {
     "index": 4471,
