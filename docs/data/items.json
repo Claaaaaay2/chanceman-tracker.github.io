@@ -21948,7 +21948,7 @@
           "rule": {
             "all": [
               {
-                "has": 19669
+                "has": 10113
               },
               {
                 "has": 2491
@@ -25616,7 +25616,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Magic armours"
+    ]
   },
   {
     "index": 719,
@@ -25884,7 +25887,7 @@
           "rule": {
             "all": [
               {
-                "has": 19669
+                "has": 10113
               },
               {
                 "has": 2487
@@ -32880,7 +32883,7 @@
     "sources": {
       "other": {
         "Crafting a Broodoo shield (10) (combat)": {
-          "notes": "Requires a combat tribal mask, Snakeskin and any nails and level 35 Crafting.",
+          "notes": "Requires a combat tribal mask, Snakeskin, a Hammer and any nails and level 35 Crafting.",
           "rule": {
             "all": [
               {
@@ -32888,6 +32891,9 @@
               },
               {
                 "has": 6289
+              },
+              {
+                "has": 2347
               },
               "hasAnyNails",
               {
@@ -32911,7 +32917,7 @@
     "sources": {
       "other": {
         "Crafting a Broodoo shield (10) (disease)": {
-          "notes": "Requires a disease tribal mask, Snakeskin and any nails and level 35 Crafting.",
+          "notes": "Requires a disease tribal mask, Snakeskin, a Hammer and any nails and level 35 Crafting.",
           "rule": {
             "all": [
               {
@@ -32919,6 +32925,9 @@
               },
               {
                 "has": 6289
+              },
+              {
+                "has": 2347
               },
               "hasAnyNails",
               {
@@ -32942,7 +32951,7 @@
     "sources": {
       "other": {
         "Crafting a Broodoo shield (10) (poison)": {
-          "notes": "Requires a poison tribal mask, Snakeskin and any nails and level 35 Crafting.",
+          "notes": "Requires a poison tribal mask, Snakeskin, a Hammer and any nails and level 35 Crafting.",
           "rule": {
             "all": [
               {
@@ -32950,6 +32959,9 @@
               },
               {
                 "has": 6289
+              },
+              {
+                "has": 2347
               },
               "hasAnyNails",
               {
@@ -42294,7 +42306,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Magic armours"
+    ]
   },
   {
     "index": 1127,
@@ -61201,7 +61216,10 @@
       "shops": {
         "Yes": "canCompleteTheFremennikTrials"
       }
-    }
+    },
+    "tags": [
+      "Magic armours"
+    ]
   },
   {
     "index": 1645,
@@ -65729,7 +65747,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Magic armours"
+    ]
   },
   {
     "index": 1808,
@@ -65797,7 +65818,7 @@
           "rule": {
             "all": [
               {
-                "has": 19669
+                "has": 10113
               },
               {
                 "has": 1065
@@ -66128,7 +66149,10 @@
       "shops": {
         "Yes": "canCompletePriestInPeril"
       }
-    }
+    },
+    "tags": [
+      "Magic armours"
+    ]
   },
   {
     "index": 1824,
@@ -91954,7 +91978,7 @@
     "image": "leaping_salmon.png",
     "sources": {
       "drops": {
-        "Fishing spot (barbarian)": {
+        "Fishing spot (barbarian) (Leaping salmon)": {
           "droprate": "Common"
         }
       }
@@ -91967,7 +91991,7 @@
     "image": "leaping_sturgeon.png",
     "sources": {
       "drops": {
-        "Fishing spot (barbarian)": {
+        "Fishing spot (barbarian) (Leaping sturgeon)": {
           "droprate": "Common"
         }
       }
@@ -91980,7 +92004,7 @@
     "image": "leaping_trout.png",
     "sources": {
       "drops": {
-        "Fishing spot (barbarian)": {
+        "Fishing spot (barbarian) (Leaping trout)": {
           "droprate": "Common"
         }
       }
@@ -93378,6 +93402,17 @@
     "tags": [
       "Farming"
     ]
+  },
+  {
+    "index": 2278,
+    "id": 4684,
+    "name": "Linen (Icthlarin's Little Helper)",
+    "image": "linen_(Icthlarin's_Little_Helper).png",
+    "sources": {
+      "shops": {
+        "Yes": "canCompleteGertrudesCat"
+      }
+    }
   },
   {
     "index": 2279,
@@ -113622,7 +113657,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Magic armours"
+    ]
   },
   {
     "index": 2811,
@@ -117181,7 +117219,10 @@
       "shops": {
         "Yes": "canCompletePriestInPeril"
       }
-    }
+    },
+    "tags": [
+      "Magic armours"
+    ]
   },
   {
     "index": 2920,
@@ -120848,10 +120889,10 @@
         "Barrel (Shaman Caves)": {
           "droprate": "Rare"
         },
-        "Fishing spot (cage, harpoon) Harpoon": {
+        "Fishing spot (cage, harpoon) Harpoon (Swordfish)": {
           "droprate": "Common"
         },
-        "Fishing spot (Piscatoris Fishing Colony) Harpoon": {
+        "Fishing spot (Piscatoris Fishing Colony) Harpoon (Swordfish)": {
           "droprate": "Common"
         }
       },
@@ -121024,10 +121065,10 @@
         "Reward Cart": {
           "droprate": "Varies"
         },
-        "Fishing spot (cage, harpoon) Harpoon": {
+        "Fishing spot (cage, harpoon) Harpoon (Tuna)": {
           "droprate": "Common"
         },
-        "Fishing spot (Piscatoris Fishing Colony) Harpoon": {
+        "Fishing spot (Piscatoris Fishing Colony) Harpoon (Tuna)": {
           "droprate": "Common"
         }
       },
@@ -121892,7 +121933,10 @@
       "shops": {
         "Yes": "canCompletePriestInPeril"
       }
-    }
+    },
+    "tags": [
+      "Magic armours"
+    ]
   },
   {
     "index": 3072,
@@ -122024,10 +122068,10 @@
           "rule": {
             "all": [
               {
-                "has": 19669
+                "has": 10113
               },
               {
-                "has": 10113
+                "has": 2489
               },
               {
                 "skill": "Crafting",
@@ -168584,7 +168628,10 @@
       "shops": {
         "Yes": "canCompletePriestInPeril"
       }
-    }
+    },
+    "tags": [
+      "Magic armours"
+    ]
   },
   {
     "index": 4425,
@@ -170059,7 +170106,10 @@
           "droprate": "1/354.75"
         }
       }
-    }
+    },
+    "tags": [
+      "Magic armours"
+    ]
   },
   {
     "index": 4470,
@@ -170087,7 +170137,10 @@
           "droprate": "1/354.75"
         }
       }
-    }
+    },
+    "tags": [
+      "Magic armours"
+    ]
   },
   {
     "index": 4471,
