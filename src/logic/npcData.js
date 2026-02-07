@@ -5761,7 +5761,20 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
-    "Fishing spot (Piscatoris Fishing Colony) Harpoon": {
+    "Fishing spot (Piscatoris Fishing Colony) Harpoon (Swordfish)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(Piscatoris_Fishing_Colony)#Harpoon",
+        "rule": {
+            "all": [
+                "canCompleteSwanSong",
+                "hasHarpoon"
+            ]
+        },
+        "skill": ["fishing"],
+        "level": [55],
+        "tags": [],
+        "f2p": false
+    },
+    "Fishing spot (Piscatoris Fishing Colony) Harpoon (Tuna)": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(Piscatoris_Fishing_Colony)#Harpoon",
         "rule": {
             "all": [
@@ -5901,7 +5914,7 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": true
     },
-    "Fishing spot (cage, harpoon) Harpoon": {
+    "Fishing spot (cage, harpoon) Harpoon (Tuna)": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(cage,_harpoon)#Harpoon",
         "rule": {
             "all": [
@@ -5911,6 +5924,19 @@ export const NPC_DATA = {
         },
         "skill": ["fishing"],
         "level": [35],
+        "tags": [],
+        "f2p": true
+    },
+    "Fishing spot (cage, harpoon) Harpoon (Swordfish)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(cage,_harpoon)#Harpoon",
+        "rule": {
+            "all": [
+                "canTrainFishing",
+                "hasHarpoon"
+            ]
+        },
+        "skill": ["fishing"],
+        "level": [55],
         "tags": [],
         "f2p": true
     },

@@ -120889,10 +120889,10 @@
         "Barrel (Shaman Caves)": {
           "droprate": "Rare"
         },
-        "Fishing spot (cage, harpoon) Harpoon": {
+        "Fishing spot (cage, harpoon) Harpoon (Swordfish)": {
           "droprate": "Common"
         },
-        "Fishing spot (Piscatoris Fishing Colony) Harpoon": {
+        "Fishing spot (Piscatoris Fishing Colony) Harpoon (Swordfish)": {
           "droprate": "Common"
         }
       },
@@ -121065,10 +121065,10 @@
         "Reward Cart": {
           "droprate": "Varies"
         },
-        "Fishing spot (cage, harpoon) Harpoon": {
+        "Fishing spot (cage, harpoon) Harpoon (Tuna)": {
           "droprate": "Common"
         },
-        "Fishing spot (Piscatoris Fishing Colony) Harpoon": {
+        "Fishing spot (Piscatoris Fishing Colony) Harpoon (Tuna)": {
           "droprate": "Common"
         }
       },
