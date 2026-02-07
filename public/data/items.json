@@ -21948,7 +21948,7 @@
           "rule": {
             "all": [
               {
-                "has": 19669
+                "has": 10113
               },
               {
                 "has": 2491
@@ -25887,7 +25887,7 @@
           "rule": {
             "all": [
               {
-                "has": 19669
+                "has": 10113
               },
               {
                 "has": 2487
@@ -32883,7 +32883,7 @@
     "sources": {
       "other": {
         "Crafting a Broodoo shield (10) (combat)": {
-          "notes": "Requires a combat tribal mask, Snakeskin and any nails and level 35 Crafting.",
+          "notes": "Requires a combat tribal mask, Snakeskin, a Hammer and any nails and level 35 Crafting.",
           "rule": {
             "all": [
               {
@@ -32891,6 +32891,9 @@
               },
               {
                 "has": 6289
+              },
+              {
+                "has": 2347
               },
               "hasAnyNails",
               {
@@ -32914,7 +32917,7 @@
     "sources": {
       "other": {
         "Crafting a Broodoo shield (10) (disease)": {
-          "notes": "Requires a disease tribal mask, Snakeskin and any nails and level 35 Crafting.",
+          "notes": "Requires a disease tribal mask, Snakeskin, a Hammer and any nails and level 35 Crafting.",
           "rule": {
             "all": [
               {
@@ -32922,6 +32925,9 @@
               },
               {
                 "has": 6289
+              },
+              {
+                "has": 2347
               },
               "hasAnyNails",
               {
@@ -32945,7 +32951,7 @@
     "sources": {
       "other": {
         "Crafting a Broodoo shield (10) (poison)": {
-          "notes": "Requires a poison tribal mask, Snakeskin and any nails and level 35 Crafting.",
+          "notes": "Requires a poison tribal mask, Snakeskin, a Hammer and any nails and level 35 Crafting.",
           "rule": {
             "all": [
               {
@@ -32953,6 +32959,9 @@
               },
               {
                 "has": 6289
+              },
+              {
+                "has": 2347
               },
               "hasAnyNails",
               {
@@ -65809,7 +65818,7 @@
           "rule": {
             "all": [
               {
-                "has": 19669
+                "has": 10113
               },
               {
                 "has": 1065
@@ -122048,10 +122057,10 @@
           "rule": {
             "all": [
               {
-                "has": 19669
+                "has": 10113
               },
               {
-                "has": 10113
+                "has": 2489
               },
               {
                 "skill": "Crafting",
