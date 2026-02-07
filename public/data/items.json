@@ -91978,7 +91978,7 @@
     "image": "leaping_salmon.png",
     "sources": {
       "drops": {
-        "Fishing spot (barbarian)": {
+        "Fishing spot (barbarian) (Leaping salmon)": {
           "droprate": "Common"
         }
       }
@@ -91991,7 +91991,7 @@
     "image": "leaping_sturgeon.png",
     "sources": {
       "drops": {
-        "Fishing spot (barbarian)": {
+        "Fishing spot (barbarian) (Leaping sturgeon)": {
           "droprate": "Common"
         }
       }
@@ -92004,7 +92004,7 @@
     "image": "leaping_trout.png",
     "sources": {
       "drops": {
-        "Fishing spot (barbarian)": {
+        "Fishing spot (barbarian) (Leaping trout)": {
           "droprate": "Common"
         }
       }

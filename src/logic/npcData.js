@@ -5828,7 +5828,7 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
-    "Fishing spot (barbarian)": {
+    "Fishing spot (barbarian) (Leaping trout)": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(barbarian)",
         "rule": {
             "all": [
@@ -5838,6 +5838,32 @@ export const NPC_DATA = {
         },
         "skill": ["fishing", "strength", "agility"],
         "level": [48, 15, 15],
+        "tags": [],
+        "f2p": false
+    },
+    "Fishing spot (barbarian) (Leaping salmon)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(barbarian)",
+        "rule": {
+            "all": [
+                "canTrainFishing",
+                "canBarbarianFish"
+            ]
+        },
+        "skill": ["fishing", "strength", "agility"],
+        "level": [58, 30, 30],
+        "tags": [],
+        "f2p": false
+    },
+    "Fishing spot (barbarian) (Leaping sturgeon)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(barbarian)",
+        "rule": {
+            "all": [
+                "canTrainFishing",
+                "canBarbarianFish"
+            ]
+        },
+        "skill": ["fishing", "strength", "agility"],
+        "level": [70, 45, 45],
         "tags": [],
         "f2p": false
     },
