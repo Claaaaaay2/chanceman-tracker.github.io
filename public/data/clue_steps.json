@@ -3940,7 +3940,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -3953,7 +3953,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -3966,7 +3966,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -3979,7 +3979,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -3992,7 +3992,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4005,7 +4005,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4018,7 +4018,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4033,7 +4033,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4048,7 +4048,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4061,7 +4061,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4076,7 +4076,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4089,7 +4089,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4102,7 +4102,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4115,7 +4115,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4128,7 +4128,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4141,7 +4141,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4154,7 +4154,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4169,7 +4169,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4182,7 +4182,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4195,7 +4195,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4208,7 +4208,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4221,7 +4221,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4234,7 +4234,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4249,7 +4249,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4262,7 +4262,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4275,7 +4275,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4288,7 +4288,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4306,7 +4306,7 @@
                     ],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4319,7 +4319,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4332,7 +4332,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4345,7 +4345,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4360,7 +4360,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4373,7 +4373,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4388,7 +4388,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4401,7 +4401,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4414,7 +4414,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4429,7 +4429,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4442,7 +4442,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4455,7 +4455,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4468,7 +4468,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4483,7 +4483,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4498,7 +4498,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4513,7 +4513,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
@@ -4528,7 +4528,7 @@
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasClueSpade"],
                     "rulesAny": []
                 }
             },
