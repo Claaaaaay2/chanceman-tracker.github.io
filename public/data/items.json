@@ -93404,6 +93404,17 @@
     ]
   },
   {
+    "index": 2278,
+    "id": 4684,
+    "name": "Linen (Icthlarin's Little Helper)",
+    "image": "linen_(Icthlarin's_Little_Helper).png",
+    "sources": {
+      "shops": {
+        "Yes": "canCompleteGertrudesCat"
+      }
+    }
+  },
+  {
     "index": 2279,
     "id": 31463,
     "name": "Linen yarn",
