@@ -71,7 +71,6 @@ export default async function NpcsPage() {
         if (obtained.includes(item.id)) return false;
         if (filters.onlyRolled && !rolled.includes(item.id)) return false;
         if (isItemHiddenByTag(item)) return false;
-        if (filters.isFreeToPlay && !item.tags?.includes("f2p")) return false;
         if (!filters.hasFlatpacks && item.tags?.includes("flatpack")) return false;
         if (!filters.hasItemsets && item.tags?.includes("itemset")) return false;
         if (filters.hideClue && item.tags?.includes("clue-reward-only")) return false;
