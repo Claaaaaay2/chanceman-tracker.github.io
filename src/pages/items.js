@@ -161,6 +161,11 @@ export default async function ItemsPage() {
                     <input type="checkbox" id="overrideConstruction">
                     Override construction
                 </label>
+
+                <label>
+                    <input type="checkbox" id="overrideSmithing">
+                    Override smithing
+                </label>
             </div>
         </div>
 

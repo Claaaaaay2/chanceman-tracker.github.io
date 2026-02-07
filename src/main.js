@@ -236,7 +236,8 @@ window.initItemsPage = async function () {
         { id: "overrideFarming", key: "overrideFarming", defaultValue: false, invalidate: true },
         { id: "overrideFletching", key: "overrideFletching", defaultValue: false, invalidate: true },
         { id: "overrideCrafting", key: "overrideCrafting", defaultValue: false, invalidate: true },
-        { id: "overrideConstruction", key: "overrideConstruction", defaultValue: false, invalidate: true }
+        { id: "overrideConstruction", key: "overrideConstruction", defaultValue: false, invalidate: true },
+        { id: "overrideSmithing", key: "overrideSmithing", defaultValue: false, invalidate: true }
     ];
 
     const checkboxElements = {};

@@ -32,6 +32,7 @@ let memory = {
         overrideFletching: false,
         overrideCrafting: false,
         overrideConstruction: false,
+        overrideSmithing: false,
         hunterRumoursCompleted: 0,
         hideCompletedQuests: false,
         hideIncompletableQuests: false,

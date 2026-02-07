@@ -69,7 +69,8 @@ const DIARY_SKILL_OVERRIDES = {
     Farming: "overrideFarming",
     Fletching: "overrideFletching",
     Crafting: "overrideCrafting",
-    Construction: "overrideConstruction"
+    Construction: "overrideConstruction",
+    Smithing: "overrideSmithing"
 };
 
 let achievementDiaryDataPromise = null;
@@ -7220,6 +7221,7 @@ function canTrainFiremaking(ctx) {
 }
 
 function canTrainSmithing(ctx) {
+    if (ctx.filters?.overrideSmithing) return true;
     return has(ctx, 2347); // Hammer
 }
 
