@@ -5753,6 +5753,54 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
+    "Fishing Trawler (Tuna)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Fishing_Trawler",
+        "rule": ["canTrainFishing"],
+        "skill": ["fishing"],
+        "level": [35],
+        "tags": [],
+        "f2p": false
+    },
+    "Fishing Trawler (Lobster)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Fishing_Trawler",
+        "rule": ["canTrainFishing"],
+        "skill": ["fishing"],
+        "level": [40],
+        "tags": [],
+        "f2p": false
+    },
+    "Fishing Trawler (Swordfish)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Fishing_Trawler",
+        "rule": ["canTrainFishing"],
+        "skill": ["fishing"],
+        "level": [50],
+        "tags": [],
+        "f2p": false
+    },
+    "Fishing Trawler (Shark)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Fishing_Trawler",
+        "rule": ["canTrainFishing"],
+        "skill": ["fishing"],
+        "level": [76],
+        "tags": [],
+        "f2p": false
+    },
+    "Fishing Trawler (Sea turtle)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Fishing_Trawler",
+        "rule": ["canTrainFishing"],
+        "skill": ["fishing"],
+        "level": [79],
+        "tags": [],
+        "f2p": false
+    },
+    "Fishing Trawler (Manta ray)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Fishing_Trawler",
+        "rule": ["canTrainFishing"],
+        "skill": ["fishing"],
+        "level": [81],
+        "tags": [],
+        "f2p": false
+    },
     "Fishing spot (Civitas illa Fortis)": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(Civitas_illa_Fortis)",
         "rule": ["hasBigFishingNet"],
