@@ -492,6 +492,71 @@ body.route-loading .route-loading-overlay {
     color: var(--skill-tag-text);
 }
 
+.items-top-filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 1rem 0.75rem;
+}
+
+.items-top-filters input[type="search"] {
+    max-width: 240px;
+}
+
+.npc-filter {
+    position: relative;
+}
+
+.npc-filter-panel {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 6px);
+    width: 320px;
+    max-width: 80vw;
+    padding: 0.6rem;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color-darker);
+    border-radius: 6px;
+    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.18);
+    z-index: 30;
+}
+
+.npc-filter.is-open .npc-filter-panel {
+    display: block;
+}
+
+.npc-filter-actions {
+    display: flex;
+    gap: 0.35rem;
+    margin: 0.5rem 0;
+}
+
+.npc-filter-actions button {
+    padding: 0.15rem 0.4rem;
+    font-size: 0.75rem;
+}
+
+.npc-filter-actions--apply {
+    justify-content: flex-end;
+    margin-top: 0.5rem;
+}
+
+.npc-filter-list {
+    max-height: 280px;
+    overflow: auto;
+    display: grid;
+    gap: 0.25rem;
+}
+
+.npc-filter-item {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.8rem;
+}
+
 .item-skill-tag--warn {
     border-color: var(--skill-tag-border);
     background-color: var(--skill-tag-bg);

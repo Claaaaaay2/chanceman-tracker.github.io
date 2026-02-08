@@ -57,6 +57,8 @@ export function isNpcBlockedByFilters(npcName, ctx) {
     if (!npc) return true;
 
     const f = ctx.filters ?? {};
+    ctx.npcDropExclusionSet ??= new Set(f.npcDropExclusions || []);
+    if (ctx.npcDropExclusionSet.has(npcName)) return true;
 
     if (f.isFreeToPlay && !npc.f2p) return true;
     if (!f.allowOthersHouses && npc.tags?.includes("house")) return true;

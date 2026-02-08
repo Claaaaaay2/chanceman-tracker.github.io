@@ -46,7 +46,8 @@ let memory = {
         showOnlyCompletableTiers: false,
         hazeelCultLocked: false,
         hideIncompletableDiaries: false,
-        hasDoneEasterEvent: false
+        hasDoneEasterEvent: false,
+        npcDropExclusions: []
     },
     player: null,
 };
