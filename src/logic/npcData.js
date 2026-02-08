@@ -5740,8 +5740,8 @@ export const NPC_DATA = {
     "Fish stall (Port Roberts)": {
         "wiki": "https://oldschool.runescape.wiki/w/Fish_stall_(Port_Roberts)",
         "rule": ["canCompletePandemonium"],
-        "skill": ["thieving"],
-        "level": [42],
+        "skill": ["thieving", "sailing"],
+        "level": [42, 50],
         "tags": [],
         "f2p": false
     },
@@ -6381,8 +6381,8 @@ export const NPC_DATA = {
     "Fur stall (Port Roberts)": {
         "wiki": "https://oldschool.runescape.wiki/w/Fur_stall_(Port_Roberts)",
         "rule": ["canCompletePandemonium"],
-        "skill": ["thieving"],
-        "level": [35],
+        "skill": ["thieving", "sailing"],
+        "level": [35, 50],
         "tags": [],
         "f2p": false
     },
@@ -6495,8 +6495,8 @@ export const NPC_DATA = {
     "Gem stall (Port Roberts)": {
         "wiki": "https://oldschool.runescape.wiki/w/Gem_stall_(Port_Roberts)",
         "rule": ["canCompletePandemonium"],
-        "skill": ["thieving"],
-        "level": [75],
+        "skill": ["thieving", "sailing"],
+        "level": [75, 50],
         "tags": [],
         "f2p": false
     },
@@ -11147,8 +11147,8 @@ export const NPC_DATA = {
     "Ore stall (Port Roberts)": {
         "wiki": "https://oldschool.runescape.wiki/w/Ore_stall_(Port_Roberts)",
         "rule": ["canCompletePandemonium"],
-        "skill": ["thieving"],
-        "level": [82],
+        "skill": ["thieving", "sailing"],
+        "level": [82, 50],
         "tags": [],
         "f2p": false
     },
@@ -13379,8 +13379,8 @@ export const NPC_DATA = {
     "Silk stall (Port Roberts)": {
         "wiki": "https://oldschool.runescape.wiki/w/Silk_stall_(Port_Roberts)",
         "rule": ["canCompletePandemonium"],
-        "skill": ["thieving"],
-        "level": [20],
+        "skill": ["thieving", "sailing"],
+        "level": [20, 50],
         "tags": [],
         "f2p": false
     },
@@ -13443,8 +13443,8 @@ export const NPC_DATA = {
     "Silver stall (Port Roberts)": {
         "wiki": "https://oldschool.runescape.wiki/w/Silver_stall_(Port_Roberts)",
         "rule": ["canCompletePandemonium"],
-        "skill": ["thieving"],
-        "level": [50],
+        "skill": ["thieving", "sailing"],
+        "level": [50, 50],
         "tags": [],
         "f2p": false
     },
@@ -14173,8 +14173,8 @@ export const NPC_DATA = {
     "Spice stall (Port Roberts)": {
         "wiki": "https://oldschool.runescape.wiki/w/Spice_stall_(Port_Roberts)",
         "rule": ["canCompletePandemonium"],
-        "skill": ["thieving"],
-        "level": [65],
+        "skill": ["thieving", "sailing"],
+        "level": [65, 50],
         "tags": [],
         "f2p": false
     },
@@ -15724,8 +15724,8 @@ export const NPC_DATA = {
     "Veg stall (Port Roberts)": {
         "wiki": "https://oldschool.runescape.wiki/w/Veg_stall_(Port_Roberts)",
         "rule": ["canCompletePandemonium"],
-        "skill": ["thieving"],
-        "level": [2],
+        "skill": ["thieving", "sailing"],
+        "level": [2, 50],
         "tags": [],
         "f2p": false
     },
