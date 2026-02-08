@@ -987,6 +987,15 @@ body.route-loading .route-loading-overlay {
     color: var(--text-color);
     pointer-events: none;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    max-height: min(60vh, 320px);
+    overflow: auto;
+}
+
+.item-tooltip--top {
+    top: auto;
+    bottom: 100%;
+    margin-top: 0;
+    margin-bottom: 6px;
 }
 
 .item-card:hover .item-tooltip {

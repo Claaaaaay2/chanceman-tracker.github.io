@@ -638,6 +638,19 @@ window.initItemsPage = async function () {
         if (!elements.grid || elements.grid.dataset.tooltipBound) return;
         elements.grid.dataset.tooltipBound = "true";
 
+        const positionTooltip = (card) => {
+            const tooltip = card.querySelector(".item-tooltip");
+            if (!tooltip) return;
+            tooltip.classList.remove("item-tooltip--top");
+            requestAnimationFrame(() => {
+                const rect = tooltip.getBoundingClientRect();
+                const padding = 8;
+                if (rect.bottom > window.innerHeight - padding) {
+                    tooltip.classList.add("item-tooltip--top");
+                }
+            });
+        };
+
         const handleTooltipTrigger = async (event) => {
             const card = event.target.closest(".item-card");
             if (!card) return;
@@ -652,6 +665,7 @@ window.initItemsPage = async function () {
                 if (tooltip) {
                     tooltip.outerHTML = cached;
                 }
+                positionTooltip(card);
                 card.dataset.tooltipLoaded = "true";
                 return;
             }
@@ -667,6 +681,7 @@ window.initItemsPage = async function () {
                 if (tooltip) {
                     tooltip.outerHTML = html;
                 }
+                positionTooltip(card);
                 card.dataset.tooltipLoaded = "true";
             } finally {
                 card.dataset.tooltipLoading = "false";
@@ -674,6 +689,11 @@ window.initItemsPage = async function () {
         };
 
         elements.grid.addEventListener("mouseenter", handleTooltipTrigger, true);
+        elements.grid.addEventListener("mouseenter", (event) => {
+            const card = event.target.closest(".item-card");
+            if (!card) return;
+            positionTooltip(card);
+        }, true);
         elements.grid.addEventListener("focusin", handleTooltipTrigger);
     }
 
