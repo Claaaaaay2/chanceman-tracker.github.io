@@ -105,3 +105,13 @@ document.addEventListener("click", async (e) => {
         setBusy(false);
     }
 });
+
+document.addEventListener("keydown", (e) => {
+    if (e.key !== "Enter") return;
+    if (e.target?.id !== "playerName") return;
+    const app = document.getElementById("app");
+    const saveBtn = app?.querySelector("#saveBtn");
+    if (!saveBtn || saveBtn.disabled) return;
+    e.preventDefault();
+    saveBtn.click();
+});
