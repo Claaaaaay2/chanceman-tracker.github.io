@@ -5194,8 +5194,8 @@ export const NPC_DATA = {
     "Earth warrior": {
         "wiki": "https://oldschool.runescape.wiki/w/Earth_warrior",
         "rule": null,
-        "skill": ["agility"],
-        "level": [15],
+        "skill": [],
+        "level": [],
         "tags": [],
         "f2p": false
     },
@@ -13688,8 +13688,8 @@ export const NPC_DATA = {
     "Skeleton (Wilderness Agility Course)": {
         "wiki": "https://oldschool.runescape.wiki/w/Skeleton_(Wilderness_Agility_Course)",
         "rule": null,
-        "skill": ["agility"],
-        "level": [52],
+        "skill": [],
+        "level": [],
         "tags": [],
         "f2p": false
     },

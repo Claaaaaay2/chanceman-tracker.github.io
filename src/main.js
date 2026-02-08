@@ -464,10 +464,10 @@ window.initItemsPage = async function () {
     }
 
     async function getItemSkillLabels(item, ctx, rank) {
-        if (rank !== 5 && rank !== 7) return [];
+        if (rank !== 5 && rank !== 6 && rank !== 7) return [];
 
         const skills = new Map();
-        const includeLevels = rank === 7;
+        const includeLevels = rank === 7 || rank === 6;
         const addSkillForRank = rank === 7 ? addSkillMin : addSkill;
         const collectSkillsForRank = rank === 7 ? collectSkillsFromRuleMin : collectSkillsFromRule;
 
@@ -489,7 +489,7 @@ window.initItemsPage = async function () {
                     addSkillForRank(skills, skill, includeLevels ? level : null);
                 }
 
-                if (rank === 5 && npc?.rule) {
+                if ((rank === 5 || rank === 6) && npc?.rule) {
                     collectSkillsForRank(npc.rule, skills, false);
                 }
             }
@@ -507,7 +507,7 @@ window.initItemsPage = async function () {
 
                     const obtainableNow = await evaluateRule(source.rule, ctx);
                     if (obtainableNow) continue;
-                } else if (rank === 5) {
+                } else if (rank === 5 || rank === 6) {
                     const obtainableNow = await evaluateRule(source.rule, ctx);
                     if (!obtainableNow) continue;
                 } else {
@@ -929,12 +929,16 @@ window.initItemsPage = async function () {
                 for (const label of deferredSkillLabels) {
                     combinedSkillLabels.set(label, true);
                 }
+                const formatLabel = (label) => {
+                    if (sort.rank !== 6) return label;
+                    return `or ${label}`;
+                };
                 const skillHtml = combinedSkillLabels.size
                     ? `
-                        <div class="item-skill-tags">
+                        <div class="item-skill-tags${sort.rank === 6 ? " item-skill-tags--or" : ""}">
                             ${[...combinedSkillLabels.entries()]
                                 .map(([label, isDeferred]) => `
-                                <span class="item-skill-tag${isDeferred ? " item-skill-tag--warn" : ""}">${escapeHtml(label)}</span>
+                                <span class="item-skill-tag${isDeferred ? " item-skill-tag--warn" : ""}">${escapeHtml(formatLabel(label))}</span>
                             `).join("")}
                         </div>
                     `

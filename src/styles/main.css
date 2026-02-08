@@ -15,6 +15,11 @@
     --border-color: #CCCCCC;
     --border-color-darker: #8E8068;
     --header-footer-color: #B8A282;
+    --skill-tag-bg: #605443;
+    --skill-tag-text: #FFFFFF;
+    --skill-tag-border: #4F4436;
+    --skill-tag-warn-bg: #9B6039;
+    --skill-tag-warn-text: #FFFFFF;
 }
 
 html.dark {
@@ -32,6 +37,11 @@ html.dark {
     --border-color: #596e96;
     --border-color-darker: #596E96;
     --header-footer-color: #0A1023;
+    --skill-tag-bg: #384766;
+    --skill-tag-text: #CBD9F4;
+    --skill-tag-border: #596E96;
+    --skill-tag-warn-bg: #CBD9F4;
+    --skill-tag-warn-text: #0A1023;
 }
 
 body {
@@ -466,19 +476,26 @@ body.route-loading .route-loading-overlay {
     gap: 4px;
 }
 
+.item-skill-tags--or {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .item-skill-tag {
     padding: 2px 5px;
     font-size: 0.65rem;
     line-height: 1;
     border-radius: 4px;
-    border: 1px solid var(--border-color-darker);
-    background-color: var(--input-text-bg);
-    color: var(--section-header-color);
+    border: 1px solid var(--skill-tag-border);
+    background-color: var(--skill-tag-bg);
+    color: var(--skill-tag-text);
 }
 
 .item-skill-tag--warn {
-    border-color: var(--highlight-color);
-    color: var(--highlight-color);
+    border-color: var(--skill-tag-border);
+    background-color: var(--skill-tag-bg);
+    color: var(--skill-tag-text);
 }
 
 .roll-intro {
