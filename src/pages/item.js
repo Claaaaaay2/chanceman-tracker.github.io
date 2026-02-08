@@ -1,5 +1,5 @@
 import { NPC_DATA } from "../logic/npcData.js";
-import { isItemHiddenByTag, isNpcBlockedByFilters, isNpcObtainable, isRuleObtainable, isSourceHiddenByFilters } from "../logic/itemVisibility.js";
+import { isDropSlayerLocked, isItemHiddenByTag, isNpcBlockedByFilters, isNpcObtainable, isRuleObtainable, isSourceHiddenByFilters } from "../logic/itemVisibility.js";
 import { parseDropRate } from "../logic/utils.js";
 import { fileStore } from "../storage/fileStore.js";
 
@@ -22,7 +22,7 @@ export default async function ItemPage() {
     if (!item) return `<h1>Item not found</h1>`;
     if (isItemHiddenByTag(item)) return `<h1>Item not found</h1>`;
 
-    const sourcesHtml = await renderSources(item.sources);
+    const sourcesHtml = await renderSources(item, item.sources);
     const processableHtml = renderProcessable(item.processable, items);
 
     return `
@@ -47,7 +47,7 @@ export default async function ItemPage() {
 /* ===========================================================
    SOURCE SECTIONS
    =========================================================== */
-async function renderSources(sources = {}) {
+async function renderSources(item, sources = {}) {
     const sections = ["drops", "other", "shops", "spawns"];
 
     const htmlParts = [];
@@ -56,7 +56,7 @@ async function renderSources(sources = {}) {
         htmlParts.push(`
             <div class="source-section">
                 <h3>${capitalize(section)}</h3>
-                ${await renderSourceTable(section, sources[section])}
+                ${await renderSourceTable(section, sources[section], item)}
             </div>
         `);
     }
@@ -72,7 +72,7 @@ function capitalize(s) {
 /* ===========================================================
    INDIVIDUAL TABLE RENDERING
    =========================================================== */
-async function renderSourceTable(section, entries) {
+async function renderSourceTable(section, entries, item) {
     if (!entries || Object.keys(entries).length === 0)
         return `<p><em>No data.</em></p>`;
 
@@ -86,6 +86,8 @@ async function renderSourceTable(section, entries) {
         const rows = [];
 
         for (const [name, data] of Object.entries(entries)) {
+            const isDropBlockedBySlayer = fileStore.filters?.isSlayerLocked
+                && isDropSlayerLocked(item, name, data);
             if (isNpcBlockedByFilters(name, fileStore)) {
                 rows.push({
                     name,
@@ -94,7 +96,7 @@ async function renderSourceTable(section, entries) {
                 });
                 continue;
             }
-            const obtainable = await isNpcObtainable(name, fileStore);
+            const obtainable = !isDropBlockedBySlayer && await isNpcObtainable(name, fileStore);
             rows.push({
                 name,
                 data,

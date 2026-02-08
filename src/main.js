@@ -1,5 +1,5 @@
 import { canReachNpc, evaluateRule } from "./logic/itemAvailability.js";
-import { areNpcSkillsMet, isItemHiddenByTag, isNpcBlockedByFilters, isNpcObtainable, isSourceHiddenByFilters } from "./logic/itemVisibility.js";
+import { areNpcSkillsMet, isDropSlayerLocked, isItemHiddenByTag, isNpcBlockedByFilters, isNpcObtainable, isSourceHiddenByFilters } from "./logic/itemVisibility.js";
 import { capitalizeFirstLetter, parseDropRate } from "./logic/utils.js";
 import { NPC_DATA } from "./logic/npcData.js";
 import { getObtainabilityRank } from "./logic/sortHelpers.js";
@@ -131,6 +131,7 @@ async function computeAllRanksOnce(items, ctx) {
 
             if (item.sources?.drops) {
                 for (const [npcName, drops] of Object.entries(item.sources.drops)) {
+                    if (ctx.filters?.isSlayerLocked && isDropSlayerLocked(item, npcName, drops)) continue;
 
                     if (!(await isNpcObtainable(npcName, ctx))) continue;
 
@@ -522,6 +523,7 @@ window.initItemsPage = async function () {
 
         if (item.sources?.drops) {
             for (const [npcName, drops] of Object.entries(item.sources.drops)) {
+                if (ctx.filters?.isSlayerLocked && isDropSlayerLocked(item, npcName, drops)) continue;
                 if (await isNpcObtainable(npcName, ctx)) {
                     const rateLabel = getDropRateLabel(drops);
                     sources.push(`Drop: ${npcName}${rateLabel}`);
@@ -1229,13 +1231,23 @@ async function hideSkill(item, ctx, skill, rolledSet) {
     // NPC drops
     if (dropNpcs.length) {
         for (const npcName of dropNpcs) {
+            const drop = item.sources?.drops?.[npcName];
+            const isDropTagged = isDropSlayerLocked(item, npcName, drop);
             const npcMeta = NPC_META.get(npcName);
             const npc = NPC_DATA[npcName];
-            if (!npc) continue;
+            if (!npc) {
+                if (isDropTagged) {
+                    hasAnySkillSource = true;
+                } else {
+                    hasReachableNonSkillSource = true;
+                }
+                continue;
+            }
             if (isNpcBlockedByFilters(npcName, ctx)) continue;
 
             const isSlayerLockTag = skill === "Slayer"
-                && (npcMeta?.tags?.has("slayer-task-only") || npcMeta?.isSuperior
+                && (isDropTagged
+                    || npcMeta?.tags?.has("slayer-task-only") || npcMeta?.isSuperior
                     || npc.tags?.includes("slayer-task-only") || npc.tags?.includes("superior"));
             const skills = npcMeta?.skills ?? npc.skill;
             const levels = npcMeta?.levels ?? npc.level;

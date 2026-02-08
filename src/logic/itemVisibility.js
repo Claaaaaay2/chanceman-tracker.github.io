@@ -4,6 +4,36 @@ import { capitalizeFirstLetter } from "./utils.js";
 
 const REWARD_POOL_35_39 = "Reward pool 35\u201339 Fishing";
 const HIDDEN_ITEM_TAGS = new Set(["deadman", "leagues", "gridmaster"]);
+const SLAYER_ONLY_DROP_ITEMS = new Set([23490, 21257]);
+
+function hasTag(tags, tag) {
+    if (!tags) return false;
+    if (Array.isArray(tags)) return tags.includes(tag);
+    return tags === tag;
+}
+
+function isDropEntrySlayerLocked(entry) {
+    return hasTag(entry?.tags, "slayer-task-only")
+        || entry?.slayerTaskOnly
+        || hasTag(entry?.tags, "superior")
+        || entry?.superiorOnly;
+}
+
+export function isDropSlayerLocked(item, npcName, drops) {
+    const itemId = Number(item?.id);
+    if (SLAYER_ONLY_DROP_ITEMS.has(itemId)) {
+        if (itemId === 23490 && npcName?.includes("Muddy chest")) {
+            return false;
+        }
+        return true;
+    }
+
+    if (Array.isArray(drops)) {
+        return drops.length > 0 && drops.every((entry) => isDropEntrySlayerLocked(entry));
+    }
+
+    return isDropEntrySlayerLocked(drops);
+}
 
 export function isItemHiddenByTag(item) {
     const tags = item?.tags;
