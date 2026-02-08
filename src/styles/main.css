@@ -551,6 +551,12 @@ body.route-loading .route-loading-overlay {
     max-width: 240px;
 }
 
+.items-top-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
 .npc-filter {
     position: relative;
 }

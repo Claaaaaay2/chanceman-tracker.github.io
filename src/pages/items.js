@@ -22,17 +22,21 @@ export default async function ItemsPage() {
 
         <div class="items-top-filters">
             <input type="search" id="itemSearch" placeholder="Filter items..." />
-            <div class="npc-filter" id="npcFilter">
-                <button type="button" id="npcFilterToggle">Choose visible NPCs</button>
-                <div class="npc-filter-panel" id="npcFilterPanel">
-                    <input type="search" id="npcFilterSearch" placeholder="Search NPCs...">
-                    <div class="npc-filter-actions">
-                        <button type="button" id="npcFilterAll">All</button>
-                        <button type="button" id="npcFilterNone">None</button>
-                    </div>
-                    <div class="npc-filter-list" id="npcFilterList"></div>
-                    <div class="npc-filter-actions npc-filter-actions--apply">
-                        <button type="button" id="npcFilterApply">Apply</button>
+            <div class="items-top-actions">
+                <button type="button" id="connectFilesBtn">Connect files</button>
+                <button type="button" id="refreshFilesBtn">Refresh files</button>
+                <div class="npc-filter" id="npcFilter">
+                    <button type="button" id="npcFilterToggle">Choose visible NPCs</button>
+                    <div class="npc-filter-panel" id="npcFilterPanel">
+                        <input type="search" id="npcFilterSearch" placeholder="Search NPCs...">
+                        <div class="npc-filter-actions">
+                            <button type="button" id="npcFilterAll">All</button>
+                            <button type="button" id="npcFilterNone">None</button>
+                        </div>
+                        <div class="npc-filter-list" id="npcFilterList"></div>
+                        <div class="npc-filter-actions npc-filter-actions--apply">
+                            <button type="button" id="npcFilterApply">Apply</button>
+                        </div>
                     </div>
                 </div>
             </div>

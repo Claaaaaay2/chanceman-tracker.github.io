@@ -6,6 +6,7 @@ import { getObtainabilityRank } from "./logic/sortHelpers.js";
 import { initBugPage } from "./pages/reportABug.js";
 import { router } from "./router.js";
 import { fileStore } from "./storage/fileStore.js";
+import { loadFromDB, saveToDB } from "./storage/fileStoreHelpers.js";
 import { initFiltersOverrides } from "./styles/filtersOverrides.js";
 import "./styles/main.css";
 import { initTheme } from "./styles/theme.js";
@@ -204,6 +205,8 @@ window.initItemsPage = async function () {
         filterToggle: document.getElementById("filter-overrides-toggle"),
         importButton: document.getElementById("import-item-filters"),
         importInput: document.getElementById("import-item-filters-input"),
+        connectFilesBtn: document.getElementById("connectFilesBtn"),
+        refreshFilesBtn: document.getElementById("refreshFilesBtn"),
         npcFilter: document.getElementById("npcFilter"),
         npcFilterToggle: document.getElementById("npcFilterToggle"),
         npcFilterPanel: document.getElementById("npcFilterPanel"),
@@ -258,6 +261,7 @@ window.initItemsPage = async function () {
     const missingElement = !elements.searchInput || !elements.hunterRumoursCompleted || !elements.grid || !elements.loading
         || !elements.importButton || !elements.importInput
         || !elements.f2pSourcelessRow
+        || !elements.connectFilesBtn || !elements.refreshFilesBtn
         || !elements.npcFilter || !elements.npcFilterToggle || !elements.npcFilterPanel
         || !elements.npcFilterSearch || !elements.npcFilterList
         || !elements.npcFilterAll || !elements.npcFilterNone || !elements.npcFilterApply
@@ -283,6 +287,7 @@ window.initItemsPage = async function () {
     const f = fileStore.filters;
     applyFiltersToUI(f);
     bindNpcFilterUI();
+    bindFileRefreshUI();
 
     function buildNpcFilterList(filters) {
         const npcNames = Object.keys(NPC_DATA).sort((a, b) => a.localeCompare(b));
@@ -294,6 +299,76 @@ window.initItemsPage = async function () {
                 <span>${escapeHtml(npcName)}</span>
             </label>
         `).join("");
+    }
+
+    async function readHandleJson(handle) {
+        if (!handle) return null;
+        if (handle.queryPermission) {
+            const permission = await handle.queryPermission({ mode: "read" });
+            if (permission !== "granted") {
+                const requested = await handle.requestPermission({ mode: "read" });
+                if (requested !== "granted") {
+                    throw new Error("File permission not granted.");
+                }
+            }
+        }
+        const file = await handle.getFile();
+        return JSON.parse(await file.text());
+    }
+
+    async function loadStoredHandles() {
+        const rolledHandle = await loadFromDB("fileHandle:rolled");
+        const obtainedHandle = await loadFromDB("fileHandle:obtained");
+        return { rolledHandle, obtainedHandle };
+    }
+
+    async function storeHandles(rolledHandle, obtainedHandle) {
+        await saveToDB("fileHandle:rolled", rolledHandle);
+        await saveToDB("fileHandle:obtained", obtainedHandle);
+    }
+
+    function pickHandlesFromSelection(handles) {
+        const byName = (keyword) => handles.find((handle) => handle.name.toLowerCase().includes(keyword));
+        const rolledHandle = byName("rolled");
+        const obtainedHandle = byName("obtained");
+        return { rolledHandle, obtainedHandle };
+    }
+
+    async function connectFileHandles() {
+        if (!window.showOpenFilePicker) {
+            alert("Your browser does not support connecting files. Please use the Upload or Reupload page.");
+            return;
+        }
+        const handles = await window.showOpenFilePicker({
+            multiple: true,
+            types: [
+                {
+                    description: "Chanceman JSON",
+                    accept: { "application/json": [".json"] }
+                }
+            ]
+        });
+        const { rolledHandle, obtainedHandle } = pickHandlesFromSelection(handles);
+        if (!rolledHandle || !obtainedHandle) {
+            alert("Please select both chanceman_rolled.json and chanceman_obtained.json.");
+            return;
+        }
+        await storeHandles(rolledHandle, obtainedHandle);
+        await refreshFilesFromHandles({ rolledHandle, obtainedHandle });
+    }
+
+    async function refreshFilesFromHandles(loadedHandles) {
+        const { rolledHandle, obtainedHandle } = loadedHandles || await loadStoredHandles();
+        if (!rolledHandle || !obtainedHandle) {
+            alert("No connected files found. Click \"Connect files\" first.");
+            return;
+        }
+        const rolled = await readHandleJson(rolledHandle);
+        const obtained = await readHandleJson(obtainedHandle);
+        await fileStore.setRolled(rolled);
+        await fileStore.setObtained(obtained);
+        invalidateLogicCaches(fileStore);
+        renderItems();
     }
 
     function updateNpcFilterVisibility() {
@@ -385,6 +460,37 @@ window.initItemsPage = async function () {
         });
     }
 
+    function bindFileRefreshUI() {
+        if (!window.showOpenFilePicker) {
+            elements.connectFilesBtn.hidden = true;
+            elements.refreshFilesBtn.hidden = true;
+            return;
+        }
+        elements.connectFilesBtn.addEventListener("click", async () => {
+            try {
+                setInputsDisabled(true);
+                await connectFileHandles();
+            } catch (err) {
+                console.error(err);
+                alert(err.message || "Failed to connect files.");
+            } finally {
+                setInputsDisabled(false);
+            }
+        });
+
+        elements.refreshFilesBtn.addEventListener("click", async () => {
+            try {
+                setInputsDisabled(true);
+                await refreshFilesFromHandles();
+            } catch (err) {
+                console.error(err);
+                alert(err.message || "Failed to refresh files.");
+            } finally {
+                setInputsDisabled(false);
+            }
+        });
+    }
+
     function updateF2pDependentFilters(filters) {
         if (!elements.f2pSourcelessRow) return;
         elements.f2pSourcelessRow.hidden = !filters?.isFreeToPlay;
@@ -412,6 +518,8 @@ window.initItemsPage = async function () {
     function setInputsDisabled(disabled) {
         elements.searchInput.disabled = disabled;
         elements.hunterRumoursCompleted.disabled = disabled;
+        elements.connectFilesBtn.disabled = disabled;
+        elements.refreshFilesBtn.disabled = disabled;
         elements.npcFilterToggle.disabled = disabled;
         elements.npcFilterSearch.disabled = disabled;
         elements.npcFilterAll.disabled = disabled;

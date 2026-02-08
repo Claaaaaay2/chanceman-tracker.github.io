@@ -49,6 +49,15 @@ export default function HomePage() {
                 <li><strong>Overrides</strong> – preview what lamping a skill would unlock.</li>
                 <li><strong>Specific filters</strong> – reduce noise from sources you do not want to see.</li>
             </ul>
+                <div class="card home-card">
+            <h2>Quick Refresh</h2>
+            <p><strong>Chromium browsers only.</strong> You can connect your files once from the Items page and then refresh them with one click.</p>
+            <ul class="home-list">
+                <li>Click <strong>Connect files</strong> on Items and select both JSON files.</li>
+                <li>Later, click <strong>Refresh files</strong> to reload without reopening the picker.</li>
+            </ul>
         </div>
+
+</div>
     `;
 }
