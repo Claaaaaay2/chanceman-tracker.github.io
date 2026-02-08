@@ -157,6 +157,22 @@ window.initSkillUnlocksPage = function () {
     const list = document.getElementById("unlockList");
     if (!list) return;
 
+    const jumpNav = document.querySelector(".unlock-jump");
+    if (jumpNav && !jumpNav.dataset.bound) {
+        jumpNav.dataset.bound = "true";
+        jumpNav.addEventListener("click", (event) => {
+            const link = event.target.closest(".unlock-jump-link");
+            if (!link) return;
+            const targetId = link.getAttribute("href")?.slice(1);
+            if (!targetId) return;
+            const target = document.getElementById(targetId);
+            if (!target) return;
+            event.preventDefault();
+            history.replaceState(null, "", `#${targetId}`);
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+    }
+
     list.querySelectorAll(".unlock-section").forEach((section) => {
         const key = section.dataset.section || "";
         const stored = localStorage.getItem(`unlock-section:${key}`);
