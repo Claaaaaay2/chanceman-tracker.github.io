@@ -1,4 +1,5 @@
 import { canReachNpc, evaluateRule } from "./logic/itemAvailability.js";
+import { getHighlightClasses, isItemSourcesChanged, markNewItems, markSourceSignature } from "./logic/highlightState.js";
 import { areNpcSkillsMet, isDropSlayerLocked, isItemHiddenByTag, isNpcBlockedByFilters, isNpcObtainable, isSourceHiddenByFilters } from "./logic/itemVisibility.js";
 import { capitalizeFirstLetter, parseDropRate } from "./logic/utils.js";
 import { NPC_DATA } from "./logic/npcData.js";
@@ -242,6 +243,7 @@ window.initItemsPage = async function () {
         { id: "isFreeToPlay", key: "isFreeToPlay", defaultValue: false, invalidate: true },
         { id: "hideSourcelessItems", key: "hideSourcelessItems", defaultValue: false },
         { id: "hasEasyCasCompleted", key: "hasEasyCasCompleted", defaultValue: false, invalidate: true },
+        { id: "highlightChanges", key: "highlightChanges", defaultValue: false },
         { id: "overrideWoodcutting", key: "overrideWoodcutting", defaultValue: false, invalidate: true },
         { id: "overrideMining", key: "overrideMining", defaultValue: false, invalidate: true },
         { id: "overrideFishing", key: "overrideFishing", defaultValue: false, invalidate: true },
@@ -1023,7 +1025,8 @@ window.initItemsPage = async function () {
             hideJon,
             isFreeToPlay,
             hideSourcelessItems,
-            otherDropsSortByDroprate = true
+            otherDropsSortByDroprate = true,
+            highlightChanges = false
         } = getFilters();
 
         const items = fileStore.items || [];
@@ -1039,6 +1042,7 @@ window.initItemsPage = async function () {
         // sort async
         const filtered = [];
 
+        const visibleItemIds = [];
         for (const entry of ranked) {
             const { item } = entry;
             const meta = itemMeta?.get(item.id);
@@ -1093,6 +1097,11 @@ window.initItemsPage = async function () {
             if (hideUnobtainable && sort.rank === 8) continue;
 
             filtered.push({ ...entry, sort });
+            visibleItemIds.push(item.id);
+        }
+
+        if (highlightChanges) {
+            markNewItems(visibleItemIds);
         }
 
         filtered.sort((a, b) => {
@@ -1185,8 +1194,9 @@ window.initItemsPage = async function () {
                         <div class="item-tooltip-empty">Hover to load</div>
                     </div>
                 `;
+                const highlightClass = highlightChanges ? getHighlightClasses(item.id) : "";
                 html += `
-                    <div class="item-card" data-item-id="${item.id}" onclick="navigate('/item?id=${item.id}')">
+                    <div class="item-card${highlightClass ? ` ${highlightClass}` : ""}" data-item-id="${item.id}" onclick="navigate('/item?id=${item.id}')">
                         ${isObtained ? `<span class="badge obtained">Obtained</span>` : ""}
                         ${isRolled ? `<span class="badge rolled">Rolled</span>` : ""}
                         <img class="lazy-img item-image" data-src="/images/${item.image}" src="/images/placeholder.png">
@@ -1197,7 +1207,28 @@ window.initItemsPage = async function () {
                 `;
             }
 
-            elements.grid.innerHTML = html;
+        elements.grid.innerHTML = html;
+
+        if (highlightChanges) {
+            const signatureTargets = filtered.map(({ item }) => item);
+            setTimeout(async () => {
+                for (const item of signatureTargets) {
+                    try {
+                        const sources = await getObtainableSources(item, fileStore, rolledSet);
+                        const signature = sources.sort((a, b) => a.localeCompare(b)).join("||");
+                        markSourceSignature(item.id, signature);
+                        if (isItemSourcesChanged(item.id)) {
+                            const card = elements.grid.querySelector(`.item-card[data-item-id="${item.id}"]`);
+                            if (card) {
+                                card.classList.add("is-sources-changed");
+                            }
+                        }
+                    } catch (err) {
+                        console.error(err);
+                    }
+                }
+            }, 0);
+        }
 
             const otherDropsToggle = document.getElementById("otherDropsSortByDroprate");
             if (otherDropsToggle) {
@@ -1290,6 +1321,12 @@ window.addEventListener("DOMContentLoaded", async () => {
 });
 
 window.addEventListener("popstate", router);
+
+document.addEventListener("mouseover", (event) => {
+    const target = event.target.closest(".is-new, .is-sources-changed");
+    if (!target) return;
+    target.classList.remove("is-new", "is-sources-changed");
+});
 
 // Allow <a data-link href="/about"> navigation
 document.addEventListener("click", (e) => {

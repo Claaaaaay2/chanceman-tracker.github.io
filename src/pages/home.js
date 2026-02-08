@@ -28,28 +28,30 @@ export default function HomePage() {
         </div>
 
         <div class="card home-card">
-            <h2>Pages You Can Use</h2>
+            <h2>Pages</h2>
             <ul class="home-list">
-                <li><strong>Items</strong> – your master list of obtainable, gated, and unobtainable drops.</li>
-                <li><strong>Unlocks</strong> – items you have rolled and obtained, grouped by skill tag.</li>
-                <li><strong>NPC drops</strong> – each NPC’s remaining drops, sortable by drop rate impact.</li>
-                <li><strong>Item history</strong> – paired roll/obtain timelines for audits and planning.</li>
-                <li><strong>Achievement diaries</strong> – completion and incompletable filters.</li>
-                <li><strong>Clue steps</strong> – search and feasibility filters for clue progress.</li>
-                <li><strong>Quests</strong> – completion filters and missing item requirements.</li>
-                <li><strong>Report a bug</strong> – bugs or wrong data report form, feel free to leave suggestions too.</li>
+                <li><strong>Items</strong> - your master list of obtainable, gated, and unobtainable drops.</li>
+                <li><strong>Unlocks</strong> - items you have rolled and obtained, grouped by skill tag.</li>
+                <li><strong>NPC drops</strong> - each NPC's remaining drops, sortable by drop rate impact.</li>
+                <li><strong>Item history</strong> - paired roll/obtain timelines for audits and planning.</li>
+                <li><strong>Achievement diaries</strong> - completion and incompletable filters.</li>
+                <li><strong>Clue steps</strong> - search and feasibility filters for clue progress.</li>
+                <li><strong>Quests</strong> - completion filters and missing item requirements.</li>
+                <li><strong>Report a bug</strong> - bugs or wrong data report form, feel free to leave suggestions too.</li>
             </ul>
         </div>
 
         <div class="card home-card">
-            <h2>Filter Highlights</h2>
+            <h2>Filters</h2>
             <ul class="home-list">
-                <li><strong>Ironman / F2P</strong> – adapt sources and rules to your account type.</li>
-                <li><strong>NPC visibility</strong> – include or exclude specific NPC drops globally.</li>
-                <li><strong>Overrides</strong> – preview what lamping a skill would unlock.</li>
-                <li><strong>Specific filters</strong> – reduce noise from sources you do not want to see.</li>
+                <li><strong>Ironman / F2P</strong> - adapt sources and rules to your account type.</li>
+                <li><strong>NPC visibility</strong> - include or exclude specific NPC drops globally.</li>
+                <li><strong>Overrides</strong> - preview what lamping a skill would unlock.</li>
+                <li><strong>Highlight changes</strong> - optionally glow new items or source changes after filters update.</li>
             </ul>
-                <div class="card home-card">
+        </div>
+
+        <div class="card home-card">
             <h2>Quick Refresh</h2>
             <p><strong>Chromium browsers only.</strong> You can connect your files once from the Items page and then refresh them with one click.</p>
             <ul class="home-list">
@@ -57,7 +59,5 @@ export default function HomePage() {
                 <li>Later, click <strong>Refresh files</strong> to reload without reopening the picker.</li>
             </ul>
         </div>
-
-</div>
     `;
 }
