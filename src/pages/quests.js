@@ -211,7 +211,7 @@ export default async function QuestsPage() {
     if (!fileStore.player) {
         return `
             <h1>Quests</h1>
-            <p>Please upload your files and player name on the Home page first.</p>
+            <p>Please upload your files and player name on the Upload page first.</p>
         `;
     }
 

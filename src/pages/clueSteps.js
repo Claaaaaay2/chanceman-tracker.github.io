@@ -296,7 +296,7 @@ export default async function ClueStepsPage() {
 
     const missingPlayerNote = hasPlayer
         ? ""
-        : `<p class="clue-warning">Upload your player data on the Home page to evaluate requirements.</p>`;
+        : `<p class="clue-warning">Upload your player data on the Upload page to evaluate requirements.</p>`;
 
     return `
         <h1>Clue steps</h1>

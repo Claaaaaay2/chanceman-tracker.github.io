@@ -30,6 +30,7 @@ export async function Header() {
                     <span class="menu-caret" aria-hidden="true">▾</span>
                 </button>
                 <span class="header-links">
+                    <a data-link href="/">Home</a><span class="header-separator">|</span>
                     <a data-link href="/items">Items</a><span class="header-separator">|</span>
                 <a data-link href="/unlocks">Unlocks</a><span class="header-separator">|</span>
                     <a data-link href="/npcs">NPC drops</a><span class="header-separator">|</span>

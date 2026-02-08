@@ -8,7 +8,7 @@ export default async function ItemPage() {
     const rolled = fileStore.rolled;
 
     if (!obtained || !rolled)
-        return `<h1>Please upload your files on the Home page first.</h1>`;
+        return `<h1>Please upload your files on the Upload page first.</h1>`;
 
     const params = new URLSearchParams(window.location.search);
     const id = params.get("id");

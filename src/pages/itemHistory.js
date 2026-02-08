@@ -142,7 +142,7 @@ export default async function ItemHistoryPage() {
     if (!obtained || !rolled) {
         return `
             <h1>Item history</h1>
-            <p>Please upload your files on the Home page first.</p>
+            <p>Please upload your files on the Upload page first.</p>
         `;
     }
 

@@ -12,6 +12,7 @@ import ClueStepsPage from "./pages/clueSteps.js";
 import { BugPage } from "./pages/reportABug.js";
 import ReuploadPage from "./pages/reupload.js";
 import UploadPage from "./pages/upload.js";
+import HomePage from "./pages/home.js";
 import ItemHistoryPage from "./pages/itemHistory.js";
 import { bindThemeToggle, updateThemeIcon } from "./styles/theme.js";
 import { bindFiltersOverridesToggle } from "./styles/filtersOverrides.js";
@@ -51,7 +52,8 @@ export async function router() {
     const basePath = path.split("?")[0];
 
     const routes = {
-        "/": UploadPage,
+        "/": HomePage,
+        "/upload": UploadPage,
         "/items": ItemsPage,
         "/unlocks": SkillUnlocksPage,
         "/npcs": NpcsPage,

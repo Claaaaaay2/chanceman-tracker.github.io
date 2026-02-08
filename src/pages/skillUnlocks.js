@@ -47,7 +47,7 @@ export default async function SkillUnlocksPage() {
     if (!obtained || !rolled) {
         return `
             <h1>Unlocks by skill</h1>
-            <p>Please upload your files on the Home page first.</p>
+            <p>Please upload your files on the Upload page first.</p>
         `;
     }
 

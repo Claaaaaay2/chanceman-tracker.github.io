@@ -15,6 +15,7 @@ initFiltersOverrides();
 function getCurrentPageLabel() {
     const path = window.location.pathname;
     if (path === "/") return "Home";
+    if (path === "/upload") return "Upload";
     if (path === "/items") return "Items";
     if (path === "/npcs") return "NPC drops";
     if (path === "/item-history") return "Item history";

@@ -197,7 +197,7 @@ export default async function AchievementDiariesPage() {
     if (!fileStore.player) {
         return `
             <h1>Achievement diaries</h1>
-            <p>Please upload your files and player name on the Home page first.</p>
+            <p>Please upload your files and player name on the Upload page first.</p>
         `;
     }
 
