@@ -206,6 +206,7 @@ window.initItemsPage = async function () {
         filterToggle: document.getElementById("filter-overrides-toggle"),
         importButton: document.getElementById("import-item-filters"),
         importInput: document.getElementById("import-item-filters-input"),
+        itemsSectionSummary: document.getElementById("itemsSectionSummary"),
         connectFilesBtn: document.getElementById("connectFilesBtn"),
         refreshFilesBtn: document.getElementById("refreshFilesBtn"),
         npcFilter: document.getElementById("npcFilter"),
@@ -252,7 +253,8 @@ window.initItemsPage = async function () {
         { id: "overrideFletching", key: "overrideFletching", defaultValue: false, invalidate: true },
         { id: "overrideCrafting", key: "overrideCrafting", defaultValue: false, invalidate: true },
         { id: "overrideConstruction", key: "overrideConstruction", defaultValue: false, invalidate: true },
-        { id: "overrideSmithing", key: "overrideSmithing", defaultValue: false, invalidate: true }
+        { id: "overrideSmithing", key: "overrideSmithing", defaultValue: false, invalidate: true },
+        { id: "showSectionCounts", key: "showSectionCounts", defaultValue: false }
     ];
 
     const checkboxElements = {};
@@ -263,6 +265,7 @@ window.initItemsPage = async function () {
     const missingElement = !elements.searchInput || !elements.hunterRumoursCompleted || !elements.grid || !elements.loading
         || !elements.importButton || !elements.importInput
         || !elements.f2pSourcelessRow
+        || !elements.itemsSectionSummary
         || !elements.connectFilesBtn || !elements.refreshFilesBtn
         || !elements.npcFilter || !elements.npcFilterToggle || !elements.npcFilterPanel
         || !elements.npcFilterSearch || !elements.npcFilterList
@@ -1026,7 +1029,8 @@ window.initItemsPage = async function () {
             isFreeToPlay,
             hideSourcelessItems,
             otherDropsSortByDroprate = true,
-            highlightChanges = false
+            highlightChanges = false,
+            showSectionCounts = false
         } = getFilters();
 
         const items = fileStore.items || [];
@@ -1132,6 +1136,7 @@ window.initItemsPage = async function () {
             }, {});
             let html = "";
             let lastRank = null;
+            const summaryParts = [];
 
             for (const { item, sort } of filtered) {
                 if (sort.rank !== lastRank) {
@@ -1150,8 +1155,14 @@ window.initItemsPage = async function () {
                     `
                     : "";
                 const sectionCount = sectionCounts[sort.rank] ?? 0;
+                const sectionId = `items-section-${sort.rank}`;
+                if (showSectionCounts) {
+                    summaryParts.push(
+                        `<a href="#${sectionId}">${escapeHtml(ITEM_SECTION_TITLES[sort.rank] ?? "Other Items")} (${sectionCount})</a>`
+                    );
+                }
                 html += `
-                    <h2 class="item-section-header">
+                    <h2 class="item-section-header" id="${sectionId}">
                         <span class="item-section-title">
                             ${ITEM_SECTION_TITLES[sort.rank] ?? "Other Items"}
                             <span class="item-section-count">(${sectionCount})</span>
@@ -1207,7 +1218,14 @@ window.initItemsPage = async function () {
                 `;
             }
 
-        elements.grid.innerHTML = html;
+            elements.grid.innerHTML = html;
+            if (showSectionCounts) {
+                elements.itemsSectionSummary.hidden = false;
+                elements.itemsSectionSummary.innerHTML = summaryParts.join("");
+            } else {
+                elements.itemsSectionSummary.hidden = true;
+                elements.itemsSectionSummary.innerHTML = "";
+            }
 
         if (highlightChanges) {
             const signatureTargets = filtered.map(({ item }) => item);

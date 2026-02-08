@@ -604,6 +604,35 @@ body.route-loading .route-loading-overlay {
     gap: 0.4rem;
 }
 
+.items-summary-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.8rem;
+}
+
+.items-section-summary {
+    margin: 0 1rem 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+}
+
+.items-section-summary a {
+    text-decoration: none;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 999px;
+    border: 1px solid var(--border-color-darker);
+    color: var(--section-header-color);
+    background: var(--card-bg);
+}
+
+.items-section-summary a:hover {
+    color: var(--highlight-color);
+    border-color: var(--highlight-color);
+}
+
 .npc-filter {
     position: relative;
 }
@@ -1079,6 +1108,7 @@ body.route-loading .route-loading-overlay {
     align-items: center;
     justify-content: flex-start;
     gap: 2rem;
+    scroll-margin-top: 48px;
 }
 
 .item-section-title {

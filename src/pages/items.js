@@ -23,6 +23,10 @@ export default async function ItemsPage() {
         <div class="items-top-filters">
             <input type="search" id="itemSearch" placeholder="Filter items..." />
             <div class="items-top-actions">
+                <label class="items-summary-toggle">
+                    <input type="checkbox" id="showSectionCounts">
+                    Show section counts
+                </label>
                 <button type="button" id="connectFilesBtn">Connect files</button>
                 <button type="button" id="refreshFilesBtn">Refresh files</button>
                 <div class="npc-filter" id="npcFilter">
@@ -41,6 +45,7 @@ export default async function ItemsPage() {
                 </div>
             </div>
         </div>
+        <div class="items-section-summary" id="itemsSectionSummary" hidden></div>
 
         <div class="filters-overrides">
             <div class="item-filters">

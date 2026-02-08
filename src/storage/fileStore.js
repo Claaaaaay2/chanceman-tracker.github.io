@@ -35,6 +35,7 @@ let memory = {
         overrideSmithing: false,
         hunterRumoursCompleted: 0,
         highlightChanges: false,
+        showSectionCounts: false,
         hideCompletedQuests: false,
         hideIncompletableQuests: false,
         questSearch: "",
