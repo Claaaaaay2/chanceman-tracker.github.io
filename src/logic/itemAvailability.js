@@ -2,6 +2,53 @@ import { NPC_DATA } from "./npcData.js";
 import { REQUIREMENT_CHECKS, has, hasSkillLevel } from "./requirements.js";
 import { capitalizeFirstLetter } from "./utils.js";
 
+const BUTTERFLY_NET_ID = 10010;
+const IMPLING_JAR_LEVEL_DOWNGRADES = new Map([
+    [27, 17],
+    [32, 22],
+    [38, 28],
+    [46, 36],
+    [52, 42],
+    [60, 50],
+    [68, 58],
+    [75, 65],
+    [84, 74],
+    [90, 80],
+    [93, 83],
+    [99, 89],
+]);
+
+function adjustImplingJarRuleLevels(subrules, ctx) {
+    if (!Array.isArray(subrules) || !ctx || !has(ctx, BUTTERFLY_NET_ID)) return null;
+
+    let hasImplingJar = false;
+    let hunterRuleIndex = -1;
+    let hunterLevel = null;
+
+    for (let i = 0; i < subrules.length; i++) {
+        const sub = subrules[i];
+        if (sub?.has === 11260) hasImplingJar = true;
+        if (sub?.skill && sub?.level !== undefined) {
+            const skillName = capitalizeFirstLetter(sub.skill);
+            if (skillName === "Hunter") {
+                hunterRuleIndex = i;
+                hunterLevel = sub.level;
+            }
+        }
+    }
+
+    if (!hasImplingJar || hunterRuleIndex < 0) return null;
+    const loweredLevel = IMPLING_JAR_LEVEL_DOWNGRADES.get(hunterLevel);
+    if (!loweredLevel) return null;
+
+    const adjusted = [...subrules];
+    adjusted[hunterRuleIndex] = {
+        ...subrules[hunterRuleIndex],
+        level: loweredLevel,
+    };
+    return adjusted;
+}
+
 /* ===========================================================
    NPC ACCESS
    =========================================================== */
@@ -113,8 +160,10 @@ export async function evaluateRule(rule, ctx) {
             }
         } else if (rule.all) {
             // all
+            const adjustedRules = adjustImplingJarRuleLevels(rule.all, ctx);
+            const subrules = adjustedRules || rule.all;
             result = true;
-            for (const sub of rule.all) {
+            for (const sub of subrules) {
                 if (!(await evaluateRule(sub, ctx))) {
                     result = false;
                     break;

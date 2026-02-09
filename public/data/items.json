@@ -15047,7 +15047,7 @@
     "sources": {
       "other": {
         "Catching a Baby impling": {
-          "notes": "Requires an Impling jar and level 27 Hunter.",
+          "notes": "Requires an Impling jar and level 27 Hunter (or level 17 with a butterfly net).",
           "rule": {
             "all": [
               {
@@ -49182,7 +49182,7 @@
     "sources": {
       "other": {
         "Catching a Dragon impling": {
-          "notes": "Requires an Impling jar and level 83 Hunter.",
+          "notes": "Requires an Impling jar and level 93 Hunter (or level 83 with a butterfly net).",
           "rule": {
             "all": [
               {
@@ -49190,7 +49190,7 @@
               },
               {
                 "skill": "Hunter",
-                "level": 83
+                "level": 93
               }
             ]
           }
@@ -52790,7 +52790,7 @@
     "sources": {
       "other": {
         "Catching an Earth impling": {
-          "notes": "Requires an Impling jar and level 36 Hunter.",
+          "notes": "Requires an Impling jar and level 46 Hunter (or level 36 with a butterfly net).",
           "rule": {
             "all": [
               {
@@ -52798,7 +52798,7 @@
               },
               {
                 "skill": "Hunter",
-                "level": 36
+                "level": 46
               }
             ]
           }
@@ -53700,7 +53700,7 @@
     "sources": {
       "other": {
         "Catching an Eclectic impling": {
-          "notes": "Requires an Impling jar and level 50 Hunter.",
+          "notes": "Requires an Impling jar and level 60 Hunter (or level 50 with a butterfly net).",
           "rule": {
             "all": [
               {
@@ -53708,7 +53708,7 @@
               },
               {
                 "skill": "Hunter",
-                "level": 50
+                "level": 60
               }
             ]
           }
@@ -56749,7 +56749,7 @@
     "sources": {
       "other": {
         "Catching an Essence impling": {
-          "notes": "Requires an Impling jar and level 42 Hunter.",
+          "notes": "Requires an Impling jar and level 52 Hunter (or level 42 with a butterfly net).",
           "rule": {
             "all": [
               {
@@ -56757,7 +56757,7 @@
               },
               {
                 "skill": "Hunter",
-                "level": 42
+                "level": 52
               }
             ]
           }
@@ -64626,7 +64626,7 @@
     "sources": {
       "other": {
         "Catching a Gourmet impling": {
-          "notes": "Requires an Impling jar and level 28 Hunter.",
+          "notes": "Requires an Impling jar and level 38 Hunter (or level 28 with a butterfly net).",
           "rule": {
             "all": [
               {
@@ -64634,7 +64634,7 @@
               },
               {
                 "skill": "Hunter",
-                "level": 28
+                "level": 38
               }
             ]
           }
@@ -95640,7 +95640,7 @@
     "sources": {
       "other": {
         "Catching a Magpie impling": {
-          "notes": "Requires an Impling jar and level 65 Hunter.",
+          "notes": "Requires an Impling jar and level 75 Hunter (or level 65 with a butterfly net).",
           "rule": {
             "all": [
               {
@@ -95648,7 +95648,7 @@
               },
               {
                 "skill": "Hunter",
-                "level": 65
+                "level": 75
               }
             ]
           }
@@ -106635,7 +106635,7 @@
     "sources": {
       "other": {
         "Catching a Nature impling": {
-          "notes": "Requires an Impling jar and level 58 Hunter.",
+          "notes": "Requires an Impling jar and level 68 Hunter (or level 58 with a butterfly net).",
           "rule": {
             "all": [
               {
@@ -106643,7 +106643,7 @@
               },
               {
                 "skill": "Hunter",
-                "level": 58
+                "level": 68
               }
             ]
           }
@@ -107862,7 +107862,7 @@
     "sources": {
       "other": {
         "Catching a Ninja impling": {
-          "notes": "Requires an Impling jar and level 74 Hunter.",
+          "notes": "Requires an Impling jar and level 84 Hunter (or level 74 with a butterfly net).",
           "rule": {
             "all": [
               {
@@ -107870,7 +107870,7 @@
               },
               {
                 "skill": "Hunter",
-                "level": 74
+                "level": 84
               }
             ]
           }
@@ -169474,7 +169474,7 @@
     "sources": {
       "other": {
         "Catching a Young impling": {
-          "notes": "Requires an Impling jar and level 22 Hunter.",
+          "notes": "Requires an Impling jar and level 32 Hunter (or level 22 with a butterfly net).",
           "rule": {
             "all": [
               {
@@ -169482,7 +169482,7 @@
               },
               {
                 "skill": "Hunter",
-                "level": 22
+                "level": 32
               }
             ]
           }

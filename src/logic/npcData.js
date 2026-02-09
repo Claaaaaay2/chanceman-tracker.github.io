@@ -1054,7 +1054,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Baby_impling_jar",
         "rule": ["canCatchImplingsInJars"],
         "skill": ["hunter"],
-        "level": [17],
+        "level": [27],
         "tags": [],
         "f2p": false
     },
@@ -4811,7 +4811,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Dragon_impling_jar",
         "rule": ["canCatchImplingsInJars"],
         "skill": ["hunter"],
-        "level": [83],
+        "level": [93],
         "tags": [],
         "f2p": false
     },
@@ -5179,7 +5179,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Earth_impling_jar",
         "rule": ["canCatchImplingsInJars"],
         "skill": ["hunter"],
-        "level": [36],
+        "level": [46],
         "tags": [],
         "f2p": false
     },
@@ -5227,7 +5227,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Eclectic_impling_jar",
         "rule": ["canCatchImplingsInJars"],
         "skill": ["hunter"],
-        "level": [50],
+        "level": [60],
         "tags": [],
         "f2p": false
     },
@@ -5499,7 +5499,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Essence_impling_jar",
         "rule": ["canCatchImplingsInJars"],
         "skill": ["hunter"],
-        "level": [42],
+        "level": [52],
         "tags": [],
         "f2p": false
     },
@@ -7047,7 +7047,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Gourmet_impling_jar",
         "rule": ["canCatchImplingsInJars"],
         "skill": ["hunter"],
-        "level": [28],
+        "level": [38],
         "tags": [],
         "f2p": false
     },
@@ -9558,11 +9558,19 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
+    "Lucky impling": {
+        "wiki": "https://oldschool.runescape.wiki/w/Lucky_impling",
+        "rule": ["canTrainHunter"],
+        "skill": ["hunter"],
+        "level": [99],
+        "tags": [],
+        "f2p": false
+    },
     "Lucky impling jar": {
         "wiki": "https://oldschool.runescape.wiki/w/Lucky_impling_jar",
         "rule": ["canCatchImplingsInJars"],
         "skill": ["hunter"],
-        "level": [89],
+        "level": [99],
         "tags": [],
         "f2p": false
     },
@@ -9745,7 +9753,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Magpie_impling_jar",
         "rule": ["canCatchImplingsInJars"],
         "skill": ["hunter"],
-        "level": [65],
+        "level": [75],
         "tags": [],
         "f2p": false
     },
@@ -10662,7 +10670,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Nature_impling_jar",
         "rule": ["canCatchImplingsInJars"],
         "skill": ["hunter"],
-        "level": [58],
+        "level": [68],
         "tags": [],
         "f2p": false
     },
@@ -10823,7 +10831,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Ninja_impling_jar",
         "rule": ["canCatchImplingsInJars"],
         "skill": ["hunter"],
-        "level": [74],
+        "level": [84],
         "tags": [],
         "f2p": false
     },
@@ -16641,7 +16649,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Young_impling_jar",
         "rule": ["canCatchImplingsInJars"],
         "skill": ["hunter"],
-        "level": [22],
+        "level": [32],
         "tags": [],
         "f2p": false
     },
@@ -17030,7 +17038,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Dragon_impling_jar",
         "rule": ["canCompleteMonkeyMadnessII"],
         "skill": ["hunter"],
-        "level": [83],
+        "level": [93],
         "tags": [],
         "f2p": false
     },

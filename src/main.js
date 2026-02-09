@@ -1,6 +1,7 @@
 import { canReachNpc, evaluateRule } from "./logic/itemAvailability.js";
 import { getHighlightClasses, isItemSourcesChanged, markNewItems, markSourceSignature } from "./logic/highlightState.js";
-import { areNpcSkillsMet, isDropSlayerLocked, isItemHiddenByTag, isNpcBlockedByFilters, isNpcObtainable, isSourceHiddenByFilters } from "./logic/itemVisibility.js";
+import { areNpcSkillsMet, getNpcEffectiveLevels, isDropSlayerLocked, isItemHiddenByTag, isNpcBlockedByFilters, isNpcObtainable, isSourceHiddenByFilters } from "./logic/itemVisibility.js";
+import { has } from "./logic/requirements.js";
 import { capitalizeFirstLetter, parseDropRate } from "./logic/utils.js";
 import { NPC_DATA } from "./logic/npcData.js";
 import { getObtainabilityRank } from "./logic/sortHelpers.js";
@@ -74,6 +75,22 @@ const ITEM_SECTION_TITLES = {
     7: "Drops for which you do not have the level yet",
     8: "Unobtainable Items"
 };
+
+const BUTTERFLY_NET_ID = 10010;
+const IMPLING_JAR_LEVEL_DOWNGRADES = new Map([
+    [27, 17],
+    [32, 22],
+    [38, 28],
+    [46, 36],
+    [52, 42],
+    [60, 50],
+    [68, 58],
+    [75, 65],
+    [84, 74],
+    [90, 80],
+    [93, 83],
+    [99, 89],
+]);
 
 const NPC_META = new Map(
     Object.entries(NPC_DATA).map(([npcName, npc]) => {
@@ -641,16 +658,56 @@ window.initItemsPage = async function () {
         }
     }
 
-    function collectSkillsFromRule(rule, skills, includeLevels) {
+    function adjustImplingJarRuleLevelsForSkills(rule, ctx) {
+        if (!rule?.all || !ctx || !has(ctx, BUTTERFLY_NET_ID)) return null;
+
+        let hasImplingJar = false;
+        let hunterRuleIndex = -1;
+        let hunterLevel = null;
+
+        for (let i = 0; i < rule.all.length; i++) {
+            const sub = rule.all[i];
+            if (sub?.has === 11260) hasImplingJar = true;
+            if (sub?.skill && sub?.level !== undefined) {
+                const skillName = capitalizeFirstLetter(sub.skill);
+                if (skillName === "Hunter") {
+                    hunterRuleIndex = i;
+                    hunterLevel = sub.level;
+                }
+            }
+        }
+
+        if (!hasImplingJar || hunterRuleIndex < 0) return null;
+        const loweredLevel = IMPLING_JAR_LEVEL_DOWNGRADES.get(hunterLevel);
+        if (!loweredLevel) return null;
+
+        const adjusted = {
+            ...rule,
+            all: [...rule.all],
+        };
+        adjusted.all[hunterRuleIndex] = {
+            ...rule.all[hunterRuleIndex],
+            level: loweredLevel,
+        };
+        return adjusted;
+    }
+
+    function collectSkillsFromRule(rule, skills, includeLevels, ctx) {
         if (!rule) return;
         if (typeof rule === "string") return;
         if (Array.isArray(rule)) {
             for (const sub of rule) {
-                collectSkillsFromRule(sub, skills, includeLevels);
+                collectSkillsFromRule(sub, skills, includeLevels, ctx);
             }
             return;
         }
         if (typeof rule !== "object") return;
+
+        const adjustedRule = adjustImplingJarRuleLevelsForSkills(rule, ctx);
+        if (adjustedRule) {
+            collectSkillsFromRule(adjustedRule, skills, includeLevels, ctx);
+            return;
+        }
 
         if (rule.skill && rule.level !== undefined) {
             addSkill(skills, rule.skill, includeLevels ? rule.level : null);
@@ -664,24 +721,30 @@ window.initItemsPage = async function () {
         }
 
         if (rule.any) {
-            collectSkillsFromRule(rule.any, skills, includeLevels);
+            collectSkillsFromRule(rule.any, skills, includeLevels, ctx);
         }
 
         if (rule.all) {
-            collectSkillsFromRule(rule.all, skills, includeLevels);
+            collectSkillsFromRule(rule.all, skills, includeLevels, ctx);
         }
     }
 
-    function collectSkillsFromRuleMin(rule, skills, includeLevels) {
+    function collectSkillsFromRuleMin(rule, skills, includeLevels, ctx) {
         if (!rule) return;
         if (typeof rule === "string") return;
         if (Array.isArray(rule)) {
             for (const sub of rule) {
-                collectSkillsFromRuleMin(sub, skills, includeLevels);
+                collectSkillsFromRuleMin(sub, skills, includeLevels, ctx);
             }
             return;
         }
         if (typeof rule !== "object") return;
+
+        const adjustedRule = adjustImplingJarRuleLevelsForSkills(rule, ctx);
+        if (adjustedRule) {
+            collectSkillsFromRuleMin(adjustedRule, skills, includeLevels, ctx);
+            return;
+        }
 
         if (rule.skill && rule.level !== undefined) {
             addSkillMin(skills, rule.skill, includeLevels ? rule.level : null);
@@ -695,11 +758,11 @@ window.initItemsPage = async function () {
         }
 
         if (rule.any) {
-            collectSkillsFromRuleMin(rule.any, skills, includeLevels);
+            collectSkillsFromRuleMin(rule.any, skills, includeLevels, ctx);
         }
 
         if (rule.all) {
-            collectSkillsFromRuleMin(rule.all, skills, includeLevels);
+            collectSkillsFromRuleMin(rule.all, skills, includeLevels, ctx);
         }
     }
 
@@ -723,14 +786,15 @@ window.initItemsPage = async function () {
                 if (rank === 5 && !skillsMet) continue;
                 if (rank === 7 && skillsMet) continue;
 
+                const levels = getNpcEffectiveLevels(npcName, ctx);
                 for (let i = 0; i < npc.skill.length; i++) {
                     const skill = npc.skill[i];
-                    const level = npc.level?.[i];
+                    const level = levels?.[i];
                     addSkillForRank(skills, skill, includeLevels ? level : null);
                 }
 
                 if ((rank === 5 || rank === 6) && npc?.rule) {
-                    collectSkillsForRank(npc.rule, skills, false);
+                    collectSkillsForRank(npc.rule, skills, false, ctx);
                 }
             }
         }
@@ -760,7 +824,7 @@ window.initItemsPage = async function () {
                     }
                 }
 
-                collectSkillsForRank(source.rule, skills, includeLevels);
+                collectSkillsForRank(source.rule, skills, includeLevels, ctx);
             }
         }
 
@@ -796,7 +860,7 @@ window.initItemsPage = async function () {
                 addSkill(skills, source.skill, source.level);
             }
 
-            collectSkillsFromRule(source.rule, skills, true);
+            collectSkillsFromRule(source.rule, skills, true, ctx);
         }
 
         return [...skills.entries()]
@@ -1613,7 +1677,7 @@ async function hideSkill(item, ctx, skill, rolledSet) {
                     || npcMeta?.tags?.has("slayer-task-only") || npcMeta?.isSuperior
                     || npc.tags?.includes("slayer-task-only") || npc.tags?.includes("superior"));
             const skills = npcMeta?.skills ?? npc.skill;
-            const levels = npcMeta?.levels ?? npc.level;
+            const levels = getNpcEffectiveLevels(npcName, ctx);
             const needsSkill = skills?.includes(skill) || isSlayerLockTag;
             if (needsSkill) hasAnySkillSource = true;
             if (!ctx.filters?.isSlayerLocked && levels?.length && skillLevel >= levels[0]) hasSkillLevel = true;

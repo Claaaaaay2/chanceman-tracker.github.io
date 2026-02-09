@@ -1,10 +1,58 @@
 import { canDoOtherMethod, canReachNpc } from "./itemAvailability.js";
 import { NPC_DATA } from "./npcData.js";
+import { has } from "./requirements.js";
 import { capitalizeFirstLetter } from "./utils.js";
 
 const REWARD_POOL_35_39 = "Reward pool 35\u201339 Fishing";
 const HIDDEN_ITEM_TAGS = new Set(["deadman", "leagues", "gridmaster"]);
 const SLAYER_ONLY_DROP_ITEMS = new Set([23490, 21257]);
+const BUTTERFLY_NET_ID = 10010;
+
+const IMPLING_LEVELS = new Map([
+    ["Baby impling", { barehand: 27, withNet: 17 }],
+    ["Young impling", { barehand: 32, withNet: 22 }],
+    ["Gourmet impling", { barehand: 38, withNet: 28 }],
+    ["Earth impling", { barehand: 46, withNet: 36 }],
+    ["Essence impling", { barehand: 52, withNet: 42 }],
+    ["Eclectic impling", { barehand: 60, withNet: 50 }],
+    ["Nature impling", { barehand: 68, withNet: 58 }],
+    ["Magpie impling", { barehand: 75, withNet: 65 }],
+    ["Ninja impling", { barehand: 84, withNet: 74 }],
+    ["Crystal impling", { barehand: 90, withNet: 80 }],
+    ["Dragon impling", { barehand: 93, withNet: 83 }],
+    ["Lucky impling", { barehand: 99, withNet: 89 }],
+]);
+
+function normalizeImplingName(npcName) {
+    let name = npcName.replace(" (After Monkey Madness II)", "");
+    if (name.endsWith(" impling jar")) {
+        name = name.replace(" jar", "");
+    }
+    return name;
+}
+
+function getImplingRequiredLevel(npcName, ctx) {
+    const baseName = normalizeImplingName(npcName);
+    const levels = IMPLING_LEVELS.get(baseName);
+    if (!levels) return null;
+    return has(ctx, BUTTERFLY_NET_ID) ? levels.withNet : levels.barehand;
+}
+
+export function getNpcEffectiveLevels(npcName, ctx) {
+    const npc = NPC_DATA[npcName];
+    if (!npc?.level?.length || !npc?.skill?.length) return npc?.level || [];
+
+    const levels = [...npc.level];
+    const implingLevel = getImplingRequiredLevel(npcName, ctx);
+    if (implingLevel !== null) {
+        const hunterIndex = npc.skill.indexOf("hunter");
+        if (hunterIndex >= 0) {
+            levels[hunterIndex] = implingLevel;
+        }
+    }
+
+    return levels;
+}
 
 function hasTag(tags, tag) {
     if (!tags) return false;
@@ -96,9 +144,11 @@ export function areNpcSkillsMet(npcName, ctx) {
     if (!npc.skill?.length) return true;
     if (!ctx.player?.levels) return false;
 
+    const effectiveLevels = getNpcEffectiveLevels(npcName, ctx);
+
     for (let i = 0; i < npc.skill.length; i++) {
         const skill = npc.skill[i];
-        const level = npc.level[i];
+        const level = effectiveLevels[i];
 
         if (ctx.player.levels[capitalizeFirstLetter(skill)] < level) {
             return false;
