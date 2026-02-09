@@ -30,7 +30,7 @@ export default async function ItemsPage() {
                 <button type="button" id="connectFilesBtn">Connect files</button>
                 <button type="button" id="refreshFilesBtn">Refresh files</button>
                 <div class="npc-filter" id="npcFilter">
-                    <button type="button" id="npcFilterToggle">Choose visible NPCs</button>
+                    <button type="button" id="npcFilterToggle">Hide specific NPCs</button>
                     <div class="npc-filter-panel" id="npcFilterPanel">
                         <input type="search" id="npcFilterSearch" placeholder="Search NPCs...">
                         <div class="npc-filter-actions">

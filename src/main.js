@@ -457,23 +457,37 @@ window.initItemsPage = async function () {
             }
         });
 
+        function getNpcFilterVisibleItems() {
+            const query = elements.npcFilterSearch.value.trim().toLowerCase();
+            const items = elements.npcFilterList.querySelectorAll(".npc-filter-item");
+            const visible = [];
+            for (const item of items) {
+                const label = item.textContent?.toLowerCase() || "";
+                if (!query || label.includes(query)) {
+                    visible.push(item);
+                }
+            }
+            return visible;
+        }
+
         elements.npcFilterAll.addEventListener("click", async () => {
-            pendingNpcExclusions = new Set();
-            buildNpcFilterList({
-                ...fileStore.filters,
-                npcDropExclusions: []
-            });
-            updateNpcFilterVisibility();
+            const visibleItems = getNpcFilterVisibleItems();
+            for (const item of visibleItems) {
+                const checkbox = item.querySelector("input[type=\"checkbox\"][data-npc]");
+                if (!checkbox) continue;
+                checkbox.checked = true;
+                pendingNpcExclusions.delete(checkbox.dataset.npc);
+            }
         });
 
         elements.npcFilterNone.addEventListener("click", async () => {
-            const npcNames = Object.keys(NPC_DATA);
-            pendingNpcExclusions = new Set(npcNames);
-            buildNpcFilterList({
-                ...fileStore.filters,
-                npcDropExclusions: npcNames
-            });
-            updateNpcFilterVisibility();
+            const visibleItems = getNpcFilterVisibleItems();
+            for (const item of visibleItems) {
+                const checkbox = item.querySelector("input[type=\"checkbox\"][data-npc]");
+                if (!checkbox) continue;
+                checkbox.checked = false;
+                pendingNpcExclusions.add(checkbox.dataset.npc);
+            }
         });
 
         elements.npcFilterApply.addEventListener("click", async () => {
