@@ -7,6 +7,7 @@ const SECTION_ORDER = [
     "Ranged armours",
     "Magic",
     "Magic armours",
+    "Prayer armours",
     "Food",
     "Potion",
     "Teleports",

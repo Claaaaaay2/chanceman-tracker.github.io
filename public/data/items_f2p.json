@@ -408,7 +408,8 @@
     "name": "Adamant mace",
     "image": "adamant_mace.png",
     "tags": [
-      "Melee"
+      "Melee",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -1334,7 +1335,8 @@
     "tags": [
       "Melee armours",
       "Ranged armours",
-      "Magic armours"
+      "Magic armours",
+      "Prayer armours"
     ],
     "sources": {
       "other": {
@@ -1462,7 +1464,8 @@
     "name": "Ancient full helm",
     "image": "ancient_full_helm.png",
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {}
   },
@@ -1472,7 +1475,8 @@
     "name": "Ancient kiteshield",
     "image": "ancient_kiteshield.png",
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {}
   },
@@ -1482,7 +1486,8 @@
     "name": "Ancient platebody",
     "image": "ancient_platebody.png",
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {}
   },
@@ -1492,7 +1497,8 @@
     "name": "Ancient platelegs",
     "image": "ancient_platelegs.png",
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {}
   },
@@ -1502,7 +1508,8 @@
     "name": "Ancient plateskirt",
     "image": "ancient_plateskirt.png",
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {}
   },
@@ -1691,7 +1698,8 @@
     "name": "Armadyl full helm",
     "image": "armadyl_full_helm.png",
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {}
   },
@@ -1701,7 +1709,8 @@
     "name": "Armadyl kiteshield",
     "image": "armadyl_kiteshield.png",
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {}
   },
@@ -1711,7 +1720,8 @@
     "name": "Armadyl platebody",
     "image": "armadyl_platebody.png",
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {}
   },
@@ -1721,7 +1731,8 @@
     "name": "Armadyl platelegs",
     "image": "armadyl_platelegs.png",
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {}
   },
@@ -1731,7 +1742,8 @@
     "name": "Armadyl plateskirt",
     "image": "armadyl_plateskirt.png",
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {}
   },
@@ -1834,7 +1846,8 @@
     "name": "Bandos full helm",
     "image": "bandos_full_helm.png",
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {}
   },
@@ -1844,7 +1857,8 @@
     "name": "Bandos kiteshield",
     "image": "bandos_kiteshield.png",
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {}
   },
@@ -1854,7 +1868,8 @@
     "name": "Bandos platebody",
     "image": "bandos_platebody.png",
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {}
   },
@@ -1864,7 +1879,8 @@
     "name": "Bandos platelegs",
     "image": "bandos_platelegs.png",
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {}
   },
@@ -1874,7 +1890,8 @@
     "name": "Bandos plateskirt",
     "image": "bandos_plateskirt.png",
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {}
   },
@@ -2319,7 +2336,8 @@
     "name": "Black mace",
     "image": "black_mace.png",
     "tags": [
-      "Melee"
+      "Melee",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -7734,7 +7752,8 @@
     "name": "Guthix full helm",
     "image": "guthix_full_helm.png",
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {}
   },
@@ -7744,7 +7763,8 @@
     "name": "Guthix kiteshield",
     "image": "guthix_kiteshield.png",
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {}
   },
@@ -7754,7 +7774,8 @@
     "name": "Guthix platebody",
     "image": "guthix_platebody.png",
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {}
   },
@@ -7764,7 +7785,8 @@
     "name": "Guthix platelegs",
     "image": "guthix_platelegs.png",
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {}
   },
@@ -7774,7 +7796,8 @@
     "name": "Guthix plateskirt",
     "image": "guthix_plateskirt.png",
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {}
   },
@@ -8000,7 +8023,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Prayer armours"
+    ]
   },
   {
     "index": 2017,
@@ -10597,7 +10623,8 @@
     "name": "Mithril mace",
     "image": "mithril_mace.png",
     "tags": [
-      "Melee"
+      "Melee",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -11152,14 +11179,20 @@
       "spawns": {
         "Yes": "canTrainPrayer"
       }
-    }
+    },
+    "tags": [
+      "Prayer armours"
+    ]
   },
   {
     "index": 2534,
     "id": 20202,
     "name": "Monk's robe (g)",
     "image": "monk's_robe_(g).png",
-    "sources": {}
+    "sources": {},
+    "tags": [
+      "Prayer armours"
+    ]
   },
   {
     "index": 2535,
@@ -11167,7 +11200,8 @@
     "name": "Monk's robe (t)",
     "image": "monk's_robe_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -11186,14 +11220,20 @@
       "spawns": {
         "Yes": "canTrainPrayer"
       }
-    }
+    },
+    "tags": [
+      "Prayer armours"
+    ]
   },
   {
     "index": 2537,
     "id": 20199,
     "name": "Monk's robe top (g)",
     "image": "monk's_robe_top_(g).png",
-    "sources": {}
+    "sources": {},
+    "tags": [
+      "Prayer armours"
+    ]
   },
   {
     "index": 2538,
@@ -11201,7 +11241,8 @@
     "name": "Monk's robe top (t)",
     "image": "monk's_robe_top_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -11856,7 +11897,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Prayer armours"
+    ]
   },
   {
     "index": 2896,
@@ -11867,7 +11911,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Prayer armours"
+    ]
   },
   {
     "index": 2906,
@@ -13111,7 +13158,8 @@
     "name": "Rune mace",
     "image": "rune_mace.png",
     "tags": [
-      "Melee"
+      "Melee",
+      "Prayer armours"
     ],
     "sources": {
       "shops": {
@@ -13954,7 +14002,8 @@
     "name": "Saradomin full helm",
     "image": "saradomin_full_helm.png",
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {}
   },
@@ -13964,7 +14013,8 @@
     "name": "Saradomin kiteshield",
     "image": "saradomin_kiteshield.png",
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {}
   },
@@ -13974,7 +14024,8 @@
     "name": "Saradomin platebody",
     "image": "saradomin_platebody.png",
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {}
   },
@@ -13984,7 +14035,8 @@
     "name": "Saradomin platelegs",
     "image": "saradomin_platelegs.png",
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {}
   },
@@ -13994,7 +14046,8 @@
     "name": "Saradomin plateskirt",
     "image": "saradomin_plateskirt.png",
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {}
   },
@@ -14050,14 +14103,20 @@
     "id": 548,
     "name": "Shade robe",
     "image": "shade_robe.png",
-    "sources": {}
+    "sources": {},
+    "tags": [
+      "Prayer armours"
+    ]
   },
   {
     "index": 3395,
     "id": 546,
     "name": "Shade robe top",
     "image": "shade_robe_top.png",
-    "sources": {}
+    "sources": {},
+    "tags": [
+      "Prayer armours"
+    ]
   },
   {
     "index": 3397,
@@ -14999,7 +15058,8 @@
     "name": "Steel mace",
     "image": "steel_mace.png",
     "tags": [
-      "Melee"
+      "Melee",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -17831,7 +17891,8 @@
     "name": "Zamorak full helm",
     "image": "zamorak_full_helm.png",
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {}
   },
@@ -17841,7 +17902,8 @@
     "name": "Zamorak kiteshield",
     "image": "zamorak_kiteshield.png",
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {}
   },
@@ -17856,7 +17918,10 @@
           "droprate": "1/20"
         }
       }
-    }
+    },
+    "tags": [
+      "Prayer armours"
+    ]
   },
   {
     "index": 4470,
@@ -17869,7 +17934,10 @@
           "droprate": "1/20"
         }
       }
-    }
+    },
+    "tags": [
+      "Prayer armours"
+    ]
   },
   {
     "index": 4475,
@@ -17877,7 +17945,8 @@
     "name": "Zamorak platebody",
     "image": "zamorak_platebody.png",
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {}
   },
@@ -17887,7 +17956,8 @@
     "name": "Zamorak platelegs",
     "image": "zamorak_platelegs.png",
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {}
   },
@@ -17897,7 +17967,8 @@
     "name": "Zamorak plateskirt",
     "image": "zamorak_plateskirt.png",
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {}
   }
