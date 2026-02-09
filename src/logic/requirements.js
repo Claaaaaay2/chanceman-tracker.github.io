@@ -1031,6 +1031,9 @@ export const REQUIREMENT_CHECKS = {
     canCompleteTheFremennikTrials(ctx) {
         return canCompleteTheFremennikTrials(ctx);
     },
+    hasNotCompletedTheFremennikTrials(ctx) {
+        return (ctx.player?.quests?.["The Fremennik Trials"] ?? 0) < 2;
+    },
     canCompleteTheFeud(ctx) {
         return canCompleteTheFeud(ctx);
     },

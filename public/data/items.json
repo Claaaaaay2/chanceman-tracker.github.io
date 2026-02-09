@@ -93632,6 +93632,48 @@
               }
             ]
           }
+        },
+        "Giving Askeladden on Waterbirth Island a Fremennik armour crafting material.": {
+          "notes": "Requires The Fremennik Trials requirements and either a Dagannoth hide, a Rock-shell chunk, a Rock-shell shard, a Rock-shell splinter, a Circular hide, a Flattened hide, a Stretched hide, a Skull piece, a Ribcage piece or a Fibula piece.",
+          "rule": {
+            "all": [
+              "canCompleteTheFremennikTrials",
+              {
+                "any": [
+                  {
+                    "has": 6155
+                  },
+                  {
+                    "has": 6157
+                  },
+                  {
+                    "has": 6159
+                  },
+                  {
+                    "has": 6161
+                  },
+                  {
+                    "has": 6169
+                  },
+                  {
+                    "has": 6171
+                  },
+                  {
+                    "has": 6173
+                  },
+                  {
+                    "has": 6163
+                  },
+                  {
+                    "has": 6165
+                  },
+                  {
+                    "has": 6167
+                  }
+                ]
+              }
+            ]
+          }
         }
       }
     }
@@ -157626,6 +157668,48 @@
         "Questing": {
           "notes": "Received during The Fremmenik Isles.",
           "rule": "canCompleteTheFremennikIsles"
+        },
+        "Giving Askeladden on Waterbirth Island a Fremennik armour crafting material.": {
+          "notes": "Requires either a Dagannoth hide, a Rock-shell chunk, a Rock-shell shard, a Rock-shell splinter, a Circular hide, a Flattened hide, a Stretched hide, a Skull piece, a Ribcage piece or a Fibula piece, and you must not have completed The Fremennik Trials.",
+          "rule": {
+            "all": [
+              "hasNotCompletedTheFremennikTrials",
+              {
+                "any": [
+                  {
+                    "has": 6155
+                  },
+                  {
+                    "has": 6157
+                  },
+                  {
+                    "has": 6159
+                  },
+                  {
+                    "has": 6161
+                  },
+                  {
+                    "has": 6169
+                  },
+                  {
+                    "has": 6171
+                  },
+                  {
+                    "has": 6173
+                  },
+                  {
+                    "has": 6163
+                  },
+                  {
+                    "has": 6165
+                  },
+                  {
+                    "has": 6167
+                  }
+                ]
+              }
+            ]
+          }
         }
       }
     }
