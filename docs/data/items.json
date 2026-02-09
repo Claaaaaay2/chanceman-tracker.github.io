@@ -86,7 +86,8 @@
     "name": "3rd age cloak",
     "image": "3rd_age_cloak.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -111,7 +112,8 @@
     "name": "3rd age druidic cloak",
     "image": "3rd_age_druidic_cloak.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -133,7 +135,8 @@
     "name": "3rd age druidic robe bottoms",
     "image": "3rd_age_druidic_robe_bottoms.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -155,7 +158,8 @@
     "name": "3rd age druidic robe top",
     "image": "3rd_age_druidic_robe_top.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -178,7 +182,8 @@
     "image": "3rd_age_druidic_staff.png",
     "tags": [
       "clue-reward-only",
-      "Magic"
+      "Magic",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -2057,7 +2062,8 @@
     "name": "Adamant cane",
     "image": "adamant_cane.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -3832,7 +3838,8 @@
     "name": "Adamant mace",
     "image": "adamant_mace.png",
     "tags": [
-      "Melee"
+      "Melee",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -7921,7 +7928,8 @@
     "tags": [
       "Melee armours",
       "Ranged armours",
-      "Magic armours"
+      "Magic armours",
+      "Prayer armours"
     ]
   },
   {
@@ -8064,7 +8072,8 @@
       "Melee armours",
       "Ranged armours",
       "Magic armours",
-      "Teleports"
+      "Teleports",
+      "Prayer armours"
     ]
   },
   {
@@ -8091,7 +8100,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ]
   },
   {
@@ -8128,7 +8138,8 @@
     "tags": [
       "Melee armours",
       "Ranged armours",
-      "Magic armours"
+      "Magic armours",
+      "Prayer armours"
     ]
   },
   {
@@ -8140,7 +8151,8 @@
       "clue-reward-only",
       "Melee armours",
       "Ranged armours",
-      "Magic armours"
+      "Magic armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -8160,7 +8172,8 @@
       "Melee armours",
       "Ranged armours",
       "Magic armours",
-      "Teleports"
+      "Teleports",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -8180,7 +8193,8 @@
       "Melee armours",
       "Ranged armours",
       "Magic armours",
-      "Teleports"
+      "Teleports",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -8214,7 +8228,8 @@
       "Melee armours",
       "Ranged armours",
       "Magic armours",
-      "Teleports"
+      "Teleports",
+      "Prayer armours"
     ]
   },
   {
@@ -8241,7 +8256,8 @@
       "Melee armours",
       "Ranged armours",
       "Magic armours",
-      "Teleports"
+      "Teleports",
+      "Prayer armours"
     ]
   },
   {
@@ -8328,7 +8344,8 @@
     "tags": [
       "Melee armours",
       "Ranged armours",
-      "Magic armours"
+      "Magic armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -8434,7 +8451,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ]
   },
   {
@@ -8532,7 +8550,8 @@
     "tags": [
       "Melee armours",
       "Ranged armours",
-      "Magic armours"
+      "Magic armours",
+      "Prayer armours"
     ]
   },
   {
@@ -8559,7 +8578,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ]
   },
   {
@@ -8734,7 +8754,8 @@
       "clue-reward-only",
       "Melee armours",
       "Ranged armours",
-      "Magic armours"
+      "Magic armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -8769,7 +8790,8 @@
     "image": "ancient_bracers.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -8980,7 +9002,10 @@
           "droprate": "1/1000"
         }
       }
-    }
+    },
+    "tags": [
+      "Prayer armours"
+    ]
   },
   {
     "index": 223,
@@ -9014,7 +9039,10 @@
           "droprate": "1/1000"
         }
       }
-    }
+    },
+    "tags": [
+      "Prayer armours"
+    ]
   },
   {
     "index": 224,
@@ -9048,7 +9076,10 @@
           "droprate": "1/1000"
         }
       }
-    }
+    },
+    "tags": [
+      "Prayer armours"
+    ]
   },
   {
     "index": 225,
@@ -9082,7 +9113,10 @@
           "droprate": "1/1000"
         }
       }
-    }
+    },
+    "tags": [
+      "Prayer armours"
+    ]
   },
   {
     "index": 226,
@@ -9116,7 +9150,10 @@
           "droprate": "1/1000"
         }
       }
-    }
+    },
+    "tags": [
+      "Prayer armours"
+    ]
   },
   {
     "index": 227,
@@ -9125,7 +9162,8 @@
     "image": "ancient_chaps.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -9141,7 +9179,8 @@
     "name": "Ancient cloak",
     "image": "ancient_cloak.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -9158,7 +9197,8 @@
     "image": "ancient_coif.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -9174,7 +9214,8 @@
     "name": "Ancient crozier",
     "image": "ancient_crozier.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -9237,7 +9278,8 @@
     "image": "ancient_d'hide_body.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -9254,7 +9296,8 @@
     "image": "ancient_d'hide_boots.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -9271,7 +9314,8 @@
     "image": "ancient_d'hide_shield.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -9498,7 +9542,8 @@
     "image": "ancient_full_helm.png",
     "tags": [
       "clue-reward-only",
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -9531,7 +9576,8 @@
       }
     },
     "tags": [
-      "Melee"
+      "Melee",
+      "Prayer armours"
     ]
   },
   {
@@ -9554,7 +9600,8 @@
     "image": "ancient_kiteshield.png",
     "tags": [
       "clue-reward-only",
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -9578,7 +9625,8 @@
       }
     },
     "tags": [
-      "Melee"
+      "Melee",
+      "Prayer armours"
     ]
   },
   {
@@ -9660,7 +9708,8 @@
     "name": "Ancient mitre",
     "image": "ancient_mitre.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -9877,7 +9926,8 @@
     "image": "ancient_platebody.png",
     "tags": [
       "clue-reward-only",
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -9894,7 +9944,8 @@
     "image": "ancient_platelegs.png",
     "tags": [
       "clue-reward-only",
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -9911,7 +9962,8 @@
     "image": "ancient_plateskirt.png",
     "tags": [
       "clue-reward-only",
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -10000,7 +10052,8 @@
     "name": "Ancient robe legs",
     "image": "ancient_robe_legs.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -10016,7 +10069,8 @@
     "name": "Ancient robe top",
     "image": "ancient_robe_top.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -10194,7 +10248,8 @@
     "name": "Ancient stole",
     "image": "ancient_stole.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -11890,7 +11945,8 @@
     "tags": [
       "Melee armours",
       "Ranged armours",
-      "Magic armours"
+      "Magic armours",
+      "Prayer armours"
     ]
   },
   {
@@ -12198,7 +12254,8 @@
     "tags": [
       "Melee armours",
       "Ranged armours",
-      "Magic armours"
+      "Magic armours",
+      "Prayer armours"
     ]
   },
   {
@@ -12287,7 +12344,8 @@
       }
     },
     "tags": [
-      "Magic armours"
+      "Magic armours",
+      "Prayer armours"
     ]
   },
   {
@@ -12598,7 +12656,8 @@
     "image": "armadyl_bracers.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -12790,7 +12849,8 @@
     "image": "armadyl_chaps.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -12831,7 +12891,8 @@
     "name": "Armadyl cloak",
     "image": "armadyl_cloak.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -12848,7 +12909,8 @@
     "image": "armadyl_coif.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -12880,7 +12942,8 @@
     "name": "Armadyl crozier",
     "image": "armadyl_crozier.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -12897,7 +12960,8 @@
     "image": "armadyl_d'hide_body.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -12914,7 +12978,8 @@
     "image": "armadyl_d'hide_boots.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -12931,7 +12996,8 @@
     "image": "armadyl_d'hide_shield.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -12980,7 +13046,8 @@
     "image": "armadyl_full_helm.png",
     "tags": [
       "clue-reward-only",
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -13013,7 +13080,8 @@
       }
     },
     "tags": [
-      "Melee"
+      "Melee",
+      "Prayer armours"
     ]
   },
   {
@@ -13083,7 +13151,8 @@
     "image": "armadyl_kiteshield.png",
     "tags": [
       "clue-reward-only",
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -13099,7 +13168,8 @@
     "name": "Armadyl mitre",
     "image": "armadyl_mitre.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -13252,7 +13322,8 @@
     "image": "armadyl_platebody.png",
     "tags": [
       "clue-reward-only",
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -13269,7 +13340,8 @@
     "image": "armadyl_platelegs.png",
     "tags": [
       "clue-reward-only",
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -13286,7 +13358,8 @@
     "image": "armadyl_plateskirt.png",
     "tags": [
       "clue-reward-only",
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -13302,7 +13375,8 @@
     "name": "Armadyl robe legs",
     "image": "armadyl_robe_legs.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -13318,7 +13392,8 @@
     "name": "Armadyl robe top",
     "image": "armadyl_robe_top.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -13398,7 +13473,8 @@
     "name": "Armadyl stole",
     "image": "armadyl_stole.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -15047,7 +15123,7 @@
     "sources": {
       "other": {
         "Catching a Baby impling": {
-          "notes": "Requires an Impling jar and level 27 Hunter.",
+          "notes": "Requires an Impling jar and level 27 Hunter (or level 17 with a butterfly net).",
           "rule": {
             "all": [
               {
@@ -15726,7 +15802,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ]
   },
   {
@@ -15736,7 +15813,8 @@
     "image": "bandos_bracers.png",
     "tags": [
       "clue-reward-only",
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -15753,7 +15831,8 @@
     "image": "bandos_chaps.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -15785,7 +15864,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ]
   },
   {
@@ -15794,7 +15874,8 @@
     "name": "Bandos cloak",
     "image": "bandos_cloak.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -15811,7 +15892,8 @@
     "image": "bandos_coif.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -15827,7 +15909,8 @@
     "name": "Bandos crozier",
     "image": "bandos_crozier.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -15844,7 +15927,8 @@
     "image": "bandos_d'hide_body.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -15861,7 +15945,8 @@
     "image": "bandos_d'hide_boots.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -15878,7 +15963,8 @@
     "image": "bandos_d'hide_shield.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -15927,7 +16013,8 @@
     "image": "bandos_full_helm.png",
     "tags": [
       "clue-reward-only",
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -15960,7 +16047,8 @@
       }
     },
     "tags": [
-      "Melee"
+      "Melee",
+      "Prayer armours"
     ]
   },
   {
@@ -15999,7 +16087,8 @@
     "image": "bandos_kiteshield.png",
     "tags": [
       "clue-reward-only",
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -16015,7 +16104,8 @@
     "name": "Bandos mitre",
     "image": "bandos_mitre.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -16168,7 +16258,8 @@
     "image": "bandos_platebody.png",
     "tags": [
       "clue-reward-only",
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -16185,7 +16276,8 @@
     "image": "bandos_platelegs.png",
     "tags": [
       "clue-reward-only",
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -16202,7 +16294,8 @@
     "image": "bandos_plateskirt.png",
     "tags": [
       "clue-reward-only",
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -16218,7 +16311,8 @@
     "name": "Bandos robe legs",
     "image": "bandos_robe_legs.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -16234,7 +16328,8 @@
     "name": "Bandos robe top",
     "image": "bandos_robe_top.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -16314,7 +16409,8 @@
     "name": "Bandos stole",
     "image": "bandos_stole.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -16346,7 +16442,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ]
   },
   {
@@ -18458,7 +18555,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ]
   },
   {
@@ -20939,7 +21037,8 @@
     "name": "Black mace",
     "image": "black_mace.png",
     "tags": [
-      "Melee"
+      "Melee",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -22657,7 +22756,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ]
   },
   {
@@ -32906,7 +33006,8 @@
       }
     },
     "tags": [
-      "Magic armours"
+      "Magic armours",
+      "Prayer armours"
     ]
   },
   {
@@ -32940,7 +33041,8 @@
       }
     },
     "tags": [
-      "Magic armours"
+      "Magic armours",
+      "Prayer armours"
     ]
   },
   {
@@ -32974,7 +33076,8 @@
       }
     },
     "tags": [
-      "Magic armours"
+      "Magic armours",
+      "Prayer armours"
     ]
   },
   {
@@ -32993,7 +33096,8 @@
       }
     },
     "tags": [
-      "Magic armours"
+      "Magic armours",
+      "Prayer armours"
     ]
   },
   {
@@ -33012,7 +33116,8 @@
       }
     },
     "tags": [
-      "Magic armours"
+      "Magic armours",
+      "Prayer armours"
     ]
   },
   {
@@ -33031,7 +33136,8 @@
       }
     },
     "tags": [
-      "Magic armours"
+      "Magic armours",
+      "Prayer armours"
     ]
   },
   {
@@ -33725,7 +33831,16 @@
       },
       "other": {
         "Converting Dessicated Pages": {
-          "notes": "Requires 50 Runecraft to convert the untradable dessicated pages."
+          "notes": "Requires 50 Runecraft and access to Branda the Fire Queen or Eldric the Ice King.",
+          "rule": {
+            "all": [
+              "canAccessDessicatedPagesBosses",
+              {
+                "skill": "Runecraft",
+                "level": 50
+              }
+            ]
+          }
         }
       }
     },
@@ -43115,7 +43230,8 @@
       }
     },
     "tags": [
-      "Magic armours"
+      "Magic armours",
+      "Prayer armours"
     ]
   },
   {
@@ -43131,7 +43247,8 @@
       }
     },
     "tags": [
-      "Magic armours"
+      "Magic armours",
+      "Prayer armours"
     ]
   },
   {
@@ -43147,7 +43264,8 @@
       }
     },
     "tags": [
-      "Magic armours"
+      "Magic armours",
+      "Prayer armours"
     ]
   },
   {
@@ -44884,7 +45002,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Prayer armours"
+    ]
   },
   {
     "index": 1206,
@@ -49182,7 +49303,7 @@
     "sources": {
       "other": {
         "Catching a Dragon impling": {
-          "notes": "Requires an Impling jar and level 83 Hunter.",
+          "notes": "Requires an Impling jar and level 93 Hunter (or level 83 with a butterfly net).",
           "rule": {
             "all": [
               {
@@ -49190,7 +49311,7 @@
               },
               {
                 "skill": "Hunter",
-                "level": 83
+                "level": 93
               }
             ]
           }
@@ -50673,7 +50794,10 @@
           "droprate": "1/1000"
         }
       }
-    }
+    },
+    "tags": [
+      "Prayer armours"
+    ]
   },
   {
     "index": 1364,
@@ -51649,7 +51773,10 @@
           "droprate": "1/25.6"
         }
       }
-    }
+    },
+    "tags": [
+      "Prayer armours"
+    ]
   },
   {
     "index": 1392,
@@ -51662,7 +51789,10 @@
           "droprate": "1/21.333"
         }
       }
-    }
+    },
+    "tags": [
+      "Prayer armours"
+    ]
   },
   {
     "index": 1393,
@@ -52790,7 +52920,7 @@
     "sources": {
       "other": {
         "Catching an Earth impling": {
-          "notes": "Requires an Impling jar and level 36 Hunter.",
+          "notes": "Requires an Impling jar and level 46 Hunter (or level 36 with a butterfly net).",
           "rule": {
             "all": [
               {
@@ -52798,7 +52928,7 @@
               },
               {
                 "skill": "Hunter",
-                "level": 36
+                "level": 46
               }
             ]
           }
@@ -53700,7 +53830,7 @@
     "sources": {
       "other": {
         "Catching an Eclectic impling": {
-          "notes": "Requires an Impling jar and level 50 Hunter.",
+          "notes": "Requires an Impling jar and level 60 Hunter (or level 50 with a butterfly net).",
           "rule": {
             "all": [
               {
@@ -53708,7 +53838,7 @@
               },
               {
                 "skill": "Hunter",
-                "level": 50
+                "level": 60
               }
             ]
           }
@@ -54278,7 +54408,8 @@
       }
     },
     "tags": [
-      "Magic armours"
+      "Magic armours",
+      "Prayer armours"
     ]
   },
   {
@@ -54583,7 +54714,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ]
   },
   {
@@ -56749,7 +56881,7 @@
     "sources": {
       "other": {
         "Catching an Essence impling": {
-          "notes": "Requires an Impling jar and level 42 Hunter.",
+          "notes": "Requires an Impling jar and level 52 Hunter (or level 42 with a butterfly net).",
           "rule": {
             "all": [
               {
@@ -56757,7 +56889,7 @@
               },
               {
                 "skill": "Hunter",
-                "level": 42
+                "level": 52
               }
             ]
           }
@@ -64626,7 +64758,7 @@
     "sources": {
       "other": {
         "Catching a Gourmet impling": {
-          "notes": "Requires an Impling jar and level 28 Hunter.",
+          "notes": "Requires an Impling jar and level 38 Hunter (or level 28 with a butterfly net).",
           "rule": {
             "all": [
               {
@@ -64634,7 +64766,7 @@
               },
               {
                 "skill": "Hunter",
-                "level": 28
+                "level": 38
               }
             ]
           }
@@ -77725,7 +77857,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ]
   },
   {
@@ -78175,7 +78308,8 @@
     "image": "guthix_bracers.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -78192,7 +78326,8 @@
     "image": "guthix_chaps.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -78208,7 +78343,8 @@
     "name": "Guthix cloak",
     "image": "guthix_cloak.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -78225,7 +78361,8 @@
     "image": "guthix_coif.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -78241,7 +78378,8 @@
     "name": "Guthix crozier",
     "image": "guthix_crozier.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -78258,7 +78396,8 @@
     "image": "guthix_d'hide_body.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -78275,7 +78414,8 @@
     "image": "guthix_d'hide_boots.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -78292,7 +78432,8 @@
     "image": "guthix_d'hide_shield.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -78341,7 +78482,8 @@
     "image": "guthix_full_helm.png",
     "tags": [
       "clue-reward-only",
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -78358,7 +78500,8 @@
     "image": "guthix_kiteshield.png",
     "tags": [
       "clue-reward-only",
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -78374,7 +78517,8 @@
     "name": "Guthix mitre",
     "image": "guthix_mitre.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -78545,7 +78689,8 @@
     "image": "guthix_platebody.png",
     "tags": [
       "clue-reward-only",
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -78562,7 +78707,8 @@
     "image": "guthix_platelegs.png",
     "tags": [
       "clue-reward-only",
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -78579,7 +78725,8 @@
     "image": "guthix_plateskirt.png",
     "tags": [
       "clue-reward-only",
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -78759,7 +78906,8 @@
     "name": "Guthix robe legs",
     "image": "guthix_robe_legs.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -78775,7 +78923,8 @@
     "name": "Guthix robe top",
     "image": "guthix_robe_top.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -78791,7 +78940,8 @@
     "name": "Guthix stole",
     "image": "guthix_stole.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -80250,7 +80400,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ]
   },
   {
@@ -80415,7 +80566,8 @@
     "name": "Holy blessing",
     "image": "holy_blessing.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -80516,7 +80668,8 @@
     "name": "Holy sandals",
     "image": "holy_sandals.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -80559,7 +80712,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Prayer armours"
+    ]
   },
   {
     "index": 1952,
@@ -80567,7 +80723,8 @@
     "name": "Holy wraps",
     "image": "holy_wraps.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -80583,7 +80740,8 @@
     "name": "Honourable blessing",
     "image": "honourable_blessing.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -80923,7 +81081,8 @@
       }
     },
     "tags": [
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ]
   },
   {
@@ -81826,7 +81985,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ]
   },
   {
@@ -81851,7 +82011,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ]
   },
   {
@@ -81865,7 +82026,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ]
   },
   {
@@ -87942,7 +88104,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ]
   },
   {
@@ -87961,7 +88124,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ]
   },
   {
@@ -87980,7 +88144,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ]
   },
   {
@@ -93632,6 +93797,48 @@
               }
             ]
           }
+        },
+        "Giving Askeladden on Waterbirth Island a Fremennik armour crafting material.": {
+          "notes": "Requires The Fremennik Trials requirements and either a Dagannoth hide, a Rock-shell chunk, a Rock-shell shard, a Rock-shell splinter, a Circular hide, a Flattened hide, a Stretched hide, a Skull piece, a Ribcage piece or a Fibula piece.",
+          "rule": {
+            "all": [
+              "canCompleteTheFremennikTrials",
+              {
+                "any": [
+                  {
+                    "has": 6155
+                  },
+                  {
+                    "has": 6157
+                  },
+                  {
+                    "has": 6159
+                  },
+                  {
+                    "has": 6161
+                  },
+                  {
+                    "has": 6169
+                  },
+                  {
+                    "has": 6171
+                  },
+                  {
+                    "has": 6173
+                  },
+                  {
+                    "has": 6163
+                  },
+                  {
+                    "has": 6165
+                  },
+                  {
+                    "has": 6167
+                  }
+                ]
+              }
+            ]
+          }
         }
       }
     }
@@ -95640,7 +95847,7 @@
     "sources": {
       "other": {
         "Catching a Magpie impling": {
-          "notes": "Requires an Impling jar and level 65 Hunter.",
+          "notes": "Requires an Impling jar and level 75 Hunter (or level 65 with a butterfly net).",
           "rule": {
             "all": [
               {
@@ -95648,7 +95855,7 @@
               },
               {
                 "skill": "Hunter",
-                "level": 65
+                "level": 75
               }
             ]
           }
@@ -97957,7 +98164,8 @@
       }
     },
     "tags": [
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ]
   },
   {
@@ -98006,7 +98214,8 @@
       }
     },
     "tags": [
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ]
   },
   {
@@ -98055,7 +98264,8 @@
       }
     },
     "tags": [
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ]
   },
   {
@@ -102253,7 +102463,8 @@
     "name": "Mithril mace",
     "image": "mithril_mace.png",
     "tags": [
-      "Melee"
+      "Melee",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -104154,7 +104365,10 @@
       "spawns": {
         "Yes": "canTrainPrayer"
       }
-    }
+    },
+    "tags": [
+      "Prayer armours"
+    ]
   },
   {
     "index": 2534,
@@ -104162,7 +104376,8 @@
     "name": "Monk's robe (g)",
     "image": "monk's_robe_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -104178,7 +104393,8 @@
     "name": "Monk's robe (t)",
     "image": "monk's_robe_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -104205,7 +104421,10 @@
       "spawns": {
         "Yes": "canTrainPrayer"
       }
-    }
+    },
+    "tags": [
+      "Prayer armours"
+    ]
   },
   {
     "index": 2537,
@@ -104213,7 +104432,8 @@
     "name": "Monk's robe top (g)",
     "image": "monk's_robe_top_(g).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -104229,7 +104449,8 @@
     "name": "Monk's robe top (t)",
     "image": "monk's_robe_top_(t).png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -104717,6 +104938,9 @@
         "Ancient Zygomite": {
           "droprate": "Always"
         },
+        "Swamp Crab": {
+          "droprate": "Always"
+        },
         "Chest (alchemist's signet)": {
           "droprate": "1/5"
         },
@@ -104739,9 +104963,6 @@
           "droprate": "1/63"
         },
         "Calvar'ion": {
-          "droprate": "1/64"
-        },
-        "Swamp Crab": {
           "droprate": "1/64"
         }
       },
@@ -106635,7 +106856,7 @@
     "sources": {
       "other": {
         "Catching a Nature impling": {
-          "notes": "Requires an Impling jar and level 58 Hunter.",
+          "notes": "Requires an Impling jar and level 68 Hunter (or level 58 with a butterfly net).",
           "rule": {
             "all": [
               {
@@ -106643,7 +106864,7 @@
               },
               {
                 "skill": "Hunter",
-                "level": 58
+                "level": 68
               }
             ]
           }
@@ -107600,7 +107821,8 @@
       }
     },
     "tags": [
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ]
   },
   {
@@ -107862,7 +108084,7 @@
     "sources": {
       "other": {
         "Catching a Ninja impling": {
-          "notes": "Requires an Impling jar and level 74 Hunter.",
+          "notes": "Requires an Impling jar and level 84 Hunter (or level 74 with a butterfly net).",
           "rule": {
             "all": [
               {
@@ -107870,7 +108092,7 @@
               },
               {
                 "skill": "Hunter",
-                "level": 74
+                "level": 84
               }
             ]
           }
@@ -109604,7 +109826,8 @@
       }
     },
     "tags": [
-      "Magic armours"
+      "Magic armours",
+      "Prayer armours"
     ]
   },
   {
@@ -112522,7 +112745,8 @@
     "name": "Peaceful blessing",
     "image": "peaceful_blessing.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -116592,7 +116816,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Prayer armours"
+    ]
   },
   {
     "index": 2896,
@@ -116603,7 +116830,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Prayer armours"
+    ]
   },
   {
     "index": 2897,
@@ -116686,7 +116916,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ]
   },
   {
@@ -116722,7 +116953,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ]
   },
   {
@@ -116736,7 +116968,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ]
   },
   {
@@ -116750,7 +116983,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ]
   },
   {
@@ -123519,7 +123753,8 @@
       }
     },
     "tags": [
-      "Melee"
+      "Melee",
+      "Prayer armours"
     ]
   },
   {
@@ -123547,7 +123782,10 @@
           "droprate": "1/716"
         }
       }
-    }
+    },
+    "tags": [
+      "Prayer armours"
+    ]
   },
   {
     "index": 3124,
@@ -124152,7 +124390,8 @@
       }
     },
     "tags": [
-      "Melee"
+      "Melee",
+      "Prayer armours"
     ]
   },
   {
@@ -126064,7 +126303,8 @@
     "name": "Rune cane",
     "image": "rune_cane.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -128405,7 +128645,8 @@
     "name": "Rune mace",
     "image": "rune_mace.png",
     "tags": [
-      "Melee"
+      "Melee",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -132844,7 +133085,8 @@
     "image": "saradomin_bracers.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -133053,7 +133295,8 @@
     "image": "saradomin_chaps.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -133069,7 +133312,8 @@
     "name": "Saradomin cloak",
     "image": "saradomin_cloak.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -133086,7 +133330,8 @@
     "image": "saradomin_coif.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -133102,7 +133347,8 @@
     "name": "Saradomin crozier",
     "image": "saradomin_crozier.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -133119,7 +133365,8 @@
     "image": "saradomin_d'hide_body.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -133136,7 +133383,8 @@
     "image": "saradomin_d'hide_boots.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -133153,7 +133401,8 @@
     "image": "saradomin_d'hide_shield.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -133202,7 +133451,8 @@
     "image": "saradomin_full_helm.png",
     "tags": [
       "clue-reward-only",
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -133235,7 +133485,8 @@
       }
     },
     "tags": [
-      "Melee"
+      "Melee",
+      "Prayer armours"
     ]
   },
   {
@@ -133274,7 +133525,8 @@
     "image": "saradomin_kiteshield.png",
     "tags": [
       "clue-reward-only",
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -133290,7 +133542,8 @@
     "name": "Saradomin mitre",
     "image": "saradomin_mitre.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -133461,7 +133714,8 @@
     "image": "saradomin_platebody.png",
     "tags": [
       "clue-reward-only",
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -133478,7 +133732,8 @@
     "image": "saradomin_platelegs.png",
     "tags": [
       "clue-reward-only",
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -133495,7 +133750,8 @@
     "image": "saradomin_plateskirt.png",
     "tags": [
       "clue-reward-only",
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -133511,7 +133767,8 @@
     "name": "Saradomin robe legs",
     "image": "saradomin_robe_legs.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -133527,7 +133784,8 @@
     "name": "Saradomin robe top",
     "image": "saradomin_robe_top.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -133543,7 +133801,8 @@
     "name": "Saradomin stole",
     "image": "saradomin_stole.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -134481,7 +134740,10 @@
           "droprate": "1/4"
         }
       }
-    }
+    },
+    "tags": [
+      "Prayer armours"
+    ]
   },
   {
     "index": 3395,
@@ -134494,7 +134756,10 @@
           "droprate": "1/4"
         }
       }
-    }
+    },
+    "tags": [
+      "Prayer armours"
+    ]
   },
   {
     "index": 3396,
@@ -138716,7 +138981,16 @@
       },
       "other": {
         "Converting Dessicated Pages": {
-          "notes": "Requires 50 Runecraft to convert the untradable dessicated pages."
+          "notes": "Requires 50 Runecraft and access to Branda the Fire Queen or Eldric the Ice King.",
+          "rule": {
+            "all": [
+              "canAccessDessicatedPagesBosses",
+              {
+                "skill": "Runecraft",
+                "level": 50
+              }
+            ]
+          }
         }
       }
     },
@@ -138839,7 +139113,16 @@
       },
       "other": {
         "Converting Dessicated Pages": {
-          "notes": "Requires 50 Runecraft to convert the untradable dessicated pages."
+          "notes": "Requires 50 Runecraft and access to Branda the Fire Queen or Eldric the Ice King.",
+          "rule": {
+            "all": [
+              "canAccessDessicatedPagesBosses",
+              {
+                "skill": "Runecraft",
+                "level": 50
+              }
+            ]
+          }
         }
       }
     },
@@ -139230,7 +139513,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ]
   },
   {
@@ -139807,7 +140091,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ]
   },
   {
@@ -144210,7 +144495,8 @@
     "name": "Steel mace",
     "image": "steel_mace.png",
     "tags": [
-      "Melee"
+      "Melee",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -147269,7 +147555,10 @@
           "droprate": "1/620"
         }
       }
-    }
+    },
+    "tags": [
+      "Prayer armours"
+    ]
   },
   {
     "index": 3783,
@@ -147306,7 +147595,10 @@
           "droprate": "1/620"
         }
       }
-    }
+    },
+    "tags": [
+      "Prayer armours"
+    ]
   },
   {
     "index": 3784,
@@ -147343,7 +147635,10 @@
           "droprate": "1/620"
         }
       }
-    }
+    },
+    "tags": [
+      "Prayer armours"
+    ]
   },
   {
     "index": 3785,
@@ -156392,7 +156687,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ]
   },
   {
@@ -156421,7 +156717,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ]
   },
   {
@@ -156450,7 +156747,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ]
   },
   {
@@ -157626,6 +157924,48 @@
         "Questing": {
           "notes": "Received during The Fremmenik Isles.",
           "rule": "canCompleteTheFremennikIsles"
+        },
+        "Giving Askeladden on Waterbirth Island a Fremennik armour crafting material.": {
+          "notes": "Requires either a Dagannoth hide, a Rock-shell chunk, a Rock-shell shard, a Rock-shell splinter, a Circular hide, a Flattened hide, a Stretched hide, a Skull piece, a Ribcage piece or a Fibula piece, and you must not have completed The Fremennik Trials.",
+          "rule": {
+            "all": [
+              "hasNotCompletedTheFremennikTrials",
+              {
+                "any": [
+                  {
+                    "has": 6155
+                  },
+                  {
+                    "has": 6157
+                  },
+                  {
+                    "has": 6159
+                  },
+                  {
+                    "has": 6161
+                  },
+                  {
+                    "has": 6169
+                  },
+                  {
+                    "has": 6171
+                  },
+                  {
+                    "has": 6173
+                  },
+                  {
+                    "has": 6163
+                  },
+                  {
+                    "has": 6165
+                  },
+                  {
+                    "has": 6167
+                  }
+                ]
+              }
+            ]
+          }
         }
       }
     }
@@ -161047,7 +161387,8 @@
     "name": "Unholy blessing",
     "image": "unholy_blessing.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -161131,7 +161472,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Prayer armours"
+    ]
   },
   {
     "index": 4203,
@@ -161858,7 +162202,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ]
   },
   {
@@ -161894,7 +162239,8 @@
       }
     },
     "tags": [
-      "Melee"
+      "Melee",
+      "Prayer armours"
     ]
   },
   {
@@ -161930,7 +162276,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ]
   },
   {
@@ -161966,7 +162313,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ]
   },
   {
@@ -162619,7 +162967,8 @@
       }
     },
     "tags": [
-      "Magic armours"
+      "Magic armours",
+      "Prayer armours"
     ]
   },
   {
@@ -162644,7 +162993,8 @@
       }
     },
     "tags": [
-      "Magic armours"
+      "Magic armours",
+      "Prayer armours"
     ]
   },
   {
@@ -162669,7 +163019,8 @@
       }
     },
     "tags": [
-      "Magic armours"
+      "Magic armours",
+      "Prayer armours"
     ]
   },
   {
@@ -162890,7 +163241,8 @@
     "name": "War blessing",
     "image": "war_blessing.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -165301,7 +165653,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ]
   },
   {
@@ -165411,7 +165764,8 @@
       }
     },
     "tags": [
-      "Melee"
+      "Melee",
+      "Prayer armours"
     ]
   },
   {
@@ -169474,7 +169828,7 @@
     "sources": {
       "other": {
         "Catching a Young impling": {
-          "notes": "Requires an Impling jar and level 22 Hunter.",
+          "notes": "Requires an Impling jar and level 32 Hunter (or level 22 with a butterfly net).",
           "rule": {
             "all": [
               {
@@ -169482,7 +169836,7 @@
               },
               {
                 "skill": "Hunter",
-                "level": 22
+                "level": 32
               }
             ]
           }
@@ -169574,7 +169928,8 @@
     "image": "zamorak_bracers.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -169760,7 +170115,8 @@
     "image": "zamorak_chaps.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -169776,7 +170132,8 @@
     "name": "Zamorak cloak",
     "image": "zamorak_cloak.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -169793,7 +170150,8 @@
     "image": "zamorak_coif.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -169809,7 +170167,8 @@
     "name": "Zamorak crozier",
     "image": "zamorak_crozier.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -169826,7 +170185,8 @@
     "image": "zamorak_d'hide_body.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -169843,7 +170203,8 @@
     "image": "zamorak_d'hide_boots.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -169860,7 +170221,8 @@
     "image": "zamorak_d'hide_shield.png",
     "tags": [
       "clue-reward-only",
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -169909,7 +170271,8 @@
     "image": "zamorak_full_helm.png",
     "tags": [
       "clue-reward-only",
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -169942,7 +170305,8 @@
       }
     },
     "tags": [
-      "Melee"
+      "Melee",
+      "Prayer armours"
     ]
   },
   {
@@ -169981,7 +170345,8 @@
     "image": "zamorak_kiteshield.png",
     "tags": [
       "clue-reward-only",
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -169997,7 +170362,8 @@
     "name": "Zamorak mitre",
     "image": "zamorak_mitre.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -170108,7 +170474,8 @@
       }
     },
     "tags": [
-      "Magic armours"
+      "Magic armours",
+      "Prayer armours"
     ]
   },
   {
@@ -170139,7 +170506,8 @@
       }
     },
     "tags": [
-      "Magic armours"
+      "Magic armours",
+      "Prayer armours"
     ]
   },
   {
@@ -170285,7 +170653,8 @@
     "image": "zamorak_platebody.png",
     "tags": [
       "clue-reward-only",
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -170302,7 +170671,8 @@
     "image": "zamorak_platelegs.png",
     "tags": [
       "clue-reward-only",
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -170319,7 +170689,8 @@
     "image": "zamorak_plateskirt.png",
     "tags": [
       "clue-reward-only",
-      "Melee armours"
+      "Melee armours",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -170335,7 +170706,8 @@
     "name": "Zamorak robe legs",
     "image": "zamorak_robe_legs.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -170351,7 +170723,8 @@
     "name": "Zamorak robe top",
     "image": "zamorak_robe_top.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -170367,7 +170740,8 @@
     "name": "Zamorak stole",
     "image": "zamorak_stole.png",
     "tags": [
-      "clue-reward-only"
+      "clue-reward-only",
+      "Prayer armours"
     ],
     "sources": {
       "drops": {
@@ -170502,7 +170876,8 @@
       }
     },
     "tags": [
-      "Ranged armours"
+      "Ranged armours",
+      "Prayer armours"
     ]
   },
   {
