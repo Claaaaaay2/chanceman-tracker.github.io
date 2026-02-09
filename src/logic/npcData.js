@@ -9558,6 +9558,14 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
+    "Lucky impling jar": {
+        "wiki": "https://oldschool.runescape.wiki/w/Lucky_impling_jar",
+        "rule": ["canCatchImplingsInJars"],
+        "skill": ["hunter"],
+        "level": [89],
+        "tags": [],
+        "f2p": false
+    },
     "Lunar Chest": {
         "wiki": "https://oldschool.runescape.wiki/w/Lunar_Chest",
         "rule": ["canCompletePerilousMoons"],
