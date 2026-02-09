@@ -181,6 +181,20 @@ export default async function NpcsPage() {
                 </span>
                 <span class="npc-drop-sort-label">Chance for new roll</span>
             </label>
+            <div class="npc-filter" id="npcFilter">
+                <button type="button" id="npcFilterToggle">Hide specific NPCs</button>
+                <div class="npc-filter-panel" id="npcFilterPanel">
+                    <input type="search" id="npcFilterSearch" placeholder="Search NPCs...">
+                    <div class="npc-filter-actions">
+                        <button type="button" id="npcFilterAll">All</button>
+                        <button type="button" id="npcFilterNone">None</button>
+                    </div>
+                    <div class="npc-filter-list" id="npcFilterList"></div>
+                    <div class="npc-filter-actions npc-filter-actions--apply">
+                        <button type="button" id="npcFilterApply">Apply</button>
+                    </div>
+                </div>
+            </div>
         </div>
         <p class="empty-state" id="npcEmptyState" style="display: ${emptyDisplay};">No reachable NPCs with remaining drops for your current filters.</p>
         <section class="npc-drop-list" id="npcDropList">
@@ -234,6 +248,9 @@ window.initNpcsPage = function () {
     const toggle = document.getElementById("npcSortToggle");
     if (toggle) {
         toggle.checked = Boolean(fileStore.filters?.npcSortByRate);
+    }
+    if (typeof window.initNpcFilterUI === "function") {
+        window.initNpcFilterUI(() => window.dispatchEvent(new PopStateEvent("popstate")));
     }
 };
 

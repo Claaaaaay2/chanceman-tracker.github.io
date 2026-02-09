@@ -1336,6 +1336,10 @@ body.route-loading .route-loading-overlay {
     white-space: nowrap;
 }
 
+.npc-drop-filters .npc-filter {
+    margin-left: auto;
+}
+
 .npc-drop-sort-title {
     font-weight: 700;
     opacity: 0.9;
