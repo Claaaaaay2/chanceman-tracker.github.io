@@ -1031,6 +1031,9 @@ export const REQUIREMENT_CHECKS = {
     canCompleteTheFremennikTrials(ctx) {
         return canCompleteTheFremennikTrials(ctx);
     },
+    canAccessDessicatedPagesBosses(ctx) {
+        return canAccessDessicatedPagesBosses(ctx);
+    },
     hasNotCompletedTheFremennikTrials(ctx) {
         return (ctx.player?.quests?.["The Fremennik Trials"] ?? 0) < 2;
     },
@@ -4685,6 +4688,14 @@ function canCompleteTheFremennikTrials(ctx) {
     return has(ctx, 1917) // Beer
         && has(ctx, 590)  // Tinderbox
         && hasAnyItems(ctx, [383, 389, 395]); // Raw shark, Raw sea turtle or Raw manta ray
+}
+
+function canAccessDessicatedPagesBosses(ctx) {
+    const f = ctx.filters ?? {};
+    if (f.hideBosses) return false;
+    const exclusions = new Set(f.npcDropExclusions || []);
+    const bosses = ["Branda the Fire Queen", "Eldric the Ice King"];
+    return !bosses.every((name) => exclusions.has(name));
 }
 
 function canCompleteTheFrozenDoor(ctx) {

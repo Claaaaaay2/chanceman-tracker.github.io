@@ -33725,7 +33725,16 @@
       },
       "other": {
         "Converting Dessicated Pages": {
-          "notes": "Requires 50 Runecraft to convert the untradable dessicated pages."
+          "notes": "Requires 50 Runecraft and access to Branda the Fire Queen or Eldric the Ice King.",
+          "rule": {
+            "all": [
+              "canAccessDessicatedPagesBosses",
+              {
+                "skill": "Runecraft",
+                "level": 50
+              }
+            ]
+          }
         }
       }
     },
@@ -138758,7 +138767,16 @@
       },
       "other": {
         "Converting Dessicated Pages": {
-          "notes": "Requires 50 Runecraft to convert the untradable dessicated pages."
+          "notes": "Requires 50 Runecraft and access to Branda the Fire Queen or Eldric the Ice King.",
+          "rule": {
+            "all": [
+              "canAccessDessicatedPagesBosses",
+              {
+                "skill": "Runecraft",
+                "level": 50
+              }
+            ]
+          }
         }
       }
     },
@@ -138881,7 +138899,16 @@
       },
       "other": {
         "Converting Dessicated Pages": {
-          "notes": "Requires 50 Runecraft to convert the untradable dessicated pages."
+          "notes": "Requires 50 Runecraft and access to Branda the Fire Queen or Eldric the Ice King.",
+          "rule": {
+            "all": [
+              "canAccessDessicatedPagesBosses",
+              {
+                "skill": "Runecraft",
+                "level": 50
+              }
+            ]
+          }
         }
       }
     },
