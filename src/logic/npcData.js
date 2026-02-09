@@ -2371,7 +2371,7 @@ export const NPC_DATA = {
     },
     "Bronze dragon Standard": {
         "wiki": "https://oldschool.runescape.wiki/w/Bronze_dragon#Standard",
-        "rule": ["canKillDifficultDragons"],
+        "rule": null,
         "skill": [],
         "level": [],
         "tags": [],
@@ -2427,7 +2427,7 @@ export const NPC_DATA = {
     },
     "Brutal black dragon": {
         "wiki": "https://oldschool.runescape.wiki/w/Brutal_black_dragon",
-        "rule": ["canKillDifficultDragons"],
+        "rule": null,
         "skill": ["Slayer"],
         "level": [77],
         "tags": [],
@@ -2435,7 +2435,7 @@ export const NPC_DATA = {
     },
     "Brutal blue dragon": {
         "wiki": "https://oldschool.runescape.wiki/w/Brutal_blue_dragon",
-        "rule": ["canKillDifficultDragons"],
+        "rule": null,
         "skill": [],
         "level": [],
         "tags": [],
@@ -2445,7 +2445,6 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Brutal_blue_dragon",
         "rule": {
             "all": [
-                "canKillDifficultDragons",
                 "canCompleteTheHeartOfDarkness",
             ]
         },
@@ -2458,7 +2457,6 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Brutal_green_dragon",
         "rule": {
             "all": [
-                "canKillDifficultDragons",
                 "canEnterAncientCavern"
             ]
         },
@@ -2469,7 +2467,7 @@ export const NPC_DATA = {
     },
     "Brutal red dragon": {
         "wiki": "https://oldschool.runescape.wiki/w/Brutal_red_dragon",
-        "rule": ["canKillDifficultDragons"],
+        "rule": null,
         "skill": [],
         "level": [],
         "tags": [],
@@ -3472,7 +3470,6 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Chewed_bones",
         "rule": {
             "all": [
-                "canKillDifficultDragons",
                 "canEnterAncientCavern"
             ]
         },
@@ -8527,7 +8524,7 @@ export const NPC_DATA = {
     },
     "Iron dragon Standard": {
         "wiki": "https://oldschool.runescape.wiki/w/Iron_dragon#Standard",
-        "rule": ["canKillDifficultDragons"],
+        "rule": null,
         "skill": [],
         "level": [],
         "tags": [],
@@ -9088,7 +9085,7 @@ export const NPC_DATA = {
     },
     "King Black Dragon": {
         "wiki": "https://oldschool.runescape.wiki/w/King_Black_Dragon",
-        "rule": ["canKillDifficultDragons"],
+        "rule": null,
         "skill": [],
         "level": [],
         "tags": ["boss"],
@@ -10144,7 +10141,6 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Mithril_dragon",
         "rule": {
             "all": [
-                "canKillDifficultDragons",
                 "canEnterAncientCavern"
             ]
         },
@@ -14439,7 +14435,7 @@ export const NPC_DATA = {
     },
     "Steel dragon Standard": {
         "wiki": "https://oldschool.runescape.wiki/w/Steel_dragon#Standard",
-        "rule": ["canKillDifficultDragons"],
+        "rule": null,
         "skill": [],
         "level": [],
         "tags": [],
@@ -17124,7 +17120,7 @@ export const NPC_DATA = {
     },
     "Brutal black dragon (Before Barbarian training)": {
         "wiki": "https://oldschool.runescape.wiki/w/Brutal_black_dragon",
-        "rule": ["canKillDifficultDragons"],
+        "rule": null,
         "skill": ["Slayer"],
         "level": [77],
         "tags": [],
@@ -17132,7 +17128,7 @@ export const NPC_DATA = {
     },
     "Brutal red dragon (Before Barbarian training)": {
         "wiki": "https://oldschool.runescape.wiki/w/Brutal_red_dragon",
-        "rule": ["canKillDifficultDragons"],
+        "rule": null,
         "skill": [],
         "level": [],
         "tags": [],
@@ -17140,7 +17136,7 @@ export const NPC_DATA = {
     },
     "Brutal blue dragon (Before Barbarian training)": {
         "wiki": "https://oldschool.runescape.wiki/w/Brutal_blue_dragon",
-        "rule": ["canKillDifficultDragons"],
+        "rule": null,
         "skill": [],
         "level": [],
         "tags": [],
@@ -17150,7 +17146,6 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Brutal_black_dragon",
         "rule": {
             "all": [
-                "canKillDifficultDragons",
                 "canCompleteBarbarianTraining",
             ]
         },
@@ -17163,7 +17158,6 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Brutal_red_dragon",
         "rule": {
             "all": [
-                "canKillDifficultDragons",
                 "canCompleteBarbarianTraining",
             ]
         },
@@ -17176,7 +17170,6 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Brutal_blue_dragon",
         "rule": {
             "all": [
-                "canKillDifficultDragons",
                 "canCompleteBarbarianTraining",
             ]
         },

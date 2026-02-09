@@ -1494,9 +1494,6 @@ export const REQUIREMENT_CHECKS = {
     canKillGargoyles(ctx) {
         return canKillGargoyles(ctx);
     },
-    canKillDifficultDragons(ctx) {
-        return canKillDifficultDragons(ctx);
-    },
     canKillFossilIslandWyverns(ctx) {
         return canKillFossilIslandWyverns(ctx);
     },
@@ -5898,10 +5895,6 @@ function canKillGargoyles(ctx) {
         4162,
         21754,
     ]) // Rock thrownhammer
-}
-
-function canKillDifficultDragons(ctx) {
-    return hasQuestPoints(ctx, 32);
 }
 
 function canEnterKaruulmSlayerDungeon(ctx) {
