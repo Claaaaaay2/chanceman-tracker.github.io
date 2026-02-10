@@ -23,6 +23,26 @@ function getDropRateLabel(drops) {
     return best ? ` (${best})` : "";
 }
 
+function getBestDropRateValue(drops) {
+    if (!drops) return 0;
+    let bestValue = 0;
+
+    if (Array.isArray(drops)) {
+        for (const drop of drops) {
+            if (!drop?.droprate) continue;
+            const value = parseDropRate(drop.droprate);
+            if (value > bestValue) {
+                bestValue = value;
+            }
+        }
+    } else if (drops?.droprate) {
+        bestValue = parseDropRate(drops.droprate);
+    }
+
+    if (!Number.isFinite(bestValue) || bestValue < 0) return 0;
+    return bestValue;
+}
+
 function normalizeRateScore(value) {
     if (!Number.isFinite(value) || value <= 0) return 0;
     return value > 1 ? 1 : value;
@@ -134,7 +154,13 @@ export default async function NpcsPage() {
         const itemCount = entry.items.length;
         const itemLabel = itemCount === 1 ? "item" : "items";
         const itemsHtml = entry.items
-            .sort((a, b) => a.name.localeCompare(b.name))
+            .sort((a, b) => {
+                const aRate = getBestDropRateValue(a.sources?.drops?.[entry.npcName]);
+                const bRate = getBestDropRateValue(b.sources?.drops?.[entry.npcName]);
+                const rateDiff = bRate - aRate;
+                if (rateDiff !== 0) return rateDiff;
+                return a.name.localeCompare(b.name);
+            })
             .map((item) => {
                 const drops = item.sources?.drops?.[entry.npcName];
                 const rateLabel = getDropRateLabel(drops);
