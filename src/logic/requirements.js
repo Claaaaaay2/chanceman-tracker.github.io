@@ -2274,8 +2274,8 @@ export const REQUIREMENT_CHECKS = {
     canBurnUriumShades(ctx) {
         return canBurnUriumShades(ctx);
     },
-    hasFremennikTrialsStartingOres(ctx) {
-        return hasFremennikTrialsStartingOres(ctx);
+    hasFremennikIslesStartingOres(ctx) {
+        return hasFremennikIslesStartingOres(ctx);
     },
     canUseFairyRings(ctx) {
         return canCompleteFairytaleIGrowingPains(ctx);
@@ -6321,7 +6321,7 @@ function canMakeNeitiznotShield(ctx) {
         && has(ctx, 954);  // Rope
 }
 
-function hasFremennikTrialsStartingOres(ctx) {
+function hasFremennikIslesStartingOres(ctx) {
     return (ctx.player.levels.Mining === 1 //
         ? has(ctx, 438) // Tin ore
         : ctx.player.levels.Mining <= 54 //
