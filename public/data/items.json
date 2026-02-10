@@ -104938,9 +104938,6 @@
         "Ancient Zygomite": {
           "droprate": "Always"
         },
-        "Swamp Crab": {
-          "droprate": "Always"
-        },
         "Chest (alchemist's signet)": {
           "droprate": "1/5"
         },
@@ -104963,6 +104960,9 @@
           "droprate": "1/63"
         },
         "Calvar'ion": {
+          "droprate": "1/64"
+        },
+        "Swamp Crab": {
           "droprate": "1/64"
         }
       },
