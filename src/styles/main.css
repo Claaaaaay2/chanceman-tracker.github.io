@@ -282,6 +282,7 @@ button:disabled {
 .header-links a:hover {
     background-color: var(--table-alternate-row);
 }
+
 .header.is-menu-open .header-links {
     display: flex;
 }
@@ -572,9 +573,11 @@ body.route-loading .route-loading-overlay {
     0% {
         box-shadow: 0 0 0 2px var(--item-highlight-new);
     }
+
     50% {
         box-shadow: 0 0 0 4px color-mix(in srgb, var(--item-highlight-new) 55%, transparent);
     }
+
     100% {
         box-shadow: 0 0 0 2px var(--item-highlight-new);
     }
@@ -584,9 +587,11 @@ body.route-loading .route-loading-overlay {
     0% {
         box-shadow: 0 0 0 2px var(--item-highlight-changed);
     }
+
     50% {
         box-shadow: 0 0 0 4px color-mix(in srgb, var(--item-highlight-changed) 55%, transparent);
     }
+
     100% {
         box-shadow: 0 0 0 2px var(--item-highlight-changed);
     }
@@ -974,6 +979,7 @@ body.route-loading .route-loading-overlay {
 .history-range-hidden {
     display: none !important;
 }
+
 @media (max-width: 600px) {
     .roll-name-list {
         column-width: auto;
@@ -1131,6 +1137,10 @@ body.route-loading .route-loading-overlay {
 
 .other-drops-sort-label {
     opacity: 0.8;
+}
+
+.other-drops-sort .toggle-slider::before {
+    top: 0.5px;
 }
 
 .toggle-switch {
@@ -1725,4 +1735,3 @@ body.route-loading .route-loading-overlay {
     font-weight: 600;
     color: var(--highlight-color);
 }
-
