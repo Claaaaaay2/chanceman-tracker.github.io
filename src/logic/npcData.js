@@ -1473,24 +1473,24 @@ export const NPC_DATA = {
                 "hasMirrorShield"
             ]
         },
-        "skill": [],
-        "level": [],
+        "skill": ["slayer"],
+        "level": [40],
         "tags": [],
         "f2p": false
     },
     "Basilisk Knight": {
         "wiki": "https://oldschool.runescape.wiki/w/Basilisk_Knight",
         "rule": ["canCompleteTheFremennikExiles"],
-        "skill": [],
-        "level": [],
+        "skill": ["slayer"],
+        "level": [60],
         "tags": [],
         "f2p": false
     },
     "Basilisk Sentinel": {
         "wiki": "https://oldschool.runescape.wiki/w/Basilisk_Sentinel",
         "rule": ["canCompleteTheFremennikExiles"],
-        "skill": [],
-        "level": [],
+        "skill": ["slayer"],
+        "level": [60],
         "tags": ["superior"],
         "f2p": false
     },
