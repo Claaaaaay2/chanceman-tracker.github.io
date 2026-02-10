@@ -2283,7 +2283,13 @@ export const NPC_DATA = {
     },
     "Broken armour": {
         "wiki": "https://oldschool.runescape.wiki/w/Broken_armour",
-        "rule": ["canMakeArmourStand"],
+        "rule": {
+            "all": [
+                "canMakeArmourStand",
+                "hasCupOfTea",
+                "hasLeatherGloves"
+            ]
+        },
         "skill": [],
         "level": [],
         "tags": ["house"],
