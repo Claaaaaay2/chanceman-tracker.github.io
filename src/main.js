@@ -1512,20 +1512,7 @@ async function shouldHideForClueFilter(item, ctx, rolledSet) {
             const npcMeta = NPC_META.get(npcName);
             const npc = NPC_DATA[npcName];
             if (!npc) continue;
-            const isBlockedByFilters = isNpcBlockedByFilters(npcName, ctx);
-            if (isBlockedByFilters) {
-                if (skill === "Slayer") {
-                    const isSlayerLockTag = (isDropTagged
-                        || npcMeta?.tags?.has("slayer-task-only") || npcMeta?.isSuperior
-                        || npc.tags?.includes("slayer-task-only") || npc.tags?.includes("superior"));
-                    const skills = npcMeta?.skills ?? npc.skill;
-                    const hasSlayerRequirement = skills?.includes("Slayer") || isSlayerLockTag;
-                    if (hasSlayerRequirement) {
-                        hasAnySkillSource = true;
-                    }
-                }
-                continue;
-            }
+            if (isNpcBlockedByFilters(npcName, ctx)) continue;
 
             const isClueSource = npcMeta?.isClue ?? npc.tags?.includes("clue");
             if (isClueSource) hasAnyClueSource = true;
