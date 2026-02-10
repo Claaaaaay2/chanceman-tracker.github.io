@@ -3,6 +3,35 @@ import { REQUIREMENT_CHECKS, has, hasSkillLevel } from "./requirements.js";
 import { capitalizeFirstLetter } from "./utils.js";
 
 const BUTTERFLY_NET_ID = 10010;
+const HOUSE_RULE_BYPASS_RULES = new Set([
+    "canTrainConstruction",
+    "canMakeWoodenCats",
+    "canMakeWoodenWorkbench",
+    "canMakeOakWorkbench",
+    "canMakeSteelFramedWorkbench",
+    "canMakeOakLectern",
+    "canMakeEagleLectern",
+    "canMakeDemonLectern",
+    "canMakeTeakEagleLectern",
+    "canMakeTeakDemonLectern",
+    "canMakeMahoganyEagleLectern",
+    "canMakeMahoganyDemonLectern",
+    "canMakeMarbleLectern",
+    "canMakeCraftingTableI",
+    "canMakeCraftingTableII",
+    "canMakeRepairBench",
+    "canMakeWhetstone",
+    "canMakeArmourStand",
+    "canMakeToolStore",
+    "canMakeWoodenLarder",
+    "canMakeOakLarder",
+    "canMakeTeakLarder",
+    "canMakeWoodenShelvesI",
+    "canMakeWoodenShelvesII",
+    "canMakeOakShelves",
+    "canMakeTeakShelvesI",
+    "canMakeTeakShelvesII",
+]);
 const IMPLING_JAR_LEVEL_DOWNGRADES = new Map([
     [27, 17],
     [32, 22],
@@ -68,13 +97,19 @@ export async function canReachNpc(npcName, ctx) {
         return false;
     }
 
-    if (ctx.filters?.allowOthersHouses && npc.tags?.includes("house")) {
-        ctx.npcReachCache.set(npcName, true);
-        return true;
-    }
-
     const rule = npc.rule;
-    const result = !rule ? true : await evaluateRule(rule, ctx);
+    let result = false;
+    if (ctx.filters?.allowOthersHouses && npc.tags?.includes("house")) {
+        const prevBypass = ctx.houseRuleBypass;
+        ctx.houseRuleBypass = true;
+        try {
+            result = !rule ? true : await evaluateRule(rule, ctx);
+        } finally {
+            ctx.houseRuleBypass = prevBypass;
+        }
+    } else {
+        result = !rule ? true : await evaluateRule(rule, ctx);
+    }
 
     ctx.npcReachCache.set(npcName, result);
     return result;
@@ -111,12 +146,16 @@ export async function evaluateRule(rule, ctx) {
         result = true;
     } else if (typeof rule === "string") {
         // String -> requirement function
+        if (ctx?.houseRuleBypass && HOUSE_RULE_BYPASS_RULES.has(rule)) {
+            result = true;
+        } else {
         const fn = REQUIREMENT_CHECKS[rule];
         if (!fn) {
             console.warn("Unknown rule:", rule);
             result = false;
         } else {
             result = await fn(ctx);
+        }
         }
     } else if (Array.isArray(rule)) {
         // Array -> OR
