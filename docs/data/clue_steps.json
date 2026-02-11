@@ -13276,14 +13276,14 @@
                 "requirements": {
                     "skills": {},
                     "quests": {
-                        "Making History": "completed",
-                        "Troll Stronghold": "completed"
+                        "Making History": "completed"
                     },
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
                     "rulesAll": [
-                        "hasClueSpade"
+                        "hasClueSpade",
+                        "canReachTrollheim"
                     ],
                     "rulesAny": []
                 }
@@ -16675,7 +16675,9 @@
                     "skills": {
                         "Defence": 70
                     },
-                    "quests": {"Priest in Peril":"completed"},
+                    "quests": {
+                        "Priest in Peril": "completed"
+                    },
                     "items": [],
                     "untracked": [],
                     "itemsAny": [

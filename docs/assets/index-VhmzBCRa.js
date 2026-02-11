@@ -8,7 +8,7 @@
         <footer>
         <a class="footer-link" href="https://ko-fi.com/kryen" target="_blank" rel="noopener noreferrer">☕ Support on Ko-fi ☕</a>
         <span class="footer-separator">|</span>
-        <span>Version: 2026-02-11T06:27:34.686Z</span>
+        <span>Version: 2026-02-11T16:17:57.249Z</span>
         </footer>
     `}async function Ip(){if(!(h.obtained&&h.rolled))return`
         <nav class="header">
