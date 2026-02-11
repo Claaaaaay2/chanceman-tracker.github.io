@@ -21091,7 +21091,7 @@
     "image": "black_mask.png",
     "sources": {
       "other": {
-        "Depleting a Black mask(10)": {
+        "Depleting a Black mask (10)": {
           "notes": "Deplete a full Black mask.",
           "rule": {
             "has": 8901
@@ -39191,6 +39191,14 @@
       },
       "shops": {
         "Yes": "canCompleteTaiBwoWannaiTrio"
+      },
+      "other": {
+        "Making a Cleaning cloth": {
+          "notes": "Requires Silk and untradable Karamjan rum.",
+          "rule": {
+            "has": 950
+          }
+        }
       }
     }
   },

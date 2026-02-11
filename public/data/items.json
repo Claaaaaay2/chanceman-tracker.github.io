@@ -39191,6 +39191,14 @@
       },
       "shops": {
         "Yes": "canCompleteTaiBwoWannaiTrio"
+      },
+      "other": {
+        "Making a Cleaning cloth": {
+          "notes": "Requires Silk and untradable Karamjan rum.",
+          "rule": {
+            "has": 950
+          }
+        }
       }
     }
   },

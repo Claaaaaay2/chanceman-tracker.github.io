@@ -2767,7 +2767,7 @@
                         "untracked": [],
                         "itemsAny": [],
                         "rulesAll": [
-                            "hasFremennikTrialsStartingOres"
+                            "hasFremennikIslesStartingOres"
                         ],
                         "rulesAny": []
                     }
@@ -2786,7 +2786,7 @@
                         "itemsAny": [],
                         "rulesAll": [
                             "canTrainMining",
-                            "hasFremennikTrialsStartingOres"
+                            "hasFremennikIslesStartingOres"
                         ],
                         "rulesAny": []
                     }
@@ -2909,7 +2909,7 @@
                         "untracked": [],
                         "itemsAny": [],
                         "rulesAll": [
-                            "hasFremennikTrialsStartingOres"
+                            "hasFremennikIslesStartingOres"
                         ],
                         "rulesAny": []
                     }
