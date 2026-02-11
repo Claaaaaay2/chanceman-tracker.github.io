@@ -125474,6 +125474,28 @@
     }
   },
   {
+    "index": 3179,
+    "id": 8941,
+    "name": "Rum (blue)",
+    "image": "rum_(blue).png",
+    "sources": {
+      "shops": {
+        "Yes": "canCompleteCabinFever"
+      }
+    }
+  },
+  {
+    "index": 3179,
+    "id": 8940,
+    "name": "Rum (red)",
+    "image": "rum_(red).png",
+    "sources": {
+      "shops": {
+        "Yes": "canCompleteCabinFever"
+      }
+    }
+  },
+  {
     "index": 3180,
     "id": 1319,
     "name": "Rune 2h sword",
