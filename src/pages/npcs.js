@@ -1,4 +1,5 @@
 import { isItemHiddenByTag, isNpcObtainable } from "../logic/itemVisibility.js";
+import { NPC_DATA } from "../logic/npcData.js";
 import { parseDropRate } from "../logic/utils.js";
 import { fileStore } from "../storage/fileStore.js";
 
@@ -153,6 +154,10 @@ export default async function NpcsPage() {
     const cards = results.map((entry) => {
         const itemCount = entry.items.length;
         const itemLabel = itemCount === 1 ? "item" : "items";
+        const npcWiki = NPC_DATA[entry.npcName]?.wiki;
+        const npcNameHtml = npcWiki
+            ? `<a class="npc-drop-name-link" href="${npcWiki}" target="_blank" rel="noreferrer">${escapeHtml(entry.npcName)}</a>`
+            : `<span class="npc-drop-name-text">${escapeHtml(entry.npcName)}</span>`;
         const itemsHtml = entry.items
             .sort((a, b) => {
                 const aRate = getBestDropRateValue(a.sources?.drops?.[entry.npcName]);
@@ -178,7 +183,7 @@ export default async function NpcsPage() {
         return `
             <article class="npc-drop-card" data-name="${escapeHtml(entry.npcName.toLowerCase())}" data-items="${escapeHtml(itemNames)}">
                 <header class="npc-drop-card-header">
-                    <h2 class="npc-drop-name">${escapeHtml(entry.npcName)}</h2>
+                    <h2 class="npc-drop-name">${npcNameHtml}</h2>
                     <span class="npc-drop-count">${itemCount} ${itemLabel}</span>
                 </header>
                 <div class="npc-drop-rate">Chance to get a new roll: ${formatCumulativeRate(entry.totalRateScore)}</div>
