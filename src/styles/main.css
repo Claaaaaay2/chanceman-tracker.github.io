@@ -1265,6 +1265,10 @@ body.route-loading .route-loading-overlay {
     white-space: nowrap;
 }
 
+.npc-drop-filter--checkbox input[type="checkbox"] {
+    margin: 0;
+}
+
 .npc-drop-list {
     margin: 0 1rem 1rem;
     display: grid;
@@ -1328,6 +1332,15 @@ body.route-loading .route-loading-overlay {
     padding: 0.25rem 0.35rem;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.npc-drop-item .badge.rolled {
+    position: static;
+    top: auto;
+    right: auto;
+    font-size: 0.7rem;
+    line-height: 1;
+    padding: 2px 6px;
 }
 
 .npc-drop-item:hover {

@@ -78,6 +78,11 @@ export default async function NpcsPage() {
     const items = fileStore.items || [];
     const obtained = fileStore.obtained || [];
     const rolled = fileStore.rolled || [];
+    const rolledSet = new Set(
+        Array.isArray(rolled)
+            ? rolled.map((entry) => (entry && typeof entry === "object" ? entry.id : entry))
+            : []
+    );
     const filters = fileStore.filters || {};
     const ctx = {
         items,
@@ -90,7 +95,8 @@ export default async function NpcsPage() {
     function isItemEligible(item) {
         if (!item) return false;
         if (obtained.includes(item.id)) return false;
-        if (filters.onlyRolled && !rolled.includes(item.id)) return false;
+        if (filters.onlyRolled && !rolledSet.has(item.id)) return false;
+        if (filters.npcOnlyRolled && !rolledSet.has(item.id)) return false;
         if (isItemHiddenByTag(item)) return false;
         if (!filters.hasFlatpacks && item.tags?.includes("flatpack")) return false;
         if (!filters.hasItemsets && item.tags?.includes("itemset")) return false;
@@ -169,10 +175,12 @@ export default async function NpcsPage() {
             .map((item) => {
                 const drops = item.sources?.drops?.[entry.npcName];
                 const rateLabel = getDropRateLabel(drops);
+                const isRolled = rolledSet.has(item.id);
                 return `
                 <div class="npc-drop-item" onclick="navigate('/item?id=${item.id}')">
                     <img class="npc-drop-item-image" src="/images/${item.image}" alt="${escapeHtml(item.name)}">
                     <span class="npc-drop-item-name">${escapeHtml(item.name)}${escapeHtml(rateLabel)}</span>
+                    ${isRolled ? `<span class="badge rolled npc-drop-rolled">Rolled</span>` : ""}
                 </div>
             `;
             })
@@ -211,6 +219,10 @@ export default async function NpcsPage() {
                     <span class="toggle-slider" aria-hidden="true"></span>
                 </span>
                 <span class="npc-drop-sort-label">Chance for new roll</span>
+            </label>
+            <label class="npc-drop-filter npc-drop-filter--checkbox">
+                <input type="checkbox" id="npcOnlyRolledToggle">
+                <span>Show only rolled items</span>
             </label>
             <div class="npc-filter" id="npcFilter">
                 <button type="button" id="npcFilterToggle">Hide specific NPCs</button>
@@ -280,6 +292,10 @@ window.initNpcsPage = function () {
     if (toggle) {
         toggle.checked = Boolean(fileStore.filters?.npcSortByRate);
     }
+    const onlyRolledToggle = document.getElementById("npcOnlyRolledToggle");
+    if (onlyRolledToggle) {
+        onlyRolledToggle.checked = Boolean(fileStore.filters?.npcOnlyRolled);
+    }
     if (typeof window.initNpcFilterUI === "function") {
         window.initNpcFilterUI(() => window.dispatchEvent(new PopStateEvent("popstate")));
     }
@@ -294,6 +310,15 @@ document.addEventListener("input", async (e) => {
     await fileStore.setFilters({
         ...fileStore.filters,
         npcSortByRate: nextValue
+    });
+    window.dispatchEvent(new PopStateEvent("popstate"));
+});
+
+document.addEventListener("input", async (e) => {
+    if (e.target.id !== "npcOnlyRolledToggle") return;
+    await fileStore.setFilters({
+        ...fileStore.filters,
+        npcOnlyRolled: e.target.checked
     });
     window.dispatchEvent(new PopStateEvent("popstate"));
 });
