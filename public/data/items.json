@@ -6069,6 +6069,12 @@
     "tags": [
       "Food",
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Fishing",
+        "amount": 5
+      }
     ]
   },
   {
@@ -15009,6 +15015,12 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Woodcutting",
+        "amount": 1
+      }
     ]
   },
   {
@@ -15048,6 +15060,12 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Woodcutting",
+        "amount": 1
+      }
     ]
   },
   {
@@ -15087,6 +15105,12 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Woodcutting",
+        "amount": 2
+      }
     ]
   },
   {
@@ -15126,6 +15150,12 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Woodcutting",
+        "amount": 2
+      }
     ]
   },
   {
@@ -15786,6 +15816,12 @@
     "tags": [
       "Food",
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Thieving",
+        "amount": 1
+      }
     ]
   },
   {
@@ -16745,6 +16781,12 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Fishing",
+        "amount": 1
+      }
     ]
   },
   {
@@ -22591,6 +22633,12 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Hunter",
+        "amount": 1
+      }
     ]
   },
   {
@@ -28837,6 +28885,12 @@
     "tags": [
       "Food",
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Herblore",
+        "amount": 4
+      }
     ]
   },
   {
@@ -38008,6 +38062,42 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Cooking",
+        "amount": {
+          "type": "tiered",
+          "basedOn": "Cooking",
+          "tiers": [
+            {
+              "min": 1,
+              "max": 19,
+              "amount": 1
+            },
+            {
+              "min": 20,
+              "max": 39,
+              "amount": 2
+            },
+            {
+              "min": 40,
+              "max": 59,
+              "amount": 3
+            },
+            {
+              "min": 60,
+              "max": 79,
+              "amount": 4
+            },
+            {
+              "min": 80,
+              "max": 99,
+              "amount": 5
+            }
+          ]
+        }
+      }
     ]
   },
   {
@@ -38093,6 +38183,42 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Cooking",
+        "amount": {
+          "type": "tiered",
+          "basedOn": "Cooking",
+          "tiers": [
+            {
+              "min": 1,
+              "max": 19,
+              "amount": 1
+            },
+            {
+              "min": 20,
+              "max": 39,
+              "amount": 2
+            },
+            {
+              "min": 40,
+              "max": 59,
+              "amount": 3
+            },
+            {
+              "min": 60,
+              "max": 79,
+              "amount": 4
+            },
+            {
+              "min": 80,
+              "max": 99,
+              "amount": 5
+            }
+          ]
+        }
+      }
     ]
   },
   {
@@ -38132,6 +38258,42 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Cooking",
+        "amount": {
+          "type": "tiered",
+          "basedOn": "Cooking",
+          "tiers": [
+            {
+              "min": 1,
+              "max": 19,
+              "amount": 2
+            },
+            {
+              "min": 20,
+              "max": 39,
+              "amount": 3
+            },
+            {
+              "min": 40,
+              "max": 59,
+              "amount": 4
+            },
+            {
+              "min": 60,
+              "max": 79,
+              "amount": 5
+            },
+            {
+              "min": 80,
+              "max": 99,
+              "amount": 6
+            }
+          ]
+        }
+      }
     ]
   },
   {
@@ -38171,6 +38333,42 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Cooking",
+        "amount": {
+          "type": "tiered",
+          "basedOn": "Cooking",
+          "tiers": [
+            {
+              "min": 1,
+              "max": 19,
+              "amount": 2
+            },
+            {
+              "min": 20,
+              "max": 39,
+              "amount": 3
+            },
+            {
+              "min": 40,
+              "max": 59,
+              "amount": 4
+            },
+            {
+              "min": 60,
+              "max": 79,
+              "amount": 5
+            },
+            {
+              "min": 80,
+              "max": 99,
+              "amount": 6
+            }
+          ]
+        }
+      }
     ]
   },
   {
@@ -38230,6 +38428,12 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Firemaking",
+        "amount": 1
+      }
     ]
   },
   {
@@ -38962,6 +39166,12 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Farming",
+        "amount": 1
+      }
     ]
   },
   {
@@ -39039,6 +39249,12 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Farming",
+        "amount": 1
+      }
     ]
   },
   {
@@ -39072,6 +39288,12 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Farming",
+        "amount": 2
+      }
     ]
   },
   {
@@ -50952,6 +51174,12 @@
     "tags": [
       "Food",
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Fletching",
+        "amount": 4
+      }
     ]
   },
   {
@@ -52675,6 +52903,16 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Mining",
+        "amount": 1
+      },
+      {
+        "skill": "Smithing",
+        "amount": 1
+      }
     ]
   },
   {
@@ -52717,6 +52955,16 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Mining",
+        "amount": 1
+      },
+      {
+        "skill": "Smithing",
+        "amount": 1
+      }
     ]
   },
   {
@@ -52763,6 +53011,16 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Mining",
+        "amount": 2
+      },
+      {
+        "skill": "Smithing",
+        "amount": 2
+      }
     ]
   },
   {
@@ -52805,6 +53063,16 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Mining",
+        "amount": 2
+      },
+      {
+        "skill": "Smithing",
+        "amount": 2
+      }
     ]
   },
   {
@@ -54088,6 +54356,12 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Woodcutting",
+        "amount": 1
+      }
     ]
   },
   {
@@ -54629,6 +54903,12 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Agility",
+        "amount": 1
+      }
     ]
   },
   {
@@ -60234,6 +60514,12 @@
     "tags": [
       "Food",
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Fishing",
+        "amount": 3
+      }
     ]
   },
   {
@@ -62007,6 +62293,12 @@
     "tags": [
       "Food",
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Farming",
+        "amount": 3
+      }
     ]
   },
   {
@@ -66174,6 +66466,12 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Herblore",
+        "amount": 1
+      }
     ]
   },
   {
@@ -66256,6 +66554,12 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Herblore",
+        "amount": 2
+      }
     ]
   },
   {
@@ -66295,6 +66599,12 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Herblore",
+        "amount": 1
+      }
     ]
   },
   {
@@ -66334,6 +66644,12 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Herblore",
+        "amount": 2
+      }
     ]
   },
   {
@@ -81812,6 +82128,12 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Slayer",
+        "amount": 1
+      }
     ]
   },
   {
@@ -86960,6 +87282,12 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Farming",
+        "amount": 1
+      }
     ]
   },
   {
@@ -89259,6 +89587,12 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Smithing",
+        "amount": 4
+      }
     ]
   },
   {
@@ -89273,6 +89607,12 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Slayer",
+        "amount": 1
+      }
     ]
   },
   {
@@ -93719,6 +94059,12 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Ranged",
+        "amount": 4
+      }
     ]
   },
   {
@@ -98451,6 +98797,12 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Farming",
+        "amount": 2
+      }
     ]
   },
   {
@@ -98490,6 +98842,27 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Magic",
+        "amount": {
+          "type": "tiered",
+          "basedOn": "Magic",
+          "tiers": [
+            {
+              "min": 1,
+              "max": 49,
+              "amount": 3
+            },
+            {
+              "min": 50,
+              "max": 99,
+              "amount": 4
+            }
+          ]
+        }
+      }
     ]
   },
   {
@@ -98913,6 +99286,12 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Runecraft",
+        "amount": 1
+      }
     ]
   },
   {
@@ -99032,6 +99411,27 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Magic",
+        "amount": {
+          "type": "tiered",
+          "basedOn": "Magic",
+          "tiers": [
+            {
+              "min": 1,
+              "max": 49,
+              "amount": 2
+            },
+            {
+              "min": 50,
+              "max": 99,
+              "amount": 3
+            }
+          ]
+        }
+      }
     ]
   },
   {
@@ -99071,6 +99471,27 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Magic",
+        "amount": {
+          "type": "tiered",
+          "basedOn": "Magic",
+          "tiers": [
+            {
+              "min": 1,
+              "max": 49,
+              "amount": 3
+            },
+            {
+              "min": 50,
+              "max": 99,
+              "amount": 4
+            }
+          ]
+        }
+      }
     ]
   },
   {
@@ -105484,6 +105905,12 @@
     "tags": [
       "Food",
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Crafting",
+        "amount": 4
+      }
     ]
   },
   {
@@ -114643,6 +115070,16 @@
     "tags": [
       "Food",
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Thieving",
+        "amount": 1
+      },
+      {
+        "skill": "Crafting",
+        "amount": 1
+      }
     ]
   },
   {
@@ -131908,6 +132345,12 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Hunter",
+        "amount": 1
+      }
     ]
   },
   {
@@ -137180,6 +137623,12 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Slayer",
+        "amount": 2
+      }
     ]
   },
   {
@@ -137219,6 +137668,12 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Slayer",
+        "amount": 2
+      }
     ]
   },
   {
@@ -137258,6 +137713,12 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Slayer",
+        "amount": 4
+      }
     ]
   },
   {
@@ -137297,6 +137758,12 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Slayer",
+        "amount": 4
+      }
     ]
   },
   {
@@ -141333,6 +141800,16 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Mining",
+        "amount": 1
+      },
+      {
+        "skill": "Magic",
+        "amount": 1
+      }
     ]
   },
   {
@@ -147585,6 +148062,12 @@
     "tags": [
       "Food",
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Agility",
+        "amount": 5
+      }
     ]
   },
   {
@@ -147654,6 +148137,12 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Agility",
+        "amount": 1
+      }
     ]
   },
   {
@@ -157675,6 +158164,12 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Hunter",
+        "amount": 2
+      }
     ]
   },
   {
@@ -166393,6 +166888,12 @@
     "tags": [
       "Food",
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Slayer",
+        "amount": 5
+      }
     ]
   },
   {
@@ -167688,6 +168189,27 @@
     },
     "tags": [
       "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Magic",
+        "amount": {
+          "type": "tiered",
+          "basedOn": "Magic",
+          "tiers": [
+            {
+              "min": 1,
+              "max": 49,
+              "amount": 2
+            },
+            {
+              "min": 50,
+              "max": 99,
+              "amount": 3
+            }
+          ]
+        }
+      }
     ]
   },
   {

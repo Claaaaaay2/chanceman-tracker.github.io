@@ -42,6 +42,41 @@ function slugifySection(value) {
         .replace(/(^-|-$)/g, "");
 }
 
+function normalizeSkillKey(skill) {
+    return String(skill || "")
+        .toLowerCase()
+        .replace(/[^a-z0-9]/g, "");
+}
+
+function getPlayerLevel(levelsMap, skill) {
+    if (!levelsMap) return null;
+    const key = String(skill || "").toLowerCase();
+    if (levelsMap.has(key)) return levelsMap.get(key);
+    return null;
+}
+
+function resolveBoostAmount(boost, levelsMap) {
+    const amount = boost?.amount;
+    if (typeof amount === "number") {
+        return { value: amount, known: true };
+    }
+    if (amount && typeof amount === "object" && amount.type === "tiered") {
+        const basedOn = amount.basedOn || boost?.skill;
+        const level = getPlayerLevel(levelsMap, basedOn);
+        if (level === null || level === undefined) {
+            return { value: null, known: false };
+        }
+        const tiers = Array.isArray(amount.tiers) ? amount.tiers : [];
+        for (const tier of tiers) {
+            if (level >= tier.min && level <= tier.max) {
+                return { value: tier.amount, known: true };
+            }
+        }
+        return { value: null, known: false };
+    }
+    return { value: null, known: false };
+}
+
 export default async function SkillUnlocksPage() {
     const obtained = fileStore.obtained;
     const rolled = fileStore.rolled;
@@ -56,6 +91,10 @@ export default async function SkillUnlocksPage() {
     await fileStore.ensureItemsLoaded();
 
     const items = fileStore.items || [];
+    const playerLevels = fileStore.player?.levels || null;
+    const levelsMap = playerLevels
+        ? new Map(Object.entries(playerLevels).map(([key, value]) => [String(key).toLowerCase(), value]))
+        : null;
     const obtainedSet = new Set(obtained);
     const rolledSet = new Set(rolled);
 
@@ -82,12 +121,48 @@ export default async function SkillUnlocksPage() {
 
         tagged.sort((a, b) => a.name.localeCompare(b.name));
 
-        const cards = tagged.map((item) => `
-            <div class="unlock-item" data-name="${escapeHtml(item.name.toLowerCase())}">
-                <img class="unlock-item-image" src="/images/${item.image}" alt="${escapeHtml(item.name)}">
-                <span class="unlock-item-name">${escapeHtml(item.name)}</span>
-            </div>
-        `).join("");
+        const cards = tagged.map((item) => {
+            const boosts = Array.isArray(item.boosts) ? item.boosts : [];
+            const boostsHtml = boosts.length
+                ? `
+                    <div class="unlock-boosts">
+                        ${boosts.map((boost) => {
+                            const skill = boost?.skill || "";
+                            const amountInfo = resolveBoostAmount(boost, levelsMap);
+                            const amountLabel = amountInfo.known ? `+${amountInfo.value}` : "+?";
+                            const fallbackLabel = skill ? `${skill} ${amountLabel}` : amountLabel;
+                            const iconKey = normalizeSkillKey(skill);
+                            const iconHtml = iconKey
+                                ? `<img class="unlock-boost-icon" src="/images/skills/${escapeHtml(iconKey)}.png" alt="${escapeHtml(skill)} icon">`
+                                : "";
+                            const labelHtml = iconKey
+                                ? ""
+                                : `<span class="unlock-boost-label">${escapeHtml(fallbackLabel)}</span>`;
+                            const title = amountInfo.known
+                                ? `${skill} ${amountLabel}`
+                                : `${skill} boost (requires player level)`;
+                            return `
+                                <span class="unlock-boost${amountInfo.known ? "" : " unlock-boost--unknown"}" title="${escapeHtml(title)}">
+                                    ${iconHtml}
+                                    <span class="unlock-boost-text">${escapeHtml(amountLabel)}</span>
+                                    ${labelHtml}
+                                </span>
+                            `;
+                        }).join("")}
+                    </div>
+                `
+                : "";
+
+            return `
+                <div class="unlock-item" data-name="${escapeHtml(item.name.toLowerCase())}">
+                    <img class="unlock-item-image" src="/images/${item.image}" alt="${escapeHtml(item.name)}">
+                    <div class="unlock-item-details">
+                        <span class="unlock-item-name">${escapeHtml(item.name)}</span>
+                        ${boostsHtml}
+                    </div>
+                </div>
+            `;
+        }).join("");
 
         return `
             <section class="unlock-section" id="${escapeHtml(id)}" data-section="${escapeHtml(tag)}">

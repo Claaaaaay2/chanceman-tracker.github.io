@@ -1500,7 +1500,7 @@ body.route-loading .route-loading-overlay {
 
 .unlock-item {
     display: inline-flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.5rem;
     padding: 0.25rem 0.35rem;
     border-radius: 4px;
@@ -1515,6 +1515,50 @@ body.route-loading .route-loading-overlay {
 .unlock-item-name {
     font-size: 0.9rem;
     color: var(--text-color);
+}
+
+.unlock-item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    min-width: 0;
+}
+
+.unlock-boosts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+}
+
+.unlock-boost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    padding: 0.1rem 0.35rem;
+    border-radius: 999px;
+    border: 1px solid var(--border-color-darker);
+    background: var(--table-alternate-row);
+    color: var(--text-color);
+    font-size: 0.75rem;
+    line-height: 1.1;
+}
+
+.unlock-boost-text {
+    font-weight: 600;
+}
+
+.unlock-boost-label {
+    white-space: nowrap;
+}
+
+.unlock-boost-icon {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+}
+
+.unlock-boost--unknown {
+    opacity: 0.7;
 }
 
 .unlock-empty {
