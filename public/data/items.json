@@ -6067,7 +6067,8 @@
       }
     },
     "tags": [
-      "Food"
+      "Food",
+      "Other skill boosts"
     ]
   },
   {
@@ -15005,7 +15006,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 403,
@@ -15041,7 +15045,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 404,
@@ -15077,7 +15084,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 405,
@@ -15113,7 +15123,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 406,
@@ -15771,7 +15784,8 @@
       }
     },
     "tags": [
-      "Food"
+      "Food",
+      "Other skill boosts"
     ]
   },
   {
@@ -16728,7 +16742,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 481,
@@ -22571,7 +22588,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 642,
@@ -28815,7 +28835,8 @@
       }
     },
     "tags": [
-      "Food"
+      "Food",
+      "Other skill boosts"
     ]
   },
   {
@@ -37984,7 +38005,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 998,
@@ -38066,7 +38090,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 1000,
@@ -38102,7 +38129,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 1001,
@@ -38138,7 +38168,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 1002,
@@ -38194,7 +38227,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 1005,
@@ -38923,7 +38959,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 1026,
@@ -38997,7 +39036,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 1028,
@@ -39027,7 +39069,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 1029,
@@ -50905,7 +50950,8 @@
       }
     },
     "tags": [
-      "Food"
+      "Food",
+      "Other skill boosts"
     ]
   },
   {
@@ -52626,7 +52672,10 @@
           "notes": "Purchase from Falador pub (free roll)."
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 1405,
@@ -52665,7 +52714,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 1406,
@@ -52708,7 +52760,10 @@
           "rule": "canCompleteForgettableTale"
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 1407,
@@ -52747,7 +52802,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 1408,
@@ -54027,7 +54085,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 1436,
@@ -54565,7 +54626,10 @@
       "shops": {
         "Yes": "canCompleteSongOfTheElves"
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 1459,
@@ -60168,7 +60232,8 @@
       }
     },
     "tags": [
-      "Food"
+      "Food",
+      "Other skill boosts"
     ]
   },
   {
@@ -61940,7 +62005,8 @@
       }
     },
     "tags": [
-      "Food"
+      "Food",
+      "Other skill boosts"
     ]
   },
   {
@@ -66105,7 +66171,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 1817,
@@ -66184,7 +66253,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 1819,
@@ -66220,7 +66292,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 1820,
@@ -66256,7 +66331,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 1821,
@@ -81731,7 +81809,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 1989,
@@ -86876,7 +86957,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 2112,
@@ -89172,7 +89256,10 @@
       "shops": {
         "Yes": "canCompleteSleepingGiants"
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 2190,
@@ -89183,7 +89270,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 2191,
@@ -93626,7 +93716,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 2281,
@@ -98355,7 +98448,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 2400,
@@ -98391,7 +98487,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 2401,
@@ -98811,7 +98910,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 2419,
@@ -98927,7 +99029,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 2422,
@@ -98963,7 +99068,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 2423,
@@ -105374,7 +105482,8 @@
       }
     },
     "tags": [
-      "Food"
+      "Food",
+      "Other skill boosts"
     ]
   },
   {
@@ -114532,7 +114641,8 @@
       }
     },
     "tags": [
-      "Food"
+      "Food",
+      "Other skill boosts"
     ]
   },
   {
@@ -131795,7 +131905,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 3294,
@@ -137064,7 +137177,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 3561,
@@ -137100,7 +137216,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 3562,
@@ -137136,7 +137255,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 3563,
@@ -137172,7 +137294,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 3564,
@@ -141205,7 +141330,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 3655,
@@ -147455,7 +147583,8 @@
       }
     },
     "tags": [
-      "Food"
+      "Food",
+      "Other skill boosts"
     ]
   },
   {
@@ -147522,7 +147651,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 3781,
@@ -157540,7 +157672,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 4106,
@@ -166256,7 +166391,8 @@
       }
     },
     "tags": [
-      "Food"
+      "Food",
+      "Other skill boosts"
     ]
   },
   {
@@ -167549,7 +167685,10 @@
           "notes": "Purchase from Falador pub (free roll)."
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ]
   },
   {
     "index": 4371,
