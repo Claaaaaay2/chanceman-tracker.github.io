@@ -6067,7 +6067,14 @@
       }
     },
     "tags": [
-      "Food"
+      "Food",
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Fishing",
+        "amount": 5
+      }
     ]
   },
   {
@@ -15005,7 +15012,16 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Woodcutting",
+        "amount": 1
+      }
+    ]
   },
   {
     "index": 403,
@@ -15041,7 +15057,16 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Woodcutting",
+        "amount": 1
+      }
+    ]
   },
   {
     "index": 404,
@@ -15077,7 +15102,16 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Woodcutting",
+        "amount": 2
+      }
+    ]
   },
   {
     "index": 405,
@@ -15113,7 +15147,16 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Woodcutting",
+        "amount": 2
+      }
+    ]
   },
   {
     "index": 406,
@@ -15771,7 +15814,14 @@
       }
     },
     "tags": [
-      "Food"
+      "Food",
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Thieving",
+        "amount": 1
+      }
     ]
   },
   {
@@ -16728,7 +16778,16 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Fishing",
+        "amount": 1
+      }
+    ]
   },
   {
     "index": 481,
@@ -22571,7 +22630,16 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Hunter",
+        "amount": 1
+      }
+    ]
   },
   {
     "index": 642,
@@ -28815,7 +28883,14 @@
       }
     },
     "tags": [
-      "Food"
+      "Food",
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Herblore",
+        "amount": 4
+      }
     ]
   },
   {
@@ -37984,7 +38059,46 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Cooking",
+        "amount": {
+          "type": "tiered",
+          "basedOn": "Cooking",
+          "tiers": [
+            {
+              "min": 1,
+              "max": 19,
+              "amount": 1
+            },
+            {
+              "min": 20,
+              "max": 39,
+              "amount": 2
+            },
+            {
+              "min": 40,
+              "max": 59,
+              "amount": 3
+            },
+            {
+              "min": 60,
+              "max": 79,
+              "amount": 4
+            },
+            {
+              "min": 80,
+              "max": 99,
+              "amount": 5
+            }
+          ]
+        }
+      }
+    ]
   },
   {
     "index": 998,
@@ -38066,7 +38180,46 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Cooking",
+        "amount": {
+          "type": "tiered",
+          "basedOn": "Cooking",
+          "tiers": [
+            {
+              "min": 1,
+              "max": 19,
+              "amount": 1
+            },
+            {
+              "min": 20,
+              "max": 39,
+              "amount": 2
+            },
+            {
+              "min": 40,
+              "max": 59,
+              "amount": 3
+            },
+            {
+              "min": 60,
+              "max": 79,
+              "amount": 4
+            },
+            {
+              "min": 80,
+              "max": 99,
+              "amount": 5
+            }
+          ]
+        }
+      }
+    ]
   },
   {
     "index": 1000,
@@ -38102,7 +38255,46 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Cooking",
+        "amount": {
+          "type": "tiered",
+          "basedOn": "Cooking",
+          "tiers": [
+            {
+              "min": 1,
+              "max": 19,
+              "amount": 2
+            },
+            {
+              "min": 20,
+              "max": 39,
+              "amount": 3
+            },
+            {
+              "min": 40,
+              "max": 59,
+              "amount": 4
+            },
+            {
+              "min": 60,
+              "max": 79,
+              "amount": 5
+            },
+            {
+              "min": 80,
+              "max": 99,
+              "amount": 6
+            }
+          ]
+        }
+      }
+    ]
   },
   {
     "index": 1001,
@@ -38138,7 +38330,46 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Cooking",
+        "amount": {
+          "type": "tiered",
+          "basedOn": "Cooking",
+          "tiers": [
+            {
+              "min": 1,
+              "max": 19,
+              "amount": 2
+            },
+            {
+              "min": 20,
+              "max": 39,
+              "amount": 3
+            },
+            {
+              "min": 40,
+              "max": 59,
+              "amount": 4
+            },
+            {
+              "min": 60,
+              "max": 79,
+              "amount": 5
+            },
+            {
+              "min": 80,
+              "max": 99,
+              "amount": 6
+            }
+          ]
+        }
+      }
+    ]
   },
   {
     "index": 1002,
@@ -38194,7 +38425,16 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Firemaking",
+        "amount": 1
+      }
+    ]
   },
   {
     "index": 1005,
@@ -38923,7 +39163,16 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Farming",
+        "amount": 1
+      }
+    ]
   },
   {
     "index": 1026,
@@ -38997,7 +39246,16 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Farming",
+        "amount": 1
+      }
+    ]
   },
   {
     "index": 1028,
@@ -39027,7 +39285,16 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Farming",
+        "amount": 2
+      }
+    ]
   },
   {
     "index": 1029,
@@ -50905,7 +51172,14 @@
       }
     },
     "tags": [
-      "Food"
+      "Food",
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Fletching",
+        "amount": 4
+      }
     ]
   },
   {
@@ -52626,7 +52900,20 @@
           "notes": "Purchase from Falador pub (free roll)."
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Mining",
+        "amount": 1
+      },
+      {
+        "skill": "Smithing",
+        "amount": 1
+      }
+    ]
   },
   {
     "index": 1405,
@@ -52665,7 +52952,20 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Mining",
+        "amount": 1
+      },
+      {
+        "skill": "Smithing",
+        "amount": 1
+      }
+    ]
   },
   {
     "index": 1406,
@@ -52708,7 +53008,20 @@
           "rule": "canCompleteForgettableTale"
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Mining",
+        "amount": 2
+      },
+      {
+        "skill": "Smithing",
+        "amount": 2
+      }
+    ]
   },
   {
     "index": 1407,
@@ -52747,7 +53060,20 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Mining",
+        "amount": 2
+      },
+      {
+        "skill": "Smithing",
+        "amount": 2
+      }
+    ]
   },
   {
     "index": 1408,
@@ -54027,7 +54353,16 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Woodcutting",
+        "amount": 1
+      }
+    ]
   },
   {
     "index": 1436,
@@ -54565,7 +54900,16 @@
       "shops": {
         "Yes": "canCompleteSongOfTheElves"
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Agility",
+        "amount": 1
+      }
+    ]
   },
   {
     "index": 1459,
@@ -60168,7 +60512,14 @@
       }
     },
     "tags": [
-      "Food"
+      "Food",
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Fishing",
+        "amount": 3
+      }
     ]
   },
   {
@@ -61940,7 +62291,14 @@
       }
     },
     "tags": [
-      "Food"
+      "Food",
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Farming",
+        "amount": 3
+      }
     ]
   },
   {
@@ -66105,7 +66463,16 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Herblore",
+        "amount": 1
+      }
+    ]
   },
   {
     "index": 1817,
@@ -66184,7 +66551,16 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Herblore",
+        "amount": 2
+      }
+    ]
   },
   {
     "index": 1819,
@@ -66220,7 +66596,16 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Herblore",
+        "amount": 1
+      }
+    ]
   },
   {
     "index": 1820,
@@ -66256,7 +66641,16 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Herblore",
+        "amount": 2
+      }
+    ]
   },
   {
     "index": 1821,
@@ -81731,7 +82125,16 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Slayer",
+        "amount": 1
+      }
+    ]
   },
   {
     "index": 1989,
@@ -86876,7 +87279,16 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Farming",
+        "amount": 1
+      }
+    ]
   },
   {
     "index": 2112,
@@ -89172,7 +89584,16 @@
       "shops": {
         "Yes": "canCompleteSleepingGiants"
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Smithing",
+        "amount": 4
+      }
+    ]
   },
   {
     "index": 2190,
@@ -89183,7 +89604,16 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Slayer",
+        "amount": 1
+      }
+    ]
   },
   {
     "index": 2191,
@@ -93626,7 +94056,16 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Ranged",
+        "amount": 4
+      }
+    ]
   },
   {
     "index": 2281,
@@ -98355,7 +98794,16 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Farming",
+        "amount": 2
+      }
+    ]
   },
   {
     "index": 2400,
@@ -98391,7 +98839,31 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Magic",
+        "amount": {
+          "type": "tiered",
+          "basedOn": "Magic",
+          "tiers": [
+            {
+              "min": 1,
+              "max": 49,
+              "amount": 3
+            },
+            {
+              "min": 50,
+              "max": 99,
+              "amount": 4
+            }
+          ]
+        }
+      }
+    ]
   },
   {
     "index": 2401,
@@ -98811,7 +99283,16 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Runecraft",
+        "amount": 1
+      }
+    ]
   },
   {
     "index": 2419,
@@ -98927,7 +99408,31 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Magic",
+        "amount": {
+          "type": "tiered",
+          "basedOn": "Magic",
+          "tiers": [
+            {
+              "min": 1,
+              "max": 49,
+              "amount": 2
+            },
+            {
+              "min": 50,
+              "max": 99,
+              "amount": 3
+            }
+          ]
+        }
+      }
+    ]
   },
   {
     "index": 2422,
@@ -98963,7 +99468,31 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Magic",
+        "amount": {
+          "type": "tiered",
+          "basedOn": "Magic",
+          "tiers": [
+            {
+              "min": 1,
+              "max": 49,
+              "amount": 3
+            },
+            {
+              "min": 50,
+              "max": 99,
+              "amount": 4
+            }
+          ]
+        }
+      }
+    ]
   },
   {
     "index": 2423,
@@ -105374,7 +105903,14 @@
       }
     },
     "tags": [
-      "Food"
+      "Food",
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Crafting",
+        "amount": 4
+      }
     ]
   },
   {
@@ -114532,7 +115068,18 @@
       }
     },
     "tags": [
-      "Food"
+      "Food",
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Thieving",
+        "amount": 1
+      },
+      {
+        "skill": "Crafting",
+        "amount": 1
+      }
     ]
   },
   {
@@ -131795,7 +132342,16 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Hunter",
+        "amount": 1
+      }
+    ]
   },
   {
     "index": 3294,
@@ -137064,7 +137620,16 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Slayer",
+        "amount": 2
+      }
+    ]
   },
   {
     "index": 3561,
@@ -137100,7 +137665,16 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Slayer",
+        "amount": 2
+      }
+    ]
   },
   {
     "index": 3562,
@@ -137136,7 +137710,16 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Slayer",
+        "amount": 4
+      }
+    ]
   },
   {
     "index": 3563,
@@ -137172,7 +137755,16 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Slayer",
+        "amount": 4
+      }
+    ]
   },
   {
     "index": 3564,
@@ -141205,7 +141797,20 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Mining",
+        "amount": 1
+      },
+      {
+        "skill": "Magic",
+        "amount": 1
+      }
+    ]
   },
   {
     "index": 3655,
@@ -147455,7 +148060,14 @@
       }
     },
     "tags": [
-      "Food"
+      "Food",
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Agility",
+        "amount": 5
+      }
     ]
   },
   {
@@ -147522,7 +148134,16 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Agility",
+        "amount": 1
+      }
+    ]
   },
   {
     "index": 3781,
@@ -157540,7 +158161,16 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Hunter",
+        "amount": 2
+      }
+    ]
   },
   {
     "index": 4106,
@@ -166256,7 +166886,14 @@
       }
     },
     "tags": [
-      "Food"
+      "Food",
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Slayer",
+        "amount": 5
+      }
     ]
   },
   {
@@ -167549,7 +168186,31 @@
           "notes": "Purchase from Falador pub (free roll)."
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Magic",
+        "amount": {
+          "type": "tiered",
+          "basedOn": "Magic",
+          "tiers": [
+            {
+              "min": 1,
+              "max": 49,
+              "amount": 2
+            },
+            {
+              "min": 50,
+              "max": 99,
+              "amount": 3
+            }
+          ]
+        }
+      }
+    ]
   },
   {
     "index": 4371,

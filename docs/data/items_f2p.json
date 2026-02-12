@@ -6095,7 +6095,20 @@
           "notes": "Purchase from Falador pub (free roll)."
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Mining",
+        "amount": 1
+      },
+      {
+        "skill": "Smithing",
+        "amount": 1
+      }
+    ]
   },
   {
     "index": 1415,
@@ -17720,7 +17733,31 @@
           "notes": "Purchase from Falador pub (free roll)."
         }
       }
-    }
+    },
+    "tags": [
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Magic",
+        "amount": {
+          "type": "tiered",
+          "basedOn": "Magic",
+          "tiers": [
+            {
+              "min": 1,
+              "max": 49,
+              "amount": 2
+            },
+            {
+              "min": 50,
+              "max": 99,
+              "amount": 3
+            }
+          ]
+        }
+      }
+    ]
   },
   {
     "index": 4371,
