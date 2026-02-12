@@ -13564,7 +13564,7 @@ export const NPC_DATA = {
     },
     "Skeletal Wyvern": {
         "wiki": "https://oldschool.runescape.wiki/w/Skeletal_Wyvern",
-        "rule": ["hasAccessToWyvernProtection"],
+        "rule": [],
         "skill": ["Slayer"],
         "level": [72],
         "tags": [],
