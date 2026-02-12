@@ -340,21 +340,34 @@ window.initNpcFilterUI = function initNpcFilterUI(onApply) {
     });
 };
 
+let lazyImageObserver = null;
+
 function initLazyImages() {
     const lazyImages = document.querySelectorAll("img.lazy-img");
+    if (!lazyImages.length) return;
 
-    const observer = new IntersectionObserver((entries, obs) => {
-        for (const entry of entries) {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;   // load real image
-                img.classList.remove("lazy-img");
-                obs.unobserve(img);
+    if (!("IntersectionObserver" in window)) {
+        lazyImages.forEach((img) => {
+            img.src = img.dataset.src;
+            img.classList.remove("lazy-img");
+        });
+        return;
+    }
+
+    if (!lazyImageObserver) {
+        lazyImageObserver = new IntersectionObserver((entries, obs) => {
+            for (const entry of entries) {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.classList.remove("lazy-img");
+                    obs.unobserve(img);
+                }
             }
-        }
-    });
+        }, { rootMargin: "100px 0px" });
+    }
 
-    lazyImages.forEach(img => observer.observe(img));
+    lazyImages.forEach((img) => lazyImageObserver.observe(img));
 }
 
 window.initItemsPage = async function () {
@@ -427,7 +440,9 @@ window.initItemsPage = async function () {
         || !elements.connectFilesBtn || !elements.refreshFilesBtn
         || checkboxConfigs.some((config) => !checkboxElements[config.key]);
     if (missingElement) {
-        setTimeout(initItemsPage, 0);
+        if (window.location.pathname === "/items") {
+            setTimeout(initItemsPage, 0);
+        }
         return;
     }
 
@@ -1461,7 +1476,7 @@ document.addEventListener("click", (e) => {
 export function afterRoute() {
     initLazyImages();
 
-    if (typeof initItemsPage === "function") {
+    if (typeof initItemsPage === "function" && window.location.pathname === "/items") {
         initItemsPage();
         initFiltersOverrides();
     }
