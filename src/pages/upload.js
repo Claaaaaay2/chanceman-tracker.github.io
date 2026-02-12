@@ -1,6 +1,16 @@
 import { fetchPlayer } from "../api/playerApi.js";
 import { fileStore } from "../storage/fileStore.js";
 
+function getReturnPath() {
+    const stored = sessionStorage.getItem("uploadReturnPath");
+    if (!stored) return "/items";
+    const normalized = stored.split("?")[0].split("#")[0];
+    if (normalized === "/upload" || normalized === "/reupload") {
+        return "/items";
+    }
+    return stored;
+}
+
 export default function UploadPage() {
     return `
         <h1>Chanceman Tracker Setup</h1>
@@ -44,6 +54,7 @@ export default function UploadPage() {
 }
 
 document.addEventListener("click", async (e) => {
+    if (window.location.pathname !== "/upload") return;
     if (e.target.id !== "saveBtn") return;
 
     const app = document.getElementById("app");
@@ -96,7 +107,9 @@ document.addEventListener("click", async (e) => {
 
         // Redirect to items page
         status.textContent = "Saved! Redirecting...";
-        history.pushState(null, "", "/items");
+        const returnPath = getReturnPath();
+        sessionStorage.removeItem("uploadReturnPath");
+        history.pushState(null, "", returnPath);
         window.dispatchEvent(new PopStateEvent("popstate"));
     } catch (err) {
         console.error(err);
@@ -107,6 +120,7 @@ document.addEventListener("click", async (e) => {
 });
 
 document.addEventListener("keydown", (e) => {
+    if (window.location.pathname !== "/upload") return;
     if (e.key !== "Enter") return;
     if (e.target?.id !== "playerName") return;
     const app = document.getElementById("app");

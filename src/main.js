@@ -6,7 +6,7 @@ import { capitalizeFirstLetter, parseDropRate } from "./logic/utils.js";
 import { NPC_DATA } from "./logic/npcData.js";
 import { getObtainabilityRank } from "./logic/sortHelpers.js";
 import { initBugPage } from "./pages/reportABug.js";
-import { router } from "./router.js";
+import { navigate, router } from "./router.js";
 import { fileStore } from "./storage/fileStore.js";
 import { loadFromDB, saveToDB } from "./storage/fileStoreHelpers.js";
 import { initFiltersOverrides } from "./styles/filtersOverrides.js";
@@ -1450,8 +1450,8 @@ document.addEventListener("click", (e) => {
     if (!link) return;
 
     e.preventDefault();
-    history.pushState(null, "", link.href);
-    router();
+    const url = new URL(link.href);
+    navigate(`${url.pathname}${url.search}${url.hash}`);
 });
 
 

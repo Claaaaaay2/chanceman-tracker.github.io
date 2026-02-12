@@ -38,6 +38,14 @@ function setRouteLoading(isLoading) {
 }
 
 export async function navigate(path) {
+    const target = String(path || "");
+    const normalized = target.split("?")[0].split("#")[0];
+    if (normalized === "/upload" || normalized === "/reupload") {
+        const currentPath = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+        if (currentPath !== "/upload" && currentPath !== "/reupload") {
+            sessionStorage.setItem("uploadReturnPath", currentPath);
+        }
+    }
     history.pushState({}, "", path);
     router();
 }
