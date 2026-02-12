@@ -3294,7 +3294,7 @@
               },
               {
                 "skill": "Smithing",
-                "level": 61
+                "level": 76
               },
               {
                 "has": 2347
@@ -23120,7 +23120,10 @@
           ]
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 657,
@@ -23384,7 +23387,10 @@
           ]
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 659,
@@ -23537,7 +23543,10 @@
           ]
         }
       }
-    }
+    },
+    "tags": [
+      "Food"
+    ]
   },
   {
     "index": 660,
@@ -23747,7 +23756,10 @@
           ]
         }
       }
-    }
+    },
+    "tags": [
+      "Potion"
+    ]
   },
   {
     "index": 666,
@@ -54053,7 +54065,8 @@
       }
     },
     "tags": [
-      "Melee"
+      "Melee",
+      "Prayer armours"
     ]
   },
   {
@@ -63458,7 +63471,8 @@
       }
     },
     "tags": [
-      "Melee"
+      "Melee",
+      "Prayer armours"
     ]
   },
   {
@@ -115730,7 +115744,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Cooking"
+    ]
   },
   {
     "index": 2856,
