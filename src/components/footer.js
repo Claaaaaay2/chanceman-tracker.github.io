@@ -6,6 +6,8 @@ export async function Footer() {
         <a class="footer-link" href="https://ko-fi.com/kryen" target="_blank" rel="noopener noreferrer">☕ Support on Ko-fi ☕</a>
         <span class="footer-separator">|</span>
         <span>Version: ${chancemanTrackerVersion}</span>
+        <span class="footer-separator">|</span>
+        <span>Made by Kryen (IGN: KryenChance)</span>
         </footer>
     `;
 }
