@@ -12,18 +12,18 @@ const SECTION_ORDER = [
     "Other skill boosts",
     "Potion",
     "Teleports",
-    "Prayer",
-    "Woodcutting",
-    "Mining",
-    "Fishing",
-    "Hunter",
+    "Cooking",
     "Construction",
     "Crafting",
     "Farming",
     "Fletching",
+    "Fishing",
+    "Hunter",
+    "Mining",
+    "Prayer",
     "Runecraft",
     "Smithing",
-    "Cooking"
+    "Woodcutting"
 ];
 
 function escapeHtml(value) {
