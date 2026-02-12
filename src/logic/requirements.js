@@ -2557,7 +2557,6 @@ function canCompleteBarbarianFiremaking1(ctx) {
     return allTrue([
         hasSkillLevel(ctx, "Firemaking", 35),
         has(ctx, 1521), // Oak logs
-        hasAnyItems(ctx, [841, 839, 843, 845, 849, 847, 853, 851, 857, 855, 861, 859]),
     ]);
 }
 
