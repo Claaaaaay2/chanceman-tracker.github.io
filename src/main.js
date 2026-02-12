@@ -77,6 +77,9 @@ const ITEM_SECTION_TITLES = {
 };
 
 const BUTTERFLY_NET_ID = 10010;
+const GOURMET_IMPLING_JAR_ID = 11242;
+const EARTH_IMPLING_JAR_ID = 11244;
+const ESSENCE_IMPLING_JAR_ID = 11246;
 const IMPLING_JAR_LEVEL_DOWNGRADES = new Map([
     [27, 17],
     [32, 22],
@@ -707,8 +710,16 @@ window.initItemsPage = async function () {
         }
     }
 
+    function hasMagicButterflyNetRequirement(ctx) {
+        const hunterLevel = ctx?.player?.levels?.Hunter;
+        if (typeof hunterLevel !== "number" || hunterLevel < 17) return false;
+        return has(ctx, GOURMET_IMPLING_JAR_ID)
+            && has(ctx, EARTH_IMPLING_JAR_ID)
+            && has(ctx, ESSENCE_IMPLING_JAR_ID);
+    }
+
     function adjustImplingJarRuleLevelsForSkills(rule, ctx) {
-        if (!rule?.all || !ctx || !has(ctx, BUTTERFLY_NET_ID)) return null;
+        if (!rule?.all || !ctx || !(has(ctx, BUTTERFLY_NET_ID) || hasMagicButterflyNetRequirement(ctx))) return null;
 
         let hasImplingJar = false;
         let hunterRuleIndex = -1;
