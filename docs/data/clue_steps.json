@@ -16799,21 +16799,29 @@
                 "type": "Emote clues",
                 "requirements": {
                     "skills": {},
-                    "quests": {},
+                    "quests": {
+                        "Legends' Quest": "completed",
+                        "Mourning's End Part II": "completed"
+                    },
                     "items": [
                         {
                             "id": 5547,
                             "name": "Death tiara"
-                        },
-                        {
-                            "id": 2572,
-                            "name": "Ring of wealth"
                         }
                     ],
-                    "untracked": [
-                        "Item missing in items.json: Cape of legends"
+                    "untracked": [],
+                    "itemsAny": [
+                        [
+                            {
+                                "id": 2572,
+                                "name": "Ring of wealth"
+                            },
+                            {
+                                "id": 11980,
+                                "name": "Ring of wealth (5)"
+                            }
+                        ]
                     ],
-                    "itemsAny": [],
                     "rulesAll": [],
                     "rulesAny": []
                 }
@@ -16822,8 +16830,14 @@
                 "description": "Goblin Salute at the Goblin Village. Beware of double agents!\n\nEquip a Bandos platebody, Bandos cloak and Bandos godsword.",
                 "type": "Emote clues",
                 "requirements": {
-                    "skills": {},
-                    "quests": {},
+                    "skills": {
+                        "Defence": 40,
+                        "Prayer": 40,
+                        "Attack": 75
+                    },
+                    "quests": {
+                        "The Lost Tribe": "complete"
+                    },
                     "items": [
                         {
                             "id": 12480,
@@ -16848,8 +16862,13 @@
                 "description": "Jump for joy in the centre of Zul-Andra. Beware of double agents!\n\nEquip a dragon 2h sword, Bandos boots and an obsidian cape.",
                 "type": "Emote clues",
                 "requirements": {
-                    "skills": {},
-                    "quests": {},
+                    "skills": {
+                        "Attack": 60,
+                        "Defence": 65
+                    },
+                    "quests": {
+                        "Regicide": "completed"
+                    },
                     "items": [
                         {
                             "id": 7158,
@@ -16874,7 +16893,10 @@
                 "description": "Panic by the big egg where no one dare goes and the ground is burnt. Beware of double agents!\n\nEquip a dragon med helm, a TokTz-Ket-Xil, a brine sabre, rune platebody and an uncharged amulet of glory.",
                 "type": "Emote clues",
                 "requirements": {
-                    "skills": {},
+                    "skills": {
+                        "Defence": 60,
+                        "Attack": 40
+                    },
                     "quests": {
                         "Dragon Slayer I": "completed"
                     },
@@ -16896,8 +16918,8 @@
                             "name": "Rune platebody"
                         },
                         {
-                            "id": 1712,
-                            "name": "Amulet of glory(4)"
+                            "id": 1704,
+                            "name": "Amulet of glory"
                         }
                     ],
                     "untracked": [],
@@ -16910,8 +16932,14 @@
                 "description": "Salute outside the gates of Cam Torum. Beware of double agents!\n\nEquip a full set of blue moon equipment.",
                 "type": "Emote clues",
                 "requirements": {
-                    "skills": {},
-                    "quests": {},
+                    "skills": {
+                        "Magic": 75,
+                        "Defence": 50,
+                        "Attack": 70
+                    },
+                    "quests": {
+                        "Children of the Sun": "completed"
+                    },
                     "items": [
                         {
                             "id": 29019,
@@ -16928,7 +16956,9 @@
                     ],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "canStartPerilousMoons"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -16936,8 +16966,14 @@
                 "description": "Show your anger at the Wise old man. Beware of double agents!\n\nEquip an abyssal whip, a legend's cape and some spined chaps.",
                 "type": "Emote clues",
                 "requirements": {
-                    "skills": {},
-                    "quests": {},
+                    "skills": {
+                        "Attack": 70,
+                        "Defence": 40,
+                        "Ranged": 40
+                    },
+                    "quests": {
+                        "Legends' Quest": "completed"
+                    },
                     "items": [
                         {
                             "id": 4151,
@@ -16948,9 +16984,7 @@
                             "name": "Spined chaps"
                         }
                     ],
-                    "untracked": [
-                        "Item missing in items.json: Cape of legends"
-                    ],
+                    "untracked": [],
                     "itemsAny": [],
                     "rulesAll": [],
                     "rulesAny": []
@@ -16960,7 +16994,9 @@
                 "description": "Show your anger towards the Statue of Saradomin in Ellamaria's garden. Beware of double agents!\n\nEquip a Zamorak godsword.",
                 "type": "Emote clues",
                 "requirements": {
-                    "skills": {},
+                    "skills": {
+                        "Attack": 75
+                    },
                     "quests": {},
                     "items": [
                         {
@@ -16978,17 +17014,19 @@
                 "description": "Slap your head in the centre of the Kourend catacombs. Beware of double agents!\n\nEquip arclight or emberlight along with the amulet of the damned.",
                 "type": "Emote clues",
                 "requirements": {
-                    "skills": {},
-                    "quests": {},
+                    "skills": {
+                        "Attack": 75
+                    },
+                    "quests": {
+                        "Shadow of the Storm": "completed"
+                    },
                     "items": [
                         {
                             "id": 12851,
                             "name": "Amulet of the damned (full)"
                         }
                     ],
-                    "untracked": [
-                        "Item missing in items.json: Arclight"
-                    ],
+                    "untracked": [],
                     "itemsAny": [],
                     "rulesAll": [],
                     "rulesAny": []
@@ -16998,8 +17036,13 @@
                 "description": "Spin in front of the Soul Altar. Beware of double agents!\n\nEquip a dragon pickaxe, helm of neitiznot and a pair of rune boots.",
                 "type": "Emote clues",
                 "requirements": {
-                    "skills": {},
-                    "quests": {},
+                    "skills": {
+                        "Attack": 60,
+                        "Defence": 55
+                    },
+                    "quests": {
+                        "Fremennik Isles": "completed"
+                    },
                     "items": [
                         {
                             "id": 11920,
@@ -17024,7 +17067,9 @@
                 "description": "Stamp in the Enchanted valley west of the waterfall. Beware of double agents!\n\nEquip a dragon axe.",
                 "type": "Emote clues",
                 "requirements": {
-                    "skills": {},
+                    "skills": {
+                        "Attack": 60
+                    },
                     "quests": {},
                     "items": [
                         {
@@ -17034,7 +17079,9 @@
                     ],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "canUseFairyRings"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -17042,8 +17089,12 @@
                 "description": "Swing a bullroarer at the top of the watchtower. Beware of double agents!\n\nEquip a dragon plateskirt, climbing boots and a dragon chainbody.",
                 "type": "Emote clues",
                 "requirements": {
-                    "skills": {},
-                    "quests": {},
+                    "skills": {
+                        "Defence": 60
+                    },
+                    "quests": {
+                        "Death Plateau": "completed"
+                    },
                     "items": [
                         {
                             "id": 4585,
@@ -17056,11 +17107,21 @@
                         {
                             "id": 3140,
                             "name": "Dragon chainbody"
+                        },
+                        {
+                            "id": 973,
+                            "name": "Charcoal"
+                        },
+                        {
+                            "id": 970,
+                            "name": "Papyrus"
                         }
                     ],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "canReachKharaziJungle"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -17068,8 +17129,14 @@
                 "description": "Wave on the northern wall of the Castle Drakan. Beware of double agents!\n\nWear a dragon sq shield, splitbark body and any boater.",
                 "type": "Emote clues",
                 "requirements": {
-                    "skills": {},
-                    "quests": {},
+                    "skills": {
+                        "Defence": 60,
+                        "Magic": 40
+                    },
+                    "quests": {
+                        "Legends' Quest": "completed",
+                        "Darkness of Hallowvale": "completed"
+                    },
                     "items": [
                         {
                             "id": 1187,
@@ -17078,14 +17145,45 @@
                         {
                             "id": 3387,
                             "name": "Splitbark body"
-                        },
-                        {
-                            "id": 7325,
-                            "name": "Blue boater"
                         }
                     ],
                     "untracked": [],
-                    "itemsAny": [],
+                    "itemsAny": [
+                        [
+                            {
+                                "id": 7327,
+                                "name": "Black boater"
+                            },
+                            {
+                                "id": 7325,
+                                "name": "Blue boater"
+                            },
+                            {
+                                "id": 7323,
+                                "name": "Green boater"
+                            },
+                            {
+                                "id": 7321,
+                                "name": "Orange boater"
+                            },
+                            {
+                                "id": 12309,
+                                "name": "Pink boater"
+                            },
+                            {
+                                "id": 12311,
+                                "name": "Purple boater"
+                            },
+                            {
+                                "id": 7319,
+                                "name": "Red boater"
+                            },
+                            {
+                                "id": 12313,
+                                "name": "White boater"
+                            }
+                        ]
+                    ],
                     "rulesAll": [],
                     "rulesAny": []
                 }
@@ -17094,8 +17192,14 @@
                 "description": "Yawn in the 7th room of Pyramid Plunder. Beware of double agents!\n\nEquip a pharaoh's sceptre and a full set of menaphite robes.",
                 "type": "Emote clues",
                 "requirements": {
-                    "skills": {},
-                    "quests": {},
+                    "skills": {
+                        "Thieving": 81,
+                        "Attack": 30,
+                        "Magic": 30
+                    },
+                    "quests": {
+                        "Icthlarin's Little Helper": "completed"
+                    },
                     "items": [
                         {
                             "id": 26945,
@@ -17124,8 +17228,13 @@
                 "description": "Think on the western coast of Salvager Overlook. Beware of double agents!\n\nEquip a Hueycoatl hide coif and some Hueycoatl hide vambraces.",
                 "type": "Emote clues",
                 "requirements": {
-                    "skills": {},
-                    "quests": {},
+                    "skills": {
+                        "Ranged": 70,
+                        "Defence": 40
+                    },
+                    "quests": {
+                        "Children of the Sun": "completed"
+                    },
                     "items": [
                         {
                             "id": 30073,
@@ -17158,9 +17267,7 @@
                             "name": "Abyssal whip"
                         }
                     ],
-                    "untracked": [
-                        "Abyssal tentacle/variant works."
-                    ],
+                    "untracked": [],
                     "itemsAny": [],
                     "rulesAll": [],
                     "rulesAny": []
@@ -17204,13 +17311,17 @@
                         {
                             "id": 952,
                             "name": "Spade"
+                        },
+                        {
+                            "id": 5325,
+                            "name": "Gardening trowel"
+                        },
+                        {
+                            "id": 5354,
+                            "name": "Filled plant pot"
                         }
                     ],
-                    "untracked": [
-                        "Item missing in items.json: Spirit sapling",
-                        "Item missing in items.json: Trowel",
-                        "Must be your planted spirit tree."
-                    ],
+                    "untracked": [],
                     "itemsAny": [],
                     "rulesAll": [],
                     "rulesAny": []
@@ -17221,7 +17332,9 @@
                 "type": "Cryptic clues",
                 "requirements": {
                     "skills": {
-                        "Magic": 83
+                        "Magic": 83,
+                        "Mining": 38,
+                        "Crafting": 38
                     },
                     "quests": {},
                     "items": [
@@ -17236,14 +17349,17 @@
                         {
                             "id": 565,
                             "name": "Blood rune"
+                        },
+                        {
+                            "id": 1755,
+                            "name": "Chisel"
                         }
                     ],
-                    "untracked": [
-                        "Item missing in items.json: Dark essence block",
-                        "Requires Arceuus spellbook."
-                    ],
+                    "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "hasUsablePickaxe"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -17254,7 +17370,9 @@
                     "skills": {
                         "Slayer": 80
                     },
-                    "quests": {},
+                    "quests": {
+                        "Priest in Peril": "completed"
+                    },
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
@@ -17269,15 +17387,13 @@
                     "skills": {
                         "Slayer": 83
                     },
-                    "quests": {
-                        "Troll Stronghold": "started"
-                    },
+                    "quests": {},
                     "items": [],
-                    "untracked": [
-                        "Requires god item aligned with mage."
-                    ],
+                    "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "canReachTrollheim"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -17319,16 +17435,23 @@
                     "quests": {},
                     "items": [
                         {
-                            "id": 590,
-                            "name": "Tinderbox"
-                        },
-                        {
                             "id": 1513,
                             "name": "Magic logs"
                         }
                     ],
                     "untracked": [],
-                    "itemsAny": [],
+                    "itemsAny": [
+                        [
+                            {
+                                "id": 590,
+                                "name": "Tinderbox"
+                            },
+                            {
+                                "id": 1521,
+                                "name": "Oak logs"
+                            }
+                        ]
+                    ],
                     "rulesAll": [],
                     "rulesAny": []
                 }
@@ -17343,16 +17466,23 @@
                     "quests": {},
                     "items": [
                         {
-                            "id": 590,
-                            "name": "Tinderbox"
-                        },
-                        {
                             "id": 19669,
                             "name": "Redwood logs"
                         }
                     ],
                     "untracked": [],
-                    "itemsAny": [],
+                    "itemsAny": [
+                        [
+                            {
+                                "id": 590,
+                                "name": "Tinderbox"
+                            },
+                            {
+                                "id": 1521,
+                                "name": "Oak logs"
+                            }
+                        ]
+                    ],
                     "rulesAll": [],
                     "rulesAny": []
                 }
@@ -17364,7 +17494,9 @@
                     "skills": {
                         "Hunter": 79
                     },
-                    "quests": {},
+                    "quests": {
+                        "Children of the Sun": "completed"
+                    },
                     "items": [
                         {
                             "id": 303,
@@ -17390,12 +17522,7 @@
                     },
                     "quests": {},
                     "items": [],
-                    "untracked": [
-                        "Item missing in items.json: Graceful hood",
-                        "Item missing in items.json: Graceful top",
-                        "Item missing in items.json: Graceful legs",
-                        "Any full graceful outfit; Agility cape can substitute."
-                    ],
+                    "untracked": [],
                     "itemsAny": [],
                     "rulesAll": [],
                     "rulesAny": []
@@ -17415,11 +17542,27 @@
                             "name": "Zulrah's scales"
                         }
                     ],
-                    "untracked": [
-                        "Item missing in items.json: Antidote++",
-                        "Requires 5-20 scales."
+                    "untracked": [],
+                    "itemsAny": [
+                        [
+                            {
+                                "id": 5958,
+                                "name": "Antidote++(1)"
+                            },
+                            {
+                                "id": 5956,
+                                "name": "Antidote++(2)"
+                            },
+                            {
+                                "id": 5954,
+                                "name": "Antidote++(3)"
+                            },
+                            {
+                                "id": 5952,
+                                "name": "Antidote++(4)"
+                            }
+                        ]
                     ],
-                    "itemsAny": [],
                     "rulesAll": [],
                     "rulesAny": []
                 }
@@ -17433,12 +17576,11 @@
                     },
                     "quests": {},
                     "items": [],
-                    "untracked": [
-                        "Item missing in items.json: Pickaxe",
-                        "Prospector kit or golden prospector kit required; Varrock armour 4 can substitute. Blast Mine does not work."
-                    ],
+                    "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "hasUsablePickaxe"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -17465,12 +17607,14 @@
                         "Thieving": 85
                     },
                     "quests": {
-                        "Mourning's End Part I": "started"
+                        "Roving Elves": "completed"
                     },
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "canStartMourningsEndPartI"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -17479,25 +17623,26 @@
                 "type": "Cryptic clues",
                 "requirements": {
                     "skills": {
-                        "Runecraft": 77
+                        "Runecraft": 77,
+                        "Mining": 38,
+                        "Crafting": 38
                     },
-                    "quests": {
-                        "Sins of the Father": "completed"
-                    },
-                    "items": [],
-                    "untracked": [
-                        "Item missing in items.json: Dark essence fragments",
-                        "Item missing in items.json: Daeyalt essence"
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 7936,
+                            "name": "Pure essence"
+                        },
+                        {
+                            "id": 1755,
+                            "name": "Chisel"
+                        }
                     ],
-                    "itemsAny": [
-                        [
-                            {
-                                "id": 7936,
-                                "name": "Pure essence"
-                            }
-                        ]
+                    "untracked": [],
+                    "itemsAny": [],
+                    "rulesAll": [
+                        "hasUsablePickaxe"
                     ],
-                    "rulesAll": [],
                     "rulesAny": []
                 }
             },
@@ -17508,9 +17653,7 @@
                     "skills": {
                         "Herblore": 80
                     },
-                    "quests": {
-                        "Barbarian Training": "completed"
-                    },
+                    "quests": {},
                     "items": [
                         {
                             "id": 171,
@@ -17523,7 +17666,9 @@
                     ],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "canCompleteBarbarianHerblore"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -17535,7 +17680,7 @@
                         "Fletching": 81
                     },
                     "quests": {
-                        "The Tourist Trap": "started"
+                        "The Tourist Trap": "completed"
                     },
                     "items": [
                         {
@@ -17563,7 +17708,16 @@
                     "quests": {
                         "Shades of Mort'ton": "completed"
                     },
-                    "items": [],
+                    "items": [
+                        {
+                            "id": 590,
+                            "name": "Tinderbox"
+                        },
+                        {
+                            "id": 3404,
+                            "name": "Fiyr remains"
+                        }
+                    ],
                     "untracked": [],
                     "itemsAny": [
                         [
@@ -17574,18 +17728,6 @@
                             {
                                 "id": 19672,
                                 "name": "Redwood pyre logs"
-                            }
-                        ],
-                        [
-                            {
-                                "id": 590,
-                                "name": "Tinderbox"
-                            }
-                        ],
-                        [
-                            {
-                                "id": 3404,
-                                "name": "Fiyr remains"
                             }
                         ]
                     ],
@@ -17602,17 +17744,23 @@
                         "Cooking": 72
                     },
                     "quests": {
-                        "Regicide": "started"
+                        "Regicide": "completed"
                     },
                     "items": [
                         {
                             "id": 946,
                             "name": "Knife"
+                        },
+                        {
+                            "id": 307,
+                            "name": "Fishing rod"
+                        },
+                        {
+                            "id": 313,
+                            "name": "Fishing bait"
                         }
                     ],
-                    "untracked": [
-                        "Item missing in items.json: Sacred eel"
-                    ],
+                    "untracked": [],
                     "itemsAny": [],
                     "rulesAll": [],
                     "rulesAny": []
@@ -17625,9 +17773,7 @@
                     "skills": {},
                     "quests": {},
                     "items": [],
-                    "untracked": [
-                        "Combat equipment required."
-                    ],
+                    "untracked": [],
                     "itemsAny": [],
                     "rulesAll": [],
                     "rulesAny": []
@@ -17651,9 +17797,7 @@
                             "name": "Sandworms"
                         }
                     ],
-                    "untracked": [
-                        "Angler's or spirit angler's outfit required."
-                    ],
+                    "untracked": [],
                     "itemsAny": [],
                     "rulesAll": [],
                     "rulesAny": []
@@ -17669,11 +17813,12 @@
                     "quests": {},
                     "items": [],
                     "untracked": [
-                        "Item missing in items.json: Axe",
-                        "Lumberjack or forestry outfit required; forestry kit/basket counts."
+                        "Lumberjack or forestry outfit required."
                     ],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "hasUsableAxe"
+                    ],
                     "rulesAny": []
                 }
             },
@@ -17687,28 +17832,22 @@
                     "quests": {
                         "Death to the Dorgeshuun": "completed"
                     },
-                    "items": [],
-                    "untracked": [
-                        "Item missing in items.json: Empty light orb"
+                    "items": [
+                        {
+                            "id": 10981,
+                            "name": "Cave goblin wire"
+                        },
+                        {
+                            "id": 1785,
+                            "name": "Glassblowing pipe"
+                        },
+                        {
+                            "id": 1775,
+                            "name": "Molten glass"
+                        }
                     ],
-                    "itemsAny": [
-                        [
-                            {
-                                "id": 10981,
-                                "name": "Cave goblin wire"
-                            }
-                        ],
-                        [
-                            {
-                                "id": 1785,
-                                "name": "Glassblowing pipe"
-                            },
-                            {
-                                "id": 1775,
-                                "name": "Molten glass"
-                            }
-                        ]
-                    ],
+                    "untracked": [],
+                    "itemsAny": [],
                     "rulesAll": [],
                     "rulesAny": []
                 }
@@ -17757,12 +17896,11 @@
                         "Shades of Mort'ton": "completed"
                     },
                     "items": [],
-                    "untracked": [
-                        "Requires silver or gold shade key.",
-                        "Combat equipment required."
-                    ],
+                    "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": [
+                        "canBurnAsynShades"
+                    ],
                     "rulesAny": []
                 }
             }

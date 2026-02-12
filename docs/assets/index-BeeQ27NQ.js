@@ -8,7 +8,7 @@
         <footer>
         <a class="footer-link" href="https://ko-fi.com/kryen" target="_blank" rel="noopener noreferrer">☕ Support on Ko-fi ☕</a>
         <span class="footer-separator">|</span>
-        <span>Version: 2026-02-12T11:48:13.665Z</span>
+        <span>Version: 2026-02-12T19:59:47.942Z</span>
         <span class="footer-separator">|</span>
         <span>Made by Kryen (IGN: KryenChance)</span>
         </footer>
