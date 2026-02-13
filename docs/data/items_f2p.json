@@ -8,26 +8,23 @@
       "Melee"
     ],
     "sources": {
-      "shops": {
-        "Yes": "No requirements"
-      }
-    },
-    "other": {
-      "Smithing an Adamant 2h sword": {
-        "notes": "Requires an Adamantite bar and a Hammer.",
-        "rule": {
-          "all": [
-            {
-              "has": 2361
-            },
-            {
-              "skill": "Smithing",
-              "level": 84
-            },
-            {
-              "has": 2347
-            }
-          ]
+      "other": {
+        "Smithing an Adamant 2h sword": {
+          "notes": "Requires an Adamantite bar and a Hammer.",
+          "rule": {
+            "all": [
+              {
+                "has": 2361
+              },
+              {
+                "skill": "Smithing",
+                "level": 84
+              },
+              {
+                "has": 2347
+              }
+            ]
+          }
         }
       }
     }
