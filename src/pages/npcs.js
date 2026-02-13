@@ -3,6 +3,16 @@ import { NPC_DATA } from "../logic/npcData.js";
 import { parseDropRate } from "../logic/utils.js";
 import { fileStore } from "../storage/fileStore.js";
 
+const SLAYER_TASK_ONLY_ITEM_IDS = new Set([23490, 21257]);
+
+function shouldHideTaskOnlyDropItem(item, npcName, filters) {
+    if (!filters?.isSlayerLocked) return false;
+    const itemId = Number(item?.id);
+    if (!SLAYER_TASK_ONLY_ITEM_IDS.has(itemId)) return false;
+    if (itemId === 23490 && npcName?.includes("Muddy chest")) return false;
+    return true;
+}
+
 function getDropRateLabel(drops) {
     if (!drops) return "";
     let best = null;
@@ -110,6 +120,7 @@ export default async function NpcsPage() {
         const drops = item.sources?.drops;
         if (!drops) continue;
         for (const npcName of Object.keys(drops)) {
+            if (shouldHideTaskOnlyDropItem(item, npcName, filters)) continue;
             const list = itemsByNpc.get(npcName) || [];
             list.push(item);
             itemsByNpc.set(npcName, list);
