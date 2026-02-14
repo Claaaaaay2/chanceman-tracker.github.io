@@ -96,8 +96,9 @@ export async function getObtainabilityRank(item, ctx) {
     if (src.other) {
         const levelIgnoredCtx = {
             ...ctx,
-            ignoreSkillLevels: true,
+            ignoreSkillLevels: "levelsOnly",
             suppressMissing: true,
+            ruleEvalKey: `${ctx.ruleEvalKey || "base"}:ignoreLevels`,
             missing: {
                 ...ctx.missing,
                 suppressMissing: true,

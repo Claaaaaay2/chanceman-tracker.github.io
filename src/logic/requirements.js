@@ -251,6 +251,10 @@ export function hasSkillLevel(ctx, skill, level, options = {}) {
     const overrideKey = options.overrideKey;
     if (overrideKey && ctx.filters?.[overrideKey]) return true;
 
+    if (ctx?.ignoreSkillLevels === "levelsOnly") {
+        return true;
+    }
+
     // In "ignore skill levels" mode, treat skill checks as satisfied only if the
     // player can train that skill at all. This lets sorting distinguish between
     // "trainable but level-gated" (rank 7) and "fully unobtainable" (rank 8).
