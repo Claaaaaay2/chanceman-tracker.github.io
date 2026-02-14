@@ -220,9 +220,25 @@ button:disabled {
     align-items: center;
 }
 
+.header-menu-groups {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-left: 0.55rem;
+}
+
+.header-home-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    flex: 0 0 auto;
+}
+
 .header-home-icon img {
-    width: 36px;
-    height: 36px;
+    width: 28px;
+    height: 28px;
     display: block;
 }
 
@@ -246,8 +262,13 @@ button:disabled {
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
-    padding: 0.2rem 0.5rem;
+    padding: 0.2rem 0.55rem;
     line-height: 1.2;
+    border: 1px solid var(--border-color-darker);
+}
+
+.nav-menu-toggle[aria-expanded="true"] {
+    background-color: var(--input-button-bg-hover);
 }
 
 .menu-caret {
@@ -256,11 +277,11 @@ button:disabled {
 }
 
 .header-links {
-    display: none;
+    display: flex;
     position: absolute;
     top: calc(100% + 4px);
     left: 0;
-    min-width: 220px;
+    min-width: 210px;
     width: max-content;
     max-width: calc(100vw - 20px);
     background: var(--header-footer-color);
@@ -272,6 +293,10 @@ button:disabled {
     gap: 0;
     z-index: 1100;
     overflow: hidden;
+}
+
+.header-links[hidden] {
+    display: none;
 }
 
 
@@ -287,10 +312,33 @@ button:disabled {
 
 .header-links a:hover {
     background-color: var(--table-alternate-row);
+    text-decoration: none;
 }
 
-.header.is-menu-open .header-links {
-    display: flex;
+.header-actions {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-left: 0.3rem;
+}
+
+.header-action-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.2rem 0.55rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color-darker);
+    background-color: transparent;
+    line-height: 1.2;
+}
+
+.header-action-link:hover {
+    background-color: var(--table-alternate-row);
+    text-decoration: none;
+}
+
+.header-link-active {
+    background-color: var(--table-alternate-row);
 }
 
 .playerName {
@@ -299,6 +347,28 @@ button:disabled {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
+}
+
+.player-greeting {
+    white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+    .header-menu-groups {
+        margin-left: 0.35rem;
+        gap: 0.3rem;
+    }
+
+    .header-actions {
+        gap: 0.2rem;
+        margin-left: 0.2rem;
+    }
+
+    .nav-menu-toggle,
+    .header-action-link {
+        padding: 0.18rem 0.4rem;
+        font-size: 0.85rem;
+    }
 }
 
 

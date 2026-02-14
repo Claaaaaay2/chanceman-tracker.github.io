@@ -1,4 +1,4 @@
-import{f as v}from"./playerApi-ls5qQEYU.js";import{f as c}from"./index-zP2e84ue.js";import"./questPoints-DcKLxK_Y.js";function S(){const o=sessionStorage.getItem("uploadReturnPath");if(!o)return"/items";const r=o.split("?")[0].split("#")[0];return r==="/upload"||r==="/reupload"?"/items":o}function P(){return`
+import{f as v}from"./playerApi-ls5qQEYU.js";import{f as c}from"./index-Cc1vD1pR.js";import"./questPoints-DcKLxK_Y.js";function S(){const o=sessionStorage.getItem("uploadReturnPath");if(!o)return"/items";const r=o.split("?")[0].split("#")[0];return r==="/upload"||r==="/reupload"?"/items":o}function P(){return`
         <h1>Chanceman Tracker Setup</h1>
 
         <p><strong>Upload your chanceman_obtained.json and chanceman_rolled.json files.</strong></p>

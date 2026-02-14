@@ -1,48 +1,72 @@
-function getCurrentPageLabel() {
-    const path = window.location.pathname;
-    if (path === "/" || path === "/home") return "Home";
-    if (path === "/upload") return "Upload";
-    if (path === "/items") return "Items";
-    if (path === "/npcs") return "NPC drops";
-    if (path === "/item-history") return "Item history";
-    if (path === "/achievement-diaries") return "Achievement diaries";
-    if (path === "/clue-steps") return "Clue steps";
-    if (path === "/quests") return "Quests";
-    if (path === "/reupload") return "Reupload";
-    if (path === "/bug") return "Report a bug";
-    return "Menu";
+function getMenuFromToggle(header, toggle) {
+    const menuId = toggle.getAttribute("aria-controls");
+    if (!menuId) return null;
+    return header.querySelector(`#${menuId}`);
 }
+
+function closeAllMenus(header) {
+    const toggles = header.querySelectorAll(".nav-menu-toggle");
+
+    toggles.forEach((toggle) => {
+        toggle.setAttribute("aria-expanded", "false");
+        const menu = getMenuFromToggle(header, toggle);
+        if (menu) {
+            menu.hidden = true;
+        }
+    });
+}
+
+let activeHeader = null;
+let globalDocumentHandlerBound = false;
 
 export function initNavMenu() {
     const header = document.querySelector(".header");
-    const toggle = document.getElementById("nav-menu-toggle");
-    const label = document.getElementById("nav-current-page");
-    if (!header || !toggle) return;
+    if (!header) return;
 
-    if (label) {
-        label.textContent = getCurrentPageLabel();
+    activeHeader = header;
+    closeAllMenus(header);
+
+    header.querySelectorAll(".nav-menu-toggle").forEach((toggle) => {
+        if (toggle.dataset.bound === "true") return;
+        toggle.dataset.bound = "true";
+
+        const menu = getMenuFromToggle(header, toggle);
+        if (!menu) return;
+
+        menu.hidden = true;
+        toggle.addEventListener("click", (event) => {
+            event.stopPropagation();
+            const isOpen = toggle.getAttribute("aria-expanded") === "true";
+
+            closeAllMenus(header);
+            if (!isOpen) {
+                toggle.setAttribute("aria-expanded", "true");
+                menu.hidden = false;
+            }
+        });
+    });
+
+    if (header.dataset.navBound !== "true") {
+        header.dataset.navBound = "true";
+
+        header.addEventListener("click", (event) => {
+            if (!event.target.closest("[data-link]")) return;
+            closeAllMenus(header);
+        });
+
+        header.addEventListener("keydown", (event) => {
+            if (event.key !== "Escape") return;
+            closeAllMenus(header);
+        });
     }
 
-    header.classList.remove("is-menu-open");
-    toggle.setAttribute("aria-expanded", "false");
+    if (!globalDocumentHandlerBound) {
+        globalDocumentHandlerBound = true;
 
-    if (toggle.dataset.bound) return;
-    toggle.dataset.bound = "true";
-
-    toggle.addEventListener("click", () => {
-        const isOpen = header.classList.toggle("is-menu-open");
-        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-    });
-
-    header.addEventListener("click", (event) => {
-        if (!event.target.closest("[data-link]")) return;
-        header.classList.remove("is-menu-open");
-        toggle.setAttribute("aria-expanded", "false");
-    });
-
-    document.addEventListener("click", (event) => {
-        if (event.target.closest(".header")) return;
-        header.classList.remove("is-menu-open");
-        toggle.setAttribute("aria-expanded", "false");
-    });
+        document.addEventListener("click", (event) => {
+            if (!activeHeader) return;
+            if (event.target.closest(".header") === activeHeader) return;
+            closeAllMenus(activeHeader);
+        });
+    }
 }
