@@ -5,7 +5,6 @@ import { has } from "./logic/requirements.js";
 import { capitalizeFirstLetter, parseDropRate } from "./logic/utils.js";
 import { NPC_DATA } from "./logic/npcData.js";
 import { getObtainabilityRank } from "./logic/sortHelpers.js";
-import { initBugPage } from "./pages/reportABug.js";
 import { navigate, router } from "./router.js";
 import { fileStore } from "./storage/fileStore.js";
 import { loadFromDB, saveToDB } from "./storage/fileStoreHelpers.js";

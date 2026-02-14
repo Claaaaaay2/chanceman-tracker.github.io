@@ -1,21 +1,25 @@
 import { Footer } from "./components/footer.js";
 import { Header } from "./components/header.js";
 import { afterRoute } from "./main.js";
-import ItemPage from "./pages/item.js";
-import ItemsPage from "./pages/items.js";
-import SkillUnlocksPage from "./pages/skillUnlocks.js";
-import NpcsPage from "./pages/npcs.js";
-import NotFoundPage from "./pages/notFound.js";
-import QuestsPage from "./pages/quests.js";
-import AchievementDiariesPage from "./pages/achievementDiaries.js";
-import ClueStepsPage from "./pages/clueSteps.js";
-import { BugPage } from "./pages/reportABug.js";
-import ReuploadPage from "./pages/reupload.js";
-import UploadPage from "./pages/upload.js";
-import HomePage from "./pages/home.js";
-import ItemHistoryPage from "./pages/itemHistory.js";
 import { bindThemeToggle, updateThemeIcon } from "./styles/theme.js";
 import { bindFiltersOverridesToggle } from "./styles/filtersOverrides.js";
+
+const routePageLoaders = {
+    "/": async () => (await import("./pages/home.js")).default,
+    "/upload": async () => (await import("./pages/upload.js")).default,
+    "/items": async () => (await import("./pages/items.js")).default,
+    "/unlocks": async () => (await import("./pages/skillUnlocks.js")).default,
+    "/npcs": async () => (await import("./pages/npcs.js")).default,
+    "/item": async () => (await import("./pages/item.js")).default,
+    "/item-history": async () => (await import("./pages/itemHistory.js")).default,
+    "/achievement-diaries": async () => (await import("./pages/achievementDiaries.js")).default,
+    "/clue-steps": async () => (await import("./pages/clueSteps.js")).default,
+    "/quests": async () => (await import("./pages/quests.js")).default,
+    "/reupload": async () => (await import("./pages/reupload.js")).default,
+    "/bug": async () => (await import("./pages/reportABug.js")).BugPage
+};
+
+const loadNotFoundPage = async () => (await import("./pages/notFound.js")).default;
 
 function ensureRouteLoadingOverlay() {
     let overlay = document.getElementById("routeLoading");
@@ -59,22 +63,8 @@ export async function router() {
 
     const basePath = path.split("?")[0];
 
-    const routes = {
-        "/": HomePage,
-        "/upload": UploadPage,
-        "/items": ItemsPage,
-        "/unlocks": SkillUnlocksPage,
-        "/npcs": NpcsPage,
-        "/item": ItemPage,
-        "/item-history": ItemHistoryPage,
-        "/achievement-diaries": AchievementDiariesPage,
-        "/clue-steps": ClueStepsPage,
-        "/quests": QuestsPage,
-        "/reupload": ReuploadPage,
-        "/bug": BugPage,
-    };
-
-    const page = routes[basePath] || NotFoundPage;
+    const pageLoader = routePageLoaders[basePath] || loadNotFoundPage;
+    const page = await pageLoader();
     const app = document.getElementById("app");
 
     try {

@@ -57,3 +57,5 @@ export function initBugPage() {
         }
     });
 }
+
+window.initBugPage = initBugPage;
