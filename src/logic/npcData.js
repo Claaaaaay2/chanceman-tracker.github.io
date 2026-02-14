@@ -5277,16 +5277,16 @@ export const NPC_DATA = {
     "Elder aquanite": {
         "wiki": "https://oldschool.runescape.wiki/w/Elder_aquanite",
         "rule": ["canCompletePandemonium"],
-        "skill": ["Slayer"],
-        "level": [78],
+        "skill": ["Slayer", "sailing"],
+        "level": [78, 73],
         "tags": ["superior"],
         "f2p": false
     },
     "Elder aquanite Normal": {
         "wiki": "https://oldschool.runescape.wiki/w/Elder_aquanite#Normal",
         "rule": ["canCompletePandemonium"],
-        "skill": ["Slayer"],
-        "level": [78],
+        "skill": ["Slayer", "sailing"],
+        "level": [78, 73],
         "tags": ["superior"],
         "f2p": false
     },
