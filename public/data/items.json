@@ -136343,6 +136343,12 @@
         "Experiment No.2": {
           "droprate": "Always"
         }
+      },
+      "other": {
+        "From the piano after starting Grim Tales": {
+          "notes": "Can be gotten right after completing Witch's House.",
+          "rule": "canCompleteWitchsHouse"
+        }
       }
     }
   },
