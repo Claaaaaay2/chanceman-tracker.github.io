@@ -1,6 +1,6 @@
 import { fetchPlayer } from "../api/playerApi.js";
+import { invalidateLogicCaches } from "../items/logicCache.js";
 import { fileStore } from "../storage/fileStore.js";
-import { invalidateLogicCaches } from "../main.js";
 
 function getReturnPath() {
     const stored = sessionStorage.getItem("uploadReturnPath");

@@ -1,6 +1,6 @@
 import { NPC_DATA } from "../logic/npcData.js";
 import { buildNpcDropEntries, formatCumulativeRate, getBestDropRateValue, getDropRateLabel } from "../logic/npcDropEntries.js";
-import { initNpcFilterUI } from "../main.js";
+import { initNpcFilterUI } from "../items/npcFilterUI.js";
 import { fileStore } from "../storage/fileStore.js";
 
 function escapeHtml(value) {

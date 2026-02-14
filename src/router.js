@@ -1,6 +1,7 @@
 import { Footer } from "./components/footer.js";
 import { Header } from "./components/header.js";
-import { afterRoute, initItemsRoute } from "./main.js";
+import { afterRoute } from "./app/routeEnhancements.js";
+import { initItemsRoute } from "./items/itemsPageController.js";
 import { bindThemeToggle, updateThemeIcon } from "./styles/theme.js";
 import { bindFiltersOverridesToggle } from "./styles/filtersOverrides.js";
 
