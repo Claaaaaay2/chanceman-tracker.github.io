@@ -1782,6 +1782,10 @@ body.route-loading .route-loading-overlay {
 .clue-step-status {
     text-align: right;
     white-space: nowrap;
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.35rem;
 }
 
 .clue-missing {
@@ -1799,6 +1803,34 @@ body.route-loading .route-loading-overlay {
 
 .clue-status-blocked {
     border-color: #B33A3A;
+}
+
+.clue-step-info {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.05rem;
+    height: 1.05rem;
+    border-radius: 999px;
+    border: 1px solid #7B3FB2;
+    background-color: #7B3FB2;
+    color: #FFFFFF;
+    font-size: 0.72rem;
+    font-weight: 700;
+    font-style: normal;
+    font-family: serif;
+    line-height: 1;
+    cursor: help;
+    opacity: 0.85;
+}
+
+.clue-step-info:hover,
+.clue-step-info:focus-visible {
+    opacity: 1;
+}
+
+.clue-step.clue-step-special {
+    border-color: #7B3FB2;
 }
 
 

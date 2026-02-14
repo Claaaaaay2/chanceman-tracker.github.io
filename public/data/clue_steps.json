@@ -1318,9 +1318,13 @@
             {
                 "description": "Search the crates in Canifis.",
                 "type": "Cryptic clues",
+                "specialInfo": "You can only receive this step after completing Priest in Peril.",
+                "countWhenAvailableOnly": true,
                 "requirements": {
                     "skills": {},
-                    "quests": {},
+                    "quests": {
+                        "Priest in Peril": "completed"
+                    },
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],

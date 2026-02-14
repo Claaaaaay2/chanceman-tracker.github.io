@@ -183,6 +183,17 @@ function normalizeSearch(value) {
     return String(value || "").trim().toLowerCase();
 }
 
+function shouldCountStepForPlayer(step, player) {
+    if (!step?.countWhenAvailableOnly) return true;
+    const questRequirements = step.requirements?.quests || {};
+    for (const [questName, requirementType] of Object.entries(questRequirements)) {
+        const status = player?.quests?.[questName] ?? 0;
+        if (requirementType === "completed" && status !== 2) return false;
+        if (requirementType === "started" && status <= 0) return false;
+    }
+    return true;
+}
+
 async function loadClueData() {
     try {
         const response = await fetch("/data/clue_steps.json");
@@ -210,12 +221,23 @@ export default async function ClueStepsPage() {
         if (!steps.length) continue;
 
         let doableCount = 0;
+        let countableStepCount = 0;
         const typesInOrder = [];
         const rowsByType = new Map();
 
         for (const step of steps) {
+            const countableForTotals = !hasPlayer || shouldCountStepForPlayer(step, fileStore.player);
+            if (countableForTotals) {
+                countableStepCount += 1;
+            }
+
             const description = step.description || step.name || "Untitled step";
             const type = step.type || "Unknown";
+            const specialInfo = step.specialInfo || "";
+            const hasSpecialInfo = Boolean(specialInfo);
+            const specialInfoHtml = hasSpecialInfo
+                ? `<span class="clue-step-info" tabindex="0" aria-label="Special clue information" title="${escapeHtml(specialInfo)}">i</span>`
+                : "";
             let isDoable = false;
             let isTrainable = false;
             let statusClass = "clue-status-blocked";
@@ -230,7 +252,9 @@ export default async function ClueStepsPage() {
                     statusClass = "clue-status-ready";
                     statusLabel = "Completable";
                     isDoable = true;
-                    doableCount += 1;
+                    if (countableForTotals) {
+                        doableCount += 1;
+                    }
                 } else {
                     const trainableCtx = buildRequirementContext({ ignoreSkillLevels: true });
                     const { met: trainableMet } = await evaluateRequirements(step.requirements, trainableCtx, itemsById);
@@ -253,18 +277,18 @@ export default async function ClueStepsPage() {
             }
 
             rowsByType.get(type).push(`
-                <div class="clue-step ${statusClass}"
+                <div class="clue-step ${statusClass}${hasSpecialInfo ? " clue-step-special" : ""}"
                     data-doable="${isDoable ? "true" : "false"}"
                     data-trainable="${isTrainable ? "true" : "false"}"
                     data-description="${escapeHtml(description).toLowerCase()}">
                     <div class="clue-step-name">${escapeHtml(description)}</div>
-                    <div class="clue-step-status">${statusLabel}</div>
+                    <div class="clue-step-status">${escapeHtml(statusLabel)}${specialInfoHtml}</div>
                     ${missingHtml}
                 </div>
             `);
         }
 
-        const totalCount = steps.length;
+        const totalCount = countableStepCount;
         const percentCompletable = totalCount ? Math.round((doableCount / totalCount) * 100) : 0;
 
         tierSections.push(`
