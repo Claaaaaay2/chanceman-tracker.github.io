@@ -1,25 +1,54 @@
 import { Footer } from "./components/footer.js";
 import { Header } from "./components/header.js";
-import { afterRoute } from "./main.js";
+import { afterRoute, initItemsRoute } from "./main.js";
 import { bindThemeToggle, updateThemeIcon } from "./styles/theme.js";
 import { bindFiltersOverridesToggle } from "./styles/filtersOverrides.js";
 
-const routePageLoaders = {
-    "/": async () => (await import("./pages/home.js")).default,
-    "/upload": async () => (await import("./pages/upload.js")).default,
-    "/items": async () => (await import("./pages/items.js")).default,
-    "/unlocks": async () => (await import("./pages/skillUnlocks.js")).default,
-    "/npcs": async () => (await import("./pages/npcs.js")).default,
-    "/item": async () => (await import("./pages/item.js")).default,
-    "/item-history": async () => (await import("./pages/itemHistory.js")).default,
-    "/achievement-diaries": async () => (await import("./pages/achievementDiaries.js")).default,
-    "/clue-steps": async () => (await import("./pages/clueSteps.js")).default,
-    "/quests": async () => (await import("./pages/quests.js")).default,
-    "/reupload": async () => (await import("./pages/reupload.js")).default,
-    "/bug": async () => (await import("./pages/reportABug.js")).BugPage
+const routeDefinitions = {
+    "/": {
+        load: async () => import("./pages/home.js")
+    },
+    "/upload": {
+        load: async () => import("./pages/upload.js")
+    },
+    "/items": {
+        load: async () => import("./pages/items.js"),
+        init: initItemsRoute
+    },
+    "/unlocks": {
+        load: async () => import("./pages/skillUnlocks.js")
+    },
+    "/npcs": {
+        load: async () => import("./pages/npcs.js")
+    },
+    "/item": {
+        load: async () => import("./pages/item.js")
+    },
+    "/item-history": {
+        load: async () => import("./pages/itemHistory.js")
+    },
+    "/achievement-diaries": {
+        load: async () => import("./pages/achievementDiaries.js")
+    },
+    "/clue-steps": {
+        load: async () => import("./pages/clueSteps.js")
+    },
+    "/quests": {
+        load: async () => import("./pages/quests.js")
+    },
+    "/reupload": {
+        load: async () => import("./pages/reupload.js")
+    },
+    "/bug": {
+        load: async () => import("./pages/reportABug.js")
+    }
 };
 
-const loadNotFoundPage = async () => (await import("./pages/notFound.js")).default;
+const notFoundRouteDefinition = {
+    load: async () => import("./pages/notFound.js")
+};
+
+let currentRouteTeardown = null;
 
 function ensureRouteLoadingOverlay() {
     let overlay = document.getElementById("routeLoading");
@@ -62,12 +91,19 @@ export async function router() {
     const path = window.location.pathname;
 
     const basePath = path.split("?")[0];
-
-    const pageLoader = routePageLoaders[basePath] || loadNotFoundPage;
-    const page = await pageLoader();
+    const routeDefinition = routeDefinitions[basePath] || notFoundRouteDefinition;
+    const routeModule = await routeDefinition.load();
+    const page = routeModule.default;
+    const routeInit = routeDefinition.init || routeModule.init;
+    const routeTeardown = routeModule.teardown;
     const app = document.getElementById("app");
 
     try {
+        if (typeof currentRouteTeardown === "function") {
+            await currentRouteTeardown();
+            currentRouteTeardown = null;
+        }
+
         app.innerHTML = `
             <div class="layout">
                 ${await Header()}
@@ -83,6 +119,10 @@ export async function router() {
         updateThemeIcon();
 
         afterRoute();
+        if (typeof routeInit === "function") {
+            await routeInit();
+        }
+        currentRouteTeardown = typeof routeTeardown === "function" ? routeTeardown : null;
     } finally {
         setRouteLoading(false);
     }

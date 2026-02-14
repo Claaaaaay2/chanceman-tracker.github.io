@@ -230,14 +230,18 @@ function applyUnlockSearch(container) {
     }
 }
 
-window.initSkillUnlocksPage = function () {
+let teardownUnlocksHandlers = null;
+
+export function init() {
+    teardown();
+
     const list = document.getElementById("unlockList");
     if (!list) return;
+    const cleanup = [];
 
     const jumpNav = document.querySelector(".unlock-jump");
-    if (jumpNav && !jumpNav.dataset.bound) {
-        jumpNav.dataset.bound = "true";
-        jumpNav.addEventListener("click", (event) => {
+    if (jumpNav) {
+        const onJumpClick = (event) => {
             const link = event.target.closest(".unlock-jump-link");
             if (!link) return;
             const targetId = link.getAttribute("href")?.slice(1);
@@ -247,7 +251,9 @@ window.initSkillUnlocksPage = function () {
             event.preventDefault();
             history.replaceState(null, "", `#${targetId}`);
             target.scrollIntoView({ behavior: "smooth", block: "start" });
-        });
+        };
+        jumpNav.addEventListener("click", onJumpClick);
+        cleanup.push(() => jumpNav.removeEventListener("click", onJumpClick));
     }
 
     list.querySelectorAll(".unlock-section").forEach((section) => {
@@ -260,10 +266,12 @@ window.initSkillUnlocksPage = function () {
 
     const search = document.getElementById("unlockSearch");
     if (search) {
-        search.addEventListener("input", () => applyUnlockSearch(list));
+        const onSearchInput = () => applyUnlockSearch(list);
+        search.addEventListener("input", onSearchInput);
+        cleanup.push(() => search.removeEventListener("input", onSearchInput));
     }
 
-    list.addEventListener("click", (event) => {
+    const onListClick = (event) => {
         const toggle = event.target.closest(".unlock-toggle");
         if (!toggle) return;
         const section = toggle.closest(".unlock-section");
@@ -272,5 +280,20 @@ window.initSkillUnlocksPage = function () {
         setSectionCollapsed(section, collapsed);
         const key = section.dataset.section || "";
         localStorage.setItem(`unlock-section:${key}`, collapsed ? "collapsed" : "expanded");
-    });
-};
+    };
+    list.addEventListener("click", onListClick);
+    cleanup.push(() => list.removeEventListener("click", onListClick));
+
+    teardownUnlocksHandlers = () => {
+        for (const remove of cleanup) {
+            remove();
+        }
+    };
+}
+
+export function teardown() {
+    if (typeof teardownUnlocksHandlers === "function") {
+        teardownUnlocksHandlers();
+    }
+    teardownUnlocksHandlers = null;
+}

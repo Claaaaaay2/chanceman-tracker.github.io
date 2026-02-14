@@ -1,5 +1,6 @@
 import { NPC_DATA } from "../logic/npcData.js";
 import { buildNpcDropEntries, formatCumulativeRate, getBestDropRateValue, getDropRateLabel } from "../logic/npcDropEntries.js";
+import { initNpcFilterUI } from "../main.js";
 import { fileStore } from "../storage/fileStore.js";
 
 function escapeHtml(value) {
@@ -159,20 +160,11 @@ function applyNpcSearch(container) {
     }
 }
 
-document.addEventListener("input", async (e) => {
-    if (e.target.id !== "npcSearch") return;
-    const nextFilters = {
-        ...fileStore.filters,
-        npcSearch: e.target.value
-    };
-    await fileStore.setFilters(nextFilters);
-    const list = document.getElementById("npcDropList");
-    if (list) {
-        applyNpcSearch(list);
-    }
-});
+let teardownNpcsHandlers = null;
 
-window.initNpcsPage = function () {
+export function init() {
+    teardown();
+
     const list = document.getElementById("npcDropList");
     if (list) {
         applyNpcSearch(list);
@@ -189,35 +181,65 @@ window.initNpcsPage = function () {
     if (collapseDropsToggle) {
         collapseDropsToggle.checked = Boolean(fileStore.filters?.npcCollapseDrops);
     }
-    if (typeof window.initNpcFilterUI === "function") {
-        window.initNpcFilterUI(() => window.dispatchEvent(new PopStateEvent("popstate")));
+    initNpcFilterUI(() => window.dispatchEvent(new PopStateEvent("popstate")));
+
+    const onNpcSearchInput = async (event) => {
+        if (event.target.id !== "npcSearch") return;
+        const nextFilters = {
+            ...fileStore.filters,
+            npcSearch: event.target.value
+        };
+        await fileStore.setFilters(nextFilters);
+        const nextList = document.getElementById("npcDropList");
+        if (nextList) {
+            applyNpcSearch(nextList);
+        }
+    };
+
+    const onNpcSortInput = async (event) => {
+        if (event.target.id !== "npcSortToggle") return;
+        const nextValue = !fileStore.filters?.npcSortByRate;
+        await fileStore.setFilters({
+            ...fileStore.filters,
+            npcSortByRate: nextValue
+        });
+        window.dispatchEvent(new PopStateEvent("popstate"));
+    };
+
+    const onNpcOnlyRolledInput = async (event) => {
+        if (event.target.id !== "npcOnlyRolledToggle") return;
+        await fileStore.setFilters({
+            ...fileStore.filters,
+            npcOnlyRolled: event.target.checked
+        });
+        window.dispatchEvent(new PopStateEvent("popstate"));
+    };
+
+    const onNpcCollapseDropsInput = async (event) => {
+        if (event.target.id !== "npcCollapseDropsToggle") return;
+        await fileStore.setFilters({
+            ...fileStore.filters,
+            npcCollapseDrops: event.target.checked
+        });
+        window.dispatchEvent(new PopStateEvent("popstate"));
+    };
+
+    document.addEventListener("input", onNpcSearchInput);
+    document.addEventListener("input", onNpcSortInput);
+    document.addEventListener("input", onNpcOnlyRolledInput);
+    document.addEventListener("input", onNpcCollapseDropsInput);
+
+    teardownNpcsHandlers = () => {
+        document.removeEventListener("input", onNpcSearchInput);
+        document.removeEventListener("input", onNpcSortInput);
+        document.removeEventListener("input", onNpcOnlyRolledInput);
+        document.removeEventListener("input", onNpcCollapseDropsInput);
+    };
+}
+
+export function teardown() {
+    if (typeof teardownNpcsHandlers === "function") {
+        teardownNpcsHandlers();
     }
-};
-
-document.addEventListener("input", async (e) => {
-    if (e.target.id !== "npcSortToggle") return;
-    const nextValue = !fileStore.filters?.npcSortByRate;
-    await fileStore.setFilters({
-        ...fileStore.filters,
-        npcSortByRate: nextValue
-    });
-    window.dispatchEvent(new PopStateEvent("popstate"));
-});
-
-document.addEventListener("input", async (e) => {
-    if (e.target.id !== "npcOnlyRolledToggle") return;
-    await fileStore.setFilters({
-        ...fileStore.filters,
-        npcOnlyRolled: e.target.checked
-    });
-    window.dispatchEvent(new PopStateEvent("popstate"));
-});
-
-document.addEventListener("input", async (e) => {
-    if (e.target.id !== "npcCollapseDropsToggle") return;
-    await fileStore.setFilters({
-        ...fileStore.filters,
-        npcCollapseDrops: e.target.checked
-    });
-    window.dispatchEvent(new PopStateEvent("popstate"));
-});
+    teardownNpcsHandlers = null;
+}

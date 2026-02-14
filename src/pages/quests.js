@@ -411,38 +411,57 @@ async function updateQuestFilters(partial, options = {}) {
     }
 }
 
-document.addEventListener("change", async (e) => {
-    if (e.target.id === "hideCompletedQuests") {
-        await updateQuestFilters({ hideCompletedQuests: e.target.checked });
-    }
-    if (e.target.id === "hideIncompletableQuests") {
-        await updateQuestFilters({ hideIncompletableQuests: e.target.checked });
-    }
-    if (e.target.id === "hazeelCultLocked") {
-        await updateQuestFilters({ hazeelCultLocked: e.target.checked }, { rerender: true });
-    }
-    if (e.target.id === "heroesQuestGangToggle") {
-        await updateQuestFilters(
-            { heroesQuestGang: e.target.checked ? "phoenix" : "black_arm" },
-            { rerender: true }
-        );
-    }
-    if (e.target.id === "questSortToggle") {
-        await updateQuestFilters(
-            { questSortByMissingItems: e.target.checked },
-            { rerender: true }
-        );
-    }
-});
+let teardownQuestsHandlers = null;
 
-document.addEventListener("input", async (e) => {
-    if (e.target.id !== "questSearch") return;
-    await updateQuestFilters({ questSearch: e.target.value });
-});
+export function init() {
+    teardown();
 
-window.initQuestsPage = function () {
     const list = document.getElementById("questList");
     if (list) {
         applyQuestFilters(list);
     }
-};
+
+    const onQuestChange = async (event) => {
+        if (event.target.id === "hideCompletedQuests") {
+            await updateQuestFilters({ hideCompletedQuests: event.target.checked });
+        }
+        if (event.target.id === "hideIncompletableQuests") {
+            await updateQuestFilters({ hideIncompletableQuests: event.target.checked });
+        }
+        if (event.target.id === "hazeelCultLocked") {
+            await updateQuestFilters({ hazeelCultLocked: event.target.checked }, { rerender: true });
+        }
+        if (event.target.id === "heroesQuestGangToggle") {
+            await updateQuestFilters(
+                { heroesQuestGang: event.target.checked ? "phoenix" : "black_arm" },
+                { rerender: true }
+            );
+        }
+        if (event.target.id === "questSortToggle") {
+            await updateQuestFilters(
+                { questSortByMissingItems: event.target.checked },
+                { rerender: true }
+            );
+        }
+    };
+
+    const onQuestInput = async (event) => {
+        if (event.target.id !== "questSearch") return;
+        await updateQuestFilters({ questSearch: event.target.value });
+    };
+
+    document.addEventListener("change", onQuestChange);
+    document.addEventListener("input", onQuestInput);
+
+    teardownQuestsHandlers = () => {
+        document.removeEventListener("change", onQuestChange);
+        document.removeEventListener("input", onQuestInput);
+    };
+}
+
+export function teardown() {
+    if (typeof teardownQuestsHandlers === "function") {
+        teardownQuestsHandlers();
+    }
+    teardownQuestsHandlers = null;
+}

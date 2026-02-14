@@ -403,23 +403,6 @@ async function updateClueFiltersAndRerender(partial) {
     await router();
 }
 
-document.addEventListener("change", async (e) => {
-    if (e.target.id === "hideCompletableClues") {
-        await updateClueFilters({ hideCompletableClues: e.target.checked });
-    }
-    if (e.target.id === "hideIncompletableClues") {
-        await updateClueFilters({ hideIncompletableClues: e.target.checked });
-    }
-    if (e.target.id === "hasDoneEasterEvent") {
-        await updateClueFiltersAndRerender({ hasDoneEasterEvent: e.target.checked });
-    }
-});
-
-document.addEventListener("input", async (e) => {
-    if (e.target.id !== "clueSearch") return;
-    await updateClueFilters({ clueSearch: e.target.value });
-});
-
 function setToggleState(toggle, collapsed) {
     toggle.textContent = collapsed ? "Show" : "Hide";
     toggle.setAttribute("aria-expanded", collapsed ? "false" : "true");
@@ -433,18 +416,55 @@ function setTierCollapsed(tier, collapsed) {
     }
 }
 
-document.addEventListener("click", async (e) => {
-    if (e.target.classList.contains("clue-tier-toggle")) {
-        const tier = e.target.closest(".clue-tier");
-        if (tier) {
-            setTierCollapsed(tier, !tier.classList.contains("is-collapsed"));
-        }
-    }
-});
+let teardownClueHandlers = null;
 
-window.initClueStepsPage = function () {
+export function init() {
+    teardown();
+
     const list = document.getElementById("clueList");
     if (list) {
         applyClueFilters(list);
     }
-};
+
+    const onClueChange = async (event) => {
+        if (event.target.id === "hideCompletableClues") {
+            await updateClueFilters({ hideCompletableClues: event.target.checked });
+        }
+        if (event.target.id === "hideIncompletableClues") {
+            await updateClueFilters({ hideIncompletableClues: event.target.checked });
+        }
+        if (event.target.id === "hasDoneEasterEvent") {
+            await updateClueFiltersAndRerender({ hasDoneEasterEvent: event.target.checked });
+        }
+    };
+
+    const onClueInput = async (event) => {
+        if (event.target.id !== "clueSearch") return;
+        await updateClueFilters({ clueSearch: event.target.value });
+    };
+
+    const onClueClick = async (event) => {
+        if (!event.target.classList.contains("clue-tier-toggle")) return;
+        const tier = event.target.closest(".clue-tier");
+        if (tier) {
+            setTierCollapsed(tier, !tier.classList.contains("is-collapsed"));
+        }
+    };
+
+    document.addEventListener("change", onClueChange);
+    document.addEventListener("input", onClueInput);
+    document.addEventListener("click", onClueClick);
+
+    teardownClueHandlers = () => {
+        document.removeEventListener("change", onClueChange);
+        document.removeEventListener("input", onClueInput);
+        document.removeEventListener("click", onClueClick);
+    };
+}
+
+export function teardown() {
+    if (typeof teardownClueHandlers === "function") {
+        teardownClueHandlers();
+    }
+    teardownClueHandlers = null;
+}

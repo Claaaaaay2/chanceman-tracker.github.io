@@ -367,15 +367,6 @@ async function updateDiaryFilters(partial) {
     }
 }
 
-document.addEventListener("change", async (e) => {
-    if (e.target.id === "hideCompletedDiaries") {
-        await updateDiaryFilters({ hideCompletedDiaries: e.target.checked });
-    }
-    if (e.target.id === "hideIncompletableDiaries") {
-        await updateDiaryFilters({ hideIncompletableDiaries: e.target.checked });
-    }
-});
-
 function setToggleState(toggle, collapsed) {
     toggle.textContent = collapsed ? "Show" : "Hide";
     toggle.setAttribute("aria-expanded", collapsed ? "false" : "true");
@@ -397,41 +388,15 @@ function setTierCollapsed(tier, collapsed) {
     }
 }
 
-document.addEventListener("click", async (e) => {
-    if (e.target.id === "foldAllDiaries") {
-        document.querySelectorAll(".diary-region").forEach((region) => setRegionCollapsed(region, true));
-        document.querySelectorAll(".diary-tier").forEach((tier) => setTierCollapsed(tier, true));
-        return;
-    }
-    if (e.target.id === "unfoldAllDiaries") {
-        document.querySelectorAll(".diary-region").forEach((region) => setRegionCollapsed(region, false));
-        document.querySelectorAll(".diary-tier").forEach((tier) => setTierCollapsed(tier, false));
-        return;
-    }
-    if (e.target.classList.contains("diary-region-toggle")) {
-        const region = e.target.closest(".diary-region");
-        if (region) {
-            setRegionCollapsed(region, !region.classList.contains("is-collapsed"));
-        }
-    }
-    if (e.target.classList.contains("diary-tier-toggle")) {
-        const tier = e.target.closest(".diary-tier");
-        if (tier) {
-            setTierCollapsed(tier, !tier.classList.contains("is-collapsed"));
-        }
-    }
-    if (e.target.id === "toggleCompletableTiers") {
-        const nextValue = !fileStore.filters?.showOnlyCompletableTiers;
-        await updateDiaryFilters({ showOnlyCompletableTiers: nextValue });
-        setCompletableTiersButton(e.target, nextValue);
-    }
-});
-
 function setCompletableTiersButton(button, isEnabled) {
     button.textContent = isEnabled ? "Show all tiers" : "Show only completable tiers";
 }
 
-window.initAchievementDiariesPage = function () {
+let teardownDiaryHandlers = null;
+
+export function init() {
+    teardown();
+
     const list = document.getElementById("diaryList");
     if (list) {
         applyDiaryFilters(list);
@@ -440,4 +405,58 @@ window.initAchievementDiariesPage = function () {
     if (toggleButton) {
         setCompletableTiersButton(toggleButton, Boolean(fileStore.filters?.showOnlyCompletableTiers));
     }
-};
+
+    const onDiaryChange = async (event) => {
+        if (event.target.id === "hideCompletedDiaries") {
+            await updateDiaryFilters({ hideCompletedDiaries: event.target.checked });
+        }
+        if (event.target.id === "hideIncompletableDiaries") {
+            await updateDiaryFilters({ hideIncompletableDiaries: event.target.checked });
+        }
+    };
+
+    const onDiaryClick = async (event) => {
+        if (event.target.id === "foldAllDiaries") {
+            document.querySelectorAll(".diary-region").forEach((region) => setRegionCollapsed(region, true));
+            document.querySelectorAll(".diary-tier").forEach((tier) => setTierCollapsed(tier, true));
+            return;
+        }
+        if (event.target.id === "unfoldAllDiaries") {
+            document.querySelectorAll(".diary-region").forEach((region) => setRegionCollapsed(region, false));
+            document.querySelectorAll(".diary-tier").forEach((tier) => setTierCollapsed(tier, false));
+            return;
+        }
+        if (event.target.classList.contains("diary-region-toggle")) {
+            const region = event.target.closest(".diary-region");
+            if (region) {
+                setRegionCollapsed(region, !region.classList.contains("is-collapsed"));
+            }
+        }
+        if (event.target.classList.contains("diary-tier-toggle")) {
+            const tier = event.target.closest(".diary-tier");
+            if (tier) {
+                setTierCollapsed(tier, !tier.classList.contains("is-collapsed"));
+            }
+        }
+        if (event.target.id === "toggleCompletableTiers") {
+            const nextValue = !fileStore.filters?.showOnlyCompletableTiers;
+            await updateDiaryFilters({ showOnlyCompletableTiers: nextValue });
+            setCompletableTiersButton(event.target, nextValue);
+        }
+    };
+
+    document.addEventListener("change", onDiaryChange);
+    document.addEventListener("click", onDiaryClick);
+
+    teardownDiaryHandlers = () => {
+        document.removeEventListener("change", onDiaryChange);
+        document.removeEventListener("click", onDiaryClick);
+    };
+}
+
+export function teardown() {
+    if (typeof teardownDiaryHandlers === "function") {
+        teardownDiaryHandlers();
+    }
+    teardownDiaryHandlers = null;
+}

@@ -53,79 +53,96 @@ export default function UploadPage() {
     `;
 }
 
-document.addEventListener("click", async (e) => {
-    if (window.location.pathname !== "/upload") return;
-    if (e.target.id !== "saveBtn") return;
+let teardownUploadHandlers = null;
 
-    const app = document.getElementById("app");
+export function init() {
+    teardown();
 
-    const rolledInput = app.querySelector("#rolledInput");
-    const obtainedInput = app.querySelector("#obtainedInput");
-    const playerNameInput = app.querySelector("#playerName");
-    const status = app.querySelector("#status");
-    const loading = app.querySelector("#formLoading");
-    const inputs = [
-        rolledInput,
-        obtainedInput,
-        playerNameInput,
-        app.querySelector("#saveBtn"),
-    ];
+    const onUploadClick = async (event) => {
+        if (event.target.id !== "saveBtn") return;
 
-    const rolledFile = rolledInput.files[0];
-    const obtainedFile = obtainedInput.files[0];
+        const app = document.getElementById("app");
+        if (!app) return;
 
-    const setBusy = (isBusy, message) => {
-        app.classList.toggle("upload-busy", isBusy);
-        loading.classList.toggle("active", isBusy);
-        inputs.forEach((input) => {
-            input.disabled = isBusy;
-        });
-        if (message !== undefined) {
-            status.textContent = message;
+        const rolledInput = app.querySelector("#rolledInput");
+        const obtainedInput = app.querySelector("#obtainedInput");
+        const playerNameInput = app.querySelector("#playerName");
+        const status = app.querySelector("#status");
+        const loading = app.querySelector("#formLoading");
+        if (!rolledInput || !obtainedInput || !playerNameInput || !status || !loading) return;
+        const saveBtn = app.querySelector("#saveBtn");
+        if (!saveBtn) return;
+        const inputs = [rolledInput, obtainedInput, playerNameInput, saveBtn];
+
+        const rolledFile = rolledInput.files[0];
+        const obtainedFile = obtainedInput.files[0];
+
+        const setBusy = (isBusy, message) => {
+            app.classList.toggle("upload-busy", isBusy);
+            loading.classList.toggle("active", isBusy);
+            inputs.forEach((input) => {
+                input.disabled = isBusy;
+            });
+            if (message !== undefined) {
+                status.textContent = message;
+            }
+        };
+
+        try {
+            setBusy(true, "Reading files...");
+            await new Promise(requestAnimationFrame);
+
+            if (rolledFile) {
+                const json = JSON.parse(await rolledFile.text());
+                await fileStore.setRolled(json);
+            }
+
+            if (obtainedFile) {
+                const json = JSON.parse(await obtainedFile.text());
+                await fileStore.setObtained(json);
+            }
+
+            if (playerNameInput.value) {
+                status.textContent = "Fetching player data...";
+                const player = await fetchPlayer(playerNameInput.value);
+                await fileStore.setPlayer(player);
+            }
+
+            // Redirect to items page
+            status.textContent = "Saved! Redirecting...";
+            const returnPath = getReturnPath();
+            sessionStorage.removeItem("uploadReturnPath");
+            history.pushState(null, "", returnPath);
+            window.dispatchEvent(new PopStateEvent("popstate"));
+        } catch (err) {
+            console.error(err);
+            status.textContent = err.message || "Error reading files!";
+        } finally {
+            setBusy(false);
         }
     };
 
-    try {
-        setBusy(true, "Reading files...");
-        await new Promise(requestAnimationFrame);
+    const onUploadKeydown = (event) => {
+        if (event.key !== "Enter") return;
+        if (event.target?.id !== "playerName") return;
+        const app = document.getElementById("app");
+        const saveBtn = app?.querySelector("#saveBtn");
+        if (!saveBtn || saveBtn.disabled) return;
+        event.preventDefault();
+        saveBtn.click();
+    };
 
-        if (rolledFile) {
-            const json = JSON.parse(await rolledFile.text());
-            await fileStore.setRolled(json);
-        }
+    document.addEventListener("click", onUploadClick);
+    document.addEventListener("keydown", onUploadKeydown);
+    teardownUploadHandlers = () => {
+        document.removeEventListener("click", onUploadClick);
+        document.removeEventListener("keydown", onUploadKeydown);
+    };
+}
 
-        if (obtainedFile) {
-            const json = JSON.parse(await obtainedFile.text());
-            await fileStore.setObtained(json);
-        }
-
-        if (playerNameInput.value) {
-            status.textContent = "Fetching player data...";
-            const player = await fetchPlayer(playerNameInput.value);
-            await fileStore.setPlayer(player);
-        }
-
-        // Redirect to items page
-        status.textContent = "Saved! Redirecting...";
-        const returnPath = getReturnPath();
-        sessionStorage.removeItem("uploadReturnPath");
-        history.pushState(null, "", returnPath);
-        window.dispatchEvent(new PopStateEvent("popstate"));
-    } catch (err) {
-        console.error(err);
-        status.textContent = err.message || "Error reading files!";
-    } finally {
-        setBusy(false);
+export function teardown() {
+    if (typeof teardownUploadHandlers === "function") {
+        teardownUploadHandlers();
     }
-});
-
-document.addEventListener("keydown", (e) => {
-    if (window.location.pathname !== "/upload") return;
-    if (e.key !== "Enter") return;
-    if (e.target?.id !== "playerName") return;
-    const app = document.getElementById("app");
-    const saveBtn = app?.querySelector("#saveBtn");
-    if (!saveBtn || saveBtn.disabled) return;
-    e.preventDefault();
-    saveBtn.click();
-});
+    teardownUploadHandlers = null;
+}

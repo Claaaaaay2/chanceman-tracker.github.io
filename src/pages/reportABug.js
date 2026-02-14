@@ -1,6 +1,9 @@
 import { fileStore } from "../storage/fileStore.js";
 
-export async function BugPage() {
+let bugButton = null;
+let bugClickHandler = null;
+
+export default async function BugPage() {
     return `
         <h1>Report a bug</h1>
         <p>Report your problems here. It will automatically also send your obtained and rolled for me to check :)</p>
@@ -10,13 +13,16 @@ export async function BugPage() {
     `;
 }
 
-export function initBugPage() {
+export function init() {
+    teardown();
+
     const btn = document.getElementById("reportBug");
     if (!btn) {
         return;
     }
+    bugButton = btn;
 
-    btn.addEventListener("click", async () => {
+    bugClickHandler = async () => {
         const status = document.getElementById("bugStatus");
         const message = document.getElementById("bugText").value.trim();
 
@@ -55,7 +61,15 @@ export function initBugPage() {
         } finally {
             btn.disabled = false;
         }
-    });
+    };
+
+    btn.addEventListener("click", bugClickHandler);
 }
 
-window.initBugPage = initBugPage;
+export function teardown() {
+    if (bugButton && bugClickHandler) {
+        bugButton.removeEventListener("click", bugClickHandler);
+    }
+    bugButton = null;
+    bugClickHandler = null;
+}

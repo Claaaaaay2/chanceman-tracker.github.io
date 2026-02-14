@@ -53,83 +53,100 @@ export default function ReuploadPage() {
     `;
 }
 
-document.addEventListener("click", async (e) => {
-    if (window.location.pathname !== "/reupload") return;
-    if (e.target.id !== "saveBtn") return;
+let teardownReuploadHandlers = null;
 
-    const app = document.getElementById("app");
+export function init() {
+    teardown();
 
-    const rolledInput = app.querySelector("#rolledInput");
-    const obtainedInput = app.querySelector("#obtainedInput");
-    const playerNameInput = app.querySelector("#playerName");
-    const status = app.querySelector("#status");
-    const loading = app.querySelector("#formLoading");
-    const inputs = [
-        rolledInput,
-        obtainedInput,
-        playerNameInput,
-        app.querySelector("#saveBtn"),
-    ];
+    const onReuploadClick = async (event) => {
+        if (event.target.id !== "saveBtn") return;
 
-    const rolledFile = rolledInput.files[0];
-    const obtainedFile = obtainedInput.files[0];
+        const app = document.getElementById("app");
+        if (!app) return;
 
-    const setBusy = (isBusy, message) => {
-        app.classList.toggle("upload-busy", isBusy);
-        loading.classList.toggle("active", isBusy);
-        inputs.forEach((input) => {
-            input.disabled = isBusy;
-        });
-        if (message !== undefined) {
-            status.textContent = message;
+        const rolledInput = app.querySelector("#rolledInput");
+        const obtainedInput = app.querySelector("#obtainedInput");
+        const playerNameInput = app.querySelector("#playerName");
+        const status = app.querySelector("#status");
+        const loading = app.querySelector("#formLoading");
+        if (!rolledInput || !obtainedInput || !playerNameInput || !status || !loading) return;
+        const saveBtn = app.querySelector("#saveBtn");
+        if (!saveBtn) return;
+        const inputs = [rolledInput, obtainedInput, playerNameInput, saveBtn];
+
+        const rolledFile = rolledInput.files[0];
+        const obtainedFile = obtainedInput.files[0];
+
+        const setBusy = (isBusy, message) => {
+            app.classList.toggle("upload-busy", isBusy);
+            loading.classList.toggle("active", isBusy);
+            inputs.forEach((input) => {
+                input.disabled = isBusy;
+            });
+            if (message !== undefined) {
+                status.textContent = message;
+            }
+        };
+
+        try {
+            setBusy(true, "Reading files...");
+            await new Promise(requestAnimationFrame);
+
+            if (rolledFile) {
+                const json = JSON.parse(await rolledFile.text());
+                await fileStore.setRolled(json);
+            }
+
+            if (obtainedFile) {
+                const json = JSON.parse(await obtainedFile.text());
+                await fileStore.setObtained(json);
+            }
+
+            if (playerNameInput.value) {
+                status.textContent = "Fetching player data...";
+                const player = await fetchPlayer(playerNameInput.value);
+                await fileStore.setPlayer(player);
+            }
+
+            // Clear any state
+            invalidateLogicCaches(fileStore);
+            window.__itemsPageData = null;
+
+            // Redirect to items page
+            status.textContent = "Saved! Redirecting...";
+            const returnPath = getReturnPath();
+            sessionStorage.removeItem("uploadReturnPath");
+            history.pushState(null, "", returnPath);
+            window.dispatchEvent(new PopStateEvent("popstate"));
+        } catch (err) {
+            console.error(err);
+            status.textContent = err.message || "Error reading files!";
+        } finally {
+            setBusy(false);
         }
     };
 
-    try {
-        setBusy(true, "Reading files...");
-        await new Promise(requestAnimationFrame);
+    const onReuploadKeydown = (event) => {
+        if (event.key !== "Enter") return;
+        if (event.target?.id !== "playerName") return;
+        const app = document.getElementById("app");
+        const saveBtn = app?.querySelector("#saveBtn");
+        if (!saveBtn || saveBtn.disabled) return;
+        event.preventDefault();
+        saveBtn.click();
+    };
 
-        if (rolledFile) {
-            const json = JSON.parse(await rolledFile.text());
-            await fileStore.setRolled(json);
-        }
+    document.addEventListener("click", onReuploadClick);
+    document.addEventListener("keydown", onReuploadKeydown);
+    teardownReuploadHandlers = () => {
+        document.removeEventListener("click", onReuploadClick);
+        document.removeEventListener("keydown", onReuploadKeydown);
+    };
+}
 
-        if (obtainedFile) {
-            const json = JSON.parse(await obtainedFile.text());
-            await fileStore.setObtained(json);
-        }
-
-        if (playerNameInput.value) {
-            status.textContent = "Fetching player data...";
-            const player = await fetchPlayer(playerNameInput.value);
-            await fileStore.setPlayer(player);
-        }
-
-        // Clear any state
-        invalidateLogicCaches(fileStore);
-        window.__itemsPageData = null;
-
-        // Redirect to items page
-        status.textContent = "Saved! Redirecting...";
-        const returnPath = getReturnPath();
-        sessionStorage.removeItem("uploadReturnPath");
-        history.pushState(null, "", returnPath);
-        window.dispatchEvent(new PopStateEvent("popstate"));
-    } catch (err) {
-        console.error(err);
-        status.textContent = err.message || "Error reading files!";
-    } finally {
-        setBusy(false);
+export function teardown() {
+    if (typeof teardownReuploadHandlers === "function") {
+        teardownReuploadHandlers();
     }
-});
-
-document.addEventListener("keydown", (e) => {
-    if (window.location.pathname !== "/reupload") return;
-    if (e.key !== "Enter") return;
-    if (e.target?.id !== "playerName") return;
-    const app = document.getElementById("app");
-    const saveBtn = app?.querySelector("#saveBtn");
-    if (!saveBtn || saveBtn.disabled) return;
-    e.preventDefault();
-    saveBtn.click();
-});
+    teardownReuploadHandlers = null;
+}

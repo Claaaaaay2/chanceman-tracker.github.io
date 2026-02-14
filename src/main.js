@@ -199,7 +199,7 @@ function escapeHtml(value) {
         .replace(/"/g, "&quot;");
 }
 
-window.initNpcFilterUI = function initNpcFilterUI(onApply) {
+export function initNpcFilterUI(onApply) {
     const elements = {
         npcFilter: document.getElementById("npcFilter"),
         npcFilterToggle: document.getElementById("npcFilterToggle"),
@@ -340,7 +340,7 @@ window.initNpcFilterUI = function initNpcFilterUI(onApply) {
         await setNpcExclusions([...pendingNpcExclusions]);
         elements.npcFilter.classList.remove("is-open");
     });
-};
+}
 
 let lazyImageObserver = null;
 
@@ -372,7 +372,7 @@ function initLazyImages() {
     lazyImages.forEach((img) => lazyImageObserver.observe(img));
 }
 
-window.initItemsPage = async function () {
+export async function initItemsPage() {
     await fileStore.ensureItemsLoaded();
 
     const elements = {
@@ -459,7 +459,7 @@ window.initItemsPage = async function () {
 
     const f = fileStore.filters;
     applyFiltersToUI(f);
-    window.initNpcFilterUI(renderItems);
+    initNpcFilterUI(renderItems);
     bindFileRefreshUI();
 
     async function readHandleJson(handle) {
@@ -1446,7 +1446,7 @@ window.initItemsPage = async function () {
     });
 
     renderItems();
-};
+}
 
 export function invalidateLogicCaches(ctx) {
     rankedItemsCache = null;
@@ -1482,35 +1482,14 @@ document.addEventListener("click", (e) => {
 
 
 
-// Hook into router so your lazy images load after page render
+export async function initItemsRoute() {
+    await initItemsPage();
+    initFiltersOverrides();
+}
+
+// Hook into router so shared UI enhancements load after page render
 export function afterRoute() {
     initLazyImages();
-
-    if (typeof initItemsPage === "function" && window.location.pathname === "/items") {
-        initItemsPage();
-        initFiltersOverrides();
-    }
-    if (typeof initBugPage === "function") {
-        initBugPage();
-    }
-    if (typeof initQuestsPage === "function") {
-        initQuestsPage();
-    }
-    if (typeof initAchievementDiariesPage === "function") {
-        initAchievementDiariesPage();
-    }
-    if (typeof initClueStepsPage === "function") {
-        initClueStepsPage();
-    }
-    if (typeof initItemHistoryPage === "function") {
-        initItemHistoryPage();
-    }
-    if (typeof initNpcsPage === "function") {
-        initNpcsPage();
-    }
-    if (typeof initSkillUnlocksPage === "function") {
-        initSkillUnlocksPage();
-    }
     initNavMenu();
 }
 

@@ -202,12 +202,17 @@ export default async function ItemHistoryPage() {
     `;
 }
 
-window.initItemHistoryPage = function () {
+let teardownHistoryHandlers = null;
+
+export function init() {
+    teardown();
+
     const toggle = document.getElementById("itemHistoryViewToggle");
     const panelView = document.querySelector(".history-view-panels");
     const listView = document.querySelector(".history-view-list");
 
     if (!toggle || !panelView || !listView) return;
+    const cleanup = [];
 
     const storageKey = "itemHistoryView";
     const stored = localStorage.getItem(storageKey);
@@ -223,9 +228,11 @@ window.initItemHistoryPage = function () {
 
     setView(initialView);
 
-    toggle.addEventListener("input", () => {
+    const onToggleInput = () => {
         setView(toggle.checked ? "list" : "panel");
-    });
+    };
+    toggle.addEventListener("input", onToggleInput);
+    cleanup.push(() => toggle.removeEventListener("input", onToggleInput));
 
     const rangeStartInput = document.getElementById("historyRangeStart");
     const rangeEndInput = document.getElementById("historyRangeEnd");
@@ -233,7 +240,14 @@ window.initItemHistoryPage = function () {
     const rangeEndSlider = document.getElementById("historyRangeEndSlider");
     const rangeSlider = document.getElementById("historyRangeSlider");
 
-    if (!rangeStartInput || !rangeEndInput || !rangeStartSlider || !rangeEndSlider || !rangeSlider) return;
+    if (!rangeStartInput || !rangeEndInput || !rangeStartSlider || !rangeEndSlider || !rangeSlider) {
+        teardownHistoryHandlers = () => {
+            for (const remove of cleanup) {
+                remove();
+            }
+        };
+        return;
+    }
 
     const maxLength = Number.parseInt(rangeEndInput.max, 10) || 1;
 
@@ -288,19 +302,40 @@ window.initItemHistoryPage = function () {
 
     applyRange(rangeStartInput.value, rangeEndInput.value, "init");
 
-    rangeStartInput.addEventListener("input", () => {
+    const onRangeStartInput = () => {
         applyRange(rangeStartInput.value, rangeEndInput.value, "start");
-    });
+    };
+    rangeStartInput.addEventListener("input", onRangeStartInput);
+    cleanup.push(() => rangeStartInput.removeEventListener("input", onRangeStartInput));
 
-    rangeEndInput.addEventListener("input", () => {
+    const onRangeEndInput = () => {
         applyRange(rangeStartInput.value, rangeEndInput.value, "end");
-    });
+    };
+    rangeEndInput.addEventListener("input", onRangeEndInput);
+    cleanup.push(() => rangeEndInput.removeEventListener("input", onRangeEndInput));
 
-    rangeStartSlider.addEventListener("input", () => {
+    const onRangeStartSliderInput = () => {
         applyRange(rangeStartSlider.value, rangeEndSlider.value, "start");
-    });
+    };
+    rangeStartSlider.addEventListener("input", onRangeStartSliderInput);
+    cleanup.push(() => rangeStartSlider.removeEventListener("input", onRangeStartSliderInput));
 
-    rangeEndSlider.addEventListener("input", () => {
+    const onRangeEndSliderInput = () => {
         applyRange(rangeStartSlider.value, rangeEndSlider.value, "end");
-    });
-};
+    };
+    rangeEndSlider.addEventListener("input", onRangeEndSliderInput);
+    cleanup.push(() => rangeEndSlider.removeEventListener("input", onRangeEndSliderInput));
+
+    teardownHistoryHandlers = () => {
+        for (const remove of cleanup) {
+            remove();
+        }
+    };
+}
+
+export function teardown() {
+    if (typeof teardownHistoryHandlers === "function") {
+        teardownHistoryHandlers();
+    }
+    teardownHistoryHandlers = null;
+}
