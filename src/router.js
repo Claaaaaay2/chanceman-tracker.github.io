@@ -50,6 +50,11 @@ const notFoundRouteDefinition = {
 };
 
 let currentRouteTeardown = null;
+const prefetchedRoutePaths = new Set();
+
+function normalizePath(path) {
+    return String(path || "").split("?")[0].split("#")[0];
+}
 
 function ensureRouteLoadingOverlay() {
     let overlay = document.getElementById("routeLoading");
@@ -72,8 +77,7 @@ function setRouteLoading(isLoading) {
 }
 
 export async function navigate(path) {
-    const target = String(path || "");
-    const normalized = target.split("?")[0].split("#")[0];
+    const normalized = normalizePath(path);
     if (normalized === "/upload" || normalized === "/reupload") {
         const currentPath = `${window.location.pathname}${window.location.search}${window.location.hash}`;
         if (currentPath !== "/upload" && currentPath !== "/reupload") {
@@ -85,6 +89,25 @@ export async function navigate(path) {
 }
 
 window.navigate = navigate;
+
+export function prefetchRoutes(paths = []) {
+    const tasks = [...new Set(paths.map((path) => normalizePath(path)).filter(Boolean))]
+        .map(async (path) => {
+            if (prefetchedRoutePaths.has(path)) return;
+            const routeDefinition = routeDefinitions[path];
+            if (!routeDefinition) return;
+
+            prefetchedRoutePaths.add(path);
+            try {
+                await routeDefinition.load();
+            } catch (error) {
+                prefetchedRoutePaths.delete(path);
+                console.error(`Failed to prefetch route "${path}".`, error);
+            }
+        });
+
+    return Promise.all(tasks);
+}
 
 export async function router() {
     setRouteLoading(true);

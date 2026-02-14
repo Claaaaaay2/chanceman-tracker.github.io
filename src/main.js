@@ -1,3 +1,4 @@
+import { scheduleLikelyRoutePrefetch } from "./app/routePrefetch.js";
 import { navigate, router } from "./router.js";
 import { fileStore } from "./storage/fileStore.js";
 import { initFiltersOverrides } from "./styles/filtersOverrides.js";
@@ -10,6 +11,7 @@ initFiltersOverrides();
 window.addEventListener("DOMContentLoaded", async () => {
     await fileStore.init();
     await router();
+    scheduleLikelyRoutePrefetch();
 });
 
 window.addEventListener("popstate", router);
