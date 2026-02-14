@@ -220,6 +220,12 @@ button:disabled {
     align-items: center;
 }
 
+.header-home-icon img {
+    width: 36px;
+    height: 36px;
+    display: block;
+}
+
 .header a {
     text-decoration: none;
 }

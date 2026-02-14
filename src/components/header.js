@@ -6,6 +6,9 @@ export async function Header() {
     if (!loaded) {
         return `
         <nav class="header">
+            <a class="header-home-icon" data-link href="/home" aria-label="Go to home">
+                <img src="/favicon.svg" alt="Home" />
+            </a>
             <span class="header-nav">
                 <button class="nav-menu-toggle" id="nav-menu-toggle" type="button" aria-expanded="false">
                 <span id="nav-current-page">Menu</span>
@@ -24,6 +27,9 @@ export async function Header() {
 
     return `
         <nav class="header">
+            <a class="header-home-icon" data-link href="/home" aria-label="Go to home">
+                <img src="/favicon.svg" alt="Home" />
+            </a>
             <span class="header-nav">
                 <button class="nav-menu-toggle" id="nav-menu-toggle" type="button" aria-expanded="false">
                     <span id="nav-current-page">Menu</span>
@@ -49,3 +55,4 @@ export async function Header() {
         </nav>
     `;
 }
+

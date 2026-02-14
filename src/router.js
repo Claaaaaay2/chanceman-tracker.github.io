@@ -9,6 +9,9 @@ const routeDefinitions = {
     "/": {
         load: async () => import("./pages/home.js")
     },
+    "/home": {
+        load: async () => import("./pages/home.js")
+    },
     "/upload": {
         load: async () => import("./pages/upload.js")
     },
