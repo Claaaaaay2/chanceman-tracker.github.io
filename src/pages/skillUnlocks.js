@@ -18,6 +18,7 @@ const SECTION_ORDER = [
     "Farming",
     "Fletching",
     "Fishing",
+    "Herblore",
     "Hunter",
     "Mining",
     "Prayer",

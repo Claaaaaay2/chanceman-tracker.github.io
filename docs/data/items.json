@@ -7295,7 +7295,10 @@
       "shops": {
         "Yes": "canTrainHerblore"
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 166,
@@ -7985,7 +7988,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 191,
@@ -8600,7 +8606,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 210,
@@ -9540,7 +9549,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 239,
@@ -12285,7 +12297,10 @@
           "droprate": "1/16"
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 320,
@@ -14013,7 +14028,10 @@
       "spawns": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 384,
@@ -14493,7 +14511,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 397,
@@ -14520,7 +14541,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 398,
@@ -34780,7 +34804,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 936,
@@ -34834,7 +34861,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 938,
@@ -36618,7 +36648,8 @@
       }
     },
     "tags": [
-      "Food"
+      "Food",
+      "Herblore"
     ]
   },
   {
@@ -38902,7 +38933,8 @@
     "name": "Chocolate dust",
     "image": "chocolate_dust.png",
     "tags": [
-      "Cooking"
+      "Cooking",
+      "Herblore"
     ],
     "sources": {
       "drops": {
@@ -40232,7 +40264,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1050,
@@ -42578,7 +42613,8 @@
       }
     },
     "tags": [
-      "Crafting"
+      "Crafting",
+      "Herblore"
     ]
   },
   {
@@ -42637,7 +42673,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1124,
@@ -42962,7 +43001,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1138,
@@ -42982,7 +43024,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1141,
@@ -45113,7 +45158,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1192,
@@ -50794,7 +50842,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1352,
@@ -52412,7 +52463,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1401,
@@ -52439,7 +52493,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1402,
@@ -54779,7 +54836,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1455,
@@ -58701,7 +58761,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1567,
@@ -62378,7 +62441,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1674,
@@ -63858,7 +63924,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1730,
@@ -67874,7 +67943,10 @@
           "droprate": "11 × Varies"
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1835,
@@ -68868,7 +68940,10 @@
           "droprate": "11 × Varies"
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1836,
@@ -69868,7 +69943,10 @@
           "droprate": "Varies"
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1837,
@@ -70814,7 +70892,10 @@
           "droprate": "Common"
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1838,
@@ -71766,7 +71847,10 @@
           "droprate": "Common"
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1839,
@@ -71779,7 +71863,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1840,
@@ -72725,7 +72812,10 @@
           "droprate": "11 × Varies"
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1841,
@@ -73737,7 +73827,10 @@
           "droprate": "11 × Varies"
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1842,
@@ -74737,7 +74830,10 @@
           "droprate": "11 × Varies"
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1843,
@@ -75671,7 +75767,10 @@
           "droprate": "Common"
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1844,
@@ -76737,7 +76836,10 @@
           "droprate": "Common"
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1845,
@@ -76867,7 +76969,10 @@
           "droprate": "Varies"
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1846,
@@ -77828,7 +77933,10 @@
           "droprate": "Common"
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1847,
@@ -77889,7 +77997,10 @@
           "droprate": "1/128"
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1848,
@@ -78019,7 +78130,10 @@
           "droprate": "Varies"
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1849,
@@ -78139,7 +78253,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1854,
@@ -78166,7 +78283,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1855,
@@ -79436,7 +79556,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1903,
@@ -80351,7 +80474,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1931,
@@ -80378,7 +80504,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1932,
@@ -81287,7 +81416,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1960,
@@ -81314,7 +81446,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 1961,
@@ -82697,7 +82832,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 2014,
@@ -82724,7 +82862,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 2015,
@@ -87751,7 +87892,8 @@
       }
     },
     "tags": [
-      "Food"
+      "Food",
+      "Herblore"
     ]
   },
   {
@@ -89152,7 +89294,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 2177,
@@ -89769,7 +89914,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 2195,
@@ -89796,7 +89944,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 2196,
@@ -90273,7 +90424,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 2202,
@@ -90300,7 +90454,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 2203,
@@ -91752,7 +91909,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 2233,
@@ -93384,7 +93544,10 @@
           "droprate": "3 × 1/27"
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 2271,
@@ -93720,7 +93883,10 @@
           "droprate": "1/256"
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 2277,
@@ -95794,7 +95960,8 @@
       }
     },
     "tags": [
-      "Crafting"
+      "Crafting",
+      "Herblore"
     ]
   },
   {
@@ -98210,7 +98377,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 2385,
@@ -98244,7 +98414,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 2386,
@@ -98271,7 +98444,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 2387,
@@ -105526,7 +105702,10 @@
           "rule": "canUseSilverSickle"
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 2560,
@@ -107279,7 +107458,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 2618,
@@ -108588,7 +108770,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 2638,
@@ -113659,7 +113844,10 @@
           "rule": "canStartATasteOfHope"
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 2785,
@@ -113892,7 +114080,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 2794,
@@ -115107,7 +115298,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 2844,
@@ -115825,7 +116019,10 @@
       "spawns": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 2858,
@@ -118566,7 +118763,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 2960,
@@ -118657,7 +118857,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 2963,
@@ -119064,7 +119267,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 2965,
@@ -122855,7 +123061,10 @@
       "spawns": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 3078,
@@ -124951,7 +125160,8 @@
       }
     },
     "tags": [
-      "Food"
+      "Food",
+      "Herblore"
     ]
   },
   {
@@ -136343,8 +136553,17 @@
         "Experiment No.2": {
           "droprate": "Always"
         }
+      },
+      "other": {
+        "From the piano after starting Grim Tales": {
+          "notes": "Can be gotten right after completing Witch's House.",
+          "rule": "canCompleteWitchsHouse"
+        }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 3445,
@@ -136732,7 +136951,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 3536,
@@ -138347,7 +138569,10 @@
           "notes": "From Agility Arena interface."
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 3583,
@@ -138374,7 +138599,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 3584,
@@ -139027,7 +139255,10 @@
       "spawns": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 3586,
@@ -141071,7 +141302,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 3634,
@@ -151209,7 +151443,10 @@
       "spawns": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 3852,
@@ -152131,7 +152368,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 3880,
@@ -152158,7 +152398,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 3881,
@@ -155065,7 +155308,8 @@
       }
     },
     "tags": [
-      "Food"
+      "Food",
+      "Herblore"
     ]
   },
   {
@@ -155157,7 +155401,10 @@
           "notes": "From Agility Arena interface."
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 3995,
@@ -155184,7 +155431,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 3996,
@@ -156798,7 +157048,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 4038,
@@ -156825,7 +157078,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 4039,
@@ -159411,7 +159667,10 @@
           "droprate": "Always"
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 4168,
@@ -162247,7 +162506,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 4205,
@@ -163137,7 +163399,10 @@
           "droprate": "3 × 1/15"
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 4239,
@@ -163278,7 +163543,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 4240,
@@ -163855,7 +164123,10 @@
           ]
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 4269,
@@ -166030,7 +166301,10 @@
       "spawns": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 4308,
@@ -168087,7 +168361,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 4367,
@@ -169640,7 +169917,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Herblore"
+    ]
   },
   {
     "index": 4422,
@@ -170153,7 +170433,8 @@
       }
     },
     "tags": [
-      "Crafting"
+      "Crafting",
+      "Herblore"
     ]
   },
   {
@@ -171962,7 +172243,8 @@
       }
     },
     "tags": [
-      "Ranged"
+      "Ranged",
+      "Herblore"
     ]
   },
   {
