@@ -43,6 +43,7 @@ let memory = {
         npcSearch: "",
         npcSortByRate: false,
         npcOnlyRolled: false,
+        npcCollapseDrops: false,
         hideCompletableClues: false,
         hideIncompletableClues: false,
         hideCompletedDiaries: false,

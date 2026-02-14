@@ -1,71 +1,6 @@
-import { isItemHiddenByTag, isNpcObtainable } from "../logic/itemVisibility.js";
 import { NPC_DATA } from "../logic/npcData.js";
-import { parseDropRate } from "../logic/utils.js";
+import { buildNpcDropEntries, formatCumulativeRate, getBestDropRateValue, getDropRateLabel } from "../logic/npcDropEntries.js";
 import { fileStore } from "../storage/fileStore.js";
-
-const SLAYER_TASK_ONLY_ITEM_IDS = new Set([23490, 21257]);
-
-function shouldHideTaskOnlyDropItem(item, npcName, filters) {
-    if (!filters?.isSlayerLocked) return false;
-    const itemId = Number(item?.id);
-    if (!SLAYER_TASK_ONLY_ITEM_IDS.has(itemId)) return false;
-    if (itemId === 23490 && npcName?.includes("Muddy chest")) return false;
-    return true;
-}
-
-function getDropRateLabel(drops) {
-    if (!drops) return "";
-    let best = null;
-    let bestValue = 0;
-
-    if (Array.isArray(drops)) {
-        for (const drop of drops) {
-            if (!drop?.droprate) continue;
-            const value = parseDropRate(drop.droprate);
-            if (value > bestValue) {
-                bestValue = value;
-                best = drop.droprate;
-            }
-        }
-    } else if (drops?.droprate) {
-        best = drops.droprate;
-    }
-
-    return best ? ` (${best})` : "";
-}
-
-function getBestDropRateValue(drops) {
-    if (!drops) return 0;
-    let bestValue = 0;
-
-    if (Array.isArray(drops)) {
-        for (const drop of drops) {
-            if (!drop?.droprate) continue;
-            const value = parseDropRate(drop.droprate);
-            if (value > bestValue) {
-                bestValue = value;
-            }
-        }
-    } else if (drops?.droprate) {
-        bestValue = parseDropRate(drops.droprate);
-    }
-
-    if (!Number.isFinite(bestValue) || bestValue < 0) return 0;
-    return bestValue;
-}
-
-function normalizeRateScore(value) {
-    if (!Number.isFinite(value) || value <= 0) return 0;
-    return value > 1 ? 1 : value;
-}
-
-function formatCumulativeRate(value) {
-    if (!Number.isFinite(value) || value <= 0) return "0%";
-    const clamped = Math.min(value, 1);
-    const percent = clamped * 100;
-    if (value > 1) return ">=100%";
-    return `${percent.toFixed(2)}%`;
-}
 
 function escapeHtml(value) {
     return String(value)
@@ -85,80 +20,14 @@ export default async function NpcsPage() {
 
     await fileStore.ensureItemsLoaded();
 
-    const items = fileStore.items || [];
-    const obtained = fileStore.obtained || [];
-    const rolled = fileStore.rolled || [];
-    const rolledSet = new Set(
-        Array.isArray(rolled)
-            ? rolled.map((entry) => (entry && typeof entry === "object" ? entry.id : entry))
-            : []
-    );
     const filters = fileStore.filters || {};
-    const ctx = {
-        items,
-        obtained,
-        rolled,
+    const collapseDrops = Boolean(filters.npcCollapseDrops);
+    const { entries: results, rolledSet } = await buildNpcDropEntries({
+        items: fileStore.items || [],
+        obtained: fileStore.obtained || [],
+        rolled: fileStore.rolled || [],
         player: fileStore.player,
         filters
-    };
-
-    function isItemEligible(item) {
-        if (!item) return false;
-        if (obtained.includes(item.id)) return false;
-        if (filters.onlyRolled && !rolledSet.has(item.id)) return false;
-        if (filters.npcOnlyRolled && !rolledSet.has(item.id)) return false;
-        if (isItemHiddenByTag(item)) return false;
-        if (!filters.hasFlatpacks && item.tags?.includes("flatpack")) return false;
-        if (!filters.hasItemsets && item.tags?.includes("itemset")) return false;
-        if (filters.hideClue && item.tags?.includes("clue-reward-only")) return false;
-        return true;
-    }
-
-    const itemsByNpc = new Map();
-    for (const item of items) {
-        if (!isItemEligible(item)) continue;
-        const drops = item.sources?.drops;
-        if (!drops) continue;
-        for (const npcName of Object.keys(drops)) {
-            if (shouldHideTaskOnlyDropItem(item, npcName, filters)) continue;
-            const list = itemsByNpc.get(npcName) || [];
-            list.push(item);
-            itemsByNpc.set(npcName, list);
-        }
-    }
-
-    const results = [];
-    for (const [npcName, npcItems] of itemsByNpc.entries()) {
-        if (!npcItems.length) continue;
-        if (!(await isNpcObtainable(npcName, ctx))) continue;
-
-        let totalRateScore = 0;
-        for (const item of npcItems) {
-            const drops = item.sources?.drops?.[npcName];
-            if (!drops) continue;
-            let bestRate = -Infinity;
-            if (Array.isArray(drops)) {
-                for (const drop of drops) {
-                    if (!drop?.droprate) continue;
-                    bestRate = Math.max(bestRate, parseDropRate(drop.droprate));
-                }
-            } else if (drops?.droprate) {
-                bestRate = parseDropRate(drops.droprate);
-            }
-            totalRateScore += normalizeRateScore(bestRate);
-        }
-
-        results.push({ npcName, items: npcItems, totalRateScore });
-    }
-
-    results.sort((a, b) => {
-        if (filters.npcSortByRate) {
-            const rateDiff = b.totalRateScore - a.totalRateScore;
-            if (rateDiff !== 0) return rateDiff;
-        }
-        const countDiff = b.items.length - a.items.length;
-        if (countDiff !== 0) return countDiff;
-        return a.npcName.localeCompare(b.npcName);
     });
 
     if (!results.length) {
@@ -175,27 +44,30 @@ export default async function NpcsPage() {
         const npcNameHtml = npcWiki
             ? `<a class="npc-drop-name-link" href="${npcWiki}" target="_blank" rel="noreferrer">${escapeHtml(entry.npcName)}</a>`
             : `<span class="npc-drop-name-text">${escapeHtml(entry.npcName)}</span>`;
-        const itemsHtml = entry.items
-            .sort((a, b) => {
-                const aRate = getBestDropRateValue(a.sources?.drops?.[entry.npcName]);
-                const bRate = getBestDropRateValue(b.sources?.drops?.[entry.npcName]);
-                const rateDiff = bRate - aRate;
-                if (rateDiff !== 0) return rateDiff;
-                return a.name.localeCompare(b.name);
-            })
-            .map((item) => {
-                const drops = item.sources?.drops?.[entry.npcName];
-                const rateLabel = getDropRateLabel(drops);
-                const isRolled = rolledSet.has(item.id);
-                return `
-                <div class="npc-drop-item" onclick="navigate('/item?id=${item.id}')">
-                    <img class="npc-drop-item-image" src="/images/${item.image}" alt="${escapeHtml(item.name)}">
-                    <span class="npc-drop-item-name">${escapeHtml(item.name)}${escapeHtml(rateLabel)}</span>
-                    ${isRolled ? `<span class="badge rolled npc-drop-rolled">Rolled</span>` : ""}
-                </div>
-            `;
-            })
-            .join("");
+        let itemsHtml = "";
+        if (!collapseDrops) {
+            itemsHtml = entry.items
+                .sort((a, b) => {
+                    const aRate = getBestDropRateValue(a.sources?.drops?.[entry.npcName]);
+                    const bRate = getBestDropRateValue(b.sources?.drops?.[entry.npcName]);
+                    const rateDiff = bRate - aRate;
+                    if (rateDiff !== 0) return rateDiff;
+                    return a.name.localeCompare(b.name);
+                })
+                .map((item) => {
+                    const drops = item.sources?.drops?.[entry.npcName];
+                    const rateLabel = getDropRateLabel(drops);
+                    const isRolled = rolledSet.has(item.id);
+                    return `
+                    <div class="npc-drop-item" onclick="navigate('/item?id=${item.id}')">
+                        <img class="npc-drop-item-image" src="/images/${item.image}" alt="${escapeHtml(item.name)}">
+                        <span class="npc-drop-item-name">${escapeHtml(item.name)}${escapeHtml(rateLabel)}</span>
+                        ${isRolled ? `<span class="badge rolled npc-drop-rolled">Rolled</span>` : ""}
+                    </div>
+                `;
+                })
+                .join("");
+        }
 
         const itemNames = entry.items.map((item) => item.name.toLowerCase()).join(" ");
 
@@ -206,9 +78,11 @@ export default async function NpcsPage() {
                     <span class="npc-drop-count">${itemCount} ${itemLabel}</span>
                 </header>
                 <div class="npc-drop-rate">Chance to get a new roll: ${formatCumulativeRate(entry.totalRateScore)}</div>
-                <div class="npc-drop-items">
-                    ${itemsHtml}
-                </div>
+                ${collapseDrops ? "" : `
+                    <div class="npc-drop-items">
+                        ${itemsHtml}
+                    </div>
+                `}
             </article>
         `;
     }).join("");
@@ -234,6 +108,10 @@ export default async function NpcsPage() {
             <label class="npc-drop-filter npc-drop-filter--checkbox">
                 <input type="checkbox" id="npcOnlyRolledToggle">
                 <span>Show only rolled items</span>
+            </label>
+            <label class="npc-drop-filter npc-drop-filter--checkbox">
+                <input type="checkbox" id="npcCollapseDropsToggle">
+                <span>Collapse drops</span>
             </label>
             <div class="npc-filter" id="npcFilter">
                 <button type="button" id="npcFilterToggle">Hide specific NPCs</button>
@@ -307,13 +185,14 @@ window.initNpcsPage = function () {
     if (onlyRolledToggle) {
         onlyRolledToggle.checked = Boolean(fileStore.filters?.npcOnlyRolled);
     }
+    const collapseDropsToggle = document.getElementById("npcCollapseDropsToggle");
+    if (collapseDropsToggle) {
+        collapseDropsToggle.checked = Boolean(fileStore.filters?.npcCollapseDrops);
+    }
     if (typeof window.initNpcFilterUI === "function") {
         window.initNpcFilterUI(() => window.dispatchEvent(new PopStateEvent("popstate")));
     }
 };
-
-function setNpcSortToggle(button, isEnabled) {
-    }
 
 document.addEventListener("input", async (e) => {
     if (e.target.id !== "npcSortToggle") return;
@@ -330,6 +209,15 @@ document.addEventListener("input", async (e) => {
     await fileStore.setFilters({
         ...fileStore.filters,
         npcOnlyRolled: e.target.checked
+    });
+    window.dispatchEvent(new PopStateEvent("popstate"));
+});
+
+document.addEventListener("input", async (e) => {
+    if (e.target.id !== "npcCollapseDropsToggle") return;
+    await fileStore.setFilters({
+        ...fileStore.filters,
+        npcCollapseDrops: e.target.checked
     });
     window.dispatchEvent(new PopStateEvent("popstate"));
 });
