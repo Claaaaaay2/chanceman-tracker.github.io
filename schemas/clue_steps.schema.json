@@ -1,0 +1,169 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "clue_steps.schema.json",
+    "type": "object",
+    "required": [
+        "tiers"
+    ],
+    "properties": {
+        "tiers": {
+            "type": "object",
+            "required": [
+                "Beginner",
+                "Easy",
+                "Medium",
+                "Hard",
+                "Elite",
+                "Master"
+            ],
+            "properties": {
+                "Beginner": {
+                    "$ref": "#/$defs/tierSteps"
+                },
+                "Easy": {
+                    "$ref": "#/$defs/tierSteps"
+                },
+                "Medium": {
+                    "$ref": "#/$defs/tierSteps"
+                },
+                "Hard": {
+                    "$ref": "#/$defs/tierSteps"
+                },
+                "Elite": {
+                    "$ref": "#/$defs/tierSteps"
+                },
+                "Master": {
+                    "$ref": "#/$defs/tierSteps"
+                }
+            },
+            "additionalProperties": false
+        }
+    },
+    "additionalProperties": false,
+    "$defs": {
+        "itemRef": {
+            "type": "object",
+            "required": [
+                "id"
+            ],
+            "properties": {
+                "id": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ]
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false
+        },
+        "requirements": {
+            "type": "object",
+            "required": [
+                "skills",
+                "quests",
+                "items",
+                "untracked",
+                "itemsAny",
+                "rulesAll",
+                "rulesAny"
+            ],
+            "properties": {
+                "skills": {
+                    "type": "object",
+                    "patternProperties": {
+                        ".*": {
+                            "type": "integer"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                "quests": {
+                    "type": "object",
+                    "patternProperties": {
+                        ".*": {
+                            "enum": [
+                                "started",
+                                "completed",
+                                "complete"
+                            ]
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                "items": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/$defs/itemRef"
+                    }
+                },
+                "untracked": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "itemsAny": {
+                    "type": "array",
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/$defs/itemRef"
+                        }
+                    }
+                },
+                "rulesAll": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "rulesAny": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "additionalProperties": false
+        },
+        "step": {
+            "type": "object",
+            "required": [
+                "description",
+                "type",
+                "requirements"
+            ],
+            "properties": {
+                "description": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "requirements": {
+                    "$ref": "#/$defs/requirements"
+                },
+                "specialInfo": {
+                    "type": "string"
+                },
+                "countWhenAvailableOnly": {
+                    "type": "boolean"
+                }
+            },
+            "additionalProperties": false
+        },
+        "tierSteps": {
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/step"
+            }
+        }
+    }
+}

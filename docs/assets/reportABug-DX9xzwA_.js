@@ -1,4 +1,4 @@
-import{f as n}from"./index-ocd0jo_t.js";let o=null,t=null;async function d(){return`
+import{f as n}from"./index-CNsWtI7f.js";let o=null,t=null;async function d(){return`
         <h1>Report a bug</h1>
         <p>Report your problems here. It will automatically also send your obtained and rolled for me to check :)</p>
         <textarea id="bugText" placeholder="Describe the bug..." cols="50" rows="10"></textarea><br/><br/>

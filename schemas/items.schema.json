@@ -1,0 +1,363 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "items.schema.json",
+    "type": "array",
+    "items": {
+        "$ref": "#/$defs/item"
+    },
+    "$defs": {
+        "itemId": {
+            "anyOf": [
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        },
+        "rule": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/$defs/rule"
+                    }
+                },
+                {
+                    "type": "object",
+                    "anyOf": [
+                        {
+                            "required": [
+                                "has"
+                            ],
+                            "properties": {
+                                "has": {
+                                    "$ref": "#/$defs/itemId"
+                                }
+                            }
+                        },
+                        {
+                            "required": [
+                                "skill",
+                                "level"
+                            ],
+                            "properties": {
+                                "skill": {
+                                    "type": "string"
+                                },
+                                "level": {
+                                    "type": "integer"
+                                }
+                            }
+                        },
+                        {
+                            "required": [
+                                "skills"
+                            ],
+                            "properties": {
+                                "skills": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "required": [
+                                            "skill",
+                                            "level"
+                                        ],
+                                        "properties": {
+                                            "skill": {
+                                                "type": "string"
+                                            },
+                                            "level": {
+                                                "type": "integer"
+                                            }
+                                        },
+                                        "additionalProperties": true
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "required": [
+                                "all"
+                            ],
+                            "properties": {
+                                "all": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/$defs/rule"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "required": [
+                                "any"
+                            ],
+                            "properties": {
+                                "any": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/$defs/rule"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "additionalProperties": true
+                }
+            ]
+        },
+        "sourceRuleOrString": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "$ref": "#/$defs/rule"
+                }
+            ]
+        },
+        "dropEntry": {
+            "type": "object",
+            "required": [
+                "droprate"
+            ],
+            "properties": {
+                "droprate": {
+                    "type": "string"
+                },
+                "tags": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    ]
+                },
+                "slayerTaskOnly": {
+                    "type": "boolean"
+                },
+                "superiorOnly": {
+                    "type": "boolean"
+                }
+            },
+            "additionalProperties": true
+        },
+        "sourceMethod": {
+            "type": "object",
+            "properties": {
+                "notes": {
+                    "type": "string"
+                },
+                "rule": {
+                    "$ref": "#/$defs/sourceRuleOrString"
+                },
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "houseRule": {
+                    "$ref": "#/$defs/rule"
+                }
+            },
+            "additionalProperties": true
+        },
+        "sources": {
+            "type": "object",
+            "properties": {
+                "drops": {
+                    "type": "object",
+                    "patternProperties": {
+                        ".*": {
+                            "$ref": "#/$defs/dropEntry"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                "other": {
+                    "type": "object",
+                    "patternProperties": {
+                        ".*": {
+                            "$ref": "#/$defs/sourceMethod"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                "shops": {
+                    "type": "object",
+                    "patternProperties": {
+                        ".*": {
+                            "$ref": "#/$defs/sourceRuleOrString"
+                        }
+                    },
+                    "additionalProperties": true
+                },
+                "spawns": {
+                    "type": "object",
+                    "patternProperties": {
+                        ".*": {
+                            "$ref": "#/$defs/sourceRuleOrString"
+                        }
+                    },
+                    "additionalProperties": true
+                },
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "sources": {
+                    "type": "object"
+                }
+            },
+            "additionalProperties": true
+        },
+        "tieredBoostAmount": {
+            "type": "object",
+            "required": [
+                "type",
+                "basedOn",
+                "tiers"
+            ],
+            "properties": {
+                "type": {
+                    "const": "tiered"
+                },
+                "basedOn": {
+                    "type": "string"
+                },
+                "tiers": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                        "type": "object",
+                        "required": [
+                            "min",
+                            "max",
+                            "amount"
+                        ],
+                        "properties": {
+                            "min": {
+                                "type": "integer"
+                            },
+                            "max": {
+                                "type": "integer"
+                            },
+                            "amount": {
+                                "type": "integer"
+                            }
+                        },
+                        "additionalProperties": true
+                    }
+                }
+            },
+            "additionalProperties": true
+        },
+        "boost": {
+            "type": "object",
+            "required": [
+                "skill",
+                "amount"
+            ],
+            "properties": {
+                "skill": {
+                    "type": "string"
+                },
+                "amount": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "$ref": "#/$defs/tieredBoostAmount"
+                        }
+                    ]
+                }
+            },
+            "additionalProperties": true
+        },
+        "item": {
+            "type": "object",
+            "required": [
+                "index",
+                "id",
+                "name",
+                "image"
+            ],
+            "properties": {
+                "index": {
+                    "type": "integer"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "image": {
+                    "type": "string"
+                },
+                "tags": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    ]
+                },
+                "sources": {
+                    "$ref": "#/$defs/sources"
+                },
+                "processable": {
+                    "type": "object",
+                    "patternProperties": {
+                        ".*": {
+                            "anyOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "integer"
+                                }
+                            ]
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                "boosts": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/$defs/boost"
+                    }
+                },
+                "other": {
+                    "type": "object",
+                    "patternProperties": {
+                        ".*": {
+                            "$ref": "#/$defs/sourceMethod"
+                        }
+                    },
+                    "additionalProperties": false
+                }
+            },
+            "additionalProperties": false
+        }
+    }
+}

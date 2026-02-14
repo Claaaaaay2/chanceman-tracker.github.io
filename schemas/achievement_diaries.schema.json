@@ -1,0 +1,175 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "achievement_diaries.schema.json",
+    "type": "object",
+    "required": [
+        "diaries"
+    ],
+    "properties": {
+        "diaries": {
+            "type": "object",
+            "minProperties": 1,
+            "patternProperties": {
+                ".*": {
+                    "$ref": "#/$defs/diaryRegion"
+                }
+            },
+            "additionalProperties": false
+        }
+    },
+    "additionalProperties": false,
+    "$defs": {
+        "itemRef": {
+            "type": "object",
+            "required": [
+                "id"
+            ],
+            "properties": {
+                "id": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ]
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false
+        },
+        "itemRefOrId": {
+            "anyOf": [
+                {
+                    "type": "integer"
+                },
+                {
+                    "$ref": "#/$defs/itemRef"
+                }
+            ]
+        },
+        "requirements": {
+            "type": "object",
+            "required": [
+                "skills",
+                "quests",
+                "items",
+                "untracked",
+                "itemsAny",
+                "rulesAll",
+                "rulesAny"
+            ],
+            "properties": {
+                "skills": {
+                    "type": "object",
+                    "patternProperties": {
+                        ".*": {
+                            "type": "integer"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                "quests": {
+                    "type": "object",
+                    "patternProperties": {
+                        ".*": {
+                            "enum": [
+                                "started",
+                                "completed",
+                                "todo"
+                            ]
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                "items": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/$defs/itemRef"
+                    }
+                },
+                "untracked": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "itemsAny": {
+                    "type": "array",
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/$defs/itemRefOrId"
+                        }
+                    }
+                },
+                "rulesAll": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "rulesAny": {
+                    "type": "array",
+                    "items": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            "additionalProperties": false
+        },
+        "task": {
+            "type": "object",
+            "required": [
+                "name",
+                "requirements"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "requirements": {
+                    "$ref": "#/$defs/requirements"
+                }
+            },
+            "additionalProperties": false
+        },
+        "taskList": {
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/task"
+            }
+        },
+        "diaryRegion": {
+            "type": "object",
+            "properties": {
+                "Easy": {
+                    "$ref": "#/$defs/taskList"
+                },
+                "Medium": {
+                    "$ref": "#/$defs/taskList"
+                },
+                "Hard": {
+                    "$ref": "#/$defs/taskList"
+                },
+                "Elite": {
+                    "$ref": "#/$defs/taskList"
+                }
+            },
+            "additionalProperties": false
+        }
+    }
+}
