@@ -1441,6 +1441,11 @@ body.route-loading .route-loading-overlay {
     margin-top: -0.35rem;
 }
 
+.npc-drop-rate-info {
+    margin-left: 0.35rem;
+    vertical-align: middle;
+}
+
 
 .npc-drop-sort {
     display: inline-flex;

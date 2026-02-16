@@ -11,6 +11,10 @@ function escapeHtml(value) {
         .replace(/"/g, "&quot;");
 }
 
+function isClueRewardCasketSource(sourceName) {
+    return /^Reward casket \(/i.test(sourceName || "");
+}
+
 export default async function NpcsPage() {
     if (!fileStore.player) {
         return `
@@ -42,6 +46,10 @@ export default async function NpcsPage() {
         const itemCount = entry.items.length;
         const itemLabel = itemCount === 1 ? "item" : "items";
         const npcWiki = NPC_DATA[entry.npcName]?.wiki;
+        const showClueRollInfo = isClueRewardCasketSource(entry.npcName);
+        const clueRollInfoHtml = showClueRollInfo
+            ? `<span class="clue-step-info npc-drop-rate-info" tabindex="0" aria-label="Clue casket roll information" title="Chance for a new roll is per roll inside the casket, not per casket.">i</span>`
+            : "";
         const npcNameHtml = npcWiki
             ? `<a class="npc-drop-name-link" href="${npcWiki}" target="_blank" rel="noreferrer">${escapeHtml(entry.npcName)}</a>`
             : `<span class="npc-drop-name-text">${escapeHtml(entry.npcName)}</span>`;
@@ -78,7 +86,7 @@ export default async function NpcsPage() {
                     <h2 class="npc-drop-name">${npcNameHtml}</h2>
                     <span class="npc-drop-count">${itemCount} ${itemLabel}</span>
                 </header>
-                <div class="npc-drop-rate">Chance to get a new roll: ${formatCumulativeRate(entry.totalRateScore)}</div>
+                <div class="npc-drop-rate">Chance to get a new roll: ${formatCumulativeRate(entry.totalRateScore)}${clueRollInfoHtml}</div>
                 ${collapseDrops ? "" : `
                     <div class="npc-drop-items">
                         ${itemsHtml}
