@@ -52483,7 +52483,7 @@
                 "has": 227
               },
               {
-                "has": 265
+                "has": 267
               },
               {
                 "skill": "Herblore",
@@ -61380,7 +61380,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Woodcutting"
+    ]
   },
   {
     "index": 1626,
@@ -65428,8 +65431,10 @@
     "name": "Granite body",
     "image": "granite_body.png",
     "sources": {
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "From Barbarian Assault."
+        }
       }
     },
     "tags": [
@@ -93220,7 +93225,10 @@
           "droprate": "1/6"
         }
       }
-    }
+    },
+    "tags": [
+      "Woodcutting"
+    ]
   },
   {
     "index": 2254,
@@ -94582,7 +94590,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Woodcutting"
+    ]
   },
   {
     "index": 2288,
@@ -95441,7 +95452,10 @@
           "droprate": "1/6"
         }
       }
-    }
+    },
+    "tags": [
+      "Woodcutting"
+    ]
   },
   {
     "index": 2313,
@@ -97669,7 +97683,10 @@
           "droprate": "1/6"
         }
       }
-    }
+    },
+    "tags": [
+      "Woodcutting"
+    ]
   },
   {
     "index": 2367,
@@ -107646,7 +107663,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Woodcutting"
+    ]
   },
   {
     "index": 2624,
@@ -108884,7 +108904,7 @@
     "sources": {
       "other": {
         "Smithing a Noxious halberd": {
-          "notes": "Requires Noxious point, Noxious blade and a Noxious pommel and level 72 Smithing and level 72 Crafting.",
+          "notes": "Requires Noxious point, Noxious blade and a Noxious pommel and level 72 Smithing, level 72 Crafting and level 92 Slayer to kill Araxxor.",
           "rule": {
             "all": [
               {
@@ -108896,6 +108916,10 @@
                   {
                     "skill": "Crafting",
                     "level": 72
+                  },
+                  {
+                    "skill": "Slayer",
+                    "level": 92
                   }
                 ]
               },
@@ -109577,7 +109601,10 @@
           "droprate": "1/6"
         }
       }
-    }
+    },
+    "tags": [
+      "Woodcutting"
+    ]
   },
   {
     "index": 2666,
@@ -135142,7 +135169,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Woodcutting"
+    ]
   },
   {
     "index": 3381,
@@ -135166,7 +135196,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Woodcutting"
+    ]
   },
   {
     "index": 3382,
@@ -148230,7 +148263,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Woodcutting"
+    ]
   },
   {
     "index": 3775,
@@ -157773,7 +157809,7 @@
               },
               {
                 "skill": "Crafting",
-                "level": 16
+                "level": 85
               }
             ]
           },
@@ -167720,7 +167756,10 @@
           "droprate": "1/6"
         }
       }
-    }
+    },
+    "tags": [
+      "Woodcutting"
+    ]
   },
   {
     "index": 4355,
@@ -170116,7 +170155,10 @@
           "droprate": "1/6"
         }
       }
-    }
+    },
+    "tags": [
+      "Woodcutting"
+    ]
   },
   {
     "index": 4432,
