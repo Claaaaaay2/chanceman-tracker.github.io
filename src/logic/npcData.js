@@ -16586,7 +16586,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Yew_tree",
         "rule": ["canTrainWoodcutting"],
         "skill": ["woodcutting"],
-        "level": [true],
+        "level": [60],
         "tags": [],
         "f2p": true
     },

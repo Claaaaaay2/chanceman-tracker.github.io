@@ -1,7 +1,7 @@
 import { initLazyImages } from "../app/lazyImages.js";
 import { canReachNpc, evaluateRule } from "../logic/itemAvailability.js";
 import { getHighlightClasses, isItemSourcesChanged, markNewItems, markSourceSignature } from "../logic/highlightState.js";
-import { areNpcSkillsMet, getNpcEffectiveLevels, isDropSlayerLocked, isItemHiddenByTag, isNpcBlockedByFilters, isNpcObtainable, isSourceHiddenByFilters } from "../logic/itemVisibility.js";
+import { areNpcSkillsMet, getNpcEffectiveLevels, isDropSlayerLocked, isItemHiddenByTag, isNpcBlockedByFilters, isNpcObtainable, isRuleObtainable, isSourceHiddenByFilters } from "../logic/itemVisibility.js";
 import { NPC_DATA } from "../logic/npcData.js";
 import { has } from "../logic/requirements.js";
 import { getObtainabilityRank } from "../logic/sortHelpers.js";
@@ -729,14 +729,18 @@ export async function initItemsPage() {
         }
 
         if (rolledSet?.has(item.id) && item.sources?.shops) {
-            for (const shopName of Object.keys(item.sources.shops)) {
-                sources.push(`Shop: ${shopName}`);
+            for (const [shopName, rule] of Object.entries(item.sources.shops)) {
+                if (await isRuleObtainable(rule, ctx)) {
+                    sources.push(`Shop: ${shopName}`);
+                }
             }
         }
 
         if (rolledSet?.has(item.id) && item.sources?.spawns) {
-            for (const spawnName of Object.keys(item.sources.spawns)) {
-                sources.push(`Spawn: ${spawnName}`);
+            for (const [spawnName, rule] of Object.entries(item.sources.spawns)) {
+                if (await isRuleObtainable(rule, ctx)) {
+                    sources.push(`Spawn: ${spawnName}`);
+                }
             }
         }
 
