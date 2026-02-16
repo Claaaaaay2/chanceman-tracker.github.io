@@ -2704,8 +2704,19 @@ function canCompleteBlackKnightsFortress(ctx) {
     return allTrue([
         hasQuestPoints(ctx, 12), //
         has(ctx, 1965), // Cabbage
-        has(ctx, 1101), // Iron chainbody
-        has(ctx, 1139), // Bronze med helm
+        (
+            // Original route: bronze med helm + iron chainbody
+            (
+                has(ctx, 1101) // Iron chainbody
+                && has(ctx, 1139) // Bronze med helm
+            )
+            // Alternative route: any black full helm + platebody + platelegs (including (t)/(g))
+            || (
+                hasAnyItems(ctx, [1165, 2595, 2587]) // Black full helm / (g) / (t)
+                && hasAnyItems(ctx, [1125, 2591, 2583]) // Black platebody / (g) / (t)
+                && hasAnyItems(ctx, [1077, 2593, 2585]) // Black platelegs / (g) / (t)
+            )
+        ),
     ]);
 }
 
