@@ -96,7 +96,9 @@ export async function getObtainabilityRank(item, ctx) {
     if (src.other) {
         const levelIgnoredCtx = {
             ...ctx,
-            ignoreSkillLevels: "levelsOnly",
+            // Keep trainability checks while ignoring numeric level thresholds.
+            // This matches rank-7 intent and the tooltip/skill-label path.
+            ignoreSkillLevels: true,
             suppressMissing: true,
             ruleEvalKey: `${ctx.ruleEvalKey || "base"}:ignoreLevels`,
             missing: {

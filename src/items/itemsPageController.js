@@ -20,7 +20,7 @@ const ITEM_SECTION_TITLES = {
     4: "Other Sources",
     5: "Skill Requirements Met",
     6: "Other Drops",
-    7: "Drops for which you do not have the level yet",
+    7: "Sources for which you do not have the level yet",
     8: "Unobtainable Items"
 };
 

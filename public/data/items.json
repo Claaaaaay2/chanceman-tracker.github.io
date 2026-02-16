@@ -108902,7 +108902,7 @@
     "sources": {
       "other": {
         "Smithing a Noxious halberd": {
-          "notes": "Requires Noxious point, Noxious blade and a Noxious pommel and level 72 Smithing and level 72 Crafting.",
+          "notes": "Requires Noxious point, Noxious blade and a Noxious pommel and level 72 Smithing, level 72 Crafting and level 92 Slayer to kill Araxxor.",
           "rule": {
             "all": [
               {
@@ -108914,6 +108914,10 @@
                   {
                     "skill": "Crafting",
                     "level": 72
+                  },
+                  {
+                    "skill": "Slayer",
+                    "level": 92
                   }
                 ]
               },
