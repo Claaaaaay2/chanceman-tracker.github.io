@@ -243,6 +243,8 @@ export function canTrainSkill(ctx, skill) {
             return canTrainWoodcutting(ctx);
         case "Herblore":
             return canCompleteDruidicRitual(ctx);
+        case "Sailing":
+            return canCompletePandemonium(ctx);
         default:
             // Most skills are assumed trainable without special item gates.
             return true;
