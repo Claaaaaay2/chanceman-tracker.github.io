@@ -1609,24 +1609,24 @@ export const NPC_DATA = {
     "Bird nest (egg)": {
         "wiki": "https://oldschool.runescape.wiki/w/Bird_nest_(egg)",
         "rule": null,
-        "skill": ["woodcutting"],
-        "level": [1],
+        "skill": [],
+        "level": [],
         "tags": [],
         "f2p": false
     },
     "Bird nest (ring)": {
         "wiki": "https://oldschool.runescape.wiki/w/Bird_nest_(ring)",
-        "rule": ["canTrainWoodcutting"],
-        "skill": ["woodcutting"],
-        "level": [1],
+        "rule": [],
+        "skill": [],
+        "level": [],
         "tags": [],
         "f2p": false
     },
     "Bird nest (seeds)": {
         "wiki": "https://oldschool.runescape.wiki/w/Bird_nest_(seeds)",
-        "rule": ["canTrainWoodcutting"],
-        "skill": ["woodcutting"],
-        "level": [1],
+        "rule": [],
+        "skill": [],
+        "level": [],
         "tags": [],
         "f2p": false
     },
