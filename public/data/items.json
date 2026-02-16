@@ -65431,8 +65431,10 @@
     "name": "Granite body",
     "image": "granite_body.png",
     "sources": {
-      "shops": {
-        "Yes": "No requirements"
+      "other": {
+        "Special shop": {
+          "notes": "From Barbarian Assault."
+        }
       }
     },
     "tags": [
