@@ -61380,7 +61380,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Woodcutting"
+    ]
   },
   {
     "index": 1626,
@@ -93220,7 +93223,10 @@
           "droprate": "1/6"
         }
       }
-    }
+    },
+    "tags": [
+      "Woodcutting"
+    ]
   },
   {
     "index": 2254,
@@ -94582,7 +94588,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Woodcutting"
+    ]
   },
   {
     "index": 2288,
@@ -95441,7 +95450,10 @@
           "droprate": "1/6"
         }
       }
-    }
+    },
+    "tags": [
+      "Woodcutting"
+    ]
   },
   {
     "index": 2313,
@@ -97669,7 +97681,10 @@
           "droprate": "1/6"
         }
       }
-    }
+    },
+    "tags": [
+      "Woodcutting"
+    ]
   },
   {
     "index": 2367,
@@ -107646,7 +107661,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Woodcutting"
+    ]
   },
   {
     "index": 2624,
@@ -109577,7 +109595,10 @@
           "droprate": "1/6"
         }
       }
-    }
+    },
+    "tags": [
+      "Woodcutting"
+    ]
   },
   {
     "index": 2666,
@@ -135142,7 +135163,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Woodcutting"
+    ]
   },
   {
     "index": 3381,
@@ -135166,7 +135190,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Woodcutting"
+    ]
   },
   {
     "index": 3382,
@@ -148230,7 +148257,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Woodcutting"
+    ]
   },
   {
     "index": 3775,
@@ -167720,7 +167750,10 @@
           "droprate": "1/6"
         }
       }
-    }
+    },
+    "tags": [
+      "Woodcutting"
+    ]
   },
   {
     "index": 4355,
@@ -170116,7 +170149,10 @@
           "droprate": "1/6"
         }
       }
-    }
+    },
+    "tags": [
+      "Woodcutting"
+    ]
   },
   {
     "index": 4432,
