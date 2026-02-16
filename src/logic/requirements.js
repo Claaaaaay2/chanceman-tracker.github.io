@@ -7205,8 +7205,7 @@ function canTrainFarming(ctx) {
 }
 
 function canPlantTrees(ctx) {
-    return canTrainFarming(ctx) //
-        && has(ctx, 5341) // Rake
+    return has(ctx, 5341) // Rake
         && has(ctx, 952); // Spade
 }
 
@@ -7220,8 +7219,7 @@ function canPlantHardwoodTrees(ctx) {
 }
 
 function canPlantPlants(ctx) {
-    return canTrainFarming(ctx) //
-        && has(ctx, 5341); // Rake
+    return has(ctx, 5341); // Rake
 }
 
 function canTrainConstruction(ctx) {
