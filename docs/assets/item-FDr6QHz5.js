@@ -1,4 +1,4 @@
-import{f as r,a as g,c as w,d as $,i as y,p as u,N as j,e as O,g as h}from"./index-_hvuegEc.js";async function B(){const e=r.obtained,s=r.rolled;if(!e||!s)return"<h1>Please upload your files on the Upload page first.</h1>";const l=new URLSearchParams(window.location.search).get("id");if(!l)return"<h1>No item selected</h1>";await r.ensureItemsLoaded();const o=r.items,n=o.find(a=>a.id==l);if(!n||g(n))return"<h1>Item not found</h1>";const c=await k(n,n.sources),t=R(n.processable,o);return`
+import{f as r,a as g,c as w,d as $,i as y,p as u,N as j,e as O,g as h}from"./index-CIVIkReU.js";async function B(){const e=r.obtained,s=r.rolled;if(!e||!s)return"<h1>Please upload your files on the Upload page first.</h1>";const l=new URLSearchParams(window.location.search).get("id");if(!l)return"<h1>No item selected</h1>";await r.ensureItemsLoaded();const o=r.items,n=o.find(a=>a.id==l);if(!n||g(n))return"<h1>Item not found</h1>";const c=await k(n,n.sources),t=R(n.processable,o);return`
         <h1>${n.name}</h1>
 
         <div class="item-header">

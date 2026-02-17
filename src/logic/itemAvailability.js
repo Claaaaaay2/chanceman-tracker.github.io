@@ -158,12 +158,18 @@ export async function evaluateRule(rule, ctx) {
         }
         }
     } else if (Array.isArray(rule)) {
+        // Legacy data sometimes stores "no requirements" as [].
+        // Treat empty arrays as reachable/obtainable.
+        if (rule.length === 0) {
+            result = true;
+        } else {
         // Array -> OR
         for (const r of rule) {
             if (await evaluateRule(r, ctx)) {
                 result = true;
                 break;
             }
+        }
         }
     } else if (typeof rule === "object") {
         // Object structures
