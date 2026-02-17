@@ -1121,7 +1121,14 @@ body.route-loading .route-loading-overlay {
 }
 
 .quest-name {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
     font-weight: 600;
+}
+
+.quest-info {
+    flex: 0 0 auto;
 }
 
 .quest-status {

@@ -3577,8 +3577,8 @@
     "image": "bowl_of_water.png",
     "sources": {
       "other": {
-        "Cooking a Bowl of water": {
-          "notes": "Requires Bowl.",
+        "Filling a Bowl": {
+          "notes": "Requires a Bowl.",
           "rule": {
             "all": [
               {
@@ -4897,7 +4897,7 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Crafting a Bucket of water": {
+        "Filling a Bucket": {
           "notes": "Requires a Bucket.",
           "rule": {
             "all": [
@@ -9274,6 +9274,18 @@
       },
       "spawns": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Filling a Jug": {
+          "notes": "Requires a Jug.",
+          "rule": {
+            "all": [
+              {
+                "has": 1935
+              }
+            ]
+          }
+        }
       }
     }
   },

@@ -2932,9 +2932,16 @@ function canCompleteDefenderOfVarrock(ctx) {
 }
 
 function canCompleteDemonSlayer(ctx) {
+    const hasWaterForF2P = hasAnyItems(ctx, [
+        1929, // Bucket of water
+        1937, // Jug of water
+        1921, // Bowl of water
+        227,  // Vial of water
+    ]);
+
     return allTrue([
-        has(ctx, 1929), // Bucket of water
         has(ctx, 526), // Bones
+        ctx.filters?.isFreeToPlay ? hasWaterForF2P : true,
     ]);
 }
 

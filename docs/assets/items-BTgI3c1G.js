@@ -1,4 +1,4 @@
-import{f as e}from"./index-Bxo1fZye.js";async function t(){return await e.ensureItemsLoaded(),`
+import{f as e}from"./index-D5Tc1oWf.js";async function t(){return await e.ensureItemsLoaded(),`
         <div class="items-header">
             <h1>Items</h1>
             <button id="filter-overrides-toggle" title="Toggle filters and overrides">

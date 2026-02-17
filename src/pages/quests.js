@@ -15,6 +15,18 @@ const RFD_SUBQUEST_KEYS = {
     "Wartface & Bentnoze": "canCompleteRFDFreeingTheGoblinGenerals"
 };
 
+const QUEST_INFO_NOTES = {
+    "Demon Slayer": "An untradable Waterskin(3) can be used instead of a Bucket of water. Buy this at Ali Morrisane's."
+};
+
+function escapeHtml(value) {
+    return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+}
+
 function normalizeRequirementName(value) {
     return value
         .replace(/[’']/g, "")
@@ -311,6 +323,12 @@ export default async function QuestsPage() {
         const missingHtml = !quest.isCompleted && !quest.isDoable
             ? renderQuestMissing(quest.missingItems)
             : "";
+        const questInfo = fileStore.filters?.isFreeToPlay
+            ? null
+            : QUEST_INFO_NOTES[quest.questName];
+        const questInfoHtml = questInfo
+            ? `<span class="clue-step-info quest-info" tabindex="0" aria-label="Quest information" title="${escapeHtml(questInfo)}">i</span>`
+            : "";
 
         return `
             <div class="quest-row ${quest.statusClass}"
@@ -318,7 +336,7 @@ export default async function QuestsPage() {
                 data-doable="${quest.isDoable ? "true" : "false"}"
                 data-trainable="${quest.isTrainable ? "true" : "false"}"
                 data-name="${quest.questName.toLowerCase()}">
-                <div class="quest-name">${quest.questName}</div>
+                <div class="quest-name">${quest.questName}${questInfoHtml}</div>
                 <div class="quest-status">${quest.statusLabel}</div>
                 ${missingHtml}
             </div>
