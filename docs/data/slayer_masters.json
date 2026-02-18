@@ -1,0 +1,3675 @@
+{
+    "masters": [
+        {
+            "name": "Turael",
+            "customUrl": "",
+            "notes": [],
+            "reachRequirements": {},
+            "assignmentRequirements": {},
+            "monsters": [
+                {
+                    "name": "Banshees",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 15,
+                            "Combat": 20
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    },
+                    "notes": [
+                        "Can be safespotted if no Earmuffs are available."
+                    ]
+                },
+                {
+                    "name": "Bats",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 5
+                        }
+                    }
+                },
+                {
+                    "name": "Bears",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 13
+                        }
+                    }
+                },
+                {
+                    "name": "Birds",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Cave bugs",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 7
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAll": [
+                            "Rope"
+                        ],
+                        "itemsAny": []
+                    }
+                },
+                {
+                    "name": "Cave crawlers",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 10,
+                            "Combat": 10
+                        }
+                    }
+                },
+                {
+                    "name": "Cave slimes",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 17,
+                            "Combat": 15
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAll": [
+                            "Rope"
+                        ],
+                        "itemsAny": []
+                    }
+                },
+                {
+                    "name": "Cows",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Crawling Hands",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 5
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Dogs",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 15
+                        }
+                    }
+                },
+                {
+                    "name": "Dwarves",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 6
+                        }
+                    }
+                },
+                {
+                    "name": "Ghosts",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 13
+                        }
+                    }
+                },
+                {
+                    "name": "Goblins",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Icefiends",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 20
+                        }
+                    }
+                },
+                {
+                    "name": "Kalphite",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 15
+                        }
+                    }
+                },
+                {
+                    "name": "Lizards",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 22
+                        }
+                    }
+                },
+                {
+                    "name": "Minotaurs",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 7
+                        }
+                    }
+                },
+                {
+                    "name": "Monkeys",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Rats",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Scorpions",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 7
+                        }
+                    }
+                },
+                {
+                    "name": "Skeletons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 15
+                        }
+                    }
+                },
+                {
+                    "name": "Spiders",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Wolves",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 20
+                        }
+                    }
+                },
+                {
+                    "name": "Zombies",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 10
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Spria",
+            "customUrl": "",
+            "notes": [],
+            "reachRequirements": {
+                "quests": {
+                    "A Porcine of Interest": "completed"
+                }
+            },
+            "assignmentRequirements": {},
+            "monsters": [
+                {
+                    "name": "Banshees",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 15,
+                            "Combat": 20
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    },
+                    "notes": [
+                        "Can be safespotted if no Earmuffs are available."
+                    ]
+                },
+                {
+                    "name": "Bats",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 5
+                        }
+                    }
+                },
+                {
+                    "name": "Bears",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 13
+                        }
+                    }
+                },
+                {
+                    "name": "Birds",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Cave bugs",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 7
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAll": [
+                            "Rope"
+                        ],
+                        "itemsAny": []
+                    }
+                },
+                {
+                    "name": "Cave crawlers",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 10,
+                            "Combat": 10
+                        }
+                    }
+                },
+                {
+                    "name": "Cave slimes",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 17,
+                            "Combat": 15
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAll": [
+                            "Rope"
+                        ],
+                        "itemsAny": []
+                    }
+                },
+                {
+                    "name": "Cows",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Crawling Hands",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 5
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Dogs",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 15
+                        }
+                    }
+                },
+                {
+                    "name": "Dwarves",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 6
+                        }
+                    }
+                },
+                {
+                    "name": "Ghosts",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 13
+                        }
+                    }
+                },
+                {
+                    "name": "Goblins",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Icefiends",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 20
+                        }
+                    }
+                },
+                {
+                    "name": "Kalphite",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 15
+                        }
+                    }
+                },
+                {
+                    "name": "Lizards",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 22
+                        }
+                    }
+                },
+                {
+                    "name": "Minotaurs",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 7
+                        }
+                    }
+                },
+                {
+                    "name": "Monkeys",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Rats",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Scorpions",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 7
+                        }
+                    }
+                },
+                {
+                    "name": "Skeletons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 15
+                        }
+                    }
+                },
+                {
+                    "name": "Sourhogs",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "A Porcine of Interest": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Spiders",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Wolves",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 20
+                        }
+                    }
+                },
+                {
+                    "name": "Zombies",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 10
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Krystilia",
+            "customUrl": "",
+            "notes": [],
+            "reachRequirements": {},
+            "assignmentRequirements": {},
+            "monsters": [
+                {
+                    "name": "Abyssal demons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 85
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Ankou",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Aviansie",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skillsAny": [
+                            {
+                                "Strength": 60
+                            },
+                            {
+                                "Agility": 60
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Bandits",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Bears",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Black demons",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Black dragons",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Black Knights",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Bloodveld",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 50
+                        },
+                        "skillsAny": [
+                            {
+                                "Strength": 60
+                            },
+                            {
+                                "Agility": 60
+                            }
+                        ],
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Chaos druids",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Dark warriors",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Dust devils",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 65
+                        },
+                        "quests": {
+                            "Desert Treasure I": "completed"
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAny": [
+                            [
+                                "Face mask",
+                                "Dwellberries"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "name": "Earth warriors",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Ents",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Fire giants",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Greater demons",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Green dragons",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Hellhounds",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Hill Giants",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Ice giants",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Ice warriors",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Jellies",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 52
+                        }
+                    }
+                },
+                {
+                    "name": "Lava dragons",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Lesser demons",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Magic axes",
+                    "customUrl": "",
+                    "reachRequirements": {
+                        "itemsAll": [
+                            "Lockpick"
+                        ],
+                        "itemsAny": []
+                    }
+                },
+                {
+                    "name": "Mammoths",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Moss giants",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Nechryael",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 80
+                        }
+                    }
+                },
+                {
+                    "name": "Pirates",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Revenants",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Rogues",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Scorpions",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Skeletons",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Spiders",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Spiritual creatures",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 63
+                        },
+                        "skillsAny": [
+                            {
+                                "Strength": 60
+                            },
+                            {
+                                "Agility": 60
+                            }
+                        ],
+                        "quests": {
+                            "Death Plateau": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Zombies",
+                    "customUrl": ""
+                }
+            ]
+        },
+        {
+            "name": "Mazchna",
+            "customUrl": "",
+            "notes": [],
+            "reachRequirements": {
+                "quests": {
+                    "Priest in Peril": "completed"
+                }
+            },
+            "assignmentRequirements": {
+                "skills": {
+                    "Combat": 20
+                }
+            },
+            "monsters": [
+                {
+                    "name": "Banshees",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 15,
+                            "Combat": 20
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    },
+                    "notes": [
+                        "Can be safespotted if no Earmuffs are available."
+                    ]
+                },
+                {
+                    "name": "Bats",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 5
+                        }
+                    }
+                },
+                {
+                    "name": "Bears",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 13
+                        }
+                    }
+                },
+                {
+                    "name": "Catablepon",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 35
+                        }
+                    }
+                },
+                {
+                    "name": "Cave bugs",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 7
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAll": [
+                            "Rope"
+                        ],
+                        "itemsAny": []
+                    }
+                },
+                {
+                    "name": "Cave crawlers",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 10,
+                            "Combat": 10
+                        }
+                    }
+                },
+                {
+                    "name": "Cave slimes",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 17,
+                            "Combat": 15
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAll": [
+                            "Rope"
+                        ],
+                        "itemsAny": []
+                    }
+                },
+                {
+                    "name": "Cockatrice",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 17,
+                            "Defence": 20,
+                            "Combat": 25
+                        }
+                    },
+                    "notes": [
+                        "Can be safespotted if no Mirror shield is available."
+                    ]
+                },
+                {
+                    "name": "Crabs",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Crawling Hands",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 5
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Dogs",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 15
+                        }
+                    }
+                },
+                {
+                    "name": "Flesh Crawlers",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 15
+                        }
+                    }
+                },
+                {
+                    "name": "Ghosts",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 13
+                        }
+                    }
+                },
+                {
+                    "name": "Ghouls",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        },
+                        "skills": {
+                            "Combat": 25
+                        }
+                    }
+                },
+                {
+                    "name": "Hill Giants",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 25
+                        }
+                    }
+                },
+                {
+                    "name": "Hobgoblins",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 20
+                        }
+                    }
+                },
+                {
+                    "name": "Ice warriors",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 45
+                        }
+                    }
+                },
+                {
+                    "name": "Kalphite",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 15
+                        }
+                    }
+                },
+                {
+                    "name": "Killerwatts",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 37,
+                            "Combat": 50
+                        },
+                        "quests": {
+                            "Ernest the Chicken": "completed"
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAll": [
+                            "Insulated boots"
+                        ],
+                        "itemsAny": []
+                    }
+                },
+                {
+                    "name": "Lizards",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 22
+                        }
+                    }
+                },
+                {
+                    "name": "Mogres",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 32,
+                            "Combat": 30
+                        },
+                        "quests": {
+                            "Skippy and the Mogres": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Pyrefiends",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 30,
+                            "Combat": 25
+                        }
+                    }
+                },
+                {
+                    "name": "Rockslugs",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 20,
+                            "Combat": 20
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAny": [
+                            [
+                                "Brine sabre",
+                                "Pile of salt",
+                                "Bag of salt"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "name": "Scorpions",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 7
+                        }
+                    }
+                },
+                {
+                    "name": "Shades",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 30
+                        }
+                    }
+                },
+                {
+                    "name": "Skeletons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 15
+                        }
+                    }
+                },
+                {
+                    "name": "Vampyres",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        },
+                        "skills": {
+                            "Combat": 35
+                        }
+                    }
+                },
+                {
+                    "name": "Wall beasts",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 35,
+                            "Defence": 5,
+                            "Combat": 30
+                        }
+                    },
+                    "notes": [
+                        "If not using an alt, requires a Spiny helmet."
+                    ]
+                },
+                {
+                    "name": "Wolves",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 20
+                        }
+                    }
+                },
+                {
+                    "name": "Zombies",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 10
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Vannaka",
+            "customUrl": "",
+            "notes": [],
+            "reachRequirements": {},
+            "assignmentRequirements": {
+                "skills": {
+                    "Combat": 40
+                }
+            },
+            "monsters": [
+                {
+                    "name": "Aberrant spectres",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 60,
+                            "Combat": 65
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    },
+                    "notes": [
+                        "Can be safespotted if no Nose peg is available."
+                    ]
+                },
+                {
+                    "name": "Abyssal demons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 85,
+                            "Combat": 85
+                        },
+                        "questsAny": [
+                            {
+                                "Priest in Peril": "completed"
+                            },
+                            {
+                                "Fairytale II - Cure a Queen": "completed"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Ankou",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 40
+                        }
+                    }
+                },
+                {
+                    "name": "Basilisks",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 40,
+                            "Defence": 20,
+                            "Combat": 40
+                        }
+                    },
+                    "notes": [
+                        "Can be safespotted if Mirror shield is not available."
+                    ]
+                },
+                {
+                    "name": "Bloodveld",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 50,
+                            "Combat": 50
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Blue dragons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Dragon Slayer I": "started"
+                        },
+                        "skills": {
+                            "Combat": 65
+                        }
+                    }
+                },
+                {
+                    "name": "Brine rats",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 47,
+                            "Combat": 45
+                        },
+                        "quests": {
+                            "Olaf's Quest": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Cockatrice",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 17,
+                            "Defence": 20,
+                            "Combat": 25
+                        }
+                    },
+                    "notes": [
+                        "Can be safespotted if no Mirror shield is available."
+                    ]
+                },
+                {
+                    "name": "Crabs",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Crocodiles",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 50
+                        }
+                    }
+                },
+                {
+                    "name": "Dagannoth",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Horror from the Deep": "completed"
+                        },
+                        "skills": {
+                            "Combat": 75
+                        }
+                    }
+                },
+                {
+                    "name": "Dust devils",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 65,
+                            "Combat": 70
+                        },
+                        "quests": {
+                            "Desert Treasure I": "completed"
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAny": [
+                            [
+                                "Face mask",
+                                "Dwellberries"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "name": "Elves",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Regicide": "completed"
+                        },
+                        "skills": {
+                            "Combat": 70
+                        }
+                    }
+                },
+                {
+                    "name": "Fever spiders",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 42,
+                            "Combat": 40
+                        },
+                        "quests": {
+                            "Rum Deal": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Fire giants",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 65
+                        }
+                    }
+                },
+                {
+                    "name": "Gargoyles",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 75,
+                            "Combat": 80
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAny": [
+                            [
+                                "Rock hammer",
+                                "Rock thrownhammer",
+                                "Granite hammer"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "name": "Ghouls",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        },
+                        "skills": {
+                            "Combat": 25
+                        }
+                    }
+                },
+                {
+                    "name": "Gryphons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 51,
+                            "Sailing": 45
+                        },
+                        "quests": {
+                            "Troubled Tortugans": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Harpie Bug Swarms",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 3,
+                            "Firemaking": 33,
+                            "Combat": 45
+                        }
+                    },
+                    "reachRequirements": {
+                        "items": [
+                            "Unlit bug lantern",
+                            "Tinderbox"
+                        ]
+                    }
+                },
+                {
+                    "name": "Hellhounds",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 75
+                        }
+                    }
+                },
+                {
+                    "name": "Hill Giants",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 25
+                        }
+                    }
+                },
+                {
+                    "name": "Hobgoblins",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 20
+                        }
+                    }
+                },
+                {
+                    "name": "Ice giants",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 50
+                        }
+                    }
+                },
+                {
+                    "name": "Ice warriors",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 45
+                        }
+                    }
+                },
+                {
+                    "name": "Infernal Mages",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 45,
+                            "Combat": 40
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Jellies",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 52,
+                            "Combat": 57
+                        }
+                    }
+                },
+                {
+                    "name": "Jungle horrors",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Cabin Fever": "completed"
+                        },
+                        "skills": {
+                            "Combat": 65
+                        }
+                    }
+                },
+                {
+                    "name": "Kalphite",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 15
+                        }
+                    }
+                },
+                {
+                    "name": "Kurask",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 70,
+                            "Combat": 65
+                        }
+                    }
+                },
+                {
+                    "name": "Lesser demons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 60
+                        }
+                    }
+                },
+                {
+                    "name": "Mogres",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 32,
+                            "Combat": 30
+                        },
+                        "quests": {
+                            "Skippy and the Mogres": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Molanisks",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 39,
+                            "Combat": 50
+                        },
+                        "quests": {
+                            "Death to the Dorgeshuun": "completed"
+                        }
+                    },
+                    "notes": [
+                        "If not using an alt, requires a Slayer bell."
+                    ]
+                },
+                {
+                    "name": "Moss giants",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 40
+                        }
+                    }
+                },
+                {
+                    "name": "Nechryael",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 80,
+                            "Combat": 85
+                        }
+                    }
+                },
+                {
+                    "name": "Ogres",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 40
+                        }
+                    }
+                },
+                {
+                    "name": "Otherworldly beings",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Lost City": "completed"
+                        },
+                        "skills": {
+                            "Combat": 40
+                        }
+                    }
+                },
+                {
+                    "name": "Pyrefiends",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 30,
+                            "Combat": 25
+                        }
+                    }
+                },
+                {
+                    "name": "Sea snakes",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 40,
+                            "Combat": 50
+                        },
+                        "quests": {
+                            "Lost City": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Shades",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 30
+                        }
+                    }
+                },
+                {
+                    "name": "Shadow warriors",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Legends' Quest": "completed"
+                        },
+                        "skills": {
+                            "Combat": 60
+                        }
+                    }
+                },
+                {
+                    "name": "Spiritual creatures",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 63,
+                            "Combat": 60
+                        },
+                        "skillsAny": [
+                            {
+                                "Strength": 60
+                            },
+                            {
+                                "Agility": 60
+                            }
+                        ],
+                        "quests": {
+                            "Death Plateau": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Terror dogs",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 40,
+                            "Combat": 60
+                        },
+                        "quests": {
+                            "Haunted Mine": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Trolls",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 60
+                        }
+                    }
+                },
+                {
+                    "name": "Turoth",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 55,
+                            "Combat": 60
+                        }
+                    }
+                },
+                {
+                    "name": "Vampyres",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        },
+                        "skills": {
+                            "Combat": 35
+                        }
+                    }
+                },
+                {
+                    "name": "Werewolves",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        },
+                        "skills": {
+                            "Combat": 60
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Chaeldar",
+            "customUrl": "",
+            "notes": [],
+            "reachRequirements": {
+                "quests": {
+                    "Lost City": "completed"
+                }
+            },
+            "assignmentRequirements": {
+                "skills": {
+                    "Combat": 70
+                }
+            },
+            "monsters": [
+                {
+                    "name": "Aberrant spectres",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 60,
+                            "Combat": 65
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    },
+                    "notes": [
+                        "Can be safespotted if no Nose peg is available."
+                    ]
+                },
+                {
+                    "name": "Abyssal demons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 85,
+                            "Combat": 85
+                        },
+                        "questsAny": [
+                            {
+                                "Priest in Peril": "completed"
+                            },
+                            {
+                                "Fairytale II - Cure a Queen": "completed"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Aviansie",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skillsAny": [
+                            {
+                                "Strength": 60
+                            },
+                            {
+                                "Agility": 60
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Basilisks",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 40,
+                            "Defence": 20,
+                            "Combat": 40
+                        }
+                    },
+                    "notes": [
+                        "Can be safespotted if Mirror shield is not available."
+                    ]
+                },
+                {
+                    "name": "Black demons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 80
+                        }
+                    }
+                },
+                {
+                    "name": "Bloodveld",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 50,
+                            "Combat": 50
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Blue dragons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Dragon Slayer I": "started"
+                        },
+                        "skills": {
+                            "Combat": 65
+                        }
+                    }
+                },
+                {
+                    "name": "Brine rats",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 47,
+                            "Combat": 45
+                        },
+                        "quests": {
+                            "Olaf's Quest": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Cave horrors",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 58,
+                            "Combat": 85
+                        },
+                        "quests": {
+                            "Cabin Fever": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Cave kraken",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 87,
+                            "Magic": 50,
+                            "Combat": 80
+                        }
+                    }
+                },
+                {
+                    "name": "Crabs",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Custodian stalker",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 54
+                        },
+                        "quests": {
+                            "Shadows of Custodia": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Dagannoth",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Horror from the Deep": "completed"
+                        },
+                        "skills": {
+                            "Combat": 75
+                        }
+                    }
+                },
+                {
+                    "name": "Dust devils",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 65,
+                            "Combat": 70
+                        },
+                        "quests": {
+                            "Desert Treasure I": "completed"
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAny": [
+                            [
+                                "Face mask",
+                                "Dwellberries"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "name": "Elves",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Regicide": "completed"
+                        },
+                        "skills": {
+                            "Combat": 70
+                        }
+                    }
+                },
+                {
+                    "name": "Fever spiders",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 42,
+                            "Combat": 40
+                        },
+                        "quests": {
+                            "Rum Deal": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Fire giants",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 65
+                        }
+                    }
+                },
+                {
+                    "name": "Fossil Island Wyverns",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Bone Voyage": "completed",
+                            "Elemental Workshop I": "completed"
+                        },
+                        "skills": {
+                            "Combat": 60
+                        }
+                    }
+                },
+                {
+                    "name": "Gargoyles",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 75,
+                            "Combat": 80
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAny": [
+                            [
+                                "Rock hammer",
+                                "Rock thrownhammer",
+                                "Granite hammer"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "name": "Greater demons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 70
+                        }
+                    }
+                },
+                {
+                    "name": "Gryphons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 51,
+                            "Sailing": 45
+                        },
+                        "quests": {
+                            "Troubled Tortugans": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Hellhounds",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 75
+                        }
+                    }
+                },
+                {
+                    "name": "Jellies",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 52,
+                            "Combat": 57
+                        }
+                    }
+                },
+                {
+                    "name": "Jungle horrors",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Cabin Fever": "completed"
+                        },
+                        "skills": {
+                            "Combat": 65
+                        }
+                    }
+                },
+                {
+                    "name": "Kalphite",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 15
+                        }
+                    }
+                },
+                {
+                    "name": "Kurask",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 70,
+                            "Combat": 65
+                        }
+                    }
+                },
+                {
+                    "name": "Lesser demons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 60
+                        }
+                    }
+                },
+                {
+                    "name": "Lesser Nagua",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 48
+                        },
+                        "quests": {
+                            "Perilous Moons": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Lizardmen",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Mutated zygomites",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 57,
+                            "Combat": 60
+                        },
+                        "quests": {
+                            "Lost City": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Nechryael",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 80,
+                            "Combat": 85
+                        }
+                    }
+                },
+                {
+                    "name": "Shadow warriors",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Legends' Quest": "completed"
+                        },
+                        "skills": {
+                            "Combat": 60
+                        }
+                    }
+                },
+                {
+                    "name": "Skeletal Wyverns",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 72,
+                            "Combat": 70
+                        },
+                        "quests": {
+                            "Elemental Workshop I": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Spiritual creatures",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 63,
+                            "Combat": 60
+                        },
+                        "skillsAny": [
+                            {
+                                "Strength": 60
+                            },
+                            {
+                                "Agility": 60
+                            }
+                        ],
+                        "quests": {
+                            "Death Plateau": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Trolls",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 60
+                        }
+                    }
+                },
+                {
+                    "name": "Turoth",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 55,
+                            "Combat": 60
+                        }
+                    }
+                },
+                {
+                    "name": "TzHaar",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Vampyres",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        },
+                        "skills": {
+                            "Combat": 35
+                        }
+                    }
+                },
+                {
+                    "name": "Warped creatures",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 56
+                        },
+                        "quests": {
+                            "The Path of Glouphrie": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Wyrms",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 62
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAny": [
+                            [
+                                "Granite boots",
+                                "Boots of stone",
+                                "Boots of brimstone"
+                            ]
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Konar",
+            "customUrl": "",
+            "notes": [
+                "This does not account for locations of these npcs yet."
+            ],
+            "reachRequirements": {},
+            "assignmentRequirements": {
+                "skills": {
+                    "Combat": 75
+                }
+            },
+            "monsters": [
+                {
+                    "name": "Aberrant spectres",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 60,
+                            "Combat": 65
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    },
+                    "notes": [
+                        "Can be safespotted if no Nose peg is available."
+                    ]
+                },
+                {
+                    "name": "Abyssal demons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 85,
+                            "Combat": 85
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Ankou",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 40
+                        }
+                    }
+                },
+                {
+                    "name": "Aviansie",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skillsAny": [
+                            {
+                                "Strength": 60
+                            },
+                            {
+                                "Agility": 60
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Basilisks",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 40,
+                            "Defence": 20,
+                            "Combat": 40
+                        }
+                    },
+                    "notes": [
+                        "Can be safespotted if Mirror shield is not available."
+                    ]
+                },
+                {
+                    "name": "Black demons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 80
+                        }
+                    }
+                },
+                {
+                    "name": "Black dragons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Dragon Slayer I": "started"
+                        },
+                        "skills": {
+                            "Combat": 80
+                        }
+                    }
+                },
+                {
+                    "name": "Bloodveld",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 50,
+                            "Combat": 50
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Blue dragons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Dragon Slayer I": "started"
+                        },
+                        "skills": {
+                            "Combat": 65
+                        }
+                    }
+                },
+                {
+                    "name": "Brine rats",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 47,
+                            "Combat": 45
+                        },
+                        "quests": {
+                            "Olaf's Quest": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Cave kraken",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 87,
+                            "Magic": 50,
+                            "Combat": 80
+                        }
+                    }
+                },
+                {
+                    "name": "Dagannoth",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Horror from the Deep": "completed"
+                        },
+                        "skills": {
+                            "Combat": 75
+                        }
+                    }
+                },
+                {
+                    "name": "Dark beasts",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 90,
+                            "Combat": 90
+                        },
+                        "quests": {
+                            "Mourning's End Part II": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Drakes",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 84
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAny": [
+                            [
+                                "Granite boots",
+                                "Boots of stone",
+                                "Boots of brimstone"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "name": "Dust devils",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 65,
+                            "Combat": 70
+                        },
+                        "quests": {
+                            "Desert Treasure I": "completed"
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAny": [
+                            [
+                                "Face mask",
+                                "Dwellberries"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "name": "Fire giants",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 65
+                        }
+                    }
+                },
+                {
+                    "name": "Fossil Island Wyverns",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Bone Voyage": "completed",
+                            "Elemental Workshop I": "completed"
+                        },
+                        "skills": {
+                            "Combat": 60
+                        }
+                    }
+                },
+                {
+                    "name": "Gargoyles",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 75,
+                            "Combat": 80
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAny": [
+                            [
+                                "Rock hammer",
+                                "Rock thrownhammer",
+                                "Granite hammer"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "name": "Greater demons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 70
+                        }
+                    }
+                },
+                {
+                    "name": "Hellhounds",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 75
+                        }
+                    }
+                },
+                {
+                    "name": "Hydras",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 95
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAny": [
+                            [
+                                "Granite boots",
+                                "Boots of stone",
+                                "Boots of brimstone"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "name": "Jellies",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 52,
+                            "Combat": 57
+                        }
+                    }
+                },
+                {
+                    "name": "Kalphite",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 15
+                        }
+                    }
+                },
+                {
+                    "name": "Kurask",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 70,
+                            "Combat": 65
+                        }
+                    }
+                },
+                {
+                    "name": "Lesser Nagua",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 48
+                        },
+                        "quests": {
+                            "Perilous Moons": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Lizardmen",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Metal dragons",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Mutated Zygomites",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 57,
+                            "Combat": 60
+                        },
+                        "quests": {
+                            "Lost City": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Nechryael",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 80,
+                            "Combat": 85
+                        }
+                    }
+                },
+                {
+                    "name": "Red dragons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Dragon Slayer I": "started"
+                        },
+                        "skills": {
+                            "Combat": 68
+                        }
+                    }
+                },
+                {
+                    "name": "Skeletal Wyverns",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 72,
+                            "Combat": 70
+                        },
+                        "quests": {
+                            "Elemental Workshop I": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Smoke devils",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 93,
+                            "Combat": 85
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAny": [
+                            [
+                                "Face mask",
+                                "Dwellberries"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "name": "Trolls",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 60
+                        }
+                    }
+                },
+                {
+                    "name": "Turoth",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 55,
+                            "Combat": 60
+                        }
+                    }
+                },
+                {
+                    "name": "Vampyres",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 35
+                        }
+                    }
+                },
+                {
+                    "name": "Warped creatures",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 56
+                        },
+                        "quests": {
+                            "The Path of Glouphrie": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Waterfiends",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Barbarian Training Firemaking I": "completed"
+                        },
+                        "skills": {
+                            "Combat": 75
+                        }
+                    }
+                },
+                {
+                    "name": "Wyrms",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 62
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAny": [
+                            [
+                                "Granite boots",
+                                "Boots of stone",
+                                "Boots of brimstone"
+                            ]
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Nieve",
+            "customUrl": "",
+            "notes": [],
+            "reachRequirements": {},
+            "assignmentRequirements": {
+                "skills": {
+                    "Combat": 85
+                }
+            },
+            "monsters": [
+                {
+                    "name": "Aberrant spectres",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 60,
+                            "Combat": 65
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    },
+                    "notes": [
+                        "Can be safespotted if no Nose peg is available."
+                    ]
+                },
+                {
+                    "name": "Abyssal demons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 85,
+                            "Combat": 85
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Ankou",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 40
+                        }
+                    }
+                },
+                {
+                    "name": "Araxytes",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 92
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Aviansie",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skillsAny": [
+                            {
+                                "Strength": 60
+                            },
+                            {
+                                "Agility": 60
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Aquanites",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 78,
+                            "Sailing": 73
+                        }
+                    }
+                },
+                {
+                    "name": "Basilisks",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 40,
+                            "Defence": 20,
+                            "Combat": 40
+                        }
+                    },
+                    "notes": [
+                        "Can be safespotted if Mirror shield is not available."
+                    ]
+                },
+                {
+                    "name": "Black demons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 80
+                        }
+                    }
+                },
+                {
+                    "name": "Black dragons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Dragon Slayer I": "started"
+                        },
+                        "skills": {
+                            "Combat": 80
+                        }
+                    }
+                },
+                {
+                    "name": "Bloodveld",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 50,
+                            "Combat": 50
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Blue dragons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Dragon Slayer I": "started"
+                        },
+                        "skills": {
+                            "Combat": 65
+                        }
+                    }
+                },
+                {
+                    "name": "Brine rats",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 47,
+                            "Combat": 45
+                        },
+                        "quests": {
+                            "Olaf's Quest": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Cave horrors",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 58,
+                            "Combat": 85
+                        },
+                        "quests": {
+                            "Cabin Fever": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Cave kraken",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 87,
+                            "Magic": 50,
+                            "Combat": 80
+                        }
+                    }
+                },
+                {
+                    "name": "Custodian stalker",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 54
+                        },
+                        "quests": {
+                            "Shadows of Custodia": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Dagannoth",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Horror from the Deep": "completed"
+                        },
+                        "skills": {
+                            "Combat": 75
+                        }
+                    }
+                },
+                {
+                    "name": "Dark beasts",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 90,
+                            "Combat": 90
+                        },
+                        "quests": {
+                            "Mourning's End Part II": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Drakes",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 84
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAny": [
+                            [
+                                "Granite boots",
+                                "Boots of stone",
+                                "Boots of brimstone"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "name": "Dust devils",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 65,
+                            "Combat": 70
+                        },
+                        "quests": {
+                            "Desert Treasure I": "completed"
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAny": [
+                            [
+                                "Face mask",
+                                "Dwellberries"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "name": "Elves",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Regicide": "completed"
+                        },
+                        "skills": {
+                            "Combat": 70
+                        }
+                    }
+                },
+                {
+                    "name": "Fire giants",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 65
+                        }
+                    }
+                },
+                {
+                    "name": "Fossil Island Wyverns",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Bone Voyage": "completed",
+                            "Elemental Workshop I": "completed"
+                        },
+                        "skills": {
+                            "Combat": 60
+                        }
+                    }
+                },
+                {
+                    "name": "Frost dragons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Sailing": 87
+                        },
+                        "rulesAll": [
+                            "canSailToGrimstone"
+                        ]
+                    }
+                },
+                {
+                    "name": "Gargoyles",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 75,
+                            "Combat": 80
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAny": [
+                            [
+                                "Rock hammer",
+                                "Rock thrownhammer",
+                                "Granite hammer"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "name": "Greater demons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 70
+                        }
+                    }
+                },
+                {
+                    "name": "Gryphons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 51,
+                            "Sailing": 45
+                        },
+                        "quests": {
+                            "Troubled Tortugans": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Hellhounds",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 75
+                        }
+                    }
+                },
+                {
+                    "name": "Kalphite",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 15
+                        }
+                    }
+                },
+                {
+                    "name": "Kurask",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 70,
+                            "Combat": 65
+                        }
+                    }
+                },
+                {
+                    "name": "Lizardmen",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Metal dragons",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Mutated Zygomites",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 57,
+                            "Combat": 60
+                        },
+                        "quests": {
+                            "Lost City": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Nechryael",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 80,
+                            "Combat": 85
+                        }
+                    }
+                },
+                {
+                    "name": "Red dragons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Dragon Slayer I": "started"
+                        },
+                        "skills": {
+                            "Combat": 68
+                        }
+                    }
+                },
+                {
+                    "name": "Scabarites",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Contact!": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Skeletal Wyverns",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 72,
+                            "Combat": 70
+                        },
+                        "quests": {
+                            "Elemental Workshop I": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Smoke devils",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 93,
+                            "Combat": 85
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAny": [
+                            [
+                                "Face mask",
+                                "Dwellberries"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "name": "Spiritual creatures",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 63,
+                            "Combat": 60
+                        },
+                        "skillsAny": [
+                            {
+                                "Strength": 60
+                            },
+                            {
+                                "Agility": 60
+                            }
+                        ],
+                        "quests": {
+                            "Death Plateau": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Suqah",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Lunar Diplomacy": "completed"
+                        },
+                        "skills": {
+                            "Combat": 85
+                        }
+                    }
+                },
+                {
+                    "name": "Trolls",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 60
+                        }
+                    }
+                },
+                {
+                    "name": "Turoth",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 55,
+                            "Combat": 60
+                        }
+                    }
+                },
+                {
+                    "name": "TzHaar",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Vampyres",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        },
+                        "skills": {
+                            "Combat": 35
+                        }
+                    }
+                },
+                {
+                    "name": "Warped creatures",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 56
+                        },
+                        "quests": {
+                            "The Path of Glouphrie": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Wyrms",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 62
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAny": [
+                            [
+                                "Granite boots",
+                                "Boots of stone",
+                                "Boots of brimstone"
+                            ]
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Duradal",
+            "customUrl": "",
+            "notes": [],
+            "reachRequirements": {
+                "quests": {
+                    "Shilo Village": "completed"
+                }
+            },
+            "assignmentRequirements": {
+                "skills": {
+                    "Combat": 100
+                }
+            },
+            "monsters": [
+                {
+                    "name": "Aberrant spectres",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 60,
+                            "Combat": 65
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    },
+                    "notes": [
+                        "Can be safespotted if no Nose peg is available."
+                    ]
+                },
+                {
+                    "name": "Abyssal demons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 85,
+                            "Combat": 85
+                        },
+                        "questsAny": [
+                            {
+                                "Priest in Peril": "completed"
+                            },
+                            {
+                                "Fairytale II - Cure a Queen": "completed"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Ankou",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 40
+                        }
+                    }
+                },
+                {
+                    "name": "Aquanite",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 78,
+                            "Sailing": 73
+                        }
+                    }
+                },
+                {
+                    "name": "Araxytes",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 92
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Aviansie",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skillsAny": [
+                            {
+                                "Strength": 60
+                            },
+                            {
+                                "Agility": 60
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Basilisks",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 40,
+                            "Defence": 20,
+                            "Combat": 40
+                        }
+                    },
+                    "notes": [
+                        "Can be safespotted if Mirror shield is not available."
+                    ]
+                },
+                {
+                    "name": "Black demons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 80
+                        }
+                    }
+                },
+                {
+                    "name": "Black dragons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Dragon Slayer I": "started"
+                        },
+                        "skills": {
+                            "Combat": 80
+                        }
+                    }
+                },
+                {
+                    "name": "Bloodveld",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 50,
+                            "Combat": 50
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Blue dragons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Dragon Slayer I": "started"
+                        },
+                        "skills": {
+                            "Combat": 65
+                        }
+                    }
+                },
+                {
+                    "name": "Cave horrors",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 58,
+                            "Combat": 85
+                        },
+                        "quests": {
+                            "Cabin Fever": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Cave kraken",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 87,
+                            "Magic": 50,
+                            "Combat": 80
+                        }
+                    }
+                },
+                {
+                    "name": "Dagannoth",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Horror from the Deep": "completed"
+                        },
+                        "skills": {
+                            "Combat": 75
+                        }
+                    }
+                },
+                {
+                    "name": "Dark beasts",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 90,
+                            "Combat": 90
+                        },
+                        "quests": {
+                            "Mourning's End Part II": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Drakes",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 84
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAny": [
+                            [
+                                "Granite boots",
+                                "Boots of stone",
+                                "Boots of brimstone"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "name": "Dust devils",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 65,
+                            "Combat": 70
+                        },
+                        "quests": {
+                            "Desert Treasure I": "completed"
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAny": [
+                            [
+                                "Face mask",
+                                "Dwellberries"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "name": "Elves",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Regicide": "completed"
+                        },
+                        "skills": {
+                            "Combat": 70
+                        }
+                    }
+                },
+                {
+                    "name": "Fire giants",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 65
+                        }
+                    }
+                },
+                {
+                    "name": "Fossil Island Wyverns",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Bone Voyage": "completed",
+                            "Elemental Workshop I": "completed"
+                        },
+                        "skills": {
+                            "Combat": 60
+                        }
+                    }
+                },
+                {
+                    "name": "Frost dragons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Sailing": 87
+                        },
+                        "rulesAll": [
+                            "canSailToGrimstone"
+                        ]
+                    }
+                },
+                {
+                    "name": "Gargoyles",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 75,
+                            "Combat": 80
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAny": [
+                            [
+                                "Rock hammer",
+                                "Rock thrownhammer",
+                                "Granite hammer"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "name": "Greater demons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 70
+                        }
+                    }
+                },
+                {
+                    "name": "Gryphons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 51,
+                            "Sailing": 45
+                        },
+                        "quests": {
+                            "Troubled Tortugans": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Hellhounds",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 75
+                        }
+                    }
+                },
+                {
+                    "name": "Kalphite",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 15
+                        }
+                    }
+                },
+                {
+                    "name": "Kurask",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 70,
+                            "Combat": 65
+                        }
+                    }
+                },
+                {
+                    "name": "Lizardmen",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Metal dragons",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Mutated Zygomites",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 57,
+                            "Combat": 60
+                        },
+                        "quests": {
+                            "Lost City": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Nechryael",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 80,
+                            "Combat": 85
+                        }
+                    }
+                },
+                {
+                    "name": "Red dragons",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Dragon Slayer I": "started"
+                        },
+                        "skills": {
+                            "Combat": 68
+                        }
+                    }
+                },
+                {
+                    "name": "Skeletal Wyverns",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 72,
+                            "Combat": 70
+                        },
+                        "quests": {
+                            "Elemental Workshop I": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Smoke devils",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 93,
+                            "Combat": 85
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAny": [
+                            [
+                                "Face mask",
+                                "Dwellberries"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "name": "Spiritual creatures",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 63,
+                            "Combat": 60
+                        },
+                        "skillsAny": [
+                            {
+                                "Strength": 60
+                            },
+                            {
+                                "Agility": 60
+                            }
+                        ],
+                        "quests": {
+                            "Death Plateau": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Suqah",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Lunar Diplomacy": "completed"
+                        },
+                        "skills": {
+                            "Combat": 85
+                        }
+                    }
+                },
+                {
+                    "name": "Trolls",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 60
+                        }
+                    }
+                },
+                {
+                    "name": "TzHaar",
+                    "customUrl": ""
+                },
+                {
+                    "name": "Vampyres",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        },
+                        "skills": {
+                            "Combat": 35
+                        }
+                    }
+                },
+                {
+                    "name": "Warped creatures",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 56
+                        },
+                        "quests": {
+                            "The Path of Glouphrie": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Waterfiends",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "Barbarian Training Firemaking I": "completed"
+                        },
+                        "skills": {
+                            "Combat": 75
+                        }
+                    }
+                },
+                {
+                    "name": "Wyrms",
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 62
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAny": [
+                            [
+                                "Granite boots",
+                                "Boots of stone",
+                                "Boots of brimstone"
+                            ]
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
