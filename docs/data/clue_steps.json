@@ -3450,7 +3450,9 @@
                 "type": "Anagrams",
                 "requirements": {
                     "skills": {},
-                    "quests": {},
+                    "quests": {
+                        "Jungle Potion": "completed"
+                    },
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
