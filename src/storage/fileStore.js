@@ -17,6 +17,7 @@ let memory = {
         hideBosses: false,
         hideRaids: false,
         isSlayerLocked: false,
+        hideUnreachableSlayerMasters: true,
         isHunterRumourLocked: false,
         hideLMS: false,
         hideJon: false,

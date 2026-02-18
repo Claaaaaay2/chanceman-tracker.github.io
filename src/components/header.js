@@ -11,7 +11,8 @@ const CORE_LINKS = [
 const PROGRESS_LINKS = [
     { href: "/achievement-diaries", label: "Achievement diaries" },
     { href: "/clue-steps", label: "Clue steps" },
-    { href: "/quests", label: "Quests" }
+    { href: "/quests", label: "Quests" },
+    { href: "/slayer-masters", label: "Slayer masters" }
 ];
 
 const ACTION_LINKS = [

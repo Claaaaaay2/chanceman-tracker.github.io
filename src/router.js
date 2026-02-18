@@ -40,6 +40,9 @@ const routeDefinitions = {
     "/quests": {
         load: async () => import("./pages/quests.js")
     },
+    "/slayer-masters": {
+        load: async () => import("./pages/slayerMasters.js")
+    },
     "/reupload": {
         load: async () => import("./pages/reupload.js")
     },
