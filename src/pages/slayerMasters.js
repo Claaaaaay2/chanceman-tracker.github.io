@@ -290,7 +290,7 @@ export default async function SlayerMastersPage() {
 
     await fileStore.ensureItemsLoaded();
 
-    const response = await fetch("/data/Slayer_masters.json");
+    const response = await fetch("/data/slayer_masters.json");
     const data = await response.json();
     const masters = Array.isArray(data?.masters) ? data.masters : [];
     const masterIdCounts = new Map();
