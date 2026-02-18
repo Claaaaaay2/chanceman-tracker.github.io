@@ -1496,6 +1496,9 @@ export const REQUIREMENT_CHECKS = {
     hasBagOfSalt(ctx) {
         return has(ctx, 4161);
     },
+    hasPileOfSalt(ctx) {
+        return has(ctx, 4689);
+    },
     hasBrineSabre(ctx) {
         return has(ctx, 11037);
     },

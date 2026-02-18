@@ -6734,7 +6734,8 @@ export const NPC_DATA = {
         "rule": {
             "any": [
                 "hasBrineSabre",
-                "hasBagOfSalt"
+                "hasBagOfSalt",
+                "hasPileOfSalt"
             ]
         },
         "skill": ["Slayer"],
@@ -12532,7 +12533,8 @@ export const NPC_DATA = {
         "rule": {
             "any": [
                 "hasBrineSabre",
-                "hasBagOfSalt"
+                "hasBagOfSalt",
+                "hasPileOfSalt"
             ]
         },
         "skill": ["Slayer"],
