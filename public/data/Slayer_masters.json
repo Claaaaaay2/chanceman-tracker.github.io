@@ -43,11 +43,10 @@
                         }
                     },
                     "reachRequirements": {
-                        "itemsAny": [
-                            [
-                                "Rope"
-                            ]
-                        ]
+                        "itemsAll": [
+                            "Rope"
+                        ],
+                        "itemsAny": []
                     }
                 },
                 {
@@ -68,11 +67,10 @@
                         }
                     },
                     "reachRequirements": {
-                        "itemsAny": [
-                            [
-                                "Rope"
-                            ]
-                        ]
+                        "itemsAll": [
+                            "Rope"
+                        ],
+                        "itemsAny": []
                     }
                 },
                 {
@@ -205,11 +203,10 @@
                         }
                     },
                     "reachRequirements": {
-                        "itemsAny": [
-                            [
-                                "Rope"
-                            ]
-                        ]
+                        "itemsAll": [
+                            "Rope"
+                        ],
+                        "itemsAny": []
                     }
                 },
                 {
@@ -230,11 +227,10 @@
                         }
                     },
                     "reachRequirements": {
-                        "itemsAny": [
-                            [
-                                "Rope"
-                            ]
-                        ]
+                        "itemsAll": [
+                            "Rope"
+                        ],
+                        "itemsAny": []
                     }
                 },
                 {
@@ -491,11 +487,10 @@
                     "name": "Magic axes",
                     "customUrl": "",
                     "reachRequirements": {
-                        "itemsAny": [
-                            [
-                                "Lockpick"
-                            ]
-                        ]
+                        "itemsAll": [
+                            "Lockpick"
+                        ],
+                        "itemsAny": []
                     }
                 },
                 {
@@ -618,11 +613,10 @@
                         }
                     },
                     "reachRequirements": {
-                        "itemsAny": [
-                            [
-                                "Rope"
-                            ]
-                        ]
+                        "itemsAll": [
+                            "Rope"
+                        ],
+                        "itemsAny": []
                     }
                 },
                 {
@@ -643,11 +637,10 @@
                         }
                     },
                     "reachRequirements": {
-                        "itemsAny": [
-                            [
-                                "Rope"
-                            ]
-                        ]
+                        "itemsAll": [
+                            "Rope"
+                        ],
+                        "itemsAny": []
                     }
                 },
                 {
@@ -728,11 +721,10 @@
                         }
                     },
                     "reachRequirements": {
-                        "itemsAny": [
-                            [
-                                "Insulated boots"
-                            ]
-                        ]
+                        "itemsAll": [
+                            "Insulated boots"
+                        ],
+                        "itemsAny": []
                     }
                 },
                 {

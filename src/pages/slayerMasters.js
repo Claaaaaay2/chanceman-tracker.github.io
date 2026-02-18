@@ -69,6 +69,7 @@ function mergeRequirementSets(...requirementsList) {
         quests: {},
         questsAny: [],
         items: [],
+        itemsAll: [],
         itemsAny: [],
         rulesAll: [],
         rulesAny: [],
@@ -85,6 +86,7 @@ function mergeRequirementSets(...requirementsList) {
         if (Array.isArray(requirements.questsAny)) merged.questsAny.push(...requirements.questsAny);
 
         if (Array.isArray(requirements.items)) merged.items.push(...requirements.items);
+        if (Array.isArray(requirements.itemsAll)) merged.itemsAll.push(...requirements.itemsAll);
         if (Array.isArray(requirements.itemsAny)) merged.itemsAny.push(...requirements.itemsAny);
 
         if (Array.isArray(requirements.rulesAll)) merged.rulesAll.push(...requirements.rulesAll);
@@ -156,7 +158,12 @@ async function evaluateRequirements(requirements, ctx) {
         }
     }
 
-    for (const itemName of requirements?.items || []) {
+    const requiredItems = [
+        ...(requirements?.items || []),
+        ...(requirements?.itemsAll || [])
+    ];
+
+    for (const itemName of requiredItems) {
         if (!hasItemByName(ctx, itemName)) {
             missing.push(itemName);
         }
