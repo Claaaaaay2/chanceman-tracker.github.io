@@ -1871,11 +1871,12 @@
       "9290": "187",
       "9297": "5937",
       "9304": "5940",
-      "9340": "9192",
-      "9339": "9191"
+      "9339": "9191",
+      "9340": "9192"
     },
     "tags": [
-      "Ranged"
+      "Ranged",
+      "Fletching"
     ]
   },
   {
@@ -2137,7 +2138,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 56,
@@ -3412,7 +3416,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 92,
@@ -5521,7 +5528,8 @@
     "name": "Adamantite bar",
     "image": "adamantite_bar.png",
     "tags": [
-      "Smithing"
+      "Smithing",
+      "Sailing"
     ],
     "sources": {
       "drops": {
@@ -5826,7 +5834,8 @@
     },
     "tags": [
       "Hunter",
-      "Construction"
+      "Construction",
+      "Sailing"
     ]
   },
   {
@@ -6693,7 +6702,8 @@
     "name": "Air rune",
     "image": "air_rune.png",
     "tags": [
-      "Magic"
+      "Magic",
+      "Sailing"
     ],
     "sources": {
       "drops": {
@@ -26816,7 +26826,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 755,
@@ -26862,7 +26875,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 757,
@@ -26886,7 +26902,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 758,
@@ -29005,7 +29024,10 @@
           "droprate": "1/1024"
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 783,
@@ -29748,7 +29770,10 @@
           "droprate": "1/1023"
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 812,
@@ -30270,7 +30295,8 @@
     "name": "Bronze bar",
     "image": "bronze_bar.png",
     "tags": [
-      "Smithing"
+      "Smithing",
+      "Sailing"
     ],
     "sources": {
       "drops": {
@@ -30411,7 +30437,8 @@
     "name": "Bronze bolts",
     "image": "bronze_bolts.png",
     "tags": [
-      "Ranged"
+      "Ranged",
+      "Fletching"
     ],
     "sources": {
       "drops": {
@@ -30532,10 +30559,10 @@
     },
     "processable": {
       "878": "187",
-      "6061": "5937",
-      "6062": "5940",
       "879": "45",
-      "881": "47"
+      "881": "47",
+      "6061": "5937",
+      "6062": "5940"
     }
   },
   {
@@ -30756,7 +30783,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 831,
@@ -31705,7 +31735,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 862,
@@ -32223,7 +32256,8 @@
     },
     "tags": [
       "Hunter",
-      "Construction"
+      "Construction",
+      "Sailing"
     ]
   },
   {
@@ -35710,7 +35744,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 953,
@@ -35729,7 +35766,8 @@
     },
     "tags": [
       "Hunter",
-      "Fletching"
+      "Fletching",
+      "Sailing"
     ]
   },
   {
@@ -35757,7 +35795,8 @@
       }
     },
     "tags": [
-      "Construction"
+      "Construction",
+      "Sailing"
     ]
   },
   {
@@ -35823,7 +35862,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 957,
@@ -36867,7 +36909,10 @@
           "rule": "canCompleteATasteOfHope"
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 989,
@@ -38610,7 +38655,8 @@
     "image": "chisel.png",
     "tags": [
       "Crafting",
-      "Fletching"
+      "Fletching",
+      "Sailing"
     ],
     "sources": {
       "drops": {
@@ -43279,7 +43325,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 1152,
@@ -48421,19 +48470,20 @@
       "21924": "187",
       "21926": "5937",
       "21928": "5940",
+      "21955": "45",
+      "21957": "9187",
+      "21959": "46",
+      "21961": "9188",
+      "21963": "9189",
+      "21965": "9190",
+      "21967": "9191",
       "21969": "9192",
       "21971": "9193",
-      "21965": "9190",
-      "21957": "9187",
-      "21973": "9194",
-      "21955": "45",
-      "21959": "46",
-      "21967": "9191",
-      "21963": "9189",
-      "21961": "9188"
+      "21973": "9194"
     },
     "tags": [
-      "Ranged"
+      "Ranged",
+      "Fletching"
     ]
   },
   {
@@ -48743,7 +48793,10 @@
           "droprate": "1/20000"
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 1293,
@@ -48780,7 +48833,10 @@
           "droprate": "1/3000"
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 1294,
@@ -49882,7 +49938,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 1328,
@@ -50401,7 +50460,10 @@
           "droprate": "1/400; 1/100"
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 1342,
@@ -50436,7 +50498,8 @@
     },
     "tags": [
       "Hunter",
-      "Construction"
+      "Construction",
+      "Sailing"
     ]
   },
   {
@@ -54206,7 +54269,10 @@
           "droprate": "1/65.5"
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 1424,
@@ -54517,7 +54583,10 @@
           "droprate": "Common"
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 1439,
@@ -60604,7 +60673,8 @@
     "name": "Fishing bait",
     "image": "fishing_bait.png",
     "tags": [
-      "Fishing"
+      "Fishing",
+      "Sailing"
     ],
     "sources": {
       "drops": {
@@ -80036,7 +80106,8 @@
     "tags": [
       "Hunter",
       "Construction",
-      "Smithing"
+      "Smithing",
+      "Sailing"
     ],
     "sources": {
       "drops": {
@@ -83705,7 +83776,8 @@
     "name": "Iron bar",
     "image": "iron_bar.png",
     "tags": [
-      "Smithing"
+      "Smithing",
+      "Sailing"
     ],
     "sources": {
       "drops": {
@@ -83958,13 +84030,14 @@
       }
     },
     "processable": {
+      "880": "46",
       "9287": "187",
       "9294": "5937",
-      "9301": "5940",
-      "880": "46"
+      "9301": "5940"
     },
     "tags": [
-      "Ranged"
+      "Ranged",
+      "Fletching"
     ]
   },
   {
@@ -84194,7 +84267,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 2034,
@@ -85321,7 +85397,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 2065,
@@ -85880,7 +85959,8 @@
     },
     "tags": [
       "Hunter",
-      "Construction"
+      "Construction",
+      "Sailing"
     ]
   },
   {
@@ -87229,7 +87309,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 2104,
@@ -87248,7 +87331,8 @@
     },
     "tags": [
       "Hunter",
-      "Fletching"
+      "Fletching",
+      "Sailing"
     ]
   },
   {
@@ -87276,7 +87360,8 @@
       }
     },
     "tags": [
-      "Construction"
+      "Construction",
+      "Sailing"
     ]
   },
   {
@@ -87342,7 +87427,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 2108,
@@ -89583,7 +89671,8 @@
     "image": "knife.png",
     "tags": [
       "Hunter",
-      "Fletching"
+      "Fletching",
+      "Sailing"
     ],
     "sources": {
       "drops": {
@@ -90916,7 +91005,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 2206,
@@ -90944,7 +91036,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 2207,
@@ -90965,7 +91060,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 2208,
@@ -91004,7 +91102,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 2209,
@@ -91032,7 +91133,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 2210,
@@ -91053,7 +91157,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 2211,
@@ -91074,7 +91181,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 2212,
@@ -91102,7 +91212,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 2213,
@@ -91162,7 +91275,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 2215,
@@ -91183,7 +91299,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 2216,
@@ -91211,7 +91330,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 2217,
@@ -91239,7 +91361,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 2218,
@@ -91299,7 +91424,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 2220,
@@ -91320,7 +91448,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 2221,
@@ -92660,7 +92791,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 2236,
@@ -94614,7 +94748,8 @@
     "image": "logs.png",
     "tags": [
       "Hunter",
-      "Fletching"
+      "Fletching",
+      "Sailing"
     ],
     "sources": {
       "drops": {
@@ -96470,7 +96605,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 2333,
@@ -96871,7 +97009,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 2345,
@@ -96950,7 +97091,8 @@
     },
     "tags": [
       "Hunter",
-      "Fletching"
+      "Fletching",
+      "Sailing"
     ]
   },
   {
@@ -97086,7 +97228,8 @@
       }
     },
     "tags": [
-      "Construction"
+      "Construction",
+      "Sailing"
     ]
   },
   {
@@ -97152,7 +97295,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 2350,
@@ -101054,7 +101200,8 @@
     "name": "Mithril bar",
     "image": "mithril_bar.png",
     "tags": [
-      "Smithing"
+      "Smithing",
+      "Sailing"
     ],
     "sources": {
       "drops": {
@@ -101397,11 +101544,12 @@
       "9289": "187",
       "9296": "5937",
       "9303": "5940",
-      "9338": "9190",
-      "9337": "9189"
+      "9337": "9189",
+      "9338": "9190"
     },
     "tags": [
-      "Ranged"
+      "Ranged",
+      "Fletching"
     ]
   },
   {
@@ -101640,7 +101788,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 2453,
@@ -102743,7 +102894,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 2484,
@@ -103452,7 +103606,8 @@
     },
     "tags": [
       "Hunter",
-      "Construction"
+      "Construction",
+      "Sailing"
     ]
   },
   {
@@ -105104,7 +105259,8 @@
       }
     },
     "tags": [
-      "Crafting"
+      "Crafting",
+      "Sailing"
     ]
   },
   {
@@ -107538,7 +107694,10 @@
           "droprate": "1/100"
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 2620,
@@ -109555,7 +109714,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 2664,
@@ -109625,7 +109787,8 @@
     "image": "oak_logs.png",
     "tags": [
       "Hunter",
-      "Fletching"
+      "Fletching",
+      "Sailing"
     ],
     "sources": {
       "drops": {
@@ -109873,7 +110036,8 @@
       }
     },
     "tags": [
-      "Construction"
+      "Construction",
+      "Sailing"
     ]
   },
   {
@@ -109931,7 +110095,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 2673,
@@ -115124,7 +115291,8 @@
     "image": "plank.png",
     "tags": [
       "Hunter",
-      "Construction"
+      "Construction",
+      "Sailing"
     ],
     "sources": {
       "drops": {
@@ -122260,7 +122428,10 @@
           "droprate": "1/41.2"
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 3040,
@@ -123772,7 +123943,8 @@
       }
     },
     "tags": [
-      "Potion"
+      "Potion",
+      "Sailing"
     ]
   },
   {
@@ -123856,7 +124028,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 3099,
@@ -125224,7 +125399,8 @@
     "name": "Rope",
     "image": "rope.png",
     "tags": [
-      "Hunter"
+      "Hunter",
+      "Sailing"
     ],
     "sources": {
       "drops": {
@@ -125430,7 +125606,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 3155,
@@ -125449,7 +125628,8 @@
     },
     "tags": [
       "Hunter",
-      "Fletching"
+      "Fletching",
+      "Sailing"
     ]
   },
   {
@@ -125473,7 +125653,8 @@
     },
     "tags": [
       "Hunter",
-      "Construction"
+      "Construction",
+      "Sailing"
     ]
   },
   {
@@ -125525,7 +125706,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 3159,
@@ -127236,7 +127420,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 3194,
@@ -128901,7 +129088,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 3231,
@@ -129847,7 +130037,8 @@
     },
     "tags": [
       "Hunter",
-      "Construction"
+      "Construction",
+      "Sailing"
     ]
   },
   {
@@ -131714,7 +131905,8 @@
     "name": "Runite bar",
     "image": "runite_bar.png",
     "tags": [
-      "Smithing"
+      "Smithing",
+      "Sailing"
     ],
     "sources": {
       "drops": {
@@ -131993,7 +132185,8 @@
       "9342": "9194"
     },
     "tags": [
-      "Ranged"
+      "Ranged",
+      "Fletching"
     ]
   },
   {
@@ -134807,7 +135000,8 @@
     },
     "tags": [
       "Hunter",
-      "Construction"
+      "Construction",
+      "Sailing"
     ]
   },
   {
@@ -142977,7 +143171,8 @@
     "image": "steel_bar.png",
     "tags": [
       "Construction",
-      "Smithing"
+      "Smithing",
+      "Sailing"
     ],
     "sources": {
       "drops": {
@@ -143362,7 +143557,8 @@
       "9336": "9188"
     },
     "tags": [
-      "Ranged"
+      "Ranged",
+      "Fletching"
     ]
   },
   {
@@ -143694,7 +143890,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 3672,
@@ -144882,7 +145081,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 3703,
@@ -145675,7 +145877,8 @@
     "image": "steel_nails.png",
     "tags": [
       "Hunter",
-      "Construction"
+      "Construction",
+      "Sailing"
     ],
     "sources": {
       "drops": {
@@ -151493,7 +151696,8 @@
       }
     },
     "tags": [
-      "Herblore"
+      "Herblore",
+      "Sailing"
     ]
   },
   {
@@ -152000,7 +152204,10 @@
           "droprate": "1/29.1"
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 3864,
@@ -152766,7 +152973,10 @@
           "droprate": "Common"
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 3887,
@@ -153170,7 +153380,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 3899,
@@ -153276,7 +153489,8 @@
     },
     "tags": [
       "Hunter",
-      "Fletching"
+      "Fletching",
+      "Sailing"
     ]
   },
   {
@@ -153383,7 +153597,8 @@
     },
     "tags": [
       "Hunter",
-      "Construction"
+      "Construction",
+      "Sailing"
     ]
   },
   {
@@ -153452,7 +153667,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 3905,
@@ -155245,7 +155463,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 3991,
@@ -162897,7 +163118,10 @@
           "droprate": "Common"
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 4218,
@@ -169073,7 +169297,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Sailing"
+    ]
   },
   {
     "index": 4387,
