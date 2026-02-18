@@ -12,7 +12,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 15
+                            "Slayer": 15,
+                            "Combat": 20
                         },
                         "quests": {
                             "Priest in Peril": "completed"
@@ -24,11 +25,21 @@
                 },
                 {
                     "name": "Bats",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 5
+                        }
+                    }
                 },
                 {
                     "name": "Bears",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 13
+                        }
+                    }
                 },
                 {
                     "name": "Birds",
@@ -54,7 +65,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 10
+                            "Slayer": 10,
+                            "Combat": 10
                         }
                     }
                 },
@@ -63,7 +75,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 17
+                            "Slayer": 17,
+                            "Combat": 15
                         }
                     },
                     "reachRequirements": {
@@ -91,15 +104,30 @@
                 },
                 {
                     "name": "Dogs",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 15
+                        }
+                    }
                 },
                 {
                     "name": "Dwarves",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 6
+                        }
+                    }
                 },
                 {
                     "name": "Ghosts",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 13
+                        }
+                    }
                 },
                 {
                     "name": "Goblins",
@@ -107,11 +135,21 @@
                 },
                 {
                     "name": "Icefiends",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 20
+                        }
+                    }
                 },
                 {
                     "name": "Kalphite",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 15
+                        }
+                    }
                 },
                 {
                     "name": "Lizards",
@@ -124,7 +162,12 @@
                 },
                 {
                     "name": "Minotaurs",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 7
+                        }
+                    }
                 },
                 {
                     "name": "Monkeys",
@@ -136,11 +179,21 @@
                 },
                 {
                     "name": "Scorpions",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 7
+                        }
+                    }
                 },
                 {
                     "name": "Skeletons",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 15
+                        }
+                    }
                 },
                 {
                     "name": "Spiders",
@@ -148,11 +201,21 @@
                 },
                 {
                     "name": "Wolves",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 20
+                        }
+                    }
                 },
                 {
                     "name": "Zombies",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 10
+                        }
+                    }
                 }
             ]
         },
@@ -172,7 +235,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 15
+                            "Slayer": 15,
+                            "Combat": 20
                         },
                         "quests": {
                             "Priest in Peril": "completed"
@@ -184,11 +248,21 @@
                 },
                 {
                     "name": "Bats",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 5
+                        }
+                    }
                 },
                 {
                     "name": "Bears",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 13
+                        }
+                    }
                 },
                 {
                     "name": "Birds",
@@ -214,7 +288,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 10
+                            "Slayer": 10,
+                            "Combat": 10
                         }
                     }
                 },
@@ -223,7 +298,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 17
+                            "Slayer": 17,
+                            "Combat": 15
                         }
                     },
                     "reachRequirements": {
@@ -251,15 +327,30 @@
                 },
                 {
                     "name": "Dogs",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 15
+                        }
+                    }
                 },
                 {
                     "name": "Dwarves",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 6
+                        }
+                    }
                 },
                 {
                     "name": "Ghosts",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 13
+                        }
+                    }
                 },
                 {
                     "name": "Goblins",
@@ -267,11 +358,21 @@
                 },
                 {
                     "name": "Icefiends",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 20
+                        }
+                    }
                 },
                 {
                     "name": "Kalphite",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 15
+                        }
+                    }
                 },
                 {
                     "name": "Lizards",
@@ -284,7 +385,12 @@
                 },
                 {
                     "name": "Minotaurs",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 7
+                        }
+                    }
                 },
                 {
                     "name": "Monkeys",
@@ -296,11 +402,21 @@
                 },
                 {
                     "name": "Scorpions",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 7
+                        }
+                    }
                 },
                 {
                     "name": "Skeletons",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 15
+                        }
+                    }
                 },
                 {
                     "name": "Sourhogs",
@@ -317,11 +433,21 @@
                 },
                 {
                     "name": "Wolves",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 20
+                        }
+                    }
                 },
                 {
                     "name": "Zombies",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 10
+                        }
+                    }
                 }
             ]
         },
@@ -582,7 +708,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 15
+                            "Slayer": 15,
+                            "Combat": 20
                         },
                         "quests": {
                             "Priest in Peril": "completed"
@@ -594,15 +721,30 @@
                 },
                 {
                     "name": "Bats",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 5
+                        }
+                    }
                 },
                 {
                     "name": "Bears",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 13
+                        }
+                    }
                 },
                 {
                     "name": "Catablepon",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 35
+                        }
+                    }
                 },
                 {
                     "name": "Cave bugs",
@@ -624,7 +766,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 10
+                            "Slayer": 10,
+                            "Combat": 10
                         }
                     }
                 },
@@ -633,7 +776,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 17
+                            "Slayer": 17,
+                            "Combat": 15
                         }
                     },
                     "reachRequirements": {
@@ -649,7 +793,8 @@
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 17,
-                            "Defence": 20
+                            "Defence": 20,
+                            "Combat": 25
                         }
                     },
                     "notes": [
@@ -674,15 +819,30 @@
                 },
                 {
                     "name": "Dogs",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 15
+                        }
+                    }
                 },
                 {
                     "name": "Flesh Crawlers",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 15
+                        }
+                    }
                 },
                 {
                     "name": "Ghosts",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 13
+                        }
+                    }
                 },
                 {
                     "name": "Ghouls",
@@ -690,31 +850,55 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Priest in Peril": "completed"
+                        },
+                        "skills": {
+                            "Combat": 25
                         }
                     }
                 },
                 {
                     "name": "Hill Giants",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 25
+                        }
+                    }
                 },
                 {
                     "name": "Hobgoblins",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 20
+                        }
+                    }
                 },
                 {
                     "name": "Ice warriors",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 45
+                        }
+                    }
                 },
                 {
                     "name": "Kalphite",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 15
+                        }
+                    }
                 },
                 {
                     "name": "Killerwatts",
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 37
+                            "Slayer": 37,
+                            "Combat": 50
                         },
                         "quests": {
                             "Ernest the Chicken": "completed"
@@ -741,7 +925,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 32
+                            "Slayer": 32,
+                            "Combat": 30
                         },
                         "quests": {
                             "Skippy and the Mogres": "completed"
@@ -753,7 +938,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 30
+                            "Slayer": 30,
+                            "Combat": 25
                         }
                     }
                 },
@@ -762,7 +948,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 20
+                            "Slayer": 20,
+                            "Combat": 20
                         }
                     },
                     "reachRequirements": {
@@ -777,15 +964,30 @@
                 },
                 {
                     "name": "Scorpions",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 7
+                        }
+                    }
                 },
                 {
                     "name": "Shades",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 30
+                        }
+                    }
                 },
                 {
                     "name": "Skeletons",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 15
+                        }
+                    }
                 },
                 {
                     "name": "Vampyres",
@@ -793,6 +995,9 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Priest in Peril": "completed"
+                        },
+                        "skills": {
+                            "Combat": 35
                         }
                     }
                 },
@@ -802,7 +1007,8 @@
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 35,
-                            "Defence": 5
+                            "Defence": 5,
+                            "Combat": 30
                         }
                     },
                     "notes": [
@@ -811,11 +1017,21 @@
                 },
                 {
                     "name": "Wolves",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 20
+                        }
+                    }
                 },
                 {
                     "name": "Zombies",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 10
+                        }
+                    }
                 }
             ]
         },
@@ -837,7 +1053,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 60
+                            "Slayer": 60,
+                            "Combat": 65
                         },
                         "quests": {
                             "Priest in Peril": "completed"
@@ -852,7 +1069,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 85
+                            "Slayer": 85,
+                            "Combat": 85
                         },
                         "questsAny": [
                             {
@@ -866,7 +1084,12 @@
                 },
                 {
                     "name": "Ankou",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 40
+                        }
+                    }
                 },
                 {
                     "name": "Basilisks",
@@ -874,7 +1097,8 @@
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 40,
-                            "Defence": 20
+                            "Defence": 20,
+                            "Combat": 40
                         }
                     },
                     "notes": [
@@ -886,7 +1110,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 50
+                            "Slayer": 50,
+                            "Combat": 50
                         },
                         "quests": {
                             "Priest in Peril": "completed"
@@ -899,6 +1124,9 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Dragon Slayer I": "started"
+                        },
+                        "skills": {
+                            "Combat": 65
                         }
                     }
                 },
@@ -907,7 +1135,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 47
+                            "Slayer": 47,
+                            "Combat": 45
                         },
                         "quests": {
                             "Olaf's Quest": "completed"
@@ -920,7 +1149,8 @@
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 17,
-                            "Defence": 20
+                            "Defence": 20,
+                            "Combat": 25
                         }
                     },
                     "notes": [
@@ -933,7 +1163,12 @@
                 },
                 {
                     "name": "Crocodiles",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 50
+                        }
+                    }
                 },
                 {
                     "name": "Dagannoth",
@@ -941,6 +1176,9 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Horror from the Deep": "completed"
+                        },
+                        "skills": {
+                            "Combat": 75
                         }
                     }
                 },
@@ -949,7 +1187,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 65
+                            "Slayer": 65,
+                            "Combat": 70
                         },
                         "quests": {
                             "Desert Treasure I": "completed"
@@ -970,6 +1209,9 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Regicide": "completed"
+                        },
+                        "skills": {
+                            "Combat": 70
                         }
                     }
                 },
@@ -978,7 +1220,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 42
+                            "Slayer": 42,
+                            "Combat": 40
                         },
                         "quests": {
                             "Rum Deal": "completed"
@@ -987,14 +1230,20 @@
                 },
                 {
                     "name": "Fire giants",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 65
+                        }
+                    }
                 },
                 {
                     "name": "Gargoyles",
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 75
+                            "Slayer": 75,
+                            "Combat": 80
                         },
                         "quests": {
                             "Priest in Peril": "completed"
@@ -1016,6 +1265,9 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Priest in Peril": "completed"
+                        },
+                        "skills": {
+                            "Combat": 25
                         }
                     }
                 },
@@ -1038,7 +1290,8 @@
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 3,
-                            "Firemaking": 33
+                            "Firemaking": 33,
+                            "Combat": 45
                         }
                     },
                     "reachRequirements": {
@@ -1050,30 +1303,56 @@
                 },
                 {
                     "name": "Hellhounds",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 75
+                        }
+                    }
                 },
                 {
                     "name": "Hill Giants",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 25
+                        }
+                    }
                 },
                 {
                     "name": "Hobgoblins",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 20
+                        }
+                    }
                 },
                 {
                     "name": "Ice giants",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 50
+                        }
+                    }
                 },
                 {
                     "name": "Ice warriors",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 45
+                        }
+                    }
                 },
                 {
                     "name": "Infernal Mages",
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 45
+                            "Slayer": 45,
+                            "Combat": 40
                         },
                         "quests": {
                             "Priest in Peril": "completed"
@@ -1085,7 +1364,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 52
+                            "Slayer": 52,
+                            "Combat": 57
                         }
                     }
                 },
@@ -1095,32 +1375,47 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Cabin Fever": "completed"
+                        },
+                        "skills": {
+                            "Combat": 65
                         }
                     }
                 },
                 {
                     "name": "Kalphite",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 15
+                        }
+                    }
                 },
                 {
                     "name": "Kurask",
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 70
+                            "Slayer": 70,
+                            "Combat": 65
                         }
                     }
                 },
                 {
                     "name": "Lesser demons",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 60
+                        }
+                    }
                 },
                 {
                     "name": "Mogres",
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 32
+                            "Slayer": 32,
+                            "Combat": 30
                         },
                         "quests": {
                             "Skippy and the Mogres": "completed"
@@ -1132,7 +1427,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 39
+                            "Slayer": 39,
+                            "Combat": 50
                         },
                         "quests": {
                             "Death to the Dorgeshuun": "completed"
@@ -1144,20 +1440,31 @@
                 },
                 {
                     "name": "Moss giants",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 40
+                        }
+                    }
                 },
                 {
                     "name": "Nechryael",
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 80
+                            "Slayer": 80,
+                            "Combat": 85
                         }
                     }
                 },
                 {
                     "name": "Ogres",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 40
+                        }
+                    }
                 },
                 {
                     "name": "Otherworldly beings",
@@ -1165,6 +1472,9 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Lost City": "completed"
+                        },
+                        "skills": {
+                            "Combat": 40
                         }
                     }
                 },
@@ -1173,7 +1483,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 30
+                            "Slayer": 30,
+                            "Combat": 25
                         }
                     }
                 },
@@ -1182,7 +1493,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 40
+                            "Slayer": 40,
+                            "Combat": 50
                         },
                         "quests": {
                             "Lost City": "completed"
@@ -1191,7 +1503,12 @@
                 },
                 {
                     "name": "Shades",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 30
+                        }
+                    }
                 },
                 {
                     "name": "Shadow warriors",
@@ -1199,6 +1516,9 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Legends' Quest": "completed"
+                        },
+                        "skills": {
+                            "Combat": 60
                         }
                     }
                 },
@@ -1207,7 +1527,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 63
+                            "Slayer": 63,
+                            "Combat": 60
                         },
                         "skillsAny": [
                             {
@@ -1227,7 +1548,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 40
+                            "Slayer": 40,
+                            "Combat": 60
                         },
                         "quests": {
                             "Haunted Mine": "completed"
@@ -1236,14 +1558,20 @@
                 },
                 {
                     "name": "Trolls",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 60
+                        }
+                    }
                 },
                 {
                     "name": "Turoth",
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 55
+                            "Slayer": 55,
+                            "Combat": 60
                         }
                     }
                 },
@@ -1253,6 +1581,9 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Priest in Peril": "completed"
+                        },
+                        "skills": {
+                            "Combat": 35
                         }
                     }
                 },
@@ -1262,6 +1593,9 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Priest in Peril": "completed"
+                        },
+                        "skills": {
+                            "Combat": 60
                         }
                     }
                 }
@@ -1289,7 +1623,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 60
+                            "Slayer": 60,
+                            "Combat": 65
                         },
                         "quests": {
                             "Priest in Peril": "completed"
@@ -1304,7 +1639,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 85
+                            "Slayer": 85,
+                            "Combat": 85
                         },
                         "questsAny": [
                             {
@@ -1336,7 +1672,8 @@
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 40,
-                            "Defence": 20
+                            "Defence": 20,
+                            "Combat": 40
                         }
                     },
                     "notes": [
@@ -1345,14 +1682,20 @@
                 },
                 {
                     "name": "Black demons",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 80
+                        }
+                    }
                 },
                 {
                     "name": "Bloodveld",
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 50
+                            "Slayer": 50,
+                            "Combat": 50
                         },
                         "quests": {
                             "Priest in Peril": "completed"
@@ -1365,6 +1708,9 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Dragon Slayer I": "started"
+                        },
+                        "skills": {
+                            "Combat": 65
                         }
                     }
                 },
@@ -1373,7 +1719,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 47
+                            "Slayer": 47,
+                            "Combat": 45
                         },
                         "quests": {
                             "Olaf's Quest": "completed"
@@ -1385,7 +1732,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 58
+                            "Slayer": 58,
+                            "Combat": 85
                         },
                         "quests": {
                             "Cabin Fever": "completed"
@@ -1398,7 +1746,8 @@
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 87,
-                            "Magic": 50
+                            "Magic": 50,
+                            "Combat": 80
                         }
                     }
                 },
@@ -1424,6 +1773,9 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Horror from the Deep": "completed"
+                        },
+                        "skills": {
+                            "Combat": 75
                         }
                     }
                 },
@@ -1432,7 +1784,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 65
+                            "Slayer": 65,
+                            "Combat": 70
                         },
                         "quests": {
                             "Desert Treasure I": "completed"
@@ -1453,6 +1806,9 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Regicide": "completed"
+                        },
+                        "skills": {
+                            "Combat": 70
                         }
                     }
                 },
@@ -1461,7 +1817,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 42
+                            "Slayer": 42,
+                            "Combat": 40
                         },
                         "quests": {
                             "Rum Deal": "completed"
@@ -1470,7 +1827,12 @@
                 },
                 {
                     "name": "Fire giants",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 65
+                        }
+                    }
                 },
                 {
                     "name": "Fossil Island Wyverns",
@@ -1479,6 +1841,9 @@
                         "quests": {
                             "Bone Voyage": "completed",
                             "Elemental Workshop I": "completed"
+                        },
+                        "skills": {
+                            "Combat": 60
                         }
                     }
                 },
@@ -1487,7 +1852,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 75
+                            "Slayer": 75,
+                            "Combat": 80
                         },
                         "quests": {
                             "Priest in Peril": "completed"
@@ -1505,7 +1871,12 @@
                 },
                 {
                     "name": "Greater demons",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 70
+                        }
+                    }
                 },
                 {
                     "name": "Gryphons",
@@ -1522,14 +1893,20 @@
                 },
                 {
                     "name": "Hellhounds",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 75
+                        }
+                    }
                 },
                 {
                     "name": "Jellies",
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 52
+                            "Slayer": 52,
+                            "Combat": 57
                         }
                     }
                 },
@@ -1539,25 +1916,39 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Cabin Fever": "completed"
+                        },
+                        "skills": {
+                            "Combat": 65
                         }
                     }
                 },
                 {
                     "name": "Kalphite",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 15
+                        }
+                    }
                 },
                 {
                     "name": "Kurask",
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 70
+                            "Slayer": 70,
+                            "Combat": 65
                         }
                     }
                 },
                 {
                     "name": "Lesser demons",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 60
+                        }
+                    }
                 },
                 {
                     "name": "Lesser Nagua",
@@ -1580,7 +1971,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 57
+                            "Slayer": 57,
+                            "Combat": 60
                         },
                         "quests": {
                             "Lost City": "completed"
@@ -1592,7 +1984,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 80
+                            "Slayer": 80,
+                            "Combat": 85
                         }
                     }
                 },
@@ -1602,6 +1995,9 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Legends' Quest": "completed"
+                        },
+                        "skills": {
+                            "Combat": 60
                         }
                     }
                 },
@@ -1610,7 +2006,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 72
+                            "Slayer": 72,
+                            "Combat": 70
                         },
                         "quests": {
                             "Elemental Workshop I": "completed"
@@ -1622,7 +2019,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 63
+                            "Slayer": 63,
+                            "Combat": 60
                         },
                         "skillsAny": [
                             {
@@ -1639,14 +2037,20 @@
                 },
                 {
                     "name": "Trolls",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 60
+                        }
+                    }
                 },
                 {
                     "name": "Turoth",
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 55
+                            "Slayer": 55,
+                            "Combat": 60
                         }
                     }
                 },
@@ -1660,6 +2064,9 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Priest in Peril": "completed"
+                        },
+                        "skills": {
+                            "Combat": 35
                         }
                     }
                 },
@@ -1713,7 +2120,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 60
+                            "Slayer": 60,
+                            "Combat": 65
                         },
                         "quests": {
                             "Priest in Peril": "completed"
@@ -1728,7 +2136,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 85
+                            "Slayer": 85,
+                            "Combat": 85
                         },
                         "quests": {
                             "Priest in Peril": "completed"
@@ -1737,7 +2146,12 @@
                 },
                 {
                     "name": "Ankou",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 40
+                        }
+                    }
                 },
                 {
                     "name": "Aviansie",
@@ -1759,7 +2173,8 @@
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 40,
-                            "Defence": 20
+                            "Defence": 20,
+                            "Combat": 40
                         }
                     },
                     "notes": [
@@ -1768,7 +2183,12 @@
                 },
                 {
                     "name": "Black demons",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 80
+                        }
+                    }
                 },
                 {
                     "name": "Black dragons",
@@ -1776,6 +2196,9 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Dragon Slayer I": "started"
+                        },
+                        "skills": {
+                            "Combat": 80
                         }
                     }
                 },
@@ -1784,7 +2207,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 50
+                            "Slayer": 50,
+                            "Combat": 50
                         },
                         "quests": {
                             "Priest in Peril": "completed"
@@ -1797,6 +2221,9 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Dragon Slayer I": "started"
+                        },
+                        "skills": {
+                            "Combat": 65
                         }
                     }
                 },
@@ -1805,7 +2232,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 47
+                            "Slayer": 47,
+                            "Combat": 45
                         },
                         "quests": {
                             "Olaf's Quest": "completed"
@@ -1818,7 +2246,8 @@
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 87,
-                            "Magic": 50
+                            "Magic": 50,
+                            "Combat": 80
                         }
                     }
                 },
@@ -1828,6 +2257,9 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Horror from the Deep": "completed"
+                        },
+                        "skills": {
+                            "Combat": 75
                         }
                     }
                 },
@@ -1836,7 +2268,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 90
+                            "Slayer": 90,
+                            "Combat": 90
                         },
                         "quests": {
                             "Mourning's End Part II": "completed"
@@ -1866,7 +2299,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 65
+                            "Slayer": 65,
+                            "Combat": 70
                         },
                         "quests": {
                             "Desert Treasure I": "completed"
@@ -1883,7 +2317,12 @@
                 },
                 {
                     "name": "Fire giants",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 65
+                        }
+                    }
                 },
                 {
                     "name": "Fossil Island Wyverns",
@@ -1892,6 +2331,9 @@
                         "quests": {
                             "Bone Voyage": "completed",
                             "Elemental Workshop I": "completed"
+                        },
+                        "skills": {
+                            "Combat": 60
                         }
                     }
                 },
@@ -1900,7 +2342,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 75
+                            "Slayer": 75,
+                            "Combat": 80
                         },
                         "quests": {
                             "Priest in Peril": "completed"
@@ -1918,11 +2361,21 @@
                 },
                 {
                     "name": "Greater demons",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 70
+                        }
+                    }
                 },
                 {
                     "name": "Hellhounds",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 75
+                        }
+                    }
                 },
                 {
                     "name": "Hydras",
@@ -1947,20 +2400,27 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 52
+                            "Slayer": 52,
+                            "Combat": 57
                         }
                     }
                 },
                 {
                     "name": "Kalphite",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 15
+                        }
+                    }
                 },
                 {
                     "name": "Kurask",
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 70
+                            "Slayer": 70,
+                            "Combat": 65
                         }
                     }
                 },
@@ -1989,7 +2449,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 57
+                            "Slayer": 57,
+                            "Combat": 60
                         },
                         "quests": {
                             "Lost City": "completed"
@@ -2001,7 +2462,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 80
+                            "Slayer": 80,
+                            "Combat": 85
                         }
                     }
                 },
@@ -2011,6 +2473,9 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Dragon Slayer I": "started"
+                        },
+                        "skills": {
+                            "Combat": 68
                         }
                     }
                 },
@@ -2019,7 +2484,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 72
+                            "Slayer": 72,
+                            "Combat": 70
                         },
                         "quests": {
                             "Elemental Workshop I": "completed"
@@ -2031,7 +2497,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 93
+                            "Slayer": 93,
+                            "Combat": 85
                         }
                     },
                     "reachRequirements": {
@@ -2045,20 +2512,31 @@
                 },
                 {
                     "name": "Trolls",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 60
+                        }
+                    }
                 },
                 {
                     "name": "Turoth",
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 55
+                            "Slayer": 55,
+                            "Combat": 60
                         }
                     }
                 },
                 {
                     "name": "Vampyres",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 35
+                        }
+                    }
                 },
                 {
                     "name": "Warped creatures",
@@ -2078,6 +2556,9 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Barbarian Training Firemaking I": "completed"
+                        },
+                        "skills": {
+                            "Combat": 75
                         }
                     }
                 },
@@ -2119,7 +2600,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 60
+                            "Slayer": 60,
+                            "Combat": 65
                         },
                         "quests": {
                             "Priest in Peril": "completed"
@@ -2134,7 +2616,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 85
+                            "Slayer": 85,
+                            "Combat": 85
                         },
                         "quests": {
                             "Priest in Peril": "completed"
@@ -2143,7 +2626,12 @@
                 },
                 {
                     "name": "Ankou",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 40
+                        }
+                    }
                 },
                 {
                     "name": "Araxytes",
@@ -2187,7 +2675,8 @@
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 40,
-                            "Defence": 20
+                            "Defence": 20,
+                            "Combat": 40
                         }
                     },
                     "notes": [
@@ -2196,7 +2685,12 @@
                 },
                 {
                     "name": "Black demons",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 80
+                        }
+                    }
                 },
                 {
                     "name": "Black dragons",
@@ -2204,6 +2698,9 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Dragon Slayer I": "started"
+                        },
+                        "skills": {
+                            "Combat": 80
                         }
                     }
                 },
@@ -2212,7 +2709,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 50
+                            "Slayer": 50,
+                            "Combat": 50
                         },
                         "quests": {
                             "Priest in Peril": "completed"
@@ -2225,6 +2723,9 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Dragon Slayer I": "started"
+                        },
+                        "skills": {
+                            "Combat": 65
                         }
                     }
                 },
@@ -2233,7 +2734,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 47
+                            "Slayer": 47,
+                            "Combat": 45
                         },
                         "quests": {
                             "Olaf's Quest": "completed"
@@ -2245,7 +2747,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 58
+                            "Slayer": 58,
+                            "Combat": 85
                         },
                         "quests": {
                             "Cabin Fever": "completed"
@@ -2258,7 +2761,8 @@
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 87,
-                            "Magic": 50
+                            "Magic": 50,
+                            "Combat": 80
                         }
                     }
                 },
@@ -2280,6 +2784,9 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Horror from the Deep": "completed"
+                        },
+                        "skills": {
+                            "Combat": 75
                         }
                     }
                 },
@@ -2288,7 +2795,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 90
+                            "Slayer": 90,
+                            "Combat": 90
                         },
                         "quests": {
                             "Mourning's End Part II": "completed"
@@ -2318,7 +2826,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 65
+                            "Slayer": 65,
+                            "Combat": 70
                         },
                         "quests": {
                             "Desert Treasure I": "completed"
@@ -2339,12 +2848,20 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Regicide": "completed"
+                        },
+                        "skills": {
+                            "Combat": 70
                         }
                     }
                 },
                 {
                     "name": "Fire giants",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 65
+                        }
+                    }
                 },
                 {
                     "name": "Fossil Island Wyverns",
@@ -2353,6 +2870,9 @@
                         "quests": {
                             "Bone Voyage": "completed",
                             "Elemental Workshop I": "completed"
+                        },
+                        "skills": {
+                            "Combat": 60
                         }
                     }
                 },
@@ -2373,7 +2893,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 75
+                            "Slayer": 75,
+                            "Combat": 80
                         },
                         "quests": {
                             "Priest in Peril": "completed"
@@ -2391,7 +2912,12 @@
                 },
                 {
                     "name": "Greater demons",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 70
+                        }
+                    }
                 },
                 {
                     "name": "Gryphons",
@@ -2408,18 +2934,29 @@
                 },
                 {
                     "name": "Hellhounds",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 75
+                        }
+                    }
                 },
                 {
                     "name": "Kalphite",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 15
+                        }
+                    }
                 },
                 {
                     "name": "Kurask",
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 70
+                            "Slayer": 70,
+                            "Combat": 65
                         }
                     }
                 },
@@ -2436,7 +2973,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 57
+                            "Slayer": 57,
+                            "Combat": 60
                         },
                         "quests": {
                             "Lost City": "completed"
@@ -2448,7 +2986,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 80
+                            "Slayer": 80,
+                            "Combat": 85
                         }
                     }
                 },
@@ -2458,6 +2997,9 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Dragon Slayer I": "started"
+                        },
+                        "skills": {
+                            "Combat": 68
                         }
                     }
                 },
@@ -2475,7 +3017,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 72
+                            "Slayer": 72,
+                            "Combat": 70
                         },
                         "quests": {
                             "Elemental Workshop I": "completed"
@@ -2487,7 +3030,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 93
+                            "Slayer": 93,
+                            "Combat": 85
                         }
                     },
                     "reachRequirements": {
@@ -2504,7 +3048,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 63
+                            "Slayer": 63,
+                            "Combat": 60
                         },
                         "skillsAny": [
                             {
@@ -2525,19 +3070,28 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Lunar Diplomacy": "completed"
+                        },
+                        "skills": {
+                            "Combat": 85
                         }
                     }
                 },
                 {
                     "name": "Trolls",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 60
+                        }
+                    }
                 },
                 {
                     "name": "Turoth",
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 55
+                            "Slayer": 55,
+                            "Combat": 60
                         }
                     }
                 },
@@ -2551,6 +3105,9 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Priest in Peril": "completed"
+                        },
+                        "skills": {
+                            "Combat": 35
                         }
                     }
                 },
@@ -2608,7 +3165,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 60
+                            "Slayer": 60,
+                            "Combat": 65
                         },
                         "quests": {
                             "Priest in Peril": "completed"
@@ -2623,7 +3181,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 85
+                            "Slayer": 85,
+                            "Combat": 85
                         },
                         "questsAny": [
                             {
@@ -2637,7 +3196,12 @@
                 },
                 {
                     "name": "Ankou",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 40
+                        }
+                    }
                 },
                 {
                     "name": "Aquanite",
@@ -2681,7 +3245,8 @@
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 40,
-                            "Defence": 20
+                            "Defence": 20,
+                            "Combat": 40
                         }
                     },
                     "notes": [
@@ -2690,7 +3255,12 @@
                 },
                 {
                     "name": "Black demons",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 80
+                        }
+                    }
                 },
                 {
                     "name": "Black dragons",
@@ -2698,6 +3268,9 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Dragon Slayer I": "started"
+                        },
+                        "skills": {
+                            "Combat": 80
                         }
                     }
                 },
@@ -2706,7 +3279,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 50
+                            "Slayer": 50,
+                            "Combat": 50
                         },
                         "quests": {
                             "Priest in Peril": "completed"
@@ -2719,6 +3293,9 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Dragon Slayer I": "started"
+                        },
+                        "skills": {
+                            "Combat": 65
                         }
                     }
                 },
@@ -2727,7 +3304,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 58
+                            "Slayer": 58,
+                            "Combat": 85
                         },
                         "quests": {
                             "Cabin Fever": "completed"
@@ -2740,7 +3318,8 @@
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 87,
-                            "Magic": 50
+                            "Magic": 50,
+                            "Combat": 80
                         }
                     }
                 },
@@ -2750,6 +3329,9 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Horror from the Deep": "completed"
+                        },
+                        "skills": {
+                            "Combat": 75
                         }
                     }
                 },
@@ -2758,7 +3340,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 90
+                            "Slayer": 90,
+                            "Combat": 90
                         },
                         "quests": {
                             "Mourning's End Part II": "completed"
@@ -2788,7 +3371,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 65
+                            "Slayer": 65,
+                            "Combat": 70
                         },
                         "quests": {
                             "Desert Treasure I": "completed"
@@ -2809,12 +3393,20 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Regicide": "completed"
+                        },
+                        "skills": {
+                            "Combat": 70
                         }
                     }
                 },
                 {
                     "name": "Fire giants",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 65
+                        }
+                    }
                 },
                 {
                     "name": "Fossil Island Wyverns",
@@ -2823,6 +3415,9 @@
                         "quests": {
                             "Bone Voyage": "completed",
                             "Elemental Workshop I": "completed"
+                        },
+                        "skills": {
+                            "Combat": 60
                         }
                     }
                 },
@@ -2843,7 +3438,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 75
+                            "Slayer": 75,
+                            "Combat": 80
                         },
                         "quests": {
                             "Priest in Peril": "completed"
@@ -2861,7 +3457,12 @@
                 },
                 {
                     "name": "Greater demons",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 70
+                        }
+                    }
                 },
                 {
                     "name": "Gryphons",
@@ -2878,18 +3479,29 @@
                 },
                 {
                     "name": "Hellhounds",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 75
+                        }
+                    }
                 },
                 {
                     "name": "Kalphite",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 15
+                        }
+                    }
                 },
                 {
                     "name": "Kurask",
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 70
+                            "Slayer": 70,
+                            "Combat": 65
                         }
                     }
                 },
@@ -2906,7 +3518,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 57
+                            "Slayer": 57,
+                            "Combat": 60
                         },
                         "quests": {
                             "Lost City": "completed"
@@ -2918,7 +3531,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 80
+                            "Slayer": 80,
+                            "Combat": 85
                         }
                     }
                 },
@@ -2928,6 +3542,9 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Dragon Slayer I": "started"
+                        },
+                        "skills": {
+                            "Combat": 68
                         }
                     }
                 },
@@ -2936,7 +3553,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 72
+                            "Slayer": 72,
+                            "Combat": 70
                         },
                         "quests": {
                             "Elemental Workshop I": "completed"
@@ -2948,7 +3566,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 93
+                            "Slayer": 93,
+                            "Combat": 85
                         }
                     },
                     "reachRequirements": {
@@ -2965,7 +3584,8 @@
                     "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 63
+                            "Slayer": 63,
+                            "Combat": 60
                         },
                         "skillsAny": [
                             {
@@ -2986,12 +3606,20 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Lunar Diplomacy": "completed"
+                        },
+                        "skills": {
+                            "Combat": 85
                         }
                     }
                 },
                 {
                     "name": "Trolls",
-                    "customUrl": ""
+                    "customUrl": "",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Combat": 60
+                        }
+                    }
                 },
                 {
                     "name": "TzHaar",
@@ -3003,6 +3631,9 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Priest in Peril": "completed"
+                        },
+                        "skills": {
+                            "Combat": 35
                         }
                     }
                 },
@@ -3024,6 +3655,9 @@
                     "assignmentRequirements": {
                         "quests": {
                             "Barbarian Training Firemaking I": "completed"
+                        },
+                        "skills": {
+                            "Combat": 75
                         }
                     }
                 },
