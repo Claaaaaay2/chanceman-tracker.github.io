@@ -689,9 +689,7 @@
         {
             "name": "Mazchna",
             "customUrl": "",
-            "notes": [
-                "Requires level 20 combat to be assigned."
-            ],
+            "notes": [],
             "reachRequirements": {
                 "quests": {
                     "Priest in Peril": "completed"
@@ -1038,9 +1036,7 @@
         {
             "name": "Vannaka",
             "customUrl": "",
-            "notes": [
-                "Requires level 40 combat to be assigned."
-            ],
+            "notes": [],
             "reachRequirements": {},
             "assignmentRequirements": {
                 "skills": {
@@ -1604,9 +1600,7 @@
         {
             "name": "Chaeldar",
             "customUrl": "",
-            "notes": [
-                "Requires level 70 combat to be assigned."
-            ],
+            "notes": [],
             "reachRequirements": {
                 "quests": {
                     "Lost City": "completed"
@@ -2106,7 +2100,7 @@
             "name": "Konar",
             "customUrl": "",
             "notes": [
-                "Requires level 75 combat to be assigned."
+                "This does not account for locations of these npcs yet."
             ],
             "reachRequirements": {},
             "assignmentRequirements": {
@@ -2585,9 +2579,7 @@
         {
             "name": "Nieve",
             "customUrl": "",
-            "notes": [
-                "Requires level 85 combat to be assigned."
-            ],
+            "notes": [],
             "reachRequirements": {},
             "assignmentRequirements": {
                 "skills": {
@@ -3146,9 +3138,7 @@
         {
             "name": "Duradal",
             "customUrl": "",
-            "notes": [
-                "Requires level 100 combat to be assigned."
-            ],
+            "notes": [],
             "reachRequirements": {
                 "quests": {
                     "Shilo Village": "completed"
