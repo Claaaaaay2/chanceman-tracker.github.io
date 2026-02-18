@@ -394,9 +394,9 @@ export default async function SlayerMastersPage() {
                 <header class="slayer-master-header">
                     <h2>
                         ${master.customUrl
-                            ? `<a href="${escapeHtml(master.customUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(master.name)}</a>`
-                            : escapeHtml(master.name)
-                        }
+                ? `<a href="${escapeHtml(master.customUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(master.name)}</a>`
+                : escapeHtml(master.name)
+            }
                         ${masterInfo}
                     </h2>
                     <div class="slayer-master-metrics">
