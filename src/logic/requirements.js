@@ -5169,7 +5169,7 @@ function canGetFishbowlWithWater(ctx) {
 }
 
 function canKillMogreSailing(ctx) {
-    return (canTrainSlayer(ctx) || ctx.player.levels.Slayer >= 32) //
+    return ctx.player.levels.Slayer >= 32 //
         && (canShortrange(ctx) || canDoSailingCombat(ctx));
 }
 
