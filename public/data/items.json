@@ -1875,7 +1875,8 @@
       "9339": "9191"
     },
     "tags": [
-      "Ranged"
+      "Ranged",
+      "Fletching"
     ]
   },
   {
@@ -30411,7 +30412,8 @@
     "name": "Bronze bolts",
     "image": "bronze_bolts.png",
     "tags": [
-      "Ranged"
+      "Ranged",
+      "Fletching"
     ],
     "sources": {
       "drops": {
@@ -48433,7 +48435,8 @@
       "21961": "9188"
     },
     "tags": [
-      "Ranged"
+      "Ranged",
+      "Fletching"
     ]
   },
   {
@@ -83964,7 +83967,8 @@
       "880": "46"
     },
     "tags": [
-      "Ranged"
+      "Ranged",
+      "Fletching"
     ]
   },
   {
@@ -101401,7 +101405,8 @@
       "9337": "9189"
     },
     "tags": [
-      "Ranged"
+      "Ranged",
+      "Fletching"
     ]
   },
   {
@@ -131993,7 +131998,8 @@
       "9342": "9194"
     },
     "tags": [
-      "Ranged"
+      "Ranged",
+      "Fletching"
     ]
   },
   {
@@ -143362,7 +143368,8 @@
       "9336": "9188"
     },
     "tags": [
-      "Ranged"
+      "Ranged",
+      "Fletching"
     ]
   },
   {
