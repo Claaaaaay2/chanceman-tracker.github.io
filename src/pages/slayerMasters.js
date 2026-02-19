@@ -294,7 +294,7 @@ function formatMissingParts(parts) {
 
 function wikiUrlForMonster(monsterName) {
     const page = encodeURIComponent(String(monsterName || "").replace(/\s+/g, "_"));
-    return `https://oldschool.runescape.wiki/w/${page}`;
+    return `https://oldschool.runescape.wiki/w/Slayer_task/${page}`;
 }
 
 function renderInfoIcon(title, label) {
@@ -303,8 +303,6 @@ function renderInfoIcon(title, label) {
 }
 
 function getMonsterLink(monster) {
-    if (monster?.customUrl) return monster.customUrl;
-    if (monster?.wikiUrl) return monster.wikiUrl;
     return wikiUrlForMonster(monster?.name);
 }
 
