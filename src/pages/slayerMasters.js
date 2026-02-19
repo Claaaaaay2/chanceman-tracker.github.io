@@ -98,6 +98,34 @@ function mergeRequirementSets(...requirementsList) {
     return merged;
 }
 
+function maybeIgnoreCombatRequirements(requirements, ignoreCombatLevel) {
+    if (!ignoreCombatLevel || !requirements || typeof requirements !== "object") {
+        return requirements || {};
+    }
+
+    const skills = { ...(requirements.skills || {}) };
+    for (const skill of Object.keys(skills)) {
+        if (String(skill).toLowerCase() === "combat") {
+            delete skills[skill];
+        }
+    }
+
+    const skillsAny = (requirements.skillsAny || []).map((option) => {
+        const nextOption = {};
+        for (const [skill, level] of Object.entries(option || {})) {
+            if (String(skill).toLowerCase() === "combat") continue;
+            nextOption[skill] = level;
+        }
+        return nextOption;
+    }).filter((option) => Object.keys(option).length > 0);
+
+    return {
+        ...requirements,
+        skills,
+        skillsAny
+    };
+}
+
 async function evaluateRequirements(requirements, ctx) {
     const missing = [];
 
@@ -307,6 +335,7 @@ export default async function SlayerMastersPage() {
 
     const ctx = buildRequirementContext();
     const hideUnreachableSlayerMasters = fileStore.filters?.hideUnreachableSlayerMasters ?? true;
+    const ignoreSlayerMasterCombatLevel = Boolean(fileStore.filters?.ignoreSlayerMasterCombatLevel);
 
     const masterHtml = [];
 
@@ -320,7 +349,11 @@ export default async function SlayerMastersPage() {
         const monsterRows = [];
 
         for (const monster of master.monsters || []) {
-            const assignmentReq = mergeRequirementSets(master.assignmentRequirements, monster.assignmentRequirements);
+            const monsterAssignmentReq = maybeIgnoreCombatRequirements(
+                monster.assignmentRequirements || {},
+                ignoreSlayerMasterCombatLevel
+            );
+            const assignmentReq = mergeRequirementSets(master.assignmentRequirements, monsterAssignmentReq);
             const reachReq = mergeRequirementSets(master.reachRequirements, monster.reachRequirements);
 
             const assignmentStatus = await evaluateRequirements(assignmentReq, ctx);
@@ -419,6 +452,10 @@ export default async function SlayerMastersPage() {
                 <input type="checkbox" id="hideUnreachableSlayerMasters" ${hideUnreachableSlayerMasters ? "checked" : ""}>
                 Hide unreachable slayer masters
             </label>
+            <label class="slayer-master-filter">
+                <input type="checkbox" id="ignoreSlayerMasterCombatLevel" ${ignoreSlayerMasterCombatLevel ? "checked" : ""}>
+                Ignore combat level
+            </label>
         </div>
         <nav class="unlock-jump slayer-master-jump" aria-label="Jump to slayer master">
             <div class="unlock-jump-label">Jump to slayer master</div>
@@ -451,12 +488,16 @@ function applySlayerMasterFilters(container) {
     }
 }
 
-async function updateSlayerMasterFilters(partial) {
+async function updateSlayerMasterFilters(partial, options = {}) {
     const nextFilters = {
         ...fileStore.filters,
         ...partial
     };
     await fileStore.setFilters(nextFilters);
+    if (options.rerender) {
+        window.dispatchEvent(new PopStateEvent("popstate"));
+        return;
+    }
     const list = document.getElementById("slayerMasterList");
     if (list) {
         applySlayerMasterFilters(list);
@@ -490,8 +531,15 @@ export function init() {
     }
 
     const onSlayerMasterChange = async (event) => {
-        if (event.target.id !== "hideUnreachableSlayerMasters") return;
-        await updateSlayerMasterFilters({ hideUnreachableSlayerMasters: event.target.checked });
+        if (event.target.id === "hideUnreachableSlayerMasters") {
+            await updateSlayerMasterFilters({ hideUnreachableSlayerMasters: event.target.checked });
+        }
+        if (event.target.id === "ignoreSlayerMasterCombatLevel") {
+            await updateSlayerMasterFilters(
+                { ignoreSlayerMasterCombatLevel: event.target.checked },
+                { rerender: true }
+            );
+        }
     };
 
     document.addEventListener("change", onSlayerMasterChange);
