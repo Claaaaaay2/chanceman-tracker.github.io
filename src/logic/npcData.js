@@ -8362,14 +8362,6 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
-    "Icefiend Level 13": {
-        "wiki": "https://oldschool.runescape.wiki/w/Icefiend#Level_13",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": [],
-        "f2p": false
-    },
     "Icelord": {
         "wiki": "https://oldschool.runescape.wiki/w/Icelord",
         "rule": ["canCompleteColdWar"],
@@ -9389,14 +9381,6 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
-    "Limestone rocks": {
-        "wiki": "https://oldschool.runescape.wiki/w/Limestone_rock",
-        "rule": ["canTrainMining"],
-        "skill": ["mining"],
-        "level": [10],
-        "tags": [],
-        "f2p": false
-    },
     "Limpwurt plant": {
         "wiki": "https://oldschool.runescape.wiki/w/Limpwurt_plant",
         "rule": {
@@ -9559,14 +9543,6 @@ export const NPC_DATA = {
         "rule": ["canTrainMining"],
         "skill": ["mining"],
         "level": [65],
-        "tags": [],
-        "f2p": false
-    },
-    "Lucky impling": {
-        "wiki": "https://oldschool.runescape.wiki/w/Lucky_impling",
-        "rule": ["canTrainHunter"],
-        "skill": ["hunter"],
-        "level": [99],
         "tags": [],
         "f2p": false
     },
@@ -10932,14 +10908,6 @@ export const NPC_DATA = {
         "level": [15, 15],
         "tags": [],
         "f2p": false
-    },
-    "Oak tree (The Node)": {
-        "wiki": "https://oldschool.runescape.wiki/w/Oak_tree_(The_Node)",
-        "rule": null,
-        "skill": ["woodcutting"],
-        "level": [15],
-        "tags": [],
-        "f2p": true
     },
     "Obor Free-to-play": {
         "wiki": "https://oldschool.runescape.wiki/w/Obor#Free-to-play",
@@ -15122,14 +15090,6 @@ export const NPC_DATA = {
         "tags": ["easy"],
         "f2p": true
     },
-    "Tools (gardening) m": {
-        "wiki": "https://oldschool.runescape.wiki/w/Tools_(gardening)",
-        "rule": null,
-        "skill": [],
-        "level": [],
-        "tags": ["easy"],
-        "f2p": false
-    },
     "Tormented Demon": {
         "wiki": "https://oldschool.runescape.wiki/w/Tormented_Demon",
         "rule": ["canCompleteWhileGuthixSleeps"],
@@ -15359,14 +15319,6 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
-        "f2p": false
-    },
-    "Trinket of advanced weaponry": {
-        "wiki": "https://oldschool.runescape.wiki/w/Trinket_of_advanced_weaponry",
-        "rule": ["never"],
-        "skill": [],
-        "level": [],
-        "tags": ["deadman"],
         "f2p": false
     },
     "Troll general": {
@@ -16445,14 +16397,6 @@ export const NPC_DATA = {
     "Wooden larder": {
         "wiki": "https://oldschool.runescape.wiki/w/Wooden_larder",
         "rule": ["canMakeWoodenLarder"],
-        "skill": [],
-        "level": [],
-        "tags": ["house"],
-        "f2p": false
-    },
-    "Wooden shelves 1": {
-        "wiki": "https://oldschool.runescape.wiki/w/Wooden_shelves_1",
-        "rule": ["canMakeWoodenShelvesI"],
         "skill": [],
         "level": [],
         "tags": ["house"],
