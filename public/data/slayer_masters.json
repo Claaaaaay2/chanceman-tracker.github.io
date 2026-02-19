@@ -54,10 +54,9 @@
                         }
                     },
                     "reachRequirements": {
-                        "itemsAll": [
-                            "Rope"
-                        ],
-                        "itemsAny": []
+                        "rulesAll": [
+                            "canEnterLumbridgeSwampCaves"
+                        ]
                     }
                 },
                 {
@@ -80,10 +79,9 @@
                         }
                     },
                     "reachRequirements": {
-                        "itemsAll": [
-                            "Rope"
-                        ],
-                        "itemsAny": []
+                        "rulesAll": [
+                            "canEnterLumbridgeSwampCaves"
+                        ]
                     }
                 },
                 {
@@ -277,10 +275,9 @@
                         }
                     },
                     "reachRequirements": {
-                        "itemsAll": [
-                            "Rope"
-                        ],
-                        "itemsAny": []
+                        "rulesAll": [
+                            "canEnterLumbridgeSwampCaves"
+                        ]
                     }
                 },
                 {
@@ -303,10 +300,9 @@
                         }
                     },
                     "reachRequirements": {
-                        "itemsAll": [
-                            "Rope"
-                        ],
-                        "itemsAny": []
+                        "rulesAll": [
+                            "canEnterLumbridgeSwampCaves"
+                        ]
                     }
                 },
                 {
@@ -753,10 +749,9 @@
                         }
                     },
                     "reachRequirements": {
-                        "itemsAll": [
-                            "Rope"
-                        ],
-                        "itemsAny": []
+                        "rulesAll": [
+                            "canEnterLumbridgeSwampCaves"
+                        ]
                     }
                 },
                 {
@@ -779,10 +774,9 @@
                         }
                     },
                     "reachRequirements": {
-                        "itemsAll": [
-                            "Rope"
-                        ],
-                        "itemsAny": []
+                        "rulesAll": [
+                            "canEnterLumbridgeSwampCaves"
+                        ]
                     }
                 },
                 {
