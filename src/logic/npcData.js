@@ -13202,30 +13202,6 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
-    "Seed pack (High seed)": {
-        "wiki": "https://oldschool.runescape.wiki/w/Seed_pack#High_seed_rewards",
-        "rule": ["canTrainFarming"],
-        "skill": ["farming"],
-        "level": [85],
-        "tags": [],
-        "f2p": false
-    },
-    "Seed pack (Low seed)": {
-        "wiki": "https://oldschool.runescape.wiki/w/Seed_pack#Low_seed_rewards",
-        "rule": ["canTrainFarming"],
-        "skill": ["farming"],
-        "level": [45],
-        "tags": [],
-        "f2p": false
-    },
-    "Seed pack (Medium seed)": {
-        "wiki": "https://oldschool.runescape.wiki/w/Seed_pack#Medium_seed_rewards",
-        "rule": ["canTrainFarming"],
-        "skill": ["farming"],
-        "level": [65],
-        "tags": [],
-        "f2p": false
-    },
     "Seed pack High seed": {
         "wiki": "https://oldschool.runescape.wiki/w/Seed_pack#High_seed_rewards",
         "rule": ["canTrainFarming"],
@@ -13244,9 +13220,30 @@ export const NPC_DATA = {
     },
     "Seed pack Medium seed": {
         "wiki": "https://oldschool.runescape.wiki/w/Seed_pack#Medium_seed_rewards",
-        "rule": ["canTrainFarming"],
-        "skill": ["farming"],
-        "level": [65],
+        "rule": {
+            "any": [
+                {
+                    "all": [
+                        {
+                            "skill": "farming",
+                            "level": 65
+                        },
+                        "canTrainFarming"
+                    ]
+                },
+                {
+                    "all": [
+                        {
+                            "skill": "farming",
+                            "level": 34
+                        },
+                        "hasSpade"
+                    ]
+                }
+            ]
+        },
+        "skill": [],
+        "level": [],
         "tags": [],
         "f2p": false
     },
