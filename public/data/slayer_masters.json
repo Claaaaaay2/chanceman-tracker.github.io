@@ -2,14 +2,12 @@
     "masters": [
         {
             "name": "Turael",
-            "customUrl": "",
             "notes": [],
             "reachRequirements": {},
             "assignmentRequirements": {},
             "monsters": [
                 {
                     "name": "Banshees",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 15,
@@ -25,7 +23,6 @@
                 },
                 {
                     "name": "Bats",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 5
@@ -34,7 +31,6 @@
                 },
                 {
                     "name": "Bears",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 13
@@ -42,12 +38,10 @@
                     }
                 },
                 {
-                    "name": "Birds",
-                    "customUrl": ""
+                    "name": "Birds"
                 },
                 {
                     "name": "Cave bugs",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 7
@@ -61,7 +55,6 @@
                 },
                 {
                     "name": "Cave crawlers",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 10,
@@ -71,7 +64,6 @@
                 },
                 {
                     "name": "Cave slimes",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 17,
@@ -85,12 +77,10 @@
                     }
                 },
                 {
-                    "name": "Cows",
-                    "customUrl": ""
+                    "name": "Cows"
                 },
                 {
                     "name": "Crawling Hands",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 5
@@ -102,7 +92,6 @@
                 },
                 {
                     "name": "Dogs",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 15
@@ -111,7 +100,6 @@
                 },
                 {
                     "name": "Dwarves",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 6
@@ -120,7 +108,6 @@
                 },
                 {
                     "name": "Ghosts",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 13
@@ -128,12 +115,10 @@
                     }
                 },
                 {
-                    "name": "Goblins",
-                    "customUrl": ""
+                    "name": "Goblins"
                 },
                 {
                     "name": "Icefiends",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 20
@@ -142,7 +127,6 @@
                 },
                 {
                     "name": "Kalphite",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 15
@@ -151,7 +135,6 @@
                 },
                 {
                     "name": "Lizards",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 22
@@ -160,7 +143,6 @@
                 },
                 {
                     "name": "Minotaurs",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 7
@@ -168,16 +150,13 @@
                     }
                 },
                 {
-                    "name": "Monkeys",
-                    "customUrl": ""
+                    "name": "Monkeys"
                 },
                 {
-                    "name": "Rats",
-                    "customUrl": ""
+                    "name": "Rats"
                 },
                 {
                     "name": "Scorpions",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 7
@@ -186,7 +165,6 @@
                 },
                 {
                     "name": "Skeletons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 15
@@ -194,12 +172,10 @@
                     }
                 },
                 {
-                    "name": "Spiders",
-                    "customUrl": ""
+                    "name": "Spiders"
                 },
                 {
                     "name": "Wolves",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 20
@@ -208,7 +184,6 @@
                 },
                 {
                     "name": "Zombies",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 10
@@ -219,7 +194,6 @@
         },
         {
             "name": "Spria",
-            "customUrl": "",
             "notes": [],
             "reachRequirements": {
                 "quests": {
@@ -230,7 +204,6 @@
             "monsters": [
                 {
                     "name": "Banshees",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 15,
@@ -246,7 +219,6 @@
                 },
                 {
                     "name": "Bats",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 5
@@ -255,7 +227,6 @@
                 },
                 {
                     "name": "Bears",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 13
@@ -263,12 +234,10 @@
                     }
                 },
                 {
-                    "name": "Birds",
-                    "customUrl": ""
+                    "name": "Birds"
                 },
                 {
                     "name": "Cave bugs",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 7
@@ -282,7 +251,6 @@
                 },
                 {
                     "name": "Cave crawlers",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 10,
@@ -292,7 +260,6 @@
                 },
                 {
                     "name": "Cave slimes",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 17,
@@ -306,12 +273,10 @@
                     }
                 },
                 {
-                    "name": "Cows",
-                    "customUrl": ""
+                    "name": "Cows"
                 },
                 {
                     "name": "Crawling Hands",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 5
@@ -323,7 +288,6 @@
                 },
                 {
                     "name": "Dogs",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 15
@@ -332,7 +296,6 @@
                 },
                 {
                     "name": "Dwarves",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 6
@@ -341,7 +304,6 @@
                 },
                 {
                     "name": "Ghosts",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 13
@@ -349,12 +311,10 @@
                     }
                 },
                 {
-                    "name": "Goblins",
-                    "customUrl": ""
+                    "name": "Goblins"
                 },
                 {
                     "name": "Icefiends",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 20
@@ -363,7 +323,6 @@
                 },
                 {
                     "name": "Kalphite",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 15
@@ -372,7 +331,6 @@
                 },
                 {
                     "name": "Lizards",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 22
@@ -381,7 +339,6 @@
                 },
                 {
                     "name": "Minotaurs",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 7
@@ -389,16 +346,13 @@
                     }
                 },
                 {
-                    "name": "Monkeys",
-                    "customUrl": ""
+                    "name": "Monkeys"
                 },
                 {
-                    "name": "Rats",
-                    "customUrl": ""
+                    "name": "Rats"
                 },
                 {
                     "name": "Scorpions",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 7
@@ -407,7 +361,6 @@
                 },
                 {
                     "name": "Skeletons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 15
@@ -416,7 +369,6 @@
                 },
                 {
                     "name": "Sourhogs",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "A Porcine of Interest": "completed"
@@ -424,12 +376,10 @@
                     }
                 },
                 {
-                    "name": "Spiders",
-                    "customUrl": ""
+                    "name": "Spiders"
                 },
                 {
                     "name": "Wolves",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 20
@@ -438,7 +388,6 @@
                 },
                 {
                     "name": "Zombies",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 10
@@ -449,14 +398,12 @@
         },
         {
             "name": "Krystilia",
-            "customUrl": "",
             "notes": [],
             "reachRequirements": {},
             "assignmentRequirements": {},
             "monsters": [
                 {
                     "name": "Abyssal demons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 85
@@ -467,12 +414,10 @@
                     }
                 },
                 {
-                    "name": "Ankou",
-                    "customUrl": ""
+                    "name": "Ankou"
                 },
                 {
                     "name": "Aviansie",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skillsAny": [
                             {
@@ -485,28 +430,22 @@
                     }
                 },
                 {
-                    "name": "Bandits",
-                    "customUrl": ""
+                    "name": "Bandits"
                 },
                 {
-                    "name": "Bears",
-                    "customUrl": ""
+                    "name": "Bears"
                 },
                 {
-                    "name": "Black demons",
-                    "customUrl": ""
+                    "name": "Black demons"
                 },
                 {
-                    "name": "Black dragons",
-                    "customUrl": ""
+                    "name": "Black dragons"
                 },
                 {
-                    "name": "Black Knights",
-                    "customUrl": ""
+                    "name": "Black Knights"
                 },
                 {
                     "name": "Bloodveld",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 50
@@ -525,16 +464,13 @@
                     }
                 },
                 {
-                    "name": "Chaos druids",
-                    "customUrl": ""
+                    "name": "Chaos druids"
                 },
                 {
-                    "name": "Dark warriors",
-                    "customUrl": ""
+                    "name": "Dark warriors"
                 },
                 {
                     "name": "Dust devils",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 65
@@ -553,44 +489,34 @@
                     }
                 },
                 {
-                    "name": "Earth warriors",
-                    "customUrl": ""
+                    "name": "Earth warriors"
                 },
                 {
-                    "name": "Ents",
-                    "customUrl": ""
+                    "name": "Ents"
                 },
                 {
-                    "name": "Fire giants",
-                    "customUrl": ""
+                    "name": "Fire giants"
                 },
                 {
-                    "name": "Greater demons",
-                    "customUrl": ""
+                    "name": "Greater demons"
                 },
                 {
-                    "name": "Green dragons",
-                    "customUrl": ""
+                    "name": "Green dragons"
                 },
                 {
-                    "name": "Hellhounds",
-                    "customUrl": ""
+                    "name": "Hellhounds"
                 },
                 {
-                    "name": "Hill Giants",
-                    "customUrl": ""
+                    "name": "Hill Giants"
                 },
                 {
-                    "name": "Ice giants",
-                    "customUrl": ""
+                    "name": "Ice giants"
                 },
                 {
-                    "name": "Ice warriors",
-                    "customUrl": ""
+                    "name": "Ice warriors"
                 },
                 {
                     "name": "Jellies",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 52
@@ -598,16 +524,13 @@
                     }
                 },
                 {
-                    "name": "Lava dragons",
-                    "customUrl": ""
+                    "name": "Lava dragons"
                 },
                 {
-                    "name": "Lesser demons",
-                    "customUrl": ""
+                    "name": "Lesser demons"
                 },
                 {
                     "name": "Magic axes",
-                    "customUrl": "",
                     "reachRequirements": {
                         "itemsAll": [
                             "Lockpick"
@@ -616,16 +539,13 @@
                     }
                 },
                 {
-                    "name": "Mammoths",
-                    "customUrl": ""
+                    "name": "Mammoths"
                 },
                 {
-                    "name": "Moss giants",
-                    "customUrl": ""
+                    "name": "Moss giants"
                 },
                 {
                     "name": "Nechryael",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 80
@@ -633,32 +553,25 @@
                     }
                 },
                 {
-                    "name": "Pirates",
-                    "customUrl": ""
+                    "name": "Pirates"
                 },
                 {
-                    "name": "Revenants",
-                    "customUrl": ""
+                    "name": "Revenants"
                 },
                 {
-                    "name": "Rogues",
-                    "customUrl": ""
+                    "name": "Rogues"
                 },
                 {
-                    "name": "Scorpions",
-                    "customUrl": ""
+                    "name": "Scorpions"
                 },
                 {
-                    "name": "Skeletons",
-                    "customUrl": ""
+                    "name": "Skeletons"
                 },
                 {
-                    "name": "Spiders",
-                    "customUrl": ""
+                    "name": "Spiders"
                 },
                 {
                     "name": "Spiritual creatures",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 63
@@ -677,14 +590,12 @@
                     }
                 },
                 {
-                    "name": "Zombies",
-                    "customUrl": ""
+                    "name": "Zombies"
                 }
             ]
         },
         {
             "name": "Mazchna",
-            "customUrl": "",
             "notes": [],
             "reachRequirements": {
                 "quests": {
@@ -699,7 +610,6 @@
             "monsters": [
                 {
                     "name": "Banshees",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 15,
@@ -715,7 +625,6 @@
                 },
                 {
                     "name": "Bats",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 5
@@ -724,7 +633,6 @@
                 },
                 {
                     "name": "Bears",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 13
@@ -733,7 +641,6 @@
                 },
                 {
                     "name": "Catablepon",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 35
@@ -742,7 +649,6 @@
                 },
                 {
                     "name": "Cave bugs",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 7
@@ -756,7 +662,6 @@
                 },
                 {
                     "name": "Cave crawlers",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 10,
@@ -766,7 +671,6 @@
                 },
                 {
                     "name": "Cave slimes",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 17,
@@ -781,7 +685,6 @@
                 },
                 {
                     "name": "Cockatrice",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 17,
@@ -794,12 +697,10 @@
                     ]
                 },
                 {
-                    "name": "Crabs",
-                    "customUrl": ""
+                    "name": "Crabs"
                 },
                 {
                     "name": "Crawling Hands",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 5
@@ -811,7 +712,6 @@
                 },
                 {
                     "name": "Dogs",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 15
@@ -820,7 +720,6 @@
                 },
                 {
                     "name": "Flesh Crawlers",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 15
@@ -829,7 +728,6 @@
                 },
                 {
                     "name": "Ghosts",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 13
@@ -838,7 +736,6 @@
                 },
                 {
                     "name": "Ghouls",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Priest in Peril": "completed"
@@ -850,7 +747,6 @@
                 },
                 {
                     "name": "Hill Giants",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 25
@@ -859,7 +755,6 @@
                 },
                 {
                     "name": "Hobgoblins",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 20
@@ -868,7 +763,6 @@
                 },
                 {
                     "name": "Ice warriors",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 45
@@ -877,7 +771,6 @@
                 },
                 {
                     "name": "Kalphite",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 15
@@ -886,7 +779,6 @@
                 },
                 {
                     "name": "Killerwatts",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 37,
@@ -905,7 +797,6 @@
                 },
                 {
                     "name": "Lizards",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 22
@@ -914,7 +805,6 @@
                 },
                 {
                     "name": "Mogres",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 32,
@@ -927,7 +817,6 @@
                 },
                 {
                     "name": "Pyrefiends",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 30,
@@ -937,7 +826,6 @@
                 },
                 {
                     "name": "Rockslugs",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 20,
@@ -956,7 +844,6 @@
                 },
                 {
                     "name": "Scorpions",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 7
@@ -965,7 +852,6 @@
                 },
                 {
                     "name": "Shades",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 30
@@ -974,7 +860,6 @@
                 },
                 {
                     "name": "Skeletons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 15
@@ -983,7 +868,6 @@
                 },
                 {
                     "name": "Vampyres",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Priest in Peril": "completed"
@@ -995,7 +879,6 @@
                 },
                 {
                     "name": "Wall beasts",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 35,
@@ -1009,7 +892,6 @@
                 },
                 {
                     "name": "Wolves",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 20
@@ -1018,7 +900,6 @@
                 },
                 {
                     "name": "Zombies",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 10
@@ -1029,7 +910,6 @@
         },
         {
             "name": "Vannaka",
-            "customUrl": "",
             "notes": [],
             "reachRequirements": {},
             "assignmentRequirements": {
@@ -1040,7 +920,6 @@
             "monsters": [
                 {
                     "name": "Aberrant spectres",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 60,
@@ -1056,7 +935,6 @@
                 },
                 {
                     "name": "Abyssal demons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 85,
@@ -1074,7 +952,6 @@
                 },
                 {
                     "name": "Ankou",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 40
@@ -1083,7 +960,6 @@
                 },
                 {
                     "name": "Basilisks",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 40,
@@ -1097,7 +973,6 @@
                 },
                 {
                     "name": "Bloodveld",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 50,
@@ -1110,7 +985,6 @@
                 },
                 {
                     "name": "Blue dragons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Dragon Slayer I": "started"
@@ -1122,7 +996,6 @@
                 },
                 {
                     "name": "Brine rats",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 47,
@@ -1135,7 +1008,6 @@
                 },
                 {
                     "name": "Cockatrice",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 17,
@@ -1148,12 +1020,10 @@
                     ]
                 },
                 {
-                    "name": "Crabs",
-                    "customUrl": ""
+                    "name": "Crabs"
                 },
                 {
                     "name": "Crocodiles",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 50
@@ -1162,7 +1032,6 @@
                 },
                 {
                     "name": "Dagannoth",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Horror from the Deep": "completed"
@@ -1174,7 +1043,6 @@
                 },
                 {
                     "name": "Dust devils",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 65,
@@ -1195,7 +1063,6 @@
                 },
                 {
                     "name": "Elves",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Regicide": "completed"
@@ -1207,7 +1074,6 @@
                 },
                 {
                     "name": "Fever spiders",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 42,
@@ -1220,7 +1086,6 @@
                 },
                 {
                     "name": "Fire giants",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 65
@@ -1229,7 +1094,6 @@
                 },
                 {
                     "name": "Gargoyles",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 75,
@@ -1251,7 +1115,6 @@
                 },
                 {
                     "name": "Ghouls",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Priest in Peril": "completed"
@@ -1263,7 +1126,6 @@
                 },
                 {
                     "name": "Gryphons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 51,
@@ -1276,7 +1138,6 @@
                 },
                 {
                     "name": "Harpie Bug Swarms",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 3,
@@ -1293,7 +1154,6 @@
                 },
                 {
                     "name": "Hellhounds",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 75
@@ -1302,7 +1162,6 @@
                 },
                 {
                     "name": "Hill Giants",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 25
@@ -1311,7 +1170,6 @@
                 },
                 {
                     "name": "Hobgoblins",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 20
@@ -1320,7 +1178,6 @@
                 },
                 {
                     "name": "Ice giants",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 50
@@ -1329,7 +1186,6 @@
                 },
                 {
                     "name": "Ice warriors",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 45
@@ -1338,7 +1194,6 @@
                 },
                 {
                     "name": "Infernal Mages",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 45,
@@ -1351,7 +1206,6 @@
                 },
                 {
                     "name": "Jellies",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 52,
@@ -1361,7 +1215,6 @@
                 },
                 {
                     "name": "Jungle horrors",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Cabin Fever": "completed"
@@ -1373,7 +1226,6 @@
                 },
                 {
                     "name": "Kalphite",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 15
@@ -1382,7 +1234,6 @@
                 },
                 {
                     "name": "Kurask",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 70,
@@ -1392,7 +1243,6 @@
                 },
                 {
                     "name": "Lesser demons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 60
@@ -1401,7 +1251,6 @@
                 },
                 {
                     "name": "Mogres",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 32,
@@ -1414,7 +1263,6 @@
                 },
                 {
                     "name": "Molanisks",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 39,
@@ -1430,7 +1278,6 @@
                 },
                 {
                     "name": "Moss giants",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 40
@@ -1439,7 +1286,6 @@
                 },
                 {
                     "name": "Nechryael",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 80,
@@ -1449,7 +1295,6 @@
                 },
                 {
                     "name": "Ogres",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 40
@@ -1458,7 +1303,6 @@
                 },
                 {
                     "name": "Otherworldly beings",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Lost City": "completed"
@@ -1470,7 +1314,6 @@
                 },
                 {
                     "name": "Pyrefiends",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 30,
@@ -1480,7 +1323,6 @@
                 },
                 {
                     "name": "Sea snakes",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 40,
@@ -1493,7 +1335,6 @@
                 },
                 {
                     "name": "Shades",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 30
@@ -1502,7 +1343,6 @@
                 },
                 {
                     "name": "Shadow warriors",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Legends' Quest": "completed"
@@ -1514,7 +1354,6 @@
                 },
                 {
                     "name": "Spiritual creatures",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 63,
@@ -1535,7 +1374,6 @@
                 },
                 {
                     "name": "Terror dogs",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 40,
@@ -1548,7 +1386,6 @@
                 },
                 {
                     "name": "Trolls",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 60
@@ -1557,7 +1394,6 @@
                 },
                 {
                     "name": "Turoth",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 55,
@@ -1567,7 +1403,6 @@
                 },
                 {
                     "name": "Vampyres",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Priest in Peril": "completed"
@@ -1579,7 +1414,6 @@
                 },
                 {
                     "name": "Werewolves",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Priest in Peril": "completed"
@@ -1593,7 +1427,6 @@
         },
         {
             "name": "Chaeldar",
-            "customUrl": "",
             "notes": [],
             "reachRequirements": {
                 "quests": {
@@ -1608,7 +1441,6 @@
             "monsters": [
                 {
                     "name": "Aberrant spectres",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 60,
@@ -1624,7 +1456,6 @@
                 },
                 {
                     "name": "Abyssal demons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 85,
@@ -1642,7 +1473,6 @@
                 },
                 {
                     "name": "Aviansie",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skillsAny": [
                             {
@@ -1656,7 +1486,6 @@
                 },
                 {
                     "name": "Basilisks",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 40,
@@ -1670,7 +1499,6 @@
                 },
                 {
                     "name": "Black demons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 80
@@ -1679,7 +1507,6 @@
                 },
                 {
                     "name": "Bloodveld",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 50,
@@ -1692,7 +1519,6 @@
                 },
                 {
                     "name": "Blue dragons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Dragon Slayer I": "started"
@@ -1704,7 +1530,6 @@
                 },
                 {
                     "name": "Brine rats",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 47,
@@ -1717,7 +1542,6 @@
                 },
                 {
                     "name": "Cave horrors",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 58,
@@ -1730,7 +1554,6 @@
                 },
                 {
                     "name": "Cave kraken",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 87,
@@ -1740,12 +1563,10 @@
                     }
                 },
                 {
-                    "name": "Crabs",
-                    "customUrl": ""
+                    "name": "Crabs"
                 },
                 {
                     "name": "Custodian stalker",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 54
@@ -1757,7 +1578,6 @@
                 },
                 {
                     "name": "Dagannoth",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Horror from the Deep": "completed"
@@ -1769,7 +1589,6 @@
                 },
                 {
                     "name": "Dust devils",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 65,
@@ -1790,7 +1609,6 @@
                 },
                 {
                     "name": "Elves",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Regicide": "completed"
@@ -1802,7 +1620,6 @@
                 },
                 {
                     "name": "Fever spiders",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 42,
@@ -1815,7 +1632,6 @@
                 },
                 {
                     "name": "Fire giants",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 65
@@ -1824,7 +1640,6 @@
                 },
                 {
                     "name": "Fossil Island Wyverns",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Bone Voyage": "completed",
@@ -1837,7 +1652,6 @@
                 },
                 {
                     "name": "Gargoyles",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 75,
@@ -1859,7 +1673,6 @@
                 },
                 {
                     "name": "Greater demons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 70
@@ -1868,7 +1681,6 @@
                 },
                 {
                     "name": "Gryphons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 51,
@@ -1881,7 +1693,6 @@
                 },
                 {
                     "name": "Hellhounds",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 75
@@ -1890,7 +1701,6 @@
                 },
                 {
                     "name": "Jellies",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 52,
@@ -1900,7 +1710,6 @@
                 },
                 {
                     "name": "Jungle horrors",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Cabin Fever": "completed"
@@ -1912,7 +1721,6 @@
                 },
                 {
                     "name": "Kalphite",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 15
@@ -1921,7 +1729,6 @@
                 },
                 {
                     "name": "Kurask",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 70,
@@ -1931,7 +1738,6 @@
                 },
                 {
                     "name": "Lesser demons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 60
@@ -1940,7 +1746,6 @@
                 },
                 {
                     "name": "Lesser Nagua",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 48
@@ -1951,12 +1756,10 @@
                     }
                 },
                 {
-                    "name": "Lizardmen",
-                    "customUrl": ""
+                    "name": "Lizardmen"
                 },
                 {
                     "name": "Mutated zygomites",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 57,
@@ -1969,7 +1772,6 @@
                 },
                 {
                     "name": "Nechryael",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 80,
@@ -1979,7 +1781,6 @@
                 },
                 {
                     "name": "Shadow warriors",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Legends' Quest": "completed"
@@ -1991,7 +1792,6 @@
                 },
                 {
                     "name": "Skeletal Wyverns",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 72,
@@ -2004,7 +1804,6 @@
                 },
                 {
                     "name": "Spiritual creatures",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 63,
@@ -2025,7 +1824,6 @@
                 },
                 {
                     "name": "Trolls",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 60
@@ -2034,7 +1832,6 @@
                 },
                 {
                     "name": "Turoth",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 55,
@@ -2043,12 +1840,10 @@
                     }
                 },
                 {
-                    "name": "TzHaar",
-                    "customUrl": ""
+                    "name": "TzHaar"
                 },
                 {
                     "name": "Vampyres",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Priest in Peril": "completed"
@@ -2060,7 +1855,6 @@
                 },
                 {
                     "name": "Warped creatures",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 56
@@ -2072,7 +1866,6 @@
                 },
                 {
                     "name": "Wyrms",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 62
@@ -2092,7 +1885,6 @@
         },
         {
             "name": "Konar",
-            "customUrl": "",
             "notes": [
                 "This does not account for locations of these npcs yet."
             ],
@@ -2105,7 +1897,6 @@
             "monsters": [
                 {
                     "name": "Aberrant spectres",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 60,
@@ -2121,7 +1912,6 @@
                 },
                 {
                     "name": "Abyssal demons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 85,
@@ -2134,7 +1924,6 @@
                 },
                 {
                     "name": "Ankou",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 40
@@ -2143,7 +1932,6 @@
                 },
                 {
                     "name": "Aviansie",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skillsAny": [
                             {
@@ -2157,7 +1945,6 @@
                 },
                 {
                     "name": "Basilisks",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 40,
@@ -2171,7 +1958,6 @@
                 },
                 {
                     "name": "Black demons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 80
@@ -2180,7 +1966,6 @@
                 },
                 {
                     "name": "Black dragons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Dragon Slayer I": "started"
@@ -2192,7 +1977,6 @@
                 },
                 {
                     "name": "Bloodveld",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 50,
@@ -2205,7 +1989,6 @@
                 },
                 {
                     "name": "Blue dragons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Dragon Slayer I": "started"
@@ -2217,7 +2000,6 @@
                 },
                 {
                     "name": "Brine rats",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 47,
@@ -2230,7 +2012,6 @@
                 },
                 {
                     "name": "Cave kraken",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 87,
@@ -2241,7 +2022,6 @@
                 },
                 {
                     "name": "Dagannoth",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Horror from the Deep": "completed"
@@ -2253,7 +2033,6 @@
                 },
                 {
                     "name": "Dark beasts",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 90,
@@ -2266,7 +2045,6 @@
                 },
                 {
                     "name": "Drakes",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 84
@@ -2284,7 +2062,6 @@
                 },
                 {
                     "name": "Dust devils",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 65,
@@ -2305,7 +2082,6 @@
                 },
                 {
                     "name": "Fire giants",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 65
@@ -2314,7 +2090,6 @@
                 },
                 {
                     "name": "Fossil Island Wyverns",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Bone Voyage": "completed",
@@ -2327,7 +2102,6 @@
                 },
                 {
                     "name": "Gargoyles",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 75,
@@ -2349,7 +2123,6 @@
                 },
                 {
                     "name": "Greater demons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 70
@@ -2358,7 +2131,6 @@
                 },
                 {
                     "name": "Hellhounds",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 75
@@ -2367,7 +2139,6 @@
                 },
                 {
                     "name": "Hydras",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 95
@@ -2385,7 +2156,6 @@
                 },
                 {
                     "name": "Jellies",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 52,
@@ -2395,7 +2165,6 @@
                 },
                 {
                     "name": "Kalphite",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 15
@@ -2404,7 +2173,6 @@
                 },
                 {
                     "name": "Kurask",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 70,
@@ -2414,7 +2182,6 @@
                 },
                 {
                     "name": "Lesser Nagua",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 48
@@ -2425,16 +2192,13 @@
                     }
                 },
                 {
-                    "name": "Lizardmen",
-                    "customUrl": ""
+                    "name": "Lizardmen"
                 },
                 {
-                    "name": "Metal dragons",
-                    "customUrl": ""
+                    "name": "Metal dragons"
                 },
                 {
                     "name": "Mutated Zygomites",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 57,
@@ -2447,7 +2211,6 @@
                 },
                 {
                     "name": "Nechryael",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 80,
@@ -2457,7 +2220,6 @@
                 },
                 {
                     "name": "Red dragons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Dragon Slayer I": "started"
@@ -2469,7 +2231,6 @@
                 },
                 {
                     "name": "Skeletal Wyverns",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 72,
@@ -2482,7 +2243,6 @@
                 },
                 {
                     "name": "Smoke devils",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 93,
@@ -2500,7 +2260,6 @@
                 },
                 {
                     "name": "Trolls",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 60
@@ -2509,7 +2268,6 @@
                 },
                 {
                     "name": "Turoth",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 55,
@@ -2519,7 +2277,6 @@
                 },
                 {
                     "name": "Vampyres",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 35
@@ -2528,7 +2285,6 @@
                 },
                 {
                     "name": "Warped creatures",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 56
@@ -2540,7 +2296,6 @@
                 },
                 {
                     "name": "Waterfiends",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Barbarian Training Firemaking I": "completed"
@@ -2552,7 +2307,6 @@
                 },
                 {
                     "name": "Wyrms",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 62
@@ -2572,7 +2326,6 @@
         },
         {
             "name": "Nieve",
-            "customUrl": "",
             "notes": [],
             "reachRequirements": {},
             "assignmentRequirements": {
@@ -2583,7 +2336,6 @@
             "monsters": [
                 {
                     "name": "Aberrant spectres",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 60,
@@ -2599,7 +2351,6 @@
                 },
                 {
                     "name": "Abyssal demons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 85,
@@ -2612,7 +2363,6 @@
                 },
                 {
                     "name": "Ankou",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 40
@@ -2621,7 +2371,6 @@
                 },
                 {
                     "name": "Araxytes",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 92
@@ -2633,7 +2382,6 @@
                 },
                 {
                     "name": "Aviansie",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skillsAny": [
                             {
@@ -2647,7 +2395,6 @@
                 },
                 {
                     "name": "Aquanites",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 78,
@@ -2657,7 +2404,6 @@
                 },
                 {
                     "name": "Basilisks",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 40,
@@ -2671,7 +2417,6 @@
                 },
                 {
                     "name": "Black demons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 80
@@ -2680,7 +2425,6 @@
                 },
                 {
                     "name": "Black dragons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Dragon Slayer I": "started"
@@ -2692,7 +2436,6 @@
                 },
                 {
                     "name": "Bloodveld",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 50,
@@ -2705,7 +2448,6 @@
                 },
                 {
                     "name": "Blue dragons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Dragon Slayer I": "started"
@@ -2717,7 +2459,6 @@
                 },
                 {
                     "name": "Brine rats",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 47,
@@ -2730,7 +2471,6 @@
                 },
                 {
                     "name": "Cave horrors",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 58,
@@ -2743,7 +2483,6 @@
                 },
                 {
                     "name": "Cave kraken",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 87,
@@ -2754,7 +2493,6 @@
                 },
                 {
                     "name": "Custodian stalker",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 54
@@ -2766,7 +2504,6 @@
                 },
                 {
                     "name": "Dagannoth",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Horror from the Deep": "completed"
@@ -2778,7 +2515,6 @@
                 },
                 {
                     "name": "Dark beasts",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 90,
@@ -2791,7 +2527,6 @@
                 },
                 {
                     "name": "Drakes",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 84
@@ -2809,7 +2544,6 @@
                 },
                 {
                     "name": "Dust devils",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 65,
@@ -2830,7 +2564,6 @@
                 },
                 {
                     "name": "Elves",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Regicide": "completed"
@@ -2842,7 +2575,6 @@
                 },
                 {
                     "name": "Fire giants",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 65
@@ -2851,7 +2583,6 @@
                 },
                 {
                     "name": "Fossil Island Wyverns",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Bone Voyage": "completed",
@@ -2864,7 +2595,6 @@
                 },
                 {
                     "name": "Frost dragons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Sailing": 87
@@ -2876,7 +2606,6 @@
                 },
                 {
                     "name": "Gargoyles",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 75,
@@ -2898,7 +2627,6 @@
                 },
                 {
                     "name": "Greater demons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 70
@@ -2907,7 +2635,6 @@
                 },
                 {
                     "name": "Gryphons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 51,
@@ -2920,7 +2647,6 @@
                 },
                 {
                     "name": "Hellhounds",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 75
@@ -2929,7 +2655,6 @@
                 },
                 {
                     "name": "Kalphite",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 15
@@ -2938,7 +2663,6 @@
                 },
                 {
                     "name": "Kurask",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 70,
@@ -2947,16 +2671,13 @@
                     }
                 },
                 {
-                    "name": "Lizardmen",
-                    "customUrl": ""
+                    "name": "Lizardmen"
                 },
                 {
-                    "name": "Metal dragons",
-                    "customUrl": ""
+                    "name": "Metal dragons"
                 },
                 {
                     "name": "Mutated Zygomites",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 57,
@@ -2969,7 +2690,6 @@
                 },
                 {
                     "name": "Nechryael",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 80,
@@ -2979,7 +2699,6 @@
                 },
                 {
                     "name": "Red dragons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Dragon Slayer I": "started"
@@ -2991,7 +2710,6 @@
                 },
                 {
                     "name": "Scabarites",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Contact!": "completed"
@@ -3000,7 +2718,6 @@
                 },
                 {
                     "name": "Skeletal Wyverns",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 72,
@@ -3013,7 +2730,6 @@
                 },
                 {
                     "name": "Smoke devils",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 93,
@@ -3031,7 +2747,6 @@
                 },
                 {
                     "name": "Spiritual creatures",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 63,
@@ -3052,7 +2767,6 @@
                 },
                 {
                     "name": "Suqah",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Lunar Diplomacy": "completed"
@@ -3064,7 +2778,6 @@
                 },
                 {
                     "name": "Trolls",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 60
@@ -3073,7 +2786,6 @@
                 },
                 {
                     "name": "Turoth",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 55,
@@ -3082,12 +2794,10 @@
                     }
                 },
                 {
-                    "name": "TzHaar",
-                    "customUrl": ""
+                    "name": "TzHaar"
                 },
                 {
                     "name": "Vampyres",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Priest in Peril": "completed"
@@ -3099,7 +2809,6 @@
                 },
                 {
                     "name": "Warped creatures",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 56
@@ -3111,7 +2820,6 @@
                 },
                 {
                     "name": "Wyrms",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 62
@@ -3131,7 +2839,6 @@
         },
         {
             "name": "Duradal",
-            "customUrl": "",
             "notes": [],
             "reachRequirements": {
                 "quests": {
@@ -3146,7 +2853,6 @@
             "monsters": [
                 {
                     "name": "Aberrant spectres",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 60,
@@ -3162,7 +2868,6 @@
                 },
                 {
                     "name": "Abyssal demons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 85,
@@ -3180,7 +2885,6 @@
                 },
                 {
                     "name": "Ankou",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 40
@@ -3189,7 +2893,6 @@
                 },
                 {
                     "name": "Aquanite",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 78,
@@ -3199,7 +2902,6 @@
                 },
                 {
                     "name": "Araxytes",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 92
@@ -3211,7 +2913,6 @@
                 },
                 {
                     "name": "Aviansie",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skillsAny": [
                             {
@@ -3225,7 +2926,6 @@
                 },
                 {
                     "name": "Basilisks",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 40,
@@ -3239,7 +2939,6 @@
                 },
                 {
                     "name": "Black demons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 80
@@ -3248,7 +2947,6 @@
                 },
                 {
                     "name": "Black dragons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Dragon Slayer I": "started"
@@ -3260,7 +2958,6 @@
                 },
                 {
                     "name": "Bloodveld",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 50,
@@ -3273,7 +2970,6 @@
                 },
                 {
                     "name": "Blue dragons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Dragon Slayer I": "started"
@@ -3285,7 +2981,6 @@
                 },
                 {
                     "name": "Cave horrors",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 58,
@@ -3298,7 +2993,6 @@
                 },
                 {
                     "name": "Cave kraken",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 87,
@@ -3309,7 +3003,6 @@
                 },
                 {
                     "name": "Dagannoth",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Horror from the Deep": "completed"
@@ -3321,7 +3014,6 @@
                 },
                 {
                     "name": "Dark beasts",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 90,
@@ -3334,7 +3026,6 @@
                 },
                 {
                     "name": "Drakes",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 84
@@ -3352,7 +3043,6 @@
                 },
                 {
                     "name": "Dust devils",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 65,
@@ -3373,7 +3063,6 @@
                 },
                 {
                     "name": "Elves",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Regicide": "completed"
@@ -3385,7 +3074,6 @@
                 },
                 {
                     "name": "Fire giants",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 65
@@ -3394,7 +3082,6 @@
                 },
                 {
                     "name": "Fossil Island Wyverns",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Bone Voyage": "completed",
@@ -3407,7 +3094,6 @@
                 },
                 {
                     "name": "Frost dragons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Sailing": 87
@@ -3419,7 +3105,6 @@
                 },
                 {
                     "name": "Gargoyles",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 75,
@@ -3441,7 +3126,6 @@
                 },
                 {
                     "name": "Greater demons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 70
@@ -3450,7 +3134,6 @@
                 },
                 {
                     "name": "Gryphons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 51,
@@ -3463,7 +3146,6 @@
                 },
                 {
                     "name": "Hellhounds",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 75
@@ -3472,7 +3154,6 @@
                 },
                 {
                     "name": "Kalphite",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 15
@@ -3481,7 +3162,6 @@
                 },
                 {
                     "name": "Kurask",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 70,
@@ -3490,16 +3170,13 @@
                     }
                 },
                 {
-                    "name": "Lizardmen",
-                    "customUrl": ""
+                    "name": "Lizardmen"
                 },
                 {
-                    "name": "Metal dragons",
-                    "customUrl": ""
+                    "name": "Metal dragons"
                 },
                 {
                     "name": "Mutated Zygomites",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 57,
@@ -3512,7 +3189,6 @@
                 },
                 {
                     "name": "Nechryael",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 80,
@@ -3522,7 +3198,6 @@
                 },
                 {
                     "name": "Red dragons",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Dragon Slayer I": "started"
@@ -3534,7 +3209,6 @@
                 },
                 {
                     "name": "Skeletal Wyverns",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 72,
@@ -3547,7 +3221,6 @@
                 },
                 {
                     "name": "Smoke devils",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 93,
@@ -3565,7 +3238,6 @@
                 },
                 {
                     "name": "Spiritual creatures",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 63,
@@ -3586,7 +3258,6 @@
                 },
                 {
                     "name": "Suqah",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Lunar Diplomacy": "completed"
@@ -3598,7 +3269,6 @@
                 },
                 {
                     "name": "Trolls",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 60
@@ -3606,12 +3276,10 @@
                     }
                 },
                 {
-                    "name": "TzHaar",
-                    "customUrl": ""
+                    "name": "TzHaar"
                 },
                 {
                     "name": "Vampyres",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Priest in Peril": "completed"
@@ -3623,7 +3291,6 @@
                 },
                 {
                     "name": "Warped creatures",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 56
@@ -3635,7 +3302,6 @@
                 },
                 {
                     "name": "Waterfiends",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "quests": {
                             "Barbarian Training Firemaking I": "completed"
@@ -3647,7 +3313,6 @@
                 },
                 {
                     "name": "Wyrms",
-                    "customUrl": "",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 62
