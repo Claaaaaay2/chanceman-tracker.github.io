@@ -1,4 +1,4 @@
-import{f as e}from"./index-DJfkluCI.js";function t(){const o=e.obtained&&e.rolled,s=e.player?.name;return`
+import{f as e}from"./index-Q3tWmWIg.js";function l(){const o=e.obtained&&e.rolled,s=e.player?.name;return`
         <h1>Chanceman Tracker</h1>
         <p>Track your progress, filter for your ruleset, and plan what to chase next.</p>
 
@@ -21,6 +21,7 @@ import{f as e}from"./index-DJfkluCI.js";function t(){const o=e.obtained&&e.rolle
                 <li><strong>Items</strong> - your master list of obtainable, gated, and unobtainable drops.</li>
                 <li><strong>Unlocks</strong> - items you have rolled and obtained, grouped by skill tag.</li>
                 <li><strong>NPC drops</strong> - each NPC's remaining drops, sortable by drop rate impact.</li>
+                <li><strong>Random picker</strong> - roulette-style item and NPC picks for what to chase next.</li>
                 <li><strong>Item history</strong> - paired roll/obtain timelines for audits and planning.</li>
                 <li><strong>Achievement diaries</strong> - completion and incompletable filters.</li>
                 <li><strong>Clue steps</strong> - search and feasibility filters for clue progress.</li>
@@ -47,4 +48,4 @@ import{f as e}from"./index-DJfkluCI.js";function t(){const o=e.obtained&&e.rolle
                 <li>Later, click <strong>Refresh files</strong> to reload without reopening the picker.</li>
             </ul>
         </div>
-    `}export{t as default};
+    `}export{l as default};

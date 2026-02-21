@@ -14401,9 +14401,6 @@
       "drops": {
         "Spade (scenery)": {
           "droprate": "Always"
-        },
-        "Tools (gardening)": {
-          "droprate": "Always"
         }
       },
       "spawns": {

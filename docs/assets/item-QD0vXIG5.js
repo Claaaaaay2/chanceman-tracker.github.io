@@ -1,4 +1,4 @@
-import{f as r,a as g,c as w,d as $,i as y,p as u,N as j,e as O,g as h}from"./index-DJfkluCI.js";async function B(){const e=r.obtained,s=r.rolled;if(!e||!s)return"<h1>Please upload your files on the Upload page first.</h1>";const l=new URLSearchParams(window.location.search).get("id");if(!l)return"<h1>No item selected</h1>";await r.ensureItemsLoaded();const o=r.items,n=o.find(a=>a.id==l);if(!n||g(n))return"<h1>Item not found</h1>";const c=await k(n,n.sources),t=R(n.processable,o);return`
+import{f as r,c as g,d as w,e as $,a as y,p as u,N as j,g as O,h as f}from"./index-Q3tWmWIg.js";async function B(){const e=r.obtained,s=r.rolled;if(!e||!s)return"<h1>Please upload your files on the Upload page first.</h1>";const l=new URLSearchParams(window.location.search).get("id");if(!l)return"<h1>No item selected</h1>";await r.ensureItemsLoaded();const o=r.items,n=o.find(a=>a.id==l);if(!n||g(n))return"<h1>Item not found</h1>";const c=await k(n,n.sources),t=R(n.processable,o);return`
         <h1>${n.name}</h1>
 
         <div class="item-header">
@@ -18,7 +18,7 @@ import{f as r,a as g,c as w,d as $,i as y,p as u,N as j,e as O,g as h}from"./ind
                 <h3>${S(o)}</h3>
                 ${await N(o,s[o],e)}
             </div>
-        `);return l.join("")}function S(e){return e.charAt(0).toUpperCase()+e.slice(1)}async function N(e,s,d){if(!s||Object.keys(s).length===0)return"<p><em>No data.</em></p>";const l=new URLSearchParams(window.location.search),o=Number(l.get("id"));if(e==="drops"){const n=[];for(const[t,a]of Object.entries(s)){const i=r.filters?.isSlayerLocked&&w(d,t,a);if($(t,r)){n.push({name:t,data:a,obtainable:!1});continue}const f=!i&&await y(t,r);n.push({name:t,data:a,obtainable:f})}return n.sort((t,a)=>{if(t.obtainable!==a.obtainable)return t.obtainable?-1:1;const i=u(t.data.droprate),f=u(a.data.droprate);return f!==i?f-i:t.name.localeCompare(a.name)}),`
+        `);return l.join("")}function S(e){return e.charAt(0).toUpperCase()+e.slice(1)}async function N(e,s,d){if(!s||Object.keys(s).length===0)return"<p><em>No data.</em></p>";const l=new URLSearchParams(window.location.search),o=Number(l.get("id"));if(e==="drops"){const n=[];for(const[t,a]of Object.entries(s)){const i=r.filters?.isSlayerLocked&&w(d,t,a);if($(t,r)){n.push({name:t,data:a,obtainable:!1});continue}const h=!i&&await y(t,r);n.push({name:t,data:a,obtainable:h})}return n.sort((t,a)=>{if(t.obtainable!==a.obtainable)return t.obtainable?-1:1;const i=u(t.data.droprate),h=u(a.data.droprate);return h!==i?h-i:t.name.localeCompare(a.name)}),`
             <table class="osrs-table">
                 <tr>
                     <th>Source</th>
@@ -33,11 +33,11 @@ import{f as r,a as g,c as w,d as $,i as y,p as u,N as j,e as O,g as h}from"./ind
             </tr>
         `).join("")}
             </table>
-        `}if(e==="other"){const n=[];for(const[c,t]of Object.entries(s)){const{notes:a,rule:i}=t,f=O(t,r)?!1:await h(i,r);n.push(`
+        `}if(e==="other"){const n=[];for(const[c,t]of Object.entries(s)){const{notes:a,rule:i}=t,h=O(t,r)?!1:await f(i,r);n.push(`
                 <tr>
                     <td>${c}</td>
                     <td>${a||""}</td>
-                    <td>${f?b():p()}</td>
+                    <td>${h?b():p()}</td>
                 </tr>
             `)}return`
             <table class="osrs-table">
@@ -48,7 +48,7 @@ import{f as r,a as g,c as w,d as $,i as y,p as u,N as j,e as O,g as h}from"./ind
                 </tr>
                 ${n.join("")}
             </table>
-        `}if(e==="shops"){const n=[];for(const[c,t]of Object.entries(s)){let a=!1;r.rolled.includes(o)&&(typeof t=="string"?a=await h(t,r):typeof t=="object"&&(a=await h(t,r))),n.push(`
+        `}if(e==="shops"){const n=[];for(const[c,t]of Object.entries(s)){let a=!1;r.rolled.includes(o)&&(typeof t=="string"?a=await f(t,r):typeof t=="object"&&(a=await f(t,r))),n.push(`
                 <tr>
                     <td>${m(t)}</td>
                     <td>${a?b():p()}</td>
@@ -58,7 +58,7 @@ import{f as r,a as g,c as w,d as $,i as y,p as u,N as j,e as O,g as h}from"./ind
                 <tr><th>Requirement</th><th>Obtainable?</th></tr>
                 ${n.join("")}
             </table>
-        `}if(e==="spawns"){const n=[];for(const[c,t]of Object.entries(s)){let a=!1;r.rolled.includes(o)&&(typeof t=="string"?a=await h(t,r):typeof t=="object"&&(a=await h(t,r))),n.push(`
+        `}if(e==="spawns"){const n=[];for(const[c,t]of Object.entries(s)){let a=!1;r.rolled.includes(o)&&(typeof t=="string"?a=await f(t,r):typeof t=="object"&&(a=await f(t,r))),n.push(`
                 <tr>
                     <td>${m(t)}</td>
                     <td>${a?b():p()}</td>
