@@ -1,6 +1,10 @@
 import { REQUIREMENT_CHECKS } from "../logic/requirements.js";
 import { fileStore } from "../storage/fileStore.js";
 
+const SLAYER_RULE_LABELS = {
+    canAssignWaterfiendsBarbarianFiremaking1: "Barbarian firemaking 1 completed"
+};
+
 function escapeHtml(value) {
     return String(value)
         .replace(/&/g, "&amp;")
@@ -60,6 +64,10 @@ function hasItemByName(ctx, itemName) {
         }
     }
     return false;
+}
+
+function formatRuleLabel(ruleKey) {
+    return SLAYER_RULE_LABELS[ruleKey] || ruleKey;
 }
 
 function mergeRequirementSets(...requirementsList) {
@@ -207,17 +215,18 @@ async function evaluateRequirements(requirements, ctx) {
 
     for (const ruleKey of requirements?.rulesAll || []) {
         const ruleFn = REQUIREMENT_CHECKS[ruleKey];
+        const ruleLabel = formatRuleLabel(ruleKey);
         if (!ruleFn) {
-            missing.push(`${ruleKey} (rule missing)`);
+            missing.push(`${ruleLabel} (rule missing)`);
             continue;
         }
         try {
             const met = await ruleFn(ctx);
             if (!met) {
-                missing.push(ruleKey);
+                missing.push(ruleLabel);
             }
         } catch (error) {
-            missing.push(`${ruleKey} (rule error)`);
+            missing.push(`${ruleLabel} (rule error)`);
         }
     }
 
@@ -227,8 +236,9 @@ async function evaluateRequirements(requirements, ctx) {
         const failedRules = [];
         for (const ruleKey of rulesAny) {
             const ruleFn = REQUIREMENT_CHECKS[ruleKey];
+            const ruleLabel = formatRuleLabel(ruleKey);
             if (!ruleFn) {
-                failedRules.push(`${ruleKey} (rule missing)`);
+                failedRules.push(`${ruleLabel} (rule missing)`);
                 continue;
             }
             try {
@@ -236,10 +246,10 @@ async function evaluateRequirements(requirements, ctx) {
                 if (met) {
                     anyRuleMet = true;
                 } else {
-                    failedRules.push(ruleKey);
+                    failedRules.push(ruleLabel);
                 }
             } catch (error) {
-                failedRules.push(`${ruleKey} (rule error)`);
+                failedRules.push(`${ruleLabel} (rule error)`);
             }
         }
         if (!anyRuleMet) {
@@ -334,6 +344,9 @@ export default async function SlayerMastersPage() {
     const ctx = buildRequirementContext();
     const hideUnreachableSlayerMasters = fileStore.filters?.hideUnreachableSlayerMasters ?? true;
     const ignoreSlayerMasterCombatLevel = Boolean(fileStore.filters?.ignoreSlayerMasterCombatLevel);
+    const overrideBarbarianFiremaking1ForWaterfiends = Boolean(
+        fileStore.filters?.overrideBarbarianFiremaking1ForWaterfiends
+    );
 
     const masterHtml = [];
 
@@ -454,6 +467,14 @@ export default async function SlayerMastersPage() {
                 <input type="checkbox" id="ignoreSlayerMasterCombatLevel" ${ignoreSlayerMasterCombatLevel ? "checked" : ""}>
                 Ignore combat level
             </label>
+            <label class="slayer-master-filter">
+                <input
+                    type="checkbox"
+                    id="overrideBarbarianFiremaking1ForWaterfiends"
+                    ${overrideBarbarianFiremaking1ForWaterfiends ? "checked" : ""}
+                >
+                Barbarian firemaking 1 completed
+            </label>
         </div>
         <nav class="unlock-jump slayer-master-jump" aria-label="Jump to slayer master">
             <div class="unlock-jump-label">Jump to slayer master</div>
@@ -535,6 +556,12 @@ export function init() {
         if (event.target.id === "ignoreSlayerMasterCombatLevel") {
             await updateSlayerMasterFilters(
                 { ignoreSlayerMasterCombatLevel: event.target.checked },
+                { rerender: true }
+            );
+        }
+        if (event.target.id === "overrideBarbarianFiremaking1ForWaterfiends") {
+            await updateSlayerMasterFilters(
+                { overrideBarbarianFiremaking1ForWaterfiends: event.target.checked },
                 { rerender: true }
             );
         }

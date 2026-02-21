@@ -2252,6 +2252,9 @@ export const REQUIREMENT_CHECKS = {
     canCompleteBarbarianFiremaking1(ctx) {
         return canCompleteBarbarianFiremaking1(ctx);
     },
+    canAssignWaterfiendsBarbarianFiremaking1(ctx) {
+        return Boolean(ctx.filters?.overrideBarbarianFiremaking1ForWaterfiends);
+    },
     canCompleteBarbarianFiremaking2(ctx) {
         return canCompleteBarbarianFiremaking2(ctx);
     },

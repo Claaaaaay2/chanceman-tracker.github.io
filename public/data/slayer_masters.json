@@ -2297,9 +2297,9 @@
                 {
                     "name": "Waterfiends",
                     "assignmentRequirements": {
-                        "quests": {
-                            "Barbarian Training Firemaking I": "completed"
-                        },
+                        "rulesAll": [
+                            "canAssignWaterfiendsBarbarianFiremaking1"
+                        ],
                         "skills": {
                             "Combat": 75
                         }
@@ -3303,9 +3303,9 @@
                 {
                     "name": "Waterfiends",
                     "assignmentRequirements": {
-                        "quests": {
-                            "Barbarian Training Firemaking I": "completed"
-                        },
+                        "rulesAll": [
+                            "canAssignWaterfiendsBarbarianFiremaking1"
+                        ],
                         "skills": {
                             "Combat": 75
                         }

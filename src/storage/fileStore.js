@@ -19,6 +19,7 @@ let memory = {
         isSlayerLocked: false,
         hideUnreachableSlayerMasters: true,
         ignoreSlayerMasterCombatLevel: false,
+        overrideBarbarianFiremaking1ForWaterfiends: false,
         isHunterRumourLocked: false,
         hideLMS: false,
         hideJon: false,
