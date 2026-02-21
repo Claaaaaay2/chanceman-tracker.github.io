@@ -76,6 +76,59 @@ function pickRandomIndex(length, currentIndex = -1) {
     return next;
 }
 
+function shuffleItems(items) {
+    const clone = [...items];
+    for (let i = clone.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [clone[i], clone[j]] = [clone[j], clone[i]];
+    }
+    return clone;
+}
+
+function createItemCycler(candidates) {
+    let pool = shuffleItems(candidates);
+    const refill = () => {
+        pool = shuffleItems(candidates);
+    };
+
+    return (avoidIds = []) => {
+        if (!pool.length) refill();
+        const avoid = new Set((avoidIds || []).filter((id) => id !== null && id !== undefined));
+
+        let index = pool.findIndex((item) => !avoid.has(item.id));
+        if (index < 0) {
+            refill();
+            index = pool.findIndex((item) => !avoid.has(item.id));
+        }
+        if (index < 0) index = 0;
+
+        const [selected] = pool.splice(index, 1);
+        return selected;
+    };
+}
+
+function createNameCycler(names) {
+    let pool = shuffleItems(names);
+    const refill = () => {
+        pool = shuffleItems(names);
+    };
+
+    return (avoidNames = []) => {
+        if (!pool.length) refill();
+        const avoid = new Set((avoidNames || []).filter((name) => Boolean(name)));
+
+        let index = pool.findIndex((name) => !avoid.has(name));
+        if (index < 0) {
+            refill();
+            index = pool.findIndex((name) => !avoid.has(name));
+        }
+        if (index < 0) index = 0;
+
+        const [selected] = pool.splice(index, 1);
+        return selected;
+    };
+}
+
 async function waitForTransition(element, fallbackMs) {
     await new Promise((resolve) => {
         let done = false;
@@ -139,19 +192,41 @@ function setNpcTrackStatic(track, label) {
 }
 
 function buildItemSpinLabels(candidates, target) {
-    const items = [];
     const randomSteps = Math.max(10, Math.min(ITEM_SPIN_STEPS, candidates.length * 2));
-    for (let index = 0; index < randomSteps; index++) {
-        const randomIndex = Math.floor(Math.random() * candidates.length);
-        items.push(candidates[randomIndex]);
+    const trailingSteps = Math.max(5, Math.min(9, candidates.length + 1));
+    const prefixCount = randomSteps;
+    const suffixCount = trailingSteps;
+
+    const availableWithoutTarget = candidates.filter((item) => item.id !== target.id);
+    const canRenderFullyUnique = availableWithoutTarget.length >= (prefixCount + suffixCount);
+    if (canRenderFullyUnique) {
+        const unique = shuffleItems(availableWithoutTarget).slice(0, prefixCount + suffixCount);
+        const items = [
+            ...unique.slice(0, prefixCount),
+            target,
+            ...unique.slice(prefixCount)
+        ];
+        return { items, targetIndex: prefixCount };
     }
+
+    const items = [];
+    const nextFromCycle = createItemCycler(candidates);
+    let previousId = null;
+
+    for (let index = 0; index < randomSteps; index++) {
+        const next = nextFromCycle([previousId, target.id]);
+        items.push(next);
+        previousId = next.id;
+    }
+
     const targetIndex = items.length;
     items.push(target);
+    previousId = target.id;
 
-    const trailingSteps = Math.max(5, Math.min(9, candidates.length + 1));
     for (let index = 0; index < trailingSteps; index++) {
-        const randomIndex = Math.floor(Math.random() * candidates.length);
-        items.push(candidates[randomIndex]);
+        const next = nextFromCycle([previousId, target.id]);
+        items.push(next);
+        previousId = next.id;
     }
 
     return { items, targetIndex };
@@ -160,20 +235,44 @@ function buildItemSpinLabels(candidates, target) {
 function buildNpcSpinLabels(candidates, targetIndex) {
     const names = candidates.map((entry) => entry.npcName);
     if (!names.length) return { labels: [], targetIndex: -1 };
-    const repeatCount = Math.max(3, Math.ceil(12 / names.length));
-    const repeated = [];
-    for (let index = 0; index < repeatCount; index++) {
-        repeated.push(...names);
-    }
-    const labels = [
-        ...repeated,
-        ...names.slice(0, targetIndex + 1)
-    ];
-    const chosenIndex = labels.length - 1;
+    const targetName = names[targetIndex];
+    const randomSteps = Math.max(12, Math.min(32, names.length * 3));
     const trailingSteps = Math.max(5, Math.min(9, names.length + 1));
-    for (let index = 1; index <= trailingSteps; index++) {
-        labels.push(names[(targetIndex + index) % names.length]);
+    const prefixCount = randomSteps;
+    const suffixCount = trailingSteps;
+
+    const availableWithoutTarget = names.filter((name) => name !== targetName);
+    const canRenderFullyUnique = availableWithoutTarget.length >= (prefixCount + suffixCount);
+    if (canRenderFullyUnique) {
+        const unique = shuffleItems(availableWithoutTarget).slice(0, prefixCount + suffixCount);
+        const labels = [
+            ...unique.slice(0, prefixCount),
+            targetName,
+            ...unique.slice(prefixCount)
+        ];
+        return { labels, targetIndex: prefixCount };
     }
+
+    const labels = [];
+    const nextFromCycle = createNameCycler(names);
+    let previousName = "";
+
+    for (let index = 0; index < randomSteps; index++) {
+        const next = nextFromCycle([previousName, targetName]);
+        labels.push(next);
+        previousName = next;
+    }
+
+    const chosenIndex = labels.length;
+    labels.push(targetName);
+    previousName = targetName;
+
+    for (let index = 0; index < trailingSteps; index++) {
+        const next = nextFromCycle([previousName, targetName]);
+        labels.push(next);
+        previousName = next;
+    }
+
     return { labels, targetIndex: chosenIndex };
 }
 

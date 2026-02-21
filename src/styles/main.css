@@ -1547,7 +1547,7 @@ body.route-loading .route-loading-overlay {
 }
 
 .dice-reel--vertical {
-    height: 122px;
+    height: 190px;
 }
 
 .dice-reel-track {
@@ -1593,7 +1593,7 @@ body.route-loading .route-loading-overlay {
     display: flex;
     flex-direction: column;
     gap: 0;
-    min-height: 122px;
+    min-height: 190px;
 }
 
 .dice-chip {
