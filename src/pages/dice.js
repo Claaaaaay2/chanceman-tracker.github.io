@@ -1,6 +1,6 @@
 import { NPC_DATA } from "../logic/npcData.js";
 import { buildNpcDropEntries, getBestDropRateValue, getDropRateLabel } from "../logic/npcDropEntries.js";
-import { isItemHiddenByTag } from "../logic/itemVisibility.js";
+import { isItemHiddenByTag, isNpcObtainable } from "../logic/itemVisibility.js";
 import { isItemObtainable } from "../logic/sortHelpers.js";
 import { fileStore } from "../storage/fileStore.js";
 
@@ -23,6 +23,37 @@ function escapeHtml(value) {
 function normalizeIdArray(entries) {
     if (!Array.isArray(entries)) return [];
     return entries.map((entry) => (entry && typeof entry === "object" ? entry.id : entry));
+}
+
+function createDiceContext({ items, obtained, rolled, filters }) {
+    const allItems = Array.isArray(items) ? items : [];
+    const allObtained = normalizeIdArray(obtained);
+    const allRolled = normalizeIdArray(rolled);
+    const activeFilters = filters || {};
+
+    return {
+        items: allItems,
+        obtained: allObtained,
+        rolled: allRolled,
+        player: fileStore.player,
+        filters: activeFilters,
+        cacheRules: true,
+        ruleEvalCache: new Map(),
+        ruleEvalKey: "dice",
+        npcReachCache: new Map(),
+        npcObtainableCache: new Map(),
+        missing: {
+            items: new Set(),
+            itemGroups: [],
+            itemGroupKeys: new Set(),
+            skills: [],
+            skillKeys: new Set(),
+            prereqQuests: [],
+            prereqQuestKeys: new Set(),
+            questPointsRequired: 0,
+            questPointsCurrent: fileStore.player?.questPoints ?? 0
+        }
+    };
 }
 
 function isDiceItemEligible(item, filters, obtainedSet) {
@@ -204,30 +235,12 @@ async function collectItemCandidates() {
     const rolled = normalizeIdArray(fileStore.rolled || []);
     const obtainedSet = new Set(obtained);
     const allItems = fileStore.items || [];
-
-    const ctx = {
+    const ctx = createDiceContext({
         items: allItems,
         obtained,
         rolled,
-        player: fileStore.player,
-        filters,
-        cacheRules: true,
-        ruleEvalCache: new Map(),
-        ruleEvalKey: "dice",
-        npcReachCache: new Map(),
-        npcObtainableCache: new Map(),
-        missing: {
-            items: new Set(),
-            itemGroups: [],
-            itemGroupKeys: new Set(),
-            skills: [],
-            skillKeys: new Set(),
-            prereqQuests: [],
-            prereqQuestKeys: new Set(),
-            questPointsRequired: 0,
-            questPointsCurrent: fileStore.player?.questPoints ?? 0
-        }
-    };
+        filters
+    });
 
     const candidates = [];
     for (const item of allItems) {
@@ -237,7 +250,7 @@ async function collectItemCandidates() {
     }
 
     candidates.sort((a, b) => a.name.localeCompare(b.name));
-    return candidates;
+    return { candidates, ctx };
 }
 
 async function collectNpcCandidates() {
@@ -251,18 +264,26 @@ async function collectNpcCandidates() {
     return { entries, rolledSet };
 }
 
-function renderItemDetails(item) {
+async function renderItemDetails(item, ctx) {
     if (!item) {
         return `<p class="empty-state">No obtainable items left for your current filters.</p>`;
     }
 
     const imageSrc = item.image ? `/images/${item.image}` : "/images/placeholder.png";
-    const dropSources = Object.entries(item.sources?.drops || {})
-        .map(([npcName, drops]) => ({
-            npcName,
-            drops,
-            rateValue: getBestDropRateValue(drops),
-            rateLabel: getDropRateLabel(drops)
+    const dropSourceEntries = Object.entries(item.sources?.drops || {});
+    const dropSourcesWithFlags = await Promise.all(dropSourceEntries.map(async ([npcName, drops]) => ({
+        npcName,
+        drops,
+        obtainable: await isNpcObtainable(npcName, ctx)
+    })));
+
+    const dropSources = dropSourcesWithFlags
+        .filter((entry) => entry.obtainable)
+        .map((entry) => ({
+            npcName: entry.npcName,
+            drops: entry.drops,
+            rateValue: getBestDropRateValue(entry.drops),
+            rateLabel: getDropRateLabel(entry.drops)
         }))
         .sort((a, b) => {
             if (a.rateValue !== b.rateValue) return b.rateValue - a.rateValue;
@@ -294,7 +315,7 @@ function renderItemDetails(item) {
                 </div>
             </div>
         `
-        : `<p class="dice-item-sources-empty">No drop sources listed for this item.</p>`;
+        : `<p class="dice-item-sources-empty">No obtainable drop sources for this item with current filters.</p>`;
 
     return `
         <div class="dice-result-card">
@@ -361,36 +382,37 @@ function updateControls(state, elements) {
     elements.finishedBtn.disabled = disableButtons || !state.selectedNpcName;
 }
 
-function renderCurrentState(state, elements) {
+async function renderCurrentState(state, elements) {
     const selectedItem = state.itemCandidates.find((item) => item.id === state.selectedItemId) || null;
     const selectedNpc = state.npcCandidates.find((entry) => entry.npcName === state.selectedNpcName) || null;
 
     setItemTrackStatic(elements.itemTrack, selectedItem);
     setNpcTrackStatic(elements.npcTrack, selectedNpc ? selectedNpc.npcName : "No reachable NPCs");
 
-    elements.itemDetails.innerHTML = renderItemDetails(selectedItem);
+    elements.itemDetails.innerHTML = await renderItemDetails(selectedItem, state.itemCtx);
     elements.npcDetails.innerHTML = renderNpcDetails(selectedNpc, state.rolledSet);
 
     updateControls(state, elements);
 }
 
-function renderSelectionDetails(state, elements) {
+async function renderSelectionDetails(state, elements) {
     const selectedItem = state.itemCandidates.find((item) => item.id === state.selectedItemId) || null;
     const selectedNpc = state.npcCandidates.find((entry) => entry.npcName === state.selectedNpcName) || null;
 
-    elements.itemDetails.innerHTML = renderItemDetails(selectedItem);
+    elements.itemDetails.innerHTML = await renderItemDetails(selectedItem, state.itemCtx);
     elements.npcDetails.innerHTML = renderNpcDetails(selectedNpc, state.rolledSet);
 
     updateControls(state, elements);
 }
 
 async function refreshCandidates(state, elements, { autoPick = false } = {}) {
-    const [itemCandidates, npcData] = await Promise.all([
+    const [itemData, npcData] = await Promise.all([
         collectItemCandidates(),
         collectNpcCandidates()
     ]);
 
-    state.itemCandidates = itemCandidates;
+    state.itemCandidates = itemData.candidates;
+    state.itemCtx = itemData.ctx;
     state.npcCandidates = npcData.entries;
     state.rolledSet = npcData.rolledSet;
 
@@ -423,7 +445,7 @@ async function refreshCandidates(state, elements, { autoPick = false } = {}) {
         await saveSelections(nextItemId, nextNpcName);
     }
 
-    renderCurrentState(state, elements);
+    await renderCurrentState(state, elements);
 }
 
 async function rollItem(state, elements) {
@@ -437,7 +459,7 @@ async function rollItem(state, elements) {
 
     state.selectedItemId = target.id;
     await saveSelections(state.selectedItemId, state.selectedNpcName);
-    renderSelectionDetails(state, elements);
+    await renderSelectionDetails(state, elements);
 }
 
 async function rollNpc(state, elements) {
@@ -451,7 +473,7 @@ async function rollNpc(state, elements) {
 
     state.selectedNpcName = target.npcName;
     await saveSelections(state.selectedItemId, state.selectedNpcName);
-    renderSelectionDetails(state, elements);
+    await renderSelectionDetails(state, elements);
 }
 
 async function addObtainedIds(ids) {
@@ -551,6 +573,7 @@ export async function init() {
     const state = {
         busy: false,
         itemCandidates: [],
+        itemCtx: null,
         npcCandidates: [],
         rolledSet: new Set(),
         selectedItemId: null,
