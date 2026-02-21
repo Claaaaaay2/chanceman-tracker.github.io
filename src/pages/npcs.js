@@ -35,13 +35,6 @@ export default async function NpcsPage() {
         filters
     });
 
-    if (!results.length) {
-        return `
-            <h1>NPC drops</h1>
-            <p class="empty-state">No reachable NPCs with remaining drops for your current filters.</p>
-        `;
-    }
-
     const cards = results.map((entry) => {
         const itemCount = entry.items.length;
         const itemLabel = itemCount === 1 ? "item" : "items";
