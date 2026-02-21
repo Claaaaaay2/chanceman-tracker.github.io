@@ -14,6 +14,19 @@ function normalizeIds(value) {
     return value.map((id) => String(id));
 }
 
+function normalizeSearchText(value) {
+    return String(value || "").trim().toLowerCase();
+}
+
+function getItemLabel(id, itemsById, emptyLabel = "") {
+    if (id === undefined || id === null || id === "") {
+        return emptyLabel;
+    }
+
+    const item = itemsById.get(String(id));
+    return item?.name ?? `Unknown item (${id})`;
+}
+
 function renderItemList(ids, itemsById) {
     if (!ids.length) {
         return `<p class="roll-empty">No items yet.</p>`;
@@ -21,10 +34,9 @@ function renderItemList(ids, itemsById) {
 
     const rows = ids.map((id, index) => {
         const item = itemsById.get(id);
-        const label = escapeHtml(item?.name ?? `Unknown item (${id})`);
-        const content = item
-            ? `<a onclick="navigate('/item?id=${id}')">${label}</a>`
-            : label;
+        const rawLabel = getItemLabel(id, itemsById);
+        const label = escapeHtml(rawLabel);
+        const searchValue = escapeHtml(normalizeSearchText(rawLabel));
         const image = item?.image ? `/images/${item.image}` : "/images/placeholder.png";
         const imgAttrs = item?.image
             ? `class="lazy-img roll-inline-image" data-src="${image}" src="/images/placeholder.png"`
@@ -42,7 +54,7 @@ function renderItemList(ids, itemsById) {
             `;
 
         return `
-            <li class="roll-item-row" data-history-index="${index + 1}" value="${index + 1}">
+            <li class="roll-item-row" data-history-index="${index + 1}" data-history-search="${searchValue}" value="${index + 1}">
                 <span>
                     ${contentMarkup}
                 </span>
@@ -74,7 +86,8 @@ function renderHistoryItem(id, itemsById, emptyLabel) {
     }
 
     const item = itemsById.get(id);
-    const label = escapeHtml(item?.name ?? `Unknown item (${id})`);
+    const rawLabel = getItemLabel(id, itemsById, emptyLabel);
+    const label = escapeHtml(rawLabel);
     const image = item?.image ? `/images/${item.image}` : "/images/placeholder.png";
     const imgAttrs = item?.image
         ? `class="lazy-img history-panel-image" data-src="${image}" src="/images/placeholder.png"`
@@ -109,9 +122,12 @@ function renderHistoryPanels(obtainedIds, rolledIds, itemsById) {
         const obtainedId = obtainedIds[index];
         const rolledId = rolledIds[index];
         const displayIndex = index + 1;
+        const obtainedSearch = normalizeSearchText(getItemLabel(obtainedId, itemsById));
+        const rolledSearch = normalizeSearchText(getItemLabel(rolledId, itemsById));
+        const panelSearchValue = escapeHtml(`${obtainedSearch} ${rolledSearch}`.trim());
 
         return `
-            <div class="history-panel card" data-history-index="${displayIndex}">
+            <div class="history-panel card" data-history-index="${displayIndex}" data-history-search="${panelSearchValue}">
                 <div class="history-panel-index">${displayIndex}</div>
                 <div class="history-panel-column">
                     <div class="history-panel-label">Obtained</div>
@@ -157,8 +173,12 @@ export default async function ItemHistoryPage() {
         ? `
         <div class="history-filter card">
             <div class="history-filter-header">
-                <strong>Range filter</strong>
+                <strong>Filters</strong>
             </div>
+            <label class="history-search-field" for="historySearch">
+                <span>Search</span>
+                <input type="search" id="historySearch" placeholder="Item name">
+            </label>
             <div class="history-filter-row">
                 <label class="history-filter-field">
                     <span>Start</span>
@@ -239,6 +259,7 @@ export function init() {
     const rangeStartSlider = document.getElementById("historyRangeStartSlider");
     const rangeEndSlider = document.getElementById("historyRangeEndSlider");
     const rangeSlider = document.getElementById("historyRangeSlider");
+    const searchInput = document.getElementById("historySearch");
 
     if (!rangeStartInput || !rangeEndInput || !rangeStartSlider || !rangeEndSlider || !rangeSlider) {
         teardownHistoryHandlers = () => {
@@ -256,12 +277,29 @@ export function init() {
         return Number.isFinite(parsed) ? parsed : fallback;
     }
 
+    const panels = Array.from(panelView.querySelectorAll("[data-history-index]"));
+    const rows = Array.from(listView.querySelectorAll(".roll-item-row[data-history-index]"));
+
     function updateRangeStyle(start, end) {
         const maxSpan = Math.max(1, maxLength - 1);
         const startPercent = Math.min(100, Math.max(0, ((start - 1) / maxSpan) * 100));
         const endPercent = Math.min(100, Math.max(0, ((end - 1) / maxSpan) * 100));
         rangeSlider.style.setProperty("--range-start", `${startPercent}%`);
         rangeSlider.style.setProperty("--range-end", `${endPercent}%`);
+    }
+
+    function applySearch(searchValue) {
+        const normalizedSearch = normalizeSearchText(searchValue);
+
+        panels.forEach((panel) => {
+            const panelSearch = panel.dataset.historySearch || "";
+            panel.classList.toggle("history-search-hidden", Boolean(normalizedSearch) && !panelSearch.includes(normalizedSearch));
+        });
+
+        rows.forEach((row) => {
+            const rowSearch = row.dataset.historySearch || "";
+            row.classList.toggle("history-search-hidden", Boolean(normalizedSearch) && !rowSearch.includes(normalizedSearch));
+        });
     }
 
     function applyRange(startValue, endValue, source) {
@@ -287,13 +325,11 @@ export function init() {
         rangeStartSlider.style.zIndex = start === end ? 5 : 2;
         rangeEndSlider.style.zIndex = 4;
 
-        const panels = panelView.querySelectorAll("[data-history-index]");
         panels.forEach((panel) => {
             const index = normalizeValue(panel.dataset.historyIndex, 1);
             panel.classList.toggle("history-range-hidden", index < start || index > end);
         });
 
-        const rows = listView.querySelectorAll(".roll-item-row[data-history-index]");
         rows.forEach((row) => {
             const index = normalizeValue(row.dataset.historyIndex, 1);
             row.classList.toggle("history-range-hidden", index < start || index > end);
@@ -301,6 +337,7 @@ export function init() {
     }
 
     applyRange(rangeStartInput.value, rangeEndInput.value, "init");
+    applySearch(searchInput?.value || "");
 
     const onRangeStartInput = () => {
         applyRange(rangeStartInput.value, rangeEndInput.value, "start");
@@ -325,6 +362,14 @@ export function init() {
     };
     rangeEndSlider.addEventListener("input", onRangeEndSliderInput);
     cleanup.push(() => rangeEndSlider.removeEventListener("input", onRangeEndSliderInput));
+
+    if (searchInput) {
+        const onSearchInput = () => {
+            applySearch(searchInput.value);
+        };
+        searchInput.addEventListener("input", onSearchInput);
+        cleanup.push(() => searchInput.removeEventListener("input", onSearchInput));
+    }
 
     teardownHistoryHandlers = () => {
         for (const remove of cleanup) {
