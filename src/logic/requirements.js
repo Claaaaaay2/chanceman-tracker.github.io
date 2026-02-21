@@ -3754,12 +3754,14 @@ function canCompleteMisthalinMystery(ctx) {
 }
 
 function canCompleteMonkeyMadnessI(ctx) {
-    return requiresQuest(ctx, "canCompleteTheGrandTree", canCompleteTheGrandTree) //
-        && requiresQuest(ctx, "canCompleteTreeGnomeVillage", canCompleteTreeGnomeVillage) //
-        && has(ctx, 2357) // Gold bar
-        && has(ctx, 1759) // Ball of wool
-        && has(ctx, 1963) // Bananas
-        && (has(ctx, 3183) || requiresQuest(ctx, "canCompleteJunglePotion", canCompleteJunglePotion)) // Monkey bones or Monkey corpse
+    return allTrue([
+        requiresQuest(ctx, "canCompleteTheGrandTree", canCompleteTheGrandTree), //
+        requiresQuest(ctx, "canCompleteTreeGnomeVillage", canCompleteTreeGnomeVillage), //
+        has(ctx, 2357), // Gold bar
+        has(ctx, 1759), // Ball of wool
+        has(ctx, 1963), // Bananas
+        (has(ctx, 3183) || requiresQuest(ctx, "canCompleteJunglePotion", canCompleteJunglePotion)), // Monkey bones or Monkey corpse
+    ]);
 }
 
 function canCompleteMonkeyMadnessII(ctx) {
@@ -4023,18 +4025,20 @@ function canCompleteRatcatchers(ctx) {
 }
 
 function canCompleteRecipeForDisaster(ctx) {
-    return requiresQuest(ctx, "canCompleteRFDAnotherCooksQuest", canCompleteRFDAnotherCooksQuest) //
-        && requiresQuest(ctx, "canCompleteRFDFreeingTheMountainDwarf", canCompleteRFDFreeingTheMountainDwarf) //
-        && requiresQuest(ctx, "canCompleteRFDFreeingTheGoblinGenerals", canCompleteRFDFreeingTheGoblinGenerals) //
-        && requiresQuest(ctx, "canCompleteRFDFreeingPiratePete", canCompleteRFDFreeingPiratePete) //
-        && requiresQuest(ctx, "canCompleteRFDFreeingTheLumbridgeGuide", canCompleteRFDFreeingTheLumbridgeGuide) //
-        && requiresQuest(ctx, "canCompleteRFDFreeingEvilDave", canCompleteRFDFreeingEvilDave) //
-        && requiresQuest(ctx, "canCompleteRFDFreeingSkrachUglologwee", canCompleteRFDFreeingSkrachUglologwee) //
-        && requiresQuest(ctx, "canCompleteRFDFreeingSirAmikVarse", canCompleteRFDFreeingSirAmikVarse) //
-        && requiresQuest(ctx, "canCompleteRFDFreeingKingAwowogei", canCompleteRFDFreeingKingAwowogei) //
-        && requiresQuest(ctx, "canCompleteDesertTreasureI", canCompleteDesertTreasureI) //
-        && requiresQuest(ctx, "canCompleteHorrorFromTheDeep", canCompleteHorrorFromTheDeep) //
-        && hasQuestPoints(ctx, 175)
+    return allTrue([
+        requiresQuest(ctx, "canCompleteRFDAnotherCooksQuest", canCompleteRFDAnotherCooksQuest), //
+        requiresQuest(ctx, "canCompleteRFDFreeingTheMountainDwarf", canCompleteRFDFreeingTheMountainDwarf), //
+        requiresQuest(ctx, "canCompleteRFDFreeingTheGoblinGenerals", canCompleteRFDFreeingTheGoblinGenerals), //
+        requiresQuest(ctx, "canCompleteRFDFreeingPiratePete", canCompleteRFDFreeingPiratePete), //
+        requiresQuest(ctx, "canCompleteRFDFreeingTheLumbridgeGuide", canCompleteRFDFreeingTheLumbridgeGuide), //
+        requiresQuest(ctx, "canCompleteRFDFreeingEvilDave", canCompleteRFDFreeingEvilDave), //
+        requiresQuest(ctx, "canCompleteRFDFreeingSkrachUglologwee", canCompleteRFDFreeingSkrachUglologwee), //
+        requiresQuest(ctx, "canCompleteRFDFreeingSirAmikVarse", canCompleteRFDFreeingSirAmikVarse), //
+        requiresQuest(ctx, "canCompleteRFDFreeingKingAwowogei", canCompleteRFDFreeingKingAwowogei), //
+        requiresQuest(ctx, "canCompleteDesertTreasureI", canCompleteDesertTreasureI), //
+        requiresQuest(ctx, "canCompleteHorrorFromTheDeep", canCompleteHorrorFromTheDeep), //
+        hasQuestPoints(ctx, 175),
+    ]);
 }
 
 function canCompleteRecipeForDisaster0(ctx) {
@@ -4710,9 +4714,11 @@ function canCompleteTheFremennikIsles(ctx) {
 }
 
 function canCompleteTheFremennikTrials(ctx) {
-    return has(ctx, 1917) // Beer
-        && has(ctx, 590)  // Tinderbox
-        && hasAnyItems(ctx, [383, 389, 395]); // Raw shark, Raw sea turtle or Raw manta ray
+    return allTrue([
+        has(ctx, 1917), // Beer
+        has(ctx, 590), // Tinderbox
+        hasAnyItems(ctx, [383, 389, 395]), // Raw shark, Raw sea turtle or Raw manta ray
+    ]);
 }
 
 function canAccessDessicatedPagesBosses(ctx) {
