@@ -34,7 +34,7 @@ function addMissingItemOptionGroup(ctx, options) {
         ctx.missing.itemGroupKeys = new Set();
     }
     const normalized = options
-        .map((option) => [...option].sort((a, b) => a - b).join(","))
+        .map((option) => [...option].map((entry) => String(entry)).sort().join(","))
         .sort()
         .join("|");
     const key = `options:${normalized}`;
@@ -3760,13 +3760,25 @@ function canCompleteMisthalinMystery(ctx) {
 }
 
 function canCompleteMonkeyMadnessI(ctx) {
+    const hasMonkeyBones = hasItem(ctx, 3183, { trackMissing: false });
+    const junglePotionPathCtx = {
+        ...ctx,
+        suppressMissing: true,
+        missing: null
+    };
+    const canUseJunglePotionPath = canCompleteJunglePotion(junglePotionPathCtx);
+    const hasMonkeyBonesOrJunglePotionPath = hasMonkeyBones || canUseJunglePotionPath;
+    if (!hasMonkeyBonesOrJunglePotionPath) {
+        addMissingItemOptionGroup(ctx, [[3183], ["Monkey corpse (Jungle potion required)"]]);
+    }
+
     return allTrue([
         requiresQuest(ctx, "canCompleteTheGrandTree", canCompleteTheGrandTree), //
         requiresQuest(ctx, "canCompleteTreeGnomeVillage", canCompleteTreeGnomeVillage), //
         has(ctx, 2357), // Gold bar
         has(ctx, 1759), // Ball of wool
         has(ctx, 1963), // Bananas
-        (has(ctx, 3183) || requiresQuest(ctx, "canCompleteJunglePotion", canCompleteJunglePotion)), // Monkey bones or Monkey corpse
+        hasMonkeyBonesOrJunglePotionPath, // Monkey bones OR Jungle Potion path
     ]);
 }
 

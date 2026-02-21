@@ -107,7 +107,9 @@ function getMissingItems(ctx, itemsById) {
                 for (const id of group) {
                     itemGroupIds.add(id);
                 }
-                return group.map((id) => itemsById.get(id) ?? `Item ${id}`);
+                return group.map((id) => typeof id === "string"
+                    ? id
+                    : (itemsById.get(id) ?? `Item ${id}`));
             }
             if (group?.options) {
                 for (const option of group.options) {
@@ -117,7 +119,9 @@ function getMissingItems(ctx, itemsById) {
                 }
                 return {
                     options: group.options.map((option) =>
-                        option.map((id) => itemsById.get(id) ?? `Item ${id}`)
+                        option.map((id) => typeof id === "string"
+                            ? id
+                            : (itemsById.get(id) ?? `Item ${id}`))
                     )
                 };
             }
