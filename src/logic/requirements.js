@@ -1574,6 +1574,9 @@ export const REQUIREMENT_CHECKS = {
     canEnterTheCharredDungeon(ctx) {
         return canEnterTheCharredDungeon(ctx);
     },
+    canReachWyrmsTask(ctx) {
+        return canReachWyrmsTask(ctx);
+    },
     canSailToBrittleIsle(ctx) {
         return canSailToBrittleIsle(ctx);
     },
@@ -5874,6 +5877,11 @@ function canSailToBrittleIsle(ctx) {
 function canEnterTheCharredDungeon(ctx) {
     return requiresQuest(ctx, "canCompletePandemonium", canCompletePandemonium) //
         && has(ctx, 954); // Rope
+}
+
+function canReachWyrmsTask(ctx) {
+    return canEnterTheCharredDungeon(ctx)
+        || hasAnyItems(ctx, [21643, 23037, 22951]); // Granite boots, Boots of stone, Boots of brimstone
 }
 
 function canLongrange(ctx) {

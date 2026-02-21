@@ -2,7 +2,8 @@ import { REQUIREMENT_CHECKS } from "../logic/requirements.js";
 import { fileStore } from "../storage/fileStore.js";
 
 const SLAYER_RULE_LABELS = {
-    canAssignWaterfiendsBarbarianFiremaking1: "Barbarian firemaking 1 completed"
+    canAssignWaterfiendsBarbarianFiremaking1: "Barbarian firemaking 1 completed",
+    canReachWyrmsTask: "Any of: Granite boots / Boots of stone / Boots of brimstone, or access to the Charred Dungeon"
 };
 
 function escapeHtml(value) {

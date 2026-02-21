@@ -1872,12 +1872,8 @@
                         }
                     },
                     "reachRequirements": {
-                        "itemsAny": [
-                            [
-                                "Granite boots",
-                                "Boots of stone",
-                                "Boots of brimstone"
-                            ]
+                        "rulesAll": [
+                            "canReachWyrmsTask"
                         ]
                     }
                 }
@@ -2313,12 +2309,8 @@
                         }
                     },
                     "reachRequirements": {
-                        "itemsAny": [
-                            [
-                                "Granite boots",
-                                "Boots of stone",
-                                "Boots of brimstone"
-                            ]
+                        "rulesAll": [
+                            "canReachWyrmsTask"
                         ]
                     }
                 }
@@ -2826,12 +2818,8 @@
                         }
                     },
                     "reachRequirements": {
-                        "itemsAny": [
-                            [
-                                "Granite boots",
-                                "Boots of stone",
-                                "Boots of brimstone"
-                            ]
+                        "rulesAll": [
+                            "canReachWyrmsTask"
                         ]
                     }
                 }
@@ -3319,12 +3307,8 @@
                         }
                     },
                     "reachRequirements": {
-                        "itemsAny": [
-                            [
-                                "Granite boots",
-                                "Boots of stone",
-                                "Boots of brimstone"
-                            ]
+                        "rulesAll": [
+                            "canReachWyrmsTask"
                         ]
                     }
                 }
