@@ -8,6 +8,8 @@ const CORE_LINKS = [
     { href: "/item-history", label: "Item history" }
 ];
 
+const DICE_LINK = { href: "/dice", label: "Random picker" };
+
 const PROGRESS_LINKS = [
     { href: "/achievement-diaries", label: "Achievement diaries" },
     { href: "/clue-steps", label: "Clue steps" },
@@ -87,6 +89,14 @@ export async function Header() {
             </a>
             <span class="header-menu-groups">
                 ${renderMenu("nav-menu-core", "Tracker", CORE_LINKS, currentPath)}
+                <a
+                    class="header-dice-link ${isActiveLink(currentPath, DICE_LINK.href) ? "header-link-active" : ""}"
+                    data-link
+                    href="${DICE_LINK.href}"
+                    aria-label="${DICE_LINK.label}"
+                    title="${DICE_LINK.label}">
+                    &#127922;
+                </a>
                 ${renderMenu("nav-menu-progress", "Progress", PROGRESS_LINKS, currentPath)}
             </span>
             <span class="header-actions">

@@ -25,6 +25,9 @@ const routeDefinitions = {
     "/npcs": {
         load: async () => import("./pages/npcs.js")
     },
+    "/dice": {
+        load: async () => import("./pages/dice.js")
+    },
     "/item": {
         load: async () => import("./pages/item.js")
     },

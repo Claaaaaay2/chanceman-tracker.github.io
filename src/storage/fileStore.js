@@ -42,6 +42,8 @@ let memory = {
         hideCompletedQuests: false,
         hideIncompletableQuests: false,
         questSearch: "",
+        diceSelectedItemId: null,
+        diceSelectedNpcName: "",
         clueSearch: "",
         npcSearch: "",
         npcSortByRate: false,

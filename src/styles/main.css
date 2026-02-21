@@ -322,6 +322,24 @@ button:disabled {
     margin-left: 0.3rem;
 }
 
+.header-dice-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color-darker);
+    margin: 0 0.15rem;
+    font-size: 1.05rem;
+    line-height: 1;
+}
+
+.header-dice-link:hover {
+    background-color: var(--table-alternate-row);
+    text-decoration: none;
+}
+
 .header-action-link {
     display: inline-flex;
     align-items: center;
@@ -1478,6 +1496,232 @@ body.route-loading .route-loading-overlay {
 
 .npc-sort-toggle .toggle-slider::before {
     top: 0.5px;
+}
+
+.dice-intro {
+    margin-bottom: 1rem;
+}
+
+.dice-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1rem;
+}
+
+.dice-card {
+    padding: 0.85rem;
+}
+
+.dice-card h2 {
+    margin-top: 0;
+}
+
+.dice-reel {
+    position: relative;
+    border: 1px solid var(--border-color-darker);
+    border-radius: 8px;
+    background-color: color-mix(in srgb, var(--card-bg) 72%, var(--bg-color));
+    overflow: hidden;
+}
+
+.dice-reel--horizontal {
+    height: 56px;
+}
+
+.dice-reel--vertical {
+    height: 122px;
+}
+
+.dice-reel-track {
+    will-change: transform;
+}
+
+.dice-reel-indicator {
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.dice-reel-indicator--horizontal {
+    top: 4px;
+    bottom: 4px;
+    left: 50%;
+    width: 132px;
+    transform: translateX(-50%);
+    border-left: 4px solid var(--highlight-color);
+    border-right: 4px solid var(--highlight-color);
+    border-radius: 6px;
+}
+
+.dice-reel-indicator--vertical {
+    left: 8px;
+    right: 8px;
+    top: 50%;
+    height: 38px;
+    transform: translateY(-50%);
+    border-top: 4px solid var(--highlight-color);
+    border-bottom: 4px solid var(--highlight-color);
+    border-radius: 6px;
+}
+
+.dice-reel-track--horizontal {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    min-height: 56px;
+}
+
+.dice-reel-track--vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    min-height: 122px;
+}
+
+.dice-chip {
+    box-sizing: border-box;
+    width: 132px;
+    min-width: 132px;
+    height: 56px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.35rem;
+    text-align: center;
+    border-right: 1px solid var(--border-color);
+    font-weight: 600;
+}
+
+.dice-chip-image {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.dice-chip-label {
+    padding: 0 0.5rem;
+}
+
+.dice-chip--spacer {
+    width: 0;
+    min-width: 0;
+    padding: 0;
+    border-right-color: transparent;
+    opacity: 0;
+}
+
+.dice-row {
+    box-sizing: border-box;
+    height: 38px;
+    min-height: 38px;
+    display: flex;
+    align-items: center;
+    padding: 0 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dice-row--spacer {
+    height: 0;
+    min-height: 0;
+    padding: 0;
+    border-bottom-color: transparent;
+    opacity: 0;
+}
+
+.dice-actions {
+    display: flex;
+    gap: 0.55rem;
+    margin-top: 0.65rem;
+    margin-bottom: 0.65rem;
+}
+
+.dice-result-card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: color-mix(in srgb, var(--bg-color) 38%, var(--card-bg));
+    padding: 0.65rem;
+}
+
+.dice-result-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+}
+
+.dice-result-image {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+}
+
+.dice-result-name {
+    font-weight: 600;
+}
+
+.dice-item-sources {
+    margin-top: 0.55rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.dice-item-sources-title {
+    margin: 0 0 0.35rem;
+    font-size: 0.9rem;
+}
+
+.dice-item-source-rate {
+    white-space: nowrap;
+    opacity: 0.85;
+}
+
+.dice-item-sources-empty {
+    margin: 0.5rem 0 0;
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.dice-result-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.6rem;
+    margin-bottom: 0.55rem;
+}
+
+.dice-result-header h3 {
+    margin: 0;
+}
+
+.dice-npc-item-list {
+    display: grid;
+    gap: 0.35rem;
+}
+
+.dice-npc-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.32rem 0.35rem;
+    border-radius: 6px;
+    background-color: color-mix(in srgb, var(--table-alternate-row) 80%, transparent);
+}
+
+.dice-npc-item:hover {
+    background-color: color-mix(in srgb, var(--table-alternate-row) 100%, transparent);
+    text-decoration: none;
+}
+
+.dice-npc-item-image {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.dice-npc-item-name {
+    flex: 1;
 }
 
 /* End NPC drops */
