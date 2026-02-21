@@ -3,7 +3,10 @@ import { fileStore } from "../storage/fileStore.js";
 
 const SLAYER_RULE_LABELS = {
     canAssignWaterfiendsBarbarianFiremaking1: "Barbarian firemaking 1 completed",
-    canReachWyrmsTask: "Any of: Granite boots / Boots of stone / Boots of brimstone, or access to the Charred Dungeon"
+    canReachWyrmsTask: "Any of: Granite boots / Boots of stone / Boots of brimstone, or access to the Charred Dungeon",
+    canReachAbyssalSire: "Can reach Abyssal Sire area",
+    canReachTrollheim: "Can reach Trollheim",
+    hasUsableAxe: "Has a usable axe"
 };
 
 function escapeHtml(value) {
@@ -210,7 +213,11 @@ async function evaluateRequirements(requirements, ctx) {
         if (!Array.isArray(itemGroup) || !itemGroup.length) continue;
         const hasAny = itemGroup.some((itemName) => hasItemByName(ctx, itemName));
         if (!hasAny) {
-            missing.push(`Any of: ${itemGroup.join(" / ")}`);
+            if (itemGroup.length === 1) {
+                missing.push(itemGroup[0]);
+            } else {
+                missing.push(`Any of: ${itemGroup.join(" / ")}`);
+            }
         }
     }
 
@@ -317,6 +324,25 @@ function getMonsterLink(monster) {
     return wikiUrlForMonster(monster?.name);
 }
 
+function getSlayerStatusState(isAssignable, isReachable) {
+    if (!isAssignable) {
+        return {
+            statusKey: "unassignable",
+            statusLabel: "Unassignable"
+        };
+    }
+    if (!isReachable) {
+        return {
+            statusKey: "unreachable",
+            statusLabel: "Unreachable"
+        };
+    }
+    return {
+        statusKey: "reachable",
+        statusLabel: "Assignable and reachable"
+    };
+}
+
 export default async function SlayerMastersPage() {
     if (!fileStore.player || !fileStore.obtained || !fileStore.rolled) {
         return `
@@ -371,36 +397,114 @@ export default async function SlayerMastersPage() {
             const assignmentStatus = await evaluateRequirements(assignmentReq, ctx);
             const reachStatus = await evaluateRequirements(reachReq, ctx);
 
-            const isAssignable = assignmentStatus.met;
-            const isReachable = reachStatus.met;
+            const locations = Array.isArray(monster.locations) ? monster.locations : [];
+            const locationRows = [];
+            let assignableLocationCount = 0;
+            let reachableAssignableLocationCount = 0;
 
-            if (isAssignable) {
-                assignableCount += 1;
-                if (isReachable) {
-                    reachableAssignableCount += 1;
+            for (const location of locations) {
+                const locationAssignmentReq = maybeIgnoreCombatRequirements(
+                    location?.assignmentRequirements || {},
+                    ignoreSlayerMasterCombatLevel
+                );
+                const mergedLocationAssignmentReq = mergeRequirementSets(assignmentReq, locationAssignmentReq);
+                const mergedLocationReachReq = mergeRequirementSets(reachReq, location?.reachRequirements);
+
+                const locationAssignmentStatus = await evaluateRequirements(mergedLocationAssignmentReq, ctx);
+                const locationReachStatus = await evaluateRequirements(mergedLocationReachReq, ctx);
+                const locationAssignable = locationAssignmentStatus.met;
+                const locationReachable = locationReachStatus.met;
+
+                if (locationAssignable) {
+                    assignableLocationCount += 1;
+                    if (locationReachable) {
+                        reachableAssignableLocationCount += 1;
+                    }
                 }
+
+                const locationMissingLines = [];
+                if (!locationAssignable) {
+                    if (locationAssignmentStatus.missing.length) {
+                        locationMissingLines.push(`To be assigned here: ${formatMissingParts(locationAssignmentStatus.missing)}.`);
+                    }
+                    if (!locationReachable && locationReachStatus.missing.length) {
+                        locationMissingLines.push(`To reach here: ${formatMissingParts(locationReachStatus.missing)}.`);
+                    }
+                } else if (!locationReachable && locationReachStatus.missing.length) {
+                    locationMissingLines.push(`To reach here: ${formatMissingParts(locationReachStatus.missing)}.`);
+                }
+
+                const locationState = getSlayerStatusState(locationAssignable, locationReachable);
+                const locationNotes = Array.isArray(location?.notes) ? location.notes : [];
+                const locationInfo = locationNotes.length
+                    ? renderInfoIcon(locationNotes.join("\n"), `${monster.name} ${location?.name || "location"} note`)
+                    : "";
+
+                locationRows.push(`
+                    <div class="slayer-location slayer-location--${locationState.statusKey}">
+                        <div class="slayer-location-header">
+                            <span class="slayer-location-name">${escapeHtml(location?.name || "Location")}</span>
+                            ${locationInfo}
+                            <span class="slayer-location-status">${locationState.statusLabel}</span>
+                        </div>
+                        ${locationMissingLines.length ? `<div class="slayer-location-missing">${locationMissingLines.map((line) => `<div>${escapeHtml(line)}</div>`).join("")}</div>` : ""}
+                    </div>
+                `);
             }
 
-            let statusClass = "slayer-monster--reachable";
-            let statusLabel = "Assignable and reachable";
+            const isAssignable = locations.length > 0 ? assignableLocationCount > 0 : assignmentStatus.met;
+            const isReachable = locations.length > 0
+                ? reachableAssignableLocationCount > 0
+                : reachStatus.met;
+
+            const assignableUnitCount = locations.length > 0
+                ? assignableLocationCount
+                : (isAssignable ? 1 : 0);
+            const reachableAssignableUnitCount = locations.length > 0
+                ? reachableAssignableLocationCount
+                : (isAssignable && isReachable ? 1 : 0);
+
+            assignableCount += assignableUnitCount;
+            reachableAssignableCount += reachableAssignableUnitCount;
+
+            const statusState = getSlayerStatusState(isAssignable, isReachable);
+            const statusClass = `slayer-monster--${statusState.statusKey}`;
+            let statusLabel = statusState.statusLabel;
             const missingLines = [];
 
             if (!isAssignable) {
-                statusClass = "slayer-monster--unassignable";
-                statusLabel = "Unassignable";
-                missingLines.push(`To be assigned: ${formatMissingParts(assignmentStatus.missing)}.`);
-                if (!isReachable) {
+                if (assignmentStatus.missing.length) {
+                    missingLines.push(`To be assigned: ${formatMissingParts(assignmentStatus.missing)}.`);
+                }
+                if (!isReachable && reachStatus.missing.length) {
                     missingLines.push(`To reach: ${formatMissingParts(reachStatus.missing)}.`);
                 }
-            } else if (!isReachable) {
-                statusClass = "slayer-monster--unreachable";
-                statusLabel = "Unreachable";
+            } else if (!isReachable && reachStatus.missing.length) {
                 missingLines.push(`To reach: ${formatMissingParts(reachStatus.missing)}.`);
+            }
+            if (locations.length > 0) {
+                if (isAssignable && isReachable) {
+                    statusLabel = `Locations reachable: ${reachableAssignableLocationCount}/${assignableLocationCount}`;
+                } else if (!isAssignable && assignmentStatus.met) {
+                    statusLabel = "No assignable locations";
+                    missingLines.push("No locations are currently assignable.");
+                } else if (isAssignable && !isReachable) {
+                    statusLabel = "No reachable assignable locations";
+                    missingLines.push("No assignable locations are currently reachable.");
+                }
             }
 
             const monsterNotes = Array.isArray(monster.notes) ? monster.notes : [];
             const monsterInfo = monsterNotes.length
                 ? renderInfoIcon(monsterNotes.join("\n"), `${monster.name} note`)
+                : "";
+            const locationBlock = locationRows.length
+                ? `
+                    <div class="slayer-location-list">
+                        <div class="slayer-location-list-label">Locations</div>
+                        ${locationRows.join("")}
+                    </div>
+                `
                 : "";
 
             monsterRows.push(`
@@ -411,6 +515,7 @@ export default async function SlayerMastersPage() {
                         <span class="slayer-monster-status">${statusLabel}</span>
                     </div>
                     ${missingLines.length ? `<div class="slayer-monster-missing">${missingLines.map((line) => `<div>${escapeHtml(line)}</div>`).join("")}</div>` : ""}
+                    ${locationBlock}
                 </article>
             `);
         }

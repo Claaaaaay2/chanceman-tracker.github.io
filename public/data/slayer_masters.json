@@ -1882,7 +1882,7 @@
         {
             "name": "Konar",
             "notes": [
-                "This does not account for locations of these npcs yet."
+                "Supports location-specific task rules via each monster's locations array."
             ],
             "reachRequirements": {},
             "assignmentRequirements": {
@@ -1897,13 +1897,26 @@
                         "skills": {
                             "Slayer": 60,
                             "Combat": 65
-                        },
-                        "quests": {
-                            "Priest in Peril": "completed"
                         }
                     },
                     "notes": [
                         "Can be safespotted if no Nose peg is available."
+                    ],
+                    "locations": [
+                        {
+                            "name": "Catacombs of Kourend"
+                        },
+                        {
+                            "name": "Slayer Tower",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "Priest in Peril": "completed"
+                                }
+                            }
+                        },
+                        {
+                            "name": "Stronghold Slayer Cave"
+                        }
                     ]
                 },
                 {
@@ -1912,11 +1925,29 @@
                         "skills": {
                             "Slayer": 85,
                             "Combat": 85
-                        },
-                        "quests": {
-                            "Priest in Peril": "completed"
                         }
-                    }
+                    },
+                    "locations": [
+                        {
+                            "name": "Catacombs of Kourend"
+                        },
+                        {
+                            "name": "Abyss",
+                            "reachRequirements": {
+                                "rulesAll": [
+                                    "canReachAbyssalSire"
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Slayer Tower",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "Priest in Peril": "completed"
+                                }
+                            }
+                        }
+                    ]
                 },
                 {
                     "name": "Ankou",
@@ -1924,7 +1955,18 @@
                         "skills": {
                             "Combat": 40
                         }
-                    }
+                    },
+                    "locations": [
+                        {
+                            "name": "Stronghold of Security"
+                        },
+                        {
+                            "name": "Stronghold Slayer Dungeon"
+                        },
+                        {
+                            "name": "Catacombs of Kourend"
+                        }
+                    ]
                 },
                 {
                     "name": "Aviansie",
@@ -1937,7 +1979,27 @@
                                 "Agility": 60
                             }
                         ]
-                    }
+                    },
+                    "locations": [
+                        {
+                            "name": "God Wars Dungeon",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "Death Plateau": "completed"
+                                }
+                            },
+                            "reachRequirements": {
+                                "itemsAny": [
+                                    [
+                                        "Rope"
+                                    ]
+                                ],
+                                "rulesAll": [
+                                    "canReachTrollheim"
+                                ]
+                            }
+                        }
+                    ]
                 },
                 {
                     "name": "Basilisks",
@@ -1950,6 +2012,19 @@
                     },
                     "notes": [
                         "Can be safespotted if Mirror shield is not available."
+                    ],
+                    "locations": [
+                        {
+                            "name": "Fremennik Slayer Dungeon"
+                        },
+                        {
+                            "name": "Jormungand's Prison",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "The Fremennik Exiles": "completed"
+                                }
+                            }
+                        }
                     ]
                 },
                 {
@@ -1958,18 +2033,58 @@
                         "skills": {
                             "Combat": 80
                         }
-                    }
+                    },
+                    "locations": [
+                        {
+                            "name": "Catacombs of Kourend"
+                        },
+                        {
+                            "name": "Chasm of Fire"
+                        },
+                        {
+                            "name": "Taverley Dungeon"
+                        },
+                        {
+                            "name": "Brimhaven Dungeon",
+                            "reachRequirements": {
+                                "rulesAll": [
+                                    "hasUsableAxe"
+                                ]
+                            }
+                        }
+                    ]
                 },
                 {
                     "name": "Black dragons",
                     "assignmentRequirements": {
-                        "quests": {
-                            "Dragon Slayer I": "started"
-                        },
                         "skills": {
                             "Combat": 80
                         }
-                    }
+                    },
+                    "locations": [
+                        {
+                            "name": "Catacombs of Kourend"
+                        },
+                        {
+                            "name": "Myths' Guild Dungeon",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "Dragon Slayer II": "completed"
+                                }
+                            }
+                        },
+                        {
+                            "name": "Evil Chicken's Lair",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "Lost City": "completed"
+                                }
+                            }
+                        },
+                        {
+                            "name": "Taverley Dungeon"
+                        }
+                    ]
                 },
                 {
                     "name": "Bloodveld",
@@ -1977,22 +2092,101 @@
                         "skills": {
                             "Slayer": 50,
                             "Combat": 50
-                        },
-                        "quests": {
-                            "Priest in Peril": "completed"
                         }
-                    }
+                    },
+                    "locations": [
+                        {
+                            "name": "Catacombs of Kourend"
+                        },
+                        {
+                            "name": "God Wars Dungeon",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "Death Plateau": "completed"
+                                }
+                            },
+                            "reachRequirements": {
+                                "itemsAny": [
+                                    [
+                                        "Rope"
+                                    ]
+                                ],
+                                "rulesAll": [
+                                    "canReachTrollheim"
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Iorwerth Dungeon",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "Song of the Elves": "completed"
+                                }
+                            }
+                        },
+                        {
+                            "name": "Meiyerditch Laboratories",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "Sins of the Father": "completed"
+                                }
+                            }
+                        },
+                        {
+                            "name": "Slayer Tower",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "Priest in Peril": "completed"
+                                }
+                            }
+                        },
+                        {
+                            "name": "Stronghold Slayer Dungeon"
+                        }
+                    ]
                 },
                 {
                     "name": "Blue dragons",
                     "assignmentRequirements": {
-                        "quests": {
-                            "Dragon Slayer I": "started"
-                        },
                         "skills": {
                             "Combat": 65
                         }
-                    }
+                    },
+                    "locations": [
+                        {
+                            "name": "Catacombs of Kourend"
+                        },
+                        {
+                            "name": "Isle of Souls Dungeon"
+                        },
+                        {
+                            "name": "Myths' Guild Dungeon",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "Dragon Slayer II": "completed"
+                                }
+                            }
+                        },
+                        {
+                            "name": "Ogre Enclave",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "Watchtower": "completed"
+                                }
+                            }
+                        },
+                        {
+                            "name": "Ruins of Tapoyauik",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "The Heart of Darkness": "completed"
+                                }
+                            }
+                        },
+                        {
+                            "name": "Taverley Dungeon"
+                        }
+                    ]
                 },
                 {
                     "name": "Brine rats",
@@ -2004,7 +2198,12 @@
                         "quests": {
                             "Olaf's Quest": "completed"
                         }
-                    }
+                    },
+                    "locations": [
+                        {
+                            "name": "Brine Rat Cavern"
+                        }
+                    ]
                 },
                 {
                     "name": "Cave kraken",
@@ -2014,18 +2213,44 @@
                             "Magic": 50,
                             "Combat": 80
                         }
-                    }
+                    },
+                    "locations": [
+                        {
+                            "name": "Kraken Cove"
+                        }
+                    ]
                 },
                 {
                     "name": "Dagannoth",
                     "assignmentRequirements": {
-                        "quests": {
-                            "Horror from the Deep": "completed"
-                        },
                         "skills": {
                             "Combat": 75
                         }
-                    }
+                    },
+                    "locations": [
+                        {
+                            "name": "Catacombs of Kourend"
+                        },
+                        {
+                            "name": "Lighthouse",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "Horror from the Deep": "completed"
+                                }
+                            }
+                        },
+                        {
+                            "name": "Waterbirth Island"
+                        },
+                        {
+                            "name": "Jormungand's Prison",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "The Fremennik Exiles": "completed"
+                                }
+                            }
+                        }
+                    ]
                 },
                 {
                     "name": "Dark beasts",
@@ -2033,11 +2258,26 @@
                         "skills": {
                             "Slayer": 90,
                             "Combat": 90
-                        },
-                        "quests": {
-                            "Mourning's End Part II": "completed"
                         }
-                    }
+                    },
+                    "locations": [
+                        {
+                            "name": "Mourner Tunnels",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "Mourning's End Part II": "completed"
+                                }
+                            }
+                        },
+                        {
+                            "name": "Iorwerth Dungeon",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "Song of the Elves": "completed"
+                                }
+                            }
+                        }
+                    ]
                 },
                 {
                     "name": "Drakes",
@@ -2046,15 +2286,20 @@
                             "Slayer": 84
                         }
                     },
-                    "reachRequirements": {
-                        "itemsAny": [
-                            [
-                                "Granite boots",
-                                "Boots of stone",
-                                "Boots of brimstone"
-                            ]
-                        ]
-                    }
+                    "locations": [
+                        {
+                            "name": "Karuulm Slayer Dungeon",
+                            "reachRequirements": {
+                                "itemsAny": [
+                                    [
+                                        "Granite boots",
+                                        "Boots of stone",
+                                        "Boots of brimstone"
+                                    ]
+                                ]
+                            }
+                        }
+                    ]
                 },
                 {
                     "name": "Dust devils",
@@ -2062,19 +2307,21 @@
                         "skills": {
                             "Slayer": 65,
                             "Combat": 70
-                        },
-                        "quests": {
-                            "Desert Treasure I": "completed"
                         }
                     },
-                    "reachRequirements": {
-                        "itemsAny": [
-                            [
-                                "Face mask",
-                                "Dwellberries"
-                            ]
-                        ]
-                    }
+                    "locations": [
+                        {
+                            "name": "Catacombs of Kourend"
+                        },
+                        {
+                            "name": "Smoke Dungeon",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "Desert Treasure I": "completed"
+                                }
+                            }
+                        }
+                    ]
                 },
                 {
                     "name": "Fire giants",
@@ -2082,7 +2329,49 @@
                         "skills": {
                             "Combat": 65
                         }
-                    }
+                    },
+                    "locations": [
+                        {
+                            "name": "Brimhaven Dungeon",
+                            "reachRequirements": {
+                                "rulesAll": [
+                                    "hasUsableAxe"
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Catacombs of Kourend"
+                        },
+                        {
+                            "name": "Isle of Souls Dungeon"
+                        },
+                        {
+                            "name": "Giants' Den"
+                        },
+                        {
+                            "name": "Karuulm Slayer Dungeon",
+                            "reachRequirements": {
+                                "itemsAny": [
+                                    [
+                                        "Granite boots",
+                                        "Boots of stone",
+                                        "Boots of brimstone"
+                                    ]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Stronghold Slayer Dungeon"
+                        },
+                        {
+                            "name": "Waterfall Dungeon",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "Waterfall Quest": "completed"
+                                }
+                            }
+                        }
+                    ]
                 },
                 {
                     "name": "Fossil Island Wyverns",
@@ -2094,7 +2383,12 @@
                         "skills": {
                             "Combat": 60
                         }
-                    }
+                    },
+                    "locations": [
+                        {
+                            "name": "Wyvern Cave"
+                        }
+                    ]
                 },
                 {
                     "name": "Gargoyles",
@@ -2102,9 +2396,6 @@
                         "skills": {
                             "Slayer": 75,
                             "Combat": 80
-                        },
-                        "quests": {
-                            "Priest in Peril": "completed"
                         }
                     },
                     "reachRequirements": {
@@ -2115,7 +2406,17 @@
                                 "Granite hammer"
                             ]
                         ]
-                    }
+                    },
+                    "locations": [
+                        {
+                            "name": "Slayer Tower",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "Priest in Peril": "completed"
+                                }
+                            }
+                        }
+                    ]
                 },
                 {
                     "name": "Greater demons",
@@ -2123,7 +2424,38 @@
                         "skills": {
                             "Combat": 70
                         }
-                    }
+                    },
+                    "locations": [
+                        {
+                            "name": "Catacombs of Kourend"
+                        },
+                        {
+                            "name": "Chasm of Fire"
+                        },
+                        {
+                            "name": "Isle of Souls Dungeon"
+                        },
+                        {
+                            "name": "Karuulm Slayer Dungeon",
+                            "reachRequirements": {
+                                "itemsAny": [
+                                    [
+                                        "Granite boots",
+                                        "Boots of stone",
+                                        "Boots of brimstone"
+                                    ]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Brimhaven Dungeon",
+                            "reachRequirements": {
+                                "rulesAll": [
+                                    "hasUsableAxe"
+                                ]
+                            }
+                        }
+                    ]
                 },
                 {
                     "name": "Hellhounds",
@@ -2131,7 +2463,33 @@
                         "skills": {
                             "Combat": 75
                         }
-                    }
+                    },
+                    "locations": [
+                        {
+                            "name": "Karuulm Slayer Dungeon",
+                            "reachRequirements": {
+                                "itemsAny": [
+                                    [
+                                        "Granite boots",
+                                        "Boots of stone",
+                                        "Boots of brimstone"
+                                    ]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Catacombs of Kourend"
+                        },
+                        {
+                            "name": "Stronghold Slayer Dungeon"
+                        },
+                        {
+                            "name": "Taverley Dungeon"
+                        },
+                        {
+                            "name": "Witchaven Dungeon"
+                        }
+                    ]
                 },
                 {
                     "name": "Hydras",
@@ -2140,15 +2498,20 @@
                             "Slayer": 95
                         }
                     },
-                    "reachRequirements": {
-                        "itemsAny": [
-                            [
-                                "Granite boots",
-                                "Boots of stone",
-                                "Boots of brimstone"
-                            ]
-                        ]
-                    }
+                    "locations": [
+                        {
+                            "name": "Karuulm Slayer Dungeon",
+                            "reachRequirements": {
+                                "itemsAny": [
+                                    [
+                                        "Granite boots",
+                                        "Boots of stone",
+                                        "Boots of brimstone"
+                                    ]
+                                ]
+                            }
+                        }
+                    ]
                 },
                 {
                     "name": "Jellies",
@@ -2157,7 +2520,23 @@
                             "Slayer": 52,
                             "Combat": 57
                         }
-                    }
+                    },
+                    "locations": [
+                        {
+                            "name": "Fremennik Slayer Dungeon"
+                        },
+                        {
+                            "name": "Catacombs of Kourend"
+                        },
+                        {
+                            "name": "Ruins of Tapoyauik",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "The Heart of Darkness": "completed"
+                                }
+                            }
+                        }
+                    ]
                 },
                 {
                     "name": "Kalphite",
@@ -2165,7 +2544,22 @@
                         "skills": {
                             "Combat": 15
                         }
-                    }
+                    },
+                    "locations": [
+                        {
+                            "name": "Kalphite Lair",
+                            "reachRequirements": {
+                                "itemsAny": [
+                                    [
+                                        "Rope"
+                                    ]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Kalphite Cave"
+                        }
+                    ]
                 },
                 {
                     "name": "Kurask",
@@ -2174,24 +2568,114 @@
                             "Slayer": 70,
                             "Combat": 65
                         }
-                    }
+                    },
+                    "locations": [
+                        {
+                            "name": "Fremennik Slayer Dungeon"
+                        },
+                        {
+                            "name": "Iorwerth Dungeon",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "Song of the Elves": "completed"
+                                }
+                            }
+                        }
+                    ]
                 },
                 {
                     "name": "Lesser Nagua",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 48
-                        },
-                        "quests": {
-                            "Perilous Moons": "completed"
                         }
-                    }
+                    },
+                    "locations": [
+                        {
+                            "name": "Neypotzli",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "Perilous Moons": "completed"
+                                }
+                            }
+                        },
+                        {
+                            "name": "Ruins of Tapoyauik",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "The Heart of Darkness": "completed"
+                                }
+                            }
+                        },
+                        {
+                            "name": "Crypt of Tonali",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "The Final Dawn": "completed"
+                                }
+                            }
+                        }
+                    ]
                 },
                 {
-                    "name": "Lizardmen"
+                    "name": "Lizardmen",
+                    "locations": [
+                        {
+                            "name": "Battlefront"
+                        },
+                        {
+                            "name": "Lizardman Canyon"
+                        },
+                        {
+                            "name": "Lizardman Settlement"
+                        },
+                        {
+                            "name": "Kebos Swamp"
+                        },
+                        {
+                            "name": "Molch"
+                        }
+                    ]
                 },
                 {
-                    "name": "Metal dragons"
+                    "name": "Metal dragons",
+                    "locations": [
+                        {
+                            "name": "Ancient Cavern",
+                            "assignmentRequirements": {
+                                "rulesAll": [
+                                    "canAssignWaterfiendsBarbarianFiremaking1"
+                                ]
+                            },
+                            "reachRequirements": {
+                                "rulesAll": [
+                                    "canAssignWaterfiendsBarbarianFiremaking1"
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Brimhaven Dungeon",
+                            "reachRequirements": {
+                                "rulesAll": [
+                                    "hasUsableAxe"
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Catacombs of Kourend"
+                        },
+                        {
+                            "name": "Isle of Souls Dungeon"
+                        },
+                        {
+                            "name": "Lithkren Vault",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "Dragon Slayer II": "completed"
+                                }
+                            }
+                        }
+                    ]
                 },
                 {
                     "name": "Mutated Zygomites",
@@ -2199,11 +2683,26 @@
                         "skills": {
                             "Slayer": 57,
                             "Combat": 60
-                        },
-                        "quests": {
-                            "Lost City": "completed"
                         }
-                    }
+                    },
+                    "locations": [
+                        {
+                            "name": "Fossil Island",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "Bone Voyage": "completed"
+                                }
+                            }
+                        },
+                        {
+                            "name": "Zanaris",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "Lost City": "completed"
+                                }
+                            }
+                        }
+                    ]
                 },
                 {
                     "name": "Nechryael",
@@ -2212,18 +2711,60 @@
                             "Slayer": 80,
                             "Combat": 85
                         }
-                    }
+                    },
+                    "locations": [
+                        {
+                            "name": "Catacombs of Kourend"
+                        },
+                        {
+                            "name": "Iorwerth Dungeon",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "Song of the Elves": "completed"
+                                }
+                            }
+                        },
+                        {
+                            "name": "Slayer Tower",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "Priest in Peril": "completed"
+                                }
+                            }
+                        }
+                    ]
                 },
                 {
                     "name": "Red dragons",
                     "assignmentRequirements": {
-                        "quests": {
-                            "Dragon Slayer I": "started"
-                        },
                         "skills": {
                             "Combat": 68
                         }
-                    }
+                    },
+                    "locations": [
+                        {
+                            "name": "Brimhaven Dungeon",
+                            "reachRequirements": {
+                                "rulesAll": [
+                                    "hasUsableAxe"
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Catacombs of Kourend"
+                        },
+                        {
+                            "name": "Forthos Dungeon"
+                        },
+                        {
+                            "name": "Myths' Guild Dungeon",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "Dragon Slayer II": "completed"
+                                }
+                            }
+                        }
+                    ]
                 },
                 {
                     "name": "Skeletal Wyverns",
@@ -2231,11 +2772,13 @@
                         "skills": {
                             "Slayer": 72,
                             "Combat": 70
-                        },
-                        "quests": {
-                            "Elemental Workshop I": "completed"
                         }
-                    }
+                    },
+                    "locations": [
+                        {
+                            "name": "Asgarnian Ice Dungeon"
+                        }
+                    ]
                 },
                 {
                     "name": "Smoke devils",
@@ -2245,14 +2788,11 @@
                             "Combat": 85
                         }
                     },
-                    "reachRequirements": {
-                        "itemsAny": [
-                            [
-                                "Face mask",
-                                "Dwellberries"
-                            ]
-                        ]
-                    }
+                    "locations": [
+                        {
+                            "name": "Smoke Devil Dungeon"
+                        }
+                    ]
                 },
                 {
                     "name": "Trolls",
@@ -2260,7 +2800,39 @@
                         "skills": {
                             "Combat": 60
                         }
-                    }
+                    },
+                    "locations": [
+                        {
+                            "name": "Troll Stronghold",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "Death Plateau": "completed"
+                                }
+                            }
+                        },
+                        {
+                            "name": "Keldagrim"
+                        },
+                        {
+                            "name": "Death Plateau",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "Death Plateau": "completed"
+                                }
+                            }
+                        },
+                        {
+                            "name": "South of Mount Quidamortem"
+                        },
+                        {
+                            "name": "Fremennik Isles",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "The Fremennik Isles": "completed"
+                                }
+                            }
+                        }
+                    ]
                 },
                 {
                     "name": "Turoth",
@@ -2269,7 +2841,12 @@
                             "Slayer": 55,
                             "Combat": 60
                         }
-                    }
+                    },
+                    "locations": [
+                        {
+                            "name": "Fremennik Slayer Dungeon"
+                        }
+                    ]
                 },
                 {
                     "name": "Vampyres",
@@ -2277,7 +2854,33 @@
                         "skills": {
                             "Combat": 35
                         }
-                    }
+                    },
+                    "locations": [
+                        {
+                            "name": "Darkmeyer",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "Sins of the Father": "completed"
+                                }
+                            }
+                        },
+                        {
+                            "name": "Meiyerditch",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "The Darkness of Hallowvale": "completed"
+                                }
+                            }
+                        },
+                        {
+                            "name": "Slepe",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "Priest in Peril": "completed"
+                                }
+                            }
+                        }
+                    ]
                 },
                 {
                     "name": "Warped creatures",
@@ -2288,18 +2891,46 @@
                         "quests": {
                             "The Path of Glouphrie": "completed"
                         }
-                    }
+                    },
+                    "locations": [
+                        {
+                            "name": "Poison Waste Dungeon"
+                        }
+                    ]
                 },
                 {
                     "name": "Waterfiends",
                     "assignmentRequirements": {
-                        "rulesAll": [
-                            "canAssignWaterfiendsBarbarianFiremaking1"
-                        ],
                         "skills": {
                             "Combat": 75
                         }
-                    }
+                    },
+                    "locations": [
+                        {
+                            "name": "Ancient Cavern",
+                            "assignmentRequirements": {
+                                "rulesAll": [
+                                    "canAssignWaterfiendsBarbarianFiremaking1"
+                                ]
+                            },
+                            "reachRequirements": {
+                                "rulesAll": [
+                                    "canAssignWaterfiendsBarbarianFiremaking1"
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Iorwerth Dungeon",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "Song of the Elves": "completed"
+                                }
+                            }
+                        },
+                        {
+                            "name": "Kraken Cove"
+                        }
+                    ]
                 },
                 {
                     "name": "Wyrms",
@@ -2308,11 +2939,39 @@
                             "Slayer": 62
                         }
                     },
-                    "reachRequirements": {
-                        "rulesAll": [
-                            "canReachWyrmsTask"
-                        ]
-                    }
+                    "locations": [
+                        {
+                            "name": "Karuulm Slayer Dungeon",
+                            "reachRequirements": {
+                                "itemsAny": [
+                                    [
+                                        "Granite boots",
+                                        "Boots of stone",
+                                        "Boots of brimstone"
+                                    ]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Neypotzli",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "Perilous Moons": "completed"
+                                }
+                            }
+                        },
+                        {
+                            "name": "Charred Dungeon",
+                            "assignmentRequirements": {
+                                "skills": {
+                                    "Sailing": 62
+                                },
+                                "quests": {
+                                    "Pandemonium": "completed"
+                                }
+                            }
+                        }
+                    ]
                 }
             ]
         },
