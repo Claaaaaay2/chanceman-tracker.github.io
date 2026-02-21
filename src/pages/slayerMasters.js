@@ -3,7 +3,7 @@ import { fileStore } from "../storage/fileStore.js";
 
 const SLAYER_RULE_LABELS = {
     canAssignWaterfiendsBarbarianFiremaking1: "Barbarian firemaking 1 completed",
-    canReachWyrmsTask: "Any of: Granite boots / Boots of stone / Boots of brimstone, or access to the Charred Dungeon",
+    canReachWyrmsTask: "Any of: Granite boots / Boots of stone / Boots of brimstone, access to the Charred Dungeon, or can start Perilous Moons and reach Wyrmlings",
     canReachAbyssalSire: "Can reach Abyssal Sire area",
     canReachTrollheim: "Can reach Trollheim",
     hasUsableAxe: "Has a usable axe"

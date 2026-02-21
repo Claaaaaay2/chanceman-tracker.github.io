@@ -5881,6 +5881,7 @@ function canEnterTheCharredDungeon(ctx) {
 
 function canReachWyrmsTask(ctx) {
     return canEnterTheCharredDungeon(ctx)
+        || canStartPerilousMoonsAndReachWyrmlings(ctx)
         || hasAnyItems(ctx, [21643, 23037, 22951]); // Granite boots, Boots of stone, Boots of brimstone
 }
 
