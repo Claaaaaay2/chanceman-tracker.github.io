@@ -8964,7 +8964,7 @@ export const NPC_DATA = {
     },
     "Kalphite Guardian": {
         "wiki": "https://oldschool.runescape.wiki/w/Kalphite_Guardian",
-        "rule": ["canEnterKalphiteLair"],
+        "rule": ["canKillKalphitesOutsideLair"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -8980,7 +8980,7 @@ export const NPC_DATA = {
     },
     "Kalphite Soldier": {
         "wiki": "https://oldschool.runescape.wiki/w/Kalphite_Soldier",
-        "rule": ["canEnterKalphiteLair"],
+        "rule": ["canKillKalphitesOutsideLair"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -8988,7 +8988,7 @@ export const NPC_DATA = {
     },
     "Kalphite Worker": {
         "wiki": "https://oldschool.runescape.wiki/w/Kalphite_Worker",
-        "rule": ["canEnterKalphiteLair"],
+        "rule": ["canKillKalphitesOutsideLair"],
         "skill": [],
         "level": [],
         "tags": [],

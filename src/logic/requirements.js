@@ -1589,6 +1589,9 @@ export const REQUIREMENT_CHECKS = {
     canEnterKalphiteLair(ctx) {
         return canEnterKalphiteLair(ctx);
     },
+    canKillKalphitesOutsideLair(ctx) {
+        return canKillKalphitesOutsideLair(ctx);
+    },
     canCompleteRoyalTrouble(ctx) {
         return canCompleteRoyalTrouble(ctx);
     },
@@ -5817,6 +5820,14 @@ function hasAnyNails(ctx) {
 
 function canEnterKalphiteLair(ctx) {
     return has(ctx, 954); // Rope
+}
+
+function canKillKalphitesOutsideLair(ctx) {
+    if (ctx.filters?.isSlayerLocked) {
+        return canEnterKalphiteLair(ctx);
+    }
+    // Outside of Slayer-locked mode, these are available in the Kalphite Cave on task.
+    return true;
 }
 
 function canEnterAncientCavern(ctx) {
