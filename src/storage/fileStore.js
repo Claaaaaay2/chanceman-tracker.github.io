@@ -18,6 +18,7 @@ let memory = {
         hideRaids: false,
         isSlayerLocked: false,
         hideUnreachableSlayerMasters: true,
+        hideUnassignableSlayerTasks: false,
         ignoreSlayerMasterCombatLevel: false,
         overrideBarbarianFiremaking1ForWaterfiends: false,
         isHunterRumourLocked: false,

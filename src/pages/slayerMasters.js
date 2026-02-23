@@ -370,6 +370,7 @@ export default async function SlayerMastersPage() {
 
     const ctx = buildRequirementContext();
     const hideUnreachableSlayerMasters = fileStore.filters?.hideUnreachableSlayerMasters ?? true;
+    const hideUnassignableSlayerTasks = Boolean(fileStore.filters?.hideUnassignableSlayerTasks);
     const ignoreSlayerMasterCombatLevel = Boolean(fileStore.filters?.ignoreSlayerMasterCombatLevel);
     const overrideBarbarianFiremaking1ForWaterfiends = Boolean(
         fileStore.filters?.overrideBarbarianFiremaking1ForWaterfiends
@@ -570,6 +571,10 @@ export default async function SlayerMastersPage() {
                 Hide unreachable slayer masters
             </label>
             <label class="slayer-master-filter">
+                <input type="checkbox" id="hideUnassignableSlayerTasks" ${hideUnassignableSlayerTasks ? "checked" : ""}>
+                Hide unassignable tasks
+            </label>
+            <label class="slayer-master-filter">
                 <input type="checkbox" id="ignoreSlayerMasterCombatLevel" ${ignoreSlayerMasterCombatLevel ? "checked" : ""}>
                 Ignore combat level
             </label>
@@ -596,11 +601,28 @@ export default async function SlayerMastersPage() {
 
 function applySlayerMasterFilters(container) {
     const hideUnreachableSlayerMasters = fileStore.filters?.hideUnreachableSlayerMasters ?? true;
+    const hideUnassignableSlayerTasks = Boolean(fileStore.filters?.hideUnassignableSlayerTasks);
     const masters = container.querySelectorAll(".slayer-master");
     for (const master of masters) {
         const isReachable = master.dataset.masterReachable === "true";
         const shouldHideMaster = hideUnreachableSlayerMasters && !isReachable;
         master.style.display = shouldHideMaster ? "none" : "";
+    }
+    const monsters = container.querySelectorAll(".slayer-monster");
+    for (const monster of monsters) {
+        const isUnassignable = monster.classList.contains("slayer-monster--unassignable");
+        monster.style.display = hideUnassignableSlayerTasks && isUnassignable ? "none" : "";
+    }
+    const locations = container.querySelectorAll(".slayer-location");
+    for (const location of locations) {
+        const isUnassignable = location.classList.contains("slayer-location--unassignable");
+        location.style.display = hideUnassignableSlayerTasks && isUnassignable ? "none" : "";
+    }
+    const locationLists = container.querySelectorAll(".slayer-location-list");
+    for (const locationList of locationLists) {
+        const locationRows = locationList.querySelectorAll(".slayer-location");
+        const hasVisibleLocation = Array.from(locationRows).some((row) => row.style.display !== "none");
+        locationList.style.display = hasVisibleLocation ? "" : "none";
     }
 
     const jumpLinks = document.querySelectorAll(".slayer-master-jump-link");
@@ -664,6 +686,9 @@ export function init() {
                 { ignoreSlayerMasterCombatLevel: event.target.checked },
                 { rerender: true }
             );
+        }
+        if (event.target.id === "hideUnassignableSlayerTasks") {
+            await updateSlayerMasterFilters({ hideUnassignableSlayerTasks: event.target.checked });
         }
         if (event.target.id === "overrideBarbarianFiremaking1ForWaterfiends") {
             await updateSlayerMasterFilters(
