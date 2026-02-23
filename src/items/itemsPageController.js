@@ -406,6 +406,27 @@ export async function initItemsPage() {
         return rule;
     }
 
+    function bindSectionSummaryNavigation() {
+        if (!elements.itemsSectionSummary || elements.itemsSectionSummary.dataset.navBound === "true") return;
+        elements.itemsSectionSummary.dataset.navBound = "true";
+
+        elements.itemsSectionSummary.addEventListener("click", (event) => {
+            const link = event.target.closest("a[href^=\"#items-section-\"]");
+            if (!link) return;
+
+            event.preventDefault();
+            const targetId = link.getAttribute("href")?.slice(1);
+            if (!targetId) return;
+
+            const target = document.getElementById(targetId);
+            if (!target) return;
+
+            const nextUrl = `${window.location.pathname}${window.location.search}#${targetId}`;
+            history.replaceState(history.state ?? {}, "", nextUrl);
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+    }
+
     function getDropRateLabel(drops) {
         if (!drops) return "";
         let best = null;
@@ -1125,6 +1146,7 @@ export async function initItemsPage() {
             if (showSectionCounts) {
                 elements.itemsSectionSummary.hidden = false;
                 elements.itemsSectionSummary.innerHTML = summaryParts.join("");
+                bindSectionSummaryNavigation();
             } else {
                 elements.itemsSectionSummary.hidden = true;
                 elements.itemsSectionSummary.innerHTML = "";
