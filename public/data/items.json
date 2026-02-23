@@ -7157,6 +7157,14 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Crafting at the Ourania altar": {
+          "notes": "Can be crafted at the Ourania altar using Pure essence.",
+          "rule": {
+            "has": 7936
+          }
+        }
       }
     }
   },
@@ -14126,6 +14134,12 @@
                 "level": 40
               }
             ]
+          }
+        },
+        "Crafting at the Ourania altar": {
+          "notes": "Can be crafted at the Ourania altar using Pure essence.",
+          "rule": {
+            "has": 7936
           }
         }
       }
@@ -24862,6 +24876,14 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Crafting at the Ourania altar": {
+          "notes": "Can be crafted at the Ourania altar using Pure essence.",
+          "rule": {
+            "has": 7936
+          }
+        }
       }
     },
     "tags": [
@@ -26649,6 +26671,14 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Crafting at the Ourania altar": {
+          "notes": "Can be crafted at the Ourania altar using Pure essence.",
+          "rule": {
+            "has": 7936
+          }
+        }
       }
     }
   },
@@ -37797,6 +37827,14 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Crafting at the Ourania altar": {
+          "notes": "Can be crafted at the Ourania altar using Pure essence.",
+          "rule": {
+            "has": 7936
+          }
+        }
       }
     }
   },
@@ -42464,6 +42502,14 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Crafting at the Ourania altar": {
+          "notes": "Can be crafted at the Ourania altar using Pure essence.",
+          "rule": {
+            "has": 7936
+          }
+        }
       }
     }
   },
@@ -44835,6 +44881,14 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Crafting at the Ourania altar": {
+          "notes": "Can be crafted at the Ourania altar using Pure essence.",
+          "rule": {
+            "has": 7936
+          }
+        }
       }
     }
   },
@@ -53981,6 +54035,14 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Crafting at the Ourania altar": {
+          "notes": "Can be crafted at the Ourania altar using Pure essence.",
+          "rule": {
+            "has": 7936
+          }
+        }
       }
     }
   },
@@ -60283,6 +60345,14 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Crafting at the Ourania altar": {
+          "notes": "Can be crafted at the Ourania altar using Pure essence.",
+          "rule": {
+            "has": 7936
+          }
+        }
       }
     }
   },
@@ -92766,6 +92836,14 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Crafting at the Ourania altar": {
+          "notes": "Can be crafted at the Ourania altar using Pure essence.",
+          "rule": {
+            "has": 7936
+          }
+        }
       }
     }
   },
@@ -100229,6 +100307,14 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Crafting at the Ourania altar": {
+          "notes": "Can be crafted at the Ourania altar using Pure essence.",
+          "rule": {
+            "has": 7936
+          }
+        }
       }
     }
   },
@@ -108596,6 +108682,14 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Crafting at the Ourania altar": {
+          "notes": "Can be crafted at the Ourania altar using Pure essence.",
+          "rule": {
+            "has": 7936
+          }
+        }
       }
     }
   },
@@ -140465,6 +140559,14 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Crafting at the Ourania altar": {
+          "notes": "Can be crafted at the Ourania altar using Pure essence.",
+          "rule": {
+            "has": 7936
+          }
+        }
       }
     },
     "tags": [
@@ -165309,6 +165411,14 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Crafting at the Ourania altar": {
+          "notes": "Can be crafted at the Ourania altar using Pure essence.",
+          "rule": {
+            "has": 7936
+          }
+        }
       }
     }
   },
