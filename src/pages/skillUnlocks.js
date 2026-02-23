@@ -24,6 +24,7 @@ const SECTION_ORDER = [
     "Prayer",
     "Runecraft",
     "Sailing",
+    "Slayer",
     "Smithing",
     "Woodcutting"
 ];

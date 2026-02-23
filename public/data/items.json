@@ -15279,7 +15279,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Slayer"
+    ]
   },
   {
     "index": 409,
@@ -21205,7 +21208,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Slayer"
+    ]
   },
   {
     "index": 590,
@@ -21221,7 +21227,10 @@
           "droprate": "1/512"
         }
       }
-    }
+    },
+    "tags": [
+      "Slayer"
+    ]
   },
   {
     "index": 591,
@@ -28910,7 +28919,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Slayer"
     ]
   },
   {
@@ -28941,7 +28951,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Slayer"
     ]
   },
   {
@@ -29468,7 +29479,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Slayer"
+    ]
   },
   {
     "index": 798,
@@ -29704,7 +29718,8 @@
       }
     },
     "tags": [
-      "Fletching"
+      "Fletching",
+      "Slayer"
     ]
   },
   {
@@ -29718,7 +29733,8 @@
       }
     },
     "tags": [
-      "Ranged"
+      "Ranged",
+      "Slayer"
     ]
   },
   {
@@ -53375,7 +53391,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Slayer"
+    ]
   },
   {
     "index": 1412,
@@ -57626,7 +57645,10 @@
           "droprate": "1/1376"
         }
       }
-    }
+    },
+    "tags": [
+      "Slayer"
+    ]
   },
   {
     "index": 1535,
@@ -57698,7 +57720,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Slayer"
+    ]
   },
   {
     "index": 1540,
@@ -58906,7 +58931,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Slayer"
+    ]
   },
   {
     "index": 1568,
@@ -65603,7 +65631,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Slayer"
     ]
   },
   {
@@ -82908,7 +82937,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Slayer"
     ]
   },
   {
@@ -92909,7 +92939,8 @@
       }
     },
     "tags": [
-      "Melee"
+      "Melee",
+      "Slayer"
     ]
   },
   {
@@ -92934,7 +92965,8 @@
       }
     },
     "tags": [
-      "Melee"
+      "Melee",
+      "Slayer"
     ]
   },
   {
@@ -100502,7 +100534,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Slayer"
     ]
   },
   {
@@ -109159,7 +109192,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Slayer"
+    ]
   },
   {
     "index": 2645,
@@ -114367,7 +114403,10 @@
           "rule": "canCompleteIcthlarinsLittleHelper"
         }
       }
-    }
+    },
+    "tags": [
+      "Slayer"
+    ]
   },
   {
     "index": 2793,
@@ -125171,7 +125210,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Slayer"
+    ]
   },
   {
     "index": 3136,
@@ -125182,7 +125224,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Slayer"
+    ]
   },
   {
     "index": 3138,
@@ -137847,7 +137892,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Slayer"
+    ]
   },
   {
     "index": 3559,
@@ -138148,7 +138196,10 @@
           "droprate": "1/296–1/288"
         }
       }
-    }
+    },
+    "tags": [
+      "Slayer"
+    ]
   },
   {
     "index": 3560,
@@ -138349,7 +138400,8 @@
       }
     },
     "tags": [
-      "Magic"
+      "Magic",
+      "Slayer"
     ]
   },
   {
@@ -141289,7 +141341,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Slayer"
     ]
   },
   {
@@ -155567,7 +155620,8 @@
       }
     },
     "tags": [
-      "Sailing"
+      "Sailing",
+      "Slayer"
     ]
   },
   {
@@ -162525,7 +162579,8 @@
       }
     },
     "tags": [
-      "Fletching"
+      "Fletching",
+      "Slayer"
     ]
   },
   {
@@ -162894,7 +162949,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Slayer"
+    ]
   },
   {
     "index": 4206,
