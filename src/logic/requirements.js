@@ -3320,6 +3320,8 @@ function canCompleteGertrudesCat(ctx) {
     return allTrue([
         has(ctx, 1927), // Bucket of milk
         has(ctx, 1552), // Seasoned sardine
+        has(ctx, 327),  // Raw sardine
+        has(ctx, 1573), // Doogle leaves
     ]);
 }
 
