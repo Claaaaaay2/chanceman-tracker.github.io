@@ -3,6 +3,36 @@ import { fileStore } from "../storage/fileStore.js";
 import { canReachNpc, evaluateRule } from "./itemAvailability.js";
 import { NPC_DATA } from "./npcData.js";
 
+function ruleContainsSkillRequirement(rule) {
+    if (!rule || typeof rule === "string") return false;
+    if (Array.isArray(rule)) {
+        return rule.some((subRule) => ruleContainsSkillRequirement(subRule));
+    }
+    if (typeof rule !== "object") return false;
+
+    if (rule.skill && rule.level !== undefined) {
+        return true;
+    }
+
+    if (Array.isArray(rule.skills) && rule.skills.some((req) => req?.skill && req.level !== undefined)) {
+        return true;
+    }
+
+    return ruleContainsSkillRequirement(rule.any) || ruleContainsSkillRequirement(rule.all);
+}
+
+function sourceHasSkillRequirement(source) {
+    if (!source) return false;
+
+    if (Array.isArray(source.skill)) {
+        if (source.skill.length && source.level !== undefined) return true;
+    } else if (source.skill && source.level !== undefined) {
+        return true;
+    }
+
+    return ruleContainsSkillRequirement(source.rule);
+}
+
 export async function isItemObtainable(item, ctx) {
     const src = item.sources || {};
 
@@ -48,7 +78,6 @@ export async function getObtainabilityRank(item, ctx) {
     const src = item.sources || {};
     const name = item.name.toLowerCase();
     const id = item.id;
-    const player = ctx.player;
 
     const rolled = fileStore.rolled?.includes(id);
 
@@ -84,11 +113,26 @@ export async function getObtainabilityRank(item, ctx) {
 
     // Other sources (crafting, etc.)
     if (src.other) {
+        let hasObtainableOtherWithSkill = false;
+        let hasObtainableOtherWithoutSkill = false;
+
         for (const obj of Object.values(src.other)) {
             if (isSourceHiddenByFilters(obj, ctx)) continue;
             if (await isRuleObtainable(obj.rule, ctx)) {
-                return { rank: 4, name };
+                if (sourceHasSkillRequirement(obj)) {
+                    hasObtainableOtherWithSkill = true;
+                } else {
+                    hasObtainableOtherWithoutSkill = true;
+                }
             }
+        }
+
+        if (hasObtainableOtherWithoutSkill) {
+            return { rank: 4, name };
+        }
+
+        if (hasObtainableOtherWithSkill) {
+            return { rank: 5, name };
         }
     }
 
@@ -121,32 +165,37 @@ export async function getObtainabilityRank(item, ctx) {
 
     // Drops handling OTHERS
     if (src.drops) {
-        let hasAnyReachable = false;
-        let hasAnyWithUnmetSkill = false;
+        let hasSkillMetDrop = false;
+        let hasNoSkillDrop = false;
+        let hasUnmetSkillDrop = false;
 
         for (const npcName of Object.keys(src.drops)) {
             if (!(await canReachNpc(npcName, ctx))) continue;
             if (isNpcBlockedByFilters(npcName, ctx)) continue;
 
-            hasAnyReachable = true;
-
             const npc = NPC_DATA[npcName];
 
-            // No skill required -> reachable drop
             if (!npc?.skill?.length) {
-                return { rank: 6, name };
+                hasNoSkillDrop = true;
+                continue;
             }
-
-            if (!player) continue;
 
             if (areNpcSkillsMet(npcName, ctx)) {
-                return { rank: 5, name };
+                hasSkillMetDrop = true;
+            } else {
+                hasUnmetSkillDrop = true;
             }
-
-            hasAnyWithUnmetSkill = true;
         }
 
-        if (hasAnyReachable && hasAnyWithUnmetSkill) {
+        if (hasSkillMetDrop) {
+            return { rank: 5, name };
+        }
+
+        if (hasNoSkillDrop) {
+            return { rank: 6, name };
+        }
+
+        if (hasUnmetSkillDrop) {
             return { rank: 7, name };
         }
     }
