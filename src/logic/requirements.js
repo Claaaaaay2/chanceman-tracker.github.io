@@ -5792,7 +5792,8 @@ function canCatchCrabs(ctx) {
         && has(ctx, 8794)      // Saw
         && has(ctx, 1925)      // Bucket
         && has(ctx, 960)       // Plank
-        && hasAnyNails(ctx);
+        && hasAnyNails(ctx)    //
+        && (has(ctx, 32307) || has(ctx, 11334)); // Fine fish offcuts or Fish offcuts
 }
 
 function canCatchButterflies(ctx) {
