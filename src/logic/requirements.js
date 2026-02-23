@@ -6758,10 +6758,7 @@ function canTrainMining(ctx) {
 }
 
 function canTrainHerblore(ctx) {
-    return requiresQuest(ctx, "canCompleteDruidicRitual", canCompleteDruidicRitual)
-        && has(ctx, 199)  // Grimy guam leaf
-        && has(ctx, 201)  // Grimy marrentill
-        && has(ctx, 203); // Grimy tarromin
+    return requiresQuest(ctx, "canCompleteDruidicRitual", canCompleteDruidicRitual);
 }
 
 function canTrainFishing(ctx) {
