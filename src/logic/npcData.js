@@ -15594,7 +15594,7 @@ export const NPC_DATA = {
         "rule": ["canReachAbyssalSire"],
         "skill": ["Slayer"],
         "level": [85],
-        "tags": ["boss"],
+        "tags": ["boss", "slayer-task-only"],
         "f2p": false
     },
     "Unsired (per part)": {
@@ -15602,7 +15602,7 @@ export const NPC_DATA = {
         "rule": ["canReachAbyssalSire"],
         "skill": ["Slayer"],
         "level": [85],
-        "tags": ["boss"],
+        "tags": ["boss", "slayer-task-only"],
         "f2p": false
     },
     "Urium Shade": {
