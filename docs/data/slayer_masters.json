@@ -1933,6 +1933,11 @@
                         },
                         {
                             "name": "Abyss",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "Priest in Peril": "completed"
+                                }
+                            },
                             "reachRequirements": {
                                 "rulesAll": [
                                     "canReachAbyssalSire"
@@ -2289,6 +2294,11 @@
                     "locations": [
                         {
                             "name": "Karuulm Slayer Dungeon",
+                            "assignmentRequirements": {
+                                "skills": {
+                                    "Slayer": 44
+                                }
+                            },
                             "reachRequirements": {
                                 "itemsAny": [
                                     [
@@ -2350,6 +2360,11 @@
                         },
                         {
                             "name": "Karuulm Slayer Dungeon",
+                            "assignmentRequirements": {
+                                "skills": {
+                                    "Slayer": 44
+                                }
+                            },
                             "reachRequirements": {
                                 "itemsAny": [
                                     [
@@ -2437,6 +2452,11 @@
                         },
                         {
                             "name": "Karuulm Slayer Dungeon",
+                            "assignmentRequirements": {
+                                "skills": {
+                                    "Slayer": 44
+                                }
+                            },
                             "reachRequirements": {
                                 "itemsAny": [
                                     [
@@ -2467,6 +2487,11 @@
                     "locations": [
                         {
                             "name": "Karuulm Slayer Dungeon",
+                            "assignmentRequirements": {
+                                "skills": {
+                                    "Slayer": 44
+                                }
+                            },
                             "reachRequirements": {
                                 "itemsAny": [
                                     [
@@ -2501,6 +2526,11 @@
                     "locations": [
                         {
                             "name": "Karuulm Slayer Dungeon",
+                            "assignmentRequirements": {
+                                "skills": {
+                                    "Slayer": 44
+                                }
+                            },
                             "reachRequirements": {
                                 "itemsAny": [
                                     [
@@ -2942,6 +2972,11 @@
                     "locations": [
                         {
                             "name": "Karuulm Slayer Dungeon",
+                            "assignmentRequirements": {
+                                "skills": {
+                                    "Slayer": 44
+                                }
+                            },
                             "reachRequirements": {
                                 "itemsAny": [
                                     [

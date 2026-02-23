@@ -7157,6 +7157,14 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Crafting at the Ourania altar": {
+          "notes": "Can be crafted at the Ourania altar using Pure essence.",
+          "rule": {
+            "has": 7936
+          }
+        }
       }
     }
   },
@@ -14127,6 +14135,12 @@
               }
             ]
           }
+        },
+        "Crafting at the Ourania altar": {
+          "notes": "Can be crafted at the Ourania altar using Pure essence.",
+          "rule": {
+            "has": 7936
+          }
         }
       }
     },
@@ -15265,7 +15279,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Slayer"
+    ]
   },
   {
     "index": 409,
@@ -21191,7 +21208,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Slayer"
+    ]
   },
   {
     "index": 590,
@@ -21207,7 +21227,10 @@
           "droprate": "1/512"
         }
       }
-    }
+    },
+    "tags": [
+      "Slayer"
+    ]
   },
   {
     "index": 591,
@@ -24862,6 +24885,14 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Crafting at the Ourania altar": {
+          "notes": "Can be crafted at the Ourania altar using Pure essence.",
+          "rule": {
+            "has": 7936
+          }
+        }
       }
     },
     "tags": [
@@ -26649,6 +26680,14 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Crafting at the Ourania altar": {
+          "notes": "Can be crafted at the Ourania altar using Pure essence.",
+          "rule": {
+            "has": 7936
+          }
+        }
       }
     }
   },
@@ -28880,7 +28919,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Slayer"
     ]
   },
   {
@@ -28911,7 +28951,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Slayer"
     ]
   },
   {
@@ -29438,7 +29479,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Slayer"
+    ]
   },
   {
     "index": 798,
@@ -29674,7 +29718,8 @@
       }
     },
     "tags": [
-      "Fletching"
+      "Fletching",
+      "Slayer"
     ]
   },
   {
@@ -29688,7 +29733,8 @@
       }
     },
     "tags": [
-      "Ranged"
+      "Ranged",
+      "Slayer"
     ]
   },
   {
@@ -37797,6 +37843,14 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Crafting at the Ourania altar": {
+          "notes": "Can be crafted at the Ourania altar using Pure essence.",
+          "rule": {
+            "has": 7936
+          }
+        }
       }
     }
   },
@@ -42464,6 +42518,14 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Crafting at the Ourania altar": {
+          "notes": "Can be crafted at the Ourania altar using Pure essence.",
+          "rule": {
+            "has": 7936
+          }
+        }
       }
     }
   },
@@ -44835,6 +44897,14 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Crafting at the Ourania altar": {
+          "notes": "Can be crafted at the Ourania altar using Pure essence.",
+          "rule": {
+            "has": 7936
+          }
+        }
       }
     }
   },
@@ -45767,11 +45837,27 @@
     "sources": {
       "other": {
         "Crafting a Diamond amulet (u)": {
-          "notes": "Requires Gold bar, Diamond and an Amulet mould and level 70 Crafting.",
+          "notes": "Requires Gold bar or 40 Mining and 40 Smithing (for a 'perfect' gold bar), Diamond and an Amulet mould and level 70 Crafting.",
           "rule": {
             "all": [
               {
-                "has": 2357
+                "any": [
+                  {
+                    "has": 2357
+                  },
+                  {
+                    "all": [
+                      {
+                        "skill": "Mining",
+                        "level": 40
+                      },
+                      {
+                        "skill": "Smithing",
+                        "level": 40
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "has": 1601
@@ -45944,11 +46030,27 @@
       },
       "other": {
         "Crafting a Diamond bracelet": {
-          "notes": "Requires Gold bar, Diamond and Bracelet mould and level 58 Crafting.",
+          "notes": "Requires Gold bar or 40 Mining and 40 Smithing (for a 'perfect' gold bar), Diamond and Bracelet mould and level 58 Crafting.",
           "rule": {
             "all": [
               {
-                "has": 2357
+                "any": [
+                  {
+                    "has": 2357
+                  },
+                  {
+                    "all": [
+                      {
+                        "skill": "Mining",
+                        "level": 40
+                      },
+                      {
+                        "skill": "Smithing",
+                        "level": 40
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "has": 1601
@@ -46051,11 +46153,27 @@
       },
       "other": {
         "Crafting a Diamond necklace": {
-          "notes": "Requires Gold bar, Diamond and Necklace mould and level 56 Crafting.",
+          "notes": "Requires Gold bar or 40 Mining and 40 Smithing (for a 'perfect' gold bar), Diamond and Necklace mould and level 56 Crafting.",
           "rule": {
             "all": [
               {
-                "has": 2357
+                "any": [
+                  {
+                    "has": 2357
+                  },
+                  {
+                    "all": [
+                      {
+                        "skill": "Mining",
+                        "level": 40
+                      },
+                      {
+                        "skill": "Smithing",
+                        "level": 40
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "has": 1601
@@ -46137,11 +46255,27 @@
       },
       "other": {
         "Crafting a Diamond ring": {
-          "notes": "Requires Gold bar, Diamond and Ring mould and level 43 Crafting.",
+          "notes": "Requires Gold bar or 40 Mining and 40 Smithing (for a 'perfect' gold bar), Diamond and Ring mould and level 43 Crafting.",
           "rule": {
             "all": [
               {
-                "has": 2357
+                "any": [
+                  {
+                    "has": 2357
+                  },
+                  {
+                    "all": [
+                      {
+                        "skill": "Mining",
+                        "level": 40
+                      },
+                      {
+                        "skill": "Smithing",
+                        "level": 40
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "has": 1601
@@ -51563,11 +51697,27 @@
     "sources": {
       "other": {
         "Crafting a Dragonstone amulet (u)": {
-          "notes": "Requires Gold bar, Dragonstone and Amulet mould and level 80 Crafting.",
+          "notes": "Requires Gold bar or 40 Mining and 40 Smithing (for a 'perfect' gold bar), Dragonstone and Amulet mould and level 80 Crafting.",
           "rule": {
             "all": [
               {
-                "has": 2357
+                "any": [
+                  {
+                    "has": 2357
+                  },
+                  {
+                    "all": [
+                      {
+                        "skill": "Mining",
+                        "level": 40
+                      },
+                      {
+                        "skill": "Smithing",
+                        "level": 40
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "has": 1615
@@ -51844,11 +51994,27 @@
       },
       "other": {
         "Crafting a Dragonstone bracelet": {
-          "notes": "Requires Gold bar, Dragonstone and Bracelet mould and level 74 Crafting.",
+          "notes": "Requires Gold bar or 40 Mining and 40 Smithing (for a 'perfect' gold bar), Dragonstone and Bracelet mould and level 74 Crafting.",
           "rule": {
             "all": [
               {
-                "has": 2357
+                "any": [
+                  {
+                    "has": 2357
+                  },
+                  {
+                    "all": [
+                      {
+                        "skill": "Mining",
+                        "level": 40
+                      },
+                      {
+                        "skill": "Smithing",
+                        "level": 40
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "has": 1615
@@ -52024,11 +52190,27 @@
       },
       "other": {
         "Crafting a Dragonstone ring": {
-          "notes": "Requires Gold bar, Dragonstone and Ring mould and level 55 Crafting.",
+          "notes": "Requires Gold bar or 40 Mining and 40 Smithing (for a 'perfect' gold bar), Dragonstone and Ring mould and level 55 Crafting.",
           "rule": {
             "all": [
               {
-                "has": 2357
+                "any": [
+                  {
+                    "has": 2357
+                  },
+                  {
+                    "all": [
+                      {
+                        "skill": "Mining",
+                        "level": 40
+                      },
+                      {
+                        "skill": "Smithing",
+                        "level": 40
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "has": 1615
@@ -53321,7 +53503,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Slayer"
+    ]
   },
   {
     "index": 1412,
@@ -53981,6 +54166,14 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Crafting at the Ourania altar": {
+          "notes": "Can be crafted at the Ourania altar using Pure essence.",
+          "rule": {
+            "has": 7936
+          }
+        }
       }
     }
   },
@@ -55365,11 +55558,27 @@
       },
       "other": {
         "Crafting an Emerald amulet (u)": {
-          "notes": "Requires Gold bar, Emerald and Amulet mould and level 31 Crafting.",
+          "notes": "Requires Gold bar or 40 Mining and 40 Smithing (for a 'perfect' gold bar), Emerald and Amulet mould and level 31 Crafting.",
           "rule": {
             "all": [
               {
-                "has": 2357
+                "any": [
+                  {
+                    "has": 2357
+                  },
+                  {
+                    "all": [
+                      {
+                        "skill": "Mining",
+                        "level": 40
+                      },
+                      {
+                        "skill": "Smithing",
+                        "level": 40
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "has": 1605
@@ -55528,11 +55737,27 @@
       },
       "other": {
         "Crafting an Emerald bracelet": {
-          "notes": "Requires Gold bar, Emerald and Bracelet mould and level 30 Crafting.",
+          "notes": "Requires Gold bar or 40 Mining and 40 Smithing (for a 'perfect' gold bar), Emerald and Bracelet mould and level 30 Crafting.",
           "rule": {
             "all": [
               {
-                "has": 2357
+                "any": [
+                  {
+                    "has": 2357
+                  },
+                  {
+                    "all": [
+                      {
+                        "skill": "Mining",
+                        "level": 40
+                      },
+                      {
+                        "skill": "Smithing",
+                        "level": 40
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "has": 1605
@@ -55638,11 +55863,27 @@
       },
       "other": {
         "Crafting an Emerald necklace": {
-          "notes": "Requires Gold bar, Emerald and Necklace mould and level 29 Crafting.",
+          "notes": "Requires Gold bar or 40 Mining and 40 Smithing (for a 'perfect' gold bar), Emerald and Necklace mould and level 29 Crafting.",
           "rule": {
             "all": [
               {
-                "has": 2357
+                "any": [
+                  {
+                    "has": 2357
+                  },
+                  {
+                    "all": [
+                      {
+                        "skill": "Mining",
+                        "level": 40
+                      },
+                      {
+                        "skill": "Smithing",
+                        "level": 40
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "has": 1605
@@ -55733,11 +55974,27 @@
       },
       "other": {
         "Crafting an Emerald ring": {
-          "notes": "Requires Gold bar, Emerald and Ring mould and level 27 Crafting.",
+          "notes": "Requires Gold bar or 40 Mining and 40 Smithing (for a 'perfect' gold bar), Emerald and Ring mould and level 27 Crafting.",
           "rule": {
             "all": [
               {
-                "has": 2357
+                "any": [
+                  {
+                    "has": 2357
+                  },
+                  {
+                    "all": [
+                      {
+                        "skill": "Mining",
+                        "level": 40
+                      },
+                      {
+                        "skill": "Smithing",
+                        "level": 40
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "has": 1605
@@ -57564,7 +57821,10 @@
           "droprate": "1/1376"
         }
       }
-    }
+    },
+    "tags": [
+      "Slayer"
+    ]
   },
   {
     "index": 1535,
@@ -57636,7 +57896,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "Slayer"
+    ]
   },
   {
     "index": 1540,
@@ -58844,7 +59107,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Slayer"
+    ]
   },
   {
     "index": 1568,
@@ -60283,6 +60549,14 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Crafting at the Ourania altar": {
+          "notes": "Can be crafted at the Ourania altar using Pure essence.",
+          "rule": {
+            "has": 7936
+          }
+        }
       }
     }
   },
@@ -64342,11 +64616,27 @@
       },
       "other": {
         "Crafting a Gold amulet (u)": {
-          "notes": "Requires Gold bar and Amulet mould and level 8 Crafting.",
+          "notes": "Requires Gold bar or 40 Mining and 40 Smithing (for a 'perfect' gold bar) and Amulet mould and level 8 Crafting.",
           "rule": {
             "all": [
               {
-                "has": 2357
+                "any": [
+                  {
+                    "has": 2357
+                  },
+                  {
+                    "all": [
+                      {
+                        "skill": "Mining",
+                        "level": 40
+                      },
+                      {
+                        "skill": "Smithing",
+                        "level": 40
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "has": 1595
@@ -64571,11 +64861,27 @@
       },
       "other": {
         "Crafting a Gold bracelet": {
-          "notes": "Requires Gold bar and Bracelet mould and level 7 Crafting.",
+          "notes": "Requires Gold bar or 40 Mining and 40 Smithing (for a 'perfect' gold bar) and Bracelet mould and level 7 Crafting.",
           "rule": {
             "all": [
               {
-                "has": 2357
+                "any": [
+                  {
+                    "has": 2357
+                  },
+                  {
+                    "all": [
+                      {
+                        "skill": "Mining",
+                        "level": 40
+                      },
+                      {
+                        "skill": "Smithing",
+                        "level": 40
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "has": 11065
@@ -64746,11 +65052,27 @@
       },
       "other": {
         "Crafting a Gold necklace": {
-          "notes": "Requires Gold bar and Necklace mould and level 6 Crafting.",
+          "notes": "Requires Gold bar or 40 Mining and 40 Smithing (for a 'perfect' gold bar) and Necklace mould and level 6 Crafting.",
           "rule": {
             "all": [
               {
-                "has": 2357
+                "any": [
+                  {
+                    "has": 2357
+                  },
+                  {
+                    "all": [
+                      {
+                        "skill": "Mining",
+                        "level": 40
+                      },
+                      {
+                        "skill": "Smithing",
+                        "level": 40
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "has": 1597
@@ -65103,11 +65425,27 @@
       },
       "other": {
         "Crafting a Gold ring": {
-          "notes": "Requires Gold bar and Ring mould and level 5 Crafting.",
+          "notes": "Requires Gold bar or 40 Mining and 40 Smithing (for a 'perfect' gold bar) and Ring mould and level 5 Crafting.",
           "rule": {
             "all": [
               {
-                "has": 2357
+                "any": [
+                  {
+                    "has": 2357
+                  },
+                  {
+                    "all": [
+                      {
+                        "skill": "Mining",
+                        "level": 40
+                      },
+                      {
+                        "skill": "Smithing",
+                        "level": 40
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "has": 1592
@@ -65164,11 +65502,27 @@
     "sources": {
       "other": {
         "Crafting a Gold tiara": {
-          "notes": "Requires a Gold bar and a Tiara mould and level 42 Crafting.",
+          "notes": "Requires a Gold bar or 40 Mining and 40 Smithing and a Tiara mould and level 42 Crafting.",
           "rule": {
             "all": [
               {
-                "has": 2357
+                "any": [
+                  {
+                    "has": 2357
+                  },
+                  {
+                    "all": [
+                      {
+                        "skill": "Mining",
+                        "level": 40
+                      },
+                      {
+                        "skill": "Smithing",
+                        "level": 40
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "has": 5523
@@ -65533,7 +65887,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Slayer"
     ]
   },
   {
@@ -82838,7 +83193,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Slayer"
     ]
   },
   {
@@ -92766,6 +93122,14 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Crafting at the Ourania altar": {
+          "notes": "Can be crafted at the Ourania altar using Pure essence.",
+          "rule": {
+            "has": 7936
+          }
+        }
       }
     }
   },
@@ -92831,7 +93195,8 @@
       }
     },
     "tags": [
-      "Melee"
+      "Melee",
+      "Slayer"
     ]
   },
   {
@@ -92856,7 +93221,8 @@
       }
     },
     "tags": [
-      "Melee"
+      "Melee",
+      "Slayer"
     ]
   },
   {
@@ -100229,6 +100595,14 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Crafting at the Ourania altar": {
+          "notes": "Can be crafted at the Ourania altar using Pure essence.",
+          "rule": {
+            "has": 7936
+          }
+        }
       }
     }
   },
@@ -100416,7 +100790,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Slayer"
     ]
   },
   {
@@ -108596,6 +108971,14 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Crafting at the Ourania altar": {
+          "notes": "Can be crafted at the Ourania altar using Pure essence.",
+          "rule": {
+            "has": 7936
+          }
+        }
       }
     }
   },
@@ -109065,7 +109448,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Slayer"
+    ]
   },
   {
     "index": 2645,
@@ -111627,11 +112013,27 @@
     "sources": {
       "other": {
         "Crafting an Onyx amulet (u)": {
-          "notes": "Requires Gold bar, Onyx and Amulet mould and level 90 Crafting.",
+          "notes": "Requires Gold bar or 40 Mining and 40 Smithing (for a 'perfect' gold bar), Onyx and Amulet mould and level 90 Crafting.",
           "rule": {
             "all": [
               {
-                "has": 2357
+                "any": [
+                  {
+                    "has": 2357
+                  },
+                  {
+                    "all": [
+                      {
+                        "skill": "Mining",
+                        "level": 40
+                      },
+                      {
+                        "skill": "Smithing",
+                        "level": 40
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "has": 6573
@@ -111948,11 +112350,27 @@
     "sources": {
       "other": {
         "Crafting an Onyx bracelet": {
-          "notes": "Requires Gold bar, Onyx and Bracelet mould and level 84 Crafting.",
+          "notes": "Requires Gold bar or 40 Mining and 40 Smithing (for a 'perfect' gold bar), Onyx and Bracelet mould and level 84 Crafting.",
           "rule": {
             "all": [
               {
-                "has": 2357
+                "any": [
+                  {
+                    "has": 2357
+                  },
+                  {
+                    "all": [
+                      {
+                        "skill": "Mining",
+                        "level": 40
+                      },
+                      {
+                        "skill": "Smithing",
+                        "level": 40
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "has": 6573
@@ -112035,11 +112453,27 @@
     "sources": {
       "other": {
         "Crafting an Onyx necklace": {
-          "notes": "Requires Gold bar, Onyx and Necklace mould and level 82 Crafting.",
+          "notes": "Requires Gold bar or 40 Mining and 40 Smithing (for a 'perfect' gold bar), Onyx and Necklace mould and level 82 Crafting.",
           "rule": {
             "all": [
               {
-                "has": 2357
+                "any": [
+                  {
+                    "has": 2357
+                  },
+                  {
+                    "all": [
+                      {
+                        "skill": "Mining",
+                        "level": 40
+                      },
+                      {
+                        "skill": "Smithing",
+                        "level": 40
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "has": 6573
@@ -112065,11 +112499,27 @@
     "sources": {
       "other": {
         "Crafting an Onyx ring": {
-          "notes": "Requires Gold bar, Onyx and Ring mould and level 67 Crafting.",
+          "notes": "Requires Gold bar or 40 Mining and 40 Smithing (for a 'perfect' gold bar), Onyx and Ring mould and level 67 Crafting.",
           "rule": {
             "all": [
               {
-                "has": 2357
+                "any": [
+                  {
+                    "has": 2357
+                  },
+                  {
+                    "all": [
+                      {
+                        "skill": "Mining",
+                        "level": 40
+                      },
+                      {
+                        "skill": "Smithing",
+                        "level": 40
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "has": 6573
@@ -114273,7 +114723,10 @@
           "rule": "canCompleteIcthlarinsLittleHelper"
         }
       }
-    }
+    },
+    "tags": [
+      "Slayer"
+    ]
   },
   {
     "index": 2793,
@@ -125077,7 +125530,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Slayer"
+    ]
   },
   {
     "index": 3136,
@@ -125088,7 +125544,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Slayer"
+    ]
   },
   {
     "index": 3138,
@@ -125997,11 +126456,27 @@
     "sources": {
       "other": {
         "Crafting a Ruby amulet (u)": {
-          "notes": "Requires a Gold bar, a Ruby and an Amulet mould and level 50 Crafting.",
+          "notes": "Requires a Gold bar or 40 Mining and 40 Smithing, a Ruby and an Amulet mould and level 50 Crafting.",
           "rule": {
             "all": [
               {
-                "has": 2357
+                "any": [
+                  {
+                    "has": 2357
+                  },
+                  {
+                    "all": [
+                      {
+                        "skill": "Mining",
+                        "level": 40
+                      },
+                      {
+                        "skill": "Smithing",
+                        "level": 40
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "has": 1603
@@ -126163,11 +126638,27 @@
       },
       "other": {
         "Crafting a Ruby bracelet": {
-          "notes": "Requires Gold bar, Ruby and Bracelet mould and level 42 Crafting.",
+          "notes": "Requires Gold bar or 40 Mining and 40 Smithing (for a 'perfect' gold bar), Ruby and Bracelet mould and level 42 Crafting.",
           "rule": {
             "all": [
               {
-                "has": 2357
+                "any": [
+                  {
+                    "has": 2357
+                  },
+                  {
+                    "all": [
+                      {
+                        "skill": "Mining",
+                        "level": 40
+                      },
+                      {
+                        "skill": "Smithing",
+                        "level": 40
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "has": 1603
@@ -133557,11 +134048,27 @@
     "sources": {
       "other": {
         "Crafting a Sapphire amulet (u)": {
-          "notes": "Requires Gold bar, Sapphire and Amulet mould and level 24 Crafting.",
+          "notes": "Requires Gold bar or 40 Mining and 40 Smithing (for a 'perfect' gold bar), Sapphire and Amulet mould and level 24 Crafting.",
           "rule": {
             "all": [
               {
-                "has": 2357
+                "any": [
+                  {
+                    "has": 2357
+                  },
+                  {
+                    "all": [
+                      {
+                        "skill": "Mining",
+                        "level": 40
+                      },
+                      {
+                        "skill": "Smithing",
+                        "level": 40
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "has": 1607
@@ -133725,11 +134232,27 @@
       },
       "other": {
         "Crafting a Sapphire bracelet": {
-          "notes": "Requires Gold bar, Sapphire and Bracelet mould and level 23 Crafting.",
+          "notes": "Requires Gold bar or 40 Mining and 40 Smithing (for a 'perfect' gold bar), Sapphire and Bracelet mould and level 23 Crafting.",
           "rule": {
             "all": [
               {
-                "has": 2357
+                "any": [
+                  {
+                    "has": 2357
+                  },
+                  {
+                    "all": [
+                      {
+                        "skill": "Mining",
+                        "level": 40
+                      },
+                      {
+                        "skill": "Smithing",
+                        "level": 40
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "has": 1607
@@ -133905,11 +134428,27 @@
       },
       "other": {
         "Crafting a Sapphire necklace": {
-          "notes": "Requires Gold bar, Sapphire and Necklace mould and level 22 Crafting.",
+          "notes": "Requires Gold bar or 40 Mining and 40 Smithing (for a 'perfect' gold bar), Sapphire and Necklace mould and level 22 Crafting.",
           "rule": {
             "all": [
               {
-                "has": 2357
+                "any": [
+                  {
+                    "has": 2357
+                  },
+                  {
+                    "all": [
+                      {
+                        "skill": "Mining",
+                        "level": 40
+                      },
+                      {
+                        "skill": "Smithing",
+                        "level": 40
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "has": 1607
@@ -134024,11 +134563,27 @@
       },
       "other": {
         "Crafting a Sapphire ring": {
-          "notes": "Requires Gold bar, Sapphire and Ring mould and level 20 Crafting.",
+          "notes": "Requires Gold bar or 40 Mining and 40 Smithing (for a 'perfect' gold bar), Sapphire and Ring mould and level 20 Crafting.",
           "rule": {
             "all": [
               {
-                "has": 2357
+                "any": [
+                  {
+                    "has": 2357
+                  },
+                  {
+                    "all": [
+                      {
+                        "skill": "Mining",
+                        "level": 40
+                      },
+                      {
+                        "skill": "Smithing",
+                        "level": 40
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "has": 1607
@@ -137753,7 +138308,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Slayer"
+    ]
   },
   {
     "index": 3559,
@@ -138054,7 +138612,10 @@
           "droprate": "1/296–1/288"
         }
       }
-    }
+    },
+    "tags": [
+      "Slayer"
+    ]
   },
   {
     "index": 3560,
@@ -138255,7 +138816,8 @@
       }
     },
     "tags": [
-      "Magic"
+      "Magic",
+      "Slayer"
     ]
   },
   {
@@ -140465,6 +141027,14 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Crafting at the Ourania altar": {
+          "notes": "Can be crafted at the Ourania altar using Pure essence.",
+          "rule": {
+            "has": 7936
+          }
+        }
       }
     },
     "tags": [
@@ -141187,7 +141757,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "Slayer"
     ]
   },
   {
@@ -141492,7 +142063,7 @@
                     "has": 31553
                   },
                   {
-                    "has": 31564
+                    "has": 31561
                   }
                 ]
               },
@@ -141530,7 +142101,7 @@
                     "has": 31553
                   },
                   {
-                    "has": 31564
+                    "has": 31561
                   }
                 ]
               },
@@ -155465,7 +156036,8 @@
       }
     },
     "tags": [
-      "Sailing"
+      "Sailing",
+      "Slayer"
     ]
   },
   {
@@ -162423,7 +162995,8 @@
       }
     },
     "tags": [
-      "Fletching"
+      "Fletching",
+      "Slayer"
     ]
   },
   {
@@ -162792,7 +163365,10 @@
       "shops": {
         "Yes": "No requirements"
       }
-    }
+    },
+    "tags": [
+      "Slayer"
+    ]
   },
   {
     "index": 4206,
@@ -165309,6 +165885,14 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Crafting at the Ourania altar": {
+          "notes": "Can be crafted at the Ourania altar using Pure essence.",
+          "rule": {
+            "has": 7936
+          }
+        }
       }
     }
   },
@@ -172214,11 +172798,27 @@
     "sources": {
       "other": {
         "Crafting a zenyte amulet (u)": {
-          "notes": "Requires a Gold bar, a Zenyte and a Amulet mould and level 98 Crafting.",
+          "notes": "Requires a Gold bar or 40 Mining and 40 Smithing, a Zenyte and a Amulet mould and level 98 Crafting.",
           "rule": {
             "all": [
               {
-                "has": 2357
+                "any": [
+                  {
+                    "has": 2357
+                  },
+                  {
+                    "all": [
+                      {
+                        "skill": "Mining",
+                        "level": 40
+                      },
+                      {
+                        "skill": "Smithing",
+                        "level": 40
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "has": 19493
@@ -172244,11 +172844,27 @@
     "sources": {
       "other": {
         "Crafting a zenyte bracelet": {
-          "notes": "Requires a Gold bar, a Zenyte and a Bracelet mould and level 95 Crafting.",
+          "notes": "Requires a Gold bar or 40 Mining and 40 Smithing, a Zenyte and a Bracelet mould and level 95 Crafting.",
           "rule": {
             "all": [
               {
-                "has": 2357
+                "any": [
+                  {
+                    "has": 2357
+                  },
+                  {
+                    "all": [
+                      {
+                        "skill": "Mining",
+                        "level": 40
+                      },
+                      {
+                        "skill": "Smithing",
+                        "level": 40
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "has": 19493
@@ -172274,11 +172890,27 @@
     "sources": {
       "other": {
         "Crafting a zenyte necklace": {
-          "notes": "Requires a Gold bar, a Zenyte and a Necklace mould and level 92 Crafting.",
+          "notes": "Requires a Gold bar or 40 Mining and 40 Smithing, a Zenyte and a Necklace mould and level 92 Crafting.",
           "rule": {
             "all": [
               {
-                "has": 2357
+                "any": [
+                  {
+                    "has": 2357
+                  },
+                  {
+                    "all": [
+                      {
+                        "skill": "Mining",
+                        "level": 40
+                      },
+                      {
+                        "skill": "Smithing",
+                        "level": 40
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "has": 19493
@@ -172304,11 +172936,27 @@
     "sources": {
       "other": {
         "Crafting a zenyte ring": {
-          "notes": "Requires a Gold bar, a Zenyte and a Ring mould and level 89 Crafting.",
+          "notes": "Requires a Gold bar or 40 Mining and 40 Smithing, a Zenyte and a Ring mould and level 89 Crafting.",
           "rule": {
             "all": [
               {
-                "has": 2357
+                "any": [
+                  {
+                    "has": 2357
+                  },
+                  {
+                    "all": [
+                      {
+                        "skill": "Mining",
+                        "level": 40
+                      },
+                      {
+                        "skill": "Smithing",
+                        "level": 40
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "has": 19493
