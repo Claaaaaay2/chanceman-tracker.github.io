@@ -1933,6 +1933,11 @@
                         },
                         {
                             "name": "Abyss",
+                            "assignmentRequirements": {
+                                "quests": {
+                                    "Priest in Peril": "completed"
+                                }
+                            },
                             "reachRequirements": {
                                 "rulesAll": [
                                     "canReachAbyssalSire"
