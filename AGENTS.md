@@ -12,6 +12,7 @@ Main app (root):
 - `npm run dev`: start the Vite dev server.
 - `npm run build`: produce a production build in `dist/`.
 - `npm run preview`: serve the production build locally.
+- Agent instruction: do not run `npm run build`; the user will run build verification manually.
 
 Bug report relay (`bug-report-relay/`):
 - `npm run dev`: run the worker locally with Wrangler.
