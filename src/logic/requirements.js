@@ -1538,6 +1538,9 @@ export const REQUIREMENT_CHECKS = {
     canCompleteAlfredGrimhandsBarcrawl(ctx) {
         return canCompleteAlfredGrimhandsBarcrawl(ctx);
     },
+    canCompleteTheIdesOfMilk(ctx) {
+        return canCompleteTheIdesOfMilk(ctx);
+    },
     canCompleteAnExistentialCrisis(ctx) {
         return canCompleteAnExistentialCrisis(ctx);
     },
@@ -2469,6 +2472,10 @@ function canCompleteAKingdomDivided(ctx) {
 }
 
 function canCompleteAlfredGrimhandsBarcrawl(ctx) {
+    return true;
+}
+
+function canCompleteTheIdesOfMilk(ctx) {
     return true;
 }
 

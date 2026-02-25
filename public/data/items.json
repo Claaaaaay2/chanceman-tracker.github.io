@@ -957,6 +957,9 @@
         "Void Knights' Reward Options Seed pack": {
           "droprate": "3 × 1/35.367"
         },
+        "Brutus (m)": {
+          "droprate": "1/16.2"
+        },
         "Mammoth": {
           "droprate": "1/25.6"
         },
@@ -6703,7 +6706,8 @@
     "image": "air_rune.png",
     "tags": [
       "Magic",
-      "Sailing"
+      "Sailing",
+      "Teleports"
     ],
     "sources": {
       "drops": {
@@ -6766,6 +6770,9 @@
         },
         "Strange creature (Shadows of Custodia)": {
           "droprate": "1/8"
+        },
+        "Brutus": {
+          "droprate": "1/8.1"
         },
         "Abyssal demon Wilderness Slayer Cave": {
           "droprate": "1/8.5"
@@ -37483,6 +37490,9 @@
         "Reward casket (easy) Standard": {
           "droprate": "1/36"
         },
+        "Brutus": {
+          "droprate": "1/40.5"
+        },
         "Aviansie": {
           "droprate": "1/42.667"
         },
@@ -41863,6 +41873,33 @@
     ]
   },
   {
+    "index": 4502,
+    "id": 33109,
+    "name": "Cooked t-bone steak",
+    "image": "cooked_t-bone_steak.png",
+    "tags": [
+      "Food"
+    ],
+    "sources": {
+      "other": {
+        "Cooking a Cooked t-bone steak": {
+          "notes": "Requires Raw t-bone steak and level 13 Cooking.",
+          "rule": {
+            "all": [
+              {
+                "has": 33106
+              },
+              {
+                "skill": "Cooking",
+                "level": 13
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
     "index": 1104,
     "id": 29128,
     "name": "Cooked wild kebbit",
@@ -42726,6 +42763,19 @@
     ]
   },
   {
+    "index": 4502,
+    "id": 33093,
+    "name": "Cow slippers",
+    "image": "cow_slippers.png",
+    "sources": {
+      "drops": {
+        "Brutus (m)": {
+          "droprate": "1/150"
+        }
+      }
+    }
+  },
+  {
     "index": 1122,
     "id": 1739,
     "name": "Cowhide",
@@ -42740,6 +42790,9 @@
         },
         "Undead cow": {
           "droprate": "Always"
+        },
+        "Brutus": {
+          "droprate": "1/8.1"
         },
         "H.A.M. Member": {
           "droprate": "1/34"
@@ -83795,6 +83848,9 @@
         "Tower Archer North": {
           "droprate": "1/7.143"
         },
+        "Brutus": {
+          "droprate": "1/8.1"
+        },
         "Spiritual ranger": {
           "droprate": "1/8.533"
         },
@@ -85312,6 +85368,9 @@
         "Obor Members": {
           "droprate": "1/27"
         },
+        "Brutus": {
+          "droprate": "1/40.5"
+        },
         "Black Knight": {
           "droprate": "1/64"
         }
@@ -86781,6 +86840,9 @@
         "Damaged armour": {
           "droprate": "1/1.754"
         },
+        "Brutus": {
+          "droprate": "1/40.5"
+        },
         "Pirate": {
           "droprate": "1/128"
         },
@@ -86867,6 +86929,9 @@
         },
         "Broken armour": {
           "droprate": "1/3.509"
+        },
+        "Brutus": {
+          "droprate": "1/81"
         },
         "Ice giant Regular": {
           "droprate": "1/128"
@@ -86972,6 +87037,9 @@
         },
         "Spiritual warrior": {
           "droprate": "1/31.75"
+        },
+        "Brutus": {
+          "droprate": "1/81"
         },
         "Simple lockbox": {
           "droprate": "1/339.062"
@@ -95179,6 +95247,9 @@
         "Small salvage": {
           "droprate": "1/8.6"
         },
+        "Brutus": {
+          "droprate": "1/16.2"
+        },
         "Fishy salvage": {
           "droprate": "1/23.35"
         },
@@ -100297,6 +100368,9 @@
         },
         "Essence impling jar": {
           "droprate": "1/10"
+        },
+        "Brutus": {
+          "droprate": "1/10.13"
         },
         "Crystal chest": {
           "droprate": "1/10.667"
@@ -110193,6 +110267,9 @@
         "Fishy salvage": {
           "droprate": "1/11.675"
         },
+        "Brutus": {
+          "droprate": "1/16.2"
+        },
         "Small salvage": {
           "droprate": "1/17.2"
         },
@@ -117073,6 +117150,9 @@
         "Dire gryphon": {
           "droprate": "3 × 1/21.3"
         },
+        "Brutus (m)": {
+          "droprate": "1/8.1"
+        },
         "Seed Stall": {
           "droprate": "1/8.403"
         },
@@ -122594,6 +122674,22 @@
     "tags": [
       "Cooking"
     ]
+  },
+  {
+    "index": 4501,
+    "id": 33106,
+    "name": "Raw t-bone steak",
+    "image": "raw_t-bone_steak.png",
+    "tags": [
+      "Cooking"
+    ],
+    "sources": {
+      "drops": {
+        "Brutus": {
+          "droprate": "Always"
+        }
+      }
+    }
   },
   {
     "index": 3032,

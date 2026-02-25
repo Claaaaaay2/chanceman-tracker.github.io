@@ -185,6 +185,7 @@ export const QUEST_POINTS: Record<string, number> = {
     "The Grand Tree": 5,
     "The Great Brain Robbery": 2,
     "The Hand in the Sand": 1,
+    "The Ides of Milk": 1,
     "The Heart of Darkness": 2,
     "The Knight's Sword": 1,
     "The Lost Tribe": 1,

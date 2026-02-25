@@ -2479,6 +2479,22 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
+    "Brutus": {
+        "wiki": "https://oldschool.runescape.wiki/w/Brutus",
+        "rule": ["canCompleteTheIdesOfMilk"],
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": true
+    },
+    "Brutus (m)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Brutus",
+        "rule": ["canCompleteTheIdesOfMilk"],
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
     "Bryophyta Free-to-play": {
         "wiki": "https://oldschool.runescape.wiki/w/Bryophyta#Free-to-play",
         "rule": {
