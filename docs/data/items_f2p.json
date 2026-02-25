@@ -1051,7 +1051,8 @@
     "name": "Air rune",
     "image": "air_rune.png",
     "tags": [
-      "Magic"
+      "Magic",
+      "Teleports"
     ],
     "sources": {
       "drops": {
@@ -1072,6 +1073,9 @@
         },
         "Zombie (Sepulchre of Death)": {
           "droprate": "1/5"
+        },
+        "Brutus": {
+          "droprate": "1/8.1"
         },
         "Chest (Maze)": {
           "droprate": "1/10"
@@ -5134,6 +5138,9 @@
         "Gunthor the brave": {
           "droprate": "1/32"
         },
+        "Brutus": {
+          "droprate": "1/40.5"
+        },
         "Bandit Level 22": {
           "droprate": "1/42.667"
         },
@@ -5597,6 +5604,33 @@
     }
   },
   {
+    "index": 4502,
+    "id": 33109,
+    "name": "Cooked t-bone steak",
+    "image": "cooked_t-bone_steak.png",
+    "tags": [
+      "Food"
+    ],
+    "sources": {
+      "other": {
+        "Cooking a Cooked t-bone steak": {
+          "notes": "Requires Raw t-bone steak and level 13 Cooking.",
+          "rule": {
+            "all": [
+              {
+                "has": 33106
+              },
+              {
+                "skill": "Cooking",
+                "level": 13
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
     "index": 1105,
     "id": 1955,
     "name": "Cooking apple",
@@ -5777,6 +5811,9 @@
         },
         "Cow calf": {
           "droprate": "Always"
+        },
+        "Brutus": {
+          "droprate": "1/8.1"
         }
       }
     }
@@ -8086,6 +8123,9 @@
         "Adventurer Jon Sharpshooter": {
           "droprate": "Always"
         },
+        "Brutus": {
+          "droprate": "1/8.1"
+        },
         "Strange shrine": {
           "droprate": "1/9"
         },
@@ -8441,6 +8481,9 @@
         },
         "Obor Free-to-play": {
           "droprate": "1/27"
+        },
+        "Brutus": {
+          "droprate": "1/40.5"
         },
         "Black Knight": {
           "droprate": "1/64"
@@ -8815,6 +8858,9 @@
     ],
     "sources": {
       "drops": {
+        "Brutus": {
+          "droprate": "1/40.5"
+        },
         "Pirate": {
           "droprate": "1/128"
         },
@@ -8879,6 +8925,9 @@
         "Combat path starter kit": {
           "droprate": "Always"
         },
+        "Brutus": {
+          "droprate": "1/81"
+        },
         "Ice giant Regular": {
           "droprate": "1/128"
         },
@@ -8940,6 +8989,9 @@
     ],
     "sources": {
       "drops": {
+        "Brutus": {
+          "droprate": "1/81"
+        },
         "Simple lockbox": {
           "droprate": "1/339.062"
         }
@@ -9875,6 +9927,9 @@
         },
         "Evergreen tree": {
           "droprate": "Common"
+        },
+        "Brutus": {
+          "droprate": "1/16.2"
         }
       },
       "spawns": {
@@ -10053,6 +10108,9 @@
         },
         "Mind Golem": {
           "droprate": "1/6.5"
+        },
+        "Brutus": {
+          "droprate": "1/10.13"
         },
         "White Knight Level 36": {
           "droprate": "1/11.636"
@@ -11481,6 +11539,9 @@
         },
         "Simple lockbox": {
           "droprate": "3 × 1/8.333"
+        },
+        "Brutus": {
+          "droprate": "1/16.2"
         }
       }
     }
@@ -12255,6 +12316,22 @@
       "drops": {
         "Fishing spot (cage, harpoon) Harpoon (Swordfish)": {
           "droprate": "Common"
+        }
+      }
+    }
+  },
+  {
+    "index": 4501,
+    "id": 33106,
+    "name": "Raw t-bone steak",
+    "image": "raw_t-bone_steak.png",
+    "tags": [
+      "Cooking"
+    ],
+    "sources": {
+      "drops": {
+        "Brutus": {
+          "droprate": "Always"
         }
       }
     }
