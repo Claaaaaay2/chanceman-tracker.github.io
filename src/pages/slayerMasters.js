@@ -91,7 +91,17 @@ function mergeRequirementSets(...requirementsList) {
     for (const requirements of requirementsList) {
         if (!requirements || typeof requirements !== "object") continue;
 
-        Object.assign(merged.skills, requirements.skills || {});
+        for (const [skill, rawLevel] of Object.entries(requirements.skills || {})) {
+            const level = Number(rawLevel);
+            if (!Number.isFinite(level)) {
+                merged.skills[skill] = rawLevel;
+                continue;
+            }
+            const existing = Number(merged.skills[skill]);
+            if (!Number.isFinite(existing) || level > existing) {
+                merged.skills[skill] = level;
+            }
+        }
         if (Array.isArray(requirements.skillsAny)) merged.skillsAny.push(...requirements.skillsAny);
 
         Object.assign(merged.quests, requirements.quests || {});
