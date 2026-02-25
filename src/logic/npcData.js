@@ -41,7 +41,7 @@ export const NPC_DATA = {
     },
     "Aberrant spectre": {
         "wiki": "https://oldschool.runescape.wiki/w/Aberrant_spectre",
-        "rule": ["hasNosePeg"],
+        "rule": ["hasNosePegOrCanLongRange"],
         "skill": ["Slayer"],
         "level": [60],
         "tags": [],
@@ -49,7 +49,7 @@ export const NPC_DATA = {
     },
     "Abhorrent spectre": {
         "wiki": "https://oldschool.runescape.wiki/w/Aberrant_spectre",
-        "rule": ["hasNosePeg"],
+        "rule": ["hasNosePegOrCanLongRange"],
         "skill": ["Slayer"],
         "level": [60],
         "tags": ["superior"],
@@ -4639,7 +4639,7 @@ export const NPC_DATA = {
     },
     "Deviant spectre": {
         "wiki": "https://oldschool.runescape.wiki/w/Deviant_spectre",
-        "rule": ["hasNosePeg"],
+        "rule": ["hasNosePegOrCanLongRange"],
         "skill": ["Slayer"],
         "level": [60],
         "tags": [],
@@ -12011,7 +12011,7 @@ export const NPC_DATA = {
     },
     "Repugnant spectre": {
         "wiki": "https://oldschool.runescape.wiki/w/Repugnant_spectre",
-        "rule": ["hasNosePeg"],
+        "rule": ["hasNosePegOrCanLongRange"],
         "skill": ["Slayer"],
         "level": [60],
         "tags": ["superior"],

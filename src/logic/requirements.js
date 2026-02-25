@@ -1874,8 +1874,8 @@ export const REQUIREMENT_CHECKS = {
     canMakeAdamantKeel(ctx) {
         return canMakeAdamantKeel(ctx);
     },
-    hasNosePeg(ctx) {
-        return has(ctx, 4168);
+    hasNosePegOrCanLongRange(ctx) {
+        return has(ctx, 4168) || canLongrange(ctx);
     },
     hasSlayerBell(ctx) {
         return has(ctx, 10952);
