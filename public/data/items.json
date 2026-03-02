@@ -48375,7 +48375,6 @@
       }
     },
     "tags": [
-      "Ranged",
       "Fletching"
     ]
   },
@@ -89015,7 +89014,8 @@
     "name": "Jug of wine",
     "image": "jug_of_wine.png",
     "tags": [
-      "Food"
+      "Food",
+      "Prayer"
     ],
     "sources": {
       "drops": {
