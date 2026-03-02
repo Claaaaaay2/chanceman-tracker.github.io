@@ -12786,8 +12786,8 @@ export const NPC_DATA = {
     "Sabre-toothed kebbit": {
         "wiki": "https://oldschool.runescape.wiki/w/Sabre-toothed_kebbit",
         "rule": ["canDeadfallTrap"],
-        "skill": [51],
-        "level": ["hunter"],
+        "skill": ["hunter"],
+        "level": [51],
         "tags": [],
         "f2p": false
     },
