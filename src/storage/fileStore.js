@@ -21,6 +21,7 @@ let memory = {
         hideUnassignableSlayerTasks: false,
         ignoreSlayerMasterCombatLevel: false,
         overrideBarbarianFiremaking1ForWaterfiends: false,
+        hasAntiDragonShield: false,
         isHunterRumourLocked: false,
         hideLMS: false,
         hideJon: false,

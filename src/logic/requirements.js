@@ -2267,6 +2267,9 @@ export const REQUIREMENT_CHECKS = {
     canAssignWaterfiendsBarbarianFiremaking1(ctx) {
         return Boolean(ctx.filters?.overrideBarbarianFiremaking1ForWaterfiends);
     },
+    hasAntiDragonShieldForDragonSlayerTasks(ctx) {
+        return Boolean(ctx.filters?.hasAntiDragonShield);
+    },
     canCompleteBarbarianFiremaking2(ctx) {
         return canCompleteBarbarianFiremaking2(ctx);
     },

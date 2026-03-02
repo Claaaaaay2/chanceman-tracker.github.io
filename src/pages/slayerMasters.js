@@ -3,6 +3,7 @@ import { fileStore } from "../storage/fileStore.js";
 
 const SLAYER_RULE_LABELS = {
     canAssignWaterfiendsBarbarianFiremaking1: "Barbarian firemaking 1 completed",
+    hasAntiDragonShieldForDragonSlayerTasks: "Obtained Anti-dragon shield",
     canReachWyrmsTask: "Any of: Granite boots / Boots of stone / Boots of brimstone, access to the Charred Dungeon, or can start Perilous Moons and reach Wyrmlings",
     canReachAbyssalSire: "Can reach Abyssal Sire area",
     canReachTrollheim: "Can reach Trollheim",
@@ -334,6 +335,10 @@ function getMonsterLink(monster) {
     return wikiUrlForMonster(monster?.name);
 }
 
+function isDragonSlayerMonster(monsterName) {
+    return /\bdragons?\b/i.test(String(monsterName || ""));
+}
+
 function getSlayerStatusState(isAssignable, isReachable) {
     if (!isAssignable) {
         return {
@@ -385,6 +390,7 @@ export default async function SlayerMastersPage() {
     const overrideBarbarianFiremaking1ForWaterfiends = Boolean(
         fileStore.filters?.overrideBarbarianFiremaking1ForWaterfiends
     );
+    const hasAntiDragonShield = Boolean(fileStore.filters?.hasAntiDragonShield);
 
     const masterHtml = [];
 
@@ -402,7 +408,14 @@ export default async function SlayerMastersPage() {
                 monster.assignmentRequirements || {},
                 ignoreSlayerMasterCombatLevel
             );
-            const assignmentReq = mergeRequirementSets(master.assignmentRequirements, monsterAssignmentReq);
+            const dragonSlayerRequirement = isDragonSlayerMonster(monster.name)
+                ? { rulesAll: ["hasAntiDragonShieldForDragonSlayerTasks"] }
+                : null;
+            const assignmentReq = mergeRequirementSets(
+                master.assignmentRequirements,
+                monsterAssignmentReq,
+                dragonSlayerRequirement
+            );
             const reachReq = mergeRequirementSets(master.reachRequirements, monster.reachRequirements);
 
             const assignmentStatus = await evaluateRequirements(assignmentReq, ctx);
@@ -596,6 +609,14 @@ export default async function SlayerMastersPage() {
                 >
                 Barbarian firemaking 1 completed
             </label>
+            <label class="slayer-master-filter">
+                <input
+                    type="checkbox"
+                    id="hasAntiDragonShield"
+                    ${hasAntiDragonShield ? "checked" : ""}
+                >
+                Obtained Anti-dragon shield
+            </label>
         </div>
         <nav class="unlock-jump slayer-master-jump" aria-label="Jump to slayer master">
             <div class="unlock-jump-label">Jump to slayer master</div>
@@ -703,6 +724,12 @@ export function init() {
         if (event.target.id === "overrideBarbarianFiremaking1ForWaterfiends") {
             await updateSlayerMasterFilters(
                 { overrideBarbarianFiremaking1ForWaterfiends: event.target.checked },
+                { rerender: true }
+            );
+        }
+        if (event.target.id === "hasAntiDragonShield") {
+            await updateSlayerMasterFilters(
+                { hasAntiDragonShield: event.target.checked },
                 { rerender: true }
             );
         }
