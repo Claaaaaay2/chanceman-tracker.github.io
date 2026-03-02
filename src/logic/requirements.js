@@ -7260,7 +7260,9 @@ function canTrainFarming(ctx) {
     return hasAnyItems(ctx, [
         5341,
         8431,
-    ]); // Rake or Bagged plant 1
+        8433,
+        1925,
+    ]); // Rake or Bagged plant 1/2 or Bucket
 }
 
 function canPlantTrees(ctx) {
