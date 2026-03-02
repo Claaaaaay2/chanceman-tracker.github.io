@@ -1,4 +1,4 @@
-import{f as e}from"./index-DODFCPhU.js";async function t(){return await e.ensureItemsLoaded(),`
+import{f as e}from"./index-DmLeSzun.js";async function t(){return await e.ensureItemsLoaded(),`
         <div class="items-header">
             <h1>Items</h1>
             <button id="filter-overrides-toggle" title="Toggle filters and overrides">
@@ -138,6 +138,11 @@ import{f as e}from"./index-DODFCPhU.js";async function t(){return await e.ensure
                 <label>
                     <input type="checkbox" id="hasEasyCasCompleted">
                     Easy CA's completed
+                </label>
+
+                <label>
+                    <input type="checkbox" id="countSkillBoosts">
+                    Skill boosts for level reqs
                 </label>
 
                 <label>

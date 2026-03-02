@@ -112349,6 +112349,9 @@
           "droprate": "1/51.2; 1/38.4"
         }
       },
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Fletching bolt tips": {
           "notes": "Requires an Onyx and a Chisel and level 73 Fletching.",
@@ -112368,9 +112371,6 @@
           }
         }
       }
-    },
-    "shops": {
-      "Yes": "No requirements"
     },
     "tags": [
       "Fletching"
