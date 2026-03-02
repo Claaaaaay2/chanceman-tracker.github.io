@@ -112297,6 +112297,9 @@
         }
       }
     },
+    "shops": {
+      "Yes": "No requirements"
+    },
     "tags": [
       "Fletching"
     ]
