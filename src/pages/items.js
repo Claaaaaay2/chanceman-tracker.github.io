@@ -146,6 +146,11 @@ export default async function ItemsPage() {
                 </label>
 
                 <label>
+                    <input type="checkbox" id="countSkillBoosts">
+                    Skill boosts for level reqs
+                </label>
+
+                <label>
                     <input type="checkbox" id="highlightChanges">
                     Highlight new/changed items
                 </label>

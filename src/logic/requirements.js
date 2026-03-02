@@ -1,3 +1,5 @@
+import { getEffectiveSkillLevel } from "./skillBoosts.js";
+
 function shouldTrackMissing(ctx) {
     return !ctx?.suppressMissing && !ctx?.missing?.suppressMissing;
 }
@@ -253,6 +255,7 @@ export function canTrainSkill(ctx, skill) {
 
 export function hasSkillLevel(ctx, skill, level, options = {}) {
     const overrideKey = options.overrideKey;
+    const trackMissing = options.trackMissing !== false;
     if (overrideKey && ctx.filters?.[overrideKey]) return true;
 
     if (ctx?.ignoreSkillLevels === "levelsOnly") {
@@ -266,9 +269,9 @@ export function hasSkillLevel(ctx, skill, level, options = {}) {
         return canTrainSkill(ctx, skill);
     }
 
-    const current = ctx.player?.levels?.[skill] ?? 1;
+    const current = getEffectiveSkillLevel(ctx, skill) ?? 1;
     if (typeof current === "number" && current >= level) return true;
-    if (ctx?.missing && shouldTrackMissing(ctx)) {
+    if (trackMissing && ctx?.missing && shouldTrackMissing(ctx)) {
         if (!ctx.missing.skills) {
             ctx.missing.skills = [];
         }

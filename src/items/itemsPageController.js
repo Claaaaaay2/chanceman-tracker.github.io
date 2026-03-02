@@ -1,5 +1,6 @@
 import { initLazyImages } from "../app/lazyImages.js";
 import { canReachNpc, evaluateRule } from "../logic/itemAvailability.js";
+import { getBoostedRequirementLabel } from "../logic/skillBoosts.js";
 import { getHighlightClasses, isItemSourcesChanged, markNewItems, markSourceSignature } from "../logic/highlightState.js";
 import { areNpcSkillsMet, getNpcEffectiveLevels, isDropSlayerLocked, isItemHiddenByTag, isNpcBlockedByFilters, isNpcObtainable, isRuleObtainable, isSourceHiddenByFilters } from "../logic/itemVisibility.js";
 import { NPC_DATA } from "../logic/npcData.js";
@@ -193,6 +194,7 @@ export async function initItemsPage() {
         { id: "isFreeToPlay", key: "isFreeToPlay", defaultValue: false, invalidate: true },
         { id: "hideSourcelessItems", key: "hideSourcelessItems", defaultValue: false },
         { id: "hasEasyCasCompleted", key: "hasEasyCasCompleted", defaultValue: false, invalidate: true },
+        { id: "countSkillBoosts", key: "countSkillBoosts", defaultValue: false, invalidate: true },
         { id: "highlightChanges", key: "highlightChanges", defaultValue: false },
         { id: "overrideWoodcutting", key: "overrideWoodcutting", defaultValue: false, invalidate: true },
         { id: "overrideMining", key: "overrideMining", defaultValue: false, invalidate: true },
@@ -622,11 +624,28 @@ export async function initItemsPage() {
         }
     }
 
+    function formatSkillRequirementLabel(skill, level, rank, ctx, includeLevels) {
+        if (level === null || level === undefined || Number.isNaN(level)) {
+            return skill;
+        }
+
+        const boostedLabel = getBoostedRequirementLabel(ctx, skill, level);
+        if (boostedLabel) {
+            return boostedLabel;
+        }
+
+        if (!includeLevels || rank === 5) {
+            return skill;
+        }
+
+        return `${level} ${skill}`;
+    }
+
     async function getItemSkillLabels(item, ctx, rank) {
         if (rank !== 5 && rank !== 6 && rank !== 7) return [];
 
         const skills = new Map();
-        const includeLevels = rank === 7 || rank === 6;
+        const includeLevels = rank === 7 || rank === 6 || Boolean(ctx?.filters?.countSkillBoosts);
         const addSkillForRank = rank === 7 ? addSkillMin : addSkill;
         const collectSkillsForRank = rank === 7 ? collectSkillsFromRuleMin : collectSkillsFromRule;
 
@@ -686,9 +705,7 @@ export async function initItemsPage() {
 
         return [...skills.entries()]
             .sort(([a], [b]) => a.localeCompare(b))
-            .map(([skill, level]) => (includeLevels && level !== null && level !== undefined)
-                ? `${level} ${skill}`
-                : skill);
+            .map(([skill, level]) => formatSkillRequirementLabel(skill, level, rank, ctx, includeLevels));
     }
 
     async function getDeferredSkillLabels(item, ctx, rank) {
@@ -721,9 +738,7 @@ export async function initItemsPage() {
 
         return [...skills.entries()]
             .sort(([a], [b]) => a.localeCompare(b))
-            .map(([skill, level]) => (level !== null && level !== undefined)
-                ? `${level} ${skill}`
-                : skill);
+            .map(([skill, level]) => formatSkillRequirementLabel(skill, level, rank, ctx, true));
     }
 
     async function getObtainableSources(item, ctx, rolledSet) {

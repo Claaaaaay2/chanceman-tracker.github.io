@@ -27,6 +27,7 @@ let memory = {
         isFreeToPlay: false,
         hideSourcelessItems: false,
         hasEasyCasCompleted: false,
+        countSkillBoosts: false,
         otherDropsSortByDroprate: true,
         overrideWoodcutting: false,
         overrideMining: false,

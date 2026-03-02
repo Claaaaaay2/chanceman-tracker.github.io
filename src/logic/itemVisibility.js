@@ -1,6 +1,6 @@
 import { canDoOtherMethod, canReachNpc } from "./itemAvailability.js";
 import { NPC_DATA } from "./npcData.js";
-import { has } from "./requirements.js";
+import { has, hasSkillLevel } from "./requirements.js";
 import { capitalizeFirstLetter } from "./utils.js";
 
 const REWARD_POOL_35_39 = "Reward pool 35\u201339 Fishing";
@@ -122,9 +122,11 @@ export function isNpcBlockedByFilters(npcName, ctx) {
     if (f.isSlayerLocked) {
         if (npc.tags?.includes("slayer-task-only") || npc.tags?.includes("superior")) return true;
         if (npc.skill?.includes("Slayer")) {
-            if (!ctx.player?.levels?.Slayer && ctx.player?.levels?.Slayer !== 0) return true;
+            if (ctx.player?.levels?.Slayer === undefined || ctx.player?.levels?.Slayer === null) return true;
             const slayerIndex = npc.skill.indexOf("Slayer");
-            if (slayerIndex >= 0 && ctx.player.levels.Slayer < npc.level[slayerIndex]) return true;
+            if (slayerIndex >= 0 && !hasSkillLevel(ctx, "Slayer", npc.level[slayerIndex], { trackMissing: false })) {
+                return true;
+            }
         }
     }
 
@@ -150,7 +152,7 @@ export function areNpcSkillsMet(npcName, ctx) {
         const skill = npc.skill[i];
         const level = effectiveLevels[i];
 
-        if (ctx.player.levels[capitalizeFirstLetter(skill)] < level) {
+        if (!hasSkillLevel(ctx, capitalizeFirstLetter(skill), level, { trackMissing: false })) {
             return false;
         }
     }
