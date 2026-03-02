@@ -57,7 +57,12 @@ export const NPC_DATA = {
     },
     "Abyssal Sire": {
         "wiki": "https://oldschool.runescape.wiki/w/Abyssal_Sire",
-        "rule": ["canReachAbyssalSire"],
+        "rule": {
+            "all": [
+                "canReachAbyssalSire",
+                "canCompletePriestInPeril"
+            ]
+        },
         "skill": ["Slayer"],
         "level": [85],
         "tags": ["boss", "slayer-task-only"],
@@ -15607,7 +15612,12 @@ export const NPC_DATA = {
     },
     "Unsired": {
         "wiki": "https://oldschool.runescape.wiki/w/Unsired",
-        "rule": ["canReachAbyssalSire"],
+        "rule": {
+            "all": [
+                "canReachAbyssalSire",
+                "canCompletePriestInPeril"
+            ]
+        },
         "skill": ["Slayer"],
         "level": [85],
         "tags": ["boss", "slayer-task-only"],
@@ -15615,7 +15625,12 @@ export const NPC_DATA = {
     },
     "Unsired (per part)": {
         "wiki": "https://oldschool.runescape.wiki/w/Unsired",
-        "rule": ["canReachAbyssalSire"],
+        "rule": {
+            "all": [
+                "canReachAbyssalSire",
+                "canCompletePriestInPeril"
+            ]
+        },
         "skill": ["Slayer"],
         "level": [85],
         "tags": ["boss", "slayer-task-only"],
