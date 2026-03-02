@@ -4318,7 +4318,8 @@ function canCompleteScrambled(ctx) {
         hasAnyNails(ctx), //
         has(ctx, 2347), // Hammer
         has(ctx, 8794), // Saw
-        has(ctx, 960), // Plank
+        has(ctx, 960),  // Plank
+        has(ctx, 1980), // Empty cup
     ]);
 }
 
