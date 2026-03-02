@@ -174,6 +174,10 @@ export default async function ItemHistoryPage() {
         <div class="history-filter card">
             <div class="history-filter-header">
                 <strong>Filters</strong>
+                <label class="history-filter-field" for="historyReverseSort">
+                    <input type="checkbox" id="historyReverseSort">
+                    <span>Reverse order</span>
+                </label>
             </div>
             <label class="history-search-field" for="historySearch">
                 <span>Search</span>
@@ -237,6 +241,8 @@ export function init() {
     const storageKey = "itemHistoryView";
     const stored = localStorage.getItem(storageKey);
     const initialView = stored === "list" ? "list" : "panel";
+    const reverseSortStorageKey = "itemHistoryReverseSort";
+    const storedReverseSort = localStorage.getItem(reverseSortStorageKey);
 
     function setView(view) {
         const isList = view === "list";
@@ -260,6 +266,11 @@ export function init() {
     const rangeEndSlider = document.getElementById("historyRangeEndSlider");
     const rangeSlider = document.getElementById("historyRangeSlider");
     const searchInput = document.getElementById("historySearch");
+    const reverseSortInput = document.getElementById("historyReverseSort");
+
+    if (reverseSortInput) {
+        reverseSortInput.checked = storedReverseSort === "true";
+    }
 
     if (!rangeStartInput || !rangeEndInput || !rangeStartSlider || !rangeEndSlider || !rangeSlider) {
         teardownHistoryHandlers = () => {
@@ -279,6 +290,8 @@ export function init() {
 
     const panels = Array.from(panelView.querySelectorAll("[data-history-index]"));
     const rows = Array.from(listView.querySelectorAll(".roll-item-row[data-history-index]"));
+    const panelGrid = panelView.querySelector(".history-grid");
+    const rowLists = Array.from(listView.querySelectorAll(".roll-name-list"));
 
     function updateRangeStyle(start, end) {
         const maxSpan = Math.max(1, maxLength - 1);
@@ -299,6 +312,32 @@ export function init() {
         rows.forEach((row) => {
             const rowSearch = row.dataset.historySearch || "";
             row.classList.toggle("history-search-hidden", Boolean(normalizedSearch) && !rowSearch.includes(normalizedSearch));
+        });
+    }
+
+    function sortByHistoryIndex(items) {
+        return items.slice().sort((a, b) => {
+            const left = normalizeValue(a.dataset.historyIndex, 1);
+            const right = normalizeValue(b.dataset.historyIndex, 1);
+            return left - right;
+        });
+    }
+
+    function applyReverseSort(shouldReverse) {
+        if (panelGrid) {
+            const sortedPanels = sortByHistoryIndex(Array.from(panelGrid.querySelectorAll(".history-panel[data-history-index]")));
+            if (shouldReverse) {
+                sortedPanels.reverse();
+            }
+            sortedPanels.forEach((panel) => panelGrid.appendChild(panel));
+        }
+
+        rowLists.forEach((rowList) => {
+            const sortedRows = sortByHistoryIndex(Array.from(rowList.querySelectorAll(".roll-item-row[data-history-index]")));
+            if (shouldReverse) {
+                sortedRows.reverse();
+            }
+            sortedRows.forEach((row) => rowList.appendChild(row));
         });
     }
 
@@ -338,6 +377,7 @@ export function init() {
 
     applyRange(rangeStartInput.value, rangeEndInput.value, "init");
     applySearch(searchInput?.value || "");
+    applyReverseSort(Boolean(reverseSortInput?.checked));
 
     const onRangeStartInput = () => {
         applyRange(rangeStartInput.value, rangeEndInput.value, "start");
@@ -369,6 +409,15 @@ export function init() {
         };
         searchInput.addEventListener("input", onSearchInput);
         cleanup.push(() => searchInput.removeEventListener("input", onSearchInput));
+    }
+
+    if (reverseSortInput) {
+        const onReverseSortInput = () => {
+            applyReverseSort(reverseSortInput.checked);
+            localStorage.setItem(reverseSortStorageKey, reverseSortInput.checked ? "true" : "false");
+        };
+        reverseSortInput.addEventListener("input", onReverseSortInput);
+        cleanup.push(() => reverseSortInput.removeEventListener("input", onReverseSortInput));
     }
 
     teardownHistoryHandlers = () => {
