@@ -13086,7 +13086,7 @@ export const NPC_DATA = {
     },
     "Screaming twisted banshee": {
         "wiki": "https://oldschool.runescape.wiki/w/Screaming_twisted_banshee",
-        "rule": ["hasEarmuffs"],
+        "rule": ["hasEarmuffsOrLongrange"],
         "skill": ["Slayer"],
         "level": [15],
         "tags": ["superior"],
@@ -15392,7 +15392,7 @@ export const NPC_DATA = {
     },
     "Twisted Banshee": {
         "wiki": "https://oldschool.runescape.wiki/w/Twisted_Banshee",
-        "rule": ["hasEarmuffs"],
+        "rule": ["hasEarmuffsOrLongrange"],
         "skill": ["Slayer"],
         "level": [15],
         "tags": [],

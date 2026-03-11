@@ -1889,6 +1889,9 @@ export const REQUIREMENT_CHECKS = {
     hasEarmuffs(ctx) {
         return has(ctx, 4166);
     },
+    hasEarmuffsOrLongrange(ctx) {
+        return has(ctx, 4166) || canLongrange(ctx);
+    },
     hasCrystalKey(ctx) {
         return has(ctx, 989);
     },
