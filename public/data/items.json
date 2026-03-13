@@ -105569,15 +105569,14 @@
     "sources": {
       "other": {
         "Crafting hunter armour": {
-          "notes": "Requires Sunlight antelope fur and 69 Crafting and level 69 Crafting.",
+          "notes": "Requires Sunlight antelope fur and Mixed hide base.",
           "rule": {
             "all": [
               {
                 "has": 29177
               },
               {
-                "skill": "Crafting",
-                "level": 69
+                "has": 29292
               }
             ]
           }
@@ -105597,15 +105596,14 @@
     "sources": {
       "other": {
         "Crafting hunter armour": {
-          "notes": "Requires Jaguar fur and 68 Crafting and level 68 Crafting.",
+          "notes": "Requires Jaguar fur and Mixed hide base.",
           "rule": {
             "all": [
               {
                 "has": 29218
               },
               {
-                "skill": "Crafting",
-                "level": 68
+                "has": 29292
               }
             ]
           }
@@ -105625,15 +105623,14 @@
     "sources": {
       "other": {
         "Crafting hunter armour": {
-          "notes": "Requires Fox fur and 71 Crafting and level 71 Crafting.",
+          "notes": "Requires Fox fur and Mixed hide base.",
           "rule": {
             "all": [
               {
                 "has": 29163
               },
               {
-                "skill": "Crafting",
-                "level": 71
+                "has": 29292
               }
             ]
           }
@@ -105653,15 +105650,14 @@
     "sources": {
       "other": {
         "Crafting hunter armour": {
-          "notes": "Requires Sunlight antelope fur and 72 Crafting and level 72 Crafting.",
+          "notes": "Requires Sunlight antelope fur and Mixed hide base.",
           "rule": {
             "all": [
               {
                 "has": 29177
               },
               {
-                "skill": "Crafting",
-                "level": 72
+                "has": 29292
               }
             ]
           }
