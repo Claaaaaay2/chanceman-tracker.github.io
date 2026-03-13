@@ -29,6 +29,7 @@ const BUTTERFLY_NET_ID = 10010;
 const GOURMET_IMPLING_JAR_ID = 11242;
 const EARTH_IMPLING_JAR_ID = 11244;
 const ESSENCE_IMPLING_JAR_ID = 11246;
+const ALWAYS_DROP_RATE_SORT_VALUE = parseDropRate("Always");
 const IMPLING_JAR_LEVEL_DOWNGRADES = new Map([
     [27, 17],
     [32, 22],
@@ -98,7 +99,7 @@ async function computeAllRanksOnce(items, ctx) {
 
     const nextRankedItemsCache = await Promise.all(
         items.map(async item => {
-            let bestDropRate = 0;
+            let bestDropRate = null;
 
             if (item.sources?.drops) {
                 for (const [npcName, drops] of Object.entries(item.sources.drops)) {
@@ -108,16 +109,17 @@ async function computeAllRanksOnce(items, ctx) {
 
                     if (Array.isArray(drops)) {
                         for (const d of drops) {
-                            bestDropRate = Math.max(
-                                bestDropRate,
-                                parseDropRate(d.droprate)
-                            );
+                            if (!d?.droprate) continue;
+                            const parsedRate = parseDropRate(d.droprate);
+                            bestDropRate = bestDropRate === null
+                                ? parsedRate
+                                : Math.max(bestDropRate, parsedRate);
                         }
                     } else if (drops?.droprate) {
-                        bestDropRate = Math.max(
-                            bestDropRate,
-                            parseDropRate(drops.droprate)
-                        );
+                        const parsedRate = parseDropRate(drops.droprate);
+                        bestDropRate = bestDropRate === null
+                            ? parsedRate
+                            : Math.max(bestDropRate, parsedRate);
                     }
                 }
             }
@@ -125,7 +127,7 @@ async function computeAllRanksOnce(items, ctx) {
             return {
                 item,
                 sort: await getObtainabilityRank(item, ctx),
-                bestDropRate
+                sortDropRate: bestDropRate ?? ALWAYS_DROP_RATE_SORT_VALUE
             };
         })
     );
@@ -197,6 +199,7 @@ export async function initItemsPage() {
         { id: "hasEasyCasCompleted", key: "hasEasyCasCompleted", defaultValue: false, invalidate: true },
         { id: "countSkillBoosts", key: "countSkillBoosts", defaultValue: false, invalidate: true },
         { id: "highlightChanges", key: "highlightChanges", defaultValue: false },
+        { id: "itemSortByDroprate", key: "itemSortByDroprate", defaultValue: true },
         { id: "overrideWoodcutting", key: "overrideWoodcutting", defaultValue: false, invalidate: true },
         { id: "overrideMining", key: "overrideMining", defaultValue: false, invalidate: true },
         { id: "overrideFishing", key: "overrideFishing", defaultValue: false, invalidate: true },
@@ -349,15 +352,10 @@ export async function initItemsPage() {
     }
 
     function readFiltersFromUI() {
-        const otherDropsToggle = document.getElementById("otherDropsSortByDroprate");
-        const otherDropsSortByDroprate = otherDropsToggle
-            ? otherDropsToggle.checked
-            : (fileStore.filters?.otherDropsSortByDroprate ?? true);
         const nextFilters = {
             ...fileStore.filters,
             search: elements.searchInput.value,
             hunterRumoursCompleted: elements.hunterRumoursCompleted.value,
-            otherDropsSortByDroprate
         };
         for (const config of checkboxConfigs) {
             nextFilters[config.key] = checkboxElements[config.key].checked;
@@ -967,7 +965,7 @@ export async function initItemsPage() {
             hideJon,
             isFreeToPlay,
             hideSourcelessItems,
-            otherDropsSortByDroprate = true,
+            itemSortByDroprate = true,
             highlightChanges = false,
             showSectionCounts = false
         } = getFilters();
@@ -1054,10 +1052,10 @@ export async function initItemsPage() {
                 return a.sort.rank - b.sort.rank;
             }
 
-            // Secondary: droprate for drop ranks
-            if (a.sort.rank === 6 && otherDropsSortByDroprate) {
-                if (a.bestDropRate !== b.bestDropRate) {
-                    return b.bestDropRate - a.bestDropRate;
+            // Secondary: optional within-section drop-rate ordering
+            if (itemSortByDroprate) {
+                if (a.sortDropRate !== b.sortDropRate) {
+                    return b.sortDropRate - a.sortDropRate;
                 }
             }
 
@@ -1081,38 +1079,23 @@ export async function initItemsPage() {
 
             for (const { item, sort } of filtered) {
                 if (sort.rank !== lastRank) {
-                    const isOtherDrops = sort.rank === 6;
-                    const sortToggle = isOtherDrops
-                    ? `
-                        <label class="other-drops-sort">
-                            <span>Sort:</span>
-                            <span class="other-drops-sort-label">A-Z</span>
-                            <span class="toggle-switch">
-                                <input type="checkbox" id="otherDropsSortByDroprate" ${otherDropsSortByDroprate ? "checked" : ""}>
-                                <span class="toggle-slider" aria-hidden="true"></span>
+                    const sectionCount = sectionCounts[sort.rank] ?? 0;
+                    const sectionId = `items-section-${sort.rank}`;
+                    if (showSectionCounts) {
+                        summaryParts.push(
+                            `<a href="#${sectionId}">${escapeHtml(ITEM_SECTION_TITLES[sort.rank] ?? "Other Items")} (${sectionCount})</a>`
+                        );
+                    }
+                    html += `
+                        <h2 class="item-section-header" id="${sectionId}">
+                            <span class="item-section-title">
+                                ${ITEM_SECTION_TITLES[sort.rank] ?? "Other Items"}
+                                <span class="item-section-count">(${sectionCount})</span>
                             </span>
-                            <span>Droprate</span>
-                        </label>
-                    `
-                    : "";
-                const sectionCount = sectionCounts[sort.rank] ?? 0;
-                const sectionId = `items-section-${sort.rank}`;
-                if (showSectionCounts) {
-                    summaryParts.push(
-                        `<a href="#${sectionId}">${escapeHtml(ITEM_SECTION_TITLES[sort.rank] ?? "Other Items")} (${sectionCount})</a>`
-                    );
+                        </h2>
+                    `;
+                    lastRank = sort.rank;
                 }
-                html += `
-                    <h2 class="item-section-header" id="${sectionId}">
-                        <span class="item-section-title">
-                            ${ITEM_SECTION_TITLES[sort.rank] ?? "Other Items"}
-                            <span class="item-section-count">(${sectionCount})</span>
-                        </span>
-                        ${sortToggle}
-                    </h2>
-                `;
-                lastRank = sort.rank;
-            }
 
                 const isObtained = obtainedSet.has(item.id);
                 const isRolled = rolledSet.has(item.id);
@@ -1193,15 +1176,6 @@ export async function initItemsPage() {
             }, 0);
         }
 
-            const otherDropsToggle = document.getElementById("otherDropsSortByDroprate");
-            if (otherDropsToggle) {
-                otherDropsToggle.addEventListener("input", () => {
-                    const nextFilters = readFiltersFromUI();
-                    nextFilters.otherDropsSortByDroprate = otherDropsToggle.checked;
-                    fileStore.setFilters(nextFilters);
-                    renderItems();
-                });
-            }
             if (version !== renderVersion) return;
             initTooltipLoader();
             setTimeout(() => initLazyImages(), 0);

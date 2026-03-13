@@ -29,7 +29,6 @@ let memory = {
         hideSourcelessItems: false,
         hasEasyCasCompleted: false,
         countSkillBoosts: false,
-        otherDropsSortByDroprate: true,
         overrideWoodcutting: false,
         overrideMining: false,
         overrideFishing: false,
@@ -42,6 +41,7 @@ let memory = {
         hunterRumoursCompleted: 0,
         highlightChanges: false,
         showSectionCounts: false,
+        itemSortByDroprate: true,
         hideCompletedQuests: false,
         hideIncompletableQuests: false,
         questSearch: "",
@@ -125,8 +125,12 @@ export const fileStore = {
             if (normalizedFilters.onlyRolled === undefined && loadedFilters.onlyUnlocked !== undefined) {
                 normalizedFilters.onlyRolled = loadedFilters.onlyUnlocked;
             }
+            if (loadedFilters.itemSortByDroprate === undefined && loadedFilters.otherDropsSortByDroprate !== undefined) {
+                normalizedFilters.itemSortByDroprate = loadedFilters.otherDropsSortByDroprate;
+            }
             delete normalizedFilters.hideRolled;
             delete normalizedFilters.onlyUnlocked;
+            delete normalizedFilters.otherDropsSortByDroprate;
             memory.filters = normalizedFilters;
         }
     },

@@ -23,6 +23,15 @@ export default async function ItemsPage() {
         <div class="items-top-filters">
             <input type="search" id="itemSearch" placeholder="Filter items..." />
             <div class="items-top-actions">
+                <label class="other-drops-sort">
+                    <span>Sort items:</span>
+                    <span class="other-drops-sort-label">A-Z</span>
+                    <span class="toggle-switch">
+                        <input type="checkbox" id="itemSortByDroprate">
+                        <span class="toggle-slider" aria-hidden="true"></span>
+                    </span>
+                    <span>Droprate</span>
+                </label>
                 <label class="items-summary-toggle">
                     <input type="checkbox" id="showSectionCounts">
                     Show section counts
