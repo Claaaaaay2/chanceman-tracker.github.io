@@ -790,7 +790,7 @@ export const NPC_DATA = {
     },
     "Aquanite": {
         "wiki": "https://oldschool.runescape.wiki/w/Aquanite",
-        "rule": ["canCompletePandemonium"],
+        "rule": ["canAccessSunbleakIsland"],
         "skill": ["Slayer", "sailing"],
         "level": [78, 73],
         "tags": [],
@@ -5297,7 +5297,7 @@ export const NPC_DATA = {
     },
     "Elder aquanite": {
         "wiki": "https://oldschool.runescape.wiki/w/Elder_aquanite",
-        "rule": ["canCompletePandemonium"],
+        "rule": ["canAccessSunbleakIsland"],
         "skill": ["Slayer", "sailing"],
         "level": [78, 73],
         "tags": ["superior"],
@@ -5305,7 +5305,7 @@ export const NPC_DATA = {
     },
     "Elder aquanite Normal": {
         "wiki": "https://oldschool.runescape.wiki/w/Elder_aquanite#Normal",
-        "rule": ["canCompletePandemonium"],
+        "rule": ["canAccessSunbleakIsland"],
         "skill": ["Slayer", "sailing"],
         "level": [78, 73],
         "tags": ["superior"],
