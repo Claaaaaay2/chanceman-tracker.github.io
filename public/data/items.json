@@ -36137,8 +36137,11 @@
     "name": "Cannon barrels",
     "image": "cannon_barrels.png",
     "sources": {
-      "shops": {
-        "Yes": "canCompleteDwarfCannon"
+      "other": {
+        "Purchasing through dialogue": {
+          "note": "Can be bought ater completion of the Dwarf Cannon quest.",
+          "rule": "canCompleteDwarfCannon"
+        }
       }
     }
   },
@@ -36148,8 +36151,11 @@
     "name": "Cannon base",
     "image": "cannon_base.png",
     "sources": {
-      "shops": {
-        "Yes": "canCompleteDwarfCannon"
+      "other": {
+        "Purchasing through dialogue": {
+          "note": "Can be bought ater completion of the Dwarf Cannon quest.",
+          "rule": "canCompleteDwarfCannon"
+        }
       }
     }
   },
@@ -36159,8 +36165,11 @@
     "name": "Cannon furnace",
     "image": "cannon_furnace.png",
     "sources": {
-      "shops": {
-        "Yes": "canCompleteDwarfCannon"
+      "other": {
+        "Purchasing through dialogue": {
+          "note": "Can be bought ater completion of the Dwarf Cannon quest.",
+          "rule": "canCompleteDwarfCannon"
+        }
       }
     }
   },
@@ -36170,8 +36179,11 @@
     "name": "Cannon stand",
     "image": "cannon_stand.png",
     "sources": {
-      "shops": {
-        "Yes": "canCompleteDwarfCannon"
+      "other": {
+        "Purchasing through dialogue": {
+          "note": "Can be bought ater completion of the Dwarf Cannon quest.",
+          "rule": "canCompleteDwarfCannon"
+        }
       }
     }
   },
