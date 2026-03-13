@@ -30,6 +30,12 @@ const GOURMET_IMPLING_JAR_ID = 11242;
 const EARTH_IMPLING_JAR_ID = 11244;
 const ESSENCE_IMPLING_JAR_ID = 11246;
 const ALWAYS_DROP_RATE_SORT_VALUE = parseDropRate("Always");
+const TOOLTIP_SOURCE_TYPE_ORDER = new Map([
+    ["spawn", 0],
+    ["shop", 1],
+    ["other", 2],
+    ["drop", 3]
+]);
 const IMPLING_JAR_LEVEL_DOWNGRADES = new Map([
     [27, 17],
     [32, 22],
@@ -449,6 +455,23 @@ export async function initItemsPage() {
         return best ? ` (${best})` : "";
     }
 
+    function getDropRateSortValue(drops) {
+        if (!drops) return ALWAYS_DROP_RATE_SORT_VALUE;
+        let bestValue = null;
+
+        if (Array.isArray(drops)) {
+            for (const drop of drops) {
+                if (!drop?.droprate) continue;
+                const value = parseDropRate(drop.droprate);
+                bestValue = bestValue === null ? value : Math.max(bestValue, value);
+            }
+        } else if (drops?.droprate) {
+            bestValue = parseDropRate(drops.droprate);
+        }
+
+        return bestValue ?? ALWAYS_DROP_RATE_SORT_VALUE;
+    }
+
     function hasAnyItemSource(item, meta) {
         if (meta?.hasAnySource !== undefined) return meta.hasAnySource;
         const sources = item?.sources;
@@ -748,7 +771,12 @@ export async function initItemsPage() {
                 if (ctx.filters?.isSlayerLocked && isDropSlayerLocked(item, npcName, drops)) continue;
                 if (await isNpcObtainable(npcName, ctx)) {
                     const rateLabel = getDropRateLabel(drops);
-                    sources.push(`Drop: ${npcName}${rateLabel}`);
+                    sources.push({
+                        type: "drop",
+                        label: `Drop: ${npcName}${rateLabel}`,
+                        sortName: npcName,
+                        sortRate: getDropRateSortValue(drops)
+                    });
                 }
             }
         }
@@ -758,7 +786,12 @@ export async function initItemsPage() {
                 if (isSourceHiddenByFilters(source, ctx)) continue;
                 const rule = getOtherSourceRule(source);
                 if (!rule || rule === "No requirements" || await evaluateRule(rule, ctx)) {
-                    sources.push(name);
+                    sources.push({
+                        type: "other",
+                        label: name,
+                        sortName: name,
+                        sortRate: null
+                    });
                 }
             }
         }
@@ -766,7 +799,12 @@ export async function initItemsPage() {
         if (rolledSet?.has(item.id) && item.sources?.shops) {
             for (const [shopName, rule] of Object.entries(item.sources.shops)) {
                 if (await isRuleObtainable(rule, ctx)) {
-                    sources.push(`Shop: ${shopName}`);
+                    sources.push({
+                        type: "shop",
+                        label: `Shop: ${shopName}`,
+                        sortName: shopName,
+                        sortRate: null
+                    });
                 }
             }
         }
@@ -774,7 +812,12 @@ export async function initItemsPage() {
         if (rolledSet?.has(item.id) && item.sources?.spawns) {
             for (const [spawnName, rule] of Object.entries(item.sources.spawns)) {
                 if (await isRuleObtainable(rule, ctx)) {
-                    sources.push(`Spawn: ${spawnName}`);
+                    sources.push({
+                        type: "spawn",
+                        label: `Spawn: ${spawnName}`,
+                        sortName: spawnName,
+                        sortRate: null
+                    });
                 }
             }
         }
@@ -794,8 +837,18 @@ export async function initItemsPage() {
         }
 
         const list = sources
-            .sort((a, b) => a.localeCompare(b))
-            .map((source) => `<li>${escapeHtml(source)}</li>`)
+            .sort((a, b) => {
+                const leftTypeOrder = TOOLTIP_SOURCE_TYPE_ORDER.get(a.type) ?? Number.MAX_SAFE_INTEGER;
+                const rightTypeOrder = TOOLTIP_SOURCE_TYPE_ORDER.get(b.type) ?? Number.MAX_SAFE_INTEGER;
+                if (leftTypeOrder !== rightTypeOrder) {
+                    return leftTypeOrder - rightTypeOrder;
+                }
+                if (a.type === "drop" && b.type === "drop" && a.sortRate !== b.sortRate) {
+                    return b.sortRate - a.sortRate;
+                }
+                return a.sortName.localeCompare(b.sortName);
+            })
+            .map((source) => `<li>${escapeHtml(source.label)}</li>`)
             .join("");
 
         return `
