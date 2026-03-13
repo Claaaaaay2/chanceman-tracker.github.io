@@ -382,12 +382,16 @@ function applyClueFilters(container) {
     }
 }
 
-async function updateClueFilters(partial) {
+async function updateClueFilters(partial, options = {}) {
     const nextFilters = {
         ...fileStore.filters,
         ...partial
     };
-    await fileStore.setFilters(nextFilters);
+    if (options.immediate) {
+        void fileStore.setFilters(nextFilters);
+    } else {
+        await fileStore.setFilters(nextFilters);
+    }
     const list = document.getElementById("clueList");
     if (list) {
         applyClueFilters(list);
@@ -438,9 +442,9 @@ export function init() {
         }
     };
 
-    const onClueInput = async (event) => {
+    const onClueInput = (event) => {
         if (event.target.id !== "clueSearch") return;
-        await updateClueFilters({ clueSearch: event.target.value });
+        updateClueFilters({ clueSearch: event.target.value }, { immediate: true });
     };
 
     const onClueClick = async (event) => {

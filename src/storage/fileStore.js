@@ -64,6 +64,8 @@ let memory = {
     player: null,
 };
 
+let pendingFilterSave = Promise.resolve();
+
 // ---- Public API ----
 export const fileStore = {
     obtained: null,
@@ -141,7 +143,10 @@ export const fileStore = {
 
     async setFilters(filters) {
         memory.filters = filters;
-        await saveToDB("filters", filters);
+        pendingFilterSave = pendingFilterSave
+            .catch(() => {})
+            .then(() => saveToDB("filters", filters));
+        await pendingFilterSave;
     },
 
 

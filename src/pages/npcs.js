@@ -184,13 +184,13 @@ export function init() {
     }
     initNpcFilterUI(() => window.dispatchEvent(new PopStateEvent("popstate")));
 
-    const onNpcSearchInput = async (event) => {
+    const onNpcSearchInput = (event) => {
         if (event.target.id !== "npcSearch") return;
         const nextFilters = {
             ...fileStore.filters,
             npcSearch: event.target.value
         };
-        await fileStore.setFilters(nextFilters);
+        void fileStore.setFilters(nextFilters);
         const nextList = document.getElementById("npcDropList");
         if (nextList) {
             applyNpcSearch(nextList);

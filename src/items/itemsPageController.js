@@ -174,6 +174,7 @@ export async function initItemsPage() {
     let currentItemsById = new Map();
     let currentRolledSet = new Set();
     let tooltipCache = new Map();
+    let renderVersion = 0;
 
     const checkboxConfigs = [
         { id: "hideObtained", key: "hideObtained", defaultValue: true },
@@ -809,8 +810,6 @@ export async function initItemsPage() {
 
     function setLoading(isLoading) {
         elements.loading.classList.toggle("active", isLoading);
-        elements.grid.style.display = isLoading ? "none" : "";
-        setInputsDisabled(isLoading);
     }
 
     function initTooltipLoader() {
@@ -934,6 +933,7 @@ export async function initItemsPage() {
     }
 
     async function renderItems() {
+        const version = ++renderVersion;
         setLoading(true);
         await new Promise(requestAnimationFrame);
         let previousCacheRules;
@@ -981,6 +981,7 @@ export async function initItemsPage() {
         currentRolledSet = rolledSet;
         tooltipCache = new Map();
         const ranked = await computeAllRanksOnce(items, fileStore);
+        if (version !== renderVersion) return;
 
         // sort async
         const filtered = [];
@@ -1063,6 +1064,7 @@ export async function initItemsPage() {
             // Fallback: alphabetical
             return a.sort.name.localeCompare(b.sort.name);
         });
+        if (version !== renderVersion) return;
 
         if (filtered.length === 0) {
             elements.grid.innerHTML = `
@@ -1156,6 +1158,7 @@ export async function initItemsPage() {
                     </div>
                 `;
             }
+            if (version !== renderVersion) return;
 
             elements.grid.innerHTML = html;
             if (showSectionCounts) {
@@ -1170,9 +1173,11 @@ export async function initItemsPage() {
         if (highlightChanges) {
             const signatureTargets = filtered.map(({ item }) => item);
             setTimeout(async () => {
+                if (version !== renderVersion) return;
                 for (const item of signatureTargets) {
                     try {
                         const sources = await getObtainableSources(item, fileStore, rolledSet);
+                        if (version !== renderVersion) return;
                         const signature = sources.sort((a, b) => a.localeCompare(b)).join("||");
                         markSourceSignature(item.id, signature);
                         if (isItemSourcesChanged(item.id)) {
@@ -1197,6 +1202,7 @@ export async function initItemsPage() {
                     renderItems();
                 });
             }
+            if (version !== renderVersion) return;
             initTooltipLoader();
             setTimeout(() => initLazyImages(), 0);
         }
@@ -1208,7 +1214,9 @@ export async function initItemsPage() {
             fileStore.cacheRules = previousCacheRules;
             fileStore.ruleEvalCache = previousRuleEvalCache;
             fileStore.ruleEvalKey = previousRuleEvalKey;
-            setLoading(false);
+            if (version === renderVersion) {
+                setLoading(false);
+            }
         }
     }
 

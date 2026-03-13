@@ -422,7 +422,11 @@ async function updateQuestFilters(partial, options = {}) {
         ...fileStore.filters,
         ...partial
     };
-    await fileStore.setFilters(nextFilters);
+    if (options.immediate) {
+        void fileStore.setFilters(nextFilters);
+    } else {
+        await fileStore.setFilters(nextFilters);
+    }
     if (options.rerender) {
         window.dispatchEvent(new PopStateEvent("popstate"));
         return;
@@ -467,9 +471,9 @@ export function init() {
         }
     };
 
-    const onQuestInput = async (event) => {
+    const onQuestInput = (event) => {
         if (event.target.id !== "questSearch") return;
-        await updateQuestFilters({ questSearch: event.target.value });
+        updateQuestFilters({ questSearch: event.target.value }, { immediate: true });
     };
 
     document.addEventListener("change", onQuestChange);
