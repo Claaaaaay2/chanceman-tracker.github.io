@@ -141555,7 +141555,7 @@
     "sources": {
       "other": {
         "Cooking a Spider on shaft": {
-          "notes": "Requires a Raw Spider on shaft and level 16 Cooking.",
+          "notes": "Requires a Raw Spider on shaft (Spider carcass + Arrow shaft) and level 16 Cooking.",
           "rule": {
             "all": [
               {
@@ -141585,7 +141585,7 @@
     "sources": {
       "other": {
         "Cooking a Spider on stick": {
-          "notes": "Requires a Raw spider on a stick (Spider carcass + Skewer stick or Arrow shaft and level 16 Cooking.",
+          "notes": "Requires a Raw spider on a stick (Spider carcass + Skewer stick) and level 16 Cooking.",
           "rule": {
             "all": [
               {
