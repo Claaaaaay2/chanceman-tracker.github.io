@@ -35547,9 +35547,6 @@
                 "has": 1944
               },
               {
-                "has": 1927
-              },
-              {
                 "has": 1933
               },
               {
@@ -38171,20 +38168,6 @@
           "rule": {
             "all": [
               {
-                "any": [
-                  {
-                    "has": 1927
-                  },
-                  {
-                    "has": 2130
-                  },
-                  {
-                    "has": 6697
-                  },
-                  "canCompleteSinsOfTheFather"
-                ]
-              },
-              {
                 "skill": "Cooking",
                 "level": 48
               }
@@ -38862,9 +38845,6 @@
               },
               {
                 "has": 2017
-              },
-              {
-                "has": 1927
               },
               {
                 "has": 1973
@@ -114274,16 +114254,6 @@
           "rule": {
             "all": [
               {
-                "any": [
-                  {
-                    "has": 1927
-                  },
-                  {
-                    "has": 2130
-                  }
-                ]
-              },
-              {
                 "skill": "Cooking",
                 "level": 38
               }
@@ -116684,9 +116654,6 @@
           "notes": "Requires a Bucket of milk and level 21 Cooking.",
           "rule": {
             "all": [
-              {
-                "has": 1927
-              },
               {
                 "skill": "Cooking",
                 "level": 21

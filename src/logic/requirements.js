@@ -2542,7 +2542,7 @@ function canCompleteATailOfTwoCats(ctx) {
         has(ctx, 1897), // Chocolate cake
         has(ctx, 1511), // Logs
         has(ctx, 590), // Tinderbox
-        has(ctx, 1927), // Bucket of milk
+        hasBucketOfMilkIfF2P(ctx),
         has(ctx, 1735), // Shears
         has(ctx, 5318), // Potato seed
         has(ctx, 5341), // Rake
@@ -2832,10 +2832,14 @@ function canCompleteContact(ctx) {
     ]);
 }
 
+function hasBucketOfMilkIfF2P(ctx) {
+    return !ctx.filters?.isFreeToPlay || has(ctx, 1927); // Bucket of milk
+}
+
 function canCompleteCooksAssistant(ctx) {
     return allTrue([
         has(ctx, 1944), // Egg
-        has(ctx, 1927), // Bucket of milk
+        hasBucketOfMilkIfF2P(ctx),
         has(ctx, 1933), // Pot of flour
     ]);
 }
@@ -3334,7 +3338,7 @@ function canCompleteGardenOfTranquillity(ctx) {
 
 function canCompleteGertrudesCat(ctx) {
     return allTrue([
-        has(ctx, 1927), // Bucket of milk
+        hasBucketOfMilkIfF2P(ctx),
         has(ctx, 1552), // Seasoned sardine
         has(ctx, 327),  // Raw sardine
         has(ctx, 1573), // Doogle leaves
@@ -3362,7 +3366,7 @@ function canCompleteGhostsAhoy(ctx) {
         hasSkillLevel(ctx, "Agility", 25),
         hasSkillLevel(ctx, "Cooking", 20),
         requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
-        has(ctx, 1927), // Bucket of milk
+        hasBucketOfMilkIfF2P(ctx),
         has(ctx, 950), // Silk
         has(ctx, 1763), // Red dye
         has(ctx, 1765), // Yellow dye
@@ -3984,7 +3988,7 @@ function canCompletePlagueCity(ctx) {
         has(ctx, 2126), // Dwellberries
         has(ctx, 952), // Spade
         has(ctx, 1929), // Bucket of water
-        has(ctx, 1927), // Bucket of milk
+        hasBucketOfMilkIfF2P(ctx),
         has(ctx, 1975), // Chocolate dust
         has(ctx, 231), // Snape grass
         has(ctx, 954), // Rope
@@ -4056,7 +4060,7 @@ function canCompleteRatcatchers(ctx) {
         has(ctx, 1985), // Cheese
         has(ctx, 251), // Marrentill
         has(ctx, 235), // Unicorn horn dust
-        has(ctx, 1927), // Bucket of milk
+        hasBucketOfMilkIfF2P(ctx),
         has(ctx, 6055), // Weeds
         has(ctx, 1931), // Pot
         has(ctx, 590), // Tinderbox
@@ -4197,7 +4201,7 @@ function canCompleteRFDFreeingSirAmikVarse(ctx) {
         requiresQuest(ctx, "canCompleteRFDAnotherCooksQuest", canCompleteRFDAnotherCooksQuest), //
         canStartLegendsQuest(ctx), //
         canReachKharaziJungle(ctx), //
-        has(ctx, 1927), // Bucket of milk
+        hasBucketOfMilkIfF2P(ctx),
         has(ctx, 2130), // Pot of cream
         has(ctx, 7468), // Pot of cornflour
         has(ctx, 2138), // Raw chicken
@@ -4242,7 +4246,7 @@ function canCompleteRFDFreeingTheLumbridgeGuide(ctx) {
         requiresQuest(ctx, "canCompleteMurderMystery", canCompleteMurderMystery), //
         requiresQuest(ctx, "canCompleteNatureSpirit", canCompleteNatureSpirit), //
         requiresQuest(ctx, "canCompleteWitchsHouse", canCompleteWitchsHouse), //
-        has(ctx, 1927), // Bucket of milk
+        hasBucketOfMilkIfF2P(ctx),
         has(ctx, 1944), // Egg
         has(ctx, 1933), // Pot of flour
         has(ctx, 1887), // Cake tin
@@ -4254,7 +4258,7 @@ function canCompleteRFDFreeingTheMountainDwarf(ctx) {
         requiresQuest(ctx, "canCompleteRFDAnotherCooksQuest", canCompleteRFDAnotherCooksQuest), //
         requiresQuest(ctx, "canCompleteFishingContest", canCompleteFishingContest), //
         has(ctx, 1944), // Egg
-        has(ctx, 1927), // Bucket of milk
+        hasBucketOfMilkIfF2P(ctx),
         has(ctx, 1933), // Pot of flour
         has(ctx, 1921), // Bowl of water
         has(ctx, 1905), // Asgarnian ale
@@ -4442,7 +4446,7 @@ function canCompleteSkippyAndTheMogres(ctx) {
     return allTrue([
         hasSkillLevel(ctx, "Cooking", 20),
         has(ctx, 1929), // Bucket of water
-        has(ctx, 1927), // Bucket of milk
+        hasBucketOfMilkIfF2P(ctx),
         has(ctx, 1975), // Chocolate dust
         has(ctx, 1921), // Bowl of water
         has(ctx, 231), // Snape grass
@@ -7357,7 +7361,7 @@ function canDoGnomeRestaurant(ctx) {
                     || (has(ctx, 2015) && has(ctx, 2019) && has(ctx, 2120) && has(ctx, 2102) && has(ctx, 2114) && has(ctx, 2108) && has(ctx, 2116) && has(ctx, 2124) && has(ctx, 2054)) // Wizard blizzard
                     || (has(ctx, 2015) && has(ctx, 2120) && has(ctx, 2124) && has(ctx, 2128) && has(ctx, 2080)) // Short green guy
                     || (has(ctx, 2015) && has(ctx, 2019) && has(ctx, 2126) && has(ctx, 2114) && has(ctx, 2116) && has(ctx, 2130) && has(ctx, 2092)) // Drunk dragon
-                    || (has(ctx, 2017) && has(ctx, 1973) && has(ctx, 2128) && has(ctx, 1927) && has(ctx, 1975) && has(ctx, 2130) && has(ctx, 2074)) // Choc saturday
+                    || (has(ctx, 2017) && has(ctx, 1973) && has(ctx, 2128) && has(ctx, 1975) && has(ctx, 2130) && has(ctx, 2074)) // Choc saturday
                     || (has(ctx, 2015) && has(ctx, 2021) && has(ctx, 2019) && has(ctx, 2102) && has(ctx, 2104) && has(ctx, 2108) && has(ctx, 2110) && has(ctx, 2128) && has(ctx, 2120) && has(ctx, 2124) && has(ctx, 2064)) // Blurberry special
                 )
             )
