@@ -5801,7 +5801,6 @@ function canPitfallTrap(ctx) {
                 32907,
                 32910,
             ])
-            || canTrainWoodcutting(ctx) // for untradable Juniper logs
         );
 }
 
