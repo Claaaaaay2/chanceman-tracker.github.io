@@ -117886,6 +117886,9 @@
           "droprate": "Common"
         }
       },
+      "shops": {
+        "Yes": "canCompletePriestInPeril"
+      },
       "other": {
         "Mixing a potion": {
           "notes": "Requires Ranarr potion (unf) and Snape grass, while wearing an Amulet of chemistry or an alchemist's amulet and level 38 Herblore.",
@@ -136733,7 +136736,7 @@
         }
       },
       "shops": {
-        "Yes": "No requirements"
+        "Yes": "canCompletePriestInPeril"
       },
       "other": {
         "Cooking a Shark": {
@@ -142875,6 +142878,9 @@
         "Jekyll and Hyde Torstol": {
           "droprate": "Always"
         }
+      },
+      "shops": {
+        "Yes": "canCompletePriestInPeril"
       },
       "other": {
         "Mixing a potion": {
