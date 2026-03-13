@@ -1672,9 +1672,6 @@
       "Food"
     ],
     "sources": {
-      "shops": {
-        "Yes": "canAccessCooksGuild"
-      },
       "other": {
         "Cooking an Apple pie": {
           "notes": "Requires Uncooked apple pie and level 30 Cooking.",
@@ -12513,9 +12510,6 @@
       "Food"
     ],
     "sources": {
-      "shops": {
-        "Yes": "canAccessCooksGuild"
-      },
       "other": {
         "Cooking a Redberry pie": {
           "notes": "Requires Uncooked berry pie and level 10 Cooking.",
