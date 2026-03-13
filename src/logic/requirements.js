@@ -4759,7 +4759,7 @@ function canCompleteTheFremennikIsles(ctx) {
 
 function canCompleteTheFremennikTrials(ctx) {
     return allTrue([
-        has(ctx, 1917), // Beer
+        hasAnyItems(ctx, [1917, 3803]), // Beer or Beer tankard
         has(ctx, 590), // Tinderbox
         hasAnyItems(ctx, [383, 389, 395]), // Raw shark, Raw sea turtle or Raw manta ray
     ]);
