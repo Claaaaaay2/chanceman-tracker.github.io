@@ -35875,6 +35875,9 @@
         },
         "Camphor tree (Farming)": {
           "droprate": "Always"
+        },
+        "Martial salvage": {
+          "droprate": "1/406.7"
         }
       }
     },
@@ -87809,6 +87812,12 @@
         },
         "Ironwood tree (Farming)": {
           "droprate": "Always"
+        },
+        "Fremennik salvage": {
+          "droprate": "1/445"
+        },
+        "Martial salvage": {
+          "droprate": "1/813.3"
         }
       }
     },
@@ -121239,6 +121248,11 @@
     "name": "Raw giant krill",
     "image": "raw_giant_krill.png",
     "sources": {
+      "drops": {
+        "Fish stall (Port Roberts)": {
+          "droprate": "1/64"
+        }
+      },
       "other": {
         "Deep sea trawling": {
           "notes": "Avast me hearties yo-ho.",
@@ -121277,6 +121291,11 @@
     "name": "Raw haddock",
     "image": "raw_haddock.png",
     "sources": {
+      "drops": {
+        "Fish stall (Port Roberts)": {
+          "droprate": "1/64"
+        }
+      },
       "other": {
         "Deep sea trawling": {
           "notes": "Avast me hearties yo-ho.",
@@ -121551,7 +121570,7 @@
           "droprate": "1/21.333"
         },
         "Fish stall (Port Roberts)": {
-          "droprate": "1/24"
+          "droprate": "1/21.33"
         },
         "Frigatebird": {
           "droprate": "1/25"
@@ -122717,7 +122736,7 @@
     "sources": {
       "drops": {
         "Fish stall (Port Roberts)": {
-          "droprate": "1/60"
+          "droprate": "1/36.6"
         },
         "Fishing spot (lantern) Harpoon": {
           "droprate": "Common"
@@ -122791,7 +122810,7 @@
           "droprate": "1/4"
         },
         "Fish stall (Port Roberts)": {
-          "droprate": "1/4"
+          "droprate": "1/4.12"
         },
         "Drift net fishing Levels 47-49": {
           "droprate": "1/5"
@@ -126231,6 +126250,9 @@
         },
         "Rosewood tree (Farming)": {
           "droprate": "Always"
+        },
+        "Fremennik salvage": {
+          "droprate": "1/890"
         }
       }
     },
