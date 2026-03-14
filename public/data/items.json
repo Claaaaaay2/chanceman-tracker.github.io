@@ -59230,19 +59230,19 @@
     "image": "facility_bottle_(empty).png",
     "sources": {
       "drops": {
-        "Opulent salvage":{
+        "Opulent salvage": {
           "droprate": "1/300"
         },
-        "Fremennik salvage":{
+        "Fremennik salvage": {
           "droprate": "1/500"
         },
-        "Martial salvage":{
+        "Martial salvage": {
           "droprate": "1/700"
         },
-        "Plundered salvage":{
+        "Plundered salvage": {
           "droprate": "1/900"
         },
-        "Large salvage":{
+        "Large salvage": {
           "droprate": "1/1000"
         }
       },
@@ -151164,6 +151164,9 @@
     "image": "super_kebab.png",
     "sources": {
       "other": {
+        "Purchasing through dialogue from Ali the Kebab seller in Pollnovneach": {
+          "notes": "Free roll upon reaching the Kharidian desert."
+        },
         "Cooking a Super kebab": {
           "notes": "Requires a Kebab or Ugthanki kebab.",
           "rule": {
