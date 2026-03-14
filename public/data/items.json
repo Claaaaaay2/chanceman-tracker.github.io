@@ -59224,6 +59224,37 @@
     ]
   },
   {
+    "index": 1567,
+    "id": 4164,
+    "name": "Facility bottle",
+    "image": "facility_bottle.png",
+    "sources": {
+      "drops": {
+        "Opulent salvage":{
+          "droprate": "1/300"
+        },
+        "Fremennik salvage":{
+          "droprate": "1/500"
+        },
+        "Martial salvage":{
+          "droprate": "1/700"
+        },
+        "Plundered salvage":{
+          "droprate": "1/900"
+        },
+        "Large salvage":{
+          "droprate": "1/1000"
+        }
+      },
+      "shops": {
+        "Yes": "canCompletePandemonium"
+      }
+    },
+    "tags": [
+      "Sailing"
+    ]
+  },
+  {
     "index": 1568,
     "id": 4593,
     "name": "Fake beard",
