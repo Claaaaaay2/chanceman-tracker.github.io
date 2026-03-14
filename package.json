@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "validate:data": "node scripts/validate-data.mjs",
+    "check:item-mapping": "node scripts/check-item-mapping-coverage.mjs",
     "build": "npm run validate:data && vite build",
     "preview": "vite preview"
   },

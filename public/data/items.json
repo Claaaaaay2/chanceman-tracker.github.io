@@ -39473,11 +39473,11 @@
   {
     "index": 1028,
     "id": 5929,
-    "name": "Cider(m)",
+    "name": "Cider(m4)",
     "image": "cider(m4).png",
     "sources": {
       "other": {
-        "Brewing a Cider(m)": {
+        "Brewing a Cider(m4)": {
           "notes": "Requires Apple mush, Calquat keg and Ale yeast and level 14 Cooking.",
           "rule": {
             "all": [
@@ -39558,8 +39558,8 @@
   {
     "index": 1033,
     "id": 28824,
-    "name": "Civitas illa fortis teleport (tablet)",
-    "image": "civitas_illa_fortis_teleport_(tablet).png",
+    "name": "Civitas illa fortis teleport",
+    "image": "civitas_illa_fortis_teleport.png",
     "sources": {
       "other": {
         "Crafting a teleport tablet": {
@@ -59224,10 +59224,10 @@
     ]
   },
   {
-    "index": 1567,
-    "id": 4164,
-    "name": "Facility bottle",
-    "image": "facility_bottle.png",
+    "index": 4503,
+    "id": 33074,
+    "name": "Facility bottle (empty)",
+    "image": "facility_bottle_(empty).png",
     "sources": {
       "drops": {
         "Opulent salvage":{
@@ -119502,7 +119502,7 @@
   {
     "index": 2955,
     "id": 31677,
-    "name": "Rainbow crab A",
+    "name": "Rainbow crab (1)",
     "image": "rainbow_crab_(1).png",
     "sources": {
       "drops": {
@@ -119515,7 +119515,7 @@
   {
     "index": 2956,
     "id": 31680,
-    "name": "Rainbow crab B",
+    "name": "Rainbow crab (2)",
     "image": "rainbow_crab_(2).png",
     "sources": {
       "drops": {
@@ -119528,7 +119528,7 @@
   {
     "index": 2957,
     "id": 31683,
-    "name": "Rainbow crab C",
+    "name": "Rainbow crab (3)",
     "image": "rainbow_crab_(3).png",
     "sources": {
       "drops": {
@@ -149355,8 +149355,8 @@
   {
     "index": 3778,
     "id": 31441,
-    "name": "Summon boat (tablet)",
-    "image": "summon_boat_(tablet).png",
+    "name": "Summon boat",
+    "image": "summon_boat.png",
     "sources": {
       "other": {
         "Crafting a teleport tablet": {
@@ -155491,8 +155491,8 @@
   {
     "index": 3974,
     "id": 31443,
-    "name": "Teleport to boat (tablet)",
-    "image": "teleport_to_boat_(tablet).png",
+    "name": "Teleport to boat",
+    "image": "teleport_to_boat.png",
     "sources": {
       "other": {
         "Crafting a teleport tablet": {
