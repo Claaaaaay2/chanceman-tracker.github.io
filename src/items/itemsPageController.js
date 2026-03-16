@@ -12,6 +12,7 @@ import { loadFromDB, saveToDB } from "../storage/fileStoreHelpers.js";
 import { initFiltersOverrides } from "../styles/filtersOverrides.js";
 import { getRankedItemsCache, invalidateLogicCaches, setRankedItemsCache } from "./logicCache.js";
 import { initNpcFilterUI } from "./npcFilterUI.js";
+import { hasSuperiorSlayerUnlock, isIronmanAccount } from "../logic/playerState.js";
 
 
 const ITEM_SECTION_TITLES = {
@@ -162,7 +163,6 @@ export async function initItemsPage() {
 
     const elements = {
         searchInput: document.getElementById("itemSearch"),
-        hunterRumoursCompleted: document.getElementById("hunterRumoursCompleted"),
         filterToggle: document.getElementById("filter-overrides-toggle"),
         importButton: document.getElementById("import-item-filters"),
         importInput: document.getElementById("import-item-filters-input"),
@@ -192,8 +192,6 @@ export async function initItemsPage() {
         { id: "allowOthersHouses", key: "allowOthersHouses", defaultValue: false, invalidate: true },
         { id: "hasFlatpacks", key: "hasFlatpacks", defaultValue: true },
         { id: "hasItemsets", key: "hasItemsets", defaultValue: true },
-        { id: "hasSuperiors", key: "hasSuperiors", defaultValue: false, invalidate: true },
-        { id: "isIronman", key: "isIronman", defaultValue: false, invalidate: true },
         { id: "hideBosses", key: "hideBosses", defaultValue: false, invalidate: true },
         { id: "hideRaids", key: "hideRaids", defaultValue: false, invalidate: true },
         { id: "isSlayerLocked", key: "isSlayerLocked", defaultValue: false, invalidate: true },
@@ -202,7 +200,6 @@ export async function initItemsPage() {
         { id: "hideJon", key: "hideJon", defaultValue: false, invalidate: true },
         { id: "isFreeToPlay", key: "isFreeToPlay", defaultValue: false, invalidate: true },
         { id: "hideSourcelessItems", key: "hideSourcelessItems", defaultValue: false },
-        { id: "hasEasyCasCompleted", key: "hasEasyCasCompleted", defaultValue: false, invalidate: true },
         { id: "countSkillBoosts", key: "countSkillBoosts", defaultValue: false, invalidate: true },
         { id: "highlightChanges", key: "highlightChanges", defaultValue: false },
         { id: "itemSortByDroprate", key: "itemSortByDroprate", defaultValue: true },
@@ -223,7 +220,7 @@ export async function initItemsPage() {
         checkboxElements[config.key] = document.getElementById(config.id);
     }
 
-    const missingElement = !elements.searchInput || !elements.hunterRumoursCompleted || !elements.grid || !elements.loading
+    const missingElement = !elements.searchInput || !elements.grid || !elements.loading
         || !elements.importButton || !elements.importInput
         || !elements.f2pSourcelessRow
         || !elements.itemsSectionSummary
@@ -238,7 +235,6 @@ export async function initItemsPage() {
 
     function applyFiltersToUI(filters) {
         elements.searchInput.value = filters.search ?? "";
-        elements.hunterRumoursCompleted.value = filters.hunterRumoursCompleted ?? 0;
         for (const config of checkboxConfigs) {
             checkboxElements[config.key].checked = filters[config.key] ?? config.defaultValue;
         }
@@ -361,7 +357,6 @@ export async function initItemsPage() {
         const nextFilters = {
             ...fileStore.filters,
             search: elements.searchInput.value,
-            hunterRumoursCompleted: elements.hunterRumoursCompleted.value,
         };
         for (const config of checkboxConfigs) {
             nextFilters[config.key] = checkboxElements[config.key].checked;
@@ -373,7 +368,6 @@ export async function initItemsPage() {
 
     function setInputsDisabled(disabled) {
         elements.searchInput.disabled = disabled;
-        elements.hunterRumoursCompleted.disabled = disabled;
         elements.connectFilesBtn.disabled = disabled;
         elements.refreshFilesBtn.disabled = disabled;
         elements.npcFilterToggle.disabled = disabled;
@@ -943,24 +937,11 @@ export async function initItemsPage() {
         const previousFilters = fileStore.filters || {};
         const nextFilters = { ...previousFilters, ...parsed };
 
-        if (typeof nextFilters.hunterRumoursCompleted === "string") {
-            const trimmed = nextFilters.hunterRumoursCompleted.trim();
-            if (trimmed === "") {
-                nextFilters.hunterRumoursCompleted = 0;
-            } else {
-                const parsedNumber = Number(trimmed);
-                nextFilters.hunterRumoursCompleted = Number.isNaN(parsedNumber)
-                    ? (previousFilters.hunterRumoursCompleted ?? 0)
-                    : parsedNumber;
-            }
-        }
-
         await fileStore.setFilters(nextFilters);
         applyFiltersToUI(nextFilters);
 
         const f2pChanged = previousFilters.isFreeToPlay !== nextFilters.isFreeToPlay;
-        const hunterChanged = (previousFilters.hunterRumoursCompleted ?? 0) != (nextFilters.hunterRumoursCompleted ?? 0);
-        let shouldInvalidate = hunterChanged;
+        let shouldInvalidate = false;
 
         for (const config of checkboxConfigs) {
             if (!config.invalidate) continue;
@@ -1008,8 +989,6 @@ export async function initItemsPage() {
             allowOthersHouses,
             hasFlatpacks,
             hasItemsets,
-            hasSuperiors,
-            isIronman,
             hideBosses,
             hideRaids,
             isSlayerLocked,
@@ -1027,6 +1006,8 @@ export async function initItemsPage() {
         const itemMeta = fileStore.itemMeta;
         const obtainedSet = new Set(fileStore.obtained || []);
         const rolledSet = new Set(fileStore.rolled || []);
+        const hasSuperiors = hasSuperiorSlayerUnlock(fileStore.player);
+        const isIronman = isIronmanAccount(fileStore.player);
         const searchLower = String(search || "").toLowerCase();
         currentItemsById = new Map(items.map(item => [item.id, item]));
         currentRolledSet = rolledSet;
@@ -1290,12 +1271,6 @@ export async function initItemsPage() {
             renderItems();
         });
     }
-
-    elements.hunterRumoursCompleted.addEventListener("change", () => {
-        saveFilters();
-        invalidateLogicCaches(fileStore);
-        renderItems();
-    });
 
     renderItems();
 }

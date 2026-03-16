@@ -1,5 +1,6 @@
 import { canDoOtherMethod, canReachNpc } from "./itemAvailability.js";
 import { NPC_DATA } from "./npcData.js";
+import { hasSuperiorSlayerUnlock, isIronmanAccount } from "./playerState.js";
 import { has, hasSkillLevel } from "./requirements.js";
 import { capitalizeFirstLetter } from "./utils.js";
 
@@ -94,9 +95,10 @@ export function isItemHiddenByTag(item) {
 
 export function isSourceHiddenByFilters(source, ctx) {
     const f = ctx.filters ?? {};
+    const isIronman = isIronmanAccount(ctx.player);
     if (f.hideLMS && source?.tags?.includes("LMS")) return true;
     if (f.hideJon && source?.tags?.includes("jon")) return true;
-    if (f.isIronman && (source?.tags?.includes("notForIronmen") || source?.tags?.includes("jon"))) return true;
+    if (isIronman && (source?.tags?.includes("notForIronmen") || source?.tags?.includes("jon"))) return true;
     return false;
 }
 
@@ -105,18 +107,20 @@ export function isNpcBlockedByFilters(npcName, ctx) {
     if (!npc) return true;
 
     const f = ctx.filters ?? {};
+    const hasSuperiors = hasSuperiorSlayerUnlock(ctx.player);
+    const isIronman = isIronmanAccount(ctx.player);
     ctx.npcDropExclusionSet ??= new Set(f.npcDropExclusions || []);
     if (ctx.npcDropExclusionSet.has(npcName)) return true;
 
     if (f.isFreeToPlay && !npc.f2p) return true;
     if (!f.allowOthersHouses && npc.tags?.includes("house")) return true;
-    if (!f.hasSuperiors && npc.tags?.includes("superior")) return true;
+    if (!hasSuperiors && npc.tags?.includes("superior")) return true;
     if (f.hideClue && npc.tags?.includes("clue")) return true;
     if (f.hideBosses && npc.tags?.includes("boss")) return true;
     if (f.hideRaids && npc.tags?.includes("raid")) return true;
     if (f.hideLMS && npc.tags?.includes("LMS")) return true;
     if (f.isHunterRumourLocked && npc.tags?.includes("hunterRumour")) return true;
-    if (f.isIronman && (npc.tags?.includes("notForIronmen") || npc.tags?.includes("jon"))) return true;
+    if (isIronman && (npc.tags?.includes("notForIronmen") || npc.tags?.includes("jon"))) return true;
     if (f.hideJon && npc.tags?.includes("jon")) return true;
 
     if (f.isSlayerLocked) {

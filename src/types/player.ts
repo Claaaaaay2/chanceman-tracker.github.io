@@ -6,6 +6,12 @@ export interface Player {
     questPoints: number;
     achievementDiaries: Record<string, any>;
     combatAchievements: number[];
+    combatAchievementsCount?: number;
+    combatAchievementTiers?: Record<string, boolean>;
     collectionLog: number[];
     collectionLogItemCount: number;
+    accountType?: string | null;
+    slayer?: Record<string, any> | null;
+    barbarianTraining?: Record<string, any> | null;
+    hunterRumoursCompleted?: number;
 }

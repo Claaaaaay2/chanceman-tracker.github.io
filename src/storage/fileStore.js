@@ -12,22 +12,17 @@ let memory = {
         allowOthersHouses: false,
         hasFlatpacks: true,
         hasItemsets: true,
-        hasSuperiors: false,
-        isIronman: false,
         hideBosses: false,
         hideRaids: false,
         isSlayerLocked: false,
         hideUnreachableSlayerMasters: true,
         hideUnassignableSlayerTasks: false,
         ignoreSlayerMasterCombatLevel: false,
-        overrideBarbarianFiremaking1ForWaterfiends: false,
-        hasAntiDragonShield: false,
         isHunterRumourLocked: false,
         hideLMS: false,
         hideJon: false,
         isFreeToPlay: false,
         hideSourcelessItems: false,
-        hasEasyCasCompleted: false,
         countSkillBoosts: false,
         overrideWoodcutting: false,
         overrideMining: false,
@@ -38,7 +33,6 @@ let memory = {
         overrideCrafting: false,
         overrideConstruction: false,
         overrideSmithing: false,
-        hunterRumoursCompleted: 0,
         highlightChanges: false,
         showSectionCounts: false,
         itemSortByDroprate: true,
@@ -56,7 +50,6 @@ let memory = {
         hideIncompletableClues: false,
         hideCompletedDiaries: false,
         showOnlyCompletableTiers: false,
-        hazeelCultLocked: false,
         hideIncompletableDiaries: false,
         hasDoneEasterEvent: false,
         npcDropExclusions: []
@@ -131,6 +124,13 @@ export const fileStore = {
             delete normalizedFilters.hideRolled;
             delete normalizedFilters.onlyUnlocked;
             delete normalizedFilters.otherDropsSortByDroprate;
+            delete normalizedFilters.hasSuperiors;
+            delete normalizedFilters.isIronman;
+            delete normalizedFilters.hasEasyCasCompleted;
+            delete normalizedFilters.hasAntiDragonShield;
+            delete normalizedFilters.hazeelCultLocked;
+            delete normalizedFilters.overrideBarbarianFiremaking1ForWaterfiends;
+            delete normalizedFilters.hunterRumoursCompleted;
             memory.filters = normalizedFilters;
         }
     },
@@ -146,10 +146,19 @@ export const fileStore = {
     },
 
     async setFilters(filters) {
-        memory.filters = filters;
+        const normalizedFilters = { ...filters };
+        delete normalizedFilters.otherDropsSortByDroprate;
+        delete normalizedFilters.hasSuperiors;
+        delete normalizedFilters.isIronman;
+        delete normalizedFilters.hasEasyCasCompleted;
+        delete normalizedFilters.hasAntiDragonShield;
+        delete normalizedFilters.hazeelCultLocked;
+        delete normalizedFilters.overrideBarbarianFiremaking1ForWaterfiends;
+        delete normalizedFilters.hunterRumoursCompleted;
+        memory.filters = normalizedFilters;
         pendingFilterSave = pendingFilterSave
             .catch(() => {})
-            .then(() => saveToDB("filters", filters));
+            .then(() => saveToDB("filters", normalizedFilters));
         await pendingFilterSave;
     },
 

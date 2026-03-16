@@ -387,10 +387,6 @@ export default async function SlayerMastersPage() {
     const hideUnreachableSlayerMasters = fileStore.filters?.hideUnreachableSlayerMasters ?? true;
     const hideUnassignableSlayerTasks = Boolean(fileStore.filters?.hideUnassignableSlayerTasks);
     const ignoreSlayerMasterCombatLevel = Boolean(fileStore.filters?.ignoreSlayerMasterCombatLevel);
-    const overrideBarbarianFiremaking1ForWaterfiends = Boolean(
-        fileStore.filters?.overrideBarbarianFiremaking1ForWaterfiends
-    );
-    const hasAntiDragonShield = Boolean(fileStore.filters?.hasAntiDragonShield);
 
     const masterHtml = [];
 
@@ -601,22 +597,6 @@ export default async function SlayerMastersPage() {
                 <input type="checkbox" id="ignoreSlayerMasterCombatLevel" ${ignoreSlayerMasterCombatLevel ? "checked" : ""}>
                 Ignore combat level
             </label>
-            <label class="slayer-master-filter">
-                <input
-                    type="checkbox"
-                    id="overrideBarbarianFiremaking1ForWaterfiends"
-                    ${overrideBarbarianFiremaking1ForWaterfiends ? "checked" : ""}
-                >
-                Barbarian firemaking 1 completed
-            </label>
-            <label class="slayer-master-filter">
-                <input
-                    type="checkbox"
-                    id="hasAntiDragonShield"
-                    ${hasAntiDragonShield ? "checked" : ""}
-                >
-                Obtained Anti-dragon shield
-            </label>
         </div>
         <nav class="unlock-jump slayer-master-jump" aria-label="Jump to slayer master">
             <div class="unlock-jump-label">Jump to slayer master</div>
@@ -720,18 +700,6 @@ export function init() {
         }
         if (event.target.id === "hideUnassignableSlayerTasks") {
             await updateSlayerMasterFilters({ hideUnassignableSlayerTasks: event.target.checked });
-        }
-        if (event.target.id === "overrideBarbarianFiremaking1ForWaterfiends") {
-            await updateSlayerMasterFilters(
-                { overrideBarbarianFiremaking1ForWaterfiends: event.target.checked },
-                { rerender: true }
-            );
-        }
-        if (event.target.id === "hasAntiDragonShield") {
-            await updateSlayerMasterFilters(
-                { hasAntiDragonShield: event.target.checked },
-                { rerender: true }
-            );
         }
     };
 

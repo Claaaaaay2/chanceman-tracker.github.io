@@ -1,4 +1,5 @@
 import { getEffectiveSkillLevel } from "./skillBoosts.js";
+import { hasBarbarianFiremakingTraining, isIronmanAccount } from "./playerState.js";
 
 function shouldTrackMissing(ctx) {
     return !ctx?.suppressMissing && !ctx?.missing?.suppressMissing;
@@ -426,11 +427,11 @@ export const REQUIREMENT_CHECKS = {
     },
     has50HunterRumoursDone(ctx) {
         return (!ctx.filters?.isHunterRumourLocked && canTrainHunter(ctx)) //
-            || ctx.filters?.hunterRumoursCompleted >= 50;
+            || (ctx.player?.hunterRumoursCompleted ?? 0) >= 50;
     },
     has25HunterRumoursDone(ctx) {
         return (!ctx.filters?.isHunterRumourLocked && canTrainHunter(ctx)) //
-            || ctx.filters?.hunterRumoursCompleted >= 25;
+            || (ctx.player?.hunterRumoursCompleted ?? 0) >= 25;
     },
     canEnterNightmareZone(ctx) {
         return canEnterNightmareZone(ctx);
@@ -1311,7 +1312,7 @@ export const REQUIREMENT_CHECKS = {
         return canCompleteThroneOfMiscellania(ctx);
     },
     hasLarransKey(ctx) {
-        return has(ctx, 23490) && (ctx.filters.isIronman ? canTrainSlayer(ctx) : true);
+        return has(ctx, 23490) && (isIronmanAccount(ctx.player) ? canTrainSlayer(ctx) : true);
     },
     canCompleteDeathPlateau(ctx) {
         return canCompleteDeathPlateau(ctx);
@@ -2268,10 +2269,10 @@ export const REQUIREMENT_CHECKS = {
         return canCompleteBarbarianFiremaking1(ctx);
     },
     canAssignWaterfiendsBarbarianFiremaking1(ctx) {
-        return Boolean(ctx.filters?.overrideBarbarianFiremaking1ForWaterfiends);
+        return hasBarbarianFiremakingTraining(ctx.player);
     },
     hasAntiDragonShieldForDragonSlayerTasks(ctx) {
-        return Boolean(ctx.filters?.hasAntiDragonShield);
+        return has(ctx, 1540);
     },
     canCompleteBarbarianFiremaking2(ctx) {
         return canCompleteBarbarianFiremaking2(ctx);
@@ -3408,10 +3409,18 @@ function canCompleteHauntedMine(ctx) {
 }
 
 function canCompleteHazeelCult(ctx) {
-    if (ctx.filters?.hazeelCultLocked) {
+    if (isHazeelCultLocked(ctx)) {
         return has(ctx, 273); // Poison (item)
     }
     return true;
+}
+
+function isHazeelCultLocked(ctx) {
+    const poisonItemId = 273;
+    const obtained = ctx?.obtained || [];
+    const rolled = ctx?.rolled || [];
+
+    return obtained.includes(poisonItemId) && !rolled.includes(poisonItemId);
 }
 
 function canCompleteHeroesQuest(ctx) {
@@ -5655,9 +5664,12 @@ function hasFireRuneSource(ctx) {
 }
 
 function canReachTrollheim(ctx) {
-    if (ctx.filters?.hasEasyCasCompleted) return true;
+    if (ctx.player?.combatAchievementTiers?.easy) return true;
+    const combatAchievementsCount = ctx.player?.combatAchievementsCount
+        ?? ctx.player?.combatAchievements?.length
+        ?? 0;
     return requiresQuest(ctx, "canCompleteDeathPlateau", canCompleteDeathPlateau) //
-        || (ctx.player?.combatAchievements?.length ?? 0) >= 38;
+        || combatAchievementsCount >= 38;
 }
 
 function hasHunterMeat(ctx) {
@@ -6247,7 +6259,7 @@ function countCompletableNMZQuests(ctx) {
 }
 
 function canEnterNightmareZone(ctx) {
-    return (countCompletableNMZQuests(ctx) >= 5) && !ctx.filters?.isIronman;
+    return (countCompletableNMZQuests(ctx) >= 5) && !isIronmanAccount(ctx.player);
 }
 
 function hasKnifeOrNarwhalKnife(ctx) {

@@ -95,16 +95,6 @@ export default async function ItemsPage() {
                 </label>
 
                 <label>
-                    <input type="checkbox" id="hasSuperiors">
-                    'Bigger and Badder' unlocked
-                </label>
-
-                <label>
-                    <input type="checkbox" id="isIronman">
-                    I am an ironman
-                </label>
-
-                <label>
                     <input type="checkbox" id="hideBosses">
                     Hide bosses
                 </label>
@@ -124,11 +114,6 @@ export default async function ItemsPage() {
                     I am hunter rumour locked
                 </label>
 
-                <div>
-                    Nr of hunter rumours done:
-                    <input type="number" id="hunterRumoursCompleted">
-                </div>
-
                 <label>
                     <input type="checkbox" id="hideLMS">
                     Hide the LMS shop
@@ -147,11 +132,6 @@ export default async function ItemsPage() {
                 <label id="hideSourcelessItemsRow">
                     <input type="checkbox" id="hideSourcelessItems">
                     Hide sourceless items
-                </label>
-
-                <label>
-                    <input type="checkbox" id="hasEasyCasCompleted">
-                    Easy CA's completed
                 </label>
 
                 <label>

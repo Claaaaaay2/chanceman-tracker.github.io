@@ -1,5 +1,5 @@
-import { fetchPlayer } from "../api/playerApi.js";
 import { invalidateLogicCaches } from "../items/logicCache.js";
+import { importPlayerData } from "./playerImportHelpers.js";
 import { fileStore } from "../storage/fileStore.js";
 
 function getReturnPath() {
@@ -36,8 +36,8 @@ export default function ReuploadPage() {
         <br><br>
 
         <label>
-            Player name: (Only works with Runelite's <a href="https://oldschool.runescape.wiki/w/RuneScape:WikiSync">WikiSync</a>)<br>
-            <input type="text" id="playerName" placeholder="OSRS username" value="${fileStore.player?.name ?? ""}">
+            <a href="https://runelite.net/plugin-hub/show/chanceman-tracker-runelite-sync" target="_blank" rel="noreferrer">Chanceman Tracker Sync blob</a>:<br>
+            <textarea id="playerBlobInput" rows="10" placeholder="Paste the JSON blob from the Chanceman Tracker Sync plugin"></textarea>
         </label>
         <br><br>
 
@@ -66,13 +66,13 @@ export function init() {
 
         const rolledInput = app.querySelector("#rolledInput");
         const obtainedInput = app.querySelector("#obtainedInput");
-        const playerNameInput = app.querySelector("#playerName");
+        const playerBlobInput = app.querySelector("#playerBlobInput");
         const status = app.querySelector("#status");
         const loading = app.querySelector("#formLoading");
-        if (!rolledInput || !obtainedInput || !playerNameInput || !status || !loading) return;
+        if (!rolledInput || !obtainedInput || !playerBlobInput || !status || !loading) return;
         const saveBtn = app.querySelector("#saveBtn");
         if (!saveBtn) return;
-        const inputs = [rolledInput, obtainedInput, playerNameInput, saveBtn];
+        const inputs = [rolledInput, obtainedInput, playerBlobInput, saveBtn];
 
         const rolledFile = rolledInput.files[0];
         const obtainedFile = obtainedInput.files[0];
@@ -102,16 +102,16 @@ export function init() {
                 await fileStore.setObtained(json);
             }
 
-            if (playerNameInput.value) {
-                status.textContent = "Fetching player data...";
-                const player = await fetchPlayer(playerNameInput.value);
-                await fileStore.setPlayer(player);
-            }
+            const player = await importPlayerData({
+                playerBlobInput,
+                setStatus: (message) => {
+                    status.textContent = message;
+                }
+            });
+            await fileStore.setPlayer(player);
 
             // Clear any state
             invalidateLogicCaches(fileStore);
-            window.__itemsPageData = null;
-
             // Redirect to items page
             status.textContent = "Saved! Redirecting...";
             const returnPath = getReturnPath();
@@ -126,21 +126,9 @@ export function init() {
         }
     };
 
-    const onReuploadKeydown = (event) => {
-        if (event.key !== "Enter") return;
-        if (event.target?.id !== "playerName") return;
-        const app = document.getElementById("app");
-        const saveBtn = app?.querySelector("#saveBtn");
-        if (!saveBtn || saveBtn.disabled) return;
-        event.preventDefault();
-        saveBtn.click();
-    };
-
     document.addEventListener("click", onReuploadClick);
-    document.addEventListener("keydown", onReuploadKeydown);
     teardownReuploadHandlers = () => {
         document.removeEventListener("click", onReuploadClick);
-        document.removeEventListener("keydown", onReuploadKeydown);
     };
 }
 

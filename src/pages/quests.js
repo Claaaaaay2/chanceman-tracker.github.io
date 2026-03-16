@@ -370,10 +370,6 @@ export default async function QuestsPage() {
                 Hide incompletable quests
             </label>
             <label class="quest-filter">
-                <input type="checkbox" id="hazeelCultLocked" ${fileStore.filters?.hazeelCultLocked ? "checked" : ""}>
-                Hazeel Cult locked
-            </label>
-            <label class="quest-filter">
                 <span>Sort A-Z</span>
                 <span class="toggle-switch">
                     <input type="checkbox" id="questSortToggle" ${questSortByMissingItems ? "checked" : ""} aria-label="Sort quests by least missing items">
@@ -453,9 +449,6 @@ export function init() {
         }
         if (event.target.id === "hideIncompletableQuests") {
             await updateQuestFilters({ hideIncompletableQuests: event.target.checked });
-        }
-        if (event.target.id === "hazeelCultLocked") {
-            await updateQuestFilters({ hazeelCultLocked: event.target.checked }, { rerender: true });
         }
         if (event.target.id === "heroesQuestGangToggle") {
             await updateQuestFilters(

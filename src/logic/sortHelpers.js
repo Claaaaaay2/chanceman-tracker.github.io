@@ -2,6 +2,7 @@ import { areNpcSkillsMet, isNpcBlockedByFilters, isNpcObtainable, isRuleObtainab
 import { fileStore } from "../storage/fileStore.js";
 import { canReachNpc, evaluateRule } from "./itemAvailability.js";
 import { NPC_DATA } from "./npcData.js";
+import { isIronmanAccount } from "./playerState.js";
 
 function ruleContainsSkillRequirement(rule) {
     if (!rule || typeof rule === "string") return false;
@@ -80,6 +81,7 @@ export async function getObtainabilityRank(item, ctx) {
     const id = item.id;
 
     const rolled = fileStore.rolled?.includes(id);
+    const isIronman = isIronmanAccount(ctx.player);
 
     // 1. Shop (obtainable)
     if (rolled && src.shops) {
@@ -105,7 +107,7 @@ export async function getObtainabilityRank(item, ctx) {
             if (!(await isNpcObtainable(npcName, ctx))) continue;
 
             const npc = NPC_DATA[npcName];
-            if (npc?.tags?.includes("easy") || (npc?.tags?.includes("jon") && !ctx.filters?.isIronman)) {
+            if (npc?.tags?.includes("easy") || (npc?.tags?.includes("jon") && !isIronman)) {
                 return { rank: 3, name };
             }
         }
