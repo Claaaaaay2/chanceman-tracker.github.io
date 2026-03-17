@@ -1670,7 +1670,7 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompletePriestInPeril",
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasMushroomSpore"
             ]
         },
@@ -2620,7 +2620,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Cabbages_(plant)",
         "rule": {
             "all": [
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasCabbageSeed"
             ]
         },
@@ -8015,7 +8015,7 @@ export const NPC_DATA = {
     },
     "Hespori": {
         "wiki": "https://oldschool.runescape.wiki/w/Hespori",
-        "rule": ["canPlantPlants"],
+        "rule": ["canPlantTrees"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -11093,7 +11093,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Onion_plant",
         "rule": {
             "all": [
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasOnionSeed"
             ]
         },
@@ -11690,7 +11690,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Potato_plant",
         "rule": {
             "all": [
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasPotatoSeed"
             ]
         },
@@ -13160,7 +13160,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Seaweed_(Farming)",
         "rule": {
             "all": [
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasSeaweedSpore"
             ]
         },
@@ -13986,7 +13986,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Snape_grass_plant",
         "rule": {
             "all": [
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasSnapeGrassSeed"
             ]
         },
@@ -14500,7 +14500,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Strawberry_plant",
         "rule": {
             "all": [
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasStrawberrySeed"
             ]
         },
@@ -14651,7 +14651,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Sweetcorn_plant",
         "rule": {
             "all": [
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasSweetcornSeed"
             ]
         },
@@ -15046,7 +15046,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Tomato_plant",
         "rule": {
             "all": [
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasTomatoSeed"
             ]
         },
@@ -16034,7 +16034,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Watermelons",
         "rule": {
             "all": [
-                "canPlantPlants",
+                "canPlantTrees",
                 "hasWatermelonSeed"
             ]
         },
