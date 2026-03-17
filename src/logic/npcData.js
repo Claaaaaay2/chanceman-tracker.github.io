@@ -2784,8 +2784,8 @@ export const NPC_DATA = {
                 "hasCamphorSapling"
             ]
         },
-        "skill": ["farming"],
-        "level": [66],
+        "skill": ["farming", "woodcutting"],
+        "level": [66, 66],
         "tags": [],
         "f2p": false
     },
@@ -8587,8 +8587,8 @@ export const NPC_DATA = {
                 "hasIronwoodSapling"
             ]
         },
-        "skill": ["farming"],
-        "level": [80],
+        "skill": ["farming", "woodcutting"],
+        "level": [80, 80],
         "tags": [],
         "f2p": false
     },
@@ -9693,8 +9693,8 @@ export const NPC_DATA = {
                 "hasMagicSapling"
             ]
         },
-        "skill": ["farming"],
-        "level": [75],
+        "skill": ["farming", "woodcutting"],
+        "level": [75, 75],
         "tags": [],
         "f2p": false
     },
@@ -9788,8 +9788,8 @@ export const NPC_DATA = {
                 "hasMahoganySapling"
             ]
         },
-        "skill": ["farming"],
-        "level": [55],
+        "skill": ["farming", "woodcutting"],
+        "level": [55, 55],
         "tags": [],
         "f2p": false
     },
@@ -9916,8 +9916,8 @@ export const NPC_DATA = {
                 "hasMapleSapling"
             ]
         },
-        "skill": ["farming"],
-        "level": [45],
+        "skill": ["farming", "woodcutting"],
+        "level": [45, 45],
         "tags": [],
         "f2p": false
     },
@@ -10897,8 +10897,8 @@ export const NPC_DATA = {
                 "hasOakSapling"
             ]
         },
-        "skill": ["farming"],
-        "level": [15],
+        "skill": ["farming", "woodcutting"],
+        "level": [15, 15],
         "tags": [],
         "f2p": false
     },
@@ -11990,8 +11990,8 @@ export const NPC_DATA = {
                 "hasRedwoodSapling"
             ]
         },
-        "skill": ["farming"],
-        "level": [90],
+        "skill": ["farming", "woodcutting"],
+        "level": [90, 90],
         "tags": [],
         "f2p": false
     },
@@ -12672,8 +12672,8 @@ export const NPC_DATA = {
                 "hasRosewoodSapling"
             ]
         },
-        "skill": ["farming"],
-        "level": [92],
+        "skill": ["farming", "woodcutting"],
+        "level": [92, 92],
         "tags": [],
         "f2p": false
     },
@@ -14800,8 +14800,8 @@ export const NPC_DATA = {
                 "hasTeakSapling"
             ]
         },
-        "skill": ["farming"],
-        "level": [35],
+        "skill": ["farming", "woodcutting"],
+        "level": [35, 35],
         "tags": [],
         "f2p": false
     },
@@ -16267,8 +16267,8 @@ export const NPC_DATA = {
                 "hasWillowSapling"
             ]
         },
-        "skill": ["farming"],
-        "level": [30],
+        "skill": ["farming", "woodcutting"],
+        "level": [30, 30],
         "tags": [],
         "f2p": false
     },
@@ -16572,8 +16572,8 @@ export const NPC_DATA = {
                 "hasYewSapling"
             ]
         },
-        "skill": ["farming"],
-        "level": [60],
+        "skill": ["farming", "woodcutting"],
+        "level": [60, 60],
         "tags": [],
         "f2p": false
     },
