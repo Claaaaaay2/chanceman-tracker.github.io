@@ -1133,6 +1133,9 @@
         },
         "Skeleton Unarmed": {
           "droprate": "1/64"
+        },
+        "Chaos dwarf": {
+          "droprate": "1/42.667"
         }
       },
       "spawns": {
@@ -1672,9 +1675,6 @@
       "Food"
     ],
     "sources": {
-      "shops": {
-        "Yes": "canAccessCooksGuild"
-      },
       "other": {
         "Cooking an Apple pie": {
           "notes": "Requires Uncooked apple pie and level 30 Cooking.",
@@ -3537,6 +3537,9 @@
         },
         "Zombie (Sepulchre of Death)": {
           "droprate": "1/30"
+        },
+        "Chaos dwarf": {
+          "droprate": "Always"
         }
       },
       "spawns": {
@@ -5257,6 +5260,9 @@
         },
         "Obor Free-to-play": {
           "droprate": "1/135"
+        },
+        "Chaos dwarf": {
+          "droprate": "1/42.667"
         }
       },
       "spawns": {
@@ -5290,6 +5296,11 @@
       "Cooking"
     ],
     "sources": {
+      "drops": {
+        "Chaos dwarf": {
+          "droprate": "1/128"
+        }
+      },
       "spawns": {
         "Yes": "No requirements"
       },
@@ -5499,6 +5510,9 @@
           "droprate": "1/128"
         },
         "Moss giant Regular": {
+          "droprate": "1/128"
+        },
+        "Chaos dwarf": {
           "droprate": "1/128"
         }
       }
@@ -5792,6 +5806,9 @@
         },
         "Zombie Level 24": {
           "droprate": "1/128"
+        },
+        "Chaos dwarf": {
+          "droprate": "1/64"
         }
       },
       "spawns": {
@@ -5899,6 +5916,9 @@
         },
         "Obor Free-to-play": {
           "droprate": "1/135"
+        },
+        "Chaos dwarf": {
+          "droprate": "1/128"
         }
       },
       "shops": {
@@ -9557,6 +9577,9 @@
         },
         "Wizard": {
           "droprate": "1/128"
+        },
+        "Chaos dwarf": {
+          "droprate": "1/32"
         }
       }
     }
@@ -10234,6 +10257,9 @@
         },
         "Speedy Keith": {
           "droprate": "1/128"
+        },
+        "Chaos dwarf": {
+          "droprate": "1/42.667"
         }
       },
       "spawns": {
@@ -10408,6 +10434,11 @@
       "Smithing"
     ],
     "sources": {
+      "drops": {
+        "Chaos dwarf": {
+          "droprate": "1/21.333"
+        }
+      },
       "other": {
         "Smelting a Mithril bar": {
           "notes": "Requires Mithril ore and Coal and level 50 Smithing.",
@@ -10671,6 +10702,9 @@
       "drops": {
         "Adventurer Jon Weapons master": {
           "droprate": "Always"
+        },
+        "Chaos dwarf": {
+          "droprate": "1/128"
         }
       },
       "shops": {
@@ -11131,6 +11165,9 @@
         },
         "Simple lockbox": {
           "droprate": "1/2170"
+        },
+        "Chaos dwarf": {
+          "droprate": "1/128"
         }
       },
       "other": {
@@ -11353,7 +11390,13 @@
     "id": 991,
     "name": "Muddy key",
     "image": "muddy_key.png",
-    "sources": {}
+    "sources": {
+      "drops": {
+        "Chaos dwarf": {
+          "droprate": "1/18.286"
+        }
+      }
+    }
   },
   {
     "index": 2624,
@@ -11481,6 +11524,9 @@
         },
         "Zombie Level 13": {
           "droprate": "1/128"
+        },
+        "Chaos dwarf": {
+          "droprate": "1/42.667"
         }
       },
       "spawns": {
@@ -12513,9 +12559,6 @@
       "Food"
     ],
     "sources": {
-      "shops": {
-        "Yes": "canAccessCooksGuild"
-      },
       "other": {
         "Cooking a Redberry pie": {
           "notes": "Requires Uncooked berry pie and level 10 Cooking.",
@@ -14995,6 +15038,9 @@
         },
         "Speedy Keith": {
           "droprate": "1/128"
+        },
+        "Chaos dwarf": {
+          "droprate": "1/64"
         }
       },
       "shops": {
@@ -16789,6 +16835,11 @@
       "Cooking"
     ],
     "sources": {
+      "drops": {
+        "Chaos dwarf": {
+          "droprate": "1/128"
+        }
+      },
       "spawns": {
         "Yes": "No requirements"
       },
@@ -17583,6 +17634,9 @@
           "droprate": "1/64"
         },
         "Ice giant Regular": {
+          "droprate": "1/128"
+        },
+        "Chaos dwarf": {
           "droprate": "1/128"
         }
       },

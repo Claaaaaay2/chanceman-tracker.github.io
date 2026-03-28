@@ -2317,6 +2317,9 @@
                         "skills": {
                             "Slayer": 65,
                             "Combat": 70
+                        },
+                        "quests": {
+                            "Desert Treasure I": "completed"
                         }
                     },
                     "locations": [

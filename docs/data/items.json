@@ -24949,6 +24949,9 @@
         },
         "The Mimic Master": {
           "droprate": "1/5.158; 1/5.15"
+        },
+        "Veiled kraken": {
+          "droprate": "1/54.4"
         }
       },
       "spawns": {
@@ -35547,9 +35550,6 @@
                 "has": 1944
               },
               {
-                "has": 1927
-              },
-              {
                 "has": 1933
               },
               {
@@ -35850,13 +35850,17 @@
     "sources": {
       "other": {
         "Constructing Camphor hull parts": {
-          "notes": "Requires camphor planks.",
+          "notes": "Requires camphor planks, level 53 Construction and completion of Pandemonium.",
           "rule": {
             "all": [
               {
                 "has": 31432
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Construction",
+                "level": 53
+              }
             ]
           }
         }
@@ -35878,6 +35882,9 @@
         },
         "Camphor tree (Farming)": {
           "droprate": "Always"
+        },
+        "Martial salvage": {
+          "droprate": "1/406.7"
         }
       }
     },
@@ -35896,6 +35903,9 @@
       "drops": {
         "Lost camphor crate": {
           "droprate": "1/8"
+        },
+        "Veiled kraken": {
+          "droprate": "1/90.67"
         }
       },
       "other": {
@@ -36050,6 +36060,9 @@
         },
         "Large salvage": {
           "droprate": "1/2215"
+        },
+        "Veiled kraken": {
+          "droprate": "1/181.3"
         }
       }
     },
@@ -36140,8 +36153,11 @@
     "name": "Cannon barrels",
     "image": "cannon_barrels.png",
     "sources": {
-      "shops": {
-        "Yes": "canCompleteDwarfCannon"
+      "other": {
+        "Purchasing through dialogue": {
+          "note": "Can be bought ater completion of the Dwarf Cannon quest.",
+          "rule": "canCompleteDwarfCannon"
+        }
       }
     }
   },
@@ -36151,8 +36167,11 @@
     "name": "Cannon base",
     "image": "cannon_base.png",
     "sources": {
-      "shops": {
-        "Yes": "canCompleteDwarfCannon"
+      "other": {
+        "Purchasing through dialogue": {
+          "note": "Can be bought ater completion of the Dwarf Cannon quest.",
+          "rule": "canCompleteDwarfCannon"
+        }
       }
     }
   },
@@ -36162,8 +36181,11 @@
     "name": "Cannon furnace",
     "image": "cannon_furnace.png",
     "sources": {
-      "shops": {
-        "Yes": "canCompleteDwarfCannon"
+      "other": {
+        "Purchasing through dialogue": {
+          "note": "Can be bought ater completion of the Dwarf Cannon quest.",
+          "rule": "canCompleteDwarfCannon"
+        }
       }
     }
   },
@@ -36173,8 +36195,11 @@
     "name": "Cannon stand",
     "image": "cannon_stand.png",
     "sources": {
-      "shops": {
-        "Yes": "canCompleteDwarfCannon"
+      "other": {
+        "Purchasing through dialogue": {
+          "note": "Can be bought ater completion of the Dwarf Cannon quest.",
+          "rule": "canCompleteDwarfCannon"
+        }
       }
     }
   },
@@ -38171,20 +38196,6 @@
           "rule": {
             "all": [
               {
-                "any": [
-                  {
-                    "has": 1927
-                  },
-                  {
-                    "has": 2130
-                  },
-                  {
-                    "has": 6697
-                  },
-                  "canCompleteSinsOfTheFather"
-                ]
-              },
-              {
                 "skill": "Cooking",
                 "level": 48
               }
@@ -38864,9 +38875,6 @@
                 "has": 2017
               },
               {
-                "has": 1927
-              },
-              {
                 "has": 1973
               },
               {
@@ -39478,11 +39486,11 @@
   {
     "index": 1028,
     "id": 5929,
-    "name": "Cider(m)",
+    "name": "Cider(m4)",
     "image": "cider(m4).png",
     "sources": {
       "other": {
-        "Brewing a Cider(m)": {
+        "Brewing a Cider(m4)": {
           "notes": "Requires Apple mush, Calquat keg and Ale yeast and level 14 Cooking.",
           "rule": {
             "all": [
@@ -39563,8 +39571,8 @@
   {
     "index": 1033,
     "id": 28824,
-    "name": "Civitas illa fortis teleport (tablet)",
-    "image": "civitas_illa_fortis_teleport_(tablet).png",
+    "name": "Civitas illa fortis teleport",
+    "image": "civitas_illa_fortis_teleport.png",
     "sources": {
       "other": {
         "Crafting a teleport tablet": {
@@ -45007,6 +45015,9 @@
         },
         "The Mimic Master": {
           "droprate": "1/5.158; 1/5.15"
+        },
+        "Veiled kraken": {
+          "droprate": "1/34"
         }
       },
       "spawns": {
@@ -49041,6 +49052,9 @@
       "drops": {
         "Opulent salvage": {
           "droprate": "1/20000"
+        },
+        "Veiled kraken": {
+          "droprate": "1/1000"
         }
       }
     },
@@ -49081,6 +49095,9 @@
         },
         "Plundered salvage": {
           "droprate": "1/3000"
+        },
+        "Veiled kraken": {
+          "droprate": "1/90.67"
         }
       }
     },
@@ -50165,6 +50182,9 @@
         },
         "Great white shark": {
           "droprate": "1/6138"
+        },
+        "Veiled kraken": {
+          "droprate": "1/1850"
         }
       },
       "other": {
@@ -50708,6 +50728,9 @@
         },
         "Lava Strykewyrm": {
           "droprate": "1/400; 1/100"
+        },
+        "Veiled kraken": {
+          "droprate": "1/1150"
         }
       }
     },
@@ -53672,6 +53695,9 @@
         },
         "Forgotten Soul": {
           "droprate": "1/128"
+        },
+        "Veiled kraken": {
+          "droprate": "1/9.067"
         }
       }
     },
@@ -54275,6 +54301,9 @@
         },
         "Wise Old Man tasks": {
           "droprate": "Common"
+        },
+        "Veiled kraken": {
+          "droprate": "1/27.2"
         }
       },
       "spawns": {
@@ -59229,6 +59258,37 @@
     ]
   },
   {
+    "index": 4503,
+    "id": 33074,
+    "name": "Facility bottle (empty)",
+    "image": "facility_bottle_(empty).png",
+    "sources": {
+      "drops": {
+        "Opulent salvage": {
+          "droprate": "1/300"
+        },
+        "Fremennik salvage": {
+          "droprate": "1/500"
+        },
+        "Martial salvage": {
+          "droprate": "1/700"
+        },
+        "Plundered salvage": {
+          "droprate": "1/900"
+        },
+        "Large salvage": {
+          "droprate": "1/1000"
+        }
+      },
+      "shops": {
+        "Yes": "canCompletePandemonium"
+      }
+    },
+    "tags": [
+      "Sailing"
+    ]
+  },
+  {
     "index": 1568,
     "id": 4593,
     "name": "Fake beard",
@@ -63156,6 +63216,9 @@
         },
         "Hermit crab": {
           "droprate": "1/64"
+        },
+        "Veiled kraken": {
+          "droprate": "1/54.4"
         }
       }
     }
@@ -66211,7 +66274,7 @@
     "sources": {
       "other": {
         "Special shop": {
-          "notes": "Tithe farm reward and level 36 Farming.",
+          "notes": "Tithe farm reward (needs a Spade) and level 34 Farming.",
           "rule": {
             "all": [
               {
@@ -68491,6 +68554,9 @@
         },
         "Hunters' loot sack (supplies)": {
           "droprate": "11 × Varies"
+        },
+        "Veiled kraken": {
+          "droprate": "1/644.7"
         }
       }
     },
@@ -69488,6 +69554,9 @@
         },
         "Hunters' loot sack (supplies)": {
           "droprate": "11 × Varies"
+        },
+        "Veiled kraken": {
+          "droprate": "1/967.1"
         }
       }
     },
@@ -70491,6 +70560,9 @@
         },
         "Reward Cart": {
           "droprate": "Varies"
+        },
+        "Veiled kraken": {
+          "droprate": "1/1290"
         }
       }
     },
@@ -71440,6 +71512,9 @@
         },
         "Wise Old Man tasks": {
           "droprate": "Common"
+        },
+        "Veiled kraken": {
+          "droprate": "1/120.9"
         }
       }
     },
@@ -72395,6 +72470,9 @@
         },
         "Wise Old Man tasks": {
           "droprate": "Common"
+        },
+        "Veiled kraken": {
+          "droprate": "1/276.3"
         }
       }
     },
@@ -73360,6 +73438,9 @@
         },
         "Hunters' loot sack (supplies)": {
           "droprate": "11 × Varies"
+        },
+        "Veiled kraken": {
+          "droprate": "1/483.6"
         }
       }
     },
@@ -74375,6 +74456,9 @@
         },
         "Hunters' loot sack (supplies)": {
           "droprate": "11 × Varies"
+        },
+        "Veiled kraken": {
+          "droprate": "1/773.7"
         }
       }
     },
@@ -75378,6 +75462,9 @@
         },
         "Hunters' loot sack (supplies)": {
           "droprate": "11 × Varies"
+        },
+        "Veiled kraken": {
+          "droprate": "1/1290"
         }
       }
     },
@@ -76315,6 +76402,9 @@
         },
         "Wise Old Man tasks": {
           "droprate": "Common"
+        },
+        "Veiled kraken": {
+          "droprate": "1/161.2"
         }
       }
     },
@@ -77384,6 +77474,9 @@
         },
         "Wise Old Man tasks": {
           "droprate": "Common"
+        },
+        "Veiled kraken": {
+          "droprate": "1/351.7"
         }
       }
     },
@@ -78481,6 +78574,9 @@
         },
         "Wise Old Man tasks": {
           "droprate": "Common"
+        },
+        "Veiled kraken": {
+          "droprate": "1/214.9"
         }
       }
     },
@@ -83162,6 +83258,9 @@
         },
         "Pygmy kraken": {
           "droprate": "1/3000"
+        },
+        "Veiled kraken": {
+          "droprate": "1/1900"
         }
       }
     }
@@ -87789,13 +87888,17 @@
     "sources": {
       "other": {
         "Constructing Ironwood hull parts": {
-          "notes": "Requires ironwood planks.",
+          "notes": "Requires ironwood planks, level 77 Construction and completion of Pandemonium.",
           "rule": {
             "all": [
               {
                 "has": 31435
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Construction",
+                "level": 77
+              }
             ]
           }
         }
@@ -87817,6 +87920,12 @@
         },
         "Ironwood tree (Farming)": {
           "droprate": "Always"
+        },
+        "Fremennik salvage": {
+          "droprate": "1/445"
+        },
+        "Martial salvage": {
+          "droprate": "1/813.3"
         }
       }
     },
@@ -87891,6 +88000,9 @@
         },
         "Opulent salvage": {
           "droprate": "1/42.4"
+        },
+        "Veiled kraken": {
+          "droprate": "1/54.4"
         }
       },
       "other": {
@@ -87989,6 +88101,9 @@
         },
         "Martial salvage": {
           "droprate": "1/2430"
+        },
+        "Veiled kraken": {
+          "droprate": "1/680"
         }
       }
     },
@@ -91541,13 +91656,17 @@
     "sources": {
       "other": {
         "Constructing Large camphor hull parts": {
-          "notes": "Requires Camphor hull parts.",
+          "notes": "Requires Camphor hull parts, level 53 Construction and completion of Pandemonium.",
           "rule": {
             "all": [
               {
                 "has": 32053
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Construction",
+                "level": 53
+              }
             ]
           }
         }
@@ -91572,6 +91691,9 @@
         },
         "Great white shark": {
           "droprate": "1/6138"
+        },
+        "Veiled kraken": {
+          "droprate": "1/2100"
         }
       },
       "other": {
@@ -91638,13 +91760,17 @@
     "sources": {
       "other": {
         "Constructing Large ironwood hull parts": {
-          "notes": "Requires Ironwood hull parts.",
+          "notes": "Requires Ironwood hull parts, level 77 Construction and completion of Pandemonium.",
           "rule": {
             "all": [
               {
                 "has": 32056
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Construction",
+                "level": 77
+              }
             ]
           }
         }
@@ -91662,13 +91788,17 @@
     "sources": {
       "other": {
         "Constructing Large mahogany hull parts": {
-          "notes": "Requires Mahogany hull parts.",
+          "notes": "Requires Mahogany hull parts, level 41 Construction and completion of Pandemonium.",
           "rule": {
             "all": [
               {
                 "has": 32050
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Construction",
+                "level": 41
+              }
             ]
           }
         }
@@ -91756,13 +91886,17 @@
     "sources": {
       "other": {
         "Constructing Large oak hull parts": {
-          "notes": "Requires Oak hull parts.",
+          "notes": "Requires Oak hull parts, level 8 Construction and completion of Pandemonium.",
           "rule": {
             "all": [
               {
                 "has": 32044
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Construction",
+                "level": 8
+              }
             ]
           }
         }
@@ -91780,13 +91914,17 @@
     "sources": {
       "other": {
         "Constructing Large rosewood hull parts": {
-          "notes": "Requires Rosewood hull parts.",
+          "notes": "Requires Rosewood hull parts, level 84 Construction and completion of Pandemonium.",
           "rule": {
             "all": [
               {
                 "has": 32059
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Construction",
+                "level": 84
+              }
             ]
           }
         }
@@ -91905,13 +92043,17 @@
     "sources": {
       "other": {
         "Constructing Large teak hull parts": {
-          "notes": "Requires Teak hull parts.",
+          "notes": "Requires Teak hull parts, level 23 Construction and completion of Pandemonium.",
           "rule": {
             "all": [
               {
                 "has": 32047
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Construction",
+                "level": 23
+              }
             ]
           }
         }
@@ -91929,7 +92071,7 @@
     "sources": {
       "other": {
         "Constructing Large wooden hull parts": {
-          "notes": "Requires Wooden hull parts.",
+          "notes": "Requires Wooden hull parts and completion of Pandemonium.",
           "rule": {
             "all": [
               {
@@ -97503,13 +97645,17 @@
     "sources": {
       "other": {
         "Constructing Mahogany hull parts": {
-          "notes": "Requires Mahogany plank.",
+          "notes": "Requires Mahogany plank, level 41 Construction and completion of Pandemonium.",
           "rule": {
             "all": [
               {
                 "has": 8782
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Construction",
+                "level": 41
+              }
             ]
           }
         }
@@ -105577,15 +105723,14 @@
     "sources": {
       "other": {
         "Crafting hunter armour": {
-          "notes": "Requires Sunlight antelope fur and 69 Crafting and level 69 Crafting.",
+          "notes": "Requires Sunlight antelope fur and Mixed hide base.",
           "rule": {
             "all": [
               {
                 "has": 29177
               },
               {
-                "skill": "Crafting",
-                "level": 69
+                "has": 29292
               }
             ]
           }
@@ -105605,15 +105750,14 @@
     "sources": {
       "other": {
         "Crafting hunter armour": {
-          "notes": "Requires Jaguar fur and 68 Crafting and level 68 Crafting.",
+          "notes": "Requires Jaguar fur and Mixed hide base.",
           "rule": {
             "all": [
               {
                 "has": 29218
               },
               {
-                "skill": "Crafting",
-                "level": 68
+                "has": 29292
               }
             ]
           }
@@ -105633,15 +105777,14 @@
     "sources": {
       "other": {
         "Crafting hunter armour": {
-          "notes": "Requires Fox fur and 71 Crafting and level 71 Crafting.",
+          "notes": "Requires Fox fur and Mixed hide base.",
           "rule": {
             "all": [
               {
                 "has": 29163
               },
               {
-                "skill": "Crafting",
-                "level": 71
+                "has": 29292
               }
             ]
           }
@@ -105661,15 +105804,14 @@
     "sources": {
       "other": {
         "Crafting hunter armour": {
-          "notes": "Requires Sunlight antelope fur and 72 Crafting and level 72 Crafting.",
+          "notes": "Requires Sunlight antelope fur and Mixed hide base.",
           "rule": {
             "all": [
               {
                 "has": 29177
               },
               {
-                "skill": "Crafting",
-                "level": 72
+                "has": 29292
               }
             ]
           }
@@ -107244,6 +107386,9 @@
         },
         "Magpie impling jar": {
           "droprate": "1/21"
+        },
+        "Veiled kraken": {
+          "droprate": "1/90.67"
         }
       },
       "shops": {
@@ -107380,6 +107525,9 @@
         },
         "Experiment No.2": {
           "droprate": "1/128"
+        },
+        "Veiled kraken": {
+          "droprate": "1/9.067"
         }
       },
       "other": {
@@ -107468,6 +107616,9 @@
         },
         "Magpie impling jar": {
           "droprate": "1/21"
+        },
+        "Veiled kraken": {
+          "droprate": "1/90.67"
         }
       },
       "shops": {
@@ -107562,6 +107713,9 @@
       "drops": {
         "Great white shark": {
           "droprate": "1/20"
+        },
+        "Veiled kraken": {
+          "droprate": "1/90.67"
         }
       },
       "shops": {
@@ -108129,6 +108283,9 @@
         },
         "Waterfiend": {
           "droprate": "1/128"
+        },
+        "Veiled kraken": {
+          "droprate": "1/9.067"
         }
       },
       "other": {
@@ -110235,13 +110392,17 @@
     "sources": {
       "other": {
         "Constructing Oak hull parts": {
-          "notes": "Requires oak planks.",
+          "notes": "Requires oak planks, level 8 Construction and completion of Pandemonium.",
           "rule": {
             "all": [
               {
                 "has": 8778
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Construction",
+                "level": 8
+              }
             ]
           }
         }
@@ -112424,6 +112585,9 @@
         },
         "Chest (moon key)": {
           "droprate": "1/107"
+        },
+        "Veiled kraken": {
+          "droprate": "1/136"
         }
       },
       "other": {
@@ -113709,6 +113873,9 @@
         },
         "Giant Mole": {
           "droprate": "1/131"
+        },
+        "Veiled kraken": {
+          "droprate": "1/27.2"
         }
       },
       "other": {
@@ -114273,16 +114440,6 @@
           "notes": "Requires a Bucket of milk or a Pot of cream and level 38 Cooking.",
           "rule": {
             "all": [
-              {
-                "any": [
-                  {
-                    "has": 1927
-                  },
-                  {
-                    "has": 2130
-                  }
-                ]
-              },
               {
                 "skill": "Cooking",
                 "level": 38
@@ -116685,9 +116842,6 @@
           "rule": {
             "all": [
               {
-                "has": 1927
-              },
-              {
                 "skill": "Cooking",
                 "level": 21
               }
@@ -117910,6 +118064,9 @@
         "Nex": {
           "droprate": "Common"
         }
+      },
+      "shops": {
+        "Yes": "canCompletePriestInPeril"
       },
       "other": {
         "Mixing a potion": {
@@ -119484,7 +119641,7 @@
   {
     "index": 2955,
     "id": 31677,
-    "name": "Rainbow crab A",
+    "name": "Rainbow crab (1)",
     "image": "rainbow_crab_(1).png",
     "sources": {
       "drops": {
@@ -119497,7 +119654,7 @@
   {
     "index": 2956,
     "id": 31680,
-    "name": "Rainbow crab B",
+    "name": "Rainbow crab (2)",
     "image": "rainbow_crab_(2).png",
     "sources": {
       "drops": {
@@ -119510,7 +119667,7 @@
   {
     "index": 2957,
     "id": 31683,
-    "name": "Rainbow crab C",
+    "name": "Rainbow crab (3)",
     "image": "rainbow_crab_(3).png",
     "sources": {
       "drops": {
@@ -120959,6 +121116,11 @@
     "name": "Raw bluefin",
     "image": "raw_bluefin.png",
     "sources": {
+      "drops": {
+        "Veiled kraken": {
+          "droprate": "1/54.4"
+        }
+      },
       "other": {
         "Deep sea trawling": {
           "notes": "Avast me hearties yo-ho.",
@@ -121261,6 +121423,11 @@
     "name": "Raw giant krill",
     "image": "raw_giant_krill.png",
     "sources": {
+      "drops": {
+        "Fish stall (Port Roberts)": {
+          "droprate": "1/64"
+        }
+      },
       "other": {
         "Deep sea trawling": {
           "notes": "Avast me hearties yo-ho.",
@@ -121299,6 +121466,11 @@
     "name": "Raw haddock",
     "image": "raw_haddock.png",
     "sources": {
+      "drops": {
+        "Fish stall (Port Roberts)": {
+          "droprate": "1/64"
+        }
+      },
       "other": {
         "Deep sea trawling": {
           "notes": "Avast me hearties yo-ho.",
@@ -121321,6 +121493,11 @@
     "name": "Raw halibut",
     "image": "raw_halibut.png",
     "sources": {
+      "drops": {
+        "Veiled kraken": {
+          "droprate": "1/54.4"
+        }
+      },
       "other": {
         "Deep sea trawling": {
           "notes": "Avast me hearties yo-ho.",
@@ -121573,7 +121750,7 @@
           "droprate": "1/21.333"
         },
         "Fish stall (Port Roberts)": {
-          "droprate": "1/24"
+          "droprate": "1/21.33"
         },
         "Frigatebird": {
           "droprate": "1/25"
@@ -122739,7 +122916,7 @@
     "sources": {
       "drops": {
         "Fish stall (Port Roberts)": {
-          "droprate": "1/60"
+          "droprate": "1/36.6"
         },
         "Fishing spot (lantern) Harpoon": {
           "droprate": "Common"
@@ -122813,7 +122990,7 @@
           "droprate": "1/4"
         },
         "Fish stall (Port Roberts)": {
-          "droprate": "1/4"
+          "droprate": "1/4.12"
         },
         "Drift net fishing Levels 47-49": {
           "droprate": "1/5"
@@ -126219,7 +126396,7 @@
     "sources": {
       "other": {
         "Creating a sapling": {
-          "notes": "Requires some Rosewood planks, a Hammer and a Saw.",
+          "notes": "Requires some Rosewood planks, a Hammer and a Saw, level 84 Construction and completion of Pandemonium.",
           "rule": {
             "all": [
               {
@@ -126231,7 +126408,11 @@
               {
                 "has": 8794
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Construction",
+                "level": 84
+              }
             ]
           }
         }
@@ -126253,6 +126434,9 @@
         },
         "Rosewood tree (Farming)": {
           "droprate": "Always"
+        },
+        "Fremennik salvage": {
+          "droprate": "1/890"
         }
       }
     },
@@ -126317,6 +126501,11 @@
     "name": "Rosewood repair kit",
     "image": "rosewood_repair_kit.png",
     "sources": {
+      "drops": {
+        "Veiled kraken": {
+          "droprate": "1/272"
+        }
+      },
       "other": {
         "Creating a sapling": {
           "notes": "Requires a Rosewood plank, Dragon nails and Swamp paste.",
@@ -126404,6 +126593,9 @@
         },
         "Butterfly ray": {
           "droprate": "1/2980"
+        },
+        "Veiled kraken": {
+          "droprate": "1/2720"
         }
       }
     },
@@ -128063,6 +128255,9 @@
         },
         "Opulent salvage": {
           "droprate": "1/141.333"
+        },
+        "Veiled kraken": {
+          "droprate": "1/27.2"
         }
       },
       "other": {
@@ -129174,6 +129369,9 @@
         },
         "Revenant imp": {
           "droprate": "1/1512.5"
+        },
+        "Veiled kraken": {
+          "droprate": "1/13.6"
         }
       },
       "shops": {
@@ -131279,6 +131477,9 @@
         },
         "Gold Chest (red)": {
           "droprate": "1/71.955; 1/71.085"
+        },
+        "Veiled kraken": {
+          "droprate": "1/13.6"
         }
       },
       "shops": {
@@ -136758,7 +136959,7 @@
         }
       },
       "shops": {
-        "Yes": "No requirements"
+        "Yes": "canCompletePriestInPeril"
       },
       "other": {
         "Cooking a Shark": {
@@ -139225,6 +139426,9 @@
         },
         "Hoop Snake": {
           "droprate": "1/3.333"
+        },
+        "Veiled kraken": {
+          "droprate": "1/54.4"
         }
       }
     }
@@ -141576,7 +141780,7 @@
     "sources": {
       "other": {
         "Cooking a Spider on shaft": {
-          "notes": "Requires a Raw Spider on shaft and level 16 Cooking.",
+          "notes": "Requires a Raw Spider on shaft (Spider carcass + Arrow shaft) and level 16 Cooking.",
           "rule": {
             "all": [
               {
@@ -141606,7 +141810,7 @@
     "sources": {
       "other": {
         "Cooking a Spider on stick": {
-          "notes": "Requires a Raw spider on a stick (Spider carcass + Skewer stick or Arrow shaft and level 16 Cooking.",
+          "notes": "Requires a Raw spider on a stick (Spider carcass + Skewer stick) and level 16 Cooking.",
           "rule": {
             "all": [
               {
@@ -142900,6 +143104,9 @@
         "Jekyll and Hyde Torstol": {
           "droprate": "Always"
         }
+      },
+      "shops": {
+        "Yes": "canCompletePriestInPeril"
       },
       "other": {
         "Mixing a potion": {
@@ -149321,8 +149528,8 @@
   {
     "index": 3778,
     "id": 31441,
-    "name": "Summon boat (tablet)",
-    "image": "summon_boat_(tablet).png",
+    "name": "Summon boat",
+    "image": "summon_boat.png",
     "sources": {
       "other": {
         "Crafting a teleport tablet": {
@@ -149550,7 +149757,7 @@
     "sources": {
       "other": {
         "Crafting sunfire runes": {
-          "notes": "Requires Fire rune, Sunfire splinters and Pure essence.",
+          "notes": "Requires Fire rune, Sunfire splinters, Pure essence and level 33 Runecraft.",
           "rule": {
             "all": [
               {
@@ -149561,6 +149768,10 @@
               },
               {
                 "has": 7936
+              },
+              {
+                "skill": "Runecraft",
+                "level": 33
               }
             ]
           }
@@ -151130,6 +151341,9 @@
     "image": "super_kebab.png",
     "sources": {
       "other": {
+        "Purchasing through dialogue from Ali the Kebab seller in Pollnovneach": {
+          "notes": "Free roll upon reaching the Kharidian desert."
+        },
         "Cooking a Super kebab": {
           "notes": "Requires a Kebab or Ugthanki kebab.",
           "rule": {
@@ -154123,13 +154337,17 @@
     "sources": {
       "other": {
         "Constructing Teak hull parts": {
-          "notes": "Requires teak planks.",
+          "notes": "Requires teak planks, level 23 Construction and completion of Pandemonium.",
           "rule": {
             "all": [
               {
                 "has": 8780
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Construction",
+                "level": 23
+              }
             ]
           }
         }
@@ -155457,8 +155675,8 @@
   {
     "index": 3974,
     "id": 31443,
-    "name": "Teleport to boat (tablet)",
-    "image": "teleport_to_boat_(tablet).png",
+    "name": "Teleport to boat",
+    "image": "teleport_to_boat.png",
     "sources": {
       "other": {
         "Crafting a teleport tablet": {
@@ -156233,6 +156451,9 @@
     "name": "Toad batta",
     "image": "toad_batta.png",
     "sources": {
+      "spawns": {
+        "Yes": "canCompleteHauntedMine"
+      },
       "other": {
         "Gnome cooking": {
           "notes": "Requires an unfinished batta.",
@@ -165502,6 +165723,9 @@
         },
         "Forgotten Soul": {
           "droprate": "1/128"
+        },
+        "Veiled kraken": {
+          "droprate": "1/9.067"
         }
       },
       "other": {
@@ -166069,6 +166293,9 @@
         },
         "Wise Old Man tasks": {
           "droprate": "Common"
+        },
+        "Veiled kraken": {
+          "droprate": "1/27.2"
         }
       },
       "spawns": {
@@ -170061,7 +170288,7 @@
     "sources": {
       "other": {
         "Constructing some Wooden hull parts": {
-          "notes": "Requires planks.",
+          "notes": "Requires planks and completion of Pandemonium.",
           "rule": {
             "all": [
               {

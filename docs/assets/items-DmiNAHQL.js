@@ -1,4 +1,4 @@
-import{f as e}from"./index-DmLeSzun.js";async function t(){return await e.ensureItemsLoaded(),`
+import{f as e}from"./index-DKhOaEeS.js";async function t(){return await e.ensureItemsLoaded(),`
         <div class="items-header">
             <h1>Items</h1>
             <button id="filter-overrides-toggle" title="Toggle filters and overrides">
@@ -18,6 +18,15 @@ import{f as e}from"./index-DmLeSzun.js";async function t(){return await e.ensure
         <div class="items-top-filters">
             <input type="search" id="itemSearch" placeholder="Filter items..." />
             <div class="items-top-actions">
+                <label class="other-drops-sort">
+                    <span>Sort items:</span>
+                    <span class="other-drops-sort-label">A-Z</span>
+                    <span class="toggle-switch">
+                        <input type="checkbox" id="itemSortByDroprate">
+                        <span class="toggle-slider" aria-hidden="true"></span>
+                    </span>
+                    <span>Droprate</span>
+                </label>
                 <label class="items-summary-toggle">
                     <input type="checkbox" id="showSectionCounts">
                     Show section counts
@@ -81,16 +90,6 @@ import{f as e}from"./index-DmLeSzun.js";async function t(){return await e.ensure
                 </label>
 
                 <label>
-                    <input type="checkbox" id="hasSuperiors">
-                    'Bigger and Badder' unlocked
-                </label>
-
-                <label>
-                    <input type="checkbox" id="isIronman">
-                    I am an ironman
-                </label>
-
-                <label>
                     <input type="checkbox" id="hideBosses">
                     Hide bosses
                 </label>
@@ -110,11 +109,6 @@ import{f as e}from"./index-DmLeSzun.js";async function t(){return await e.ensure
                     I am hunter rumour locked
                 </label>
 
-                <div>
-                    Nr of hunter rumours done:
-                    <input type="number" id="hunterRumoursCompleted">
-                </div>
-
                 <label>
                     <input type="checkbox" id="hideLMS">
                     Hide the LMS shop
@@ -133,11 +127,6 @@ import{f as e}from"./index-DmLeSzun.js";async function t(){return await e.ensure
                 <label id="hideSourcelessItemsRow">
                     <input type="checkbox" id="hideSourcelessItems">
                     Hide sourceless items
-                </label>
-
-                <label>
-                    <input type="checkbox" id="hasEasyCasCompleted">
-                    Easy CA's completed
                 </label>
 
                 <label>
