@@ -1,5 +1,5 @@
-import { getEffectiveSkillLevel } from "./skillBoosts.js";
 import { hasBarbarianFiremakingTraining, isIronmanAccount } from "./playerState.js";
+import { getEffectiveSkillLevel } from "./skillBoosts.js";
 
 function shouldTrackMissing(ctx) {
     return !ctx?.suppressMissing && !ctx?.missing?.suppressMissing;
@@ -236,8 +236,6 @@ export function canTrainSkill(ctx, skill) {
             return canTrainMining(ctx);
         case "Prayer":
             return canTrainPrayer(ctx);
-        case "Runecraft":
-            return canTrainRunecraft(ctx);
         case "Slayer":
             return canTrainSlayer(ctx);
         case "Smithing":
@@ -6693,14 +6691,6 @@ function canTrainPrayer(ctx) {
                 13511,
             ])
         ); //
-}
-
-function canTrainRunecraft(ctx) {
-    return requiresQuest(ctx, "canCompleteRuneMysteries", canCompleteRuneMysteries) && hasAnyItems(ctx, [
-        5525,
-        1436,
-        7936,
-    ]);
 }
 
 function getUsableAxeIds(level) {
