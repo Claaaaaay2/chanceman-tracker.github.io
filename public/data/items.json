@@ -156451,6 +156451,9 @@
     "name": "Toad batta",
     "image": "toad_batta.png",
     "sources": {
+      "spawns": {
+        "Yes": "canCompleteHauntedMine"
+      },
       "other": {
         "Gnome cooking": {
           "notes": "Requires an unfinished batta.",
