@@ -35850,13 +35850,17 @@
     "sources": {
       "other": {
         "Constructing Camphor hull parts": {
-          "notes": "Requires camphor planks.",
+          "notes": "Requires camphor planks, level 53 Construction and completion of Pandemonium.",
           "rule": {
             "all": [
               {
                 "has": 31432
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Construction",
+                "level": 53
+              }
             ]
           }
         }
@@ -87884,13 +87888,17 @@
     "sources": {
       "other": {
         "Constructing Ironwood hull parts": {
-          "notes": "Requires ironwood planks.",
+          "notes": "Requires ironwood planks, level 77 Construction and completion of Pandemonium.",
           "rule": {
             "all": [
               {
                 "has": 31435
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Construction",
+                "level": 77
+              }
             ]
           }
         }
@@ -91648,13 +91656,17 @@
     "sources": {
       "other": {
         "Constructing Large camphor hull parts": {
-          "notes": "Requires Camphor hull parts.",
+          "notes": "Requires Camphor hull parts, level 53 Construction and completion of Pandemonium.",
           "rule": {
             "all": [
               {
                 "has": 32053
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Construction",
+                "level": 53
+              }
             ]
           }
         }
@@ -91748,13 +91760,17 @@
     "sources": {
       "other": {
         "Constructing Large ironwood hull parts": {
-          "notes": "Requires Ironwood hull parts.",
+          "notes": "Requires Ironwood hull parts, level 77 Construction and completion of Pandemonium.",
           "rule": {
             "all": [
               {
                 "has": 32056
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Construction",
+                "level": 77
+              }
             ]
           }
         }
@@ -91772,13 +91788,17 @@
     "sources": {
       "other": {
         "Constructing Large mahogany hull parts": {
-          "notes": "Requires Mahogany hull parts.",
+          "notes": "Requires Mahogany hull parts, level 41 Construction and completion of Pandemonium.",
           "rule": {
             "all": [
               {
                 "has": 32050
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Construction",
+                "level": 41
+              }
             ]
           }
         }
@@ -91866,13 +91886,17 @@
     "sources": {
       "other": {
         "Constructing Large oak hull parts": {
-          "notes": "Requires Oak hull parts.",
+          "notes": "Requires Oak hull parts, level 8 Construction and completion of Pandemonium.",
           "rule": {
             "all": [
               {
                 "has": 32044
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Construction",
+                "level": 8
+              }
             ]
           }
         }
@@ -91890,13 +91914,17 @@
     "sources": {
       "other": {
         "Constructing Large rosewood hull parts": {
-          "notes": "Requires Rosewood hull parts.",
+          "notes": "Requires Rosewood hull parts, level 84 Construction and completion of Pandemonium.",
           "rule": {
             "all": [
               {
                 "has": 32059
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Construction",
+                "level": 84
+              }
             ]
           }
         }
@@ -92015,13 +92043,17 @@
     "sources": {
       "other": {
         "Constructing Large teak hull parts": {
-          "notes": "Requires Teak hull parts.",
+          "notes": "Requires Teak hull parts, level 23 Construction and completion of Pandemonium.",
           "rule": {
             "all": [
               {
                 "has": 32047
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Construction",
+                "level": 23
+              }
             ]
           }
         }
@@ -92039,7 +92071,7 @@
     "sources": {
       "other": {
         "Constructing Large wooden hull parts": {
-          "notes": "Requires Wooden hull parts.",
+          "notes": "Requires Wooden hull parts and completion of Pandemonium.",
           "rule": {
             "all": [
               {
@@ -97613,13 +97645,17 @@
     "sources": {
       "other": {
         "Constructing Mahogany hull parts": {
-          "notes": "Requires Mahogany plank.",
+          "notes": "Requires Mahogany plank, level 41 Construction and completion of Pandemonium.",
           "rule": {
             "all": [
               {
                 "has": 8782
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Construction",
+                "level": 41
+              }
             ]
           }
         }
@@ -110356,13 +110392,17 @@
     "sources": {
       "other": {
         "Constructing Oak hull parts": {
-          "notes": "Requires oak planks.",
+          "notes": "Requires oak planks, level 8 Construction and completion of Pandemonium.",
           "rule": {
             "all": [
               {
                 "has": 8778
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Construction",
+                "level": 8
+              }
             ]
           }
         }
@@ -126356,7 +126396,7 @@
     "sources": {
       "other": {
         "Creating a sapling": {
-          "notes": "Requires some Rosewood planks, a Hammer and a Saw.",
+          "notes": "Requires some Rosewood planks, a Hammer and a Saw, level 84 Construction and completion of Pandemonium.",
           "rule": {
             "all": [
               {
@@ -126368,7 +126408,11 @@
               {
                 "has": 8794
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Construction",
+                "level": 84
+              }
             ]
           }
         }
@@ -154289,13 +154333,17 @@
     "sources": {
       "other": {
         "Constructing Teak hull parts": {
-          "notes": "Requires teak planks.",
+          "notes": "Requires teak planks, level 23 Construction and completion of Pandemonium.",
           "rule": {
             "all": [
               {
                 "has": 8780
               },
-              "canCompletePandemonium"
+              "canCompletePandemonium",
+              {
+                "skill": "Construction",
+                "level": 23
+              }
             ]
           }
         }
@@ -170233,7 +170281,7 @@
     "sources": {
       "other": {
         "Constructing some Wooden hull parts": {
-          "notes": "Requires planks.",
+          "notes": "Requires planks and completion of Pandemonium.",
           "rule": {
             "all": [
               {
