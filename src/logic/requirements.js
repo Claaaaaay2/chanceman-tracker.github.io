@@ -5,10 +5,58 @@ function shouldTrackMissing(ctx) {
     return !ctx?.suppressMissing && !ctx?.missing?.suppressMissing;
 }
 
+function getRequirementItemLookupState(ctx) {
+    if (!ctx) return null;
+
+    const itemsRef = ctx.items;
+    const rolledRef = ctx.rolled;
+    const obtainedRef = ctx.obtained;
+    const itemsLength = Array.isArray(itemsRef) ? itemsRef.length : -1;
+    const rolledLength = Array.isArray(rolledRef) ? rolledRef.length : -1;
+    const obtainedLength = Array.isArray(obtainedRef) ? obtainedRef.length : -1;
+    const cached = ctx.requirementsItemLookupState;
+
+    if (
+        cached
+        && cached.itemsRef === itemsRef
+        && cached.itemsLength === itemsLength
+        && cached.rolledRef === rolledRef
+        && cached.rolledLength === rolledLength
+        && cached.obtainedRef === obtainedRef
+        && cached.obtainedLength === obtainedLength
+    ) {
+        return cached;
+    }
+
+    const knownItemIds = new Set((itemsRef || []).map((item) => item.id));
+    const rolledSet = new Set(rolledRef || []);
+    const ownedItemIds = new Set();
+    for (const id of obtainedRef || []) {
+        if (rolledSet.has(id)) {
+            ownedItemIds.add(id);
+        }
+    }
+
+    const state = {
+        itemsRef,
+        itemsLength,
+        rolledRef,
+        rolledLength,
+        obtainedRef,
+        obtainedLength,
+        knownItemIds,
+        ownedItemIds,
+        elementalRuneResultCache: new Map()
+    };
+    ctx.requirementsItemLookupState = state;
+    return state;
+}
+
 function hasItem(ctx, id, options = {}) {
-    const item = ctx.items.find(i => i.id === id);
-    if (!item) return false;
-    const hasItemValue = ctx.rolled.includes(id) && ctx.obtained.includes(id);
+    const lookupState = getRequirementItemLookupState(ctx);
+    if (!lookupState?.knownItemIds.has(id)) return false;
+
+    const hasItemValue = lookupState.ownedItemIds.has(id);
     if (!hasItemValue && options.trackMissing !== false && ctx?.missing?.items && shouldTrackMissing(ctx)) {
         ctx.missing.items.add(id);
     }
@@ -47,6 +95,12 @@ function addMissingItemOptionGroup(ctx, options) {
 }
 
 const ELEMENTAL_RUNE_ELEMENTS = ["air", "water", "earth", "fire"];
+const ELEMENTAL_RUNE_ELEMENT_TO_MASK = Object.freeze({
+    air: 1,
+    water: 2,
+    earth: 4,
+    fire: 8
+});
 const ELEMENTAL_RUNE_RULE_TO_ELEMENT = Object.freeze({
     hasAirRuneSource: "air",
     hasWaterRuneSource: "water",
@@ -92,60 +146,106 @@ const ELEMENTAL_RUNE_PROVIDERS = Object.freeze([
     { ids: [25576, 25578], slot: "offhand", elements: ["water"] },    // Tome of water (empty) + Soaked page
     { ids: [30066, 30068], slot: "offhand", elements: ["earth"] },    // Tome of earth (empty) + Soiled page
     { ids: [20716, 20718], slot: "offhand", elements: ["fire"] },     // Tome of fire (empty) + Burnt page
-]);
+].map((provider) => Object.freeze({
+    ...provider,
+    mask: provider.elements.reduce((mask, element) => mask | (ELEMENTAL_RUNE_ELEMENT_TO_MASK[element] || 0), 0)
+})));
+const ELEMENTAL_RUNE_PROVIDERS_BY_SLOT = Object.freeze({
+    inventory: ELEMENTAL_RUNE_PROVIDERS.filter((provider) => provider.slot === "inventory"),
+    mainhand: ELEMENTAL_RUNE_PROVIDERS.filter((provider) => provider.slot === "mainhand"),
+    offhand: ELEMENTAL_RUNE_PROVIDERS.filter((provider) => provider.slot === "offhand")
+});
 const ELEMENTAL_RUNE_LOADOUT_OPTIONS = new Map();
+const ELEMENTAL_RUNE_INVENTORY_OPTIONS = new Map();
 
 function normalizeElementalRuneElements(elements) {
     const required = new Set(Array.isArray(elements) ? elements : [elements]);
     return ELEMENTAL_RUNE_ELEMENTS.filter((element) => required.has(element));
 }
 
+function getElementalRuneMask(elements) {
+    return normalizeElementalRuneElements(elements).reduce(
+        (mask, element) => mask | (ELEMENTAL_RUNE_ELEMENT_TO_MASK[element] || 0),
+        0
+    );
+}
+
 function isOptionSubset(subset, option) {
     return subset.every((id) => option.includes(id));
+}
+
+function getMinimalInventoryLoadoutOptions(requiredMask) {
+    if (requiredMask === 0) return [[]];
+    if (ELEMENTAL_RUNE_INVENTORY_OPTIONS.has(requiredMask)) {
+        return ELEMENTAL_RUNE_INVENTORY_OPTIONS.get(requiredMask) || [];
+    }
+
+    const relevantProviders = ELEMENTAL_RUNE_PROVIDERS_BY_SLOT.inventory.filter((provider) => (provider.mask & requiredMask) !== 0);
+    const candidateOptions = [];
+    const subsetCount = 1 << relevantProviders.length;
+
+    for (let subsetMask = 1; subsetMask < subsetCount; subsetMask++) {
+        let coveredMask = 0;
+        const optionIds = [];
+
+        for (let index = 0; index < relevantProviders.length; index++) {
+            if ((subsetMask & (1 << index)) === 0) continue;
+            const provider = relevantProviders[index];
+            coveredMask |= provider.mask;
+            optionIds.push(...provider.ids);
+        }
+
+        if ((coveredMask & requiredMask) !== requiredMask) continue;
+
+        candidateOptions.push({
+            subsetMask,
+            option: optionIds.sort((a, b) => a - b)
+        });
+    }
+
+    const options = candidateOptions
+        .filter((candidate, index) => !candidateOptions.some((other, otherIndex) =>
+            otherIndex !== index
+            && other.subsetMask !== candidate.subsetMask
+            && (other.subsetMask & candidate.subsetMask) === other.subsetMask
+        ))
+        .map((candidate) => candidate.option)
+        .sort((a, b) => {
+            if (a.length !== b.length) return a.length - b.length;
+            return a.join(",").localeCompare(b.join(","));
+        });
+
+    ELEMENTAL_RUNE_INVENTORY_OPTIONS.set(requiredMask, options);
+    return options;
 }
 
 function buildElementalRuneLoadoutOptions(elements) {
     const requiredElements = normalizeElementalRuneElements(elements);
     if (!requiredElements.length) return [];
 
-    const relevantProviders = ELEMENTAL_RUNE_PROVIDERS.filter((provider) =>
-        provider.elements.some((element) => requiredElements.includes(element))
-    );
-    const inventoryProviders = relevantProviders.filter((provider) => provider.slot === "inventory");
-    const mainhandProviders = [null, ...relevantProviders.filter((provider) => provider.slot === "mainhand")];
-    const offhandProviders = [null, ...relevantProviders.filter((provider) => provider.slot === "offhand")];
+    const requiredMask = getElementalRuneMask(requiredElements);
+    const mainhandProviders = [null, ...ELEMENTAL_RUNE_PROVIDERS_BY_SLOT.mainhand.filter((provider) => (provider.mask & requiredMask) !== 0)];
+    const offhandProviders = [null, ...ELEMENTAL_RUNE_PROVIDERS_BY_SLOT.offhand.filter((provider) => (provider.mask & requiredMask) !== 0)];
     const options = [];
     const seen = new Set();
 
     for (const mainhandProvider of mainhandProviders) {
-        const mainhandIds = mainhandProvider ? [...mainhandProvider.ids] : [];
-        const mainhandCoverage = new Set(mainhandProvider?.elements || []);
-        const inventorySubsetCount = 1 << inventoryProviders.length;
-
         for (const offhandProvider of offhandProviders) {
-            const offhandIds = offhandProvider ? [...offhandProvider.ids] : [];
-            const offhandCoverage = new Set(offhandProvider?.elements || []);
+            const combinedMask = (mainhandProvider?.mask || 0) | (offhandProvider?.mask || 0);
+            const remainingMask = requiredMask & ~combinedMask;
+            const inventoryOptions = getMinimalInventoryLoadoutOptions(remainingMask);
 
-            for (let mask = 0; mask < inventorySubsetCount; mask++) {
-                const optionIds = [...mainhandIds, ...offhandIds];
-                const coverage = new Set([...mainhandCoverage, ...offhandCoverage]);
-
-                for (let index = 0; index < inventoryProviders.length; index++) {
-                    if ((mask & (1 << index)) === 0) continue;
-                    const provider = inventoryProviders[index];
-                    optionIds.push(...provider.ids);
-                    for (const element of provider.elements) {
-                        coverage.add(element);
-                    }
-                }
-
-                if (!requiredElements.every((element) => coverage.has(element))) continue;
-
-                const option = [...new Set(optionIds)].sort((a, b) => a - b);
+            for (const inventoryOption of inventoryOptions) {
+                const option = [
+                    ...(mainhandProvider?.ids || []),
+                    ...(offhandProvider?.ids || []),
+                    ...inventoryOption
+                ].sort((a, b) => a - b);
                 const key = option.join(",");
-                if (seen.has(key)) continue;
-                seen.add(key);
-                options.push(option);
+                if (!seen.has(key)) {
+                    seen.add(key);
+                    options.push(option);
+                }
             }
         }
     }
@@ -182,6 +282,18 @@ export function hasElementalRuneSources(ctx, elements, options = {}) {
     const requiredElements = normalizeElementalRuneElements(elements);
     if (!requiredElements.length) return true;
 
+    const trackMissing = options.trackMissing !== false;
+    const requiredMask = getElementalRuneMask(requiredElements);
+    const lookupState = getRequirementItemLookupState(ctx);
+    const cacheKey = `${requiredMask}:${trackMissing ? "track" : "fast"}`;
+    const cached = lookupState?.elementalRuneResultCache?.get(cacheKey);
+    if (cached) {
+        if (!cached.matched && trackMissing && ctx?.missing && shouldTrackMissing(ctx) && cached.missingOptions.length) {
+            addMissingItemOptionGroup(ctx, cached.missingOptions.slice(0, 8));
+        }
+        return cached.matched;
+    }
+
     const loadoutOptions = getElementalRuneLoadoutOptions(requiredElements);
     const missingOptions = [];
 
@@ -198,6 +310,12 @@ export function hasElementalRuneSources(ctx, elements, options = {}) {
         }
 
         if (missingIds.length === 0) {
+            if (lookupState?.elementalRuneResultCache) {
+                lookupState.elementalRuneResultCache.set(cacheKey, {
+                    matched: true,
+                    missingOptions: []
+                });
+            }
             return true;
         }
 
@@ -208,7 +326,7 @@ export function hasElementalRuneSources(ctx, elements, options = {}) {
         });
     }
 
-    if (options.trackMissing !== false && ctx?.missing && shouldTrackMissing(ctx) && missingOptions.length) {
+    if (trackMissing && ctx?.missing && shouldTrackMissing(ctx) && missingOptions.length) {
         const uniqueMissingOptions = [];
         const seen = new Set();
 
@@ -230,8 +348,22 @@ export function hasElementalRuneSources(ctx, elements, options = {}) {
         if (uniqueMissingOptions.length) {
             addMissingItemOptionGroup(ctx, uniqueMissingOptions.slice(0, 8));
         }
+
+        if (lookupState?.elementalRuneResultCache) {
+            lookupState.elementalRuneResultCache.set(cacheKey, {
+                matched: false,
+                missingOptions: uniqueMissingOptions
+            });
+        }
+        return false;
     }
 
+    if (lookupState?.elementalRuneResultCache) {
+        lookupState.elementalRuneResultCache.set(cacheKey, {
+            matched: false,
+            missingOptions: []
+        });
+    }
     return false;
 }
 
@@ -348,7 +480,7 @@ async function diaryRequirementsMet(requirements, ctx) {
 
     const elementalRuneRules = (requirements?.rulesAll || []).filter(isElementalRuneRule);
     const skippedRuleKeys = new Set(elementalRuneRules);
-    if (elementalRuneRules.length && !hasElementalRuneRules(ctx, elementalRuneRules)) {
+    if (elementalRuneRules.length && !hasElementalRuneRules(ctx, elementalRuneRules, { trackMissing: false })) {
         return false;
     }
 

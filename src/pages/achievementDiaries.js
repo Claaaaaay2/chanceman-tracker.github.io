@@ -107,7 +107,7 @@ async function evaluateRequirements(requirements, ctx, itemsById) {
     const elementalRuneRules = (requirements?.rulesAll || []).filter(isElementalRuneRule);
     const skippedRuleKeys = new Set(elementalRuneRules);
     if (elementalRuneRules.length) {
-        const ok = hasElementalRuneRules(ctx, elementalRuneRules);
+        const ok = hasElementalRuneRules(ctx, elementalRuneRules, { trackMissing: false });
         if (!ok) {
             missing.rules.push(elementalRuneRules.join(" + "));
             met = false;

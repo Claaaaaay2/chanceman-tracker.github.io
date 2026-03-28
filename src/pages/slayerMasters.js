@@ -235,7 +235,7 @@ async function evaluateRequirements(requirements, ctx) {
     const elementalRuneRules = (requirements?.rulesAll || []).filter(isElementalRuneRule);
     const skippedRuleKeys = new Set(elementalRuneRules);
     if (elementalRuneRules.length) {
-        const runeRulesMet = hasElementalRuneRules(ctx, elementalRuneRules);
+        const runeRulesMet = hasElementalRuneRules(ctx, elementalRuneRules, { trackMissing: false });
         if (!runeRulesMet) {
             missing.push(elementalRuneRules.map(formatRuleLabel).join(" + "));
         }
