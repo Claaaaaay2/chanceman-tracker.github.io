@@ -1,4 +1,4 @@
-import { REQUIREMENT_CHECKS, canTrainSkill } from "../logic/requirements.js";
+import { REQUIREMENT_CHECKS, canTrainSkill, hasElementalRuneRules, isElementalRuneRule } from "../logic/requirements.js";
 import { router } from "../router.js";
 import { fileStore } from "../storage/fileStore.js";
 
@@ -91,7 +91,18 @@ async function evaluateRequirements(requirements, ctx, itemsById) {
         }
     }
 
+    const elementalRuneRules = (requirements?.rulesAll || []).filter(isElementalRuneRule);
+    const skippedRuleKeys = new Set(elementalRuneRules);
+    if (elementalRuneRules.length) {
+        const ok = hasElementalRuneRules(ctx, elementalRuneRules);
+        if (!ok) {
+            missing.rules.push(elementalRuneRules.join(" + "));
+            met = false;
+        }
+    }
+
     for (const ruleKey of requirements?.rulesAll || []) {
+        if (skippedRuleKeys.has(ruleKey)) continue;
         const ruleFn = REQUIREMENT_CHECKS[ruleKey];
         if (!ruleFn) {
             missing.rules.push(`${ruleKey} (missing)`);

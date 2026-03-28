@@ -1,4 +1,4 @@
-import { REQUIREMENT_CHECKS } from "../logic/requirements.js";
+import { REQUIREMENT_CHECKS, hasElementalRuneRules, isElementalRuneRule } from "../logic/requirements.js";
 import { fileStore } from "../storage/fileStore.js";
 
 const SLAYER_RULE_LABELS = {
@@ -232,7 +232,17 @@ async function evaluateRequirements(requirements, ctx) {
         }
     }
 
+    const elementalRuneRules = (requirements?.rulesAll || []).filter(isElementalRuneRule);
+    const skippedRuleKeys = new Set(elementalRuneRules);
+    if (elementalRuneRules.length) {
+        const runeRulesMet = hasElementalRuneRules(ctx, elementalRuneRules);
+        if (!runeRulesMet) {
+            missing.push(elementalRuneRules.map(formatRuleLabel).join(" + "));
+        }
+    }
+
     for (const ruleKey of requirements?.rulesAll || []) {
+        if (skippedRuleKeys.has(ruleKey)) continue;
         const ruleFn = REQUIREMENT_CHECKS[ruleKey];
         const ruleLabel = formatRuleLabel(ruleKey);
         if (!ruleFn) {

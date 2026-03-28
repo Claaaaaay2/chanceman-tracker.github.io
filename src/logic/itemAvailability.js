@@ -1,5 +1,5 @@
 import { NPC_DATA } from "./npcData.js";
-import { REQUIREMENT_CHECKS, has, hasSkillLevel } from "./requirements.js";
+import { REQUIREMENT_CHECKS, has, hasElementalRuneRules, hasSkillLevel, isElementalRuneRule } from "./requirements.js";
 import { capitalizeFirstLetter } from "./utils.js";
 
 const BUTTERFLY_NET_ID = 10010;
@@ -208,10 +208,21 @@ export async function evaluateRule(rule, ctx) {
             const adjustedRules = adjustImplingJarRuleLevels(rule.all, ctx);
             const subrules = adjustedRules || rule.all;
             result = true;
-            for (const sub of subrules) {
-                if (!(await evaluateRule(sub, ctx))) {
-                    result = false;
-                    break;
+            const elementalRuneRules = subrules.filter((sub) => isElementalRuneRule(sub));
+            const nonElementalSubrules = elementalRuneRules.length
+                ? subrules.filter((sub) => !isElementalRuneRule(sub))
+                : subrules;
+
+            if (elementalRuneRules.length && !hasElementalRuneRules(ctx, elementalRuneRules)) {
+                result = false;
+            }
+
+            if (result) {
+                for (const sub of nonElementalSubrules) {
+                    if (!(await evaluateRule(sub, ctx))) {
+                        result = false;
+                        break;
+                    }
                 }
             }
         } else {

@@ -46,6 +46,204 @@ function addMissingItemOptionGroup(ctx, options) {
     ctx.missing.itemGroups.push({ options });
 }
 
+const ELEMENTAL_RUNE_ELEMENTS = ["air", "water", "earth", "fire"];
+const ELEMENTAL_RUNE_RULE_TO_ELEMENT = Object.freeze({
+    hasAirRuneSource: "air",
+    hasWaterRuneSource: "water",
+    hasEarthRuneSource: "earth",
+    hasFireRuneSource: "fire"
+});
+const ELEMENTAL_RUNE_PROVIDERS = Object.freeze([
+    { ids: [556], slot: "inventory", elements: ["air"] },  // Air rune
+    { ids: [555], slot: "inventory", elements: ["water"] }, // Water rune
+    { ids: [557], slot: "inventory", elements: ["earth"] }, // Earth rune
+    { ids: [554], slot: "inventory", elements: ["fire"] },  // Fire rune
+    { ids: [4695], slot: "inventory", elements: ["air", "water"] },   // Mist rune
+    { ids: [4696], slot: "inventory", elements: ["air", "earth"] },   // Dust rune
+    { ids: [4697], slot: "inventory", elements: ["air", "fire"] },    // Smoke rune
+    { ids: [4698], slot: "inventory", elements: ["water", "earth"] }, // Mud rune
+    { ids: [4694], slot: "inventory", elements: ["water", "fire"] },  // Steam rune
+    { ids: [4699], slot: "inventory", elements: ["earth", "fire"] },  // Lava rune
+    { ids: [28929], slot: "inventory", elements: ["fire"] },          // Sunfire rune
+    { ids: [1381], slot: "mainhand", elements: ["air"] },   // Staff of air
+    { ids: [1383], slot: "mainhand", elements: ["water"] }, // Staff of water
+    { ids: [1385], slot: "mainhand", elements: ["earth"] }, // Staff of earth
+    { ids: [1387], slot: "mainhand", elements: ["fire"] },  // Staff of fire
+    { ids: [1397], slot: "mainhand", elements: ["air"] },   // Air battlestaff
+    { ids: [1395], slot: "mainhand", elements: ["water"] }, // Water battlestaff
+    { ids: [1399], slot: "mainhand", elements: ["earth"] }, // Earth battlestaff
+    { ids: [1393], slot: "mainhand", elements: ["fire"] },  // Fire battlestaff
+    { ids: [1405], slot: "mainhand", elements: ["air"] },   // Mystic air staff
+    { ids: [1403], slot: "mainhand", elements: ["water"] }, // Mystic water staff
+    { ids: [1407], slot: "mainhand", elements: ["earth"] }, // Mystic earth staff
+    { ids: [1401], slot: "mainhand", elements: ["fire"] },  // Mystic fire staff
+    { ids: [20730], slot: "mainhand", elements: ["air", "water"] },   // Mist battlestaff
+    { ids: [20733], slot: "mainhand", elements: ["air", "water"] },   // Mystic mist staff
+    { ids: [20736], slot: "mainhand", elements: ["air", "earth"] },   // Dust battlestaff
+    { ids: [20739], slot: "mainhand", elements: ["air", "earth"] },   // Mystic dust staff
+    { ids: [11998], slot: "mainhand", elements: ["air", "fire"] },    // Smoke battlestaff
+    { ids: [12000], slot: "mainhand", elements: ["air", "fire"] },    // Mystic smoke staff
+    { ids: [6562], slot: "mainhand", elements: ["water", "earth"] },  // Mud battlestaff
+    { ids: [6563], slot: "mainhand", elements: ["water", "earth"] },  // Mystic mud staff
+    { ids: [11787], slot: "mainhand", elements: ["water", "fire"] },  // Steam battlestaff
+    { ids: [11789], slot: "mainhand", elements: ["water", "fire"] },  // Mystic steam staff
+    { ids: [3053], slot: "mainhand", elements: ["earth", "fire"] },   // Lava battlestaff
+    { ids: [3054], slot: "mainhand", elements: ["earth", "fire"] },   // Mystic lava staff
+    { ids: [25576, 25578], slot: "offhand", elements: ["water"] },    // Tome of water (empty) + Soaked page
+    { ids: [30066, 30068], slot: "offhand", elements: ["earth"] },    // Tome of earth (empty) + Soiled page
+    { ids: [20716, 20718], slot: "offhand", elements: ["fire"] },     // Tome of fire (empty) + Burnt page
+]);
+const ELEMENTAL_RUNE_LOADOUT_OPTIONS = new Map();
+
+function normalizeElementalRuneElements(elements) {
+    const required = new Set(Array.isArray(elements) ? elements : [elements]);
+    return ELEMENTAL_RUNE_ELEMENTS.filter((element) => required.has(element));
+}
+
+function isOptionSubset(subset, option) {
+    return subset.every((id) => option.includes(id));
+}
+
+function buildElementalRuneLoadoutOptions(elements) {
+    const requiredElements = normalizeElementalRuneElements(elements);
+    if (!requiredElements.length) return [];
+
+    const relevantProviders = ELEMENTAL_RUNE_PROVIDERS.filter((provider) =>
+        provider.elements.some((element) => requiredElements.includes(element))
+    );
+    const inventoryProviders = relevantProviders.filter((provider) => provider.slot === "inventory");
+    const mainhandProviders = [null, ...relevantProviders.filter((provider) => provider.slot === "mainhand")];
+    const offhandProviders = [null, ...relevantProviders.filter((provider) => provider.slot === "offhand")];
+    const options = [];
+    const seen = new Set();
+
+    for (const mainhandProvider of mainhandProviders) {
+        const mainhandIds = mainhandProvider ? [...mainhandProvider.ids] : [];
+        const mainhandCoverage = new Set(mainhandProvider?.elements || []);
+        const inventorySubsetCount = 1 << inventoryProviders.length;
+
+        for (const offhandProvider of offhandProviders) {
+            const offhandIds = offhandProvider ? [...offhandProvider.ids] : [];
+            const offhandCoverage = new Set(offhandProvider?.elements || []);
+
+            for (let mask = 0; mask < inventorySubsetCount; mask++) {
+                const optionIds = [...mainhandIds, ...offhandIds];
+                const coverage = new Set([...mainhandCoverage, ...offhandCoverage]);
+
+                for (let index = 0; index < inventoryProviders.length; index++) {
+                    if ((mask & (1 << index)) === 0) continue;
+                    const provider = inventoryProviders[index];
+                    optionIds.push(...provider.ids);
+                    for (const element of provider.elements) {
+                        coverage.add(element);
+                    }
+                }
+
+                if (!requiredElements.every((element) => coverage.has(element))) continue;
+
+                const option = [...new Set(optionIds)].sort((a, b) => a - b);
+                const key = option.join(",");
+                if (seen.has(key)) continue;
+                seen.add(key);
+                options.push(option);
+            }
+        }
+    }
+
+    return options
+        .filter((option, index) => !options.some((other, otherIndex) =>
+            otherIndex !== index
+            && other.length < option.length
+            && isOptionSubset(other, option)
+        ))
+        .sort((a, b) => {
+            if (a.length !== b.length) return a.length - b.length;
+            const aKey = a.join(",");
+            const bKey = b.join(",");
+            return aKey.localeCompare(bKey);
+        });
+}
+
+function getElementalRuneLoadoutOptions(elements) {
+    const requiredElements = normalizeElementalRuneElements(elements);
+    const key = requiredElements.join("|");
+    if (!ELEMENTAL_RUNE_LOADOUT_OPTIONS.has(key)) {
+        ELEMENTAL_RUNE_LOADOUT_OPTIONS.set(key, buildElementalRuneLoadoutOptions(requiredElements));
+    }
+    return ELEMENTAL_RUNE_LOADOUT_OPTIONS.get(key) || [];
+}
+
+export function isElementalRuneRule(rule) {
+    return typeof rule === "string"
+        && Object.prototype.hasOwnProperty.call(ELEMENTAL_RUNE_RULE_TO_ELEMENT, rule);
+}
+
+export function hasElementalRuneSources(ctx, elements, options = {}) {
+    const requiredElements = normalizeElementalRuneElements(elements);
+    if (!requiredElements.length) return true;
+
+    const loadoutOptions = getElementalRuneLoadoutOptions(requiredElements);
+    const missingOptions = [];
+
+    for (const option of loadoutOptions) {
+        const missingIds = [];
+        let ownedCount = 0;
+
+        for (const id of option) {
+            if (hasItem(ctx, id, { trackMissing: false })) {
+                ownedCount++;
+            } else {
+                missingIds.push(id);
+            }
+        }
+
+        if (missingIds.length === 0) {
+            return true;
+        }
+
+        missingOptions.push({
+            option,
+            ownedCount,
+            missingIds
+        });
+    }
+
+    if (options.trackMissing !== false && ctx?.missing && shouldTrackMissing(ctx) && missingOptions.length) {
+        const uniqueMissingOptions = [];
+        const seen = new Set();
+
+        missingOptions
+            .sort((a, b) => {
+                if (a.ownedCount !== b.ownedCount) return b.ownedCount - a.ownedCount;
+                if (a.missingIds.length !== b.missingIds.length) return a.missingIds.length - b.missingIds.length;
+                if (a.option.length !== b.option.length) return a.option.length - b.option.length;
+                return a.option.join(",").localeCompare(b.option.join(","));
+            })
+            .forEach(({ missingIds }) => {
+                const normalized = [...missingIds].sort((a, b) => a - b);
+                const key = normalized.join(",");
+                if (!key || seen.has(key)) return;
+                seen.add(key);
+                uniqueMissingOptions.push(normalized);
+            });
+
+        if (uniqueMissingOptions.length) {
+            addMissingItemOptionGroup(ctx, uniqueMissingOptions.slice(0, 8));
+        }
+    }
+
+    return false;
+}
+
+export function hasElementalRuneRules(ctx, rules, options = {}) {
+    const requiredElements = normalizeElementalRuneElements(
+        rules
+            .map((rule) => ELEMENTAL_RUNE_RULE_TO_ELEMENT[rule])
+            .filter(Boolean)
+    );
+    return hasElementalRuneSources(ctx, requiredElements, options);
+}
+
 
 function hasAnyItems(ctx, ids) {
     for (const id of ids) {
@@ -148,7 +346,14 @@ async function diaryRequirementsMet(requirements, ctx) {
         }
     }
 
+    const elementalRuneRules = (requirements?.rulesAll || []).filter(isElementalRuneRule);
+    const skippedRuleKeys = new Set(elementalRuneRules);
+    if (elementalRuneRules.length && !hasElementalRuneRules(ctx, elementalRuneRules)) {
+        return false;
+    }
+
     for (const ruleKey of requirements?.rulesAll || []) {
+        if (skippedRuleKeys.has(ruleKey)) continue;
         const ruleFn = REQUIREMENT_CHECKS[ruleKey];
         if (!ruleFn) return false;
         if (!(await ruleFn(ctx))) {
@@ -2320,18 +2525,15 @@ export const REQUIREMENT_CHECKS = {
             && has(ctx, 565); // Blood rune
     },
     hasFaladorTeleportRunes(ctx) {
-        return hasWaterRuneSource(ctx) //
-            && hasAirRuneSource(ctx) //
+        return hasElementalRuneSources(ctx, ["water", "air"]) //
             && has(ctx, 563); // Law rune
     },
     hasVarrockTeleportRunes(ctx) {
-        return hasFireRuneSource(ctx) //
-            && hasAirRuneSource(ctx) //
+        return hasElementalRuneSources(ctx, ["fire", "air"]) //
             && has(ctx, 563); // Law rune
     },
     hasLumbridgeTeleportRunes(ctx) {
-        return hasEarthRuneSource(ctx) //
-            && hasAirRuneSource(ctx) //
+        return hasElementalRuneSources(ctx, ["earth", "air"]) //
             && has(ctx, 563); // Law rune
     },
     hasCamelotTeleportRunes(ctx) {
@@ -2357,8 +2559,7 @@ export const REQUIREMENT_CHECKS = {
             && has(ctx, 563); // Law rune
     },
     hasHumidifyRunes(ctx) {
-        return hasWaterRuneSource(ctx) //
-            && hasFireRuneSource(ctx) //
+        return hasElementalRuneSources(ctx, ["water", "fire"]) //
             && has(ctx, 9075); // Astral rune
     },
     hasTelegrabRunes(ctx) {
@@ -2382,8 +2583,7 @@ export const REQUIREMENT_CHECKS = {
             && has(ctx, 558); // Mind rune
     },
     hasApeAtollTeleportRunes(ctx) {
-        return hasFireRuneSource(ctx) //
-            && hasWaterRuneSource(ctx) //
+        return hasElementalRuneSources(ctx, ["fire", "water"]) //
             && has(ctx, 563); // Law rune
     },
     hasApeAtollStandardTeleportRunes(ctx) {
@@ -2396,8 +2596,7 @@ export const REQUIREMENT_CHECKS = {
             && hasEarthRuneSource(ctx);
     },
     hasTeleportToPaddewwaRunes(ctx) {
-        return hasFireRuneSource(ctx) //
-            && hasAirRuneSource(ctx) //
+        return hasElementalRuneSources(ctx, ["fire", "air"]) //
             && has(ctx, 563); // Law rune
     },
     hasPlankMakeRunes(ctx) {
@@ -2467,8 +2666,7 @@ function canCompleteAKingdomDivided(ctx) {
         hasSkillLevel(ctx, "Mining", 42), //
         hasSkillLevel(ctx, "Crafting", 38), //
         hasSkillLevel(ctx, "Magic", 35), //
-        hasAirRuneSource(ctx), //
-        hasFireRuneSource(ctx), //
+        hasElementalRuneSources(ctx, ["air", "fire"]), //
         hasAnyItems(ctx, [558, 562, 560, 565]),
         hasAnyItems(ctx, [133, 2432]),
         hasAnyItems(ctx, [2126, 4164]),
@@ -3015,9 +3213,7 @@ function canCompleteDesertTreasureII(ctx) {
         has(ctx, 565), // Blood rune
         has(ctx, 562), // Chaos rune
         has(ctx, 566), // Soul rune
-        hasAirRuneSource(ctx), //
-        hasWaterRuneSource(ctx), //
-        hasFireRuneSource(ctx), //
+        hasElementalRuneSources(ctx, ["air", "water", "fire"]), //
         has(ctx, 590), // Tinderbox
         has(ctx, 4164), // Facemask
         has(ctx, 233), // Pestle and mortar
@@ -3092,8 +3288,7 @@ function canCompleteDragonSlayerII(ctx) {
         has(ctx, 9075), // Astral rune
         has(ctx, 590), // Tinderbox
         has(ctx, 233), // Pestle and mortar
-        hasFireRuneSource(ctx), //
-        hasAirRuneSource(ctx), //
+        hasElementalRuneSources(ctx, ["fire", "air"]), //
         has(ctx, 565), // Blood rune
         hasUsablePickaxe(ctx), //
     ]);
@@ -3184,9 +3379,7 @@ function canCompleteEnakhrasLament(ctx) {
         has(ctx, 453), // Coal
         hasAnyItems(ctx, [6977, 6971, 6973, 6975]),
         has(ctx, 6983), // Granite (5kg)
-        hasAirRuneSource(ctx), //
-        hasFireRuneSource(ctx), //
-        hasEarthRuneSource(ctx), //
+        hasElementalRuneSources(ctx, ["air", "fire", "earth"]), //
         has(ctx, 562), // Chaos rune
     ]);
 }
@@ -3268,10 +3461,7 @@ function canCompleteFamilyCrest(ctx) {
         has(ctx, 1592), // Ring mould
         has(ctx, 1597), // Necklace mould
         has(ctx, 560), // Death rune
-        hasAirRuneSource(ctx), //
-        hasWaterRuneSource(ctx), //
-        hasEarthRuneSource(ctx), //
-        hasFireRuneSource(ctx), //
+        hasElementalRuneSources(ctx, ["air", "water", "earth", "fire"]), //
         hasAnyItems(ctx, [185, 183, 181, 2448, 11475, 11473, 11435, 11433, 179, 177, 175, 2446, 5949, 5947, 5945, 5943, 5958, 5956, 5954, 5952, 11503, 11501, 10931, 10929, 10927, 10925, 464, 29784, 12911, 12909, 12907, 12905, 12919, 12917, 12915, 12913, 29833, 29830, 29827, 29824]),
         hasUsablePickaxe(ctx), //
     ]);
@@ -3735,8 +3925,7 @@ function canCompleteMageArenaII(ctx) {
         hasSkillLevel(ctx, "Magic", 75),
         requiresQuest(ctx, "canCompleteMageArenaI", canCompleteMageArenaI), //
         has(ctx, 565), // Blood rune
-        hasAirRuneSource(ctx), //
-        hasFireRuneSource(ctx), //
+        hasElementalRuneSources(ctx, ["air", "fire"]), //
     ]);
 }
 
@@ -5154,12 +5343,9 @@ function canCompleteWhileGuthixSleeps(ctx) {
         has(ctx, 1607), // Sapphire
         has(ctx, 1951), // Redberries
         has(ctx, 239), // White berries
-        hasAirRuneSource(ctx), //
+        hasElementalRuneSources(ctx, ["air", "water", "earth", "fire"]), //
         has(ctx, 564), // Cosmic rune
         has(ctx, 9075), // Astral rune
-        hasWaterRuneSource(ctx), //
-        hasEarthRuneSource(ctx), //
-        hasFireRuneSource(ctx), //
         hasAnyItems(ctx, [559, 566]),
         has(ctx, 561), // Nature rune
         has(ctx, 563), // Law rune
@@ -5336,10 +5522,7 @@ function canDoMageTrainingArena(ctx) {
     return has(ctx, 564) // Cosmic rune
         && has(ctx, 561) // Nature rune
         && has(ctx, 563) // Law rune
-        && hasAirRuneSource(ctx) //
-        && hasWaterRuneSource(ctx) //
-        && hasEarthRuneSource(ctx) //
-        && hasFireRuneSource(ctx);
+        && hasElementalRuneSources(ctx, ["air", "water", "earth", "fire"]);
 }
 
 function hasAnyFeather(ctx) {
@@ -5589,76 +5772,19 @@ function hasAnySerum207(ctx) {
 }
 
 function hasAirRuneSource(ctx) {
-    return hasAnyItems(ctx, [
-        556,
-        4696,
-        4697,
-        4695,
-        1381,
-        1397,
-        1405,
-        20736,
-        20739,
-        11998,
-        12000,
-        20730,
-        20733,
-    ]);
+    return hasElementalRuneSources(ctx, ["air"]);
 }
 
 function hasWaterRuneSource(ctx) {
-    return hasAnyItems(ctx, [
-        555,
-        4698,
-        4694,
-        4695,
-        1383,
-        1395,
-        1403,
-        6562,
-        6563,
-        11787,
-        11789,
-        20730,
-        20733,
-    ]) // Tome of water and Soaked page || (has(ctx, 25576) && has(ctx, 25578)); // Tome of water and Soaked page
+    return hasElementalRuneSources(ctx, ["water"]);
 }
 
 function hasEarthRuneSource(ctx) {
-    return hasAnyItems(ctx, [
-        557,
-        4696,
-        4698,
-        4699,
-        1385,
-        1399,
-        1407,
-        20736,
-        20739,
-        6562,
-        6563,
-        3053,
-        3054,
-    ]) // Tome of earth and Soiled page || (has(ctx, 30066) && has(ctx, 30068)); // Tome of earth and Soiled page
+    return hasElementalRuneSources(ctx, ["earth"]);
 }
 
 function hasFireRuneSource(ctx) {
-    return hasAnyItems(ctx, [
-        554,
-        4699,
-        4697,
-        4694,
-        28929,
-        1387,
-        1393,
-        1401,
-        3053,
-        3054,
-        11998,
-        12000,
-        11787,
-        11789,
-    ]) // Tome of fire and Burnt page || (has(ctx, 20716) && has(ctx, 20718)); // Tome of fire and Burnt page
+    return hasElementalRuneSources(ctx, ["fire"]);
 }
 
 function canReachTrollheim(ctx) {
@@ -6494,8 +6620,7 @@ function canStartATasteOfHope(ctx) {
 
 function canStartMageArenaII(ctx) {
     return has(ctx, 565) // Blood rune
-        && hasAirRuneSource(ctx) //
-        && hasFireRuneSource(ctx); //
+        && hasElementalRuneSources(ctx, ["air", "fire"]); //
 }
 
 function canStartTheQueenOfThieves(ctx) {
