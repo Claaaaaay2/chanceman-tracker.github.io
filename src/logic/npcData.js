@@ -15769,6 +15769,14 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
+    "Veiled kraken": {
+        "wiki": "https://oldschool.runescape.wiki/w/Veiled_kraken",
+        "rule": ["canCompletePandemonium"],
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
     "Venenatis": {
         "wiki": "https://oldschool.runescape.wiki/w/Venenatis",
         "rule": ["canCompleteWildernessDiaryMedium"],

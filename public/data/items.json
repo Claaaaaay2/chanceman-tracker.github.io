@@ -24949,6 +24949,9 @@
         },
         "The Mimic Master": {
           "droprate": "1/5.158; 1/5.15"
+        },
+        "Veiled kraken": {
+          "droprate": "1/54.4"
         }
       },
       "spawns": {
@@ -35896,6 +35899,9 @@
       "drops": {
         "Lost camphor crate": {
           "droprate": "1/8"
+        },
+        "Veiled kraken": {
+          "droprate": "1/90.67"
         }
       },
       "other": {
@@ -36050,6 +36056,9 @@
         },
         "Large salvage": {
           "droprate": "1/2215"
+        },
+        "Veiled kraken": {
+          "droprate": "1/181.3"
         }
       }
     },
@@ -45002,6 +45011,9 @@
         },
         "The Mimic Master": {
           "droprate": "1/5.158; 1/5.15"
+        },
+        "Veiled kraken": {
+          "droprate": "1/34"
         }
       },
       "spawns": {
@@ -49036,6 +49048,9 @@
       "drops": {
         "Opulent salvage": {
           "droprate": "1/20000"
+        },
+        "Veiled kraken": {
+          "droprate": "1/1000"
         }
       }
     },
@@ -49076,6 +49091,9 @@
         },
         "Plundered salvage": {
           "droprate": "1/3000"
+        },
+        "Veiled kraken": {
+          "droprate": "1/90.67"
         }
       }
     },
@@ -50160,6 +50178,9 @@
         },
         "Great white shark": {
           "droprate": "1/6138"
+        },
+        "Veiled kraken": {
+          "droprate": "1/1850"
         }
       },
       "other": {
@@ -50703,6 +50724,9 @@
         },
         "Lava Strykewyrm": {
           "droprate": "1/400; 1/100"
+        },
+        "Veiled kraken": {
+          "droprate": "1/1150"
         }
       }
     },
@@ -53667,6 +53691,9 @@
         },
         "Forgotten Soul": {
           "droprate": "1/128"
+        },
+        "Veiled kraken": {
+          "droprate": "1/9.067"
         }
       }
     },
@@ -54270,6 +54297,9 @@
         },
         "Wise Old Man tasks": {
           "droprate": "Common"
+        },
+        "Veiled kraken": {
+          "droprate": "1/27.2"
         }
       },
       "spawns": {
@@ -63182,6 +63212,9 @@
         },
         "Hermit crab": {
           "droprate": "1/64"
+        },
+        "Veiled kraken": {
+          "droprate": "1/54.4"
         }
       }
     }
@@ -68517,6 +68550,9 @@
         },
         "Hunters' loot sack (supplies)": {
           "droprate": "11 × Varies"
+        },
+        "Veiled kraken": {
+          "droprate": "1/644.7"
         }
       }
     },
@@ -69514,6 +69550,9 @@
         },
         "Hunters' loot sack (supplies)": {
           "droprate": "11 × Varies"
+        },
+        "Veiled kraken": {
+          "droprate": "1/967.1"
         }
       }
     },
@@ -70517,6 +70556,9 @@
         },
         "Reward Cart": {
           "droprate": "Varies"
+        },
+        "Veiled kraken": {
+          "droprate": "1/1290"
         }
       }
     },
@@ -71466,6 +71508,9 @@
         },
         "Wise Old Man tasks": {
           "droprate": "Common"
+        },
+        "Veiled kraken": {
+          "droprate": "1/120.9"
         }
       }
     },
@@ -72421,6 +72466,9 @@
         },
         "Wise Old Man tasks": {
           "droprate": "Common"
+        },
+        "Veiled kraken": {
+          "droprate": "1/276.3"
         }
       }
     },
@@ -73386,6 +73434,9 @@
         },
         "Hunters' loot sack (supplies)": {
           "droprate": "11 × Varies"
+        },
+        "Veiled kraken": {
+          "droprate": "1/483.6"
         }
       }
     },
@@ -74401,6 +74452,9 @@
         },
         "Hunters' loot sack (supplies)": {
           "droprate": "11 × Varies"
+        },
+        "Veiled kraken": {
+          "droprate": "1/773.7"
         }
       }
     },
@@ -75404,6 +75458,9 @@
         },
         "Hunters' loot sack (supplies)": {
           "droprate": "11 × Varies"
+        },
+        "Veiled kraken": {
+          "droprate": "1/1290"
         }
       }
     },
@@ -76341,6 +76398,9 @@
         },
         "Wise Old Man tasks": {
           "droprate": "Common"
+        },
+        "Veiled kraken": {
+          "droprate": "1/161.2"
         }
       }
     },
@@ -77410,6 +77470,9 @@
         },
         "Wise Old Man tasks": {
           "droprate": "Common"
+        },
+        "Veiled kraken": {
+          "droprate": "1/351.7"
         }
       }
     },
@@ -78507,6 +78570,9 @@
         },
         "Wise Old Man tasks": {
           "droprate": "Common"
+        },
+        "Veiled kraken": {
+          "droprate": "1/214.9"
         }
       }
     },
@@ -83188,6 +83254,9 @@
         },
         "Pygmy kraken": {
           "droprate": "1/3000"
+        },
+        "Veiled kraken": {
+          "droprate": "1/1900"
         }
       }
     }
@@ -87923,6 +87992,9 @@
         },
         "Opulent salvage": {
           "droprate": "1/42.4"
+        },
+        "Veiled kraken": {
+          "droprate": "1/54.4"
         }
       },
       "other": {
@@ -88021,6 +88093,9 @@
         },
         "Martial salvage": {
           "droprate": "1/2430"
+        },
+        "Veiled kraken": {
+          "droprate": "1/680"
         }
       }
     },
@@ -91604,6 +91679,9 @@
         },
         "Great white shark": {
           "droprate": "1/6138"
+        },
+        "Veiled kraken": {
+          "droprate": "1/2100"
         }
       },
       "other": {
@@ -107272,6 +107350,9 @@
         },
         "Magpie impling jar": {
           "droprate": "1/21"
+        },
+        "Veiled kraken": {
+          "droprate": "1/90.67"
         }
       },
       "shops": {
@@ -107408,6 +107489,9 @@
         },
         "Experiment No.2": {
           "droprate": "1/128"
+        },
+        "Veiled kraken": {
+          "droprate": "1/9.067"
         }
       },
       "other": {
@@ -107496,6 +107580,9 @@
         },
         "Magpie impling jar": {
           "droprate": "1/21"
+        },
+        "Veiled kraken": {
+          "droprate": "1/90.67"
         }
       },
       "shops": {
@@ -107590,6 +107677,9 @@
       "drops": {
         "Great white shark": {
           "droprate": "1/20"
+        },
+        "Veiled kraken": {
+          "droprate": "1/90.67"
         }
       },
       "shops": {
@@ -108157,6 +108247,9 @@
         },
         "Waterfiend": {
           "droprate": "1/128"
+        },
+        "Veiled kraken": {
+          "droprate": "1/9.067"
         }
       },
       "other": {
@@ -112452,6 +112545,9 @@
         },
         "Chest (moon key)": {
           "droprate": "1/107"
+        },
+        "Veiled kraken": {
+          "droprate": "1/136"
         }
       },
       "other": {
@@ -113737,6 +113833,9 @@
         },
         "Giant Mole": {
           "droprate": "1/131"
+        },
+        "Veiled kraken": {
+          "droprate": "1/27.2"
         }
       },
       "other": {
@@ -120977,6 +121076,11 @@
     "name": "Raw bluefin",
     "image": "raw_bluefin.png",
     "sources": {
+      "drops": {
+        "Veiled kraken": {
+          "droprate": "1/54.4"
+        }
+      },
       "other": {
         "Deep sea trawling": {
           "notes": "Avast me hearties yo-ho.",
@@ -121349,6 +121453,11 @@
     "name": "Raw halibut",
     "image": "raw_halibut.png",
     "sources": {
+      "drops": {
+        "Veiled kraken": {
+          "droprate": "1/54.4"
+        }
+      },
       "other": {
         "Deep sea trawling": {
           "notes": "Avast me hearties yo-ho.",
@@ -126348,6 +126457,11 @@
     "name": "Rosewood repair kit",
     "image": "rosewood_repair_kit.png",
     "sources": {
+      "drops": {
+        "Veiled kraken": {
+          "droprate": "1/272"
+        }
+      },
       "other": {
         "Creating a sapling": {
           "notes": "Requires a Rosewood plank, Dragon nails and Swamp paste.",
@@ -126435,6 +126549,9 @@
         },
         "Butterfly ray": {
           "droprate": "1/2980"
+        },
+        "Veiled kraken": {
+          "droprate": "1/2720"
         }
       }
     },
@@ -128094,6 +128211,9 @@
         },
         "Opulent salvage": {
           "droprate": "1/141.333"
+        },
+        "Veiled kraken": {
+          "droprate": "1/27.2"
         }
       },
       "other": {
@@ -129205,6 +129325,9 @@
         },
         "Revenant imp": {
           "droprate": "1/1512.5"
+        },
+        "Veiled kraken": {
+          "droprate": "1/13.6"
         }
       },
       "shops": {
@@ -131310,6 +131433,9 @@
         },
         "Gold Chest (red)": {
           "droprate": "1/71.955; 1/71.085"
+        },
+        "Veiled kraken": {
+          "droprate": "1/13.6"
         }
       },
       "shops": {
@@ -139256,6 +139382,9 @@
         },
         "Hoop Snake": {
           "droprate": "1/3.333"
+        },
+        "Veiled kraken": {
+          "droprate": "1/54.4"
         }
       }
     }
@@ -165539,6 +165668,9 @@
         },
         "Forgotten Soul": {
           "droprate": "1/128"
+        },
+        "Veiled kraken": {
+          "droprate": "1/9.067"
         }
       },
       "other": {
@@ -166106,6 +166238,9 @@
         },
         "Wise Old Man tasks": {
           "droprate": "Common"
+        },
+        "Veiled kraken": {
+          "droprate": "1/27.2"
         }
       },
       "spawns": {
