@@ -149757,7 +149757,7 @@
     "sources": {
       "other": {
         "Crafting sunfire runes": {
-          "notes": "Requires Fire rune, Sunfire splinters and Pure essence.",
+          "notes": "Requires Fire rune, Sunfire splinters, Pure essence and level 33 Runecraft.",
           "rule": {
             "all": [
               {
@@ -149768,6 +149768,10 @@
               },
               {
                 "has": 7936
+              },
+              {
+                "skill": "Runecraft",
+                "level": 33
               }
             ]
           }
