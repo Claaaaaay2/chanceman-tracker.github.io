@@ -10280,7 +10280,12 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canStartPerilousMoons",
-                "hasMirrorShield"
+                {
+                    "any": [
+                        "canLongrange",
+                        "hasMirrorShield"
+                    ]
+                }
             ]
         },
         "skill": ["Slayer"],
