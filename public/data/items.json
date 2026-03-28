@@ -66274,7 +66274,7 @@
     "sources": {
       "other": {
         "Special shop": {
-          "notes": "Tithe farm reward and level 36 Farming.",
+          "notes": "Tithe farm reward (needs a Spade) and level 34 Farming.",
           "rule": {
             "all": [
               {
