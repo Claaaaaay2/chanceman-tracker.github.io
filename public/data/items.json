@@ -111628,7 +111628,7 @@
     "sources": {
       "other": {
         "Fletching arrows": {
-          "notes": "Requires Achey tree logs, a Knife and big chompy bird hunting and level 5 Fletching.",
+          "notes": "Requires Achey tree logs, a Knife and level 5 Fletching.",
           "rule": {
             "all": [
               {
@@ -111642,7 +111642,6 @@
                   "hasNarwhalKnife"
                 ]
               },
-              "canCompleteBigChompyBirdHunting",
               {
                 "skill": "Fletching",
                 "level": 5
