@@ -1,5 +1,5 @@
 import { invalidateLogicCaches } from "../items/logicCache.js";
-import { importPlayerData } from "./playerImportHelpers.js";
+import { saveImportedTrackerState } from "./playerImportHelpers.js";
 import { fileStore } from "../storage/fileStore.js";
 
 function getReturnPath() {
@@ -58,57 +58,58 @@ let teardownReuploadHandlers = null;
 export function init() {
     teardown();
 
+    const app = document.getElementById("app");
+    if (!app) return;
+
+    const rolledInput = app.querySelector("#rolledInput");
+    const obtainedInput = app.querySelector("#obtainedInput");
+    const playerBlobInput = app.querySelector("#playerBlobInput");
+    const status = app.querySelector("#status");
+    const loading = app.querySelector("#formLoading");
+    const saveBtn = app.querySelector("#saveBtn");
+    if (!rolledInput || !obtainedInput || !playerBlobInput || !status || !loading || !saveBtn) return;
+
+    const inputs = [rolledInput, obtainedInput, playerBlobInput, saveBtn];
+
+    const setBusy = (isBusy, message) => {
+        app.classList.toggle("upload-busy", isBusy);
+        loading.classList.toggle("active", isBusy);
+        inputs.forEach((input) => {
+            input.disabled = isBusy;
+        });
+        if (message !== undefined) {
+            status.textContent = message;
+        }
+    };
+
     const onReuploadClick = async (event) => {
         if (event.target.id !== "saveBtn") return;
 
-        const app = document.getElementById("app");
-        if (!app) return;
-
-        const rolledInput = app.querySelector("#rolledInput");
-        const obtainedInput = app.querySelector("#obtainedInput");
-        const playerBlobInput = app.querySelector("#playerBlobInput");
-        const status = app.querySelector("#status");
-        const loading = app.querySelector("#formLoading");
-        if (!rolledInput || !obtainedInput || !playerBlobInput || !status || !loading) return;
-        const saveBtn = app.querySelector("#saveBtn");
-        if (!saveBtn) return;
-        const inputs = [rolledInput, obtainedInput, playerBlobInput, saveBtn];
-
         const rolledFile = rolledInput.files[0];
         const obtainedFile = obtainedInput.files[0];
-
-        const setBusy = (isBusy, message) => {
-            app.classList.toggle("upload-busy", isBusy);
-            loading.classList.toggle("active", isBusy);
-            inputs.forEach((input) => {
-                input.disabled = isBusy;
-            });
-            if (message !== undefined) {
-                status.textContent = message;
-            }
-        };
 
         try {
             setBusy(true, "Reading files...");
             await new Promise(requestAnimationFrame);
 
+            let rolled;
             if (rolledFile) {
-                const json = JSON.parse(await rolledFile.text());
-                await fileStore.setRolled(json);
+                rolled = JSON.parse(await rolledFile.text());
             }
 
+            let obtained;
             if (obtainedFile) {
-                const json = JSON.parse(await obtainedFile.text());
-                await fileStore.setObtained(json);
+                obtained = JSON.parse(await obtainedFile.text());
             }
 
-            const player = await importPlayerData({
+            await saveImportedTrackerState({
+                rolled,
+                obtained,
                 playerBlobInput,
                 setStatus: (message) => {
                     status.textContent = message;
                 }
             });
-            await fileStore.setPlayer(player);
 
             // Clear any state
             invalidateLogicCaches(fileStore);

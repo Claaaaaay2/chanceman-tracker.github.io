@@ -1,4 +1,4 @@
-import { loadFromDB, saveToDB } from "./fileStoreHelpers.js";
+import { loadFromDB, saveManyToDB, saveToDB } from "./fileStoreHelpers.js";
 
 let memory = {
     obtained: null,
@@ -143,6 +143,34 @@ export const fileStore = {
     async setRolled(json) {
         memory.rolled = json;
         await saveToDB("unlocked", json);
+    },
+
+    async applyImportedTrackerState(nextState) {
+        const {
+            rolled,
+            obtained,
+            player
+        } = nextState;
+
+        const entries = [];
+        if (rolled !== undefined) {
+            entries.push(["unlocked", rolled]);
+        }
+        if (obtained !== undefined) {
+            entries.push(["rolled", obtained]);
+        }
+        entries.push(["player", player]);
+
+        // Persist all imported keys in one IndexedDB transaction so the DB is not left half-updated.
+        await saveManyToDB(entries);
+
+        if (rolled !== undefined) {
+            memory.rolled = rolled;
+        }
+        if (obtained !== undefined) {
+            memory.obtained = obtained;
+        }
+        memory.player = player;
     },
 
     async setFilters(filters) {

@@ -24,6 +24,21 @@ export async function saveToDB(key, data) {
     });
 }
 
+export async function saveManyToDB(entries) {
+    const db = await openDB();
+    return new Promise((resolve, reject) => {
+        const tx = db.transaction(STORE_NAME, "readwrite");
+        tx.oncomplete = () => resolve();
+        tx.onerror = () => reject(tx.error);
+        tx.onabort = () => reject(tx.error || new Error("IndexedDB transaction aborted"));
+
+        const store = tx.objectStore(STORE_NAME);
+        for (const [key, data] of entries) {
+            store.put(data, key);
+        }
+    });
+}
+
 export async function loadFromDB(key) {
     const db = await openDB();
     return new Promise((resolve) => {

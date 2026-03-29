@@ -1,5 +1,5 @@
-import { importPlayerData } from "./playerImportHelpers.js";
-import { fileStore } from "../storage/fileStore.js";
+import { saveImportedTrackerState } from "./playerImportHelpers.js";
+import { consumeTrackerSyncBridgeImport } from "./trackerSyncBridge.js";
 
 function getReturnPath() {
     const stored = sessionStorage.getItem("uploadReturnPath");
@@ -58,64 +58,82 @@ let teardownUploadHandlers = null;
 export function init() {
     teardown();
 
+    const app = document.getElementById("app");
+    if (!app) return;
+
+    const rolledInput = app.querySelector("#rolledInput");
+    const obtainedInput = app.querySelector("#obtainedInput");
+    const playerBlobInput = app.querySelector("#playerBlobInput");
+    const status = app.querySelector("#status");
+    const loading = app.querySelector("#formLoading");
+    const saveBtn = app.querySelector("#saveBtn");
+    if (!rolledInput || !obtainedInput || !playerBlobInput || !status || !loading || !saveBtn) return;
+
+    const inputs = [rolledInput, obtainedInput, playerBlobInput, saveBtn];
+
+    const setBusy = (isBusy, message) => {
+        app.classList.toggle("upload-busy", isBusy);
+        loading.classList.toggle("active", isBusy);
+        inputs.forEach((input) => {
+            input.disabled = isBusy;
+        });
+        if (message !== undefined) {
+            status.textContent = message;
+        }
+    };
+
+    const finishImport = () => {
+        status.textContent = "Saved! Redirecting...";
+        const returnPath = getReturnPath();
+        sessionStorage.removeItem("uploadReturnPath");
+        history.pushState(null, "", returnPath);
+        window.dispatchEvent(new PopStateEvent("popstate"));
+    };
+
+    const saveTrackerState = async (options) => {
+        const {
+            rolled,
+            obtained,
+            playerBlobText
+        } = options;
+
+        await saveImportedTrackerState({
+            rolled,
+            obtained,
+            playerBlobInput,
+            playerBlobText,
+            setStatus: (message) => {
+                status.textContent = message;
+            }
+        });
+    };
+
     const onUploadClick = async (event) => {
         if (event.target.id !== "saveBtn") return;
 
-        const app = document.getElementById("app");
-        if (!app) return;
-
-        const rolledInput = app.querySelector("#rolledInput");
-        const obtainedInput = app.querySelector("#obtainedInput");
-        const playerBlobInput = app.querySelector("#playerBlobInput");
-        const status = app.querySelector("#status");
-        const loading = app.querySelector("#formLoading");
-        if (!rolledInput || !obtainedInput || !playerBlobInput || !status || !loading) return;
-        const saveBtn = app.querySelector("#saveBtn");
-        if (!saveBtn) return;
-        const inputs = [rolledInput, obtainedInput, playerBlobInput, saveBtn];
-
         const rolledFile = rolledInput.files[0];
         const obtainedFile = obtainedInput.files[0];
-
-        const setBusy = (isBusy, message) => {
-            app.classList.toggle("upload-busy", isBusy);
-            loading.classList.toggle("active", isBusy);
-            inputs.forEach((input) => {
-                input.disabled = isBusy;
-            });
-            if (message !== undefined) {
-                status.textContent = message;
-            }
-        };
 
         try {
             setBusy(true, "Reading files...");
             await new Promise(requestAnimationFrame);
 
+            let rolled;
             if (rolledFile) {
-                const json = JSON.parse(await rolledFile.text());
-                await fileStore.setRolled(json);
+                rolled = JSON.parse(await rolledFile.text());
             }
 
+            let obtained;
             if (obtainedFile) {
-                const json = JSON.parse(await obtainedFile.text());
-                await fileStore.setObtained(json);
+                obtained = JSON.parse(await obtainedFile.text());
             }
 
-            const player = await importPlayerData({
-                playerBlobInput,
-                setStatus: (message) => {
-                    status.textContent = message;
-                }
+            await saveTrackerState({
+                rolled,
+                obtained
             });
-            await fileStore.setPlayer(player);
 
-            // Redirect to items page
-            status.textContent = "Saved! Redirecting...";
-            const returnPath = getReturnPath();
-            sessionStorage.removeItem("uploadReturnPath");
-            history.pushState(null, "", returnPath);
-            window.dispatchEvent(new PopStateEvent("popstate"));
+            finishImport();
         } catch (err) {
             console.error(err);
             status.textContent = err.message || "Error reading files!";
@@ -128,6 +146,42 @@ export function init() {
     teardownUploadHandlers = () => {
         document.removeEventListener("click", onUploadClick);
     };
+
+    void (async () => {
+        try {
+            const bridgeImport = await consumeTrackerSyncBridgeImport({
+                currentUrl: window.location.href,
+                onImport: async (importData) => {
+                    setBusy(true, "Importing tracker data...");
+                    await new Promise(requestAnimationFrame);
+
+                    playerBlobInput.value = importData.playerBlobText;
+                    await saveTrackerState({
+                        rolled: importData.chancemanRolled,
+                        obtained: importData.chancemanObtained,
+                        playerBlobText: importData.playerBlobText
+                    });
+                },
+                onLocalImportSuccess: ({ sanitizedUrl }) => {
+                    history.replaceState(null, "", sanitizedUrl);
+                    finishImport();
+                },
+                onAckFailure: (error, bridgeImportState) => {
+                    console.warn("Tracker bridge ack failed after successful local import.", {
+                        error,
+                        bridgeUrl: bridgeImportState.bridgeUrl
+                    });
+                }
+            });
+            if (!bridgeImport) {
+                return;
+            }
+        } catch (err) {
+            console.error(err);
+            status.textContent = err.message || "Error importing tracker data!";
+            setBusy(false);
+        }
+    })();
 }
 
 export function teardown() {

@@ -1,20 +1,21 @@
 import { parsePlayerBlob } from "../api/playerBlobApi.js";
+import { fileStore } from "../storage/fileStore.js";
+import {
+    saveImportedTrackerStateWithDependencies,
+    validateImportedPlayerData
+} from "./trackerImportPersistence.js";
 
 export async function importPlayerData(options) {
-    const {
-        playerBlobInput,
-        setStatus
-    } = options;
-
-    const blobText = readPlayerBlobText(playerBlobInput);
-    if (!blobText) {
-        throw new Error("Paste a Chanceman Tracker Sync blob.");
-    }
-
-    setStatus?.("Importing player blob...");
-    return parsePlayerBlob(blobText);
+    return validateImportedPlayerData({
+        ...options,
+        parsePlayerBlob
+    });
 }
 
-function readPlayerBlobText(playerBlobInput) {
-    return String(playerBlobInput?.value || "").trim();
+export async function saveImportedTrackerState(options) {
+    return saveImportedTrackerStateWithDependencies({
+        ...options,
+        parsePlayerBlob,
+        store: options.store || fileStore
+    });
 }
