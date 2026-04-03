@@ -7583,48 +7583,18 @@ function canTrainSmithing(ctx) {
 
 function canDoGnomeRestaurant(ctx) {
     return canTrainCooking(ctx) //
-        && ( //
-            ( // Crunchies
-                (has(ctx, 2171) && has(ctx, 2165) && has(ctx, 2169)) // Gianne dough, Crunchy tray & Gnome spice
-                && (
-                    (has(ctx, 2128) && has(ctx, 2217)) // Toad crunchies
-                    || (has(ctx, 2128) && has(ctx, 2213)) // Spicy crunchies
-                    || (has(ctx, 2128) && has(ctx, 2162) && has(ctx, 2205)) // Worm crunchies
-                    || (has(ctx, 1973) && has(ctx, 1975) && has(ctx, 2209)) // Chocchip crunchies
-                )
-            ) //
-            || ( // Battas
-                (has(ctx, 2171) && has(ctx, 2164) && has(ctx, 2128)) // Gianne dough, Batta tin & Equa leaves
-                && (
-                    (has(ctx, 2120) && has(ctx, 2122) && has(ctx, 2108) && has(ctx, 2110) && has(ctx, 2114) && has(ctx, 2116) && has(ctx, 2169) && has(ctx, 2277)) // Fruit batta
-                    || (has(ctx, 2169) && has(ctx, 1985) && has(ctx, 2152) && has(ctx, 2255)) // Toad Batta
-                    || (has(ctx, 2169) && has(ctx, 1985) && has(ctx, 2162) && has(ctx, 2253)) // Worm Batta
-                    || (has(ctx, 1982) && has(ctx, 2126) && has(ctx, 1957) && has(ctx, 1985) && has(ctx, 1965) && has(ctx, 2281)) // Vegetable Batta
-                    || (has(ctx, 1982) && has(ctx, 1985) && has(ctx, 2259)) // Cheese+tom batta
-                )
-            )
-            || ( // Gnomebowls
-                (has(ctx, 2171) && has(ctx, 2166) && has(ctx, 2128)) // Gianne dough, Gnomebowl & Equa leaves
-                && (
-                    (has(ctx, 2162) && has(ctx, 1957) && has(ctx, 2169) && has(ctx, 2191)) // Worm hole
-                    || (has(ctx, 1957) && has(ctx, 1942) && has(ctx, 2152) && has(ctx, 2195)) // Veg bowl
-                    || (has(ctx, 2152) && has(ctx, 2169) && has(ctx, 1985) && has(ctx, 2126) && has(ctx, 2187)) // Tangled toad's legs
-                    || (has(ctx, 1973) && has(ctx, 1975) && has(ctx, 2130) && has(ctx, 2185)) // Chocolate bomb
-                )
-            )
-            || ( // Cocktails
-                (has(ctx, 2025) && has(ctx, 2026)) // Cocktail shaker & Cocktail glass
-                && (
-                    (has(ctx, 2114) && has(ctx, 2102) && has(ctx, 2108) && has(ctx, 2106) && has(ctx, 2084)) // Fruit blast
-                    || (has(ctx, 2114) && has(ctx, 2102) && has(ctx, 2108) && has(ctx, 2120) && has(ctx, 2122) && has(ctx, 2116) && has(ctx, 2112) && has(ctx, 2048)) // Pineapple punch
-                    || (has(ctx, 2015) && has(ctx, 2019) && has(ctx, 2120) && has(ctx, 2102) && has(ctx, 2114) && has(ctx, 2108) && has(ctx, 2116) && has(ctx, 2124) && has(ctx, 2054)) // Wizard blizzard
-                    || (has(ctx, 2015) && has(ctx, 2120) && has(ctx, 2124) && has(ctx, 2128) && has(ctx, 2080)) // Short green guy
-                    || (has(ctx, 2015) && has(ctx, 2019) && has(ctx, 2126) && has(ctx, 2114) && has(ctx, 2116) && has(ctx, 2130) && has(ctx, 2092)) // Drunk dragon
-                    || (has(ctx, 2017) && has(ctx, 1973) && has(ctx, 2128) && has(ctx, 1975) && has(ctx, 2130) && has(ctx, 2074)) // Choc saturday
-                    || (has(ctx, 2015) && has(ctx, 2021) && has(ctx, 2019) && has(ctx, 2102) && has(ctx, 2104) && has(ctx, 2108) && has(ctx, 2110) && has(ctx, 2128) && has(ctx, 2120) && has(ctx, 2124) && has(ctx, 2064)) // Blurberry special
-                )
-            )
-        );
+        && has(ctx, 2171) // Gianne dough
+        && has(ctx, 2165) // Crunchy tray
+        && has(ctx, 2169) // Gnome spice
+        && has(ctx, 2128) // Equa leaves
+        && has(ctx, 2217) // Toad crunchies
+        && has(ctx, 2025) // Cocktail shaker
+        && has(ctx, 2026) // Cocktail glass
+        && has(ctx, 2114) // Pineapple
+        && has(ctx, 2102) // Lemon
+        && has(ctx, 2108) // Orange
+        && has(ctx, 2106) // Lemon slices
+        && has(ctx, 2084); // Fruit blast
 }
 
 function canDoValeTotems(ctx) {
