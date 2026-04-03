@@ -4169,6 +4169,7 @@ function canCompleteMountainDaughter(ctx) {
         hasSkillLevel(ctx, "Agility", 20),
         has(ctx, 954), // Rope
         has(ctx, 960), // Plank
+        hasUsablePickaxe(ctx),
     ]);
 }
 
