@@ -15546,7 +15546,9 @@
                 "type": "Cryptic clues",
                 "requirements": {
                     "skills": {},
-                    "quests": {},
+                    "quests": {
+                        "Fremennik Trials": "completed"
+                    },
                     "items": [
                         {
                             "id": 4587,
@@ -15565,6 +15567,7 @@
                 "requirements": {
                     "skills": {},
                     "quests": {
+                        "Fremennik Trials": "completed",
                         "Horror from the Deep": "completed"
                     },
                     "items": [],
@@ -15689,6 +15692,7 @@
                 "requirements": {
                     "skills": {},
                     "quests": {
+                        "Fremennik Trials": "completed",
                         "Roving Elves": "completed"
                     },
                     "items": [],
@@ -15706,7 +15710,9 @@
                         "Woodcutting": 61,
                         "Firemaking": 85
                     },
-                    "quests": {},
+                    "quests": {
+                        "Fremennik Trials": "completed"
+                    },
                     "items": [
                         {
                             "id": "6739",
@@ -15728,7 +15734,9 @@
                 "type": "Cryptic clues",
                 "requirements": {
                     "skills": {},
-                    "quests": {},
+                    "quests": {
+                        "Fremennik Trials": "completed"
+                    },
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
@@ -15741,7 +15749,9 @@
                 "type": "Cryptic clues",
                 "requirements": {
                     "skills": {},
-                    "quests": {},
+                    "quests": {
+                        "Fremennik Trials": "completed"
+                    },
                     "items": [],
                     "untracked": [],
                     "itemsAny": [
@@ -15761,7 +15771,9 @@
                 "type": "Cryptic clues",
                 "requirements": {
                     "skills": {},
-                    "quests": {},
+                    "quests": {
+                        "Fremennik Trials": "completed"
+                    },
                     "items": [],
                     "untracked": [],
                     "itemsAny": [
@@ -15784,7 +15796,9 @@
                         "Strength": 65,
                         "Attack": 65
                     },
-                    "quests": {},
+                    "quests": {
+                        "Fremennik Trials": "completed"
+                    },
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
@@ -15800,7 +15814,9 @@
                         "Strength": 65,
                         "Attack": 65
                     },
-                    "quests": {},
+                    "quests": {
+                        "Fremennik Trials": "completed"
+                    },
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
@@ -15813,7 +15829,9 @@
                 "type": "Cryptic clues",
                 "requirements": {
                     "skills": {},
-                    "quests": {},
+                    "quests": {
+                        "Fremennik Trials": "completed"
+                    },
                     "items": [],
                     "untracked": [],
                     "itemsAny": [
@@ -15834,6 +15852,7 @@
                 "requirements": {
                     "skills": {},
                     "quests": {
+                        "Fremennik Trials": "completed",
                         "The Great Brain Robbery": "completed"
                     },
                     "items": [],
@@ -15848,7 +15867,9 @@
                 "type": "Cryptic clues",
                 "requirements": {
                     "skills": {},
-                    "quests": {},
+                    "quests": {
+                        "Fremennik Trials": "completed"
+                    },
                     "items": [],
                     "untracked": [],
                     "itemsAny": [
@@ -15868,7 +15889,9 @@
                 "type": "Cryptic clues",
                 "requirements": {
                     "skills": {},
-                    "quests": {},
+                    "quests": {
+                        "Fremennik Trials": "completed"
+                    },
                     "items": [],
                     "untracked": [],
                     "itemsAny": [
@@ -15888,7 +15911,9 @@
                 "type": "Cryptic clues",
                 "requirements": {
                     "skills": {},
-                    "quests": {},
+                    "quests": {
+                        "Fremennik Trials": "completed"
+                    },
                     "items": [],
                     "untracked": [],
                     "itemsAny": [],
@@ -15902,6 +15927,7 @@
                 "requirements": {
                     "skills": {},
                     "quests": {
+                        "Fremennik Trials": "completed",
                         "Recipe for Disaster": "completed"
                     },
                     "items": [],
@@ -15917,6 +15943,7 @@
                 "requirements": {
                     "skills": {},
                     "quests": {
+                        "Fremennik Trials": "completed",
                         "Family Crest": "completed"
                     },
                     "items": [],
@@ -15931,7 +15958,9 @@
                 "type": "Cryptic clues",
                 "requirements": {
                     "skills": {},
-                    "quests": {},
+                    "quests": {
+                        "Fremennik Trials": "completed"
+                    },
                     "items": [],
                     "untracked": [],
                     "itemsAny": [
@@ -15951,7 +15980,9 @@
                 "type": "Cryptic clues",
                 "requirements": {
                     "skills": {},
-                    "quests": {},
+                    "quests": {
+                        "Fremennik Trials": "completed"
+                    },
                     "items": [],
                     "untracked": [],
                     "itemsAny": [
@@ -15972,6 +16003,7 @@
                 "requirements": {
                     "skills": {},
                     "quests": {
+                        "Fremennik Trials": "completed",
                         "In Aid of the Myreque": "completed"
                     },
                     "items": [],
@@ -15986,7 +16018,9 @@
                 "type": "Cryptic clues",
                 "requirements": {
                     "skills": {},
-                    "quests": {},
+                    "quests": {
+                        "Fremennik Trials": "completed"
+                    },
                     "items": [],
                     "untracked": [],
                     "itemsAny": [
