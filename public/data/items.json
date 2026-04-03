@@ -36155,7 +36155,7 @@
     "sources": {
       "other": {
         "Purchasing through dialogue": {
-          "note": "Can be bought ater completion of the Dwarf Cannon quest.",
+          "notes": "Can be bought after completion of the Dwarf Cannon quest.",
           "rule": "canCompleteDwarfCannon"
         }
       }
@@ -36169,7 +36169,7 @@
     "sources": {
       "other": {
         "Purchasing through dialogue": {
-          "note": "Can be bought ater completion of the Dwarf Cannon quest.",
+          "notes": "Can be bought after completion of the Dwarf Cannon quest.",
           "rule": "canCompleteDwarfCannon"
         }
       }
@@ -36183,7 +36183,7 @@
     "sources": {
       "other": {
         "Purchasing through dialogue": {
-          "note": "Can be bought ater completion of the Dwarf Cannon quest.",
+          "notes": "Can be bought after completion of the Dwarf Cannon quest.",
           "rule": "canCompleteDwarfCannon"
         }
       }
@@ -36197,7 +36197,7 @@
     "sources": {
       "other": {
         "Purchasing through dialogue": {
-          "note": "Can be bought ater completion of the Dwarf Cannon quest.",
+          "notes": "Can be bought after completion of the Dwarf Cannon quest.",
           "rule": "canCompleteDwarfCannon"
         }
       }
