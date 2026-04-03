@@ -30,6 +30,7 @@ function getRequirementItemLookupState(ctx) {
 
     const knownItemIds = new Set((itemsRef || []).map((item) => item.id));
     const rolledSet = new Set(rolledRef || []);
+    const obtainedItemIds = new Set(obtainedRef || []);
     const ownedItemIds = new Set();
     for (const id of obtainedRef || []) {
         if (rolledSet.has(id)) {
@@ -45,6 +46,7 @@ function getRequirementItemLookupState(ctx) {
         obtainedRef,
         obtainedLength,
         knownItemIds,
+        obtainedItemIds,
         ownedItemIds,
         elementalRuneResultCache: new Map()
     };
@@ -57,6 +59,17 @@ function hasItem(ctx, id, options = {}) {
     if (!lookupState?.knownItemIds.has(id)) return false;
 
     const hasItemValue = lookupState.ownedItemIds.has(id);
+    if (!hasItemValue && options.trackMissing !== false && ctx?.missing?.items && shouldTrackMissing(ctx)) {
+        ctx.missing.items.add(id);
+    }
+    return hasItemValue;
+}
+
+function hasObtainedItem(ctx, id, options = {}) {
+    const lookupState = getRequirementItemLookupState(ctx);
+    if (!lookupState?.knownItemIds.has(id)) return false;
+
+    const hasItemValue = lookupState.obtainedItemIds.has(id);
     if (!hasItemValue && options.trackMissing !== false && ctx?.missing?.items && shouldTrackMissing(ctx)) {
         ctx.missing.items.add(id);
     }
@@ -2607,7 +2620,7 @@ export const REQUIREMENT_CHECKS = {
         return hasBarbarianFiremakingTraining(ctx.player);
     },
     hasAntiDragonShieldForDragonSlayerTasks(ctx) {
-        return has(ctx, 1540);
+        return hasObtainedItem(ctx, 1540);
     },
     canCompleteBarbarianFiremaking2(ctx) {
         return canCompleteBarbarianFiremaking2(ctx);
