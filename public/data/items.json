@@ -136021,6 +136021,22 @@
       },
       "shops": {
         "Yes": "canCompletePriestInPeril"
+      },
+      "other": {
+        "Cooking a Sea turtle": {
+          "notes": "Requires Raw sea turtle and level 82 Cooking.",
+          "rule": {
+            "all": [
+              {
+                "has": 395
+              },
+              {
+                "skill": "Cooking",
+                "level": 82
+              }
+            ]
+          }
+        }
       }
     },
     "tags": [
