@@ -36109,7 +36109,7 @@
     "sources": {
       "other": {
         "Crafting a Candle lantern (black)": {
-          "notes": "Requires an Empty candle lantern and a black Candle.",
+          "notes": "Requires an Empty candle lantern and a Black candle, requiring a Bucket of Wax.",
           "rule": {
             "all": [
               {
@@ -36134,12 +36134,29 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Crafting a Candle lantern (white)": {
-          "notes": "Requires an Empty candle lantern and a white Candle (can be lit).",
+        "Crafting a Candle lantern (white) with an unlit candle": {
+          "notes": "Requires an Empty candle lantern and a white Candle.",
           "rule": {
             "all": [
               {
                 "has": 4527
+              },
+              {
+                "has": 36
+              }
+            ]
+          }
+        },
+        "Crafting a Candle lantern (white) with a lit candle": {
+          "notes": "Requires an Empty candle lantern and a white Candle (lit).",
+          "rule": {
+            "all": [
+              {
+                "has": 4527
+              },
+              {
+                "skill": "Firemaking",
+                "level": 4
               }
             ]
           }
