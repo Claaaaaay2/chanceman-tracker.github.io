@@ -6204,6 +6204,7 @@ function canSailToBrittleIsle(ctx) {
 
 function canEnterTheCharredDungeon(ctx) {
     return requiresQuest(ctx, "canCompletePandemonium", canCompletePandemonium) //
+        && hasSkillLevel(ctx, "Sailing", 60) //
         && has(ctx, 954); // Rope
 }
 
