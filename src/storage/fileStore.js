@@ -55,6 +55,7 @@ let memory = {
         npcDropExclusions: []
     },
     player: null,
+    playerBlobText: null,
 };
 
 let pendingFilterSave = Promise.resolve();
@@ -67,6 +68,7 @@ export const fileStore = {
     itemsSource: null,
     itemMeta: null,
     player: null,
+    playerBlobText: null,
 
     async ensureItemsLoaded() {
         const isF2P = this.filters?.isFreeToPlay;
@@ -108,6 +110,7 @@ export const fileStore = {
         memory.obtained = await loadFromDB("rolled");
         memory.rolled = await loadFromDB("unlocked");
         memory.player = await loadFromDB("player");
+        memory.playerBlobText = await loadFromDB("playerBlobText");
 
         const loadedFilters = await loadFromDB("filters");
         if (loadedFilters) {
@@ -149,7 +152,8 @@ export const fileStore = {
         const {
             rolled,
             obtained,
-            player
+            player,
+            playerBlobText
         } = nextState;
 
         const entries = [];
@@ -160,6 +164,9 @@ export const fileStore = {
             entries.push(["rolled", obtained]);
         }
         entries.push(["player", player]);
+        if (playerBlobText !== undefined) {
+            entries.push(["playerBlobText", playerBlobText]);
+        }
 
         // Persist all imported keys in one IndexedDB transaction so the DB is not left half-updated.
         await saveManyToDB(entries);
@@ -171,6 +178,9 @@ export const fileStore = {
             memory.obtained = obtained;
         }
         memory.player = player;
+        if (playerBlobText !== undefined) {
+            memory.playerBlobText = playerBlobText;
+        }
     },
 
     async setFilters(filters) {
@@ -196,6 +206,11 @@ export const fileStore = {
         await saveToDB("player", player);
     },
 
+    async setPlayerBlobText(playerBlobText) {
+        memory.playerBlobText = playerBlobText;
+        await saveToDB("playerBlobText", playerBlobText);
+    },
+
     get obtained() {
         return memory.obtained;
     },
@@ -211,5 +226,9 @@ export const fileStore = {
 
     get player() {
         return memory.player;
+    },
+
+    get playerBlobText() {
+        return memory.playerBlobText;
     }
 };

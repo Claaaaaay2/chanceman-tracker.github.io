@@ -19,6 +19,9 @@ function createStoreSpy() {
             },
             async setPlayer(value) {
                 calls.push(["player", value]);
+            },
+            async setPlayerBlobText(value) {
+                calls.push(["playerBlobText", value]);
             }
         }
     };
@@ -64,7 +67,8 @@ test("manual upload path still works", async () => {
     assert.deepEqual(calls, [
         ["rolled", [10]],
         ["obtained", [20]],
-        ["player", expectedPlayer]
+        ["player", expectedPlayer],
+        ["playerBlobText", "{\"schemaVersion\":1}"]
     ]);
 });
 
@@ -100,6 +104,7 @@ test("transactional store path avoids partial writes when the batch write fails"
 
     assert.equal(calls.length, 1);
     assert.equal(calls[0][0], "batch");
+    assert.equal(calls[0][1].playerBlobText, "{\"schemaVersion\":1}");
 });
 
 test("fallback sequential store writes can still fail partway through when no batch API exists", async () => {
@@ -123,6 +128,9 @@ test("fallback sequential store writes can still fail partway through when no ba
                 },
                 async setPlayer(value) {
                     calls.push(["player", value]);
+                },
+                async setPlayerBlobText(value) {
+                    calls.push(["playerBlobText", value]);
                 }
             }
         }),

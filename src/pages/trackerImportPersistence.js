@@ -38,13 +38,15 @@ export async function saveImportedTrackerStateWithDependencies(options) {
         store
     } = options;
 
+    const playerBlobText = readPlayerBlobText(options);
     const player = validateImportedPlayerData(options);
 
     if (typeof store.applyImportedTrackerState === "function") {
         await store.applyImportedTrackerState({
             rolled,
             obtained,
-            player
+            player,
+            playerBlobText
         });
         return player;
     }
@@ -60,5 +62,8 @@ export async function saveImportedTrackerStateWithDependencies(options) {
     }
 
     await store.setPlayer(player);
+    if (typeof store.setPlayerBlobText === "function") {
+        await store.setPlayerBlobText(playerBlobText);
+    }
     return player;
 }

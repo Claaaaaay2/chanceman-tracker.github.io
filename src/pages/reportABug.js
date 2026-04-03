@@ -6,7 +6,7 @@ let bugClickHandler = null;
 export default async function BugPage() {
     return `
         <h1>Report a bug</h1>
-        <p>Report your problems here. It will automatically also send your obtained and rolled for me to check :)</p>
+        <p>Report your problems here. It will automatically also send your obtained, rolled, filters, and tracker blob for me to check :)</p>
         <textarea id="bugText" placeholder="Describe the bug..." cols="50" rows="10"></textarea><br/><br/>
         <button id="reportBug">Report bug</button><br/><br/>
         <p id="bugStatus"></p>
@@ -38,6 +38,7 @@ export function init() {
             message,
             files: {
                 player: fileStore.player?.name,
+                playerBlob: fileStore.playerBlobText,
                 filters: fileStore.filters,
                 obtained: fileStore.obtained,
                 rolled: fileStore.rolled,

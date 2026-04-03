@@ -66,7 +66,7 @@ export default {
 
 			form.append(
 				`file_${name}`,
-				new Blob([JSON.stringify(content, null, 2)], { type: "application/json" }),
+				new Blob([serializeReportFileContent(content)], { type: "application/json" }),
 				`${name}.json`
 			);
 		}
@@ -85,3 +85,15 @@ export default {
 		});
 	}
 };
+
+function serializeReportFileContent(content) {
+	if (typeof content === "string") {
+		try {
+			return JSON.stringify(JSON.parse(content), null, 2);
+		} catch (error) {
+			return JSON.stringify(content, null, 2);
+		}
+	}
+
+	return JSON.stringify(content, null, 2);
+}
