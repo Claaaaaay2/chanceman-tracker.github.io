@@ -1,0 +1,7 @@
+import{f as t}from"./index-D4AezAfU.js";let o=null,r=null;async function d(){return`
+        <h1>Report a bug</h1>
+        <p>Report your problems here. It will automatically also send your obtained, rolled, filters, and tracker blob for me to check :)</p>
+        <textarea id="bugText" placeholder="Describe the bug..." cols="50" rows="10"></textarea><br/><br/>
+        <button id="reportBug">Report bug</button><br/><br/>
+        <p id="bugStatus"></p>
+    `}function c(){i();const e=document.getElementById("reportBug");e&&(o=e,r=async()=>{const n=document.getElementById("bugStatus"),l=document.getElementById("bugText").value.trim();if(!l){n.textContent="Please enter a description.";return}e.disabled=!0,n.textContent="Sending report...";const u={message:l,files:{player:t.player?.name,playerBlob:t.playerBlobText,filters:t.filters,obtained:t.obtained,rolled:t.rolled}};try{if(!(await fetch("https://bug-report-relay.chanceman-tracker.workers.dev",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(u)})).ok)throw new Error("Failed to send");document.getElementById("bugText").value="",n.textContent="Thank you! Bug report sent."}catch(a){console.error(a),n.textContent="Failed to send bug report."}finally{e.disabled=!1}},e.addEventListener("click",r))}function i(){o&&r&&o.removeEventListener("click",r),o=null,r=null}export{d as default,c as init,i as teardown};

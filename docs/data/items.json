@@ -36109,7 +36109,7 @@
     "sources": {
       "other": {
         "Crafting a Candle lantern (black)": {
-          "notes": "Requires an Empty candle lantern and a black Candle.",
+          "notes": "Requires an Empty candle lantern and a Black candle, requiring a Bucket of Wax.",
           "rule": {
             "all": [
               {
@@ -36134,12 +36134,29 @@
         "Yes": "No requirements"
       },
       "other": {
-        "Crafting a Candle lantern (white)": {
-          "notes": "Requires an Empty candle lantern and a white Candle (can be lit).",
+        "Crafting a Candle lantern (white) with an unlit candle": {
+          "notes": "Requires an Empty candle lantern and a white Candle.",
           "rule": {
             "all": [
               {
                 "has": 4527
+              },
+              {
+                "has": 36
+              }
+            ]
+          }
+        },
+        "Crafting a Candle lantern (white) with a lit candle": {
+          "notes": "Requires an Empty candle lantern and a white Candle (lit).",
+          "rule": {
+            "all": [
+              {
+                "has": 4527
+              },
+              {
+                "skill": "Firemaking",
+                "level": 4
               }
             ]
           }
@@ -36155,7 +36172,7 @@
     "sources": {
       "other": {
         "Purchasing through dialogue": {
-          "note": "Can be bought ater completion of the Dwarf Cannon quest.",
+          "notes": "Can be bought after completion of the Dwarf Cannon quest.",
           "rule": "canCompleteDwarfCannon"
         }
       }
@@ -36169,7 +36186,7 @@
     "sources": {
       "other": {
         "Purchasing through dialogue": {
-          "note": "Can be bought ater completion of the Dwarf Cannon quest.",
+          "notes": "Can be bought after completion of the Dwarf Cannon quest.",
           "rule": "canCompleteDwarfCannon"
         }
       }
@@ -36183,7 +36200,7 @@
     "sources": {
       "other": {
         "Purchasing through dialogue": {
-          "note": "Can be bought ater completion of the Dwarf Cannon quest.",
+          "notes": "Can be bought after completion of the Dwarf Cannon quest.",
           "rule": "canCompleteDwarfCannon"
         }
       }
@@ -36197,7 +36214,7 @@
     "sources": {
       "other": {
         "Purchasing through dialogue": {
-          "note": "Can be bought ater completion of the Dwarf Cannon quest.",
+          "notes": "Can be bought after completion of the Dwarf Cannon quest.",
           "rule": "canCompleteDwarfCannon"
         }
       }
@@ -42771,7 +42788,7 @@
     "sources": {
       "drops": {
         "Narwhal": {
-          "droprate": "1/30"
+          "droprate": "1/37.5"
         },
         "Albatross": {
           "droprate": "1/31.25"
@@ -42792,13 +42809,13 @@
           "droprate": "1/230"
         },
         "Fremennik salvage": {
-          "droprate": "1/266"
+          "droprate": "1/267"
         },
         "Eagle ray": {
           "droprate": "1/375"
         },
         "Large salvage": {
-          "droprate": "1/443"
+          "droprate": "1/443.6"
         }
       }
     },
@@ -50762,7 +50779,7 @@
           "droprate": "1/65"
         },
         "Narwhal": {
-          "droprate": "1/120.4"
+          "droprate": "1/150"
         },
         "Opulent salvage": {
           "droprate": "1/2000"
@@ -54601,10 +54618,10 @@
     "sources": {
       "drops": {
         "Dolphin": {
-          "droprate": "1/927"
+          "droprate": "1/1000"
         },
         "Orca": {
-          "droprate": "1/65.5"
+          "droprate": "1/70"
         }
       }
     },
@@ -55259,13 +55276,13 @@
           "droprate": "3 × 1/22"
         },
         "Rusty chest": {
-          "droprate": "1/14.625"
+          "droprate": "1/15"
         },
         "Albatross": {
           "droprate": "1/20.833"
         },
         "Aquanite": {
-          "droprate": "1/22"
+          "droprate": "1/21.33"
         },
         "Frigatebird": {
           "droprate": "1/27.778"
@@ -55289,7 +55306,7 @@
           "droprate": "2 × 1/128"
         },
         "Narwhal": {
-          "droprate": "1/66.667"
+          "droprate": "1/33.33"
         },
         "Bull shark": {
           "droprate": "1/83.333"
@@ -55301,13 +55318,13 @@
           "droprate": "1/83.333"
         },
         "Pygmy kraken": {
-          "droprate": "1/84.167"
+          "droprate": "1/90"
         },
         "Reinforced chest": {
-          "droprate": "1/97.5"
+          "droprate": "1/100"
         },
         "Tarnished chest": {
-          "droprate": "1/97.5"
+          "droprate": "1/100"
         },
         "Eagle ray": {
           "droprate": "1/125"
@@ -55325,7 +55342,7 @@
           "droprate": "1/213.333"
         },
         "Large salvage": {
-          "droprate": "1/221.5"
+          "droprate": "1/221.8"
         }
       }
     },
@@ -61813,13 +61830,13 @@
           "droprate": "1/33.333"
         },
         "Barracuda salvage": {
-          "droprate": "1/56.75"
+          "droprate": "1/56.8"
         },
         "Butterfly ray": {
           "droprate": "1/59.6"
         },
         "Narwhal": {
-          "droprate": "1/75"
+          "droprate": "1/15"
         },
         "Orca": {
           "droprate": "1/92"
@@ -81632,7 +81649,7 @@
           "droprate": "1/41.667"
         },
         "Narwhal": {
-          "droprate": "1/50"
+          "droprate": "1/25"
         },
         "Tern": {
           "droprate": "1/55.556"
@@ -81644,10 +81661,10 @@
           "droprate": "1/153.333"
         },
         "Large salvage": {
-          "droprate": "1/221.5"
+          "droprate": "1/221.8"
         },
         "Barracuda salvage": {
-          "droprate": "1/227"
+          "droprate": "1/227.2"
         },
         "Eagle ray": {
           "droprate": "1/250"
@@ -108365,7 +108382,7 @@
     "sources": {
       "drops": {
         "Narwhal": {
-          "droprate": "1/100"
+          "droprate": "1/20"
         }
       }
     },
@@ -111628,7 +111645,7 @@
     "sources": {
       "other": {
         "Fletching arrows": {
-          "notes": "Requires Achey tree logs, a Knife and big chompy bird hunting and level 5 Fletching.",
+          "notes": "Requires Achey tree logs, a Knife and level 5 Fletching.",
           "rule": {
             "all": [
               {
@@ -111642,7 +111659,6 @@
                   "hasNarwhalKnife"
                 ]
               },
-              "canCompleteBigChompyBirdHunting",
               {
                 "skill": "Fletching",
                 "level": 5
@@ -115064,13 +115080,13 @@
           "droprate": "3 × 1/22"
         },
         "Tarnished chest": {
-          "droprate": "1/14.625"
+          "droprate": "1/15"
         },
         "Manta ray (monster)": {
           "droprate": "1/18.562"
         },
         "Aquanite": {
-          "droprate": "1/22"
+          "droprate": "1/21.33"
         },
         "Orca": {
           "droprate": "1/30.667"
@@ -115103,7 +115119,7 @@
           "droprate": "1/128"
         },
         "Narwhal": {
-          "droprate": "1/133.333"
+          "droprate": "1/66.67"
         },
         "Bull shark": {
           "droprate": "1/166.667"
@@ -115115,13 +115131,13 @@
           "droprate": "1/166.667"
         },
         "Pygmy kraken": {
-          "droprate": "1/168.333"
+          "droprate": "1/180"
         },
         "Reinforced chest": {
-          "droprate": "1/195"
+          "droprate": "1/200"
         },
         "Rusty chest": {
-          "droprate": "1/195"
+          "droprate": "1/200"
         },
         "Eagle ray": {
           "droprate": "1/250"
@@ -115130,7 +115146,7 @@
           "droprate": "1/426.667"
         },
         "Large salvage": {
-          "droprate": "1/1107.5"
+          "droprate": "1/1109"
         }
       }
     },
@@ -122246,7 +122262,6 @@
       }
     },
     "tags": [
-      "Ranged",
       "Cooking"
     ]
   },
@@ -123217,16 +123232,16 @@
     "sources": {
       "drops": {
         "Manta ray (monster)": {
-          "droprate": "1/16.2"
+          "droprate": "1/20"
         },
         "Stingray": {
-          "droprate": "1/22.8"
+          "droprate": "1/30"
         },
         "Butterfly ray": {
-          "droprate": "1/41.2"
+          "droprate": "1/45"
         },
         "Eagle ray": {
-          "droprate": "1/41.2"
+          "droprate": "1/50"
         }
       }
     },
@@ -136022,6 +136037,22 @@
       },
       "shops": {
         "Yes": "canCompletePriestInPeril"
+      },
+      "other": {
+        "Cooking a Sea turtle": {
+          "notes": "Requires Raw sea turtle and level 82 Cooking.",
+          "rule": {
+            "all": [
+              {
+                "has": 395
+              },
+              {
+                "skill": "Cooking",
+                "level": 82
+              }
+            ]
+          }
+        }
       }
     },
     "tags": [
@@ -160936,10 +160967,10 @@
           "droprate": "3 × 1/22"
         },
         "Reinforced chest": {
-          "droprate": "1/14.625"
+          "droprate": "1/15"
         },
         "Aquanite": {
-          "droprate": "1/22"
+          "droprate": "1/21.33"
         },
         "Manta ray (monster)": {
           "droprate": "1/37.125"
@@ -160957,7 +160988,7 @@
           "droprate": "1/166.667"
         },
         "Martial salvage": {
-          "droprate": "1/243"
+          "droprate": "1/244"
         },
         "Butterfly ray": {
           "droprate": "1/248.333"
@@ -160966,7 +160997,7 @@
           "droprate": "1/250"
         },
         "Narwhal": {
-          "droprate": "1/400"
+          "droprate": "1/200"
         },
         "Bull shark": {
           "droprate": "1/500"
@@ -160981,16 +161012,16 @@
           "droprate": "1/500"
         },
         "Pygmy kraken": {
-          "droprate": "1/505"
+          "droprate": "1/540"
         },
         "Fremennik salvage": {
-          "droprate": "1/532"
+          "droprate": "1/534"
         },
         "Rusty chest": {
-          "droprate": "1/585"
+          "droprate": "1/600"
         },
         "Tarnished chest": {
-          "droprate": "1/585"
+          "droprate": "1/600"
         },
         "Eagle ray": {
           "droprate": "1/750"
