@@ -16178,7 +16178,8 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompleteEaglesPeak",
-                "hasRabbitSnare"
+                "hasRabbitSnare",
+                "hasBoxTrap"
             ]
         },
         "skill": ["hunter"],
