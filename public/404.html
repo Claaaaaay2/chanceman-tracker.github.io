@@ -5,8 +5,9 @@
     <meta charset="utf-8">
     <script>
         // Redirect all unknown routes back to index.html
-        sessionStorage.redirect = location.pathname;
-        location.replace("/");
+        const redirect = `${location.pathname}${location.search}${location.hash}`;
+        sessionStorage.redirect = redirect;
+        location.replace(`/?redirect=${encodeURIComponent(redirect)}`);
     </script>
 </head>
 

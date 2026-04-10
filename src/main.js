@@ -1,3 +1,4 @@
+import { consumeGithubPagesRedirect } from "./app/githubPagesRedirect.js";
 import { scheduleLikelyRoutePrefetch } from "./app/routePrefetch.js";
 import { navigate, router } from "./router.js";
 import { fileStore } from "./storage/fileStore.js";
@@ -9,6 +10,11 @@ initTheme();
 initFiltersOverrides();
 
 window.addEventListener("DOMContentLoaded", async () => {
+    const githubPagesRedirect = consumeGithubPagesRedirect();
+    if (githubPagesRedirect) {
+        history.replaceState(history.state ?? {}, "", githubPagesRedirect);
+    }
+
     await fileStore.init();
     await router();
     scheduleLikelyRoutePrefetch();
