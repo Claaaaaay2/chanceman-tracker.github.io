@@ -5896,7 +5896,7 @@ function canBurnUriumShades(ctx) {
 
 function hasCupOfTea(ctx) {
     return has(ctx, 1978) // Cup of tea
-        || (has(ctx, 1980) && has(ctx, 1921)) // Empty cup and Bowl of water
+        || has(ctx, 1921) // Bowl of water
 }
 
 function hasAnyGuthixBalance(ctx) {
@@ -7106,21 +7106,22 @@ function canFillFishFoodBox(ctx) {
 
 function hasAnyFilledBowl(ctx) {
     return hasAnyItems(ctx, [
-        1921,
-        4456,
-        2003,
-        4016,
-        2011,
-        7074,
-        1871,
         1869,
-        7086,
+        1871,
         1873,
-        7070,
-        7080,
-        7088,
+        1921,
+        2003,
+        2011,
+        4016,
+        4456,
         7068,
+        7070,
+        7074,
         7076,
+        7080,
+        7082,
+        7086,
+        7088,
     ]);
 }
 
