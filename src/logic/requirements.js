@@ -2795,10 +2795,59 @@ export const REQUIREMENT_CHECKS = {
     hasAFullBarrowsSet(ctx) {
         return hasAFullBarrowsSet(ctx);
     },
+    canCompleteTheBloodMoonRises(ctx) {
+        return canCompleteTheBloodMoonRises(ctx);
+    },
+    hasUsableBoatCannon(ctx) {
+        return hasUsableBoatCannon(ctx);
+    },
+    canBuildDragonCannon(ctx) {
+        return canBuildDragonCannon(ctx);
+    },
+    canBuildRuneCannon(ctx) {
+        return canBuildRuneCannon(ctx);
+    },
+    canBuildAdamantCannon(ctx) {
+        return canBuildAdamantCannon(ctx);
+    },
+    canBuildMithrilCannon(ctx) {
+        return canBuildMithrilCannon(ctx);
+    },
+    canBuildSteelCannon(ctx) {
+        return canBuildSteelCannon(ctx);
+    },
+    canBuildIronCannon(ctx) {
+        return canBuildIronCannon(ctx);
+    },
+    canBuildBronzeCannon(ctx) {
+        return canBuildBronzeCannon(ctx);
+    },
     never(ctx) {
         return false;
     }
 };
+
+function canCompleteTheBloodMoonRises(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteSinsOfTheFather", canCompleteSinsOfTheFather), //
+        requiresQuest(ctx, "canCompleteANightAtTheTheatre", canCompleteANightAtTheTheatre), //
+        hasSkillLevel(ctx, "Slayer", 74), //
+        hasSkillLevel(ctx, "Smithing", 72), //
+        hasSkillLevel(ctx, "Woodcutting", 74), //
+        hasSkillLevel(ctx, "Herblore", 64), //
+        hasSkillLevel(ctx, "Mining", 66), //
+        hasSkillLevel(ctx, "Crafting", 64), //
+        hasSkillLevel(ctx, "Magic", 57), //
+        hasSkillLevel(ctx, "Hunter", 65), //
+        hasSkillLevel(ctx, "Fletching", 70), //
+        hasSkillLevel(ctx, "Cooking", 72), //
+        has(ctx, 590), // Tinderbox
+        hasKnifeOrNarwhalKnife(ctx), // Knife
+        has(ctx, 2347), // Hammer
+        has(ctx, 1755), // Chisel
+        hasUsablePickaxe(ctx), // Pickaxe
+    ]);
+}
 
 function canCompleteAKingdomDivided(ctx) {
     return allTrue([
@@ -5280,7 +5329,97 @@ function canCompleteTheQueenOfThieves(ctx) {
 }
 
 function canCompleteTheRedReef(ctx) {
-    return false; // TODO
+    return allTrue([
+        hasSkillLevel(ctx, "Sailing", 52),
+        hasSkillLevel(ctx, "Smithing", 48),
+        requiresQuest(ctx, "canCompleteTroubledTortugans", canCompleteTroubledTortugans),
+    ]);
+}
+
+function hasUsableBoatCannon(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompletePandemonium", canCompletePandemonium),
+        (
+            canBuildBronzeCannon(ctx) // Bronze Cannon
+            || canBuildIronCannon(ctx) // Iron Cannon
+            || canBuildSteelCannon(ctx) // Steel Cannon
+            || canBuildMithrilCannon(ctx) // Mithril Cannon
+            || canBuildAdamantCannon(ctx) // Adamant Cannon
+            || canBuildRuneCannon(ctx) // Rune Cannon
+            || canBuildDragonCannon(ctx) // Dragon Cannon
+        )
+    ]);
+}
+
+function canBuildBronzeCannon(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompletePandemonium", canCompletePandemonium),
+        has(ctx, 960), // Plank
+        has(ctx, 4819), // Bronze Nails
+        has(ctx, 2349), // Bronze Bar
+        has(ctx, 31906), // Bronze Cannonball
+    ]);
+}
+
+function canBuildIronCannon(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompletePandemonium", canCompletePandemonium),
+        has(ctx, 8778), // Oak Plank
+        has(ctx, 4820), // Iron Nails
+        has(ctx, 2351), // Iron Bar
+        hasAnyItems(ctx, [31906, 31908]), // Bronze Cannonball or Iron Cannonball
+    ]);
+}
+
+function canBuildSteelCannon(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompletePandemonium", canCompletePandemonium),
+        has(ctx, 8780), // Teak Plank
+        has(ctx, 1539), // Steel Nails
+        has(ctx, 2353), // Steel Bar
+        hasAnyItems(ctx, [31906, 31908, 2]), // Bronze Cannonball or Iron Cannonball or Steel Cannonball
+    ]);
+}
+
+function canBuildMithrilCannon(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompletePandemonium", canCompletePandemonium),
+        has(ctx, 8782), // Mahogany Plank
+        has(ctx, 4822), // Mithril Nails
+        has(ctx, 2359), // Mithril Bar
+        hasAnyItems(ctx, [31906, 31908, 2, 31910]), // Bronze Cannonball or Iron Cannonball or Steel Cannonball or Mith cannonball
+    ]);
+}
+
+function canBuildAdamantCannon(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompletePandemonium", canCompletePandemonium),
+        has(ctx, 31432), // Camphor plank
+        has(ctx, 4823), // Adamant Nails
+        has(ctx, 2361), // Adamant Bar
+        hasAnyItems(ctx, [31906, 31908, 2, 31910, 31912]), // Bronze Cannonball or Iron Cannonball or Steel Cannonball or Mith cannonball or Adamant cannonball
+    ]);
+}
+
+function canBuildRuneCannon(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompletePandemonium", canCompletePandemonium),
+        has(ctx, 31435), // Ironwood plank
+        has(ctx, 4824), // Runite Nails
+        has(ctx, 2363), // Runite Bar
+        hasAnyItems(ctx, [31906, 31908, 2, 31910, 31912, 31914]), // Bronze Cannonball or Iron Cannonball or Steel Cannonball or Mith cannonball or Adamant cannonball or Runite cannonball
+    ]);
+}
+
+function canBuildDragonCannon(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompletePandemonium", canCompletePandemonium),
+        has(ctx, 31438), // Rosewood plank
+        has(ctx, 31406), // Dragon Nails
+        has(ctx, 31996), // Dragon Metal Sheet
+        has(ctx, 32115), // Dragon cannon barrel
+        hasAnyItems(ctx, [31906, 31908, 2, 31910, 31912, 31914, 31916]), // Bronze Cannonball or Iron Cannonball or Steel Cannonball or Mith cannonball or Adamant cannonball or Runite cannonball or dragon cannonball
+    ]);
 }
 
 function canCompleteTheRestlessGhost(ctx) {
