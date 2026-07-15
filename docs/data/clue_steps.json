@@ -5064,9 +5064,9 @@
                 "description": "Try not to step on any aquatic nasties while searching this crate.",
                 "type": "Cryptic clues",
                 "requirements": {
-                    "skills": {},
+                    "skills": {"Firemaking": 30},
                     "quests": {},
-                    "items": [],
+                    "items": [1941],
                     "untracked": [],
                     "itemsAny": [],
                     "rulesAll": [],
@@ -6934,10 +6934,8 @@
                 "type": "Coordinates",
                 "requirements": {
                     "skills": {},
-                    "quests": {
-                        "Watchtower": "completed"
-                    },
-                    "items": [],
+                    "quests": {},
+                    "items": [536,954],
                     "untracked": [],
                     "itemsAny": [],
                     "rulesAll": [

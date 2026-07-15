@@ -5780,6 +5780,9 @@
     "name": "Adamantite limbs",
     "image": "adamantite_limbs.png",
     "sources": {
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Smithing some Adamantite limbs": {
           "notes": "Requires an Adamantite bar and a Hammer and level 76 Smithing.",
@@ -8437,7 +8440,7 @@
               },
               {
                 "skill": "Magic",
-                "level": 47
+                "level": 57
               }
             ]
           }
@@ -16641,7 +16644,8 @@
               },
               {
                 "has": 2347
-              }
+              },
+              "canCompleteDesertTreasureI"
             ]
           }
         }
@@ -18070,6 +18074,10 @@
       "other": {
         "Purchasing through dialogue": {
           "notes": "Purchase from a bartender with dialogue."
+        },
+        "Part of the Final Dawn quest": {
+          "notes": "Grab from beer cupboard during dwarven portion of the quest.",
+          "rule": "canGrabTheFinalDawnDrinks"
         }
       }
     }
@@ -24996,7 +25004,7 @@
     "image": "blood_talisman.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteTempleOfTheEye"
+        "Yes": "canCompleteSinsOfTheFather"
       }
     },
     "tags": [
@@ -33527,6 +33535,9 @@
             "all": [
               {
                 "has": 22372
+              },
+              {
+                "has": 1391
               }
             ]
           }
@@ -39121,7 +39132,21 @@
         },
         "Questing": {
           "notes": "Received after The Digsite (show Certificate level 3 to Curator in Varrock Museum).",
-          "rule": "canCompleteTheDigSite"
+          "rule": {
+            "all": [
+              "hasCupOfTea",
+              {
+                "any": [
+                  {
+                    "has": 1625
+                  },
+                  {
+                    "has": 1609
+                  }
+                ]
+              }
+            ]
+          }
         }
       }
     }
@@ -39404,6 +39429,10 @@
               }
             ]
           }
+        },
+        "Part of the Final Dawn quest": {
+          "notes": "Grab from beer cupboard during dwarven portion of the quest.",
+          "rule": "canGrabTheFinalDawnDrinks"
         }
       }
     },
@@ -53368,6 +53397,10 @@
         },
         "Purchasing through dialogue": {
           "notes": "Purchase from Falador pub (free roll)."
+        },
+        "Part of the Final Dawn quest": {
+          "notes": "Grab from beer cupboard during dwarven portion of the quest.",
+          "rule": "canGrabTheFinalDawnDrinks"
         }
       }
     },
@@ -62735,7 +62768,21 @@
         },
         "Questing": {
           "notes": "Received after The Digsite (show Certificate level 3 to Curator in Varrock Museum).",
-          "rule": "canCompleteTheDigSite"
+          "rule": {
+            "all": [
+              "hasCupOfTea",
+              {
+                "any": [
+                  {
+                    "has": 1625
+                  },
+                  {
+                    "has": 1609
+                  }
+                ]
+              }
+            ]
+          }
         }
       }
     },
@@ -121139,11 +121186,14 @@
       },
       "other": {
         "Deep sea trawling": {
-          "notes": "Avast me hearties yo-ho.",
+          "notes": "Can be caught with a trawling net or by rod fishing.",
           "rule": {
-            "any": [
-              "canMakeTrawlingNet",
-              "canDeepSeaFish"
+            "all": [
+                "canDeepSeaFish",
+              {
+                "skill": "Fishing",
+                "level": 87
+              }
             ]
           }
         }
@@ -121446,11 +121496,14 @@
       },
       "other": {
         "Deep sea trawling": {
-          "notes": "Avast me hearties yo-ho.",
+          "notes": "Can be caught with a trawling net or by rod fishing.",
           "rule": {
-            "any": [
-              "canMakeTrawlingNet",
-              "canDeepSeaFish"
+            "all": [
+                "canDeepSeaFish",
+              {
+                "skill": "Fishing",
+                "level": 69
+              }
             ]
           }
         }
@@ -121489,11 +121542,14 @@
       },
       "other": {
         "Deep sea trawling": {
-          "notes": "Avast me hearties yo-ho.",
+          "notes": "Can be caught with a trawling net or by rod fishing.",
           "rule": {
-            "any": [
-              "canMakeTrawlingNet",
-              "canDeepSeaFish"
+            "all": [
+                "canDeepSeaFish",
+              {
+                "skill": "Fishing",
+                "level": 73
+              }
             ]
           }
         }
@@ -121516,11 +121572,14 @@
       },
       "other": {
         "Deep sea trawling": {
-          "notes": "Avast me hearties yo-ho.",
+          "notes": "Can be caught with a trawling net or by rod fishing.",
           "rule": {
-            "any": [
-              "canMakeTrawlingNet",
-              "canDeepSeaFish"
+            "all": [
+                "canDeepSeaFish",
+              {
+                "skill": "Fishing",
+                "level": 83
+              }
             ]
           }
         }
@@ -121945,11 +122004,14 @@
       },
       "other": {
         "Deep sea trawling": {
-          "notes": "Avast me hearties yo-ho.",
+          "notes": "Can be caught with a trawling net or by rod fishing.",
           "rule": {
-            "any": [
-              "canMakeTrawlingNet",
-              "canDeepSeaFish"
+            "all": [
+                "canDeepSeaFish",
+              {
+                "skill": "Fishing",
+                "level": 91
+              }
             ]
           }
         }
@@ -123210,11 +123272,14 @@
     "sources": {
       "other": {
         "Deep sea trawling": {
-          "notes": "Avast me hearties yo-ho.",
+          "notes": "Can be caught with a trawling net or by rod fishing.",
           "rule": {
-            "any": [
-              "canMakeTrawlingNet",
-              "canDeepSeaFish"
+            "all": [
+                "canDeepSeaFish",
+              {
+                "skill": "Fishing",
+                "level": 79
+              }
             ]
           }
         }
@@ -143270,6 +143335,12 @@
     "sources": {
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Part of the Final Dawn quest": {
+          "notes": "Grab from beer cupboard during dwarven portion of the quest.",
+          "rule": "canGrabTheFinalDawnDrinks"
+        }
       }
     },
     "tags": [
@@ -149619,6 +149690,12 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other":{
+        "Part of the Final Dawn quest": {
+          "notes": "Grab from beer cupboard during dwarven portion of the quest.",
+          "rule": "canGrabTheFinalDawnDrinks"
+        }
       }
     },
     "tags": [
@@ -159716,6 +159793,10 @@
             "skill": "Hunter",
             "level": 46
           }
+        },
+        "Part of the Final Dawn quest": {
+          "notes": "Grab from beer cupboard during dwarven portion of the quest.",
+          "rule": "canGrabTheFinalDawnDrinks"
         }
       }
     },
@@ -162325,24 +162406,8 @@
       },
       "other": {
         "Panning at the Dig Site": {
-          "notes": "Requires a Cup of tea or Cup of tea (nettle).",
-          "rule": {
-            "any": [
-              {
-                "has": 1978
-              },
-              {
-                "all": [
-                  {
-                    "has": 1980
-                  },
-                  {
-                    "has": 1921
-                  }
-                ]
-              }
-            ]
-          }
+          "notes": "Requires a Cup of tea or Nettle-water.",
+          "rule": "hasCupOfTea"
         }
       }
     },
@@ -162505,24 +162570,8 @@
       },
       "other": {
         "Panning at the Dig Site": {
-          "notes": "Requires a Cup of tea or Cup of tea (nettle).",
-          "rule": {
-            "any": [
-              {
-                "has": 1978
-              },
-              {
-                "all": [
-                  {
-                    "has": 1980
-                  },
-                  {
-                    "has": 1921
-                  }
-                ]
-              }
-            ]
-          }
+          "notes": "Requires a Cup of tea or Nettle-water.",
+          "rule": "hasCupOfTea"
         }
       }
     },
@@ -169786,6 +169835,10 @@
       "other": {
         "Purchasing through dialogue": {
           "notes": "Purchase from Falador pub (free roll)."
+        },
+        "Part of the Final Dawn quest": {
+          "notes": "Grab from beer cupboard during dwarven portion of the quest.",
+          "rule": "canGrabTheFinalDawnDrinks"
         }
       }
     },

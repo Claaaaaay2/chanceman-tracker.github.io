@@ -9631,6 +9631,14 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
+    "Maggot King": {
+        "wiki": "https://oldschool.runescape.wiki/w/Maggot_King",
+        "rule": ["canCompleteTheBloodMoonRises"],
+        "skill": [],
+        "level": [],
+        "tags": ["boss"],
+        "f2p": false
+    },
     "Magic Stall": {
         "wiki": "https://oldschool.runescape.wiki/w/Magic_Stall",
         "rule": ["canCompleteMonkeyMadnessI"],
@@ -15788,6 +15796,14 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": ["boss"],
+        "f2p": false
+    },
+    "Venator": {
+        "wiki": "https://oldschool.runescape.wiki/w/Venator",
+        "rule": ["canCompleteTheBloodMoonRises"],
+        "skill": ["Slayer"],
+        "level": [74],
+        "tags": [],
         "f2p": false
     },
     "Vera": {
