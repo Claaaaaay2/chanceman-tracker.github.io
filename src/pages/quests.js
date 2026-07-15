@@ -17,7 +17,9 @@ const RFD_SUBQUEST_KEYS = {
 
 const QUEST_INFO_NOTES = {
     "Clock Tower": "Ice gloves can be used instead of the Bucket of water, requiring 50 Mining.",
-    "Demon Slayer": "An untradable Waterskin(3) can be used instead of a Bucket of water. Buy this at Ali Morrisane's."
+    "Demon Slayer": "An untradable Waterskin(3) can be used instead of a Bucket of water. Buy this at Ali Morrisane's.",
+    "Mage Arena I": "You can use Surge Sacks instead of needing runes.",
+    "The Red Reef": "You can use Surge Sacks instead of needing a cannon. Any other range weapon should also work."
 };
 
 function escapeHtml(value) {

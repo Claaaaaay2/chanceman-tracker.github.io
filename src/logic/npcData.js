@@ -636,14 +636,17 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
+    "Ancient Zygomite (Fossil Island)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Ancient_Zygomite",
+        "rule": ["canCompleteBoneVoyage"],
+        "skill": ["Slayer"],
+        "level": [57],
+        "tags": [],
+        "f2p": false
+    },
     "Ancient Zygomite": {
         "wiki": "https://oldschool.runescape.wiki/w/Ancient_Zygomite",
-        "rule": {
-            "any": [
-                "canCompleteBoneVoyage",
-                "canCompleteShadowsOfCustodia"
-            ]
-        },
+        "rule": ["canCompleteShadowsOfCustodia"],
         "skill": ["Slayer"],
         "level": [57],
         "tags": [],
@@ -1953,6 +1956,14 @@ export const NPC_DATA = {
         "rule": ["canCompleteTheFrozenDoor"],
         "skill": [],
         "level": [],
+        "tags": [],
+        "f2p": false
+    },
+    "Blood-starved venator": {
+        "wiki": "https://oldschool.runescape.wiki/w/Blood-starved_venator",
+        "rule": ["canCompleteTheBloodMoonRises"],
+        "skill": ["Slayer"],
+        "level": [74],
         "tags": [],
         "f2p": false
     },
@@ -9356,6 +9367,14 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
+    "Letvek (Hunter)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Letvek_(Hunter)",
+        "rule": ["canCompleteTheBloodMoonRises"],
+        "skill": ["hunter"],
+        "level": [76],
+        "tags": [],
+        "f2p": false
+    },
     "Lev": {
         "wiki": "https://oldschool.runescape.wiki/w/Lev",
         "rule": ["canCompletePriestInPeril"],
@@ -14535,6 +14554,14 @@ export const NPC_DATA = {
         "rule": ["canTrainWoodcutting"],
         "skill": ["Woodcutting"],
         "level": [75],
+        "tags": [],
+        "f2p": false
+    },
+    "Stymphike": {
+        "wiki": "https://oldschool.runescape.wiki/w/Stymphike",
+        "rule": ["canCompleteTheBloodMoonRises"],
+        "skill": ["hunter"],
+        "level": [82],
         "tags": [],
         "f2p": false
     },
