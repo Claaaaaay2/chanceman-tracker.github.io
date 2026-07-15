@@ -1205,6 +1205,9 @@ export const REQUIREMENT_CHECKS = {
     canCompleteTheFinalDawn(ctx) {
         return canCompleteTheFinalDawn(ctx);
     },
+    canGrabTheFinalDawnDrinks(ctx) {
+        return canGrabTheFinalDawnDrinks(ctx)
+    },
     canCompleteShadesOfMortton(ctx) {
         return canCompleteShadesOfMortton(ctx);
     },
@@ -2167,7 +2170,7 @@ export const REQUIREMENT_CHECKS = {
         return hasAnyLantern(ctx);
     },
     hasFishingRod(ctx) {
-        return has(ctx, 307);
+        return hasFishingRod(ctx);
     },
     hasFishingBait(ctx) {
         return has(ctx, 313);
@@ -2206,7 +2209,7 @@ export const REQUIREMENT_CHECKS = {
         return canCompleteImpCatcher(ctx);
     },
     canAerialFish(ctx) {
-        return hasAnyItems(ctx, [11334, 2162]);
+        return hasAnyItems(ctx, [11334, 2162, 32307]);
     },
     canBarbarianFish(ctx) {
         return hasAnyItems(ctx, [314, 313, 11324, 11326]);
@@ -3624,7 +3627,7 @@ function canCompleteFishingContest(ctx) {
     return allTrue([
         hasSkillLevel(ctx, "Fishing", 10),
         has(ctx, 1550), // Garlic
-        has(ctx, 307), // Fishing rod
+        hasFishingRod(ctx), // Fishing rod
         has(ctx, 952), // Spade
     ]);
 }
@@ -3775,7 +3778,7 @@ function canCompleteHeroesQuest(ctx) {
         requiresQuest(ctx, "canCompleteLostCity", canCompleteLostCity), //
         requiresQuest(ctx, "canCompleteMerlinsCrystal", canCompleteMerlinsCrystal), //
         requiresQuest(ctx, "canCompleteDragonSlayerI", canCompleteDragonSlayerI), //
-        has(ctx, 307), // Fishing rod
+        hasFishingRod(ctx), // Fishing rod
         has(ctx, 313), // Fishing bait
         has(ctx, 97), // Harralander potion (unf)
         has(ctx, 255), // Harralander
@@ -3924,12 +3927,9 @@ function canCompleteKingsRansom(ctx) {
         hasAnyItems(ctx, [6979, 6981, 6983]),
         hasTelegrabRunes(ctx), //
         (
-            requiresQuest(ctx, "canCompleteWhileGuthixSleeps", canCompleteWhileGuthixSleeps) // For full Elite black armour
-            || (
-                hasAnyItems(ctx, [1165, 2587, 2595]) // Black full helm, Black full helm (t) or Black full helm (g)
-                && hasAnyItems(ctx, [1125, 2583, 2591]) // Black platebody, Black platebody (t) or Black platebody (g)
-                && hasAnyItems(ctx, [1077, 2585, 2593, 1089, 3472, 3473]) // Black platelegs, Black platelegs (t), Black platelegs (g), Black plateskirt, Black plateskirt (t) or Black plateskirt (g)
-            )
+            hasAnyItems(ctx, [1165, 2587, 2595]) // Black full helm, Black full helm (t) or Black full helm (g)
+            && hasAnyItems(ctx, [1125, 2583, 2591]) // Black platebody, Black platebody (t) or Black platebody (g)
+            && hasAnyItems(ctx, [1077, 2585, 2593, 1089, 3472, 3473]) // Black platelegs, Black platelegs (t), Black platelegs (g), Black plateskirt, Black plateskirt (t) or Black plateskirt (g)
         ), //
         has(ctx, 1139), // Bronze med helm
         has(ctx, 1101), // Iron chainbody
@@ -3960,7 +3960,7 @@ function canCompleteLandOfTheGoblins(ctx) {
         has(ctx, 229), // Vial
         has(ctx, 233), // Pestle and mortar
         has(ctx, 3379), // Raw slimy eel
-        has(ctx, 307), // Fishing rod
+        hasFishingRod(ctx) // Fishing rod
     ]);
 }
 
@@ -4054,14 +4054,7 @@ function canCompleteLunarDiplomacy(ctx) {
 
 function canCompleteMageArenaI(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Magic", 60),
-        hasAirRuneSource(ctx), //
-        hasAnyItems(ctx, [
-            558,
-            562,
-            560,
-            565,
-        ]),
+        hasSkillLevel(ctx, "Magic", 60)
     ]);
 }
 
@@ -4736,7 +4729,7 @@ function canCompleteShadowsOfCustodia(ctx) {
         has(ctx, 847), // Willow longbow
         has(ctx, 1517), // Maple logs
         has(ctx, 2347), // Hammer
-        has(ctx, 307), // Fishing rod
+        hasFishingRod(ctx) // Fishing rod
     ]);
 }
 
@@ -5048,6 +5041,22 @@ function canCompleteTheFinalDawn(ctx) {
         requiresQuest(ctx, "canCompletePerilousMoons", canCompletePerilousMoons), //
         hasKnifeOrNarwhalKnife(ctx), // Knife
         has(ctx, 1917), // Beer
+        has(ctx, 5418), // Empty Sack
+        has(ctx, 1913), // Dwarven Stout
+        hasAnyItems(ctx, [3183, 4834, 4832, 3123, 31726, 22124, 2859, 22780, 28899, 6812, 4812, 534, 530, 532, 526, 528, 6729, 536, 22783, 4830, 31729, 22786, 3125, 11943, 2136, 2134, 2132, 25833, 10816, 2142]),
+    ]);
+}
+
+function canGrabTheFinalDawnDrinks(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Thieving", 66),
+        hasSkillLevel(ctx, "Runecraft", 52),
+        hasSkillLevel(ctx, "Fletching", 52),
+        requiresQuest(ctx, "canCompleteTheHeartOfDarkness", canCompleteTheHeartOfDarkness), //
+        requiresQuest(ctx, "canCompletePerilousMoons", canCompletePerilousMoons), //
+        hasKnifeOrNarwhalKnife(ctx), // Knife
+        has(ctx, 1917), // Beer
+        has(ctx, 5418), // Empty Sack
         hasAnyItems(ctx, [3183, 4834, 4832, 3123, 31726, 22124, 2859, 22780, 28899, 6812, 4812, 534, 530, 532, 526, 528, 6729, 536, 22783, 4830, 31729, 22786, 3125, 11943, 2136, 2134, 2132, 25833, 10816, 2142]),
     ]);
 }
@@ -5695,16 +5704,21 @@ function hasAnyFeatherButStripy(ctx) {
 function hasAnyLantern(ctx) {
     return canTrainFiremaking(ctx) //
         && has(ctx, 590) // Tinderbox
-        && (canDoGuardiansOfTheRift(ctx) //
+        && (canDoGuardiansOfTheRift(ctx) // abbysal lantern
             || hasAnyItems(ctx, [
-                4548,
-                4532,
-                4529,
-                7051,
-                4537,
+                4548, // bullseye lantern
+                4532, // candle lantern (white)
+                4529, // candle lantern (black)
+                7051, // bug lantern
+                4537, // oil lantern
             ])
-            || requiresQuest(ctx, "canCompleteDesertTreasureII", canCompleteDesertTreasureII) //
+            || requiresQuest(ctx, "canCompleteDesertTreasureII", canCompleteDesertTreasureII) // magic lantern
         );
+}
+
+function hasFishingRod(ctx) {
+    return has(ctx, 307) // fishing rod
+        || canAerialFish(ctx);
 }
 
 function canDeepSeaFish(ctx) {

@@ -16644,7 +16644,8 @@
               },
               {
                 "has": 2347
-              }
+              },
+              "canCompleteDesertTreasureI"
             ]
           }
         }
@@ -18073,6 +18074,10 @@
       "other": {
         "Purchasing through dialogue": {
           "notes": "Purchase from a bartender with dialogue."
+        },
+        "Part of the Final Dawn quest": {
+          "notes": "Grab from beer cupboard during dwarven portion of the quest.",
+          "rule": "canGrabTheFinalDawnDrinks"
         }
       }
     }
@@ -33530,6 +33535,9 @@
             "all": [
               {
                 "has": 22372
+              },
+              {
+                "has": 1391
               }
             ]
           }
@@ -39421,6 +39429,10 @@
               }
             ]
           }
+        },
+        "Part of the Final Dawn quest": {
+          "notes": "Grab from beer cupboard during dwarven portion of the quest.",
+          "rule": "canGrabTheFinalDawnDrinks"
         }
       }
     },
@@ -53385,6 +53397,10 @@
         },
         "Purchasing through dialogue": {
           "notes": "Purchase from Falador pub (free roll)."
+        },
+        "Part of the Final Dawn quest": {
+          "notes": "Grab from beer cupboard during dwarven portion of the quest.",
+          "rule": "canGrabTheFinalDawnDrinks"
         }
       }
     },
@@ -143319,6 +143335,12 @@
     "sources": {
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Part of the Final Dawn quest": {
+          "notes": "Grab from beer cupboard during dwarven portion of the quest.",
+          "rule": "canGrabTheFinalDawnDrinks"
+        }
       }
     },
     "tags": [
@@ -149668,6 +149690,12 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other":{
+        "Part of the Final Dawn quest": {
+          "notes": "Grab from beer cupboard during dwarven portion of the quest.",
+          "rule": "canGrabTheFinalDawnDrinks"
+        }
       }
     },
     "tags": [
@@ -159765,6 +159793,10 @@
             "skill": "Hunter",
             "level": 46
           }
+        },
+        "Part of the Final Dawn quest": {
+          "notes": "Grab from beer cupboard during dwarven portion of the quest.",
+          "rule": "canGrabTheFinalDawnDrinks"
         }
       }
     },
@@ -169803,6 +169835,10 @@
       "other": {
         "Purchasing through dialogue": {
           "notes": "Purchase from Falador pub (free roll)."
+        },
+        "Part of the Final Dawn quest": {
+          "notes": "Grab from beer cupboard during dwarven portion of the quest.",
+          "rule": "canGrabTheFinalDawnDrinks"
         }
       }
     },
