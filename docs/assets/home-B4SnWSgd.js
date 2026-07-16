@@ -1,4 +1,4 @@
-import{f as e}from"./index-KsR_yYhy.js";function l(){const o=e.obtained&&e.rolled,s=e.player?.name;return`
+import{f as e}from"./index-DUsi9hB0.js";function l(){const o=e.obtained&&e.rolled,s=e.player?.name;return`
         <h1>Chanceman Tracker</h1>
         <p>Track your progress, filter for your ruleset, and plan what to chase next.</p>
 

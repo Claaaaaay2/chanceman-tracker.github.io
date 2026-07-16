@@ -644,7 +644,7 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
-    "Ancient Zygomite": {
+    "Ancient Zygomite (Stalker Den)": {
         "wiki": "https://oldschool.runescape.wiki/w/Ancient_Zygomite",
         "rule": ["canCompleteShadowsOfCustodia"],
         "skill": ["Slayer"],
@@ -5399,6 +5399,7 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompleteTroubledTortugans",
+                "canCompleteRFDFreeingPiratePete",
                 "canPlantPlants",
                 "hasElkhornFrag"
             ]
@@ -11470,6 +11471,7 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompleteTroubledTortugans",
+                "canCompleteRFDFreeingPiratePete",
                 "canPlantPlants",
                 "hasPillarFrag"
             ]
@@ -15547,6 +15549,7 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompleteTroubledTortugans",
+                "canCompleteRFDFreeingPiratePete",
                 "canPlantPlants",
                 "hasUmbralFrag"
             ]

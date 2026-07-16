@@ -36953,7 +36953,10 @@
         "Araxxor": {
           "droprate": "1/7187.5"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/7375"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/7375"
         },
         "Long-tailed Wyvern": {
@@ -42364,7 +42367,10 @@
         "Sergeant Strongstack": {
           "droprate": "1/15.875"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/19.667"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/19.667"
         },
         "Chest (Bryophyta's lair) Free-to-play": {
@@ -51674,7 +51680,10 @@
         "Araxxor": {
           "droprate": "1/4791.7"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/4916.7"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/4916.7"
         },
         "Long-tailed Wyvern": {
@@ -53837,7 +53846,10 @@
         "Grimy Lizard": {
           "droprate": "1/4.741"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/6.556"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/6.556"
         },
         "Malevolent Mage": {
@@ -68618,7 +68630,10 @@
         "Abhorrent spectre": {
           "droprate": "3 × 1/52.5"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "2 × 1/39.333"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "2 × 1/39.333"
         },
         "Phosani's Nightmare": {
@@ -69624,7 +69639,10 @@
         "Ancient chest": {
           "droprate": "2 × 1/33"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "2 × 1/39.333"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "2 × 1/39.333"
         },
         "Abhorrent spectre": {
@@ -73508,7 +73526,10 @@
         "Abhorrent spectre": {
           "droprate": "3 × 1/42"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "2 × 1/31.467"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "2 × 1/31.467"
         },
         "Flight Kilisa": {
@@ -74529,7 +74550,10 @@
         "Abhorrent spectre": {
           "droprate": "3 × 1/70"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "2 × 1/52.444"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "2 × 1/52.444"
         },
         "Repugnant spectre": {
@@ -78705,7 +78729,10 @@
         "Ancient chest": {
           "droprate": "2 × 1/33"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/19.667"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/19.667"
         },
         "Dark Chest": {
@@ -92892,7 +92919,10 @@
         "Elder Chaos druid": {
           "droprate": "1/18.429"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/19.667"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/19.667"
         },
         "Chest (Bryophyta's lair) Free-to-play": {
@@ -96911,7 +96941,10 @@
         "Taloned Wyvern": {
           "droprate": "1/2562.5"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/2681.8"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/2681.8"
         },
         "Deranged archaeologist": {
@@ -98006,7 +98039,10 @@
         "Araxxor": {
           "droprate": "1/1597.2"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/1638.9"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/1638.9"
         },
         "Deranged archaeologist": {
@@ -98734,7 +98770,10 @@
         "Araxxor": {
           "droprate": "1/1597.2"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/1638.9"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/1638.9"
         },
         "Long-tailed Wyvern": {
@@ -106424,7 +106463,10 @@
     "image": "mort_myre_fungus.png",
     "sources": {
       "drops": {
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "Always"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "Always"
         },
         "Chest (alchemist's signet)": {
@@ -106483,8 +106525,8 @@
     "sources": {
       "other": {
         "Using a Silver sickle (b)": {
-          "notes": "Requires completing Priest in Peril.",
-          "rule": "canUseSilverSickle"
+          "notes": "Requires completing Nature Spirit.",
+          "rule": "canCompleteNatureSpirit"
         }
       }
     }
@@ -106497,8 +106539,8 @@
     "sources": {
       "other": {
         "Using a Silver sickle (b)": {
-          "notes": "Requires completing Priest in Peril.",
-          "rule": "canUseSilverSickle"
+          "notes": "Requires completing Nature Spirit.",
+          "rule": "canCompleteNatureSpirit"
         }
       }
     }
@@ -106644,7 +106686,10 @@
         "Mutated Tortoise": {
           "droprate": "3 × 1/12.8"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/6.556"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/6.556"
         },
         "Warped Tortoise": {
@@ -106928,7 +106973,10 @@
     "image": "mushroom_spore.png",
     "sources": {
       "drops": {
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/11.8"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/11.8"
         },
         "Zygomite Level 86": {
@@ -108684,7 +108732,10 @@
         "Zamorak wizard": {
           "droprate": "1/18.286"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/19.667"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/19.667"
         },
         "Lobstrosity": {
@@ -109770,7 +109821,7 @@
         "Taloned Wyvern": {
           "droprate": "1/1.944"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/2.778"
         },
         "Herbiboar": {
@@ -114002,7 +114053,10 @@
         "Araxxor": {
           "droprate": "1/2875"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/2950"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/2950"
         },
         "Long-tailed Wyvern": {
@@ -114182,7 +114236,10 @@
         "Araxxor": {
           "droprate": "1/2053.6"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/2107.1"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/2107.1"
         },
         "Long-tailed Wyvern": {
@@ -120036,7 +120093,10 @@
         "Cyclops Warriors' Guild Basement": {
           "droprate": "1/895.7"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/983.3"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/983.3"
         },
         "Deranged archaeologist": {
@@ -124425,7 +124485,10 @@
         "Araxxor": {
           "droprate": "1/7187.5"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/7375"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/7375"
         },
         "Long-tailed Wyvern": {
@@ -127794,7 +127857,10 @@
         "Tree spirit": {
           "droprate": "1/32"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/39.333"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/39.333"
         },
         "Dark Chest": {
@@ -140290,7 +140356,10 @@
         "Opulent salvage": {
           "droprate": "1/1004.7"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/1053.6"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/1053.6"
         },
         "Lizardman Level 62": {
@@ -152527,7 +152596,10 @@
         "Lunar Chest": {
           "droprate": "6 × 1/10"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/9.219"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/9.219"
         },
         "Zygomite Level 74": {
@@ -155012,7 +155084,10 @@
         "Araxxor": {
           "droprate": "1/1597.2"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/1638.9"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/1638.9"
         },
         "Deranged archaeologist": {
@@ -158754,7 +158829,10 @@
         "Araxxor": {
           "droprate": "1/1306.8"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/1340.9"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/1340.9"
         },
         "Long-tailed Wyvern": {
@@ -167160,7 +167238,10 @@
         "Araxxor": {
           "droprate": "1/1369"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/1404.8"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/1404.8"
         },
         "Obor Members": {
@@ -169538,7 +169619,10 @@
         "Araxxor": {
           "droprate": "1/1437.5"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/1475"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/1475"
         },
         "Long-tailed Wyvern": {
@@ -172064,7 +172148,10 @@
         "Tormented Demon": {
           "droprate": "1/708.3"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/1638.9"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/1638.9"
         },
         "Deranged archaeologist": {
