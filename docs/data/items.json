@@ -136281,6 +136281,378 @@
     ]
   },
   {
+    "index": 4513,
+    "id": 33577,
+    "name": "Seeking adamant arrow",
+    "image": "Seeking_adamant_arrow.png",
+    "sources": {
+      "other": {
+        "Crafting Seeking arrows": {
+          "notes": "Requires Adamant arrows and access to Bucket of bloodwood sap.",
+          "rule": {
+            "all": [
+              {
+                "has": 890
+              },
+              {
+                "skill": "Woodcutting",
+                "level": 77
+              },
+              "canCompleteTheBloodMoonRises"
+            ]
+          }
+        },
+        "Crafting Seeking arrows with arrowtips": {
+          "notes": "Requires Adamant arrowtips and fletching logs into seeking headless arrows.",
+          "rule": {
+            "all": [
+              {
+                "has": 43
+              },
+              "hasAnyFeather",
+              "hasAnyFletchableLog",
+              "hasKnifeOrNarwhalKnife",
+              {
+                "skill": "Fletching",
+                "level": 60
+              },
+              {
+                "skill": "Woodcutting",
+                "level": 77
+              },
+              "canCompleteTheBloodMoonRises"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "index": 4514,
+    "id": 33589,
+    "name": "Seeking amethyst arrow",
+    "image": "Seeking_amethyst_arrow.png",
+    "sources": {
+      "other": {
+        "Crafting Seeking arrows": {
+          "notes": "Requires Amethyst arrows and access to Bucket of bloodwood sap.",
+          "rule": {
+            "all": [
+              {
+                "has": 21326
+              },
+              {
+                "skill": "Woodcutting",
+                "level": 77
+              },
+              "canCompleteTheBloodMoonRises"
+            ]
+          }
+        },
+        "Crafting Seeking arrows with arrowtips": {
+          "notes": "Requires amethyst arrowtips and fletching logs into seeking headless arrows.",
+          "rule": {
+            "all": [
+              {
+                "has": 21350
+              },
+              "hasAnyFeather",
+              "hasAnyFletchableLog",
+              "hasKnifeOrNarwhalKnife",
+              {
+                "skill": "Fletching",
+                "level": 82
+              },
+              {
+                "skill": "Woodcutting",
+                "level": 77
+              },
+              "canCompleteTheBloodMoonRises"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "index": 4512,
+    "id": 33553,
+    "name": "Seeking bronze arrow",
+    "image": "Seeking_bronze_arrow.png",
+    "sources": {
+      "other": {
+        "Crafting Seeking arrows": {
+          "notes": "Requires Bronze arrows and access to Bucket of bloodwood sap.",
+          "rule": {
+            "all": [
+              {
+                "has": 882
+              },
+              {
+                "skill": "Woodcutting",
+                "level": 77
+              },
+              "canCompleteTheBloodMoonRises"
+            ]
+          }
+        },
+        "Crafting Seeking arrows with arrowtips": {
+          "notes": "Requires Bronze arrowtips and fletching logs into seeking headless arrows.",
+          "rule": {
+            "all": [
+              {
+                "has": 39
+              },
+              "hasAnyFeather",
+              "hasAnyFletchableLog",
+              "hasKnifeOrNarwhalKnife",
+              {
+                "skill": "Woodcutting",
+                "level": 77
+              },
+              "canCompleteTheBloodMoonRises"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "index": 4515,
+    "id": 33595,
+    "name": "Seeking dragon arrow",
+    "image": "Seeking_dragon_arrow.png",
+    "sources": {
+      "other": {
+        "Crafting Seeking arrows": {
+          "notes": "Requires dragon arrows and access to Bucket of bloodwood sap.",
+          "rule": {
+            "all": [
+              {
+                "has": 11212
+              },
+              {
+                "skill": "Woodcutting",
+                "level": 77
+              },
+              "canCompleteTheBloodMoonRises"
+            ]
+          }
+        },
+        "Crafting Seeking arrows with arrowtips": {
+          "notes": "Requires dragon arrowtips and fletching logs into seeking headless arrows.",
+          "rule": {
+            "all": [
+              {
+                "has": 11237
+              },
+              "hasAnyFeather",
+              "hasAnyFletchableLog",
+              "hasKnifeOrNarwhalKnife",
+              {
+                "skill": "Fletching",
+                "level": 90
+              },
+              {
+                "skill": "Woodcutting",
+                "level": 77
+              },
+              "canCompleteTheBloodMoonRises"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "index": 4516,
+    "id": 33559,
+    "name": "Seeking iron arrow",
+    "image": "Seeking_iron_arrow.png",
+    "sources": {
+      "other": {
+        "Crafting Seeking arrows": {
+          "notes": "Requires iron arrows and access to Bucket of bloodwood sap.",
+          "rule": {
+            "all": [
+              {
+                "has": 884
+              },
+              {
+                "skill": "Woodcutting",
+                "level": 77
+              },
+              "canCompleteTheBloodMoonRises"
+            ]
+          }
+        },
+        "Crafting Seeking arrows with arrowtips": {
+          "notes": "Requires iron arrowtips and fletching logs into seeking headless arrows.",
+          "rule": {
+            "all": [
+              {
+                "has": 40
+              },
+              "hasAnyFeather",
+              "hasAnyFletchableLog",
+              "hasKnifeOrNarwhalKnife",
+              {
+                "skill": "Fletching",
+                "level": 15
+              },
+              {
+                "skill": "Woodcutting",
+                "level": 77
+              },
+              "canCompleteTheBloodMoonRises"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "index": 4517,
+    "id": 33571,
+    "name": "Seeking mithril arrow",
+    "image": "Seeking_mithril_arrow.png",
+    "sources": {
+      "other": {
+        "Crafting Seeking arrows": {
+          "notes": "Requires mithril arrows and access to Bucket of bloodwood sap.",
+          "rule": {
+            "all": [
+              {
+                "has": 888
+              },
+              {
+                "skill": "Woodcutting",
+                "level": 77
+              },
+              "canCompleteTheBloodMoonRises"
+            ]
+          }
+        },
+        "Crafting Seeking arrows with arrowtips": {
+          "notes": "Requires mithril arrowtips and fletching logs into seeking headless arrows.",
+          "rule": {
+            "all": [
+              {
+                "has": 42
+              },
+              "hasAnyFeather",
+              "hasAnyFletchableLog",
+              "hasKnifeOrNarwhalKnife",
+              {
+                "skill": "Fletching",
+                "level": 45
+              },
+              {
+                "skill": "Woodcutting",
+                "level": 77
+              },
+              "canCompleteTheBloodMoonRises"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "index": 4518,
+    "id": 33583,
+    "name": "Seeking rune arrow",
+    "image": "Seeking_rune_arrow.png",
+    "sources": {
+      "other": {
+        "Crafting Seeking arrows": {
+          "notes": "Requires rune arrows and access to Bucket of bloodwood sap.",
+          "rule": {
+            "all": [
+              {
+                "has": 892
+              },
+              {
+                "skill": "Woodcutting",
+                "level": 77
+              },
+              "canCompleteTheBloodMoonRises"
+            ]
+          }
+        },
+        "Crafting Seeking arrows with arrowtips": {
+          "notes": "Requires rune arrowtips and fletching logs into seeking headless arrows.",
+          "rule": {
+            "all": [
+              {
+                "has": 44
+              },
+              "hasAnyFeather",
+              "hasAnyFletchableLog",
+              "hasKnifeOrNarwhalKnife",
+              {
+                "skill": "Fletching",
+                "level": 75
+              },
+              {
+                "skill": "Woodcutting",
+                "level": 77
+              },
+              "canCompleteTheBloodMoonRises"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "index": 4519,
+    "id": 33565,
+    "name": "Seeking steel arrow",
+    "image": "Seeking_steel_arrow.png",
+    "sources": {
+      "other": {
+        "Crafting Seeking arrows": {
+          "notes": "Requires steel arrows and access to Bucket of bloodwood sap.",
+          "rule": {
+            "all": [
+              {
+                "has": 886
+              },
+              {
+                "skill": "Woodcutting",
+                "level": 77
+              },
+              "canCompleteTheBloodMoonRises"
+            ]
+          }
+        },
+        "Crafting Seeking arrows with arrowtips": {
+          "notes": "Requires steel arrowtips and fletching logs into seeking headless arrows.",
+          "rule": {
+            "all": [
+              {
+                "has": 41
+              },
+              "hasAnyFeather",
+              "hasAnyFletchableLog",
+              "hasKnifeOrNarwhalKnife",
+              {
+                "skill": "Fletching",
+                "level": 15
+              },
+              {
+                "skill": "Woodcutting",
+                "level": 77
+              },
+              "canCompleteTheBloodMoonRises"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
     "index": 3385,
     "id": 28304,
     "name": "Seers icon",
