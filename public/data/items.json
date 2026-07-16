@@ -5780,6 +5780,9 @@
     "name": "Adamantite limbs",
     "image": "adamantite_limbs.png",
     "sources": {
+      "shops": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Smithing some Adamantite limbs": {
           "notes": "Requires an Adamantite bar and a Hammer and level 76 Smithing.",
@@ -5869,6 +5872,9 @@
         "Amoxliatl": {
           "droprate": "2 × 1/14.5"
         },
+        "Venator": {
+          "droprate": "1/7.7"
+        },
         "Repugnant spectre": {
           "droprate": "3 × 1/25.6"
         },
@@ -5910,6 +5916,9 @@
         },
         "General Graardor": {
           "droprate": "1/15.875"
+        },
+        "Maggot King": {
+          "droprate": "1/15.9"
         },
         "Earthen Nagua": {
           "droprate": "1/16"
@@ -6048,6 +6057,9 @@
         },
         "Ore pack (Volcanic Mine)": {
           "droprate": "Common"
+        },
+        "Blood-starved venator": {
+          "droprate": "3 x Unknown"
         }
       },
       "shops": {
@@ -8437,7 +8449,7 @@
               },
               {
                 "skill": "Magic",
-                "level": 47
+                "level": 57
               }
             ]
           }
@@ -13633,14 +13645,7 @@
           "rule": {
             "all": [
               "hasAnyFletchableLog",
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              }
+              "hasKnifeOrNarwhalKnife"
             ]
           }
         }
@@ -14220,14 +14225,7 @@
               {
                 "has": 31032
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "skill": "Fletching",
                 "level": 74
@@ -16641,7 +16639,8 @@
               },
               {
                 "has": 2347
-              }
+              },
+              "canCompleteDesertTreasureI"
             ]
           }
         }
@@ -18070,6 +18069,10 @@
       "other": {
         "Purchasing through dialogue": {
           "notes": "Purchase from a bartender with dialogue."
+        },
+        "Part of the Final Dawn quest": {
+          "notes": "Grab from beer cupboard during dwarven portion of the quest.",
+          "rule": "canGrabTheFinalDawnDrinks"
         }
       }
     }
@@ -24980,6 +24983,12 @@
     "image": "blood_shard.png",
     "sources": {
       "drops": {
+        "Blood-starved venator": {
+          "droprate": "1/5"
+        },
+        "Venator": {
+          "droprate": "1/860"
+        },
         "Vyrewatch Sentinel": {
           "droprate": "1/1500"
         },
@@ -24996,7 +25005,7 @@
     "image": "blood_talisman.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteTempleOfTheEye"
+        "Yes": "canCompleteSinsOfTheFather"
       }
     },
     "tags": [
@@ -25687,14 +25696,7 @@
           "notes": "Requires a Knife and a Scaly blue dragonhide.",
           "rule": {
             "all": [
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "has": 27897
               }
@@ -33527,6 +33529,9 @@
             "all": [
               {
                 "has": 22372
+              },
+              {
+                "has": 1391
               }
             ]
           }
@@ -33824,14 +33829,7 @@
               {
                 "has": 1925
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              }
+              "hasKnifeOrNarwhalKnife"
             ]
           }
         }
@@ -35616,7 +35614,7 @@
     "image": "calcite.png",
     "sources": {
       "drops": {
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/6.556"
         },
         "Boulder (Volcanic Mine)": {
@@ -35667,14 +35665,7 @@
               {
                 "has": 5980
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              }
+              "hasKnifeOrNarwhalKnife"
             ]
           }
         }
@@ -36835,14 +36826,7 @@
               {
                 "has": 11332
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              }
+              "hasKnifeOrNarwhalKnife"
             ]
           }
         }
@@ -38697,14 +38681,7 @@
               {
                 "has": 2142
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "skill": "Cooking",
                 "level": 11
@@ -39121,7 +39098,21 @@
         },
         "Questing": {
           "notes": "Received after The Digsite (show Certificate level 3 to Curator in Varrock Museum).",
-          "rule": "canCompleteTheDigSite"
+          "rule": {
+            "all": [
+              "hasCupOfTea",
+              {
+                "any": [
+                  {
+                    "has": 1625
+                  },
+                  {
+                    "has": 1609
+                  }
+                ]
+              }
+            ]
+          }
         }
       }
     }
@@ -39178,14 +39169,7 @@
               {
                 "has": 1550
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              }
+              "hasKnifeOrNarwhalKnife"
             ]
           }
         }
@@ -39209,14 +39193,7 @@
               {
                 "has": 1957
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              }
+              "hasKnifeOrNarwhalKnife"
             ]
           }
         }
@@ -39243,14 +39220,7 @@
               {
                 "has": 1982
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              }
+              "hasKnifeOrNarwhalKnife"
             ]
           }
         }
@@ -39277,14 +39247,7 @@
               {
                 "has": 361
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              }
+              "hasKnifeOrNarwhalKnife"
             ]
           }
         }
@@ -39311,14 +39274,7 @@
               {
                 "has": 1861
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              }
+              "hasKnifeOrNarwhalKnife"
             ]
           }
         }
@@ -39404,6 +39360,10 @@
               }
             ]
           }
+        },
+        "Part of the Final Dawn quest": {
+          "notes": "Grab from beer cupboard during dwarven portion of the quest.",
+          "rule": "canGrabTheFinalDawnDrinks"
         }
       }
     },
@@ -43068,6 +43028,22 @@
       "drops": {
         "Reward casket (medium) Standard": {
           "droprate": "1/1133"
+        }
+      }
+    }
+  },
+  {
+    "index": 4504,
+    "id":  	33631,
+    "name": "Crimson kisten",
+    "image": "crimson_kisten.png",
+    "tags": [
+      "Melee"
+    ],
+    "sources": {
+      "drops": {
+        "Maggot King": {
+          "droprate": "1/520"
         }
       }
     }
@@ -53368,6 +53344,10 @@
         },
         "Purchasing through dialogue": {
           "notes": "Purchase from Falador pub (free roll)."
+        },
+        "Part of the Final Dawn quest": {
+          "notes": "Grab from beer cupboard during dwarven portion of the quest.",
+          "rule": "canGrabTheFinalDawnDrinks"
         }
       }
     },
@@ -57811,6 +57791,32 @@
     }
   },
   {
+    "index": 4510,
+    "id": 33636,
+    "name": "Etched elder venator fang",
+    "image": "etched_elder_venator_fang.png",
+    "sources": {
+      "other": {
+        "Etching a fang": {
+          "notes": "Requires Elder venator fang and level 84 crafting.",
+          "rule": {
+            "all": [
+              {
+                "skills": [
+                  {
+                    "skill": "Crafting",
+                    "level": 84
+                  }
+                ]
+              },
+              "canCompleteTheBloodMoonRises"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
     "index": 1532,
     "id": 13235,
     "name": "Eternal boots",
@@ -60006,20 +60012,21 @@
     "name": "Fine fish offcuts",
     "image": "fine_fish_offcuts.png",
     "sources": {
+      "drops": {
+        "Venator": {
+          "droprate": "1/43.67"
+        },
+        "Blood-starved venator": {
+          "droprate": "3 x Unknown"
+        }
+      },
       "other": {
         "Cutting some Fish": {
           "notes": "Requires raw fish and a Knife (or chum spreader).",
           "rule": {
             "all": [
               "hasFishForFineOffcuts",
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              }
+              "hasKnifeOrNarwhalKnife"
             ]
           }
         }
@@ -61064,6 +61071,12 @@
       "drops": {
         "Opulent salvage": {
           "droprate": "1/14.133"
+        },
+        "Venator": {
+          "droprate": "1/26.2"
+        },
+        "Blood-starved venator": {
+          "droprate": "3 x Unknown"
         }
       },
       "other": {
@@ -61072,14 +61085,7 @@
           "rule": {
             "all": [
               "hasFishForOffcuts",
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              }
+              "hasKnifeOrNarwhalKnife"
             ]
           }
         }
@@ -62735,7 +62741,21 @@
         },
         "Questing": {
           "notes": "Received after The Digsite (show Certificate level 3 to Curator in Varrock Museum).",
-          "rule": "canCompleteTheDigSite"
+          "rule": {
+            "all": [
+              "hasCupOfTea",
+              {
+                "any": [
+                  {
+                    "has": 1625
+                  },
+                  {
+                    "has": 1609
+                  }
+                ]
+              }
+            ]
+          }
         }
       }
     },
@@ -65474,6 +65494,9 @@
         "Zombie pirate Diary": {
           "droprate": "1/31.5"
         },
+        "Maggot King": {
+          "droprate": "1/31.8"
+        },
         "Greater demon Wilderness Slayer Cave": {
           "droprate": "1/41"
         },
@@ -67067,14 +67090,7 @@
               {
                 "has": 1515
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "skill": "Fletching",
                 "level": 79
@@ -67121,14 +67137,7 @@
               {
                 "has": 1517
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "skill": "Fletching",
                 "level": 53
@@ -80207,14 +80216,7 @@
               {
                 "has": 32317
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              }
+              "hasKnifeOrNarwhalKnife"
             ]
           }
         }
@@ -80906,6 +80908,9 @@
     ],
     "sources": {
       "drops": {
+        "Venator": {
+          "droprate": "1/21.83"
+        },
         "Zombie (Tarn's Lair) High level": {
           "droprate": "1/25.6"
         },
@@ -80914,6 +80919,9 @@
         },
         "Baby impling jar": {
           "droprate": "1/100"
+        },
+        "Blood-starved venator": {
+          "droprate": "3 x Unknown"
         }
       },
       "other": {
@@ -82512,14 +82520,7 @@
               {
                 "has": 29311
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "skill": "Fletching",
                 "level": 60
@@ -89059,14 +89060,7 @@
               {
                 "has": 1511
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+                "hasKnifeOrNarwhalKnife",
               {
                 "skill": "Fletching",
                 "level": 3
@@ -89263,6 +89257,12 @@
         },
         "Pyrelord": {
           "droprate": "1/64"
+        },
+        "Venator": {
+          "droprate": "1/131"
+        },
+        "Blood-starved venator": {
+          "droprate": "3 x Unknown"
         }
       },
       "spawns": {
@@ -89874,14 +89874,7 @@
               {
                 "has": 1861
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              }
+                "hasKnifeOrNarwhalKnife"
             ]
           }
         },
@@ -89895,14 +89888,7 @@
               {
                 "has": 1957
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              }
+              "hasKnifeOrNarwhalKnife"
             ]
           }
         },
@@ -89916,14 +89902,7 @@
               {
                 "has": 1982
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              }
+              "hasKnifeOrNarwhalKnife"
             ]
           }
         }
@@ -94088,14 +94067,7 @@
           "notes": "Requires a Lemon and a Knife.",
           "rule": {
             "all": [
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "has": 2102
               }
@@ -94119,14 +94091,7 @@
           "notes": "Requires a Lemon and a Knife or a Narwhal knife.",
           "rule": {
             "all": [
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "has": 2102
               }
@@ -94167,6 +94132,28 @@
       "drops": {
         "Reward casket (master)": {
           "droprate": "1/851"
+        }
+      }
+    }
+  },
+  {
+    "index": 4506,
+    "id":  	33625,
+    "name": "Letvek",
+    "image": "letvek.png",
+    "sources": {
+      "drops": {
+        "Letvek (Hunter)": {
+          "droprate": "Always"
+        },
+        "Maggot King": {
+          "droprate": "1/15.9"
+        },
+        "Venator": {
+          "droprate": "1/65.5"
+        },
+        "Blood-starved venator": {
+          "droprate": "Unknown"
         }
       }
     }
@@ -94394,14 +94381,7 @@
           "notes": "Requires a Lime and a Knife or a Narwhal knife.",
           "rule": {
             "all": [
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "has": 2120
               }
@@ -94425,14 +94405,7 @@
           "notes": "Requires a Lime and a Knife or a Narwhal knife.",
           "rule": {
             "all": [
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "has": 2120
               }
@@ -95635,14 +95608,7 @@
               {
                 "has": 1511
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "skill": "Fletching",
                 "level": 10
@@ -96495,14 +96461,7 @@
               {
                 "has": 1513
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "skill": "Fletching",
                 "level": 85
@@ -97017,14 +96976,7 @@
               {
                 "has": 1513
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "skill": "Fletching",
                 "level": 87
@@ -97095,14 +97047,7 @@
               {
                 "has": 1513
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "skill": "Fletching",
                 "level": 80
@@ -97239,14 +97184,7 @@
               {
                 "has": 1513
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "skill": "Fletching",
                 "level": 78
@@ -98103,14 +98041,7 @@
               {
                 "has": 6332
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "skill": "Fletching",
                 "level": 61
@@ -98628,14 +98559,7 @@
               {
                 "has": 1517
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "skill": "Fletching",
                 "level": 55
@@ -98854,14 +98778,7 @@
               {
                 "has": 1517
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "skill": "Fletching",
                 "level": 57
@@ -98939,14 +98856,7 @@
               {
                 "has": 1517
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "skill": "Fletching",
                 "level": 50
@@ -98977,14 +98887,7 @@
               {
                 "has": 1517
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "skill": "Fletching",
                 "level": 54
@@ -99208,14 +99111,7 @@
               {
                 "has": 32349
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              }
+              "hasKnifeOrNarwhalKnife"
             ]
           }
         }
@@ -100344,14 +100240,7 @@
               {
                 "has": 2142
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              }
+              "hasKnifeOrNarwhalKnife"
             ]
           }
         }
@@ -104324,6 +104213,9 @@
         "Earth impling jar": {
           "droprate": "1/10"
         },
+        "Venator": {
+          "droprate": "1/10.92"
+        },
         "Dagannoth Rex": {
           "droprate": "1/12.8"
         },
@@ -104350,6 +104242,9 @@
         },
         "The Nightmare": {
           "droprate": "1/25"
+        },
+        "Maggot King": {
+          "droprate": "1/31.8"
         },
         "Barbarian Assault/Gambles Low": {
           "droprate": "1/32"
@@ -104440,6 +104335,9 @@
         },
         "Ore pack (Volcanic Mine)": {
           "droprate": "Common"
+        },
+        "Blood-starved venator": {
+          "droprate": "3 x Unknown"
         }
       },
       "shops": {
@@ -106535,6 +106433,12 @@
         "Sulliuscep": {
           "droprate": "1/11.111"
         },
+        "Venator": {
+          "droprate": "1/13.1"
+        },
+        "Maggot King": {
+          "droprate": "1/15.9"
+        },
         "Araxxor": {
           "droprate": "1/28.75"
         },
@@ -106555,6 +106459,9 @@
         },
         "Swamp Crab": {
           "droprate": "1/64"
+        },
+        "Blood-starved venator": {
+          "droprate": "3 x Unknown"
         }
       },
       "other": {
@@ -109502,6 +109409,37 @@
     ]
   },
   {
+    "index": 4511,
+    "id": 33639,
+    "name": "Necklace of rupture",
+    "image": "necklace_of_rupture.png",
+    "sources": {
+      "other": {
+        "Etching a fang": {
+          "notes": "Requires Etched Elder venator fang, Necklace of Anguish and level 84 crafting.",
+          "rule": {
+            "all": [
+              {
+                "skills": [
+                  {
+                    "skill": "Crafting",
+                    "level": 84
+                  }
+                ]
+              },
+              {
+                "has": 33636
+              },
+              {
+                "has": 19547
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
     "index": 2632,
     "id": 1733,
     "name": "Needle",
@@ -110601,14 +110539,7 @@
               {
                 "has": 1521
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "skill": "Fletching",
                 "level": 25
@@ -110924,14 +110855,7 @@
               {
                 "has": 1521
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "skill": "Fletching",
                 "level": 27
@@ -111003,14 +110927,7 @@
               {
                 "has": 1521
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "skill": "Fletching",
                 "level": 20
@@ -111041,14 +110958,7 @@
               {
                 "has": 1521
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "skill": "Fletching",
                 "level": 24
@@ -111651,14 +111561,7 @@
               {
                 "has": 2862
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "skill": "Fletching",
                 "level": 5
@@ -112007,14 +111910,7 @@
               {
                 "has": 1957
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              }
+              "hasKnifeOrNarwhalKnife"
             ]
           }
         },
@@ -112028,14 +111924,7 @@
               {
                 "has": 1982
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              }
+              "hasKnifeOrNarwhalKnife"
             ]
           }
         }
@@ -113396,14 +113285,7 @@
           "notes": "Requires an Orange and a Knife.",
           "rule": {
             "all": [
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "has": 2108
               }
@@ -113414,14 +113296,7 @@
           "notes": "Requires a Knife or a Narwhal knife and 43 agility to get Orange (hat).",
           "rule": {
             "all": [
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              }
+              "hasKnifeOrNarwhalKnife"
             ]
           }
         }
@@ -113550,14 +113425,7 @@
           "notes": "Requires an Orange and a Knife.",
           "rule": {
             "all": [
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "has": 2108
               }
@@ -113568,14 +113436,7 @@
           "notes": "Requires a Knife or a Narwhal knife and 43 agility to get Orange (hat).",
           "rule": {
             "all": [
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              }
+              "hasKnifeOrNarwhalKnife"
             ]
           }
         }
@@ -113638,6 +113499,29 @@
         }
       }
     }
+  },
+  
+  {
+    "index": 4507,
+    "id": 33657,
+    "name": "Orikalkum gravel",
+    "image": "orikalkum_gravel.png",
+    "sources": {
+      "drops": {
+        "Maggot King": {
+          "droprate": "1/39.75"
+        },
+        "Venator": {
+          "droprate": "1/131"
+        },
+        "Blood-starved venator": {
+          "droprate": "3 x Unknown"
+        }
+      }
+    },
+    "tags": [
+      "Melee"
+    ]
   },
   {
     "index": 2753,
@@ -115246,14 +115130,7 @@
                   "canCompleteTheTouristTrap"
                 ]
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              }
+              "hasKnifeOrNarwhalKnife"
             ]
           }
         }
@@ -115381,14 +115258,7 @@
                   "canCompleteTheTouristTrap"
                 ]
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              }
+              "hasKnifeOrNarwhalKnife"
             ]
           }
         }
@@ -119322,7 +119192,7 @@
     "image": "pyrophosphite.png",
     "sources": {
       "drops": {
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/6.556"
         },
         "Boulder (Volcanic Mine)": {
@@ -121105,14 +120975,7 @@
               {
                 "has": 31674
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "skill": "Cooking",
                 "level": 48
@@ -121139,11 +121002,14 @@
       },
       "other": {
         "Deep sea trawling": {
-          "notes": "Avast me hearties yo-ho.",
+          "notes": "Can be caught with a trawling net or by rod fishing.",
           "rule": {
-            "any": [
-              "canMakeTrawlingNet",
-              "canDeepSeaFish"
+            "all": [
+                "canDeepSeaFish",
+              {
+                "skill": "Fishing",
+                "level": 87
+              }
             ]
           }
         }
@@ -121446,11 +121312,14 @@
       },
       "other": {
         "Deep sea trawling": {
-          "notes": "Avast me hearties yo-ho.",
+          "notes": "Can be caught with a trawling net or by rod fishing.",
           "rule": {
-            "any": [
-              "canMakeTrawlingNet",
-              "canDeepSeaFish"
+            "all": [
+                "canDeepSeaFish",
+              {
+                "skill": "Fishing",
+                "level": 69
+              }
             ]
           }
         }
@@ -121489,11 +121358,14 @@
       },
       "other": {
         "Deep sea trawling": {
-          "notes": "Avast me hearties yo-ho.",
+          "notes": "Can be caught with a trawling net or by rod fishing.",
           "rule": {
-            "any": [
-              "canMakeTrawlingNet",
-              "canDeepSeaFish"
+            "all": [
+                "canDeepSeaFish",
+              {
+                "skill": "Fishing",
+                "level": 73
+              }
             ]
           }
         }
@@ -121516,11 +121388,14 @@
       },
       "other": {
         "Deep sea trawling": {
-          "notes": "Avast me hearties yo-ho.",
+          "notes": "Can be caught with a trawling net or by rod fishing.",
           "rule": {
-            "any": [
-              "canMakeTrawlingNet",
-              "canDeepSeaFish"
+            "all": [
+                "canDeepSeaFish",
+              {
+                "skill": "Fishing",
+                "level": 83
+              }
             ]
           }
         }
@@ -121945,11 +121820,14 @@
       },
       "other": {
         "Deep sea trawling": {
-          "notes": "Avast me hearties yo-ho.",
+          "notes": "Can be caught with a trawling net or by rod fishing.",
           "rule": {
-            "any": [
-              "canMakeTrawlingNet",
-              "canDeepSeaFish"
+            "all": [
+                "canDeepSeaFish",
+              {
+                "skill": "Fishing",
+                "level": 91
+              }
             ]
           }
         }
@@ -122227,14 +122105,7 @@
                   }
                 ]
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "skill": "Cooking",
                 "level": 77
@@ -122310,14 +122181,7 @@
               {
                 "has": 31671
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "skill": "Cooking",
                 "level": 21
@@ -123210,11 +123074,14 @@
     "sources": {
       "other": {
         "Deep sea trawling": {
-          "notes": "Avast me hearties yo-ho.",
+          "notes": "Can be caught with a trawling net or by rod fishing.",
           "rule": {
-            "any": [
-              "canMakeTrawlingNet",
-              "canDeepSeaFish"
+            "all": [
+                "canDeepSeaFish",
+              {
+                "skill": "Fishing",
+                "level": 79
+              }
             ]
           }
         }
@@ -124363,14 +124230,7 @@
               {
                 "has": 19669
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "skill": "Fletching",
                 "level": 90
@@ -124487,14 +124347,7 @@
               {
                 "has": 19669
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "skill": "Fletching",
                 "level": 92
@@ -126182,14 +126035,7 @@
                   }
                 ]
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              }
+              "hasKnifeOrNarwhalKnife"
             ]
           }
         }
@@ -133365,6 +133211,9 @@
         "Revenant dark beast": {
           "droprate": "1/30.94"
         },
+        "Maggot King": {
+          "droprate": "1/31.8"
+        },
         "Barbarian Assault/Gambles High": {
           "droprate": "1/32"
         },
@@ -133482,6 +133331,9 @@
         "Rock Golem (monster) High level": {
           "droprate": "1/128"
         },
+        "Venator": {
+          "droprate": "1*131"
+        },
         "Revenant goblin": {
           "droprate": "1/431.95"
         },
@@ -133499,6 +133351,9 @@
         },
         "Ore pack (Volcanic Mine)": {
           "droprate": "Common"
+        },
+        "Blood-starved venator": {
+          "droprate": "3 x Unknown"
         }
       },
       "shops": {
@@ -137642,14 +137497,7 @@
               {
                 "has": 1511
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "skill": "Fletching",
                 "level": 5
@@ -139291,14 +139139,7 @@
               {
                 "has": 1923
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              }
+              "hasKnifeOrNarwhalKnife"
             ]
           }
         }
@@ -142477,14 +142318,7 @@
                   }
                 ]
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              }
+              "hasKnifeOrNarwhalKnife"
             ]
           }
         }
@@ -143270,6 +143104,12 @@
     "sources": {
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Part of the Final Dawn quest": {
+          "notes": "Grab from beer cupboard during dwarven portion of the quest.",
+          "rule": "canGrabTheFinalDawnDrinks"
+        }
       }
     },
     "tags": [
@@ -149468,6 +149308,28 @@
     ]
   },
   {
+    "index": 4505,
+    "id": 33651,
+    "name": "Stymphike feather",
+    "image": "stymphike_feather.png",
+    "sources": {
+      "drops": {
+        "Stymphike": {
+          "droprate": "Always"
+        },
+        "Venator": {
+          "droprate": "~1/10.92"
+        },
+        "Maggot King": {
+          "droprate": "1/15.9"
+        },
+        "Blood-starved venator": {
+          "droprate": "3 x Unknown"
+        }
+      }
+    }
+  },
+  {
     "index": 3775,
     "id": 21626,
     "name": "Sulliuscep cap",
@@ -149619,6 +149481,12 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other":{
+        "Part of the Final Dawn quest": {
+          "notes": "Grab from beer cupboard during dwarven portion of the quest.",
+          "rule": "canGrabTheFinalDawnDrinks"
+        }
       }
     },
     "tags": [
@@ -154810,14 +154678,7 @@
               {
                 "has": 6333
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              }
+              "hasKnifeOrNarwhalKnife"
             ]
           }
         }
@@ -159716,6 +159577,10 @@
             "skill": "Hunter",
             "level": 46
           }
+        },
+        "Part of the Final Dawn quest": {
+          "notes": "Grab from beer cupboard during dwarven portion of the quest.",
+          "rule": "canGrabTheFinalDawnDrinks"
         }
       }
     },
@@ -160207,14 +160072,7 @@
               {
                 "has": 361
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "skill": "Cooking",
                 "level": 67
@@ -160711,14 +160569,7 @@
               {
                 "has": 1861
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              }
+              "hasKnifeOrNarwhalKnife"
             ]
           }
         },
@@ -160732,14 +160583,7 @@
               {
                 "has": 1873
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              }
+              "hasKnifeOrNarwhalKnife"
             ]
           }
         }
@@ -160763,14 +160607,7 @@
               {
                 "has": 1861
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              }
+              "hasKnifeOrNarwhalKnife"
             ]
           }
         },
@@ -160784,14 +160621,7 @@
               {
                 "has": 1873
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              }
+              "hasKnifeOrNarwhalKnife"
             ]
           }
         }
@@ -162325,24 +162155,8 @@
       },
       "other": {
         "Panning at the Dig Site": {
-          "notes": "Requires a Cup of tea or Cup of tea (nettle).",
-          "rule": {
-            "any": [
-              {
-                "has": 1978
-              },
-              {
-                "all": [
-                  {
-                    "has": 1980
-                  },
-                  {
-                    "has": 1921
-                  }
-                ]
-              }
-            ]
-          }
+          "notes": "Requires a Cup of tea or Nettle-water.",
+          "rule": "hasCupOfTea"
         }
       }
     },
@@ -162505,24 +162319,8 @@
       },
       "other": {
         "Panning at the Dig Site": {
-          "notes": "Requires a Cup of tea or Cup of tea (nettle).",
-          "rule": {
-            "any": [
-              {
-                "has": 1978
-              },
-              {
-                "all": [
-                  {
-                    "has": 1980
-                  },
-                  {
-                    "has": 1921
-                  }
-                ]
-              }
-            ]
-          }
+          "notes": "Requires a Cup of tea or Nettle-water.",
+          "rule": "hasCupOfTea"
         }
       }
     },
@@ -162725,6 +162523,9 @@
         },
         "Shop Counter (gems)": {
           "droprate": "1/10"
+        },
+        "Maggot King": {
+          "droprate": "1/10.6"
         },
         "Brimstone chest": {
           "droprate": "1/12"
@@ -164331,6 +164132,25 @@
     ]
   },
   {
+    "index": 4508,
+    "id": 33661,
+    "name": "Venator fang",
+    "image": "venator_fang.png",
+    "sources": {
+      "drops": {
+        "Venator": {
+          "droprate": "1/18.71"
+        },
+        "Maggot King": {
+          "droprate": "1/79.5"
+        },
+        "Blood-starved venator": {
+          "droprate": "3 x Unknown"
+        }
+      }
+    }
+  },
+  {
     "index": 4224,
     "id": 28310,
     "name": "Venator ring",
@@ -164389,6 +164209,25 @@
     "tags": [
       "Ranged"
     ]
+  },
+  {
+    "index": 4509,
+    "id": 33663,
+    "name": "Venator tooth",
+    "image": "venator_tooth.png",
+    "sources": {
+      "drops": {
+        "Venator": {
+          "droprate": "1/18.71"
+        },
+        "Maggot King": {
+          "droprate": "1/79.5"
+        },
+        "Blood-starved venator": {
+          "droprate": "3 x Unknown"
+        }
+      }
+    }
   },
   {
     "index": 4226,
@@ -165393,7 +165232,7 @@
         "Ancient Wyvern": {
           "droprate": "1/22"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/36.875"
         },
         "Long-tailed Wyvern": {
@@ -167053,14 +166892,7 @@
           "notes": "Requires a Knife and a Watermelon.",
           "rule": {
             "all": [
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "has": 5982
               }
@@ -169162,14 +168994,7 @@
               {
                 "has": 1519
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "skill": "Fletching",
                 "level": 40
@@ -169385,14 +169210,7 @@
               {
                 "has": 1519
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "skill": "Fletching",
                 "level": 42
@@ -169467,14 +169285,7 @@
               {
                 "has": 1519
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "skill": "Fletching",
                 "level": 35
@@ -169505,14 +169316,7 @@
               {
                 "has": 1519
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "skill": "Fletching",
                 "level": 39
@@ -169786,6 +169590,10 @@
       "other": {
         "Purchasing through dialogue": {
           "notes": "Purchase from Falador pub (free roll)."
+        },
+        "Part of the Final Dawn quest": {
+          "notes": "Grab from beer cupboard during dwarven portion of the quest.",
+          "rule": "canGrabTheFinalDawnDrinks"
         }
       }
     },
@@ -170402,14 +170210,7 @@
           "notes": "Requires Logs and a Knife and level 9 Fletching.",
           "rule": {
             "all": [
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "has": 1511
               },
@@ -171216,14 +171017,7 @@
               {
                 "has": 32325
               },
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              }
+              "hasKnifeOrNarwhalKnife"
             ]
           }
         }
@@ -171680,14 +171474,7 @@
           "notes": "Requires a Knife and Yew logs and level 70 Fletching.",
           "rule": {
             "all": [
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "has": 1515
               },
@@ -171970,14 +171757,7 @@
           "notes": "Requires a Knife and Yew logs and level 72 Fletching.",
           "rule": {
             "all": [
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "has": 1515
               },
@@ -172067,14 +171847,7 @@
           "notes": "Requires a Knife and Yew logs and level 65 Fletching.",
           "rule": {
             "all": [
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "has": 1515
               },
@@ -172102,14 +171875,7 @@
           "notes": "Requires a Knife and Yew logs and level 69 Fletching.",
           "rule": {
             "all": [
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "has": 1515
               },
@@ -173588,14 +173354,7 @@
           "notes": "Requires a Knife, Fishing rod and Fishing bait and level 87 Fishing and level 72 Cooking.",
           "rule": {
             "all": [
-              {
-                "any": [
-                  {
-                    "has": 946
-                  },
-                  "hasNarwhalKnife"
-                ]
-              },
+              "hasKnifeOrNarwhalKnife",
               {
                 "has": 307
               },

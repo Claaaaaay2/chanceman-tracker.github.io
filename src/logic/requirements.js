@@ -2209,7 +2209,7 @@ export const REQUIREMENT_CHECKS = {
         return canCompleteImpCatcher(ctx);
     },
     canAerialFish(ctx) {
-        return hasAnyItems(ctx, [11334, 2162, 32307]);
+        return canAerialFish(ctx);
     },
     canBarbarianFish(ctx) {
         return hasAnyItems(ctx, [314, 313, 11324, 11326]);
@@ -5859,6 +5859,11 @@ function hasFishingRod(ctx) {
     return has(ctx, 307) // fishing rod
         || canAerialFish(ctx);
 }
+
+function canAerialFish(ctx) {
+   return hasAnyItems(ctx, [11334, 2162, 32307]);
+}
+
 
 function canDeepSeaFish(ctx) {
     return requiresQuest(ctx, "canCompletePandemonium", canCompletePandemonium) //

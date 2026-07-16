@@ -5066,7 +5066,12 @@
                 "requirements": {
                     "skills": {"Firemaking": 30},
                     "quests": {},
-                    "items": [1941],
+                    "items": [
+                        {
+                            "id": 1941,
+                            "name": "Swamp paste"
+                        }
+                    ],
                     "untracked": [],
                     "itemsAny": [],
                     "rulesAll": [],
@@ -6935,7 +6940,16 @@
                 "requirements": {
                     "skills": {},
                     "quests": {},
-                    "items": [536,954],
+                    "items": [
+                        {
+                            "id": 536,
+                            "name": "Dragon bones"
+                        },
+                        {
+                            "id": 954,
+                            "name": "Rope"
+                        }
+                    ],
                     "untracked": [],
                     "itemsAny": [],
                     "rulesAll": [

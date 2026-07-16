@@ -5064,9 +5064,14 @@
                 "description": "Try not to step on any aquatic nasties while searching this crate.",
                 "type": "Cryptic clues",
                 "requirements": {
-                    "skills": {},
+                    "skills": {"Firemaking": 30},
                     "quests": {},
-                    "items": [],
+                    "items": [
+                        {
+                            "id": 1941,
+                            "name": "Swamp paste"
+                        }
+                    ],
                     "untracked": [],
                     "itemsAny": [],
                     "rulesAll": [],
@@ -6934,10 +6939,17 @@
                 "type": "Coordinates",
                 "requirements": {
                     "skills": {},
-                    "quests": {
-                        "Watchtower": "completed"
-                    },
-                    "items": [],
+                    "quests": {},
+                    "items": [
+                        {
+                            "id": 536,
+                            "name": "Dragon bones"
+                        },
+                        {
+                            "id": 954,
+                            "name": "Rope"
+                        }
+                    ],
                     "untracked": [],
                     "itemsAny": [],
                     "rulesAll": [
