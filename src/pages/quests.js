@@ -21,7 +21,8 @@ const QUEST_INFO_NOTES = {
     "Mage Arena I": "You can use Surge Sacks instead of needing runes.",
     "The Red Reef": "You can use Surge Sacks instead of needing a cannon. Any other range weapon should also work.",
     "Enakhra's Lament": "You can pick up a lit candle which is untradable.",
-    "Shadows of Custodia": "You can use a Barbarian fishing rod instead of a regular fishing rod."
+    "Shadows of Custodia": "You can use a Barbarian fishing rod instead of a regular fishing rod.",
+    "Pirate's Treasure": "Supposedly, you can ignore the Banana and White Apron by buying the rum right before your membership expires, and logging out in brimhaven. When your membership has expired, you will be in Lumbridge with a nice bottle of rum in your inventory."
 };
 
 function escapeHtml(value) {

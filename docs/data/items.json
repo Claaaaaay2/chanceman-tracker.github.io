@@ -56287,11 +56287,14 @@
       },
       "other": {
         "Crafting an Empty oil lamp": {
-          "notes": "Requires Molten glass and level 12 Crafting.",
+          "notes": "Requires Molten glass, glassblowing pipe and level 12 Crafting.",
           "rule": {
             "all": [
               {
                 "has": 1775
+              },
+              {
+                "has": 1785
               },
               {
                 "skill": "Crafting",
