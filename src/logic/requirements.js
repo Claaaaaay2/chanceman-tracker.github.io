@@ -2822,6 +2822,9 @@ export const REQUIREMENT_CHECKS = {
     canBuildBronzeCannon(ctx) {
         return canBuildBronzeCannon(ctx);
     },
+    canGoDiving(ctx) {
+        return canGoDiving(ctx);
+    },
     never(ctx) {
         return false;
     }
@@ -3567,7 +3570,6 @@ function canCompleteEnakhrasLament(ctx) {
         hasSkillLevel(ctx, "Magic", 39),
         has(ctx, 1755), // Chisel
         has(ctx, 590), // Tinderbox
-        has(ctx, 36), // Candle
         has(ctx, 1511), // Logs
         has(ctx, 1521), // Oak logs
         has(ctx, 1519), // Willow logs
@@ -4086,7 +4088,14 @@ function canCompleteLunarDiplomacy(ctx) {
         has(ctx, 233), // Pestle and mortar
         has(ctx, 2347), // Hammer
         has(ctx, 952), // Spade
-        has(ctx, 4548), // Bullseye lantern
+        (has(ctx, 4548) // Bullseye lantern
+            || (
+                has(ctx, 4546) && // Bullseye lantern (unf)
+                has(ctx, 1939) && // Swamp tar 
+                has(ctx, 1607) && // Sapphire
+                has(ctx, 590) // Tinderbox
+            )
+        ),
         hasUsableAxe(ctx), //
         hasUsablePickaxe(ctx), //
         (canDoGuardiansOfTheRift(ctx) //
@@ -4279,6 +4288,13 @@ function canCompleteMyArmsBigAdventure(ctx) {
     ]);
 }
 
+function canGoDiving(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteRFDAnotherCooksQuest", canCompleteRFDAnotherCooksQuest), //
+        has(ctx, 6667), // Empty fishbowl
+    ]);
+}
+
 function canCompleteNatureSpirit(ctx) {
     return allTrue([
         requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
@@ -4433,7 +4449,7 @@ function canCompleteRagAndBoneManII(ctx) {
         (requiresQuest(ctx, "canCompleteSkippyAndTheMogres", canCompleteSkippyAndTheMogres) || canShortrange(ctx)), //
         (canStartZogreFleshEaters(ctx) || (hasTelegrabRunes(ctx) && canShortrange(ctx))), //
         requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
-        requiresQuest(ctx, "canCompleteCreatureOfFenkenstrain", canCompleteCreatureOfFenkenstrain), //
+        has(ctx, 952), // Spade, as only this is needed to gain access to experiments cave
         canEnterLumbridgeSwampCaves(ctx), //
     ]);
 }
@@ -4778,7 +4794,6 @@ function canCompleteShadowsOfCustodia(ctx) {
         has(ctx, 847), // Willow longbow
         has(ctx, 1517), // Maple logs
         has(ctx, 2347), // Hammer
-        hasFishingRod(ctx) // Fishing rod
     ]);
 }
 
@@ -4969,7 +4984,14 @@ function canCompleteTearsOfGuthix(ctx) {
         hasSkillLevel(ctx, "Firemaking", 49),
         hasSkillLevel(ctx, "Crafting", 20),
         hasSkillLevel(ctx, "Mining", 20),
-        has(ctx, 4548), // Bullseye lantern
+        (has(ctx, 4548) // Bullseye lantern
+            || (
+                has(ctx, 4546) && // Bullseye lantern (unf)
+                has(ctx, 1939) && // Swamp tar 
+                has(ctx, 1607) && // Sapphire
+                has(ctx, 590) // Tinderbox
+            )
+        ),
         has(ctx, 1607), // Sapphire
         has(ctx, 1755), // Chisel
         has(ctx, 590), // Tinderbox
@@ -5633,7 +5655,6 @@ function canCompleteWhileGuthixSleeps(ctx) {
         has(ctx, 567), // Unpowered orb
         has(ctx, 1139), // Bronze med helm
         has(ctx, 1101), // Iron chainbody
-        has(ctx, 4548), // Bullseye lantern
         has(ctx, 1607), // Sapphire
         has(ctx, 1951), // Redberries
         has(ctx, 239), // White berries

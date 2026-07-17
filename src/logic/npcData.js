@@ -5399,7 +5399,7 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompleteTroubledTortugans",
-                "canCompleteRFDFreeingPiratePete",
+                "canGoDiving",
                 "canPlantPlants",
                 "hasElkhornFrag"
             ]
@@ -11471,7 +11471,7 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompleteTroubledTortugans",
-                "canCompleteRFDFreeingPiratePete",
+                "canGoDiving",
                 "canPlantPlants",
                 "hasPillarFrag"
             ]
@@ -13195,7 +13195,8 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canPlantTrees",
-                "hasSeaweedSpore"
+                "hasSeaweedSpore",
+                "canGoDiving"
             ]
         },
         "skill": ["farming"],
@@ -15549,7 +15550,7 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompleteTroubledTortugans",
-                "canCompleteRFDFreeingPiratePete",
+                "canGoDiving",
                 "canPlantPlants",
                 "hasUmbralFrag"
             ]
