@@ -39074,6 +39074,9 @@
       "shops": {
         "Yes": "No requirements"
       },
+      "spawns": {
+        "Yes": "hasButler"
+      },
       "other": {
         "Cooking a Chocolate cake": {
           "notes": "Requires a Cake and a Chocolate bar or Chocolate dust and level 50 Cooking.",
@@ -43568,6 +43571,9 @@
         "Steel dragon Standard": {
           "droprate": "1/128"
         }
+      },
+      "spawns": {
+        "Yes": "hasButler"
       },
       "other": {
         "Cooking a Curry": {
@@ -115215,6 +115221,9 @@
           "droprate": "1/12.681"
         }
       },
+      "spawns": {
+        "Yes": "hasButler"
+      },
       "other": {
         "Cooking a Pineapple pizza": {
           "notes": "Requires Pineapple rings or Pineapple chunks and a Plain pizza and level 65 Cooking.",
@@ -138015,6 +138024,9 @@
           "droprate": "1/44.727"
         }
       },
+      "spawns": {
+        "Yes": "hasButler"
+      },
       "other": {
         "Cooking some Shrimps": {
           "notes": "Requires Raw shrimps.",
@@ -148417,6 +148429,9 @@
     "sources": {
       "shops": {
         "Yes": "No requirements"
+      },
+      "spawns": {
+        "Yes": "hasButler"
       },
       "other": {
         "Seers Pub": {

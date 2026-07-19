@@ -2825,6 +2825,27 @@ export const REQUIREMENT_CHECKS = {
     canGoDiving(ctx) {
         return canGoDiving(ctx);
     },
+    hasButler(ctx) {
+        return hasbutler(ctx);
+    },
+    canBuildKitchenTable(ctx) {
+        return canBuildKitchenTable(ctx);
+    },
+    canBuildLarder(ctx) {
+        return canBuildLarder(ctx);
+    },
+    canBuildSink(ctx) {
+        return canBuildSink(ctx);
+    },
+    canBuildKitchenShelves(ctx) {
+        return canBuildKitchenShelves(ctx);
+    },
+    canBuildOven(ctx) {
+        return canBuildOven(ctx);
+    },
+    canBuildBed(ctx) {
+        return canBuildBed(ctx);
+    },
     never(ctx) {
         return false;
     }
@@ -3297,6 +3318,86 @@ function canCompleteDaddysHome(ctx) {
         hasAnyNails(ctx), //
         has(ctx, 2347), // Hammer
         has(ctx, 8794), // Saw
+    ]);
+}
+
+function hasButler(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Construction", 20),
+        canBuildKitchenTable(ctx),
+        canBuildLarder(ctx),
+        canBuildSink(ctx),
+        canBuildKitchenShelves(ctx),
+        canBuildOven(ctx),
+        canBuildBed(ctx)
+    ]);
+}
+
+function canBuildKitchenTable(ctx) {
+    return allTrue([
+        has(ctx, 2347), // Hammer
+        has(ctx, 8794), // Saw
+        (
+            (has(ctx, 960) && hasAnyNails(ctx)) || // Wooden table materials
+            has(ctx, 8778) ||                      // Oak plank
+            has(ctx, 8780)                         // Teak plank
+        )
+    ]);
+}
+
+function canBuildLarder(ctx) {
+    return allTrue([
+        has(ctx, 2347), // Hammer
+        has(ctx, 8794), // Saw
+        (
+            (has(ctx, 960) && hasAnyNails(ctx)) || // Wooden table materials
+            has(ctx, 8778) ||                      // Oak plank
+            has(ctx, 8780) && has(ctx, 8790)        // Teak plank + bolt of cloth
+        )
+    ]);
+}
+
+function canBuildSink(ctx) {
+    return allTrue([
+        has(ctx, 2347), // Hammer
+        has(ctx, 8794), // Saw
+        (
+            has (ctx, 2353) ||                                          // Steel bar
+            has(ctx, 26266) && has(ctx, 8782) && has(ctx, 8784)         // Condensed gold + Mahogany plank + gold leaf
+        )
+    ]);
+}
+
+function canBuildKitchenShelves(ctx) {
+    return allTrue([
+        has(ctx, 2347), // Hammer
+        has(ctx, 8794), // Saw
+        (
+            (has(ctx, 960) && hasAnyNails(ctx)) ||   // Wooden shelves 1: Plank + Nails
+            (has(ctx, 8778) && has(ctx, 1761)) ||    // Oak shelves: Oak plank + Soft clay
+            (has(ctx, 8780) && has(ctx, 1761))       // Teak shelves: Teak plank + Soft clay
+        )
+    ]);
+}
+
+function canBuildOven(ctx) {
+    return allTrue([
+        has(ctx, 2347), // Hammer
+        has(ctx, 8794), // Saw
+        has(ctx, 2353)  // Steel bar — small oven and up only need bars; firepit tiers also want soft clay but aren't required
+    ]);
+}
+
+function canBuildBed(ctx) {
+    return allTrue([
+        has(ctx, 2347), // Hammer
+        has(ctx, 8794), // Saw
+        (
+            (has(ctx, 960) && hasAnyNails(ctx) && has(ctx, 8790)) || // Wooden bed: Plank + Nails + Bolt of cloth
+            (has(ctx, 8778) && has(ctx, 8790)) ||                    // Oak bed: Oak plank + Bolt of cloth
+            (has(ctx, 8780) && has(ctx, 8790))                       // Teak bed: Teak plank + Bolt of cloth
+            (has(ctx, 8782) && has(ctx, 8790))                       // Mahogany bed: Mahogany plank + Bolt of cloth
+        )
     ]);
 }
 
