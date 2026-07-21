@@ -2826,7 +2826,7 @@ export const REQUIREMENT_CHECKS = {
         return canGoDiving(ctx);
     },
     hasButler(ctx) {
-        return hasbutler(ctx);
+        return hasButler(ctx);
     },
     canBuildKitchenTable(ctx) {
         return canBuildKitchenTable(ctx);
@@ -2846,10 +2846,30 @@ export const REQUIREMENT_CHECKS = {
     canBuildBed(ctx) {
         return canBuildBed(ctx);
     },
+    canAccessDrumstickIsle(ctx) {
+        return canAccessDrumstickIsle(ctx);
+    },
+    canAccessYnsdailIsland(ctx) {  
+        return canAccessYnsdailIsland(ctx);
+    },
     never(ctx) {
         return false;
     }
 };
+
+function canAccessYnsdailIsland(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Sailing", 73), //
+        canMakeAdamantKeel(ctx) //
+    ]);
+}
+
+function canAccessDrumstickIsle(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Sailing", 79), //
+        canMakeAdamantKeel(ctx) //
+    ]);
+}
 
 function canCompleteTheBloodMoonRises(ctx) {
     return allTrue([

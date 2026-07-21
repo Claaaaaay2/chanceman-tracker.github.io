@@ -54616,7 +54616,7 @@
     "sources": {
       "drops": {
         "Dolphin": {
-          "droprate": "1/1000"
+          "droprate": "1/1200"
         },
         "Orca": {
           "droprate": "1/70"
