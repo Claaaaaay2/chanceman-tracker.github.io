@@ -12724,6 +12724,14 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
+    "Rubium rocks": {
+        "wiki": "https://oldschool.runescape.wiki/w/Rubium_rocks",
+        "rule": ["canTrainMining"],
+        "skill": ["sailing", "mining"],
+        "level": [60, 48],
+        "tags": [],
+        "f2p": false
+    },
     "Ruby harvest": {
         "wiki": "https://oldschool.runescape.wiki/w/Ruby_harvest",
         "rule": ["canCatchButterflies"],

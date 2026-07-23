@@ -3261,6 +3261,30 @@
     }
   },
   {
+    "index": 4529,
+    "id": 31940,
+    "name": "Adamant incendiary cannonball",
+    "image": "Adamant_incendiary_cannonball.png",
+    "sources": {
+      "other": {
+        "Crafting incendiary cannonball": {
+          "notes": "Requires completion of Pandemonium, adamant cannonball and rubium splinters.",
+          "rule": {
+            "all": [
+              "canCompletePandemonium",
+              {
+                "has": 31912
+              },
+              {
+                "has": 31722
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
     "index": 86,
     "id": 829,
     "name": "Adamant javelin",
@@ -31720,6 +31744,30 @@
     "tags": [
       "Melee"
     ]
+  },
+  {
+    "index": 4528,
+    "id": 31932,
+    "name": "Bronze incendiary cannonball",
+    "image": "Bronze_incendiary_cannonball.png",
+    "sources": {
+      "other": {
+        "Crafting incendiary cannonball": {
+          "notes": "Requires completion of Pandemonium, bronze cannonball and rubium splinters.",
+          "rule": {
+            "all": [
+              "canCompletePandemonium",
+              {
+                "has": 31906
+              },
+              {
+                "has": 31722
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 856,
@@ -85924,6 +85972,30 @@
     ]
   },
   {
+    "index": 4527,
+    "id": 31934,
+    "name": "Iron incendiary cannonball",
+    "image": "Iron_incendiary_cannonball.png",
+    "sources": {
+      "other": {
+        "Crafting incendiary cannonball": {
+          "notes": "Requires completion of Pandemonium, iron cannonball and rubium splinters.",
+          "rule": {
+            "all": [
+              "canCompletePandemonium",
+              {
+                "has": 31908
+              },
+              {
+                "has": 31722
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
     "index": 2059,
     "id": 826,
     "name": "Iron javelin",
@@ -103416,6 +103488,30 @@
     "tags": [
       "Melee"
     ]
+  },
+  {
+    "index": 4532,
+    "id": 31938,
+    "name": "Mithril incendiary cannonball",
+    "image": "Mithril_incendiary_cannonball.png",
+    "sources": {
+      "other": {
+        "Crafting incendiary cannonball": {
+          "notes": "Requires completion of Pandemonium, mithril cannonball and rubium splinters.",
+          "rule": {
+            "all": [
+              "canCompletePandemonium",
+              {
+                "has": 31910
+              },
+              {
+                "has": 31722
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 2478,
@@ -126700,6 +126796,19 @@
     }
   },
   {
+    "index": 4526,
+    "id": 31722,
+    "name": "Rubium splinters",
+    "image": "Rubium_splinters.png",
+    "sources": {
+      "drops": {
+        "Rubium rocks": {
+          "droprate": "Always"
+        }
+      }
+    }
+  },
+  {
     "index": 3165,
     "id": 1603,
     "name": "Ruby",
@@ -129781,6 +129890,30 @@
       "drops": {
         "Reward casket (hard)": {
           "droprate": "1/1625"
+        }
+      }
+    }
+  },
+  {
+    "index": 4531,
+    "id": 31942,
+    "name": "Rune incendiary cannonball",
+    "image": "Rune_incendiary_cannonball.png",
+    "sources": {
+      "other": {
+        "Crafting incendiary cannonball": {
+          "notes": "Requires completion of Pandemonium, rune cannonball and rubium splinters.",
+          "rule": {
+            "all": [
+              "canCompletePandemonium",
+              {
+                "has": 31914
+              },
+              {
+                "has": 31722
+              }
+            ]
+          }
         }
       }
     }
@@ -146318,6 +146451,30 @@
     "tags": [
       "Melee"
     ]
+  },
+  {
+    "index": 4530,
+    "id": 31936,
+    "name": "Steel incendiary cannonball",
+    "image": "Steel_incendiary_cannonball.png",
+    "sources": {
+      "other": {
+        "Crafting incendiary cannonball": {
+          "notes": "Requires completion of Pandemonium, steel cannonball and rubium splinters.",
+          "rule": {
+            "all": [
+              "canCompletePandemonium",
+              {
+                "has": 2
+              },
+              {
+                "has": 31722
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 3697,
