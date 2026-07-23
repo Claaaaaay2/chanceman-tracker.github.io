@@ -2236,6 +2236,30 @@
     }
   },
   {
+    "index": 4521,
+    "id": 31926,
+    "name": "Adamant chainshot cannonball",
+    "image": "Adamant_chainshot_cannonball.png",
+    "sources": {
+      "other": {
+        "Crafting chainshot cannonball": {
+          "notes": "Requires completion of Pandemonium, adamant cannonball and a chain.",
+          "rule": {
+            "all": [
+              "canCompletePandemonium",
+              {
+                "has": 31912
+              },
+              {
+                "has": 32886
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
     "index": 57,
     "id": 3100,
     "name": "Adamant claws",
@@ -30947,6 +30971,30 @@
               },
               {
                 "has": 2347
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "index": 4520,
+    "id": 31918,
+    "name": "Bronze chainshot cannonball",
+    "image": "Bronze_chainshot_cannonball.png",
+    "sources": {
+      "other": {
+        "Crafting chainshot cannonball": {
+          "notes": "Requires completion of Pandemonium, bronze cannonball and a chain.",
+          "rule": {
+            "all": [
+              "canCompletePandemonium",
+              {
+                "has": 31906
+              },
+              {
+                "has": 32886
               }
             ]
           }
@@ -84961,6 +85009,30 @@
     }
   },
   {
+    "index": 4522,
+    "id": 31920,
+    "name": "Iron chainshot cannonball",
+    "image": "Iron_chainshot_cannonball.png",
+    "sources": {
+      "other": {
+        "Crafting chainshot cannonball": {
+          "notes": "Requires completion of Pandemonium, iron cannonball and a chain.",
+          "rule": {
+            "all": [
+              "canCompletePandemonium",
+              {
+                "has": 31908
+              },
+              {
+                "has": 32886
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
     "index": 2035,
     "id": 3096,
     "name": "Iron claws",
@@ -102507,6 +102579,30 @@
               },
               {
                 "has": 2347
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "index": 4523,
+    "id": 31924,
+    "name": "Mithril chainshot cannonball",
+    "image": "Mithril_chainshot_cannonball.png",
+    "sources": {
+      "other": {
+        "Crafting chainshot cannonball": {
+          "notes": "Requires completion of Pandemonium, mithril cannonball and a chain.",
+          "rule": {
+            "all": [
+              "canCompletePandemonium",
+              {
+                "has": 31910
+              },
+              {
+                "has": 32886
               }
             ]
           }
@@ -128413,6 +128509,30 @@
     }
   },
   {
+    "index": 4524,
+    "id": 31928,
+    "name": "Rune chainshot cannonball",
+    "image": "Rune_chainshot_cannonball.png",
+    "sources": {
+      "other": {
+        "Crafting chainshot cannonball": {
+          "notes": "Requires completion of Pandemonium, rune cannonball and a chain.",
+          "rule": {
+            "all": [
+              "canCompletePandemonium",
+              {
+                "has": 31914
+              },
+              {
+                "has": 32886
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
     "index": 3195,
     "id": 3101,
     "name": "Rune claws",
@@ -145248,6 +145368,30 @@
               },
               {
                 "has": 2347
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "index": 4525,
+    "id": 31922,
+    "name": "Steel chainshot cannonball",
+    "image": "Steel_chainshot_cannonball.png",
+    "sources": {
+      "other": {
+        "Crafting chainshot cannonball": {
+          "notes": "Requires completion of Pandemonium, steel cannonball and a chain.",
+          "rule": {
+            "all": [
+              "canCompletePandemonium",
+              {
+                "has": 2
+              },
+              {
+                "has": 32886
               }
             ]
           }
