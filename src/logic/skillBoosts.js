@@ -118,7 +118,7 @@ function getBoostSummary(ctx) {
     return summary;
 }
 
-function getBaseSkillLevel(ctx, skill) {
+export function getBaseSkillLevel(ctx, skill) {
     const normalizedSkill = normalizeSkillName(skill);
     if (!normalizedSkill) return null;
     const baseLevel = ctx?.player?.levels?.[normalizedSkill];
