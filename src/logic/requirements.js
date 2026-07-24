@@ -1,5 +1,6 @@
 import { hasBarbarianFiremakingTraining, isIronmanAccount } from "./playerState.js";
 import { getEffectiveSkillLevel } from "./skillBoosts.js";
+import { getBaseSkillLevel } from "./skillBoosts.js";
 
 function shouldTrackMissing(ctx) {
     return !ctx?.suppressMissing && !ctx?.missing?.suppressMissing;
@@ -636,6 +637,39 @@ export function hasSkillLevel(ctx, skill, level, options = {}) {
     return false;
 }
 
+export function hasNonBoostableSkillLevel(ctx, skill, level, options = {}) {
+    const overrideKey = options.overrideKey;
+    const trackMissing = options.trackMissing !== false;
+    if (overrideKey && ctx.filters?.[overrideKey]) return true;
+
+    if (ctx?.ignoreSkillLevels === "levelsOnly") {
+        return true;
+    }
+
+    // In "ignore skill levels" mode, treat skill checks as satisfied only if the
+    // player can train that skill at all. This lets sorting distinguish between
+    // "trainable but level-gated" (rank 7) and "fully unobtainable" (rank 8).
+    if (ctx?.ignoreSkillLevels) {
+        return canTrainSkill(ctx, skill);
+    }
+
+    const current = getBaseSkillLevel(ctx, skill) ?? 1;
+    if (typeof current === "number" && current >= level) return true;
+    if (trackMissing && ctx?.missing && shouldTrackMissing(ctx)) {
+        if (!ctx.missing.skills) {
+            ctx.missing.skills = [];
+        }
+        if (!ctx.missing.skillKeys) {
+            ctx.missing.skillKeys = new Set();
+        }
+        const key = `${skill} ${level}`;
+        if (!ctx.missing.skillKeys.has(key)) {
+            ctx.missing.skillKeys.add(key);
+            ctx.missing.skills.push(key);
+        }
+    }
+    return false;
+}
 
 export function has(ctx, id) {
     return hasItem(ctx, id);
@@ -1056,7 +1090,7 @@ export const REQUIREMENT_CHECKS = {
         return canCompleteHisFaithfulServants(ctx);
     },
     canCompleteDeathOnTheIsle(ctx) {
-        return requiresQuest(ctx, "canCompleteChildrenOfTheSun", canCompleteChildrenOfTheSun);
+        return cancompleteDeathOnTheIsle(ctx);
     },
     canCompleteFightArena(ctx) {
         return true;
@@ -2822,25 +2856,69 @@ export const REQUIREMENT_CHECKS = {
     canBuildBronzeCannon(ctx) {
         return canBuildBronzeCannon(ctx);
     },
+    canGoDiving(ctx) {
+        return canGoDiving(ctx);
+    },
+    hasButler(ctx) {
+        return hasButler(ctx);
+    },
+    canBuildKitchenTable(ctx) {
+        return canBuildKitchenTable(ctx);
+    },
+    canBuildLarder(ctx) {
+        return canBuildLarder(ctx);
+    },
+    canBuildSink(ctx) {
+        return canBuildSink(ctx);
+    },
+    canBuildKitchenShelves(ctx) {
+        return canBuildKitchenShelves(ctx);
+    },
+    canBuildOven(ctx) {
+        return canBuildOven(ctx);
+    },
+    canBuildBed(ctx) {
+        return canBuildBed(ctx);
+    },
+    canAccessDrumstickIsle(ctx) {
+        return canAccessDrumstickIsle(ctx);
+    },
+    canAccessYnsdailIsland(ctx) {  
+        return canAccessYnsdailIsland(ctx);
+    },
     never(ctx) {
         return false;
     }
 };
 
+function canAccessYnsdailIsland(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Sailing", 73), //
+        canMakeAdamantKeel(ctx) //
+    ]);
+}
+
+function canAccessDrumstickIsle(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Sailing", 79), //
+        canMakeAdamantKeel(ctx) //
+    ]);
+}
+
 function canCompleteTheBloodMoonRises(ctx) {
     return allTrue([
         requiresQuest(ctx, "canCompleteSinsOfTheFather", canCompleteSinsOfTheFather), //
         requiresQuest(ctx, "canCompleteANightAtTheTheatre", canCompleteANightAtTheTheatre), //
-        hasSkillLevel(ctx, "Slayer", 74), //
-        hasSkillLevel(ctx, "Smithing", 72), //
-        hasSkillLevel(ctx, "Woodcutting", 74), //
-        hasSkillLevel(ctx, "Herblore", 64), //
-        hasSkillLevel(ctx, "Mining", 66), //
-        hasSkillLevel(ctx, "Crafting", 64), //
-        hasSkillLevel(ctx, "Magic", 57), //
-        hasSkillLevel(ctx, "Hunter", 65), //
-        hasSkillLevel(ctx, "Fletching", 70), //
-        hasSkillLevel(ctx, "Cooking", 72), //
+        hasNonBoostableSkillLevel(ctx, "Slayer", 74), //
+        hasNonBoostableSkillLevel(ctx, "Smithing", 72), //
+        hasNonBoostableSkillLevel(ctx, "Woodcutting", 74), //
+        hasNonBoostableSkillLevel(ctx, "Herblore", 64), //
+        hasNonBoostableSkillLevel(ctx, "Mining", 66), //
+        hasNonBoostableSkillLevel(ctx, "Crafting", 64), //
+        hasNonBoostableSkillLevel(ctx, "Magic", 57), //
+        hasNonBoostableSkillLevel(ctx, "Hunter", 65), //
+        hasNonBoostableSkillLevel(ctx, "Fletching", 70), //
+        hasNonBoostableSkillLevel(ctx, "Cooking", 72), //
         has(ctx, 590), // Tinderbox
         hasKnifeOrNarwhalKnife(ctx), // Knife
         has(ctx, 2347), // Hammer
@@ -2856,13 +2934,13 @@ function canCompleteAKingdomDivided(ctx) {
         requiresQuest(ctx, "canCompleteTheAscentOfArceuus", canCompleteTheAscentOfArceuus), //
         requiresQuest(ctx, "canCompleteTheForsakenTower", canCompleteTheForsakenTower), //
         requiresQuest(ctx, "canCompleteTaleOfTheRighteous", canCompleteTaleOfTheRighteous), //
-        hasSkillLevel(ctx, "Agility", 54), //
-        hasSkillLevel(ctx, "Thieving", 52), //
-        hasSkillLevel(ctx, "Woodcutting", 52), //
-        hasSkillLevel(ctx, "Herblore", 50), //
-        hasSkillLevel(ctx, "Mining", 42), //
-        hasSkillLevel(ctx, "Crafting", 38), //
-        hasSkillLevel(ctx, "Magic", 35), //
+        hasNonBoostableSkillLevel(ctx, "Agility", 54), //
+        hasNonBoostableSkillLevel(ctx, "Thieving", 52), //
+        hasNonBoostableSkillLevel(ctx, "Woodcutting", 52), //
+        hasNonBoostableSkillLevel(ctx, "Herblore", 50), //
+        hasNonBoostableSkillLevel(ctx, "Mining", 42), //
+        hasNonBoostableSkillLevel(ctx, "Crafting", 38), //
+        hasNonBoostableSkillLevel(ctx, "Magic", 35), //
         hasElementalRuneSources(ctx, ["air", "fire"]), //
         hasAnyItems(ctx, [558, 562, 560, 565]),
         hasAnyItems(ctx, [133, 2432]),
@@ -2895,10 +2973,10 @@ function canCompleteANightAtTheTheatre(ctx) {
 
 function canCompleteAnimalMagnetism(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Slayer", 18),
-        hasSkillLevel(ctx, "Crafting", 19),
-        hasSkillLevel(ctx, "Ranged", 30),
-        hasSkillLevel(ctx, "Woodcutting", 35),
+        hasNonBoostableSkillLevel(ctx, "Slayer", 18),
+        hasNonBoostableSkillLevel(ctx, "Crafting", 19),
+        hasNonBoostableSkillLevel(ctx, "Ranged", 30),
+        hasNonBoostableSkillLevel(ctx, "Woodcutting", 35),
         requiresQuest(ctx, "canCompleteErnestTheChicken", canCompleteErnestTheChicken), //
         requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
         has(ctx, 1355), // Mithril axe
@@ -2913,8 +2991,8 @@ function canCompleteAnimalMagnetism(ctx) {
 
 function canCompleteAnotherSliceOfHAM(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Attack", 15),
-        hasSkillLevel(ctx, "Prayer", 25),
+        hasNonBoostableSkillLevel(ctx, "Attack", 15),
+        hasNonBoostableSkillLevel(ctx, "Prayer", 25),
         requiresQuest(ctx, "canCompleteDeathToTheDorgeshuun", canCompleteDeathToTheDorgeshuun), //
         requiresQuest(ctx, "canCompleteTheGiantDwarf", canCompleteTheGiantDwarf), //
         requiresQuest(ctx, "canCompleteTheDigSite", canCompleteTheDigSite), //
@@ -2948,11 +3026,11 @@ function canCompleteATailOfTwoCats(ctx) {
 
 function canCompleteATasteOfHope(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Crafting", 48),
-        hasSkillLevel(ctx, "Agility", 45),
-        hasSkillLevel(ctx, "Attack", 40),
-        hasSkillLevel(ctx, "Herblore", 40),
-        hasSkillLevel(ctx, "Slayer", 38),
+        hasNonBoostableSkillLevel(ctx, "Crafting", 48),
+        hasNonBoostableSkillLevel(ctx, "Agility", 45),
+        hasNonBoostableSkillLevel(ctx, "Attack", 40),
+        hasNonBoostableSkillLevel(ctx, "Herblore", 40),
+        hasNonBoostableSkillLevel(ctx, "Slayer", 38),
         requiresQuest(ctx, "canCompleteDarknessOfHallowvale", canCompleteDarknessOfHallowvale), //
         has(ctx, 1605), // Emerald
         has(ctx, 1755), // Chisel
@@ -2964,9 +3042,9 @@ function canCompleteATasteOfHope(ctx) {
 
 function canCompleteAtFirstLight(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Hunter", 46),
-        hasSkillLevel(ctx, "Herblore", 30),
-        hasSkillLevel(ctx, "Construction", 27),
+        hasNonBoostableSkillLevel(ctx, "Hunter", 46),
+        hasNonBoostableSkillLevel(ctx, "Herblore", 30),
+        hasNonBoostableSkillLevel(ctx, "Construction", 27),
         requiresQuest(ctx, "canCompleteEaglesPeak", canCompleteEaglesPeak), //
         requiresQuest(ctx, "canCompleteChildrenOfTheSun", canCompleteChildrenOfTheSun), //
         has(ctx, 4055), // Toy mouse (wound)
@@ -2977,7 +3055,7 @@ function canCompleteAtFirstLight(ctx) {
 
 function canCompleteBarbarianFarming(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Farming", 15),
+        hasNonBoostableSkillLevel(ctx, "Farming", 15),
         canPlantTrees(ctx), //
         hasAnySapling(ctx),
     ]);
@@ -2985,7 +3063,7 @@ function canCompleteBarbarianFarming(ctx) {
 
 function canCompleteBarbarianFiremaking1(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Firemaking", 35),
+        hasNonBoostableSkillLevel(ctx, "Firemaking", 35),
         has(ctx, 1521), // Oak logs
     ]);
 }
@@ -3000,9 +3078,9 @@ function canCompleteBarbarianFiremaking2(ctx) {
 
 function canCompleteBarbarianFishing(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Fishing", 55),
-        hasSkillLevel(ctx, "Agility", 15),
-        hasSkillLevel(ctx, "Strength", 35),
+        hasNonBoostableSkillLevel(ctx, "Fishing", 55),
+        hasNonBoostableSkillLevel(ctx, "Agility", 15),
+        hasNonBoostableSkillLevel(ctx, "Strength", 35),
         hasAnyItems(ctx, [313, 314, 11334, 11324, 11326]),
         hasAnyFeather(ctx),
     ]);
@@ -3010,7 +3088,7 @@ function canCompleteBarbarianFishing(ctx) {
 
 function canCompleteBarbarianHerblore(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Herblore", 4),
+        hasNonBoostableSkillLevel(ctx, "Herblore", 4),
         requiresQuest(ctx, "canCompleteDruidicRitual", canCompleteDruidicRitual), //
         requiresQuest(ctx, "canCompleteBarbarianFiremaking1", canCompleteBarbarianFiremaking1), //
         requiresQuest(ctx, "canCompleteBarbarianFishing", canCompleteBarbarianFishing), //
@@ -3021,7 +3099,7 @@ function canCompleteBarbarianHerblore(ctx) {
 
 function canCompleteBarbarianSmithing(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Smithing", 5),
+        hasNonBoostableSkillLevel(ctx, "Smithing", 5),
         requiresQuest(ctx, "canCompleteBarbarianFishing", canCompleteBarbarianFishing), //
         requiresQuest(ctx, "canCompleteTaiBwoWannaiTrio", canCompleteTaiBwoWannaiTrio), //
         ( //
@@ -3061,9 +3139,9 @@ function canCompleteBelowIceMountain(ctx) {
 
 function canCompleteBeneathCursedSands(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Agility", 62),
-        hasSkillLevel(ctx, "Crafting", 55),
-        hasSkillLevel(ctx, "Firemaking", 55),
+        hasNonBoostableSkillLevel(ctx, "Agility", 62),
+        hasNonBoostableSkillLevel(ctx, "Crafting", 55),
+        hasNonBoostableSkillLevel(ctx, "Firemaking", 55),
         requiresQuest(ctx, "canCompleteContact", canCompleteContact), //
         has(ctx, 453), // Coal
         has(ctx, 2351), // Iron bar
@@ -3090,7 +3168,7 @@ function canCompleteBigChompyBirdHunting(ctx) {
     return allTrue([
         hasSkillLevel(ctx, "Fletching", 5),
         hasSkillLevel(ctx, "Cooking", 30),
-        hasSkillLevel(ctx, "Ranged", 30),
+        hasNonBoostableSkillLevel(ctx, "Ranged", 30),
         has(ctx, 314), // Feather
         hasKnifeOrNarwhalKnife(ctx), // Knife
         has(ctx, 1755), // Chisel
@@ -3165,10 +3243,10 @@ function canCompleteBurialAtSea(ctx) {
 
 function canCompleteCabinFever(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Agility", 42),
-        hasSkillLevel(ctx, "Crafting", 45),
-        hasSkillLevel(ctx, "Smithing", 50),
-        hasSkillLevel(ctx, "Ranged", 40),
+        hasNonBoostableSkillLevel(ctx, "Agility", 42),
+        hasNonBoostableSkillLevel(ctx, "Crafting", 45),
+        hasNonBoostableSkillLevel(ctx, "Smithing", 50),
+        hasNonBoostableSkillLevel(ctx, "Ranged", 40),
         requiresQuest(ctx, "canCompletePiratesTreasure", canCompletePiratesTreasure), //
         requiresQuest(ctx, "canCompleteRumDeal", canCompleteRumDeal), //
         has(ctx, 590), // Tinderbox
@@ -3198,11 +3276,11 @@ function canCompleteClockTower(ctx) {
 
 function canCompleteColdWar(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Hunter", 10),
-        hasSkillLevel(ctx, "Agility", 30),
-        hasSkillLevel(ctx, "Crafting", 30),
-        hasSkillLevel(ctx, "Construction", 34),
-        hasSkillLevel(ctx, "Thieving", 15),
+        hasNonBoostableSkillLevel(ctx, "Hunter", 10),
+        hasNonBoostableSkillLevel(ctx, "Agility", 30),
+        hasNonBoostableSkillLevel(ctx, "Crafting", 30),
+        hasNonBoostableSkillLevel(ctx, "Construction", 34),
+        hasNonBoostableSkillLevel(ctx, "Thieving", 15),
         has(ctx, 8778), // Oak plank
         has(ctx, 1539), // Steel nails
         has(ctx, 2347), // Hammer
@@ -3253,8 +3331,8 @@ function canCompleteCreatureOfFenkenstrain(ctx) {
 
 function canCompleteCurrentAffairs(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Sailing", 22),
-        hasSkillLevel(ctx, "Fishing", 10),
+        hasNonBoostableSkillLevel(ctx, "Sailing", 22),
+        hasNonBoostableSkillLevel(ctx, "Fishing", 10),
         requiresQuest(ctx, "canCompletePandemonium", canCompletePandemonium), //
         has(ctx, 973), // Charcoal
     ]);
@@ -3262,8 +3340,8 @@ function canCompleteCurrentAffairs(ctx) {
 
 function canCompleteCurseOfTheEmptyLord(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Prayer", 31),
-        hasSkillLevel(ctx, "Thieving", 53),
+        hasNonBoostableSkillLevel(ctx, "Prayer", 31),
+        hasNonBoostableSkillLevel(ctx, "Thieving", 53),
         requiresQuest(ctx, "canGetRingOfVisibility", canGetRingOfVisibility), //
     ]);
 }
@@ -3297,15 +3375,95 @@ function canCompleteDaddysHome(ctx) {
     ]);
 }
 
+function hasButler(ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Construction", 20),
+        canBuildKitchenTable(ctx),
+        canBuildLarder(ctx),
+        canBuildSink(ctx),
+        canBuildKitchenShelves(ctx),
+        canBuildOven(ctx),
+        canBuildBed(ctx)
+    ]);
+}
+
+function canBuildKitchenTable(ctx) {
+    return allTrue([
+        has(ctx, 2347), // Hammer
+        has(ctx, 8794), // Saw
+        (
+            (has(ctx, 960) && hasAnyNails(ctx)) || // Wooden table materials
+            has(ctx, 8778) ||                      // Oak plank
+            has(ctx, 8780)                         // Teak plank
+        )
+    ]);
+}
+
+function canBuildLarder(ctx) {
+    return allTrue([
+        has(ctx, 2347), // Hammer
+        has(ctx, 8794), // Saw
+        (
+            (has(ctx, 960) && hasAnyNails(ctx)) || // Wooden table materials
+            has(ctx, 8778) ||                      // Oak plank
+            has(ctx, 8780) && has(ctx, 8790)        // Teak plank + bolt of cloth
+        )
+    ]);
+}
+
+function canBuildSink(ctx) {
+    return allTrue([
+        has(ctx, 2347), // Hammer
+        has(ctx, 8794), // Saw
+        (
+            has (ctx, 2353) ||                                          // Steel bar
+            has(ctx, 26266) && has(ctx, 8782) && has(ctx, 8784)         // Condensed gold + Mahogany plank + gold leaf
+        )
+    ]);
+}
+
+function canBuildKitchenShelves(ctx) {
+    return allTrue([
+        has(ctx, 2347), // Hammer
+        has(ctx, 8794), // Saw
+        (
+            (has(ctx, 960) && hasAnyNails(ctx)) ||   // Wooden shelves 1: Plank + Nails
+            (has(ctx, 8778) && has(ctx, 1761)) ||    // Oak shelves: Oak plank + Soft clay
+            (has(ctx, 8780) && has(ctx, 1761))       // Teak shelves: Teak plank + Soft clay
+        )
+    ]);
+}
+
+function canBuildOven(ctx) {
+    return allTrue([
+        has(ctx, 2347), // Hammer
+        has(ctx, 8794), // Saw
+        has(ctx, 2353)  // Steel bar — small oven and up only need bars; firepit tiers also want soft clay but aren't required
+    ]);
+}
+
+function canBuildBed(ctx) {
+    return allTrue([
+        has(ctx, 2347), // Hammer
+        has(ctx, 8794), // Saw
+        (
+            (has(ctx, 960) && hasAnyNails(ctx) && has(ctx, 8790)) || // Wooden bed: Plank + Nails + Bolt of cloth
+            (has(ctx, 8778) && has(ctx, 8790)) ||                    // Oak bed: Oak plank + Bolt of cloth
+            (has(ctx, 8780) && has(ctx, 8790))                       // Teak bed: Teak plank + Bolt of cloth
+            (has(ctx, 8782) && has(ctx, 8790))                       // Mahogany bed: Mahogany plank + Bolt of cloth
+        )
+    ]);
+}
+
 function canCompleteDarknessOfHallowvale(ctx) {
     return allTrue([
         hasSkillLevel(ctx, "Construction", 5),
-        hasSkillLevel(ctx, "Mining", 20),
-        hasSkillLevel(ctx, "Thieving", 22),
+        hasNonBoostableSkillLevel(ctx, "Mining", 20),
+        hasNonBoostableSkillLevel(ctx, "Thieving", 22),
         hasSkillLevel(ctx, "Agility", 26),
-        hasSkillLevel(ctx, "Crafting", 32),
+        hasNonBoostableSkillLevel(ctx, "Crafting", 32),
         hasSkillLevel(ctx, "Magic", 33),
-        hasSkillLevel(ctx, "Strength", 40),
+        hasNonBoostableSkillLevel(ctx, "Strength", 40),
         requiresQuest(ctx, "canCompleteInAidOfTheMyreque", canCompleteInAidOfTheMyreque), //
         hasAnyNails(ctx), //
         has(ctx, 960), // Plank
@@ -3317,6 +3475,13 @@ function canCompleteDarknessOfHallowvale(ctx) {
     ]);
 }
 
+function canCompleteDeathOnTheIsle(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteChildrenOfTheSun", canCompleteChildrenOfTheSun),
+        hasNonBoostableSkillLevel(ctx, "Agility", 32),
+        hasNonBoostableSkillLevel(ctx, "Thieving", 34),
+    ]);
+}
 function canCompleteDeathPlateau(ctx) {
     return allTrue([
         has(ctx, 2309), // Bread
@@ -3344,8 +3509,8 @@ function canCompleteDeathToTheDorgeshuun(ctx) {
 
 function canCompleteDefenderOfVarrock(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Smithing", 55),
-        hasSkillLevel(ctx, "Hunter", 52),
+        hasNonBoostableSkillLevel(ctx, "Smithing", 55),
+        hasNonBoostableSkillLevel(ctx, "Hunter", 52),
         requiresQuest(ctx, "canCompleteTempleOfIkov", canCompleteTempleOfIkov), //
         requiresQuest(ctx, "canCompleteBelowIceMountain", canCompleteBelowIceMountain), //
         requiresQuest(ctx, "canCompleteFamilyCrest", canCompleteFamilyCrest), //
@@ -3380,6 +3545,10 @@ function canCompleteDesertTreasureI(ctx) {
         requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
         requiresQuest(ctx, "canCompleteWaterfallQuest", canCompleteWaterfallQuest), //
         canReachTrollheim(ctx),
+        hasNonBoostableSkillLevel(ctx, "Thieving", 53),
+        hasNonBoostableSkillLevel(ctx, "Magic", 50),
+        hasNonBoostableSkillLevel(ctx, "Slayer", 10),
+        hasSkillLevel(ctx, "Firemaking", 50),
         hasAnyItems(ctx, [2126, 4164]),
         has(ctx, 1513), // Magic logs
         has(ctx, 1775), // Molten glass
@@ -3406,6 +3575,12 @@ function canCompleteDesertTreasureII(ctx) {
         requiresQuest(ctx, "canCompleteGardenOfDeath", canCompleteGardenOfDeath), //
         requiresQuest(ctx, "canCompleteBelowIceMountain", canCompleteBelowIceMountain), //
         requiresQuest(ctx, "canCompleteHisFaithfulServants", canCompleteHisFaithfulServants), //
+        hasNonBoostableSkillLevel(ctx, "Magic", 75),
+        hasNonBoostableSkillLevel(ctx, "Firemaking", 75),
+        hasNonBoostableSkillLevel(ctx, "Thieving", 70),
+        hasNonBoostableSkillLevel(ctx, "Herblore", 62),
+        hasNonBoostableSkillLevel(ctx, "Runecraft", 60),
+        hasNonBoostableSkillLevel(ctx, "Construction", 60),
         has(ctx, 560), // Death rune
         has(ctx, 565), // Blood rune
         has(ctx, 562), // Chaos rune
@@ -3420,7 +3595,7 @@ function canCompleteDesertTreasureII(ctx) {
 function canCompleteDeviousMinds(ctx) {
     return allTrue([
         hasSkillLevel(ctx, "Smithing", 65),
-        hasSkillLevel(ctx, "Runecraft", 50),
+        hasNonBoostableSkillLevel(ctx, "Runecraft", 50),
         hasSkillLevel(ctx, "Fletching", 50),
         requiresQuest(ctx, "canCompleteWanted", canCompleteWanted), //
         requiresQuest(ctx, "canCompleteTrollStronghold", canCompleteTrollStronghold), //
@@ -3455,14 +3630,14 @@ function canCompleteDragonSlayerI(ctx) {
 
 function canCompleteDragonSlayerII(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Magic", 75),
-        hasSkillLevel(ctx, "Smithing", 70),
-        hasSkillLevel(ctx, "Mining", 68),
-        hasSkillLevel(ctx, "Crafting", 62),
-        hasSkillLevel(ctx, "Agility", 60),
-        hasSkillLevel(ctx, "Thieving", 60),
-        hasSkillLevel(ctx, "Construction", 50),
-        hasSkillLevel(ctx, "Hitpoints", 50),
+        hasNonBoostableSkillLevel(ctx, "Magic", 75),
+        hasNonBoostableSkillLevel(ctx, "Smithing", 70),
+        hasNonBoostableSkillLevel(ctx, "Mining", 68),
+        hasNonBoostableSkillLevel(ctx, "Crafting", 62),
+        hasNonBoostableSkillLevel(ctx, "Agility", 60),
+        hasNonBoostableSkillLevel(ctx, "Thieving", 60),
+        hasNonBoostableSkillLevel(ctx, "Construction", 50),
+        hasNonBoostableSkillLevel(ctx, "Hitpoints", 50),
         hasQuestPoints(ctx, 200), //
         requiresQuest(ctx, "canCompleteLegendsQuest", canCompleteLegendsQuest), //
         requiresQuest(ctx, "canCompleteDreamMentor", canCompleteDreamMentor), //
@@ -3561,13 +3736,12 @@ function canCompleteElementalWorkshopII(ctx) {
 
 function canCompleteEnakhrasLament(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Crafting", 50),
+        hasNonBoostableSkillLevel(ctx, "Crafting", 50),
         hasSkillLevel(ctx, "Firemaking", 45),
-        hasSkillLevel(ctx, "Prayer", 43),
+        hasNonBoostableSkillLevel(ctx, "Prayer", 43),
         hasSkillLevel(ctx, "Magic", 39),
         has(ctx, 1755), // Chisel
         has(ctx, 590), // Tinderbox
-        has(ctx, 36), // Candle
         has(ctx, 1511), // Logs
         has(ctx, 1521), // Oak logs
         has(ctx, 1519), // Willow logs
@@ -3617,7 +3791,7 @@ function canCompleteErnestTheChicken(ctx) {
 
 function canCompleteEthicallyAcquiredAntiquities(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Thieving", 25),
+        hasNonBoostableSkillLevel(ctx, "Thieving", 25),
         requiresQuest(ctx, "canCompleteChildrenOfTheSun", canCompleteChildrenOfTheSun), //
         requiresQuest(ctx, "canCompleteShieldOfArrav", canCompleteShieldOfArrav),
     ]);
@@ -3635,7 +3809,7 @@ function canCompleteFairytaleIGrowingPains(ctx) {
 
 function canCompleteFairytaleIICureAQueen(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Thieving", 40),
+        hasNonBoostableSkillLevel(ctx, "Thieving", 40),
         hasSkillLevel(ctx, "Farming", 49),
         hasSkillLevel(ctx, "Herblore", 57),
         requiresQuest(ctx, "canCompleteFairytaleIGrowingPains", canCompleteFairytaleIGrowingPains), //
@@ -3674,7 +3848,7 @@ function canCompleteFightArena(ctx) {
 
 function canCompleteFishingContest(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Fishing", 10),
+        hasNonBoostableSkillLevel(ctx, "Fishing", 10),
         has(ctx, 1550), // Garlic
         hasFishingRod(ctx), // Fishing rod
         has(ctx, 952), // Spade
@@ -3697,7 +3871,7 @@ function canCompleteForgettableTale(ctx) {
 
 function canCompleteGardenOfDeath(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Farming", 20),
+        hasNonBoostableSkillLevel(ctx, "Farming", 20),
         has(ctx, 5329),
     ]);
 }
@@ -3733,8 +3907,8 @@ function canCompleteGertrudesCat(ctx) {
 
 function canCompleteGettingAhead(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Crafting", 30),
-        hasSkillLevel(ctx, "Construction", 26),
+        hasNonBoostableSkillLevel(ctx, "Crafting", 30),
+        hasNonBoostableSkillLevel(ctx, "Construction", 26),
         hasAnyItems(ctx, [948, 6814, 958]),
         has(ctx, 1761), // Soft clay
         has(ctx, 2347), // Hammer
@@ -3846,14 +4020,14 @@ function canCompleteHisFaithfulServants(ctx) {
 
 function canCompleteHolyGrail(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Attack", 20),
+        hasNonBoostableSkillLevel(ctx, "Attack", 20),
         requiresQuest(ctx, "canCompleteMerlinsCrystal", canCompleteMerlinsCrystal),
     ]);
 }
 
 function canCompleteHopespearsWill(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Prayer", 50),
+        hasNonBoostableSkillLevel(ctx, "Prayer", 50),
         requiresQuest(ctx, "canCompleteTheRestlessGhost", canCompleteTheRestlessGhost), //
         requiresQuest(ctx, "canCompleteDesertTreasureI", canCompleteDesertTreasureI), //
         requiresQuest(ctx, "canCompleteFairytaleIICureAQueen", canCompleteFairytaleIICureAQueen), //
@@ -3907,8 +4081,8 @@ function canCompleteImpendingChaos(ctx) {
 function canCompleteInAidOfTheMyreque(ctx) {
     return allTrue([
         hasSkillLevel(ctx, "Agility", 25),
-        hasSkillLevel(ctx, "Crafting", 25),
-        hasSkillLevel(ctx, "Mining", 15),
+        hasNonBoostableSkillLevel(ctx, "Crafting", 25),
+        hasNonBoostableSkillLevel(ctx, "Mining", 15),
         hasSkillLevel(ctx, "Magic", 7),
         requiresQuest(ctx, "canCompleteInSearchOfTheMyreque", canCompleteInSearchOfTheMyreque), //
         has(ctx, 952), // Spade
@@ -3967,8 +4141,8 @@ function canCompleteJunglePotion(ctx) {
 
 function canCompleteKingsRansom(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Magic", 45),
-        hasSkillLevel(ctx, "Defence", 65),
+        hasNonBoostableSkillLevel(ctx, "Magic", 45),
+        hasNonBoostableSkillLevel(ctx, "Defence", 65),
         requiresQuest(ctx, "canCompleteBlackKnightsFortress", canCompleteBlackKnightsFortress), //
         requiresQuest(ctx, "canCompleteHolyGrail", canCompleteHolyGrail), //
         requiresQuest(ctx, "canCompleteMurderMystery", canCompleteMurderMystery), //
@@ -3987,17 +4161,17 @@ function canCompleteKingsRansom(ctx) {
 
 function canCompleteLairOfTarnRazorlor(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Slayer", 40),
+        hasNonBoostableSkillLevel(ctx, "Slayer", 40),
         requiresQuest(ctx, "canCompleteHauntedMine", canCompleteHauntedMine), //
     ]);
 }
 
 function canCompleteLandOfTheGoblins(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Agility", 38),
-        hasSkillLevel(ctx, "Fishing", 40),
-        hasSkillLevel(ctx, "Thieving", 45),
-        hasSkillLevel(ctx, "Herblore", 48),
+        hasNonBoostableSkillLevel(ctx, "Agility", 38),
+        hasNonBoostableSkillLevel(ctx, "Fishing", 40),
+        hasNonBoostableSkillLevel(ctx, "Thieving", 45),
+        hasNonBoostableSkillLevel(ctx, "Herblore", 48),
         requiresQuest(ctx, "canCompleteAnotherSliceOfHAM", canCompleteAnotherSliceOfHAM), //
         requiresQuest(ctx, "canCompleteFishingContest", canCompleteFishingContest), //
         has(ctx, 3002), // Toadflax potion (unf)
@@ -4069,13 +4243,13 @@ function canCompleteLostCity(ctx) {
 
 function canCompleteLunarDiplomacy(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Herblore", 5),
-        hasSkillLevel(ctx, "Crafting", 61),
-        hasSkillLevel(ctx, "Defence", 40),
-        hasSkillLevel(ctx, "Firemaking", 49),
-        hasSkillLevel(ctx, "Magic", 65),
-        hasSkillLevel(ctx, "Mining", 60),
-        hasSkillLevel(ctx, "Woodcutting", 55),
+        hasNonBoostableSkillLevel(ctx, "Herblore", 5),
+        hasNonBoostableSkillLevel(ctx, "Crafting", 61),
+        hasNonBoostableSkillLevel(ctx, "Defence", 40),
+        hasNonBoostableSkillLevel(ctx, "Firemaking", 49),
+        hasNonBoostableSkillLevel(ctx, "Magic", 65),
+        hasNonBoostableSkillLevel(ctx, "Mining", 60),
+        hasNonBoostableSkillLevel(ctx, "Woodcutting", 55),
         requiresQuest(ctx, "canCompleteTheFremennikTrials", canCompleteTheFremennikTrials), //
         requiresQuest(ctx, "canCompleteLostCity", canCompleteLostCity), //
         requiresQuest(ctx, "canCompleteRuneMysteries", canCompleteRuneMysteries), //
@@ -4086,7 +4260,14 @@ function canCompleteLunarDiplomacy(ctx) {
         has(ctx, 233), // Pestle and mortar
         has(ctx, 2347), // Hammer
         has(ctx, 952), // Spade
-        has(ctx, 4548), // Bullseye lantern
+        (has(ctx, 4548) // Bullseye lantern
+            || (
+                has(ctx, 4546) && // Bullseye lantern (unf)
+                has(ctx, 1939) && // Swamp tar 
+                has(ctx, 1607) && // Sapphire
+                has(ctx, 590) // Tinderbox
+            )
+        ),
         hasUsableAxe(ctx), //
         hasUsablePickaxe(ctx), //
         (canDoGuardiansOfTheRift(ctx) //
@@ -4103,13 +4284,13 @@ function canCompleteLunarDiplomacy(ctx) {
 
 function canCompleteMageArenaI(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Magic", 60)
+        hasNonBoostableSkillLevel(ctx, "Magic", 60)
     ]);
 }
 
 function canCompleteMageArenaII(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Magic", 75),
+        hasNonBoostableSkillLevel(ctx, "Magic", 75),
         requiresQuest(ctx, "canCompleteMageArenaI", canCompleteMageArenaI), //
         has(ctx, 565), // Blood rune
         hasElementalRuneSources(ctx, ["air", "fire"]), //
@@ -4118,7 +4299,7 @@ function canCompleteMageArenaII(ctx) {
 
 function canCompleteMakingFriendsWithMyArm(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Firemaking", 66),
+        hasNonBoostableSkillLevel(ctx, "Firemaking", 66),
         hasSkillLevel(ctx, "Mining", 72),
         hasSkillLevel(ctx, "Construction", 35),
         hasSkillLevel(ctx, "Agility", 68),
@@ -4192,12 +4373,12 @@ function canCompleteMonkeyMadnessI(ctx) {
 
 function canCompleteMonkeyMadnessII(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Slayer", 69),
-        hasSkillLevel(ctx, "Crafting", 70),
-        hasSkillLevel(ctx, "Hunter", 60),
-        hasSkillLevel(ctx, "Agility", 55),
-        hasSkillLevel(ctx, "Thieving", 55),
-        hasSkillLevel(ctx, "Firemaking", 60),
+        hasNonBoostableSkillLevel(ctx, "Slayer", 69),
+        hasNonBoostableSkillLevel(ctx, "Crafting", 70),
+        hasNonBoostableSkillLevel(ctx, "Hunter", 60),
+        hasNonBoostableSkillLevel(ctx, "Agility", 55),
+        hasNonBoostableSkillLevel(ctx, "Thieving", 55),
+        hasNonBoostableSkillLevel(ctx, "Firemaking", 60),
         requiresQuest(ctx, "canCompleteEnlightenedJourney", canCompleteEnlightenedJourney), //
         has(ctx, 1513), // Magic logs
         requiresQuest(ctx, "canCompleteTheEyesOfGlouphrie", canCompleteTheEyesOfGlouphrie), //
@@ -4230,8 +4411,8 @@ function canCompleteMountainDaughter(ctx) {
 
 function canCompleteMourningsEndPartI(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Ranged", 60),
-        hasSkillLevel(ctx, "Thieving", 50),
+        hasNonBoostableSkillLevel(ctx, "Ranged", 60),
+        hasNonBoostableSkillLevel(ctx, "Thieving", 50),
         canStartMourningsEndPartI(ctx), //
         has(ctx, 948), // Bear fur
         has(ctx, 950), // Silk
@@ -4265,7 +4446,7 @@ function canCompleteMurderMystery(ctx) {
 function canCompleteMyArmsBigAdventure(ctx) {
     return allTrue([
         hasSkillLevel(ctx, "Farming", 29),
-        hasSkillLevel(ctx, "Woodcutting", 10),
+        hasNonBoostableSkillLevel(ctx, "Woodcutting", 10),
         requiresQuest(ctx, "canCompleteEadgarsRuse", canCompleteEadgarsRuse), //
         requiresQuest(ctx, "canCompleteTheFeud", canCompleteTheFeud), //
         requiresQuest(ctx, "canCompleteJunglePotion", canCompleteJunglePotion), //
@@ -4276,6 +4457,13 @@ function canCompleteMyArmsBigAdventure(ctx) {
         has(ctx, 5341), // Rake
         has(ctx, 5343), // Seed dibber
         canReachTrollheim(ctx),
+    ]);
+}
+
+function canGoDiving(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteRFDAnotherCooksQuest", canCompleteRFDAnotherCooksQuest), //
+        has(ctx, 6667), // Empty fishbowl
     ]);
 }
 
@@ -4342,11 +4530,11 @@ function canCompletePandemonium(ctx) {
 
 function canCompletePerilousMoons(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Slayer", 48),
-        hasSkillLevel(ctx, "Hunter", 20),
-        hasSkillLevel(ctx, "Fishing", 20),
-        hasSkillLevel(ctx, "Runecraft", 20),
-        hasSkillLevel(ctx, "Construction", 10),
+        hasNonBoostableSkillLevel(ctx, "Slayer", 48),
+        hasNonBoostableSkillLevel(ctx, "Hunter", 20),
+        hasNonBoostableSkillLevel(ctx, "Fishing", 20),
+        hasNonBoostableSkillLevel(ctx, "Runecraft", 20),
+        hasNonBoostableSkillLevel(ctx, "Construction", 10),
         canStartPerilousMoons(ctx), //
         hasKnifeOrNarwhalKnife(ctx), // Knife
         has(ctx, 2347), // Hammer
@@ -4404,8 +4592,8 @@ function canCompletePrinceAliRescue(ctx) {
 
 function canCompletePryingTimes(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Smithing", 30),
-        hasSkillLevel(ctx, "Sailing", 12),
+        hasNonBoostableSkillLevel(ctx, "Smithing", 30),
+        hasNonBoostableSkillLevel(ctx, "Sailing", 12),
         requiresQuest(ctx, "canCompletePandemonium", canCompletePandemonium), //
         requiresQuest(ctx, "canCompleteTheKnightsSword", canCompleteTheKnightsSword), //
         has(ctx, 2347), // Hammer
@@ -4425,7 +4613,7 @@ function canCompleteRagAndBoneManI(ctx) {
 function canCompleteRagAndBoneManII(ctx) {
     return allTrue([
         hasSkillLevel(ctx, "Slayer", 40),
-        hasSkillLevel(ctx, "Defence", 20),
+        hasNonBoostableSkillLevel(ctx, "Defence", 20),
         requiresQuest(ctx, "canCompleteRagAndBoneManI", canCompleteRagAndBoneManI), //
         has(ctx, 1931), // Pot
         has(ctx, 590), // Tinderbox
@@ -4433,7 +4621,7 @@ function canCompleteRagAndBoneManII(ctx) {
         (requiresQuest(ctx, "canCompleteSkippyAndTheMogres", canCompleteSkippyAndTheMogres) || canShortrange(ctx)), //
         (canStartZogreFleshEaters(ctx) || (hasTelegrabRunes(ctx) && canShortrange(ctx))), //
         requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
-        requiresQuest(ctx, "canCompleteCreatureOfFenkenstrain", canCompleteCreatureOfFenkenstrain), //
+        has(ctx, 952), // Spade, as only this is needed to gain access to experiments cave
         canEnterLumbridgeSwampCaves(ctx), //
     ]);
 }
@@ -4518,7 +4706,7 @@ function canCompleteRecruitmentDrive(ctx) {
 
 function canCompleteRegicide(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Crafting", 10),
+        hasNonBoostableSkillLevel(ctx, "Crafting", 10),
         hasSkillLevel(ctx, "Agility", 56),
         requiresQuest(ctx, "canCompleteUndergroundPass", canCompleteUndergroundPass), //
         , // Bow and arrows needed, but thats a huge one... TODO
@@ -4537,6 +4725,7 @@ function canCompleteRegicide(ctx) {
 function canCompleteRFDAnotherCooksQuest(ctx) {
     return allTrue([
         requiresQuest(ctx, "canCompleteCooksAssistant", canCompleteCooksAssistant), //
+        hasNonBoostableSkillLevel(ctx, "Cooking", 10),
         has(ctx, 221), // Eye of newt
         has(ctx, 1909), // Greenman's ale
         has(ctx, 2084), // Fruit blast
@@ -4556,7 +4745,7 @@ function canCompleteRFDFreeingEvilDave(ctx) {
 function canCompleteRFDFreeingKingAwowogei(ctx) {
     return allTrue([
         hasSkillLevel(ctx, "Cooking", 70),
-        hasSkillLevel(ctx, "Agility", 48),
+        hasNonBoostableSkillLevel(ctx, "Agility", 48),
         requiresQuest(ctx, "canCompleteRFDAnotherCooksQuest", canCompleteRFDAnotherCooksQuest), //
         requiresQuest(ctx, "canCompleteMonkeyMadnessI", canCompleteMonkeyMadnessI), //
         has(ctx, 954), // Rope
@@ -4686,7 +4875,7 @@ function canCompleteRumDeal(ctx) {
         hasSkillLevel(ctx, "Crafting", 42),
         hasSkillLevel(ctx, "Farming", 40),
         hasSkillLevel(ctx, "Prayer", 47),
-        hasSkillLevel(ctx, "Slayer", 42),
+        hasNonBoostableSkillLevel(ctx, "Slayer", 42),
         hasSkillLevel(ctx, "Fishing", 50),
         requiresQuest(ctx, "canCompleteZogreFleshEaters", canCompleteZogreFleshEaters), //
         requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
@@ -4701,15 +4890,15 @@ function canCompleteRuneMysteries(ctx) {
 
 function canCompleteScorpionCatcher(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Prayer", 31),
+        hasNonBoostableSkillLevel(ctx, "Prayer", 31),
     ]);
 }
 
 function canCompleteScrambled(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Construction", 38),
-        hasSkillLevel(ctx, "Cooking", 36),
-        hasSkillLevel(ctx, "Smithing", 35),
+        hasNonBoostableSkillLevel(ctx, "Construction", 38),
+        hasNonBoostableSkillLevel(ctx, "Cooking", 36),
+        hasNonBoostableSkillLevel(ctx, "Smithing", 35),
         requiresQuest(ctx, "canCompleteChildrenOfTheSun", canCompleteChildrenOfTheSun), //
         has(ctx, 1921), // Bowl of water
         hasAnyNails(ctx), //
@@ -4730,9 +4919,9 @@ function canCompleteSeaSlug(ctx) {
 
 function canCompleteSecretsOfTheNorth(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Agility", 69),
-        hasSkillLevel(ctx, "Thieving", 64),
-        hasSkillLevel(ctx, "Hunter", 56),
+        hasNonBoostableSkillLevel(ctx, "Agility", 69),
+        hasNonBoostableSkillLevel(ctx, "Thieving", 64),
+        hasNonBoostableSkillLevel(ctx, "Hunter", 56),
         requiresQuest(ctx, "canCompleteMakingFriendsWithMyArm", canCompleteMakingFriendsWithMyArm), //
         requiresQuest(ctx, "canCompleteTheGeneralsShadow", canCompleteTheGeneralsShadow), //
         requiresQuest(ctx, "canCompleteDeviousMinds", canCompleteDeviousMinds), //
@@ -4770,15 +4959,14 @@ function canCompleteShadowOfTheStorm(ctx) {
 
 function canCompleteShadowsOfCustodia(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Slayer", 54),
-        hasSkillLevel(ctx, "Fishing", 45),
-        hasSkillLevel(ctx, "Construction", 41),
-        hasSkillLevel(ctx, "Hunter", 36),
+        hasNonBoostableSkillLevel(ctx, "Slayer", 54),
+        hasNonBoostableSkillLevel(ctx, "Fishing", 45),
+        hasNonBoostableSkillLevel(ctx, "Construction", 41),
+        hasNonBoostableSkillLevel(ctx, "Hunter", 36),
         requiresQuest(ctx, "canCompleteChildrenOfTheSun", canCompleteChildrenOfTheSun), //
         has(ctx, 847), // Willow longbow
         has(ctx, 1517), // Maple logs
         has(ctx, 2347), // Hammer
-        hasFishingRod(ctx) // Fishing rod
     ]);
 }
 
@@ -4809,13 +4997,13 @@ function canCompleteShiloVillage(ctx) {
 
 function canCompleteSinsOfTheFather(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Woodcutting", 62),
-        hasSkillLevel(ctx, "Fletching", 60),
-        hasSkillLevel(ctx, "Crafting", 56),
-        hasSkillLevel(ctx, "Agility", 52),
-        hasSkillLevel(ctx, "Attack", 50),
-        hasSkillLevel(ctx, "Slayer", 50),
-        hasSkillLevel(ctx, "Magic", 49),
+        hasNonBoostableSkillLevel(ctx, "Woodcutting", 62),
+        hasNonBoostableSkillLevel(ctx, "Fletching", 60),
+        hasNonBoostableSkillLevel(ctx, "Crafting", 56),
+        hasNonBoostableSkillLevel(ctx, "Agility", 52),
+        hasNonBoostableSkillLevel(ctx, "Attack", 50),
+        hasNonBoostableSkillLevel(ctx, "Slayer", 50),
+        hasNonBoostableSkillLevel(ctx, "Magic", 49),
         requiresQuest(ctx, "canCompleteVampyreSlayer", canCompleteVampyreSlayer), //
         requiresQuest(ctx, "canCompleteATasteOfHope", canCompleteATasteOfHope), //
         has(ctx, 1603), // Ruby
@@ -4839,7 +5027,7 @@ function canCompleteSkippyAndTheMogres(ctx) {
 
 function canCompleteSleepingGiants(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Smithing", 15),
+        hasNonBoostableSkillLevel(ctx, "Smithing", 15),
         hasAnyNails(ctx), //
         has(ctx, 1521), // Oak logs
         has(ctx, 1737), // Wool
@@ -4851,14 +5039,14 @@ function canCompleteSleepingGiants(ctx) {
 
 function canCompleteSongOfTheElves(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Agility", 70),
-        hasSkillLevel(ctx, "Construction", 70),
-        hasSkillLevel(ctx, "Farming", 70),
-        hasSkillLevel(ctx, "Herblore", 70),
-        hasSkillLevel(ctx, "Hunter", 70),
-        hasSkillLevel(ctx, "Mining", 70),
-        hasSkillLevel(ctx, "Smithing", 70),
-        hasSkillLevel(ctx, "Woodcutting", 70),
+        hasNonBoostableSkillLevel(ctx, "Agility", 70),
+        hasNonBoostableSkillLevel(ctx, "Construction", 70),
+        hasNonBoostableSkillLevel(ctx, "Farming", 70),
+        hasNonBoostableSkillLevel(ctx, "Herblore", 70),
+        hasNonBoostableSkillLevel(ctx, "Hunter", 70),
+        hasNonBoostableSkillLevel(ctx, "Mining", 70),
+        hasNonBoostableSkillLevel(ctx, "Smithing", 70),
+        hasNonBoostableSkillLevel(ctx, "Woodcutting", 70),
         requiresQuest(ctx, "canCompleteMourningsEndPartII", canCompleteMourningsEndPartII), //
         requiresQuest(ctx, "canCompleteMakingHistory", canCompleteMakingHistory), //
         requiresQuest(ctx, "canCompleteDruidicRitual", canCompleteDruidicRitual), //
@@ -4933,7 +5121,7 @@ function canCompleteSwanSong(ctx) {
 function canCompleteTaiBwoWannaiTrio(ctx) {
     return allTrue([
         hasSkillLevel(ctx, "Agility", 15),
-        hasSkillLevel(ctx, "Cooking", 30),
+        hasNonBoostableSkillLevel(ctx, "Cooking", 30),
         hasSkillLevel(ctx, "Fishing", 65),
         requiresQuest(ctx, "canCompleteJunglePotion", canCompleteJunglePotion), //
         hasSlashWeapon(ctx), //
@@ -4953,8 +5141,8 @@ function canCompleteTaiBwoWannaiTrio(ctx) {
 
 function canCompleteTaleOfTheRighteous(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Mining", 10),
-        hasSkillLevel(ctx, "Strength", 16),
+        hasNonBoostableSkillLevel(ctx, "Mining", 10),
+        hasNonBoostableSkillLevel(ctx, "Strength", 16),
         requiresQuest(ctx, "canCompleteClientOfKourend", canCompleteClientOfKourend), //
         has(ctx, 954), // Rope
         hasAirRuneSource(ctx), //
@@ -4969,7 +5157,14 @@ function canCompleteTearsOfGuthix(ctx) {
         hasSkillLevel(ctx, "Firemaking", 49),
         hasSkillLevel(ctx, "Crafting", 20),
         hasSkillLevel(ctx, "Mining", 20),
-        has(ctx, 4548), // Bullseye lantern
+        (has(ctx, 4548) // Bullseye lantern
+            || (
+                has(ctx, 4546) && // Bullseye lantern (unf)
+                has(ctx, 1939) && // Swamp tar 
+                has(ctx, 1607) && // Sapphire
+                has(ctx, 590) // Tinderbox
+            )
+        ),
         has(ctx, 1607), // Sapphire
         has(ctx, 1755), // Chisel
         has(ctx, 590), // Tinderbox
@@ -4988,7 +5183,7 @@ function canCompleteTempleOfIkov(ctx) {
 
 function canCompleteTempleOfTheEye(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Runecraft", 10),
+        hasNonBoostableSkillLevel(ctx, "Runecraft", 10),
         requiresQuest(ctx, "canCompleteRuneMysteries", canCompleteRuneMysteries), //
         has(ctx, 1929), // Bucket of water
         has(ctx, 1755), // Chisel
@@ -4997,7 +5192,7 @@ function canCompleteTempleOfTheEye(ctx) {
 
 function canCompleteTheAscentOfArceuus(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Hunter", 12),
+        hasNonBoostableSkillLevel(ctx, "Hunter", 12),
         requiresQuest(ctx, "canCompleteClientOfKourend", canCompleteClientOfKourend),
     ]);
 }
@@ -5011,12 +5206,12 @@ function canCompleteTheCorsairCurse(ctx) {
 
 function canCompleteTheCurseOfArrav(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Mining", 64),
-        hasSkillLevel(ctx, "Ranged", 62),
-        hasSkillLevel(ctx, "Thieving", 62),
-        hasSkillLevel(ctx, "Agility", 61),
-        hasSkillLevel(ctx, "Strength", 58),
-        hasSkillLevel(ctx, "Slayer", 37),
+        hasNonBoostableSkillLevel(ctx, "Mining", 64),
+        hasNonBoostableSkillLevel(ctx, "Ranged", 62),
+        hasNonBoostableSkillLevel(ctx, "Thieving", 62),
+        hasNonBoostableSkillLevel(ctx, "Agility", 61),
+        hasNonBoostableSkillLevel(ctx, "Strength", 58),
+        hasNonBoostableSkillLevel(ctx, "Slayer", 37),
         requiresQuest(ctx, "canCompleteDefenderOfVarrock", canCompleteDefenderOfVarrock), //
         requiresQuest(ctx, "canCompleteTrollRomance", canCompleteTrollRomance), //
         has(ctx, 2126), // Dwellberries
@@ -5029,7 +5224,7 @@ function canCompleteTheCurseOfArrav(ctx) {
 
 function canCompleteTheDepthsOfDespair(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Agility", 18),
+        hasNonBoostableSkillLevel(ctx, "Agility", 18),
         requiresQuest(ctx, "canCompleteClientOfKourend", canCompleteClientOfKourend)
     ]);
 }
@@ -5058,8 +5253,8 @@ function canCompleteTheEnchantedKey(ctx) {
 
 function canCompleteTheEyesOfGlouphrie(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Construction", 5),
-        hasSkillLevel(ctx, "Magic", 46),
+        hasNonBoostableSkillLevel(ctx, "Construction", 5),
+        hasNonBoostableSkillLevel(ctx, "Magic", 46),
         requiresQuest(ctx, "canCompleteTheGrandTree", canCompleteTheGrandTree), //
         has(ctx, 4687), // Bucket of sap
         has(ctx, 4698), // Mud rune
@@ -5073,7 +5268,7 @@ function canCompleteTheEyesOfGlouphrie(ctx) {
 
 function canCompleteTheFeud(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Thieving", 30),
+        hasNonBoostableSkillLevel(ctx, "Thieving", 30),
         has(ctx, 4591), // Kharidian headpiece
         has(ctx, 4593), // Fake beard
         has(ctx, 1917), // Beer
@@ -5083,9 +5278,9 @@ function canCompleteTheFeud(ctx) {
 
 function canCompleteTheFinalDawn(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Thieving", 66),
-        hasSkillLevel(ctx, "Runecraft", 52),
-        hasSkillLevel(ctx, "Fletching", 52),
+        hasNonBoostableSkillLevel(ctx, "Thieving", 66),
+        hasNonBoostableSkillLevel(ctx, "Runecraft", 52),
+        hasNonBoostableSkillLevel(ctx, "Fletching", 52),
         requiresQuest(ctx, "canCompleteTheHeartOfDarkness", canCompleteTheHeartOfDarkness), //
         requiresQuest(ctx, "canCompletePerilousMoons", canCompletePerilousMoons), //
         hasKnifeOrNarwhalKnife(ctx), // Knife
@@ -5119,11 +5314,11 @@ function canCompleteTheForsakenTower(ctx) {
 
 function canCompleteTheFremennikExiles(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Crafting", 65),
-        hasSkillLevel(ctx, "Slayer", 60),
-        hasSkillLevel(ctx, "Smithing", 60),
-        hasSkillLevel(ctx, "Fishing", 60),
-        hasSkillLevel(ctx, "Runecraft", 55),
+        hasNonBoostableSkillLevel(ctx, "Crafting", 65),
+        hasNonBoostableSkillLevel(ctx, "Slayer", 60),
+        hasNonBoostableSkillLevel(ctx, "Smithing", 60),
+        hasNonBoostableSkillLevel(ctx, "Fishing", 60),
+        hasNonBoostableSkillLevel(ctx, "Runecraft", 55),
         hasSkillLevel(ctx, "Mining", 60),
         requiresQuest(ctx, "canCompleteTheFremennikIsles", canCompleteTheFremennikIsles), //
         requiresQuest(ctx, "canCompleteLunarDiplomacy", canCompleteLunarDiplomacy), //
@@ -5175,10 +5370,10 @@ function canAccessDessicatedPagesBosses(ctx) {
 
 function canCompleteTheFrozenDoor(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Hitpoints", 70),
-        hasSkillLevel(ctx, "Strength", 70),
-        hasSkillLevel(ctx, "Agility", 70),
-        hasSkillLevel(ctx, "Ranged", 70),
+        hasNonBoostableSkillLevel(ctx, "Hitpoints", 70),
+        hasNonBoostableSkillLevel(ctx, "Strength", 70),
+        hasNonBoostableSkillLevel(ctx, "Agility", 70),
+        hasNonBoostableSkillLevel(ctx, "Ranged", 70),
         requiresQuest(ctx, "canCompleteDesertTreasureI", canCompleteDesertTreasureI), //
         canDoKreearra(ctx), //
         canDoGeneralGraardor(ctx), //
@@ -5189,7 +5384,7 @@ function canCompleteTheFrozenDoor(ctx) {
 
 function canCompleteTheGardenOfDeath(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Farming", 20),
+        hasNonBoostableSkillLevel(ctx, "Farming", 20),
         has(ctx, 5329), // Secateurs
     ]);
 }
@@ -5237,9 +5432,9 @@ function canCompleteTheGrandTree(ctx) {
 
 function canCompleteTheGreatBrainRobbery(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Crafting", 16), //
-        hasSkillLevel(ctx, "Construction", 30), //
-        hasSkillLevel(ctx, "Prayer", 50), //
+        hasNonBoostableSkillLevel(ctx, "Crafting", 16), //
+        hasNonBoostableSkillLevel(ctx, "Construction", 30), //
+        hasNonBoostableSkillLevel(ctx, "Prayer", 50), //
         requiresQuest(ctx, "canCompleteCreatureOfFenkenstrain", canCompleteCreatureOfFenkenstrain), //
         requiresQuest(ctx, "canCompleteCabinFever", canCompleteCabinFever), //
         requiresQuest(ctx, "canCompleteRFDFreeingPiratePete", canCompleteRFDFreeingPiratePete), //
@@ -5264,8 +5459,8 @@ function canStartTheGreatBrainRobbery(ctx) {
 
 function canCompleteTheHandInTheSand(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Thieving", 17),
-        hasSkillLevel(ctx, "Crafting", 49),
+        hasNonBoostableSkillLevel(ctx, "Thieving", 17),
+        hasNonBoostableSkillLevel(ctx, "Crafting", 49),
         has(ctx, 1917), // Beer
         has(ctx, 229), // Vial
         has(ctx, 1951), // Redberries
@@ -5278,10 +5473,10 @@ function canCompleteTheHandInTheSand(ctx) {
 
 function canCompleteTheHeartOfDarkness(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Mining", 55), //
-        hasSkillLevel(ctx, "Thieving", 48), //
-        hasSkillLevel(ctx, "Slayer", 48), //
-        hasSkillLevel(ctx, "Agility", 46), //
+        hasNonBoostableSkillLevel(ctx, "Mining", 55), //
+        hasNonBoostableSkillLevel(ctx, "Thieving", 48), //
+        hasNonBoostableSkillLevel(ctx, "Slayer", 48), //
+        hasNonBoostableSkillLevel(ctx, "Agility", 46), //
         hasUsablePickaxe(ctx), //
     ]);
 }
@@ -5308,11 +5503,11 @@ function canCompleteTheLostTribe(ctx) {
 
 function canCompleteThePathOfGlouphrie(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Strength", 60),
-        hasSkillLevel(ctx, "Slayer", 56),
-        hasSkillLevel(ctx, "Thieving", 56),
-        hasSkillLevel(ctx, "Ranged", 47),
-        hasSkillLevel(ctx, "Agility", 45),
+        hasNonBoostableSkillLevel(ctx, "Strength", 60),
+        hasNonBoostableSkillLevel(ctx, "Slayer", 56),
+        hasNonBoostableSkillLevel(ctx, "Thieving", 56),
+        hasNonBoostableSkillLevel(ctx, "Ranged", 47),
+        hasNonBoostableSkillLevel(ctx, "Agility", 45),
         requiresQuest(ctx, "canCompleteTheEyesOfGlouphrie", canCompleteTheEyesOfGlouphrie), //
         requiresQuest(ctx, "canCompleteWaterfallQuest", canCompleteWaterfallQuest), //
         requiresQuest(ctx, "canCompleteTreeGnomeVillage", canCompleteTreeGnomeVillage), //
@@ -5322,7 +5517,7 @@ function canCompleteThePathOfGlouphrie(ctx) {
 
 function canCompleteTheQueenOfThieves(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Thieving", 20),
+        hasNonBoostableSkillLevel(ctx, "Thieving", 20),
         requiresQuest(ctx, "canCompleteClientOfKourend", canCompleteClientOfKourend),
         has(ctx, 2003), // Stew
     ]);
@@ -5330,8 +5525,8 @@ function canCompleteTheQueenOfThieves(ctx) {
 
 function canCompleteTheRedReef(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Sailing", 52),
-        hasSkillLevel(ctx, "Smithing", 48),
+        hasNonBoostableSkillLevel(ctx, "Sailing", 52),
+        hasNonBoostableSkillLevel(ctx, "Smithing", 48),
         requiresQuest(ctx, "canCompleteTroubledTortugans", canCompleteTroubledTortugans),
     ]);
 }
@@ -5428,7 +5623,7 @@ function canCompleteTheRestlessGhost(ctx) {
 
 function canCompleteTheRibbitingTaleOfALilyPadLabourDispute(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Woodcutting", 15),
+        hasNonBoostableSkillLevel(ctx, "Woodcutting", 15),
         requiresQuest(ctx, "canCompleteChildrenOfTheSun", canCompleteChildrenOfTheSun),
         hasUsableAxe(ctx),
     ]);
@@ -5437,8 +5632,8 @@ function canCompleteTheRibbitingTaleOfALilyPadLabourDispute(ctx) {
 function canCompleteTheSlugMenace(ctx) {
     return allTrue([
         hasSkillLevel(ctx, "Crafting", 30),
-        hasSkillLevel(ctx, "Runecraft", 30),
-        hasSkillLevel(ctx, "Slayer", 30),
+        hasNonBoostableSkillLevel(ctx, "Runecraft", 30),
+        hasNonBoostableSkillLevel(ctx, "Slayer", 30),
         hasSkillLevel(ctx, "Thieving", 30),
         requiresQuest(ctx, "canCompleteWanted", canCompleteWanted), //
         requiresQuest(ctx, "canCompleteSeaSlug", canCompleteSeaSlug), //
@@ -5517,12 +5712,12 @@ function canCompleteTrollStronghold(ctx) {
 
 function canCompleteTroubledTortugans(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Slayer", 51), //
-        hasSkillLevel(ctx, "Construction", 48), //
-        hasSkillLevel(ctx, "Sailing", 45), //
-        hasSkillLevel(ctx, "Hunter", 45), //
-        hasSkillLevel(ctx, "Woodcutting", 40), //
-        hasSkillLevel(ctx, "Crafting", 34), //
+        hasNonBoostableSkillLevel(ctx, "Slayer", 51), //
+        hasNonBoostableSkillLevel(ctx, "Construction", 48), //
+        hasNonBoostableSkillLevel(ctx, "Sailing", 45), //
+        hasNonBoostableSkillLevel(ctx, "Hunter", 45), //
+        hasNonBoostableSkillLevel(ctx, "Woodcutting", 40), //
+        hasNonBoostableSkillLevel(ctx, "Crafting", 34), //
         requiresQuest(ctx, "canCompletePandemonium", canCompletePandemonium), //
         hasUsableAxe(ctx),
         has(ctx, 401), // Seaweed
@@ -5598,7 +5793,7 @@ function canCompleteWaterfallQuest(ctx) {
 
 function canCompleteWhatLiesBelow(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Runecraft", 35),
+        hasNonBoostableSkillLevel(ctx, "Runecraft", 35),
         requiresQuest(ctx, "canCompleteRuneMysteries", canCompleteRuneMysteries), //
         has(ctx, 1923), // Bowl
         has(ctx, 562), // Chaos rune
@@ -5612,12 +5807,12 @@ function canCompleteWhatLiesBelow(ctx) {
 
 function canCompleteWhileGuthixSleeps(ctx) {
     return allTrue([
-        hasSkillLevel(ctx, "Thieving", 72),
-        hasSkillLevel(ctx, "Magic", 67),
-        hasSkillLevel(ctx, "Agility", 66),
-        hasSkillLevel(ctx, "Farming", 65),
-        hasSkillLevel(ctx, "Herblore", 65),
-        hasSkillLevel(ctx, "Hunter", 62),
+        hasNonBoostableSkillLevel(ctx, "Thieving", 72),
+        hasNonBoostableSkillLevel(ctx, "Magic", 67),
+        hasNonBoostableSkillLevel(ctx, "Agility", 66),
+        hasNonBoostableSkillLevel(ctx, "Farming", 65),
+        hasNonBoostableSkillLevel(ctx, "Herblore", 65),
+        hasNonBoostableSkillLevel(ctx, "Hunter", 62),
         hasQuestPoints(ctx, 180), //
         requiresQuest(ctx, "canCompleteDefenderOfVarrock", canCompleteDefenderOfVarrock), //
         requiresQuest(ctx, "canCompleteThePathOfGlouphrie", canCompleteThePathOfGlouphrie), //
@@ -5633,7 +5828,6 @@ function canCompleteWhileGuthixSleeps(ctx) {
         has(ctx, 567), // Unpowered orb
         has(ctx, 1139), // Bronze med helm
         has(ctx, 1101), // Iron chainbody
-        has(ctx, 4548), // Bullseye lantern
         has(ctx, 1607), // Sapphire
         has(ctx, 1951), // Redberries
         has(ctx, 239), // White berries
@@ -5673,7 +5867,7 @@ function canCompleteZogreFleshEaters(ctx) {
     return allTrue([
         hasSkillLevel(ctx, "Smithing", 4),
         hasSkillLevel(ctx, "Herblore", 8),
-        hasSkillLevel(ctx, "Ranged", 30),
+        hasNonBoostableSkillLevel(ctx, "Ranged", 30),
         requiresQuest(ctx, "canCompleteBigChompyBirdHunting", canCompleteBigChompyBirdHunting), //
         requiresQuest(ctx, "canCompleteJunglePotion", canCompleteJunglePotion), //
     ]);

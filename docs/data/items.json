@@ -2236,6 +2236,30 @@
     }
   },
   {
+    "index": 4521,
+    "id": 31926,
+    "name": "Adamant chainshot cannonball",
+    "image": "Adamant_chainshot_cannonball.png",
+    "sources": {
+      "other": {
+        "Crafting chainshot cannonball": {
+          "notes": "Requires completion of Pandemonium, adamant cannonball and a chain.",
+          "rule": {
+            "all": [
+              "canCompletePandemonium",
+              {
+                "has": 31912
+              },
+              {
+                "has": 32886
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
     "index": 57,
     "id": 3100,
     "name": "Adamant claws",
@@ -3232,6 +3256,30 @@
       "drops": {
         "Reward casket (medium) Standard": {
           "droprate": "1/1133"
+        }
+      }
+    }
+  },
+  {
+    "index": 4529,
+    "id": 31940,
+    "name": "Adamant incendiary cannonball",
+    "image": "Adamant_incendiary_cannonball.png",
+    "sources": {
+      "other": {
+        "Crafting incendiary cannonball": {
+          "notes": "Requires completion of Pandemonium, adamant cannonball and rubium splinters.",
+          "rule": {
+            "all": [
+              "canCompletePandemonium",
+              {
+                "has": 31912
+              },
+              {
+                "has": 31722
+              }
+            ]
+          }
         }
       }
     }
@@ -30955,6 +31003,30 @@
     }
   },
   {
+    "index": 4520,
+    "id": 31918,
+    "name": "Bronze chainshot cannonball",
+    "image": "Bronze_chainshot_cannonball.png",
+    "sources": {
+      "other": {
+        "Crafting chainshot cannonball": {
+          "notes": "Requires completion of Pandemonium, bronze cannonball and a chain.",
+          "rule": {
+            "all": [
+              "canCompletePandemonium",
+              {
+                "has": 31906
+              },
+              {
+                "has": 32886
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
     "index": 832,
     "id": 3095,
     "name": "Bronze claws",
@@ -31672,6 +31744,30 @@
     "tags": [
       "Melee"
     ]
+  },
+  {
+    "index": 4528,
+    "id": 31932,
+    "name": "Bronze incendiary cannonball",
+    "image": "Bronze_incendiary_cannonball.png",
+    "sources": {
+      "other": {
+        "Crafting incendiary cannonball": {
+          "notes": "Requires completion of Pandemonium, bronze cannonball and rubium splinters.",
+          "rule": {
+            "all": [
+              "canCompletePandemonium",
+              {
+                "has": 31906
+              },
+              {
+                "has": 31722
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 856,
@@ -36953,7 +37049,10 @@
         "Araxxor": {
           "droprate": "1/7187.5"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/7375"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/7375"
         },
         "Long-tailed Wyvern": {
@@ -39070,6 +39169,9 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "spawns": {
+        "Yes": "hasButler"
       },
       "other": {
         "Cooking a Chocolate cake": {
@@ -42364,7 +42466,10 @@
         "Sergeant Strongstack": {
           "droprate": "1/15.875"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/19.667"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/19.667"
         },
         "Chest (Bryophyta's lair) Free-to-play": {
@@ -43562,6 +43667,9 @@
         "Steel dragon Standard": {
           "droprate": "1/128"
         }
+      },
+      "spawns": {
+        "Yes": "hasButler"
       },
       "other": {
         "Cooking a Curry": {
@@ -51674,7 +51782,10 @@
         "Araxxor": {
           "droprate": "1/4791.7"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/4916.7"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/4916.7"
         },
         "Long-tailed Wyvern": {
@@ -53837,7 +53948,10 @@
         "Grimy Lizard": {
           "droprate": "1/4.741"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/6.556"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/6.556"
         },
         "Malevolent Mage": {
@@ -54598,7 +54712,7 @@
     "sources": {
       "drops": {
         "Dolphin": {
-          "droprate": "1/1000"
+          "droprate": "1/1200"
         },
         "Orca": {
           "droprate": "1/70"
@@ -56275,11 +56389,14 @@
       },
       "other": {
         "Crafting an Empty oil lamp": {
-          "notes": "Requires Molten glass and level 12 Crafting.",
+          "notes": "Requires Molten glass, glassblowing pipe and level 12 Crafting.",
           "rule": {
             "all": [
               {
                 "has": 1775
+              },
+              {
+                "has": 1785
               },
               {
                 "skill": "Crafting",
@@ -68618,7 +68735,10 @@
         "Abhorrent spectre": {
           "droprate": "3 × 1/52.5"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "2 × 1/39.333"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "2 × 1/39.333"
         },
         "Phosani's Nightmare": {
@@ -69624,7 +69744,10 @@
         "Ancient chest": {
           "droprate": "2 × 1/33"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "2 × 1/39.333"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "2 × 1/39.333"
         },
         "Abhorrent spectre": {
@@ -73508,7 +73631,10 @@
         "Abhorrent spectre": {
           "droprate": "3 × 1/42"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "2 × 1/31.467"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "2 × 1/31.467"
         },
         "Flight Kilisa": {
@@ -74529,7 +74655,10 @@
         "Abhorrent spectre": {
           "droprate": "3 × 1/70"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "2 × 1/52.444"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "2 × 1/52.444"
         },
         "Repugnant spectre": {
@@ -78705,7 +78834,10 @@
         "Ancient chest": {
           "droprate": "2 × 1/33"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/19.667"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/19.667"
         },
         "Dark Chest": {
@@ -84925,6 +85057,30 @@
     }
   },
   {
+    "index": 4522,
+    "id": 31920,
+    "name": "Iron chainshot cannonball",
+    "image": "Iron_chainshot_cannonball.png",
+    "sources": {
+      "other": {
+        "Crafting chainshot cannonball": {
+          "notes": "Requires completion of Pandemonium, iron cannonball and a chain.",
+          "rule": {
+            "all": [
+              "canCompletePandemonium",
+              {
+                "has": 31908
+              },
+              {
+                "has": 32886
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
     "index": 2035,
     "id": 3096,
     "name": "Iron claws",
@@ -85814,6 +85970,30 @@
     "tags": [
       "Melee"
     ]
+  },
+  {
+    "index": 4527,
+    "id": 31934,
+    "name": "Iron incendiary cannonball",
+    "image": "Iron_incendiary_cannonball.png",
+    "sources": {
+      "other": {
+        "Crafting incendiary cannonball": {
+          "notes": "Requires completion of Pandemonium, iron cannonball and rubium splinters.",
+          "rule": {
+            "all": [
+              "canCompletePandemonium",
+              {
+                "has": 31908
+              },
+              {
+                "has": 31722
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 2059,
@@ -92892,7 +93072,10 @@
         "Elder Chaos druid": {
           "droprate": "1/18.429"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/19.667"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/19.667"
         },
         "Chest (Bryophyta's lair) Free-to-play": {
@@ -96911,7 +97094,10 @@
         "Taloned Wyvern": {
           "droprate": "1/2562.5"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/2681.8"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/2681.8"
         },
         "Deranged archaeologist": {
@@ -98006,7 +98192,10 @@
         "Araxxor": {
           "droprate": "1/1597.2"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/1638.9"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/1638.9"
         },
         "Deranged archaeologist": {
@@ -98734,7 +98923,10 @@
         "Araxxor": {
           "droprate": "1/1597.2"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/1638.9"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/1638.9"
         },
         "Long-tailed Wyvern": {
@@ -102467,6 +102659,30 @@
     }
   },
   {
+    "index": 4523,
+    "id": 31924,
+    "name": "Mithril chainshot cannonball",
+    "image": "Mithril_chainshot_cannonball.png",
+    "sources": {
+      "other": {
+        "Crafting chainshot cannonball": {
+          "notes": "Requires completion of Pandemonium, mithril cannonball and a chain.",
+          "rule": {
+            "all": [
+              "canCompletePandemonium",
+              {
+                "has": 31910
+              },
+              {
+                "has": 32886
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
     "index": 2454,
     "id": 3099,
     "name": "Mithril claws",
@@ -103272,6 +103488,30 @@
     "tags": [
       "Melee"
     ]
+  },
+  {
+    "index": 4532,
+    "id": 31938,
+    "name": "Mithril incendiary cannonball",
+    "image": "Mithril_incendiary_cannonball.png",
+    "sources": {
+      "other": {
+        "Crafting incendiary cannonball": {
+          "notes": "Requires completion of Pandemonium, mithril cannonball and rubium splinters.",
+          "rule": {
+            "all": [
+              "canCompletePandemonium",
+              {
+                "has": 31910
+              },
+              {
+                "has": 31722
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 2478,
@@ -106424,7 +106664,10 @@
     "image": "mort_myre_fungus.png",
     "sources": {
       "drops": {
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "Always"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "Always"
         },
         "Chest (alchemist's signet)": {
@@ -106483,8 +106726,8 @@
     "sources": {
       "other": {
         "Using a Silver sickle (b)": {
-          "notes": "Requires completing Priest in Peril.",
-          "rule": "canUseSilverSickle"
+          "notes": "Requires completing Nature Spirit.",
+          "rule": "canCompleteNatureSpirit"
         }
       }
     }
@@ -106497,8 +106740,8 @@
     "sources": {
       "other": {
         "Using a Silver sickle (b)": {
-          "notes": "Requires completing Priest in Peril.",
-          "rule": "canUseSilverSickle"
+          "notes": "Requires completing Nature Spirit.",
+          "rule": "canCompleteNatureSpirit"
         }
       }
     }
@@ -106644,7 +106887,10 @@
         "Mutated Tortoise": {
           "droprate": "3 × 1/12.8"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/6.556"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/6.556"
         },
         "Warped Tortoise": {
@@ -106928,7 +107174,10 @@
     "image": "mushroom_spore.png",
     "sources": {
       "drops": {
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/11.8"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/11.8"
         },
         "Zygomite Level 86": {
@@ -108684,7 +108933,10 @@
         "Zamorak wizard": {
           "droprate": "1/18.286"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/19.667"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/19.667"
         },
         "Lobstrosity": {
@@ -109770,7 +110022,7 @@
         "Taloned Wyvern": {
           "droprate": "1/1.944"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/2.778"
         },
         "Herbiboar": {
@@ -114002,7 +114254,10 @@
         "Araxxor": {
           "droprate": "1/2875"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/2950"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/2950"
         },
         "Long-tailed Wyvern": {
@@ -114182,7 +114437,10 @@
         "Araxxor": {
           "droprate": "1/2053.6"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/2107.1"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/2107.1"
         },
         "Long-tailed Wyvern": {
@@ -115154,6 +115412,9 @@
         "Yama": {
           "droprate": "1/12.681"
         }
+      },
+      "spawns": {
+        "Yes": "hasButler"
       },
       "other": {
         "Cooking a Pineapple pizza": {
@@ -120036,7 +120297,10 @@
         "Cyclops Warriors' Guild Basement": {
           "droprate": "1/895.7"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/983.3"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/983.3"
         },
         "Deranged archaeologist": {
@@ -124425,7 +124689,10 @@
         "Araxxor": {
           "droprate": "1/7187.5"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/7375"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/7375"
         },
         "Long-tailed Wyvern": {
@@ -126529,6 +126796,19 @@
     }
   },
   {
+    "index": 4526,
+    "id": 31722,
+    "name": "Rubium splinters",
+    "image": "Rubium_splinters.png",
+    "sources": {
+      "drops": {
+        "Rubium rocks": {
+          "droprate": "Always"
+        }
+      }
+    }
+  },
+  {
     "index": 3165,
     "id": 1603,
     "name": "Ruby",
@@ -127794,7 +128074,10 @@
         "Tree spirit": {
           "droprate": "1/32"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/39.333"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/39.333"
         },
         "Dark Chest": {
@@ -128327,6 +128610,30 @@
               },
               {
                 "has": 2347
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "index": 4524,
+    "id": 31928,
+    "name": "Rune chainshot cannonball",
+    "image": "Rune_chainshot_cannonball.png",
+    "sources": {
+      "other": {
+        "Crafting chainshot cannonball": {
+          "notes": "Requires completion of Pandemonium, rune cannonball and a chain.",
+          "rule": {
+            "all": [
+              "canCompletePandemonium",
+              {
+                "has": 31914
+              },
+              {
+                "has": 32886
               }
             ]
           }
@@ -129583,6 +129890,30 @@
       "drops": {
         "Reward casket (hard)": {
           "droprate": "1/1625"
+        }
+      }
+    }
+  },
+  {
+    "index": 4531,
+    "id": 31942,
+    "name": "Rune incendiary cannonball",
+    "image": "Rune_incendiary_cannonball.png",
+    "sources": {
+      "other": {
+        "Crafting incendiary cannonball": {
+          "notes": "Requires completion of Pandemonium, rune cannonball and rubium splinters.",
+          "rule": {
+            "all": [
+              "canCompletePandemonium",
+              {
+                "has": 31914
+              },
+              {
+                "has": 31722
+              }
+            ]
+          }
         }
       }
     }
@@ -136284,7 +136615,7 @@
     "index": 4513,
     "id": 33577,
     "name": "Seeking adamant arrow",
-    "image": "Seeking_adamant_arrow.png",
+    "image": "Seeking_adamant_arrow_5.png",
     "sources": {
       "other": {
         "Crafting Seeking arrows": {
@@ -136331,7 +136662,7 @@
     "index": 4514,
     "id": 33589,
     "name": "Seeking amethyst arrow",
-    "image": "Seeking_amethyst_arrow.png",
+    "image": "Seeking_amethyst_arrow_5.png",
     "sources": {
       "other": {
         "Crafting Seeking arrows": {
@@ -136378,7 +136709,7 @@
     "index": 4512,
     "id": 33553,
     "name": "Seeking bronze arrow",
-    "image": "Seeking_bronze_arrow.png",
+    "image": "Seeking_bronze_arrow_5.png",
     "sources": {
       "other": {
         "Crafting Seeking arrows": {
@@ -136421,7 +136752,7 @@
     "index": 4515,
     "id": 33595,
     "name": "Seeking dragon arrow",
-    "image": "Seeking_dragon_arrow.png",
+    "image": "Seeking_dragon_arrow_5.png",
     "sources": {
       "other": {
         "Crafting Seeking arrows": {
@@ -136468,7 +136799,7 @@
     "index": 4516,
     "id": 33559,
     "name": "Seeking iron arrow",
-    "image": "Seeking_iron_arrow.png",
+    "image": "Seeking_iron_arrow_5.png",
     "sources": {
       "other": {
         "Crafting Seeking arrows": {
@@ -136515,7 +136846,7 @@
     "index": 4517,
     "id": 33571,
     "name": "Seeking mithril arrow",
-    "image": "Seeking_mithril_arrow.png",
+    "image": "Seeking_mithril_arrow_5.png",
     "sources": {
       "other": {
         "Crafting Seeking arrows": {
@@ -136562,7 +136893,7 @@
     "index": 4518,
     "id": 33583,
     "name": "Seeking rune arrow",
-    "image": "Seeking_rune_arrow.png",
+    "image": "Seeking_rune_arrow_5.png",
     "sources": {
       "other": {
         "Crafting Seeking arrows": {
@@ -136609,7 +136940,7 @@
     "index": 4519,
     "id": 33565,
     "name": "Seeking steel arrow",
-    "image": "Seeking_steel_arrow.png",
+    "image": "Seeking_steel_arrow_5.png",
     "sources": {
       "other": {
         "Crafting Seeking arrows": {
@@ -137945,6 +138276,9 @@
         "Reward casket (beginner)": {
           "droprate": "1/44.727"
         }
+      },
+      "spawns": {
+        "Yes": "hasButler"
       },
       "other": {
         "Cooking some Shrimps": {
@@ -140290,7 +140624,10 @@
         "Opulent salvage": {
           "droprate": "1/1004.7"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/1053.6"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/1053.6"
         },
         "Lizardman Level 62": {
@@ -145172,6 +145509,30 @@
     }
   },
   {
+    "index": 4525,
+    "id": 31922,
+    "name": "Steel chainshot cannonball",
+    "image": "Steel_chainshot_cannonball.png",
+    "sources": {
+      "other": {
+        "Crafting chainshot cannonball": {
+          "notes": "Requires completion of Pandemonium, steel cannonball and a chain.",
+          "rule": {
+            "all": [
+              "canCompletePandemonium",
+              {
+                "has": 2
+              },
+              {
+                "has": 32886
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
     "index": 3673,
     "id": 3097,
     "name": "Steel claws",
@@ -146090,6 +146451,30 @@
     "tags": [
       "Melee"
     ]
+  },
+  {
+    "index": 4530,
+    "id": 31936,
+    "name": "Steel incendiary cannonball",
+    "image": "Steel_incendiary_cannonball.png",
+    "sources": {
+      "other": {
+        "Crafting incendiary cannonball": {
+          "notes": "Requires completion of Pandemonium, steel cannonball and rubium splinters.",
+          "rule": {
+            "all": [
+              "canCompletePandemonium",
+              {
+                "has": 2
+              },
+              {
+                "has": 31722
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 3697,
@@ -148345,6 +148730,9 @@
     "sources": {
       "shops": {
         "Yes": "No requirements"
+      },
+      "spawns": {
+        "Yes": "hasButler"
       },
       "other": {
         "Seers Pub": {
@@ -152527,7 +152915,10 @@
         "Lunar Chest": {
           "droprate": "6 × 1/10"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/9.219"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/9.219"
         },
         "Zygomite Level 74": {
@@ -155012,7 +155403,10 @@
         "Araxxor": {
           "droprate": "1/1597.2"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/1638.9"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/1638.9"
         },
         "Deranged archaeologist": {
@@ -158754,7 +159148,10 @@
         "Araxxor": {
           "droprate": "1/1306.8"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/1340.9"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/1340.9"
         },
         "Long-tailed Wyvern": {
@@ -167160,7 +167557,10 @@
         "Araxxor": {
           "droprate": "1/1369"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/1404.8"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/1404.8"
         },
         "Obor Members": {
@@ -169538,7 +169938,10 @@
         "Araxxor": {
           "droprate": "1/1437.5"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/1475"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/1475"
         },
         "Long-tailed Wyvern": {
@@ -172064,7 +172467,10 @@
         "Tormented Demon": {
           "droprate": "1/708.3"
         },
-        "Ancient Zygomite": {
+        "Ancient Zygomite (Stalker Den)": {
+          "droprate": "1/1638.9"
+        },
+        "Ancient Zygomite (Fossil Island)": {
           "droprate": "1/1638.9"
         },
         "Deranged archaeologist": {

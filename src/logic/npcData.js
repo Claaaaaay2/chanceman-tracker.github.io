@@ -644,7 +644,7 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
-    "Ancient Zygomite": {
+    "Ancient Zygomite (Stalker Den)": {
         "wiki": "https://oldschool.runescape.wiki/w/Ancient_Zygomite",
         "rule": ["canCompleteShadowsOfCustodia"],
         "skill": ["Slayer"],
@@ -793,7 +793,7 @@ export const NPC_DATA = {
     },
     "Aquanite": {
         "wiki": "https://oldschool.runescape.wiki/w/Aquanite",
-        "rule": ["canAccessSunbleakIsland"],
+        "rule": ["canAccessYnsdailIsland"],
         "skill": ["Slayer", "sailing"],
         "level": [78, 73],
         "tags": [],
@@ -5308,7 +5308,7 @@ export const NPC_DATA = {
     },
     "Elder aquanite": {
         "wiki": "https://oldschool.runescape.wiki/w/Elder_aquanite",
-        "rule": ["canAccessSunbleakIsland"],
+        "rule": ["canAccessYnsdailIsland"],
         "skill": ["Slayer", "sailing"],
         "level": [78, 73],
         "tags": ["superior"],
@@ -5316,7 +5316,7 @@ export const NPC_DATA = {
     },
     "Elder aquanite Normal": {
         "wiki": "https://oldschool.runescape.wiki/w/Elder_aquanite#Normal",
-        "rule": ["canAccessSunbleakIsland"],
+        "rule": ["canAccessYnsdailIsland"],
         "skill": ["Slayer", "sailing"],
         "level": [78, 73],
         "tags": ["superior"],
@@ -5399,6 +5399,7 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompleteTroubledTortugans",
+                "canGoDiving",
                 "canPlantPlants",
                 "hasElkhornFrag"
             ]
@@ -11470,6 +11471,7 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompleteTroubledTortugans",
+                "canGoDiving",
                 "canPlantPlants",
                 "hasPillarFrag"
             ]
@@ -12690,7 +12692,12 @@ export const NPC_DATA = {
     },
     "Rosewood tree": {
         "wiki": "https://oldschool.runescape.wiki/w/Rosewood_tree",
-        "rule": ["canTrainWoodcutting"],
+        "rule": {
+            "all": [
+                "canTrainWoodcutting",
+                "canAccessDrumstickIsle"
+            ]
+        },
         "skill": ["woodcutting", "sailing"],
         "level": [92, 79],
         "tags": [],
@@ -12714,6 +12721,14 @@ export const NPC_DATA = {
         "rule": ["canCompleteTheTouristTrap"],
         "skill": [],
         "level": [],
+        "tags": [],
+        "f2p": false
+    },
+    "Rubium rocks": {
+        "wiki": "https://oldschool.runescape.wiki/w/Rubium_rocks",
+        "rule": ["canTrainMining"],
+        "skill": ["sailing", "mining"],
+        "level": [60, 48],
         "tags": [],
         "f2p": false
     },
@@ -13193,7 +13208,8 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canPlantTrees",
-                "hasSeaweedSpore"
+                "hasSeaweedSpore",
+                "canGoDiving"
             ]
         },
         "skill": ["farming"],
@@ -15547,6 +15563,7 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompleteTroubledTortugans",
+                "canGoDiving",
                 "canPlantPlants",
                 "hasUmbralFrag"
             ]
