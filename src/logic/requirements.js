@@ -8092,10 +8092,10 @@ function canMakeAdamantKeel(ctx) {
             && (has(ctx, 32011) // Adamant keel parts
                 || has(ctx, 32032)) // Large adamant keel parts
         ) || (has(ctx, 32892) // Cupronickel bar
-            || (has(ctx, 32014) // Rune keel parts
+            && (has(ctx, 32014) // Rune keel parts
                 || has(ctx, 32035)) // Large rune keel parts
         ) || (has(ctx, 32892) // Cupronickel bar
-            || (has(ctx, 32017) // Dragon keel parts
+            && (has(ctx, 32017) // Dragon keel parts
                 || has(ctx, 32038)) // Large dragon keel parts
         )
     );
