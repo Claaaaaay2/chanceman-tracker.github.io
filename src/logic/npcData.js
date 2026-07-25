@@ -905,7 +905,7 @@ export const NPC_DATA = {
     },
     "Artio": {
         "wiki": "https://oldschool.runescape.wiki/w/Artio",
-        "rule": ["canCompleteWildernessDiaryHard"],
+        "rule": ["canTrainSlayer"],
         "skill": [],
         "level": [],
         "tags": ["boss"],
@@ -2760,7 +2760,7 @@ export const NPC_DATA = {
     },
     "Calvar'ion": {
         "wiki": "https://oldschool.runescape.wiki/w/Calvar%27ion",
-        "rule": ["canCompleteWildernessDiaryHard"],
+        "rule": ["canTrainSlayer"],
         "skill": [],
         "level": [],
         "tags": ["boss"],
@@ -3421,7 +3421,7 @@ export const NPC_DATA = {
     },
     "Chest (Rogues' Castle)": {
         "wiki": "https://oldschool.runescape.wiki/w/Chest_(Rogues%27_Castle)",
-        "rule": ["canTrainSlayer"],
+        "rule": ["canCompleteWildernessDiaryHard"],
         "skill": ["thieving"],
         "level": [84],
         "tags": [],
@@ -9629,7 +9629,7 @@ export const NPC_DATA = {
     },
     "Lundail Medium Wilderness diary": {
         "wiki": "https://oldschool.runescape.wiki/w/Lundail#Medium_Wilderness_diary",
-        "rule": ["canTrainSlayer"],
+        "rule": ["canCompleteWildernessDiaryMedium"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -14309,7 +14309,7 @@ export const NPC_DATA = {
     },
     "Spindel": {
         "wiki": "https://oldschool.runescape.wiki/w/Spindel",
-        "rule": ["canCompleteWildernessDiaryHard"],
+        "rule": ["canTrainSlayer"],
         "skill": [],
         "level": [],
         "tags": ["boss"],
@@ -16987,7 +16987,7 @@ export const NPC_DATA = {
     },
     "Zombie pirate Diary": {
         "wiki": "https://oldschool.runescape.wiki/w/Zombie_pirate#Diary",
-        "rule": ["canTrainSlayer"],
+        "rule": ["canCompleteWildernessDiaryMedium"],
         "skill": [],
         "level": [],
         "tags": [],
