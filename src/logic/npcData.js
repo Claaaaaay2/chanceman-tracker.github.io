@@ -2725,7 +2725,7 @@ export const NPC_DATA = {
     },
     "Callisto": {
         "wiki": "https://oldschool.runescape.wiki/w/Callisto",
-        "rule": ["canCompleteWildernessDiaryMedium"],
+        "rule": ["canTrainSlayer"],
         "skill": [],
         "level": [],
         "tags": ["boss"],
@@ -3421,7 +3421,7 @@ export const NPC_DATA = {
     },
     "Chest (Rogues' Castle)": {
         "wiki": "https://oldschool.runescape.wiki/w/Chest_(Rogues%27_Castle)",
-        "rule": ["canCompleteWildernessDiaryMedium"],
+        "rule": ["canTrainSlayer"],
         "skill": ["thieving"],
         "level": [84],
         "tags": [],
@@ -9629,7 +9629,7 @@ export const NPC_DATA = {
     },
     "Lundail Medium Wilderness diary": {
         "wiki": "https://oldschool.runescape.wiki/w/Lundail#Medium_Wilderness_diary",
-        "rule": ["canCompleteWildernessDiaryMedium"],
+        "rule": ["canTrainSlayer"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -12726,7 +12726,12 @@ export const NPC_DATA = {
     },
     "Rubium rocks": {
         "wiki": "https://oldschool.runescape.wiki/w/Rubium_rocks",
-        "rule": ["canTrainMining"],
+        "rule": {
+            "all": [
+                "canTrainMining",
+                "hasRope"
+            ]
+        },
         "skill": ["sailing", "mining"],
         "level": [60, 48],
         "tags": [],
@@ -15836,7 +15841,7 @@ export const NPC_DATA = {
     },
     "Venenatis": {
         "wiki": "https://oldschool.runescape.wiki/w/Venenatis",
-        "rule": ["canCompleteWildernessDiaryMedium"],
+        "rule": ["canTrainSlayer"],
         "skill": [],
         "level": [],
         "tags": ["boss"],
@@ -15860,7 +15865,7 @@ export const NPC_DATA = {
     },
     "Vet'ion": {
         "wiki": "https://oldschool.runescape.wiki/w/Vet%27ion",
-        "rule": ["canCompleteWildernessDiaryMedium"],
+        "rule": ["canTrainSlayer"],
         "skill": [],
         "level": [],
         "tags": ["boss"],
@@ -16982,7 +16987,7 @@ export const NPC_DATA = {
     },
     "Zombie pirate Diary": {
         "wiki": "https://oldschool.runescape.wiki/w/Zombie_pirate#Diary",
-        "rule": ["canCompleteWildernessDiaryMedium"],
+        "rule": ["canTrainSlayer"],
         "skill": [],
         "level": [],
         "tags": [],

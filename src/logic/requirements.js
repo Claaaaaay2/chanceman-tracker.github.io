@@ -2242,6 +2242,9 @@ export const REQUIREMENT_CHECKS = {
     canCompleteImpCatcher(ctx) {
         return canCompleteImpCatcher(ctx);
     },
+    canTrainSlayer(ctx) {
+        return canTrainSlayer(ctx);
+    },
     canAerialFish(ctx) {
         return canAerialFish(ctx);
     },
@@ -6485,6 +6488,7 @@ function canKillKalphitesOutsideLair(ctx) {
     // Outside of Slayer-locked mode, these are available in the Kalphite Cave on task.
     return true;
 }
+
 
 function canEnterAncientCavern(ctx) {
     return requiresQuest(ctx, "canCompleteBarbarianFiremaking1", canCompleteBarbarianFiremaking1);
