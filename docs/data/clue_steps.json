@@ -6886,12 +6886,12 @@
                 }
             },
             {
-                "description": "02 degrees 58 minutes north,\n34 degrees 30 minutes east",
+                "description": "02 degrees 56 minutes north,\n34 degrees 30 minutes east",
                 "type": "Coordinates",
                 "requirements": {
                     "skills": {},
                     "quests": {
-                        "Priest in Peril": "completed"
+                        "In Search of the Myreque": "completed"
                     },
                     "items": [],
                     "untracked": [],
@@ -8152,7 +8152,7 @@
                     "untracked": [],
                     "itemsAny": [],
                     "rulesAll": [
-                        "canStartPerilousMoons"
+                        "canCompletePerilousMoons"
                     ],
                     "rulesAny": []
                 }

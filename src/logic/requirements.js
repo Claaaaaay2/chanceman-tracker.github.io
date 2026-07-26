@@ -4621,7 +4621,7 @@ function canCompleteRagAndBoneManII(ctx) {
         has(ctx, 1931), // Pot
         has(ctx, 590), // Tinderbox
         hasAnyLog(ctx), //
-        (requiresQuest(ctx, "canCompleteSkippyAndTheMogres", canCompleteSkippyAndTheMogres) || canShortrange(ctx)), //
+        requiresQuest(ctx, "canCompleteSkippyAndTheMogres", canCompleteSkippyAndTheMogres), //
         (canStartZogreFleshEaters(ctx) || (hasTelegrabRunes(ctx) && canShortrange(ctx))), //
         requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
         has(ctx, 952), // Spade, as only this is needed to gain access to experiments cave
