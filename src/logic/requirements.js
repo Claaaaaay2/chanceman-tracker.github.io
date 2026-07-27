@@ -3419,7 +3419,7 @@ function canBuildSink(ctx) {
         has(ctx, 2347), // Hammer
         has(ctx, 8794), // Saw
         (
-            has (ctx, 2353) ||                                          // Steel bar
+            has(ctx, 2353) ||                                           // Steel bar
             has(ctx, 26266) && has(ctx, 8782) && has(ctx, 8784)         // Condensed gold + Mahogany plank + gold leaf
         )
     ]);
@@ -3452,7 +3452,7 @@ function canBuildBed(ctx) {
         (
             (has(ctx, 960) && hasAnyNails(ctx) && has(ctx, 8790)) || // Wooden bed: Plank + Nails + Bolt of cloth
             (has(ctx, 8778) && has(ctx, 8790)) ||                    // Oak bed: Oak plank + Bolt of cloth
-            (has(ctx, 8780) && has(ctx, 8790))                       // Teak bed: Teak plank + Bolt of cloth
+            (has(ctx, 8780) && has(ctx, 8790)) ||                    // Teak bed: Teak plank + Bolt of cloth
             (has(ctx, 8782) && has(ctx, 8790))                       // Mahogany bed: Mahogany plank + Bolt of cloth
         )
     ]);
