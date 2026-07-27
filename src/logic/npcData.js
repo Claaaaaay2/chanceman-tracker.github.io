@@ -905,7 +905,7 @@ export const NPC_DATA = {
     },
     "Artio": {
         "wiki": "https://oldschool.runescape.wiki/w/Artio",
-        "rule": ["canCompleteWildernessDiaryHard"],
+        "rule": ["canTrainSlayer"],
         "skill": [],
         "level": [],
         "tags": ["boss"],
@@ -2725,7 +2725,7 @@ export const NPC_DATA = {
     },
     "Callisto": {
         "wiki": "https://oldschool.runescape.wiki/w/Callisto",
-        "rule": ["canCompleteWildernessDiaryMedium"],
+        "rule": ["canTrainSlayer"],
         "skill": [],
         "level": [],
         "tags": ["boss"],
@@ -2760,7 +2760,7 @@ export const NPC_DATA = {
     },
     "Calvar'ion": {
         "wiki": "https://oldschool.runescape.wiki/w/Calvar%27ion",
-        "rule": ["canCompleteWildernessDiaryHard"],
+        "rule": ["canTrainSlayer"],
         "skill": [],
         "level": [],
         "tags": ["boss"],
@@ -3421,7 +3421,7 @@ export const NPC_DATA = {
     },
     "Chest (Rogues' Castle)": {
         "wiki": "https://oldschool.runescape.wiki/w/Chest_(Rogues%27_Castle)",
-        "rule": ["canCompleteWildernessDiaryMedium"],
+        "rule": ["canCompleteWildernessDiaryHard"],
         "skill": ["thieving"],
         "level": [84],
         "tags": [],
@@ -12726,7 +12726,12 @@ export const NPC_DATA = {
     },
     "Rubium rocks": {
         "wiki": "https://oldschool.runescape.wiki/w/Rubium_rocks",
-        "rule": ["canTrainMining"],
+        "rule": {
+            "all": [
+                "canTrainMining",
+                "hasRope"
+            ]
+        },
         "skill": ["sailing", "mining"],
         "level": [60, 48],
         "tags": [],
@@ -14304,7 +14309,7 @@ export const NPC_DATA = {
     },
     "Spindel": {
         "wiki": "https://oldschool.runescape.wiki/w/Spindel",
-        "rule": ["canCompleteWildernessDiaryHard"],
+        "rule": ["canTrainSlayer"],
         "skill": [],
         "level": [],
         "tags": ["boss"],
@@ -15836,7 +15841,7 @@ export const NPC_DATA = {
     },
     "Venenatis": {
         "wiki": "https://oldschool.runescape.wiki/w/Venenatis",
-        "rule": ["canCompleteWildernessDiaryMedium"],
+        "rule": ["canTrainSlayer"],
         "skill": [],
         "level": [],
         "tags": ["boss"],
@@ -15860,7 +15865,7 @@ export const NPC_DATA = {
     },
     "Vet'ion": {
         "wiki": "https://oldschool.runescape.wiki/w/Vet%27ion",
-        "rule": ["canCompleteWildernessDiaryMedium"],
+        "rule": ["canTrainSlayer"],
         "skill": [],
         "level": [],
         "tags": ["boss"],

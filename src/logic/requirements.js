@@ -2242,6 +2242,9 @@ export const REQUIREMENT_CHECKS = {
     canCompleteImpCatcher(ctx) {
         return canCompleteImpCatcher(ctx);
     },
+    canTrainSlayer(ctx) {
+        return canTrainSlayer(ctx);
+    },
     canAerialFish(ctx) {
         return canAerialFish(ctx);
     },
@@ -3416,7 +3419,7 @@ function canBuildSink(ctx) {
         has(ctx, 2347), // Hammer
         has(ctx, 8794), // Saw
         (
-            has (ctx, 2353) ||                                          // Steel bar
+            has(ctx, 2353) ||                                           // Steel bar
             has(ctx, 26266) && has(ctx, 8782) && has(ctx, 8784)         // Condensed gold + Mahogany plank + gold leaf
         )
     ]);
@@ -3449,7 +3452,7 @@ function canBuildBed(ctx) {
         (
             (has(ctx, 960) && hasAnyNails(ctx) && has(ctx, 8790)) || // Wooden bed: Plank + Nails + Bolt of cloth
             (has(ctx, 8778) && has(ctx, 8790)) ||                    // Oak bed: Oak plank + Bolt of cloth
-            (has(ctx, 8780) && has(ctx, 8790))                       // Teak bed: Teak plank + Bolt of cloth
+            (has(ctx, 8780) && has(ctx, 8790)) ||                    // Teak bed: Teak plank + Bolt of cloth
             (has(ctx, 8782) && has(ctx, 8790))                       // Mahogany bed: Mahogany plank + Bolt of cloth
         )
     ]);
@@ -4618,7 +4621,7 @@ function canCompleteRagAndBoneManII(ctx) {
         has(ctx, 1931), // Pot
         has(ctx, 590), // Tinderbox
         hasAnyLog(ctx), //
-        (requiresQuest(ctx, "canCompleteSkippyAndTheMogres", canCompleteSkippyAndTheMogres) || canShortrange(ctx)), //
+        requiresQuest(ctx, "canCompleteSkippyAndTheMogres", canCompleteSkippyAndTheMogres), //
         (canStartZogreFleshEaters(ctx) || (hasTelegrabRunes(ctx) && canShortrange(ctx))), //
         requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
         has(ctx, 952), // Spade, as only this is needed to gain access to experiments cave
@@ -6486,6 +6489,7 @@ function canKillKalphitesOutsideLair(ctx) {
     return true;
 }
 
+
 function canEnterAncientCavern(ctx) {
     return requiresQuest(ctx, "canCompleteBarbarianFiremaking1", canCompleteBarbarianFiremaking1);
 }
@@ -8092,10 +8096,10 @@ function canMakeAdamantKeel(ctx) {
             && (has(ctx, 32011) // Adamant keel parts
                 || has(ctx, 32032)) // Large adamant keel parts
         ) || (has(ctx, 32892) // Cupronickel bar
-            || (has(ctx, 32014) // Rune keel parts
+            && (has(ctx, 32014) // Rune keel parts
                 || has(ctx, 32035)) // Large rune keel parts
         ) || (has(ctx, 32892) // Cupronickel bar
-            || (has(ctx, 32017) // Dragon keel parts
+            && (has(ctx, 32017) // Dragon keel parts
                 || has(ctx, 32038)) // Large dragon keel parts
         )
     );
