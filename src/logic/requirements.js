@@ -2889,10 +2889,37 @@ export const REQUIREMENT_CHECKS = {
     canAccessYnsdailIsland(ctx) {  
         return canAccessYnsdailIsland(ctx);
     },
+    canAccessWyrmscraigIsland(ctx) {  
+        return canAccessWyrmscraigIsland(ctx);
+    },
+    canCompleteGardenOfDeath(ctx) {
+        return canCompleteGardenOfDeath(ctx);
+    },
+    canCompleteFallenFromGrace(ctx) {  
+        return canCompleteFallenFromGrace(ctx);
+    },
     never(ctx) {
         return false;
     }
 };
+
+function canAccessWyrmscraigIsland (ctx) {
+    return allTrue([
+        hasSkillLevel(ctx, "Sailing", 62), //
+    ]);
+}
+
+function canCompleteFallenFromGrace(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompletePandemonium", canCompletePandemonium), //
+        hasNonBoostableSkillLevel(ctx, "Sailing", 62), //
+        hasNonBoostableSkillLevel(ctx, "Crafting", 60), //
+        hasNonBoostableSkillLevel(ctx, "Runecraft", 47), //
+        hasNonBoostableSkillLevel(ctx, "Mining", 53), //
+        has(ctx, 1755), // Chisel
+        hasUsablePickaxe(ctx) // Pickaxe
+    ]);
+}
 
 function canAccessYnsdailIsland(ctx) {
     return allTrue([
@@ -6567,6 +6594,7 @@ function canEnterTheCharredDungeon(ctx) {
 function canReachWyrmsTask(ctx) {
     return canEnterTheCharredDungeon(ctx)
         || canStartPerilousMoonsAndReachWyrmlings(ctx)
+        || canAccessWyrmscraigIsland(ctx)
         || hasAnyItems(ctx, [21643, 23037, 22951]); // Granite boots, Boots of stone, Boots of brimstone
 }
 

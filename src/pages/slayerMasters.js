@@ -7,6 +7,7 @@ const SLAYER_RULE_LABELS = {
     canReachWyrmsTask: "Any of: Granite boots / Boots of stone / Boots of brimstone, access to the Charred Dungeon, or can start Perilous Moons and reach Wyrmlings",
     canReachAbyssalSire: "Can reach Abyssal Sire area",
     canReachTrollheim: "Can reach Trollheim",
+    canAccessWyrmscraigIsland: "Can access Wyrmscraig Island",
     hasUsableAxe: "Has a usable axe"
 };
 

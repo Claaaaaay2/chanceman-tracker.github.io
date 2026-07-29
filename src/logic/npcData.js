@@ -9298,7 +9298,12 @@ export const NPC_DATA = {
     },
     "Lava Strykewyrm": {
         "wiki": "https://oldschool.runescape.wiki/w/Lava_Strykewyrm",
-        "rule": ["canEnterTheCharredDungeon"],
+        "rule": {
+            "any": [
+                "canEnterTheCharredDungeon",
+                "canAccessWyrmscraigIsland"
+            ]
+        },
         "skill": ["Slayer"],
         "level": [62],
         "tags": [],
@@ -9651,6 +9656,14 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
+    "Mad Angel": {
+        "wiki": "https://oldschool.runescape.wiki/w/Mad_Angel",
+        "rule": ["canCompleteFallenFromGrace"],
+        "skill": [],
+        "level": [],
+        "tags": ["boss"],
+        "f2p": false
+    },
     "Maggot King": {
         "wiki": "https://oldschool.runescape.wiki/w/Maggot_King",
         "rule": ["canCompleteTheBloodMoonRises"],
@@ -9756,7 +9769,12 @@ export const NPC_DATA = {
     },
     "Magma strykewyrm": {
         "wiki": "https://oldschool.runescape.wiki/w/Magma_strykewyrm",
-        "rule": ["canEnterTheCharredDungeon"],
+        "rule": {
+            "any": [
+                "canEnterTheCharredDungeon",
+                "canAccessWyrmscraigIsland"
+            ]
+        },
         "skill": ["Slayer"],
         "level": [62],
         "tags": ["superior"],
@@ -9764,7 +9782,12 @@ export const NPC_DATA = {
     },
     "Magma strykewyrm Normal": {
         "wiki": "https://oldschool.runescape.wiki/w/Magma_strykewyrm#Normal",
-        "rule": ["canEnterTheCharredDungeon"],
+        "rule": {
+            "any": [
+                "canEnterTheCharredDungeon",
+                "canAccessWyrmscraigIsland"
+            ]
+        },
         "skill": ["Slayer"],
         "level": [62],
         "tags": ["superior"],
@@ -10824,7 +10847,7 @@ export const NPC_DATA = {
             ]
         },
         "skill": ["mining", "sailing"],
-        "level": [74, 67],
+        "level": [74, 62],
         "tags": [],
         "f2p": false
     },
@@ -16546,7 +16569,12 @@ export const NPC_DATA = {
     },
     "Wyrm": {
         "wiki": "https://oldschool.runescape.wiki/w/Wyrm",
-        "rule": ["canEnterKaruulmSlayerDungeon"],
+        "rule": {
+            "any": [
+                "canEnterKaruulmSlayerDungeon",
+                "canAccessWyrmscraigIsland"
+            ]
+        },
         "skill": ["Slayer"],
         "level": [62],
         "tags": [],
@@ -16554,9 +16582,22 @@ export const NPC_DATA = {
     },
     "Wyrmling": {
         "wiki": "https://oldschool.runescape.wiki/w/Wyrmling",
-        "rule": ["canStartPerilousMoonsAndReachWyrmlings"],
+        "rule": {
+            "any": [
+                "canStartPerilousMoonsAndReachWyrmlings",
+                "canAccessWyrmscraigIsland"
+            ]
+        },
         "skill": ["Slayer"],
         "level": [62],
+        "tags": [],
+        "f2p": false
+    },
+    "Wyrmscraig Goat": {
+        "wiki": "https://oldschool.runescape.wiki/w/Wyrmscraig_Goat",
+        "rule": ["canAccessWyrmscraigIsland"],
+        "skill": [],
+        "level": [],
         "tags": [],
         "f2p": false
     },
@@ -16578,7 +16619,12 @@ export const NPC_DATA = {
     },
     "Yak": {
         "wiki": "https://oldschool.runescape.wiki/w/Yak",
-        "rule": ["canCompleteTheFremennikIsles"],
+        "rule": {
+            "any": [
+                "canCompleteTheFremennikIsles",
+                "canAccessWyrmscraigIsland"
+            ]
+        },
         "skill": [],
         "level": [],
         "tags": [],
