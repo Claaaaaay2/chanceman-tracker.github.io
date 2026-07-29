@@ -16596,8 +16596,8 @@ export const NPC_DATA = {
     "Wyrmscraig Goat": {
         "wiki": "https://oldschool.runescape.wiki/w/Wyrmscraig_Goat",
         "rule": ["canAccessWyrmscraigIsland"],
-        "skill": [],
-        "level": [],
+        "skill": ["hunter"],
+        "level": [60],
         "tags": [],
         "f2p": false
     },
