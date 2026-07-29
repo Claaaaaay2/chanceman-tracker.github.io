@@ -29854,6 +29854,23 @@
     "sources": {
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Fletching Broad bolts": {
+          "notes": "Unfinished broad bolts and Feather and level 55 Fletching.",
+          "rule": {
+            "all": [
+              {
+                "has": 11876
+              },
+              "hasAnyFeather",
+              {
+                "skill": "Fletching",
+                "level": 55
+              }
+            ]
+          }
+        }
       }
     },
     "tags": [
@@ -136480,6 +136497,12 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Questing": {
+          "notes": "Can be obtained from the camping equipment at the start of the garden of death.",
+          "rule": "canCompleteGardenOfDeath"
+        }
       }
     },
     "tags": [
@@ -145549,11 +145572,7 @@
       "other": {
         "Questing": {
           "notes": "Given to you as a reward from Death Plateau.",
-          "rule": {
-            "all": [
-              "canCompleteDeathPlateau"
-            ]
-          }
+          "rule": "canCompleteDeathPlateau"
         },
         "Smithing some Steel claws": {
           "notes": "Requires a Steel bar, a Hammer and completon of Death Plateau and level 41 Smithing.",
