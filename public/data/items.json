@@ -45612,7 +45612,7 @@
           "droprate": "Always"
         },
         "Wyrmscraig Goat": {
-          "droprate": "Always"
+          "droprate": "1/1.333"
         },
         "Corporeal Beast": {
           "droprate": "1/30.118"
@@ -80680,6 +80680,17 @@
             ]
           }
         }
+      }
+    }
+  },
+  {
+    "index": 4542,
+    "id": 34027,
+    "name": "Hallowfell",
+    "image": "Hallowfell.png",
+    "sources": {
+      "shops": {
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -171434,8 +171445,667 @@
     "sources": {
       "drops": {
         "Wyrmscraig Goat": {
-          "droprate": "Unknown"
+          "droprate": "1/4"
         }
+      }
+    }
+  },
+  {
+    "index": 4534,
+    "id": 33872,
+    "name": "Wyrmscraig noble skirt (black)",
+    "image": "Wyrmscraig_noble_skirt_(black).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4535,
+    "id": 33860,
+    "name": "Wyrmscraig noble skirt (blue)",
+    "image": "Wyrmscraig_noble_skirt_(blue).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4536,
+    "id": 33857,
+    "name": "Wyrmscraig noble skirt (green)",
+    "image": "Wyrmscraig_noble_skirt_(green).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4537,
+    "id": 33875,
+    "name": "Wyrmscraig noble skirt (pink)",
+    "image": "Wyrmscraig_noble_skirt_(pink).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4538,
+    "id": 33863,
+    "name": "Wyrmscraig noble skirt (red)",
+    "image": "Wyrmscraig_noble_skirt_(red).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4539,
+    "id": 33869,
+    "name": "Wyrmscraig noble skirt (white)",
+    "image": "Wyrmscraig_noble_skirt_(white).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4540,
+    "id": 33866,
+    "name": "Wyrmscraig noble skirt (yellow)",
+    "image": "Wyrmscraig_noble_skirt_(yellow).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4541,
+    "id": 33878,
+    "name": "Wyrmscraig shoes",
+    "image": "Wyrmscraig_shoes.png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4543,
+    "id": 33881,
+    "name": "Wyrmscraig boots",
+    "image": "Wyrmscraig_boots.png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },  {
+    "index": 4544,
+    "id": 33884,
+    "name": "Wyrmscraig villager robe top (A, green)",
+    "image": "Wyrmscraig_villager_robe_top_(A,_green).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4545,
+    "id": 33887,
+    "name": "Wyrmscraig villager robe top (A, blue)",
+    "image": "Wyrmscraig_villager_robe_top_(A,_blue).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4546,
+    "id": 33890,
+    "name": "Wyrmscraig villager robe top (A, red)",
+    "image": "Wyrmscraig_villager_robe_top_(A,_red).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4547,
+    "id": 33893,
+    "name": "Wyrmscraig villager robe top (A, yellow)",
+    "image": "Wyrmscraig_villager_robe_top_(A,_yellow).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4548,
+    "id": 33896,
+    "name": "Wyrmscraig villager robe top (A, white)",
+    "image": "Wyrmscraig_villager_robe_top_(A,_white).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4549,
+    "id": 33899,
+    "name": "Wyrmscraig villager robe top (A, black)",
+    "image": "Wyrmscraig_villager_robe_top_(A,_black).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4550,
+    "id": 33902,
+    "name": "Wyrmscraig villager robe top (A, pink)",
+    "image": "Wyrmscraig_villager_robe_top_(A,_pink).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4551,
+    "id": 33905,
+    "name": "Wyrmscraig villager robe top (A, yellow)",
+    "image": "Wyrmscraig_villager_robe_top_(A,_yellow).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4552,
+    "id": 33950,
+    "name": "Wyrmscraig villager robe top (B, green)",
+    "image": "Wyrmscraig_villager_robe_top_(B,_green).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4553,
+    "id": 33953,
+    "name": "Wyrmscraig villager robe top (B, blue)",
+    "image": "Wyrmscraig_villager_robe_top_(B,_blue).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4554,
+    "id": 33956,
+    "name": "Wyrmscraig villager robe top (B, red)",
+    "image": "Wyrmscraig_villager_robe_top_(B,_red).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4555,
+    "id": 33959,
+    "name": "Wyrmscraig villager robe top (B, yellow)",
+    "image": "Wyrmscraig_villager_robe_top_(B,_yellow).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4556,
+    "id": 33962,
+    "name": "Wyrmscraig villager robe top (B, white)",
+    "image": "Wyrmscraig_villager_robe_top_(B,_white).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4557,
+    "id": 33965,
+    "name": "Wyrmscraig villager robe top (B, black)",
+    "image": "Wyrmscraig_villager_robe_top_(B,_black).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4558,
+    "id": 33968,
+    "name": "Wyrmscraig villager robe top (B, pink)",
+    "image": "Wyrmscraig_villager_robe_top_(B,_pink).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4559,
+    "id": 33908,
+    "name": "Wyrmscraig villager robe top (B, yellow)",
+    "image": "Wyrmscraig_villager_robe_top_(B,_yellow).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4560,
+    "id": 33911,
+    "name": "Wyrmscraig villager robe bottom (A, blue)",
+    "image": "Wyrmscraig_villager_robe_bottom_(A,_blue).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4561,
+    "id": 33914,
+    "name": "Wyrmscraig villager robe bottom (A, red)",
+    "image": "Wyrmscraig_villager_robe_bottom_(A,_red).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4562,
+    "id": 33917,
+    "name": "Wyrmscraig villager robe bottom (A, yellow)",
+    "image": "Wyrmscraig_villager_robe_bottom_(A,_yellow).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4563,
+    "id": 33920,
+    "name": "Wyrmscraig villager robe bottom (A, white)",
+    "image": "Wyrmscraig_villager_robe_bottom_(A,_white).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4564,
+    "id": 33923,
+    "name": "Wyrmscraig villager robe bottom (A, black)",
+    "image": "Wyrmscraig_villager_robe_bottom_(A,_black).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4565,
+    "id": 33926,
+    "name": "Wyrmscraig villager robe bottom (A, pink)",
+    "image": "Wyrmscraig_villager_robe_bottom_(A,_pink).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4566,
+    "id": 33929,
+    "name": "Wyrmscraig villager robe bottom (B, green)",
+    "image": "Wyrmscraig_villager_robe_bottom_(B,_green).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4567,
+    "id": 33932,
+    "name": "Wyrmscraig villager robe bottom (B, blue)",
+    "image": "Wyrmscraig_villager_robe_bottom_(B,_blue).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4568,
+    "id": 33935,
+    "name": "Wyrmscraig villager robe bottom (B, red)",
+    "image": "Wyrmscraig_villager_robe_bottom_(B,_red).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4569,
+    "id": 33938,
+    "name": "Wyrmscraig villager robe bottom (B, yellow)",
+    "image": "Wyrmscraig_villager_robe_bottom_(B,_yellow).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4570,
+    "id": 33941,
+    "name": "Wyrmscraig villager robe bottom (B, white)",
+    "image": "Wyrmscraig_villager_robe_bottom_(B,_white).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4571,
+    "id": 33944,
+    "name": "Wyrmscraig villager robe bottom (B, black)",
+    "image": "Wyrmscraig_villager_robe_bottom_(B,_black).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4572,
+    "id": 33947,
+    "name": "Wyrmscraig villager robe bottom (B, pink)",
+    "image": "Wyrmscraig_villager_robe_bottom_(B,_pink).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4573,
+    "id": 33971,
+    "name": "Wyrmscraig villager skirt (green)",
+    "image": "Wyrmscraig_villager_skirt_(green).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4574,
+    "id": 33974,
+    "name": "Wyrmscraig villager skirt (blue)",
+    "image": "Wyrmscraig_villager_skirt_(blue).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4575,
+    "id": 33977,
+    "name": "Wyrmscraig villager skirt (red)",
+    "image": "Wyrmscraig_villager_skirt_(red).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4576,
+    "id": 33980,
+    "name": "Wyrmscraig villager skirt (yellow)",
+    "image": "Wyrmscraig_villager_skirt_(yellow).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4577,
+    "id": 33983,
+    "name": "Wyrmscraig villager skirt (white)",
+    "image": "Wyrmscraig_villager_skirt_(white).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4578,
+    "id": 33986,
+    "name": "Wyrmscraig villager skirt (black)",
+    "image": "Wyrmscraig_villager_skirt_(black).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4579,
+    "id": 33989,
+    "name": "Wyrmscraig villager skirt (pink)",
+    "image": "Wyrmscraig_villager_skirt_(pink).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4580,
+    "id": 33992,
+    "name": "Wyrmscraig villager work skirt (green)",
+    "image": "Wyrmscraig_villager_work_skirt_(green).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4581,
+    "id": 33995,
+    "name": "Wyrmscraig villager work skirt (blue)",
+    "image": "Wyrmscraig_villager_work_skirt_(blue).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4582,
+    "id": 33998,
+    "name": "Wyrmscraig villager work skirt (red)",
+    "image": "Wyrmscraig_villager_work_skirt_(red).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4583,
+    "id": 34001,
+    "name": "Wyrmscraig villager work skirt (yellow)",
+    "image": "Wyrmscraig_villager_work_skirt_(yellow).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4584,
+    "id": 34004,
+    "name": "Wyrmscraig villager work skirt (white)",
+    "image": "Wyrmscraig_villager_work_skirt_(white).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4585,
+    "id": 34007,
+    "name": "Wyrmscraig villager work skirt (black)",
+    "image": "Wyrmscraig_villager_work_skirt_(black).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4586,
+    "id": 34010,
+    "name": "Wyrmscraig villager work skirt (pink)",
+    "image": "Wyrmscraig_villager_work_skirt_(pink).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4587,
+    "id": 34013,
+    "name": "Wyrmscraig villager work skirt (yellow)",
+    "image": "Wyrmscraig_villager_work_skirt_(yellow).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4588,
+    "id": 33836,
+    "name": "Noble robe top (green)",
+    "image": "Noble_robe_top_(green).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4589,
+    "id": 33839,
+    "name": "Noble robe top (blue)",
+    "image": "Noble_robe_top_(blue).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4590,
+    "id": 33842,
+    "name": "Noble robe top (red)",
+    "image": "Noble_robe_top_(red).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4591,
+    "id": 33845,
+    "name": "Noble robe top (yellow)",
+    "image": "Noble_robe_top_(yellow).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4592,
+    "id": 33848,
+    "name": "Noble robe top (white)",
+    "image": "Noble_robe_top_(white).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4593,
+    "id": 33851,
+    "name": "Noble robe top (black)",
+    "image": "Noble_robe_top_(black).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
+      }
+    }
+  },
+  {
+    "index": 4594,
+    "id": 33854,
+    "name": "Noble robe top (pink)",
+    "image": "Noble_robe_top_(pink).png",
+    "sources": {
+      "shops": {
+        "Yes": "canAccessWyrmscraigIsland"
       }
     }
   },
