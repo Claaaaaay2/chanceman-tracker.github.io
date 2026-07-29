@@ -3820,6 +3820,9 @@
         "King Sand Crab": {
           "droprate": "1/25.6"
         },
+        "Mad Angel": {
+          "droprate": "1/26"
+        },
         "Reward casket (medium) Standard": {
           "droprate": "1/34.1"
         },
@@ -7028,6 +7031,9 @@
         },
         "Reward casket (easy) Standard": {
           "droprate": "1/36"
+        },
+        "Mad Angel": {
+          "droprate": "1/39"
         },
         "Banshee": {
           "droprate": "1/42.667"
@@ -43608,6 +43614,11 @@
     "name": "Cupronickel bar",
     "image": "cupronickel_bar.png",
     "sources": {
+      "drops": {
+        "Mad Angel": {
+          "droprate": "1/156"
+        }
+      },
       "other": {
         "Smelting a Cupronickel bar": {
           "notes": "Requires Nickel ore and Copper ore and level 74 Smithing.",
@@ -44717,6 +44728,9 @@
         "Reinforced chest": {
           "droprate": "1/19.5"
         },
+        "Mad Angel": {
+          "droprate": "1/19.5"
+        },
         "Chest (Bryophyta's lair) Free-to-play": {
           "droprate": "1/19.667"
         },
@@ -45587,7 +45601,7 @@
   {
     "index": 1198,
     "id": 9735,
-    "name": "Desert goat horn",
+    "name": "Goat horn",
     "image": "desert_goat_horn.png",
     "sources": {
       "drops": {
@@ -45595,6 +45609,9 @@
           "droprate": "Always"
         },
         "Goat": {
+          "droprate": "Always"
+        },
+        "Wyrmscraig Goat": {
           "droprate": "Always"
         },
         "Corporeal Beast": {
@@ -48615,6 +48632,9 @@
         },
         "Vorkath Post-quest": {
           "droprate": "2 × 1/75"
+        },
+        "Mad Angel": {
+          "droprate": "1/78"
         }
       },
       "shops": {
@@ -50719,6 +50739,9 @@
         },
         "Grotesque Guardians": {
           "droprate": "2 × 1/142"
+        },
+        "Mad Angel": {
+          "droprate": "1/78"
         },
         "Great white shark": {
           "droprate": "1/100"
@@ -55708,6 +55731,9 @@
         },
         "Gem stall (Port Roberts)": {
           "droprate": "1/22.588"
+        },
+        "Mad Angel": {
+          "droprate": "1/26"
         },
         "Yama": {
           "droprate": "1/31.703"
@@ -64614,8 +64640,8 @@
     "image": "goat_horn_dust.png",
     "sources": {
       "other": {
-        "Grinding a Desert goat horn": {
-          "notes": "Requires Desert goat horn and a Pestle and mortar (or ask Wesley in Nardah).",
+        "Grinding a Goat horn": {
+          "notes": "Requires Goat horn and a Pestle and mortar (or ask Wesley in Nardah).",
           "rule": {
             "all": [
               {
@@ -93017,6 +93043,9 @@
         "Dagannoth (Waterbirth Island) Level 90": {
           "droprate": "1/12.8"
         },
+        "Mad Angel": {
+          "droprate": "1/13"
+        },
         "Branda the Fire Queen": {
           "droprate": "2 × 1/27.5"
         },
@@ -108950,6 +108979,9 @@
         "Zamorak wizard": {
           "droprate": "1/18.286"
         },
+        "Mad Angel": {
+          "droprate": "1/19.5"
+        },
         "Ancient Zygomite (Stalker Den)": {
           "droprate": "1/19.667"
         },
@@ -114493,6 +114525,9 @@
         },
         "Mummy (Ancient Pyramid)": {
           "droprate": "1/11.659"
+        },
+        "Mad Angel": {
+          "droprate": "1/156"
         }
       },
       "spawns": {
@@ -118006,6 +118041,9 @@
         "Hallowed sack": {
           "droprate": "5 × 1/10"
         },
+        "Mad Angel": {
+          "droprate": "1/10"
+        },
         "Coffin (Hallowed Sepulchre) Low": {
           "droprate": "1/10"
         },
@@ -118179,6 +118217,9 @@
         },
         "Hallowed sack": {
           "droprate": "1/10"
+        },
+        "Mad Angel": {
+          "droprate": "1/13"
         },
         "Branda the Fire Queen": {
           "droprate": "2 × 1/27.5"
@@ -122136,6 +122177,9 @@
         },
         "Chest (moon key)": {
           "droprate": "1/10.7"
+        },
+        "Mad Angel": {
+          "droprate": "1/19.5"
         },
         "Kraken": {
           "droprate": "1/64"
@@ -129345,6 +129389,9 @@
         "Nechryarch Normal": {
           "droprate": "3 × 1/38.667"
         },
+        "Mad Angel": {
+          "droprate": "1/13"
+        },
         "Grotesque Guardians": {
           "droprate": "2 × 1/28.4"
         },
@@ -130198,6 +130245,9 @@
         },
         "Colossal Hydra": {
           "droprate": "3 × 1/42.667"
+        },
+        "Mad Angel": {
+          "droprate": "1/13"
         },
         "Araxxor": {
           "droprate": "1/14.375"
@@ -134527,6 +134577,9 @@
         "Tern": {
           "droprate": "1/12.5"
         },
+        "Mad Angel": {
+          "droprate": "1/26"
+        },
         "Small chest": {
           "droprate": "1/30"
         },
@@ -137484,6 +137537,9 @@
         },
         "Kraken": {
           "droprate": "1/18.286"
+        },
+        "Mad Angel": {
+          "droprate": "1/19.5"
         },
         "Ferocious barbarian spirit": {
           "droprate": "1/21.333"
@@ -145332,6 +145388,9 @@
         "Elder custodian stalker": {
           "droprate": "1/8.267"
         },
+        "Mad Angel": {
+          "droprate": "1/9.75"
+        },
         "Zombie Pirate's Locker": {
           "droprate": "1/14.417"
         },
@@ -151034,6 +151093,9 @@
         "Chaos Elemental": {
           "droprate": "1/5"
         },
+        "Mad Angel": {
+          "droprate": "1/10"
+        },
         "Colossal Hydra": {
           "droprate": "3 × 1/32"
         },
@@ -151143,6 +151205,11 @@
     "name": "Super combat potion(3)",
     "image": "super_combat_potion(3).png",
     "sources": {
+      "drops": {
+        "Mad Angel": {
+          "droprate": "1/19.5"
+        }
+      },
       "other": {
         "Decanting a potion": {
           "notes": "Decanting a Super combat potion(1), (2) or (4).",
@@ -171360,6 +171427,19 @@
     ]
   },
   {
+    "index": 4533,
+    "id": 34017,
+    "name": "Wyrmscraig goat fur",
+    "image": "Wyrmscraig_goat_fur.png",
+    "sources": {
+      "drops": {
+        "Wyrmscraig Goat": {
+          "droprate": "Unknown"
+        }
+      }
+    }
+  },
+  {
     "index": 4404,
     "id": 6812,
     "name": "Wyvern bones",
@@ -171921,6 +172001,11 @@
     "name": "Yellowfin",
     "image": "yellowfin.png",
     "sources": {
+      "drops": {
+        "Mad Angel": {
+          "droprate": "1/19.5"
+        }
+      },
       "other": {
         "Cooking a Yellowfin": {
           "notes": "Requires Raw yellowfin and level 79 Cooking.",

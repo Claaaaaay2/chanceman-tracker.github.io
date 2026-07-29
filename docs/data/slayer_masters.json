@@ -4010,6 +4010,401 @@
                     }
                 }
             ]
+        },
+        {
+            "name": "Mortimer",
+            "notes": [],
+            "reachRequirements": {
+                "rulesAll": [
+                    "canAccessWyrmscraigIsland"
+                ]
+            },
+            "assignmentRequirements": {
+                "skills": {
+                    "Combat": 100,
+                    "Slayer": 70
+                }
+            },
+            "monsters": [
+                {
+                    "name": "Aberrant spectres",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 60,
+                            "Combat": 65
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    },
+                    "notes": [
+                        "Can be safespotted if no Nose peg is available."
+                    ]
+                },
+                {
+                    "name": "Abyssal demons",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 85,
+                            "Combat": 85
+                        },
+                        "questsAny": [
+                            {
+                                "Priest in Peril": "completed"
+                            },
+                            {
+                                "Fairytale II - Cure a Queen": "completed"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Aquanite",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 78,
+                            "Sailing": 73
+                        }
+                    }
+                },
+                {
+                    "name": "Araxytes",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 92
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Banshees",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 15,
+                            "Combat": 20
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Basilisks",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 40,
+                            "Defence": 20,
+                            "Combat": 40
+                        }
+                    },
+                    "notes": [
+                        "Can be safespotted if Mirror shield is not available."
+                    ]
+                },
+                {
+                    "name": "Bloodveld",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 50,
+                            "Combat": 50
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Cave crawlers",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 10,
+                            "Combat": 10
+                        }
+                    }
+                },
+                {
+                    "name": "Cave horrors",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 58,
+                            "Combat": 85
+                        },
+                        "quests": {
+                            "Cabin Fever": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Cockatrice",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 17,
+                            "Defence": 20,
+                            "Combat": 25
+                        }
+                    },
+                    "notes": [
+                        "Can be safespotted if no Mirror shield is available."
+                    ]
+                },
+                {
+                    "name": "Crawling Hands",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 5
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Custodian stalker",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 54
+                        },
+                        "quests": {
+                            "Shadows of Custodia": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Dark beasts",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 90,
+                            "Combat": 90
+                        },
+                        "quests": {
+                            "Mourning's End Part II": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Drakes",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 84
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAny": [
+                            [
+                                "Granite boots",
+                                "Boots of stone",
+                                "Boots of brimstone"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "name": "Dust devils",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 65,
+                            "Combat": 70
+                        },
+                        "quests": {
+                            "Desert Treasure I": "completed"
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAny": [
+                            [
+                                "Face mask",
+                                "Dwellberries"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "name": "Gargoyles",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 75,
+                            "Combat": 80
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAny": [
+                            [
+                                "Rock hammer",
+                                "Rock thrownhammer",
+                                "Granite hammer"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "name": "Gryphons",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 51,
+                            "Sailing": 45
+                        },
+                        "quests": {
+                            "Troubled Tortugans": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Hydras",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 95
+                        }
+                    },
+                    "locations": [
+                        {
+                            "name": "Karuulm Slayer Dungeon",
+                            "assignmentRequirements": {
+                                "skills": {
+                                    "Slayer": 44
+                                }
+                            },
+                            "reachRequirements": {
+                                "itemsAny": [
+                                    [
+                                        "Granite boots",
+                                        "Boots of stone",
+                                        "Boots of brimstone"
+                                    ]
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Infernal Mages",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 45,
+                            "Combat": 40
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Jellies",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 52,
+                            "Combat": 57
+                        }
+                    }
+                },
+                {
+                    "name": "Kurask",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 70,
+                            "Combat": 65
+                        }
+                    }
+                },
+                {
+                    "name": "Nechryael",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 80,
+                            "Combat": 85
+                        }
+                    }
+                },
+                {
+                    "name": "Pyrefiends",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 30,
+                            "Combat": 25
+                        }
+                    }
+                },
+                {
+                    "name": "Rockslugs",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 20,
+                            "Combat": 20
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAny": [
+                            [
+                                "Brine sabre",
+                                "Pile of salt",
+                                "Bag of salt"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "name": "Smoke devils",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 93,
+                            "Combat": 85
+                        }
+                    },
+                    "reachRequirements": {
+                        "itemsAny": [
+                            [
+                                "Face mask",
+                                "Dwellberries"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "name": "Turoth",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 55,
+                            "Combat": 60
+                        }
+                    }
+                },
+                {
+                    "name": "Venators",
+                    "assignmentRequirements": {
+                        "quests": {
+                            "The Blood Moon Rises": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Warped creatures",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 56
+                        },
+                        "quests": {
+                            "The Path of Glouphrie": "completed"
+                        }
+                    }
+                },
+                {
+                    "name": "Wyrms",
+                    "assignmentRequirements": {
+                        "skills": {
+                            "Slayer": 62
+                        }
+                    },
+                    "reachRequirements": {
+                        "rulesAny": [
+                            "canReachWyrmsTask"
+                        ]
+                    }
+                }
+            ]
         }
     ]
 }

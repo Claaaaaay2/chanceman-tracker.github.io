@@ -63,6 +63,7 @@ export const QUEST_POINTS: Record<string, number> = {
     "Ethically Acquired Antiquities": 1,
     "Fairytale I - Growing Pains": 2,
     "Fairytale II - Cure a Queen": 2,
+    "Fallen From Grace": 2,
     "Family Crest": 1,
     "Family Pest": 0,
     "Fight Arena": 2,
