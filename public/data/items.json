@@ -12708,6 +12708,19 @@
     }
   },
   {
+    "index": 4595,
+    "id": 34033,
+    "name": "Ardeaglais teleport",
+    "image": "Ardeaglais_teleport.png",
+    "sources": {
+      "drops": {
+        "Mad Angel": {
+          "droprate": "1/22.29"
+        }
+      }
+    }
+  },
+  {
     "index": 333,
     "id": 8011,
     "name": "Ardougne teleport (tablet)",
@@ -80689,8 +80702,10 @@
     "name": "Hallowfell",
     "image": "Hallowfell.png",
     "sources": {
-      "shops": {
-        "Yes": "canCompleteFallenFromGrace"
+      "drops": {
+        "Mad Angel": {
+          "droprate": "1/128"
+        }
       }
     }
   },
