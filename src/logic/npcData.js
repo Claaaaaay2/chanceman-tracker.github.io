@@ -1983,8 +1983,8 @@ export const NPC_DATA = {
                 "canCompleteTroubledTortugans"
             ]
         },
-        "skill": ["hunter"],
-        "level": [48],
+        "skill": ["hunter", "sailing"],
+        "level": [48, 45],
         "tags": [],
         "f2p": false
     },
@@ -11882,15 +11882,15 @@ export const NPC_DATA = {
         "f2p": false
     },
     "Rainbow crab (Hunter)": {
-        "wiki": "https://oldschool.runescape.wiki/w/Red_crab_(Hunter)",
+        "wiki": "https://oldschool.runescape.wiki/w/Rainbow_crab_(Hunter)",
         "rule": {
             "all": [
                 "canCatchCrabs",
                 "canCompletePandemonium"
             ]
         },
-        "skill": ["hunter"],
-        "level": [77],
+        "skill": ["hunter", "sailing"],
+        "level": [77, 64],
         "tags": [],
         "f2p": false
     },
