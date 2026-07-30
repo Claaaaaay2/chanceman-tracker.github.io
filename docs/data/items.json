@@ -80701,6 +80701,9 @@
     "id": 34027,
     "name": "Hallowfell",
     "image": "Hallowfell.png",
+    "tags": [
+      "Melee"
+    ],
     "sources": {
       "drops": {
         "Mad Angel": {
