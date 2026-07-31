@@ -6485,6 +6485,17 @@ function canCatchCrabs(ctx) {
         && (has(ctx, 32307) || has(ctx, 11334)); // Fine fish offcuts or Fish offcuts
 }
 
+function canCatchRainbowCrabs(ctx) {
+    return canTrainConstruction(ctx) //
+        && canTrainHunter(ctx) //
+        && has(ctx, 2347)      // Hammer
+        && has(ctx, 8794)      // Saw
+        && has(ctx, 1925)      // Bucket
+        && has(ctx, 960)       // Plank
+        && hasAnyNails(ctx)    //
+        && has(ctx, 32307); // Fine fish offcuts
+}
+
 function canCatchButterflies(ctx) {
     return canTrainHunter(ctx) //
         && has(ctx, 10010)     // Butterfly net
