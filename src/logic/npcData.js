@@ -11885,8 +11885,8 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Rainbow_crab_(Hunter)",
         "rule": {
             "all": [
-                "canCatchCrabs",
-                "canCompletePandemonium"
+                "canCatchRainbowCrabs",
+                "canCompletePandemonium",
             ]
         },
         "skill": ["hunter", "sailing"],
