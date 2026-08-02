@@ -1600,6 +1600,9 @@ export const REQUIREMENT_CHECKS = {
     canCatchSalamanders(ctx) {
         return canCatchSalamanders(ctx);
     },
+    canCatchRainbowCrabs(ctx) {
+        return canCatchRainbowCrabs(ctx);
+    },
     canCatchCrabs(ctx) {
         return canCatchCrabs(ctx);
     },
@@ -6403,7 +6406,6 @@ function canNooseWand(ctx) {
 
 function canCatchImplingsInJars(ctx) {
     return canTrainHunter(ctx) //
-        && has(ctx, 10010)  // Butterfly net
         && has(ctx, 11260); // Impling jar
 }
 
@@ -6498,7 +6500,6 @@ function canCatchRainbowCrabs(ctx) {
 
 function canCatchButterflies(ctx) {
     return canTrainHunter(ctx) //
-        && has(ctx, 10010)     // Butterfly net
         && has(ctx, 10012);    // Butterfly jar
 }
 
