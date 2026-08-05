@@ -5781,7 +5781,6 @@ function canCompleteVampyreSlayer(ctx) {
     return allTrue([
         has(ctx, 1917), // Beer
         has(ctx, 2347), // Hammer
-        has(ctx, 1550), // Garlic
     ]);
 }
 
