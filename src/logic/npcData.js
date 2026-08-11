@@ -8419,6 +8419,14 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
+    "Impaler deer": {
+        "wiki": "https://oldschool.runescape.wiki/w/Impaler_deer",
+        "rule": ["canCompleteTheBloodMoonRises"],
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
     "Imre": {
         "wiki": "https://oldschool.runescape.wiki/w/Imre",
         "rule": ["canCompletePriestInPeril"],

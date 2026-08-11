@@ -31315,6 +31315,9 @@
           "droprate": "Uncommon"
         }
       },
+      "spawns": {
+        "Yes": "canCompletePandemonium"
+      },
       "other": {
         "Fletching Bronze darts": {
           "notes": "Requires a Bronze dart tip and any Feather and level 10 Fletching.",
@@ -57964,6 +57967,35 @@
     }
   },
   {
+    "index": 4597,
+    "id": 33534,
+    "name": "Etched araxyte fang",
+    "image": "Etched_araxyte_fang.png",
+    "sources": {
+      "other": {
+        "Etching a fang": {
+          "notes": "Requires Araxyte fang, a chisel and level 86 crafting.",
+          "rule": {
+            "all": [
+              {
+                "has": 1755
+              },
+              "canCompletePriestInPeril",
+              {
+                "skill": "Crafting",
+                "level": 86
+              },
+              {
+                "skill": "Slayer",
+                "level": 92
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
     "index": 4510,
     "id": 33636,
     "name": "Etched elder venator fang",
@@ -57971,9 +58003,12 @@
     "sources": {
       "other": {
         "Etching a fang": {
-          "notes": "Requires Elder venator fang and level 84 crafting.",
+          "notes": "Requires Elder venator fang, a chisel and level 84 crafting.",
           "rule": {
             "all": [
+              {
+                "has": 1755
+              },
               {
                 "skills": [
                   {
@@ -121799,6 +121834,19 @@
       },
       "shops": {
         "Yes": "No requirements"
+      }
+    }
+  },
+  {
+    "index": 4596,
+    "id": 33821,
+    "name": "Raw impaler meat",
+    "image": "raw_rat_meat.png",
+    "sources": {
+      "drops": {
+        "Impaler deer": {
+          "droprate": "Always"
+        }
       }
     }
   },
