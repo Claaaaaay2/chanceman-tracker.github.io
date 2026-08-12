@@ -657,6 +657,72 @@ export async function initItemsPage() {
         return `${level} ${skill}`;
     }
 
+    async function getSkillSortKey(item, ctx, rank) {
+    if (rank !== 7) return null;
+
+    const skills = new Map();
+
+    if (item.sources?.drops) {
+        for (const npcName of Object.keys(item.sources.drops)) {
+            if (isNpcBlockedByFilters(npcName, ctx)) continue;
+            if (!(await canReachNpc(npcName, ctx))) continue;
+
+            const npc = NPC_DATA[npcName];
+            if (!npc?.skill?.length) continue;
+
+            const skillsMet = areNpcSkillsMet(npcName, ctx);
+            if (skillsMet) continue;
+
+            const levels = getNpcEffectiveLevels(npcName, ctx);
+
+            for (let i = 0; i < npc.skill.length; i++) {
+                const skill = npc.skill[i];
+                const level = levels?.[i];
+                addSkillMin(skills, skill, level);
+            }
+        }
+    }
+
+    if (item.sources?.other) {
+        const levelIgnoredCtx = getLevelIgnoredCtx(ctx);
+
+        for (const source of Object.values(item.sources.other)) {
+            if (isSourceHiddenByFilters(source, ctx)) continue;
+            if (!source?.rule) continue;
+
+            const obtainableWithIgnoredLevels =
+                await evaluateRule(source.rule, levelIgnoredCtx);
+
+            if (!obtainableWithIgnoredLevels) continue;
+
+            const obtainableNow =
+                await evaluateRule(source.rule, ctx);
+
+            if (obtainableNow) continue;
+
+            if (Array.isArray(source.skill)) {
+                for (const skill of source.skill) {
+                    addSkillMin(skills, skill, source.level);
+                }
+            } else if (source.skill) {
+                addSkillMin(skills, source.skill, source.level);
+            }
+
+            collectSkillsFromRuleMin(source.rule, skills, true, ctx);
+        }
+    }
+
+    return [...skills.entries()]
+        .filter(([, level]) => level !== null && level !== undefined)
+        .sort(([skillA, levelA], [skillB, levelB]) => {
+            if (skillA !== skillB) {
+                return skillA.localeCompare(skillB);
+            }
+
+            return levelA - levelB;
+        });
+}
+
     async function getItemSkillLabels(item, ctx, rank) {
         if (rank !== 5 && rank !== 6 && rank !== 7) return [];
 
@@ -1072,7 +1138,13 @@ export async function initItemsPage() {
             }
             if (hideUnobtainable && sort.rank === 8) continue;
 
-            filtered.push({ ...entry, sort });
+            filtered.push({
+                ...entry,
+                sort,
+                skillSortKey: sort.rank === 7
+                    ? await getSkillSortKey(item, fileStore, sort.rank)
+                    : null
+            });
             visibleItemIds.push(item.id);
         }
 
@@ -1081,21 +1153,46 @@ export async function initItemsPage() {
         }
 
         filtered.sort((a, b) => {
-            // Primary: rank
-            if (a.sort.rank !== b.sort.rank) {
-                return a.sort.rank - b.sort.rank;
-            }
+        // Primary: rank
+        if (a.sort.rank !== b.sort.rank) {
+            return a.sort.rank - b.sort.rank;
+        }
 
-            // Secondary: optional within-section drop-rate ordering
-            if (itemSortByDroprate) {
-                if (a.sortDropRate !== b.sortDropRate) {
-                    return b.sortDropRate - a.sortDropRate;
+        // Special sorting for:
+        // "Sources for which you do not have the level yet"
+        if (a.sort.rank === 7) {
+            const aSkill = a.skillSortKey?.[0];
+            const bSkill = b.skillSortKey?.[0];
+
+            if (aSkill && bSkill) {
+                // Skill alphabetically
+                if (aSkill[0] !== bSkill[0]) {
+                    return aSkill[0].localeCompare(bSkill[0]);
                 }
+
+                // Level ascending
+                if (aSkill[1] !== bSkill[1]) {
+                    return aSkill[1] - bSkill[1];
+                }
+            } else if (aSkill) {
+                return -1;
+            } else if (bSkill) {
+                return 1;
             }
 
-            // Fallback: alphabetical
+            // Same skill/level: alphabetical item name
             return a.sort.name.localeCompare(b.sort.name);
-        });
+        }
+
+        // Secondary: optional within-section drop-rate ordering
+        if (itemSortByDroprate) {
+            if (a.sortDropRate !== b.sortDropRate) {
+                return b.sortDropRate - a.sortDropRate;
+            }
+        }
+        // Fallback: alphabetical
+        return a.sort.name.localeCompare(b.sort.name);
+    });
         if (version !== renderVersion) return;
 
         if (filtered.length === 0) {

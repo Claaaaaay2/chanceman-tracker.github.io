@@ -255,26 +255,54 @@ export default async function ClueStepsPage() {
             let statusLabel = "Incompletable";
             let missingHtml = "";
 
-            if (hasPlayer) {
-                const ctx = buildRequirementContext();
-                const { met, missing } = await evaluateRequirements(step.requirements, ctx, itemsById);
+            const isJuggledSherlock =
+                tier === "Elite" &&
+                description.startsWith("Show this to Sherlock.") &&
+                fileStore.filters?.juggleSherlockClues;
 
-                if (met) {
+            if (hasPlayer) {
+                if (isJuggledSherlock) {
+                    // Sherlock clue juggling bug:
+                    // If we have one solvable Sherlock clue, we can keep juggling it instead of needing to solve the others.
                     statusClass = "clue-status-ready";
                     statusLabel = "Completable";
                     isDoable = true;
+
                     if (countableForTotals) {
                         doableCount += 1;
                     }
                 } else {
-                    const trainableCtx = buildRequirementContext({ ignoreSkillLevels: true });
-                    const { met: trainableMet } = await evaluateRequirements(step.requirements, trainableCtx, itemsById);
-                    if (trainableMet) {
-                        statusClass = "clue-status-trainable";
-                        statusLabel = "Train levels";
-                        isTrainable = true;
+                    const ctx = buildRequirementContext();
+                    const { met, missing } = await evaluateRequirements(
+                        step.requirements,
+                        ctx,
+                        itemsById
+                    );
+
+                    if (met) {
+                        statusClass = "clue-status-ready";
+                        statusLabel = "Completable";
+                        isDoable = true;
+
+                        if (countableForTotals) {
+                            doableCount += 1;
+                        }
+                    } else {
+                        const trainableCtx = buildRequirementContext({ ignoreSkillLevels: true });
+                        const { met: trainableMet } = await evaluateRequirements(
+                            step.requirements,
+                            trainableCtx,
+                            itemsById
+                        );
+
+                        if (trainableMet) {
+                            statusClass = "clue-status-trainable";
+                            statusLabel = "Train levels";
+                            isTrainable = true;
+                        }
+
+                        missingHtml = renderMissing(missing);
                     }
-                    missingHtml = renderMissing(missing);
                 }
             }
 
@@ -352,6 +380,10 @@ export default async function ClueStepsPage() {
             <label class="clue-filter">
                 <input type="checkbox" id="hasDoneEasterEvent" ${fileStore.filters?.hasDoneEasterEvent ? "checked" : ""}>
                 Has done Easter event (Eastfloor spade)
+            </label>
+            <label class="clue-filter">
+                <input type="checkbox" id="juggleSherlockClues" ${fileStore.filters?.juggleSherlockClues ? "checked" : ""}>
+                I want to juggle good Sherlock clues (Elite clues only)
             </label>
         </div>
         <div class="clue-list" id="clueList">
@@ -450,6 +482,9 @@ export function init() {
         }
         if (event.target.id === "hasDoneEasterEvent") {
             await updateClueFiltersAndRerender({ hasDoneEasterEvent: event.target.checked });
+        }
+        if (event.target.id === "juggleSherlockClues") {
+            await updateClueFiltersAndRerender({ juggleSherlockClues: event.target.checked });
         }
     };
 

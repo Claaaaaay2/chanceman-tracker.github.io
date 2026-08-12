@@ -1,0 +1,1378 @@
+[
+  {
+    "index": 1828,
+    "id": 31205,
+    "name": "Grid master altar icon scroll",
+    "image": "grid_master_altar_icon_scroll.png",
+    "tags": [
+      "gridmaster"
+    ]
+  },
+  {
+    "index": 1829,
+    "id": 31181,
+    "name": "Grid master tabard",
+    "image": "grid_master_tabard.png",
+    "tags": [
+      "gridmaster"
+    ]
+  },
+  {
+    "index": 1830,
+    "id": 31184,
+    "name": "Grid master tabard (b)",
+    "image": "grid_master_tabard_(b).png",
+    "tags": [
+      "gridmaster"
+    ]
+  },
+  {
+    "index": 1831,
+    "id": 31190,
+    "name": "Grid master tabard (g)",
+    "image": "grid_master_tabard_(g).png",
+    "tags": [
+      "gridmaster"
+    ]
+  },
+  {
+    "index": 1832,
+    "id": 31187,
+    "name": "Grid master tabard (p)",
+    "image": "grid_master_tabard_(p).png",
+    "tags": [
+      "gridmaster"
+    ]
+  },
+  {
+    "index": 1833,
+    "id": 31208,
+    "name": "Grid master torch scroll",
+    "image": "grid_master_torch_scroll.png",
+    "tags": [
+      "gridmaster"
+    ]
+  },
+  {
+    "index": 2929,
+    "id": 30430,
+    "name": "Raging echoes banner",
+    "image": "raging_echoes_banner.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 2930,
+    "id": 30410,
+    "name": "Raging echoes boots (t1)",
+    "image": "raging_echoes_boots_(t1).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 2931,
+    "id": 30418,
+    "name": "Raging echoes boots (t2)",
+    "image": "raging_echoes_boots_(t2).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 2932,
+    "id": 30426,
+    "name": "Raging echoes boots (t3)",
+    "image": "raging_echoes_boots_(t3).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 2933,
+    "id": 30428,
+    "name": "Raging echoes cane",
+    "image": "raging_echoes_cane.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 2934,
+    "id": 30557,
+    "name": "Raging echoes curtains",
+    "image": "raging_echoes_curtains.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 2935,
+    "id": 30455,
+    "name": "Raging echoes death scroll",
+    "image": "raging_echoes_death_scroll.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 2936,
+    "id": 30404,
+    "name": "Raging echoes hat (t1)",
+    "image": "raging_echoes_hat_(t1).png",
+    "tags": [
+      "leagues",
+      "Magic armours"
+    ]
+  },
+  {
+    "index": 2937,
+    "id": 30412,
+    "name": "Raging echoes hat (t2)",
+    "image": "raging_echoes_hat_(t2).png",
+    "tags": [
+      "leagues",
+      "Magic armours"
+    ]
+  },
+  {
+    "index": 2938,
+    "id": 30420,
+    "name": "Raging echoes hat (t3)",
+    "image": "raging_echoes_hat_(t3).png",
+    "tags": [
+      "leagues",
+      "Magic armours"
+    ]
+  },
+  {
+    "index": 2939,
+    "id": 30459,
+    "name": "Raging echoes nexus scroll",
+    "image": "raging_echoes_nexus_scroll.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 2940,
+    "id": 30457,
+    "name": "Raging echoes npc contact scroll",
+    "image": "raging_echoes_npc_contact_scroll.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 2941,
+    "id": 30461,
+    "name": "Raging echoes portal scroll",
+    "image": "raging_echoes_portal_scroll.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 2942,
+    "id": 30331,
+    "name": "Raging echoes relic hunter (t1) armour set",
+    "image": "raging_echoes_relic_hunter_(t1)_armour_set.png",
+    "tags": [
+      "leagues",
+      "itemset"
+    ]
+  },
+  {
+    "index": 2943,
+    "id": 30334,
+    "name": "Raging echoes relic hunter (t2) armour set",
+    "image": "raging_echoes_relic_hunter_(t2)_armour_set.png",
+    "tags": [
+      "leagues",
+      "itemset"
+    ]
+  },
+  {
+    "index": 2944,
+    "id": 30337,
+    "name": "Raging echoes relic hunter (t3) armour set",
+    "image": "raging_echoes_relic_hunter_(t3)_armour_set.png",
+    "tags": [
+      "leagues",
+      "itemset"
+    ]
+  },
+  {
+    "index": 2945,
+    "id": 30408,
+    "name": "Raging echoes robeskirt (t1)",
+    "image": "raging_echoes_robeskirt_(t1).png",
+    "tags": [
+      "leagues",
+      "Magic armours"
+    ]
+  },
+  {
+    "index": 2946,
+    "id": 30416,
+    "name": "Raging echoes robeskirt (t2)",
+    "image": "raging_echoes_robeskirt_(t2).png",
+    "tags": [
+      "leagues",
+      "Magic armours"
+    ]
+  },
+  {
+    "index": 2947,
+    "id": 30424,
+    "name": "Raging echoes robeskirt (t3)",
+    "image": "raging_echoes_robeskirt_(t3).png",
+    "tags": [
+      "leagues",
+      "Magic armours"
+    ]
+  },
+  {
+    "index": 2948,
+    "id": 30554,
+    "name": "Raging echoes rug",
+    "image": "raging_echoes_rug.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 2949,
+    "id": 30560,
+    "name": "Raging echoes scrying pool scroll",
+    "image": "raging_echoes_scrying_pool_scroll.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 2950,
+    "id": 30563,
+    "name": "Raging echoes spirit tree scroll",
+    "image": "raging_echoes_spirit_tree_scroll.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 2951,
+    "id": 30406,
+    "name": "Raging echoes top (t1)",
+    "image": "raging_echoes_top_(t1).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 2952,
+    "id": 30414,
+    "name": "Raging echoes top (t2)",
+    "image": "raging_echoes_top_(t2).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 2953,
+    "id": 30422,
+    "name": "Raging echoes top (t3)",
+    "image": "raging_echoes_top_(t3).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 3402,
+    "id": 26424,
+    "name": "Shattered banner",
+    "image": "shattered_banner.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 3403,
+    "id": 26436,
+    "name": "Shattered boots (t1)",
+    "image": "shattered_boots_(t1).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 3404,
+    "id": 26448,
+    "name": "Shattered boots (t2)",
+    "image": "shattered_boots_(t2).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 3405,
+    "id": 26460,
+    "name": "Shattered boots (t3)",
+    "image": "shattered_boots_(t3).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 3406,
+    "id": 26517,
+    "name": "Shattered cane",
+    "image": "shattered_cane.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 3407,
+    "id": 26528,
+    "name": "Shattered cannon ornament kit",
+    "image": "shattered_cannon_ornament_kit.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 3408,
+    "id": 26427,
+    "name": "Shattered hood (t1)",
+    "image": "shattered_hood_(t1).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 3409,
+    "id": 26439,
+    "name": "Shattered hood (t2)",
+    "image": "shattered_hood_(t2).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 3410,
+    "id": 26451,
+    "name": "Shattered hood (t3)",
+    "image": "shattered_hood_(t3).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 3411,
+    "id": 26554,
+    "name": "Shattered relic hunter (t1) armour set",
+    "image": "shattered_relic_hunter_(t1)_armour_set.png",
+    "tags": [
+      "leagues",
+      "itemset"
+    ]
+  },
+  {
+    "index": 3412,
+    "id": 26557,
+    "name": "Shattered relic hunter (t2) armour set",
+    "image": "shattered_relic_hunter_(t2)_armour_set.png",
+    "tags": [
+      "leagues",
+      "itemset"
+    ]
+  },
+  {
+    "index": 3413,
+    "id": 26560,
+    "name": "Shattered relic hunter (t3) armour set",
+    "image": "shattered_relic_hunter_(t3)_armour_set.png",
+    "tags": [
+      "leagues",
+      "itemset"
+    ]
+  },
+  {
+    "index": 3414,
+    "id": 26541,
+    "name": "Shattered relics mystic ornament kit",
+    "image": "shattered_relics_mystic_ornament_kit.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 3415,
+    "id": 26421,
+    "name": "Shattered relics variety ornament kit",
+    "image": "shattered_relics_variety_ornament_kit.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 3416,
+    "id": 26479,
+    "name": "Shattered relics void ornament kit",
+    "image": "shattered_relics_void_ornament_kit.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 3417,
+    "id": 26500,
+    "name": "Shattered teleport scroll",
+    "image": "shattered_teleport_scroll.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 3418,
+    "id": 26430,
+    "name": "Shattered top (t1)",
+    "image": "shattered_top_(t1).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 3419,
+    "id": 26442,
+    "name": "Shattered top (t2)",
+    "image": "shattered_top_(t2).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 3420,
+    "id": 26454,
+    "name": "Shattered top (t3)",
+    "image": "shattered_top_(t3).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 3421,
+    "id": 26433,
+    "name": "Shattered trousers (t1)",
+    "image": "shattered_trousers_(t1).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 3422,
+    "id": 26445,
+    "name": "Shattered trousers (t2)",
+    "image": "shattered_trousers_(t2).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 3423,
+    "id": 26457,
+    "name": "Shattered trousers (t3)",
+    "image": "shattered_trousers_(t3).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4059,
+    "id": 25056,
+    "name": "Trailblazer banner",
+    "image": "trailblazer_banner.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4060,
+    "id": 25037,
+    "name": "Trailblazer boots (t1)",
+    "image": "trailblazer_boots_(t1).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4061,
+    "id": 25025,
+    "name": "Trailblazer boots (t2)",
+    "image": "trailblazer_boots_(t2).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4062,
+    "id": 25010,
+    "name": "Trailblazer boots (t3)",
+    "image": "trailblazer_boots_(t3).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4063,
+    "id": 25013,
+    "name": "Trailblazer cane",
+    "image": "trailblazer_cane.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4064,
+    "id": 25093,
+    "name": "Trailblazer globe",
+    "image": "trailblazer_globe.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4065,
+    "id": 25099,
+    "name": "Trailblazer graceful ornament kit",
+    "image": "trailblazer_graceful_ornament_kit.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4066,
+    "id": 25028,
+    "name": "Trailblazer hood (t1)",
+    "image": "trailblazer_hood_(t1).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4067,
+    "id": 25016,
+    "name": "Trailblazer hood (t2)",
+    "image": "trailblazer_hood_(t2).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4068,
+    "id": 25001,
+    "name": "Trailblazer hood (t3)",
+    "image": "trailblazer_hood_(t3).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4069,
+    "id": 25380,
+    "name": "Trailblazer relic hunter (t1) armour set",
+    "image": "trailblazer_relic_hunter_(t1)_armour_set.png",
+    "tags": [
+      "leagues",
+      "itemset"
+    ]
+  },
+  {
+    "index": 4070,
+    "id": 25383,
+    "name": "Trailblazer relic hunter (t2) armour set",
+    "image": "trailblazer_relic_hunter_(t2)_armour_set.png",
+    "tags": [
+      "leagues",
+      "itemset"
+    ]
+  },
+  {
+    "index": 4071,
+    "id": 25386,
+    "name": "Trailblazer relic hunter (t3) armour set",
+    "image": "trailblazer_relic_hunter_(t3)_armour_set.png",
+    "tags": [
+      "leagues",
+      "itemset"
+    ]
+  },
+  {
+    "index": 4072,
+    "id": 28693,
+    "name": "Trailblazer reloaded alchemy scroll",
+    "image": "trailblazer_reloaded_alchemy_scroll.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4073,
+    "id": 28702,
+    "name": "Trailblazer reloaded banner",
+    "image": "trailblazer_reloaded_banner.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4074,
+    "id": 28690,
+    "name": "Trailblazer reloaded blowpipe ornament kit",
+    "image": "trailblazer_reloaded_blowpipe_ornament_kit.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4075,
+    "id": 28721,
+    "name": "Trailblazer reloaded boots (t1)",
+    "image": "trailblazer_reloaded_boots_(t1).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4076,
+    "id": 28733,
+    "name": "Trailblazer reloaded boots (t2)",
+    "image": "trailblazer_reloaded_boots_(t2).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4077,
+    "id": 28745,
+    "name": "Trailblazer reloaded boots (t3)",
+    "image": "trailblazer_reloaded_boots_(t3).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4078,
+    "id": 28684,
+    "name": "Trailblazer reloaded bulwark ornament kit",
+    "image": "trailblazer_reloaded_bulwark_ornament_kit.png",
+    "tags": [
+      "leagues",
+      "Melee"
+    ]
+  },
+  {
+    "index": 4079,
+    "id": 28699,
+    "name": "Trailblazer reloaded death scroll",
+    "image": "trailblazer_reloaded_death_scroll.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4080,
+    "id": 28712,
+    "name": "Trailblazer reloaded headband (t1)",
+    "image": "trailblazer_reloaded_headband_(t1).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4081,
+    "id": 28724,
+    "name": "Trailblazer reloaded headband (t2)",
+    "image": "trailblazer_reloaded_headband_(t2).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4082,
+    "id": 28736,
+    "name": "Trailblazer reloaded headband (t3)",
+    "image": "trailblazer_reloaded_headband_(t3).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4083,
+    "id": 28705,
+    "name": "Trailblazer reloaded home teleport scroll",
+    "image": "trailblazer_reloaded_home_teleport_scroll.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4084,
+    "id": 28708,
+    "name": "Trailblazer reloaded rejuvenation pool scroll",
+    "image": "trailblazer_reloaded_rejuvenation_pool_scroll.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4085,
+    "id": 28777,
+    "name": "Trailblazer reloaded relic hunter (t1) armour set",
+    "image": "trailblazer_reloaded_relic_hunter_(t1)_armour_set.png",
+    "tags": [
+      "leagues",
+      "itemset"
+    ]
+  },
+  {
+    "index": 4086,
+    "id": 28780,
+    "name": "Trailblazer reloaded relic hunter (t2) armour set",
+    "image": "trailblazer_reloaded_relic_hunter_(t2)_armour_set.png",
+    "tags": [
+      "leagues",
+      "itemset"
+    ]
+  },
+  {
+    "index": 4087,
+    "id": 28783,
+    "name": "Trailblazer reloaded relic hunter (t3) armour set",
+    "image": "trailblazer_reloaded_relic_hunter_(t3)_armour_set.png",
+    "tags": [
+      "leagues",
+      "itemset"
+    ]
+  },
+  {
+    "index": 4088,
+    "id": 28715,
+    "name": "Trailblazer reloaded top (t1)",
+    "image": "trailblazer_reloaded_top_(t1).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4089,
+    "id": 28727,
+    "name": "Trailblazer reloaded top (t2)",
+    "image": "trailblazer_reloaded_top_(t2).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4090,
+    "id": 28739,
+    "name": "Trailblazer reloaded top (t3)",
+    "image": "trailblazer_reloaded_top_(t3).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4091,
+    "id": 28748,
+    "name": "Trailblazer reloaded torch",
+    "image": "trailblazer_reloaded_torch.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4092,
+    "id": 28718,
+    "name": "Trailblazer reloaded trousers (t1)",
+    "image": "trailblazer_reloaded_trousers_(t1).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4093,
+    "id": 28730,
+    "name": "Trailblazer reloaded trousers (t2)",
+    "image": "trailblazer_reloaded_trousers_(t2).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4094,
+    "id": 28742,
+    "name": "Trailblazer reloaded trousers (t3)",
+    "image": "trailblazer_reloaded_trousers_(t3).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4095,
+    "id": 28696,
+    "name": "Trailblazer reloaded vengeance scroll",
+    "image": "trailblazer_reloaded_vengeance_scroll.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4096,
+    "id": 25096,
+    "name": "Trailblazer rug",
+    "image": "trailblazer_rug.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4097,
+    "id": 25087,
+    "name": "Trailblazer teleport scroll",
+    "image": "trailblazer_teleport_scroll.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4098,
+    "id": 25090,
+    "name": "Trailblazer tool ornament kit",
+    "image": "trailblazer_tool_ornament_kit.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4099,
+    "id": 25031,
+    "name": "Trailblazer top (t1)",
+    "image": "trailblazer_top_(t1).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4100,
+    "id": 25019,
+    "name": "Trailblazer top (t2)",
+    "image": "trailblazer_top_(t2).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4101,
+    "id": 25004,
+    "name": "Trailblazer top (t3)",
+    "image": "trailblazer_top_(t3).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4102,
+    "id": 25034,
+    "name": "Trailblazer trousers (t1)",
+    "image": "trailblazer_trousers_(t1).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4103,
+    "id": 25022,
+    "name": "Trailblazer trousers (t2)",
+    "image": "trailblazer_trousers_(t2).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4104,
+    "id": 25007,
+    "name": "Trailblazer trousers (t3)",
+    "image": "trailblazer_trousers_(t3).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4134,
+    "id": 24413,
+    "name": "Twisted banner",
+    "image": "twisted_banner.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4135,
+    "id": 24463,
+    "name": "Twisted blueprints",
+    "image": "twisted_blueprints.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4136,
+    "id": 24411,
+    "name": "Twisted boots (t1)",
+    "image": "twisted_boots_(t1).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4137,
+    "id": 24403,
+    "name": "Twisted boots (t2)",
+    "image": "twisted_boots_(t2).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4138,
+    "id": 24393,
+    "name": "Twisted boots (t3)",
+    "image": "twisted_boots_(t3).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4141,
+    "id": 24395,
+    "name": "Twisted cane",
+    "image": "twisted_cane.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4142,
+    "id": 24407,
+    "name": "Twisted coat (t1)",
+    "image": "twisted_coat_(t1).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4143,
+    "id": 24399,
+    "name": "Twisted coat (t2)",
+    "image": "twisted_coat_(t2).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4144,
+    "id": 24389,
+    "name": "Twisted coat (t3)",
+    "image": "twisted_coat_(t3).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4145,
+    "id": 24405,
+    "name": "Twisted hat (t1)",
+    "image": "twisted_hat_(t1).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4146,
+    "id": 24397,
+    "name": "Twisted hat (t2)",
+    "image": "twisted_hat_(t2).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4147,
+    "id": 24387,
+    "name": "Twisted hat (t3)",
+    "image": "twisted_hat_(t3).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4148,
+    "id": 24466,
+    "name": "Twisted horns",
+    "image": "twisted_horns.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4149,
+    "id": 24469,
+    "name": "Twisted relic hunter (t1) armour set",
+    "image": "twisted_relic_hunter_(t1)_armour_set.png",
+    "tags": [
+      "leagues",
+      "itemset"
+    ]
+  },
+  {
+    "index": 4150,
+    "id": 24472,
+    "name": "Twisted relic hunter (t2) armour set",
+    "image": "twisted_relic_hunter_(t2)_armour_set.png",
+    "tags": [
+      "leagues",
+      "itemset"
+    ]
+  },
+  {
+    "index": 4151,
+    "id": 24475,
+    "name": "Twisted relic hunter (t3) armour set",
+    "image": "twisted_relic_hunter_(t3)_armour_set.png",
+    "tags": [
+      "leagues",
+      "itemset"
+    ]
+  },
+  {
+    "index": 4152,
+    "id": 24460,
+    "name": "Twisted teleport scroll",
+    "image": "twisted_teleport_scroll.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4153,
+    "id": 24409,
+    "name": "Twisted trousers (t1)",
+    "image": "twisted_trousers_(t1).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4154,
+    "id": 24401,
+    "name": "Twisted trousers (t2)",
+    "image": "twisted_trousers_(t2).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 4155,
+    "id": 24391,
+    "name": "Twisted trousers (t3)",
+    "image": "twisted_trousers_(t3).png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 1420,
+    "id": 30451,
+    "name": "Echo ahrim's ornament kit",
+    "image": "echo_ahrim's_ornament_kit.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 1422,
+    "id": 30453,
+    "name": "Echo home teleport scroll",
+    "image": "echo_home_teleport_scroll.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 1424,
+    "id": 30432,
+    "name": "Echo venator bow ornament kit",
+    "image": "echo_venator_bow_ornament_kit.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 1425,
+    "id": 30443,
+    "name": "Echo virtus ornament kit",
+    "image": "echo_virtus_ornament_kit.png",
+    "tags": [
+      "leagues"
+    ]
+  },
+  {
+    "index": 371,
+    "id": 29628,
+    "name": "Armageddon cape fabric",
+    "image": "armageddon_cape_fabric.png",
+    "tags": [
+      "deadman"
+    ]
+  },
+  {
+    "index": 372,
+    "id": 29619,
+    "name": "Armageddon rug",
+    "image": "armageddon_rug.png",
+    "tags": [
+      "deadman"
+    ]
+  },
+  {
+    "index": 373,
+    "id": 29622,
+    "name": "Armageddon teleport scroll",
+    "image": "armageddon_teleport_scroll.png",
+    "tags": [
+      "deadman"
+    ]
+  },
+  {
+    "index": 374,
+    "id": 29625,
+    "name": "Armageddon weapon scroll",
+    "image": "armageddon_weapon_scroll.png",
+    "tags": [
+      "deadman"
+    ]
+  },
+  {
+    "index": 660,
+    "id": 29640,
+    "name": "Blighted overload (1)",
+    "image": "blighted_overload_(1).png",
+    "tags": [
+      "deadman"
+    ]
+  },
+  {
+    "index": 661,
+    "id": 29637,
+    "name": "Blighted overload (2)",
+    "image": "blighted_overload_(2).png",
+    "tags": [
+      "deadman"
+    ]
+  },
+  {
+    "index": 662,
+    "id": 29634,
+    "name": "Blighted overload (3)",
+    "image": "blighted_overload_(3).png",
+    "tags": [
+      "deadman"
+    ]
+  },
+  {
+    "index": 663,
+    "id": 29631,
+    "name": "Blighted overload (4)",
+    "image": "blighted_overload_(4).png",
+    "tags": [
+      "deadman"
+    ]
+  },
+  {
+    "index": 1009,
+    "id": 29643,
+    "name": "Chitin",
+    "image": "chitin.png",
+    "tags": [
+      "deadman"
+    ]
+  },
+  {
+    "index": 1108,
+    "id": 28537,
+    "name": "Corrupted armadyl godsword",
+    "image": "corrupted_armadyl_godsword.png",
+    "tags": [
+      "deadman",
+      "Melee"
+    ]
+  },
+  {
+    "index": 1109,
+    "id": 29599,
+    "name": "Corrupted dark bow",
+    "image": "corrupted_dark_bow.png",
+    "tags": [
+      "deadman",
+      "Ranged"
+    ]
+  },
+  {
+    "index": 1110,
+    "id": 28534,
+    "name": "Corrupted dragon claws",
+    "image": "corrupted_dragon_claws.png",
+    "tags": [
+      "deadman",
+      "Melee"
+    ]
+  },
+  {
+    "index": 1111,
+    "id": 28545,
+    "name": "Corrupted scythe of vitur (uncharged)",
+    "image": "corrupted_scythe_of_vitur_(uncharged).png",
+    "tags": [
+      "deadman",
+      "Melee"
+    ]
+  },
+  {
+    "index": 1112,
+    "id": 28549,
+    "name": "Corrupted tumeken's shadow (uncharged)",
+    "image": "corrupted_tumeken's_shadow_(uncharged).png",
+    "tags": [
+      "deadman",
+      "Magic"
+    ]
+  },
+  {
+    "index": 1113,
+    "id": 28540,
+    "name": "Corrupted twisted bow",
+    "image": "corrupted_twisted_bow.png",
+    "tags": [
+      "deadman",
+      "Ranged"
+    ]
+  },
+  {
+    "index": 1114,
+    "id": 28531,
+    "name": "Corrupted voidwaker",
+    "image": "corrupted_voidwaker.png",
+    "tags": [
+      "deadman",
+      "Melee"
+    ]
+  },
+  {
+    "index": 1115,
+    "id": 29602,
+    "name": "Corrupted volatile nightmare staff",
+    "image": "corrupted_volatile_nightmare_staff.png",
+    "tags": [
+      "deadman",
+      "Magic"
+    ]
+  },
+  {
+    "index": 2640,
+    "id": 30676,
+    "name": "Nimbleness charm",
+    "image": "nimbleness_charm.png",
+    "tags": [
+      "deadman"
+    ]
+  },
+  {
+    "index": 3650,
+    "id": 22622,
+    "name": "Statius's warhammer",
+    "image": "statius's_warhammer.png",
+    "sources": {
+      "shops": {
+        "Yes": "No requirements"
+      }
+    },
+    "tags": [
+      "deadman"
+    ]
+  },
+  {
+    "index": 3742,
+    "id": 30679,
+    "name": "Stockpiling charm",
+    "image": "stockpiling_charm.png",
+    "tags": [
+      "deadman"
+    ]
+  },
+  {
+    "index": 4116,
+    "id": 28567,
+    "name": "Trinket of advanced weaponry",
+    "image": "trinket_of_advanced_weaponry.png",
+    "tags": [
+      "deadman"
+    ]
+  },
+  {
+    "index": 4117,
+    "id": 28564,
+    "name": "Trinket of fairies",
+    "image": "trinket_of_fairies.png",
+    "tags": [
+      "deadman"
+    ]
+  },
+  {
+    "index": 4118,
+    "id": 28570,
+    "name": "Trinket of undead",
+    "image": "trinket_of_undead.png",
+    "tags": [
+      "deadman"
+    ]
+  },
+  {
+    "index": 4119,
+    "id": 28561,
+    "name": "Trinket of vengeance",
+    "image": "trinket_of_vengeance.png",
+    "tags": [
+      "deadman"
+    ]
+  },
+  {
+    "index": 4270,
+    "id": 30685,
+    "name": "Vulnerability charm",
+    "image": "vulnerability_charm.png",
+    "tags": [
+      "deadman"
+    ]
+  },
+  {
+    "index": 4500,
+    "id": 22647,
+    "name": "Zuriel's staff",
+    "image": "zuriel's_staff.png",
+    "tags": [
+      "deadman"
+    ]
+  }
+]

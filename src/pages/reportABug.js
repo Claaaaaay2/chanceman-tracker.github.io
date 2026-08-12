@@ -59,7 +59,7 @@ export function init() {
             status.textContent = "Thank you! Bug report sent.";
         } catch (e) {
             console.error(e);
-            status.textContent = "Failed to send bug report.";
+            status.textContent = "Failed to send bug report. Please reach out on the Chance Man Discord server in #chance-man-tracker.";
         } finally {
             btn.disabled = false;
         }

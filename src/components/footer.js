@@ -8,6 +8,8 @@ export async function Footer() {
         <span>Version: ${chancemanTrackerVersion}</span>
         <span class="footer-separator">|</span>
         <span>Made by Kryen (IGN: KryenChance)</span>
+        <span class="footer-separator">|</span>
+        <span>Maintained by Hexii (IGN: RandomHexii)</span>
         </footer>
     `;
 }
