@@ -7993,17 +7993,13 @@ function canTrainSmithing(ctx) {
 
 function canDoGnomeRestaurant(ctx) {
     return canTrainCooking(ctx) //
-        && has(ctx, 2171) // Gianne dough
-        && has(ctx, 2165) // Crunchy tray
-        && has(ctx, 2169) // Gnome spice
-        && has(ctx, 2128) // Equa leaves
         && has(ctx, 2217) // Toad crunchies
-        && has(ctx, 2025) // Cocktail shaker
-        && has(ctx, 2026) // Cocktail glass
-        && has(ctx, 2114) // Pineapple
-        && has(ctx, 2102) // Lemon
-        && has(ctx, 2108) // Orange
-        && has(ctx, 2106) // Lemon slices
+        && has(ctx, 2209) // chocchip crunchies
+        && has(ctx, 2255) // toad batta
+        && has(ctx, 2259) // cheese+tom batta
+        && has(ctx, 2048) // pineapple punch
+        && has(ctx, 2054) // wizard blizzard
+        && has(ctx, 2080) // short green guy
         && has(ctx, 2084); // Fruit blast
 }
 
