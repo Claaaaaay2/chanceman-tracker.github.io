@@ -729,6 +729,9 @@ export const REQUIREMENT_CHECKS = {
     canAccessSunbleakIsland(ctx) {
         return canAccessSunbleakIsland(ctx);
     },
+    canAccessOnyxCrest(ctx) {
+        return canAccessOnyxCrest(ctx);
+    },
     canCompleteDeviousMinds(ctx) {
         return canCompleteDeviousMinds(ctx);
     },
@@ -7038,6 +7041,11 @@ function canAccessSunbleakIsland(ctx) {
                 && hasSkillLevel(ctx, "Construction", 81) //
             )
         );
+}
+
+function canAccessOnyxCrest(ctx) {
+    return requiresQuest(ctx, "canCompletePandemonium", canCompletePandemonium) //
+        && hasSkillLevel(ctx, "Sailing", 47)
 }
 
 function canDoMixology(ctx) {
