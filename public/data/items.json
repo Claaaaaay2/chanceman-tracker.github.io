@@ -12715,7 +12715,7 @@
     "sources": {
       "drops": {
         "Mad Angel": {
-          "droprate": "1/22.29"
+          "droprate": "1/25"
         }
       }
     }
@@ -31244,7 +31244,7 @@
         }
       },
       "spawns": {
-        "Yes": "canCompletePandemonium"
+        "Yes": "canAccessOnyxCrest"
       },
       "other": {
         "Fletching Bronze darts": {
@@ -80491,7 +80491,7 @@
     "sources": {
       "drops": {
         "Mad Angel": {
-          "droprate": "1/128"
+          "droprate": "1/127"
         }
       }
     }
