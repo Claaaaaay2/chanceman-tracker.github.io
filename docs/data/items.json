@@ -170156,7 +170156,7 @@
     "image": "Wyrmscraig_noble_skirt_(black).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170167,7 +170167,7 @@
     "image": "Wyrmscraig_noble_skirt_(blue).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170178,7 +170178,7 @@
     "image": "Wyrmscraig_noble_skirt_(green).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170189,7 +170189,7 @@
     "image": "Wyrmscraig_noble_skirt_(pink).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170200,7 +170200,7 @@
     "image": "Wyrmscraig_noble_skirt_(red).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170211,7 +170211,7 @@
     "image": "Wyrmscraig_noble_skirt_(white).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170222,7 +170222,7 @@
     "image": "Wyrmscraig_noble_skirt_(yellow).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170233,7 +170233,7 @@
     "image": "Wyrmscraig_shoes.png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170244,7 +170244,7 @@
     "image": "Wyrmscraig_boots.png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },  {
@@ -170254,7 +170254,7 @@
     "image": "Wyrmscraig_villager_robe_top_(A,_green).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170265,7 +170265,7 @@
     "image": "Wyrmscraig_villager_robe_top_(A,_blue).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170276,7 +170276,7 @@
     "image": "Wyrmscraig_villager_robe_top_(A,_red).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170287,7 +170287,7 @@
     "image": "Wyrmscraig_villager_robe_top_(A,_yellow).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170298,7 +170298,7 @@
     "image": "Wyrmscraig_villager_robe_top_(A,_white).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170309,7 +170309,7 @@
     "image": "Wyrmscraig_villager_robe_top_(A,_black).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170320,7 +170320,7 @@
     "image": "Wyrmscraig_villager_robe_top_(A,_pink).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170331,7 +170331,7 @@
     "image": "Wyrmscraig_villager_robe_top_(A,_yellow).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170342,7 +170342,7 @@
     "image": "Wyrmscraig_villager_robe_top_(B,_green).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170353,7 +170353,7 @@
     "image": "Wyrmscraig_villager_robe_top_(B,_blue).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170364,7 +170364,7 @@
     "image": "Wyrmscraig_villager_robe_top_(B,_red).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170375,7 +170375,7 @@
     "image": "Wyrmscraig_villager_robe_top_(B,_yellow).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170386,7 +170386,7 @@
     "image": "Wyrmscraig_villager_robe_top_(B,_white).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170397,7 +170397,7 @@
     "image": "Wyrmscraig_villager_robe_top_(B,_black).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170408,7 +170408,7 @@
     "image": "Wyrmscraig_villager_robe_top_(B,_pink).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170419,7 +170419,7 @@
     "image": "Wyrmscraig_villager_robe_top_(B,_yellow).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170430,7 +170430,7 @@
     "image": "Wyrmscraig_villager_robe_bottom_(A,_blue).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170441,7 +170441,7 @@
     "image": "Wyrmscraig_villager_robe_bottom_(A,_red).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170452,7 +170452,7 @@
     "image": "Wyrmscraig_villager_robe_bottom_(A,_yellow).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170463,7 +170463,7 @@
     "image": "Wyrmscraig_villager_robe_bottom_(A,_white).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170474,7 +170474,7 @@
     "image": "Wyrmscraig_villager_robe_bottom_(A,_black).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170485,7 +170485,7 @@
     "image": "Wyrmscraig_villager_robe_bottom_(A,_pink).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170496,7 +170496,7 @@
     "image": "Wyrmscraig_villager_robe_bottom_(B,_green).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170507,7 +170507,7 @@
     "image": "Wyrmscraig_villager_robe_bottom_(B,_blue).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170518,7 +170518,7 @@
     "image": "Wyrmscraig_villager_robe_bottom_(B,_red).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170529,7 +170529,7 @@
     "image": "Wyrmscraig_villager_robe_bottom_(B,_yellow).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170540,7 +170540,7 @@
     "image": "Wyrmscraig_villager_robe_bottom_(B,_white).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170551,7 +170551,7 @@
     "image": "Wyrmscraig_villager_robe_bottom_(B,_black).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170562,7 +170562,7 @@
     "image": "Wyrmscraig_villager_robe_bottom_(B,_pink).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170573,7 +170573,7 @@
     "image": "Wyrmscraig_villager_skirt_(green).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170584,7 +170584,7 @@
     "image": "Wyrmscraig_villager_skirt_(blue).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170595,7 +170595,7 @@
     "image": "Wyrmscraig_villager_skirt_(red).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170606,7 +170606,7 @@
     "image": "Wyrmscraig_villager_skirt_(yellow).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170617,7 +170617,7 @@
     "image": "Wyrmscraig_villager_skirt_(white).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170628,7 +170628,7 @@
     "image": "Wyrmscraig_villager_skirt_(black).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170639,7 +170639,7 @@
     "image": "Wyrmscraig_villager_skirt_(pink).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170650,7 +170650,7 @@
     "image": "Wyrmscraig_villager_work_skirt_(green).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170661,7 +170661,7 @@
     "image": "Wyrmscraig_villager_work_skirt_(blue).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170672,7 +170672,7 @@
     "image": "Wyrmscraig_villager_work_skirt_(red).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170683,7 +170683,7 @@
     "image": "Wyrmscraig_villager_work_skirt_(yellow).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170694,7 +170694,7 @@
     "image": "Wyrmscraig_villager_work_skirt_(white).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170705,7 +170705,7 @@
     "image": "Wyrmscraig_villager_work_skirt_(black).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170716,7 +170716,7 @@
     "image": "Wyrmscraig_villager_work_skirt_(pink).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170727,7 +170727,7 @@
     "image": "Wyrmscraig_villager_work_skirt_(yellow).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170738,7 +170738,7 @@
     "image": "Noble_robe_top_(green).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170749,7 +170749,7 @@
     "image": "Noble_robe_top_(blue).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170760,7 +170760,7 @@
     "image": "Noble_robe_top_(red).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170771,7 +170771,7 @@
     "image": "Noble_robe_top_(yellow).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170782,7 +170782,7 @@
     "image": "Noble_robe_top_(white).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170793,7 +170793,7 @@
     "image": "Noble_robe_top_(black).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
@@ -170804,7 +170804,7 @@
     "image": "Noble_robe_top_(pink).png",
     "sources": {
       "shops": {
-        "Yes": "canAccessWyrmscraigIsland"
+        "Yes": "canCompleteFallenFromGrace"
       }
     }
   },
