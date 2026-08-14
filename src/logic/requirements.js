@@ -4585,9 +4585,7 @@ function canCompletePerilousMoons(ctx) {
 
 function canCompletePiratesTreasure(ctx) {
     return allTrue([
-        has(ctx, 1005), // White apron
         has(ctx, 952), // Spade
-        has(ctx, 1963), // Banana
     ]);
 }
 
@@ -5513,6 +5511,7 @@ function canCompleteTheHeartOfDarkness(ctx) {
         hasNonBoostableSkillLevel(ctx, "Thieving", 48), //
         hasNonBoostableSkillLevel(ctx, "Slayer", 48), //
         hasNonBoostableSkillLevel(ctx, "Agility", 46), //
+        requiresQuest(ctx, "canCompleteTwilightsPromise", canCompleteTwilightsPromise), //
         hasUsablePickaxe(ctx), //
     ]);
 }
@@ -5762,7 +5761,6 @@ function canCompleteTroubledTortugans(ctx) {
 
 function canCompleteTwilightsPromise(ctx) {
     return allTrue([
-        canShortrange(ctx),
         requiresQuest(ctx, "canCompleteChildrenOfTheSun", canCompleteChildrenOfTheSun), //
     ]);
 
