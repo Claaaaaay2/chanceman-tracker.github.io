@@ -22,7 +22,8 @@ const QUEST_INFO_NOTES = {
     "The Red Reef": "You can use Surge Sacks instead of needing a cannon. Any other range weapon should also work.",
     "Enakhra's Lament": "You can pick up a lit candle which is untradable.",
     "Shadows of Custodia": "You can use a Barbarian fishing rod instead of a regular fishing rod.",
-    "Pirate's Treasure": "Supposedly, you can ignore the Banana and White Apron by buying the rum right before your membership expires, and logging out in brimhaven. When your membership has expired, you will be in Lumbridge with a nice bottle of rum in your inventory."
+    "Pirate's Treasure": "Two ways to solve this one. Can use crop circle in Brimhaven to smuggle karamja rum. Drop it inside puro-puro, pick it up in another crop circle location before it despawns. Do not teleport with it (even fairy rings are a no-go). Alternatively, you can buy the rum right before your membership expires, and log out in brimhaven. When your membership has expired, you will be in Lumbridge with a nice bottle of rum in your inventory.",
+    "Twilight's Promise": "You can use a training bow if you do not have any short-ranged weapons."
 };
 
 function escapeHtml(value) {

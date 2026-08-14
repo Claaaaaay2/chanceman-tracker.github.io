@@ -23,7 +23,8 @@ const ITEM_SECTION_TITLES = {
     5: "Skill Requirements Met",
     6: "Other Drops",
     7: "Sources for which you do not have the level yet",
-    8: "Unobtainable Items"
+    8: "Clue rewards",
+    9: "Unobtainable Items"
 };
 
 const BUTTERFLY_NET_ID = 10010;
@@ -156,6 +157,18 @@ function escapeHtml(value) {
         .replace(/</g, "&lt;")
         .replace(/>/g, "&gt;")
         .replace(/"/g, "&quot;");
+}
+
+function getItemDisplayRank(item, sort, isClueRewardOnly) {
+    if (isClueRewardOnly) {
+        return 8;
+    }
+
+    if (sort.rank === 8) {
+        return 9;
+    }
+
+    return sort.rank;
 }
 
 export async function initItemsPage() {
@@ -425,6 +438,43 @@ export async function initItemsPage() {
             const nextUrl = `${window.location.pathname}${window.location.search}#${targetId}`;
             history.replaceState(history.state ?? {}, "", nextUrl);
             target.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+    }
+
+    function bindItemSectionCollapse() {
+        if (!elements.grid) return;
+
+        const headers = elements.grid.querySelectorAll(".item-section-header");
+
+        headers.forEach((header) => {
+            if (header.dataset.collapseBound === "true") return;
+
+            header.dataset.collapseBound = "true";
+
+            const toggleSection = () => {
+                const isCollapsed = header.classList.toggle("is-collapsed");
+                const toggle = header.querySelector(".item-section-toggle");
+
+                if (toggle) {
+                    toggle.textContent = isCollapsed ? "▶" : "▼";
+                }
+
+                let next = header.nextElementSibling;
+
+                while (next && !next.classList.contains("item-section-header")) {
+                    next.style.display = isCollapsed ? "none" : "";
+                    next = next.nextElementSibling;
+                }
+            };
+
+            header.addEventListener("click", toggleSection);
+
+            header.addEventListener("keydown", (event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    toggleSection();
+                }
+            });
         });
     }
 
@@ -1138,9 +1188,11 @@ export async function initItemsPage() {
             }
             if (hideUnobtainable && sort.rank === 8) continue;
 
+            const displayRank = getItemDisplayRank(item, sort, isClueRewardOnly);
             filtered.push({
                 ...entry,
                 sort,
+                displayRank,
                 skillSortKey: sort.rank === 7
                     ? await getSkillSortKey(item, fileStore, sort.rank)
                     : null
@@ -1153,79 +1205,85 @@ export async function initItemsPage() {
         }
 
         filtered.sort((a, b) => {
-        // Primary: rank
-        if (a.sort.rank !== b.sort.rank) {
-            return a.sort.rank - b.sort.rank;
-        }
-
-        // Special sorting for:
-        // "Sources for which you do not have the level yet"
-        if (a.sort.rank === 7) {
-            const aSkill = a.skillSortKey?.[0];
-            const bSkill = b.skillSortKey?.[0];
-
-            if (aSkill && bSkill) {
-                // Skill alphabetically
-                if (aSkill[0] !== bSkill[0]) {
-                    return aSkill[0].localeCompare(bSkill[0]);
-                }
-
-                // Level ascending
-                if (aSkill[1] !== bSkill[1]) {
-                    return aSkill[1] - bSkill[1];
-                }
-            } else if (aSkill) {
-                return -1;
-            } else if (bSkill) {
-                return 1;
+            // Primary: display section
+            if (a.displayRank !== b.displayRank) {
+                return a.displayRank - b.displayRank;
             }
 
-            // Same skill/level: alphabetical item name
+            // Special sorting for:
+            // "Sources for which you do not have the level yet"
+            if (a.sort.rank === 7) {
+                const aSkill = a.skillSortKey?.[0];
+                const bSkill = b.skillSortKey?.[0];
+
+                if (aSkill && bSkill) {
+                    // Skill alphabetically
+                    if (aSkill[0] !== bSkill[0]) {
+                        return aSkill[0].localeCompare(bSkill[0]);
+                    }
+
+                    // Level ascending
+                    if (aSkill[1] !== bSkill[1]) {
+                        return aSkill[1] - bSkill[1];
+                    }
+                } else if (aSkill) {
+                    return -1;
+                } else if (bSkill) {
+                    return 1;
+                }
+
+                // Same skill/level: alphabetical item name
+                return a.sort.name.localeCompare(b.sort.name);
+            }
+
+            // Secondary: optional within-section drop-rate ordering
+            if (itemSortByDroprate) {
+                if (a.sortDropRate !== b.sortDropRate) {
+                    return b.sortDropRate - a.sortDropRate;
+                }
+            }
+
+            // Fallback: alphabetical
             return a.sort.name.localeCompare(b.sort.name);
-        }
-
-        // Secondary: optional within-section drop-rate ordering
-        if (itemSortByDroprate) {
-            if (a.sortDropRate !== b.sortDropRate) {
-                return b.sortDropRate - a.sortDropRate;
-            }
-        }
-        // Fallback: alphabetical
-        return a.sort.name.localeCompare(b.sort.name);
-    });
+        });
         if (version !== renderVersion) return;
 
-        if (filtered.length === 0) {
+                if (filtered.length === 0) {
             elements.grid.innerHTML = `
                 <p class="empty-state">No drops found for current filters.</p>
             `;
         } else {
-            const sectionCounts = filtered.reduce((acc, { sort }) => {
-                acc[sort.rank] = (acc[sort.rank] ?? 0) + 1;
+            const sectionCounts = filtered.reduce((acc, { displayRank }) => {
+                acc[displayRank] = (acc[displayRank] ?? 0) + 1;
                 return acc;
             }, {});
+
             let html = "";
-            let lastRank = null;
+            let lastDisplayRank = null;
             const summaryParts = [];
 
-            for (const { item, sort } of filtered) {
-                if (sort.rank !== lastRank) {
-                    const sectionCount = sectionCounts[sort.rank] ?? 0;
-                    const sectionId = `items-section-${sort.rank}`;
+            for (const { item, sort, displayRank } of filtered) {
+                if (displayRank !== lastDisplayRank) {
+                    const sectionCount = sectionCounts[displayRank] ?? 0;
+                    const sectionId = `items-section-${displayRank}`;
+
                     if (showSectionCounts) {
                         summaryParts.push(
-                            `<a href="#${sectionId}">${escapeHtml(ITEM_SECTION_TITLES[sort.rank] ?? "Other Items")} (${sectionCount})</a>`
+                            `<a href="#${sectionId}">${escapeHtml(ITEM_SECTION_TITLES[displayRank] ?? "Other Items")} (${sectionCount})</a>`
                         );
                     }
+
                     html += `
-                        <h2 class="item-section-header" id="${sectionId}">
+                        <h2 class="item-section-header" id="${sectionId}" data-section-rank="${displayRank}" tabindex="0">
                             <span class="item-section-title">
-                                ${ITEM_SECTION_TITLES[sort.rank] ?? "Other Items"}
+                                <span class="item-section-toggle" aria-hidden="true">▼</span>
+                                ${ITEM_SECTION_TITLES[displayRank] ?? "Other Items"}
                                 <span class="item-section-count">(${sectionCount})</span>
                             </span>
                         </h2>
                     `;
-                    lastRank = sort.rank;
+
+                    lastDisplayRank = displayRank;
                 }
 
                 const isObtained = obtainedSet.has(item.id);
@@ -1233,16 +1291,20 @@ export async function initItemsPage() {
                 const skillLabels = await getItemSkillLabels(item, fileStore, sort.rank);
                 const deferredSkillLabels = await getDeferredSkillLabels(item, fileStore, sort.rank);
                 const combinedSkillLabels = new Map();
+
                 for (const label of skillLabels) {
                     combinedSkillLabels.set(label, false);
                 }
+
                 for (const label of deferredSkillLabels) {
                     combinedSkillLabels.set(label, true);
                 }
+
                 const formatLabel = (label) => {
                     if (sort.rank !== 6) return label;
                     return `or ${label}`;
                 };
+
                 const skillHtml = combinedSkillLabels.size
                     ? `
                         <div class="item-skill-tags${sort.rank === 6 ? " item-skill-tags--or" : ""}">
@@ -1260,9 +1322,11 @@ export async function initItemsPage() {
                         <div class="item-tooltip-empty">Hover to load</div>
                     </div>
                 `;
+
                 const highlightClass = highlightChanges ? getHighlightClasses(item.id) : "";
+
                 html += `
-                    <div class="item-card${highlightClass ? ` ${highlightClass}` : ""}" data-item-id="${item.id}" onclick="navigate('/item?id=${item.id}')">
+                    <div class="item-card${highlightClass ? ` ${highlightClass}` : ""}" data-item-id="${item.id}" data-section-rank="${displayRank}" onclick="navigate('/item?id=${item.id}')">
                         ${isObtained ? `<span class="badge obtained">Obtained</span>` : ""}
                         ${isRolled ? `<span class="badge rolled">Rolled</span>` : ""}
                         <img class="lazy-img item-image" data-src="/images/${item.image}" src="/images/placeholder.png">
@@ -1272,9 +1336,12 @@ export async function initItemsPage() {
                     </div>
                 `;
             }
+
             if (version !== renderVersion) return;
 
             elements.grid.innerHTML = html;
+            bindItemSectionCollapse();
+
             if (showSectionCounts) {
                 elements.itemsSectionSummary.hidden = false;
                 elements.itemsSectionSummary.innerHTML = summaryParts.join("");
@@ -1283,8 +1350,9 @@ export async function initItemsPage() {
                 elements.itemsSectionSummary.hidden = true;
                 elements.itemsSectionSummary.innerHTML = "";
             }
+        }
 
-        if (highlightChanges) {
+                if (highlightChanges) {
             const signatureTargets = filtered.map(({ item }) => item);
             setTimeout(async () => {
                 if (version !== renderVersion) return;
@@ -1307,23 +1375,24 @@ export async function initItemsPage() {
             }, 0);
         }
 
-            if (version !== renderVersion) return;
-            initTooltipLoader();
-            setTimeout(() => initLazyImages(), 0);
-        }
+        if (version !== renderVersion) return;
+        initTooltipLoader();
+        setTimeout(() => initLazyImages(), 0);
+
         if (profileItems) {
             const renderElapsed = performance.now() - renderStart;
             console.log(`[Items] renderItems: ${renderElapsed.toFixed(1)}ms`);
         }
-        } finally {
-            fileStore.cacheRules = previousCacheRules;
-            fileStore.ruleEvalCache = previousRuleEvalCache;
-            fileStore.ruleEvalKey = previousRuleEvalKey;
-            if (version === renderVersion) {
-                setLoading(false);
-            }
+            } finally {
+        fileStore.cacheRules = previousCacheRules;
+        fileStore.ruleEvalCache = previousRuleEvalCache;
+        fileStore.ruleEvalKey = previousRuleEvalKey;
+
+        if (version === renderVersion) {
+            setLoading(false);
         }
     }
+}
 
     function saveFilters() {
         fileStore.setFilters(readFiltersFromUI());
