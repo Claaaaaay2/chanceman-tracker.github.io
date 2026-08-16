@@ -16,7 +16,7 @@ import { hasSuperiorSlayerUnlock, isIronmanAccount } from "../logic/playerState.
 
 
 const ITEM_SECTION_TITLES = {
-    1: "Buyable shop Items",
+    1: "Buyable shop items",
     2: "Pickupable spawns",
     3: "Easy Rolls",
     4: "Other Sources",
@@ -24,7 +24,7 @@ const ITEM_SECTION_TITLES = {
     6: "Other Drops",
     7: "Sources for which you do not have the level yet",
     8: "Clue rewards",
-    9: "Unobtainable Items"
+    9: "Unobtainable items"
 };
 
 const BUTTERFLY_NET_ID = 10010;

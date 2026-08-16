@@ -13727,7 +13727,7 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": true
     },
-    "Skeleton (Tarn's Lair) High level": {
+    "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
         "wiki": "https://oldschool.runescape.wiki/w/Skeleton_(Tarn%27s_Lair)#High_level",
         "rule": null,
         "skill": [],
@@ -13743,7 +13743,7 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
-    "Skeleton (Tarn's Lair) Medium level": {
+    "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
         "wiki": "https://oldschool.runescape.wiki/w/Skeleton_(Tarn%27s_Lair)#Medium_level",
         "rule": null,
         "skill": [],
