@@ -1200,7 +1200,7 @@
         "Brutal green dragon": {
           "droprate": "1/42.667"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/42.667"
         },
         "White Knight Level 38": {
@@ -1233,7 +1233,7 @@
         "Skeleton (mage)": {
           "droprate": "1/64"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/64"
         },
         "Skeleton brute": {
@@ -1726,7 +1726,7 @@
         "Skeleton (mage)": {
           "droprate": "1/128"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/128"
         },
         "Skeleton brute": {
@@ -3554,7 +3554,7 @@
         "Ice troll": {
           "droprate": "1/128"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/128"
         },
         "Twisted Banshee": {
@@ -5737,7 +5737,7 @@
         "Skeleton (mage)": {
           "droprate": "1/64"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/64"
         },
         "Skeleton brute": {
@@ -6342,7 +6342,7 @@
     "image": "agility_potion(2).png",
     "sources": {
       "drops": {
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/25.6"
         }
       },
@@ -6999,7 +6999,7 @@
         "Emissary Chosen": {
           "droprate": "1/25.6"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/25.6"
         },
         "Elder Chaos druid": {
@@ -7946,7 +7946,7 @@
         "Crafting stall": {
           "droprate": "1/4.5"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/25.6"
         },
         "Barbarian (Barbarian Camp) High level": {
@@ -11923,7 +11923,7 @@
         "Aviansie": {
           "droprate": "1/25.6"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/25.6"
         },
         "Spiritual mage": {
@@ -13663,7 +13663,7 @@
         "Gnome woman": {
           "droprate": "1/2.286"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/25.6"
         }
       },
@@ -14438,7 +14438,7 @@
         "Apprentice potion pack": {
           "droprate": "4 × 1/7.727"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/25.6"
         }
       },
@@ -21216,10 +21216,10 @@
         "Skeleton (mage)": {
           "droprate": "1/128"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/128"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/128"
         },
         "Reward casket (beginner)": {
@@ -24702,7 +24702,7 @@
         "Skeleton (mage)": {
           "droprate": "1/42.667"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/42.667"
         },
         "Skeleton brute": {
@@ -28310,13 +28310,13 @@
         "Skeleton (Stronghold of Security)": {
           "droprate": "Always"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "Always"
         },
         "Skeleton (Tarn's Lair) Low level": {
           "droprate": "Always"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "Always"
         },
         "Skeleton (The Restless Ghost)": {
@@ -30366,7 +30366,7 @@
         "Skeleton (Tarn's Lair) Low level": {
           "droprate": "1/25.6"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/25.6"
         },
         "Ogre Coffin": {
@@ -31446,7 +31446,7 @@
         "Skeleton (mage)": {
           "droprate": "1/25.6"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/25.6"
         },
         "Wall beast": {
@@ -32256,7 +32256,7 @@
     ],
     "sources": {
       "drops": {
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/25.6"
         }
       },
@@ -32543,7 +32543,7 @@
         "Damaged armour": {
           "droprate": "1/4.167"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/64"
         }
       },
@@ -32699,7 +32699,7 @@
         "Skeleton (mage)": {
           "droprate": "1/25.6"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/25.6"
         }
       },
@@ -36143,7 +36143,7 @@
         "Skeleton (mage)": {
           "droprate": "1/25.6"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/25.6"
         }
       },
@@ -62909,7 +62909,7 @@
           }
         },
         "Decanting jewellery": {
-          "notes": "Requires a games necklace (2) (drop from Skeleton (tarn's lair)) (well 4 of them actually)."
+          "notes": "Requires a games necklace (2) (drop from Skeleton (tarn's lair + ruins of ullek)) (well 4 of them actually)."
         }
       }
     },
@@ -65538,10 +65538,10 @@
         "Skeleton (mage)": {
           "droprate": "1/64"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/64"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/64"
         },
         "Skeleton brute": {
@@ -68286,7 +68286,7 @@
         "Skeleton (mage)": {
           "droprate": "1/546.1"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/546.1"
         },
         "Skeleton brute": {
@@ -68448,7 +68448,7 @@
         "Lesser demon Regular (m)": {
           "droprate": "1/2730.7"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/2730.7"
         },
         "Werewolf": {
@@ -69286,7 +69286,7 @@
         "Skeleton (mage)": {
           "droprate": "1/819.2"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/819.2"
         },
         "Skeleton brute": {
@@ -69451,7 +69451,7 @@
         "Lesser demon Regular (m)": {
           "droprate": "1/4096"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/4096"
         },
         "Werewolf": {
@@ -70304,7 +70304,7 @@
         "Skeleton (mage)": {
           "droprate": "1/1092.3"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/1092.3"
         },
         "Skeleton brute": {
@@ -70472,7 +70472,7 @@
         "Lesser demon Regular (m)": {
           "droprate": "1/5461.3"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/5461.3"
         },
         "Werewolf": {
@@ -71247,7 +71247,7 @@
         "Skeleton (mage)": {
           "droprate": "1/102.4"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/102.4"
         },
         "Skeleton brute": {
@@ -71421,7 +71421,7 @@
         "Lesser demon Regular (m)": {
           "droprate": "1/512"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/512"
         },
         "Werewolf": {
@@ -72202,7 +72202,7 @@
         "Skeleton (mage)": {
           "droprate": "1/234.1"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/234.1"
         },
         "Skeleton brute": {
@@ -72367,7 +72367,7 @@
         "Lesser demon Regular (m)": {
           "droprate": "1/1170.3"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/1170.3"
         },
         "Werewolf": {
@@ -73173,7 +73173,7 @@
         "Skeleton (mage)": {
           "droprate": "1/409.6"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/409.6"
         },
         "Skeleton brute": {
@@ -73338,7 +73338,7 @@
         "Lesser demon Regular (m)": {
           "droprate": "1/2048"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/2048"
         },
         "Werewolf": {
@@ -74194,7 +74194,7 @@
         "Skeleton (mage)": {
           "droprate": "1/655.4"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/655.4"
         },
         "Skeleton brute": {
@@ -74359,7 +74359,7 @@
         "Lesser demon Regular (m)": {
           "droprate": "1/3276.8"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/3276.8"
         },
         "Werewolf": {
@@ -75203,7 +75203,7 @@
         "Skeleton (mage)": {
           "droprate": "1/1092.3"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/1092.3"
         },
         "Skeleton brute": {
@@ -75368,7 +75368,7 @@
         "Lesser demon Regular (m)": {
           "droprate": "1/5461.3"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/5461.3"
         },
         "Werewolf": {
@@ -76143,7 +76143,7 @@
         "Skeleton (mage)": {
           "droprate": "1/136.5"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/136.5"
         },
         "Skeleton brute": {
@@ -76317,7 +76317,7 @@
         "Lesser demon Regular (m)": {
           "droprate": "1/682.7"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/682.7"
         },
         "Werewolf": {
@@ -77209,7 +77209,7 @@
         "Skeleton (mage)": {
           "droprate": "1/297.9"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/297.9"
         },
         "Skeleton brute": {
@@ -77371,7 +77371,7 @@
         "Lesser demon Regular (m)": {
           "droprate": "1/1489.5"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/1489.5"
         },
         "Werewolf": {
@@ -78303,7 +78303,7 @@
         "Skeleton (mage)": {
           "droprate": "1/182"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/182"
         },
         "Skeleton brute": {
@@ -78477,7 +78477,7 @@
         "Lesser demon Regular (m)": {
           "droprate": "1/910.2"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/910.2"
         },
         "Werewolf": {
@@ -84104,7 +84104,7 @@
         "Skeleton (Catacombs of Kourend)": {
           "droprate": "1/64"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/64"
         },
         "Skeleton Armed": {
@@ -84305,7 +84305,7 @@
         "H.A.M. Guard": {
           "droprate": "1/36.667"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/42.667"
         },
         "Guard (H.A.M. Storerooms)": {
@@ -84487,7 +84487,7 @@
         "Skeleton (mage)": {
           "droprate": "1/42.667"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/42.667"
         },
         "Bandit (Bandit Camp)": {
@@ -84588,7 +84588,7 @@
         "Highwayman No hood (m)": {
           "droprate": "1/20"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/42.667"
         }
       },
@@ -85124,7 +85124,7 @@
         "H.A.M. Guard": {
           "droprate": "1/36.667"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/42.667"
         },
         "Guard (H.A.M. Storerooms)": {
@@ -85387,7 +85387,7 @@
     "image": "iron_dart_(p).png",
     "sources": {
       "drops": {
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/42.667"
         }
       },
@@ -86062,7 +86062,7 @@
         "Skeleton (mage)": {
           "droprate": "1/16"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/16"
         },
         "Skeleton brute": {
@@ -86423,7 +86423,7 @@
         "Banshee": {
           "droprate": "1/64"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/64"
         },
         "Barbarian (Barbarian Camp) High level": {
@@ -86491,7 +86491,7 @@
         "Combat path starter kit": {
           "droprate": "Always"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/16"
         },
         "Wall beast": {
@@ -87354,7 +87354,7 @@
         "Skeleton (mage)": {
           "droprate": "1/64"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/64"
         },
         "Skeletal miner": {
@@ -87468,7 +87468,7 @@
         "Dagannoth": {
           "droprate": "1/21.333"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/25.6"
         },
         "Ork": {
@@ -87867,7 +87867,7 @@
         "Skeleton (mage)": {
           "droprate": "1/25.6"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/25.6"
         },
         "Skeleton (Tarn's Lair) Low level": {
@@ -90363,7 +90363,7 @@
         "Skeleton (mage)": {
           "droprate": "1/42.667"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/42.667"
         },
         "H.A.M. Member": {
@@ -93231,7 +93231,7 @@
         "Rock (Troll)": {
           "droprate": "1/42.667"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/42.667"
         },
         "Sorebones": {
@@ -93671,7 +93671,7 @@
         "H.A.M. Guard": {
           "droprate": "1/36.667"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/42.667"
         },
         "Reward casket (beginner)": {
@@ -93957,7 +93957,7 @@
         "Reward casket (beginner)": {
           "droprate": "1/44.727"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/64"
         }
       },
@@ -97206,7 +97206,7 @@
         "Skeleton (mage)": {
           "droprate": "1/128"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/128"
         }
       },
@@ -101484,7 +101484,7 @@
         "Black Knight": {
           "droprate": "1/32"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/42.667"
         },
         "Zombie (Kourend)": {
@@ -104079,7 +104079,7 @@
         "Skeleton (mage)": {
           "droprate": "1/64"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/64"
         },
         "Skeleton (Tarn's Lair) Low level": {
@@ -104159,7 +104159,7 @@
         "Skeleton (mage)": {
           "droprate": "1/128"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/128"
         },
         "Skeleton brute": {
@@ -104669,7 +104669,7 @@
         "Green dragon Wilderness Slayer Cave": {
           "droprate": "1/64"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/128"
         },
         "Ornate lockbox": {
@@ -104927,7 +104927,7 @@
         "Rusty scimitar": {
           "droprate": "1/50"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/64"
         },
         "Black Chest (red)": {
@@ -105342,7 +105342,7 @@
         "Skeleton (mage)": {
           "droprate": "1/128"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/128"
         },
         "Skeleton brute": {
@@ -131633,7 +131633,7 @@
         "Skeleton (mage)": {
           "droprate": "1/128"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/128"
         },
         "Skeleton brute": {
@@ -134741,7 +134741,7 @@
         "Skeleton (mage)": {
           "droprate": "1/64"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/64"
         },
         "Skeleton brute": {
@@ -137613,7 +137613,7 @@
         "Skeleton (mage)": {
           "droprate": "1/42.667"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/42.667"
         },
         "Reward casket (beginner)": {
@@ -137925,7 +137925,7 @@
         "Lizard": {
           "droprate": "1/64"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/64"
         },
         "Small Lizard": {
@@ -137990,7 +137990,7 @@
         "Skeleton (mage)": {
           "droprate": "1/42.667"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/42.667"
         },
         "Skeleton brute": {
@@ -143645,7 +143645,7 @@
         "Skeleton (mage)": {
           "droprate": "1/64"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/64"
         },
         "Zombie Level 13": {
@@ -144104,7 +144104,7 @@
         "Skeleton (mage)": {
           "droprate": "1/64"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/64"
         },
         "Guard (H.A.M. Storerooms)": {
@@ -144580,7 +144580,7 @@
         "Skeleton (mage)": {
           "droprate": "1/42.667"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/42.667"
         }
       },
@@ -144912,7 +144912,7 @@
         "Skeleton (mage)": {
           "droprate": "1/64"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/64"
         },
         "Zombie (Tarn's Lair) High level": {
@@ -145124,7 +145124,7 @@
         "Skeleton (mage)": {
           "droprate": "1/25.6"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/25.6"
         },
         "Ogre Coffin": {
@@ -145625,7 +145625,7 @@
         "Skeleton (mage)": {
           "droprate": "1/128"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/128"
         },
         "Skeleton brute": {
@@ -146032,7 +146032,7 @@
         "Skeleton (mage)": {
           "droprate": "1/42.667"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/42.667"
         }
       },
@@ -146171,7 +146171,7 @@
         "Skeleton (mage)": {
           "droprate": "1/128"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/128"
         },
         "Skeleton brute": {
@@ -146927,7 +146927,7 @@
         "Skeleton (mage)": {
           "droprate": "1/25.6"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/25.6"
         },
         "Zombie (Tarn's Lair) Low level": {
@@ -147096,7 +147096,7 @@
         "Reward casket (beginner)": {
           "droprate": "1/44.727"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/64"
         },
         "Former Vampyre": {
@@ -147619,7 +147619,7 @@
         "Skeleton (mage)": {
           "droprate": "1/25.6"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/25.6"
         },
         "Earth warrior": {
@@ -147831,7 +147831,7 @@
         "Skeleton (mage)": {
           "droprate": "1/25.6"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/25.6"
         }
       },
@@ -148110,7 +148110,7 @@
         "Twig": {
           "droprate": "1/42.667"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/64"
         },
         "Black Guard Berserker": {
@@ -149027,7 +149027,7 @@
         "Skeleton (mage)": {
           "droprate": "1/25.6"
         },
-        "Skeleton (Tarn's Lair) High level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) High level": {
           "droprate": "1/25.6"
         }
       },
@@ -166587,7 +166587,7 @@
         "Shadow warrior": {
           "droprate": "1/128"
         },
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/128"
         },
         "Nest (nice) Kwuarm potion (unf)": {
@@ -171713,7 +171713,7 @@
     "image": "yew_longbow_(u).png",
     "sources": {
       "drops": {
-        "Skeleton (Tarn's Lair) Medium level": {
+        "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/42.667"
         }
       },
