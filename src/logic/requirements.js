@@ -910,71 +910,71 @@ export const REQUIREMENT_CHECKS = {
         return hasAnyNails(ctx);
     },
     canMakeWoodenWorkbench(ctx) {
-        return canTrainConstruction(ctx) //
+        return hasSkillLevel(ctx, "Construction", 17) //
             && hasAnyNails(ctx) //
             && has(ctx, 8794) // Saw
             && has(ctx, 2347) // Hammer
             && has(ctx, 960); // Plank
     },
     canMakeOakWorkbench(ctx) {
-        return canTrainConstruction(ctx) //
+        return hasSkillLevel(ctx, "Construction", 32) //
             && has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
             && has(ctx, 8778); // Oak plank
     },
     canMakeSteelFramedWorkbench(ctx) {
-        return canTrainConstruction(ctx) //
+        return hasSkillLevel(ctx, "Construction", 46) //
             && has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
             && has(ctx, 8778)  // Oak plank
             && has(ctx, 2353); // Steel bar
     },
     canMakeOakLectern(ctx) {
-        return canTrainConstruction(ctx) //
+        return hasSkillLevel(ctx, "Construction", 40) //
             && has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
             && has(ctx, 8778); // Oak plank
     },
     canMakeEagleLectern(ctx) {
-        return canTrainConstruction(ctx) //
+        return hasSkillLevel(ctx, "Construction", 47) //
             && has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
             && has(ctx, 8778); // Oak plank
     },
     canMakeDemonLectern(ctx) {
-        return canTrainConstruction(ctx) //
+        return hasSkillLevel(ctx, "Construction", 47) //
             && has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
             && has(ctx, 8778); // Oak plank
     },
     canMakeTeakEagleLectern(ctx) {
-        return canTrainConstruction(ctx) //
+        return hasSkillLevel(ctx, "Construction", 57) //
             && has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
             && has(ctx, 8780); // Teak plank
     },
     canMakeTeakDemonLectern(ctx) {
-        return canTrainConstruction(ctx) //
+        return hasSkillLevel(ctx, "Construction", 57) //
             && has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
             && has(ctx, 8780); // Teak plank
     },
     canMakeMahoganyEagleLectern(ctx) {
-        return canTrainConstruction(ctx) //
+        return hasSkillLevel(ctx, "Construction", 67) //
             && has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
             && has(ctx, 8782)  // Mahogany plank
             && has(ctx, 8784); // Gold leaf
     },
     canMakeMahoganyDemonLectern(ctx) {
-        return canTrainConstruction(ctx) //
+        return hasSkillLevel(ctx, "Construction", 67) //
             && has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
             && has(ctx, 8782)  // Mahogany plank
             && has(ctx, 8784); // Gold leaf
     },
     canMakeMarbleLectern(ctx) {
-        return canTrainConstruction(ctx) //
+        return hasSkillLevel(ctx, "Construction", 77) //
             && has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
             && has(ctx, 8786)  // Marble block
@@ -982,73 +982,73 @@ export const REQUIREMENT_CHECKS = {
             && has(ctx, 8784); // Gold leaf
     },
     canMakeCraftingTableI(ctx) {
-        return canTrainConstruction(ctx) //
+        return hasSkillLevel(ctx, "Construction", 16) //
             && has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
             && has(ctx, 8778); // Oak plank
     },
     canMakeCraftingTableII(ctx) {
-        return canTrainConstruction(ctx) //
+        return hasSkillLevel(ctx, "Construction", 25) //
             && has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
             && has(ctx, 8778)  // Oak plank
             && has(ctx, 1775); // Molten glass
     },
     canMakeRepairBench(ctx) {
-        return canTrainConstruction(ctx) //
+        return hasSkillLevel(ctx, "Construction", 15) //
             && has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
             && has(ctx, 8778); // Oak plank
     },
     canMakeWhetstone(ctx) {
-        return canTrainConstruction(ctx) //
+        return hasSkillLevel(ctx, "Construction", 35) //
             && has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
             && has(ctx, 8778)  // Oak plank
             && has(ctx, 3420); // Limestone brick
     },
     canMakeArmourStand(ctx) {
-        return canTrainConstruction(ctx) //
+        return hasSkillLevel(ctx, "Construction", 55) //
             && has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
             && has(ctx, 8778)  // Oak plank
             && has(ctx, 3420); // Limestone brick
     },
     canMakeToolStore(ctx) {
-        return canTrainConstruction(ctx) //
+        return hasSkillLevel(ctx, "Construction", 15) //
             && has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
             && has(ctx, 8778); // Oak plank
     },
     canMakeWoodenLarder(ctx) {
-        return canTrainConstruction(ctx) //
+        return hasSkillLevel(ctx, "Construction", 9) //
             && has(ctx, 8794) // Saw
             && has(ctx, 2347) // Hammer
             && hasAnyNails(ctx) //
             && has(ctx, 960); // Plank
     },
     canMakeOakLarder(ctx) {
-        return canTrainConstruction(ctx) //
+        return hasSkillLevel(ctx, "Construction", 33) //
             && has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
             && has(ctx, 8778); // Oak plank
     },
     canMakeTeakLarder(ctx) {
-        return canTrainConstruction(ctx) //
+        return hasSkillLevel(ctx, "Construction", 43) //
             && has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
             && has(ctx, 8790)  // Bolt of cloth
             && has(ctx, 8780); // Teak plank
     },
     canMakeWoodenShelvesI(ctx) {
-        return canTrainConstruction(ctx) //
+        return hasSkillLevel(ctx, "Construction", 6) //
             && has(ctx, 8794) // Saw
             && has(ctx, 2347) // Hammer
             && hasAnyNails(ctx) //
             && has(ctx, 960); // Plank
     },
     canMakeWoodenShelvesII(ctx) {
-        return canTrainConstruction(ctx) //
+        return hasSkillLevel(ctx, "Construction", 12) //
             && has(ctx, 8794) // Saw
             && has(ctx, 2347) // Hammer
             && hasAnyNails(ctx) //
@@ -1056,21 +1056,21 @@ export const REQUIREMENT_CHECKS = {
             && has(ctx, 960); // Plank
     },
     canMakeOakShelves(ctx) {
-        return canTrainConstruction(ctx) //
+        return hasSkillLevel(ctx, "Construction", 34) //
             && has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
             && has(ctx, 1761)  // Soft clay
             && has(ctx, 8778); // Oak plank
     },
     canMakeTeakShelvesI(ctx) {
-        return canTrainConstruction(ctx) //
+        return hasSkillLevel(ctx, "Construction", 56) //
             && has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
             && has(ctx, 1761)  // Soft clay
             && has(ctx, 8780); // Teak plank
     },
     canMakeTeakShelvesII(ctx) {
-        return canTrainConstruction(ctx) //
+        return hasSkillLevel(ctx, "Construction", 67) //
             && has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
             && has(ctx, 1761)  // Soft clay
@@ -2701,8 +2701,8 @@ export const REQUIREMENT_CHECKS = {
     canBurnUriumShades(ctx) {
         return canBurnUriumShades(ctx);
     },
-    hasFremennikIslesStartingOres(ctx) {
-        return hasFremennikIslesStartingOres(ctx);
+    canAccessNeitiznot(ctx) {
+        return canAccessNeitiznot(ctx);
     },
     canUseFairyRings(ctx) {
         return canCompleteFairytaleIGrowingPains(ctx);
@@ -6477,8 +6477,7 @@ function canCatchSalamanders(ctx) {
 }
 
 function canCatchCrabs(ctx) {
-    return canTrainConstruction(ctx) //
-        && canTrainHunter(ctx) //
+    return canTrainHunter(ctx) //
         && has(ctx, 2347)      // Hammer
         && has(ctx, 8794)      // Saw
         && has(ctx, 1925)      // Bucket
@@ -6488,8 +6487,7 @@ function canCatchCrabs(ctx) {
 }
 
 function canCatchRainbowCrabs(ctx) {
-    return canTrainConstruction(ctx) //
-        && canTrainHunter(ctx) //
+    return canTrainHunter(ctx) //
         && has(ctx, 2347)      // Hammer
         && has(ctx, 8794)      // Saw
         && has(ctx, 1925)      // Bucket
@@ -6572,14 +6570,14 @@ function canDoZulrah(ctx) {
 function canStartAtFirstLight(ctx) {
     return canTrainHunter(ctx) //
         && canTrainHerblore(ctx) //
-        && canTrainConstruction(ctx) //
+        && hasSkillLevel(ctx, "Construction", 27) //
         && requiresQuest(ctx, "canCompleteEaglesPeak", canCompleteEaglesPeak) //
         && requiresQuest(ctx, "canCompleteChildrenOfTheSun", canCompleteChildrenOfTheSun);
 }
 
 function canSailToTheNorthernOcean(ctx) {
     return requiresQuest(ctx, "canCompletePandemonium", canCompletePandemonium) //
-        && canTrainConstruction(ctx) //
+        && hasSkillLevel(ctx, "Construction", 72) //
         && has(ctx, 31435) // Ironwood plank
         && has(ctx, 4824)  // Rune nails
         && has(ctx, 32892) // Cupronickel bar
@@ -6840,8 +6838,7 @@ function canGetGoutweed(ctx) {
 }
 
 function canDoMahoganyHomes(ctx) {
-    return canTrainConstruction(ctx) //
-        && has(ctx, 2347) // Hammer
+    return has(ctx, 2347) // Hammer
         && has(ctx, 8794) // Saw
         && has(ctx, 2353) // Steel bar
         && hasAnyItems(ctx, [
@@ -7072,33 +7069,26 @@ function canDoMixology(ctx) {
 }
 
 function canMakeSplitLog(ctx) {
-    return requiresQuest(ctx, "canCompleteTheFremennikTrials", canCompleteTheFremennikTrials) //
-        && canTrainConstruction(ctx) //
-        && (ctx.player.levels.Mining === 1 //
-            ? has(ctx, 438) // Tin ore
-            : ctx.player.levels.Mining <= 54 //
-                ? has(ctx, 453) // Coal
-                : has(ctx, 447)) // Mithril ore
+    return canAccessNeitiznot(ctx) // to get to neitiznot
+        && hasSkillLevel(ctx, "Woodcutting", 56) //
+        && hasUsableAxe(ctx) // any axe
         && has(ctx, 10810) // Arctic pine logs
         && has(ctx, 954);  // Rope
 }
 
 function canMakeNeitiznotShield(ctx) {
-    return requiresQuest(ctx, "canCompleteTheFremennikTrials", canCompleteTheFremennikTrials) //
-        && canTrainConstruction(ctx) //
-        && (ctx.player.levels.Mining === 1 //
-            ? has(ctx, 438) // Tin ore
-            : ctx.player.levels.Mining <= 54 //
-                ? has(ctx, 453) // Coal
-                : has(ctx, 447)) // Mithril ore
+    return canAccessNeitiznot(ctx) // to get to neitiznot
+        && hasSkillLevel(ctx, "Woodcutting", 56) //
         && has(ctx, 10810) // Arctic pine logs
         && has(ctx, 4819)  // Bronze nails
         && has(ctx, 2347)  // Hammer
         && has(ctx, 954);  // Rope
 }
 
-function hasFremennikIslesStartingOres(ctx) {
-    return (ctx.player.levels.Mining === 1 //
+function canAccessNeitiznot(ctx) {
+    return requiresQuest(ctx, "canCompleteTheFremennikTrials", canCompleteTheFremennikTrials) //
+        && has(ctx, 359) // raw tuna
+        && (ctx.player.levels.Mining === 1 //
         ? has(ctx, 438) // Tin ore
         : ctx.player.levels.Mining <= 54 //
             ? has(ctx, 453) // Coal
@@ -7106,26 +7096,14 @@ function hasFremennikIslesStartingOres(ctx) {
 }
 
 function canMakeYakhideArmour(ctx) {
-    return requiresQuest(ctx, "canCompleteTheFremennikTrials", canCompleteTheFremennikTrials) //
-        && canTrainConstruction(ctx) //
-        && (ctx.player.levels.Mining === 1 //
-            ? has(ctx, 438) // Tin ore
-            : ctx.player.levels.Mining <= 54 //
-                ? has(ctx, 453) // Coal
-                : has(ctx, 447)) // Mithril ore
+    return canAccessNeitiznot(ctx) // to get to neitiznot
         && has(ctx, 10812) // Split log
         && has(ctx, 10820) // Cured yak-hide
         && has(ctx, 954);  // Rope
 }
 
 function canCureYakHide(ctx) {
-    return requiresQuest(ctx, "canCompleteTheFremennikTrials", canCompleteTheFremennikTrials) //
-        && canTrainConstruction(ctx) //
-        && (ctx.player.levels.Mining === 1 //
-            ? has(ctx, 438) // Tin ore
-            : ctx.player.levels.Mining <= 54 //
-                ? has(ctx, 453) // Coal
-                : has(ctx, 447)) // Mithril ore
+    return canAccessNeitiznot(ctx) // to get to neitiznot
         && has(ctx, 10812) // Split log
         && has(ctx, 10818) // Yak-hide
         && has(ctx, 954);  // Rope
@@ -7153,7 +7131,7 @@ function canStartLegendsQuest(ctx) {
 
 function canStartDarknessOfHallowvale(ctx) {
     return requiresQuest(ctx, "canCompleteInAidOfTheMyreque", canCompleteInAidOfTheMyreque) //
-        && canTrainConstruction(ctx) //
+        && hasSkillLevel(ctx, "Construction", 5) //
         && canTrainMining(ctx) //
         && canTrainCrafting(ctx); //
 }
@@ -7175,7 +7153,7 @@ function canStartTheQueenOfThieves(ctx) {
     return requiresQuest(ctx, "canCompleteClientOfKourend", canCompleteClientOfKourend);
 }
 
-function hasTelegrabRunes(ctx) {
+export function hasTelegrabRunes(ctx) {
     return has(ctx, 563) // Law rune
         && hasAirRuneSource(ctx);
 }

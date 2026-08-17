@@ -3,6 +3,7 @@ import { fileStore } from "../storage/fileStore.js";
 import { canReachNpc, evaluateRule } from "./itemAvailability.js";
 import { NPC_DATA } from "./npcData.js";
 import { isIronmanAccount } from "./playerState.js";
+import { hasTelegrabRunes } from "./requirements.js";
 
 function ruleContainsSkillRequirement(rule) {
     if (!rule || typeof rule === "string") return false;
@@ -93,10 +94,26 @@ export async function getObtainabilityRank(item, ctx) {
     }
 
     // 2. Spawn (obtainable)
-    if (rolled && src.spawns) {
-        for (const rule of Object.values(src.spawns)) {
-            if (await isRuleObtainable(rule, ctx)) {
-                return { rank: 2, name };
+    if (src.spawns) {
+        // Normal spawn
+        if (rolled) {
+            for (const rule of Object.values(src.spawns)) {
+                if (await isRuleObtainable(rule, ctx)) {
+                    return { rank: 2, name };
+                }
+            }
+        }
+
+        // Telegrab spawn
+        if (ctx?.filters?.allowTelegrab && await hasTelegrabRunes(ctx)) {
+            for (const rule of Object.values(src.spawns)) {
+                if (!rule || rule === "No requirements") {
+                    return { rank: 2, name };
+                }
+
+                if (await evaluateRule(rule, ctx)) {
+                    return { rank: 2, name };
+                }
             }
         }
     }

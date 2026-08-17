@@ -59285,6 +59285,9 @@
     "sources": {
       "shops": {
         "Yes": "No requirements"
+      },
+      "spawns": {
+        "Yes": "No requirements"
       }
     },
     "tags": [

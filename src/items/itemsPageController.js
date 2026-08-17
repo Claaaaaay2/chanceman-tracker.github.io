@@ -4,7 +4,7 @@ import { getBoostedRequirementLabel } from "../logic/skillBoosts.js";
 import { getHighlightClasses, isItemSourcesChanged, markNewItems, markSourceSignature } from "../logic/highlightState.js";
 import { areNpcSkillsMet, getNpcEffectiveLevels, isDropSlayerLocked, isItemHiddenByTag, isNpcBlockedByFilters, isNpcObtainable, isRuleObtainable, isSourceHiddenByFilters } from "../logic/itemVisibility.js";
 import { NPC_DATA } from "../logic/npcData.js";
-import { has } from "../logic/requirements.js";
+import { has, hasTelegrabRunes } from "../logic/requirements.js";
 import { getObtainabilityRank } from "../logic/sortHelpers.js";
 import { capitalizeFirstLetter, parseDropRate } from "../logic/utils.js";
 import { fileStore } from "../storage/fileStore.js";
@@ -18,10 +18,10 @@ import { hasSuperiorSlayerUnlock, isIronmanAccount } from "../logic/playerState.
 const ITEM_SECTION_TITLES = {
     1: "Buyable shop items",
     2: "Pickupable spawns",
-    3: "Easy Rolls",
-    4: "Other Sources",
-    5: "Skill Requirements Met",
-    6: "Other Drops",
+    3: "Easy rolls",
+    4: "Other sources",
+    5: "Skill requirements met",
+    6: "Other drops",
     7: "Sources for which you do not have the level yet",
     8: "Clue rewards",
     9: "Unobtainable items"
@@ -203,6 +203,7 @@ export async function initItemsPage() {
         { id: "hideUnobtainable", key: "hideUnobtainable", defaultValue: true },
         { id: "hideClueRewardOnly", key: "hideClue", defaultValue: true, invalidate: true },
         { id: "allowOthersHouses", key: "allowOthersHouses", defaultValue: false, invalidate: true },
+        { id: "allowTelegrab", key: "allowTelegrab", defaultValue: false, invalidate: true },
         { id: "hasFlatpacks", key: "hasFlatpacks", defaultValue: true },
         { id: "hasItemsets", key: "hasItemsets", defaultValue: true },
         { id: "hideBosses", key: "hideBosses", defaultValue: false, invalidate: true },
@@ -419,6 +420,18 @@ export async function initItemsPage() {
         }
         return rule;
     }
+
+    async function isTelegrabSpawnObtainable(rule, ctx) {
+    if (!ctx?.filters?.allowTelegrab) return false;
+
+    if (!(await hasTelegrabRunes(ctx))) return false;
+
+    if (!rule || rule === "No requirements") {
+        return true;
+    }
+
+    return await evaluateRule(rule, ctx);
+}
 
     function bindSectionSummaryNavigation() {
         if (!elements.itemsSectionSummary || elements.itemsSectionSummary.dataset.navBound === "true") return;
@@ -921,7 +934,13 @@ export async function initItemsPage() {
 
         if (rolledSet?.has(item.id) && item.sources?.spawns) {
             for (const [spawnName, rule] of Object.entries(item.sources.spawns)) {
-                if (await isRuleObtainable(rule, ctx)) {
+                const obtainableNormally =
+                    await isRuleObtainable(rule, ctx);
+
+                const obtainableByTelegrab =
+                    await isTelegrabSpawnObtainable(rule, ctx);
+
+                if (obtainableNormally || obtainableByTelegrab) {
                     sources.push({
                         type: "spawn",
                         label: `Spawn: ${spawnName}`,
@@ -1103,6 +1122,7 @@ export async function initItemsPage() {
             hideUnobtainable,
             hideClue,
             allowOthersHouses,
+            allowTelegrab,
             hasFlatpacks,
             hasItemsets,
             hideBosses,
@@ -1153,38 +1173,38 @@ export async function initItemsPage() {
             const isClueRewardOnly = meta?.isClueRewardOnly ?? item.tags?.includes("clue-reward-only");
             if (hideClue && isClueRewardOnly) continue;
             if (hideClue && await shouldHideForClueFilter(item, fileStore, rolledSet)) {
-                sort.rank = 8;
-            }
-            if (!allowOthersHouses && await hideTag(item, fileStore, "house", rolledSet)) {
-                sort.rank = 8;
+                sort.rank = 9;
             }
             if (!hasSuperiors && await hideTag(item, fileStore, "superior", rolledSet)) {
-                sort.rank = 8;
+                sort.rank = 9;
             }
             if (isIronman && await isNonIronItem(item, fileStore, rolledSet)) {
-                sort.rank = 8;
+                sort.rank = 9;
             }
             const hasFlatpackTag = meta?.hasFlatpack ?? item.tags?.includes("flatpack");
             if (!hasFlatpacks && hasFlatpackTag) continue;
             const hasItemsetTag = meta?.hasItemset ?? item.tags?.includes("itemset");
             if (!hasItemsets && hasItemsetTag) continue;
             if (hideBosses && await hideTag(item, fileStore, "boss", rolledSet)) {
-                sort.rank = 8;
+                sort.rank = 9;
             }
             if (hideRaids && await hideTag(item, fileStore, "raid", rolledSet)) {
-                sort.rank = 8;
+                sort.rank = 9;
             }
             if (isSlayerLocked && await hideSkill(item, fileStore, "Slayer", rolledSet)) {
-                sort.rank = 8;
+                sort.rank = 9;
             }
             if (isHunterRumourLocked && await hideTag(item, fileStore, "hunterRumour", rolledSet)) {
-                sort.rank = 8;
+                sort.rank = 9;
+            }
+            if (!allowOthersHouses && await hideTag(item, fileStore, "house", rolledSet)) {
+                sort.rank = 9;
             }
             if (hideLMS && await hideTag(item, fileStore, "LMS", rolledSet)) {
-                sort.rank = 8;
+                sort.rank = 9;
             }
             if (hideJon && await hideTag(item, fileStore, "jon", rolledSet)) {
-                sort.rank = 8;
+                sort.rank = 9;
             }
             if (hideUnobtainable && sort.rank === 8) continue;
 
@@ -1585,48 +1605,97 @@ async function isNonIronItem(item, ctx, rolledSet) {
 async function hideTag(item, ctx, tag, rolledSet) {
     let hasAnyTagSource = false;
     let hasReachableNonTagSource = false;
+
     const meta = fileStore.itemMeta?.get(item.id);
-    const dropNpcs = meta?.dropNpcs ?? (item.sources?.drops ? Object.keys(item.sources.drops) : []);
-    const otherSources = meta?.otherSources ?? (item.sources?.other ? Object.values(item.sources.other) : []);
+    const dropNpcs = meta?.dropNpcs ?? (
+        item.sources?.drops ? Object.keys(item.sources.drops) : []
+    );
+    const otherSources = meta?.otherSources ?? (
+        item.sources?.other ? Object.values(item.sources.other) : []
+    );
 
     // NPC drops
     if (dropNpcs.length) {
         for (const npcName of dropNpcs) {
             const npcMeta = NPC_META.get(npcName);
             const npc = NPC_DATA[npcName];
+
             if (!npc) continue;
             if (isNpcBlockedByFilters(npcName, ctx)) continue;
 
-            const isTag = npcMeta?.tags?.has(tag) ?? npc.tags?.includes(tag);
-            if (isTag) hasAnyTagSource = true;
+            const isTag =
+                npcMeta?.tags?.has(tag) ??
+                npc.tags?.includes(tag);
+
+            if (isTag) {
+                hasAnyTagSource = true;
+            }
 
             const reachable = await canReachNpc(npcName, ctx);
+
             if (!reachable) continue;
 
-            if (!isTag) hasReachableNonTagSource = true;
+            if (!isTag) {
+                hasReachableNonTagSource = true;
+            }
         }
     }
 
-    // Other sources (crafting, house actions, etc)
+    // Other sources (crafting, house actions, etc.)
     if (otherSources.length) {
         for (const source of otherSources) {
             const isHiddenByFilters = isSourceHiddenByFilters(source, ctx);
-            const isIgnoredTagSource = (tag === "LMS" && source.tags?.includes("LMS"))
-                || (tag === "jon" && source.tags?.includes("jon"));
+
+            const isIgnoredTagSource =
+                (tag === "LMS" && source.tags?.includes("LMS")) ||
+                (tag === "jon" && source.tags?.includes("jon"));
 
             if (isHiddenByFilters && !isIgnoredTagSource) continue;
 
             const isTag = source.tags?.includes(tag);
-            if (isTag) hasAnyTagSource = true;
 
-            const reachable = await canReachSource(source, ctx);
+            if (isTag) {
+                hasAnyTagSource = true;
+            }
+
+            // Build the effective rule for this source.
+            let rule = source.rule;
+
+            if (
+                source.tags?.includes("house") &&
+                source.houseRule &&
+                !fileStore.filters.allowOthersHouses
+            ) {
+                rule = {
+                    all: [
+                        rule,
+                        source.houseRule
+                    ]
+                };
+            }
+
+            const sourceForReachability = {
+                ...source,
+                rule
+            };
+
+            const reachable = await canReachSource(
+                sourceForReachability,
+                ctx
+            );
+
             if (!reachable) continue;
 
-            if (!isTag) hasReachableNonTagSource = true;
+            if (!isTag) {
+                hasReachableNonTagSource = true;
+            }
         }
     }
 
-    if (rolledSet?.has(item.id) && (item.sources?.shops || item.sources?.spawns)) {
+    if (
+        rolledSet?.has(item.id) &&
+        (item.sources?.shops || item.sources?.spawns)
+    ) {
         return false;
     }
 
@@ -1695,9 +1764,9 @@ async function hideSkill(item, ctx, skill, rolledSet) {
         }
     }
 
-    if (rolledSet?.has(item.id) && (item.sources?.shops || item.sources?.spawns)) {
-        return false;
-    }
+if (rolledSet?.has(item.id) && item.sources?.shops) {
+    return false;
+}
 
     if (hasReachableNonSkillSource) return false;
 
