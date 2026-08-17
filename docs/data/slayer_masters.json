@@ -2097,6 +2097,9 @@
                         "skills": {
                             "Slayer": 50,
                             "Combat": 50
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
                         }
                     },
                     "locations": [

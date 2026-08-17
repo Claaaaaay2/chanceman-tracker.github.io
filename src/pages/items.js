@@ -85,6 +85,11 @@ export default async function ItemsPage() {
                 </label>
 
                 <label>
+                    <input type="checkbox" id="allowTelegrab">
+                    Allow telegrab for rolls
+                </label>
+
+                <label>
                     <input type="checkbox" id="hasFlatpacks">
                     I play with flatpacks
                 </label>
