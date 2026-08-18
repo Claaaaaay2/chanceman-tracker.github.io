@@ -5944,7 +5944,7 @@
         "Mutated Tortoise": {
           "droprate": "3 × 1/32"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/21.429"
         },
         "Phantom Muspah": {
@@ -17699,7 +17699,7 @@
         "Tormented Demon": {
           "droprate": "1/17"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/37.5"
         },
         "Armoured kraken": {
@@ -20498,7 +20498,7 @@
         "Magpie impling jar": {
           "droprate": "1/10.5"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/21.429"
         },
         "Ninja impling": {
@@ -25714,7 +25714,7 @@
         "Brutal blue dragon": {
           "droprate": "Always"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "Always"
         },
         "Barbarian Assault/Gambles Low": {
@@ -36992,7 +36992,7 @@
         "Manta ray (monster)": {
           "droprate": "1/1546.9"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/3125"
         },
         "Alchemical Hydra": {
@@ -37307,7 +37307,7 @@
         "Cave kraken": {
           "droprate": "1/12.5"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/25"
         },
         "Tormented Demon": {
@@ -44394,7 +44394,7 @@
         "The Whisperer": {
           "droprate": "1/12.5"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/25"
         },
         "Feral Vampyre": {
@@ -45827,7 +45827,7 @@
         "Chewed bones": {
           "droprate": "1/16"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/37.5"
         },
         "Magpie impling": {
@@ -46012,7 +46012,7 @@
         "Magma strykewyrm": {
           "droprate": "3 × 1/94.2"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/109.2"
         },
         "Colossal Hydra": {
@@ -48064,7 +48064,7 @@
         "King Black Dragon": {
           "droprate": "1/5000"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "1/5000"
         },
         "Rune dragon": {
@@ -48392,7 +48392,7 @@
         "Dragon impling jar": {
           "droprate": "1/19"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/50"
         },
         "King Black Dragon": {
@@ -48485,7 +48485,7 @@
         "Reward casket (master)": {
           "droprate": "1/30.3"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/75"
         },
         "Mad Angel": {
@@ -48834,7 +48834,7 @@
         "Rewards Chest (Fortis Colosseum) Wave 9": {
           "droprate": "1/6.792"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/18.75"
         },
         "Phantom Muspah": {
@@ -48937,7 +48937,7 @@
         "Grubby Chest": {
           "droprate": "1/16.667"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/37.5"
         },
         "Dragon impling": {
@@ -49516,7 +49516,7 @@
         "Chest (Tombs of Amascut)": {
           "droprate": "3 × 1/27"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/25"
         },
         "Grotesque Guardians": {
@@ -50428,7 +50428,7 @@
         "Reward casket (elite)": {
           "droprate": "1/32.3"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/75"
         },
         "Colossal Hydra": {
@@ -50954,7 +50954,7 @@
         "Phantom Muspah": {
           "droprate": "2 × 1/58.75"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/75"
         },
         "Yama": {
@@ -51069,7 +51069,7 @@
         "Phantom Muspah": {
           "droprate": "2 × 1/47"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/75"
         },
         "Rewards Chest (Fortis Colosseum) Wave 11": {
@@ -51460,7 +51460,7 @@
     "image": "dragonbone_necklace.png",
     "sources": {
       "drops": {
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "1/1000"
         }
       }
@@ -51647,7 +51647,7 @@
         "Manta ray (monster)": {
           "droprate": "1/1031.3"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/2083.3"
         },
         "Alchemical Hydra": {
@@ -51735,7 +51735,7 @@
         "Dragon impling jar": {
           "droprate": "1/19"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/50"
         },
         "Dark Chest": {
@@ -51915,7 +51915,7 @@
     "image": "dragonstone_bolt_tips.png",
     "sources": {
       "drops": {
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/30"
         },
         "Zulrah": {
@@ -55727,7 +55727,7 @@
         "Magma strykewyrm": {
           "droprate": "3 × 1/117.8"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/136.5"
         },
         "Colossal Hydra": {
@@ -66366,7 +66366,7 @@
         "Market stall (wine)": {
           "droprate": "1/5.882"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/30"
         },
         "Zulrah": {
@@ -66813,7 +66813,7 @@
         "Green dragon Wilderness Slayer Cave": {
           "droprate": "Always"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/21.429"
         },
         "Corporeal Beast": {
@@ -88938,7 +88938,7 @@
     "image": "jar_of_decay.png",
     "sources": {
       "drops": {
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "1/3000"
         }
       }
@@ -96304,7 +96304,7 @@
         "Nuclear smoke devil": {
           "droprate": "3 × 1/42.667"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/30"
         },
         "General Graardor": {
@@ -96923,7 +96923,7 @@
         "Manta ray (monster)": {
           "droprate": "1/562.5"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/1136.4"
         },
         "Alchemical Hydra": {
@@ -98030,7 +98030,7 @@
         "Manta ray (monster)": {
           "droprate": "1/343.8"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/694.4"
         },
         "Alchemical Hydra": {
@@ -98371,7 +98371,7 @@
         "Phantom Muspah": {
           "droprate": "2 × 1/94"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/150"
         }
       },
@@ -98758,7 +98758,7 @@
         "Manta ray (monster)": {
           "droprate": "1/343.8"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/694.4"
         },
         "Alchemical Hydra": {
@@ -112393,7 +112393,7 @@
         "Zalcano": {
           "droprate": "1/18"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/37.5"
         },
         "Ninja impling": {
@@ -114083,7 +114083,7 @@
         "Manta ray (monster)": {
           "droprate": "1/618.8"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/1250"
         },
         "Alchemical Hydra": {
@@ -114263,7 +114263,7 @@
         "Manta ray (monster)": {
           "droprate": "1/442"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/892.9"
         },
         "Alchemical Hydra": {
@@ -119835,7 +119835,7 @@
         "Ice warrior (m)": {
           "droprate": "1/191.1"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/416.7"
         },
         "Alchemical Hydra": {
@@ -122418,7 +122418,7 @@
         "Grotesque Guardians": {
           "droprate": "2 × 1/94.667"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/100"
         },
         "Drake": {
@@ -123492,7 +123492,7 @@
         "Red dragon": {
           "droprate": "Always"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/21.429"
         },
         "Grubby Chest": {
@@ -124309,7 +124309,7 @@
         "Manta ray (monster)": {
           "droprate": "1/1546.9"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/3125"
         },
         "Alchemical Hydra": {
@@ -126658,7 +126658,7 @@
         "Magma strykewyrm": {
           "droprate": "3 × 1/117.8"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/136.5"
         },
         "Colossal Hydra": {
@@ -128726,7 +128726,7 @@
         "Crystal impling jar": {
           "droprate": "1/18"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/50"
         },
         "The Hueycoatl": {
@@ -129835,7 +129835,7 @@
         "Araxxor": {
           "droprate": "1/14.375"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/30"
         },
         "Commander Zilyana": {
@@ -130244,7 +130244,7 @@
         "King kurask": {
           "droprate": "3 × 1/41.333"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/30"
         },
         "General Graardor": {
@@ -134328,7 +134328,7 @@
         "Magma strykewyrm": {
           "droprate": "3 × 1/471"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/546"
         },
         "Colossal Hydra": {
@@ -135806,7 +135806,7 @@
     "image": "scaly_blue_dragonhide.png",
     "sources": {
       "drops": {
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "1/10"
         },
         "Brutal blue dragon": {
@@ -137277,7 +137277,7 @@
         "Grotesque Guardians": {
           "droprate": "2 × 1/94.667"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/100"
         },
         "Drake": {
@@ -138536,7 +138536,7 @@
     "image": "skeletal_visage.png",
     "sources": {
       "drops": {
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "1/5000"
         }
       }
@@ -139896,7 +139896,7 @@
         "Thermonuclear smoke devil": {
           "droprate": "1/53.5"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/112.3"
         },
         "Cave abomination": {
@@ -152583,7 +152583,7 @@
     "image": "superior_dragon_bones.png",
     "sources": {
       "drops": {
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "Always"
         },
         "Frost dragon": {
@@ -154824,7 +154824,7 @@
         "Manta ray (monster)": {
           "droprate": "1/343.8"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/694.4"
         },
         "Alchemical Hydra": {
@@ -158470,7 +158470,7 @@
         "Hespori": {
           "droprate": "1/40"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/118.7"
         },
         "Brimstone chest": {
@@ -166182,7 +166182,7 @@
         "Phantom Muspah": {
           "droprate": "2 × 1/559.5"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/595.2"
         },
         "Alchemical Hydra": {
@@ -168707,7 +168707,7 @@
         "Manta ray (monster)": {
           "droprate": "1/309.4"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/625"
         },
         "Alchemical Hydra": {
@@ -170010,7 +170010,7 @@
         "Rune dragon": {
           "droprate": "1/15.875"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/50"
         },
         "Yama": {
@@ -170056,7 +170056,7 @@
     "image": "wrath_talisman.png",
     "sources": {
       "drops": {
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/50"
         },
         "Adamant dragon": {
@@ -171919,7 +171919,7 @@
         "Manta ray (monster)": {
           "droprate": "1/343.8"
         },
-        "Vorkath Post-quest": {
+        "Vorkath": {
           "droprate": "2 × 1/694.4"
         },
         "Alchemical Hydra": {
