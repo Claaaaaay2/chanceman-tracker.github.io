@@ -32,13 +32,9 @@ const LIKE_A_BOSS = [
     },
     {
         name: "Barrows brothers",
-        npcs: [
-            "Ahrim the Blighted",
-            "Dharok the Wretched",
-            "Guthan the Infested",
-            "Karil the Tainted",
-            "Torag the Corrupted",
-            "Verac the Defiled"
+        npcs: ["Chest (Barrows)"],
+        notes: [
+            "You need a spade."
         ]
     },
     {
@@ -76,7 +72,10 @@ const LIKE_A_BOSS = [
         name: "General Graardor"
     },
     {
-        name: "Giant Mole"
+        name: "Giant Mole",
+        notes: [
+            "You need a spade."
+        ]
     },
     {
         name: "Grotesque Guardians"
@@ -85,7 +84,10 @@ const LIKE_A_BOSS = [
         name: "K'ril Tsutsaroth"
     },
     {
-        name: "Kalphite Queen"
+        name: "Kalphite Queen",
+        notes: [
+            "You need a rope."
+        ]
     },
     {
         name: "King Black Dragon"
@@ -94,7 +96,10 @@ const LIKE_A_BOSS = [
         name: "Kraken"
     },
     {
-        name: "Kree'arra"
+        name: "Kree'arra",
+        notes: [
+            "You need a Mithril grapple and 70 ranged."
+        ]
     },
     {
         name: "The Leviathan"
@@ -580,34 +585,32 @@ async function processBossTask(boss, master, ctx) {
     }
 
     /*
- * Krystilia only assigns these Wilderness bosses.
- */
-if (master.name === "Krystilia") {
-    const krystiliaBosses = [
-        "Callisto",
-        "Chaos Elemental",
-        "Chaos Fanatic",
-        "Crazy archaeologist",
-        "Scorpia",
-        "Venenatis",
-        "Vet'ion"
-    ];
+     * Krystilia only assigns these Wilderness bosses.
+     */
+    if (master.name === "Krystilia") {
+        const krystiliaBosses = [
+            "Callisto",
+            "Chaos Elemental",
+            "Chaos Fanatic",
+            "Crazy archaeologist",
+            "Scorpia",
+            "Venenatis",
+            "Vet'ion"
+        ];
 
-    if (!krystiliaBosses.includes(boss.name)) {
-        return {
-            assignable: false,
-            reachable: false,
-            statusLabel: "Not assigned by this master",
-            missingLines: [],
-            statusKey: "unassignable"
-        };
+        if (!krystiliaBosses.includes(boss.name)) {
+            return {
+                assignable: false,
+                reachable: false,
+                statusLabel: "Not assigned by this master",
+                missingLines: [],
+                statusKey: "unassignable"
+            };
+        }
     }
-}
 
     /*
      * No NPC data means we cannot evaluate the boss.
-     * Treat it as unavailable rather than allowing it
-     * to accidentally count toward the percentage.
      */
     if (!bossNpcs.length) {
         return {
@@ -620,16 +623,22 @@ if (master.name === "Krystilia") {
     }
 
     /*
-     * A boss task is assignable if at least one of the
-     * applicable NPCs satisfies its requirements.
+     * Boss requirements are split into two categories:
      *
-     * NPC_DATA uses:
-     *   skill -> Slayer/other skill requirements
-     *   level -> combat/NPC level requirements
-     *   rule -> access rules
+     * ASSIGNMENT:
+     *   - Slayer level only
+     *   - Quest completion rules (canComplete...)
      *
-     * For Slayer-task purposes, the skill and rule data
-     * are the important parts.
+     * REACH:
+     *   - Everything else, such as:
+     *       canReachAbyssalSire
+     *       canDoZulrah
+     *       hasSpade
+     *       etc.
+     *
+     * This mirrors the normal Slayer monster logic:
+     * being unable to reach a boss does NOT make the boss
+     * unassignable.
      */
     const evaluateNpc = async (npc) => {
         const assignmentRequirements = {
@@ -638,31 +647,100 @@ if (master.name === "Krystilia") {
             rulesAny: []
         };
 
-        for (const [skill, level] of Object.entries(npc.skill || {})) {
-            assignmentRequirements.skills[skill] = level;
+        const reachRequirements = {
+            rulesAll: [],
+            rulesAny: []
+        };
+        
+
+        /*
+         * NPC_DATA stores skill and level as parallel arrays.
+         *
+         * For bosses, ONLY Slayer is an assignment requirement.
+         * Other skills are intentionally ignored.
+         */
+        const skills = Array.isArray(npc.skill) ? npc.skill : [];
+        const levels = Array.isArray(npc.level) ? npc.level : [];
+
+        for (let i = 0; i < skills.length; i++) {
+            const skill = skills[i];
+
+            if (String(skill).toLowerCase() !== "slayer") {
+                continue;
+            }
+
+            const level = Number(levels[i]);
+
+            if (Number.isFinite(level)) {
+                assignmentRequirements.skills.Slayer = level;
+            }
         }
 
+        /*
+         * Split rules:
+         *
+         * canComplete... = quest/assignment requirement
+         * everything else = reach requirement
+         */
+        const addRule = (ruleKey, destination) => {
+            if (!ruleKey) return;
+
+            if (String(ruleKey).startsWith("canComplete")) {
+                destination.rulesAll.push(ruleKey);
+            } else {
+                reachRequirements.rulesAll.push(ruleKey);
+            }
+        };
+
         if (Array.isArray(npc.rule)) {
-            assignmentRequirements.rulesAll.push(...npc.rule);
+            for (const ruleKey of npc.rule) {
+                addRule(ruleKey, assignmentRequirements);
+            }
         } else if (npc.rule && typeof npc.rule === "object") {
             if (Array.isArray(npc.rule.all)) {
-                assignmentRequirements.rulesAll.push(...npc.rule.all);
+                for (const ruleKey of npc.rule.all) {
+                    addRule(ruleKey, assignmentRequirements);
+                }
             }
 
             if (Array.isArray(npc.rule.any)) {
-                assignmentRequirements.rulesAny.push(...npc.rule.any);
+                for (const ruleKey of npc.rule.any) {
+                    if (String(ruleKey).startsWith("canComplete")) {
+                        assignmentRequirements.rulesAny.push(ruleKey);
+                    } else {
+                        reachRequirements.rulesAny.push(ruleKey);
+                    }
+                }
             }
         }
 
-        return evaluateRequirements(assignmentRequirements, ctx);
+        const assignmentStatus = await evaluateRequirements(
+            assignmentRequirements,
+            ctx
+        );
+
+        const reachStatus = await evaluateRequirements(
+            reachRequirements,
+            ctx
+        );
+
+        return {
+            assignmentStatus,
+            reachStatus,
+            assignable: assignmentStatus.met,
+            reachable: assignmentStatus.met && reachStatus.met
+        };
     };
 
+    /*
+     * Evaluate the main boss NPCs.
+     */
     const npcResults = [];
 
     for (const npc of bossNpcs) {
         npcResults.push({
             npc,
-            status: await evaluateNpc(npc)
+            ...(await evaluateNpc(npc))
         });
     }
 
@@ -674,7 +752,7 @@ if (master.name === "Krystilia") {
     for (const npc of substituteNpcs) {
         substituteResults.push({
             npc,
-            status: await evaluateNpc(npc)
+            ...(await evaluateNpc(npc))
         });
     }
 
@@ -683,32 +761,42 @@ if (master.name === "Krystilia") {
         ...substituteResults
     ];
 
+    /*
+     * The task is assignable if at least one boss/substitute
+     * meets its Slayer level + quest requirements.
+     */
     const assignableResults = allResults.filter(
-        ({ status }) => status.met
+        ({ assignable }) => assignable
     );
 
     const assignable = assignableResults.length > 0;
 
     /*
-     * For a boss task, reaching ANY valid boss/substitute
-     * is enough to make the task reachable.
-     *
-     * This is particularly important for:
-     *   Callisto -> Artio
-     *   Crazy archaeologist -> Deranged archaeologist
-     *   Venenatis -> Spindel
-     *   Vet'ion -> Calvar'ion
+     * The task is reachable if at least one boss/substitute
+     * is BOTH assignable AND reachable.
      */
-    const reachable = assignable;
+    const reachableResults = allResults.filter(
+        ({ reachable }) => reachable
+    );
+
+    const reachable = reachableResults.length > 0;
 
     const missingLines = [];
 
+    if (Array.isArray(boss.notes)) {
+        missingLines.push(...boss.notes);
+    }
+
+    /*
+     * If the boss cannot be assigned, show the missing
+     * Slayer level / quest requirements.
+     */
     if (!assignable) {
         const missing = [];
 
-        for (const { status } of allResults) {
-            if (status.missing.length) {
-                missing.push(...status.missing);
+        for (const { assignmentStatus } of allResults) {
+            if (assignmentStatus.missing.length) {
+                missing.push(...assignmentStatus.missing);
             }
         }
 
@@ -716,7 +804,38 @@ if (master.name === "Krystilia") {
 
         if (uniqueMissing.length) {
             missingLines.push(
-                `To be assigned/reached: ${formatMissingParts(uniqueMissing)}.`
+                `To be assigned: ${formatMissingParts(uniqueMissing)}.`
+            );
+        }
+    }
+
+    /*
+     * If the boss is assignable but cannot be reached,
+     * show the missing access requirements.
+     *
+     * If there are multiple alternatives (for example
+     * Callisto/Artio), only alternatives that are actually
+     * assignable contribute their reach requirements.
+     */
+    if (assignable && !reachable) {
+        const missing = [];
+
+        for (const {
+            assignable: npcAssignable,
+            reachStatus
+        } of allResults) {
+            if (!npcAssignable) continue;
+
+            if (reachStatus.missing.length) {
+                missing.push(...reachStatus.missing);
+            }
+        }
+
+        const uniqueMissing = [...new Set(missing)];
+
+        if (uniqueMissing.length) {
+            missingLines.push(
+                `To reach: ${formatMissingParts(uniqueMissing)}.`
             );
         }
     }

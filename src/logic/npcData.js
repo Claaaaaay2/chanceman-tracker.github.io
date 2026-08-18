@@ -8011,7 +8011,7 @@ export const NPC_DATA = {
     },
     "Hermit crab": {
         "wiki": "https://oldschool.runescape.wiki/w/Hermit_crab",
-        "rule": ["canCompletePandemonium"],
+        "rule": ["canCompleteTroubledTortugans"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -15974,7 +15974,7 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
-    "Vorkath Post-quest": {
+    "Vorkath": {
         "wiki": "https://oldschool.runescape.wiki/w/Vorkath#Post-quest",
         "rule": ["canCompleteDragonSlayerII"],
         "skill": [],
@@ -17073,7 +17073,7 @@ export const NPC_DATA = {
     },
     "Zulrah": {
         "wiki": "https://oldschool.runescape.wiki/w/Zulrah",
-        "rule": ["canDoZulrah"],
+        "rule": ["canCompleteRegicide"],
         "skill": [],
         "level": [],
         "tags": ["boss"],

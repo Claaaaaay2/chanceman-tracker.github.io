@@ -2047,9 +2047,6 @@ export const REQUIREMENT_CHECKS = {
     canCompleteTheFrozenDoor(ctx) {
         return canCompleteTheFrozenDoor(ctx);
     },
-    canDoZulrah(ctx) {
-        return canDoZulrah(ctx);
-    },
     canStartAtFirstLight(ctx) {
         return canStartAtFirstLight(ctx);
     },
@@ -6561,11 +6558,6 @@ function canGetKPSpears(ctx) {
             && has(ctx, 1247) // Rune spear
             && has(ctx, 1249) // Dragon spear
         )
-}
-
-function canDoZulrah(ctx) {
-    return canShortrange(ctx) //
-        && requiresQuest(ctx, "canCompleteRegicide", canCompleteRegicide);
 }
 
 function canStartAtFirstLight(ctx) {
