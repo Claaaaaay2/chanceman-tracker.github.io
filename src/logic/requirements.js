@@ -1453,7 +1453,7 @@ export const REQUIREMENT_CHECKS = {
         return canCompleteEnlightenedJourney(ctx);
     },
     async canAccessCooksGuild(ctx) {
-        return (hasAnyItems(ctx, [1949, 20205]) && canTrainCooking(ctx)) || await canCompleteVarrockDiaryHard(ctx);
+        return (hasAnyItems(ctx, [1949, 20205]) && hasSkillLevel(ctx, "Cooking", 32)) || await canCompleteVarrockDiaryHard(ctx);
     },
     canCompleteRumDeal(ctx) {
         return canCompleteRumDeal(ctx);
@@ -2196,6 +2196,12 @@ export const REQUIREMENT_CHECKS = {
     },
     has96FishingForBarbarianFishing(ctx) {
         return hasSkillLevel(ctx, "Fishing", 96);
+    },
+    has55FishingForBarbarianFishing(ctx) {
+        return hasSkillLevel(ctx, "Fishing", 55);
+    },
+    has75FishingForBarbarianFishing(ctx) {
+        return hasSkillLevel(ctx, "Fishing", 75);
     },
     canMakeTrawlingNet(ctx) {
         return canMakeTrawlingNet(ctx);
@@ -6033,7 +6039,7 @@ function canEnterCosmicAltar(ctx) {
 
 function canDoTombsOfAmascut(ctx) {
     return requiresQuest(ctx, "canCompleteIntoTheTombs", canCompleteIntoTheTombs) //
-        && canTrainMining(ctx);
+        && hasUsablePickaxe(ctx) //;
 }
 
 function canDoMageTrainingArena(ctx) {
@@ -6065,8 +6071,7 @@ function hasAnyFeatherButStripy(ctx) {
 }
 
 function hasAnyLantern(ctx) {
-    return canTrainFiremaking(ctx) //
-        && has(ctx, 590) // Tinderbox
+    return has(ctx, 590) // Tinderbox
         && (canDoGuardiansOfTheRift(ctx) // abbysal lantern
             || hasAnyItems(ctx, [
                 4548, // bullseye lantern
@@ -6091,14 +6096,14 @@ function canAerialFish(ctx) {
 
 function canDeepSeaFish(ctx) {
     return requiresQuest(ctx, "canCompletePandemonium", canCompletePandemonium) //
-        && canTrainFishing(ctx) //
+        && hasSkillLevel(ctx, "Fishing", 69) //
         && has(ctx, 307) // Fishing rod
         && (has(ctx, 11334) || has(ctx, 32307)); // Fish offcuts or Fine fish offcuts
 }
 
 function canMakeTrawlingNet(ctx) {
     return requiresQuest(ctx, "canCompletePandemonium", canCompletePandemonium) //
-        && canTrainFishing(ctx) //
+        && hasSkillLevel(ctx, "Fishing", 69) //
         && (
             ( // Rope trawling net
                 has(ctx, 954) // Rope
@@ -6142,7 +6147,7 @@ function canMakeTrawlingNet(ctx) {
 
 function canEnterLumbridgeSwampCaves(ctx) {
     return has(ctx, 954) // Rope
-        || canStartTheLostTribe(ctx) && canTrainMining(ctx);
+        || canStartTheLostTribe(ctx) && hasUsablePickaxe(ctx);
 }
 
 function canStartTheLostTribe(ctx) {
@@ -6428,13 +6433,12 @@ function hasAnyLog(ctx) {
         19669,
         2862 // achey tree logs
     ])
-        || canTrainWoodcutting(ctx); // for untradable Juniper logs
+        || hasUsableAxe(ctx); // for untradable Juniper logs
 }
 
 function canEnterCraftingGuild(ctx) {
-    return canTrainCrafting(ctx) //
-        && has(ctx, 20208) // Golden apron
-        && has(ctx, 1757); // Brown apron
+    return hasSkillLevel(ctx, "Crafting", 40) //
+        && (has(ctx, 20208) || has(ctx, 1757)); // Golden apron / Brown apron
 }
 
 function hasAnyFletchableLog(ctx) {
@@ -6543,7 +6547,6 @@ function canGetKarambwanVessel(ctx) {
 
 function canGetKPSpears(ctx) {
     return requiresQuest(ctx, "canCompleteJunglePotion", canCompleteJunglePotion) //
-        && canTrainCooking(ctx) //
         && has(ctx, 303)  // Small fishing net
         && has(ctx, 3157) // Karambwan vessel
         && has(ctx, 3159) // Karambwan vessel (baited)
@@ -6720,10 +6723,10 @@ function canReachPiratesCove(ctx) {
         && requiresQuest(ctx, "canCompleteLostCity", canCompleteLostCity) //
         && requiresQuest(ctx, "canCompleteRuneMysteries", canCompleteRuneMysteries) //
         && requiresQuest(ctx, "canCompleteShiloVillage", canCompleteShiloVillage) //
-        && canTrainCrafting(ctx) //
-        && canTrainFiremaking(ctx) //
-        && canTrainMining(ctx) //
-        && canTrainWoodcutting(ctx); //
+        && hasNonBoostableSkillLevel(ctx, "Crafting", 61)
+        && hasNonBoostableSkillLevel(ctx, "Firemaking", 49)
+        && hasNonBoostableSkillLevel(ctx, "Mining", 60)
+        && hasNonBoostableSkillLevel(ctx, "Woodcutting", 55)
 }
 
 function canFishFromRewardPool(ctx) {
@@ -6778,7 +6781,7 @@ function countDyes(ctx) {
 
 function canUseSilverSickle(ctx) {
     return requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril) //
-        && canTrainCrafting(ctx) //
+        && hasSkillLevel(ctx, "Crafting", 18) //
         && has(ctx, 2961)  // Silver sickle
         && has(ctx, 2355)  // Silver bar
         && has(ctx, 2976); // Sickle mould
@@ -6826,7 +6829,7 @@ function hasMachete(ctx) {
 
 function canGetGoutweed(ctx) {
     return requiresQuest(ctx, "canCompleteEadgarsRuse", canCompleteEadgarsRuse) // Goutweed crate
-        || (has(ctx, 6311) && canTrainFarming(ctx)) // Gout tuber
+        || (has(ctx, 6311) && hasSkillLevel(ctx, "Farming", 29) && has(ctx, 5341)) // Gout tuber + rake
         || (canReachTrollheim(ctx) && canDoGnomeRestaurant(ctx)); // Brambickle
 }
 
@@ -6845,18 +6848,18 @@ function canDoMahoganyHomes(ctx) {
 function canMakeGuthixRests(ctx) {
     return requiresQuest(ctx, "canCompleteRuneMysteries", canCompleteRuneMysteries) //
         && requiresQuest(ctx, "canCompleteShiloVillage", canCompleteShiloVillage) //
-        && canTrainCrafting(ctx) //
-        && canTrainHerblore(ctx) //
-        && canTrainSmithing(ctx) //
+        && hasSkillLevel(ctx, "Crafting", 25)
+        && hasSkillLevel(ctx, "Herblore", 18)
+        && hasSkillLevel(ctx, "Smithing", 30)
         && has(ctx, 2353); // Steel bar
 }
 
 function canMakePotLids(ctx) {
     return requiresQuest(ctx, "canCompleteRuneMysteries", canCompleteRuneMysteries) //
         && requiresQuest(ctx, "canCompleteShiloVillage", canCompleteShiloVillage) //
-        && canTrainCrafting(ctx) //
-        && canTrainHerblore(ctx) //
-        && canTrainSmithing(ctx) //
+        && hasSkillLevel(ctx, "Crafting", 25)
+        && hasSkillLevel(ctx, "Herblore", 18)
+        && hasSkillLevel(ctx, "Smithing", 30)
         && has(ctx, 2353) // Steel bar
         && has(ctx, 2349) // Bronze bar
         && has(ctx, 2351) // Iron bar
@@ -6924,7 +6927,7 @@ function hasKnifeOrNarwhalKnife(ctx) {
 
     const hasHorn = hasItem(ctx, 31954, { trackMissing: false }); // Narwhal horn
     if (hasHorn) {
-        return canTrainCrafting(ctx) && has(ctx, 1755); // Chisel
+        return hasSkillLevel(ctx, "Crafting", 51) && has(ctx, 1755); // Chisel
     }
 
     addMissingItemOptionGroup(ctx, [[946], [31954, 1755]]);
@@ -6932,7 +6935,7 @@ function hasKnifeOrNarwhalKnife(ctx) {
 }
 
 function hasNarwhalKnife(ctx) {
-    return canTrainCrafting(ctx) //
+    return hasSkillLevel(ctx, "Crafting", 51) //
         && has(ctx, 31954) // Narwhal horn
         && has(ctx, 1755); // Chisel
 }
@@ -7104,7 +7107,7 @@ function canCureYakHide(ctx) {
 
 function canReachKharaziJungle(ctx) {
     return canStartLegendsQuest(ctx)
-        && canTrainWoodcutting(ctx) //
+        && hasUsableAxe(ctx) //
         && hasMachete(ctx);
 }
 
@@ -7123,18 +7126,24 @@ function canStartLegendsQuest(ctx) {
 }
 
 function canStartDarknessOfHallowvale(ctx) {
-    return requiresQuest(ctx, "canCompleteInAidOfTheMyreque", canCompleteInAidOfTheMyreque) //
-        && hasSkillLevel(ctx, "Construction", 5) //
-        && canTrainMining(ctx) //
-        && canTrainCrafting(ctx); //
+    return allTrue([
+        hasSkillLevel(ctx, "Construction", 5),
+        hasNonBoostableSkillLevel(ctx, "Mining", 20),
+        hasNonBoostableSkillLevel(ctx, "Thieving", 22),
+        hasSkillLevel(ctx, "Agility", 26),
+        hasNonBoostableSkillLevel(ctx, "Crafting", 32),
+        hasSkillLevel(ctx, "Magic", 33),
+        hasNonBoostableSkillLevel(ctx, "Strength", 40),
+        requiresQuest(ctx, "canCompleteInAidOfTheMyreque", canCompleteInAidOfTheMyreque), //
+    ]);
 }
 
 function canStartATasteOfHope(ctx) {
     return requiresQuest(ctx, "canCompleteDarknessOfHallowvale", canCompleteDarknessOfHallowvale) //
-        && canTrainCrafting(ctx) //
-        && (canTrainSlayer(ctx) || ctx.player.levels.Slayer >= 38) //
-        && canTrainHerblore(ctx) //
-        && canTrainMining(ctx); //
+        && hasSkillLevel(ctx, "Crafting", 48) //
+        && hasSkillLevel(ctx, "Slayer", 38) //
+        && hasSkillLevel(ctx, "Herblore", 40) //
+        && hasSkillLevel(ctx, "Agility", 45) //
 }
 
 function canStartMageArenaII(ctx) {
@@ -7960,7 +7969,7 @@ function canTrainFletching(ctx) {
 
 function canTrainFiremaking(ctx) {
     return has(ctx, 590) // Tinderbox
-        || canTrainWoodcutting(ctx); // For training FM in COX
+        || hasUsableAxe(ctx); // For training FM in COX
 }
 
 function canTrainSmithing(ctx) {
@@ -7969,8 +7978,7 @@ function canTrainSmithing(ctx) {
 }
 
 function canDoGnomeRestaurant(ctx) {
-    return canTrainCooking(ctx) //
-        && has(ctx, 2217) // Toad crunchies
+    return has(ctx, 2217) // Toad crunchies
         && has(ctx, 2209) // chocchip crunchies
         && has(ctx, 2255) // toad batta
         && has(ctx, 2259) // cheese+tom batta
@@ -7981,11 +7989,11 @@ function canDoGnomeRestaurant(ctx) {
 }
 
 function canDoValeTotems(ctx) {
-    return canTrainFletching(ctx) //
-        && requiresQuest(ctx, "canCompleteChildrenOfTheSun", canCompleteChildrenOfTheSun) //
+    return  requiresQuest(ctx, "canCompleteChildrenOfTheSun", canCompleteChildrenOfTheSun) //
         && hasKnifeOrNarwhalKnife(ctx) //
         && ( //
             (has(ctx, 1521) // Oak logs
+                && hasSkillLevel(ctx, "Fletching", 20)
                 && hasAnyItems(ctx, [
                     843,
                     845,
@@ -7996,6 +8004,7 @@ function canDoValeTotems(ctx) {
                 ]) //
             ) //
             || (has(ctx, 1519) // Willow logs
+                && hasSkillLevel(ctx, "Fletching", 35)
                 && hasAnyItems(ctx, [
                     849,
                     847,
@@ -8006,6 +8015,7 @@ function canDoValeTotems(ctx) {
                 ]) //
             ) //
             || (has(ctx, 1517) // Maple logs
+                && hasSkillLevel(ctx, "Fletching", 50)
                 && hasAnyItems(ctx, [
                     853,
                     851,
@@ -8016,6 +8026,7 @@ function canDoValeTotems(ctx) {
                 ]) //
             ) //
             || (has(ctx, 1515) // Yew logs
+                && hasSkillLevel(ctx, "Fletching", 65)
                 && hasAnyItems(ctx, [
                     857,
                     855,
@@ -8026,6 +8037,7 @@ function canDoValeTotems(ctx) {
                 ]) //
             ) //
             || (has(ctx, 1513) // Magic logs
+                && hasSkillLevel(ctx, "Fletching", 80)
                 && hasAnyItems(ctx, [
                     861,
                     859,
@@ -8036,6 +8048,7 @@ function canDoValeTotems(ctx) {
                 ]) //
             ) //
             || (has(ctx, 19669) // Redwood logs
+                && hasSkillLevel(ctx, "Fletching", 90)
                 && hasAnyItems(ctx, [
                     31049,
                     22266,
@@ -8045,7 +8058,7 @@ function canDoValeTotems(ctx) {
 }
 
 function canDoWintertodt(ctx) {
-    return canTrainFiremaking(ctx);
+    return hasSkillLevel(ctx, "Firemaking", 50);
 }
 
 function canDoSalvaging(ctx) {

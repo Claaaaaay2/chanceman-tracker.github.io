@@ -105725,8 +105725,11 @@
         }
       },
       "shops": {
-        "Yes": "canTrainHunter"
-      }
+        "Yes": {
+                "skill": "Hunter",
+                "level": 46
+              }
+            }
     }
   },
   {
@@ -105951,7 +105954,10 @@
         }
       },
       "spawns": {
-        "Yes": "canTrainPrayer"
+        "Yes": {
+                "skill": "Prayer",
+                "level": 31
+        }
       }
     },
     "tags": [
@@ -106007,7 +106013,10 @@
         }
       },
       "spawns": {
-        "Yes": "canTrainPrayer"
+        "Yes": {
+                "skill": "Prayer",
+                "level": 31
+        }
       }
     },
     "tags": [
@@ -127750,7 +127759,10 @@
         }
       },
       "shops": {
-        "Yes": "canTrainWoodcutting"
+        "Yes": {
+                "skill": "Woodcutting",
+                "level": 60
+              }
       },
       "other": {
         "Smithing a Rune axe": {
@@ -159360,8 +159372,11 @@
     "name": "Trapper's tipple",
     "image": "trapper's_tipple.png",
     "sources": {
-      "spawns": {
-        "Yes": "canTrainHunter"
+      "spawns":{
+        "Yes": {
+                "skill": "Hunter",
+                "level": 46
+              }
       },
       "other": {
         "Purchasing through dialogue": {
@@ -164823,7 +164838,7 @@
         "Yes": {
           "all": [
             "canCompleteBoneVoyage",
-            "canTrainMining"
+            "hasUsablePickaxe"
           ]
         }
       }

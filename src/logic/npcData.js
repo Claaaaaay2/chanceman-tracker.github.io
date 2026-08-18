@@ -118,7 +118,7 @@ export const NPC_DATA = {
     },
     "Achey Tree": {
         "wiki": "https://oldschool.runescape.wiki/w/Achey_Tree",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": ["woodcutting"],
         "level": [1],
         "tags": [],
@@ -134,7 +134,7 @@ export const NPC_DATA = {
     },
     "Adamantite rocks": {
         "wiki": "https://oldschool.runescape.wiki/w/Adamantite_rocks",
-        "rule": ["canTrainMining"],
+        "rule": ["hasUsablePickaxe"],
         "skill": ["mining"],
         "level": ["70"],
         "tags": [],
@@ -582,7 +582,7 @@ export const NPC_DATA = {
     },
     "Amethyst crystals": {
         "wiki": "https://oldschool.runescape.wiki/w/Amethyst_crystals",
-        "rule": ["canTrainMining"],
+        "rule": ["hasUsablePickaxe"],
         "skill": ["mining"],
         "level": [92],
         "tags": [],
@@ -841,7 +841,7 @@ export const NPC_DATA = {
     },
     "Arctic pine tree": {
         "wiki": "https://oldschool.runescape.wiki/w/Arctic_pine_tree",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": ["woodcutting"],
         "level": [54],
         "tags": [],
@@ -1041,7 +1041,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Baby_green_dragon",
         "rule": {
             "any": [
-                "canTrainWoodcutting",
+                "hasUsableAxe",
                 "canCompleteDragonSlayerII"
             ]
         },
@@ -1052,7 +1052,7 @@ export const NPC_DATA = {
     },
     "Baby impling": {
         "wiki": "https://oldschool.runescape.wiki/w/Baby_impling",
-        "rule": ["canTrainHunter"],
+        "rule": null,
         "skill": ["hunter"],
         "level": [27],
         "tags": [],
@@ -1092,7 +1092,7 @@ export const NPC_DATA = {
     },
     "Bag full of gems": {
         "wiki": "https://oldschool.runescape.wiki/w/Bag_full_of_gems",
-        "rule": ["canTrainMining"],
+        "rule": ["hasUsablePickaxe"],
         "skill": ["mining"],
         "level": [1],
         "tags": [],
@@ -1457,7 +1457,7 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompleteBelowIceMountain",
-                "canTrainMining"
+                "hasUsablePickaxe"
             ]
         },
         "skill": ["mining"],
@@ -1659,7 +1659,6 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompleteBoneVoyage",
-                "canTrainHunter",
                 "hasBirdhouse"
             ]
         },
@@ -2006,7 +2005,7 @@ export const NPC_DATA = {
     },
     "Blurite rocks": {
         "wiki": "https://oldschool.runescape.wiki/w/Blurite_rocks",
-        "rule": ["canTrainMining"],
+        "rule": ["hasUsablePickaxe"],
         "skill": ["mining"],
         "level": [10],
         "tags": [],
@@ -2515,7 +2514,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Bryophyta#Free-to-play",
         "rule": {
             "any": [
-                "canTrainWoodcutting",
+                "hasUsableAxe",
                 "hasSecateurs"
             ]
         },
@@ -2528,7 +2527,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Bryophyta#Members",
         "rule": {
             "any": [
-                "canTrainWoodcutting",
+                "hasUsableAxe",
                 "hasSecateurs"
             ]
         },
@@ -2547,7 +2546,7 @@ export const NPC_DATA = {
     },
     "Buckets (Tempoross Cove)": {
         "wiki": "https://oldschool.runescape.wiki/w/Buckets_(Tempoross_Cove)",
-        "rule": ["canTrainFishing"],
+        "rule": null,
         "skill": ["fishing"],
         "level": [35],
         "tags": [],
@@ -2701,7 +2700,7 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canStartPerilousMoons",
-                "canTrainMining",
+                "hasUsablePickaxe",
                 "hasHammer"
             ]
         },
@@ -2715,7 +2714,7 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canStartPerilousMoons",
-                "canTrainMining"
+                "hasUsablePickaxe"
             ]
         },
         "skill": ["mining"],
@@ -2779,7 +2778,7 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompleteTroubledTortugans",
-                "canTrainWoodcutting"
+                "hasUsableAxe"
             ]
         },
         "skill": ["woodcutting"],
@@ -3257,7 +3256,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Chest_(Bryophyta%27s_lair)#Free-to-play",
         "rule": {
             "any": [
-                "canTrainWoodcutting",
+                "hasUsableAxe",
                 "hasSecateurs"
             ]
         },
@@ -3270,7 +3269,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Chest_(Bryophyta%27s_lair)#Members",
         "rule": {
             "any": [
-                "canTrainWoodcutting",
+                "hasUsableAxe",
                 "hasSecateurs"
             ]
         },
@@ -3637,7 +3636,7 @@ export const NPC_DATA = {
     },
     "Clay rocks": {
         "wiki": "https://oldschool.runescape.wiki/w/Clay_rocks",
-        "rule": ["canTrainMining"],
+        "rule": ["hasUsablePickaxe"],
         "skill": ["mining"],
         "level": [1],
         "tags": [],
@@ -3669,7 +3668,7 @@ export const NPC_DATA = {
     },
     "Coal rocks": {
         "wiki": "https://oldschool.runescape.wiki/w/Coal_rocks",
-        "rule": ["canTrainMining"],
+        "rule": ["hasUsablePickaxe"],
         "skill": ["mining"],
         "level": [30],
         "tags": [],
@@ -3815,7 +3814,7 @@ export const NPC_DATA = {
     },
     "Copper rocks": {
         "wiki": "https://oldschool.runescape.wiki/w/Copper_rocks",
-        "rule": ["canTrainMining"],
+        "rule": ["hasUsablePickaxe"],
         "skill": ["mining"],
         "level": [1],
         "tags": [],
@@ -3908,7 +3907,7 @@ export const NPC_DATA = {
     },
     "Crashed Star": {
         "wiki": "https://oldschool.runescape.wiki/w/Crashed_Star",
-        "rule": ["canTrainMining"],
+        "rule": ["hasUsablePickaxe"],
         "skill": ["mining"],
         "level": [10],
         "tags": [],
@@ -4417,7 +4416,7 @@ export const NPC_DATA = {
     },
     "Dark kebbit": {
         "wiki": "https://oldschool.runescape.wiki/w/Dark_kebbit",
-        "rule": ["canTrainHunter"],
+        "rule": null,
         "skill": ["hunter"],
         "level": [57],
         "tags": [],
@@ -4489,7 +4488,7 @@ export const NPC_DATA = {
     },
     "Dashing kebbit": {
         "wiki": "https://oldschool.runescape.wiki/w/Dashing_kebbit",
-        "rule": ["canTrainHunter"],
+        "rule": null,
         "skill": ["hunter"],
         "level": [69],
         "tags": [],
@@ -4497,7 +4496,7 @@ export const NPC_DATA = {
     },
     "Dead tree": {
         "wiki": "https://oldschool.runescape.wiki/w/Dead_tree",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": ["woodcutting"],
         "level": [1],
         "tags": [],
@@ -4505,7 +4504,7 @@ export const NPC_DATA = {
     },
     "Dead tree (burnt)": {
         "wiki": "https://oldschool.runescape.wiki/w/Dead_tree_(burnt)",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": ["woodcutting"],
         "level": [1],
         "tags": [],
@@ -4513,7 +4512,7 @@ export const NPC_DATA = {
     },
     "Dead tree (old)": {
         "wiki": "https://oldschool.runescape.wiki/w/Dead_tree_(old)",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": ["woodcutting"],
         "level": [1],
         "tags": [],
@@ -4521,7 +4520,7 @@ export const NPC_DATA = {
     },
     "Dead tree (sandy)": {
         "wiki": "https://oldschool.runescape.wiki/w/Dead_tree_(sandy)",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": ["woodcutting"],
         "level": [1],
         "tags": [],
@@ -4529,7 +4528,7 @@ export const NPC_DATA = {
     },
     "Dead tree (snowy)": {
         "wiki": "https://oldschool.runescape.wiki/w/Dead_tree_(snowy)",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": ["woodcutting"],
         "level": [1],
         "tags": [],
@@ -4537,7 +4536,7 @@ export const NPC_DATA = {
     },
     "Dead tree (swampy)": {
         "wiki": "https://oldschool.runescape.wiki/w/Dead_tree_(swampy)",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": ["woodcutting"],
         "level": [1],
         "tags": [],
@@ -4545,7 +4544,7 @@ export const NPC_DATA = {
     },
     "Dead tree (weathered)": {
         "wiki": "https://oldschool.runescape.wiki/w/Dead_tree_(weathered)",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": ["woodcutting"],
         "level": [1],
         "tags": [],
@@ -4603,7 +4602,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Dense_Jungle",
         "rule": {
             "all": [
-                "canTrainWoodcutting",
+                "hasUsableAxe",
                 "hasMachete",
                 "canCompleteJunglePotion"
             ]
@@ -4836,7 +4835,7 @@ export const NPC_DATA = {
     },
     "Dragon impling": {
         "wiki": "https://oldschool.runescape.wiki/w/Dragon_impling",
-        "rule": ["canTrainHunter"],
+        "rule": null,
         "skill": ["hunter"],
         "level": [93],
         "tags": [],
@@ -4905,8 +4904,6 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Drift_net_fishing",
         "rule": {
             "all": [
-                "canTrainFishing",
-                "canTrainHunter",
                 "canCompleteBoneVoyage",
                 "hasDriftNet",
                 "hasNumulite"
@@ -4921,8 +4918,6 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Drift_net_fishing#Levels_47-49",
         "rule": {
             "all": [
-                "canTrainFishing",
-                "canTrainHunter",
                 "canCompleteBoneVoyage",
                 "hasDriftNet",
                 "hasNumulite"
@@ -4937,8 +4932,6 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Drift_net_fishing#Levels_50-59",
         "rule": {
             "all": [
-                "canTrainFishing",
-                "canTrainHunter",
                 "canCompleteBoneVoyage",
                 "hasDriftNet",
                 "hasNumulite"
@@ -4953,8 +4946,6 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Drift_net_fishing#Levels_60-69",
         "rule": {
             "all": [
-                "canTrainFishing",
-                "canTrainHunter",
                 "canCompleteBoneVoyage",
                 "hasDriftNet",
                 "hasNumulite"
@@ -4969,8 +4960,6 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Drift_net_fishing#Levels_70-79",
         "rule": {
             "all": [
-                "canTrainFishing",
-                "canTrainHunter",
                 "canCompleteBoneVoyage",
                 "hasDriftNet",
                 "hasNumulite"
@@ -4985,8 +4974,6 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Drift_net_fishing#Levels_80-89",
         "rule": {
             "all": [
-                "canTrainFishing",
-                "canTrainHunter",
                 "canCompleteBoneVoyage",
                 "hasDriftNet",
                 "hasNumulite"
@@ -5001,8 +4988,6 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Drift_net_fishing#Levels_90-99",
         "rule": {
             "all": [
-                "canTrainFishing",
-                "canTrainHunter",
                 "canCompleteBoneVoyage",
                 "hasDriftNet",
                 "hasNumulite"
@@ -5172,7 +5157,7 @@ export const NPC_DATA = {
     },
     "Dying tree": {
         "wiki": "https://oldschool.runescape.wiki/w/Dying_tree",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": ["woodcutting"],
         "level": [1],
         "tags": [],
@@ -5204,7 +5189,7 @@ export const NPC_DATA = {
     },
     "Earth impling": {
         "wiki": "https://oldschool.runescape.wiki/w/Earth_impling",
-        "rule": ["canTrainHunter"],
+        "rule": null,
         "skill": ["hunter"],
         "level": [46],
         "tags": [],
@@ -5252,7 +5237,7 @@ export const NPC_DATA = {
     },
     "Eclectic impling": {
         "wiki": "https://oldschool.runescape.wiki/w/Eclectic_impling",
-        "rule": ["canTrainHunter"],
+        "rule": null,
         "skill": ["hunter"],
         "level": [60],
         "tags": [],
@@ -5509,7 +5494,7 @@ export const NPC_DATA = {
     },
     "Ent": {
         "wiki": "https://oldschool.runescape.wiki/w/Ent",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -5525,7 +5510,7 @@ export const NPC_DATA = {
     },
     "Essence impling": {
         "wiki": "https://oldschool.runescape.wiki/w/Essence_impling",
-        "rule": ["canTrainHunter"],
+        "rule": null,
         "skill": ["hunter"],
         "level": [52],
         "tags": [],
@@ -5541,7 +5526,7 @@ export const NPC_DATA = {
     },
     "Evergreen tree": {
         "wiki": "https://oldschool.runescape.wiki/w/Evergreen_tree",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": ["woodcutting"],
         "level": [1],
         "tags": [],
@@ -5704,7 +5689,7 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canEnterAncientCavern",
-                "canTrainWoodcutting"
+                "hasUsableAxe"
             ]
         },
         "skill": [],
@@ -5783,7 +5768,7 @@ export const NPC_DATA = {
     },
     "Fishing Trawler": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_Trawler",
-        "rule": ["canTrainFishing"],
+        "rule": null,
         "skill": ["fishing"],
         "level": [15],
         "tags": [],
@@ -5791,7 +5776,7 @@ export const NPC_DATA = {
     },
     "Fishing Trawler (Tuna)": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_Trawler",
-        "rule": ["canTrainFishing"],
+        "rule": null,
         "skill": ["fishing"],
         "level": [35],
         "tags": [],
@@ -5799,7 +5784,7 @@ export const NPC_DATA = {
     },
     "Fishing Trawler (Lobster)": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_Trawler",
-        "rule": ["canTrainFishing"],
+        "rule": null,
         "skill": ["fishing"],
         "level": [40],
         "tags": [],
@@ -5807,7 +5792,7 @@ export const NPC_DATA = {
     },
     "Fishing Trawler (Swordfish)": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_Trawler",
-        "rule": ["canTrainFishing"],
+        "rule": null,
         "skill": ["fishing"],
         "level": [50],
         "tags": [],
@@ -5815,7 +5800,7 @@ export const NPC_DATA = {
     },
     "Fishing Trawler (Shark)": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_Trawler",
-        "rule": ["canTrainFishing"],
+        "rule": null,
         "skill": ["fishing"],
         "level": [76],
         "tags": [],
@@ -5823,7 +5808,7 @@ export const NPC_DATA = {
     },
     "Fishing Trawler (Sea turtle)": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_Trawler",
-        "rule": ["canTrainFishing"],
+        "rule": null,
         "skill": ["fishing"],
         "level": [79],
         "tags": [],
@@ -5831,7 +5816,7 @@ export const NPC_DATA = {
     },
     "Fishing Trawler (Manta ray)": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_Trawler",
-        "rule": ["canTrainFishing"],
+        "rule": null,
         "skill": ["fishing"],
         "level": [81],
         "tags": [],
@@ -5850,7 +5835,12 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompleteSwanSong",
-                "hasHarpoon"
+                {
+                    "any": [
+                        "has75FishingForBarbarianFishing",
+                        "hasHarpoon"
+                    ]
+                }
             ]
         },
         "skill": ["fishing"],
@@ -5863,7 +5853,12 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompleteSwanSong",
-                "hasHarpoon"
+                {
+                    "any": [
+                        "has55FishingForBarbarianFishing",
+                        "hasHarpoon"
+                    ]
+                }
             ]
         },
         "skill": ["fishing"],
@@ -5929,7 +5924,6 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(barbarian)",
         "rule": {
             "all": [
-                "canTrainFishing",
                 "canBarbarianFish"
             ]
         },
@@ -5942,7 +5936,6 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(barbarian)",
         "rule": {
             "all": [
-                "canTrainFishing",
                 "canBarbarianFish"
             ]
         },
@@ -5955,7 +5948,6 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(barbarian)",
         "rule": {
             "all": [
-                "canTrainFishing",
                 "canBarbarianFish"
             ]
         },
@@ -5975,8 +5967,8 @@ export const NPC_DATA = {
     "Fishing spot (big net, harpoon) Harpoon": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(big_net,_harpoon)#Harpoon",
         "rule": {
-            "all": [
-                "canTrainFishing",
+            "any": [
+                "has96FishingForBarbarianFishing",
                 "hasHarpoon"
             ]
         },
@@ -5987,12 +5979,7 @@ export const NPC_DATA = {
     },
     "Fishing spot (cage, harpoon) Cage": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(cage,_harpoon)#Cage",
-        "rule": {
-            "all": [
-                "canTrainFishing",
-                "hasLobsterPot"
-            ]
-        },
+        "rule": ["hasLobsterPot"],
         "skill": ["fishing"],
         "level": [40],
         "tags": [],
@@ -6001,8 +5988,8 @@ export const NPC_DATA = {
     "Fishing spot (cage, harpoon) Harpoon (Tuna)": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(cage,_harpoon)#Harpoon",
         "rule": {
-            "all": [
-                "canTrainFishing",
+            "any": [
+                "has55FishingForBarbarianFishing",
                 "hasHarpoon"
             ]
         },
@@ -6014,8 +6001,8 @@ export const NPC_DATA = {
     "Fishing spot (cage, harpoon) Harpoon (Swordfish)": {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(cage,_harpoon)#Harpoon",
         "rule": {
-            "all": [
-                "canTrainFishing",
+            "any": [
+                "has75FishingForBarbarianFishing",
                 "hasHarpoon"
             ]
         },
@@ -6028,7 +6015,6 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(dark_crab)#Dark_bait",
         "rule": {
             "all": [
-                "canTrainFishing",
                 "hasLobsterPot",
                 "hasDarkFishingBait"
             ]
@@ -6039,12 +6025,7 @@ export const NPC_DATA = {
         "f2p": false
     },
     "Fishing spot (dark crab) No bait": {
-        "rule": {
-            "all": [
-                "canTrainFishing",
-                "hasLobsterPot"
-            ]
-        },
+        "rule": ["hasLobsterPot"],
         "skill": ["fishing"],
         "level": [40],
         "tags": [],
@@ -6054,7 +6035,6 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(frogspawn)#Bait",
         "rule": {
             "all": [
-                "canTrainFishing",
                 "hasFishingRod",
                 "hasFishingBait",
                 "canReachFrogSpawnSpot"
@@ -6069,7 +6049,6 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(frogspawn)#Small_net",
         "rule": {
             "all": [
-                "canTrainFishing",
                 "hasSmallFishingNet",
                 "canReachFrogSpawnSpot"
             ]
@@ -6099,7 +6078,6 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(lantern)#Harpoon",
         "rule": {
             "all": [
-                "canTrainFishing",
                 "canCompletePandemonium",
                 "hasHarpoon",
                 "hasAnyLantern"
@@ -6114,7 +6092,6 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Fishing_spot_(small_net,_bait)#Bait",
         "rule": {
             "all": [
-                "canTrainFishing",
                 "hasFishingRod",
                 "hasFishingBait"
             ]
@@ -6137,7 +6114,6 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompletePriestInPeril",
-                "canTrainFishing",
                 "hasFishingRod",
                 "hasFishingBait"
             ]
@@ -6237,7 +6213,7 @@ export const NPC_DATA = {
     },
     "Flowering Tree (Forestry event)": {
         "wiki": "https://oldschool.runescape.wiki/w/Flowering_Tree_(Forestry_event)",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": ["woodcutting"],
         "level": [1],
         "tags": [],
@@ -6261,7 +6237,7 @@ export const NPC_DATA = {
     },
     "Forester (Woodcutting Guild)": {
         "wiki": "https://oldschool.runescape.wiki/w/Forester_(Woodcutting_Guild)",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": ["woodcutting"],
         "level": [60],
         "tags": [],
@@ -6362,7 +6338,7 @@ export const NPC_DATA = {
     },
     "Friendly Ent (Forestry event)": {
         "wiki": "https://oldschool.runescape.wiki/w/Friendly_Ent_(Forestry_event)",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": ["woodcutting"],
         "level": [1],
         "tags": [],
@@ -6370,7 +6346,7 @@ export const NPC_DATA = {
     },
     "Friendly Ent (Forestry event) 75 Woodcutting": {
         "wiki": "https://oldschool.runescape.wiki/w/Friendly_Ent_(Forestry_event)",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": ["woodcutting"],
         "level": [75],
         "tags": [],
@@ -6559,7 +6535,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Gem_rocks",
         "rule": {
             "all": [
-                "canTrainMining",
+                "hasUsablePickaxe",
                 "canReachGemRocks"
             ]
         },
@@ -6586,7 +6562,7 @@ export const NPC_DATA = {
     },
     "Gemstone Crab": {
         "wiki": "https://oldschool.runescape.wiki/w/Gemstone_Crab",
-        "rule": ["canTrainMining"],
+        "rule": ["hasUsablePickaxe"],
         "skill": ["mining"],
         "level": [1],
         "tags": [],
@@ -7026,7 +7002,7 @@ export const NPC_DATA = {
     },
     "Gold rocks": {
         "wiki": "https://oldschool.runescape.wiki/w/Gold_rocks",
-        "rule": ["canTrainMining"],
+        "rule": ["hasUsablePickaxe"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -7074,7 +7050,7 @@ export const NPC_DATA = {
     },
     "Gourmet impling": {
         "wiki": "https://oldschool.runescape.wiki/w/Gourmet_impling",
-        "rule": ["canTrainHunter"],
+        "rule": null,
         "skill": ["hunter"],
         "level": [38],
         "tags": [],
@@ -7170,7 +7146,7 @@ export const NPC_DATA = {
     },
     "Granite rocks": {
         "wiki": "https://oldschool.runescape.wiki/w/Granite_rocks",
-        "rule": ["canTrainMining"],
+        "rule": ["hasUsablePickaxe"],
         "skill": ["mining"],
         "level": [45],
         "tags": [],
@@ -7627,7 +7603,7 @@ export const NPC_DATA = {
     },
     "Hammers (Tempoross Cove)": {
         "wiki": "https://oldschool.runescape.wiki/w/Hammers_(Tempoross_Cove)",
-        "rule": ["canTrainFishing"],
+        "rule": null,
         "skill": ["fishing"],
         "level": [35],
         "tags": ["easy"],
@@ -7650,7 +7626,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Harpie_Bug_Swarm",
         "rule": {
             "all": [
-                "canTrainFiremaking",
+                "hasTinderbox",
                 "hasUnlitBugLantern"
             ]
         },
@@ -7661,7 +7637,7 @@ export const NPC_DATA = {
     },
     "Harpoons (Tempoross Cove)": {
         "wiki": "https://oldschool.runescape.wiki/w/Harpoons_(Tempoross_Cove)",
-        "rule": ["canTrainFishing"],
+        "rule": null,
         "skill": ["fishing"],
         "level": [35],
         "tags": ["easy"],
@@ -7802,13 +7778,7 @@ export const NPC_DATA = {
     },
     "Herbiboar": {
         "wiki": "https://oldschool.runescape.wiki/w/Herbiboar",
-        "rule": {
-            "all": [
-                "canCompleteBoneVoyage",
-                "canTrainHunter",
-                "canTrainHerblore"
-            ]
-        },
+        "rule": ["canCompleteBoneVoyage"],
         "skill": ["hunter", "herblore"],
         "level": [80, 31],
         "tags": [],
@@ -8125,7 +8095,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Hollow_tree",
         "rule": {
             "all": [
-                "canTrainWoodcutting",
+                "hasUsableAxe",
                 "canCompletePriestInPeril"
             ]
         },
@@ -8477,7 +8447,7 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompleteAKingdomDivided",
-                "canTrainMining"
+                "hasUsablePickaxe"
             ]
         },
         "skill": ["mining"],
@@ -8490,7 +8460,7 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompleteAKingdomDivided",
-                "canTrainMining"
+                "hasUsablePickaxe"
             ]
         },
         "skill": ["mining"],
@@ -8580,7 +8550,7 @@ export const NPC_DATA = {
     },
     "Iron rocks": {
         "wiki": "https://oldschool.runescape.wiki/w/Iron_rocks",
-        "rule": ["canTrainMining"],
+        "rule": ["hasUsablePickaxe"],
         "skill": ["mining"],
         "level": [15],
         "tags": [],
@@ -8590,7 +8560,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Ironwood_tree",
         "rule": {
             "all": [
-                "canTrainWoodcutting",
+                "hasUsableAxe",
                 "canAccessSunbleakIsland"
             ]
         },
@@ -8952,7 +8922,7 @@ export const NPC_DATA = {
     },
     "Jungle tree": {
         "wiki": "https://oldschool.runescape.wiki/w/Jungle_tree",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": ["woodcutting"],
         "level": [1],
         "tags": [],
@@ -9327,7 +9297,7 @@ export const NPC_DATA = {
     },
     "Lead rocks": {
         "wiki": "https://oldschool.runescape.wiki/w/Lead_rocks",
-        "rule": ["canTrainMining"],
+        "rule": ["hasUsablePickaxe"],
         "skill": ["mining"],
         "level": [25],
         "tags": [],
@@ -9409,7 +9379,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Light_Jungle",
         "rule": {
             "all": [
-                "canTrainWoodcutting",
+                "hasUsableAxe",
                 "hasMachete",
                 "canCompleteJunglePotion"
             ]
@@ -9429,7 +9399,7 @@ export const NPC_DATA = {
     },
     "Limestone rock": {
         "wiki": "https://oldschool.runescape.wiki/w/Limestone_rock",
-        "rule": ["canTrainMining"],
+        "rule": ["hasUsablePickaxe"],
         "skill": ["mining"],
         "level": [10],
         "tags": [],
@@ -9594,7 +9564,7 @@ export const NPC_DATA = {
     },
     "Lovakite rocks": {
         "wiki": "https://oldschool.runescape.wiki/w/Lovakite_rocks",
-        "rule": ["canTrainMining"],
+        "rule": ["hasUsablePickaxe"],
         "skill": ["mining"],
         "level": [65],
         "tags": [],
@@ -9701,7 +9671,6 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompleteBoneVoyage",
-                "canTrainHunter",
                 "hasMagicBirdhouse"
             ]
         },
@@ -9728,7 +9697,7 @@ export const NPC_DATA = {
     },
     "Magic tree": {
         "wiki": "https://oldschool.runescape.wiki/w/Magic_tree",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": ["woodcutting"],
         "level": [75],
         "tags": [],
@@ -9767,7 +9736,7 @@ export const NPC_DATA = {
             "all": [
                 "canPlantTrees",
                 "hasMagicSapling",
-                "canTrainWoodcutting"
+                "hasUsableAxe"
             ]
         },
         "skill": ["farming", "woodcutting"],
@@ -9803,7 +9772,7 @@ export const NPC_DATA = {
     },
     "Magpie impling": {
         "wiki": "https://oldschool.runescape.wiki/w/Magpie_impling",
-        "rule": ["canTrainHunter"],
+        "rule": null,
         "skill": ["hunter"],
         "level": [75],
         "tags": [],
@@ -9822,7 +9791,6 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompleteBoneVoyage",
-                "canTrainHunter",
                 "hasMahoganyBirdhouse"
             ]
         },
@@ -9833,7 +9801,7 @@ export const NPC_DATA = {
     },
     "Mahogany tree": {
         "wiki": "https://oldschool.runescape.wiki/w/Mahogany_tree",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": ["woodcutting"],
         "level": [50],
         "tags": [],
@@ -9937,7 +9905,6 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompleteBoneVoyage",
-                "canTrainHunter",
                 "hasMapleBirdhouse"
             ]
         },
@@ -9950,7 +9917,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Maple_tree",
         "rule": {
             "all": [
-                "canTrainWoodcutting",
+                "hasUsableAxe",
                 "canCompleteDragonSlayerI"
             ]
         },
@@ -9961,7 +9928,7 @@ export const NPC_DATA = {
     },
     "Maple tree": {
         "wiki": "https://oldschool.runescape.wiki/w/Maple_tree",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": ["woodcutting"],
         "level": [45],
         "tags": [],
@@ -10000,7 +9967,7 @@ export const NPC_DATA = {
             "all": [
                 "canPlantTrees",
                 "hasMapleSapling",
-                "canTrainWoodcutting"
+                "hasUsableAxe"
             ]
         },
         "skill": ["farming", "woodcutting"],
@@ -10118,7 +10085,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Medium_Jungle",
         "rule": {
             "all": [
-                "canTrainWoodcutting",
+                "hasUsableAxe",
                 "hasMachete",
                 "canCompleteJunglePotion"
             ]
@@ -10214,7 +10181,7 @@ export const NPC_DATA = {
     },
     "Mithril rocks": {
         "wiki": "https://oldschool.runescape.wiki/w/Mithril_rocks",
-        "rule": ["canTrainMining"],
+        "rule": ["hasUsablePickaxe"],
         "skill": ["mining"],
         "level": [55],
         "tags": [],
@@ -10482,13 +10449,7 @@ export const NPC_DATA = {
     },
     "Muddy patch": {
         "wiki": "https://oldschool.runescape.wiki/w/Muddy_patch",
-        "rule": {
-            "all": [
-                "canCompleteBoneVoyage",
-                "canTrainHunter",
-                "canTrainHerblore"
-            ]
-        },
+        "rule": ["canCompleteBoneVoyage"],
         "skill": ["hunter", "herblore"],
         "level": [80, 31],
         "tags": [],
@@ -10552,13 +10513,7 @@ export const NPC_DATA = {
     },
     "Mushroom (herbiboar, red)": {
         "wiki": "https://oldschool.runescape.wiki/w/Mushroom_(herbiboar,_red)",
-        "rule": {
-            "all": [
-                "canCompleteBoneVoyage",
-                "canTrainHunter",
-                "canTrainHerblore"
-            ]
-        },
+        "rule": ["canCompleteBoneVoyage"],
         "skill": ["hunter", "herblore"],
         "level": [80, 31],
         "tags": [],
@@ -10724,7 +10679,7 @@ export const NPC_DATA = {
     },
     "Nature impling": {
         "wiki": "https://oldschool.runescape.wiki/w/Nature_impling",
-        "rule": ["canTrainHunter"],
+        "rule": null,
         "skill": ["hunter"],
         "level": [68],
         "tags": [],
@@ -10851,7 +10806,7 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompletePandemonium",
-                "canTrainMining"
+                "hasUsablePickaxe"
             ]
         },
         "skill": ["mining", "sailing"],
@@ -10885,7 +10840,7 @@ export const NPC_DATA = {
     },
     "Ninja impling": {
         "wiki": "https://oldschool.runescape.wiki/w/Ninja_impling",
-        "rule": ["canTrainHunter"],
+        "rule": null,
         "skill": ["hunter"],
         "level": [84],
         "tags": [],
@@ -10912,7 +10867,6 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompleteBoneVoyage",
-                "canTrainHunter",
                 "hasOakBirdhouse"
             ]
         },
@@ -10947,7 +10901,7 @@ export const NPC_DATA = {
     },
     "Oak tree": {
         "wiki": "https://oldschool.runescape.wiki/w/Oak_tree",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": ["woodcutting"],
         "level": [15],
         "tags": [],
@@ -10986,7 +10940,7 @@ export const NPC_DATA = {
             "all": [
                 "canPlantTrees",
                 "hasOakSapling",
-                "canTrainWoodcutting"
+                "hasUsableAxe"
             ]
         },
         "skill": ["farming", "woodcutting"],
@@ -11248,7 +11202,7 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompleteBoneVoyage",
-                "canTrainMining"
+                "hasUsablePickaxe"
             ]
         },
         "skill": [],
@@ -11266,7 +11220,7 @@ export const NPC_DATA = {
     },
     "Ore vein": {
         "wiki": "https://oldschool.runescape.wiki/w/Ore_vein",
-        "rule": ["canTrainMining"],
+        "rule": ["hasUsablePickaxe"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -12030,7 +11984,6 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompleteBoneVoyage",
-                "canTrainHunter",
                 "hasRedwoodBirdhouse"
             ]
         },
@@ -12041,7 +11994,7 @@ export const NPC_DATA = {
     },
     "Redwood tree": {
         "wiki": "https://oldschool.runescape.wiki/w/Redwood_tree",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": ["woodcutting"],
         "level": [90],
         "tags": [],
@@ -12561,7 +12514,7 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompleteTheTouristTrap",
-                "canTrainMining"
+                "hasUsablePickaxe"
             ]
         },
         "skill": ["mining"],
@@ -12600,7 +12553,6 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Rod_Fishing_spot_(anglerfish)",
         "rule": {
             "all": [
-                "canTrainFishing",
                 "hasFishingRod",
                 "hasSandworms"
             ]
@@ -12614,7 +12566,6 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Rod_Fishing_spot_(lure,_bait)#Bait",
         "rule": {
             "all": [
-                "canTrainFishing",
                 "hasFishingRod",
                 "hasFishingBait"
             ]
@@ -12628,7 +12579,6 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Rod_Fishing_spot_(lure,_bait)#Fly_fishing",
         "rule": {
             "all": [
-                "canTrainFishing",
                 "hasFlyFishingRod",
                 "hasFeather"
             ]
@@ -12642,7 +12592,6 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Rod_Fishing_spot_(lure,_bait)#Stripy_feathers",
         "rule": {
             "all": [
-                "canTrainFishing",
                 "hasFlyFishingRod",
                 "hasStripyFeather"
             ]
@@ -12702,7 +12651,7 @@ export const NPC_DATA = {
     },
     "Ropes (Tempoross Cove)": {
         "wiki": "https://oldschool.runescape.wiki/w/Ropes_(Tempoross_Cove)",
-        "rule": ["canTrainFishing"],
+        "rule": null,
         "skill": ["fishing"],
         "level": [35],
         "tags": ["easy"],
@@ -12725,7 +12674,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Rosewood_tree",
         "rule": {
             "all": [
-                "canTrainWoodcutting",
+                "hasUsableAxe",
                 "canAccessDrumstickIsle"
             ]
         },
@@ -12759,7 +12708,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Rubium_rocks",
         "rule": {
             "all": [
-                "canTrainMining",
+                "hasUsablePickaxe",
                 "hasRope"
             ]
         },
@@ -12781,7 +12730,7 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompleteRuneMysteries",
-                "canTrainMining"
+                "hasUsablePickaxe"
             ]
         },
         "skill": [],
@@ -12794,7 +12743,7 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompleteRuneMysteries",
-                "canTrainMining"
+                "hasUsablePickaxe"
             ]
         },
         "skill": ["mining"],
@@ -12812,7 +12761,7 @@ export const NPC_DATA = {
     },
     "Runite rocks": {
         "wiki": "https://oldschool.runescape.wiki/w/Runite_rocks",
-        "rule": ["canTrainMining"],
+        "rule": ["hasUsablePickaxe"],
         "skill": ["mining"],
         "level": [85],
         "tags": [],
@@ -12932,7 +12881,7 @@ export const NPC_DATA = {
     },
     "Sandstone rocks": {
         "wiki": "https://oldschool.runescape.wiki/w/Sandstone_rocks",
-        "rule": ["canTrainMining"],
+        "rule": ["hasUsablePickaxe"],
         "skill": ["mining"],
         "level": [35],
         "tags": [],
@@ -13255,13 +13204,7 @@ export const NPC_DATA = {
     },
     "Seaweed (herbiboar)": {
         "wiki": "https://oldschool.runescape.wiki/w/Seaweed_(herbiboar)",
-        "rule": {
-            "all": [
-                "canCompleteBoneVoyage",
-                "canTrainHunter",
-                "canTrainHerblore"
-            ]
-        },
+        "rule": ["canCompleteBoneVoyage"],
         "skill": ["hunter", "herblore"],
         "level": [80, 31],
         "tags": [],
@@ -13492,7 +13435,7 @@ export const NPC_DATA = {
     },
     "Shrine": {
         "wiki": "https://oldschool.runescape.wiki/w/Shrine",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": ["woodcutting"],
         "level": [60],
         "tags": [],
@@ -13556,7 +13499,7 @@ export const NPC_DATA = {
     },
     "Silver rocks": {
         "wiki": "https://oldschool.runescape.wiki/w/Silver_rocks",
-        "rule": ["canTrainMining"],
+        "rule": ["hasUsablePickaxe"],
         "skill": ["mining"],
         "level": [20],
         "tags": [],
@@ -14006,13 +13949,7 @@ export const NPC_DATA = {
     },
     "Smelly mushroom": {
         "wiki": "https://oldschool.runescape.wiki/w/Smelly_mushroom",
-        "rule": {
-            "all": [
-                "canCompleteBoneVoyage",
-                "canTrainHunter",
-                "canTrainHerblore"
-            ]
-        },
+        "rule": ["canCompleteBoneVoyage"],
         "skill": ["hunter", "herblore"],
         "level": [80, 31],
         "tags": [],
@@ -14097,7 +14034,7 @@ export const NPC_DATA = {
     },
     "Soft clay pack": {
         "wiki": "https://oldschool.runescape.wiki/w/Soft_clay_pack",
-        "rule": ["canTrainMining"],
+        "rule": ["hasUsablePickaxe"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -14108,7 +14045,7 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompleteSongOfTheElves",
-                "canTrainMining"
+                "hasUsablePickaxe"
             ]
         },
         "skill": [],
@@ -14449,7 +14386,7 @@ export const NPC_DATA = {
     },
     "Spotted kebbit": {
         "wiki": "https://oldschool.runescape.wiki/w/Spotted_kebbit",
-        "rule": ["canTrainHunter"],
+        "rule": null,
         "skill": ["hunter"],
         "level": [43],
         "tags": [],
@@ -14595,7 +14532,7 @@ export const NPC_DATA = {
     },
     "Struggling sapling (Forestry event)": {
         "wiki": "https://oldschool.runescape.wiki/w/Struggling_sapling_(Forestry_event)",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -14603,7 +14540,7 @@ export const NPC_DATA = {
     },
     "Struggling sapling (Forestry event) 75 Woodcutting": {
         "wiki": "https://oldschool.runescape.wiki/w/Struggling_sapling_(Forestry_event)",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": ["Woodcutting"],
         "level": [75],
         "tags": [],
@@ -14621,7 +14558,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Sulliuscep",
         "rule": {
             "all": [
-                "canTrainWoodcutting",
+                "hasUsableAxe",
                 "canCompleteBoneVoyage"
             ]
         },
@@ -14843,7 +14780,6 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompleteBoneVoyage",
-                "canTrainHunter",
                 "hasTeakBirdhouse"
             ]
         },
@@ -14878,7 +14814,7 @@ export const NPC_DATA = {
     },
     "Teak tree": {
         "wiki": "https://oldschool.runescape.wiki/w/Teak_tree",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": ["woodcutting"],
         "level": [35],
         "tags": [],
@@ -15120,7 +15056,7 @@ export const NPC_DATA = {
     },
     "Tin rocks": {
         "wiki": "https://oldschool.runescape.wiki/w/Tin_rocks",
-        "rule": ["canTrainMining"],
+        "rule": ["hasUsablePickaxe"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -15309,7 +15245,7 @@ export const NPC_DATA = {
     },
     "Tree": {
         "wiki": "https://oldschool.runescape.wiki/w/Tree",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -15317,7 +15253,7 @@ export const NPC_DATA = {
     },
     "Tree (Great Kourend)": {
         "wiki": "https://oldschool.runescape.wiki/w/Tree_(Great_Kourend)",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -15325,7 +15261,7 @@ export const NPC_DATA = {
     },
     "Tree (Isle of Souls)": {
         "wiki": "https://oldschool.runescape.wiki/w/Tree_(Isle_of_Souls)",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -15333,7 +15269,7 @@ export const NPC_DATA = {
     },
     "Tree (Pest Control)": {
         "wiki": "https://oldschool.runescape.wiki/w/Tree_(Pest_Control)",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -15343,7 +15279,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Tree_(Prifddinas)",
         "rule": {
             "all": [
-                "canTrainWoodcutting",
+                "hasUsableAxe",
                 "canCompleteSongOfTheElves"
             ]
         },
@@ -15354,7 +15290,7 @@ export const NPC_DATA = {
     },
     "Tree (Shayzien)": {
         "wiki": "https://oldschool.runescape.wiki/w/Tree_(Shayzien)",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -15364,7 +15300,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Tree_(Tirannwn)",
         "rule": {
             "all": [
-                "canTrainWoodcutting",
+                "hasUsableAxe",
                 "canCompleteRegicide"
             ]
         },
@@ -15375,7 +15311,7 @@ export const NPC_DATA = {
     },
     "Tree (Varlamore)": {
         "wiki": "https://oldschool.runescape.wiki/w/Tree_(Varlamore)",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -15385,7 +15321,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Tree_(crystal)",
         "rule": {
             "all": [
-                "canTrainWoodcutting",
+                "hasUsableAxe",
                 "canCompleteSongOfTheElves"
             ]
         },
@@ -15968,7 +15904,7 @@ export const NPC_DATA = {
     },
     "Volcanic sulphur (rock)": {
         "wiki": "https://oldschool.runescape.wiki/w/Volcanic_sulphur_(rock)",
-        "rule": ["canTrainMining"],
+        "rule": ["hasUsablePickaxe"],
         "skill": ["mining"],
         "level": [42],
         "tags": [],
@@ -16320,7 +16256,7 @@ export const NPC_DATA = {
     },
     "Wild dog": {
         "wiki": "https://oldschool.runescape.wiki/w/Wild_dog",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -16352,7 +16288,6 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompleteBoneVoyage",
-                "canTrainHunter",
                 "hasWillowBirdhouse"
             ]
         },
@@ -16363,7 +16298,7 @@ export const NPC_DATA = {
     },
     "Willow tree": {
         "wiki": "https://oldschool.runescape.wiki/w/Willow_tree",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": ["woodcutting"],
         "level": [30],
         "tags": [],
@@ -16402,7 +16337,7 @@ export const NPC_DATA = {
             "all": [
                 "canPlantTrees",
                 "hasWillowSapling",
-                "canTrainWoodcutting"
+                "hasUsableAxe"
             ]
         },
         "skill": ["farming", "woodcutting"],
@@ -16680,7 +16615,6 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompleteBoneVoyage",
-                "canTrainHunter",
                 "hasYewBirdhouse"
             ]
         },
@@ -16691,7 +16625,7 @@ export const NPC_DATA = {
     },
     "Yew tree": {
         "wiki": "https://oldschool.runescape.wiki/w/Yew_tree",
-        "rule": ["canTrainWoodcutting"],
+        "rule": ["hasUsableAxe"],
         "skill": ["woodcutting"],
         "level": [60],
         "tags": [],
@@ -16730,7 +16664,7 @@ export const NPC_DATA = {
             "all": [
                 "canPlantTrees",
                 "hasYewSapling",
-                "canTrainWoodcutting"
+                "hasUsableAxe"
             ]
         },
         "skill": ["farming", "woodcutting"],
@@ -16748,7 +16682,7 @@ export const NPC_DATA = {
     },
     "Young impling": {
         "wiki": "https://oldschool.runescape.wiki/w/Young_impling",
-        "rule": ["canTrainHunter"],
+        "rule": null,
         "skill": ["hunter"],
         "level": [32],
         "tags": [],
