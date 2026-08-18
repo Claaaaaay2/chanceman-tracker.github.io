@@ -6429,6 +6429,7 @@ function hasAnyLog(ctx) {
         32907,
         32910,
         19669,
+        2862 // achey tree logs
     ])
         || canTrainWoodcutting(ctx); // for untradable Juniper logs
 }

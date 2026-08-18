@@ -1,5 +1,6 @@
 import { REQUIREMENT_CHECKS, hasElementalRuneRules, isElementalRuneRule } from "../logic/requirements.js";
 import { fileStore } from "../storage/fileStore.js";
+import { NPC_DATA } from "../logic/npcData.js";
 
 const SLAYER_RULE_LABELS = {
     canAssignWaterfiendsBarbarianFiremaking1: "Barbarian firemaking 1 completed",
@@ -10,6 +11,133 @@ const SLAYER_RULE_LABELS = {
     canAccessWyrmscraigIsland: "Can access Wyrmscraig Island",
     hasUsableAxe: "Has a usable axe"
 };
+
+const LIKE_A_BOSS_MASTERS = new Set([
+    "Konar",
+    "Nieve",
+    "Duradel",
+    "Krystilia"
+]);
+
+const LIKE_A_BOSS = [
+    {
+        name: "Abyssal Sire"
+    },
+    {
+        name: "Alchemical Hydra",
+        masters: ["Konar"]
+    },
+    {
+        name: "Araxxor"
+    },
+    {
+        name: "Barrows brothers",
+        npcs: [
+            "Ahrim the Blighted",
+            "Dharok the Wretched",
+            "Guthan the Infested",
+            "Karil the Tainted",
+            "Torag the Corrupted",
+            "Verac the Defiled"
+        ]
+    },
+    {
+        name: "Callisto",
+        substitutes: ["Artio"]
+    },
+    {
+        name: "Cerberus"
+    },
+    {
+        name: "Chaos Elemental"
+    },
+    {
+        name: "Chaos Fanatic"
+    },
+    {
+        name: "Commander Zilyana"
+    },
+    {
+        name: "Crazy archaeologist",
+        substitutes: ["Deranged archaeologist"]
+    },
+    {
+        name: "Dagannoth Kings",
+        npcs: [
+            "Dagannoth Prime",
+            "Dagannoth Rex",
+            "Dagannoth Supreme"
+        ]
+    },
+    {
+        name: "Duke Sucellus"
+    },
+    {
+        name: "General Graardor"
+    },
+    {
+        name: "Giant Mole"
+    },
+    {
+        name: "Grotesque Guardians"
+    },
+    {
+        name: "K'ril Tsutsaroth"
+    },
+    {
+        name: "Kalphite Queen"
+    },
+    {
+        name: "King Black Dragon"
+    },
+    {
+        name: "Kraken"
+    },
+    {
+        name: "Kree'arra"
+    },
+    {
+        name: "The Leviathan"
+    },
+    {
+        name: "Maggot King"
+    },
+    {
+        name: "Phantom Muspah"
+    },
+    {
+        name: "Sarachnis"
+    },
+    {
+        name: "Scorpia"
+    },
+    {
+        name: "Shellbane gryphon"
+    },
+    {
+        name: "Thermonuclear smoke devil"
+    },
+    {
+        name: "Vardorvis"
+    },
+    {
+        name: "Venenatis",
+        substitutes: ["Spindel"]
+    },
+    {
+        name: "Vet'ion",
+        substitutes: ["Calvar'ion"]
+    },
+    {
+        name: "Vorkath"
+    },
+    {
+        name: "The Whisperer"
+    },
+    {
+        name: "Zulrah"
+    }
+];
 
 function escapeHtml(value) {
     return String(value)
@@ -369,6 +497,241 @@ function getSlayerStatusState(isAssignable, isReachable) {
     };
 }
 
+function isBossAvailableToMaster(boss, masterName) {
+    if (!LIKE_A_BOSS_MASTERS.has(masterName)) {
+        return false;
+    }
+
+    if (masterName === "Krystilia") {
+        return (
+            WILDERNESS_BOSS_NAMES.has(boss.name) ||
+            KRYSTILIA_EXCEPTION_BOSS_NAMES.has(boss.name)
+        );
+    }
+
+    if (boss.masters && !boss.masters.includes(masterName)) {
+        return false;
+    }
+
+    return true;
+}
+
+function getBossAssignmentRequirements(boss) {
+    return boss.assignmentRequirements || {};
+}
+
+function getBossReachRequirements(boss) {
+    return boss.reachRequirements || {};
+}
+
+async function evaluateBossForMaster(boss, master, ctx) {
+    if (!isBossAvailableToMaster(boss, master.name)) {
+        return {
+            assignable: false,
+            reachable: false,
+            assignmentStatus: { met: false, missing: [] },
+            reachStatus: { met: false, missing: [] }
+        };
+    }
+
+    // Boss assignments ignore combat level.
+    const assignmentStatus = await evaluateRequirements(
+        getBossAssignmentRequirements(boss),
+        ctx
+    );
+
+    const reachStatus = await evaluateRequirements(
+        getBossReachRequirements(boss),
+        ctx
+    );
+
+    return {
+        assignable: assignmentStatus.met,
+        reachable: assignmentStatus.met && reachStatus.met,
+        assignmentStatus,
+        reachStatus
+    };
+}
+
+async function processBossTask(boss, master, ctx) {
+    const bossNpcNames = boss.npcs?.length
+        ? boss.npcs
+        : [boss.name];
+
+    const bossNpcs = bossNpcNames
+        .map((name) => NPC_DATA[name])
+        .filter(Boolean);
+
+    const substituteNpcs = (boss.substitutes || [])
+        .map((name) => NPC_DATA[name])
+        .filter(Boolean);
+
+    /*
+     * If this boss has a master restriction, enforce it here.
+     */
+    if (boss.masters && !boss.masters.includes(master.name)) {
+        return {
+            assignable: false,
+            reachable: false,
+            statusLabel: "Not assigned by this master",
+            missingLines: [],
+            statusKey: "unassignable"
+        };
+    }
+
+    /*
+ * Krystilia only assigns these Wilderness bosses.
+ */
+if (master.name === "Krystilia") {
+    const krystiliaBosses = [
+        "Callisto",
+        "Chaos Elemental",
+        "Chaos Fanatic",
+        "Crazy archaeologist",
+        "Scorpia",
+        "Venenatis",
+        "Vet'ion"
+    ];
+
+    if (!krystiliaBosses.includes(boss.name)) {
+        return {
+            assignable: false,
+            reachable: false,
+            statusLabel: "Not assigned by this master",
+            missingLines: [],
+            statusKey: "unassignable"
+        };
+    }
+}
+
+    /*
+     * No NPC data means we cannot evaluate the boss.
+     * Treat it as unavailable rather than allowing it
+     * to accidentally count toward the percentage.
+     */
+    if (!bossNpcs.length) {
+        return {
+            assignable: false,
+            reachable: false,
+            statusLabel: "No NPC data",
+            missingLines: [],
+            statusKey: "unassignable"
+        };
+    }
+
+    /*
+     * A boss task is assignable if at least one of the
+     * applicable NPCs satisfies its requirements.
+     *
+     * NPC_DATA uses:
+     *   skill -> Slayer/other skill requirements
+     *   level -> combat/NPC level requirements
+     *   rule -> access rules
+     *
+     * For Slayer-task purposes, the skill and rule data
+     * are the important parts.
+     */
+    const evaluateNpc = async (npc) => {
+        const assignmentRequirements = {
+            skills: {},
+            rulesAll: [],
+            rulesAny: []
+        };
+
+        for (const [skill, level] of Object.entries(npc.skill || {})) {
+            assignmentRequirements.skills[skill] = level;
+        }
+
+        if (Array.isArray(npc.rule)) {
+            assignmentRequirements.rulesAll.push(...npc.rule);
+        } else if (npc.rule && typeof npc.rule === "object") {
+            if (Array.isArray(npc.rule.all)) {
+                assignmentRequirements.rulesAll.push(...npc.rule.all);
+            }
+
+            if (Array.isArray(npc.rule.any)) {
+                assignmentRequirements.rulesAny.push(...npc.rule.any);
+            }
+        }
+
+        return evaluateRequirements(assignmentRequirements, ctx);
+    };
+
+    const npcResults = [];
+
+    for (const npc of bossNpcs) {
+        npcResults.push({
+            npc,
+            status: await evaluateNpc(npc)
+        });
+    }
+
+    /*
+     * Substitutes count as alternatives to the boss itself.
+     */
+    const substituteResults = [];
+
+    for (const npc of substituteNpcs) {
+        substituteResults.push({
+            npc,
+            status: await evaluateNpc(npc)
+        });
+    }
+
+    const allResults = [
+        ...npcResults,
+        ...substituteResults
+    ];
+
+    const assignableResults = allResults.filter(
+        ({ status }) => status.met
+    );
+
+    const assignable = assignableResults.length > 0;
+
+    /*
+     * For a boss task, reaching ANY valid boss/substitute
+     * is enough to make the task reachable.
+     *
+     * This is particularly important for:
+     *   Callisto -> Artio
+     *   Crazy archaeologist -> Deranged archaeologist
+     *   Venenatis -> Spindel
+     *   Vet'ion -> Calvar'ion
+     */
+    const reachable = assignable;
+
+    const missingLines = [];
+
+    if (!assignable) {
+        const missing = [];
+
+        for (const { status } of allResults) {
+            if (status.missing.length) {
+                missing.push(...status.missing);
+            }
+        }
+
+        const uniqueMissing = [...new Set(missing)];
+
+        if (uniqueMissing.length) {
+            missingLines.push(
+                `To be assigned/reached: ${formatMissingParts(uniqueMissing)}.`
+            );
+        }
+    }
+
+    const statusState = getSlayerStatusState(assignable, reachable);
+
+    return {
+        assignable,
+        reachable,
+        statusLabel: statusState.statusLabel,
+        statusKey: statusState.statusKey,
+        missingLines
+    };
+}
+
 export default async function SlayerMastersPage() {
     if (!fileStore.player || !fileStore.obtained || !fileStore.rolled) {
         return `
@@ -398,6 +761,7 @@ export default async function SlayerMastersPage() {
     const hideUnreachableSlayerMasters = fileStore.filters?.hideUnreachableSlayerMasters ?? true;
     const hideUnassignableSlayerTasks = Boolean(fileStore.filters?.hideUnassignableSlayerTasks);
     const ignoreSlayerMasterCombatLevel = Boolean(fileStore.filters?.ignoreSlayerMasterCombatLevel);
+    const likeABossUnlocked = Boolean(fileStore.filters?.likeABossUnlocked);
 
     const masterHtml = [];
 
@@ -555,6 +919,79 @@ export default async function SlayerMastersPage() {
             ? ((reachableAssignableCount / assignableCount) * 100).toFixed(1)
             : "0.0";
 
+        let bossAssignableCount = 0;
+        let bossReachableCount = 0;
+        const bossRows = [];
+
+        if (likeABossUnlocked && LIKE_A_BOSS_MASTERS.has(master.name)) {
+            for (const boss of LIKE_A_BOSS) {
+                const bossResult = await processBossTask(
+                    boss,
+                    master,
+                    ctx
+                );
+
+                /*
+                * Masters that don't assign this boss don't belong
+                * in this master's boss pool at all.
+                */
+                if (
+                    bossResult.statusKey === "unassignable" &&
+                    bossResult.statusLabel === "Not assigned by this master"
+                ) {
+                    continue;
+                }
+
+                if (bossResult.assignable) {
+                    bossAssignableCount++;
+
+                    if (bossResult.reachable) {
+                        bossReachableCount++;
+                    }
+                }
+
+                const statusClass =
+                    `slayer-monster--${bossResult.statusKey}`;
+
+                bossRows.push(`
+                    <article class="slayer-monster ${statusClass}">
+                        <div class="slayer-monster-header">
+                            <a
+                                class="slayer-monster-link"
+                                href="${escapeHtml(getMonsterLink({ name: boss.name }))}"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >${escapeHtml(boss.name)}</a>
+
+                            <span class="slayer-monster-status">
+                                ${escapeHtml(bossResult.statusLabel)}
+                            </span>
+                        </div>
+
+                        ${
+                            bossResult.missingLines.length
+                                ? `
+                                    <div class="slayer-monster-missing">
+                                        ${bossResult.missingLines
+                                            .map((line) => `<div>${escapeHtml(line)}</div>`)
+                                            .join("")}
+                                    </div>
+                                `
+                                : ""
+                        }
+                    </article>
+                `);
+            }
+        }
+
+        const bossReachPercent = bossAssignableCount > 0
+            ? ((bossReachableCount / bossAssignableCount) * 100).toFixed(1)
+            : "0.0";
+
+        const bossTaskPercent = bossAssignableCount > 0
+            ? (100 / bossAssignableCount).toFixed(1)
+            : "0.0";
+
         const masterNotes = Array.isArray(master.notes) ? master.notes : [];
         const masterInfo = masterNotes.length
             ? renderInfoIcon(masterNotes.join("\n"), `${master.name} note`)
@@ -581,14 +1018,71 @@ export default async function SlayerMastersPage() {
                         ${masterInfo}
                     </h2>
                     <div class="slayer-master-metrics">
-                        <span class="slayer-master-metric">Master reachable: ${masterReach.met ? "Yes" : "No"}</span>
-                        <span class="slayer-master-metric">Assignable reachable: ${reachPercent}% (${reachableAssignableCount}/${assignableCount})</span>
+                        <span class="slayer-master-metric">
+                            Master reachable: ${masterReach.met ? "Yes" : "No"}
+                        </span>
+
+                        <span class="slayer-master-metric">
+                            Assignable reachable: ${reachPercent}% (${reachableAssignableCount}/${assignableCount})
+                        </span>
+
+                        ${
+                            likeABossUnlocked &&
+                            LIKE_A_BOSS_MASTERS.has(master.name) &&
+                            bossAssignableCount > 0
+                                ? `
+                                    <span class="slayer-master-metric">
+                                        Boss tasks: ${bossReachPercent}% reachable
+                                        (${bossReachableCount}/${bossAssignableCount})
+                                        — ${bossTaskPercent}% each
+                                        <a
+                                            class="unlock-jump-link slayer-boss-jump-link"
+                                            href="#${escapeHtml(`${id}-bosses`)}"
+                                        >Jump to breakdown</a>
+                                    </span>
+                                `
+                                : ""
+                        }
                     </div>
                 </header>
                 ${masterMissing.length ? `<div class="slayer-master-missing">${masterMissing.map((line) => `<div>${escapeHtml(line)}</div>`).join("")}</div>` : ""}
                 <div class="slayer-monster-grid">
                     ${monsterRows.join("")}
                 </div>
+
+                ${
+                    likeABossUnlocked &&
+                    LIKE_A_BOSS_MASTERS.has(master.name) &&
+                    bossRows.length
+                        ? `
+                            <section
+                                class="slayer-boss-breakdown"
+                                id="${escapeHtml(`${id}-bosses`)}"
+                            >
+                                <h3>Like a boss</h3>
+
+                                <div class="slayer-master-metrics">
+                                    <span class="slayer-master-metric">
+                                        Assignable bosses: ${bossAssignableCount}
+                                    </span>
+
+                                    <span class="slayer-master-metric">
+                                        Reachable: ${bossReachPercent}%
+                                        (${bossReachableCount}/${bossAssignableCount})
+                                    </span>
+
+                                    <span class="slayer-master-metric">
+                                        Each boss: ${bossTaskPercent}%
+                                    </span>
+                                </div>
+
+                                <div class="slayer-monster-grid">
+                                    ${bossRows.join("")}
+                                </div>
+                            </section>
+                        `
+                        : ""
+                }
             </section>
         `);
     }
@@ -607,6 +1101,10 @@ export default async function SlayerMastersPage() {
             <label class="slayer-master-filter">
                 <input type="checkbox" id="ignoreSlayerMasterCombatLevel" ${ignoreSlayerMasterCombatLevel ? "checked" : ""}>
                 Ignore combat level
+            </label>
+            <label class="slayer-master-filter">
+                <input type="checkbox" id="likeABossUnlocked" ${likeABossUnlocked ? "checked" : ""}>
+                "Like a boss" unlocked
             </label>
         </div>
         <nav class="unlock-jump slayer-master-jump" aria-label="Jump to slayer master">
@@ -711,6 +1209,13 @@ export function init() {
         }
         if (event.target.id === "hideUnassignableSlayerTasks") {
             await updateSlayerMasterFilters({ hideUnassignableSlayerTasks: event.target.checked });
+        }
+
+        if (event.target.id === "likeABossUnlocked") {
+            await updateSlayerMasterFilters(
+                { likeABossUnlocked: event.target.checked },
+                { rerender: true }
+            );
         }
     };
 
