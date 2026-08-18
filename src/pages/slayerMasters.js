@@ -580,32 +580,29 @@ async function processBossTask(boss, master, ctx) {
     }
 
     /*
-     * Krystilia only assigns Wilderness bosses, with
-     * King Black Dragon as the exception.
-     */
-    if (master.name === "Krystilia") {
-        const isWildernessBoss = [
-            "Callisto",
-            "Chaos Elemental",
-            "Chaos Fanatic",
-            "Crazy archaeologist",
-            "Scorpia",
-            "Venenatis",
-            "Vet'ion"
-        ].includes(boss.name);
+ * Krystilia only assigns these Wilderness bosses.
+ */
+if (master.name === "Krystilia") {
+    const krystiliaBosses = [
+        "Callisto",
+        "Chaos Elemental",
+        "Chaos Fanatic",
+        "Crazy archaeologist",
+        "Scorpia",
+        "Venenatis",
+        "Vet'ion"
+    ];
 
-        const isKbd = boss.name === "King Black Dragon";
-
-        if (!isWildernessBoss && !isKbd) {
-            return {
-                assignable: false,
-                reachable: false,
-                statusLabel: "Not assigned by this master",
-                missingLines: [],
-                statusKey: "unassignable"
-            };
-        }
+    if (!krystiliaBosses.includes(boss.name)) {
+        return {
+            assignable: false,
+            reachable: false,
+            statusLabel: "Not assigned by this master",
+            missingLines: [],
+            statusKey: "unassignable"
+        };
     }
+}
 
     /*
      * No NPC data means we cannot evaluate the boss.
@@ -637,15 +634,24 @@ async function processBossTask(boss, master, ctx) {
     const evaluateNpc = async (npc) => {
         const assignmentRequirements = {
             skills: {},
-            rulesAll: []
+            rulesAll: [],
+            rulesAny: []
         };
 
         for (const [skill, level] of Object.entries(npc.skill || {})) {
             assignmentRequirements.skills[skill] = level;
         }
 
-        for (const rule of npc.rule || []) {
-            assignmentRequirements.rulesAll.push(rule);
+        if (Array.isArray(npc.rule)) {
+            assignmentRequirements.rulesAll.push(...npc.rule);
+        } else if (npc.rule && typeof npc.rule === "object") {
+            if (Array.isArray(npc.rule.all)) {
+                assignmentRequirements.rulesAll.push(...npc.rule.all);
+            }
+
+            if (Array.isArray(npc.rule.any)) {
+                assignmentRequirements.rulesAny.push(...npc.rule.any);
+            }
         }
 
         return evaluateRequirements(assignmentRequirements, ctx);
