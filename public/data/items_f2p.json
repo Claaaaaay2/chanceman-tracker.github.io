@@ -11294,7 +11294,10 @@
     "image": "monk's_robe.png",
     "sources": {
       "spawns": {
-        "Yes": "canTrainPrayer"
+        "Yes": {
+                "skill": "Prayer",
+                "level": 31
+        }
       }
     },
     "tags": [
@@ -11335,7 +11338,10 @@
     "image": "monk's_robe_top.png",
     "sources": {
       "spawns": {
-        "Yes": "canTrainPrayer"
+        "Yes": {
+                "skill": "Prayer",
+                "level": 31
+        }
       }
     },
     "tags": [
@@ -11946,16 +11952,14 @@
       },
       "shops": {
         "Yes": "No requirements"
-      },
-      "other": {
-        "Crafting": {
-          "notes": "Requires an Unfired pot.",
+      },"other": {
+        "Crafting a Pot": {
+          "notes": "Requires Unfired pot.",
           "rule": {
             "all": [
               {
                 "has": 1787
-              },
-              "canTrainCrafting"
+              }
             ]
           }
         },
