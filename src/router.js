@@ -46,6 +46,9 @@ const routeDefinitions = {
     "/slayer-masters": {
         load: async () => import("./pages/slayerMasters.js")
     },
+    "/sailing": {
+        load: async () => import("./pages/sailing.js")
+    },
     "/reupload": {
         load: async () => import("./pages/reupload.js")
     },
