@@ -56799,6 +56799,11 @@
       "Potion"
     ],
     "sources": {
+      "drops": {
+        "Goblin Drop table 2": {
+          "droprate": "Common"
+        }
+      },
       "other": {
         "Decanting a potion": {
           "notes": "Decanting an Energy potion(2), (3) or (4).",
@@ -56828,6 +56833,17 @@
       "Potion"
     ],
     "sources": {
+      "drops": {
+        "Goblin Drop table 1": {
+          "droprate": "Common"
+        },
+        "Goblin Drop table 2": {
+          "droprate": "Common"
+        },
+        "Dark wizard Low level": {
+          "droprate": "Common"
+        }
+      },
       "other": {
         "Decanting a potion": {
           "notes": "Decanting an Energy potion(1), (3) or (4).",
@@ -56872,6 +56888,15 @@
         },
         "Ornate lockbox": {
           "droprate": "1/16.667"
+        },
+        "Man": {
+          "droprate": "Common"
+        },
+        "Woman": {
+          "droprate": "Common"
+        },
+        "Cave crawler": {
+          "droprate": "Common"
         }
       },
       "other": {
@@ -56926,6 +56951,12 @@
         },
         "Combat path voucher (m)": {
           "droprate": "Always"
+        },
+        "Goblin Drop table 1": {
+          "droprate": "Common"
+        },
+        "Cave crawler": {
+          "droprate": "Common"
         }
       },
       "other": {
