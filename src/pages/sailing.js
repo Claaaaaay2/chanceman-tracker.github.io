@@ -12,9 +12,9 @@ import { fileStore } from "../storage/fileStore.js";
  *   fileStore.rolled and fileStore.obtained.
  */
 
-const HULLS = [
+const HULLS_RAFT = [
     {
-        name: "Wooden hull",
+        name: "Wooden base",
         sailing: 1,
         construction: 1,
         materials: [
@@ -25,7 +25,7 @@ const HULLS = [
         wiki: "https://oldschool.runescape.wiki/w/Wooden_hull"
     },
     {
-        name: "Oak hull",
+        name: "Oak base",
         sailing: 20,
         construction: 8,
         materials: [
@@ -33,10 +33,10 @@ const HULLS = [
             ["Rope", 6],
             ["Swamp tar", 10]
         ],
-        wiki: "https://oldschool.runescape.wiki/w/Oak_hull#Raft"
+        wiki: "https://oldschool.runescape.wiki/w/Oak_hull"
     },
     {
-        name: "Teak hull",
+        name: "Teak base",
         sailing: 31,
         construction: 23,
         materials: [
@@ -45,10 +45,10 @@ const HULLS = [
             ["Swamp tar", 10],
             ["Lead bar", 5]
         ],
-        wiki: "https://oldschool.runescape.wiki/w/Teak_hull#Raft"
+        wiki: "https://oldschool.runescape.wiki/w/Teak_hull"
     },
     {
-        name: "Mahogany hull",
+        name: "Mahogany base",
         sailing: 48,
         construction: 41,
         materials: [
@@ -57,10 +57,10 @@ const HULLS = [
             ["Swamp tar", 10],
             ["Lead bar", 5]
         ],
-        wiki: "https://oldschool.runescape.wiki/w/Mahogany_hull#Raft"
+        wiki: "https://oldschool.runescape.wiki/w/Mahogany_hull"
     },
     {
-        name: "Camphor hull",
+        name: "Camphor base",
         sailing: 67,
         construction: 59,
         materials: [
@@ -69,10 +69,10 @@ const HULLS = [
             ["Swamp tar", 10],
             ["Lead bar", 5]
         ],
-        wiki: "https://oldschool.runescape.wiki/w/Camphor_hull#Raft"
+        wiki: "https://oldschool.runescape.wiki/w/Camphor_hull"
     },
     {
-        name: "Ironwood hull",
+        name: "Ironwood base",
         sailing: 81,
         construction: 75,
         materials: [
@@ -81,10 +81,10 @@ const HULLS = [
             ["Swamp tar", 10],
             ["Cupronickel bar", 5]
         ],
-        wiki: "https://oldschool.runescape.wiki/w/Ironwood_hull#Raft"
+        wiki: "https://oldschool.runescape.wiki/w/Ironwood_hull"
     },
     {
-        name: "Rosewood hull",
+        name: "Rosewood base",
         sailing: 93,
         construction: 84,
         materials: [
@@ -93,11 +93,181 @@ const HULLS = [
             ["Swamp tar", 10],
             ["Cupronickel bar", 5]
         ],
-        wiki: "https://oldschool.runescape.wiki/w/Rosewood_hull#Raft"
+        wiki: "https://oldschool.runescape.wiki/w/Rosewood_hull"
     }
 ];
 
-const HELMS = [
+const HULLS_SKIFF = [
+    {
+        name: "Wooden skiff",
+        sailing: 15,
+        construction: 1,
+        materials: [
+            ["Wooden hull parts", 10],
+            ["Bronze nails", 300],
+            ["Swamp tar", 20]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Wooden_hull"
+    },
+    {
+        name: "Oak skiff",
+        sailing: 20,
+        construction: 8,
+        materials: [
+            ["Oak hull parts", 10],
+            ["Iron nails", 300],
+            ["Swamp tar", 20]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Oak_hull"
+    },
+    {
+        name: "Teak skiff",
+        sailing: 31,
+        construction: 23,
+        materials: [
+            ["Teak hull parts", 10],
+            ["Steel nails", 300],
+            ["Swamp tar", 20],
+            ["Lead bar", 5]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Teak_hull"
+    },
+    {
+        name: "Mahogany skiff",
+        sailing: 48,
+        construction: 41,
+        materials: [
+            ["Mahogany hull parts", 10],
+            ["Mithril nails", 300],
+            ["Swamp tar", 20],
+            ["Lead bar", 5]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Mahogany_hull"
+    },
+    {
+        name: "Camphor skiff",
+        sailing: 67,
+        construction: 59,
+        materials: [
+            ["Camphor hull parts", 10],
+            ["Adamantite nails", 300],
+            ["Swamp tar", 20],
+            ["Lead bar", 5]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Camphor_hull"
+    },
+    {
+        name: "Ironwood skiff",
+        sailing: 81,
+        construction: 75,
+        materials: [
+            ["Ironwood hull parts", 10],
+            ["Rune nails", 300],
+            ["Swamp tar", 20],
+            ["Cupronickel bar", 5]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Ironwood_hull"
+    },
+    {
+        name: "Rosewood skiff",
+        sailing: 93,
+        construction: 84,
+        materials: [
+            ["Rosewood hull parts", 10],
+            ["Dragon nails", 300],
+            ["Swamp tar", 20],
+            ["Cupronickel bar", 5]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Rosewood_hull"
+    }
+];
+
+const HULLS_SLOOP = [
+    {
+        name: "Wooden sloop",
+        sailing: 50,
+        construction: 1,
+        materials: [
+            ["Large wooden hull parts", 16],
+            ["Bronze nails", 600],
+            ["Swamp tar", 25]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/hull"
+    },
+    {
+        name: "Oak sloop",
+        sailing: 50,
+        construction: 8,
+        materials: [
+            ["Large oak hull parts", 16],
+            ["Iron nails", 600],
+            ["Swamp tar", 25]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/hull"
+    },
+    {
+        name: "Teak sloop",
+        sailing: 50,
+        construction: 23,
+        materials: [
+            ["Large teak hull parts", 16],
+            ["Steel nails", 600],
+            ["Swamp tar", 25],
+            ["Lead bar", 5]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/hull"
+    },
+    {
+        name: "Mahogany sloop",
+        sailing: 50,
+        construction: 41,
+        materials: [
+            ["Large mahogany hull parts", 16],
+            ["Mithril nails", 600],
+            ["Swamp tar", 25],
+            ["Lead bar", 5]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Mahogany_hull"
+    },
+    {
+        name: "Camphor sloop",
+        sailing: 67,
+        construction: 59,
+        materials: [
+            ["Large Camphor hull parts", 16],
+            ["Adamantite nails", 600],
+            ["Swamp tar", 25],
+            ["Lead bar", 5]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Camphor_hull"
+    },
+    {
+        name: "Ironwood sloop",
+        sailing: 81,
+        construction: 75,
+        materials: [
+            ["Large ironwood hull parts", 16],
+            ["Rune nails", 600],
+            ["Swamp tar", 25],
+            ["Cupronickel bar", 5]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Ironwood_hull"
+    },
+    {
+        name: "Rosewood sloop",
+        sailing: 93,
+        construction: 84,
+        materials: [
+            ["Large rosewood hull parts", 16],
+            ["Dragon nails", 600],
+            ["Swamp tar", 25],
+            ["Cupronickel bar", 5]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Rosewood_hull"
+    }
+];
+
+const HELMS_RAFT = [
     {
         name: "Bronze helm",
         sailing: 1,
@@ -170,7 +340,153 @@ const HELMS = [
     }
 ];
 
-const MASTS_AND_SAILS = [
+const HELMS_SKIFF = [
+    {
+        name: "Bronze helm",
+        sailing: 1,
+        construction: 1,
+        materials: [
+            ["Plank", 3],
+            ["Bronze bar", 6]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Bronze_helm"
+    },
+    {
+        name: "Iron helm",
+        sailing: 17,
+        construction: 14,
+        materials: [
+            ["Oak plank", 3],
+            ["Iron bar", 6]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Iron_helm"
+    },
+    {
+        name: "Steel helm",
+        sailing: 38,
+        construction: 30,
+        materials: [
+            ["Teak plank", 3],
+            ["Steel bar", 6]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Steel_helm"
+    },
+    {
+        name: "Mithril helm",
+        sailing: 55,
+        construction: 47,
+        materials: [
+            ["Mahogany plank", 3],
+            ["Mithril bar", 6]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Mithril_helm"
+    },
+    {
+        name: "Adamant helm",
+        sailing: 72,
+        construction: 59,
+        materials: [
+            ["Camphor plank", 3],
+            ["Adamantite bar", 6]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Adamant_helm"
+    },
+    {
+        name: "Rune helm",
+        sailing: 87,
+        construction: 81,
+        materials: [
+            ["Ironwood plank", 3],
+            ["Runite bar", 6]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Rune_helm"
+    },
+    {
+        name: "Dragon helm",
+        sailing: 96,
+        construction: 86,
+        materials: [
+            ["Rosewood plank", 3],
+            ["Dragon metal sheet", 6]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Dragon_helm"
+    }
+];
+
+const HELMS_SLOOP = [
+    {
+        name: "Bronze helm",
+        sailing: 1,
+        construction: 1,
+        materials: [
+            ["Plank", 4],
+            ["Bronze bar", 8]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Bronze_helm"
+    },
+    {
+        name: "Iron helm",
+        sailing: 17,
+        construction: 14,
+        materials: [
+            ["Oak plank", 4],
+            ["Iron bar", 8]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Iron_helm"
+    },
+    {
+        name: "Steel helm",
+        sailing: 38,
+        construction: 30,
+        materials: [
+            ["Teak plank", 4],
+            ["Steel bar", 8]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Steel_helm"
+    },
+    {
+        name: "Mithril helm",
+        sailing: 55,
+        construction: 47,
+        materials: [
+            ["Mahogany plank", 4],
+            ["Mithril bar", 8]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Mithril_helm"
+    },
+    {
+        name: "Adamant helm",
+        sailing: 72,
+        construction: 59,
+        materials: [
+            ["Camphor plank", 4],
+            ["Adamantite bar", 8]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Adamant_helm"
+    },
+    {
+        name: "Rune helm",
+        sailing: 87,
+        construction: 81,
+        materials: [
+            ["Ironwood plank", 4],
+            ["Runite bar", 8]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Rune_helm"
+    },
+    {
+        name: "Dragon helm",
+        sailing: 96,
+        construction: 86,
+        materials: [
+            ["Rosewood plank", 4],
+            ["Dragon metal sheet", 8]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Dragon_helm"
+    }
+];
+
+const MASTS_AND_SAILS_RAFT = [
     {
         name: "Wooden mast and linen sails",
         sailing: 1,
@@ -180,7 +496,7 @@ const MASTS_AND_SAILS = [
             ["Bronze nails", 20],
             ["Bolt of linen", 5]
         ],
-        wiki: "https://oldschool.runescape.wiki/w/Wooden_mast_and_linen_sails#Raft"
+        wiki: "https://oldschool.runescape.wiki/w/Wooden_mast_and_linen_sails"
     },
     {
         name: "Oak mast and linen sails",
@@ -191,7 +507,7 @@ const MASTS_AND_SAILS = [
             ["Iron nails", 20],
             ["Bolt of linen", 5]
         ],
-        wiki: "https://oldschool.runescape.wiki/w/Oak_mast_and_linen_sails#Raft"
+        wiki: "https://oldschool.runescape.wiki/w/Oak_mast_and_linen_sails"
     },
     {
         name: "Teak mast and canvas sails",
@@ -202,7 +518,7 @@ const MASTS_AND_SAILS = [
             ["Steel nails", 20],
             ["Bolt of canvas", 5]
         ],
-        wiki: "https://oldschool.runescape.wiki/w/Teak_mast_and_canvas_sails#Raft"
+        wiki: "https://oldschool.runescape.wiki/w/Teak_mast_and_canvas_sails"
     },
     {
         name: "Mahogany mast and canvas sails",
@@ -213,7 +529,7 @@ const MASTS_AND_SAILS = [
             ["Mithril nails", 20],
             ["Bolt of canvas", 5]
         ],
-        wiki: "https://oldschool.runescape.wiki/w/Mahogany_mast_and_canvas_sails#Raft"
+        wiki: "https://oldschool.runescape.wiki/w/Mahogany_mast_and_canvas_sails"
     },
     {
         name: "Camphor mast and canvas sails",
@@ -224,7 +540,7 @@ const MASTS_AND_SAILS = [
             ["Adamantite nails", 20],
             ["Bolt of canvas", 5]
         ],
-        wiki: "https://oldschool.runescape.wiki/w/Camphor_mast_and_canvas_sails#Raft"
+        wiki: "https://oldschool.runescape.wiki/w/Camphor_mast_and_canvas_sails"
     },
     {
         name: "Ironwood mast and cotton sails",
@@ -235,7 +551,7 @@ const MASTS_AND_SAILS = [
             ["Rune nails", 20],
             ["Bolt of cotton", 5]
         ],
-        wiki: "https://oldschool.runescape.wiki/w/Ironwood_mast_and_cotton_sails#Raft"
+        wiki: "https://oldschool.runescape.wiki/w/Ironwood_mast_and_cotton_sails"
     },
     {
         name: "Rosewood mast and cotton sails",
@@ -246,11 +562,171 @@ const MASTS_AND_SAILS = [
             ["Dragon nails", 20],
             ["Bolt of cotton", 5]
         ],
-        wiki: "https://oldschool.runescape.wiki/w/Rosewood_mast_and_cotton_sails#Raft"
+        wiki: "https://oldschool.runescape.wiki/w/Rosewood_mast_and_cotton_sails"
     }
 ];
 
-const KEELS = [
+const MASTS_AND_SAILS_SKIFF = [
+    {
+        name: "Wooden mast and linen sails",
+        sailing: 1,
+        construction: 1,
+        materials: [
+            ["Logs", 10],
+            ["Bronze nails", 40],
+            ["Bolt of linen", 5]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Wooden_mast_and_linen_sails"
+    },
+    {
+        name: "Oak mast and linen sails",
+        sailing: 24,
+        construction: 11,
+        materials: [
+            ["Oak logs", 10],
+            ["Iron nails", 40],
+            ["Bolt of linen", 5]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Oak_mast_and_linen_sails"
+    },
+    {
+        name: "Teak mast and canvas sails",
+        sailing: 36,
+        construction: 26,
+        materials: [
+            ["Teak logs", 10],
+            ["Steel nails", 40],
+            ["Bolt of canvas", 5]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Teak_mast_and_canvas_sails"
+    },
+    {
+        name: "Mahogany mast and canvas sails",
+        sailing: 52,
+        construction: 45,
+        materials: [
+            ["Mahogany logs", 10],
+            ["Mithril nails", 40],
+            ["Bolt of canvas", 5]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Mahogany_mast_and_canvas_sails"
+    },
+    {
+        name: "Camphor mast and canvas sails",
+        sailing: 68,
+        construction: 60,
+        materials: [
+            ["Camphor logs", 10],
+            ["Adamantite nails", 40],
+            ["Bolt of canvas", 5]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Camphor_mast_and_canvas_sails"
+    },
+    {
+        name: "Ironwood mast and cotton sails",
+        sailing: 83,
+        construction: 77,
+        materials: [
+            ["Ironwood logs", 10],
+            ["Rune nails", 40],
+            ["Bolt of cotton", 5]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Ironwood_mast_and_cotton_sails"
+    },
+    {
+        name: "Rosewood mast and cotton sails",
+        sailing: 94,
+        construction: 85,
+        materials: [
+            ["Rosewood logs", 10],
+            ["Dragon nails", 40],
+            ["Bolt of cotton", 5]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Rosewood_mast_and_cotton_sails"
+    }
+];
+
+const MASTS_AND_SAILS_SLOOP = [
+    {
+        name: "Wooden mast and linen sails",
+        sailing: 1,
+        construction: 1,
+        materials: [
+            ["Logs", 15],
+            ["Bronze nails", 60],
+            ["Bolt of linen", 10]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Wooden_mast_and_linen_sails"
+    },
+    {
+        name: "Oak mast and linen sails",
+        sailing: 24,
+        construction: 11,
+        materials: [
+            ["Oak logs", 15],
+            ["Iron nails", 60],
+            ["Bolt of linen", 10]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Oak_mast_and_linen_sails"
+    },
+    {
+        name: "Teak mast and canvas sails",
+        sailing: 36,
+        construction: 26,
+        materials: [
+            ["Teak logs", 15],
+            ["Steel nails", 60],
+            ["Bolt of canvas", 10]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Teak_mast_and_canvas_sails"
+    },
+    {
+        name: "Mahogany mast and canvas sails",
+        sailing: 52,
+        construction: 45,
+        materials: [
+            ["Mahogany logs", 15],
+            ["Mithril nails", 60],
+            ["Bolt of canvas", 10]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Mahogany_mast_and_canvas_sails"
+    },
+    {
+        name: "Camphor mast and canvas sails",
+        sailing: 68,
+        construction: 60,
+        materials: [
+            ["Camphor logs", 15],
+            ["Adamantite nails", 60],
+            ["Bolt of canvas", 10]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Camphor_mast_and_canvas_sails"
+    },
+    {
+        name: "Ironwood mast and cotton sails",
+        sailing: 83,
+        construction: 77,
+        materials: [
+            ["Ironwood logs", 15],
+            ["Rune nails", 60],
+            ["Bolt of cotton", 10]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Ironwood_mast_and_cotton_sails"
+    },
+    {
+        name: "Rosewood mast and cotton sails",
+        sailing: 94,
+        construction: 85,
+        materials: [
+            ["Rosewood logs", 15],
+            ["Dragon nails", 60],
+            ["Bolt of cotton", 10]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Rosewood_mast_and_cotton_sails"
+    }
+];
+
+const KEELS_SKIFF = [
     {
         name: "Bronze keel",
         sailing: 15,
@@ -258,7 +734,7 @@ const KEELS = [
         materials: [
             ["Bronze keel parts", 10]
         ],
-        wiki: "https://oldschool.runescape.wiki/w/Bronze_keel#Skiff"
+        wiki: "https://oldschool.runescape.wiki/w/Bronze_keel"
     },
     {
         name: "Iron keel",
@@ -267,7 +743,7 @@ const KEELS = [
         materials: [
             ["Iron keel parts", 10]
         ],
-        wiki: "https://oldschool.runescape.wiki/w/Iron_keel#Skiff"
+        wiki: "https://oldschool.runescape.wiki/w/Iron_keel"
     },
     {
         name: "Steel keel",
@@ -277,7 +753,7 @@ const KEELS = [
             ["Steel keel parts", 10],
             ["Lead bar", 5]
         ],
-        wiki: "https://oldschool.runescape.wiki/w/Steel_keel#Skiff"
+        wiki: "https://oldschool.runescape.wiki/w/Steel_keel"
     },
     {
         name: "Mithril keel",
@@ -287,7 +763,7 @@ const KEELS = [
             ["Mithril keel parts", 10],
             ["Lead bar", 5]
         ],
-        wiki: "https://oldschool.runescape.wiki/w/Mithril_keel#Skiff"
+        wiki: "https://oldschool.runescape.wiki/w/Mithril_keel"
     },
     {
         name: "Adamant keel",
@@ -297,7 +773,7 @@ const KEELS = [
             ["Adamant keel parts", 10],
             ["Lead bar", 5]
         ],
-        wiki: "https://oldschool.runescape.wiki/w/Adamant_keel#Skiff"
+        wiki: "https://oldschool.runescape.wiki/w/Adamant_keel"
     },
     {
         name: "Rune keel",
@@ -307,7 +783,7 @@ const KEELS = [
             ["Rune keel parts", 10],
             ["Cupronickel bar", 5]
         ],
-        wiki: "https://oldschool.runescape.wiki/w/Rune_keel#Skiff"
+        wiki: "https://oldschool.runescape.wiki/w/Rune_keel"
     },
     {
         name: "Dragon keel",
@@ -317,13 +793,89 @@ const KEELS = [
             ["Dragon keel parts", 10],
             ["Cupronickel bar", 5]
         ],
-        wiki: "https://oldschool.runescape.wiki/w/Dragon_keel#Skiff"
+        wiki: "https://oldschool.runescape.wiki/w/Dragon_keel"
+    }
+];
+
+const KEELS_SLOOP = [
+    {
+        name: "Bronze keel",
+        sailing: 15,
+        construction: 1,
+        materials: [
+            ["Large bronze keel parts", 16]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Bronze_keel"
+    },
+    {
+        name: "Iron keel",
+        sailing: 22,
+        construction: 17,
+        materials: [
+            ["Large iron keel parts", 16]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Iron_keel"
+    },
+    {
+        name: "Steel keel",
+        sailing: 39,
+        construction: 32,
+        materials: [
+            ["Large steel keel parts", 16],
+            ["Lead bar", 5]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Steel_keel"
+    },
+    {
+        name: "Mithril keel",
+        sailing: 54,
+        construction: 50,
+        materials: [
+            ["Large mithril keel parts", 16],
+            ["Lead bar", 5]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Mithril_keel"
+    },
+    {
+        name: "Adamant keel",
+        sailing: 66,
+        construction: 62,
+        materials: [
+            ["Large adamant keel parts", 16],
+            ["Lead bar", 5]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Adamant_keel"
+    },
+    {
+        name: "Rune keel",
+        sailing: 85,
+        construction: 78,
+        materials: [
+            ["Large rune keel parts", 16],
+            ["Cupronickel bar", 5]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Rune_keel"
+    },
+    {
+        name: "Dragon keel",
+        sailing: 97,
+        construction: 87,
+        materials: [
+            ["Large dragon keel parts", 16],
+            ["Cupronickel bar", 5]
+        ],
+        wiki: "https://oldschool.runescape.wiki/w/Dragon_keel"
     }
 ];
 
 const FACILITIES = [
     {
         name: "Bronze cannon",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
         sailing: 28,
         construction: 21,
         crew: "1 Privateering",
@@ -337,6 +889,11 @@ const FACILITIES = [
     },
     {
         name: "Iron cannon",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
         sailing: 35,
         construction: 28,
         crew: "2 Privateering",
@@ -350,6 +907,11 @@ const FACILITIES = [
     },
     {
         name: "Steel cannon",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
         sailing: 47,
         construction: 39,
         crew: "2 Privateering",
@@ -363,6 +925,11 @@ const FACILITIES = [
     },
     {
         name: "Mithril cannon",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
         sailing: 57,
         construction: 50,
         crew: "3 Privateering",
@@ -376,6 +943,11 @@ const FACILITIES = [
     },
     {
         name: "Adamant cannon",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
         sailing: 69,
         construction: 61,
         crew: "3 Privateering",
@@ -389,6 +961,11 @@ const FACILITIES = [
     },
     {
         name: "Rune cannon",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
         sailing: 80,
         construction: 76,
         crew: "4 Privateering",
@@ -402,6 +979,11 @@ const FACILITIES = [
     },
     {
         name: "Dragon cannon",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
         sailing: 92,
         construction: 84,
         crew: "4 Privateering",
@@ -417,6 +999,11 @@ const FACILITIES = [
 
     {
         name: "Bronze salvaging hook",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
         sailing: 15,
         construction: 1,
         crew: "1 Deckhandiness",
@@ -431,6 +1018,11 @@ const FACILITIES = [
     },
     {
         name: "Iron salvaging hook",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
         sailing: 21,
         construction: 9,
         crew: "1 Deckhandiness",
@@ -445,6 +1037,11 @@ const FACILITIES = [
     },
     {
         name: "Steel salvaging hook",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
         sailing: 27,
         construction: 18,
         crew: "1 Deckhandiness",
@@ -460,6 +1057,11 @@ const FACILITIES = [
     },
     {
         name: "Mithril salvaging hook",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
         sailing: 44,
         construction: 30,
         crew: "2 Deckhandiness",
@@ -475,6 +1077,11 @@ const FACILITIES = [
     },
     {
         name: "Adamant salvaging hook",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
         sailing: 59,
         construction: 52,
         crew: "2 Deckhandiness",
@@ -490,6 +1097,11 @@ const FACILITIES = [
     },
     {
         name: "Rune salvaging hook",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
         sailing: 74,
         construction: 66,
         crew: "3 Deckhandiness",
@@ -506,6 +1118,11 @@ const FACILITIES = [
     },
     {
         name: "Dragon salvaging hook",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
         sailing: 86,
         construction: 78,
         crew: "4 Deckhandiness",
@@ -523,6 +1140,10 @@ const FACILITIES = [
 
     {
         name: "Rope trawling net",
+        boat: [
+            "Skiff",
+            "Sloop"
+        ],
         sailing: 56,
         construction: 45,
         crew: "1 Deckhandiness",
@@ -537,6 +1158,10 @@ const FACILITIES = [
     },
     {
         name: "Linen trawling net",
+        boat: [
+            "Skiff",
+            "Sloop"
+        ],
         sailing: 65,
         construction: 61,
         crew: "2 Deckhandiness",
@@ -552,6 +1177,10 @@ const FACILITIES = [
     },
     {
         name: "Hemp trawling net",
+        boat: [
+            "Skiff",
+            "Sloop"
+        ],
         sailing: 76,
         construction: 65,
         crew: "3 Deckhandiness",
@@ -568,6 +1197,10 @@ const FACILITIES = [
     },
     {
         name: "Cotton trawling net",
+        boat: [
+            "Skiff",
+            "Sloop"
+        ],
         sailing: 84,
         construction: 73,
         crew: "4 Deckhandiness",
@@ -585,6 +1218,11 @@ const FACILITIES = [
 
     {
         name: "Basic cargo hold",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
         sailing: 1,
         construction: 1,
         crew: "20 (raft), 30 (skiff), 40 (sloop)",
@@ -597,6 +1235,11 @@ const FACILITIES = [
     },
     {
         name: "Oak cargo hold",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
         sailing: 18,
         construction: 11,
         crew: "30 (raft), 45 (skiff), 60 (sloop)",
@@ -609,6 +1252,11 @@ const FACILITIES = [
     },
     {
         name: "Teak cargo hold",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
         sailing: 29,
         construction: 21,
         crew: "45 (raft), 60 (skiff), 90 (sloop)",
@@ -622,6 +1270,11 @@ const FACILITIES = [
     },
     {
         name: "Mahogany cargo hold",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
         sailing: 46,
         construction: 41,
         crew: "60 (raft), 90 (skiff), 120 (sloop)",
@@ -635,6 +1288,11 @@ const FACILITIES = [
     },
     {
         name: "Camphor cargo hold",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
         sailing: 60,
         construction: 53,
         crew: "80 (raft), 120 (skiff), 160 (sloop)",
@@ -648,6 +1306,11 @@ const FACILITIES = [
     },
     {
         name: "Ironwood cargo hold",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
         sailing: 80,
         construction: 77,
         crew: "105 (raft), 150 (skiff), 210 (sloop)",
@@ -661,6 +1324,11 @@ const FACILITIES = [
     },
     {
         name: "Rosewood cargo hold",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
         sailing: 89,
         construction: 84,
         crew: "120 (raft), 180 (skiff), 240 (sloop)",
@@ -696,6 +1364,25 @@ const FLAGS_AND_TRIMS = [
         ],
         xp: 20,
         wiki: "https://oldschool.runescape.wiki/w/Trims"
+    }
+];
+
+const BRAZIERS = [
+    {
+        name: "Eternal brazier",
+        sailing: 78,
+        construction: 72,
+        materials: [
+            ["Ironwood plank", 4],
+            ["Rune nails", 16],
+            ["Runite bar", 6],
+            ["Cupronickel bar", 6],
+            ["Te salt", 250],
+            ["Efh salt", 250],
+            ["Urt salt", 250]
+        ],
+        xp: 1373,
+        wiki: "https://oldschool.runescape.wiki/w/Eternal_brazier"
     }
 ];
 
@@ -942,7 +1629,10 @@ function normalizeMaterialCandidates(name) {
         "Ropes ": ["Rope"],
         "Ray barbs": ["Ray barb"],
         "Dragon sheets": ["Dragon sheet"],
-        "Dragon metal sheet": ["Dragon metal sheet"]
+        "Dragon metal sheet": ["Dragon metal sheet"],
+        "Te salt": ["Te salt"],
+        "Efh salt": ["Efh salt"],
+        "Urt salt": ["Urt salt"]
     };
 
     for (const alias of aliases[original] || []) {
@@ -1102,7 +1792,7 @@ function renderMaterials(materialStatus) {
                         <span class="sailing-material-indicator">
                             ${material.available ? "✓" : "✗"}
                         </span>
-                        ${escapeHtml(material.name)}
+                        ${escapeHtml(material.quantity)} ${escapeHtml(material.name)}
                     </span>
                 `).join("")}
             </div>
@@ -1230,16 +1920,28 @@ function renderSection(
     items,
     itemNameMap,
     obtainedSet,
-    rolledSet
+    rolledSet,
+    boat = null
 ) {
+    const filteredItems = boat
+        ? items.filter((item) =>
+            !item.boat || item.boat.includes(boat)
+        )
+        : items;
+
+    const id = title
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-|-$/g, "");
+
     return `
-        <section class="sailing-section card">
-            <header class="sailing-section-header">
-                <h2>${escapeHtml(title)}</h2>
-            </header>
+        <details class="sailing-subsection" id="${escapeHtml(id)}">
+            <summary class="sailing-subsection-header">
+                <span>${escapeHtml(title)}</span>
+            </summary>
 
             <div class="sailing-options">
-                ${items.map((item) =>
+                ${filteredItems.map((item) =>
                     renderBuildRow(
                         item,
                         itemNameMap,
@@ -1248,7 +1950,37 @@ function renderSection(
                     )
                 ).join("")}
             </div>
-        </section>
+        </details>
+    `;
+}
+
+function renderShipSection(
+    title,
+    sections,
+    itemNameMap,
+    obtainedSet,
+    rolledSet,
+    id
+) {
+    return `
+        <details class="sailing-ship-section card" id="${escapeHtml(id)}">
+            <summary class="sailing-ship-header">
+                <h2>${escapeHtml(title)}</h2>
+            </summary>
+
+            <div class="sailing-ship-content">
+                ${sections.map((section) => {
+                    return renderSection(
+                        section.title,
+                        section.items,
+                        itemNameMap,
+                        obtainedSet,
+                        rolledSet,
+                        title
+                    );
+                }).join("")}
+            </div>
+        </details>
     `;
 }
 
@@ -1518,12 +2250,77 @@ function getPageStyles() {
             }
 
             .sailing-section-header {
+                display: flex;
+                align-items: center;
                 padding: 1rem 1.25rem;
                 border-bottom: 1px solid var(--border-color, rgba(127, 127, 127, 0.25));
             }
 
             .sailing-section-header h2 {
                 margin: 0;
+            }
+
+            .sailing-section-header,
+            .sailing-ship-header,
+            .sailing-subsection-header {
+                cursor: pointer;
+                list-style: none;
+            }
+
+            .sailing-section-header::-webkit-details-marker,
+            .sailing-ship-header::-webkit-details-marker,
+            .sailing-subsection-header::-webkit-details-marker {
+                display: none;
+            }
+
+            .sailing-section-header::before,
+            .sailing-ship-header::before,
+            .sailing-subsection-header::before {
+                content: "▶";
+                display: inline-block;
+                margin-right: 0.65rem;
+                font-size: 0.8em;
+                transition: transform 0.15s ease;
+            }
+
+            details[open] > .sailing-section-header::before,
+            details[open] > .sailing-ship-header::before,
+            details[open] > .sailing-subsection-header::before {
+                transform: rotate(90deg);
+            }
+
+            .sailing-ship-section {
+                margin-bottom: 1.5rem;
+                overflow: hidden;
+            }
+
+            .sailing-ship-header {
+                display: flex;
+                align-items: center;
+                padding: 1rem 1.25rem;
+            }
+
+            .sailing-ship-header h2 {
+                margin: 0;
+            }
+
+            .sailing-ship-content {
+                padding: 0 1rem 1rem;
+            }
+
+            .sailing-subsection {
+                margin-top: 0.75rem;
+                border: 1px solid var(--border-color, rgba(127, 127, 127, 0.25));
+                border-radius: 8px;
+                overflow: hidden;
+            }
+
+            .sailing-subsection-header {
+                display: flex;
+                align-items: center;
+                padding: 0.8rem 1rem;
+                font-weight: 700;
+                background: var(--surface-1, transparent);
             }
 
             .sailing-options {
@@ -1669,7 +2466,13 @@ function getPageStyles() {
             }
 
             .sailing-hazards-section {
-                margin-top: 2.5rem;
+                margin-top: 1.5rem;
+                margin-bottom: 1.5rem;
+                overflow: hidden;
+            }
+
+            .sailing-hazards-content {
+                padding: 0 1rem 1rem;
             }
 
             .sailing-hazards-intro {
@@ -1763,7 +2566,11 @@ export default async function SailingPage() {
 
     await fileStore.ensureItemsLoaded();
 
-    if (!hasCompletedQuest("Pandemonium")) {
+    const showProgressAnyway =
+        typeof window !== "undefined" &&
+        new URLSearchParams(window.location.search).get("showProgress") === "1";
+
+    if (!hasCompletedQuest("Pandemonium") && !showProgressAnyway) {
         return `
             ${getPageStyles()}
 
@@ -1775,6 +2582,12 @@ export default async function SailingPage() {
                         Sorry laddie, you need your swimming diploma before you
                         can access a boat.
                     </p>
+
+                    <p>
+                        <a href="?showProgress=1">
+                            But click here if you want to see your progress anyway
+                        </a>
+                    </p>
                 </div>
             </section>
         `;
@@ -1785,50 +2598,127 @@ export default async function SailingPage() {
     const obtainedSet = new Set(fileStore.obtained || []);
     const rolledSet = new Set(fileStore.rolled || []);
 
-    const sections = [
-        ["Hull", HULLS],
-        ["Helm", HELMS],
-        ["Mast and sails", MASTS_AND_SAILS],
-        ["Keel", KEELS],
-        ["Facility hotspots", FACILITIES],
-        ["Flags and trims", FLAGS_AND_TRIMS]
-    ];
+        const ships = [
+    {
+        title: "Raft",
+        id: "raft",
+        sections: [
+            {
+                title: "Hull",
+                items: HULLS_RAFT
+            },
+            {
+                title: "Helm",
+                items: HELMS_RAFT
+            },
+            {
+                title: "Mast and sails",
+                items: MASTS_AND_SAILS_RAFT
+            },
+            {
+                title: "Facilities",
+                items: FACILITIES
+            },
+            {
+                title: "Flags and trims",
+                items: FLAGS_AND_TRIMS
+            },
+            {
+                title: "Braziers",
+                items: BRAZIERS
+            }
+        ]
+    },
+    {
+        title: "Skiff",
+        id: "skiff",
+        sections: [
+            {
+                title: "Hull",
+                items: HULLS_SKIFF
+            },
+            {
+                title: "Helm",
+                items: HELMS_SKIFF
+            },
+            {
+                title: "Mast and sails",
+                items: MASTS_AND_SAILS_SKIFF
+            },
+            {
+                title: "Keel",
+                items: KEELS_SKIFF
+            },
+            {
+                title: "Facilities",
+                items: FACILITIES
+            },
+            {
+                title: "Flags and trims",
+                items: FLAGS_AND_TRIMS
+            },
+            {
+                title: "Braziers",
+                items: BRAZIERS
+            }
+        ]
+    },
+    {
+        title: "Sloop",
+        id: "sloop",
+        sections: [
+            {
+                title: "Hull",
+                items: HULLS_SLOOP
+            },
+            {
+                title: "Helm",
+                items: HELMS_SLOOP
+            },
+            {
+                title: "Mast and sails",
+                items: MASTS_AND_SAILS_SLOOP
+            },
+            {
+                title: "Keel",
+                items: KEELS_SLOOP
+            },
+            {
+                title: "Facilities",
+                items: FACILITIES
+            },
+            {
+                title: "Flags and trims",
+                items: FLAGS_AND_TRIMS
+            },
+            {
+                title: "Braziers",
+                items: BRAZIERS
+            }
+        ]
+    }
+];
 
-    const jumpLinks = sections.map(([title]) => {
-        const id = title
-            .toLowerCase()
-            .replace(/[^a-z0-9]+/g, "-")
-            .replace(/^-|-$/g, "");
+    const jumpLinks = ships.map(({ title, id }) => `
+        <button
+            type="button"
+            class="sailing-jump-button"
+            onclick="document.getElementById('${id}')?.scrollIntoView({ behavior: 'smooth', block: 'start' })"
+        >
+            ${escapeHtml(title)}
+        </button>
+    `).join("");
 
-        return `
-            <button
-                type="button"
-                class="sailing-jump-button"
-                onclick="document.getElementById('${id}')?.scrollIntoView({ behavior: 'smooth', block: 'start' })"
-            >
-                ${escapeHtml(title)}
-            </button>
-        `;
-    }).join("");
-
-    const sectionHtml = sections.map(([title, items]) => {
-        const id = title
-            .toLowerCase()
-            .replace(/[^a-z0-9]+/g, "-")
-            .replace(/^-|-$/g, "");
-
-        return `
-            <div id="${escapeHtml(id)}">
-                ${renderSection(
-                    title,
-                    items,
-                    itemNameMap,
-                    obtainedSet,
-                    rolledSet
-                )}
-            </div>
-        `;
-    }).join("");
+    const shipHtml = ships.map(({ title, id, sections }) =>
+        renderShipSection(
+            title,
+            sections,
+            itemNameMap,
+            obtainedSet,
+            rolledSet,
+            id
+        )
+    ).join("");
 
     const hazardHtml = OCEAN_HAZARDS.map((hazard) =>
         renderHazard(
@@ -1865,20 +2755,22 @@ export default async function SailingPage() {
                 </nav>
             </header>
 
-            ${sectionHtml}
+            ${shipHtml}
 
-            <section
+            <details
                 class="sailing-section card sailing-hazards-section"
                 id="ocean-hazards"
             >
-                <header class="sailing-section-header">
+                <summary class="sailing-section-header sailing-collapsible-header">
                     <h2>Ocean Hazards</h2>
-                </header>
+                </summary>
 
-                <div class="sailing-hazards">
-                    ${hazardHtml}
+                <div class="sailing-hazards-content">
+                    <div class="sailing-hazards">
+                        ${hazardHtml}
+                    </div>
                 </div>
-            </section>
+            </details>
         </section>
     `;
 }

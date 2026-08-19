@@ -457,6 +457,66 @@ export async function initItemsPage() {
     function bindItemSectionCollapse() {
         if (!elements.grid) return;
 
+        const storageKey = "itemsPageCollapsedSections";
+
+        const getCollapsedSections = () => {
+            try {
+                const stored = localStorage.getItem(storageKey);
+                if (!stored) return new Set();
+
+                const parsed = JSON.parse(stored);
+
+                if (!Array.isArray(parsed)) {
+                    return new Set();
+                }
+
+                return new Set(parsed.map(Number));
+            } catch (err) {
+                console.error("Failed to load collapsed item sections:", err);
+                return new Set();
+            }
+        };
+
+        const saveCollapsedSections = (collapsedSections) => {
+            try {
+                localStorage.setItem(
+                    storageKey,
+                    JSON.stringify([...collapsedSections])
+                );
+            } catch (err) {
+                console.error("Failed to save collapsed item sections:", err);
+            }
+        };
+
+        const collapsedSections = getCollapsedSections();
+
+        const setSectionCollapsed = (header, isCollapsed) => {
+            const sectionRank = Number(header.dataset.sectionRank);
+
+            header.classList.toggle("is-collapsed", isCollapsed);
+
+            const toggle = header.querySelector(".item-section-toggle");
+
+            if (toggle) {
+                toggle.textContent = isCollapsed ? "▶" : "▼";
+            }
+
+            let next = header.nextElementSibling;
+
+            while (next && !next.classList.contains("item-section-header")) {
+                next.style.display = isCollapsed ? "none" : "";
+                next = next.nextElementSibling;
+            }
+
+            if (isCollapsed) {
+                collapsedSections.add(sectionRank);
+            } else {
+                collapsedSections.delete(sectionRank);
+            }
+
+            saveCollapsedSections(collapsedSections);
+        };
+
         const headers = elements.grid.querySelectorAll(".item-section-header");
 
         headers.forEach((header) => {
@@ -464,20 +524,16 @@ export async function initItemsPage() {
 
             header.dataset.collapseBound = "true";
 
+            const sectionRank = Number(header.dataset.sectionRank);
+
+            // Restore saved collapsed state
+            if (collapsedSections.has(sectionRank)) {
+                setSectionCollapsed(header, true);
+            }
+
             const toggleSection = () => {
-                const isCollapsed = header.classList.toggle("is-collapsed");
-                const toggle = header.querySelector(".item-section-toggle");
-
-                if (toggle) {
-                    toggle.textContent = isCollapsed ? "▶" : "▼";
-                }
-
-                let next = header.nextElementSibling;
-
-                while (next && !next.classList.contains("item-section-header")) {
-                    next.style.display = isCollapsed ? "none" : "";
-                    next = next.nextElementSibling;
-                }
+                const isCollapsed = header.classList.contains("is-collapsed");
+                setSectionCollapsed(header, !isCollapsed);
             };
 
             header.addEventListener("click", toggleSection);

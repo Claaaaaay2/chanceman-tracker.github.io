@@ -7161,7 +7161,9 @@ export function hasTelegrabRunes(ctx) {
 }
 
 function canStartIcthlarinsLittleHelper(ctx) {
-    return requiresQuest(ctx, "canCompleteGertrudesCat", canCompleteGertrudesCat);
+    return requiresQuest(ctx, "canCompleteGertrudesCat", canCompleteGertrudesCat)
+        && has(ctx, 590) // Tinderbox
+        && has(ctx, 1823) // Waterskin(4);
 }
 
 function hasCandle(ctx) {
