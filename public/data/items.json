@@ -50781,6 +50781,44 @@
         "Reward casket (elite)": {
           "droprate": "1/32.3"
         }
+      },
+      "other":{
+        "Crafting a Dragon necklace": {
+          "notes": "Requires Gold bar or 40 Mining and 40 Smithing (for a 'perfect' gold bar), Dragonstone and Necklace mould and level 72 Crafting.",
+          "rule": {
+            "all": [
+              {
+                "any": [
+                  {
+                    "has": 2357
+                  },
+                  {
+                    "all": [
+                      {
+                        "skill": "Mining",
+                        "level": 40
+                      },
+                      {
+                        "skill": "Smithing",
+                        "level": 40
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "has": 1615
+              },
+              {
+                "has": 1597
+              },
+              {
+                "skill": "Crafting",
+                "level": 72
+              }
+            ]
+          }
+        }
       }
     }
   },
