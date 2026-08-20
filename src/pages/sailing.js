@@ -1339,29 +1339,608 @@ const FACILITIES = [
         ],
         xp: 1634,
         wiki: "https://oldschool.runescape.wiki/w/Rosewood_cargo_hold"
+    },
+        {
+        name: "Range",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
+        sailing: 16,
+        construction: 6,
+        crew: "N/A",
+        materials: [
+            ["Steel bars", 4],
+            ["Charcoal", 2],
+            ["Tinderbox", 1]
+        ],
+        xp: 90,
+        wiki: "https://oldschool.runescape.wiki/w/Range_(facility)"
+    },
+    {
+        name: "Keg",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
+        sailing: 33,
+        construction: 25,
+        crew: "N/A",
+        materials: [
+            ["Oak planks", 5],
+            ["Iron nails", 20],
+            ["Barrel stand", 1]
+        ],
+        xp: 313,
+        wiki: "https://oldschool.runescape.wiki/w/Keg_(facility)"
+    },
+    {
+        name: "Innoculation station",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
+        sailing: 40,
+        construction: 37,
+        crew: "N/A",
+        materials: [
+            ["Teak planks", 8],
+            ["Steel nails", 32],
+            ["Relicym's balm(4)", 6]
+        ],
+        xp: 765,
+        wiki: "https://oldschool.runescape.wiki/w/Innoculation_station"
+    },
+    {
+        name: "Salvaging station",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
+        sailing: 42,
+        construction: 34,
+        crew: "N/A",
+        materials: [
+            ["Teak planks", 4],
+            ["Steel nails", 16]
+        ],
+        xp: 366,
+        wiki: "https://oldschool.runescape.wiki/w/Salvaging_station_(facility)"
+    },
+    {
+        name: "Chum station",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
+        sailing: 56,
+        construction: 45,
+        crew: "1 Deckhandiness",
+        materials: [
+            ["Mahogany planks", 10],
+            ["Mithril nails", 40],
+            ["Steel bars", 2],
+            ["Fishing bait", 1000],
+            ["Knife", 1]
+        ],
+        xp: 1522,
+        wiki: "https://oldschool.runescape.wiki/w/Chum_station"
+    },
+    {
+        name: "Bosun's workbench",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
+        sailing: 63,
+        construction: 54,
+        crew: "N/A",
+        materials: [
+            ["Camphor planks", 6],
+            ["Adamantite nails", 24],
+            ["Lead bars", 5]
+        ],
+        xp: 1003,
+        wiki: "https://oldschool.runescape.wiki/w/Bosun%27s_workbench"
+    },
+    {
+        name: "Advanced chum station",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
+        sailing: 68,
+        construction: 61,
+        crew: "2 Deckhandiness",
+        materials: [
+            ["Camphor planks", 10],
+            ["Adamantite nails", 40],
+            ["Steel bars", 2],
+            ["Fishing bait", 1000],
+            ["Knife", 1]
+        ],
+        xp: 1738,
+        wiki: "https://oldschool.runescape.wiki/w/Advanced_chum_station"
+    },
+    {
+        name: "Chum spreader",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
+        sailing: 82,
+        construction: 74,
+        crew: "2 Deckhandiness",
+        materials: [
+            ["Ironwood planks", 10],
+            ["Rune nails", 40],
+            ["Cupronickel bars", 5],
+            ["Fishing bait", 10000],
+            ["Narwhal horn knife", 1]
+        ],
+        xp: 2028,
+        wiki: "https://oldschool.runescape.wiki/w/Chum_spreader"
+    },
+    {
+        name: "Wind catcher",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
+        sailing: 53,
+        construction: 47,
+        crew: "2 Deckhandiness",
+        materials: [
+            ["Teak planks", 4],
+            ["Steel nails", 16],
+            ["Steel bars", 8],
+            ["Lead bars", 4],
+            ["Air runes", 10000],
+            ["Captured wind mote", 1]
+        ],
+        xp: 741,
+        wiki: "https://oldschool.runescape.wiki/w/Wind_catcher"
+    },
+    {
+        name: "Crystal extractor",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
+        sailing: 73,
+        construction: 67,
+        crew: "N/A",
+        materials: [
+            ["Ironwood planks", 6],
+            ["Cupronickel bars", 5],
+            ["Magic stones", 2],
+            ["Heart of ithell", 1]
+        ],
+        xp: 3066,
+        wiki: "https://oldschool.runescape.wiki/w/Crystal_extractor"
+    },
+    {
+        name: "Gale catcher",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
+        sailing: 79,
+        construction: 70,
+        crew: "3 Deckhandiness",
+        materials: [
+            ["Camphor planks", 4],
+            ["Adamantite nails", 16],
+            ["Adamantite bars", 8],
+            ["Cupronickel bars", 4],
+            ["Air runes", 25000],
+            ["Captured wind mote", 1],
+            ["Swift albatross feather", 5]
+        ],
+        xp: 1517,
+        wiki: "https://oldschool.runescape.wiki/w/Gale_catcher"
+    },
+    {
+        name: "Anchor",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
+        sailing: 37,
+        construction: 29,
+        crew: "N/A",
+        materials: [
+            ["Steel bars", 8],
+            ["Lead bars", 6],
+            ["Rope", 1]
+        ],
+        xp: 176,
+        wiki: "https://oldschool.runescape.wiki/w/Anchor_(facility)"
+    },
+    {
+        name: "Ballistic attractor",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
+        sailing: 50,
+        construction: 44,
+        crew: "N/A",
+        materials: [
+            ["Mahogany planks", 10],
+            ["Water runes", 5000],
+            ["Law runes", 1000],
+            ["Lead bars", 5],
+            ["Steel bars", 5]
+        ],
+        xp: 2141,
+        wiki: "https://oldschool.runescape.wiki/w/Ballistic_attractor"
+    },
+    {
+        name: "Teleport focus",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
+        sailing: 55,
+        construction: 49,
+        crew: "N/A",
+        materials: [
+            ["Mahogany planks", 8],
+            ["Mithril nails", 32],
+            ["Lead bars", 4],
+            ["Magic stone", 1]
+        ],
+        xp: 2154,
+        wiki: "https://oldschool.runescape.wiki/w/Teleport_focus_(facility)"
+    },
+    {
+        name: "Fathom stone",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
+        sailing: 70,
+        construction: 62,
+        crew: "N/A",
+        materials: [
+            ["Camphor planks", 10],
+            ["Adamantite nails", 40],
+            ["Molten glass", 4],
+            ["Cupronickel bars", 2]
+        ],
+        xp: 1652,
+        wiki: "https://oldschool.runescape.wiki/w/Fathom_stone"
+    },
+    {
+        name: "Greater teleport focus",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
+        sailing: 75,
+        construction: 69,
+        crew: "N/A",
+        materials: [
+            ["Ironwood planks", 8],
+            ["Rune nails", 32],
+            ["Cupronickel bars", 4],
+            ["Magic stones", 2],
+            ["Bottled storm", 1]
+        ],
+        xp: 3582,
+        wiki: "https://oldschool.runescape.wiki/w/Greater_teleport_focus_(facility)"
+    },
+    {
+        name: "Fathom pearl",
+        boat: [
+            "Raft",
+            "Skiff",
+            "Sloop"
+        ],
+        sailing: 91,
+        construction: 83,
+        crew: "N/A",
+        materials: [
+            ["Rosewood planks", 10],
+            ["Dragon nails", 40],
+            ["Dragon sheets", 2],
+            ["Echo pearl", 1]
+        ],
+        xp: 2307,
+        wiki: "https://oldschool.runescape.wiki/w/Fathom_pearl"
     }
 ];
 
-const FLAGS_AND_TRIMS = [
+const FLAGS = [
     {
-        name: "Flags",
-        sailing: 25,
+        name: "Storm chaser's flag",
+        sailing: 30,
         construction: 20,
         materials: [
             ["Oak logs", 4],
-            ["Rope", 1],
-            ["Fabric roll", 1]
+            ["Rope", 1]
         ],
+        requirements: {
+            equipment: [
+                {
+                    type: "helm",
+                    minimum: "Iron helm"
+                },
+                {
+                    type: "mast",
+                    minimum: "Oak mast and linen sails"
+                }
+            ]
+        },
         xp: 34,
-        wiki: "https://oldschool.runescape.wiki/w/Flags"
+        wiki: "https://oldschool.runescape.wiki/w/Storm_chaser's_flag"
     },
     {
-        name: "Trims",
+        name: "Swamp cruiser's flag",
+        sailing: 55,
+        construction: 20,
+        materials: [
+            ["Oak logs", 4],
+            ["Rope", 1]
+        ],
+        requirements: {
+            equipment: [
+                {
+                    type: "facility",
+                    exact: "Innoculation station"
+                },
+                {
+                    type: "helm",
+                    minimum: "Mithril helm"
+                }
+            ]
+        },
+        xp: 34,
+        wiki: "https://oldschool.runescape.wiki/w/Swamp_cruiser's_flag"
+    },
+    {
+        name: "Crystal glider's flag",
+        sailing: 72,
+        construction: 20,
+        materials: [
+            ["Oak logs", 4],
+            ["Rope", 1]
+        ],
+        requirements: {
+            equipment: [
+                {
+                    type: "keel",
+                    minimum: "Adamant keel"
+                }
+            ]
+        },
+        xp: 34,
+        wiki: "https://oldschool.runescape.wiki/w/Crystal_glider's_flag"
+    }
+]
+
+const TRIMS_SKIFF = [
+    {
+        name: "Inky trim",
         sailing: 25,
         construction: 20,
         materials: [
-            ["Boat paint", 2]
+            ["Inky paint", 1]
         ],
+        xp: 20,
+        wiki: "https://oldschool.runescape.wiki/w/Trims"
+    },
+    {
+        name: "Shark trim",
+        sailing: 25,
+        construction: 20,
+        materials: [
+            ["Shark paint", 1]
+        ],
+        xp: 20,
+        wiki: "https://oldschool.runescape.wiki/w/Trims"
+    },
+    {
+        name: "Barracuda trim",
+        sailing: 25,
+        construction: 20,
+        materials: [
+            ["Barracuda paint", 1]
+        ],
+        xp: 20,
+        wiki: "https://oldschool.runescape.wiki/w/Trims"
+    },
+    {
+        name: "Salvor's trim",
+        sailing: 73,
+        construction: 20,
+        materials: [
+            ["Salvor's paint", 1]
+        ],
+        xp: 20,
+        wiki: "https://oldschool.runescape.wiki/w/Trims"
+    },
+    {
+        name: "Guthixian trim",
+        sailing: 72,
+        construction: 20,
+        materials: [],
+        xp: 20,
+        wiki: "https://oldschool.runescape.wiki/w/Trims"
+    },
+    {
+        name: "Saradominist trim",
+        sailing: 38,
+        construction: 20,
+        materials: [],
+        xp: 20,
+        wiki: "https://oldschool.runescape.wiki/w/Trims"
+    },
+    {
+        name: "Zamorakian  trim",
+        sailing: 60,
+        construction: 20,
+        materials: [
+            ["Rope", 1]
+        ],
+        xp: 20,
+        wiki: "https://oldschool.runescape.wiki/w/Trims"
+    },
+    {
+        name: "Armadylean trim",
+        sailing: 78,
+        construction: 20,
+        materials: [],
+        xp: 20,
+        wiki: "https://oldschool.runescape.wiki/w/Trims"
+    },
+    {
+        name: "Merchant's trim",
+        sailing: 25,
+        construction: 20,
+        materials: [
+            ["Merchant's paint", 1]
+        ],
+        xp: 20,
+        wiki: "https://oldschool.runescape.wiki/w/Trims"
+    },
+    {
+        name: "Angler's trim",
+        sailing: 25,
+        construction: 20,
+        materials: [
+            ["Angler's paint", 1]
+        ],
+        xp: 20,
+        wiki: "https://oldschool.runescape.wiki/w/Trims"
+    },
+    {
+        name: "Sandy trim",
+        sailing: 63,
+        construction: 20,
+        materials: [],
+        xp: 20,
+        wiki: "https://oldschool.runescape.wiki/w/Trims"
+    }
+];
+
+const TRIMS_SLOOP = [
+    {
+        name: "Inky trim",
+        sailing: 25,
+        construction: 20,
+        materials: [
+            ["Inky paint", 2]
+        ],
+        xp: 20,
+        wiki: "https://oldschool.runescape.wiki/w/Trims"
+    },
+    {
+        name: "Shark trim",
+        sailing: 25,
+        construction: 20,
+        materials: [
+            ["Shark paint", 2]
+        ],
+        xp: 20,
+        wiki: "https://oldschool.runescape.wiki/w/Trims"
+    },
+    {
+        name: "Barracuda trim",
+        sailing: 25,
+        construction: 20,
+        materials: [
+            ["Barracuda paint", 2]
+        ],
+        xp: 20,
+        wiki: "https://oldschool.runescape.wiki/w/Trims"
+    },
+    {
+        name: "Salvor's trim",
+        sailing: 73,
+        construction: 20,
+        materials: [
+            ["Salvor's paint", 2]
+        ],
+        xp: 20,
+        wiki: "https://oldschool.runescape.wiki/w/Trims"
+    },
+    {
+        name: "Guthixian trim",
+        sailing: 72,
+        construction: 20,
+        materials: [],
+        xp: 20,
+        wiki: "https://oldschool.runescape.wiki/w/Trims"
+    },
+    {
+        name: "Saradominist trim",
+        sailing: 38,
+        construction: 20,
+        materials: [],
+        xp: 20,
+        wiki: "https://oldschool.runescape.wiki/w/Trims"
+    },
+    {
+        name: "Zamorakian  trim",
+        sailing: 60,
+        construction: 20,
+        materials: [
+            ["Rope", 1]
+        ],
+        xp: 20,
+        wiki: "https://oldschool.runescape.wiki/w/Trims"
+    },
+    {
+        name: "Armadylean trim",
+        sailing: 78,
+        construction: 20,
+        materials: [],
+        xp: 20,
+        wiki: "https://oldschool.runescape.wiki/w/Trims"
+    },
+    {
+        name: "Merchant's trim",
+        sailing: 25,
+        construction: 20,
+        materials: [
+            ["Merchant's paint", 2]
+        ],
+        xp: 20,
+        wiki: "https://oldschool.runescape.wiki/w/Trims"
+    },
+    {
+        name: "Angler's trim",
+        sailing: 25,
+        construction: 20,
+        materials: [
+            ["Angler's paint", 2]
+        ],
+        xp: 20,
+        wiki: "https://oldschool.runescape.wiki/w/Trims"
+    },
+    {
+        name: "Sandy trim",
+        sailing: 63,
+        construction: 20,
+        materials: [],
         xp: 20,
         wiki: "https://oldschool.runescape.wiki/w/Trims"
     }
@@ -1706,6 +2285,45 @@ function getMissingSkills(requirements) {
     return missing;
 }
 
+function getMissingEquipmentRequirements(
+    requirements,
+    itemNameMap,
+    obtainedSet,
+    rolledSet
+) {
+    const missing = [];
+
+    for (const requirement of requirements || []) {
+        let available = false;
+
+        if (requirement?.type && requirement?.minimum) {
+            available = hasMinimumEquipment(
+                requirement,
+                itemNameMap,
+                obtainedSet,
+                rolledSet
+            );
+        } else if (requirement?.exact) {
+            const item = findItemByName(
+                requirement.exact,
+                itemNameMap
+            );
+
+            available = itemIsAvailable(
+                item,
+                obtainedSet,
+                rolledSet
+            );
+        }
+
+        if (!available) {
+            missing.push(requirement);
+        }
+    }
+
+    return missing;
+}
+
 function getMaterialStatus(materials, itemNameMap, obtainedSet, rolledSet) {
     const resolved = [];
     const missing = [];
@@ -1802,7 +2420,7 @@ function renderMaterials(materialStatus) {
 
 function getBuildStatus(item, itemNameMap, obtainedSet, rolledSet) {
     const materialStatus = getMaterialStatus(
-        item.materials,
+        item.materials || [],
         itemNameMap,
         obtainedSet,
         rolledSet
@@ -1813,10 +2431,19 @@ function getBuildStatus(item, itemNameMap, obtainedSet, rolledSet) {
         Construction: item.construction
     });
 
+    const missingEquipment = getMissingEquipmentRequirements(
+        item.requirements?.equipment,
+        itemNameMap,
+        obtainedSet,
+        rolledSet
+    );
+
     let state = "available";
 
     if (materialStatus.missing.length) {
         state = "missing-materials";
+    } else if (missingEquipment.length) {
+        state = "missing-equipment";
     } else if (missingSkills.length) {
         state = "missing-levels";
     }
@@ -1824,7 +2451,8 @@ function getBuildStatus(item, itemNameMap, obtainedSet, rolledSet) {
     return {
         state,
         materialStatus,
-        missingSkills
+        missingSkills,
+        missingEquipment
     };
 }
 
@@ -1866,6 +2494,23 @@ function renderBuildRow(
         `
         : "";
 
+    const missingEquipmentText = status.missingEquipment.length
+    ? `
+        <div class="sailing-missing sailing-missing--equipment">
+            Requires:
+            ${status.missingEquipment
+                .map((requirement) =>
+                    escapeHtml(
+                        requirement.minimum
+                            ? `${requirement.minimum} or better`
+                            : requirement.exact
+                    )
+                )
+                .join(", ")}
+        </div>
+    `
+    : "";
+
     const crewHtml = extra.crew
         ? `
             <div class="sailing-extra">
@@ -1897,7 +2542,9 @@ function renderBuildRow(
                             ? "Available"
                             : status.state === "missing-levels"
                                 ? "Level required"
-                                : "Missing materials"
+                                : status.state === "missing-equipment"
+                                    ? "Boat equipment required"
+                                    : "Missing materials"
                     }
                 </span>
             </div>
@@ -1910,6 +2557,7 @@ function renderBuildRow(
             ${renderMaterials(status.materialStatus)}
 
             ${missingSkillText}
+            ${missingEquipmentText}
             ${missingMaterialText}
         </article>
     `;
@@ -1923,11 +2571,14 @@ function renderSection(
     rolledSet,
     boat = null
 ) {
-    const filteredItems = boat
-        ? items.filter((item) =>
-            !item.boat || item.boat.includes(boat)
-        )
-        : items;
+    const filteredItems =
+        boat && title === "Facilities"
+            ? items.filter(
+                (item) =>
+                    Array.isArray(item.boat) &&
+                    item.boat.includes(boat)
+            )
+            : items;
 
     const id = title
         .toLowerCase()
@@ -2620,8 +3271,8 @@ export default async function SailingPage() {
                 items: FACILITIES
             },
             {
-                title: "Flags and trims",
-                items: FLAGS_AND_TRIMS
+                title: "Flags",
+                items: FLAGS
             },
             {
                 title: "Braziers",
@@ -2654,8 +3305,12 @@ export default async function SailingPage() {
                 items: FACILITIES
             },
             {
-                title: "Flags and trims",
-                items: FLAGS_AND_TRIMS
+                title: "Flags",
+                items: FLAGS
+            },
+            {
+                title: "Trims",
+                items: TRIMS_SKIFF
             },
             {
                 title: "Braziers",
@@ -2688,8 +3343,12 @@ export default async function SailingPage() {
                 items: FACILITIES
             },
             {
-                title: "Flags and trims",
-                items: FLAGS_AND_TRIMS
+                title: "Flags",
+                items: FLAGS
+            },
+            {
+                title: "Trims",
+                items: TRIMS_SLOOP
             },
             {
                 title: "Braziers",
@@ -2737,7 +3396,7 @@ export default async function SailingPage() {
                 <h1>Sailing</h1>
 
                 <p>
-                    Sweep the decks, hoist the sails, and set a course for adventure! Check what things you can build on your ship and which hazards you can traverse!
+                    Sweep the decks, hoist the sails, and set course for adventure! Check what things you can build on your ship and which hazards you can traverse!
                 </p>
 
                 <nav class="sailing-jump-links" aria-label="Sailing sections">
