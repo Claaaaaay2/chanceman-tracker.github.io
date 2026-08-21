@@ -2848,9 +2848,476 @@ function renderHazard(
     `;
 }
 
+/*
+ * Best boat visual representation
+ *
+ * Shows only the boat with the greatest number of currently
+ * available upgrades.
+ *
+ * Boat availability:
+ * - Raft: always available
+ * - Skiff: Sailing 15+
+ * - Sloop: Sailing 50+
+ *
+ * For normal upgrade sections, if no upgrade is currently available,
+ * the first entry is shown as a fallback.
+ *
+ * Facilities, Flags, Trims and Braziers remain blank when nothing
+ * is currently available.
+ */
+
+const BEST_BOAT_FALLBACK_SECTIONS = new Set([
+    "Hull",
+    "Helm",
+    "Mast and sails",
+    "Keel"
+]);
+
+const BEST_BOAT_OPTIONAL_SECTIONS = new Set([
+    "Facilities",
+    "Flags",
+    "Trims",
+    "Braziers"
+]);
+
+function getAvailableBoatSections(
+    ship,
+    itemNameMap,
+    obtainedSet,
+    rolledSet
+) {
+    return ship.sections.map((section) => {
+        let items = section.items || [];
+
+        // Facilities are already filtered by boat in renderSection().
+        // Do the same here for the best-boat display.
+        if (section.title === "Facilities") {
+            items = items.filter(
+                (item) =>
+                    Array.isArray(item.boat) &&
+                    item.boat.includes(ship.title)
+            );
+        }
+
+        const availableItems = items.filter((item) => {
+            const status = getBuildStatus(
+                item,
+                itemNameMap,
+                obtainedSet,
+                rolledSet
+            );
+
+            return status.state === "available";
+        });
+
+        return {
+            ...section,
+            items,
+            availableItems
+        };
+    });
+}
+
+function getBestBoatForPlayer(
+    ships,
+    itemNameMap,
+    obtainedSet,
+    rolledSet
+) {
+    const sailingLevel = getPlayerSkillLevel("Sailing");
+
+    const eligibleShips = ships.filter((ship) => {
+        if (ship.title === "Raft") {
+            return true;
+        }
+
+        if (ship.title === "Skiff") {
+            return sailingLevel >= 15;
+        }
+
+        if (ship.title === "Sloop") {
+            return sailingLevel >= 50;
+        }
+
+        return false;
+    });
+
+    let bestShip = null;
+    let bestAvailableCount = -1;
+
+    for (const ship of eligibleShips) {
+        const sections = getAvailableBoatSections(
+            ship,
+            itemNameMap,
+            obtainedSet,
+            rolledSet
+        );
+
+        const availableCount = sections.reduce(
+            (total, section) =>
+                total + section.availableItems.length,
+            0
+        );
+
+        /*
+         * If two boats have the same number of available upgrades,
+         * prefer the larger boat.
+         *
+         * Raft < Skiff < Sloop
+         */
+        const boatRank = {
+            Raft: 1,
+            Skiff: 2,
+            Sloop: 3
+        }[ship.title] || 0;
+
+        const bestBoatRank = bestShip
+            ? ({
+                Raft: 1,
+                Skiff: 2,
+                Sloop: 3
+            }[bestShip.title] || 0)
+            : 0;
+
+        if (
+            availableCount > bestAvailableCount ||
+            (
+                availableCount === bestAvailableCount &&
+                boatRank > bestBoatRank
+            )
+        ) {
+            bestShip = {
+                ...ship,
+                sections
+            };
+
+            bestAvailableCount = availableCount;
+        }
+    }
+
+    return bestShip;
+}
+
+function getBestUpgradeForSection(section) {
+    /*
+     * For Hull, Helm, Mast and sails, and Keel:
+     *
+     * 1. Use the highest available upgrade.
+     * 2. If nothing is available, use the first entry.
+     */
+    if (section.availableItems.length) {
+        return section.availableItems[
+            section.availableItems.length - 1
+        ];
+    }
+
+    if (
+        BEST_BOAT_FALLBACK_SECTIONS.has(section.title) &&
+        section.items.length
+    ) {
+        return section.items[0];
+    }
+
+    return null;
+}
+
+function renderBestBoatUpgradeCell(section) {
+    /*
+     * Facilities, Flags, Trims and Braziers:
+     * Show every currently available item.
+     * If none are available, show "None".
+     */
+    if (BEST_BOAT_OPTIONAL_SECTIONS.has(section.title)) {
+        if (!section.availableItems.length) {
+            return `
+                <td class="sailing-best-boat-cell">
+                    <div class="sailing-best-boat-none">
+                        None
+                    </div>
+                </td>
+            `;
+        }
+
+        return `
+            <td class="sailing-best-boat-cell">
+                <div class="sailing-best-boat-upgrade-list">
+                    ${section.availableItems.map((item) => `
+                        <div class="sailing-best-boat-upgrade-name">
+                            ${escapeHtml(item.name)}
+                        </div>
+                    `).join("")}
+                </div>
+            </td>
+        `;
+    }
+
+    /*
+     * Hull, Helm, Mast and sails, and Keel:
+     * Show the best available upgrade.
+     * If no upgrade is available, show the first/base entry.
+     */
+    const item = getBestUpgradeForSection(section);
+
+    if (!item) {
+        return `
+            <td class="sailing-best-boat-cell">
+                <div class="sailing-best-boat-none">
+                    None
+                </div>
+            </td>
+        `;
+    }
+
+    /*
+     * The first item in these sections is ALWAYS considered
+     * the base option.
+     *
+     * This is intentionally NOT based on availability.
+     * Therefore, even if the player can build Bronze keel,
+     * Bronze keel will still say "Base option" when it is the
+     * first entry for that boat.
+     */
+    const baseItem = section.items[0];
+    const isBaseOption = item === baseItem;
+
+    return `
+        <td class="sailing-best-boat-cell">
+            <div class="sailing-best-boat-upgrade">
+                <div class="sailing-best-boat-upgrade-name">
+                    ${escapeHtml(item.name)}
+                </div>
+
+                <div class="sailing-best-boat-upgrade-status ${
+                    isBaseOption
+                        ? "sailing-best-boat-upgrade-status--fallback"
+                        : "sailing-best-boat-upgrade-status--best"
+                }">
+                    ${
+                        isBaseOption
+                            ? "Base option"
+                            : "Best upgrade"
+                    }
+                </div>
+            </div>
+        </td>
+    `;
+}
+
+function renderBestBoatVisual(
+    ships,
+    itemNameMap,
+    obtainedSet,
+    rolledSet
+) {
+    const bestBoat = getBestBoatForPlayer(
+        ships,
+        itemNameMap,
+        obtainedSet,
+        rolledSet
+    );
+
+    if (!bestBoat) {
+        return "";
+    }
+
+    const sections = bestBoat.sections;
+
+    return `
+        <section class="sailing-best-boat card">
+            <div class="sailing-best-boat-header">
+                <h2>
+                    Best boat: ${escapeHtml(bestBoat.title)}
+                </h2>
+
+                <div class="sailing-best-boat-image-wrapper">
+                    <img
+                        src="/images/sailing/${encodeURIComponent(bestBoat.title)}.png"
+                        alt="${escapeHtml(bestBoat.title)}"
+                        class="sailing-best-boat-image"
+                    >
+                </div>
+            </div>
+
+            <div class="sailing-best-boat-upgrades-title">
+                Available upgrades
+            </div>
+
+            <div class="sailing-best-boat-table-wrapper">
+                <table class="sailing-best-boat-table">
+                    <thead>
+                        <tr>
+                            ${sections.map((section) => `
+                                <th scope="col">
+                                    ${escapeHtml(section.title)}
+                                </th>
+                            `).join("")}
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            ${sections.map((section) =>
+                                renderBestBoatUpgradeCell(section)
+                            ).join("")}
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    `;
+}
+
 function getPageStyles() {
     return `
         <style>
+        .sailing-best-boat {
+            margin-bottom: 1.5rem;
+            padding: 1.25rem;
+            overflow: hidden;
+        }
+
+        .sailing-best-boat-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .sailing-best-boat-header h2 {
+            margin: 0;
+        }
+
+        .sailing-best-boat-image-wrapper {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sailing-best-boat-image {
+            display: block;
+            width: auto;
+            max-width: 180px;
+            max-height: 140px;
+            object-fit: contain;
+        }
+
+        .sailing-best-boat-upgrades-title {
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .sailing-best-boat-table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        .sailing-best-boat-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            table-layout: fixed;
+            border: 1px solid var(
+                --border-color,
+                rgba(127, 127, 127, 0.25)
+            );
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .sailing-best-boat-table th {
+            padding: 0.65rem;
+            text-align: center;
+            font-weight: 700;
+            background: var(
+                --surface-2,
+                rgba(127, 127, 127, 0.08)
+            );
+            border-bottom: 1px solid var(
+                --border-color,
+                rgba(127, 127, 127, 0.25)
+            );
+        }
+
+        .sailing-best-boat-table th:not(:last-child),
+        .sailing-best-boat-table td:not(:last-child) {
+            border-right: 1px solid var(
+                --border-color,
+                rgba(127, 127, 127, 0.25)
+            );
+        }
+
+        .sailing-best-boat-cell {
+            padding: 0.75rem;
+            vertical-align: top;
+            text-align: center;
+        }
+
+        .sailing-best-boat-cell--empty {
+            min-height: 100px;
+        }
+
+        .sailing-best-boat-upgrade {
+            display: flex;
+            min-height: 130px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 0.4rem;
+        }
+
+        .sailing-best-boat-upgrade {
+            display: flex;
+            min-height: 60px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.35rem;
+        }
+
+        .sailing-best-boat-upgrade-name {
+            font-weight: 600;
+            line-height: 1.25;
+        }
+
+        .sailing-best-boat-upgrade-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .sailing-best-boat-none {
+            opacity: 0.6;
+            font-style: italic;
+        }
+
+        .sailing-best-boat-upgrade-status {
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .sailing-best-boat-upgrade-status--fallback, .sailing-best-boat-upgrade-status--best {
+            opacity: 0.6;
+        }
+
+        @media (max-width: 700px) {
+            .sailing-best-boat-header {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .sailing-best-boat-image-wrapper {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .sailing-best-boat-table {
+                min-width: 700px;
+            }
+        }
             .sailing-page {
                 width: 100%;
             }
@@ -3357,7 +3824,6 @@ export default async function SailingPage() {
         ]
     }
 ];
-
     const jumpLinks = ships.map(({ title, id }) => `
         <button
             type="button"
@@ -3388,48 +3854,62 @@ export default async function SailingPage() {
         )
     ).join("");
 
-    return `
-        ${getPageStyles()}
+    const bestBoatHtml = renderBestBoatVisual(
+        ships,
+        itemNameMap,
+        obtainedSet,
+        rolledSet
+    );
 
-        <section class="sailing-page">
-            <header class="sailing-intro">
-                <h1>Sailing</h1>
+return `
+    ${getPageStyles()}
 
-                <p>
-                    Sweep the decks, hoist the sails, and set course for adventure! Check what things you can build on your ship and which hazards you can traverse!
-                </p>
+    <section class="sailing-page">
 
-                <nav class="sailing-jump-links" aria-label="Sailing sections">
-                    ${jumpLinks}
-                </nav>
+        <header class="sailing-intro">
+            <h1>Sailing</h1>
 
-                <nav class="sailing-jump-links sailing-jump-links--hazards" aria-label="Ocean hazards">
-                    <button
-                        type="button"
-                        class="sailing-jump-button"
-                        onclick="document.getElementById('ocean-hazards')?.scrollIntoView({ behavior: 'smooth', block: 'start' })"
-                    >
-                        Ocean hazards
-                    </button>
-                </nav>
-            </header>
+            <p>
+                Sweep the decks, hoist the sails, and set course for adventure! Check what things you can build on your ship and which hazards you can traverse!
+            </p>
+        </header>
 
-            ${shipHtml}
+        ${bestBoatHtml}
 
-            <details
-                class="sailing-section card sailing-hazards-section"
-                id="ocean-hazards"
+        <nav class="sailing-jump-links" aria-label="Sailing sections">
+            ${jumpLinks}
+        </nav>
+
+        <nav
+            class="sailing-jump-links sailing-jump-links--hazards"
+            aria-label="Ocean hazards"
+        >
+            <button
+                type="button"
+                class="sailing-jump-button"
+                onclick="document.getElementById('ocean-hazards')?.scrollIntoView({ behavior: 'smooth', block: 'start' })"
             >
-                <summary class="sailing-section-header sailing-collapsible-header">
-                    <h2>Ocean Hazards</h2>
-                </summary>
+                Ocean hazards
+            </button>
+        </nav>
 
-                <div class="sailing-hazards-content">
-                    <div class="sailing-hazards">
-                        ${hazardHtml}
-                    </div>
+        ${shipHtml}
+
+        <details
+            class="sailing-section card sailing-hazards-section"
+            id="ocean-hazards"
+        >
+            <summary class="sailing-section-header sailing-collapsible-header">
+                <h2>Ocean Hazards</h2>
+            </summary>
+
+            <div class="sailing-hazards-content">
+                <div class="sailing-hazards">
+                    ${hazardHtml}
                 </div>
-            </details>
-        </section>
-    `;
+            </div>
+        </details>
+
+    </section>
+`;
 }
