@@ -1,10 +1,4 @@
 import { fileStore } from "../storage/fileStore.js";
-import {
-    canGoDiving,
-    canCompletePryingTimes,
-    canCompleteCurrentAffairs,
-    canCompleteTroubledTortugans
-} from "../logic/requirements.js";
 
 /*
  * Sailing page
@@ -17,13 +11,6 @@ import {
  * - An item is considered available only when its item ID exists in BOTH
  *   fileStore.rolled and fileStore.obtained.
  */
-
-const sailingRules = {
-    canGoDiving,
-    canCompletePryingTimes,
-    canCompleteCurrentAffairs,
-    canCompleteTroubledTortugans
-};
 
 const HULLS_RAFT = [
     {
@@ -1805,11 +1792,6 @@ const TRIMS_SKIFF = [
                     type: "keel",
                     minimum: "Adamant helm"
                 }
-            ],
-            rulesAll: [
-                "canGoDiving",
-                "canCompletePryingTimes",
-                "canCompleteCurrentAffairs"
             ]
         },
         xp: 20,
@@ -1830,11 +1812,6 @@ const TRIMS_SKIFF = [
                     type: "mast",
                     minimum: "Oak mast and linen sails"
                 }
-            ],
-            rulesAll: [
-                "canGoDiving",
-                "canCompletePryingTimes",
-                "canCompleteCurrentAffairs"
             ]
         },
         xp: 20,
@@ -1847,13 +1824,6 @@ const TRIMS_SKIFF = [
         materials: [
             ["Rope", 1]
         ],
-        requirements: {
-            rulesAll: [
-                "canGoDiving",
-                "canCompletePryingTimes",
-                "canCompleteCurrentAffairs"
-            ]
-        },
         xp: 20,
         wiki: "https://oldschool.runescape.wiki/w/Trims"
     },
@@ -1868,11 +1838,6 @@ const TRIMS_SKIFF = [
                     type: "facility",
                     exact: "Eternal brazier"
                 }
-            ],
-            rulesAll: [
-                "canGoDiving",
-                "canCompletePryingTimes",
-                "canCompleteCurrentAffairs"
             ]
         },
         xp: 20,
@@ -2485,7 +2450,7 @@ function renderMaterials(materialStatus) {
     `;
 }
 
-async function getBuildStatus(item, itemNameMap, obtainedSet, rolledSet, ctx) {
+function getBuildStatus(item, itemNameMap, obtainedSet, rolledSet) {
     const materialStatus = getMaterialStatus(
         item.materials || [],
         itemNameMap,
@@ -2505,24 +2470,6 @@ async function getBuildStatus(item, itemNameMap, obtainedSet, rolledSet, ctx) {
         rolledSet
     );
 
-    const missingRules = [];
-
-    if (item.requirements?.rulesAll) {
-        for (const rule of item.requirements.rulesAll) {
-            const ruleFunction = sailingRules[rule];
-
-            if (!ruleFunction) {
-                console.warn(`Unknown Sailing requirement rule: ${rule}`);
-                missingRules.push(rule);
-                continue;
-            }
-
-            if (!(await ruleFunction(ctx))) {
-                missingRules.push(rule);
-            }
-        }
-    }
-
     let state = "available";
 
     if (materialStatus.missing.length) {
@@ -2531,32 +2478,28 @@ async function getBuildStatus(item, itemNameMap, obtainedSet, rolledSet, ctx) {
         state = "missing-equipment";
     } else if (missingSkills.length) {
         state = "missing-levels";
-    } else if (missingRules.length) {
-        state = "missing-rules";
     }
 
     return {
         state,
         materialStatus,
         missingSkills,
-        missingEquipment,
-        missingRules
+        missingEquipment
     };
 }
 
-async function renderBuildRow(
+function renderBuildRow(
     item,
     itemNameMap,
     obtainedSet,
     rolledSet,
     extra = {}
 ) {
-        const status = await getBuildStatus(
+    const status = getBuildStatus(
         item,
         itemNameMap,
         obtainedSet,
-        rolledSet,
-        extra.ctx
+        rolledSet
     );
 
     const missingSkillText = status.missingSkills.length

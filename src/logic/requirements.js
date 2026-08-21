@@ -4498,7 +4498,7 @@ function canCompleteMyArmsBigAdventure(ctx) {
     ]);
 }
 
-export function canGoDiving(ctx) {
+function canGoDiving(ctx) {
     return allTrue([
         requiresQuest(ctx, "canCompleteRFDAnotherCooksQuest", canCompleteRFDAnotherCooksQuest), //
         has(ctx, 6667), // Empty fishbowl
@@ -4626,7 +4626,7 @@ function canCompletePrinceAliRescue(ctx) {
     ]);
 }
 
-export function canCompletePryingTimes(ctx) {
+function canCompletePryingTimes(ctx) {
     return allTrue([
         hasNonBoostableSkillLevel(ctx, "Smithing", 30),
         hasNonBoostableSkillLevel(ctx, "Sailing", 12),
@@ -5747,7 +5747,7 @@ function canCompleteTrollStronghold(ctx) {
     ]);
 }
 
-export function canCompleteTroubledTortugans(ctx) {
+function canCompleteTroubledTortugans(ctx) {
     return allTrue([
         hasNonBoostableSkillLevel(ctx, "Slayer", 51), //
         hasNonBoostableSkillLevel(ctx, "Construction", 48), //
