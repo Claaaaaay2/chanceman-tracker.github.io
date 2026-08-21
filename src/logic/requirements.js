@@ -3331,7 +3331,6 @@ function canCompleteColdWar(ctx) {
         has(ctx, 1939), // Swamp tar
         has(ctx, 8782), // Mahogany plank
         has(ctx, 1741), // Leather
-        has(ctx, 2347), // Hammer
         has(ctx, 314), // Feather
     ]);
 }
@@ -3368,7 +3367,7 @@ function canCompleteCreatureOfFenkenstrain(ctx) {
     ]);
 }
 
-function canCompleteCurrentAffairs(ctx) {
+export function canCompleteCurrentAffairs(ctx) {
     return allTrue([
         hasNonBoostableSkillLevel(ctx, "Sailing", 22),
         hasNonBoostableSkillLevel(ctx, "Fishing", 10),
@@ -4499,7 +4498,7 @@ function canCompleteMyArmsBigAdventure(ctx) {
     ]);
 }
 
-function canGoDiving(ctx) {
+export function canGoDiving(ctx) {
     return allTrue([
         requiresQuest(ctx, "canCompleteRFDAnotherCooksQuest", canCompleteRFDAnotherCooksQuest), //
         has(ctx, 6667), // Empty fishbowl
@@ -4627,7 +4626,7 @@ function canCompletePrinceAliRescue(ctx) {
     ]);
 }
 
-function canCompletePryingTimes(ctx) {
+export function canCompletePryingTimes(ctx) {
     return allTrue([
         hasNonBoostableSkillLevel(ctx, "Smithing", 30),
         hasNonBoostableSkillLevel(ctx, "Sailing", 12),
@@ -5748,7 +5747,7 @@ function canCompleteTrollStronghold(ctx) {
     ]);
 }
 
-function canCompleteTroubledTortugans(ctx) {
+export function canCompleteTroubledTortugans(ctx) {
     return allTrue([
         hasNonBoostableSkillLevel(ctx, "Slayer", 51), //
         hasNonBoostableSkillLevel(ctx, "Construction", 48), //
