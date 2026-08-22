@@ -11552,7 +11552,7 @@ const CONSTRUCTION_ROOMS = [{
     "level": 72,
     "cost": 200000,
     "sections": [{
-        "name": "Item",
+        "name": "Mounted talisman/pendant",
         "items": [{
             "level": 72,
             "name": "Mounted xeric's talisman",
@@ -13385,21 +13385,36 @@ function renderSubsection(
 
     if (!items.length) return "";
 
+    const sectionHasAvailableBuild = items.some((item) => {
+        const status = getBuildStatus(
+            item,
+            section,
+            itemNameMap,
+            obtainedSet,
+            rolledSet
+        );
+
+        return status.state === "available";
+    });
+
     const id = `${slugify(roomName)}-${slugify(section.name)}-${index}`;
 
     return `
-        <details class="construction-subsection" id="${escapeHtml(id)}">
+        <details
+            class="construction-subsection${sectionHasAvailableBuild ? " construction-subsection--available" : ""}"
+            id="${escapeHtml(id)}"
+        >
             <summary class="construction-subsection-header">
                 <span>${escapeHtml(section.name)}</span>
             </summary>
             <div class="construction-options">
                 ${items.map((item) => renderBuild(
-        item,
-        section,
-        itemNameMap,
-        obtainedSet,
-        rolledSet
-    )).join("")}
+                    item,
+                    section,
+                    itemNameMap,
+                    obtainedSet,
+                    rolledSet
+                )).join("")}
             </div>
         </details>
     `;
@@ -13419,7 +13434,35 @@ function renderRoom(
     usefulOnly,
     roomIndex
 ) {
-    const sections = room.sections
+    const visibleSections = room.sections.filter((section) => {
+        const items = usefulOnly
+            ? section.items.filter((item) => item.useful)
+            : section.items;
+
+        return items.length > 0;
+    });
+
+    if (!visibleSections.length) return "";
+
+    const roomHasAvailableBuild = visibleSections.some((section) => {
+        const items = usefulOnly
+            ? section.items.filter((item) => item.useful)
+            : section.items;
+
+        return items.some((item) => {
+            const status = getBuildStatus(
+                item,
+                section,
+                itemNameMap,
+                obtainedSet,
+                rolledSet
+            );
+
+            return status.state === "available";
+        });
+    });
+
+    const sections = visibleSections
         .map((section, index) => renderSubsection(
             section,
             itemNameMap,
@@ -13435,7 +13478,10 @@ function renderRoom(
     if (!sections) return "";
 
     return `
-        <details class="construction-room card" id="room-${roomIndex}">
+        <details
+            class="construction-room card${roomHasAvailableBuild ? " construction-room--available" : ""}"
+            id="room-${roomIndex}"
+        >
             <summary class="construction-room-header">
                 <h2>
                     <img src="/images/Construction_icon.png" alt="Construction level"> ${escapeHtml(room.level)} | ${escapeHtml(room.name)} | <img src="/images/Coins_10000.png" alt="Coins"> ${formatCost(room.cost)}
@@ -13481,6 +13527,21 @@ function getPageStyles() {
                 margin-bottom: 1.5rem;
             }
 
+            .construction-room--available {
+                border-color: #2e9b55;
+            }
+
+            .construction-subsection {
+                margin-top: 0.75rem;
+                overflow: hidden;
+                border: 1px solid var(--border-color-darker);
+                border-radius: 6px;
+            }
+
+            .construction-subsection--available {
+                border-color: #2e9b55;
+            }
+
             .construction-room-header,
             .construction-subsection-header {
                 cursor: pointer;
@@ -13499,6 +13560,7 @@ function getPageStyles() {
                 margin-right: 0.65rem;
                 font-size: 0.8em;
                 transition: transform 0.15s ease;
+                flex: 0 0 auto;
             }
 
             details[open] > .construction-room-header::before,
@@ -13515,27 +13577,27 @@ function getPageStyles() {
 
             .construction-room-header h2 {
                 margin: 0;
-            }
-
-            .construction-room-content {
-                padding: 0 1rem 1rem;
-            }
-
-            .construction-subsection {
-                margin-top: 0.75rem;
-                overflow: hidden;
-                border: 1px solid var(--border-color-darker);
-                border-radius: 6px;
+                display: flex;
+                align-items: center;
+                gap: 0.35rem;
+                line-height: 1.2;
             }
 
             .construction-subsection-header {
                 display: flex;
                 align-items: center;
-                padding: 0.8rem 1rem;
+                padding: 1rem 1rem;
                 border-bottom: 1px solid var(--border-color-darker);
                 background: var(--surface-1);
                 font-weight: 700;
+                line-height: 1.2;
             }
+
+            .construction-subsection-header > span {
+                display: flex;
+                align-items: center;
+            }
+
 
             .construction-options {
                 display: grid;
