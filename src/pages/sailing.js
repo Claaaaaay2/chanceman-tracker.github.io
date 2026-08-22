@@ -1792,10 +1792,15 @@ const TRIMS_SKIFF = [
                     type: "keel",
                     minimum: "Adamant helm"
                 }
+            ],
+            rulesAll: [
+                "canGoDiving",
+                "canCompletePryingTimes",
+                "canCompleteCurrentAffairs"
             ]
         },
         xp: 20,
-        wiki: "https://oldschool.runescape.wiki/w/Trims"
+        wiki: "https://oldschool.runescape.wiki/w/Guthixian_trim"
     },
     {
         name: "Saradominist trim",
@@ -1812,10 +1817,15 @@ const TRIMS_SKIFF = [
                     type: "mast",
                     minimum: "Oak mast and linen sails"
                 }
+            ],
+            rulesAll: [
+                "canGoDiving",
+                "canCompletePryingTimes",
+                "canCompleteCurrentAffairs"
             ]
         },
         xp: 20,
-        wiki: "https://oldschool.runescape.wiki/w/Trims"
+        wiki: "https://oldschool.runescape.wiki/w/Saradominist_trim"
     },
     {
         name: "Zamorakian  trim",
@@ -1824,8 +1834,15 @@ const TRIMS_SKIFF = [
         materials: [
             ["Rope", 1]
         ],
+        requirements: {
+            rulesAll: [
+                "canGoDiving",
+                "canCompletePryingTimes",
+                "canCompleteCurrentAffairs"
+            ]
+        },
         xp: 20,
-        wiki: "https://oldschool.runescape.wiki/w/Trims"
+        wiki: "https://oldschool.runescape.wiki/w/Zamorakian_trim"
     },
     {
         name: "Armadylean trim",
@@ -1838,10 +1855,15 @@ const TRIMS_SKIFF = [
                     type: "facility",
                     exact: "Eternal brazier"
                 }
+            ],
+            rulesAll: [
+                "canGoDiving",
+                "canCompletePryingTimes",
+                "canCompleteCurrentAffairs"
             ]
         },
         xp: 20,
-        wiki: "https://oldschool.runescape.wiki/w/Trims"
+        wiki: "https://oldschool.runescape.wiki/w/Armadylean_trim"
     },
     {
         name: "Merchant's trim",
@@ -1851,7 +1873,7 @@ const TRIMS_SKIFF = [
             ["Merchant's paint", 1]
         ],
         xp: 20,
-        wiki: "https://oldschool.runescape.wiki/w/Trims"
+        wiki: "https://oldschool.runescape.wiki/w/Merchant's_trim"
     },
     {
         name: "Angler's trim",
@@ -1861,7 +1883,7 @@ const TRIMS_SKIFF = [
             ["Angler's paint", 1]
         ],
         xp: 20,
-        wiki: "https://oldschool.runescape.wiki/w/Trims"
+        wiki: "https://oldschool.runescape.wiki/w/Angler's_trim"
     },
     {
         name: "Sandy trim",
@@ -1869,7 +1891,7 @@ const TRIMS_SKIFF = [
         construction: 20,
         materials: [],
         xp: 20,
-        wiki: "https://oldschool.runescape.wiki/w/Trims"
+        wiki: "https://oldschool.runescape.wiki/w/Sandy_trim"
     }
 ];
 
@@ -1919,16 +1941,50 @@ const TRIMS_SLOOP = [
         sailing: 72,
         construction: 20,
         materials: [],
+        requirements: {
+            equipment: [
+                {
+                    type: "facility",
+                    exact: "Innoculation station"
+                },
+                {
+                    type: "keel",
+                    minimum: "Adamant helm"
+                }
+            ],
+            rulesAll: [
+                "canGoDiving",
+                "canCompletePryingTimes",
+                "canCompleteCurrentAffairs"
+            ]
+        },
         xp: 20,
-        wiki: "https://oldschool.runescape.wiki/w/Trims"
+        wiki: "https://oldschool.runescape.wiki/w/Guthixian_trim"
     },
     {
         name: "Saradominist trim",
         sailing: 38,
         construction: 20,
         materials: [],
+        requirements: {
+            equipment: [
+                {
+                    type: "helm",
+                    minimum: "Iron helm"
+                },
+                {
+                    type: "mast",
+                    minimum: "Oak mast and linen sails"
+                }
+            ],
+            rulesAll: [
+                "canGoDiving",
+                "canCompletePryingTimes",
+                "canCompleteCurrentAffairs"
+            ]
+        },
         xp: 20,
-        wiki: "https://oldschool.runescape.wiki/w/Trims"
+        wiki: "https://oldschool.runescape.wiki/w/Saradominist_trim"
     },
     {
         name: "Zamorakian  trim",
@@ -1937,16 +1993,36 @@ const TRIMS_SLOOP = [
         materials: [
             ["Rope", 1]
         ],
+        requirements: {
+            rulesAll: [
+                "canGoDiving",
+                "canCompletePryingTimes",
+                "canCompleteCurrentAffairs"
+            ]
+        },
         xp: 20,
-        wiki: "https://oldschool.runescape.wiki/w/Trims"
+        wiki: "https://oldschool.runescape.wiki/w/Zamorakian_trim"
     },
     {
         name: "Armadylean trim",
         sailing: 78,
         construction: 20,
         materials: [],
+        requirements: {
+            equipment: [
+                {
+                    type: "facility",
+                    exact: "Eternal brazier"
+                }
+            ],
+            rulesAll: [
+                "canGoDiving",
+                "canCompletePryingTimes",
+                "canCompleteCurrentAffairs"
+            ]
+        },
         xp: 20,
-        wiki: "https://oldschool.runescape.wiki/w/Trims"
+        wiki: "https://oldschool.runescape.wiki/w/Armadylean_trim"
     },
     {
         name: "Merchant's trim",
@@ -1956,7 +2032,7 @@ const TRIMS_SLOOP = [
             ["Merchant's paint", 2]
         ],
         xp: 20,
-        wiki: "https://oldschool.runescape.wiki/w/Trims"
+        wiki: "https://oldschool.runescape.wiki/w/Merchant's_trim"
     },
     {
         name: "Angler's trim",
@@ -1966,7 +2042,7 @@ const TRIMS_SLOOP = [
             ["Angler's paint", 2]
         ],
         xp: 20,
-        wiki: "https://oldschool.runescape.wiki/w/Trims"
+        wiki: "https://oldschool.runescape.wiki/w/Angler's_trim"
     },
     {
         name: "Sandy trim",
@@ -1974,7 +2050,7 @@ const TRIMS_SLOOP = [
         construction: 20,
         materials: [],
         xp: 20,
-        wiki: "https://oldschool.runescape.wiki/w/Trims"
+        wiki: "https://oldschool.runescape.wiki/w/Sandy_trim"
     }
 ];
 
@@ -2299,6 +2375,86 @@ function hasCompletedQuest(questName) {
     return Number(fileStore.player?.quests?.[questName] ?? 0) === 2;
 }
 
+function hasSailingItem(itemId, obtainedSet, rolledSet) {
+    return (
+        rolledSet.has(itemId) &&
+        obtainedSet.has(itemId)
+    );
+}
+
+function hasSailingUsableAxe(obtainedSet, rolledSet) {
+    const woodcuttingLevel = getPlayerSkillLevel("Woodcutting");
+
+    const axes = [
+        { id: 1351, level: 1 },   // Bronze axe
+        { id: 1349, level: 1 },   // Iron axe
+        { id: 1353, level: 6 },   // Steel axe
+        { id: 1361, level: 11 },  // Black axe
+        { id: 1355, level: 21 },  // Mithril axe
+        { id: 1357, level: 31 },  // Adamant axe
+        { id: 1359, level: 41 },  // Rune axe
+        { id: 6739, level: 61 },  // Dragon axe
+        { id: 20011, level: 61 }, // 3rd age axe
+        { id: 13241, level: 61 }, // Infernal axe
+        { id: 23862, level: 71 }  // Crystal axe
+    ];
+
+    return axes.some(
+        (axe) =>
+            woodcuttingLevel >= axe.level &&
+            hasSailingItem(axe.id, obtainedSet, rolledSet)
+    );
+}
+
+function canGoDivingSailing(obtainedSet, rolledSet) {
+    return (
+        hasCompletedQuest("Recipe for Disaster - Another Cook's Quest") &&
+        hasSailingItem(6667, obtainedSet, rolledSet)
+    );
+}
+
+function canCompletePryingTimesSailing(obtainedSet, rolledSet) {
+    return (
+        getPlayerSkillLevel("Smithing") >= 30 &&
+        getPlayerSkillLevel("Sailing") >= 12 &&
+        hasCompletedQuest("Pandemonium") &&
+        hasCompletedQuest("The Knight's Sword") &&
+        hasSailingItem(2347, obtainedSet, rolledSet) &&
+        hasSailingItem(2325, obtainedSet, rolledSet) &&
+        hasSailingItem(2353, obtainedSet, rolledSet)
+    );
+}
+
+function canCompleteCurrentAffairsSailing(obtainedSet, rolledSet) {
+    return (
+        getPlayerSkillLevel("Sailing") >= 22 &&
+        getPlayerSkillLevel("Fishing") >= 10 &&
+        hasCompletedQuest("Pandemonium") &&
+        hasSailingItem(973, obtainedSet, rolledSet)
+    );
+}
+
+function canCompleteTroubledTortugansSailing(obtainedSet, rolledSet) {
+    return (
+        getPlayerSkillLevel("Slayer") >= 51 &&
+        getPlayerSkillLevel("Construction") >= 48 &&
+        getPlayerSkillLevel("Sailing") >= 45 &&
+        getPlayerSkillLevel("Hunter") >= 45 &&
+        getPlayerSkillLevel("Woodcutting") >= 40 &&
+        getPlayerSkillLevel("Crafting") >= 34 &&
+        hasCompletedQuest("Pandemonium") &&
+        hasSailingUsableAxe(obtainedSet, rolledSet) &&
+        hasSailingItem(401, obtainedSet, rolledSet)
+    );
+}
+
+const sailingRules = {
+    canGoDiving: canGoDivingSailing,
+    canCompletePryingTimes: canCompletePryingTimesSailing,
+    canCompleteCurrentAffairs: canCompleteCurrentAffairsSailing,
+    canCompleteTroubledTortugans: canCompleteTroubledTortugansSailing
+};
+
 function getMissingSkills(requirements) {
     const missing = [];
 
@@ -2470,6 +2626,22 @@ function getBuildStatus(item, itemNameMap, obtainedSet, rolledSet) {
         rolledSet
     );
 
+    const missingRules = [];
+
+    for (const rule of item.requirements?.rulesAll || []) {
+        const ruleFunction = sailingRules[rule];
+
+        if (!ruleFunction) {
+            console.warn(`Unknown Sailing requirement rule: ${rule}`);
+            missingRules.push(rule);
+            continue;
+        }
+
+        if (!ruleFunction(obtainedSet, rolledSet)) {
+            missingRules.push(rule);
+        }
+    }
+
     let state = "available";
 
     if (materialStatus.missing.length) {
@@ -2478,13 +2650,16 @@ function getBuildStatus(item, itemNameMap, obtainedSet, rolledSet) {
         state = "missing-equipment";
     } else if (missingSkills.length) {
         state = "missing-levels";
+    } else if (missingRules.length) {
+        state = "missing-rules";
     }
 
     return {
         state,
         materialStatus,
         missingSkills,
-        missingEquipment
+        missingEquipment,
+        missingRules
     };
 }
 
@@ -2543,6 +2718,17 @@ function renderBuildRow(
     `
     : "";
 
+    const missingRulesText = status.missingRules.length
+        ? `
+            <div class="sailing-missing sailing-missing--rules">
+                Requires:
+                ${status.missingRules
+                    .map((rule) => escapeHtml(rule))
+                    .join(", ")}
+            </div>
+        `
+        : "";
+
     const crewHtml = extra.crew
         ? `
             <div class="sailing-extra">
@@ -2576,7 +2762,9 @@ function renderBuildRow(
                                 ? "Level required"
                                 : status.state === "missing-equipment"
                                     ? "Boat equipment required"
-                                    : "Missing materials"
+                                    : status.state === "missing-rules"
+                                        ? "Quest required"
+                                        : "Missing materials"
                     }
                 </span>
             </div>
@@ -2590,6 +2778,7 @@ function renderBuildRow(
 
             ${missingSkillText}
             ${missingEquipmentText}
+            ${missingRulesText}
             ${missingMaterialText}
         </article>
     `;
@@ -2791,7 +2980,7 @@ function renderHazard(
                 <div>
                     Missing:
                     ${result.missingEquipment
-                        .map((entry) => escapeHtml(entry.name))
+                        .map((entry) => escapeHtml(entry))
                         .join(", ")}
                 </div>
             `
@@ -3363,7 +3552,9 @@ function getPageStyles() {
                 border-color: #9b65d6;
             }
 
-            .sailing-option--missing-materials {
+            .sailing-option--missing-materials,
+            .sailing-option--missing-rules,
+            .sailing-option--missing-equipment {
                 border-color: #c94a4a;
             }
 
@@ -3408,7 +3599,9 @@ function getPageStyles() {
                 color: #9b65d6;
             }
 
-            .sailing-option--missing-materials .sailing-status {
+            .sailing-option--missing-materials .sailing-status,
+            .sailing-option--missing-rules .sailing-status,
+            .sailing-option--missing-equipment .sailing-status {
                 color: #c94a4a;
             }
 
