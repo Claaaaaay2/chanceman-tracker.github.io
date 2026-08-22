@@ -3331,7 +3331,6 @@ function canCompleteColdWar(ctx) {
         has(ctx, 1939), // Swamp tar
         has(ctx, 8782), // Mahogany plank
         has(ctx, 1741), // Leather
-        has(ctx, 2347), // Hammer
         has(ctx, 314), // Feather
     ]);
 }
@@ -3368,7 +3367,7 @@ function canCompleteCreatureOfFenkenstrain(ctx) {
     ]);
 }
 
-function canCompleteCurrentAffairs(ctx) {
+export function canCompleteCurrentAffairs(ctx) {
     return allTrue([
         hasNonBoostableSkillLevel(ctx, "Sailing", 22),
         hasNonBoostableSkillLevel(ctx, "Fishing", 10),

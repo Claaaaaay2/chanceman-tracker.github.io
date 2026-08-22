@@ -1782,16 +1782,50 @@ const TRIMS_SKIFF = [
         sailing: 72,
         construction: 20,
         materials: [],
+        requirements: {
+            equipment: [
+                {
+                    type: "facility",
+                    exact: "Innoculation station"
+                },
+                {
+                    type: "keel",
+                    minimum: "Adamant helm"
+                }
+            ],
+            rulesAll: [
+                "canGoDiving",
+                "canCompletePryingTimes",
+                "canCompleteCurrentAffairs"
+            ]
+        },
         xp: 20,
-        wiki: "https://oldschool.runescape.wiki/w/Trims"
+        wiki: "https://oldschool.runescape.wiki/w/Guthixian_trim"
     },
     {
         name: "Saradominist trim",
         sailing: 38,
         construction: 20,
         materials: [],
+        requirements: {
+            equipment: [
+                {
+                    type: "helm",
+                    minimum: "Iron helm"
+                },
+                {
+                    type: "mast",
+                    minimum: "Oak mast and linen sails"
+                }
+            ],
+            rulesAll: [
+                "canGoDiving",
+                "canCompletePryingTimes",
+                "canCompleteCurrentAffairs"
+            ]
+        },
         xp: 20,
-        wiki: "https://oldschool.runescape.wiki/w/Trims"
+        wiki: "https://oldschool.runescape.wiki/w/Saradominist_trim"
     },
     {
         name: "Zamorakian  trim",
@@ -1800,16 +1834,36 @@ const TRIMS_SKIFF = [
         materials: [
             ["Rope", 1]
         ],
+        requirements: {
+            rulesAll: [
+                "canGoDiving",
+                "canCompletePryingTimes",
+                "canCompleteCurrentAffairs"
+            ]
+        },
         xp: 20,
-        wiki: "https://oldschool.runescape.wiki/w/Trims"
+        wiki: "https://oldschool.runescape.wiki/w/Zamorakian_trim"
     },
     {
         name: "Armadylean trim",
         sailing: 78,
         construction: 20,
         materials: [],
+        requirements: {
+            equipment: [
+                {
+                    type: "facility",
+                    exact: "Eternal brazier"
+                }
+            ],
+            rulesAll: [
+                "canGoDiving",
+                "canCompletePryingTimes",
+                "canCompleteCurrentAffairs"
+            ]
+        },
         xp: 20,
-        wiki: "https://oldschool.runescape.wiki/w/Trims"
+        wiki: "https://oldschool.runescape.wiki/w/Armadylean_trim"
     },
     {
         name: "Merchant's trim",
@@ -1819,7 +1873,7 @@ const TRIMS_SKIFF = [
             ["Merchant's paint", 1]
         ],
         xp: 20,
-        wiki: "https://oldschool.runescape.wiki/w/Trims"
+        wiki: "https://oldschool.runescape.wiki/w/Merchant's_trim"
     },
     {
         name: "Angler's trim",
@@ -1829,7 +1883,7 @@ const TRIMS_SKIFF = [
             ["Angler's paint", 1]
         ],
         xp: 20,
-        wiki: "https://oldschool.runescape.wiki/w/Trims"
+        wiki: "https://oldschool.runescape.wiki/w/Angler's_trim"
     },
     {
         name: "Sandy trim",
@@ -1837,7 +1891,7 @@ const TRIMS_SKIFF = [
         construction: 20,
         materials: [],
         xp: 20,
-        wiki: "https://oldschool.runescape.wiki/w/Trims"
+        wiki: "https://oldschool.runescape.wiki/w/Sandy_trim"
     }
 ];
 
@@ -1887,16 +1941,50 @@ const TRIMS_SLOOP = [
         sailing: 72,
         construction: 20,
         materials: [],
+        requirements: {
+            equipment: [
+                {
+                    type: "facility",
+                    exact: "Innoculation station"
+                },
+                {
+                    type: "keel",
+                    minimum: "Adamant helm"
+                }
+            ],
+            rulesAll: [
+                "canGoDiving",
+                "canCompletePryingTimes",
+                "canCompleteCurrentAffairs"
+            ]
+        },
         xp: 20,
-        wiki: "https://oldschool.runescape.wiki/w/Trims"
+        wiki: "https://oldschool.runescape.wiki/w/Guthixian_trim"
     },
     {
         name: "Saradominist trim",
         sailing: 38,
         construction: 20,
         materials: [],
+        requirements: {
+            equipment: [
+                {
+                    type: "helm",
+                    minimum: "Iron helm"
+                },
+                {
+                    type: "mast",
+                    minimum: "Oak mast and linen sails"
+                }
+            ],
+            rulesAll: [
+                "canGoDiving",
+                "canCompletePryingTimes",
+                "canCompleteCurrentAffairs"
+            ]
+        },
         xp: 20,
-        wiki: "https://oldschool.runescape.wiki/w/Trims"
+        wiki: "https://oldschool.runescape.wiki/w/Saradominist_trim"
     },
     {
         name: "Zamorakian  trim",
@@ -1905,16 +1993,36 @@ const TRIMS_SLOOP = [
         materials: [
             ["Rope", 1]
         ],
+        requirements: {
+            rulesAll: [
+                "canGoDiving",
+                "canCompletePryingTimes",
+                "canCompleteCurrentAffairs"
+            ]
+        },
         xp: 20,
-        wiki: "https://oldschool.runescape.wiki/w/Trims"
+        wiki: "https://oldschool.runescape.wiki/w/Zamorakian_trim"
     },
     {
         name: "Armadylean trim",
         sailing: 78,
         construction: 20,
         materials: [],
+        requirements: {
+            equipment: [
+                {
+                    type: "facility",
+                    exact: "Eternal brazier"
+                }
+            ],
+            rulesAll: [
+                "canGoDiving",
+                "canCompletePryingTimes",
+                "canCompleteCurrentAffairs"
+            ]
+        },
         xp: 20,
-        wiki: "https://oldschool.runescape.wiki/w/Trims"
+        wiki: "https://oldschool.runescape.wiki/w/Armadylean_trim"
     },
     {
         name: "Merchant's trim",
@@ -1924,7 +2032,7 @@ const TRIMS_SLOOP = [
             ["Merchant's paint", 2]
         ],
         xp: 20,
-        wiki: "https://oldschool.runescape.wiki/w/Trims"
+        wiki: "https://oldschool.runescape.wiki/w/Merchant's_trim"
     },
     {
         name: "Angler's trim",
@@ -1934,7 +2042,7 @@ const TRIMS_SLOOP = [
             ["Angler's paint", 2]
         ],
         xp: 20,
-        wiki: "https://oldschool.runescape.wiki/w/Trims"
+        wiki: "https://oldschool.runescape.wiki/w/Angler's_trim"
     },
     {
         name: "Sandy trim",
@@ -1942,7 +2050,7 @@ const TRIMS_SLOOP = [
         construction: 20,
         materials: [],
         xp: 20,
-        wiki: "https://oldschool.runescape.wiki/w/Trims"
+        wiki: "https://oldschool.runescape.wiki/w/Sandy_trim"
     }
 ];
 
@@ -2267,6 +2375,86 @@ function hasCompletedQuest(questName) {
     return Number(fileStore.player?.quests?.[questName] ?? 0) === 2;
 }
 
+function hasSailingItem(itemId, obtainedSet, rolledSet) {
+    return (
+        rolledSet.has(itemId) &&
+        obtainedSet.has(itemId)
+    );
+}
+
+function hasSailingUsableAxe(obtainedSet, rolledSet) {
+    const woodcuttingLevel = getPlayerSkillLevel("Woodcutting");
+
+    const axes = [
+        { id: 1351, level: 1 },   // Bronze axe
+        { id: 1349, level: 1 },   // Iron axe
+        { id: 1353, level: 6 },   // Steel axe
+        { id: 1361, level: 11 },  // Black axe
+        { id: 1355, level: 21 },  // Mithril axe
+        { id: 1357, level: 31 },  // Adamant axe
+        { id: 1359, level: 41 },  // Rune axe
+        { id: 6739, level: 61 },  // Dragon axe
+        { id: 20011, level: 61 }, // 3rd age axe
+        { id: 13241, level: 61 }, // Infernal axe
+        { id: 23862, level: 71 }  // Crystal axe
+    ];
+
+    return axes.some(
+        (axe) =>
+            woodcuttingLevel >= axe.level &&
+            hasSailingItem(axe.id, obtainedSet, rolledSet)
+    );
+}
+
+function canGoDivingSailing(obtainedSet, rolledSet) {
+    return (
+        hasCompletedQuest("Recipe for Disaster - Another Cook's Quest") &&
+        hasSailingItem(6667, obtainedSet, rolledSet)
+    );
+}
+
+function canCompletePryingTimesSailing(obtainedSet, rolledSet) {
+    return (
+        getPlayerSkillLevel("Smithing") >= 30 &&
+        getPlayerSkillLevel("Sailing") >= 12 &&
+        hasCompletedQuest("Pandemonium") &&
+        hasCompletedQuest("The Knight's Sword") &&
+        hasSailingItem(2347, obtainedSet, rolledSet) &&
+        hasSailingItem(2325, obtainedSet, rolledSet) &&
+        hasSailingItem(2353, obtainedSet, rolledSet)
+    );
+}
+
+function canCompleteCurrentAffairsSailing(obtainedSet, rolledSet) {
+    return (
+        getPlayerSkillLevel("Sailing") >= 22 &&
+        getPlayerSkillLevel("Fishing") >= 10 &&
+        hasCompletedQuest("Pandemonium") &&
+        hasSailingItem(973, obtainedSet, rolledSet)
+    );
+}
+
+function canCompleteTroubledTortugansSailing(obtainedSet, rolledSet) {
+    return (
+        getPlayerSkillLevel("Slayer") >= 51 &&
+        getPlayerSkillLevel("Construction") >= 48 &&
+        getPlayerSkillLevel("Sailing") >= 45 &&
+        getPlayerSkillLevel("Hunter") >= 45 &&
+        getPlayerSkillLevel("Woodcutting") >= 40 &&
+        getPlayerSkillLevel("Crafting") >= 34 &&
+        hasCompletedQuest("Pandemonium") &&
+        hasSailingUsableAxe(obtainedSet, rolledSet) &&
+        hasSailingItem(401, obtainedSet, rolledSet)
+    );
+}
+
+const sailingRules = {
+    canGoDiving: canGoDivingSailing,
+    canCompletePryingTimes: canCompletePryingTimesSailing,
+    canCompleteCurrentAffairs: canCompleteCurrentAffairsSailing,
+    canCompleteTroubledTortugans: canCompleteTroubledTortugansSailing
+};
+
 function getMissingSkills(requirements) {
     const missing = [];
 
@@ -2438,6 +2626,22 @@ function getBuildStatus(item, itemNameMap, obtainedSet, rolledSet) {
         rolledSet
     );
 
+    const missingRules = [];
+
+    for (const rule of item.requirements?.rulesAll || []) {
+        const ruleFunction = sailingRules[rule];
+
+        if (!ruleFunction) {
+            console.warn(`Unknown Sailing requirement rule: ${rule}`);
+            missingRules.push(rule);
+            continue;
+        }
+
+        if (!ruleFunction(obtainedSet, rolledSet)) {
+            missingRules.push(rule);
+        }
+    }
+
     let state = "available";
 
     if (materialStatus.missing.length) {
@@ -2446,13 +2650,16 @@ function getBuildStatus(item, itemNameMap, obtainedSet, rolledSet) {
         state = "missing-equipment";
     } else if (missingSkills.length) {
         state = "missing-levels";
+    } else if (missingRules.length) {
+        state = "missing-rules";
     }
 
     return {
         state,
         materialStatus,
         missingSkills,
-        missingEquipment
+        missingEquipment,
+        missingRules
     };
 }
 
@@ -2511,6 +2718,17 @@ function renderBuildRow(
     `
     : "";
 
+    const missingRulesText = status.missingRules.length
+        ? `
+            <div class="sailing-missing sailing-missing--rules">
+                Requires:
+                ${status.missingRules
+                    .map((rule) => escapeHtml(rule))
+                    .join(", ")}
+            </div>
+        `
+        : "";
+
     const crewHtml = extra.crew
         ? `
             <div class="sailing-extra">
@@ -2544,7 +2762,9 @@ function renderBuildRow(
                                 ? "Level required"
                                 : status.state === "missing-equipment"
                                     ? "Boat equipment required"
-                                    : "Missing materials"
+                                    : status.state === "missing-rules"
+                                        ? "Quest required"
+                                        : "Missing materials"
                     }
                 </span>
             </div>
@@ -2558,6 +2778,7 @@ function renderBuildRow(
 
             ${missingSkillText}
             ${missingEquipmentText}
+            ${missingRulesText}
             ${missingMaterialText}
         </article>
     `;
@@ -2759,7 +2980,7 @@ function renderHazard(
                 <div>
                     Missing:
                     ${result.missingEquipment
-                        .map((entry) => escapeHtml(entry.name))
+                        .map((entry) => escapeHtml(entry))
                         .join(", ")}
                 </div>
             `
@@ -3170,156 +3391,15 @@ function renderBestBoatVisual(
 function getPageStyles() {
     return `
         <style>
-        .sailing-best-boat {
-            margin-bottom: 1.5rem;
-            padding: 1.25rem;
-            overflow: hidden;
-        }
+            /* =========================================================
+            Sailing page
+            ========================================================= */
 
-        .sailing-best-boat-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .sailing-best-boat-header h2 {
-            margin: 0;
-        }
-
-        .sailing-best-boat-image-wrapper {
-            flex: 0 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .sailing-best-boat-image {
-            display: block;
-            width: auto;
-            max-width: 180px;
-            max-height: 140px;
-            object-fit: contain;
-        }
-
-        .sailing-best-boat-upgrades-title {
-            margin-bottom: 0.75rem;
-            font-size: 1.1rem;
-            font-weight: 700;
-        }
-
-        .sailing-best-boat-table-wrapper {
-            width: 100%;
-            overflow-x: auto;
-        }
-
-        .sailing-best-boat-table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0;
-            table-layout: fixed;
-            border: 1px solid var(
-                --border-color,
-                rgba(127, 127, 127, 0.25)
-            );
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .sailing-best-boat-table th {
-            padding: 0.65rem;
-            text-align: center;
-            font-weight: 700;
-            background: var(
-                --surface-2,
-                rgba(127, 127, 127, 0.08)
-            );
-            border-bottom: 1px solid var(
-                --border-color,
-                rgba(127, 127, 127, 0.25)
-            );
-        }
-
-        .sailing-best-boat-table th:not(:last-child),
-        .sailing-best-boat-table td:not(:last-child) {
-            border-right: 1px solid var(
-                --border-color,
-                rgba(127, 127, 127, 0.25)
-            );
-        }
-
-        .sailing-best-boat-cell {
-            padding: 0.75rem;
-            vertical-align: top;
-            text-align: center;
-        }
-
-        .sailing-best-boat-cell--empty {
-            min-height: 100px;
-        }
-
-        .sailing-best-boat-upgrade {
-            display: flex;
-            min-height: 130px;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            gap: 0.4rem;
-        }
-
-        .sailing-best-boat-upgrade {
-            display: flex;
-            min-height: 60px;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 0.35rem;
-        }
-
-        .sailing-best-boat-upgrade-name {
-            font-weight: 600;
-            line-height: 1.25;
-        }
-
-        .sailing-best-boat-upgrade-list {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.4rem;
-        }
-
-        .sailing-best-boat-none {
-            opacity: 0.6;
-            font-style: italic;
-        }
-
-        .sailing-best-boat-upgrade-status {
-            font-size: 0.75rem;
-            font-weight: 700;
-        }
-
-        .sailing-best-boat-upgrade-status--fallback, .sailing-best-boat-upgrade-status--best {
-            opacity: 0.6;
-        }
-
-        @media (max-width: 700px) {
-            .sailing-best-boat-header {
-                align-items: flex-start;
-                flex-direction: column;
-            }
-
-            .sailing-best-boat-image-wrapper {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .sailing-best-boat-table {
-                min-width: 700px;
-            }
-        }
             .sailing-page {
-                width: 100%;
+                width: auto;
+                max-width: 100%;
+                margin: 0 1rem;
+                box-sizing: border-box;
             }
 
             .sailing-intro {
@@ -3330,6 +3410,8 @@ function getPageStyles() {
                 max-width: 800px;
                 margin: 2rem auto;
                 padding: 2rem;
+                border: 3px solid var(--border-color-darker);
+                border-radius: 6px;
                 text-align: center;
             }
 
@@ -3338,45 +3420,31 @@ function getPageStyles() {
                 font-style: italic;
             }
 
-            .sailing-jump-links {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 0.5rem;
-                margin: 1rem 0 0.75rem;
-            }
 
-            .sailing-jump-links--hazards {
-                margin-top: 0;
-            }
+            /* =========================================================
+            Shared section styling
+            ========================================================= */
 
-            .sailing-jump-button {
-                padding: 0.45rem 0.75rem;
-                border: 0;
+            .sailing-best-boat,
+            .sailing-ship-section,
+            .sailing-hazards-section {
+                overflow: hidden;
+                border: 3px solid var(--border-color-darker);
                 border-radius: 6px;
-                background: var(--surface-2, rgba(127, 127, 127, 0.12));
-                color: inherit;
-                cursor: pointer;
-                font: inherit;
             }
 
-            .sailing-jump-button:hover {
-                filter: brightness(1.15);
-            }
-
-            .sailing-section {
+            .sailing-best-boat,
+            .sailing-ship-section {
                 margin-bottom: 1.5rem;
             }
 
-            .sailing-section-header {
-                display: flex;
-                align-items: center;
-                padding: 1rem 1.25rem;
-                border-bottom: 1px solid var(--border-color, rgba(127, 127, 127, 0.25));
+            .sailing-hazards-section {
+                margin: 1.5rem 0;
             }
 
-            .sailing-section-header h2 {
-                margin: 0;
-            }
+            /* =========================================================
+            Collapsible section headers
+            ========================================================= */
 
             .sailing-section-header,
             .sailing-ship-header,
@@ -3407,52 +3475,73 @@ function getPageStyles() {
                 transform: rotate(90deg);
             }
 
-            .sailing-ship-section {
-                margin-bottom: 1.5rem;
-                overflow: hidden;
-            }
 
+            /* =========================================================
+            Main section headers
+            ========================================================= */
+
+            .sailing-section-header,
             .sailing-ship-header {
                 display: flex;
                 align-items: center;
                 padding: 1rem 1.25rem;
             }
 
+            .sailing-section-header {
+                border-bottom: 1px solid var(--border-color-darker);
+            }
+
+            .sailing-section-header h2,
             .sailing-ship-header h2 {
                 margin: 0;
             }
 
-            .sailing-ship-content {
+            .sailing-ship-content,
+            .sailing-hazards-content {
                 padding: 0 1rem 1rem;
             }
 
+
+            /* =========================================================
+            Ship subsections
+            ========================================================= */
+
             .sailing-subsection {
                 margin-top: 0.75rem;
-                border: 1px solid var(--border-color, rgba(127, 127, 127, 0.25));
-                border-radius: 8px;
                 overflow: hidden;
+                border: 1px solid var(--border-color-darker);
+                border-radius: 6px;
             }
 
             .sailing-subsection-header {
                 display: flex;
                 align-items: center;
                 padding: 0.8rem 1rem;
+                border-bottom: 1px solid var(--border-color-darker);
+                background: var(--surface-1);
                 font-weight: 700;
-                background: var(--surface-1, transparent);
             }
+
+
+            /* =========================================================
+            Ship upgrade options
+            ========================================================= */
 
             .sailing-options {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                grid-template-columns: repeat(
+                    auto-fit,
+                    minmax(300px, 1fr)
+                );
                 gap: 0.75rem;
                 padding: 1rem;
             }
 
             .sailing-option {
                 padding: 1rem;
-                border: 2px solid var(--border-color, rgba(127, 127, 127, 0.25));
-                border-radius: 8px;
-                background: var(--surface-1, transparent);
+                border: 2px solid var(--border-color-darker);
+                border-radius: 6px;
+                background: var(--surface-1);
             }
 
             .sailing-option--available {
@@ -3463,9 +3552,16 @@ function getPageStyles() {
                 border-color: #9b65d6;
             }
 
-            .sailing-option--missing-materials {
+            .sailing-option--missing-materials,
+            .sailing-option--missing-rules,
+            .sailing-option--missing-equipment {
                 border-color: #c94a4a;
             }
+
+
+            /* =========================================================
+            Upgrade / hazard headers
+            ========================================================= */
 
             .sailing-option-header,
             .sailing-hazard-header {
@@ -3503,9 +3599,16 @@ function getPageStyles() {
                 color: #9b65d6;
             }
 
-            .sailing-option--missing-materials .sailing-status {
+            .sailing-option--missing-materials .sailing-status,
+            .sailing-option--missing-rules .sailing-status,
+            .sailing-option--missing-equipment .sailing-status {
                 color: #c94a4a;
             }
+
+
+            /* =========================================================
+            Requirements and materials
+            ========================================================= */
 
             .sailing-requirements {
                 display: flex;
@@ -3540,7 +3643,7 @@ function getPageStyles() {
                 align-items: center;
                 gap: 0.3rem;
                 padding: 0.25rem 0.5rem;
-                border-radius: 5px;
+                border-radius: 6px;
                 font-size: 0.82rem;
             }
 
@@ -3567,7 +3670,7 @@ function getPageStyles() {
             .sailing-missing {
                 margin-top: 0.75rem;
                 padding: 0.6rem;
-                border-radius: 5px;
+                border-radius: 6px;
                 font-size: 0.85rem;
             }
 
@@ -3583,15 +3686,115 @@ function getPageStyles() {
                 opacity: 0.75;
             }
 
-            .sailing-hazards-section {
-                margin-top: 1.5rem;
-                margin-bottom: 1.5rem;
+
+            /* =========================================================
+            Best boat
+            ========================================================= */
+
+            .sailing-best-boat {
+                padding: 1.25rem;
+            }
+
+            .sailing-best-boat-header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 1.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .sailing-best-boat-header h2 {
+                margin: 0;
+            }
+
+            .sailing-best-boat-image-wrapper {
+                display: flex;
+                flex: 0 0 auto;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .sailing-best-boat-image {
+                display: block;
+                width: auto;
+                max-width: 180px;
+                max-height: 140px;
+                object-fit: contain;
+            }
+
+            .sailing-best-boat-upgrades-title {
+                margin-bottom: 0.75rem;
+                font-size: 1.1rem;
+                font-weight: 700;
+            }
+
+            .sailing-best-boat-table-wrapper {
+                width: 100%;
+                overflow-x: auto;
+            }
+
+            .sailing-best-boat-table {
+                width: 100%;
+                border-collapse: separate;
+                border-spacing: 0;
+                table-layout: fixed;
+                border: 1px solid var(--border-color-darker);
+                border-radius: 6px;
                 overflow: hidden;
             }
 
-            .sailing-hazards-content {
-                padding: 0 1rem 1rem;
+            .sailing-best-boat-table th {
+                padding: 0.65rem;
+                border-bottom: 1px solid var(--border-color-darker);
+                background: var(--surface-2);
+                text-align: center;
+                font-weight: 700;
             }
+
+            .sailing-best-boat-table th:not(:last-child),
+            .sailing-best-boat-table td:not(:last-child) {
+                border-right: 1px solid var(--border-color-darker);
+            }
+
+            .sailing-best-boat-cell {
+                padding: 0.75rem;
+                vertical-align: top;
+                text-align: center;
+            }
+
+            .sailing-best-boat-upgrade,
+            .sailing-best-boat-upgrade-list {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.4rem;
+            }
+
+            .sailing-best-boat-upgrade {
+                min-height: 60px;
+                justify-content: center;
+            }
+
+            .sailing-best-boat-upgrade-name {
+                font-weight: 600;
+                line-height: 1.25;
+            }
+
+            .sailing-best-boat-none {
+                opacity: 0.6;
+                font-style: italic;
+            }
+
+            .sailing-best-boat-upgrade-status {
+                font-size: 0.75rem;
+                font-weight: 700;
+                opacity: 0.6;
+            }
+
+
+            /* =========================================================
+            Ocean hazards
+            ========================================================= */
 
             .sailing-hazards-intro {
                 margin-bottom: 1rem;
@@ -3605,7 +3808,7 @@ function getPageStyles() {
             .sailing-hazard {
                 padding: 1rem;
                 border: 3px solid;
-                border-radius: 8px;
+                border-radius: 6px;
             }
 
             .sailing-hazard--green {
@@ -3625,7 +3828,10 @@ function getPageStyles() {
 
             .sailing-hazard-details {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+                grid-template-columns: repeat(
+                    auto-fit,
+                    minmax(260px, 1fr)
+                );
                 gap: 0.5rem 1.5rem;
                 margin-top: 0.75rem;
                 font-size: 0.9rem;
@@ -3634,7 +3840,7 @@ function getPageStyles() {
             .sailing-hazard-message {
                 margin-top: 0.75rem;
                 padding: 0.6rem;
-                border-radius: 5px;
+                border-radius: 6px;
                 font-weight: 600;
             }
 
@@ -3653,7 +3859,30 @@ function getPageStyles() {
                 color: #c94a4a;
             }
 
+
+            /* =========================================================
+            Mobile
+            ========================================================= */
+
             @media (max-width: 700px) {
+                .sailing-page {
+                    margin-left: 1rem;
+                    margin-right: 1rem;
+                }
+
+                .sailing-best-boat-header {
+                    align-items: flex-start;
+                    flex-direction: column;
+                }
+
+                .sailing-best-boat-image-wrapper {
+                    width: 100%;
+                }
+
+                .sailing-best-boat-table {
+                    min-width: 700px;
+                }
+
                 .sailing-option-header,
                 .sailing-hazard-header {
                     align-items: flex-start;
@@ -3824,15 +4053,6 @@ export default async function SailingPage() {
         ]
     }
 ];
-    const jumpLinks = ships.map(({ title, id }) => `
-        <button
-            type="button"
-            class="sailing-jump-button"
-            onclick="document.getElementById('${id}')?.scrollIntoView({ behavior: 'smooth', block: 'start' })"
-        >
-            ${escapeHtml(title)}
-        </button>
-    `).join("");
 
     const shipHtml = ships.map(({ title, id, sections }) =>
         renderShipSection(
@@ -3875,23 +4095,6 @@ return `
         </header>
 
         ${bestBoatHtml}
-
-        <nav class="sailing-jump-links" aria-label="Sailing sections">
-            ${jumpLinks}
-        </nav>
-
-        <nav
-            class="sailing-jump-links sailing-jump-links--hazards"
-            aria-label="Ocean hazards"
-        >
-            <button
-                type="button"
-                class="sailing-jump-button"
-                onclick="document.getElementById('ocean-hazards')?.scrollIntoView({ behavior: 'smooth', block: 'start' })"
-            >
-                Ocean hazards
-            </button>
-        </nav>
 
         ${shipHtml}
 
