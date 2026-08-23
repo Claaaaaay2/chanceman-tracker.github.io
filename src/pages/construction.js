@@ -2509,6 +2509,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 1,
             "useful": true,
+            "upgrade": true,
             "note": "Previous + clockwork",
             "requirement": null,
             "tools": [{
@@ -2530,6 +2531,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 2,
             "useful": true,
+            "upgrade": true,
             "note": "Previous + toy soldiers, toy dolls, and clockwork suits",
             "requirement": null,
             "tools": [{
@@ -2551,6 +2553,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 120,
             "useful": true,
+            "upgrade": true,
             "note": "Previous + sextants, watches, toy mice, and clockwork cats",
             "requirement": null,
             "tools": [{
@@ -5153,6 +5156,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 220,
             "useful": false,
+            "upgrade": true,
             "note": null,
             "requirement": "Priest in Peril",
             "tools": [{
@@ -5186,6 +5190,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 300,
             "useful": false,
+            "upgrade": true,
             "note": null,
             "requirement": "Priest in Peril",
             "tools": [{
@@ -6439,6 +6444,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 360,
             "useful": false,
+            "upgrade": true,
             "note": "5 pets",
             "requirement": null,
             "tools": [{
@@ -6463,6 +6469,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 560,
             "useful": false,
+            "upgrade": true,
             "note": "7 pets",
             "requirement": null,
             "tools": [{
@@ -6490,6 +6497,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 1560,
             "useful": false,
+            "upgrade": true,
             "note": "9 pets",
             "requirement": null,
             "tools": [{
@@ -6517,6 +6525,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 160,
             "useful": false,
+            "upgrade": true,
             "note": "12 pets",
             "requirement": null,
             "tools": [{
@@ -6550,6 +6559,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 158,
             "useful": false,
+            "upgrade": true,
             "note": "71 pets + 12 extras",
             "requirement": null,
             "tools": [{
@@ -7328,6 +7338,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 270,
             "useful": true,
+            "upgrade": true,
             "note": "50 Armour Sets",
             "requirement": null,
             "tools": [{
@@ -7352,6 +7363,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 420,
             "useful": true,
+            "upgrade": true,
             "note": "Infinite Armour Sets",
             "requirement": null,
             "tools": [{
@@ -7398,6 +7410,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 360,
             "useful": true,
+            "upgrade": true,
             "note": "All capes, plus one Cape of Accomplishment",
             "requirement": null,
             "tools": [{
@@ -7422,6 +7435,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 560,
             "useful": true,
+            "upgrade": true,
             "note": "All capes, plus five Capes of Accomplishment",
             "requirement": null,
             "tools": [{
@@ -7449,6 +7463,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 860,
             "useful": true,
+            "upgrade": true,
             "note": "All capes, plus ten Capes of Accomplishment",
             "requirement": null,
             "tools": [{
@@ -7479,6 +7494,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 500,
             "useful": true,
+            "upgrade": true,
             "note": "All capes",
             "requirement": null,
             "tools": [{
@@ -7512,6 +7528,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 1000,
             "useful": true,
+            "upgrade": true,
             "note": "All capes",
             "requirement": null,
             "tools": [{
@@ -7557,6 +7574,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 180,
             "useful": true,
+            "upgrade": true,
             "note": "Stores 4 types of costumes",
             "requirement": null,
             "tools": [{
@@ -7581,6 +7599,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 280,
             "useful": true,
+            "upgrade": true,
             "note": "Stores all types of costumes",
             "requirement": null,
             "tools": [{
@@ -7605,6 +7624,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 240,
             "useful": true,
+            "upgrade": true,
             "note": "7 Mage Sets",
             "requirement": null,
             "tools": [{
@@ -7644,6 +7664,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 360,
             "useful": true,
+            "upgrade": true,
             "note": "21 Mage Sets",
             "requirement": null,
             "tools": [{
@@ -7665,6 +7686,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 540,
             "useful": true,
+            "upgrade": true,
             "note": "28 Mage Sets",
             "requirement": null,
             "tools": [{
@@ -7689,6 +7711,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 560,
             "useful": true,
+            "upgrade": true,
             "note": "35 Mage Sets",
             "requirement": null,
             "tools": [{
@@ -7716,6 +7739,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 860,
             "useful": true,
+            "upgrade": true,
             "note": "42 Mage Sets",
             "requirement": null,
             "tools": [{
@@ -7746,6 +7770,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 500,
             "useful": true,
+            "upgrade": true,
             "note": "Infinite Mage Sets",
             "requirement": null,
             "tools": [{
@@ -7853,6 +7878,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 180,
             "useful": true,
+            "upgrade": true,
             "note": "Store beginner, easy, and medium Treasure Trails rewards",
             "requirement": null,
             "tools": [{
@@ -7877,6 +7903,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 280,
             "useful": true,
+            "upgrade": true,
             "note": "Store all levels of Treasure Trails rewards",
             "requirement": null,
             "tools": [{
@@ -10174,22 +10201,23 @@ const CONSTRUCTION_ROOMS = [{
             "name": "Revitalisation pool",
             "materials": [{
                 "name": "Limestone brick",
-                "quantity": 5
+                "quantity": 0
             }, {
                 "name": "Bucket of water",
-                "quantity": 5
+                "quantity": 0
             }, {
                 "name": "Soul rune",
-                "quantity": 1000
+                "quantity": 0
             }, {
                 "name": "Body rune",
-                "quantity": 1000
+                "quantity": 0
             }, {
-                "name": "Stamina potion(4) x10 (unnoted)",
-                "quantity": 1
+                "name": "Stamina potion(4)",
+                "quantity": 10
             }],
             "experience": 850,
             "useful": true,
+            "upgrade": true,
             "note": "Previous + run energy",
             "requirement": null,
             "tools": [{
@@ -10204,25 +10232,26 @@ const CONSTRUCTION_ROOMS = [{
             "name": "Rejuvenation pool",
             "materials": [{
                 "name": "Limestone brick",
-                "quantity": 5
+                "quantity": 0
             }, {
                 "name": "Bucket of water",
-                "quantity": 5
+                "quantity": 0
             }, {
                 "name": "Soul rune",
-                "quantity": 1000
+                "quantity": 0
             }, {
                 "name": "Body rune",
-                "quantity": 1000
+                "quantity": 0
             }, {
                 "name": "Stamina potion(4)",
-                "quantity": 10
+                "quantity": 0
             }, {
                 "name": "Prayer potion(4)",
                 "quantity": 10
             }],
             "experience": 900,
             "useful": true,
+            "upgrade": true,
             "note": "Previous + prayer points",
             "requirement": null,
             "tools": [{
@@ -10237,31 +10266,32 @@ const CONSTRUCTION_ROOMS = [{
             "name": "Fancy rejuvenation pool",
             "materials": [{
                 "name": "Limestone brick",
-                "quantity": 5
+                "quantity": 0
             }, {
                 "name": "Bucket of water",
-                "quantity": 5
+                "quantity": 0
             }, {
                 "name": "Soul rune",
-                "quantity": 1000
+                "quantity": 0
             }, {
                 "name": "Body rune",
-                "quantity": 1000
+                "quantity": 0
             }, {
                 "name": "Stamina potion(4)",
-                "quantity": 10
+                "quantity": 0
             }, {
                 "name": "Prayer potion(4)",
-                "quantity": 10
+                "quantity": 0
             }, {
-                "name": "Super restore(4) x10 (unnoted)",
-                "quantity": 1
+                "name": "Super restore(4)",
+                "quantity": 10
             }, {
                 "name": "Marble block",
                 "quantity": 2
             }],
             "experience": 1950,
             "useful": true,
+            "upgrade": true,
             "note": "Previous + restores stats",
             "requirement": null,
             "tools": [{
@@ -10276,28 +10306,28 @@ const CONSTRUCTION_ROOMS = [{
             "name": "Ornate rejuvenation pool",
             "materials": [{
                 "name": "Limestone brick",
-                "quantity": 5
+                "quantity": 0
             }, {
                 "name": "Bucket of water",
-                "quantity": 5
+                "quantity": 0
             }, {
                 "name": "Soul rune",
-                "quantity": 1000
+                "quantity": 0
             }, {
                 "name": "Body rune",
-                "quantity": 1000
+                "quantity": 0
             }, {
                 "name": "Stamina potion(4)",
-                "quantity": 10
+                "quantity": 0
             }, {
                 "name": "Prayer potion(4)",
-                "quantity": 10
+                "quantity": 0
             }, {
-                "name": "Super restore(4) x10 (unnoted)",
-                "quantity": 1
+                "name": "Super restore(4)",
+                "quantity": 0
             }, {
                 "name": "Marble block",
-                "quantity": 2
+                "quantity": 0
             }, {
                 "name": "Anti-venom(4)",
                 "quantity": 10
@@ -10310,6 +10340,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 3107,
             "useful": true,
+            "upgrade": true,
             "note": "Previous + hitpoints, cures poison, disease and venom and resets surge potion cooldown.",
             "requirement": null,
             "tools": [{
@@ -11894,9 +11925,6 @@ const CONSTRUCTION_ROOMS = [{
             "level": 82,
             "name": "Gilded portal nexus",
             "materials": [{
-                "name": "Marble portal nexus",
-                "quantity": 1
-            }, {
                 "name": "Marble block",
                 "quantity": 4
             }, {
@@ -11905,6 +11933,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 2600,
             "useful": true,
+            "upgrade": true,
             "note": "8",
             "requirement": null,
             "tools": [{
@@ -11918,8 +11947,11 @@ const CONSTRUCTION_ROOMS = [{
             "level": 92,
             "name": "Crystalline portal nexus",
             "materials": [{
-                "name": "Gilded portal nexus",
-                "quantity": 1
+                "name": "Marble block",
+                "quantity": 0
+            }, {
+                "name": "Gold leaf",
+                "quantity": 0
             }, {
                 "name": "Magic stone",
                 "quantity": 2
@@ -11929,6 +11961,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 2600,
             "useful": true,
+            "upgrade": true,
             "note": "41",
             "requirement": null,
             "tools": [{
@@ -13384,10 +13417,15 @@ function renderBuild(item, section, itemNameMap, obtainedSet, rolledSet) {
                 ? "Requirement required"
                 : "Missing materials";
 
+    const upgradeLabel = item.upgrade
+        ? `<span class="construction-upgrade">Upgrade</span>`
+        : "";
+
     return `
         <article class="construction-hotspot construction-hotspot--${status.state}">
             <div class="construction-hotspot-header">
                 <h3>${wikiLink(item.name)}</h3>
+                ${upgradeLabel}
                 <div class="construction-hotspot-labels">
                     <span class="construction-status">${statusText}</span>
                 </div>
@@ -13742,7 +13780,7 @@ function getPageStyles() {
             }
 
             .construction-status,
-            .construction-useful {
+            .construction-upgrade {
                 padding: 0.25rem 0.5rem;
                 border-radius: 999px;
                 font-size: 0.8rem;
@@ -13762,9 +13800,9 @@ function getPageStyles() {
                 color: #c94a4a;
             }
 
-            .construction-useful {
-                color: #9b65d6;
-                border: 1px solid rgba(155, 101, 214, 0.5);
+            .construction-upgrade {
+                color: #2e9b55;
+                border: 1px solid #2e9b55;
             }
 
             .construction-requirements {
