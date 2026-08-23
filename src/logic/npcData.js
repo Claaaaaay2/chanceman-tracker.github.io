@@ -5678,7 +5678,7 @@ export const NPC_DATA = {
     },
     "Feral Vampyre": {
         "wiki": "https://oldschool.runescape.wiki/w/Feral_Vampyre",
-        "rule": ["canCompletePriestInPeril"],
+        "rule": null,
         "skill": [],
         "level": [],
         "tags": [],
