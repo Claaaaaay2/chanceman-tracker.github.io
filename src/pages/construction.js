@@ -1094,8 +1094,8 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 87,
             "useful": true,
-            "note": "5",
-            "requirement": null,
+            "note": null,
+            "requirement": "5",
             "tools": [{
                 "name": "Hammer",
                 "quantity": 1
@@ -1118,8 +1118,8 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 91,
             "useful": true,
-            "note": "14",
-            "requirement": null,
+            "note": null,
+            "requirement": "14",
             "tools": [{
                 "name": "Hammer",
                 "quantity": 1
@@ -1139,8 +1139,8 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 184,
             "useful": true,
-            "note": "24",
-            "requirement": null,
+            "note": null,
+            "requirement": "24",
             "tools": [{
                 "name": "Hammer",
                 "quantity": 1
@@ -1160,8 +1160,8 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 184,
             "useful": true,
-            "note": "29",
-            "requirement": null,
+            "note": null,
+            "requirement": "29",
             "tools": [{
                 "name": "Hammer",
                 "quantity": 1
@@ -1184,8 +1184,8 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 224,
             "useful": true,
-            "note": "39",
-            "requirement": null,
+            "note": null,
+            "requirement": "39",
             "tools": [{
                 "name": "Hammer",
                 "quantity": 1
@@ -1208,8 +1208,8 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 224,
             "useful": true,
-            "note": "44",
-            "requirement": null,
+            "note": null,
+            "requirement": "44",
             "tools": [{
                 "name": "Hammer",
                 "quantity": 1
@@ -1219,8 +1219,8 @@ const CONSTRUCTION_ROOMS = [{
             }]
         }],
         "meta": {
-            "fLabel": "Cooking Level",
-            "gLabel": null,
+            "fLabel": null,
+            "gLabel": "Cooking Level",
             "hLabel": "Tools needed"
         }
     }, {
@@ -1624,16 +1624,16 @@ const CONSTRUCTION_ROOMS = [{
                 "name": "Soft clay",
                 "quantity": 6
             }, {
-                "name": "Brown spice",
+                "name": "Brown spice (after RFD - Freeing Evil Dave)",
                 "quantity": 4
             }, {
-                "name": "Orange spice",
+                "name": "Orange spice (after RFD - Freeing Evil Dave)",
                 "quantity": 4
             }, {
-                "name": "Red spice",
+                "name": "Red spice (after RFD - Freeing Evil Dave)",
                 "quantity": 4
             }, {
-                "name": "Yellow spice",
+                "name": "Yellow spice (after RFD - Freeing Evil Dave)",
                 "quantity": 4
             }],
             "experience": 374,
@@ -1943,7 +1943,7 @@ const CONSTRUCTION_ROOMS = [{
     }, {
         "name": "Curtains",
         "items": [{
-            "level": 2,
+            "level": 10,
             "name": "Torn curtains",
             "materials": [{
                 "name": "Plank",
@@ -2041,7 +2041,7 @@ const CONSTRUCTION_ROOMS = [{
     }, {
         "name": "Decoration",
         "items": [{
-            "level": 1,
+            "level": 10,
             "name": "Greenman carving",
             "materials": [{
                 "name": "Greenman carving",
@@ -2124,7 +2124,7 @@ const CONSTRUCTION_ROOMS = [{
     }, {
         "name": "Fireplace",
         "items": [{
-            "level": 3,
+            "level": 10,
             "name": "Clay fireplace",
             "materials": [{
                 "name": "Soft clay",
@@ -2501,8 +2501,8 @@ const CONSTRUCTION_ROOMS = [{
             "level": 25,
             "name": "Crafting table 2",
             "materials": [{
-                "name": "Crafting table 1",
-                "quantity": 1
+                "name": "Oak plank",
+                "quantity": 0
             }, {
                 "name": "Molten glass",
                 "quantity": 1
@@ -2522,8 +2522,8 @@ const CONSTRUCTION_ROOMS = [{
             "level": 34,
             "name": "Crafting table 3",
             "materials": [{
-                "name": "Crafting table 2",
-                "quantity": 1
+                "name": "Oak plank",
+                "quantity": 0
             }, {
                 "name": "Molten glass",
                 "quantity": 2
@@ -2543,11 +2543,11 @@ const CONSTRUCTION_ROOMS = [{
             "level": 42,
             "name": "Crafting table 4",
             "materials": [{
-                "name": "Crafting table 3",
-                "quantity": 1
-            }, {
                 "name": "Oak plank",
                 "quantity": 2
+            }, {
+                "name": "Molten glass",
+                "quantity": 0
             }],
             "experience": 120,
             "useful": true,
@@ -2723,9 +2723,6 @@ const CONSTRUCTION_ROOMS = [{
             "level": 25,
             "name": "Tool store 2",
             "materials": [{
-                "name": "Tool store 1",
-                "quantity": 1
-            }, {
                 "name": "Oak plank",
                 "quantity": 2
             }],
@@ -2744,9 +2741,6 @@ const CONSTRUCTION_ROOMS = [{
             "level": 35,
             "name": "Tool store 3",
             "materials": [{
-                "name": "Tool store 2",
-                "quantity": 1
-            }, {
                 "name": "Oak plank",
                 "quantity": 2
             }],
@@ -2765,9 +2759,6 @@ const CONSTRUCTION_ROOMS = [{
             "level": 44,
             "name": "Tool store 4",
             "materials": [{
-                "name": "Tool store 3",
-                "quantity": 1
-            }, {
                 "name": "Oak plank",
                 "quantity": 2
             }],
@@ -2786,9 +2777,6 @@ const CONSTRUCTION_ROOMS = [{
             "level": 55,
             "name": "Tool store 5",
             "materials": [{
-                "name": "Tool store 4",
-                "quantity": 1
-            }, {
                 "name": "Oak plank",
                 "quantity": 2
             }],
@@ -2875,9 +2863,6 @@ const CONSTRUCTION_ROOMS = [{
             "level": 62,
             "name": "Bench with vice",
             "materials": [{
-                "name": "Steel framed workbench",
-                "quantity": 1
-            }, {
                 "name": "Oak plank",
                 "quantity": 2
             }, {
@@ -2899,9 +2884,6 @@ const CONSTRUCTION_ROOMS = [{
             "level": 77,
             "name": "Bench with lathe",
             "materials": [{
-                "name": "Bench with vice",
-                "quantity": 1
-            }, {
                 "name": "Oak plank",
                 "quantity": 2
             }, {
@@ -3192,7 +3174,7 @@ const CONSTRUCTION_ROOMS = [{
     }, {
         "name": "Curtains",
         "items": [{
-            "level": 2,
+            "level": 20,
             "name": "Torn curtains",
             "materials": [{
                 "name": "Plank",
@@ -3216,7 +3198,7 @@ const CONSTRUCTION_ROOMS = [{
                 "quantity": 1
             }]
         }, {
-            "level": 18,
+            "level": 20,
             "name": "Curtains",
             "materials": [{
                 "name": "Oak plank",
@@ -3451,7 +3433,7 @@ const CONSTRUCTION_ROOMS = [{
     }, {
         "name": "Fireplace",
         "items": [{
-            "level": 3,
+            "level": 20,
             "name": "Clay fireplace",
             "materials": [{
                 "name": "Soft clay",
@@ -3513,7 +3495,7 @@ const CONSTRUCTION_ROOMS = [{
     }, {
         "name": "Rug",
         "items": [{
-            "level": 2,
+            "level": 20,
             "name": "Brown rug",
             "materials": [{
                 "name": "Bolt of cloth",
@@ -3531,7 +3513,7 @@ const CONSTRUCTION_ROOMS = [{
                 "quantity": 1
             }]
         }, {
-            "level": 13,
+            "level": 20,
             "name": "Rug",
             "materials": [{
                 "name": "Bolt of cloth",
@@ -3869,7 +3851,7 @@ const CONSTRUCTION_ROOMS = [{
                 "name": "Mithril plateskirt",
                 "quantity": 1
             }],
-            "experience": "135 \n 25",
+            "experience": "135 ,  25",
             "useful": false,
             "note": null,
             "requirement": "68",
@@ -3896,7 +3878,7 @@ const CONSTRUCTION_ROOMS = [{
                 "name": "Adamant plateskirt",
                 "quantity": 1
             }],
-            "experience": "150 \n 25",
+            "experience": "150 ,  25",
             "useful": false,
             "note": null,
             "requirement": "88",
@@ -3923,7 +3905,7 @@ const CONSTRUCTION_ROOMS = [{
                 "name": "Rune plateskirt",
                 "quantity": 1
             }],
-            "experience": "165 \n 25",
+            "experience": "165 ,  25",
             "useful": false,
             "note": null,
             "requirement": "99",
@@ -3951,7 +3933,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 180,
             "useful": false,
-            "note": "Crawling hand\nCockatrice\nBasilisk",
+            "note": "Crawling hand, Cockatrice, Basilisk",
             "requirement": null,
             "tools": [{
                 "name": "Hammer",
@@ -3969,7 +3951,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 280,
             "useful": false,
-            "note": "Kurask\nAbyssal demon",
+            "note": "Kurask, Abyssal demon",
             "requirement": null,
             "tools": [{
                 "name": "Hammer",
@@ -3982,15 +3964,15 @@ const CONSTRUCTION_ROOMS = [{
             "level": 78,
             "name": "Gilded display",
             "materials": [{
-                "name": "Mahogany plank x2[a]",
-                "quantity": 1
+                "name": "Mahogany plank",
+                "quantity": 2
             }, {
                 "name": "Gold leaf",
                 "quantity": 2
             }],
             "experience": 600,
             "useful": false,
-            "note": "King Black Dragon\nKalphite Queen\nVorkath[a]\nAlchemical Hydra[a]",
+            "note": "King Black Dragon, Kalphite Queen, Vorkath[a], Alchemical Hydra[a]",
             "requirement": null,
             "tools": [{
                 "name": "Hammer",
@@ -4034,7 +4016,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 180,
             "useful": false,
-            "note": "Mounted swordfish\nMounted harpoonfish\nMounted giant blue krill\nMounted golden haddock\nMounted orangefin",
+            "note": "Mounted swordfish, Mounted harpoonfish, Mounted giant blue krill, Mounted golden haddock, Mounted orangefin",
             "requirement": null,
             "tools": [{
                 "name": "Hammer",
@@ -4052,7 +4034,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 280,
             "useful": false,
-            "note": "Mounted shark\nMounted huge halibut\nMounted purplefin\nMounted swift marlin",
+            "note": "Mounted shark, Mounted huge halibut, Mounted purplefin, Mounted swift marlin",
             "requirement": null,
             "tools": [{
                 "name": "Hammer",
@@ -4070,7 +4052,7 @@ const CONSTRUCTION_ROOMS = [{
     }, {
         "name": "Stairs/Rugs",
         "items": [{
-            "level": 13,
+            "level": 25,
             "name": "Rug",
             "materials": [{
                 "name": "Bolt of cloth",
@@ -4287,8 +4269,8 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": null,
             "useful": true,
-            "note": "14",
-            "requirement": null,
+            "note": null,
+            "requirement": "14",
             "tools": [{
                 "name": "Hammer",
                 "quantity": 1
@@ -4320,8 +4302,8 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": null,
             "useful": true,
-            "note": "44",
-            "requirement": null,
+            "note": null,
+            "requirement": "44",
             "tools": [{
                 "name": "Hammer",
                 "quantity": 1
@@ -4353,8 +4335,8 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": null,
             "useful": true,
-            "note": "90",
-            "requirement": null,
+            "note": null,
+            "requirement": "90",
             "tools": [{
                 "name": "Hammer",
                 "quantity": 1
@@ -4364,8 +4346,8 @@ const CONSTRUCTION_ROOMS = [{
             }]
         }],
         "meta": {
-            "fLabel": "Level",
-            "gLabel": null,
+            "fLabel": null,
+            "gLabel": "Runecraft Level",
             "hLabel": null
         }
     }]
@@ -4423,7 +4405,7 @@ const CONSTRUCTION_ROOMS = [{
     }, {
         "name": "Rug",
         "items": [{
-            "level": 13,
+            "level": 27,
             "name": "Rug",
             "materials": [{
                 "name": "Bolt of cloth",
@@ -5154,8 +5136,14 @@ const CONSTRUCTION_ROOMS = [{
             "level": 53,
             "name": "Undead combat dummy",
             "materials": [{
-                "name": "Combat dummy",
-                "quantity": 1
+                "name": "Teak plank",
+                "quantity": 0
+            }, {
+                "name": "Bolt of cloth",
+                "quantity": 0
+            }, {
+                "name": "Bucket of sand",
+                "quantity": 0
             }, {
                 "name": "Black mask",
                 "quantity": 1
@@ -5166,7 +5154,7 @@ const CONSTRUCTION_ROOMS = [{
             "experience": 220,
             "useful": false,
             "note": null,
-            "requirement": null,
+            "requirement": "Priest in Peril",
             "tools": [{
                 "name": "Hammer",
                 "quantity": 1
@@ -5178,8 +5166,20 @@ const CONSTRUCTION_ROOMS = [{
             "level": 58,
             "name": "Ornate undead combat dummy",
             "materials": [{
-                "name": "Undead combat dummy",
-                "quantity": 1
+                "name": "Teak plank",
+                "quantity": 0
+            }, {
+                "name": "Bolt of cloth",
+                "quantity": 0
+            }, {
+                "name": "Bucket of sand",
+                "quantity": 0
+            }, {
+                "name": "Black mask",
+                "quantity": 0
+            }, {
+                "name": "Bucket of slime",
+                "quantity": 0
             }, {
                 "name": "Gold leaf",
                 "quantity": 1
@@ -5187,7 +5187,7 @@ const CONSTRUCTION_ROOMS = [{
             "experience": 300,
             "useful": false,
             "note": null,
-            "requirement": null,
+            "requirement": "Priest in Peril",
             "tools": [{
                 "name": "Hammer",
                 "quantity": 1
@@ -5314,7 +5314,7 @@ const CONSTRUCTION_ROOMS = [{
     }, {
         "name": "Decoration",
         "items": [{
-            "level": 1,
+            "level": 32,
             "name": "Greenman carving",
             "materials": [{
                 "name": "Greenman carving",
@@ -5332,7 +5332,7 @@ const CONSTRUCTION_ROOMS = [{
                 "quantity": 1
             }]
         }, {
-            "level": 16,
+            "level": 32,
             "name": "Oak wall decoration",
             "materials": [{
                 "name": "Oak plank",
@@ -5467,7 +5467,7 @@ const CONSTRUCTION_ROOMS = [{
     "sections": [{
         "name": "Bookcase",
         "items": [{
-            "level": 4,
+            "level": 35,
             "name": "Wooden bookcase",
             "materials": [{
                 "name": "Plank",
@@ -5488,7 +5488,7 @@ const CONSTRUCTION_ROOMS = [{
                 "quantity": 1
             }]
         }, {
-            "level": 29,
+            "level": 35,
             "name": "Oak bookcase",
             "materials": [{
                 "name": "Oak plank",
@@ -5559,7 +5559,7 @@ const CONSTRUCTION_ROOMS = [{
                 "name": "Teak plank",
                 "quantity": 3
             }, {
-                "name": "Amulet of glory (uncharged)",
+                "name": "Amulet of glory",
                 "quantity": 1
             }],
             "experience": 290,
@@ -5580,7 +5580,7 @@ const CONSTRUCTION_ROOMS = [{
                 "name": "Teak plank",
                 "quantity": 3
             }, {
-                "name": "Cape of legends",
+                "name": "Cape of legends (After Legends' Quest)",
                 "quantity": 1
             }],
             "experience": 300,
@@ -5601,7 +5601,7 @@ const CONSTRUCTION_ROOMS = [{
                 "name": "Teak plank",
                 "quantity": 3
             }, {
-                "name": "Mythical cape",
+                "name": "Mythical cape (after Dragon Slayer II)",
                 "quantity": 1
             }],
             "experience": 370,
@@ -5636,7 +5636,7 @@ const CONSTRUCTION_ROOMS = [{
             "experience": 314,
             "useful": false,
             "note": null,
-            "requirement": "Sheep Shearer \nThe Restless Ghost \nCook's Assistant \nRune Mysteries",
+            "requirement": "Sheep Shearer , The Restless Ghost , Cook's Assistant , Rune Mysteries",
             "tools": [{
                 "name": "Hammer",
                 "quantity": 1
@@ -5657,7 +5657,7 @@ const CONSTRUCTION_ROOMS = [{
             "experience": 314,
             "useful": false,
             "note": null,
-            "requirement": "Prince Ali Rescue \nTourist Trap\nThe Feud \nThe Golem",
+            "requirement": "Prince Ali Rescue , Tourist Trap, The Feud , The Golem",
             "tools": [{
                 "name": "Hammer",
                 "quantity": 1
@@ -5678,7 +5678,7 @@ const CONSTRUCTION_ROOMS = [{
             "experience": 314,
             "useful": false,
             "note": null,
-            "requirement": "Shades of Mort'ton \nHaunted Mine \nCreature of Fenkenstrain \nGhosts Ahoy",
+            "requirement": "Shades of Mort'ton , Haunted Mine , Creature of Fenkenstrain , Ghosts Ahoy",
             "tools": [{
                 "name": "Hammer",
                 "quantity": 1
@@ -5699,7 +5699,7 @@ const CONSTRUCTION_ROOMS = [{
             "experience": 464,
             "useful": false,
             "note": null,
-            "requirement": "Pirate's Treasure \nTai Bwo Wannai Trio \nShilo Village",
+            "requirement": "Pirate's Treasure , Tai Bwo Wannai Trio , Shilo Village",
             "tools": [{
                 "name": "Hammer",
                 "quantity": 1
@@ -5900,7 +5900,7 @@ const CONSTRUCTION_ROOMS = [{
     }, {
         "name": "Stairs/Rugs",
         "items": [{
-            "level": 13,
+            "level": 35,
             "name": "Rug",
             "materials": [{
                 "name": "Bolt of cloth",
@@ -5918,7 +5918,7 @@ const CONSTRUCTION_ROOMS = [{
                 "quantity": 1
             }]
         }, {
-            "level": 27,
+            "level": 35,
             "name": "Oak staircase",
             "materials": [{
                 "name": "Oak plank",
@@ -5939,7 +5939,7 @@ const CONSTRUCTION_ROOMS = [{
                 "quantity": 1
             }]
         }, {
-            "level": 28,
+            "level": 35,
             "name": "Deadman rug",
             "materials": [{
                 "name": "Bolt of cloth",
@@ -6431,8 +6431,8 @@ const CONSTRUCTION_ROOMS = [{
             "level": 48,
             "name": "Teak house",
             "materials": [{
-                "name": "Oak house",
-                "quantity": 1
+                "name": "Oak plank",
+                "quantity": 0
             }, {
                 "name": "Teak plank",
                 "quantity": 4
@@ -6452,8 +6452,11 @@ const CONSTRUCTION_ROOMS = [{
             "level": 59,
             "name": "Mahogany house",
             "materials": [{
-                "name": "Teak house",
-                "quantity": 1
+                "name": "Oak plank",
+                "quantity": 0
+            }, {
+                "name": "Teak plank",
+                "quantity": 0
             }, {
                 "name": "Mahogany plank",
                 "quantity": 4
@@ -6473,8 +6476,11 @@ const CONSTRUCTION_ROOMS = [{
             "level": 70,
             "name": "Consecrated house",
             "materials": [{
-                "name": "Mahogany house",
-                "quantity": 1
+                "name": "Oak plank",
+                "quantity": 0
+            }, {
+                "name": "Teak plank",
+                "quantity": 0
             }, {
                 "name": "Mahogany plank",
                 "quantity": 4
@@ -6497,8 +6503,11 @@ const CONSTRUCTION_ROOMS = [{
             "level": 81,
             "name": "Desecrated house",
             "materials": [{
-                "name": "Consecrated house",
-                "quantity": 1
+                "name": "Oak plank",
+                "quantity": 0
+            }, {
+                "name": "Teak plank",
+                "quantity": 0
             }, {
                 "name": "Mahogany plank",
                 "quantity": 1
@@ -6521,8 +6530,14 @@ const CONSTRUCTION_ROOMS = [{
             "level": 92,
             "name": "Nature house",
             "materials": [{
-                "name": "Desecrated house",
-                "quantity": 1
+                "name": "Oak plank",
+                "quantity": 0
+            }, {
+                "name": "Teak plank",
+                "quantity": 0
+            }, {
+                "name": "Limestone brick",
+                "quantity": 0
             }, {
                 "name": "Mahogany plank",
                 "quantity": 1
@@ -6667,7 +6682,7 @@ const CONSTRUCTION_ROOMS = [{
     "sections": [{
         "name": "Bookcase",
         "items": [{
-            "level": 4,
+            "level": 40,
             "name": "Wooden bookcase",
             "materials": [{
                 "name": "Plank",
@@ -6688,7 +6703,7 @@ const CONSTRUCTION_ROOMS = [{
                 "quantity": 1
             }]
         }, {
-            "level": 29,
+            "level": 40,
             "name": "Oak bookcase",
             "materials": [{
                 "name": "Oak plank",
@@ -7305,8 +7320,8 @@ const CONSTRUCTION_ROOMS = [{
             "level": 64,
             "name": "Teak armour case",
             "materials": [{
-                "name": "Oak armour case",
-                "quantity": 1
+                "name": "Oak plank",
+                "quantity": 0
             }, {
                 "name": "Teak plank",
                 "quantity": 3
@@ -7326,8 +7341,11 @@ const CONSTRUCTION_ROOMS = [{
             "level": 82,
             "name": "Mahogany armour case",
             "materials": [{
-                "name": "Teak armour case",
-                "quantity": 1
+                "name": "Oak plank",
+                "quantity": 0
+            }, {
+                "name": "Teak plank",
+                "quantity": 0
             }, {
                 "name": "Mahogany plank",
                 "quantity": 3
@@ -7346,7 +7364,6 @@ const CONSTRUCTION_ROOMS = [{
         }],
         "meta": {
             "fLabel": "Storage Limit",
-            "gLabel": null,
             "hLabel": "Tools needed"
         }
     }, {
@@ -7373,8 +7390,8 @@ const CONSTRUCTION_ROOMS = [{
             "level": 63,
             "name": "Teak cape rack",
             "materials": [{
-                "name": "Oak cape rack",
-                "quantity": 1
+                "name": "Oak plank",
+                "quantity": 0
             }, {
                 "name": "Teak plank",
                 "quantity": 4
@@ -7394,8 +7411,11 @@ const CONSTRUCTION_ROOMS = [{
             "level": 72,
             "name": "Mahogany cape rack",
             "materials": [{
-                "name": "Teak cape rack",
-                "quantity": 1
+                "name": "Oak plank",
+                "quantity": 0
+            }, {
+                "name": "Teak plank",
+                "quantity": 0
             }, {
                 "name": "Mahogany plank",
                 "quantity": 4
@@ -7415,8 +7435,11 @@ const CONSTRUCTION_ROOMS = [{
             "level": 81,
             "name": "Gilded cape rack",
             "materials": [{
-                "name": "Mahogany cape rack",
-                "quantity": 1
+                "name": "Oak plank",
+                "quantity": 0
+            }, {
+                "name": "Teak plank",
+                "quantity": 0
             }, {
                 "name": "Mahogany plank",
                 "quantity": 4
@@ -7439,8 +7462,17 @@ const CONSTRUCTION_ROOMS = [{
             "level": 90,
             "name": "Marble cape rack",
             "materials": [{
-                "name": "Gilded cape rack",
-                "quantity": 1
+                "name": "Oak plank",
+                "quantity": 0
+            }, {
+                "name": "Teak plank",
+                "quantity": 0
+            }, {
+                "name": "Mahogany plank",
+                "quantity": 0
+            }, {
+                "name": "Gold leaf",
+                "quantity": 0
             }, {
                 "name": "Marble block",
                 "quantity": 1
@@ -7460,8 +7492,20 @@ const CONSTRUCTION_ROOMS = [{
             "level": 99,
             "name": "Magical cape rack",
             "materials": [{
-                "name": "Marble cape rack",
-                "quantity": 1
+                "name": "Oak plank",
+                "quantity": 0
+            }, {
+                "name": "Teak plank",
+                "quantity": 0
+            }, {
+                "name": "Mahogany plank",
+                "quantity": 0
+            }, {
+                "name": "Gold leaf",
+                "quantity": 0
+            }, {
+                "name": "Marble block",
+                "quantity": 0
             }, {
                 "name": "Magic stone",
                 "quantity": 1
@@ -7479,9 +7523,7 @@ const CONSTRUCTION_ROOMS = [{
             }]
         }],
         "meta": {
-            "fLabel": "Storage Limit",
-            "gLabel": null,
-            "hLabel": null
+            "fLabel": "Storage Limit"
         }
     }, {
         "name": "Fancy dress box",
@@ -7507,8 +7549,8 @@ const CONSTRUCTION_ROOMS = [{
             "level": 62,
             "name": "Teak fancy dress box",
             "materials": [{
-                "name": "Oak fancy dress box",
-                "quantity": 1
+                "name": "Oak plank",
+                "quantity": 0
             }, {
                 "name": "Teak plank",
                 "quantity": 2
@@ -7528,8 +7570,11 @@ const CONSTRUCTION_ROOMS = [{
             "level": 80,
             "name": "Mahogany fancy dress box",
             "materials": [{
-                "name": "Teak fancy dress box",
-                "quantity": 1
+                "name": "Oak plank",
+                "quantity": 0
+            }, {
+                "name": "Teak plank",
+                "quantity": 0
             }, {
                 "name": "Mahogany plank",
                 "quantity": 2
@@ -7547,9 +7592,7 @@ const CONSTRUCTION_ROOMS = [{
             }]
         }],
         "meta": {
-            "fLabel": "Storage Limit",
-            "gLabel": null,
-            "hLabel": null
+            "fLabel": "Storage Limit"
         }
     }, {
         "name": "Magic wardrobe",
@@ -7575,9 +7618,6 @@ const CONSTRUCTION_ROOMS = [{
             "level": 51,
             "name": "Carved oak magic wardrobe",
             "materials": [{
-                "name": "Oak magic wardrobe",
-                "quantity": 1
-            }, {
                 "name": "Oak plank",
                 "quantity": 6
             }],
@@ -7596,8 +7636,8 @@ const CONSTRUCTION_ROOMS = [{
             "level": 60,
             "name": "Teak magic wardrobe",
             "materials": [{
-                "name": "Carved oak magic wardrobe",
-                "quantity": 1
+                "name": "Oak plank",
+                "quantity": 0
             }, {
                 "name": "Teak plank",
                 "quantity": 4
@@ -7617,8 +7657,8 @@ const CONSTRUCTION_ROOMS = [{
             "level": 69,
             "name": "Carved teak magic wardrobe",
             "materials": [{
-                "name": "Teak magic wardrobe",
-                "quantity": 1
+                "name": "Oak plank",
+                "quantity": 0
             }, {
                 "name": "Teak plank",
                 "quantity": 6
@@ -7638,8 +7678,11 @@ const CONSTRUCTION_ROOMS = [{
             "level": 78,
             "name": "Mahogany magic wardrobe",
             "materials": [{
-                "name": "Carved teak magic wardrobe",
-                "quantity": 1
+                "name": "Oak plank",
+                "quantity": 0
+            }, {
+                "name": "Teak plank",
+                "quantity": 0
             }, {
                 "name": "Mahogany plank",
                 "quantity": 4
@@ -7659,8 +7702,11 @@ const CONSTRUCTION_ROOMS = [{
             "level": 87,
             "name": "Gilded magic wardrobe",
             "materials": [{
-                "name": "Mahogany magic wardrobe",
-                "quantity": 1
+                "name": "Oak plank",
+                "quantity": 0
+            }, {
+                "name": "Teak plank",
+                "quantity": 0
             }, {
                 "name": "Mahogany plank",
                 "quantity": 4
@@ -7683,8 +7729,17 @@ const CONSTRUCTION_ROOMS = [{
             "level": 96,
             "name": "Marble magic wardrobe",
             "materials": [{
-                "name": "Gilded magic wardrobe",
-                "quantity": 1
+                "name": "Oak plank",
+                "quantity": 0
+            }, {
+                "name": "Teak plank",
+                "quantity": 0
+            }, {
+                "name": "Mahogany plank",
+                "quantity": 0
+            }, {
+                "name": "Gold leaf",
+                "quantity": 0
             }, {
                 "name": "Marble block",
                 "quantity": 1
@@ -7703,8 +7758,6 @@ const CONSTRUCTION_ROOMS = [{
         }],
         "meta": {
             "fLabel": "Storage Limit",
-            "gLabel": null,
-            "hLabel": null
         }
     }, {
         "name": "Toy box",
@@ -7792,8 +7845,8 @@ const CONSTRUCTION_ROOMS = [{
             "level": 66,
             "name": "Teak treasure chest",
             "materials": [{
-                "name": "Oak treasure chest",
-                "quantity": 1
+                "name": "Oak plank",
+                "quantity": 0
             }, {
                 "name": "Teak plank",
                 "quantity": 2
@@ -7813,8 +7866,11 @@ const CONSTRUCTION_ROOMS = [{
             "level": 84,
             "name": "Mahogany treasure chest",
             "materials": [{
-                "name": "Teak treasure chest",
-                "quantity": 1
+                "name": "Oak plank",
+                "quantity": 0
+            }, {
+                "name": "Teak plank",
+                "quantity": 0
             }, {
                 "name": "Mahogany plank",
                 "quantity": 2
@@ -7833,8 +7889,6 @@ const CONSTRUCTION_ROOMS = [{
         }],
         "meta": {
             "fLabel": "Storage Limit",
-            "gLabel": null,
-            "hLabel": null
         }
     }]
 }, {
@@ -8540,7 +8594,7 @@ const CONSTRUCTION_ROOMS = [{
     }, {
         "name": "Rug",
         "items": [{
-            "level": 2,
+            "level": 45,
             "name": "Brown rug",
             "materials": [{
                 "name": "Bolt of cloth",
@@ -8558,7 +8612,7 @@ const CONSTRUCTION_ROOMS = [{
                 "quantity": 1
             }]
         }, {
-            "level": 13,
+            "level": 45,
             "name": "Rug",
             "materials": [{
                 "name": "Bolt of cloth",
@@ -8576,7 +8630,7 @@ const CONSTRUCTION_ROOMS = [{
                 "quantity": 1
             }]
         }, {
-            "level": 28,
+            "level": 45,
             "name": "Deadman rug",
             "materials": [{
                 "name": "Bolt of cloth",
@@ -8769,8 +8823,11 @@ const CONSTRUCTION_ROOMS = [{
             }]
         }, {
             "level": 80,
-            "name": "Raging echoes portal[a]",
+            "name": "Raging echoes portal",
             "materials": [{
+                "name": "Marble block",
+                "quantity": 3
+            }, {
                 "name": "Raging echoes portal scroll",
                 "quantity": 1
             }],
@@ -8799,7 +8856,7 @@ const CONSTRUCTION_ROOMS = [{
     "sections": [{
         "name": "Big plant / Small plant",
         "items": [{
-            "level": 1,
+            "level": 55,
             "name": "Pumpkin",
             "materials": [{
                 "name": "Magical pumpkin",
@@ -8811,7 +8868,7 @@ const CONSTRUCTION_ROOMS = [{
             "requirement": null,
             "tools": []
         }, {
-            "level": 1,
+            "level": 55,
             "name": "Beehive (style 1)",
             "materials": [{
                 "name": "Sturdy beehive parts",
@@ -8829,7 +8886,7 @@ const CONSTRUCTION_ROOMS = [{
                 "quantity": 1
             }]
         }, {
-            "level": 1,
+            "level": 55,
             "name": "Beehive (style 2)",
             "materials": [{
                 "name": "Sturdy beehive parts",
@@ -8891,7 +8948,7 @@ const CONSTRUCTION_ROOMS = [{
     }, {
         "name": "Big plant 2 / Small plant 2",
         "items": [{
-            "level": 1,
+            "level": 55,
             "name": "Pumpkin",
             "materials": [{
                 "name": "Magical pumpkin",
@@ -8903,7 +8960,7 @@ const CONSTRUCTION_ROOMS = [{
             "requirement": null,
             "tools": []
         }, {
-            "level": 1,
+            "level": 55,
             "name": "Beehive (style 1)",
             "materials": [{
                 "name": "Sturdy beehive parts",
@@ -8921,7 +8978,7 @@ const CONSTRUCTION_ROOMS = [{
                 "quantity": 1
             }]
         }, {
-            "level": 1,
+            "level": 55,
             "name": "Beehive (style 2)",
             "materials": [{
                 "name": "Sturdy beehive parts",
@@ -8983,7 +9040,7 @@ const CONSTRUCTION_ROOMS = [{
     }, {
         "name": "Centrepiece",
         "items": [{
-            "level": 1,
+            "level": 55,
             "name": "Exit portal",
             "materials": [{
                 "name": "Iron bar",
@@ -9001,7 +9058,7 @@ const CONSTRUCTION_ROOMS = [{
                 "quantity": 1
             }]
         }, {
-            "level": 1,
+            "level": 55,
             "name": "Greenman statue",
             "materials": [{
                 "name": "Greenman statue",
@@ -9019,7 +9076,7 @@ const CONSTRUCTION_ROOMS = [{
                 "quantity": 1
             }]
         }, {
-            "level": 1,
+            "level": 55,
             "name": "Exit portal (Annihilation unlock)",
             "materials": [{
                 "name": "Iron bar",
@@ -9374,9 +9431,9 @@ const CONSTRUCTION_ROOMS = [{
             "hLabel": null
         }
     }, {
-        "name": "Item",
+        "name": "Tip jar",
         "items": [{
-            "level": 40,
+            "level": 55,
             "name": "Tip jar",
             "materials": [{
                 "name": "Mahogany plank",
@@ -9416,7 +9473,7 @@ const CONSTRUCTION_ROOMS = [{
     "sections": [{
         "name": "Decoration",
         "items": [{
-            "level": 1,
+            "level": 60,
             "name": "Greenman carving",
             "materials": [{
                 "name": "Greenman carving",
@@ -9434,7 +9491,7 @@ const CONSTRUCTION_ROOMS = [{
                 "quantity": 1
             }]
         }, {
-            "level": 16,
+            "level": 60,
             "name": "Oak wall decoration",
             "materials": [{
                 "name": "Oak plank",
@@ -9452,7 +9509,7 @@ const CONSTRUCTION_ROOMS = [{
                 "quantity": 1
             }]
         }, {
-            "level": 36,
+            "level": 60,
             "name": "Teak wall decoration",
             "materials": [{
                 "name": "Teak plank",
@@ -9470,7 +9527,7 @@ const CONSTRUCTION_ROOMS = [{
                 "quantity": 1
             }]
         }, {
-            "level": 56,
+            "level": 60,
             "name": "Gilded decoration",
             "materials": [{
                 "name": "Mahogany plank",
@@ -9725,7 +9782,7 @@ const CONSTRUCTION_ROOMS = [{
     }, {
         "name": "Seating",
         "items": [{
-            "level": 44,
+            "level": 60,
             "name": "Carved teak bench",
             "materials": [{
                 "name": "Teak plank",
@@ -9743,7 +9800,7 @@ const CONSTRUCTION_ROOMS = [{
                 "quantity": 1
             }]
         }, {
-            "level": 52,
+            "level": 60,
             "name": "Mahogany bench",
             "materials": [{
                 "name": "Mahogany plank",
@@ -10277,7 +10334,7 @@ const CONSTRUCTION_ROOMS = [{
                 "name": "Spirit sapling",
                 "quantity": 1
             }],
-            "experience": "350 \n 350",
+            "experience": "350 ,  350",
             "useful": true,
             "note": null,
             "requirement": "83",
@@ -10331,7 +10388,7 @@ const CONSTRUCTION_ROOMS = [{
                 "name": "Fairy enchantment",
                 "quantity": 1
             }],
-            "experience": "885 \n 885",
+            "experience": "885 ,  885",
             "useful": true,
             "note": null,
             "requirement": "83 + Fairytale II - Cure a Queen",
@@ -10419,7 +10476,7 @@ const CONSTRUCTION_ROOMS = [{
                 "name": "Topiary hedge (bagged)",
                 "quantity": 1
             }],
-            "experience": "141 \n 141",
+            "experience": "141 ,  141",
             "useful": false,
             "note": null,
             "requirement": null,
@@ -10598,8 +10655,8 @@ const CONSTRUCTION_ROOMS = [{
                 "name": "Steel bar",
                 "quantity": 20
             }, {
-                "name": "50,000",
-                "quantity": 1
+                "name": "Coins",
+                "quantity": "50,000"
             }],
             "experience": 623,
             "useful": false,
@@ -10619,8 +10676,8 @@ const CONSTRUCTION_ROOMS = [{
                 "name": "Bucket of water",
                 "quantity": 20
             }, {
-                "name": "100,000",
-                "quantity": 1
+                "name": "Coins",
+                "quantity": "100,000"
             }],
             "experience": 326,
             "useful": false,
@@ -10640,8 +10697,8 @@ const CONSTRUCTION_ROOMS = [{
                 "name": "Tinderbox",
                 "quantity": 20
             }, {
-                "name": "125,000",
-                "quantity": 1
+                "name": "Coins",
+                "quantity": "125,000"
             }],
             "experience": 357,
             "useful": false,
@@ -10658,8 +10715,8 @@ const CONSTRUCTION_ROOMS = [{
             "level": 83,
             "name": "Rocnar",
             "materials": [{
-                "name": "150000",
-                "quantity": 1
+                "name": "Coins",
+                "quantity": "150,000"
             }],
             "experience": 387,
             "useful": false,
@@ -10685,7 +10742,7 @@ const CONSTRUCTION_ROOMS = [{
             "name": "Skeleton guard",
             "materials": [{
                 "name": "Coins",
-                "quantity": 50000
+                "quantity": "50,000"
             }],
             "experience": 223,
             "useful": false,
@@ -10697,7 +10754,7 @@ const CONSTRUCTION_ROOMS = [{
             "name": "Guard dog",
             "materials": [{
                 "name": "Coins",
-                "quantity": 75000
+                "quantity": "75,000"
             }],
             "experience": 273,
             "useful": false,
@@ -10709,7 +10766,7 @@ const CONSTRUCTION_ROOMS = [{
             "name": "Hobgoblin",
             "materials": [{
                 "name": "Coins",
-                "quantity": 100000
+                "quantity": "100,000"
             }],
             "experience": 316,
             "useful": false,
@@ -10721,7 +10778,7 @@ const CONSTRUCTION_ROOMS = [{
             "name": "Baby red dragon",
             "materials": [{
                 "name": "Coins",
-                "quantity": 150000
+                "quantity": "150,000"
             }],
             "experience": 387,
             "useful": false,
@@ -10733,7 +10790,7 @@ const CONSTRUCTION_ROOMS = [{
             "name": "Huge spider",
             "materials": [{
                 "name": "Coins",
-                "quantity": 200000
+                "quantity": "200,000"
             }],
             "experience": 447,
             "useful": false,
@@ -10745,7 +10802,7 @@ const CONSTRUCTION_ROOMS = [{
             "name": "Troll guard",
             "materials": [{
                 "name": "Coins",
-                "quantity": 1000000
+                "quantity": "1,000,000"
             }],
             "experience": 1000,
             "useful": false,
@@ -10757,7 +10814,7 @@ const CONSTRUCTION_ROOMS = [{
             "name": "Hellhound",
             "materials": [{
                 "name": "Coins",
-                "quantity": 5000000
+                "quantity": "5,000,000"
             }],
             "experience": 2236,
             "useful": false,
@@ -11049,8 +11106,6 @@ const CONSTRUCTION_ROOMS = [{
             }]
         }],
         "meta": {
-            "fLabel": null,
-            "gLabel": null,
             "hLabel": "Tools needed"
         }
     }, {
@@ -11125,7 +11180,7 @@ const CONSTRUCTION_ROOMS = [{
             "name": "Skeleton guard",
             "materials": [{
                 "name": "Coins",
-                "quantity": 50000
+                "quantity": "50,000"
             }],
             "experience": 223,
             "useful": false,
@@ -11137,7 +11192,7 @@ const CONSTRUCTION_ROOMS = [{
             "name": "Guard dog",
             "materials": [{
                 "name": "Coins",
-                "quantity": 75000
+                "quantity": "75,000"
             }],
             "experience": 273,
             "useful": false,
@@ -11149,7 +11204,7 @@ const CONSTRUCTION_ROOMS = [{
             "name": "Hobgoblin",
             "materials": [{
                 "name": "Coins",
-                "quantity": 100000
+                "quantity": "100,000"
             }],
             "experience": 316,
             "useful": false,
@@ -11161,7 +11216,7 @@ const CONSTRUCTION_ROOMS = [{
             "name": "Baby red dragon",
             "materials": [{
                 "name": "Coins",
-                "quantity": 150000
+                "quantity": "150,000"
             }],
             "experience": 387,
             "useful": false,
@@ -11173,7 +11228,7 @@ const CONSTRUCTION_ROOMS = [{
             "name": "Huge spider",
             "materials": [{
                 "name": "Coins",
-                "quantity": 200000
+                "quantity": "200,000"
             }],
             "experience": 447,
             "useful": false,
@@ -11185,7 +11240,7 @@ const CONSTRUCTION_ROOMS = [{
             "name": "Troll guard",
             "materials": [{
                 "name": "Coins",
-                "quantity": 1000000
+                "quantity": "1,000,000"
             }],
             "experience": 1000,
             "useful": false,
@@ -11197,7 +11252,7 @@ const CONSTRUCTION_ROOMS = [{
             "name": "Hellhound",
             "materials": [{
                 "name": "Coins",
-                "quantity": 5000000
+                "quantity": "5,000,000"
             }],
             "experience": 2236,
             "useful": false,
@@ -11485,7 +11540,7 @@ const CONSTRUCTION_ROOMS = [{
             "name": "Spike trap",
             "materials": [{
                 "name": "Coins",
-                "quantity": 50000
+                "quantity": "50,000"
             }],
             "experience": 223,
             "useful": false,
@@ -11497,7 +11552,7 @@ const CONSTRUCTION_ROOMS = [{
             "name": "Man trap",
             "materials": [{
                 "name": "Coins",
-                "quantity": 75000
+                "quantity": "75,000"
             }],
             "experience": 273,
             "useful": false,
@@ -11509,7 +11564,7 @@ const CONSTRUCTION_ROOMS = [{
             "name": "Tangle vine",
             "materials": [{
                 "name": "Coins",
-                "quantity": 100000
+                "quantity": "100,000"
             }],
             "experience": 316,
             "useful": false,
@@ -11521,7 +11576,7 @@ const CONSTRUCTION_ROOMS = [{
             "name": "Marble trap",
             "materials": [{
                 "name": "Coins",
-                "quantity": 150000
+                "quantity": "150,000"
             }],
             "experience": 387,
             "useful": false,
@@ -11533,7 +11588,7 @@ const CONSTRUCTION_ROOMS = [{
             "name": "Teleport trap",
             "materials": [{
                 "name": "Coins",
-                "quantity": 200000
+                "quantity": "200,000"
             }],
             "experience": 447,
             "useful": false,
@@ -11596,7 +11651,7 @@ const CONSTRUCTION_ROOMS = [{
             "experience": 800,
             "useful": true,
             "note": null,
-            "requirement": null,
+            "requirement": "The Dig Site",
             "tools": [{
                 "name": "Hammer",
                 "quantity": 1
@@ -11607,13 +11662,13 @@ const CONSTRUCTION_ROOMS = [{
         }],
         "meta": {
             "fLabel": null,
-            "gLabel": null,
+            "gLabel": "Quest",
             "hLabel": "Tools needed"
         }
     }, {
         "name": "Curtains",
         "items": [{
-            "level": 2,
+            "level": 72,
             "name": "Torn curtains",
             "materials": [{
                 "name": "Plank",
@@ -11637,7 +11692,7 @@ const CONSTRUCTION_ROOMS = [{
                 "quantity": 1
             }]
         }, {
-            "level": 18,
+            "level": 72,
             "name": "Curtains",
             "materials": [{
                 "name": "Oak plank",
@@ -11658,7 +11713,7 @@ const CONSTRUCTION_ROOMS = [{
                 "quantity": 1
             }]
         }, {
-            "level": 40,
+            "level": 72,
             "name": "Opulent curtains",
             "materials": [{
                 "name": "Teak plank",
@@ -11679,7 +11734,7 @@ const CONSTRUCTION_ROOMS = [{
                 "quantity": 1
             }]
         }, {
-            "level": 65,
+            "level": 72,
             "name": "Raging echoes curtains",
             "materials": [{
                 "name": "Mahogany plank",
@@ -11711,7 +11766,7 @@ const CONSTRUCTION_ROOMS = [{
     }, {
         "name": "Rug",
         "items": [{
-            "level": 2,
+            "level": 72,
             "name": "Brown rug",
             "materials": [{
                 "name": "Bolt of cloth",
@@ -11729,7 +11784,7 @@ const CONSTRUCTION_ROOMS = [{
                 "quantity": 1
             }]
         }, {
-            "level": 13,
+            "level": 72,
             "name": "Rug",
             "materials": [{
                 "name": "Bolt of cloth",
@@ -11747,7 +11802,7 @@ const CONSTRUCTION_ROOMS = [{
                 "quantity": 1
             }]
         }, {
-            "level": 28,
+            "level": 72,
             "name": "Deadman rug",
             "materials": [{
                 "name": "Bolt of cloth",
@@ -11768,7 +11823,7 @@ const CONSTRUCTION_ROOMS = [{
                 "quantity": 1
             }]
         }, {
-            "level": 65,
+            "level": 72,
             "name": "Opulent rug",
             "materials": [{
                 "name": "Bolt of cloth",
@@ -11897,7 +11952,7 @@ const CONSTRUCTION_ROOMS = [{
     "sections": [{
         "name": "Decoration",
         "items": [{
-            "level": 66,
+            "level": 75,
             "name": "Round shield",
             "materials": [{
                 "name": "Oak plank",
@@ -11915,7 +11970,7 @@ const CONSTRUCTION_ROOMS = [{
                 "quantity": 1
             }]
         }, {
-            "level": 72,
+            "level": 75,
             "name": "Decorative blood",
             "materials": [{
                 "name": "Red dye",
@@ -12016,7 +12071,7 @@ const CONSTRUCTION_ROOMS = [{
     }, {
         "name": "Door",
         "items": [{
-            "level": 74,
+            "level": 75,
             "name": "Oak door",
             "materials": [{
                 "name": "Oak plank",
@@ -12081,7 +12136,7 @@ const CONSTRUCTION_ROOMS = [{
     }, {
         "name": "Lighting",
         "items": [{
-            "level": 72,
+            "level": 75,
             "name": "Candle",
             "materials": [{
                 "name": "Oak plank",
@@ -12159,7 +12214,7 @@ const CONSTRUCTION_ROOMS = [{
             "name": "Demon",
             "materials": [{
                 "name": "Coins",
-                "quantity": 500000
+                "quantity": "500,000"
             }],
             "experience": 707,
             "useful": false,
@@ -12171,7 +12226,7 @@ const CONSTRUCTION_ROOMS = [{
             "name": "Kalphite soldier",
             "materials": [{
                 "name": "Coins",
-                "quantity": 750000
+                "quantity": "750,000"
             }],
             "experience": 866,
             "useful": false,
@@ -12183,7 +12238,7 @@ const CONSTRUCTION_ROOMS = [{
             "name": "Tok-Xil",
             "materials": [{
                 "name": "Coins",
-                "quantity": 5000000
+                "quantity": "5,000,000"
             }],
             "experience": 2236,
             "useful": false,
@@ -12195,7 +12250,7 @@ const CONSTRUCTION_ROOMS = [{
             "name": "Dagannoth",
             "materials": [{
                 "name": "Coins",
-                "quantity": 7500000
+                "quantity": "7,500,000"
             }],
             "experience": 2738,
             "useful": false,
@@ -12207,7 +12262,7 @@ const CONSTRUCTION_ROOMS = [{
             "name": "Steel dragon",
             "materials": [{
                 "name": "Coins",
-                "quantity": 10000000
+                "quantity": "10,000,000"
             }],
             "experience": 3162,
             "useful": false,
@@ -12219,7 +12274,7 @@ const CONSTRUCTION_ROOMS = [{
             "name": "Rune dragon",
             "materials": [{
                 "name": "Coins",
-                "quantity": 25000000
+                "quantity": "25,000,000"
             }],
             "experience": 5000,
             "useful": false,
@@ -12448,7 +12503,7 @@ const CONSTRUCTION_ROOMS = [{
             "experience": 1490,
             "useful": true,
             "note": null,
-            "requirement": null,
+            "requirement": "Desert Treasure I , Icthlarin's Little Helper",
             "tools": [{
                 "name": "Hammer",
                 "quantity": 1
@@ -12475,7 +12530,7 @@ const CONSTRUCTION_ROOMS = [{
             "experience": 1957,
             "useful": true,
             "note": null,
-            "requirement": null,
+            "requirement": "Lunar Diplomacy",
             "tools": [{
                 "name": "Hammer",
                 "quantity": 1
@@ -12547,7 +12602,7 @@ const CONSTRUCTION_ROOMS = [{
             "experience": 3445,
             "useful": true,
             "note": null,
-            "requirement": null,
+            "requirement": "Desert Treasure I , Icthlarin's Little Helper , Lunar Diplomacy",
             "tools": [{
                 "name": "Hammer",
                 "quantity": 1
@@ -12558,7 +12613,7 @@ const CONSTRUCTION_ROOMS = [{
         }],
         "meta": {
             "fLabel": null,
-            "gLabel": null,
+            "gLabel": "Quest",
             "hLabel": null
         }
     }, {
@@ -12629,8 +12684,8 @@ const CONSTRUCTION_ROOMS = [{
                 "name": "Gold leaf",
                 "quantity": 1
             }, {
-                "name": "100,000,000",
-                "quantity": 1
+                "name": "Coins",
+                "quantity": "100,000,000"
             }],
             "experience": 800,
             "useful": false,
@@ -12690,7 +12745,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 605,
             "useful": true,
-            "note": "Ring of dueling\nGames necklace",
+            "note": "Ring of dueling, Games necklace",
             "requirement": null,
             "tools": [{
                 "name": "Hammer",
@@ -12717,7 +12772,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 1350,
             "useful": true,
-            "note": "Ring of dueling\nGames necklace\nCombat bracelet\nSkills necklace",
+            "note": "Ring of dueling, Games necklace, Combat bracelet, Skills necklace",
             "requirement": null,
             "tools": [{
                 "name": "Hammer",
@@ -12744,7 +12799,7 @@ const CONSTRUCTION_ROOMS = [{
             }],
             "experience": 2680,
             "useful": true,
-            "note": "Ring of dueling\nGames necklace\nCombat bracelet\nSkills necklace\nAmulet of glory\nRing of wealth",
+            "note": "Ring of dueling, Games necklace, Combat bracelet, Skills necklace, Amulet of glory, Ring of wealth",
             "requirement": null,
             "tools": [{
                 "name": "Hammer",
@@ -12792,6 +12847,7 @@ const CONSTRUCTION_ROOMS = [{
 }];
 
 const USEFUL_STORAGE_KEY = "constructionUsefulOnly";
+const AVAILABLE_STORAGE_KEY = "constructionAvailableOnly";
 
 function escapeHtml(value) {
     return String(value ?? "")
@@ -13003,23 +13059,23 @@ function parseRequirementValue(label, value) {
         return results;
     }
 
-    if (
-        normalizedLabel.includes("smithing level") ||
-        normalizedLabel.includes("farming level")
-    ) {
-        const numberMatch = text.match(/^\s*(\d+)/);
-        if (numberMatch) {
-            const skill = normalizedLabel.includes("smithing")
-                ? "Smithing"
-                : "Farming";
+    if (normalizedLabel.endsWith(" level")) {
+    const numberMatch = text.match(/^\s*(\d+)/);
 
-            results.push({
-                type: "skill",
-                skill,
-                required: Number(numberMatch[1]),
-                label: `${skill} level`
-            });
-        }
+    if (numberMatch) {
+        const skill = normalizedLabel
+            .replace(/\s+level$/, "")
+            .trim()
+            .replace(/\b\w/g, (char) => char.toUpperCase());
+
+        results.push({
+            type: "skill",
+            skill,
+            required: Number(numberMatch[1]),
+            label: `${skill} level`
+        });
+    }
+
 
         const plusQuest = text.match(/\+\s*(.+)$/);
         if (plusQuest) {
@@ -13042,7 +13098,7 @@ function parseRequirementValue(label, value) {
 
 function parseQuestList(text) {
     return String(text || "")
-        .split(/\r?\n/)
+        .split(/\r?, /)
         .map((quest) => quest.trim())
         .filter(Boolean)
         .map((quest) => ({
@@ -13275,7 +13331,7 @@ function renderMissing(status) {
     }
 
     if (status.toolStatus.missing.length) {
-        messages.push("Missing required tool(s)");
+        messages.push("Missing saw or hammer");
     }
 
     for (const entry of status.missingLevels) {
@@ -13328,23 +13384,18 @@ function renderBuild(item, section, itemNameMap, obtainedSet, rolledSet) {
                 ? "Requirement required"
                 : "Missing materials";
 
-    const usefulLabel = item.useful
-        ? `<span class="construction-useful">Useful</span>`
-        : "";
-
     return `
-        <article class="construction-option construction-option--${status.state}">
-            <div class="construction-option-header">
+        <article class="construction-hotspot construction-hotspot--${status.state}">
+            <div class="construction-hotspot-header">
                 <h3>${wikiLink(item.name)}</h3>
-                <div class="construction-option-labels">
-                    ${usefulLabel}
+                <div class="construction-hotspot-labels">
                     <span class="construction-status">${statusText}</span>
                 </div>
             </div>
 
             <div class="construction-requirements">
                 <span>
-                    Construction:
+                    <img src="/images/Construction_icon.png" alt="Construction level">
                     <strong>${escapeHtml(item.level)}</strong>
                 </span>
             </div>
@@ -13370,12 +13421,19 @@ function isUsefulOnlyEnabled() {
     return window.localStorage.getItem(USEFUL_STORAGE_KEY) === "true";
 }
 
+function isAvailableOnlyEnabled() {
+    if (typeof window === "undefined") return false;
+
+    return window.localStorage.getItem(AVAILABLE_STORAGE_KEY) === "true";
+}
+
 function renderSubsection(
     section,
     itemNameMap,
     obtainedSet,
     rolledSet,
     usefulOnly,
+    availableOnly,
     roomName,
     index
 ) {
@@ -13383,7 +13441,21 @@ function renderSubsection(
         ? section.items.filter((item) => item.useful)
         : section.items;
 
-    if (!items.length) return "";
+    const visibleItems = availableOnly
+        ? items.filter((item) => {
+            const status = getBuildStatus(
+                item,
+                section,
+                itemNameMap,
+                obtainedSet,
+                rolledSet
+            );
+
+            return status.state === "available";
+        })
+        : items;
+
+    if (!visibleItems.length) return "";
 
     const sectionHasAvailableBuild = items.some((item) => {
         const status = getBuildStatus(
@@ -13407,8 +13479,8 @@ function renderSubsection(
             <summary class="construction-subsection-header">
                 <span>${escapeHtml(section.name)}</span>
             </summary>
-            <div class="construction-options">
-                ${items.map((item) => renderBuild(
+            <div class="construction-hotspots">
+                ${visibleItems.map((item) => renderBuild(
                     item,
                     section,
                     itemNameMap,
@@ -13432,6 +13504,7 @@ function renderRoom(
     obtainedSet,
     rolledSet,
     usefulOnly,
+    availableOnly,
     roomIndex
 ) {
     const visibleSections = room.sections.filter((section) => {
@@ -13439,7 +13512,23 @@ function renderRoom(
             ? section.items.filter((item) => item.useful)
             : section.items;
 
-        return items.length > 0;
+        if (!items.length) return false;
+
+        if (availableOnly) {
+            return items.some((item) => {
+                const status = getBuildStatus(
+                    item,
+                    section,
+                    itemNameMap,
+                    obtainedSet,
+                    rolledSet
+                );
+
+                return status.state === "available";
+            });
+        }
+
+        return true;
     });
 
     if (!visibleSections.length) return "";
@@ -13469,6 +13558,7 @@ function renderRoom(
             obtainedSet,
             rolledSet,
             usefulOnly,
+            availableOnly,
             room.name,
             index
         ))
@@ -13532,9 +13622,9 @@ function getPageStyles() {
             }
 
             .construction-subsection {
-                margin-top: 0.75rem;
+                margin: 0.75rem 1rem 0.75rem 1rem;
                 overflow: hidden;
-                border: 1px solid var(--border-color-darker);
+                border: 2px solid var(--border-color-darker);
                 border-radius: 6px;
             }
 
@@ -13599,50 +13689,50 @@ function getPageStyles() {
             }
 
 
-            .construction-options {
+            .construction-hotspots {
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
                 gap: 0.75rem;
                 padding: 1rem;
             }
 
-            .construction-option {
+            .construction-hotspot {
                 padding: 1rem;
-                border: 2px solid var(--border-color-darker);
+                border: 2px solid;
                 border-radius: 6px;
                 background: var(--surface-1);
             }
 
-            .construction-option--available {
+            .construction-hotspot--available {
                 border-color: #2e9b55;
             }
 
-            .construction-option--missing-levels {
+            .construction-hotspot--missing-levels {
                 border-color: #9b65d6;
             }
 
-            .construction-option--missing-materials,
-            .construction-option--missing-rules {
+            .construction-hotspot--missing-materials,
+            .construction-hotspot--missing-rules {
                 border-color: #c94a4a;
             }
 
-            .construction-option-header {
+            .construction-hotspot-header {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 gap: 0.75rem;
             }
 
-            .construction-option-header h3 {
+            .construction-hotspot-header h3 {
                 margin: 0;
                 font-size: 1.05rem;
             }
 
-            .construction-option-header h3 a {
+            .construction-hotspot-header h3 a {
                 color: inherit;
             }
 
-            .construction-option-labels {
+            .construction-hotspot-labels {
                 display: flex;
                 align-items: center;
                 justify-content: flex-end;
@@ -13659,16 +13749,16 @@ function getPageStyles() {
                 font-weight: 700;
             }
 
-            .construction-option--available .construction-status {
+            .construction-hotspot--available .construction-status {
                 color: #2e9b55;
             }
 
-            .construction-option--missing-levels .construction-status {
+            .construction-hotspot--missing-levels .construction-status {
                 color: #9b65d6;
             }
 
-            .construction-option--missing-materials .construction-status,
-            .construction-option--missing-rules .construction-status {
+            .construction-hotspot--missing-materials .construction-status,
+            .construction-hotspot--missing-rules .construction-status {
                 color: #c94a4a;
             }
 
@@ -13760,16 +13850,16 @@ function getPageStyles() {
                     margin-right: 1rem;
                 }
 
-                .construction-options {
+                .construction-hotspots {
                     grid-template-columns: 1fr;
                 }
 
-                .construction-option-header {
+                .construction-hotspot-header {
                     align-items: flex-start;
                     flex-direction: column;
                 }
 
-                .construction-option-labels {
+                .construction-hotspot-labels {
                     justify-content: flex-start;
                 }
             }
@@ -13797,6 +13887,7 @@ export default async function ConstructionPage() {
     const obtainedSet = new Set(fileStore.obtained || []);
     const rolledSet = new Set(fileStore.rolled || []);
     const usefulOnly = isUsefulOnlyEnabled();
+    const availableOnly = isAvailableOnlyEnabled();
 
     const roomsHtml = CONSTRUCTION_ROOMS
         .map((room, index) => renderRoom(
@@ -13805,6 +13896,7 @@ export default async function ConstructionPage() {
             obtainedSet,
             rolledSet,
             usefulOnly,
+            availableOnly,
             index
         ))
         .filter(Boolean)
@@ -13830,6 +13922,16 @@ export default async function ConstructionPage() {
                         onchange="localStorage.setItem('constructionUsefulOnly', this.checked ? 'true' : 'false'); location.reload();"
                     >
                     Useful builds only
+                </label>
+
+                <label class="construction-setting-label">
+                    <input
+                        type="checkbox"
+                        id="construction-available-only"
+                        ${availableOnly ? "checked" : ""}
+                        onchange="localStorage.setItem('constructionAvailableOnly', this.checked ? 'true' : 'false'); location.reload();"
+                    >
+                    Only show items I can build
                 </label>
             </div>
 
