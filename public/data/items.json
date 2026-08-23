@@ -101275,6 +101275,9 @@
         "Zombie (Tarn's Lair) High level": {
           "droprate": "1/64"
         }
+      },
+      "shops": {
+        "Yes": "canDoMageTrainingArena"
       }
     },
     "tags": [
@@ -143311,6 +143314,9 @@
         "Essence impling jar": {
           "droprate": "1/100"
         }
+      },
+      "shops": {
+        "Yes": "canDoMageTrainingArena"
       }
     },
     "tags": [
