@@ -293,7 +293,20 @@
                         "quests": {
                             "Watchtower": "started"
                         },
-                        "items": [],
+                        "items": [
+                            {
+                                "id": 536,
+                                "name": "Dragon bones"
+                            },
+                            {
+                                "id": 954,
+                                "name": "Rope"
+                            },
+                            {
+                                "id": 560,
+                                "name": "Death rune"
+                            }
+                        ],
                         "untracked": [],
                         "itemsAny": [],
                         "rulesAll": [],

@@ -13302,7 +13302,7 @@ function renderMaterials(materialStatus) {
             <div class="construction-materials-title">Materials</div>
             <div class="construction-material-list">
                 ${materialStatus.resolved
-                    .filter((material) => Number(material.quantity) > 0)
+                    .filter((material) => material.quantity !== 0 && material.quantity !== "0")
                     .map((material) => `
                     <span
                         class="construction-material ${material.available ? "construction-material--available" : "construction-material--missing"}"
