@@ -13301,14 +13301,16 @@ function renderMaterials(materialStatus) {
         <div class="construction-materials">
             <div class="construction-materials-title">Materials</div>
             <div class="construction-material-list">
-                ${materialStatus.resolved.map((material) => `
+                ${materialStatus.resolved
+                    .filter((material) => Number(material.quantity) > 0)
+                    .map((material) => `
                     <span
                         class="construction-material ${material.available ? "construction-material--available" : "construction-material--missing"}"
                         title="${escapeHtml(
-        material.available
-            ? "Available"
-            : "Not yet rolled and obtained"
-    )}"
+                            material.available
+                                ? "Available"
+                                : "Not yet rolled and obtained"
+                        )}"
                     >
                         <span class="construction-material-indicator">
                             ${material.available ? "✓" : "✗"}
