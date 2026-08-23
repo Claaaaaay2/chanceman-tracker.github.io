@@ -15,7 +15,8 @@ const PROGRESS_LINKS = [
     { href: "/clue-steps", label: "Clue steps" },
     { href: "/quests", label: "Quests" },
     { href: "/slayer-masters", label: "Slayer masters" },
-    { href: "/sailing", label: "Sailing" }
+    { href: "/sailing", label: "Sailing" },
+    { href: "/construction", label: "Construction" }
 ];
 
 const ACTION_LINKS = [

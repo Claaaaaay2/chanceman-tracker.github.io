@@ -49,6 +49,9 @@ const routeDefinitions = {
     "/sailing": {
         load: async () => import("./pages/sailing.js")
     },
+    "/construction": {
+        load: async () => import("./pages/construction.js")
+    },
     "/reupload": {
         load: async () => import("./pages/reupload.js")
     },

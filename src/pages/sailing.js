@@ -2382,7 +2382,7 @@ function hasSailingItem(itemId, obtainedSet, rolledSet) {
     );
 }
 
-function hasSailingUsableAxe(obtainedSet, rolledSet) {
+function hasUsableAxe(obtainedSet, rolledSet) {
     const woodcuttingLevel = getPlayerSkillLevel("Woodcutting");
 
     const axes = [
@@ -2399,7 +2399,7 @@ function hasSailingUsableAxe(obtainedSet, rolledSet) {
         { id: 23862, level: 71 }  // Crystal axe
     ];
 
-    return axes.some(
+    return axes.any(
         (axe) =>
             woodcuttingLevel >= axe.level &&
             hasSailingItem(axe.id, obtainedSet, rolledSet)
@@ -2443,7 +2443,7 @@ function canCompleteTroubledTortugansSailing(obtainedSet, rolledSet) {
         getPlayerSkillLevel("Woodcutting") >= 40 &&
         getPlayerSkillLevel("Crafting") >= 34 &&
         hasCompletedQuest("Pandemonium") &&
-        hasSailingUsableAxe(obtainedSet, rolledSet) &&
+        hasUsableAxe(obtainedSet, rolledSet) &&
         hasSailingItem(401, obtainedSet, rolledSet)
     );
 }
