@@ -52817,6 +52817,9 @@
         "Dust devil Regular": {
           "droprate": "1/12.8"
         }
+      },
+      "shops": {
+        "Yes": "canDoMageTrainingArena"
       }
     },
     "tags": [
@@ -92750,6 +92753,9 @@
         "Essence impling jar": {
           "droprate": "1/100"
         }
+      },
+      "shops": {
+        "Yes": "canDoMageTrainingArena"
       }
     },
     "tags": [
@@ -106878,6 +106884,9 @@
         "Araxxor": {
           "droprate": "1/115"
         }
+      },
+      "shops": {
+        "Yes": "canDoMageTrainingArena"
       }
     },
     "tags": [
@@ -113512,6 +113521,12 @@
             ]
           }
         }
+      },
+      "spawns": {
+        "Yes": "No requirements"
+      },
+      "shops": {
+        "Yes": "No requirements"
       }
     }
   },
@@ -139509,6 +139524,9 @@
         "Essence impling jar": {
           "droprate": "1/100"
         }
+      },
+      "shops": {
+        "Yes": "canDoMageTrainingArena"
       }
     },
     "tags": [
@@ -146392,7 +146410,7 @@
         }
       },
       "spawns": {
-        "Yes": "canCompleteMountainDaughter"
+        "Yes": "notYetCompletedMountainDaughter"
       },
       "shops": {
         "Yes": "No requirements"
@@ -168421,11 +168439,6 @@
     "name": "Willow branch",
     "image": "willow_branch.png",
     "sources": {
-      "drops": {
-        "Willow tree (Farming)": {
-          "droprate": "Always"
-        }
-      },
       "other": {
         "Using secateurs on a planted willow tree": {
           "notes": "Using Secateurs on a planted willow tree and level 30 Farming.",
@@ -168433,6 +168446,9 @@
             "all": [
               {
                 "has": 5329
+              },
+              {
+                "has": 5341
               },
               {
                 "any": [
