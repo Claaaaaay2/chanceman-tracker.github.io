@@ -17592,7 +17592,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Tiny_port_reward_bag_(corsair_cove)",
         "rule": {"all": [
                 "canCompletePandemonium", 
-                "canCompleteCorsairCove"
+                "canCompleteTheCorsairCurse"
             ]},
         "skill": ["sailing"],
         "level": [40],
@@ -17603,7 +17603,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Small_port_reward_bag_(corsair_cove)",
         "rule": {"all": [
                 "canCompletePandemonium", 
-                "canCompleteCorsairCove"
+                "canCompleteTheCorsairCurse"
             ]},
         "skill": ["sailing"],
         "level": [40],
@@ -17614,7 +17614,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Medium_port_reward_bag_(corsair_cove)",
         "rule": {"all": [
                 "canCompletePandemonium", 
-                "canCompleteCorsairCove"
+                "canCompleteTheCorsairCurse"
             ]},
         "skill": ["sailing"],
         "level": [40],
@@ -17625,7 +17625,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Large_port_reward_bag_(corsair_cove)",
         "rule": {"all": [
                 "canCompletePandemonium", 
-                "canCompleteCorsairCove"
+                "canCompleteTheCorsairCurse"
             ]},
         "skill": ["sailing"],
         "level": [40],
@@ -17636,7 +17636,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Huge_port_reward_bag_(corsair_cove)",
         "rule": {"all": [
                 "canCompletePandemonium", 
-                "canCompleteCorsairCove"
+                "canCompleteTheCorsairCurse"
             ]},
         "skill": ["sailing"],
         "level": [40],
