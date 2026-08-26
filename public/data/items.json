@@ -78949,6 +78949,11 @@
     "name": "Grog",
     "image": "grog.png",
     "sources": {
+      "drops" : {
+        "Tiny port reward bag (the pandemonium)": {
+          "droprate": "Unknown"
+        }
+      },
       "shops": {
         "Yes": "No requirements"
       },
@@ -146713,9 +146718,6 @@
         "Barrel (Shaman Caves)": {
           "droprate": "Uncommon"
         }
-      },
-      "spawns": {
-        "Yes": "notYetCompletedMountainDaughter"
       },
       "shops": {
         "Yes": "No requirements"
