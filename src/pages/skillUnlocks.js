@@ -26,7 +26,11 @@ const SECTION_ORDER = [
     "Sailing",
     "Slayer",
     "Smithing",
-    "Woodcutting"
+    "Woodcutting",
+    "God Wars - Armadyl",
+    "God Wars - Bandos",
+    "God Wars - Saradomin",
+    "God Wars - Zamorak"
 ];
 
 function escapeHtml(value) {

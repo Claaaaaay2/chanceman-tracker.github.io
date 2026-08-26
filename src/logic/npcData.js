@@ -17342,4 +17342,1341 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
+    "Tiny port reward bag (aldarin)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Tiny_port_reward_bag_(aldarin)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [46],
+        "tags": [],
+        "f2p": false
+    },
+    "Small port reward bag (aldarin)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Small_port_reward_bag_(aldarin)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [46],
+        "tags": [],
+        "f2p": false
+    },
+    "Medium port reward bag (aldarin)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Medium_port_reward_bag_(aldarin)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [46],
+        "tags": [],
+        "f2p": false
+    },
+    "Large port reward bag (aldarin)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Large_port_reward_bag_(aldarin)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [46],
+        "tags": [],
+        "f2p": false
+    },
+    "Huge port reward bag (aldarin)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Huge_port_reward_bag_(aldarin)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [46],
+        "tags": [],
+        "f2p": false
+    },
+
+    "Tiny port reward bag (ardougne)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Tiny_port_reward_bag_(ardougne)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [28],
+        "tags": [],
+        "f2p": false
+    },
+    "Small port reward bag (ardougne)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Small_port_reward_bag_(ardougne)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [28],
+        "tags": [],
+        "f2p": false
+    },
+    "Medium port reward bag (ardougne)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Medium_port_reward_bag_(ardougne)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [28],
+        "tags": [],
+        "f2p": false
+    },
+    "Large port reward bag (ardougne)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Large_port_reward_bag_(ardougne)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [28],
+        "tags": [],
+        "f2p": false
+    },
+    "Huge port reward bag (ardougne)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Huge_port_reward_bag_(ardougne)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [28],
+        "tags": [],
+        "f2p": false
+    },
+
+    "Tiny port reward bag (brimhaven)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Tiny_port_reward_bag_(brimhaven)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [25],
+        "tags": [],
+        "f2p": false
+    },
+    "Small port reward bag (brimhaven)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Small_port_reward_bag_(brimhaven)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [25],
+        "tags": [],
+        "f2p": false
+    },
+    "Medium port reward bag (brimhaven)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Medium_port_reward_bag_(brimhaven)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [25],
+        "tags": [],
+        "f2p": false
+    },
+    "Large port reward bag (brimhaven)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Large_port_reward_bag_(brimhaven)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [25],
+        "tags": [],
+        "f2p": false
+    },
+    "Huge port reward bag (brimhaven)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Huge_port_reward_bag_(brimhaven)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [25],
+        "tags": [],
+        "f2p": false
+    },
+
+    "Tiny port reward bag (cairn isle)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Tiny_port_reward_bag_(cairn_isle)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [42],
+        "tags": [],
+        "f2p": false
+    },
+    "Small port reward bag (cairn isle)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Small_port_reward_bag_(cairn_isle)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [42],
+        "tags": [],
+        "f2p": false
+    },
+    "Medium port reward bag (cairn isle)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Medium_port_reward_bag_(cairn_isle)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [42],
+        "tags": [],
+        "f2p": false
+    },
+    "Large port reward bag (cairn isle)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Large_port_reward_bag_(cairn_isle)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [42],
+        "tags": [],
+        "f2p": false
+    },
+    "Huge port reward bag (cairn isle)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Huge_port_reward_bag_(cairn_isle)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [42],
+        "tags": [],
+        "f2p": false
+    },
+
+    "Tiny port reward bag (catherby)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Tiny_port_reward_bag_(catherby)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [20],
+        "tags": [],
+        "f2p": false
+    },
+    "Small port reward bag (catherby)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Small_port_reward_bag_(catherby)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [20],
+        "tags": [],
+        "f2p": false
+    },
+    "Medium port reward bag (catherby)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Medium_port_reward_bag_(catherby)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [20],
+        "tags": [],
+        "f2p": false
+    },
+    "Large port reward bag (catherby)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Large_port_reward_bag_(catherby)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [20],
+        "tags": [],
+        "f2p": false
+    },
+    "Huge port reward bag (catherby)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Huge_port_reward_bag_(catherby)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [20],
+        "tags": [],
+        "f2p": false
+    },
+
+    "Tiny port reward bag (civitas illa fortis)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Tiny_port_reward_bag_(civitas_illa_fortis)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [38],
+        "tags": [],
+        "f2p": false
+    },
+    "Small port reward bag (civitas illa fortis)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Small_port_reward_bag_(civitas_illa_fortis)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [38],
+        "tags": [],
+        "f2p": false
+    },
+    "Medium port reward bag (civitas illa fortis)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Medium_port_reward_bag_(civitas_illa_fortis)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [38],
+        "tags": [],
+        "f2p": false
+    },
+    "Large port reward bag (civitas illa fortis)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Large_port_reward_bag_(civitas_illa_fortis)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [38],
+        "tags": [],
+        "f2p": false
+    },
+    "Huge port reward bag (civitas illa fortis)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Huge_port_reward_bag_(civitas_illa_fortis)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [38],
+        "tags": [],
+        "f2p": false
+    },
+
+    "Tiny port reward bag (corsair cove)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Tiny_port_reward_bag_(corsair_cove)",
+        "rule": {"all": [
+                "canCompletePandemonium", 
+                "canCompleteCorsairCove"
+            ]},
+        "skill": ["sailing"],
+        "level": [40],
+        "tags": [],
+        "f2p": false
+    },
+    "Small port reward bag (corsair cove)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Small_port_reward_bag_(corsair_cove)",
+        "rule": {"all": [
+                "canCompletePandemonium", 
+                "canCompleteCorsairCove"
+            ]},
+        "skill": ["sailing"],
+        "level": [40],
+        "tags": [],
+        "f2p": false
+    },
+    "Medium port reward bag (corsair cove)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Medium_port_reward_bag_(corsair_cove)",
+        "rule": {"all": [
+                "canCompletePandemonium", 
+                "canCompleteCorsairCove"
+            ]},
+        "skill": ["sailing"],
+        "level": [40],
+        "tags": [],
+        "f2p": false
+    },
+    "Large port reward bag (corsair cove)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Large_port_reward_bag_(corsair_cove)",
+        "rule": {"all": [
+                "canCompletePandemonium", 
+                "canCompleteCorsairCove"
+            ]},
+        "skill": ["sailing"],
+        "level": [40],
+        "tags": [],
+        "f2p": false
+    },
+    "Huge port reward bag (corsair cove)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Huge_port_reward_bag_(corsair_cove)",
+        "rule": {"all": [
+                "canCompletePandemonium", 
+                "canCompleteCorsairCove"
+            ]},
+        "skill": ["sailing"],
+        "level": [40],
+        "tags": [],
+        "f2p": false
+    },
+
+    "Tiny port reward bag (deepfin point)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Tiny_port_reward_bag_(deepfin_point)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [67],
+        "tags": [],
+        "f2p": false
+    },
+    "Small port reward bag (deepfin point)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Small_port_reward_bag_(deepfin_point)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [67],
+        "tags": [],
+        "f2p": false
+    },
+    "Medium port reward bag (deepfin point)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Medium_port_reward_bag_(deepfin_point)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [67],
+        "tags": [],
+        "f2p": false
+    },
+    "Large port reward bag (deepfin point)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Large_port_reward_bag_(deepfin_point)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [67],
+        "tags": [],
+        "f2p": false
+    },
+    "Huge port reward bag (deepfin point)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Huge_port_reward_bag_(deepfin_point)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [67],
+        "tags": [],
+        "f2p": false
+    },
+
+    "Tiny port reward bag (entrana)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Tiny_port_reward_bag_(entrana)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [36],
+        "tags": [],
+        "f2p": false
+    },
+    "Small port reward bag (entrana)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Small_port_reward_bag_(entrana)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [36],
+        "tags": [],
+        "f2p": false
+    },
+    "Medium port reward bag (entrana)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Medium_port_reward_bag_(entrana)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [36],
+        "tags": [],
+        "f2p": false
+    },
+    "Large port reward bag (entrana)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Large_port_reward_bag_(entrana)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [36],
+        "tags": [],
+        "f2p": false
+    },
+    "Huge port reward bag (entrana)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Huge_port_reward_bag_(entrana)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [36],
+        "tags": [],
+        "f2p": false
+    },
+
+    "Tiny port reward bag (etceteria)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Tiny_port_reward_bag_(etceteria)",
+        "rule": {"all": ["canCompletePandemonium","canCompleteRoyalTrouble"]},
+        "skill": ["sailing"],
+        "level": [65],
+        "tags": [],
+        "f2p": false
+    },
+    "Small port reward bag (etceteria)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Small_port_reward_bag_(etceteria)",
+        "rule": {"all": ["canCompletePandemonium","canCompleteRoyalTrouble"]},
+        "skill": ["sailing"],
+        "level": [65],
+        "tags": [],
+        "f2p": false
+    },
+    "Medium port reward bag (etceteria)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Medium_port_reward_bag_(etceteria)",
+        "rule": {"all": ["canCompletePandemonium","canCompleteRoyalTrouble"]},
+        "skill": ["sailing"],
+        "level": [65],
+        "tags": [],
+        "f2p": false
+    },
+    "Large port reward bag (etceteria)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Large_port_reward_bag_(etceteria)",
+        "rule": {"all": ["canCompletePandemonium","canCompleteRoyalTrouble"]},
+        "skill": ["sailing"],
+        "level": [65],
+        "tags": [],
+        "f2p": false
+    },
+    "Huge port reward bag (etceteria)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Huge_port_reward_bag_(etceteria)",
+        "rule": {"all": ["canCompletePandemonium","canCompleteRoyalTrouble"]},
+        "skill": ["sailing"],
+        "level": [65],
+        "tags": [],
+        "f2p": false
+    },
+
+    "Tiny port reward bag (hosidius)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Tiny_port_reward_bag_(hosidius)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [5],
+        "tags": [],
+        "f2p": false
+    },
+    "Small port reward bag (hosidius)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Small_port_reward_bag_(hosidius)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [5],
+        "tags": [],
+        "f2p": false
+    },
+    "Medium port reward bag (hosidius)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Medium_port_reward_bag_(hosidius)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [5],
+        "tags": [],
+        "f2p": false
+    },
+    "Large port reward bag (hosidius)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Large_port_reward_bag_(hosidius)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [5],
+        "tags": [],
+        "f2p": false
+    },
+    "Huge port reward bag (hosidius)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Huge_port_reward_bag_(hosidius)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [5],
+        "tags": [],
+        "f2p": false
+    },
+
+    "Tiny port reward bag (jatizso)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Tiny_port_reward_bag_(jatizso)",
+        "rule": { "all":["canCompletePandemonium","canCompleteTheFremennikIsles"]},
+        "skill": ["sailing"],
+        "level": [68],
+        "tags": [],
+        "f2p": false
+    },
+    "Small port reward bag (jatizso)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Small_port_reward_bag_(jatizso)",
+        "rule": { "all":["canCompletePandemonium","canCompleteTheFremennikIsles"]},
+        "skill": ["sailing"],
+        "level": [68],
+        "tags": [],
+        "f2p": false
+    },
+    "Medium port reward bag (jatizso)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Medium_port_reward_bag_(jatizso)",
+        "rule": { "all":["canCompletePandemonium","canCompleteTheFremennikIsles"]},
+        "skill": ["sailing"],
+        "level": [68],
+        "tags": [],
+        "f2p": false
+    },
+    "Large port reward bag (jatizso)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Large_port_reward_bag_(jatizso)",
+        "rule": { "all":["canCompletePandemonium","canCompleteTheFremennikIsles"]},
+        "skill": ["sailing"],
+        "level": [68],
+        "tags": [],
+        "f2p": false
+    },
+    "Huge port reward bag (jatizso)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Huge_port_reward_bag_(jatizso)",
+        "rule": { "all":["canCompletePandemonium","canCompleteTheFremennikIsles"]},
+        "skill": ["sailing"],
+        "level": [68],
+        "tags": [],
+        "f2p": false
+    },
+
+    "Tiny port reward bag (lands end)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Tiny_port_reward_bag_(lands_end)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [5],
+        "tags": [],
+        "f2p": false
+    },
+    "Small port reward bag (lands end)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Small_port_reward_bag_(lands_end)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [5],
+        "tags": [],
+        "f2p": false
+    },
+    "Medium port reward bag (lands end)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Medium_port_reward_bag_(lands_end)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [5],
+        "tags": [],
+        "f2p": false
+    },
+    "Large port reward bag (lands end)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Large_port_reward_bag_(lands_end)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [5],
+        "tags": [],
+        "f2p": false
+    },
+    "Huge port reward bag (lands end)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Huge_port_reward_bag_(lands_end)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [5],
+        "tags": [],
+        "f2p": false
+    },
+
+    "Tiny port reward bag (lunar isle)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Tiny_port_reward_bag_(lunar_isle)",
+        "rule": { "all":["canCompletePandemonium","canCompleteLunarDiplomacy"]},
+        "skill": ["sailing"],
+        "level": [76],
+        "tags": [],
+        "f2p": false
+    },
+    "Small port reward bag (lunar isle)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Small_port_reward_bag_(lunar_isle)",
+        "rule": { "all":["canCompletePandemonium","canCompleteLunarDiplomacy"]},
+        "skill": ["sailing"],
+        "level": [76],
+        "tags": [],
+        "f2p": false
+    },
+    "Medium port reward bag (lunar isle)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Medium_port_reward_bag_(lunar_isle)",
+        "rule": { "all":["canCompletePandemonium","canCompleteLunarDiplomacy"]},
+        "skill": ["sailing"],
+        "level": [76],
+        "tags": [],
+        "f2p": false
+    },
+    "Large port reward bag (lunar isle)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Large_port_reward_bag_(lunar_isle)",
+        "rule": { "all":["canCompletePandemonium","canCompleteLunarDiplomacy"]},
+        "skill": ["sailing"],
+        "level": [76],
+        "tags": [],
+        "f2p": false
+    },
+    "Huge port reward bag (lunar isle)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Huge_port_reward_bag_(lunar_isle)",
+        "rule": { "all":["canCompletePandemonium","canCompleteLunarDiplomacy"]},
+        "skill": ["sailing"],
+        "level": [76],
+        "tags": [],
+        "f2p": false
+    },
+
+    "Tiny port reward bag (musa point)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Tiny_port_reward_bag_(musa_point)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [10],
+        "tags": [],
+        "f2p": false
+    },
+    "Small port reward bag (musa point)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Small_port_reward_bag_(musa_point)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [10],
+        "tags": [],
+        "f2p": false
+    },
+    "Medium port reward bag (musa point)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Medium_port_reward_bag_(musa_point)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [10],
+        "tags": [],
+        "f2p": false
+    },
+    "Large port reward bag (musa point)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Large_port_reward_bag_(musa_point)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [10],
+        "tags": [],
+        "f2p": false
+    },
+    "Huge port reward bag (musa point)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Huge_port_reward_bag_(musa_point)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [10],
+        "tags": [],
+        "f2p": false
+    },
+
+    "Tiny port reward bag (neitiznot)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Tiny_port_reward_bag_(neitiznot)",
+        "rule": { "all":["canCompletePandemonium","canCompleteTheFremennikIsles"]},
+        "skill": ["sailing"],
+        "level": [68],
+        "tags": [],
+        "f2p": false
+    },
+    "Small port reward bag (neitiznot)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Small_port_reward_bag_(neitiznot)",
+        "rule": { "all":["canCompletePandemonium","canCompleteTheFremennikIsles"]},
+        "skill": ["sailing"],
+        "level": [68],
+        "tags": [],
+        "f2p": false
+    },
+    "Medium port reward bag (neitiznot)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Medium_port_reward_bag_(neitiznot)",
+        "rule": { "all":["canCompletePandemonium","canCompleteTheFremennikIsles"]},
+        "skill": ["sailing"],
+        "level": [68],
+        "tags": [],
+        "f2p": false
+    },
+    "Large port reward bag (neitiznot)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Large_port_reward_bag_(neitiznot)",
+        "rule": { "all":["canCompletePandemonium","canCompleteTheFremennikIsles"]},
+        "skill": ["sailing"],
+        "level": [68],
+        "tags": [],
+        "f2p": false
+    },
+    "Huge port reward bag (neitiznot)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Huge_port_reward_bag_(neitiznot)",
+        "rule": { "all":["canCompletePandemonium","canCompleteTheFremennikIsles"]},
+        "skill": ["sailing"],
+        "level": [68],
+        "tags": [],
+        "f2p": false
+    },
+
+    "Tiny port reward bag (piscatoris)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Tiny_port_reward_bag_(piscatoris)",
+        "rule": { "all":["canCompletePandemonium","canCompleteSwanSong"]},
+        "skill": ["sailing"],
+        "level": [75],
+        "tags": [],
+        "f2p": false
+    },
+    "Small port reward bag (piscatoris)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Small_port_reward_bag_(piscatoris)",
+        "rule": { "all":["canCompletePandemonium","canCompleteSwanSong"]},
+        "skill": ["sailing"],
+        "level": [75],
+        "tags": [],
+        "f2p": false
+    },
+    "Medium port reward bag (piscatoris)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Medium_port_reward_bag_(piscatoris)",
+        "rule": { "all":["canCompletePandemonium","canCompleteSwanSong"]},
+        "skill": ["sailing"],
+        "level": [75],
+        "tags": [],
+        "f2p": false
+    },
+    "Large port reward bag (piscatoris)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Large_port_reward_bag_(piscatoris)",
+        "rule": { "all":["canCompletePandemonium","canCompleteSwanSong"]},
+        "skill": ["sailing"],
+        "level": [75],
+        "tags": [],
+        "f2p": false
+    },
+    "Huge port reward bag (piscatoris)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Huge_port_reward_bag_(piscatoris)",
+        "rule": { "all":["canCompletePandemonium","canCompleteSwanSong"]},
+        "skill": ["sailing"],
+        "level": [75],
+        "tags": [],
+        "f2p": false
+    },
+
+    "Tiny port reward bag (port khazard)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Tiny_port_reward_bag_(port_khazard)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [30],
+        "tags": [],
+        "f2p": false
+    },
+    "Small port reward bag (port khazard)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Small_port_reward_bag_(port_khazard)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [30],
+        "tags": [],
+        "f2p": false
+    },
+    "Medium port reward bag (port khazard)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Medium_port_reward_bag_(port_khazard)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [30],
+        "tags": [],
+        "f2p": false
+    },
+    "Large port reward bag (port khazard)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Large_port_reward_bag_(port_khazard)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [30],
+        "tags": [],
+        "f2p": false
+    },
+    "Huge port reward bag (port khazard)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Huge_port_reward_bag_(port_khazard)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [30],
+        "tags": [],
+        "f2p": false
+    },
+
+    "Tiny port reward bag (port piscarilius)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Tiny_port_reward_bag_(port_piscarilius)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [15],
+        "tags": [],
+        "f2p": false
+    },
+    "Small port reward bag (port piscarilius)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Small_port_reward_bag_(port_piscarilius)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [15],
+        "tags": [],
+        "f2p": false
+    },
+    "Medium port reward bag (port piscarilius)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Medium_port_reward_bag_(port_piscarilius)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [15],
+        "tags": [],
+        "f2p": false
+    },
+    "Large port reward bag (port piscarilius)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Large_port_reward_bag_(port_piscarilius)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [15],
+        "tags": [],
+        "f2p": false
+    },
+    "Huge port reward bag (port piscarilius)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Huge_port_reward_bag_(port_piscarilius)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [15],
+        "tags": [],
+        "f2p": false
+    },
+
+    "Tiny port reward bag (port roberts)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Tiny_port_reward_bag_(port_roberts)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [50],
+        "tags": [],
+        "f2p": false
+    },
+    "Small port reward bag (port roberts)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Small_port_reward_bag_(port_roberts)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [50],
+        "tags": [],
+        "f2p": false
+    },
+    "Medium port reward bag (port roberts)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Medium_port_reward_bag_(port_roberts)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [50],
+        "tags": [],
+        "f2p": false
+    },
+    "Large port reward bag (port roberts)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Large_port_reward_bag_(port_roberts)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [50],
+        "tags": [],
+        "f2p": false
+    },
+    "Huge port reward bag (port roberts)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Huge_port_reward_bag_(port_roberts)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [50],
+        "tags": [],
+        "f2p": false
+    },
+
+    "Tiny port reward bag (port sarim)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Tiny_port_reward_bag_(port_sarim)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [1],
+        "tags": [],
+        "f2p": false
+    },
+    "Small port reward bag (port sarim)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Small_port_reward_bag_(port_sarim)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [1],
+        "tags": [],
+        "f2p": false
+    },
+    "Medium port reward bag (port sarim)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Medium_port_reward_bag_(port_sarim)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [1],
+        "tags": [],
+        "f2p": false
+    },
+    "Large port reward bag (port sarim)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Large_port_reward_bag_(port_sarim)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [1],
+        "tags": [],
+        "f2p": false
+    },
+    "Huge port reward bag (port sarim)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Huge_port_reward_bag_(port_sarim)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [1],
+        "tags": [],
+        "f2p": false
+    },
+
+    "Tiny port reward bag (port tyras)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Tiny_port_reward_bag_(port_tyras)",
+        "rule": {"all": [
+                "canCompletePandemonium", 
+                "canCompleteRegicide",
+                "canMakeAdamantKeelOrBetter"
+            ]},
+        "skill": ["sailing"],
+        "level": [66],
+        "tags": [],
+        "f2p": false
+    },
+    "Small port reward bag (port tyras)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Small_port_reward_bag_(port_tyras)",
+        "rule": {"all": [
+                "canCompletePandemonium", 
+                "canCompleteRegicide",
+                "canMakeAdamantKeelOrBetter"
+            ]},
+        "skill": ["sailing"],
+        "level": [66],
+        "tags": [],
+        "f2p": false
+    },
+    "Medium port reward bag (port tyras)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Medium_port_reward_bag_(port_tyras)",
+        "rule": {"all": [
+                "canCompletePandemonium", 
+                "canCompleteRegicide",
+                "canMakeAdamantKeelOrBetter"
+            ]},
+        "skill": ["sailing"],
+        "level": [66],
+        "tags": [],
+        "f2p": false
+    },
+    "Large port reward bag (port tyras)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Large_port_reward_bag_(port_tyras)",
+        "rule": {"all": [
+                "canCompletePandemonium", 
+                "canCompleteRegicide",
+                "canMakeAdamantKeelOrBetter"
+            ]},
+        "skill": ["sailing"],
+        "level": [66],
+        "tags": [],
+        "f2p": false
+    },
+    "Huge port reward bag (port tyras)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Huge_port_reward_bag_(port_tyras)",
+        "rule": {"all": [
+                "canCompletePandemonium", 
+                "canCompleteRegicide",
+                "canMakeAdamantKeelOrBetter"
+            ]},
+        "skill": ["sailing"],
+        "level": [66],
+        "tags": [],
+        "f2p": false
+    },
+
+    "Tiny port reward bag (prifddinas)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Tiny_port_reward_bag_(prifddinas)",
+        "rule": {"all": [
+                "canCompletePandemonium", 
+                "canCompleteSongOfTheElves",
+                "canMakeAdamantKeelOrBetter"
+            ]},
+        "skill": ["sailing"],
+        "level": [70],
+        "tags": [],
+        "f2p": false
+    },
+    "Small port reward bag (prifddinas)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Small_port_reward_bag_(prifddinas)",
+        "rule": {"all": [
+                "canCompletePandemonium", 
+                "canCompleteSongOfTheElves",
+                "canMakeAdamantKeelOrBetter"
+            ]},
+        "skill": ["sailing"],
+        "level": [70],
+        "tags": [],
+        "f2p": false
+    },
+    "Medium port reward bag (prifddinas)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Medium_port_reward_bag_(prifddinas)",
+        "rule": {"all": [
+                "canCompletePandemonium", 
+                "canCompleteSongOfTheElves",
+                "canMakeAdamantKeelOrBetter"
+            ]},
+        "skill": ["sailing"],
+        "level": [70],
+        "tags": [],
+        "f2p": false
+    },
+    "Large port reward bag (prifddinas)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Large_port_reward_bag_(prifddinas)",
+        "rule": {"all": [
+                "canCompletePandemonium", 
+                "canCompleteSongOfTheElves",
+                "canMakeAdamantKeelOrBetter"
+            ]},
+        "skill": ["sailing"],
+        "level": [70],
+        "tags": [],
+        "f2p": false
+    },
+    "Huge port reward bag (prifddinas)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Huge_port_reward_bag_(prifddinas)",
+        "rule": {"all": [
+                "canCompletePandemonium", 
+                "canCompleteSongOfTheElves",
+                "canMakeAdamantKeelOrBetter"
+            ]},
+        "skill": ["sailing"],
+        "level": [70],
+        "tags": [],
+        "f2p": false
+    },
+
+    "Tiny port reward bag (red rock)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Tiny_port_reward_bag_(red_rock)",
+        "rule": ["canCompleteTroubledTortugans"],
+        "skill": ["sailing"],
+        "level": [52],
+        "tags": [],
+        "f2p": false
+    },
+    "Small port reward bag (red rock)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Small_port_reward_bag_(red_rock)",
+        "rule": ["canCompleteTroubledTortugans"],
+        "skill": ["sailing"],
+        "level": [52],
+        "tags": [],
+        "f2p": false
+    },
+    "Medium port reward bag (red rock)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Medium_port_reward_bag_(red_rock)",
+        "rule": ["canCompleteTroubledTortugans"],
+        "skill": ["sailing"],
+        "level": [52],
+        "tags": [],
+        "f2p": false
+    },
+    "Large port reward bag (red rock)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Large_port_reward_bag_(red_rock)",
+        "rule": ["canCompleteTroubledTortugans"],
+        "skill": ["sailing"],
+        "level": [52],
+        "tags": [],
+        "f2p": false
+    },
+    "Huge port reward bag (red rock)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Huge_port_reward_bag_(red_rock)",
+        "rule": ["canCompleteTroubledTortugans"],
+        "skill": ["sailing"],
+        "level": [52],
+        "tags": [],
+        "f2p": false
+    },
+
+    "Tiny port reward bag (rellekka)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Tiny_port_reward_bag_(rellekka)",
+        "rule": {"all": [
+                "canCompletePandemonium", 
+                "canCompleteTheFremennikTrials"
+            ]},
+        "skill": ["sailing"],
+        "level": [62],
+        "tags": [],
+        "f2p": false
+    },
+    "Small port reward bag (rellekka)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Small_port_reward_bag_(rellekka)",
+        "rule": {"all": [
+                "canCompletePandemonium", 
+                "canCompleteTheFremennikTrials"
+            ]},
+        "skill": ["sailing"],
+        "level": [62],
+        "tags": [],
+        "f2p": false
+    },
+    "Medium port reward bag (rellekka)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Medium_port_reward_bag_(rellekka)",
+        "rule": {"all": [
+                "canCompletePandemonium", 
+                "canCompleteTheFremennikTrials"
+            ]},
+        "skill": ["sailing"],
+        "level": [62],
+        "tags": [],
+        "f2p": false
+    },
+    "Large port reward bag (rellekka)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Large_port_reward_bag_(rellekka)",
+        "rule": {"all": [
+                "canCompletePandemonium", 
+                "canCompleteTheFremennikTrials"
+            ]},
+        "skill": ["sailing"],
+        "level": [62],
+        "tags": [],
+        "f2p": false
+    },
+    "Huge port reward bag (rellekka)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Huge_port_reward_bag_(rellekka)",
+        "rule": {"all": [
+                "canCompletePandemonium", 
+                "canCompleteTheFremennikTrials"
+            ]},
+        "skill": ["sailing"],
+        "level": [62],
+        "tags": [],
+        "f2p": false
+    },
+
+    "Tiny port reward bag (ruins of unkah)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Tiny_port_reward_bag_(ruins_of_unkah)",
+        "rule": { "all":["canCompletePandemonium","canMakeOakMastOrBetter"]},
+        "skill": ["sailing"],
+        "level": [48],
+        "tags": [],
+        "f2p": false
+    },
+    "Small port reward bag (ruins of unkah)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Small_port_reward_bag_(ruins_of_unkah)",
+        "rule": { "all":["canCompletePandemonium","canMakeOakMastOrBetter"]},
+        "skill": ["sailing"],
+        "level": [48],
+        "tags": [],
+        "f2p": false
+    },
+    "Medium port reward bag (ruins of unkah)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Medium_port_reward_bag_(ruins_of_unkah)",
+        "rule": { "all":["canCompletePandemonium","canMakeOakMastOrBetter"]},
+        "skill": ["sailing"],
+        "level": [48],
+        "tags": [],
+        "f2p": false
+    },
+    "Large port reward bag (ruins of unkah)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Large_port_reward_bag_(ruins_of_unkah)",
+        "rule": { "all":["canCompletePandemonium","canMakeOakMastOrBetter"]},
+        "skill": ["sailing"],
+        "level": [48],
+        "tags": [],
+        "f2p": false
+    },
+    "Huge port reward bag (ruins of unkah)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Huge_port_reward_bag_(ruins_of_unkah)",
+        "rule": { "all":["canCompletePandemonium","canMakeOakMastOrBetter"]},
+        "skill": ["sailing"],
+        "level": [48],
+        "tags": [],
+        "f2p": false
+    },
+
+    "Tiny port reward bag (summer shore)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Tiny_port_reward_bag_(summer_shore)",
+        "rule": ["canCompleteTroubledTortugans"],
+        "skill": ["sailing"],
+        "level": [45],
+        "tags": [],
+        "f2p": false
+    },
+    "Small port reward bag (summer shore)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Small_port_reward_bag_(summer_shore)",
+        "rule": ["canCompleteTroubledTortugans"],
+        "skill": ["sailing"],
+        "level": [45],
+        "tags": [],
+        "f2p": false
+    },
+    "Medium port reward bag (summer shore)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Medium_port_reward_bag_(summer_shore)",
+        "rule": ["canCompleteTroubledTortugans"],
+        "skill": ["sailing"],
+        "level": [45],
+        "tags": [],
+        "f2p": false
+    },
+    "Large port reward bag (summer shore)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Large_port_reward_bag_(summer_shore)",
+        "rule": ["canCompleteTroubledTortugans"],
+        "skill": ["sailing"],
+        "level": [45],
+        "tags": [],
+        "f2p": false
+    },
+    "Huge port reward bag (summer shore)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Huge_port_reward_bag_(summer_shore)",
+        "rule": ["canCompleteTroubledTortugans"],
+        "skill": ["sailing"],
+        "level": [45],
+        "tags": [],
+        "f2p": false
+    },
+
+    "Tiny port reward bag (sunset coast)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Tiny_port_reward_bag_(sunset_coast)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [44],
+        "tags": [],
+        "f2p": false
+    },
+    "Small port reward bag (sunset coast)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Small_port_reward_bag_(sunset_coast)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [44],
+        "tags": [],
+        "f2p": false
+    },
+    "Medium port reward bag (sunset coast)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Medium_port_reward_bag_(sunset_coast)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [44],
+        "tags": [],
+        "f2p": false
+    },
+    "Large port reward bag (sunset coast)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Large_port_reward_bag_(sunset_coast)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [44],
+        "tags": [],
+        "f2p": false
+    },
+    "Huge port reward bag (sunset coast)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Huge_port_reward_bag_(sunset_coast)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [44],
+        "tags": [],
+        "f2p": false
+    },
+    "Tiny port reward bag (the pandemonium)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Tiny_port_reward_bag_(the_pandemonium)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [1],
+        "tags": [],
+        "f2p": false
+    },
+    "Small port reward bag (the pandemonium)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Small_port_reward_bag_(the_pandemonium)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [1],
+        "tags": [],
+        "f2p": false
+    },
+    "Medium port reward bag (the pandemonium)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Medium_port_reward_bag_(the_pandemonium)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [1],
+        "tags": [],
+        "f2p": false
+    },
+    "Large port reward bag (the pandemonium)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Large_port_reward_bag_(the_pandemonium)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [1],
+        "tags": [],
+        "f2p": false
+    },
+    "Huge port reward bag (the pandemonium)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Huge_port_reward_bag_(the_pandemonium)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [1],
+        "tags": [],
+        "f2p": false
+    },
+    "Tiny port reward bag (void knights' outpost)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Tiny_port_reward_bag_(void_knights%27_outpost)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [50],
+        "tags": [],
+        "f2p": false
+    },
+    "Small port reward bag (void knights' outpost)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Small_port_reward_bag_(void_knights%27_outpost)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [50],
+        "tags": [],
+        "f2p": false
+    },
+    "Medium port reward bag (void knights' outpost)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Medium_port_reward_bag_(void_knights%27_outpost)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [50],
+        "tags": [],
+        "f2p": false
+    },
+    "Large port reward bag (void knights' outpost)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Large_port_reward_bag_(void_knights%27_outpost)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [50],
+        "tags": [],
+        "f2p": false
+    },
+    "Huge port reward bag (void knights' outpost)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Huge_port_reward_bag_(void_knights%27_outpost)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [50],
+        "tags": [],
+        "f2p": false
+    },
+    "Tiny port reward bag (all ports)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Tiny_port_reward_bag_(the_pandemonium)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [1],
+        "tags": [],
+        "f2p": false
+    },
+    "Small port reward bag (all ports)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Small_port_reward_bag_(the_pandemonium)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [1],
+        "tags": [],
+        "f2p": false
+    },
+    "Medium port reward bag (all ports)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Medium_port_reward_bag_(the_pandemonium)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [1],
+        "tags": [],
+        "f2p": false
+    },
+    "Large port reward bag (all ports)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Large_port_reward_bag_(the_pandemonium)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [1],
+        "tags": [],
+        "f2p": false
+    },
+    "Huge port reward bag (all ports)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Huge_port_reward_bag_(the_pandemonium)",
+        "rule": ["canCompletePandemonium"],
+        "skill": ["sailing"],
+        "level": [1],
+        "tags": [],
+        "f2p": false
+    },
 };

@@ -713,6 +713,10 @@ function requiresQuest(ctx, questKey, fn) {
     return ok;
 }
 
+function questAlreadyCompleted(ctx, questKey) {
+    return !ctx.completedQuests?.has(questKey);
+}
+
 export const REQUIREMENT_CHECKS = {
     canGetRingOfDuelling(ctx) {
         return has(ctx, 2552) || canCompleteHauntedMine(ctx);
@@ -1268,6 +1272,9 @@ export const REQUIREMENT_CHECKS = {
     },
     canCompleteMountainDaughter(ctx) {
         return canCompleteMountainDaughter(ctx);
+    },
+    notYetCompletedMountainDaughter(ctx) {
+        return notYetCompletedMountainDaughter(ctx);
     },
     canCompleteAPorcineOfInterest(ctx) {
         return canCompleteAPorcineOfInterest(ctx);
@@ -2275,8 +2282,23 @@ export const REQUIREMENT_CHECKS = {
     hasSpinyHelmet(ctx) {
         return has(ctx, 4551);
     },
-    canMakeAdamantKeel(ctx) {
-        return canMakeAdamantKeel(ctx);
+    canMakeAdamantKeelOrBetterOrBetter(ctx) {
+        return canMakeAdamantKeelOrBetterOrBetter(ctx);
+    },
+    canMakeMithrilHelmOrBetter(ctx) {
+        canMakeMithrilHelmOrBetter(ctx);
+    },
+    canMakeOakMastOrBetter(ctx) {
+        return canMakeOakMastOrBetter(ctx);
+    },
+    canMakeIronHelmOrBetter(ctx) {
+        return canMakeIronHelmOrBetter(ctx);
+    },
+    canDoBarracudaTrials(ctx) {
+        return canDoBarracudaTrials(ctx);
+    },
+    canMakeInnoculationStation(ctx) {
+        return canMakeInnoculationStation(ctx);
     },
     hasNosePegOrCanLongRange(ctx) {
         return has(ctx, 4168) || canLongrange(ctx);
@@ -2930,17 +2952,36 @@ function canCompleteFallenFromGrace(ctx) {
     ]);
 }
 
+function canDoBarracudaTrials(ctx) {
+    return allTrue([
+        ( //
+            hasSkillLevel(ctx, "Sailing", 72) && canMakeAdamantKeelOrBetter(ctx) // The Gwenith Glide
+            || hasSkillLevel(ctx, "Sailing", 55) && canMakeInnoculationStation(ctx) && canMakeMithrilHelmOrBetter(ctx) //  	The Jubbly Jive
+            || hasSkillLevel(ctx, "Sailing", 30) && canMakeOakMastOrBetter(ctx) && canMakeIronHelmOrBetter//  	The Tempor Tantrum
+        )
+         //
+    ]);
+}
+
+function canMakeInnoculationStation(ctx) {
+    return allTrue([
+        has(ctx, 8780), // Teak plank
+        has(ctx, 1539), // Steel nails
+        has(ctx, 4842)  // Relicym's balm(4)
+    ])
+}
+
 function canAccessYnsdailIsland(ctx) {
     return allTrue([
         hasSkillLevel(ctx, "Sailing", 73), //
-        canMakeAdamantKeel(ctx) //
+        canMakeAdamantKeelOrBetter(ctx) //
     ]);
 }
 
 function canAccessDrumstickIsle(ctx) {
     return allTrue([
         hasSkillLevel(ctx, "Sailing", 79), //
-        canMakeAdamantKeel(ctx) //
+        canMakeAdamantKeelOrBetter(ctx) //
     ]);
 }
 
@@ -4444,6 +4485,13 @@ function canCompleteMountainDaughter(ctx) {
         has(ctx, 954), // Rope
         has(ctx, 960), // Plank
         hasUsablePickaxe(ctx),
+    ]);
+}
+
+function notYetCompletedMountainDaughter(ctx) {
+    return allTrue([
+        canCompleteMountainDaughter(ctx),
+        questAlreadyCompleted(ctx, "canCompleteMountainDaughter", canCompleteMountainDaughter)
     ]);
 }
 
@@ -8116,7 +8164,7 @@ function canDoSalvaging(ctx) {
         );
 }
 
-function canMakeAdamantKeel(ctx) {
+function canMakeAdamantKeelOrBetter(ctx) {
     return (
         (has(ctx, 32889) // Lead bar
             && (has(ctx, 32011) // Adamant keel parts
@@ -8127,6 +8175,62 @@ function canMakeAdamantKeel(ctx) {
         ) || (has(ctx, 32892) // Cupronickel bar
             && (has(ctx, 32017) // Dragon keel parts
                 || has(ctx, 32038)) // Large dragon keel parts
+        )
+    );
+}
+
+function canMakeMithrilHelmOrBetter(ctx) {
+    return (
+        (has(ctx, 8782) // Mahogany plank
+            && (has(ctx, 2359)) // Mithril bar
+        ) || (has(ctx, 31432) // Camphor plank
+            && has(ctx, 2361) // Adamantite bar
+        ) || (has(ctx, 31435) // Ironwood plank
+            && has(ctx, 2363) // Runite bar
+        ) || (has(ctx, 31438) // Rosewood plank
+            && has(ctx, 31996) // Dragon metal sheet
+        )
+    );
+}
+
+function canMakeIronHelmOrBetter(ctx) {
+    return (
+        (has(ctx, 8782) // Mahogany plank
+            && (has(ctx, 2359)) // Mithril bar
+        ) || (has(ctx, 31432) // Camphor plank
+            && has(ctx, 2361) // Adamantite bar
+        ) || (has(ctx, 31435) // Ironwood plank
+            && has(ctx, 2363) // Runite bar
+        ) || (has(ctx, 31438) // Rosewood plank
+            && has(ctx, 31996) // Dragon metal sheet
+        ) || (has(ctx, 8778) // Oak plank
+            && has(ctx, 2351) // Iron bar
+        ) || (has(ctx, 8780) // Teak plank
+            && has(ctx, 2353) // Steel bar
+        )
+    );
+}
+
+function canMakeOakMastOrBetter(ctx) {
+    return (
+        (has(ctx, 1521) // Oak logs
+            && (has(ctx, 4820) // Iron nails
+            && has(ctx, 31472)) // Bolt of linen
+        ) || (has(ctx, 6333) // Teak logs
+            && (has(ctx, 1539) // Steel nails
+            && has(ctx, 31475)) // Bolt of canvas
+        ) || (has(ctx, 6332) // Mahogany logs
+            && (has(ctx, 4822) // Mithril nails
+            && has(ctx, 31475)) // Bolt of canvas
+        ) || (has(ctx, 32904) // Camphor logs
+            && (has(ctx, 4823) // Adamantite nails
+            && has(ctx, 31475)) // Bolt of canvas
+        ) || (has(ctx, 32907) // Ironwood logs
+            && (has(ctx, 4824) // Rune nails
+            && has(ctx, 31478)) // Bolt of cotton
+        ) || (has(ctx, 32910) // Rosewood logs
+            && (has(ctx, 31406) // Dragon nails
+            && has(ctx, 31478)) // Bolt of cotton
         )
     );
 }

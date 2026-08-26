@@ -10364,6 +10364,12 @@ const CONSTRUCTION_ROOMS = [{
             "materials": [{
                 "name": "Spirit sapling",
                 "quantity": 1
+            },{
+                "name": "Trowel",
+                "quantity": 0
+            },{
+                "name": "Plant pot",
+                "quantity": 0
             }],
             "experience": "350 ,  350",
             "useful": true,
@@ -10418,16 +10424,22 @@ const CONSTRUCTION_ROOMS = [{
             }, {
                 "name": "Fairy enchantment",
                 "quantity": 1
+            },{
+                "name": "Trowel",
+                "quantity": 0
+            },{
+                "name": "Plant pot",
+                "quantity": 0
             }],
             "experience": "885 ,  885",
             "useful": true,
             "note": null,
-            "requirement": "83 + Fairytale II - Cure a Queen",
+            "requirement": "83",
             "tools": []
         }],
         "meta": {
             "fLabel": null,
-            "gLabel": "Farming Level + Quest",
+            "gLabel": "Farming level",
             "hLabel": null
         }
     }, {
