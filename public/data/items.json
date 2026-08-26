@@ -2122,6 +2122,9 @@
         },
         "Large salvage": {
           "droprate": "1/221.5"
+        },
+        "Tiny port reward bag (port roberts)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -2912,6 +2915,9 @@
         },
         "Turoth": {
           "droprate": "1/128"
+        },
+        "Tiny port reward bag (void knights' outpost)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -4320,6 +4326,9 @@
         },
         "Silver Chest (red)": {
           "droprate": "1/76.195; 1/74.34"
+        },
+        "Tiny port reward bag (void knights' outpost)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -4588,6 +4597,9 @@
         },
         "Silver Chest (red)": {
           "droprate": "1/50.797; 1/49.56"
+        },
+        "Tiny port reward bag (void knights' outpost)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -4831,6 +4843,9 @@
         },
         "Black Chest (red)": {
           "droprate": "1/70.49; 1/65.575"
+        },
+        "Tiny port reward bag (corsair cove)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -6111,6 +6126,12 @@
         },
         "Blood-starved venator": {
           "droprate": "3 x Unknown"
+        },
+        "Tiny port reward bag (jatizso)": {
+          "droprate": "Unknown"
+        },
+        "Medium port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -9736,7 +9757,8 @@
     },
     "tags": [
       "Melee",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Bandos"
     ]
   },
   {
@@ -12783,7 +12805,8 @@
     "tags": [
       "clue-reward-only",
       "Ranged armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Armadyl"
     ],
     "sources": {
       "drops": {
@@ -12965,7 +12988,8 @@
       }
     },
     "tags": [
-      "Ranged armours"
+      "Ranged armours",
+      "God Wars - Armadyl"
     ]
   },
   {
@@ -12976,7 +13000,8 @@
     "tags": [
       "clue-reward-only",
       "Ranged armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Armadyl"
     ],
     "sources": {
       "drops": {
@@ -13008,7 +13033,8 @@
       }
     },
     "tags": [
-      "Ranged armours"
+      "Ranged armours",
+      "God Wars - Armadyl"
     ]
   },
   {
@@ -13018,7 +13044,8 @@
     "image": "armadyl_cloak.png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Armadyl"
     ],
     "sources": {
       "drops": {
@@ -13036,7 +13063,8 @@
     "tags": [
       "clue-reward-only",
       "Ranged armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Armadyl"
     ],
     "sources": {
       "drops": {
@@ -13059,7 +13087,8 @@
       }
     },
     "tags": [
-      "Ranged"
+      "Ranged",
+      "God Wars - Armadyl"
     ]
   },
   {
@@ -13069,7 +13098,8 @@
     "image": "armadyl_crozier.png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Armadyl"
     ],
     "sources": {
       "drops": {
@@ -13087,7 +13117,8 @@
     "tags": [
       "clue-reward-only",
       "Ranged armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Armadyl"
     ],
     "sources": {
       "drops": {
@@ -13105,7 +13136,8 @@
     "tags": [
       "clue-reward-only",
       "Ranged armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Armadyl"
     ],
     "sources": {
       "drops": {
@@ -13123,7 +13155,8 @@
     "tags": [
       "clue-reward-only",
       "Ranged armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Armadyl"
     ],
     "sources": {
       "drops": {
@@ -13173,7 +13206,8 @@
     "tags": [
       "clue-reward-only",
       "Melee armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Armadyl"
     ],
     "sources": {
       "drops": {
@@ -13207,7 +13241,8 @@
     },
     "tags": [
       "Melee",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Armadyl"
     ]
   },
   {
@@ -13254,7 +13289,8 @@
       }
     },
     "tags": [
-      "Ranged armours"
+      "Ranged armours",
+      "God Wars - Armadyl"
     ]
   },
   {
@@ -13278,7 +13314,8 @@
     "tags": [
       "clue-reward-only",
       "Melee armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Armadyl"
     ],
     "sources": {
       "drops": {
@@ -13295,7 +13332,8 @@
     "image": "armadyl_mitre.png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Armadyl"
     ],
     "sources": {
       "drops": {
@@ -13449,7 +13487,8 @@
     "tags": [
       "clue-reward-only",
       "Melee armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Armadyl"
     ],
     "sources": {
       "drops": {
@@ -13467,7 +13506,8 @@
     "tags": [
       "clue-reward-only",
       "Melee armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Armadyl"
     ],
     "sources": {
       "drops": {
@@ -13485,7 +13525,8 @@
     "tags": [
       "clue-reward-only",
       "Melee armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Armadyl"
     ],
     "sources": {
       "drops": {
@@ -13502,7 +13543,8 @@
     "image": "armadyl_robe_legs.png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Armadyl"
     ],
     "sources": {
       "drops": {
@@ -13519,7 +13561,8 @@
     "image": "armadyl_robe_top.png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Armadyl"
     ],
     "sources": {
       "drops": {
@@ -13600,7 +13643,8 @@
     "image": "armadyl_stole.png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Armadyl"
     ],
     "sources": {
       "drops": {
@@ -14153,6 +14197,9 @@
         },
         "Skeleton (Tarn's Lair) Low level": {
           "droprate": "1/42.667"
+        },
+        "Tiny port reward bag (lunar isle)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -15731,6 +15778,9 @@
         },
         "Ice giant Regular": {
           "droprate": "1/128"
+        },
+        "Tiny port reward bag (musa point)": {
+          "droprate": "Unknown"
         }
       },
       "spawns": {
@@ -16004,7 +16054,8 @@
     },
     "tags": [
       "Melee armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Bandos"
     ]
   },
   {
@@ -16015,7 +16066,8 @@
     "tags": [
       "clue-reward-only",
       "Melee armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Bandos"
     ],
     "sources": {
       "drops": {
@@ -16033,7 +16085,8 @@
     "tags": [
       "clue-reward-only",
       "Ranged armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Bandos"
     ],
     "sources": {
       "drops": {
@@ -16066,7 +16119,8 @@
     },
     "tags": [
       "Melee armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Bandos"
     ]
   },
   {
@@ -16076,7 +16130,8 @@
     "image": "bandos_cloak.png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Bandos"
     ],
     "sources": {
       "drops": {
@@ -16094,7 +16149,8 @@
     "tags": [
       "clue-reward-only",
       "Ranged armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Bandos"
     ],
     "sources": {
       "drops": {
@@ -16111,7 +16167,8 @@
     "image": "bandos_crozier.png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Bandos"
     ],
     "sources": {
       "drops": {
@@ -16129,7 +16186,8 @@
     "tags": [
       "clue-reward-only",
       "Ranged armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Bandos"
     ],
     "sources": {
       "drops": {
@@ -16147,7 +16205,8 @@
     "tags": [
       "clue-reward-only",
       "Ranged armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Bandos"
     ],
     "sources": {
       "drops": {
@@ -16165,7 +16224,8 @@
     "tags": [
       "clue-reward-only",
       "Ranged armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Bandos"
     ],
     "sources": {
       "drops": {
@@ -16215,7 +16275,8 @@
     "tags": [
       "clue-reward-only",
       "Melee armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Bandos"
     ],
     "sources": {
       "drops": {
@@ -16249,7 +16310,8 @@
     },
     "tags": [
       "Melee",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Bandos"
     ]
   },
   {
@@ -16289,7 +16351,8 @@
     "tags": [
       "clue-reward-only",
       "Melee armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Bandos"
     ],
     "sources": {
       "drops": {
@@ -16306,7 +16369,8 @@
     "image": "bandos_mitre.png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Bandos"
     ],
     "sources": {
       "drops": {
@@ -16460,7 +16524,8 @@
     "tags": [
       "clue-reward-only",
       "Melee armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Bandos"
     ],
     "sources": {
       "drops": {
@@ -16478,7 +16543,8 @@
     "tags": [
       "clue-reward-only",
       "Melee armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Bandos"
     ],
     "sources": {
       "drops": {
@@ -16496,7 +16562,8 @@
     "tags": [
       "clue-reward-only",
       "Melee armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Bandos"
     ],
     "sources": {
       "drops": {
@@ -16513,7 +16580,8 @@
     "image": "bandos_robe_legs.png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Bandos"
     ],
     "sources": {
       "drops": {
@@ -16530,7 +16598,8 @@
     "image": "bandos_robe_top.png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Bandos"
     ],
     "sources": {
       "drops": {
@@ -16611,7 +16680,8 @@
     "image": "bandos_stole.png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Bandos"
     ],
     "sources": {
       "drops": {
@@ -16644,7 +16714,8 @@
     },
     "tags": [
       "Melee armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Bandos"
     ]
   },
   {
@@ -16953,58 +17024,7 @@
           "rule": {
             "all": [
               "canCompletePandemonium",
-              {
-                "any": [
-                  {
-                    "all": [
-                      {
-                        "has": 32011
-                      },
-                      {
-                        "has": 32889
-                      }
-                    ]
-                  },
-                  {
-                    "all": [
-                      {
-                        "has": 8566
-                      },
-                      {
-                        "has": 2351
-                      },
-                      {
-                        "has": 1521
-                      },
-                      {
-                        "has": 4820
-                      },
-                      {
-                        "has": 31472
-                      }
-                    ]
-                  },
-                  {
-                    "all": [
-                      {
-                        "has": 8782
-                      },
-                      {
-                        "has": 2359
-                      },
-                      {
-                        "has": 8780
-                      },
-                      {
-                        "has": 1539
-                      },
-                      {
-                        "has": 4842
-                      }
-                    ]
-                  }
-                ]
-              }
+              "canDoBarracudaTrials"
             ]
           }
         }
@@ -30478,6 +30498,9 @@
         },
         "Duke Sucellus": {
           "droprate": "1/100"
+        },
+        "Tiny port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "spawns": {
@@ -30892,6 +30915,12 @@
         },
         "Rusty chest": {
           "droprate": "1/19.5"
+        },
+        "Tiny port reward bag (all ports)": {
+          "droprate": "Unknown"
+        },
+        "Tiny port reward bag (port roberts)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -31457,6 +31486,9 @@
         },
         "Minotaur": {
           "droprate": "1/10.1; 1/5.05"
+        },
+        "Tiny port reward bag (void knights' outpost)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -32545,6 +32577,9 @@
         },
         "Skeleton (Tarn's Lair + Ruins of Ullek) Medium level": {
           "droprate": "1/64"
+        },
+        "Tiny port reward bag (void knights' outpost)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -32620,6 +32655,9 @@
         },
         "Ork": {
           "droprate": "1/25.6"
+        },
+        "Tiny port reward bag (void knights' outpost)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -32797,6 +32835,9 @@
         },
         "Goblin Drop table 2": {
           "droprate": "1/128"
+        },
+        "Tiny port reward bag (corsair cove)": {
+          "droprate": "Unknown"
         }
       },
       "spawns": {
@@ -33853,6 +33894,9 @@
         },
         "Sandworm castings": {
           "droprate": "Varies"
+        },
+        "Tiny port reward bag (sunset coast)": {
+          "droprate": "Unknown"
         }
       },
       "spawns": {
@@ -35597,6 +35641,9 @@
         },
         "Nest (nice) Adamant scimitar": {
           "droprate": "Always"
+        },
+        "Tiny port reward bag (ardougne)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -35960,6 +36007,9 @@
         },
         "Veiled kraken": {
           "droprate": "1/90.67"
+        },
+        "Large port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -36674,6 +36724,9 @@
         },
         "Sarcophagus (Ancient Pyramid)": {
           "droprate": "Rare"
+        },
+        "Tiny port reward bag (port sarim)": {
+          "droprate": "Unknown"
         }
       }
     }
@@ -39123,6 +39176,9 @@
         },
         "Red dragon": {
           "droprate": "1/42.667"
+        },
+        "Tiny port reward bag (ardougne)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -40361,6 +40417,9 @@
         },
         "Ore pack (Volcanic Mine)": {
           "droprate": "Common"
+        },
+        "Medium port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -40971,6 +41030,9 @@
         },
         "Gangster": {
           "droprate": "1/10.24"
+        },
+        "Tiny port reward bag (hosidius)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -42252,6 +42314,9 @@
         },
         "Zombie Level 13": {
           "droprate": "1/64"
+        },
+        "Tiny port reward bag (jatizso)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -42917,7 +42982,8 @@
       }
     },
     "tags": [
-      "Ranged"
+      "Ranged",
+      "God Wars - Armadyl"
     ]
   },
   {
@@ -43783,7 +43849,8 @@
     },
     "tags": [
       "Magic armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Zamorak"
     ]
   },
   {
@@ -43800,7 +43867,8 @@
     },
     "tags": [
       "Magic armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Zamorak"
     ]
   },
   {
@@ -43817,7 +43885,8 @@
     },
     "tags": [
       "Magic armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Zamorak"
     ]
   },
   {
@@ -45576,7 +45645,8 @@
       }
     },
     "tags": [
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Saradomin"
     ]
   },
   {
@@ -49048,6 +49118,9 @@
         },
         "Veiled kraken": {
           "droprate": "1/1000"
+        },
+        "Tiny port reward bag (port roberts)": {
+          "droprate": "Unknown"
         }
       }
     },
@@ -49927,7 +50000,8 @@
       }
     },
     "tags": [
-      "Melee"
+      "Melee",
+      "God Wars - Zamorak"
     ]
   },
   {
@@ -55063,7 +55137,8 @@
       }
     },
     "tags": [
-      "Magic armours"
+      "Magic armours",
+      "God Wars - Zamorak"
     ]
   },
   {
@@ -55079,7 +55154,8 @@
       }
     },
     "tags": [
-      "Magic armours"
+      "Magic armours",
+      "God Wars - Zamorak"
     ]
   },
   {
@@ -55095,7 +55171,8 @@
       }
     },
     "tags": [
-      "Magic armours"
+      "Magic armours",
+      "God Wars - Zamorak"
     ]
   },
   {
@@ -55252,6 +55329,9 @@
       "drops": {
         "Elkhorn coral (plant)": {
           "droprate": "Always"
+        },
+        "Tiny port reward bag (red rock)": {
+          "droprate": "Unknown"
         }
       }
     },
@@ -55337,6 +55417,9 @@
         },
         "Large salvage": {
           "droprate": "1/221.8"
+        },
+        "Tiny port reward bag (summer shore)": {
+          "droprate": "Unknown"
         }
       }
     },
@@ -61163,6 +61246,9 @@
         },
         "Blood-starved venator": {
           "droprate": "3 x Unknown"
+        },
+        "Tiny port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -66461,6 +66547,9 @@
         },
         "Goblin Drop table 2": {
           "droprate": "1/128"
+        },
+        "Tiny port reward bag (aldarin)": {
+          "droprate": "Unknown"
         }
       },
       "spawns": {
@@ -79113,7 +79202,8 @@
     },
     "tags": [
       "Melee armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Bandos"
     ]
   },
   {
@@ -81850,7 +81940,8 @@
     "image": "holy_blessing.png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Saradomin"
     ],
     "sources": {
       "drops": {
@@ -81952,7 +82043,8 @@
     "image": "holy_sandals.png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Saradomin"
     ],
     "sources": {
       "drops": {
@@ -81997,7 +82089,8 @@
       }
     },
     "tags": [
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Saradomin"
     ]
   },
   {
@@ -82007,7 +82100,8 @@
     "image": "holy_wraps.png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Saradomin"
     ],
     "sources": {
       "drops": {
@@ -82024,7 +82118,8 @@
     "image": "honourable_blessing.png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Armadyl"
     ],
     "sources": {
       "drops": {
@@ -83411,7 +83506,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "God Wars - Zamorak"
     ]
   },
   {
@@ -83430,7 +83526,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "God Wars - Zamorak"
     ]
   },
   {
@@ -83468,7 +83565,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "God Wars - Zamorak"
     ]
   },
   {
@@ -84517,6 +84615,9 @@
         },
         "Barrel (Shaman Caves)": {
           "droprate": "Very rare"
+        },
+        "Tiny port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "spawns": {
@@ -84896,6 +84997,12 @@
         },
         "Small salvage": {
           "droprate": "1/34.4"
+        },
+        "Tiny port reward bag (all ports)": {
+          "droprate": "Unknown"
+        },
+        "Tiny port reward bag (port roberts)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -85644,6 +85751,9 @@
         },
         "Black Knight": {
           "droprate": "1/64"
+        },
+        "Tiny port reward bag (void knights' outpost)": {
+          "droprate": "Unknown"
         }
       },
       "spawns": {
@@ -86639,6 +86749,9 @@
         },
         "Workbench (Tal Teklan)": {
           "droprate": "Once"
+        },
+        "Tiny port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "spawns": {
@@ -87045,6 +87158,15 @@
         },
         "Ore pack (Volcanic Mine)": {
           "droprate": "Common"
+        },
+        "Tiny port reward bag (all ports)": {
+          "droprate": "Unknown"
+        },
+        "Tiny port reward bag (jatizso)": {
+          "droprate": "Unknown"
+        },
+        "Small port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -87146,6 +87268,9 @@
         },
         "Simple lockbox": {
           "droprate": "1/339.062"
+        },
+        "Tiny port reward bag (void knights' outpost)": {
+          "droprate": "Unknown"
         }
       },
       "spawns": {
@@ -87233,6 +87358,9 @@
         },
         "Simple lockbox": {
           "droprate": "1/339.062"
+        },
+        "Tiny port reward bag (void knights' outpost)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -87440,6 +87568,9 @@
         },
         "Skeleton Armed": {
           "droprate": "1/128"
+        },
+        "Tiny port reward bag (corsair cove)": {
+          "droprate": "Unknown"
         }
       },
       "spawns": {
@@ -89524,7 +89655,8 @@
     },
     "tags": [
       "Melee armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Saradomin"
     ]
   },
   {
@@ -89544,7 +89676,8 @@
     },
     "tags": [
       "Melee armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Saradomin"
     ]
   },
   {
@@ -89564,7 +89697,8 @@
     },
     "tags": [
       "Melee armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Saradomin"
     ]
   },
   {
@@ -93566,6 +93700,9 @@
         },
         "Barracuda salvage": {
           "droprate": "1/1135"
+        },
+        "Tiny port reward bag (deepfin point)": {
+          "droprate": "Unknown"
         }
       }
     },
@@ -94129,6 +94266,9 @@
         },
         "Struggling sapling (Forestry event)": {
           "droprate": "1/6"
+        },
+        "Tiny port reward bag (brimhaven)": {
+          "droprate": "Unknown"
         }
       }
     },
@@ -97809,6 +97949,9 @@
         },
         "Mahogany tree (Farming)": {
           "droprate": "Common"
+        },
+        "Tiny port reward bag (etceteria)": {
+          "droprate": "Unknown"
         }
       },
       "spawns": {
@@ -97938,6 +98081,9 @@
         },
         "Revenant imp": {
           "droprate": "1/1008.33"
+        },
+        "Medium port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -97994,6 +98140,12 @@
         },
         "Spined kraken": {
           "droprate": "1/107"
+        },
+        "Small port reward bag (all ports)": {
+          "droprate": "Unknown"
+        },
+        "Huge port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -102043,6 +102195,12 @@
         },
         "Bronze Chest (red)": {
           "droprate": "1/19.712; 1/19.096"
+        },
+        "Medium port reward bag (all ports)": {
+          "droprate": "Unknown"
+        },
+        "Large port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -102456,6 +102614,18 @@
         },
         "Tarnished chest": {
           "droprate": "1/58.5"
+        },
+        "Tiny port reward bag (all ports)": {
+          "droprate": "Unknown"
+        },
+        "Tiny port reward bag (port roberts)": {
+          "droprate": "Unknown"
+        },
+        "Small port reward bag (all ports)": {
+          "droprate": "Unknown"
+        },
+        "Medium port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -103168,6 +103338,9 @@
         },
         "Black Chest (red)": {
           "droprate": "1/23.497; 1/21.858"
+        },
+        "Tiny port reward bag (void knights' outpost)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -104328,6 +104501,12 @@
         },
         "Ranging cape assembler": {
           "droprate": "1/400"
+        },
+        "Tiny port reward bag (all ports)": {
+          "droprate": "Unknown"
+        },
+        "Large port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -104515,6 +104694,9 @@
         },
         "Blood-starved venator": {
           "droprate": "3 x Unknown"
+        },
+        "Tiny port reward bag (jatizso)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -104638,6 +104820,9 @@
         },
         "Silver Chest (red)": {
           "droprate": "1/76.195; 1/74.34"
+        },
+        "Tiny port reward bag (void knights' outpost)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -104773,6 +104958,9 @@
         },
         "Black Chest (red)": {
           "droprate": "1/70.49; 1/65.575"
+        },
+        "Tiny port reward bag (void knights' outpost)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -105028,6 +105216,9 @@
         },
         "Sarcophagus (Ancient Pyramid)": {
           "droprate": "Rare"
+        },
+        "Tiny port reward bag (corsair cove)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -106039,7 +106230,8 @@
       }
     },
     "tags": [
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Saradomin"
     ]
   },
   {
@@ -106049,7 +106241,8 @@
     "image": "monk's_robe_(g).png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Saradomin"
     ],
     "sources": {
       "drops": {
@@ -106066,7 +106259,8 @@
     "image": "monk's_robe_(t).png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Saradomin"
     ],
     "sources": {
       "drops": {
@@ -106098,7 +106292,8 @@
       }
     },
     "tags": [
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Saradomin"
     ]
   },
   {
@@ -106108,7 +106303,8 @@
     "image": "monk's_robe_top_(g).png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Saradomin"
     ],
     "sources": {
       "drops": {
@@ -106125,7 +106321,8 @@
     "image": "monk's_robe_top_(t).png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Saradomin"
     ],
     "sources": {
       "drops": {
@@ -109762,6 +109959,9 @@
       "drops": {
         "Nickel rocks": {
           "droprate": "Always"
+        },
+        "Tiny port reward bag (deepfin point)": {
+          "droprate": "Unknown"
         }
       }
     },
@@ -110859,6 +111059,9 @@
         },
         "Young impling jar": {
           "droprate": "1/100"
+        },
+        "Tiny port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -110909,6 +111112,11 @@
     "name": "Oak repair kit",
     "image": "oak_repair_kit.png",
     "sources": {
+      "drops": {
+        "Tiny port reward bag (all ports)": {
+          "droprate": "Unknown"
+        }
+      },
       "other": {
         "Constructing an Oak repair kit": {
           "notes": "Requires some Oak planks, some Iron nails, some Swamp paste, a Hammer and a Saw.",
@@ -111341,7 +111549,8 @@
         }
       },
       "tags": [
-        "Melee armours"
+        "Melee armours",
+        "God Wars - Zamorak"
       ]
     }
   },
@@ -111383,7 +111592,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "God Wars - Zamorak"
     ]
   },
   {
@@ -111424,7 +111634,8 @@
       }
     },
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "God Wars - Zamorak"
     ]
   },
   {
@@ -115156,6 +115367,9 @@
       "drops": {
         "Pillar coral (plant)": {
           "droprate": "Always"
+        },
+        "Tiny port reward bag (red rock)": {
+          "droprate": "Unknown"
         }
       }
     },
@@ -115241,6 +115455,9 @@
         },
         "Large salvage": {
           "droprate": "1/1109"
+        },
+        "Tiny port reward bag (summer shore)": {
+          "droprate": "Unknown"
         }
       }
     },
@@ -116183,6 +116400,9 @@
         },
         "Fishy salvage": {
           "droprate": "1/46.7"
+        },
+        "Tiny port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "spawns": {
@@ -120585,6 +120805,9 @@
         },
         "Drake": {
           "droprate": "1/93"
+        },
+        "Tiny port reward bag (port piscarilius)": {
+          "droprate": "Unknown"
         }
       }
     },
@@ -120662,6 +120885,9 @@
         },
         "Fishing spot (big net, harpoon) Big net": {
           "droprate": "Common"
+        },
+        "Tiny port reward bag (catherby)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -121173,6 +121399,9 @@
       "drops": {
         "Fishing spot (big net, harpoon) Big net": {
           "droprate": "Common"
+        },
+        "Tiny port reward bag (catherby)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -121694,6 +121923,9 @@
         },
         "Barrel (Shaman Caves)": {
           "droprate": "Rare"
+        },
+        "Tiny port reward bag (catherby)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -121801,6 +122033,9 @@
         },
         "The Mimic Master": {
           "droprate": "1/5.158; 1/5.15"
+        },
+        "Tiny port reward bag (port khazard)": {
+          "droprate": "Unknown"
         }
       }
     },
@@ -121877,6 +122112,9 @@
         },
         "Larran's small chest": {
           "droprate": "Varies"
+        },
+        "Tiny port reward bag (piscatoris)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -122383,6 +122621,9 @@
         },
         "Larran's small chest": {
           "droprate": "Varies"
+        },
+        "Tiny port reward bag (port khazard)": {
+          "droprate": "Unknown"
         }
       }
     },
@@ -122552,6 +122793,9 @@
         },
         "Barrel (Shaman Caves)": {
           "droprate": "Rare"
+        },
+        "Tiny port reward bag (catherby)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -122976,6 +123220,9 @@
         },
         "Fishing spot (Piscatoris Fishing Colony) Harpoon (Tuna)": {
           "droprate": "Common"
+        },
+        "Tiny port reward bag (catherby)": {
+          "droprate": "Unknown"
         }
       },
       "spawns": {
@@ -124679,6 +124926,11 @@
     "name": "Repair kit",
     "image": "repair_kit.png",
     "sources": {
+      "drops": {
+        "Tiny port reward bag (all ports)": {
+          "droprate": "Unknown"
+        }
+      },
       "shops": {
         "Yes": "canCompletePandemonium"
       },
@@ -128145,6 +128397,9 @@
         },
         "Veiled kraken": {
           "droprate": "1/27.2"
+        },
+        "Tiny port reward bag (port roberts)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -129286,6 +129541,9 @@
         },
         "Veiled kraken": {
           "droprate": "1/13.6"
+        },
+        "Tiny port reward bag (void knights' outpost)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -131108,6 +131366,9 @@
         },
         "Gold Chest (red)": {
           "droprate": "1/71.955; 1/71.085"
+        },
+        "Tiny port reward bag (void knights' outpost)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -131421,6 +131682,9 @@
         },
         "Veiled kraken": {
           "droprate": "1/13.6"
+        },
+        "Tiny port reward bag (void knights' outpost)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -131791,6 +132055,9 @@
         },
         "Silver Chest (red)": {
           "droprate": "1/76.195; 1/74.34"
+        },
+        "Tiny port reward bag (corsair cove)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -133434,6 +133701,9 @@
         },
         "Blood-starved venator": {
           "droprate": "3 x Unknown"
+        },
+        "Tiny port reward bag (jatizso)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -135014,7 +135284,8 @@
     "tags": [
       "clue-reward-only",
       "Ranged armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Saradomin"
     ],
     "sources": {
       "drops": {
@@ -135224,7 +135495,8 @@
     "tags": [
       "clue-reward-only",
       "Ranged armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Saradomin"
     ],
     "sources": {
       "drops": {
@@ -135241,7 +135513,8 @@
     "image": "saradomin_cloak.png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Saradomin"
     ],
     "sources": {
       "drops": {
@@ -135259,7 +135532,8 @@
     "tags": [
       "clue-reward-only",
       "Ranged armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Saradomin"
     ],
     "sources": {
       "drops": {
@@ -135276,7 +135550,8 @@
     "image": "saradomin_crozier.png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Saradomin"
     ],
     "sources": {
       "drops": {
@@ -135294,7 +135569,8 @@
     "tags": [
       "clue-reward-only",
       "Ranged armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Saradomin"
     ],
     "sources": {
       "drops": {
@@ -135312,7 +135588,8 @@
     "tags": [
       "clue-reward-only",
       "Ranged armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Saradomin"
     ],
     "sources": {
       "drops": {
@@ -135330,7 +135607,8 @@
     "tags": [
       "clue-reward-only",
       "Ranged armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Saradomin"
     ],
     "sources": {
       "drops": {
@@ -135380,7 +135658,8 @@
     "tags": [
       "clue-reward-only",
       "Melee armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Saradomin"
     ],
     "sources": {
       "drops": {
@@ -135414,7 +135693,8 @@
     },
     "tags": [
       "Melee",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Saradomin"
     ]
   },
   {
@@ -135454,7 +135734,8 @@
     "tags": [
       "clue-reward-only",
       "Melee armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Saradomin"
     ],
     "sources": {
       "drops": {
@@ -135471,7 +135752,8 @@
     "image": "saradomin_mitre.png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Saradomin"
     ],
     "sources": {
       "drops": {
@@ -135497,7 +135779,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "God Wars - Saradomin"
+    ]
   },
   {
     "index": 3354,
@@ -135643,7 +135928,8 @@
     "tags": [
       "clue-reward-only",
       "Melee armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Saradomin"
     ],
     "sources": {
       "drops": {
@@ -135661,7 +135947,8 @@
     "tags": [
       "clue-reward-only",
       "Melee armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Saradomin"
     ],
     "sources": {
       "drops": {
@@ -135679,7 +135966,8 @@
     "tags": [
       "clue-reward-only",
       "Melee armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Saradomin"
     ],
     "sources": {
       "drops": {
@@ -135696,7 +135984,8 @@
     "image": "saradomin_robe_legs.png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Saradomin"
     ],
     "sources": {
       "drops": {
@@ -135713,7 +136002,8 @@
     "image": "saradomin_robe_top.png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Saradomin"
     ],
     "sources": {
       "drops": {
@@ -135730,7 +136020,8 @@
     "image": "saradomin_stole.png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Saradomin"
     ],
     "sources": {
       "drops": {
@@ -135762,7 +136053,8 @@
       }
     },
     "tags": [
-      "Melee"
+      "Melee",
+      "God Wars - Saradomin"
     ]
   },
   {
@@ -142955,7 +143247,8 @@
       }
     },
     "tags": [
-      "Magic"
+      "Magic",
+      "God Wars - Zamorak"
     ]
   },
   {
@@ -144467,6 +144760,9 @@
         },
         "Barrel (Shaman Caves)": {
           "droprate": "Rare"
+        },
+        "Small port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -144959,6 +145255,12 @@
         },
         "Nex": {
           "droprate": "Common"
+        },
+        "Tiny port reward bag (all ports)": {
+          "droprate": "Unknown"
+        },
+        "Tiny port reward bag (port roberts)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -145753,6 +146055,9 @@
         },
         "Speedy Keith": {
           "droprate": "1/128"
+        },
+        "Tiny port reward bag (void knights' outpost)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -147055,6 +147360,9 @@
         },
         "Ranging cape accumulator": {
           "droprate": "1/400"
+        },
+        "Tiny port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -147230,6 +147538,9 @@
         },
         "Black Chest (red)": {
           "droprate": "1/70.49; 1/65.575"
+        },
+        "Tiny port reward bag (void knights' outpost)": {
+          "droprate": "Unknown"
         }
       },
       "spawns": {
@@ -147341,6 +147652,9 @@
         },
         "Simple lockbox": {
           "droprate": "1/904.167"
+        },
+        "Tiny port reward bag (void knights' outpost)": {
+          "droprate": "Unknown"
         }
       },
       "spawns": {
@@ -147618,6 +147932,9 @@
         },
         "Bronze Chest (red)": {
           "droprate": "1/32.853; 1/31.827"
+        },
+        "Tiny port reward bag (corsair cove)": {
+          "droprate": "Unknown"
         }
       },
       "spawns": {
@@ -152503,6 +152820,9 @@
         },
         "Earth impling jar": {
           "droprate": "1/100"
+        },
+        "Tiny port reward bag (hosidius)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -154668,6 +154988,9 @@
         },
         "Hunters' loot sack (supplies)": {
           "droprate": "11 × Varies"
+        },
+        "Tiny port reward bag (etceteria)": {
+          "droprate": "Unknown"
         }
       }
     },
@@ -154764,6 +155087,9 @@
         },
         "Barracuda salvage": {
           "droprate": "1/113.5"
+        },
+        "Tiny port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -154824,6 +155150,9 @@
         },
         "Pygmy kraken": {
           "droprate": "1/20.2"
+        },
+        "Tiny port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -155981,7 +156310,8 @@
       }
     },
     "tags": [
-      "Magic"
+      "Magic",
+      "God Wars - Zamorak"
     ]
   },
   {
@@ -156030,7 +156360,8 @@
       }
     },
     "tags": [
-      "Magic"
+      "Magic",
+      "God Wars - Zamorak"
     ]
   },
   {
@@ -156452,6 +156783,12 @@
         },
         "Minotaur": {
           "droprate": "1/16.833; 1/9.182"
+        },
+        "Tiny port reward bag (all ports)": {
+          "droprate": "Unknown"
+        },
+        "Tiny port reward bag (jatizso)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -160432,6 +160769,11 @@
     "name": "Ultracompost",
     "image": "ultracompost.png",
     "sources": {
+      "drops": {
+        "Tiny port reward bag (hosidius)": {
+          "droprate": "Unknown"
+        }
+      },
       "other": {
         "Creating Ultracompost": {
           "notes": "Requires Supercompost and Volcanic ash.",
@@ -160461,6 +160803,9 @@
       "drops": {
         "Umbral coral (plant)": {
           "droprate": "Always"
+        },
+        "Tiny port reward bag (red rock)": {
+          "droprate": "Unknown"
         }
       }
     },
@@ -160540,6 +160885,9 @@
         },
         "Hermit crab": {
           "droprate": "1/1280"
+        },
+        "Tiny port reward bag (summer shore)": {
+          "droprate": "Unknown"
         }
       }
     },
@@ -161298,6 +161646,9 @@
         },
         "Wise Old Man tasks": {
           "droprate": "Rare"
+        },
+        "Tiny port reward bag (cairn isle)": {
+          "droprate": "Unknown"
         }
       }
     },
@@ -161708,6 +162059,9 @@
         },
         "Wise Old Man tasks": {
           "droprate": "Uncommon"
+        },
+        "Tiny port reward bag (cairn isle)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -161833,6 +162187,9 @@
         },
         "Wise Old Man tasks": {
           "droprate": "Uncommon"
+        },
+        "Tiny port reward bag (cairn isle)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -161997,6 +162354,9 @@
         },
         "Wise Old Man tasks": {
           "droprate": "Uncommon"
+        },
+        "Tiny port reward bag (cairn isle)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -162150,6 +162510,9 @@
           "droprate": "1/1000"
         },
         "Mysterious glow": {
+          "droprate": "Unknown"
+        },
+        "Tiny port reward bag (cairn isle)": {
           "droprate": "Unknown"
         }
       },
@@ -162535,6 +162898,9 @@
         },
         "Wise Old Man tasks": {
           "droprate": "Uncommon"
+        },
+        "Tiny port reward bag (cairn isle)": {
+          "droprate": "Unknown"
         }
       },
       "spawns": {
@@ -162861,6 +163227,9 @@
         },
         "Wise Old Man tasks": {
           "droprate": "Uncommon"
+        },
+        "Tiny port reward bag (cairn isle)": {
+          "droprate": "Unknown"
         }
       },
       "spawns": {
@@ -163095,7 +163464,8 @@
     "image": "unholy_blessing.png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Zamorak"
     ],
     "sources": {
       "drops": {
@@ -163181,7 +163551,8 @@
       }
     },
     "tags": [
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Zamorak"
     ]
   },
   {
@@ -164406,7 +164777,8 @@
       }
     },
     "tags": [
-      "Melee"
+      "Melee",
+      "God Wars - Zamorak"
     ]
   },
   {
@@ -164996,7 +165368,8 @@
     "image": "war_blessing.png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Bandos"
     ],
     "sources": {
       "drops": {
@@ -171085,6 +171458,9 @@
       "drops": {
         "Yak": {
           "droprate": "Always"
+        },
+        "Tiny port reward bag (neitiznot)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -172358,7 +172734,8 @@
     "tags": [
       "clue-reward-only",
       "Ranged armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Zamorak"
     ],
     "sources": {
       "drops": {
@@ -172545,7 +172922,8 @@
     "tags": [
       "clue-reward-only",
       "Ranged armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Zamorak"
     ],
     "sources": {
       "drops": {
@@ -172562,7 +172940,8 @@
     "image": "zamorak_cloak.png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Zamorak"
     ],
     "sources": {
       "drops": {
@@ -172580,7 +172959,8 @@
     "tags": [
       "clue-reward-only",
       "Ranged armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Zamorak"
     ],
     "sources": {
       "drops": {
@@ -172597,7 +172977,8 @@
     "image": "zamorak_crozier.png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Zamorak"
     ],
     "sources": {
       "drops": {
@@ -172615,7 +172996,8 @@
     "tags": [
       "clue-reward-only",
       "Ranged armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Zamorak"
     ],
     "sources": {
       "drops": {
@@ -172633,7 +173015,8 @@
     "tags": [
       "clue-reward-only",
       "Ranged armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Zamorak"
     ],
     "sources": {
       "drops": {
@@ -172651,7 +173034,8 @@
     "tags": [
       "clue-reward-only",
       "Ranged armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Zamorak"
     ],
     "sources": {
       "drops": {
@@ -172701,7 +173085,8 @@
     "tags": [
       "clue-reward-only",
       "Melee armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Zamorak"
     ],
     "sources": {
       "drops": {
@@ -172735,7 +173120,8 @@
     },
     "tags": [
       "Melee",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Zamorak"
     ]
   },
   {
@@ -172775,7 +173161,8 @@
     "tags": [
       "clue-reward-only",
       "Melee armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Zamorak"
     ],
     "sources": {
       "drops": {
@@ -172792,7 +173179,8 @@
     "image": "zamorak_mitre.png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Zamorak"
     ],
     "sources": {
       "drops": {
@@ -172873,7 +173261,10 @@
           }
         }
       }
-    }
+    },
+    "tags": [
+      "God Wars - Zamorak"
+    ]
   },
   {
     "index": 4469,
@@ -172904,7 +173295,8 @@
     },
     "tags": [
       "Magic armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Zamorak"
     ]
   },
   {
@@ -172936,7 +173328,8 @@
     },
     "tags": [
       "Magic armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Zamorak"
     ]
   },
   {
@@ -173083,7 +173476,8 @@
     "tags": [
       "clue-reward-only",
       "Melee armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Zamorak"
     ],
     "sources": {
       "drops": {
@@ -173101,7 +173495,8 @@
     "tags": [
       "clue-reward-only",
       "Melee armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Zamorak"
     ],
     "sources": {
       "drops": {
@@ -173119,7 +173514,8 @@
     "tags": [
       "clue-reward-only",
       "Melee armours",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Zamorak"
     ],
     "sources": {
       "drops": {
@@ -173136,7 +173532,8 @@
     "image": "zamorak_robe_legs.png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Zamorak"
     ],
     "sources": {
       "drops": {
@@ -173153,7 +173550,8 @@
     "image": "zamorak_robe_top.png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Zamorak"
     ],
     "sources": {
       "drops": {
@@ -173170,7 +173568,8 @@
     "image": "zamorak_stole.png",
     "tags": [
       "clue-reward-only",
-      "Prayer armours"
+      "Prayer armours",
+      "God Wars - Zamorak"
     ],
     "sources": {
       "drops": {
@@ -173235,7 +173634,8 @@
       }
     },
     "tags": [
-      "Melee"
+      "Melee",
+      "God Wars - Zamorak"
     ]
   },
   {
@@ -173260,7 +173660,8 @@
       }
     },
     "tags": [
-      "Melee"
+      "Melee",
+      "God Wars - Zamorak"
     ]
   },
   {
@@ -173704,6 +174105,9 @@
       "drops": {
         "Zulrah": {
           "droprate": "Always"
+        },
+        "Tiny port reward bag (port tyras)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
