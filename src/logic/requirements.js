@@ -1273,9 +1273,6 @@ export const REQUIREMENT_CHECKS = {
     canCompleteMountainDaughter(ctx) {
         return canCompleteMountainDaughter(ctx);
     },
-    notYetCompletedMountainDaughter(ctx) {
-        return notYetCompletedMountainDaughter(ctx);
-    },
     canCompleteAPorcineOfInterest(ctx) {
         return canCompleteAPorcineOfInterest(ctx);
     },
@@ -4485,13 +4482,6 @@ function canCompleteMountainDaughter(ctx) {
         has(ctx, 954), // Rope
         has(ctx, 960), // Plank
         hasUsablePickaxe(ctx),
-    ]);
-}
-
-function notYetCompletedMountainDaughter(ctx) {
-    return allTrue([
-        canCompleteMountainDaughter(ctx),
-        questAlreadyCompleted(ctx, "canCompleteMountainDaughter", canCompleteMountainDaughter)
     ]);
 }
 
