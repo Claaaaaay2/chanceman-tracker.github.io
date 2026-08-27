@@ -2125,6 +2125,18 @@
         },
         "Tiny port reward bag (port roberts)": {
           "droprate": "Unknown"
+        },
+        "Small port reward bag (all ports)": {
+          "droprate": "Unknown"
+        },
+        "Medium port reward bag (all ports)": {
+          "droprate": "Unknown"
+        },
+        "Large port reward bag (all ports)": {
+          "droprate": "Unknown"
+        },
+        "Huge port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -5818,6 +5830,9 @@
         "Steel Chest (red)": {
           "droprate": "1/22.392; 1/21.532"
         },
+        "Medium port reward bag (all ports)": {
+          "droprate": "Unknown"
+        },
         "Large port reward bag (all ports)": {
           "droprate": "Unknown"
         }
@@ -5885,6 +5900,9 @@
         },
         "Martial salvage": {
           "droprate": "1/48.6"
+        },
+        "Medium port reward bag (all ports)": {
+          "droprate": "Unknown"
         },
         "Large port reward bag (all ports)": {
           "droprate": "Unknown"
@@ -32468,6 +32486,9 @@
         },
         "Ogre Coffin": {
           "droprate": "1/50"
+        },
+        "Tiny port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "spawns": {
@@ -36016,6 +36037,9 @@
         },
         "Large port reward bag (all ports)": {
           "droprate": "Unknown"
+        },
+        "Huge port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -36072,6 +36096,12 @@
         },
         "Armoured kraken": {
           "droprate": "1/29.5"
+        },
+        "Large port reward bag (all ports)": {
+          "droprate": "Unknown"
+        },
+        "Huge port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -50842,6 +50872,9 @@
         },
         "Opulent salvage": {
           "droprate": "1/2000"
+        },
+        "Huge port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       }
     },
@@ -60193,6 +60226,9 @@
         },
         "Blood-starved venator": {
           "droprate": "3 x Unknown"
+        },
+        "Medium port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -86763,6 +86799,9 @@
         },
         "Tiny port reward bag (all ports)": {
           "droprate": "Unknown"
+        },
+        "Small port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "spawns": {
@@ -88215,6 +88254,9 @@
       "drops": {
         "Lost ironwood crate": {
           "droprate": "1/8"
+        },
+        "Huge port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -88274,6 +88316,9 @@
         },
         "Veiled kraken": {
           "droprate": "1/54.4"
+        },
+        "Huge port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -98161,6 +98206,12 @@
         "Small port reward bag (all ports)": {
           "droprate": "Unknown"
         },
+        "Medium port reward bag (all ports)": {
+          "droprate": "Unknown"
+        },
+        "Large port reward bag (all ports)": {
+          "droprate": "Unknown"
+        },
         "Huge port reward bag (all ports)": {
           "droprate": "Unknown"
         }
@@ -104520,6 +104571,12 @@
           "droprate": "1/400"
         },
         "Tiny port reward bag (all ports)": {
+          "droprate": "Unknown"
+        },
+        "Small port reward bag (all ports)": {
+          "droprate": "Unknown"
+        },
+        "Medium port reward bag (all ports)": {
           "droprate": "Unknown"
         },
         "Large port reward bag (all ports)": {
@@ -111131,6 +111188,12 @@
     "sources": {
       "drops": {
         "Tiny port reward bag (all ports)": {
+          "droprate": "Unknown"
+        },
+        "Small port reward bag (all ports)": {
+          "droprate": "Unknown"
+        },
+        "Medium port reward bag (all ports)": {
           "droprate": "Unknown"
         }
       },
@@ -128417,6 +128480,15 @@
         },
         "Tiny port reward bag (port roberts)": {
           "droprate": "Unknown"
+        },
+        "Medium port reward bag (all ports)": {
+          "droprate": "Unknown"
+        },
+        "Large port reward bag (all ports)": {
+          "droprate": "Unknown"
+        },
+        "Huge port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -131092,6 +131164,9 @@
         },
         "Large port reward bag (all ports)": {
           "droprate": "Unknown"
+        },
+        "Huge port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -133726,6 +133801,9 @@
           "droprate": "3 x Unknown"
         },
         "Tiny port reward bag (jatizso)": {
+          "droprate": "Unknown"
+        },
+        "Large port reward bag (all ports)": {
           "droprate": "Unknown"
         }
       },
@@ -147383,6 +147461,9 @@
         },
         "Tiny port reward bag (all ports)": {
           "droprate": "Unknown"
+        },
+        "Small port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -155172,6 +155253,12 @@
           "droprate": "1/20.2"
         },
         "Tiny port reward bag (all ports)": {
+          "droprate": "Unknown"
+        },
+        "Small port reward bag (all ports)": {
+          "droprate": "Unknown"
+        },
+        "Medium port reward bag (all ports)": {
           "droprate": "Unknown"
         },
         "Large port reward bag (all ports)": {
