@@ -164,10 +164,6 @@ function getItemDisplayRank(item, sort, isClueRewardOnly) {
         return 8;
     }
 
-    if (sort.rank === 8) {
-        return 9;
-    }
-
     return sort.rank;
 }
 
@@ -1249,7 +1245,7 @@ export async function initItemsPage() {
                 sort.rank = 9;
             }
 
-            const isUnobtainable = sort.rank === 8 || sort.rank === 9;
+            const isUnobtainable = sort.rank === 9;
             if (hideUnobtainable && isUnobtainable) continue;
 
             const displayRank = getItemDisplayRank(item, sort, isClueRewardOnly);
