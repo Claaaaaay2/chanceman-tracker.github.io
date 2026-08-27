@@ -5817,6 +5817,9 @@
         },
         "Steel Chest (red)": {
           "droprate": "1/22.392; 1/21.532"
+        },
+        "Large port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -5882,6 +5885,9 @@
         },
         "Martial salvage": {
           "droprate": "1/48.6"
+        },
+        "Large port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -98089,6 +98095,12 @@
         },
         "Medium port reward bag (all ports)": {
           "droprate": "Unknown"
+        },
+        "Large port reward bag (all ports)": {
+          "droprate": "Unknown"
+        },
+        "Huge port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -131077,6 +131089,9 @@
         },
         "Fremennik salvage": {
           "droprate": "1/53.2"
+        },
+        "Large port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -133099,6 +133114,9 @@
         },
         "Nest (nice) Rune platelegs": {
           "droprate": "Always"
+        },
+        "Large port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -155154,6 +155172,9 @@
           "droprate": "1/20.2"
         },
         "Tiny port reward bag (all ports)": {
+          "droprate": "Unknown"
+        },
+        "Large port reward bag (all ports)": {
           "droprate": "Unknown"
         }
       },
