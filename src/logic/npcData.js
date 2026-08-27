@@ -529,6 +529,7 @@ export const NPC_DATA = {
         "rule": ["canEnterKaruulmSlayerDungeon"],
         "skill": ["Slayer"],
         "level": [95],
+        "boostable": false,
         "tags": ["boss", "slayer-task-only"],
         "f2p": false
     },
@@ -14971,6 +14972,7 @@ export const NPC_DATA = {
         "rule": ["hasFacemask"],
         "skill": ["Slayer"],
         "level": [93],
+        "boostable": false,
         "tags": ["boss", "slayer-task-only"],
         "f2p": false
     },
