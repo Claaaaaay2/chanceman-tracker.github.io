@@ -245,4 +245,3 @@ export async function evaluateRule(rule, ctx) {
 
     return result;
 }
-

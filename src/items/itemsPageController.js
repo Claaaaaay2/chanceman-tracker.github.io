@@ -407,20 +407,6 @@ export async function initItemsPage() {
         }
     }
 
-    function getOtherSourceRule(source) {
-        if (!source) return null;
-        let rule = source.rule;
-        if (source.tags?.includes("house") && source.houseRule && !fileStore.filters.allowOthersHouses) {
-            rule = {
-                all: [
-                    rule,
-                    source.houseRule
-                ]
-            };
-        }
-        return rule;
-    }
-
     async function isTelegrabSpawnObtainable(rule, ctx) {
     if (!ctx?.filters?.allowTelegrab) return false;
 
@@ -963,8 +949,8 @@ export async function initItemsPage() {
         if (item.sources?.other) {
             for (const [name, source] of Object.entries(item.sources.other)) {
                 if (isSourceHiddenByFilters(source, ctx)) continue;
-                const rule = getOtherSourceRule(source);
-                if (!rule || rule === "No requirements" || await evaluateRule(rule, ctx)) {
+
+                if (await canReachSource(source, ctx)) {
                     sources.push({
                         type: "other",
                         label: name,
@@ -973,7 +959,7 @@ export async function initItemsPage() {
                     });
                 }
             }
-        }
+}
 
         if (rolledSet?.has(item.id) && item.sources?.shops) {
             for (const [shopName, rule] of Object.entries(item.sources.shops)) {
@@ -1262,7 +1248,9 @@ export async function initItemsPage() {
             if (hideJon && await hideTag(item, fileStore, "jon", rolledSet)) {
                 sort.rank = 9;
             }
-            if (hideUnobtainable && sort.rank === 8) continue;
+
+            const isUnobtainable = sort.rank === 8 || sort.rank === 9;
+            if (hideUnobtainable && isUnobtainable) continue;
 
             const displayRank = getItemDisplayRank(item, sort, isClueRewardOnly);
             filtered.push({
@@ -1581,25 +1569,22 @@ async function shouldHideForClueFilter(item, ctx, rolledSet) {
 }
 
 async function canReachSource(source, ctx) {
-    if (!source?.rule) return true;
+    if (!source) return false;
 
-    let rule = source.rule;
+    const ruleMet = await evaluateRule(source.rule, ctx);
 
-    // Conditional house requirement
-    if (
-        source.tags?.includes("house") &&
-        source.houseRule &&
-        !fileStore.filters.allowOthersHouses
-    ) {
-        rule = {
-            all: [
-                rule,
-                source.houseRule
-            ]
-        };
+    if (!ruleMet) {
+        return false;
     }
 
-    return evaluateRule(rule, ctx);
+    if (
+        source.houseRule &&
+        !ctx.filters?.allowOthersHouses
+    ) {
+        return await evaluateRule(source.houseRule, ctx);
+    }
+
+    return true;
 }
 
 async function isNonIronItem(item, ctx, rolledSet) {
@@ -1714,31 +1699,7 @@ async function hideTag(item, ctx, tag, rolledSet) {
                 hasAnyTagSource = true;
             }
 
-            // Build the effective rule for this source.
-            let rule = source.rule;
-
-            if (
-                source.tags?.includes("house") &&
-                source.houseRule &&
-                !fileStore.filters.allowOthersHouses
-            ) {
-                rule = {
-                    all: [
-                        rule,
-                        source.houseRule
-                    ]
-                };
-            }
-
-            const sourceForReachability = {
-                ...source,
-                rule
-            };
-
-            const reachable = await canReachSource(
-                sourceForReachability,
-                ctx
-            );
+            const reachable = await canReachSource(source, ctx);
 
             if (!reachable) continue;
 
@@ -1830,4 +1791,3 @@ if (rolledSet?.has(item.id) && item.sources?.shops) {
 
     return false;
 }
-
