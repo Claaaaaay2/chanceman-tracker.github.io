@@ -1753,7 +1753,15 @@ async function hideSkill(item, ctx, skill, rolledSet) {
             const levels = getNpcEffectiveLevels(npcName, ctx);
             const needsSkill = skills?.includes(skill) || isSlayerLockTag;
             if (needsSkill) hasAnySkillSource = true;
-            if (levels?.length && skillLevel >= levels[0]) hasSkillLevel = true;
+            if (levels?.length) {
+                const meetsSkillRequirement = npc.boostable === false
+                    ? hasNonBoostableSkillLevel(ctx, skill, levels[0])
+                    : skillLevel >= levels[0];
+
+                if (meetsSkillRequirement) {
+                    hasSkillLevel = true;
+                }
+            }
 
             const reachable = await canReachNpc(npcName, ctx);
             if (!reachable) continue;

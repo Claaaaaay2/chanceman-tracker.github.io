@@ -529,6 +529,7 @@ export const NPC_DATA = {
         "rule": ["canEnterKaruulmSlayerDungeon"],
         "skill": ["Slayer"],
         "level": [95],
+        "boostable": false,
         "tags": ["boss", "slayer-task-only"],
         "f2p": false
     },
@@ -14971,6 +14972,7 @@ export const NPC_DATA = {
         "rule": ["hasFacemask"],
         "skill": ["Slayer"],
         "level": [93],
+        "boostable": false,
         "tags": ["boss", "slayer-task-only"],
         "f2p": false
     },
@@ -18640,7 +18642,7 @@ export const NPC_DATA = {
         "f2p": false
     },
     "Tiny port reward bag (all ports)": {
-        "wiki": "https://oldschool.runescape.wiki/w/Tiny_port_reward_bag_(the_pandemonium)",
+        "wiki": "https://oldschool.runescape.wiki/w/Port_reward_bag#Tiny",
         "rule": ["canCompletePandemonium"],
         "skill": ["sailing"],
         "level": [1],
@@ -18648,7 +18650,7 @@ export const NPC_DATA = {
         "f2p": false
     },
     "Small port reward bag (all ports)": {
-        "wiki": "https://oldschool.runescape.wiki/w/Small_port_reward_bag_(the_pandemonium)",
+        "wiki": "https://oldschool.runescape.wiki/w/Port_reward_bag#Small",
         "rule": ["canCompletePandemonium"],
         "skill": ["sailing"],
         "level": [1],
@@ -18656,7 +18658,7 @@ export const NPC_DATA = {
         "f2p": false
     },
     "Medium port reward bag (all ports)": {
-        "wiki": "https://oldschool.runescape.wiki/w/Medium_port_reward_bag_(the_pandemonium)",
+        "wiki": "https://oldschool.runescape.wiki/w/Port_reward_bag#Medium",
         "rule": ["canCompletePandemonium"],
         "skill": ["sailing"],
         "level": [1],
@@ -18664,7 +18666,7 @@ export const NPC_DATA = {
         "f2p": false
     },
     "Large port reward bag (all ports)": {
-        "wiki": "https://oldschool.runescape.wiki/w/Large_port_reward_bag_(the_pandemonium)",
+        "wiki": "https://oldschool.runescape.wiki/w/Port_reward_bag#Large",
         "rule": ["canCompletePandemonium"],
         "skill": ["sailing"],
         "level": [1],
@@ -18672,7 +18674,7 @@ export const NPC_DATA = {
         "f2p": false
     },
     "Huge port reward bag (all ports)": {
-        "wiki": "https://oldschool.runescape.wiki/w/Huge_port_reward_bag_(the_pandemonium)",
+        "wiki": "https://oldschool.runescape.wiki/w/Port_reward_bag#Huge",
         "rule": ["canCompletePandemonium"],
         "skill": ["sailing"],
         "level": [1],
