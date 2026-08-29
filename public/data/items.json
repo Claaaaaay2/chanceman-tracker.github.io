@@ -60229,6 +60229,12 @@
         },
         "Medium port reward bag (all ports)": {
           "droprate": "Unknown"
+        },
+        "Large port reward bag (all ports)": {
+          "droprate": "Unknown"
+        },
+        "Huge port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -133982,6 +133988,11 @@
     "name": "Sailor's mirage",
     "image": "sailor's_mirage.png",
     "sources": {
+      "drops" : {
+        "Tiny port reward bag (the pandemonium)": {
+          "droprate": "Unknown"
+        }
+      },
       "shops": {
         "Yes": "No requirements"
       }
@@ -165272,6 +165283,9 @@
     "image": "vodka.png",
     "sources": {
       "drops": {
+        "Tiny port reward bag (the pandemonium)": {
+          "droprate": "Unknown"
+        },
         "Dinky the drink troll": {
           "droprate": "1/10"
         },
