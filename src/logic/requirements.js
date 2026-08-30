@@ -47,6 +47,7 @@ function getRequirementItemLookupState(ctx) {
         obtainedRef,
         obtainedLength,
         knownItemIds,
+        rolledSet,
         obtainedItemIds,
         ownedItemIds,
         elementalRuneResultCache: new Map()
@@ -75,6 +76,16 @@ function hasObtainedItem(ctx, id, options = {}) {
         ctx.missing.items.add(id);
     }
     return hasItemValue;
+}
+
+function hasRolledButNotObtained(ctx, id) {
+    const lookupState = getRequirementItemLookupState(ctx);
+    if (!lookupState?.knownItemIds.has(id)) return false;
+
+    return (
+        (lookupState.rolledRef || []).includes(id) &&
+        !lookupState.obtainedItemIds.has(id)
+    );
 }
 
 function addMissingItemGroup(ctx, ids) {
@@ -3564,7 +3575,8 @@ function canCompleteDeathPlateau(ctx) {
         has(ctx, 333), // Trout
         has(ctx, 2351), // Iron bar
         has(ctx, 1905), // Asgarnian ale
-        has(ctx, 3105), // Climbing boots
+        (hasRolledButNotObtained(ctx, 3105) || has(ctx, 3105)), // Climbing boots
+        (hasRolledButNotObtained(ctx, 3107) || has(ctx, 3107)), // Spiked boots
     ]);
 }
 
