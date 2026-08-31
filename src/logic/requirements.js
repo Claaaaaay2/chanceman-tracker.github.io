@@ -3084,6 +3084,7 @@ function canCompleteAnotherSliceOfHAM(ctx) {
         requiresQuest(ctx, "canCompleteDeathToTheDorgeshuun", canCompleteDeathToTheDorgeshuun), //
         requiresQuest(ctx, "canCompleteTheGiantDwarf", canCompleteTheGiantDwarf), //
         requiresQuest(ctx, "canCompleteTheDigSite", canCompleteTheDigSite), //
+        (hasRolledButNotObtained(ctx, 11061) || has(ctx, 11061)), // Ancient mace
     ]); //
 }
 
@@ -3125,6 +3126,7 @@ function canCompleteATasteOfHope(ctx) {
         has(ctx, 233), // Pestle and mortar
         has(ctx, 227), // Vial of water
         hasAnyItems(ctx, [946, 2961]), // Knife or Silver sickle
+        has(ctx, 32886), // Chain
     ]);
 }
 
@@ -3709,7 +3711,7 @@ function canCompleteDragonSlayerI(ctx) {
         has(ctx, 1907), // Wizards mind bomb
         has(ctx, 301), // Lobster pot
         has(ctx, 950), // Silk
-        has(ctx, 1540), // Anti-dragon shield
+        (hasRolledButNotObtained(ctx, 1540) || has(ctx, 1540)), // Anti-dragon shield
         has(ctx, 2347), // Hammer
         has(ctx, 1539), // Steel nails
         has(ctx, 960), // Plank
@@ -4043,6 +4045,7 @@ function canCompleteGrimTales(ctx) {
         hasSkillLevel(ctx, "Woodcutting", 71),
         requiresQuest(ctx, "canCompleteWitchsHouse", canCompleteWitchsHouse), //
         has(ctx, 95), // Tarromin potion (unf)
+        (hasRolledButNotObtained(ctx, 11205) || has(ctx, 11205)), // Shrunk ogleroot to make shrink-me-quick potion
         hasUsableAxe(ctx),
     ]);
 }
@@ -4057,7 +4060,7 @@ function canCompleteHauntedMine(ctx) {
 
 function canCompleteHazeelCult(ctx) {
     if (isHazeelCultLocked(ctx)) {
-        return has(ctx, 273); // Poison (item)
+        return (hasRolledButNotObtained(ctx, 273) || has(ctx, 273)); // Poison (item)
     }
     return true;
 }
@@ -4558,7 +4561,7 @@ function canGoDiving(ctx) {
 function canCompleteNatureSpirit(ctx) {
     return allTrue([
         requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
-        hasAnyItems(ctx, [2970, 2974, 2972]),
+        has(ctx, 2970), // Mort myre fungus
         has(ctx, 2961), // Silver sickle
         has(ctx, 2355), // Silver bar
         has(ctx, 2976), // Sickle mould
@@ -4877,7 +4880,8 @@ function canCompleteRFDFreeingSkrachUglologwee(ctx) {
         has(ctx, 2876), // Raw chompy
         has(ctx, 7225), // Iron spit
         has(ctx, 1759), // Ball of wool
-        has(ctx, 7566), // Raw Jubbly
+        (hasRolledButNotObtained(ctx, 7566) || has(ctx, 7566)), // Raw Jubbly
+        (hasRolledButNotObtained(ctx, 7568) || has(ctx, 7568)), // Cooked jubbly
     ]);
 }
 
@@ -4971,7 +4975,7 @@ function canCompleteRumDeal(ctx) {
 }
 
 function canCompleteRuneMysteries(ctx) {
-    return has(ctx, 1438); // Air talisman
+    return (hasRolledButNotObtained(ctx, 1438) || has(ctx, 1438)); // Air talisman
 }
 
 function canCompleteScorpionCatcher(ctx) {
@@ -5022,13 +5026,12 @@ function canCompleteShadesOfMortton(ctx) {
         hasSkillLevel(ctx, "Herblore", 15),
         hasSkillLevel(ctx, "Firemaking", 5),
         requiresQuest(ctx, "canCompletePriestInPeril", canCompletePriestInPeril), //
-        has(ctx, 3410), // Serum 207 (3)
+        (hasRolledButNotObtained(ctx, 3410) || has(ctx, 3410)), // Serum 207 (3)
         has(ctx, 95), // Tarromin potion (unf) (might not be needed?)
         has(ctx, 592), // Ashes (might not be needed?)
         has(ctx, 590), // Tinderbox (might not be needed?)
-        has(ctx, 1511), // Logs (might not be needed?)
-        hasAnyItems(ctx, [2347, 3678]),
-        hasAnyItems(ctx, [3438, 3440, 3442, 6211, 10808, 3444, 6213, 31383, 3446, 3448, 31386, 19672, 31389]),
+        hasAnyItems(ctx, [2347, 3678]), // hammer/flamtaer hammer
+        hasAnyItems(ctx, [3438, 3440, 3442, 6211, 10808, 3444, 6213, 31383, 3446, 3448, 31386, 19672, 31389]), // pyre logs variations
         has(ctx, 3396), // Loar remains
     ]);
 }
@@ -5200,6 +5203,7 @@ function canCompleteSwanSong(ctx) {
         has(ctx, 303), // Small fishing net
         has(ctx, 1757), // Brown apron
         has(ctx, 7944), // Raw monkfish
+        has(ctx, 7946), // Cooked Monkfish
         has(ctx, 526), // Bones
     ]);
 }
@@ -5219,8 +5223,8 @@ function canCompleteTaiBwoWannaiTrio(ctx) {
         has(ctx, 3125), // Jogre bones
         has(ctx, 401), // Seaweed
         hasAnyItems(ctx, [1239, 1241, 1243, 1245, 1247, 1249]),
-        has(ctx, 3157), // Karambwan vessel
-        has(ctx, 3159), // Karambwan vessel (baited)
+        (hasRolledButNotObtained(ctx, 3157) || has(ctx, 3157)), // Karambwan vessel
+        (hasRolledButNotObtained(ctx, 3159) || has(ctx, 3159)), // Karambwan vessel (baited)
         has(ctx, 3142), // Raw Karambwan
     ]);
 }
@@ -5827,6 +5831,8 @@ function canCompleteUndergroundPass(ctx) {
         has(ctx, 952), // Spade
         has(ctx, 1925), // Bucket
         has(ctx, 590), // Tinderbox
+        has(ctx, 1033), // Zamorak monk bottom
+	    has(ctx, 1035), // Zamorak monk top these are needed for the last step to get inside where Iban is.
     ]);
 }
 
