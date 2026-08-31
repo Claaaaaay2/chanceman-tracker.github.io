@@ -3269,12 +3269,12 @@ function canCompleteBigChompyBirdHunting(ctx) {
         has(ctx, 2128), // Equa leaves
         has(ctx, 1573), // Doogle leaves
         has(ctx, 2862), // Achey tree logs
-        has(ctx, 2864), // Ogre arrow shaft
-        has(ctx, 2865), // Flighted ogre arrow
+        (hasRolledButNotObtained(ctx, 2864) || has(ctx, 2864)), // Ogre arrow shaft
+        (hasRolledButNotObtained(ctx, 2865) || has(ctx, 2865)), // Flighted ogre arrow
         has(ctx, 2859), // Wolf bones
-        has(ctx, 2861), // Wolfbone arrowtips
-        has(ctx, 2866), // Ogre arrow
-        has(ctx, 2876), // Raw chompy
+        (hasRolledButNotObtained(ctx, 2861) || has(ctx, 2861)), // Wolfbone arrowtips
+        (hasRolledButNotObtained(ctx, 2866) || has(ctx, 2866)), // Ogre arrow
+        (hasRolledButNotObtained(ctx, 2876) || has(ctx, 2876)), // Raw chompy
     ]);
 }
 
