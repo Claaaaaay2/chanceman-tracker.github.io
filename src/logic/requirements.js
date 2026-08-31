@@ -2937,10 +2937,19 @@ export const REQUIREMENT_CHECKS = {
     canCompleteFallenFromGrace(ctx) {  
         return canCompleteFallenFromGrace(ctx);
     },
+    hasAnyArrow(ctx) {
+        return hasAnyArrow(ctx);
+    },
     never(ctx) {
         return false;
     }
 };
+
+function hasAnyArrow(ctx) {
+    ([
+        hasAnyItems(ctx, [882, 884, 886, 888, 890, 892, 1121, 21326]), // bronze - dragon arrows + amethyst
+    ]);
+}
 
 function canAccessWyrmscraigIsland (ctx) {
     return allTrue([
@@ -5825,8 +5834,8 @@ function canCompleteTwilightsPromise(ctx) {
 function canCompleteUndergroundPass(ctx) {
     return allTrue([
         hasSkillLevel(ctx, "Ranged", 25),
-        requiresQuest(ctx, "canCompleteBiohazard", canCompleteBiohazard) //
-        , // Bow and arrows needed, but thats a huge one... TODO
+        requiresQuest(ctx, "canCompleteBiohazard", canCompleteBiohazard), //
+        (hasAnyArrow(ctx) || hasNonBoostableSkillLevel(ctx, "Slayer", 63)), // for flaming arrows (dropped from spiritual rangers). No bow needed, training bow works.
         has(ctx, 954), // Rope
         has(ctx, 952), // Spade
         has(ctx, 1925), // Bucket
