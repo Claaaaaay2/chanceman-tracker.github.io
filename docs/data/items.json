@@ -35795,7 +35795,7 @@
     "image": "calquat_keg.png",
     "sources": {
       "other": {
-        "Creating a sapling": {
+        "Crafting a keg": {
           "notes": "Requires a Calquat fruit and a Knife.",
           "rule": {
             "all": [
@@ -118692,6 +118692,9 @@
     "image": "premade_blurb'_sp..png",
     "sources": {
       "shops": {
+        "Yes": "No requirements"
+      },
+      "spawns": {
         "Yes": "No requirements"
       }
     },
