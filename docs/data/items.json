@@ -50831,11 +50831,6 @@
     "name": "Dragon metal shard",
     "image": "dragon_metal_shard.png",
     "sources": {
-      "drops" : {
-        "Huge port reward bag (all ports)": {
-          "droprate": "Unknown"
-        }
-      },
       "shops": {
         "Yes": "canCompleteDragonSlayerII"
       }
@@ -50871,6 +50866,9 @@
         },
         "Veiled kraken": {
           "droprate": "1/1150"
+        },
+        "Huge port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       }
     },
