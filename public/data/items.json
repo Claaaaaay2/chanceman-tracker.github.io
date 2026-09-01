@@ -14222,7 +14222,13 @@
         "Skeleton (Tarn's Lair) Low level": {
           "droprate": "1/42.667"
         },
-        "Tiny port reward bag (lunar isle)": {
+        "Medium port reward bag (lunar isle)": {
+          "droprate": "Unknown"
+        },
+        "Large port reward bag (lunar isle)": {
+          "droprate": "Unknown"
+        },
+        "Huge port reward bag (lunar isle)": {
           "droprate": "Unknown"
         }
       },
@@ -17022,6 +17028,17 @@
     "name": "Barnacle blaster",
     "image": "barnacle_blaster.png",
     "sources": {
+      "drops":  {
+        "Medium port reward bag (the pandemonium)": {
+          "droprate": "Unknown"
+        },
+        "Small port reward bag (the pandemonium)": {
+          "droprate": "Unknown"
+        },
+        "Tiny port reward bag (the pandemonium)": {
+          "droprate": "Unknown"
+        }
+      },
       "shops": {
         "Yes": "No requirements"
       }
@@ -19443,6 +19460,15 @@
         },
         "Yew birdhouse": {
           "droprate": "1/1.538; 1/1.583"
+        },
+        "Large port reward bag (lands end)": {
+          "droprate": "Unknown"
+        },
+        "Small port reward bag (lands end)": {
+          "droprate": "Unknown"
+        },
+        "Tiny port reward bag (lands end)": {
+          "droprate": "Unknown"
         }
       }
     }
@@ -49158,7 +49184,10 @@
         "Veiled kraken": {
           "droprate": "1/1000"
         },
-        "Tiny port reward bag (port roberts)": {
+        "Huge port reward bag (port roberts)": {
+          "droprate": "Unknown"
+        },
+        "Huge port reward bag (all ports)": {
           "droprate": "Unknown"
         }
       }
@@ -50805,6 +50834,11 @@
     "name": "Dragon metal shard",
     "image": "dragon_metal_shard.png",
     "sources": {
+      "drops" : {
+        "Huge port reward bag (all ports)": {
+          "droprate": "Unknown"
+        }
+      },
       "shops": {
         "Yes": "canCompleteDragonSlayerII"
       }
@@ -55372,7 +55406,7 @@
         "Elkhorn coral (plant)": {
           "droprate": "Always"
         },
-        "Tiny port reward bag (red rock)": {
+        "Small port reward bag (red rock)": {
           "droprate": "Unknown"
         }
       }
@@ -55460,7 +55494,7 @@
         "Large salvage": {
           "droprate": "1/221.8"
         },
-        "Tiny port reward bag (summer shore)": {
+        "Small port reward bag (summer shore)": {
           "droprate": "Unknown"
         }
       }
@@ -66599,7 +66633,10 @@
         "Goblin Drop table 2": {
           "droprate": "1/128"
         },
-        "Tiny port reward bag (aldarin)": {
+        "Medium port reward bag (aldarin)": {
+          "droprate": "Unknown"
+        },
+        "Small port reward bag (aldarin)": {
           "droprate": "Unknown"
         }
       },
@@ -79001,6 +79038,12 @@
     "image": "grog.png",
     "sources": {
       "drops" : {
+        "Small port reward bag (the pandemonium)": {
+          "droprate": "Unknown"
+        },
+        "Medium port reward bag (the pandemonium)": {
+          "droprate": "Unknown"
+        },
         "Tiny port reward bag (the pandemonium)": {
           "droprate": "Unknown"
         }
@@ -93768,6 +93811,12 @@
         },
         "Tiny port reward bag (deepfin point)": {
           "droprate": "Unknown"
+        },
+        "Large port reward bag (deepfin point)": {
+          "droprate": "Unknown"
+        },
+        "Huge port reward bag (deepfin point)": {
+          "droprate": "Unknown"
         }
       }
     },
@@ -104778,7 +104827,7 @@
         "Blood-starved venator": {
           "droprate": "3 x Unknown"
         },
-        "Tiny port reward bag (jatizso)": {
+        "Small port reward bag (jatizso)": {
           "droprate": "Unknown"
         }
       },
@@ -115457,7 +115506,10 @@
         "Pillar coral (plant)": {
           "droprate": "Always"
         },
-        "Tiny port reward bag (red rock)": {
+        "Large port reward bag (red rock)": {
+          "droprate": "Unknown"
+        },
+        "Medium port reward bag (red rock)": {
           "droprate": "Unknown"
         }
       }
@@ -115545,7 +115597,10 @@
         "Large salvage": {
           "droprate": "1/1109"
         },
-        "Tiny port reward bag (summer shore)": {
+        "Large port reward bag (summer shore)": {
+          "droprate": "Unknown"
+        },
+        "Medium port reward bag (summer shore)": {
           "droprate": "Unknown"
         }
       }
@@ -120898,6 +120953,15 @@
         "Drake": {
           "droprate": "1/93"
         },
+        "Large port reward bag (port piscarilius)": {
+          "droprate": "Unknown"
+        },
+        "Medium port reward bag (port piscarilius)": {
+          "droprate": "Unknown"
+        },
+        "Small port reward bag (port piscarilius)": {
+          "droprate": "Unknown"
+        },
         "Tiny port reward bag (port piscarilius)": {
           "droprate": "Unknown"
         }
@@ -122016,7 +122080,7 @@
         "Barrel (Shaman Caves)": {
           "droprate": "Rare"
         },
-        "Tiny port reward bag (catherby)": {
+        "Medium port reward bag (catherby)": {
           "droprate": "Unknown"
         }
       },
@@ -122128,6 +122192,12 @@
         },
         "Tiny port reward bag (port khazard)": {
           "droprate": "Unknown"
+        },
+        "Small port reward bag (port khazard)": {
+          "droprate": "Unknown"
+        },
+        "Medium port reward bag (port khazard)": {
+          "droprate": "Unknown"
         }
       }
     },
@@ -122205,7 +122275,10 @@
         "Larran's small chest": {
           "droprate": "Varies"
         },
-        "Tiny port reward bag (piscatoris)": {
+        "Large port reward bag (piscatoris)": {
+          "droprate": "Unknown"
+        },
+        "Medium port reward bag (piscatoris)": {
           "droprate": "Unknown"
         }
       },
@@ -133995,6 +134068,12 @@
     "image": "sailor's_mirage.png",
     "sources": {
       "drops" : {
+        "Medium port reward bag (the pandemonium)": {
+          "droprate": "Unknown"
+        },
+        "Small port reward bag (the pandemonium)": {
+          "droprate": "Unknown"
+        },
         "Tiny port reward bag (the pandemonium)": {
           "droprate": "Unknown"
         }
@@ -145374,10 +145453,13 @@
         "Nex": {
           "droprate": "Common"
         },
-        "Tiny port reward bag (all ports)": {
+        "Small port reward bag (all ports)": {
           "droprate": "Unknown"
         },
-        "Tiny port reward bag (port roberts)": {
+        "Medium port reward bag (port roberts)": {
+          "droprate": "Unknown"
+        },
+        "Large port reward bag (port roberts)": {
           "droprate": "Unknown"
         }
       },
@@ -152939,7 +153021,7 @@
         "Earth impling jar": {
           "droprate": "1/100"
         },
-        "Tiny port reward bag (hosidius)": {
+        "Large port reward bag (hosidius)": {
           "droprate": "Unknown"
         }
       },
@@ -155107,7 +155189,7 @@
         "Hunters' loot sack (supplies)": {
           "droprate": "11 × Varies"
         },
-        "Tiny port reward bag (etceteria)": {
+        "Huge port reward bag (etceteria)": {
           "droprate": "Unknown"
         }
       }
@@ -160896,11 +160978,6 @@
     "name": "Ultracompost",
     "image": "ultracompost.png",
     "sources": {
-      "drops": {
-        "Tiny port reward bag (hosidius)": {
-          "droprate": "Unknown"
-        }
-      },
       "other": {
         "Creating Ultracompost": {
           "notes": "Requires Supercompost and Volcanic ash.",
@@ -160931,7 +161008,7 @@
         "Umbral coral (plant)": {
           "droprate": "Always"
         },
-        "Tiny port reward bag (red rock)": {
+        "Huge port reward bag (red rock)": {
           "droprate": "Unknown"
         }
       }
@@ -161013,7 +161090,7 @@
         "Hermit crab": {
           "droprate": "1/1280"
         },
-        "Tiny port reward bag (summer shore)": {
+        "Huge port reward bag (summer shore)": {
           "droprate": "Unknown"
         }
       }
@@ -164154,6 +164231,17 @@
     "name": "Varlamorian kebab",
     "image": "varlamorian_kebab.png",
     "sources": {
+      "drops":{
+        "Large port reward bag (civitas illa fortis)": {
+          "droprate": "Unknown"
+        },
+        "Medium port reward bag (civitas illa fortis)": {
+          "droprate": "Unknown"
+        },
+        "Small port reward bag (civitas illa fortis)": {
+          "droprate": "Unknown"
+        }
+      },
       "shops": {
         "Yes": "No requirements"
       }
@@ -165289,6 +165377,12 @@
     "image": "vodka.png",
     "sources": {
       "drops": {
+        "Medium port reward bag (the pandemonium)": {
+          "droprate": "Unknown"
+        },
+        "Small port reward bag (the pandemonium)": {
+          "droprate": "Unknown"
+        },
         "Tiny port reward bag (the pandemonium)": {
           "droprate": "Unknown"
         },
@@ -171589,7 +171683,7 @@
         "Yak": {
           "droprate": "Always"
         },
-        "Tiny port reward bag (neitiznot)": {
+        "Medium port reward bag (neitiznot)": {
           "droprate": "Unknown"
         }
       },
@@ -174236,7 +174330,10 @@
         "Zulrah": {
           "droprate": "Always"
         },
-        "Tiny port reward bag (port tyras)": {
+        "Huge port reward bag (port tyras)": {
+          "droprate": "Unknown"
+        },
+        "Medium port reward bag (port tyras)": {
           "droprate": "Unknown"
         }
       },
