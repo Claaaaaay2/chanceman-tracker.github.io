@@ -49183,12 +49183,6 @@
         },
         "Veiled kraken": {
           "droprate": "1/1000"
-        },
-        "Huge port reward bag (port roberts)": {
-          "droprate": "Unknown"
-        },
-        "Huge port reward bag (all ports)": {
-          "droprate": "Unknown"
         }
       }
     },
@@ -49232,6 +49226,9 @@
         },
         "Veiled kraken": {
           "droprate": "1/90.67"
+        },
+        "Huge port reward bag (all ports)": {
+          "droprate": "Unknown"
         }
       }
     },
