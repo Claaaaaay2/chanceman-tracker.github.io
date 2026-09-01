@@ -29200,10 +29200,10 @@
     "sources": {
       "drops": {
         "Vampyre kraken": {
-          "droprate": "1/512"
+          "droprate": "1/350; 1/175"
         },
         "Armoured kraken": {
-          "droprate": "1/1024"
+          "droprate": "1/500; 1/250"
         }
       }
     },
@@ -29971,7 +29971,7 @@
     "sources": {
       "drops": {
         "Great white shark": {
-          "droprate": "1/1023"
+          "droprate": "1/500; 1/250"
         }
       }
     },
@@ -50306,17 +50306,20 @@
     "image": "dragon_keel_parts.png",
     "sources": {
       "drops": {
-        "Armoured kraken": {
-          "droprate": "1/1280"
-        },
         "Vampyre kraken": {
-          "droprate": "1/1280"
-        },
-        "Great white shark": {
-          "droprate": "1/6138"
+          "droprate": "1/320; 1/160"
         },
         "Veiled kraken": {
-          "droprate": "1/1850"
+          "droprate": "1/360; 1/180"
+        },
+        "Orca": {
+          "droprate": "1/400; 1/200"
+        },
+        "Great white shark": {
+          "droprate": "1/720; 1/360"
+        },
+        "Armoured kraken": {
+          "droprate": "1/540; 1/270"
         }
       },
       "other": {
@@ -50847,25 +50850,25 @@
           "droprate": "1/8"
         },
         "Magma strykewyrm": {
-          "droprate": "1/100"
-        },
-        "Armoured kraken": {
-          "droprate": "1/426.667"
-        },
-        "Vampyre kraken": {
-          "droprate": "1/426.667"
-        },
-        "Great white shark": {
-          "droprate": "1/1534.5"
+          "droprate": "3 × 1/45"
         },
         "Frost dragon": {
-          "droprate": "1/200; 1/55"
+          "droprate": "1/100; 1/40"
         },
         "Lava Strykewyrm": {
-          "droprate": "1/400; 1/100"
+          "droprate": "1/115; 1/45"
+        },
+        "Armoured kraken": {
+          "droprate": "1/135; 1/67.5"
+        },
+        "Vampyre kraken": {
+          "droprate": "1/160; 1/80"
+        },
+        "Great white shark": {
+          "droprate": "1/180; 1/90"
         },
         "Veiled kraken": {
-          "droprate": "1/1150"
+          "droprate": "1/180; 1/90"
         },
         "Huge port reward bag (all ports)": {
           "droprate": "Unknown"
@@ -50900,7 +50903,10 @@
           "droprate": "1/65"
         },
         "Narwhal": {
-          "droprate": "1/150"
+          "droprate": "1/75"
+        },
+        "Orca": {
+          "droprate": "1/75"
         },
         "Opulent salvage": {
           "droprate": "1/2000"
@@ -54774,11 +54780,11 @@
     "image": "echo_pearl.png",
     "sources": {
       "drops": {
+        "Orca": {
+          "droprate": "1/70; 1/35"
+        },
         "Dolphin": {
           "droprate": "1/1200"
-        },
-        "Orca": {
-          "droprate": "1/70"
         }
       }
     },
@@ -83520,6 +83526,9 @@
         "Vampyre kraken": {
           "droprate": "1/1500"
         },
+        "Veiled kraken": {
+          "droprate": "1/1900"
+        },
         "Armoured kraken": {
           "droprate": "1/2000"
         },
@@ -83528,9 +83537,6 @@
         },
         "Pygmy kraken": {
           "droprate": "1/3000"
-        },
-        "Veiled kraken": {
-          "droprate": "1/1900"
         }
       }
     }
@@ -92027,17 +92033,20 @@
     "image": "large_dragon_keel_parts.png",
     "sources": {
       "drops": {
-        "Armoured kraken": {
-          "droprate": "1/1280"
-        },
         "Vampyre kraken": {
-          "droprate": "1/1280"
-        },
-        "Great white shark": {
-          "droprate": "1/6138"
+          "droprate": "1/320; 1/160"
         },
         "Veiled kraken": {
-          "droprate": "1/2100"
+          "droprate": "1/360; 1/180"
+        },
+        "Orca": {
+          "droprate": "1/400; 1/200"
+        },
+        "Armoured kraken": {
+          "droprate": "1/540; 1/270"
+        },
+        "Great white shark": {
+          "droprate": "1/720; 1/360"
         }
       },
       "other": {
