@@ -1,4 +1,4 @@
-import{f as t}from"./index-Bsum62zT.js";let o=null,r=null;async function u(){return`
+import{f as t}from"./index-CBpn4Ld8.js";let o=null,r=null;async function u(){return`
         <h1>Report a bug</h1>
         <p>Report your problems here. It will automatically also send your obtained, rolled, filters, and tracker blob for me to check :)</p>
         <textarea id="bugText" placeholder="Describe the bug..." cols="50" rows="10"></textarea><br/><br/>
