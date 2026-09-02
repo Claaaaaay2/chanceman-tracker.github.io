@@ -6769,6 +6769,19 @@
     ]
   },
   {
+    "index": 4601,
+    "id": 34404,
+    "name": "Air diamond",
+    "image": "Air_diamond.png",
+    "sources": {
+      "drops": {
+        "Killerwatt": {
+          "droprate": "1/64"
+        }
+      }
+    }
+  },
+  {
     "index": 160,
     "id": 573,
     "name": "Air orb",
@@ -8027,6 +8040,36 @@
     }
   },
   {
+    "index": 4603,
+    "id": 34407,
+    "name": "Amulet of air",
+    "image": "Amulet_of_air.png",
+    "sources": {
+      "other": {
+        "Runecrafting an amulet": {
+          "notes": "Combine amulet of magic, air diamond and air runes.",
+          "rule": {
+            "all": [
+              {
+                "has": 1727
+              },
+              {
+                "has": 34404
+              },
+              {
+                "has": 556
+              },
+              {
+                "skill": "Runecraft",
+                "level": 18
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
     "index": 188,
     "id": 22557,
     "name": "Amulet of avarice",
@@ -8198,6 +8241,36 @@
     }
   },
   {
+    "index": 4604,
+    "id": 34419,
+    "name": "Amulet of earth",
+    "image": "Amulet_of_earth.png",
+    "sources": {
+      "other": {
+        "Runecrafting an amulet": {
+          "notes": "Combine amulet of magic, earth emerald and earth runes.",
+          "rule": {
+            "all": [
+              {
+                "has": 1727
+              },
+              {
+                "has": 34416
+              },
+              {
+                "has": 557
+              },
+              {
+                "skill": "Runecraft",
+                "level": 20
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
     "index": 193,
     "id": 19707,
     "name": "Amulet of eternal glory",
@@ -8224,6 +8297,36 @@
       "Teleports",
       "Prayer armours"
     ]
+  },
+  {
+    "index": 4605,
+    "id": 34425,
+    "name": "Amulet of fire",
+    "image": "Amulet_of_fire.png",
+    "sources": {
+      "other": {
+        "Runecrafting an amulet": {
+          "notes": "Combine amulet of magic, fire ruby and fire runes.",
+          "rule": {
+            "all": [
+              {
+                "has": 1727
+              },
+              {
+                "has": 34422
+              },
+              {
+                "has": 554
+              },
+              {
+                "skill": "Runecraft",
+                "level": 21
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 194,
@@ -8730,6 +8833,36 @@
       "Melee armours",
       "Prayer armours"
     ]
+  },
+  {
+    "index": 4606,
+    "id": 34413,
+    "name": "Amulet of water",
+    "image": "Amulet_of_water.png",
+    "sources": {
+      "other": {
+        "Runecrafting an amulet": {
+          "notes": "Combine amulet of magic, water sapphire and water runes.",
+          "rule": {
+            "all": [
+              {
+                "has": 1727
+              },
+              {
+                "has": 34410
+              },
+              {
+                "has": 555
+              },
+              {
+                "skill": "Runecraft",
+                "level": 19
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 209,
@@ -53901,6 +54034,19 @@
     ]
   },
   {
+    "index": 4598,
+    "id": 34416,
+    "name": "Earth emerald",
+    "image": "Earth_emerald.png",
+    "sources": {
+      "drops": {
+        "Molanisk": {
+          "droprate": "1/64"
+        }
+      }
+    }
+  },
+  {
     "index": 1413,
     "id": 11244,
     "name": "Earth impling jar",
@@ -55286,6 +55432,51 @@
     "tags": [
       "Melee"
     ]
+  },
+  {
+    "index": 4607,
+    "id": 34428,
+    "name": "Elemental amulet",
+    "image": "Elemental_amulet.png",
+    "sources": {
+      "other": {
+        "Runecrafting an amulet": {
+          "notes": "Combine amulet of air, water, fire, earth and their runes.",
+          "rule": {
+            "all": [
+              {
+                "has": 34407
+              },
+              {
+                "has": 34413
+              },
+              {
+                "has": 34425
+              },
+              {
+                "has": 34419
+              },
+              {
+                "has": 554
+              },
+              {
+                "has": 555
+              },
+              {
+                "has": 556
+              },
+              {
+                "has": 557
+              },
+              {
+                "skill": "Runecraft",
+                "level": 30
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 1448,
@@ -60353,6 +60544,19 @@
       "drops": {
         "Branda the Fire Queen": {
           "droprate": "1/75"
+        }
+      }
+    }
+  },
+  {
+    "index": 4599,
+    "id": 34422,
+    "name": "Fire ruby",
+    "image": "Fire_ruby.png",
+    "sources": {
+      "drops": {
+        "Infernal Mage": {
+          "droprate": "1/64"
         }
       }
     }
@@ -109918,6 +110122,22 @@
               }
             ]
           }
+        }
+      }
+    }
+  },
+  {
+    "index": 4602,
+    "id": 34401,
+    "name": "Necklace of fangs",
+    "image": "Necklace_of_fangs.png",
+    "sources": {
+      "drops": {
+        "Turoth": {
+          "droprate": "1/128"
+        },
+        "Spiked Turoth": {
+          "droprate": "3 x 1/128"
         }
       }
     }
@@ -165891,6 +166111,19 @@
     "tags": [
       "Magic"
     ]
+  },
+  {
+    "index": 4600,
+    "id": 34410,
+    "name": "Water sapphire",
+    "image": "Water_sapphire.png",
+    "sources": {
+      "drops": {
+        "Sea Snake Hatchling": {
+          "droprate": "1/64"
+        }
+      }
+    }
   },
   {
     "index": 4283,
