@@ -12294,7 +12294,7 @@
     "image": "apple_mush.png",
     "sources": {
       "other": {
-        "Filling a basket": {
+        "Using an apple press": {
           "notes": "Requires a Bucket and cooking apples and level 14 Cooking.",
           "rule": {
             "all": [
@@ -18852,7 +18852,7 @@
     "sources": {
       "other": {
         "Smithing Belle's folly": {
-          "notes": "Requires a Belle's folly (tarnished) and level 70 Smithing.",
+          "notes": "Requires a Belle's folly (tarnished), level 70 Smithing, and partial completion of Sleeping Giants.",
           "rule": {
             "all": [
               {
@@ -18861,7 +18861,17 @@
               {
                 "skill": "Smithing",
                 "level": 70
-              }
+              },
+              {
+                "has": 1521
+              },
+              {
+                "has": 2347
+              },
+              {
+                "has": 1737
+              },
+              "hasAnyNails"
             ]
           }
         }
