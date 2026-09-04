@@ -143550,6 +143550,9 @@
       "other": {
         "Crafting a Staff of balance": {
           "notes": "Requires a Staff of the dead and a Guthixian icon.",
+          "tags": [
+            "LMS"
+          ],
           "rule": {
             "all": [
               {
