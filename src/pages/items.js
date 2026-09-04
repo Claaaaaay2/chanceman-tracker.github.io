@@ -57,7 +57,13 @@ export default async function ItemsPage() {
         <div class="items-section-summary" id="itemsSectionSummary" hidden></div>
 
         <div class="filters-overrides">
-            <div class="item-filters">
+                <p class="marginOneRem"><strong>Item visibility</strong></p>
+                <div class="item-filters">
+
+                <label>
+                    <input type="checkbox" id="highlightChanges">
+                    Highlight new/changed items
+                </label>
 
                 <label>
                     <input type="checkbox" id="hideObtained">
@@ -80,6 +86,44 @@ export default async function ItemsPage() {
                 </label>
 
                 <label>
+                    <input type="checkbox" id="hideBosses">
+                    Hide bosses
+                </label>
+
+                <label>
+                    <input type="checkbox" id="hideRaids">
+                    Hide raids
+                </label>
+
+                <label>
+                    <input type="checkbox" id="hideLMS">
+                    Hide the LMS shop
+                </label>
+
+                <label>
+                    <input type="checkbox" id="hideJon">
+                    Hide Adventurer Jon
+                </label>
+
+                <label>
+                    <input type="checkbox" id="hideHolidayItems">
+                    Hide holiday items
+                </label>
+
+                <label>
+                    <input type="checkbox" id="countSkillBoosts">
+                    Use skill boosts for level reqs
+                </label>
+
+                <label id="hideSourcelessItemsRow">
+                    <input type="checkbox" id="hideSourcelessItems">
+                    Hide sourceless items
+                </label>
+                
+                </div>
+                <p class="marginOneRem"><strong>Account rules</strong></p>
+                <div class="item-filters">
+                <label>
                     <input type="checkbox" id="allowOthersHouses">
                     Allow other players' houses
                 </label>
@@ -100,16 +144,6 @@ export default async function ItemsPage() {
                 </label>
 
                 <label>
-                    <input type="checkbox" id="hideBosses">
-                    Hide bosses
-                </label>
-
-                <label>
-                    <input type="checkbox" id="hideRaids">
-                    Hide raids
-                </label>
-
-                <label>
                     <input type="checkbox" id="isSlayerLocked">
                     I am slayer locked
                 </label>
@@ -120,38 +154,15 @@ export default async function ItemsPage() {
                 </label>
 
                 <label>
-                    <input type="checkbox" id="hideLMS">
-                    Hide the LMS shop
-                </label>
-
-                <label>
-                    <input type="checkbox" id="hideJon">
-                    Hide Adventurer Jon
-                </label>
-
-                <label>
                     <input type="checkbox" id="isFreeToPlay">
                     I am free to play
                 </label>
+                </div>
 
-                <label id="hideSourcelessItemsRow">
-                    <input type="checkbox" id="hideSourcelessItems">
-                    Hide sourceless items
-                </label>
+            <p class="marginOneRem"><strong>Overrides</strong> (e.g. when you want to see what lamping a skill can bring you)</p>
 
-                <label>
-                    <input type="checkbox" id="countSkillBoosts">
-                    Skill boosts for level reqs
-                </label>
-
-                <label>
-                    <input type="checkbox" id="highlightChanges">
-                    Highlight new/changed items
-                </label>
-            </div>
-
-            <p class="marginOneRem">Overrides (e.g. when you've lamped a skill or want to see what lamping one can bring you)</p>
             <div class="skill-filters">
+
                 <label>
                     <input type="checkbox" id="overrideWoodcutting">
                     Override woodcutting

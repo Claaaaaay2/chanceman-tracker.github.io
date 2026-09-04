@@ -9,6 +9,24 @@ const ITEM_CHIP_WIDTH = 132;
 const ITEM_ANIMATION_MS = 1700;
 const NPC_ROW_HEIGHT = 38;
 const NPC_ANIMATION_MS = 1900;
+const DICE_EXCLUDED_ITEM_TAGS = new Set([
+    "Holiday",
+    "exclude-from-dice"
+]);
+const DICE_EXCLUDED_NPCS = new Set([
+    "Mystery box Entrana",
+    "Mystery box Free-to-play",
+    "Mystery box Members",
+    "Bounty crate (tier 1)",
+    "Bounty crate (tier 2)",
+    "Bounty crate (tier 3)",
+    "Bounty crate (tier 4)",
+    "Bounty crate (tier 5)",
+    "Bounty crate (tier 6)",
+    "Bounty crate (tier 7)",
+    "Bounty crate (tier 8)",
+    "Bounty crate (tier 9)"
+]);
 
 let teardownDiceHandlers = null;
 
@@ -60,9 +78,15 @@ function isDiceItemEligible(item, filters, obtainedSet) {
     if (!item) return false;
     if (obtainedSet.has(item.id)) return false;
     if (isItemHiddenByTag(item)) return false;
+
+    if (item.tags?.some((tag) => DICE_EXCLUDED_ITEM_TAGS.has(tag))) {
+        return false;
+    }
+
     if (!filters?.hasFlatpacks && item.tags?.includes("flatpack")) return false;
     if (!filters?.hasItemsets && item.tags?.includes("itemset")) return false;
     if (filters?.hideClue && item.tags?.includes("clue-reward-only")) return false;
+
     return true;
 }
 
@@ -360,7 +384,15 @@ async function collectNpcCandidates() {
         player: fileStore.player,
         filters: fileStore.filters || {}
     });
-    return { entries, rolledSet };
+
+    const filteredEntries = entries.filter(
+        (entry) => !DICE_EXCLUDED_NPCS.has(entry.npcName)
+    );
+
+    return {
+        entries: filteredEntries,
+        rolledSet
+    };
 }
 
 async function renderItemDetails(item, ctx) {
