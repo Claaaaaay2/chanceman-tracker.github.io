@@ -208,6 +208,7 @@ export async function initItemsPage() {
         { id: "isHunterRumourLocked", key: "isHunterRumourLocked", defaultValue: false, invalidate: true },
         { id: "hideLMS", key: "hideLMS", defaultValue: false, invalidate: true },
         { id: "hideJon", key: "hideJon", defaultValue: false, invalidate: true },
+        { id: "hideHolidayItems", key: "hideHolidayItems", defaultValue: false, invalidate: true },
         { id: "isFreeToPlay", key: "isFreeToPlay", defaultValue: false, invalidate: true },
         { id: "hideSourcelessItems", key: "hideSourcelessItems", defaultValue: false },
         { id: "countSkillBoosts", key: "countSkillBoosts", defaultValue: false, invalidate: true },
@@ -1169,6 +1170,7 @@ export async function initItemsPage() {
             isHunterRumourLocked,
             hideLMS,
             hideJon,
+            hideHolidayItems,
             isFreeToPlay,
             hideSourcelessItems,
             itemSortByDroprate = true,
@@ -1242,6 +1244,9 @@ export async function initItemsPage() {
                 sort.rank = 9;
             }
             if (hideJon && await hideTag(item, fileStore, "jon", rolledSet)) {
+                sort.rank = 9;
+            }
+            if (hideHolidayItems && await hideTag(item, fileStore, "Holiday", rolledSet)) {
                 sort.rank = 9;
             }
 

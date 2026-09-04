@@ -35,7 +35,14 @@
     "tags": [
       "clue-reward-only",
       "Melee",
-      "Woodcutting"
+      "Woodcutting",
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Woodcutting",
+        "amount": 3
+      }
     ],
     "sources": {
       "drops": {
@@ -207,7 +214,14 @@
     "tags": [
       "clue-reward-only",
       "Melee",
-      "Woodcutting"
+      "Woodcutting",
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Woodcutting",
+        "amount": 3
+      }
     ],
     "sources": {
       "other": {
@@ -355,7 +369,14 @@
     "tags": [
       "clue-reward-only",
       "Melee",
-      "Mining"
+      "Mining",
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Mining",
+        "amount": 3
+      }
     ],
     "sources": {
       "drops": {
@@ -26130,6 +26151,9 @@
     "id": 1055,
     "name": "Blue halloween mask",
     "image": "blue_halloween_mask.png",
+    "tags": [
+      "Holiday"
+    ],
     "sources": {
       "other": {
         "Complete a Halloween holiday event": {}
@@ -26328,6 +26352,9 @@
     "id": 1042,
     "name": "Blue partyhat",
     "image": "blue_partyhat.png",
+    "tags": [
+      "Holiday"
+    ],
     "sources": {
       "drops": {
         "Christmas cracker": {
@@ -39607,6 +39634,9 @@
     "id": 962,
     "name": "Christmas cracker",
     "image": "christmas_cracker.png",
+    "tags": [
+      "Holiday"
+    ],
     "sources": {
       "other": {
         "Complete a Christmas holiday event": {}
@@ -48747,7 +48777,14 @@
     },
     "tags": [
       "Melee",
-      "Woodcutting"
+      "Woodcutting",
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Woodcutting",
+        "amount": 3
+      }
     ]
   },
   {
@@ -50065,7 +50102,14 @@
     },
     "tags": [
       "Fishing",
-      "Melee"
+      "Melee",
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Fishing",
+        "amount": 3
+      }
     ]
   },
   {
@@ -51168,7 +51212,14 @@
     },
     "tags": [
       "Melee",
-      "Mining"
+      "Mining",
+      "Other skill boosts"
+    ],
+    "boosts": [
+      {
+        "skill": "Mining",
+        "amount": 3
+      }
     ]
   },
   {
@@ -54886,6 +54937,9 @@
     "id": 1961,
     "name": "Easter egg",
     "image": "easter_egg.png",
+    "tags": [
+      "Holiday"
+    ],
     "sources": {
       "other": {
         "Complete an Easter holiday event": {}
@@ -67444,6 +67498,9 @@
     "id": 1053,
     "name": "Green halloween mask",
     "image": "green_halloween_mask.png",
+    "tags": [
+      "Holiday"
+    ],
     "sources": {
       "other": {
         "Complete a Halloween holiday event": {}
@@ -67485,6 +67542,9 @@
     "id": 1044,
     "name": "Green partyhat",
     "image": "green_partyhat.png",
+    "tags": [
+      "Holiday"
+    ],
     "sources": {
       "drops": {
         "Christmas cracker": {
@@ -80879,7 +80939,8 @@
     "name": "Half full wine jug",
     "image": "half_full_wine_jug.png",
     "tags": [
-      "Food"
+      "Food",
+      "Holiday"
     ],
     "sources": {
       "other": {
@@ -80936,7 +80997,8 @@
     "name": "Halloween mask set",
     "image": "halloween_mask_set.png",
     "tags": [
-      "itemset"
+      "itemset",
+      "Holiday"
     ],
     "sources": {
       "other": {
@@ -119443,7 +119505,8 @@
     "name": "Pumpkin",
     "image": "pumpkin.png",
     "tags": [
-      "Food"
+      "Food",
+      "Holiday"
     ],
     "sources": {
       "other": {
@@ -119913,6 +119976,9 @@
     "id": 1046,
     "name": "Purple partyhat",
     "image": "purple_partyhat.png",
+    "tags": [
+      "Holiday"
+    ],
     "sources": {
       "drops": {
         "Christmas cracker": {
@@ -124476,6 +124542,9 @@
     "id": 1057,
     "name": "Red halloween mask",
     "image": "red_halloween_mask.png",
+    "tags": [
+      "Holiday"
+    ],
     "sources": {
       "other": {
         "Complete a Halloween holiday event": {}
@@ -124517,6 +124586,9 @@
     "id": 1038,
     "name": "Red partyhat",
     "image": "red_partyhat.png",
+    "tags": [
+      "Holiday"
+    ],
     "sources": {
       "drops": {
         "Christmas cracker": {
@@ -134929,6 +135001,9 @@
     "id": 1050,
     "name": "Santa hat",
     "image": "santa_hat.png",
+    "tags": [
+      "Holiday"
+    ],
     "sources": {
       "other": {
         "Complete a Christmas holiday event": {}
@@ -143745,6 +143820,9 @@
     "id": 20590,
     "name": "Stale baguette",
     "image": "stale_baguette.png",
+    "tags": [
+      "exclude-from-dice"
+    ],
     "sources": {
       "drops": {
         "Mystery box Entrana": {
@@ -168412,6 +168490,9 @@
     "id": 1048,
     "name": "White partyhat",
     "image": "white_partyhat.png",
+    "tags": [
+      "Holiday"
+    ],
     "sources": {
       "drops": {
         "Christmas cracker": {
@@ -172284,6 +172365,9 @@
     "id": 1040,
     "name": "Yellow partyhat",
     "image": "yellow_partyhat.png",
+    "tags": [
+      "Holiday"
+    ],
     "sources": {
       "drops": {
         "Christmas cracker": {

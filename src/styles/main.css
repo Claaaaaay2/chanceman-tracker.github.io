@@ -508,7 +508,7 @@ footer {
 }
 
 .skill-filters {
-    margin: 0rem 1rem 1rem 1rem;
+    margin: 1rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 0.5rem 1rem;
