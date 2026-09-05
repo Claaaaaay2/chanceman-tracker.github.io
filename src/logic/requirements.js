@@ -2870,6 +2870,135 @@ export const REQUIREMENT_CHECKS = {
     },
     hasAFullBarrowsSet(ctx) {
         return hasAFullBarrowsSet(ctx);
+    },hasObtainedAhrimsHood(ctx) {
+    return hasObtainedAhrimsHood(ctx);
+    },
+
+    hasObtainedAhrimsRobeskirt(ctx) {
+        return hasObtainedAhrimsRobeskirt(ctx);
+    },
+
+    hasObtainedAhrimsRobetop(ctx) {
+        return hasObtainedAhrimsRobetop(ctx);
+    },
+
+    hasObtainedAhrimsStaff(ctx) {
+        return hasObtainedAhrimsStaff(ctx);
+    },
+
+    hasObtainedToragsHammers(ctx) {
+        return hasObtainedToragsHammers(ctx);
+    },
+
+    hasObtainedToragsHelm(ctx) {
+        return hasObtainedToragsHelm(ctx);
+    },
+
+    hasObtainedToragsPlatebody(ctx) {
+        return hasObtainedToragsPlatebody(ctx);
+    },
+
+    hasObtainedToragsPlatelegs(ctx) {
+        return hasObtainedToragsPlatelegs(ctx);
+    },
+
+    hasObtainedDharoksGreataxe(ctx) {
+        return hasObtainedDharoksGreataxe(ctx);
+    },
+
+    hasObtainedDharoksHelm(ctx) {
+        return hasObtainedDharoksHelm(ctx);
+    },
+
+    hasObtainedDharoksPlatebody(ctx) {
+        return hasObtainedDharoksPlatebody(ctx);
+    },
+
+    hasObtainedDharoksPlatelegs(ctx) {
+        return hasObtainedDharoksPlatelegs(ctx);
+    },
+
+    hasObtainedVeracsBrassard(ctx) {
+        return hasObtainedVeracsBrassard(ctx);
+    },
+
+    hasObtainedVeracsFlail(ctx) {
+        return hasObtainedVeracsFlail(ctx);
+    },
+
+    hasObtainedVeracsHelm(ctx) {
+        return hasObtainedVeracsHelm(ctx);
+    },
+
+    hasObtainedVeracsPlateskirt(ctx) {
+        return hasObtainedVeracsPlateskirt(ctx);
+    },
+
+    hasObtainedGuthansWarspear(ctx) {
+        return hasObtainedGuthansWarspear(ctx);
+    },
+
+    hasObtainedGuthansPlatebody(ctx) {
+        return hasObtainedGuthansPlatebody(ctx);
+    },
+
+    hasObtainedGuthansHelm(ctx) {
+        return hasObtainedGuthansHelm(ctx);
+    },
+
+    hasObtainedGuthansChainskirt(ctx) {
+        return hasObtainedGuthansChainskirt(ctx);
+    },
+
+    hasObtainedKarilsCoif(ctx) {
+        return hasObtainedKarilsCoif(ctx);
+    },
+
+    hasObtainedKarilsCrossbow(ctx) {
+        return hasObtainedKarilsCrossbow(ctx);
+    },
+
+    hasObtainedKarilsLeatherskirt(ctx) {
+        return hasObtainedKarilsLeatherskirt(ctx);
+    },
+
+    hasObtainedKarilsLeathertop(ctx) {
+        return hasObtainedKarilsLeathertop(ctx);
+    },
+    hasObtainedBloodMoonHelm(ctx) {
+        return hasObtainedBloodMoonHelm(ctx);
+    },
+
+    hasObtainedBloodMoonTassets(ctx) {
+        return hasObtainedBloodMoonTassets(ctx);
+    },
+
+    hasObtainedBloodMoonChestplate(ctx) {
+        return hasObtainedBloodMoonChestplate(ctx);
+    },
+
+    hasObtainedBlueMoonChestplate(ctx) {
+        return hasObtainedBlueMoonChestplate(ctx);
+    },
+
+    hasObtainedBlueMoonHelm(ctx) {
+        return hasObtainedBlueMoonHelm(ctx);
+    },
+
+    hasObtainedBlueMoonTassets(ctx) {
+        return hasObtainedBlueMoonTassets(ctx);
+    },
+
+    hasObtainedEclipseMoonChestplate(ctx) {
+        return hasObtainedEclipseMoonChestplate(ctx);
+    },
+
+    hasObtainedEclipseMoonHelm(ctx) {
+        return hasObtainedEclipseMoonHelm(ctx);
+    },
+
+    hasObtainedEclipseMoonTassets(ctx) {
+        return hasObtainedEclipseMoonTassets(ctx);
     },
     canCompleteTheBloodMoonRises(ctx) {
         return canCompleteTheBloodMoonRises(ctx);
@@ -5980,6 +6109,171 @@ function hasAFullBarrowsSet(ctx) {
         || (has(ctx, 4716) && has(ctx, 4720) && has(ctx, 4722) && has(ctx, 4718)) //
         || (has(ctx, 4745) && has(ctx, 4749) && has(ctx, 4751) && has(ctx, 4747)) //
         || (has(ctx, 4724) && has(ctx, 4728) && has(ctx, 4730) && has(ctx, 4726));
+}
+
+function hasObtainedAhrimsHood(ctx) {
+    return hasObtainedItem(ctx, 4708) ||
+        has(ctx, 4708); // Ahrim's hood
+}
+
+function hasObtainedAhrimsRobeskirt(ctx) {
+    return hasObtainedItem(ctx, 4714) ||
+        has(ctx, 4714); // Ahrim's robeskirt
+}
+
+function hasObtainedAhrimsRobetop(ctx) {
+    return hasObtainedItem(ctx,  	4712) ||
+        has(ctx,  	4712); // Ahrim's robetop
+}
+
+function hasObtainedAhrimsStaff(ctx) {
+    return hasObtainedItem(ctx, 4710) ||
+        has(ctx, 4710); // Ahrim's staff
+}
+
+function hasObtainedToragsHammers(ctx) {
+    return hasObtainedItem(ctx, 4747) ||
+        has(ctx, 4747); // Torag's hammers
+}
+
+function hasObtainedToragsHelm(ctx) {
+    return hasObtainedItem(ctx, 4745) ||
+        has(ctx, 4745); // Torag's helm
+}
+
+function hasObtainedToragsPlatebody(ctx) {
+    return hasObtainedItem(ctx, 4749) ||
+        has(ctx, 4749); // Torag's platebody
+}
+
+function hasObtainedToragsPlatelegs(ctx) {
+    return hasObtainedItem(ctx, 4751) ||
+        has(ctx, 4751); // Torag's platelegs
+}
+
+function hasObtainedDharoksGreataxe(ctx) {
+    return hasObtainedItem(ctx, 4718) ||
+        has(ctx, 4718); // Dharok's greataxe
+}
+
+function hasObtainedDharoksHelm(ctx) {
+    return hasObtainedItem(ctx, 4716) ||
+        has(ctx, 4716); // Dharok's helm
+}
+
+function hasObtainedDharoksPlatebody(ctx) {
+    return hasObtainedItem(ctx, 4720) ||
+        has(ctx, 4720); // Dharok's platebody
+}
+
+function hasObtainedDharoksPlatelegs(ctx) {
+    return hasObtainedItem(ctx, 4722) ||
+        has(ctx, 4722); // Dharok's platelegs
+}
+
+function hasObtainedVeracsBrassard(ctx) {
+    return hasObtainedItem(ctx, 4757) ||
+        has(ctx, 4757); // Verac's brassard
+}
+
+function hasObtainedVeracsFlail(ctx) {
+    return hasObtainedItem(ctx, 4755) ||
+        has(ctx, 4755); // Verac's flail
+}
+
+function hasObtainedVeracsHelm(ctx) {
+    return hasObtainedItem(ctx, 4753) ||
+        has(ctx, 4753); // Verac's helm
+}
+
+function hasObtainedVeracsPlateskirt(ctx) {
+    return hasObtainedItem(ctx, 4759) ||
+        has(ctx, 4759); // Verac's plateskirt
+}
+
+function hasObtainedGuthansWarspear(ctx) {
+    return hasObtainedItem(ctx, 4726) ||
+        has(ctx, 4726); // Guthan's warspear
+}
+
+function hasObtainedGuthansPlatebody(ctx) {
+    return hasObtainedItem(ctx, 4728) ||
+        has(ctx, 4728); // Guthan's platebody
+}
+
+function hasObtainedGuthansHelm(ctx) {
+    return hasObtainedItem(ctx, 4724) ||
+        has(ctx, 4724); // Guthan's helm
+}
+
+function hasObtainedGuthansChainskirt(ctx) {
+    return hasObtainedItem(ctx, 4730) ||
+        has(ctx, 4730); // Guthan's chainskirt
+}
+
+function hasObtainedKarilsCoif(ctx) {
+    return hasObtainedItem(ctx, 4732) ||
+        has(ctx, 4732); // Karil's coif
+}
+
+function hasObtainedKarilsCrossbow(ctx) {
+    return hasObtainedItem(ctx, 4734) ||
+        has(ctx, 4734); // Karil's crossbow
+}
+
+function hasObtainedKarilsLeatherskirt(ctx) {
+    return hasObtainedItem(ctx, 4738) ||
+        has(ctx, 4738); // Karil's leatherskirt
+}
+
+function hasObtainedKarilsLeathertop(ctx) {
+    return hasObtainedItem(ctx, 4736) ||
+        has(ctx, 4736); // Karil's leathertop
+}
+
+function hasObtainedBloodMoonHelm(ctx) {
+    return hasObtainedItem(ctx, 29028) ||
+        has(ctx, 29028); // Blood moon helm
+}
+
+function hasObtainedBloodMoonTassets(ctx) {
+    return hasObtainedItem(ctx, 29025) ||
+        has(ctx, 29025); // Blood moon tassets
+}
+
+function hasObtainedBloodMoonChestplate(ctx) {
+    return hasObtainedItem(ctx, 29022) ||
+        has(ctx, 29022); // Blood moon chestplate
+}
+
+function hasObtainedBlueMoonChestplate(ctx) {
+    return hasObtainedItem(ctx, 29013) ||
+        has(ctx, 29013); // Blue moon chestplate
+}
+
+function hasObtainedBlueMoonHelm(ctx) {
+    return hasObtainedItem(ctx, 29019) ||
+        has(ctx, 29019); // Blue moon helm
+}
+
+function hasObtainedBlueMoonTassets(ctx) {
+    return hasObtainedItem(ctx, 29016) ||
+        has(ctx, 29016); // Blue moon tassets
+}
+
+function hasObtainedEclipseMoonChestplate(ctx) {
+    return hasObtainedItem(ctx, 29004) ||
+        has(ctx, 29004); // Eclipse moon chestplate
+}
+
+function hasObtainedEclipseMoonHelm(ctx) {
+    return hasObtainedItem(ctx, 29010) ||
+        has(ctx, 29010); // Eclipse moon helm
+}
+
+function hasObtainedEclipseMoonTassets(ctx) {
+    return hasObtainedItem(ctx, 29007) ||
+        has(ctx, 29007); // Eclipse moon tassets
 }
 
 function hasBonesForBonesToPeaches(ctx) {
