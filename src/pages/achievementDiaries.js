@@ -1,16 +1,9 @@
-import { REQUIREMENT_CHECKS, canTrainSkill, hasElementalRuneRules, isElementalRuneRule } from "../logic/requirements.js";
+import {
+    REQUIREMENT_CHECKS,
+    hasElementalRuneRules,
+    isElementalRuneRule
+} from "../logic/requirements.js";
 import { fileStore } from "../storage/fileStore.js";
-
-const SKILL_OVERRIDES = {
-    Woodcutting: "overrideWoodcutting",
-    Mining: "overrideMining",
-    Fishing: "overrideFishing",
-    Cooking: "overrideCooking",
-    Farming: "overrideFarming",
-    Fletching: "overrideFletching",
-    Crafting: "overrideCrafting",
-    Construction: "overrideConstruction"
-};
 
 const TIER_ORDER = ["Easy", "Medium", "Hard", "Elite"];
 
@@ -23,40 +16,57 @@ function escapeHtml(value) {
 }
 
 function hasSkillRequirement(ctx, skill, level) {
-    const overrideKey = SKILL_OVERRIDES[skill];
-    if (overrideKey && ctx.filters?.[overrideKey]) return true;
-    if (ctx?.ignoreSkillLevels) {
-        return canTrainSkill(ctx, skill);
-    }
     const current = ctx.player?.levels?.[skill];
     return typeof current === "number" && current >= level;
 }
 
 function hasQuestRequirement(ctx, questName, requirementType) {
     const status = ctx.player?.quests?.[questName] ?? 0;
-    if (requirementType === "completed") return status === 2;
-    if (requirementType === "started") return status > 0;
+
+    if (requirementType === "completed") {
+        return status === 2;
+    }
+
+    if (requirementType === "started") {
+        return status > 0;
+    }
+
     return false;
 }
 
 function hasItemRequirement(ctx, item) {
     if (!item?.id) return false;
+
     const obtained = ctx.obtained || [];
     const rolled = ctx.rolled || [];
+
     return obtained.includes(item.id) && rolled.includes(item.id);
 }
 
 function resolveItemName(item, itemsById) {
     if (item?.name) return item.name;
-    if (item?.id && itemsById?.has(item.id)) return itemsById.get(item.id);
-    if (typeof item === "number" && itemsById?.has(item)) return itemsById.get(item);
+
+    if (item?.id && itemsById?.has(item.id)) {
+        return itemsById.get(item.id);
+    }
+
+    if (typeof item === "number" && itemsById?.has(item)) {
+        return itemsById.get(item);
+    }
+
     return item?.id ? `Item ${item.id}` : "Unknown item";
 }
 
 function normalizeItemGroup(group) {
     return (group || []).map((entry) => {
-        if (typeof entry === "number") return { id: entry };
-        if (typeof entry === "object") return entry;
+        if (typeof entry === "number") {
+            return { id: entry };
+        }
+
+        if (typeof entry === "object") {
+            return entry;
+        }
+
         return { name: String(entry) };
     });
 }
@@ -70,8 +80,10 @@ async function evaluateRequirements(requirements, ctx, itemsById) {
         rules: [],
         untracked: []
     };
+
     let met = true;
 
+    // Skill requirements
     for (const [skill, level] of Object.entries(requirements?.skills || {})) {
         if (!hasSkillRequirement(ctx, skill, level)) {
             missing.skills.push(`${skill} ${level}`);
@@ -79,14 +91,22 @@ async function evaluateRequirements(requirements, ctx, itemsById) {
         }
     }
 
-    for (const [questName, requirementType] of Object.entries(requirements?.quests || {})) {
+    // Quest requirements
+    for (const [questName, requirementType] of Object.entries(
+        requirements?.quests || {}
+    )) {
         if (!hasQuestRequirement(ctx, questName, requirementType)) {
-            const label = requirementType === "completed" ? "completed" : "started";
+            const label =
+                requirementType === "completed"
+                    ? "completed"
+                    : "started";
+
             missing.quests.push(`${questName} (${label})`);
             met = false;
         }
     }
 
+    // Required items
     for (const item of requirements?.items || []) {
         if (!hasItemRequirement(ctx, item)) {
             missing.items.push(resolveItemName(item, itemsById));
@@ -94,36 +114,63 @@ async function evaluateRequirements(requirements, ctx, itemsById) {
         }
     }
 
+    // Any-of item groups
     for (const group of requirements?.itemsAny || []) {
         const normalizedGroup = normalizeItemGroup(group);
-        const hasAny = normalizedGroup.some((entry) => hasItemRequirement(ctx, entry));
+
+        const hasAny = normalizedGroup.some((entry) =>
+            hasItemRequirement(ctx, entry)
+        );
+
         if (!hasAny) {
-            const names = normalizedGroup.map((entry) => resolveItemName(entry, itemsById));
-            missing.itemGroups.push(`Any of: ${names.join(" / ")}`);
+            const names = normalizedGroup.map((entry) =>
+                resolveItemName(entry, itemsById)
+            );
+
+            missing.itemGroups.push(
+                `Any of: ${names.join(" / ")}`
+            );
+
             met = false;
         }
     }
 
-    const elementalRuneRules = (requirements?.rulesAll || []).filter(isElementalRuneRule);
+    // Elemental rune rules
+    const elementalRuneRules = (requirements?.rulesAll || [])
+        .filter(isElementalRuneRule);
+
     const skippedRuleKeys = new Set(elementalRuneRules);
+
     if (elementalRuneRules.length) {
-        const ok = hasElementalRuneRules(ctx, elementalRuneRules, { trackMissing: false });
+        const ok = hasElementalRuneRules(
+            ctx,
+            elementalRuneRules,
+            { trackMissing: false }
+        );
+
         if (!ok) {
             missing.rules.push(elementalRuneRules.join(" + "));
             met = false;
         }
     }
 
+    // All rules
     for (const ruleKey of requirements?.rulesAll || []) {
-        if (skippedRuleKeys.has(ruleKey)) continue;
+        if (skippedRuleKeys.has(ruleKey)) {
+            continue;
+        }
+
         const ruleFn = REQUIREMENT_CHECKS[ruleKey];
+
         if (!ruleFn) {
             missing.rules.push(`${ruleKey} (missing)`);
             met = false;
             continue;
         }
+
         try {
             const ok = await ruleFn(ctx);
+
             if (!ok) {
                 missing.rules.push(ruleKey);
                 met = false;
@@ -134,16 +181,21 @@ async function evaluateRequirements(requirements, ctx, itemsById) {
         }
     }
 
+    // Any-of rules
     const anyRules = requirements?.rulesAny || [];
+
     if (anyRules.length) {
         let anyMet = false;
         const failed = [];
+
         for (const ruleKey of anyRules) {
             const ruleFn = REQUIREMENT_CHECKS[ruleKey];
+
             if (!ruleFn) {
                 failed.push(`${ruleKey} (missing)`);
                 continue;
             }
+
             try {
                 if (await ruleFn(ctx)) {
                     anyMet = true;
@@ -154,12 +206,17 @@ async function evaluateRequirements(requirements, ctx, itemsById) {
                 failed.push(`${ruleKey} (error)`);
             }
         }
+
         if (!anyMet) {
-            missing.rules.push(`Any of: ${failed.join(" / ")}`);
+            missing.rules.push(
+                `Any of: ${failed.join(" / ")}`
+            );
+
             met = false;
         }
     }
 
+    // Untracked requirements
     if (requirements?.untracked?.length) {
         // TODO: Map untracked requirements into structured checks.
         missing.untracked = [...requirements.untracked];
@@ -171,36 +228,61 @@ async function evaluateRequirements(requirements, ctx, itemsById) {
 
 function renderMissing(missing) {
     const parts = [];
+
     if (missing.skills.length) {
-        parts.push(`Missing levels: ${missing.skills.join(", ")}.`);
+        parts.push(
+            `Missing levels: ${missing.skills.join(", ")}.`
+        );
     }
+
     if (missing.quests.length) {
-        parts.push(`Missing quests: ${missing.quests.join(", ")}.`);
+        parts.push(
+            `Missing quests: ${missing.quests.join(", ")}.`
+        );
     }
+
     if (missing.items.length) {
-        parts.push(`Missing items: ${missing.items.join(", ")}.`);
+        parts.push(
+            `Missing items: ${missing.items.join(", ")}.`
+        );
     }
+
     if (missing.itemGroups.length) {
-        parts.push(`Missing item options: ${missing.itemGroups.join("; ")}.`);
+        parts.push(
+            `Missing item options: ${missing.itemGroups.join("; ")}.`
+        );
     }
+
     if (missing.rules.length) {
-        parts.push(`Missing rules: ${missing.rules.join(", ")}.`);
+        parts.push(
+            `Missing rules: ${missing.rules.join(", ")}.`
+        );
     }
+
     if (missing.untracked.length) {
-        parts.push(`Untracked requirements: ${missing.untracked.join(", ")}.`);
+        parts.push(
+            `Untracked requirements: ${missing.untracked.join(", ")}.`
+        );
     }
-    return parts.map((part) => `<div class="diary-missing">${escapeHtml(part)}</div>`).join("");
+
+    return parts
+        .map(
+            (part) =>
+                `<div class="diary-missing">${escapeHtml(part)}</div>`
+        )
+        .join("");
 }
 
-function buildRequirementContext(options = {}) {
+function buildRequirementContext() {
     return {
         items: fileStore.items,
         player: fileStore.player,
         obtained: fileStore.obtained || [],
         rolled: fileStore.rolled || [],
         filters: fileStore.filters,
-        ignoreSkillLevels: Boolean(options.ignoreSkillLevels),
-        missing: { items: new Set() }
+        missing: {
+            items: new Set()
+        }
     };
 }
 
@@ -213,56 +295,77 @@ export default async function AchievementDiariesPage() {
     }
 
     await fileStore.ensureItemsLoaded();
-    const itemsById = new Map((fileStore.items || []).map(item => [item.id, item.name]));
+
+    const itemsById = new Map(
+        (fileStore.items || []).map((item) => [
+            item.id,
+            item.name
+        ])
+    );
 
     const response = await fetch("/data/achievement_diaries.json");
     const data = await response.json();
     const diaries = data?.diaries || {};
 
     const diarySections = [];
+
     for (const [diaryName, tiers] of Object.entries(diaries)) {
         const tierSections = [];
-        for (const tier of TIER_ORDER.filter((candidate) => tiers?.[candidate]?.length)) {
+
+        for (const tier of TIER_ORDER.filter(
+            (candidate) => tiers?.[candidate]?.length
+        )) {
             const tasks = tiers[tier] || [];
+
             let completedCount = 0;
             let readyCount = 0;
-            let trainableCount = 0;
             let blockedCount = 0;
+
             const rows = [];
 
             for (let index = 0; index < tasks.length; index++) {
                 const task = tasks[index];
-                const diaryState = fileStore.player?.achievementDiaries?.[diaryName]?.[tier];
-                const isCompleted = Boolean(diaryState?.tasks?.[index]);
+
+                const diaryState =
+                    fileStore.player?.achievementDiaries?.[diaryName]?.[tier];
+
+                const isCompleted = Boolean(
+                    diaryState?.tasks?.[index]
+                );
+
                 let isDoable = false;
-                let isTrainable = false;
                 let statusClass = "diary-status-blocked";
-                let statusLabel = "Not completed";
+                let statusLabel = "Blocked";
                 let missingHtml = "";
 
                 if (isCompleted) {
+                    // Completed tasks always use the done state.
                     statusClass = "diary-status-complete";
-                    statusLabel = "Completed";
+                    statusLabel = "Done";
                     completedCount += 1;
                 } else {
+                    // Evaluate all requirements using the player's
+                    // actual current levels and inventory state.
                     const ctx = buildRequirementContext();
-                    const { met, missing } = await evaluateRequirements(task.requirements, ctx, itemsById);
+
+                    const { met, missing } =
+                        await evaluateRequirements(
+                            task.requirements,
+                            ctx,
+                            itemsById
+                        );
+
                     if (met) {
                         statusClass = "diary-status-ready";
-                        statusLabel = "Can complete";
+                        statusLabel = "Ready";
                         isDoable = true;
                         readyCount += 1;
                     } else {
-                        const trainableCtx = buildRequirementContext({ ignoreSkillLevels: true });
-                        const { met: trainableMet } = await evaluateRequirements(task.requirements, trainableCtx, itemsById);
-                        if (trainableMet) {
-                            statusClass = "diary-status-trainable";
-                            statusLabel = "Train levels";
-                            isTrainable = true;
-                            trainableCount += 1;
-                        } else {
-                            blockedCount += 1;
-                        }
+                        statusClass = "diary-status-blocked";
+                        statusLabel = "Blocked";
+                        blockedCount += 1;
+
+                        // Always show every requirement that is not met.
                         missingHtml = renderMissing(missing);
                     }
                 }
@@ -270,26 +373,49 @@ export default async function AchievementDiariesPage() {
                 rows.push(`
                     <div class="diary-task ${statusClass}"
                         data-completed="${isCompleted ? "true" : "false"}"
-                        data-doable="${isDoable ? "true" : "false"}"
-                        data-trainable="${isTrainable ? "true" : "false"}">
-                        <div class="diary-task-name">${escapeHtml(task.name)}</div>
-                        <div class="diary-task-status">${statusLabel}</div>
+                        data-doable="${isDoable ? "true" : "false"}">
+                        <div class="diary-task-name">
+                            ${escapeHtml(task.name)}
+                        </div>
+
+                        <div class="diary-task-status">
+                            ${statusLabel}
+                        </div>
+
                         ${missingHtml}
                     </div>
                 `);
             }
 
-            const tierFullyCompletable = blockedCount === 0 && trainableCount === 0;
+            // A tier is fully completable when every incomplete task
+            // is Ready (or the task is already Done).
+            const tierFullyCompletable = blockedCount === 0;
 
             tierSections.push(`
-                <section class="diary-tier" data-fully-completable="${tierFullyCompletable ? "true" : "false"}">
+                <section
+                    class="diary-tier"
+                    data-fully-completable="${
+                        tierFullyCompletable ? "true" : "false"
+                    }"
+                >
                     <h3 class="diary-tier-header">
-                        <button class="diary-toggle diary-tier-toggle" type="button" aria-expanded="true">Hide</button>
+                        <button
+                            class="diary-toggle diary-tier-toggle"
+                            type="button"
+                            aria-expanded="true"
+                        >
+                            Hide
+                        </button>
+
                         <span>${tier}</span>
+
                         <span class="diary-tier-counts">
-                            (${completedCount} done, ${readyCount} can complete, ${trainableCount} trainable, ${blockedCount} blocked)
+                            (${completedCount} done,
+                            ${readyCount} ready,
+                            ${blockedCount} blocked)
                         </span>
                     </h3>
+
                     <div class="diary-tier-body">
                         <div class="diary-task-list">
                             ${rows.join("")}
@@ -302,9 +428,17 @@ export default async function AchievementDiariesPage() {
         diarySections.push(`
             <section class="diary-region">
                 <div class="diary-region-header">
-                    <button class="diary-toggle diary-region-toggle" type="button" aria-expanded="true">Hide</button>
+                    <button
+                        class="diary-toggle diary-region-toggle"
+                        type="button"
+                        aria-expanded="true"
+                    >
+                        Hide
+                    </button>
+
                     <h2>${escapeHtml(diaryName)}</h2>
                 </div>
+
                 <div class="diary-region-body">
                     ${tierSections.join("")}
                 </div>
@@ -314,54 +448,125 @@ export default async function AchievementDiariesPage() {
 
     return `
         <h1>Achievement diaries</h1>
+
         <div class="diary-filters">
             <label class="diary-filter">
-                <input type="checkbox" id="hideCompletedDiaries" ${fileStore.filters?.hideCompletedDiaries ? "checked" : ""}>
+                <input
+                    type="checkbox"
+                    id="hideCompletedDiaries"
+                    ${
+                        fileStore.filters?.hideCompletedDiaries
+                            ? "checked"
+                            : ""
+                    }
+                >
                 Hide completed tasks
             </label>
+
             <label class="diary-filter">
-                <input type="checkbox" id="hideIncompletableDiaries" ${fileStore.filters?.hideIncompletableDiaries ? "checked" : ""}>
-                Hide incompletable tasks
+                <input
+                    type="checkbox"
+                    id="hideIncompletableDiaries"
+                    ${
+                        fileStore.filters?.hideIncompletableDiaries
+                            ? "checked"
+                            : ""
+                    }
+                >
+                Hide blocked tasks
             </label>
-            <button class="diary-action" type="button" id="toggleCompletableTiers"></button>
-            <button class="diary-action" type="button" id="foldAllDiaries">Hide all</button>
-            <button class="diary-action" type="button" id="unfoldAllDiaries">Show all</button>
+
+            <button
+                class="diary-action"
+                type="button"
+                id="toggleCompletableTiers"
+            ></button>
+
+            <button
+                class="diary-action"
+                type="button"
+                id="foldAllDiaries"
+            >
+                Hide all
+            </button>
+
+            <button
+                class="diary-action"
+                type="button"
+                id="unfoldAllDiaries"
+            >
+                Show all
+            </button>
         </div>
+
         <div class="diary-list" id="diaryList">
-            ${diarySections.length ? diarySections.join("") : "<p>No diary data loaded yet.</p>"}
+            ${
+                diarySections.length
+                    ? diarySections.join("")
+                    : "<p>No diary data loaded yet.</p>"
+            }
         </div>
     `;
 }
 
 function applyDiaryFilters(container) {
-    const hideCompleted = fileStore.filters?.hideCompletedDiaries;
-    const hideIncompletable = fileStore.filters?.hideIncompletableDiaries;
-    const showOnlyCompletableTiers = fileStore.filters?.showOnlyCompletableTiers;
+    const hideCompleted =
+        fileStore.filters?.hideCompletedDiaries;
+
+    const hideIncompletable =
+        fileStore.filters?.hideIncompletableDiaries;
+
+    const showOnlyCompletableTiers =
+        fileStore.filters?.showOnlyCompletableTiers;
+
     const rows = container.querySelectorAll(".diary-task");
+
     for (const row of rows) {
-        const isCompleted = row.dataset.completed === "true";
-        const isDoable = row.dataset.doable === "true";
-        const isTrainable = row.dataset.trainable === "true";
-        const isIncompletable = !isCompleted && !isDoable && !isTrainable;
-        const shouldHide = (hideCompleted && isCompleted) || (hideIncompletable && isIncompletable);
+        const isCompleted =
+            row.dataset.completed === "true";
+
+        const isDoable =
+            row.dataset.doable === "true";
+
+        const isBlocked =
+            !isCompleted && !isDoable;
+
+        const shouldHide =
+            (hideCompleted && isCompleted) ||
+            (hideIncompletable && isBlocked);
+
         row.style.display = shouldHide ? "none" : "";
     }
 
     const tiers = container.querySelectorAll(".diary-tier");
+
     for (const tier of tiers) {
-        if (showOnlyCompletableTiers && tier.dataset.fullyCompletable !== "true") {
+        if (
+            showOnlyCompletableTiers &&
+            tier.dataset.fullyCompletable !== "true"
+        ) {
             tier.style.display = "none";
             continue;
         }
-        const hasVisibleTask = Array.from(tier.querySelectorAll(".diary-task"))
-            .some((task) => task.style.display !== "none");
+
+        const hasVisibleTask = Array.from(
+            tier.querySelectorAll(".diary-task")
+        ).some(
+            (task) => task.style.display !== "none"
+        );
+
         tier.style.display = hasVisibleTask ? "" : "none";
     }
 
     const regions = container.querySelectorAll(".diary-region");
+
     for (const region of regions) {
-        const hasVisibleTier = Array.from(region.querySelectorAll(".diary-tier"))
-            .some((tier) => tier.style.display !== "none");
+        const hasVisibleTier = Array.from(
+            region.querySelectorAll(".diary-tier")
+        ).some(
+            (tier) => tier.style.display !== "none"
+        );
+
         region.style.display = hasVisibleTier ? "" : "none";
     }
 }
@@ -371,8 +576,11 @@ async function updateDiaryFilters(partial) {
         ...fileStore.filters,
         ...partial
     };
+
     await fileStore.setFilters(nextFilters);
+
     const list = document.getElementById("diaryList");
+
     if (list) {
         applyDiaryFilters(list);
     }
@@ -380,27 +588,46 @@ async function updateDiaryFilters(partial) {
 
 function setToggleState(toggle, collapsed) {
     toggle.textContent = collapsed ? "Show" : "Hide";
-    toggle.setAttribute("aria-expanded", collapsed ? "false" : "true");
+    toggle.setAttribute(
+        "aria-expanded",
+        collapsed ? "false" : "true"
+    );
 }
 
 function setRegionCollapsed(region, collapsed) {
-    region.classList.toggle("is-collapsed", collapsed);
-    const toggle = region.querySelector(".diary-region-toggle");
+    region.classList.toggle(
+        "is-collapsed",
+        collapsed
+    );
+
+    const toggle = region.querySelector(
+        ".diary-region-toggle"
+    );
+
     if (toggle) {
         setToggleState(toggle, collapsed);
     }
 }
 
 function setTierCollapsed(tier, collapsed) {
-    tier.classList.toggle("is-collapsed", collapsed);
-    const toggle = tier.querySelector(".diary-tier-toggle");
+    tier.classList.toggle(
+        "is-collapsed",
+        collapsed
+    );
+
+    const toggle = tier.querySelector(
+        ".diary-tier-toggle"
+    );
+
     if (toggle) {
         setToggleState(toggle, collapsed);
     }
 }
 
 function setCompletableTiersButton(button, isEnabled) {
-    button.textContent = isEnabled ? "Show all tiers" : "Show only completable tiers";
+    button.textContent = isEnabled
+        ? "Show all tiers"
+        : "Show only completable tiers";
 }
 
 let teardownDiaryHandlers = null;
@@ -409,59 +636,139 @@ export function init() {
     teardown();
 
     const list = document.getElementById("diaryList");
+
     if (list) {
         applyDiaryFilters(list);
     }
-    const toggleButton = document.getElementById("toggleCompletableTiers");
+
+    const toggleButton =
+        document.getElementById("toggleCompletableTiers");
+
     if (toggleButton) {
-        setCompletableTiersButton(toggleButton, Boolean(fileStore.filters?.showOnlyCompletableTiers));
+        setCompletableTiersButton(
+            toggleButton,
+            Boolean(
+                fileStore.filters?.showOnlyCompletableTiers
+            )
+        );
     }
 
     const onDiaryChange = async (event) => {
         if (event.target.id === "hideCompletedDiaries") {
-            await updateDiaryFilters({ hideCompletedDiaries: event.target.checked });
+            await updateDiaryFilters({
+                hideCompletedDiaries: event.target.checked
+            });
         }
+
         if (event.target.id === "hideIncompletableDiaries") {
-            await updateDiaryFilters({ hideIncompletableDiaries: event.target.checked });
+            await updateDiaryFilters({
+                hideIncompletableDiaries: event.target.checked
+            });
         }
     };
 
     const onDiaryClick = async (event) => {
         if (event.target.id === "foldAllDiaries") {
-            document.querySelectorAll(".diary-region").forEach((region) => setRegionCollapsed(region, true));
-            document.querySelectorAll(".diary-tier").forEach((tier) => setTierCollapsed(tier, true));
+            document
+                .querySelectorAll(".diary-region")
+                .forEach((region) =>
+                    setRegionCollapsed(region, true)
+                );
+
+            document
+                .querySelectorAll(".diary-tier")
+                .forEach((tier) =>
+                    setTierCollapsed(tier, true)
+                );
+
             return;
         }
+
         if (event.target.id === "unfoldAllDiaries") {
-            document.querySelectorAll(".diary-region").forEach((region) => setRegionCollapsed(region, false));
-            document.querySelectorAll(".diary-tier").forEach((tier) => setTierCollapsed(tier, false));
+            document
+                .querySelectorAll(".diary-region")
+                .forEach((region) =>
+                    setRegionCollapsed(region, false)
+                );
+
+            document
+                .querySelectorAll(".diary-tier")
+                .forEach((tier) =>
+                    setTierCollapsed(tier, false)
+                );
+
             return;
         }
-        if (event.target.classList.contains("diary-region-toggle")) {
-            const region = event.target.closest(".diary-region");
+
+        if (
+            event.target.classList.contains(
+                "diary-region-toggle"
+            )
+        ) {
+            const region =
+                event.target.closest(".diary-region");
+
             if (region) {
-                setRegionCollapsed(region, !region.classList.contains("is-collapsed"));
+                setRegionCollapsed(
+                    region,
+                    !region.classList.contains("is-collapsed")
+                );
             }
         }
-        if (event.target.classList.contains("diary-tier-toggle")) {
-            const tier = event.target.closest(".diary-tier");
+
+        if (
+            event.target.classList.contains(
+                "diary-tier-toggle"
+            )
+        ) {
+            const tier =
+                event.target.closest(".diary-tier");
+
             if (tier) {
-                setTierCollapsed(tier, !tier.classList.contains("is-collapsed"));
+                setTierCollapsed(
+                    tier,
+                    !tier.classList.contains("is-collapsed")
+                );
             }
         }
-        if (event.target.id === "toggleCompletableTiers") {
-            const nextValue = !fileStore.filters?.showOnlyCompletableTiers;
-            await updateDiaryFilters({ showOnlyCompletableTiers: nextValue });
-            setCompletableTiersButton(event.target, nextValue);
+
+        if (
+            event.target.id === "toggleCompletableTiers"
+        ) {
+            const nextValue =
+                !fileStore.filters?.showOnlyCompletableTiers;
+
+            await updateDiaryFilters({
+                showOnlyCompletableTiers: nextValue
+            });
+
+            setCompletableTiersButton(
+                event.target,
+                nextValue
+            );
         }
     };
 
-    document.addEventListener("change", onDiaryChange);
-    document.addEventListener("click", onDiaryClick);
+    document.addEventListener(
+        "change",
+        onDiaryChange
+    );
+
+    document.addEventListener(
+        "click",
+        onDiaryClick
+    );
 
     teardownDiaryHandlers = () => {
-        document.removeEventListener("change", onDiaryChange);
-        document.removeEventListener("click", onDiaryClick);
+        document.removeEventListener(
+            "change",
+            onDiaryChange
+        );
+
+        document.removeEventListener(
+            "click",
+            onDiaryClick
+        );
     };
 }
 
@@ -469,5 +776,6 @@ export function teardown() {
     if (typeof teardownDiaryHandlers === "function") {
         teardownDiaryHandlers();
     }
+
     teardownDiaryHandlers = null;
 }

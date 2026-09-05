@@ -1849,6 +1849,9 @@ export const REQUIREMENT_CHECKS = {
     canDoMahoganyHomes(ctx) {
         return canDoMahoganyHomes(ctx);
     },
+    canGainKingdomFavour(ctx) {
+        return canGainKingdomFavour(ctx);
+    },
     canCompleteOneSmallFavour(ctx) {
         return canCompleteOneSmallFavour(ctx);
     },
@@ -7454,6 +7457,14 @@ function hasUsableAxe(ctx) {
 function canTrainWoodcutting(ctx) {
     if (ctx.filters?.overrideWoodcutting) return true;
     return hasUsableAxe(ctx);
+}
+
+function canGainKingdomFavour(ctx) {
+    return has(ctx, 5341) // rake
+        || has(ctx, 311) // harpoon
+        || has(ctx, 301) // lobster pot
+        || hasUsableAxe(ctx) // for woodcutting
+        || hasUsablePickaxe(ctx); // for mining
 }
 
 function getUsablePickaxeIds(level) {
