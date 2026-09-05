@@ -5607,7 +5607,7 @@ export const NPC_DATA = {
     },
     "Extra supply crate": {
         "wiki": "https://oldschool.runescape.wiki/w/Extra_supply_crate",
-        "rule": ["canDoWintertodt"],
+        "rule": [""],
         "skill": ["firemaking"],
         "level": [50],
         "tags": [],
@@ -12155,7 +12155,7 @@ export const NPC_DATA = {
     },
     "Reward Cart": {
         "wiki": "https://oldschool.runescape.wiki/w/Reward_Cart",
-        "rule": ["canDoWintertodt"],
+        "rule": [""],
         "skill": ["firemaking"],
         "level": [50],
         "tags": [],

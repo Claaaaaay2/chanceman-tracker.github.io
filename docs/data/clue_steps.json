@@ -12138,9 +12138,7 @@
                     ],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [
-                        "canDoWintertodt"
-                    ],
+                    "rulesAll": [],
                     "rulesAny": []
                 }
             },
