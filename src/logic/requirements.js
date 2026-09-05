@@ -1825,9 +1825,6 @@ export const REQUIREMENT_CHECKS = {
     canDoValeTotems(ctx) {
         return canDoValeTotems(ctx);
     },
-    canDoWintertodt(ctx) {
-        return canDoWintertodt(ctx);
-    },
     canDoHallowedSepulchre(ctx) {
         return canCompleteSinsOfTheFather(ctx);
     },
@@ -8132,10 +8129,6 @@ function canDoValeTotems(ctx) {
                 ]) //
             ) //
         ); //
-}
-
-function canDoWintertodt(ctx) {
-    return hasSkillLevel(ctx, "Firemaking", 50);
 }
 
 function canDoSalvaging(ctx) {

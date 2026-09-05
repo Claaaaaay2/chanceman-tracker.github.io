@@ -319,6 +319,7 @@ export default async function AchievementDiariesPage() {
 
             let completedCount = 0;
             let readyCount = 0;
+            let trainableCount = 0;
             let blockedCount = 0;
 
             const rows = [];
@@ -334,6 +335,7 @@ export default async function AchievementDiariesPage() {
                 );
 
                 let isDoable = false;
+                let isTrainable = false;
                 let statusClass = "diary-status-blocked";
                 let statusLabel = "Blocked";
                 let missingHtml = "";
@@ -344,8 +346,6 @@ export default async function AchievementDiariesPage() {
                     statusLabel = "Done";
                     completedCount += 1;
                 } else {
-                    // Evaluate all requirements using the player's
-                    // actual current levels and inventory state.
                     const ctx = buildRequirementContext();
 
                     const { met, missing } =
@@ -356,24 +356,40 @@ export default async function AchievementDiariesPage() {
                         );
 
                     if (met) {
+                        // Every requirement, including skill levels, is met.
                         statusClass = "diary-status-ready";
                         statusLabel = "Ready";
                         isDoable = true;
                         readyCount += 1;
+                    } else if (
+                        missing.skills.length > 0 &&
+                        missing.quests.length === 0 &&
+                        missing.items.length === 0 &&
+                        missing.itemGroups.length === 0 &&
+                        missing.rules.length === 0 &&
+                        missing.untracked.length === 0
+                    ) {
+                        // The only unmet requirements are skill levels.
+                        statusClass = "diary-status-trainable";
+                        statusLabel = "Train levels";
+                        isTrainable = true;
+                        trainableCount += 1;
                     } else {
+                        // At least one non-level requirement is missing.
                         statusClass = "diary-status-blocked";
                         statusLabel = "Blocked";
                         blockedCount += 1;
-
-                        // Always show every requirement that is not met.
-                        missingHtml = renderMissing(missing);
                     }
+
+                    // Always show every missing requirement.
+                    missingHtml = renderMissing(missing);
                 }
 
                 rows.push(`
                     <div class="diary-task ${statusClass}"
                         data-completed="${isCompleted ? "true" : "false"}"
-                        data-doable="${isDoable ? "true" : "false"}">
+                        data-doable="${isDoable ? "true" : "false"}"
+                        data-trainable="${isTrainable ? "true" : "false"}">
                         <div class="diary-task-name">
                             ${escapeHtml(task.name)}
                         </div>
@@ -388,8 +404,9 @@ export default async function AchievementDiariesPage() {
             }
 
             // A tier is fully completable when every incomplete task
-            // is Ready (or the task is already Done).
-            const tierFullyCompletable = blockedCount === 0;
+            // is either Ready or Trainable.
+            const tierFullyCompletable =
+                blockedCount === 0;
 
             tierSections.push(`
                 <section
@@ -412,6 +429,7 @@ export default async function AchievementDiariesPage() {
                         <span class="diary-tier-counts">
                             (${completedCount} done,
                             ${readyCount} ready,
+                            ${trainableCount} trainable,
                             ${blockedCount} blocked)
                         </span>
                     </h3>
@@ -528,8 +546,13 @@ function applyDiaryFilters(container) {
         const isDoable =
             row.dataset.doable === "true";
 
+        const isTrainable =
+            row.dataset.trainable === "true";
+
         const isBlocked =
-            !isCompleted && !isDoable;
+            !isCompleted &&
+            !isDoable &&
+            !isTrainable;
 
         const shouldHide =
             (hideCompleted && isCompleted) ||
