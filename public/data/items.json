@@ -96521,6 +96521,21 @@
         "Otherworldly being": {
           "droprate": "1/128"
         }
+      },"other": {
+        "Cooking a Mackerel": {
+          "notes": "Requires a Raw mackerel and level 10 Cooking.",
+          "rule": {
+            "all": [
+              {
+                "has": 353
+              },
+              {
+                "skill": "Cooking",
+                "level": 10
+              }
+            ]
+          }
+        }
       }
     },
     "tags": [
