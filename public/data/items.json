@@ -6599,14 +6599,8 @@
     "sources": {
       "other": {
         "Degrading an Ahrim's hood": {
-          "notes": "Requires a Ahrim's hood.",
-          "rule": {
-            "all": [
-              {
-                "has": 4708
-              }
-            ]
-          }
+          "notes": "Degrading or dropping an Ahrim's hood.",
+          "rule": "hasObtainedAhrimsHood"
         }
       }
     }
@@ -6635,14 +6629,8 @@
     "sources": {
       "other": {
         "Degrading an Ahrim's robeskirt": {
-          "notes": "Requires a Ahrim's robeskirt.",
-          "rule": {
-            "all": [
-              {
-                "has": 4714
-              }
-            ]
-          }
+          "notes": "Degrading or dropping an Ahrim's robeskirt.",
+          "rule": "hasObtainedAhrimsRobeskirt"
         }
       }
     }
@@ -6671,14 +6659,8 @@
     "sources": {
       "other": {
         "Degrading an Ahrim's robetop": {
-          "notes": "Requires a Ahrim's robetop.",
-          "rule": {
-            "all": [
-              {
-                "has": 4712
-              }
-            ]
-          }
+          "notes": "Degrading or dropping an Ahrim's robetop.",
+          "rule": "hasObtainedAhrimsRobetop"
         }
       }
     }
@@ -6707,14 +6689,8 @@
     "sources": {
       "other": {
         "Degrading an Ahrim's staff": {
-          "notes": "Requires a Ahrim's staff.",
-          "rule": {
-            "all": [
-              {
-                "has": 4710
-              }
-            ]
-          }
+          "notes": "Degrading or dropping an Ahrim's staff.",
+          "rule": "hasObtainedAhrimsStaff"
         }
       }
     }
@@ -24397,14 +24373,8 @@
     "sources": {
       "other": {
         "Degrading a Blood moon chestplate": {
-          "notes": "Requires Blood moon chestplate.",
-          "rule": {
-            "all": [
-              {
-                "has": 29022
-              }
-            ]
-          }
+          "notes": "Degrading or dropping Blood moon chestplate.",
+          "rule": "hasObtainedBloodMoonChestplate"
         }
       }
     }
@@ -24433,14 +24403,8 @@
     "sources": {
       "other": {
         "Degrading a Blood moon helm": {
-          "notes": "Requires Blood moon helm.",
-          "rule": {
-            "all": [
-              {
-                "has": 29028
-              }
-            ]
-          }
+          "notes": "Degrading or dropping Blood moon helm.",
+          "rule": "hasObtainedBloodMoonHelm"
         }
       }
     }
@@ -24469,14 +24433,8 @@
     "sources": {
       "other": {
         "Degrading some Blood moon tassets": {
-          "notes": "Requires Blood moon tassets.",
-          "rule": {
-            "all": [
-              {
-                "has": 29025
-              }
-            ]
-          }
+          "notes": "Degrading or dropping Blood moon tassets.",
+          "rule": "hasObtainedBloodMoonTassets"
         }
       }
     }
@@ -26246,14 +26204,8 @@
     "sources": {
       "other": {
         "Degrading a Blue moon chestplate": {
-          "notes": "Requires Blue moon chestplate.",
-          "rule": {
-            "all": [
-              {
-                "has": 29013
-              }
-            ]
-          }
+          "notes": "Degrading or dropping Blue moon chestplate.",
+          "rule": "hasObtainedBlueMoonChestplate"
         }
       }
     }
@@ -26282,14 +26234,8 @@
     "sources": {
       "other": {
         "Degrading a Blue moon helm": {
-          "notes": "Requires Blue moon helm.",
-          "rule": {
-            "all": [
-              {
-                "has": 29019
-              }
-            ]
-          }
+          "notes": "Degrading or dropping Blue moon helm.",
+          "rule": "hasObtainedBlueMoonHelm"
         }
       }
     }
@@ -26335,14 +26281,8 @@
     "sources": {
       "other": {
         "Degrading some Blue moon tassets": {
-          "notes": "Requires Blue moon tassets.",
-          "rule": {
-            "all": [
-              {
-                "has": 29016
-              }
-            ]
-          }
+          "notes": "Degrading or dropping Blue moon tassets.",
+          "rule": "hasObtainedBlueMoonTassets"
         }
       }
     }
@@ -45956,14 +45896,8 @@
     "sources": {
       "other": {
         "Degrading a Dharok's greataxe": {
-          "notes": "Requires a Dharok's greataxe.",
-          "rule": {
-            "all": [
-              {
-                "has": 4718
-              }
-            ]
-          }
+          "notes": "Degrading or dropping a Dharok's greataxe.",
+          "rule": "hasObtainedDharoksGreataxe"
         }
       }
     }
@@ -45992,14 +45926,8 @@
     "sources": {
       "other": {
         "Degrading a Dharok's helm": {
-          "notes": "Requires a Dharok's helm.",
-          "rule": {
-            "all": [
-              {
-                "has": 4716
-              }
-            ]
-          }
+          "notes": "Degrading or dropping a Dharok's helm.",
+          "rule": "hasObtainedDharoksHelm"
         }
       }
     }
@@ -46028,14 +45956,8 @@
     "sources": {
       "other": {
         "Degrading a Dharok's platebody": {
-          "notes": "Requires a Dharok's platebody.",
-          "rule": {
-            "all": [
-              {
-                "has": 4720
-              }
-            ]
-          }
+          "notes": "Degrading or dropping a Dharok's platebody.",
+          "rule": "hasObtainedDharoksPlatebody"
         }
       }
     }
@@ -46064,14 +45986,8 @@
     "sources": {
       "other": {
         "Degrading a Dharok's platelegs": {
-          "notes": "Requires a Dharok's platelegs.",
-          "rule": {
-            "all": [
-              {
-                "has": 4722
-              }
-            ]
-          }
+          "notes": "Degrading or dropping a Dharok's platelegs.",
+          "rule": "hasObtainedDharoksPlatelegs"
         }
       }
     }
@@ -55098,14 +55014,8 @@
     "sources": {
       "other": {
         "Degrading an Eclipse moon chestplate": {
-          "notes": "Requires Eclipse moon chestplate.",
-          "rule": {
-            "all": [
-              {
-                "has": 29004
-              }
-            ]
-          }
+          "notes": "Degrading or dropping an Eclipse moon chestplate.",
+          "rule": "hasObtainedEclipseMoonChestplate"
         }
       }
     }
@@ -55134,14 +55044,8 @@
     "sources": {
       "other": {
         "Degrading an Eclipse moon helm": {
-          "notes": "Requires Eclipse moon helm.",
-          "rule": {
-            "all": [
-              {
-                "has": 29010
-              }
-            ]
-          }
+          "notes": "Degrading or dropping an Eclipse moon helm.",
+          "rule": "hasObtainedEclipseMoonHelm"
         }
       }
     }
@@ -55170,14 +55074,8 @@
     "sources": {
       "other": {
         "Degrading some Eclipse moon tassets": {
-          "notes": "Requires Eclipse moon tassets.",
-          "rule": {
-            "all": [
-              {
-                "has": 29007
-              }
-            ]
-          }
+          "notes": "Degrading or dropping an Eclipse moon tassets.",
+          "rule": "hasObtainedEclipseMoonTassets"
         }
       }
     }
@@ -79636,14 +79534,8 @@
     "sources": {
       "other": {
         "Degrading a Guthan's chainskirt": {
-          "notes": "Requires a Guthan's chainskirt.",
-          "rule": {
-            "all": [
-              {
-                "has": 4730
-              }
-            ]
-          }
+          "notes": "Degrading or dropping a Guthan's chainskirt.",
+          "rule": "hasObtainedGuthansChainskirt"
         }
       }
     }
@@ -79672,14 +79564,8 @@
     "sources": {
       "other": {
         "Degrading a Guthan's helm": {
-          "notes": "Requires a Guthan's helm.",
-          "rule": {
-            "all": [
-              {
-                "has": 4724
-              }
-            ]
-          }
+          "notes": "Degrading or dropping a Guthan's helm.",
+          "rule": "hasObtainedGuthansHelm"
         }
       }
     }
@@ -79708,14 +79594,8 @@
     "sources": {
       "other": {
         "Degrading a Guthan's platebody": {
-          "notes": "Requires a Guthan's platebody.",
-          "rule": {
-            "all": [
-              {
-                "has": 4728
-              }
-            ]
-          }
+          "notes": "Degrading or dropping a Guthan's platebody.",
+          "rule": "hasObtainedGuthansPlatebody"
         }
       }
     }
@@ -79744,14 +79624,8 @@
     "sources": {
       "other": {
         "Degrading a Guthan's warspear": {
-          "notes": "Requires a Guthan's warspear.",
-          "rule": {
-            "all": [
-              {
-                "has": 4726
-              }
-            ]
-          }
+          "notes": "Degrading or dropping a Guthan's warspear.",
+          "rule": "hasObtainedGuthansWarspear"
         }
       }
     }
@@ -90293,14 +90167,8 @@
     "sources": {
       "other": {
         "Degrading a Karil's coif": {
-          "notes": "Requires a Karil's coif.",
-          "rule": {
-            "all": [
-              {
-                "has": 4732
-              }
-            ]
-          }
+          "notes": "Degrading or dropping a Karil's coif.",
+          "rule": "hasObtainedKarilsCoif"
         }
       }
     }
@@ -90329,14 +90197,8 @@
     "sources": {
       "other": {
         "Degrading a Karil's crossbow": {
-          "notes": "Requires a Karil's crossbow.",
-          "rule": {
-            "all": [
-              {
-                "has": 4734
-              }
-            ]
-          }
+          "notes": "Degrading or dropping a Karil's crossbow.",
+          "rule": "hasObtainedKarilsCrossbow"
         }
       }
     }
@@ -90365,14 +90227,8 @@
     "sources": {
       "other": {
         "Degrading a Karil's leatherskirt": {
-          "notes": "Requires a Karil's leatherskirt.",
-          "rule": {
-            "all": [
-              {
-                "has": 4738
-              }
-            ]
-          }
+          "notes": "Degrading or dropping a Karil's leatherskirt.",
+          "rule": "hasObtainedKarilsLeatherskirt"
         }
       }
     }
@@ -90401,14 +90257,8 @@
     "sources": {
       "other": {
         "Degrading a Karil's leathertop": {
-          "notes": "Requires a Karil's leathertop.",
-          "rule": {
-            "all": [
-              {
-                "has": 4736
-              }
-            ]
-          }
+          "notes": "Degrading or dropping a Karil's leathertop.",
+          "rule": "hasObtainedKarilsLeathertop"
         }
       }
     }
@@ -159137,14 +158987,8 @@
     "sources": {
       "other": {
         "Degrading a Torag's hammers": {
-          "notes": "Requires a Torag's hammers.",
-          "rule": {
-            "all": [
-              {
-                "has": 4747
-              }
-            ]
-          }
+          "notes": "Degrading or dropping a Torag's hammers.",
+          "rule": "hasObtainedToragsHammers"
         }
       }
     }
@@ -159173,14 +159017,8 @@
     "sources": {
       "other": {
         "Degrading a Torag's helm": {
-          "notes": "Requires a Torag's helm.",
-          "rule": {
-            "all": [
-              {
-                "has": 4745
-              }
-            ]
-          }
+          "notes": "Degrading or dropping a Torag's helm.",
+          "rule": "hasObtainedToragsHelm"
         }
       }
     }
@@ -159209,14 +159047,8 @@
     "sources": {
       "other": {
         "Degrading a Torag's platebody": {
-          "notes": "Requires a Torag's platebody.",
-          "rule": {
-            "all": [
-              {
-                "has": 4749
-              }
-            ]
-          }
+          "notes": "Degrading or dropping a Torag's platebody.",
+          "rule": "hasObtainedToragsPlatebody"
         }
       }
     }
@@ -159245,14 +159077,8 @@
     "sources": {
       "other": {
         "Degrading a Torag's platelegs": {
-          "notes": "Requires a Torag's platelegs.",
-          "rule": {
-            "all": [
-              {
-                "has": 4751
-              }
-            ]
-          }
+          "notes": "Degrading or dropping a Torag's platelegs.",
+          "rule": "hasObtainedToragsPlatelegs"
         }
       }
     }
@@ -164869,14 +164695,8 @@
     "sources": {
       "other": {
         "Degrading a Verac's brassard": {
-          "notes": "Requires a Verac's brassard.",
-          "rule": {
-            "all": [
-              {
-                "has": 4757
-              }
-            ]
-          }
+          "notes": "Degrading or dropping a Verac's brassard.",
+          "rule": "hasObtainedVeracsBrassard"
         }
       }
     }
@@ -164906,14 +164726,8 @@
     "sources": {
       "other": {
         "Degrading a Verac's flail": {
-          "notes": "Requires a Verac's flail.",
-          "rule": {
-            "all": [
-              {
-                "has": 4755
-              }
-            ]
-          }
+          "notes": "Degrading or dropping a Verac's flail.",
+          "rule": "hasObtainedVeracsFlail"
         }
       }
     }
@@ -164943,14 +164757,8 @@
     "sources": {
       "other": {
         "Degrading a Verac's helm": {
-          "notes": "Requires a Verac's helm.",
-          "rule": {
-            "all": [
-              {
-                "has": 4753
-              }
-            ]
-          }
+          "notes": "Degrading or dropping a Verac's helm.",
+          "rule": "hasObtainedVeracsHelm"
         }
       }
     }
@@ -164980,14 +164788,8 @@
     "sources": {
       "other": {
         "Degrading a Verac's plateskirt": {
-          "notes": "Requires a Verac's plateskirt.",
-          "rule": {
-            "all": [
-              {
-                "has": 4759
-              }
-            ]
-          }
+          "notes": "Degrading or dropping a Verac's plateskirt.",
+          "rule": "hasObtainedVeracsPlateskirt"
         }
       }
     }
