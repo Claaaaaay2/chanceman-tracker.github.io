@@ -420,7 +420,20 @@
                         "quests": {
                             "Monkey Madness I": "started"
                         },
-                        "items": [],
+                        "items": [
+                            {
+                                "id": 3183,
+                                "name": "Monkey bones"
+                            },
+                            {
+                                "id": 1963,
+                                "name": "Banana"
+                            },
+                            {
+                                "id": 1759,
+                                "name": "Ball of wool"
+                            }
+                        ],
                         "untracked": [],
                         "itemsAny": [],
                         "rulesAll": [],
@@ -1205,7 +1218,12 @@
                         "quests": {
                             "The Feud": "started"
                         },
-                        "items": [],
+                        "items": [
+                            {
+                                "id": 1917,
+                                "name": "Beer"
+                            }
+                        ],
                         "untracked": [],
                         "itemsAny": [],
                         "rulesAll": [],
@@ -2813,20 +2831,9 @@
                         },
                         "items": [],
                         "untracked": [],
-                        "itemsAny": [
-                            [
-                                5341,
-                                311,
-                                301
-                            ]
-                        ],
-                        "rulesAll": [],
-                        "rulesAny": [
-                            [
-                                "canTrainMining",
-                                "canTrainWoodcutting"
-                            ]
-                        ]
+                        "itemsAny": [],
+                        "rulesAll": ["canGainKingdomFavour"],
+                        "rulesAny": []
                     }
                 },
                 {
@@ -3250,8 +3257,8 @@
                                 "name": "Big fishing net"
                             },
                             {
-                                "id": 365,
-                                "name": "Bass"
+                                "id": 363,
+                                "name": "Raw bass"
                             }
                         ],
                         "untracked": [],
