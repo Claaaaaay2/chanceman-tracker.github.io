@@ -25198,7 +25198,12 @@
     "image": "blood_talisman.png",
     "sources": {
       "shops": {
-        "Yes": "canCompleteSinsOfTheFather"
+        "Yes": {
+            "all": [
+              "canCompleteTempleOfTheEye",
+              "canCompleteSinsOfTheFather"
+            ]
+          }
       }
     },
     "tags": [
@@ -45288,9 +45293,6 @@
         },
         "Dark beast": {
           "droprate": "1/128"
-        },
-        "Rewards Guardian": {
-          "droprate": "1/306.25; 1/273.438"
         }
       },
       "shops": {
