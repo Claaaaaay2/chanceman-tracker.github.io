@@ -2302,7 +2302,7 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canMakeArmourStand",
-                "hasCupOfTea",
+                "hasCupOfTeaOrBowlOfWater",
                 "hasLeatherGloves"
             ]
         },
@@ -11349,7 +11349,7 @@ export const NPC_DATA = {
     },
     "Panning tray Mud": {
         "wiki": "https://oldschool.runescape.wiki/w/Panning_tray#Mud",
-        "rule": ["hasCupOfTea"],
+        "rule": ["hasCupOfTeaOrBowlOfWater"],
         "skill": [],
         "level": [],
         "tags": [],
@@ -14066,7 +14066,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Soil#Level_1_digs",
         "rule": {
             "all": [
-                "hasCupOfTea",
+                "hasCupOfTeaOrBowlOfWater",
                 "hasLeatherGloves"
             ]
         },
@@ -14079,7 +14079,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Soil#Level_2_digs",
         "rule": {
             "all": [
-                "hasCupOfTea",
+                "hasCupOfTeaOrBowlOfWater",
                 "hasLeatherGloves"
             ]
         },
@@ -14092,7 +14092,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Soil#Level_3_digs",
         "rule": {
             "all": [
-                "hasCupOfTea",
+                "hasCupOfTeaOrBowlOfWater",
                 "hasLeatherGloves",
                 "hasOpal"
             ]
@@ -14104,7 +14104,7 @@ export const NPC_DATA = {
     },
     "Soil Training digs": {
         "wiki": "https://oldschool.runescape.wiki/w/Soil#Training_digs",
-        "rule": ["hasCupOfTea"],
+        "rule": ["hasCupOfTeaOrBowlOfWater"],
         "skill": [],
         "level": [],
         "tags": [],
