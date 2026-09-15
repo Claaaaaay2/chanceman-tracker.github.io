@@ -11867,7 +11867,7 @@ export const NPC_DATA = {
     },
     "Ranging cape accumulator": {
         "wiki": "https://oldschool.runescape.wiki/w/Ranging_cape#accumulator",
-        "rule": ["never"],
+        "rule": null,
         "skill": ["ranged"],
         "level": [99],
         "tags": [],
@@ -11875,7 +11875,7 @@ export const NPC_DATA = {
     },
     "Ranging cape assembler": {
         "wiki": "https://oldschool.runescape.wiki/w/Ranging_cape#assembler",
-        "rule": ["never"],
+        "rule": ["canCompleteDragonSlayerII"],
         "skill": ["ranged"],
         "level": [99],
         "tags": [],
