@@ -19438,6 +19438,12 @@
       },
       "shops": {
         "Yes": "No requirements"
+      },
+      "other": {
+        "Questing": {
+          "notes": "Obtained during Perilous Moons.",
+          "rule": "canStartPerilousMoonsAndBuildCrates"
+        }
       }
     },
     "tags": [
@@ -39388,7 +39394,7 @@
           "notes": "Received after The Digsite (show Certificate level 3 to Curator in Varrock Museum).",
           "rule": {
             "all": [
-              "hasCupOfTea",
+              "hasCupOfTeaOrBowlOfWater",
               {
                 "any": [
                   {
@@ -45288,7 +45294,12 @@
         }
       },
       "shops": {
-        "Yes": "canCompleteTempleOfTheEye"
+        "Yes": {
+            "all": [
+              "canCompleteTempleOfTheEye",
+              "canCompleteMourningsEndPartII"
+            ]
+          }
       },
       "other": {
         "Giving 50 junk items to Thorgel during Mournings End Part II": {
@@ -63167,7 +63178,7 @@
           "notes": "Received after The Digsite (show Certificate level 3 to Curator in Varrock Museum).",
           "rule": {
             "all": [
-              "hasCupOfTea",
+              "hasCupOfTeaOrBowlOfWater",
               {
                 "any": [
                   {
@@ -90838,6 +90849,10 @@
       "other": {
         "Bought from Bugs (Big Chompy Bird Hunting)": {
           "notes": "Does not require anything."
+        },
+        "Questing": {
+          "notes": "Obtained during Perilous Moons.",
+          "rule": "canStartPerilousMoonsAndBuildCrates"
         }
       }
     }
@@ -115425,6 +115440,10 @@
       },
       "other": {
         "Questing": {
+          "notes": "Obtained during Perilous Moons.",
+          "rule": "canStartPerilousMoonsAndBuildCrates"
+        },
+        "Questing 2": {
           "notes": "Received during A Taste of Hope.",
           "rule": "canStartATasteOfHope"
         }
@@ -162555,7 +162574,7 @@
       "other": {
         "Panning at the Dig Site": {
           "notes": "Requires a Cup of tea or Nettle-water.",
-          "rule": "hasCupOfTea"
+          "rule": "hasCupOfTeaOrBowlOfWater"
         }
       }
     },
@@ -162722,7 +162741,7 @@
       "other": {
         "Panning at the Dig Site": {
           "notes": "Requires a Cup of tea or Nettle-water.",
-          "rule": "hasCupOfTea"
+          "rule": "hasCupOfTeaOrBowlOfWater"
         }
       }
     },

@@ -414,6 +414,7 @@ function hasAnyItems(ctx, ids) {
 
 function hasClueSpadeRequirement(ctx) {
     if (ctx.filters?.hasDoneEasterEvent) return true;
+    if (ctx.player.quests["A Ruff Situation"] === 2) return true;
     return hasAnyItems(ctx, [
         952,    // Spade
     ]);
@@ -1642,6 +1643,9 @@ export const REQUIREMENT_CHECKS = {
     canStartPerilousMoonsAndReachWyrmlings(ctx) {
         return canStartPerilousMoonsAndReachWyrmlings(ctx);
     },
+    canStartPerilousMoonsAndBuildCrates(ctx) {
+        return canStartPerilousMoonsAndBuildCrates(ctx);
+    },
     canCompleteFairytaleIGrowingPains(ctx) {
         return canCompleteFairytaleIGrowingPains(ctx)
     },
@@ -2596,8 +2600,8 @@ export const REQUIREMENT_CHECKS = {
     hasUmbralFrag(ctx) {
         return has(ctx, 31515);
     },
-    hasCupOfTea(ctx) {
-        return hasCupOfTea(ctx);
+    hasCupOfTeaOrBowlOfWater(ctx) {
+        return hasCupOfTeaOrBowlOfWater(ctx);
     },
     hasLeatherGloves(ctx) {
         return has(ctx, 1059);
@@ -3068,6 +3072,12 @@ export const REQUIREMENT_CHECKS = {
     },
     hasAnyArrow(ctx) {
         return hasAnyArrow(ctx);
+    },
+    canCompleteARuffSituation(ctx) {
+        return canCompleteARuffSituation(ctx);
+    },
+    canCompleteCrabQuest(ctx) {
+        return canCompleteCrabQuest(ctx);
     },
     never(ctx) {
         return false;
@@ -4772,13 +4782,13 @@ function canCompletePerilousMoons(ctx) {
         hasNonBoostableSkillLevel(ctx, "Construction", 10),
         canStartPerilousMoons(ctx), //
         hasKnifeOrNarwhalKnife(ctx), // Knife
-        has(ctx, 2347), // Hammer
-        has(ctx, 8794), // Saw
+        (hasRolledButNotObtained(ctx, 2347) || has(ctx, 2347)), // Hammer
+        (hasRolledButNotObtained(ctx, 8794) || has(ctx, 8794)), // Saw
         has(ctx, 1444), // Water talisman
         has(ctx, 1440), // Earth talisman
-        has(ctx, 305), // Big fishing net
+        (hasRolledButNotObtained(ctx, 305) || has(ctx, 305)), // Big fishing net
         has(ctx, 954), // Rope
-        has(ctx, 233), // Pestle and mortar
+        (hasRolledButNotObtained(ctx, 233) || has(ctx, 233)), // Pestle and mortar
     ]);
 }
 
@@ -4807,6 +4817,29 @@ function canCompletePriestInPeril(ctx) {
         hasAnyItems(ctx, [7936, 1436]),
     ]) ||
         ctx.player.quests["Priest in Peril"] === 2 // already completed quest
+    );
+}
+
+function canCompleteARuffSituation(ctx) {
+    return (
+        allTrue([
+        has(ctx, 1947), // Grain
+        hasAnyItems(ctx, [29163, 958, 948, 29218, 6814]), //furs
+        hasNonBoostableSkillLevel(ctx, "Crafting", 15),
+    ]) ||
+        ctx.player.quests["A Ruff Situation"] === 2 // already completed quest
+    );
+}
+
+function canCompleteCrabQuest(ctx) {
+    return (
+        allTrue([
+            (hasRolledButNotObtained(ctx, 305) || has(ctx, 305)), // Big fishing net
+            hasNonBoostableSkillLevel(ctx, "Sailing", 40),
+            hasNonBoostableSkillLevel(ctx, "Fishing", 30),
+            requiresQuest(ctx, "canCompletePandemonium", canCompletePandemonium), //
+        ]) ||
+            ctx.player.quests["Crab Quest"] === 2 // already completed quest
     );
 }
 
@@ -5477,7 +5510,7 @@ function canCompleteTheDigSite(ctx) {
         has(ctx, 233), // Pestle and mortar
         has(ctx, 229), // Vial
         has(ctx, 590), // Tinderbox
-        hasCupOfTea(ctx), //
+        hasCupOfTeaOrBowlOfWater(ctx), //
         has(ctx, 954), // Rope
         hasAnyItems(ctx, [1609, 1625]),
         has(ctx, 973), // Charcoal
@@ -6651,7 +6684,7 @@ function canBurnUriumShades(ctx) {
         ]);
 }
 
-function hasCupOfTea(ctx) {
+function hasCupOfTeaOrBowlOfWater(ctx) {
     return has(ctx, 1978) // Cup of tea
         || has(ctx, 1921) // Bowl of water
 }
@@ -7058,6 +7091,19 @@ function canStartPerilousMoons(ctx) {
         hasSkillLevel(ctx, "Fishing", 20), //
         hasSkillLevel(ctx, "Runecraft", 20), //
         hasSkillLevel(ctx, "Construction", 10) //
+    ]);
+}
+
+function canStartPerilousMoonsAndBuildCrates(ctx) {
+    return allTrue([
+        requiresQuest(ctx, "canCompleteTwilightsPromise", canCompleteTwilightsPromise), //
+        hasSkillLevel(ctx, "Hunter", 20), //
+        hasSkillLevel(ctx, "Slayer", 48), //
+        hasSkillLevel(ctx, "Fishing", 20), //
+        hasSkillLevel(ctx, "Runecraft", 20), //
+        hasSkillLevel(ctx, "Construction", 10), //
+        has(ctx, 2347), // Hammer
+        has(ctx, 8794), // Saw
     ]);
 }
 
