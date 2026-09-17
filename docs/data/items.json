@@ -88414,7 +88414,7 @@
     "sources": {
       "other": {
         "Constructing Ironwood hull parts": {
-          "notes": "Requires ironwood planks, level 77 Construction and completion of Pandemonium.",
+          "notes": "Requires ironwood planks, level 75 Construction and completion of Pandemonium.",
           "rule": {
             "all": [
               {
@@ -88423,7 +88423,7 @@
               "canCompletePandemonium",
               {
                 "skill": "Construction",
-                "level": 77
+                "level": 75
               }
             ]
           }
