@@ -58138,10 +58138,7 @@
           "notes": "Do the gnome restaurant tutorial (free roll)."
         }
       }
-    },
-    "tags": [
-      "Food"
-    ]
+    }
   },
   {
     "index": 1531,
@@ -160075,17 +160072,6 @@
     "name": "Toy mouse (wound)",
     "image": "toy_mouse.png",
     "sources": {
-      "drops": {
-        "Accumulator max cape": {
-          "droprate": "1/2000"
-        },
-        "Ava's accumulator": {
-          "droprate": "1/2000"
-        },
-        "Ranging cape accumulator": {
-          "droprate": "1/2000"
-        }
-      },
       "other": {
         "Wind a Toy mouse": {
           "notes": "Requires a Toy mouse.",

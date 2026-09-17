@@ -805,6 +805,7 @@ export const NPC_DATA = {
         "rule": ["canCompletePriestInPeril"],
         "skill": ["Slayer"],
         "level": [92],
+        "boostable": false,
         "tags": ["boss", "slayer-task-only"],
         "f2p": false
     },
