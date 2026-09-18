@@ -1062,7 +1062,7 @@ export const NPC_DATA = {
     },
     "Baby impling jar": {
         "wiki": "https://oldschool.runescape.wiki/w/Baby_impling_jar",
-        "rule": ["canCatchImplingsInJars"],
+        "rule": ["hasBabyImplingJar"],
         "skill": ["hunter"],
         "level": [27],
         "tags": [],
@@ -4133,7 +4133,7 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "canCompleteSongOfTheElves",
-                "canCatchImplingsInJars"
+                "hasCrystalImplingJar"
             ]
         },
         "skill": ["hunter"],
@@ -4845,7 +4845,7 @@ export const NPC_DATA = {
     },
     "Dragon impling jar": {
         "wiki": "https://oldschool.runescape.wiki/w/Dragon_impling_jar",
-        "rule": ["canCatchImplingsInJars"],
+        "rule": ["hasDragonImplingJar"],
         "skill": ["hunter"],
         "level": [93],
         "tags": [],
@@ -5199,7 +5199,7 @@ export const NPC_DATA = {
     },
     "Earth impling jar": {
         "wiki": "https://oldschool.runescape.wiki/w/Earth_impling_jar",
-        "rule": ["canCatchImplingsInJars"],
+        "rule": ["hasEarthImplingJar"],
         "skill": ["hunter"],
         "level": [46],
         "tags": [],
@@ -5247,7 +5247,7 @@ export const NPC_DATA = {
     },
     "Eclectic impling jar": {
         "wiki": "https://oldschool.runescape.wiki/w/Eclectic_impling_jar",
-        "rule": ["canCatchImplingsInJars"],
+        "rule": ["hasEclecticImplingJar"],
         "skill": ["hunter"],
         "level": [60],
         "tags": [],
@@ -5520,7 +5520,7 @@ export const NPC_DATA = {
     },
     "Essence impling jar": {
         "wiki": "https://oldschool.runescape.wiki/w/Essence_impling_jar",
-        "rule": ["canCatchImplingsInJars"],
+        "rule": ["hasEssenceImplingJar"],
         "skill": ["hunter"],
         "level": [52],
         "tags": [],
@@ -7060,7 +7060,7 @@ export const NPC_DATA = {
     },
     "Gourmet impling jar": {
         "wiki": "https://oldschool.runescape.wiki/w/Gourmet_impling_jar",
-        "rule": ["canCatchImplingsInJars"],
+        "rule": ["hasGourmetImplingJar"],
         "skill": ["hunter"],
         "level": [38],
         "tags": [],
@@ -9574,7 +9574,7 @@ export const NPC_DATA = {
     },
     "Lucky impling jar": {
         "wiki": "https://oldschool.runescape.wiki/w/Lucky_impling_jar",
-        "rule": ["canCatchImplingsInJars"],
+        "rule": ["hasLuckyImplingJar"],
         "skill": ["hunter"],
         "level": [99],
         "tags": [],
@@ -9782,7 +9782,7 @@ export const NPC_DATA = {
     },
     "Magpie impling jar": {
         "wiki": "https://oldschool.runescape.wiki/w/Magpie_impling_jar",
-        "rule": ["canCatchImplingsInJars"],
+        "rule": ["hasMagpieImplingJar"],
         "skill": ["hunter"],
         "level": [75],
         "tags": [],
@@ -10689,7 +10689,7 @@ export const NPC_DATA = {
     },
     "Nature impling jar": {
         "wiki": "https://oldschool.runescape.wiki/w/Nature_impling_jar",
-        "rule": ["canCatchImplingsInJars"],
+        "rule": ["hasNatureImplingJar"],
         "skill": ["hunter"],
         "level": [68],
         "tags": [],
@@ -10850,7 +10850,7 @@ export const NPC_DATA = {
     },
     "Ninja impling jar": {
         "wiki": "https://oldschool.runescape.wiki/w/Ninja_impling_jar",
-        "rule": ["canCatchImplingsInJars"],
+        "rule": ["hasNinjaImplingJar"],
         "skill": ["hunter"],
         "level": [84],
         "tags": [],
@@ -16695,7 +16695,7 @@ export const NPC_DATA = {
     },
     "Young impling jar": {
         "wiki": "https://oldschool.runescape.wiki/w/Young_impling_jar",
-        "rule": ["canCatchImplingsInJars"],
+        "rule": ["hasYoungImplingJar"],
         "skill": ["hunter"],
         "level": [32],
         "tags": [],
@@ -17084,7 +17084,12 @@ export const NPC_DATA = {
     },
     "Dragon impling jar (After Monkey Madness II)": {
         "wiki": "https://oldschool.runescape.wiki/w/Dragon_impling_jar",
-        "rule": ["canCompleteMonkeyMadnessII"],
+        "rule": {
+            "all": [
+                "canCompleteMonkeyMadnessII",
+                "hasDragonImplingJar"
+            ]
+        },
         "skill": ["hunter"],
         "level": [93],
         "tags": [],
