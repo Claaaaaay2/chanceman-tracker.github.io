@@ -1622,9 +1622,6 @@ export const REQUIREMENT_CHECKS = {
     canNooseWand(ctx) {
         return canNooseWand(ctx);
     },
-    canCatchImplingsInJars(ctx) {
-        return canCatchImplingsInJars(ctx);
-    },
     canDeadfallTrap(ctx) {
         return canDeadfallTrap(ctx);
     },
@@ -2215,6 +2212,42 @@ export const REQUIREMENT_CHECKS = {
     },
     hasGrubbyKey(ctx) {
         return has(ctx, 23499);
+    },
+    hasBabyImplingJar(ctx) {
+        return has(ctx, 11238);
+    },
+    hasCrystalImplingJar(ctx) {
+        return has(ctx, 23768);
+    },
+    hasDragonImplingJar(ctx) {
+        return has(ctx, 11256);
+    },
+    hasEarthImplingJar(ctx) {
+        return has(ctx, 11244);
+    },
+    hasEclecticImplingJar(ctx) {
+        return has(ctx, 11248);
+    },
+    hasEssenceImplingJar(ctx) {
+        return has(ctx, 11246);
+    },
+    hasGourmetImplingJar(ctx) {
+        return has(ctx, 11242);
+    },
+    hasLuckyImplingJar(ctx) {
+        return has(ctx, 19732);
+    },
+    hasMagpieImplingJar(ctx) {
+        return has(ctx, 11252);
+    },
+    hasNatureImplingJar(ctx) {
+        return has(ctx, 11250);
+    },
+    hasNinjaImplingJar(ctx) {
+        return has(ctx, 11254);
+    },
+    hasYoungImplingJar(ctx) {
+        return has(ctx, 11240);
     },
     hasLockpick(ctx) {
         return has(ctx, 1523);
@@ -6822,11 +6855,6 @@ function canBirdSnare(ctx) {
 function canNooseWand(ctx) {
     return canTrainHunter(ctx) //
         && has(ctx, 10150); // Bird snare
-}
-
-function canCatchImplingsInJars(ctx) {
-    return canTrainHunter(ctx) //
-        && has(ctx, 11260); // Impling jar
 }
 
 function canDeadfallTrap(ctx) {
