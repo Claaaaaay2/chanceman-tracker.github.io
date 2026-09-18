@@ -1,7 +1,7 @@
 import { canDoOtherMethod, canReachNpc } from "./itemAvailability.js";
 import { NPC_DATA } from "./npcData.js";
 import { hasSuperiorSlayerUnlock, isIronmanAccount } from "./playerState.js";
-import { has, hasSkillLevel } from "./requirements.js";
+import { has, hasSkillLevel, hasNonBoostableSkillLevel } from "./requirements.js";
 import { capitalizeFirstLetter } from "./utils.js";
 
 const REWARD_POOL_35_39 = "Reward pool 35\u201339 Fishing";
@@ -156,7 +156,21 @@ export function areNpcSkillsMet(npcName, ctx) {
         const skill = npc.skill[i];
         const level = effectiveLevels[i];
 
-        if (!hasSkillLevel(ctx, capitalizeFirstLetter(skill), level, { trackMissing: false })) {
+        const skillMet = npc.boostable === false
+            ? hasNonBoostableSkillLevel(
+                ctx,
+                capitalizeFirstLetter(skill),
+                level,
+                { trackMissing: false }
+            )
+            : hasSkillLevel(
+                ctx,
+                capitalizeFirstLetter(skill),
+                level,
+                { trackMissing: false }
+            );
+
+        if (!skillMet) {
             return false;
         }
     }
