@@ -139812,7 +139812,8 @@
       }
     },
     "tags": [
-      "Slayer"
+      "Slayer",
+      "Slayertask-only"
     ]
   },
   {
@@ -169920,11 +169921,26 @@
       },
       "other": {
         "Making a Wizard blizzard": {
-          "notes": "Requires Pineapple chunks, Lime slices and a Cocktail glass and level 18 Cooking.",
+          "notes": "Requires Vodka, Gin, Lime, Lemon, Orange, Pineapple chunks, Lime slices and a Cocktail glass and level 18 Cooking.",
           "rule": {
             "all": [
               {
-                "has": 2128
+                "has": 2015
+              },
+              {
+                "has": 2019
+              },
+              {
+                "has": 2120
+              },
+              {
+                "has": 2102
+              },
+              {
+                "has": 2108
+              },
+              {
+                "has": 2116
               },
               {
                 "has": 2124
