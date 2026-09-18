@@ -1,6 +1,7 @@
 import { NPC_DATA } from "./npcData.js";
-import { REQUIREMENT_CHECKS, has, hasElementalRuneRules, hasSkillLevel, isElementalRuneRule } from "./requirements.js";
+import { REQUIREMENT_CHECKS, has, hasElementalRuneRules, hasSkillLevel, isElementalRuneRule, hasNonBoostableSkillLevel } from "./requirements.js";
 import { capitalizeFirstLetter } from "./utils.js";
+import { getNpcEffectiveLevels} from "../logic/itemVisibility.js";
 
 const BUTTERFLY_NET_ID = 10010;
 const HOUSE_RULE_BYPASS_RULES = new Set([
@@ -99,16 +100,26 @@ export async function canReachNpc(npcName, ctx) {
 
     const rule = npc.rule;
     let result = false;
+
     if (ctx.filters?.allowOthersHouses && npc.tags?.includes("house")) {
         const prevBypass = ctx.houseRuleBypass;
         ctx.houseRuleBypass = true;
+
         try {
-            result = !rule ? true : await evaluateRule(rule, ctx);
+            result = !rule
+                ? true
+                : await evaluateRule(rule, ctx, {
+                    boostable: npc.boostable
+                });
         } finally {
             ctx.houseRuleBypass = prevBypass;
         }
     } else {
-        result = !rule ? true : await evaluateRule(rule, ctx);
+        result = !rule
+            ? true
+            : await evaluateRule(rule, ctx, {
+                boostable: npc.boostable
+            });
     }
 
     ctx.npcReachCache.set(npcName, result);
@@ -129,7 +140,7 @@ export async function canDoOtherMethod(rule, ctx) {
    CORE RULE EVALUATION
    =========================================================== */
 
-export async function evaluateRule(rule, ctx) {
+export async function evaluateRule(rule, ctx, options = {}) {
     const ruleCache = ctx?.cacheRules ? ctx?.ruleEvalCache : null;
     const ruleCacheKey = ctx?.ruleEvalKey || "base";
     if (ruleCache) {
@@ -165,7 +176,7 @@ export async function evaluateRule(rule, ctx) {
         } else {
         // Array -> OR
         for (const r of rule) {
-            if (await evaluateRule(r, ctx)) {
+            if (await evaluateRule(r, ctx, options)) {
                 result = true;
                 break;
             }
@@ -180,7 +191,9 @@ export async function evaluateRule(rule, ctx) {
         } else if (rule.skill && rule.level !== undefined) {
             // skill level requirement: { skill: "Farming", level: 50 }
             const skillName = capitalizeFirstLetter(rule.skill);
-            result = hasSkillLevel(ctx, skillName, rule.level);
+            result = hasSkillLevel(ctx, skillName, rule.level, {
+                boostable: options.boostable
+            });
         } else if (Array.isArray(rule.skills)) {
             // skill level requirements list: { skills: [{ skill, level }, ...] }
             result = true;
@@ -189,8 +202,12 @@ export async function evaluateRule(rule, ctx) {
                     result = false;
                     break;
                 }
+
                 const skillName = capitalizeFirstLetter(req.skill);
-                if (!hasSkillLevel(ctx, skillName, req.level)) {
+
+                if (!hasSkillLevel(ctx, skillName, req.level, {
+                    boostable: options.boostable
+                })) {
                     result = false;
                     break;
                 }
@@ -198,7 +215,7 @@ export async function evaluateRule(rule, ctx) {
         } else if (rule.any) {
             // any
             for (const sub of rule.any) {
-                if (await evaluateRule(sub, ctx)) {
+                if (await evaluateRule(sub, ctx, options)) {
                     result = true;
                     break;
                 }
@@ -219,7 +236,7 @@ export async function evaluateRule(rule, ctx) {
 
             if (result) {
                 for (const sub of nonElementalSubrules) {
-                    if (!(await evaluateRule(sub, ctx))) {
+                    if (!(await evaluateRule(sub, ctx, options))) {
                         result = false;
                         break;
                     }

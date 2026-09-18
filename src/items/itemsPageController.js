@@ -747,7 +747,11 @@ export async function initItemsPage() {
             return skill;
         }
 
-        const boostedLabel = getBoostedRequirementLabel(ctx, skill, level);
+        // Only show skill boosts visually in the "Skill requirements met" section.
+        const boostedLabel = rank === 5
+            ? getBoostedRequirementLabel(ctx, skill, level)
+            : null;
+
         if (boostedLabel) {
             return boostedLabel;
         }
@@ -1758,14 +1762,8 @@ async function hideSkill(item, ctx, skill, rolledSet) {
             const levels = getNpcEffectiveLevels(npcName, ctx);
             const needsSkill = skills?.includes(skill) || isSlayerLockTag;
             if (needsSkill) hasAnySkillSource = true;
-            if (levels?.length) {
-                const meetsSkillRequirement = npc.boostable === false
-                    ? hasNonBoostableSkillLevel(ctx, skill, levels[0])
-                    : skillLevel >= levels[0];
-
-                if (meetsSkillRequirement) {
-                    hasSkillLevel = true;
-                }
+            if (levels?.length && skillLevel >= levels[0]) {
+                hasSkillLevel = true;
             }
 
             const reachable = await canReachNpc(npcName, ctx);

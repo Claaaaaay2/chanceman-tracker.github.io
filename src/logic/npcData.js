@@ -10861,6 +10861,7 @@ export const NPC_DATA = {
         "rule": ["hasFacemask"],
         "skill": ["Slayer"],
         "level": [93],
+        "boostable": false,
         "tags": ["superior"],
         "f2p": false
     },
@@ -13962,6 +13963,7 @@ export const NPC_DATA = {
         "rule": ["hasFacemask"],
         "skill": ["Slayer"],
         "level": [93],
+        "boostable": false,
         "tags": ["slayer-task-only"],
         "f2p": false
     },

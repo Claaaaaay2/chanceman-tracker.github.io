@@ -618,6 +618,7 @@ export function canTrainSkill(ctx, skill) {
 export function hasSkillLevel(ctx, skill, level, options = {}) {
     const overrideKey = options.overrideKey;
     const trackMissing = options.trackMissing !== false;
+
     if (overrideKey && ctx.filters?.[overrideKey]) return true;
 
     if (ctx?.ignoreSkillLevels === "levelsOnly") {
@@ -631,21 +632,35 @@ export function hasSkillLevel(ctx, skill, level, options = {}) {
         return canTrainSkill(ctx, skill);
     }
 
-    const current = getEffectiveSkillLevel(ctx, skill) ?? 1;
-    if (typeof current === "number" && current >= level) return true;
+    // NPCs marked boostable: false must use the player's actual/base level.
+    // All other skill requirements continue to use the effective level,
+    // which includes available skill boosts when enabled.
+    const current = options.boostable === false
+        ? getBaseSkillLevel(ctx, skill)
+        : getEffectiveSkillLevel(ctx, skill);
+
+    if (typeof current === "number" && current >= level) {
+        return true;
+    }
+
+    // Record unmet skill requirements for the missing-requirements display.
     if (trackMissing && ctx?.missing && shouldTrackMissing(ctx)) {
         if (!ctx.missing.skills) {
             ctx.missing.skills = [];
         }
+
         if (!ctx.missing.skillKeys) {
             ctx.missing.skillKeys = new Set();
         }
+
         const key = `${skill} ${level}`;
+
         if (!ctx.missing.skillKeys.has(key)) {
             ctx.missing.skillKeys.add(key);
             ctx.missing.skills.push(key);
         }
     }
+
     return false;
 }
 
