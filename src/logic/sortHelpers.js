@@ -164,6 +164,14 @@ export async function getObtainabilityRank(item, ctx) {
     const name = item.name.toLowerCase();
     const id = item.id;
 
+        // Slayertask-only tagged items are unavailable to players who are Slayer locked.
+    if (
+            ctx.filters?.isSlayerLocked &&
+            item.tags?.includes("Slayertask-only")
+        ) {
+            return { rank: 9, name };
+    }
+
     const rolled = fileStore.rolled?.includes(id);
     const isIronman = isIronmanAccount(ctx.player);
 
