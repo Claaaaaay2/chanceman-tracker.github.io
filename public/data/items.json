@@ -31233,6 +31233,9 @@
       "drops": {
         "Crate (Armadyl's Eyrie)": {
           "droprate": "Always"
+        },
+        "Fletching cape": {
+          "droprate": "Always"
         }
       },
       "other": {
@@ -101737,6 +101740,9 @@
         "Crate (Armadyl's Eyrie)": {
           "droprate": "Always"
         },
+        "Fletching cape": {
+          "droprate": "Always"
+        },
         "Chewed bones": {
           "droprate": "1/21.333"
         },
@@ -121555,13 +121561,13 @@
       },
       "other": {
         "Deep sea trawling": {
-          "notes": "Can be caught with a trawling net or by rod fishing.",
+          "notes": "Can be caught with a trawling net or by rod fishing (glistening shoals).",
           "rule": {
             "all": [
                 "canDeepSeaFish",
               {
                 "skill": "Fishing",
-                "level": 87
+                "level": 76
               }
             ]
           }
@@ -121914,13 +121920,13 @@
       },
       "other": {
         "Deep sea trawling": {
-          "notes": "Can be caught with a trawling net or by rod fishing.",
+          "notes": "Can be caught with a trawling net or by rod fishing (glistening shoals).",
           "rule": {
             "all": [
                 "canDeepSeaFish",
               {
                 "skill": "Fishing",
-                "level": 73
+                "level": 69
               }
             ]
           }
@@ -121944,13 +121950,13 @@
       },
       "other": {
         "Deep sea trawling": {
-          "notes": "Can be caught with a trawling net or by rod fishing.",
+          "notes": "Can be caught with a trawling net or by rod fishing (glistening shoals).",
           "rule": {
             "all": [
                 "canDeepSeaFish",
               {
                 "skill": "Fishing",
-                "level": 83
+                "level": 69
               }
             ]
           }
@@ -122401,13 +122407,13 @@
       },
       "other": {
         "Deep sea trawling": {
-          "notes": "Can be caught with a trawling net or by rod fishing.",
+          "notes": "Can be caught with a trawling net or by rod fishing (glistening shoals).",
           "rule": {
             "all": [
                 "canDeepSeaFish",
               {
                 "skill": "Fishing",
-                "level": 91
+                "level": 76
               }
             ]
           }
@@ -123679,7 +123685,7 @@
                 "canDeepSeaFish",
               {
                 "skill": "Fishing",
-                "level": 79
+                "level": 69
               }
             ]
           }
