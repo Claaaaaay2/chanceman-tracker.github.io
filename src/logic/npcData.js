@@ -5707,6 +5707,14 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
+    "Fletching cape": {
+        "wiki": "https://oldschool.runescape.wiki/w/Fletching_cape",
+        "rule": null,
+        "skill": ["fletching"],
+        "level": [99],
+        "tags": [],
+        "f2p": false
+    },
     "Fire elemental": {
         "wiki": "https://oldschool.runescape.wiki/w/Fire_elemental",
         "rule": ["hasSlashWeapon"],
