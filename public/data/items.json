@@ -14806,6 +14806,23 @@
               }
             ]
           }
+        },
+        "Mixing a potion with herblore cape + grimy herb": {
+          "notes": "Requires Vial of water and a Grimy avantoe and a herblore cape.",
+          "rule": {
+            "all": [
+              {
+                "has": 227
+              },
+              {
+                "has": 211
+              },
+              {
+                "skill": "Herblore",
+                "level": 99
+              }
+            ]
+          }
         }
       }
     },
@@ -35268,6 +35285,23 @@
               }
             ]
           }
+        },
+        "Mixing a potion with herblore cape + grimy herb": {
+          "notes": "Requires Vial of blood and a Grimy cadantine and a herblore cape.",
+          "rule": {
+            "all": [
+              {
+                "has": 22446
+              },
+              {
+                "has": 215
+              },
+              {
+                "skill": "Herblore",
+                "level": 99
+              }
+            ]
+          }
         }
       }
     }
@@ -35292,6 +35326,23 @@
               {
                 "skill": "Herblore",
                 "level": 66
+              }
+            ]
+          }
+        },
+        "Mixing a potion with herblore cape + grimy herb": {
+          "notes": "Requires Vial of water and a Grimy cadantine and a herblore cape.",
+          "rule": {
+            "all": [
+              {
+                "has": 227
+              },
+              {
+                "has": 215
+              },
+              {
+                "skill": "Herblore",
+                "level": 99
               }
             ]
           }
@@ -53189,6 +53240,23 @@
               {
                 "skill": "Herblore",
                 "level": 72
+              }
+            ]
+          }
+        },
+        "Mixing a potion with herblore cape + grimy herb": {
+          "notes": "Requires Vial of water and a Grimy dwarf weed and a herblore cape.",
+          "rule": {
+            "all": [
+              {
+                "has": 227
+              },
+              {
+                "has": 217
+              },
+              {
+                "skill": "Herblore",
+                "level": 99
               }
             ]
           }
@@ -79374,6 +79442,23 @@
               }
             ]
           }
+        },
+        "Mixing a potion with herblore cape + grimy herb": {
+          "notes": "Requires Vial of water and a Grimy guam leaf and a herblore cape.",
+          "rule": {
+            "all": [
+              {
+                "has": 227
+              },
+              {
+                "has": 199
+              },
+              {
+                "skill": "Herblore",
+                "level": 99
+              }
+            ]
+          }
         }
       }
     },
@@ -81590,6 +81675,23 @@
               }
             ]
           }
+        },
+        "Mixing a potion with herblore cape + grimy herb": {
+          "notes": "Requires Vial of water and a Grimy harralander and a herblore cape.",
+          "rule": {
+            "all": [
+              {
+                "has": 227
+              },
+              {
+                "has": 205
+              },
+              {
+                "skill": "Herblore",
+                "level": 99
+              }
+            ]
+          }
         }
       }
     },
@@ -82534,6 +82636,23 @@
               {
                 "skill": "Herblore",
                 "level": 58
+              }
+            ]
+          }
+        },
+        "Mixing a potion with herblore cape + grimy herb": {
+          "notes": "Requires Vial of water and a Grimy huasca and a herblore cape.",
+          "rule": {
+            "all": [
+              {
+                "has": 227
+              },
+              {
+                "has": 30094
+              },
+              {
+                "skill": "Herblore",
+                "level": 99
               }
             ]
           }
@@ -83950,6 +84069,23 @@
               {
                 "skill": "Herblore",
                 "level": 45
+              }
+            ]
+          }
+        },
+        "Mixing a potion with herblore cape + grimy herb": {
+          "notes": "Requires Vial of water and a Grimy irit and a herblore cape.",
+          "rule": {
+            "all": [
+              {
+                "has": 227
+              },
+              {
+                "has": 213
+              },
+              {
+                "skill": "Herblore",
+                "level": 99
               }
             ]
           }
@@ -91148,6 +91284,23 @@
               }
             ]
           }
+        },
+        "Mixing a potion with herblore cape + grimy herb": {
+          "notes": "Requires Vial of water and a Grimy kwuarm and a herblore cape.",
+          "rule": {
+            "all": [
+              {
+                "has": 227
+              },
+              {
+                "has": 213
+              },
+              {
+                "skill": "Herblore",
+                "level": 99
+              }
+            ]
+          }
         }
       }
     },
@@ -91655,6 +91808,23 @@
               {
                 "skill": "Herblore",
                 "level": 69
+              }
+            ]
+          }
+        },
+        "Mixing a potion with herblore cape + grimy herb": {
+          "notes": "Requires Vial of water and a Grimy lantadyme and a herblore cape.",
+          "rule": {
+            "all": [
+              {
+                "has": 227
+              },
+              {
+                "has": 2485
+              },
+              {
+                "skill": "Herblore",
+                "level": 99
               }
             ]
           }
@@ -99744,6 +99914,23 @@
               {
                 "skill": "Herblore",
                 "level": 5
+              }
+            ]
+          }
+        },
+        "Mixing a potion with herblore cape + grimy herb": {
+          "notes": "Requires Vial of water and a Grimy marrentill and a herblore cape.",
+          "rule": {
+            "all": [
+              {
+                "has": 227
+              },
+              {
+                "has": 201
+              },
+              {
+                "skill": "Herblore",
+                "level": 99
               }
             ]
           }
@@ -115433,6 +115620,9 @@
     "image": "pestle_and_mortar.png",
     "sources": {
       "drops": {
+        "Herblore cape": {
+          "droprate": "Always"
+        },
         "Zombie (Tarn's Lair) High level": {
           "droprate": "1/64"
         }
@@ -120251,6 +120441,23 @@
               {
                 "skill": "Herblore",
                 "level": 30
+              }
+            ]
+          }
+        },
+        "Mixing a potion with herblore cape + grimy herb": {
+          "notes": "Requires Vial of water and a Grimy ranarr and a herblore cape.",
+          "rule": {
+            "all": [              
+              {
+                "has": 227
+              },
+              {
+                "has": 207
+              },
+              {
+                "skill": "Herblore",
+                "level": 99
               }
             ]
           }
@@ -140606,6 +140813,23 @@
               }
             ]
           }
+        },
+        "Mixing a potion with herblore cape + grimy herb": {
+          "notes": "Requires Vial of water and a Grimy snapdragon and a herblore cape.",
+          "rule": {
+            "all": [              
+              {
+                "has": 227
+              },
+              {
+                "has": 3051
+              },
+              {
+                "skill": "Herblore",
+                "level": 99
+              }
+            ]
+          }
         }
       }
     },
@@ -154556,6 +154780,23 @@
               }
             ]
           }
+        },
+        "Mixing a potion with herblore cape + grimy herb": {
+          "notes": "Requires Vial of water and a Grimy tarromin and a herblore cape.",
+          "rule": {
+            "all": [              
+              {
+                "has": 227
+              },
+              {
+                "has": 203
+              },
+              {
+                "skill": "Herblore",
+                "level": 99
+              }
+            ]
+          }
         }
       }
     },
@@ -157637,6 +157878,23 @@
               }
             ]
           }
+        },
+        "Mixing a potion with herblore cape + grimy herb": {
+          "notes": "Requires Vial of water and a Grimy toadflax and a herblore cape.",
+          "rule": {
+            "all": [              
+              {
+                "has": 227
+              },
+              {
+                "has": 3049
+              },
+              {
+                "skill": "Herblore",
+                "level": 99
+              }
+            ]
+          }
         }
       }
     },
@@ -159261,6 +159519,23 @@
               {
                 "skill": "Herblore",
                 "level": 78
+              }
+            ]
+          }
+        },
+        "Mixing a potion with herblore cape + grimy herb": {
+          "notes": "Requires Vial of water and a Grimy torstol and a herblore cape.",
+          "rule": {
+            "all": [              
+              {
+                "has": 227
+              },
+              {
+                "has": 219
+              },
+              {
+                "skill": "Herblore",
+                "level": 99
               }
             ]
           }

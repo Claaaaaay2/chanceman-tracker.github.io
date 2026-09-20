@@ -7786,6 +7786,14 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
+    "Herblore cape": {
+        "wiki": "https://oldschool.runescape.wiki/w/Herblore_cape",
+        "rule": null,
+        "skill": ["herblore"],
+        "level": [99],
+        "tags": [],
+        "f2p": false
+    },
     "Herbiboar": {
         "wiki": "https://oldschool.runescape.wiki/w/Herbiboar",
         "rule": ["canCompleteBoneVoyage"],
