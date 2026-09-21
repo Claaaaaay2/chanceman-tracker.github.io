@@ -8393,13 +8393,40 @@ function hasAnyGnomeCocktail(ctx) {
 }
 
 function canTrainFarming(ctx) {
+
     if (ctx.filters?.overrideFarming) return true;
-    return hasAnyItems(ctx, [
-        5341,
-        8431,
-        8433,
-        1925,
-    ]); // Rake or Bagged plant 1/2 or Bucket
+
+    return (
+        hasAnyItems(ctx, [
+            5341, // Rake
+            1925, // Bucket
+            8431, // bagged plant 1
+        ]) ||
+
+        // Bagged plants + Construction level
+        (has(ctx, 8455) && hasSkillLevel(ctx, "Construction", 76)) || // Bagged bluebells
+        (has(ctx, 8453) && hasSkillLevel(ctx, "Construction", 71)) || // Bagged daffodils
+        (has(ctx, 8417) && hasSkillLevel(ctx, "Construction", 5))  || // Bagged dead tree
+        (has(ctx, 8451) && hasSkillLevel(ctx, "Construction", 66)) || // Bagged flower
+        (has(ctx, 8429) && hasSkillLevel(ctx, "Construction", 75)) || // Bagged magic tree
+        (has(ctx, 8425) && hasSkillLevel(ctx, "Construction", 45)) || // Bagged maple tree
+        (has(ctx, 8459) && hasSkillLevel(ctx, "Construction", 71)) || // Bagged marigolds
+        (has(ctx, 8419) && hasSkillLevel(ctx, "Construction", 10)) || // Bagged nice tree
+        (has(ctx, 8421) && hasSkillLevel(ctx, "Construction", 15)) || // Bagged oak tree
+        (has(ctx, 8433) && hasSkillLevel(ctx, "Construction", 6))  || // Bagged plant 2
+        (has(ctx, 8435) && hasSkillLevel(ctx, "Construction", 12)) || // Bagged plant 3
+        (has(ctx, 8461) && hasSkillLevel(ctx, "Construction", 76)) || // Bagged roses
+        (has(ctx, 8457) && hasSkillLevel(ctx, "Construction", 66)) || // Bagged sunflower
+        (has(ctx, 8423) && hasSkillLevel(ctx, "Construction", 30)) || // Bagged willow tree
+        (has(ctx, 8427) && hasSkillLevel(ctx, "Construction", 60)) || // Bagged yew tree
+        (has(ctx, 8445) && hasSkillLevel(ctx, "Construction", 72)) || // Fancy hedge (bagged)
+        (has(ctx, 8439) && hasSkillLevel(ctx, "Construction", 60)) || // Nice hedge (bagged)
+        (has(ctx, 8449) && hasSkillLevel(ctx, "Construction", 80)) || // Tall box hedge (bagged)
+        (has(ctx, 8441) && hasSkillLevel(ctx, "Construction", 64)) || // Small box hedge (bagged)
+        (has(ctx, 8447) && hasSkillLevel(ctx, "Construction", 76)) || // Tall fancy hedge (bagged)
+        (has(ctx, 8437) && hasSkillLevel(ctx, "Construction", 56)) || // Thorny hedge (bagged)
+        (has(ctx, 8443) && hasSkillLevel(ctx, "Construction", 68))    // Topiary hedge (bagged)
+    );
 }
 
 function canPlantTrees(ctx) {
