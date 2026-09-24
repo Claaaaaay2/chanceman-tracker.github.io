@@ -20,6 +20,22 @@ function buildLevelsMap(ctx) {
     return new Map(Object.entries(levels).map(([key, value]) => [String(key).toLowerCase(), value]));
 }
 
+export function canMeetRequirementWithBoost(ctx, skill, requiredLevel) {
+    if (!ctx?.filters?.countSkillBoosts) return false;
+    if (!Number.isFinite(requiredLevel)) return false;
+
+    const baseLevel = getBaseSkillLevel(ctx, skill);
+    if (baseLevel === null) return false;
+
+    const boost = getSkillBoostAmount(ctx, skill);
+    if (boost <= 0) return false;
+
+    return (
+        baseLevel < requiredLevel &&
+        baseLevel + boost >= requiredLevel
+    );
+}
+
 export function resolveBoostAmount(boost, levelsMap) {
     const amount = boost?.amount;
     if (typeof amount === "number") {
