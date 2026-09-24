@@ -1,6 +1,6 @@
 import { initLazyImages } from "../app/lazyImages.js";
 import { canReachNpc, evaluateRule } from "../logic/itemAvailability.js";
-import { getBoostedRequirementLabel } from "../logic/skillBoosts.js";
+import { getBoostedRequirementLabel,canMeetRequirementWithBoost, getBaseSkillLevel, getSkillBoostAmount, } from "../logic/skillBoosts.js";
 import { getHighlightClasses, isItemSourcesChanged, markNewItems, markSourceSignature } from "../logic/highlightState.js";
 import { areNpcSkillsMet, getNpcEffectiveLevels, isDropSlayerLocked, isItemHiddenByTag, isNpcBlockedByFilters, isNpcObtainable, isRuleObtainable, isSourceHiddenByFilters } from "../logic/itemVisibility.js";
 import { NPC_DATA } from "../logic/npcData.js";
@@ -1729,7 +1729,7 @@ async function hideTag(item, ctx, tag, rolledSet) {
 }
 
 async function hideSkill(item, ctx, skill, rolledSet) {
-    const skillLevel = ctx.player?.levels[skill];
+    const skillLevel = getBaseSkillLevel(ctx, skill);
     let hasAnySkillSource = false;
     let hasSkillLevel = false;
     let hasReachableNonSkillSource = false;
@@ -1759,11 +1759,26 @@ async function hideSkill(item, ctx, skill, rolledSet) {
                     || npcMeta?.tags?.has("slayer-task-only") || npcMeta?.isSuperior
                     || npc.tags?.includes("slayer-task-only") || npc.tags?.includes("superior"));
             const skills = npcMeta?.skills ?? npc.skill;
-            const levels = getNpcEffectiveLevels(npcName, ctx);
             const needsSkill = skills?.includes(skill) || isSlayerLockTag;
-            if (needsSkill) hasAnySkillSource = true;
-            if (levels?.length && skillLevel >= levels[0]) {
-                hasSkillLevel = true;
+
+            if (needsSkill) {
+                hasAnySkillSource = true;
+
+                const skillIndex = skills?.indexOf(skill);
+                const requiredLevel = skillIndex >= 0
+                    ? npc.level?.[skillIndex]
+                    : null;
+
+                if (Number.isFinite(requiredLevel) && skillLevel !== null) {
+                    if (skillLevel >= requiredLevel) {
+                        hasSkillLevel = true;
+                    } else if (
+                        npc.boostable !== false &&
+                        canMeetRequirementWithBoost(ctx, skill, requiredLevel)
+                    ) {
+                        hasSkillLevel = true;
+                    }
+                }
             }
 
             const reachable = await canReachNpc(npcName, ctx);
@@ -1779,12 +1794,29 @@ async function hideSkill(item, ctx, skill, rolledSet) {
             if (isSourceHiddenByFilters(source, ctx)) continue;
 
             const isTag = source.skill?.includes(skill);
-            if (isTag) hasAnySkillSource = true;
+
+if (isTag) {
+    hasAnySkillSource = true;
+
+    const requiredLevel = source.level;
+
+                if (Number.isFinite(requiredLevel) && skillLevel !== null) {
+                    if (skillLevel >= requiredLevel) {
+                        hasSkillLevel = true;
+                    } else if (
+                        canMeetRequirementWithBoost(ctx, skill, requiredLevel)
+                    ) {
+                        hasSkillLevel = true;
+                    }
+                }
+            }
 
             const reachable = await canReachSource(source, ctx);
             if (!reachable) continue;
 
-            if (!isTag) hasReachableNonSkillSource = true;
+            if (!isTag) {
+                hasReachableNonSkillSource = true;
+            }
         }
     }
 
