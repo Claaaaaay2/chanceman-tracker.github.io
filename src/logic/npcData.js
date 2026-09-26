@@ -12728,7 +12728,8 @@ export const NPC_DATA = {
         "rule": {
             "all": [
                 "hasUsablePickaxe",
-                "hasRope"
+                "hasRope",
+                "canCompletePandemonium"
             ]
         },
         "skill": ["sailing", "mining"],
