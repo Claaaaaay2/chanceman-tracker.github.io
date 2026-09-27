@@ -10665,15 +10665,33 @@
     "name": "Angler's paint",
     "image": "angler's_paint.png",
     "sources": {
-      "other": {
-        "Deep sea trawling": {
-          "notes": "Avast me hearties yo-ho.",
-          "rule": {
-            "any": [
-              "canMakeTrawlingNet",
-              "canDeepSeaFish"
-            ]
-          }
+      "drops": {
+        "Shimmering shoal": {
+          "droprate": "1/16200"
+        },
+        "Glistening shoal": {
+          "droprate": "1/16200"
+        },
+        "Vibrant shoal": {
+          "droprate": "1/16200"
+        },
+        "Giant krill shoal": {
+          "droprate": "1/18000"
+        },
+        "Haddock shoal": {
+          "droprate": "1/18000"
+        },
+        "Yellowfin shoal": {
+          "droprate": "1/18000"
+        },
+        "Halibut shoal": {
+          "droprate": "1/18000"
+        },
+        "Marlin shoal": {
+          "droprate": "1/18000"
+        },
+        "Bluefin shoal": {
+          "droprate": "1/18000"
         }
       }
     }
@@ -121762,22 +121780,17 @@
     "image": "raw_bluefin.png",
     "sources": {
       "drops": {
+        "Bluefin shoal": {
+          "droprate": "Always"
+        },
+        "Vibrant shoal": {
+          "droprate": "1/2"
+        },
+        "Glistening shoal": {
+          "droprate": "1/10"
+        },
         "Veiled kraken": {
           "droprate": "1/54.4"
-        }
-      },
-      "other": {
-        "Deep sea trawling": {
-          "notes": "Can be caught with a trawling net or by rod fishing (glistening shoals).",
-          "rule": {
-            "all": [
-                "canDeepSeaFish",
-              {
-                "skill": "Fishing",
-                "level": 76
-              }
-            ]
-          }
         }
       }
     },
@@ -122075,22 +122088,14 @@
     "image": "raw_giant_krill.png",
     "sources": {
       "drops": {
+        "Giant krill shoal": {
+          "droprate": "Always"
+        },
+        "Shimmering shoal": {
+          "droprate": "1/2.222"
+        },
         "Fish stall (Port Roberts)": {
           "droprate": "1/64"
-        }
-      },
-      "other": {
-        "Deep sea trawling": {
-          "notes": "Can be caught with a trawling net or by rod fishing.",
-          "rule": {
-            "all": [
-                "canDeepSeaFish",
-              {
-                "skill": "Fishing",
-                "level": 69
-              }
-            ]
-          }
         }
       }
     },
@@ -122121,22 +122126,14 @@
     "image": "raw_haddock.png",
     "sources": {
       "drops": {
+        "Haddock shoal": {
+          "droprate": "Always"
+        },
+        "Shimmering shoal": {
+          "droprate": "1/2.5"
+        },
         "Fish stall (Port Roberts)": {
-          "droprate": "1/64"
-        }
-      },
-      "other": {
-        "Deep sea trawling": {
-          "notes": "Can be caught with a trawling net or by rod fishing (glistening shoals).",
-          "rule": {
-            "all": [
-                "canDeepSeaFish",
-              {
-                "skill": "Fishing",
-                "level": 69
-              }
-            ]
-          }
+          "droprate": "~1/256"
         }
       }
     },
@@ -122151,22 +122148,17 @@
     "image": "raw_halibut.png",
     "sources": {
       "drops": {
+        "Halibut shoal": {
+          "droprate": "Always"
+        },
+        "Glistening shoal": {
+          "droprate": "1/2.5"
+        },
+        "Shimmering shoal": {
+          "droprate": "1/10"
+        },
         "Veiled kraken": {
           "droprate": "1/54.4"
-        }
-      },
-      "other": {
-        "Deep sea trawling": {
-          "notes": "Can be caught with a trawling net or by rod fishing (glistening shoals).",
-          "rule": {
-            "all": [
-                "canDeepSeaFish",
-              {
-                "skill": "Fishing",
-                "level": 69
-              }
-            ]
-          }
         }
       }
     },
@@ -122608,22 +122600,17 @@
     "image": "raw_marlin.png",
     "sources": {
       "drops": {
+        "Marlin shoal": {
+          "droprate": "Always"
+        },
+        "Vibrant shoal": {
+          "droprate": "1/2"
+        },
+        "Glistening shoal": {
+          "droprate": "1/20"
+        },
         "Barracuda salvage": {
-          "droprate": "1/28375"
-        }
-      },
-      "other": {
-        "Deep sea trawling": {
-          "notes": "Can be caught with a trawling net or by rod fishing (glistening shoals).",
-          "rule": {
-            "all": [
-                "canDeepSeaFish",
-              {
-                "skill": "Fishing",
-                "level": 76
-              }
-            ]
-          }
+          "droprate": "1/28401"
         }
       }
     },
@@ -123884,18 +123871,15 @@
     "name": "Raw yellowfin",
     "image": "raw_yellowfin.png",
     "sources": {
-      "other": {
-        "Deep sea trawling": {
-          "notes": "Can be caught with a trawling net or by rod fishing.",
-          "rule": {
-            "all": [
-                "canDeepSeaFish",
-              {
-                "skill": "Fishing",
-                "level": 69
-              }
-            ]
-          }
+      "drops": {
+        "Yellowfin shoal": {
+          "droprate": "Always"
+        },
+        "Glistening shoal": {
+          "droprate": "1/2.222"
+        },
+        "Shimmering shoal": {
+          "droprate": "1/10"
         }
       }
     },
