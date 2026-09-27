@@ -18706,4 +18706,166 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
+    "Giant krill shoal": {
+        "wiki": "https://oldschool.runescape.wiki/w/Giant_krill_shoal",
+        "rule": {
+            "all": [
+                "canCompletePandemonium",
+                {
+                    "any": [
+                        "canDeepSeaFish",
+                        "canMakeTrawlingNet"
+                    ]
+                }
+            ]
+        },
+        "skill": ["fishing"],
+        "level": [69],
+        "tags": [],
+        "f2p": false
+    },
+    "Haddock shoal": {
+        "wiki": "https://oldschool.runescape.wiki/w/Haddock_shoal",
+        "rule": {
+            "all": [
+                "canCompletePandemonium",
+                {
+                    "any": [
+                        "canDeepSeaFish",
+                        "canMakeTrawlingNet"
+                    ]
+                }
+            ]
+        },
+        "skill": ["fishing"],
+        "level": [73],
+        "tags": [],
+        "f2p": false
+    },
+    "Yellowfin shoal": {
+        "wiki": "https://oldschool.runescape.wiki/w/Yellowfin_shoal",
+        "rule": {
+            "all": [
+                "canCompletePandemonium",
+                {
+                    "any": [
+                        "canDeepSeaFish",
+                        "canMakeTrawlingNet"
+                    ]
+                }
+            ]
+        },
+        "skill": ["fishing"],
+        "level": [79],
+        "tags": [],
+        "f2p": false
+    },
+    "Halibut shoal": {
+        "wiki": "https://oldschool.runescape.wiki/w/Halibut_shoal",
+        "rule": {
+            "all": [
+                "canCompletePandemonium",
+                {
+                    "any": [
+                        "canDeepSeaFish",
+                        "canMakeTrawlingNet"
+                    ]
+                }
+            ]
+        },
+        "skill": ["fishing"],
+        "level": [83],
+        "tags": [],
+        "f2p": false
+    },
+    "Bluefin shoal": {
+        "wiki": "https://oldschool.runescape.wiki/w/Bluefin_shoal",
+        "rule": {
+            "all": [
+                "canCompletePandemonium",
+                {
+                    "any": [
+                        "canDeepSeaFish",
+                        "canMakeTrawlingNet"
+                    ]
+                }
+            ]
+        },
+        "skill": ["fishing"],
+        "level": [87],
+        "tags": [],
+        "f2p": false
+    },
+    "Marlin shoal": {
+        "wiki": "https://oldschool.runescape.wiki/w/Marlin_shoal",
+        "rule": {
+            "all": [
+                "canCompletePandemonium",
+                {
+                    "any": [
+                        "canDeepSeaFish",
+                        "canMakeTrawlingNet"
+                    ]
+                }
+            ]
+        },
+        "skill": ["fishing"],
+        "level": [91],
+        "tags": [],
+        "f2p": false
+    },
+    "Shimmering shoal": {
+        "wiki": "https://oldschool.runescape.wiki/w/Shimmering_shoal",
+        "rule": {
+            "all": [
+                "canCompletePandemonium",
+                {
+                    "any": [
+                        "canDeepSeaFish",
+                        "canMakeTrawlingNet"
+                    ]
+                }
+            ]
+        },
+        "skill": ["fishing"],
+        "level": [69],
+        "tags": [],
+        "f2p": false
+    },
+    "Glistening shoal": {
+        "wiki": "https://oldschool.runescape.wiki/w/Glistening_shoal",
+        "rule": {
+            "all": [
+                "canCompletePandemonium",
+                {
+                    "any": [
+                        "canDeepSeaFish",
+                        "canMakeTrawlingNet"
+                    ]
+                }
+            ]
+        },
+        "skill": ["fishing"],
+        "level": [76],
+        "tags": [],
+        "f2p": false
+    },
+    "Vibrant shoal": {
+        "wiki": "https://oldschool.runescape.wiki/w/Vibrant_shoal",
+        "rule": {
+            "all": [
+                "canCompletePandemonium",
+                {
+                    "any": [
+                        "canDeepSeaFish",
+                        "canMakeTrawlingNet"
+                    ]
+                }
+            ]
+        },
+        "skill": ["fishing"],
+        "level": [86],
+        "tags": [],
+        "f2p": false
+    }
 };
