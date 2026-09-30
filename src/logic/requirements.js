@@ -2117,6 +2117,15 @@ export const REQUIREMENT_CHECKS = {
     canReachGemRocks(ctx) {
         return canReachGemRocks(ctx);
     },
+    hasBeginnerWand(ctx) {
+        return has(ctx, 6908)
+    },
+    hasApprenticeWand(ctx) {
+        return has(ctx, 6910)
+    },
+    hasTeacherWand(ctx) {
+        return has(ctx, 6912)
+    },
     hasRawSwordfish(ctx) {
         return has(ctx, 371);
     },
@@ -4294,8 +4303,6 @@ function canCompleteHeroesQuest(ctx) {
         hasFishingRod(ctx), // Fishing rod
         has(ctx, 313), // Fishing bait
         has(ctx, 97), // Harralander potion (unf)
-        has(ctx, 255), // Harralander
-        has(ctx, 227), // Vial of water
         gangRequirement,
         hasUsablePickaxe(ctx), //
     ]);
@@ -6731,6 +6738,8 @@ function canBurnUriumShades(ctx) {
             31389,
         ]);
 }
+
+
 
 function hasCupOfTeaOrBowlOfWater(ctx) {
     return has(ctx, 1978) // Cup of tea

@@ -7373,12 +7373,17 @@
           "droprate": "1/102.083; 1/91.146"
         }
       },
-      "shops": {
-        "Yes": "canCompleteTempleOfTheEye"
-      },
       "other": {
         "Questing": {
           "notes": "Received at the start of Rune Mysteries."
+        },
+        "Special shop": {
+          "notes": "Bought with Abyssal pearls at the Guardians of the Rift Temple Supplies.",
+          "rule": {
+            "all": [
+              "canCompleteTempleOfTheEye"
+            ]
+          }
         }
       }
     }
@@ -12480,8 +12485,16 @@
     "name": "Apprentice wand",
     "image": "apprentice_wand.png",
     "sources": {
-      "shops": {
-        "Yes": "canDoMageTrainingArena"
+      "other": {
+        "Special shop": {
+          "notes": "Bought with pizazz points and a Beginner wand at the Mage Training Arena Rewards Guardian.",
+          "rule": {
+            "all": [
+              "canDoMageTrainingArena",
+              "hasBeginnerWand"
+            ]
+          }
+        }
       }
     },
     "tags": [
@@ -18459,8 +18472,11 @@
     "name": "Beginner wand",
     "image": "beginner_wand.png",
     "sources": {
-      "shops": {
-        "Yes": "canDoMageTrainingArena"
+      "other": {
+        "Special shop": {
+          "notes": "Bought with pizazz points at the Mage Training Arena Rewards Guardian.",
+          "rule": "canDoMageTrainingArena"
+        }
       }
     },
     "tags": [
@@ -25232,13 +25248,16 @@
     "name": "Blood talisman",
     "image": "blood_talisman.png",
     "sources": {
-      "shops": {
-        "Yes": {
+      "other": {
+        "Special shop": {
+          "notes": "Bought with Abyssal pearls at the Guardians of the Rift Temple Supplies (after completing Sins of the Father).",
+          "rule": {
             "all": [
               "canCompleteTempleOfTheEye",
               "canCompleteSinsOfTheFather"
             ]
           }
+        }
       }
     },
     "tags": [
@@ -27095,8 +27114,15 @@
           "droprate": "1/76.562; 1/68.359"
         }
       },
-      "shops": {
-        "Yes": "canCompleteTempleOfTheEye"
+      "other": {
+        "Special shop": {
+          "notes": "Bought with Abyssal pearls at the Guardians of the Rift Temple Supplies.",
+          "rule": {
+            "all": [
+              "canCompleteTempleOfTheEye"
+            ]
+          }
+        }
       }
     }
   },
@@ -38402,8 +38428,15 @@
           "droprate": "1/76.562; 1/68.359"
         }
       },
-      "shops": {
-        "Yes": "canCompleteTempleOfTheEye"
+      "other": {
+        "Special shop": {
+          "notes": "Bought with Abyssal pearls at the Guardians of the Rift Temple Supplies.",
+          "rule": {
+            "all": [
+              "canCompleteTempleOfTheEye"
+            ]
+          }
+        }
       }
     },
     "tags": [
@@ -42998,8 +43031,15 @@
           "droprate": "1/76.562; 1/68.359"
         }
       },
-      "shops": {
-        "Yes": "canCompleteTempleOfTheEye"
+      "other": {
+        "Special shop": {
+          "notes": "Bought with Abyssal pearls at the Guardians of the Rift Temple Supplies.",
+          "rule": {
+            "all": [
+              "canCompleteTempleOfTheEye"
+            ]
+          }
+        }
       }
     },
     "tags": [
@@ -45367,20 +45407,21 @@
           "droprate": "1/128"
         }
       },
-      "shops": {
-        "Yes": {
-            "all": [
-              "canCompleteTempleOfTheEye",
-              "canCompleteMourningsEndPartII"
-            ]
-          }
-      },
       "other": {
         "Giving 50 junk items to Thorgel during Mournings End Part II": {
-          "notes": "Requires a lot of items.",
+          "notes": "Good luck.",
           "rule": {
             "all": [
               "has50JunkItems",
+              "canCompleteMourningsEndPartII"
+            ]
+          }
+        },
+         "Special shop": {
+          "notes": "Bought with Abyssal pearls at the Guardians of the Rift Temple Supplies (after completing Mournings End Part II).",
+          "rule": {
+            "all": [
+              "canCompleteTempleOfTheEye",
               "canCompleteMourningsEndPartII"
             ]
           }
@@ -53164,8 +53205,11 @@
           "droprate": "1/12.8"
         }
       },
-      "shops": {
-        "Yes": "canDoMageTrainingArena"
+      "other": {
+        "Special shop": {
+          "notes": "Bought with pizazz points at the Mage Training Arena Rewards Guardian.",
+          "rule": "canDoMageTrainingArena"
+        }
       }
     },
     "tags": [
@@ -54894,8 +54938,15 @@
           "droprate": "1/102.083; 1/91.146"
         }
       },
-      "shops": {
-        "Yes": "canCompleteTempleOfTheEye"
+      "other": {
+        "Special shop": {
+          "notes": "Bought with Abyssal pearls at the Guardians of the Rift Temple Supplies.",
+          "rule": {
+            "all": [
+              "canCompleteTempleOfTheEye"
+            ]
+          }
+        }
       }
     }
   },
@@ -61376,8 +61427,15 @@
           "droprate": "1/102.083; 1/91.146"
         }
       },
-      "shops": {
-        "Yes": "canCompleteTempleOfTheEye"
+      "other": {
+        "Special shop": {
+          "notes": "Bought with Abyssal pearls at the Guardians of the Rift Temple Supplies.",
+          "rule": {
+            "all": [
+              "canCompleteTempleOfTheEye"
+            ]
+          }
+        }
       }
     }
   },
@@ -83696,8 +83754,11 @@
     "name": "Infinity boots",
     "image": "infinity_boots.png",
     "sources": {
-      "shops": {
-        "Yes": "canDoMageTrainingArena"
+      "other": {
+        "Special shop": {
+          "notes": "Bought with pizazz points at the Mage Training Arena Rewards Guardian.",
+          "rule": "canDoMageTrainingArena"
+        }
       }
     },
     "tags": [
@@ -83710,8 +83771,11 @@
     "name": "Infinity bottoms",
     "image": "infinity_bottoms.png",
     "sources": {
-      "shops": {
-        "Yes": "canDoMageTrainingArena"
+      "other": {
+        "Special shop": {
+          "notes": "Bought with pizazz points at the Mage Training Arena Rewards Guardian.",
+          "rule": "canDoMageTrainingArena"
+        }
       }
     },
     "tags": [
@@ -83724,8 +83788,11 @@
     "name": "Infinity gloves",
     "image": "infinity_gloves.png",
     "sources": {
-      "shops": {
-        "Yes": "canDoMageTrainingArena"
+      "other": {
+        "Special shop": {
+          "notes": "Bought with pizazz points at the Mage Training Arena Rewards Guardian.",
+          "rule": "canDoMageTrainingArena"
+        }
       }
     },
     "tags": [
@@ -83738,8 +83805,11 @@
     "name": "Infinity hat",
     "image": "infinity_hat.png",
     "sources": {
-      "shops": {
-        "Yes": "canDoMageTrainingArena"
+      "other": {
+        "Special shop": {
+          "notes": "Bought with pizazz points at the Mage Training Arena Rewards Guardian.",
+          "rule": "canDoMageTrainingArena"
+        }
       }
     },
     "tags": [
@@ -83752,8 +83822,11 @@
     "name": "Infinity top",
     "image": "infinity_top.png",
     "sources": {
-      "shops": {
-        "Yes": "canDoMageTrainingArena"
+      "other": {
+        "Special shop": {
+          "notes": "Bought with pizazz points at the Mage Training Arena Rewards Guardian.",
+          "rule": "canDoMageTrainingArena"
+        }
       }
     },
     "tags": [
@@ -93331,8 +93404,11 @@
           "droprate": "1/100"
         }
       },
-      "shops": {
-        "Yes": "canDoMageTrainingArena"
+      "other": {
+        "Special shop": {
+          "notes": "Bought with pizazz points at the Mage Training Arena Rewards Guardian.",
+          "rule": "canDoMageTrainingArena"
+        }
       }
     },
     "tags": [
@@ -96753,8 +96829,11 @@
     "name": "Mage's book",
     "image": "mage's_book.png",
     "sources": {
-      "shops": {
-        "Yes": "canDoMageTrainingArena"
+      "other": {
+        "Special shop": {
+          "notes": "Bought with pizazz points at the Mage Training Arena Rewards Guardian.",
+          "rule": "canDoMageTrainingArena"
+        }
       }
     }
   },
@@ -100458,8 +100537,16 @@
     "name": "Master wand",
     "image": "master_wand.png",
     "sources": {
-      "shops": {
-        "Yes": "canDoMageTrainingArena"
+      "other": {
+        "Special shop": {
+          "notes": "Bought with pizazz points and a Teacher wand at the Mage Training Arena Rewards Guardian.",
+          "rule": {
+            "all": [
+              "canDoMageTrainingArena",
+              "hasTeacherWand"
+            ]
+          }
+        }
       }
     },
     "tags": [
@@ -101669,8 +101756,15 @@
           "droprate": "1/32; 1/42.667"
         }
       },
-      "shops": {
-        "Yes": "canCompleteTempleOfTheEye"
+      "other": {
+        "Special shop": {
+          "notes": "Bought with Abyssal pearls at the Guardians of the Rift Temple Supplies.",
+          "rule": {
+            "all": [
+              "canCompleteTempleOfTheEye"
+            ]
+          }
+        }
       }
     }
   },
@@ -101927,8 +102021,11 @@
           "droprate": "1/64"
         }
       },
-      "shops": {
-        "Yes": "canDoMageTrainingArena"
+      "other": {
+        "Special shop": {
+          "notes": "Bought with pizazz points at the Mage Training Arena Rewards Guardian.",
+          "rule": "canDoMageTrainingArena"
+        }
       }
     },
     "tags": [
@@ -107584,8 +107681,11 @@
           "droprate": "1/115"
         }
       },
-      "shops": {
-        "Yes": "canDoMageTrainingArena"
+      "other": {
+        "Special shop": {
+          "notes": "Bought with pizazz points at the Mage Training Arena Rewards Guardian.",
+          "rule": "canDoMageTrainingArena"
+        }
       }
     },
     "tags": [
@@ -110161,8 +110261,15 @@
           "droprate": "1/76.562; 1/68.359"
         }
       },
-      "shops": {
-        "Yes": "canCompleteTempleOfTheEye"
+      "other": {
+        "Special shop": {
+          "notes": "Bought with Abyssal pearls at the Guardians of the Rift Temple Supplies.",
+          "rule": {
+            "all": [
+              "canCompleteTempleOfTheEye"
+            ]
+          }
+        }
       }
     },
     "tags": [
@@ -126240,8 +126347,15 @@
     "name": "Ring of the elements",
     "image": "ring_of_the_elements.png",
     "sources": {
-      "shops": {
-        "Yes": "canCompleteTempleOfTheEye"
+      "other": {
+        "Special shop": {
+          "notes": "Bought with Abyssal pearls at the Guardians of the Rift Temple Supplies.",
+          "rule": {
+            "all": [
+              "canCompleteTempleOfTheEye"
+            ]
+          }
+        }
       }
     }
   },
@@ -140404,8 +140518,11 @@
           "droprate": "1/100"
         }
       },
-      "shops": {
-        "Yes": "canDoMageTrainingArena"
+      "other": {
+        "Special shop": {
+          "notes": "Bought with pizazz points at the Mage Training Arena Rewards Guardian.",
+          "rule": "canDoMageTrainingArena"
+        }
       }
     },
     "tags": [
@@ -144236,8 +144353,11 @@
           "droprate": "1/100"
         }
       },
-      "shops": {
-        "Yes": "canDoMageTrainingArena"
+      "other": {
+        "Special shop": {
+          "notes": "Bought with pizazz points at the Mage Training Arena Rewards Guardian.",
+          "rule": "canDoMageTrainingArena"
+        }
       }
     },
     "tags": [
@@ -155114,8 +155234,16 @@
     "name": "Teacher wand",
     "image": "teacher_wand.png",
     "sources": {
-      "shops": {
-        "Yes": "canDoMageTrainingArena"
+      "other": {
+        "Special shop": {
+          "notes": "Bought with pizazz points and an Apprentice wand at the Mage Training Arena Rewards Guardian.",
+          "rule": {
+            "all": [
+              "canDoMageTrainingArena",
+              "hasApprenticeWand"
+            ]
+          }
+        }
       }
     },
     "tags": [
@@ -166970,8 +167098,15 @@
           "droprate": "1/102.083; 1/91.146"
         }
       },
-      "shops": {
-        "Yes": "canCompleteTempleOfTheEye"
+      "other": {
+        "Special shop": {
+          "notes": "Bought with Abyssal pearls at the Guardians of the Rift Temple Supplies.",
+          "rule": {
+            "all": [
+              "canCompleteTempleOfTheEye"
+            ]
+          }
+        }
       }
     }
   },
