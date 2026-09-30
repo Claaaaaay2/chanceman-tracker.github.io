@@ -1322,8 +1322,20 @@ export async function initItemsPage() {
                 <p class="empty-state">No drops found for current filters.</p>
             `;
         } else {
-            const sectionCounts = filtered.reduce((acc, { displayRank }) => {
-                acc[displayRank] = (acc[displayRank] ?? 0) + 1;
+            const sectionCounts = filtered.reduce((acc, { item, displayRank }) => {
+                if (!acc[displayRank]) {
+                    acc[displayRank] = {
+                        total: 0,
+                        rolled: 0,
+                    };
+                }
+
+                acc[displayRank].total++;
+
+                if (rolledSet.has(item.id)) {
+                    acc[displayRank].rolled++;
+                }
+
                 return acc;
             }, {});
 
@@ -1333,12 +1345,17 @@ export async function initItemsPage() {
 
             for (const { item, sort, displayRank } of filtered) {
                 if (displayRank !== lastDisplayRank) {
-                    const sectionCount = sectionCounts[displayRank] ?? 0;
+                    const sectionCount = sectionCounts[displayRank] ?? {
+                        total: 0,
+                        rolled: 0,
+                    };
                     const sectionId = `items-section-${displayRank}`;
 
                     if (showSectionCounts) {
                         summaryParts.push(
-                            `<a href="#${sectionId}">${escapeHtml(ITEM_SECTION_TITLES[displayRank] ?? "Other Items")} (${sectionCount})</a>`
+                            `<a href="#${sectionId}">${escapeHtml(
+                                ITEM_SECTION_TITLES[displayRank] ?? "Other Items"
+                            )} (Category total: ${sectionCount.total} | Rolled: ${sectionCount.rolled})</a>`
                         );
                     }
 
@@ -1347,7 +1364,7 @@ export async function initItemsPage() {
                             <span class="item-section-title">
                                 <span class="item-section-toggle" aria-hidden="true">▼</span>
                                 ${ITEM_SECTION_TITLES[displayRank] ?? "Other Items"}
-                                <span class="item-section-count">(${sectionCount})</span>
+                                <span class="item-section-count">(Total: ${sectionCount.total} | Rolled: ${sectionCount.rolled})</span>
                             </span>
                         </h2>
                     `;
