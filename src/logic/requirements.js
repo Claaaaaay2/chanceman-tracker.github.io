@@ -3136,6 +3136,9 @@ export const REQUIREMENT_CHECKS = {
     canCompleteCrabQuest(ctx) {
         return canCompleteCrabQuest(ctx);
     },
+    isBossDrop(ctx) {
+        return isBossDrop(ctx);
+    },
     never(ctx) {
         return false;
     }
@@ -7982,6 +7985,11 @@ function hasAnyFilledBowl(ctx) {
         7086,
         7088,
     ]);
+}
+
+function isBossDrop(ctx) {
+    if (ctx.filters?.hideBosses === true) return false;
+    return true;
 }
 
 function hasAnyFilledVial(ctx) {
