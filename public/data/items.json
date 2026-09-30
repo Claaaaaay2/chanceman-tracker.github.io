@@ -58319,6 +58319,7 @@
                 "has": 1755
               },
               "canCompletePriestInPeril",
+              "isBossDrop",
               {
                 "skill": "Crafting",
                 "level": 86
@@ -110758,7 +110759,8 @@
                   }
                 ]
               },
-              "canCompletePriestInPeril"
+              "canCompletePriestInPeril",
+              "isBossDrop"
             ]
           }
         }
