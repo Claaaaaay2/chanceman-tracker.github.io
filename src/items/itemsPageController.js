@@ -81,7 +81,7 @@ function isItemProfilingEnabled() {
 }
 
 async function computeAllRanksOnce(items, ctx) {
-    const rankedItemsCache = getRankedItemsCache();
+    const rankedItemsCache = getRankedItemsCache(ctx);
     if (rankedItemsCache) return rankedItemsCache;
 
     const profileItems = isItemProfilingEnabled();
@@ -1241,9 +1241,6 @@ export async function initItemsPage() {
             if (isHunterRumourLocked && await hideTag(item, fileStore, "hunterRumour", rolledSet)) {
                 sort.rank = 9;
             }
-            if (!allowOthersHouses && await hideTag(item, fileStore, "house", rolledSet)) {
-                sort.rank = 9;
-            }
             if (hideLMS && await hideTag(item, fileStore, "LMS", rolledSet)) {
                 sort.rank = 9;
             }
@@ -1590,7 +1587,7 @@ async function shouldHideForClueFilter(item, ctx, rolledSet) {
     return false;
 }
 
-async function canReachSource(source, ctx) {
+export async function canReachSource(source, ctx) {
     if (!source) return false;
 
     const ruleMet = await evaluateRule(source.rule, ctx);

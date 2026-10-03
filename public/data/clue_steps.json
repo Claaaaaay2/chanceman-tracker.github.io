@@ -6874,7 +6874,8 @@
                 "requirements": {
                     "skills": {},
                     "quests": {
-                        "Priest in Peril": "completed"
+                        "Priest in Peril": "completed",
+                        "In Aid of the Myreque": "started"
                     },
                     "items": [],
                     "untracked": [],

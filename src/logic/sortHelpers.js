@@ -60,6 +60,28 @@ function sourceHasSkillRequirement(source) {
 }
 
 /*
+    Returns true when the source's houseRule is satisfied.
+
+    A source with no houseRule does not require any additional check.
+
+    When "Allow other players' houses" is enabled, the houseRule is
+    bypassed entirely.
+
+    When it is disabled, the houseRule must be satisfied normally.
+*/
+async function isHouseRuleMet(source, ctx) {
+    if (!source?.houseRule) {
+        return true;
+    }
+
+    if (ctx.filters?.allowOthersHouses) {
+        return true;
+    }
+
+    return await evaluateRule(source.houseRule, ctx);
+}
+
+/*
     Evaluates an "other" source.
 
     The source's normal rule must always be met first.
@@ -80,14 +102,9 @@ async function isOtherSourceObtainable(source, ctx) {
         return false;
     }
 
-    if (
-        source.houseRule &&
-        !ctx.filters?.allowOthersHouses
-    ) {
-        return await evaluateRule(source.houseRule, ctx);
-    }
+    const houseRuleMet = await isHouseRuleMet(source, ctx);
 
-    return true;
+    return houseRuleMet;
 }
 
 export async function isItemObtainable(item, ctx) {
@@ -164,12 +181,12 @@ export async function getObtainabilityRank(item, ctx) {
     const name = item.name.toLowerCase();
     const id = item.id;
 
-        // Slayertask-only tagged items are unavailable to players who are Slayer locked.
+    // Slayertask-only tagged items are unavailable to players who are Slayer locked.
     if (
-            ctx.filters?.isSlayerLocked &&
-            item.tags?.includes("Slayertask-only")
-        ) {
-            return { rank: 9, name };
+        ctx.filters?.isSlayerLocked &&
+        item.tags?.includes("Slayertask-only")
+    ) {
+        return { rank: 9, name };
     }
 
     const rolled = fileStore.rolled?.includes(id);
@@ -254,10 +271,6 @@ export async function getObtainabilityRank(item, ctx) {
         for (const obj of Object.values(src.other)) {
             if (isSourceHiddenByFilters(obj, ctx)) continue;
 
-            /*
-                Use the centralized other-source evaluation so that
-                houseRule is respected here as well.
-            */
             if (await isOtherSourceObtainable(obj, ctx)) {
                 if (sourceHasSkillRequirement(obj)) {
                     hasObtainableOtherWithSkill = true;
@@ -279,20 +292,28 @@ export async function getObtainabilityRank(item, ctx) {
     // ================================================================
     // Rank 7: Other sources that are trainable but level-gated
     //
-    // Ignore numeric skill levels to determine whether the source
-    // becomes obtainable once the required skill level is reached.
-    // House rules are still respected.
+    // Ignore numeric skill levels in the normal source rule to determine
+    // whether the source becomes obtainable once the required skill
+    // level is reached.
+    //
+    // IMPORTANT:
+    // The houseRule is still evaluated against the player's actual
+    // current state. Its skill levels must NOT be ignored.
     // ================================================================
     if (src.other) {
         const levelIgnoredCtx = {
             ...ctx,
 
-            // Ignore numeric skill levels while preserving the rest
-            // of the rule evaluation.
             ignoreSkillLevels: true,
             suppressMissing: true,
 
-            ruleEvalKey: `${ctx.ruleEvalKey || "base"}:ignoreLevels`,
+            /*
+                Give this evaluation context its own cache namespace.
+                This prevents the level-ignored evaluation from sharing
+                cached results with the normal evaluation.
+            */
+            ruleEvalKey:
+                `${ctx.ruleEvalKey || "base"}:ignoreLevels`,
 
             missing: {
                 ...ctx.missing,
@@ -305,13 +326,9 @@ export async function getObtainabilityRank(item, ctx) {
             if (!obj?.rule) continue;
 
             /*
-                First check the source's normal rule with skill levels
-                ignored. This determines whether the source is
-                trainable in principle.
-
-                Then separately check the houseRule. A source in another
-                player's house should not become rank 7 merely because
-                its normal skill requirements can eventually be met.
+                Ignore numeric skill levels ONLY for the normal source
+                rule. Other requirements such as items and quests are
+                still evaluated normally.
             */
             const ruleMetWithoutLevels = await evaluateRule(
                 obj.rule,
@@ -322,18 +339,15 @@ export async function getObtainabilityRank(item, ctx) {
                 continue;
             }
 
-            if (
-                obj.houseRule &&
-                !ctx.filters?.allowOthersHouses
-            ) {
-                const houseRuleMet = await evaluateRule(
-                    obj.houseRule,
-                    ctx
-                );
+            /*
+                Do NOT use levelIgnoredCtx here.
 
-                if (!houseRuleMet) {
-                    continue;
-                }
+                The houseRule must be evaluated using the player's
+                actual skill levels. If other players' houses are
+                enabled, isHouseRuleMet() intentionally bypasses it.
+            */
+            if (!(await isHouseRuleMet(obj, ctx))) {
+                continue;
             }
 
             return { rank: 7, name };

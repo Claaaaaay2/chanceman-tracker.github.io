@@ -2334,7 +2334,7 @@ export const REQUIREMENT_CHECKS = {
         return canAerialFish(ctx);
     },
     canBarbarianFish(ctx) {
-        return hasAnyItems(ctx, [314, 313, 11324, 11326]);
+        return hasAnyItems(ctx, [314, 313, 11324, 11326, 11334, 32307]);
     },
     canReachFrogSpawnSpot(ctx) {
         return canCompleteBelowIceMountain(ctx) || canEnterLumbridgeSwampCaves(ctx);
