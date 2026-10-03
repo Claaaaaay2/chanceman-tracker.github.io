@@ -86,43 +86,35 @@ function adjustImplingJarRuleLevels(subrules, ctx) {
 export async function canReachNpc(npcName, ctx) {
     ctx.npcReachCache ??= new Map();
 
-    if (ctx.npcReachCache.has(npcName)) {
-        return ctx.npcReachCache.get(npcName);
+    const cacheKey = `${npcName}:allowOthersHouses:${Boolean(
+        ctx.filters?.allowOthersHouses
+    )}`;
+
+    if (ctx.npcReachCache.has(cacheKey)) {
+        return ctx.npcReachCache.get(cacheKey);
     }
 
     const npc = NPC_DATA[npcName];
 
     if (!npc) {
         console.warn("NPC missing from NPC_DATA:", npcName);
-        ctx.npcReachCache.set(npcName, false);
+        ctx.npcReachCache.set(cacheKey, false);
         return false;
     }
 
     const rule = npc.rule;
-    let result = false;
 
-    if (ctx.filters?.allowOthersHouses && npc.tags?.includes("house")) {
-        const prevBypass = ctx.houseRuleBypass;
-        ctx.houseRuleBypass = true;
+    const result = !rule
+        ? true
+        : await evaluateRule(rule, ctx, {
+            boostable: npc.boostable,
+            houseRuleBypass:
+                Boolean(ctx.filters?.allowOthersHouses) &&
+                npc.tags?.includes("house"),
+        });
 
-        try {
-            result = !rule
-                ? true
-                : await evaluateRule(rule, ctx, {
-                    boostable: npc.boostable
-                });
-        } finally {
-            ctx.houseRuleBypass = prevBypass;
-        }
-    } else {
-        result = !rule
-            ? true
-            : await evaluateRule(rule, ctx, {
-                boostable: npc.boostable
-            });
-    }
+    ctx.npcReachCache.set(cacheKey, result);
 
-    ctx.npcReachCache.set(npcName, result);
     return result;
 }
 
@@ -142,9 +134,17 @@ export async function canDoOtherMethod(rule, ctx) {
 
 export async function evaluateRule(rule, ctx, options = {}) {
     const ruleCache = ctx?.cacheRules ? ctx?.ruleEvalCache : null;
-    const ruleCacheKey = ctx?.ruleEvalKey || "base";
+
+    const houseRuleBypass = Boolean(options.houseRuleBypass);
+
+    const baseRuleCacheKey = ctx?.ruleEvalKey || "base";
+    const ruleCacheKey =
+        `${baseRuleCacheKey}:houseBypass:${houseRuleBypass}` +
+        `:allowOthersHouses:${Boolean(ctx?.filters?.allowOthersHouses)}`;
+
     if (ruleCache) {
         const cachedByRule = ruleCache.get(rule);
+
         if (cachedByRule?.has(ruleCacheKey)) {
             return cachedByRule.get(ruleCacheKey);
         }
@@ -157,16 +157,17 @@ export async function evaluateRule(rule, ctx, options = {}) {
         result = true;
     } else if (typeof rule === "string") {
         // String -> requirement function
-        if (ctx?.houseRuleBypass && HOUSE_RULE_BYPASS_RULES.has(rule)) {
+        if (houseRuleBypass && HOUSE_RULE_BYPASS_RULES.has(rule)) {
             result = true;
         } else {
-        const fn = REQUIREMENT_CHECKS[rule];
-        if (!fn) {
-            console.warn("Unknown rule:", rule);
-            result = false;
-        } else {
-            result = await fn(ctx);
-        }
+            const fn = REQUIREMENT_CHECKS[rule];
+
+            if (!fn) {
+                console.warn("Unknown rule:", rule);
+                result = false;
+            } else {
+                result = await fn(ctx);
+            }
         }
     } else if (Array.isArray(rule)) {
         // Legacy data sometimes stores "no requirements" as [].
@@ -174,13 +175,13 @@ export async function evaluateRule(rule, ctx, options = {}) {
         if (rule.length === 0) {
             result = true;
         } else {
-        // Array -> OR
-        for (const r of rule) {
-            if (await evaluateRule(r, ctx, options)) {
-                result = true;
-                break;
+            // Array -> OR
+            for (const r of rule) {
+                if (await evaluateRule(r, ctx, options)) {
+                    result = true;
+                    break;
+                }
             }
-        }
         }
     } else if (typeof rule === "object") {
         // Object structures
@@ -191,12 +192,14 @@ export async function evaluateRule(rule, ctx, options = {}) {
         } else if (rule.skill && rule.level !== undefined) {
             // skill level requirement: { skill: "Farming", level: 50 }
             const skillName = capitalizeFirstLetter(rule.skill);
+
             result = hasSkillLevel(ctx, skillName, rule.level, {
                 boostable: options.boostable
             });
         } else if (Array.isArray(rule.skills)) {
             // skill level requirements list: { skills: [{ skill, level }, ...] }
             result = true;
+
             for (const req of rule.skills) {
                 if (!req?.skill || req.level === undefined) {
                     result = false;
@@ -224,13 +227,21 @@ export async function evaluateRule(rule, ctx, options = {}) {
             // all
             const adjustedRules = adjustImplingJarRuleLevels(rule.all, ctx);
             const subrules = adjustedRules || rule.all;
+
             result = true;
-            const elementalRuneRules = subrules.filter((sub) => isElementalRuneRule(sub));
+
+            const elementalRuneRules = subrules.filter((sub) =>
+                isElementalRuneRule(sub)
+            );
+
             const nonElementalSubrules = elementalRuneRules.length
                 ? subrules.filter((sub) => !isElementalRuneRule(sub))
                 : subrules;
 
-            if (elementalRuneRules.length && !hasElementalRuneRules(ctx, elementalRuneRules)) {
+            if (
+                elementalRuneRules.length &&
+                !hasElementalRuneRules(ctx, elementalRuneRules)
+            ) {
                 result = false;
             }
 
@@ -253,10 +264,12 @@ export async function evaluateRule(rule, ctx, options = {}) {
 
     if (ruleCache) {
         let cachedByRule = ruleCache.get(rule);
+
         if (!cachedByRule) {
             cachedByRule = new Map();
             ruleCache.set(rule, cachedByRule);
         }
+
         cachedByRule.set(ruleCacheKey, result);
     }
 
