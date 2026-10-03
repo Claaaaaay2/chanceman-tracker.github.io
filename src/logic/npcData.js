@@ -49,7 +49,12 @@ export const NPC_DATA = {
     },
     "Abhorrent spectre": {
         "wiki": "https://oldschool.runescape.wiki/w/Aberrant_spectre",
-        "rule": ["hasNosePegOrCanLongRange"],
+        "rule": {
+            "all": [
+                "hasNosePegOrCanLongRange",
+                "canCompletePriestInPeril"
+            ]
+        },
         "skill": ["Slayer"],
         "level": [60],
         "tags": ["superior"],
@@ -3565,9 +3570,13 @@ export const NPC_DATA = {
     "Choke devil": {
         "wiki": "https://oldschool.runescape.wiki/w/Choke_devil",
         "rule": {
-            "any": [
-                "hasFacemask",
-                "canLongrange"
+            "all": [
+                "canCompleteDesertTreasureI",
+                {"any": [
+                    "hasFacemask",
+                    "canLongrange",
+                    
+                ]}
             ]
         },
         "skill": ["Slayer"],
@@ -3578,9 +3587,13 @@ export const NPC_DATA = {
     "Choke devil Wilderness Slayer Cave superior": {
         "wiki": "https://oldschool.runescape.wiki/w/Choke_devil#Wilderness_Slayer_Cave_superior",
         "rule": {
-            "any": [
-                "hasFacemask",
-                "canLongrange"
+            "all": [
+                "canCompleteDesertTreasureI",
+                {"any": [
+                    "hasFacemask",
+                    "canLongrange",
+                    
+                ]}
             ]
         },
         "skill": ["Slayer"],
@@ -7227,7 +7240,7 @@ export const NPC_DATA = {
     },
     "Greater abyssal demon": {
         "wiki": "https://oldschool.runescape.wiki/w/Greater_abyssal_demon",
-        "rule": null,
+        "rule": ["canCompletePriestInPeril"],
         "skill": ["Slayer"],
         "level": [85],
         "tags": ["superior"],
@@ -7235,7 +7248,7 @@ export const NPC_DATA = {
     },
     "Greater abyssal demon Wilderness Slayer Cave superior": {
         "wiki": "https://oldschool.runescape.wiki/w/Greater_abyssal_demon#Wilderness_Slayer_Cave_superior",
-        "rule": null,
+        "rule": ["canCompletePriestInPeril"],
         "skill": ["Slayer"],
         "level": [85],
         "tags": ["superior"],
@@ -8488,7 +8501,7 @@ export const NPC_DATA = {
     },
     "Insatiable Bloodveld": {
         "wiki": "https://oldschool.runescape.wiki/w/Insatiable_Bloodveld",
-        "rule": null,
+        "rule": ["canCompletePriestInPeril"],
         "skill": ["Slayer"],
         "level": [50],
         "tags": ["superior"],
@@ -8496,7 +8509,7 @@ export const NPC_DATA = {
     },
     "Insatiable mutated Bloodveld": {
         "wiki": "https://oldschool.runescape.wiki/w/Insatiable_mutated_Bloodveld",
-        "rule": null,
+        "rule": ["canCompletePriestInPeril"],
         "skill": ["Slayer"],
         "level": [50],
         "tags": ["superior"],
@@ -12069,7 +12082,12 @@ export const NPC_DATA = {
     },
     "Repugnant spectre": {
         "wiki": "https://oldschool.runescape.wiki/w/Repugnant_spectre",
-        "rule": ["hasNosePegOrCanLongRange"],
+        "rule": {
+            "all": [
+                "hasNosePegOrCanLongRange",
+                "canCompletePriestInPeril"
+            ]
+        },
         "skill": ["Slayer"],
         "level": [60],
         "tags": ["superior"],
@@ -13130,7 +13148,12 @@ export const NPC_DATA = {
     },
     "Screaming banshee": {
         "wiki": "https://oldschool.runescape.wiki/w/Screaming_banshee",
-        "rule": ["hasEarmuffs"],
+        "rule": {
+            "all": [
+                "canCompletePriestInPeril",
+                "hasEarmuffs"
+            ]
+        },
         "skill": ["Slayer"],
         "level": [15],
         "tags": ["superior"],
@@ -13138,7 +13161,12 @@ export const NPC_DATA = {
     },
     "Screaming twisted banshee": {
         "wiki": "https://oldschool.runescape.wiki/w/Screaming_twisted_banshee",
-        "rule": ["hasEarmuffsOrLongrange"],
+        "rule": {
+            "all": [
+                "canCompletePriestInPeril",
+                "hasEarmuffsOrLongrange"
+            ]
+        },
         "skill": ["Slayer"],
         "level": [15],
         "tags": ["superior"],
