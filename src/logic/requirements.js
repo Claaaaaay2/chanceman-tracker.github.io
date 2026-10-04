@@ -643,6 +643,17 @@ export function hasSkillLevel(ctx, skill, level, options = {}) {
         return true;
     }
 
+
+    // Track unmet skills only during houseRule evaluation.
+    if (ctx?.houseRuleSkillTracker) {
+        ctx.houseRuleSkillTracker.push({
+            skill,
+            level
+        });
+    }
+
+    // Existing missing-requirements tracking continues below.
+
     // Record unmet skill requirements for the missing-requirements display.
     if (trackMissing && ctx?.missing && shouldTrackMissing(ctx)) {
         if (!ctx.missing.skills) {
@@ -941,172 +952,173 @@ export const REQUIREMENT_CHECKS = {
         return hasAnyNails(ctx);
     },
     canMakeWoodenWorkbench(ctx) {
-        return hasSkillLevel(ctx, "Construction", 17) //
-            && hasAnyNails(ctx) //
+        return hasAnyNails(ctx) //
             && has(ctx, 8794) // Saw
             && has(ctx, 2347) // Hammer
-            && has(ctx, 960); // Plank
+            && has(ctx, 960) // Plank
+            && hasSkillLevel(ctx, "Construction", 17); //
     },
     canMakeOakWorkbench(ctx) {
-        return hasSkillLevel(ctx, "Construction", 32) //
-            && has(ctx, 8794)  // Saw
+        return has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
-            && has(ctx, 8778); // Oak plank
+            && has(ctx, 8778) // Oak plank
+            && hasSkillLevel(ctx, "Construction", 32); //
     },
     canMakeSteelFramedWorkbench(ctx) {
-        return hasSkillLevel(ctx, "Construction", 46) //
-            && has(ctx, 8794)  // Saw
+        return has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
             && has(ctx, 8778)  // Oak plank
-            && has(ctx, 2353); // Steel bar
+            && has(ctx, 2353) // Steel bar
+            && hasSkillLevel(ctx, "Construction", 46); //
     },
     canMakeOakLectern(ctx) {
-        return hasSkillLevel(ctx, "Construction", 40) //
-            && has(ctx, 8794)  // Saw
+        return has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
-            && has(ctx, 8778); // Oak plank
+            && has(ctx, 8778) // Oak plank
+            && hasSkillLevel(ctx, "Construction", 40); //
     },
     canMakeEagleLectern(ctx) {
-        return hasSkillLevel(ctx, "Construction", 47) //
-            && has(ctx, 8794)  // Saw
+        return has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
-            && has(ctx, 8778); // Oak plank
+            && has(ctx, 8778) // Oak plank
+            && hasSkillLevel(ctx, "Construction", 47); //
     },
     canMakeDemonLectern(ctx) {
-        return hasSkillLevel(ctx, "Construction", 47) //
-            && has(ctx, 8794)  // Saw
+        return has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
-            && has(ctx, 8778); // Oak plank
+            && has(ctx, 8778) // Oak plank
+            && hasSkillLevel(ctx, "Construction", 47); //
     },
     canMakeTeakEagleLectern(ctx) {
-        return hasSkillLevel(ctx, "Construction", 57) //
-            && has(ctx, 8794)  // Saw
+        return has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
-            && has(ctx, 8780); // Teak plank
+            && has(ctx, 8780) // Teak plank
+            && hasSkillLevel(ctx, "Construction", 57); //
     },
     canMakeTeakDemonLectern(ctx) {
-        return hasSkillLevel(ctx, "Construction", 57) //
-            && has(ctx, 8794)  // Saw
+        return has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
-            && has(ctx, 8780); // Teak plank
+            && has(ctx, 8780) // Teak plank
+            && hasSkillLevel(ctx, "Construction", 57); //
     },
     canMakeMahoganyEagleLectern(ctx) {
-        return hasSkillLevel(ctx, "Construction", 67) //
-            && has(ctx, 8794)  // Saw
+        return has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
             && has(ctx, 8782)  // Mahogany plank
-            && has(ctx, 8784); // Gold leaf
+            && has(ctx, 8784) // Gold leaf
+            && hasSkillLevel(ctx, "Construction", 67);
     },
     canMakeMahoganyDemonLectern(ctx) {
-        return hasSkillLevel(ctx, "Construction", 67) //
-            && has(ctx, 8794)  // Saw
+        return has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
             && has(ctx, 8782)  // Mahogany plank
-            && has(ctx, 8784); // Gold leaf
+            && has(ctx, 8784) // Gold leaf
+            && hasSkillLevel(ctx, "Construction", 67); //
     },
     canMakeMarbleLectern(ctx) {
-        return hasSkillLevel(ctx, "Construction", 77) //
-            && has(ctx, 8794)  // Saw
+        return has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
             && has(ctx, 8786)  // Marble block
             && has(ctx, 8788)  // Magic stone
-            && has(ctx, 8784); // Gold leaf
+            && has(ctx, 8784) // Gold leaf
+            && hasSkillLevel(ctx, "Construction", 77); //
     },
     canMakeCraftingTableI(ctx) {
-        return hasSkillLevel(ctx, "Construction", 16) //
-            && has(ctx, 8794)  // Saw
+        return has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
-            && has(ctx, 8778); // Oak plank
+            && has(ctx, 8778) // Oak plank
+            && hasSkillLevel(ctx, "Construction", 16) //
     },
     canMakeCraftingTableII(ctx) {
-        return hasSkillLevel(ctx, "Construction", 25) //
-            && has(ctx, 8794)  // Saw
+        return has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
             && has(ctx, 8778)  // Oak plank
-            && has(ctx, 1775); // Molten glass
+            && has(ctx, 1775) // Molten glass
+            && hasSkillLevel(ctx, "Construction", 25); //
     },
     canMakeRepairBench(ctx) {
-        return hasSkillLevel(ctx, "Construction", 15) //
-            && has(ctx, 8794)  // Saw
+        return has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
-            && has(ctx, 8778); // Oak plank
+            && has(ctx, 8778) // Oak plank
+            && hasSkillLevel(ctx, "Construction", 15); //
     },
-    canMakeWhetstone(ctx) {
-        return hasSkillLevel(ctx, "Construction", 35) //
-            && has(ctx, 8794)  // Saw
+    canMakeWhetstone(ctx) { 
+        return has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
             && has(ctx, 8778)  // Oak plank
-            && has(ctx, 3420); // Limestone brick
+            && has(ctx, 3420) // Limestone brick
+            && hasSkillLevel(ctx, "Construction", 35); //
+
     },
     canMakeArmourStand(ctx) {
-        return hasSkillLevel(ctx, "Construction", 55) //
-            && has(ctx, 8794)  // Saw
+        return has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
             && has(ctx, 8778)  // Oak plank
-            && has(ctx, 3420); // Limestone brick
+            && has(ctx, 3420) // Limestone brick
+            && hasSkillLevel(ctx, "Construction", 55); //
     },
     canMakeToolStore(ctx) {
-        return hasSkillLevel(ctx, "Construction", 15) //
-            && has(ctx, 8794)  // Saw
+        return has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
-            && has(ctx, 8778); // Oak plank
+            && has(ctx, 8778) // Oak plank
+            && hasSkillLevel(ctx, "Construction", 15); //
     },
     canMakeWoodenLarder(ctx) {
-        return hasSkillLevel(ctx, "Construction", 9) //
-            && has(ctx, 8794) // Saw
+        return has(ctx, 8794) // Saw
             && has(ctx, 2347) // Hammer
             && hasAnyNails(ctx) //
-            && has(ctx, 960); // Plank
+            && has(ctx, 960) // Plank
+            && hasSkillLevel(ctx, "Construction", 9); //
     },
     canMakeOakLarder(ctx) {
-        return hasSkillLevel(ctx, "Construction", 33) //
-            && has(ctx, 8794)  // Saw
+        return has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
-            && has(ctx, 8778); // Oak plank
+            && has(ctx, 8778) // Oak plank
+            && hasSkillLevel(ctx, "Construction", 33); //
     },
     canMakeTeakLarder(ctx) {
-        return hasSkillLevel(ctx, "Construction", 43) //
-            && has(ctx, 8794)  // Saw
+        return has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
             && has(ctx, 8790)  // Bolt of cloth
-            && has(ctx, 8780); // Teak plank
+            && has(ctx, 8780) // Teak plank
+            && hasSkillLevel(ctx, "Construction", 43); // 
     },
     canMakeWoodenShelvesI(ctx) {
-        return hasSkillLevel(ctx, "Construction", 6) //
-            && has(ctx, 8794) // Saw
+        return has(ctx, 8794) // Saw
             && has(ctx, 2347) // Hammer
             && hasAnyNails(ctx) //
-            && has(ctx, 960); // Plank
+            && has(ctx, 960) // Plank
+            && hasSkillLevel(ctx, "Construction", 6); //
     },
     canMakeWoodenShelvesII(ctx) {
-        return hasSkillLevel(ctx, "Construction", 12) //
-            && has(ctx, 8794) // Saw
+        return has(ctx, 8794) // Saw
             && has(ctx, 2347) // Hammer
             && hasAnyNails(ctx) //
             && has(ctx, 1761) // Soft clay
-            && has(ctx, 960); // Plank
+            && has(ctx, 960) // Plank
+            && hasSkillLevel(ctx, "Construction", 12) //
     },
     canMakeOakShelves(ctx) {
-        return hasSkillLevel(ctx, "Construction", 34) //
-            && has(ctx, 8794)  // Saw
+        return has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
             && has(ctx, 1761)  // Soft clay
-            && has(ctx, 8778); // Oak plank
+            && has(ctx, 8778) // Oak plank
+            && hasSkillLevel(ctx, "Construction", 34); //
     },
     canMakeTeakShelvesI(ctx) {
-        return hasSkillLevel(ctx, "Construction", 56) //
-            && has(ctx, 8794)  // Saw
+        return has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
             && has(ctx, 1761)  // Soft clay
-            && has(ctx, 8780); // Teak plank
+            && has(ctx, 8780) // Teak plank
+            && hasSkillLevel(ctx, "Construction", 56); //
     },
     canMakeTeakShelvesII(ctx) {
-        return hasSkillLevel(ctx, "Construction", 67) //
-            && has(ctx, 8794)  // Saw
+        return has(ctx, 8794)  // Saw
             && has(ctx, 2347)  // Hammer
             && has(ctx, 1761)  // Soft clay
             && has(ctx, 8780)  // Teak plank
-            && has(ctx, 8784); // Gold leaf
+            && has(ctx, 8784) // Gold leaf
+            && hasSkillLevel(ctx, "Construction", 67); //
     },
     canCompleteTaiBwoWannaiTrio(ctx) {
         return canCompleteTaiBwoWannaiTrio(ctx);

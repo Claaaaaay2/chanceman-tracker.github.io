@@ -346,11 +346,45 @@ export async function getObtainabilityRank(item, ctx) {
                 actual skill levels. If other players' houses are
                 enabled, isHouseRuleMet() intentionally bypasses it.
             */
-            if (!(await isHouseRuleMet(obj, ctx))) {
-                continue;
+            
+            let houseRuleSkills = [];
+
+            if (obj.houseRule && !ctx.filters?.allowOthersHouses) {
+                const tracker = [];
+
+                const houseRuleMet = await evaluateRule(
+                    obj.houseRule,
+                    ctx,
+                    { houseRuleSkillTracker: tracker }
+                );
+
+                if (!houseRuleMet) {
+                    if (tracker.length === 0) {
+                        continue;
+                    }
+
+                    // Keep the lowest unmet level for each skill.
+                    const lowestBySkill = new Map();
+
+                    for (const { skill, level } of tracker) {
+                        const current = lowestBySkill.get(skill);
+
+                        if (current === undefined || level < current) {
+                            lowestBySkill.set(skill, level);
+                        }
+                    }
+
+                    houseRuleSkills = [...lowestBySkill].map(
+                        ([skill, level]) => ({ skill, level })
+                    );
+                }
             }
 
-            return { rank: 7, name };
+            return {
+                rank: 7,
+                name,
+                houseRuleSkills
+            };
         }
     }
 

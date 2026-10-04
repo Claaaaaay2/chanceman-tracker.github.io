@@ -133,7 +133,10 @@ export async function canDoOtherMethod(rule, ctx) {
    =========================================================== */
 
 export async function evaluateRule(rule, ctx, options = {}) {
-    const ruleCache = ctx?.cacheRules ? ctx?.ruleEvalCache : null;
+    const ruleCache =
+    ctx?.cacheRules && !options.houseRuleSkillTracker
+        ? ctx.ruleEvalCache
+        : null;
 
     const houseRuleBypass = Boolean(options.houseRuleBypass);
 
@@ -166,7 +169,14 @@ export async function evaluateRule(rule, ctx, options = {}) {
                 console.warn("Unknown rule:", rule);
                 result = false;
             } else {
-                result = await fn(ctx);
+                result = await fn(
+                    options.houseRuleSkillTracker
+                        ? {
+                            ...ctx,
+                            houseRuleSkillTracker: options.houseRuleSkillTracker
+                        }
+                        : ctx
+                );
             }
         }
     } else if (Array.isArray(rule)) {

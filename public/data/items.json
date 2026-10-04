@@ -153718,7 +153718,7 @@
           }
         },
         "Creating supercompost (saltpetre)": {
-          "notes": "Requires Compost and Saltpetre.",
+          "notes": "Requires Compost and 3 Saltpetre.",
           "rule": {
             "all": [
               {

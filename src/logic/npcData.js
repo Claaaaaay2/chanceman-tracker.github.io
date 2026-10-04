@@ -11212,8 +11212,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Orca",
         "rule": {
             "all": [
-                "canDoSailingCombat",
-                "canSailToTheNorthernOcean"
+                "canDoSailingCombat"
             ]
         },
         "skill": [],
