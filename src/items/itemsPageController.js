@@ -763,71 +763,130 @@ export async function initItemsPage() {
         return `${level} ${skill}`;
     }
 
+
+    async function getHouseRuleMissingSkills(source, ctx) {
+        if (!source?.houseRule || ctx.filters?.allowOthersHouses) {
+            return [];
+        }
+
+        const tracker = [];
+        const trackedCtx = {
+            ...ctx,
+            houseRuleSkillTracker: tracker
+        };
+
+        const houseRuleMet = await evaluateRule(
+            source.houseRule,
+            trackedCtx,
+            { houseRuleSkillTracker: tracker }
+        );
+
+        // If any alternative is achievable, no skill is missing.
+        if (houseRuleMet || tracker.length === 0) {
+            return [];
+        }
+
+        // Keep only the lowest unmet level for each skill.
+        const lowestBySkill = new Map();
+
+        for (const { skill, level } of tracker) {
+            const current = lowestBySkill.get(skill);
+
+            if (current === undefined || level < current) {
+                lowestBySkill.set(skill, level);
+            }
+        }
+
+        return [...lowestBySkill].map(([skill, level]) => ({
+            skill,
+            level
+        }));
+    }
+
     async function getSkillSortKey(item, ctx, rank) {
-    if (rank !== 7) return null;
+        if (rank !== 7) return null;
 
-    const skills = new Map();
+        const skills = new Map();
 
-    if (item.sources?.drops) {
-        for (const npcName of Object.keys(item.sources.drops)) {
-            if (isNpcBlockedByFilters(npcName, ctx)) continue;
-            if (!(await canReachNpc(npcName, ctx))) continue;
+        if (item.sources?.drops) {
+            for (const npcName of Object.keys(item.sources.drops)) {
+                if (isNpcBlockedByFilters(npcName, ctx)) continue;
+                if (!(await canReachNpc(npcName, ctx))) continue;
 
-            const npc = NPC_DATA[npcName];
-            if (!npc?.skill?.length) continue;
+                const npc = NPC_DATA[npcName];
+                if (!npc?.skill?.length) continue;
 
-            const skillsMet = areNpcSkillsMet(npcName, ctx);
-            if (skillsMet) continue;
+                const skillsMet = areNpcSkillsMet(npcName, ctx);
+                if (skillsMet) continue;
 
-            const levels = getNpcEffectiveLevels(npcName, ctx);
+                const levels = getNpcEffectiveLevels(npcName, ctx);
 
-            for (let i = 0; i < npc.skill.length; i++) {
-                const skill = npc.skill[i];
-                const level = levels?.[i];
-                addSkillMin(skills, skill, level);
-            }
-        }
-    }
-
-    if (item.sources?.other) {
-        const levelIgnoredCtx = getLevelIgnoredCtx(ctx);
-
-        for (const source of Object.values(item.sources.other)) {
-            if (isSourceHiddenByFilters(source, ctx)) continue;
-            if (!source?.rule) continue;
-
-            const obtainableWithIgnoredLevels =
-                await evaluateRule(source.rule, levelIgnoredCtx);
-
-            if (!obtainableWithIgnoredLevels) continue;
-
-            const obtainableNow =
-                await evaluateRule(source.rule, ctx);
-
-            if (obtainableNow) continue;
-
-            if (Array.isArray(source.skill)) {
-                for (const skill of source.skill) {
-                    addSkillMin(skills, skill, source.level);
+                for (let i = 0; i < npc.skill.length; i++) {
+                    const skill = npc.skill[i];
+                    const level = levels?.[i];
+                    addSkillMin(skills, skill, level);
                 }
-            } else if (source.skill) {
-                addSkillMin(skills, source.skill, source.level);
             }
-
-            collectSkillsFromRuleMin(source.rule, skills, true, ctx);
         }
-    }
 
-    return [...skills.entries()]
-        .filter(([, level]) => level !== null && level !== undefined)
-        .sort(([skillA, levelA], [skillB, levelB]) => {
-            if (skillA !== skillB) {
-                return skillA.localeCompare(skillB);
+        if (item.sources?.other) {
+            const levelIgnoredCtx = getLevelIgnoredCtx(ctx);
+
+            for (const source of Object.values(item.sources.other)) {
+                if (isSourceHiddenByFilters(source, ctx)) continue;
+                if (!source?.rule) continue;
+
+                const obtainableWithIgnoredLevels =
+                    await evaluateRule(source.rule, levelIgnoredCtx);
+
+                if (!obtainableWithIgnoredLevels) continue;
+
+                
+                const obtainableNow =
+                    await evaluateRule(source.rule, ctx);
+
+                const houseRuleSkills =
+                    await getHouseRuleMissingSkills(source, ctx);
+
+                // A source is not level-gated if its normal rule is
+                // already met and its houseRule is also met.
+                if (obtainableNow && houseRuleSkills.length === 0) {
+                    continue;
+                }
+
+                if (Array.isArray(source.skill)) {
+                    for (const skill of source.skill) {
+                        addSkillMin(skills, skill, source.level);
+                    }
+                } else if (source.skill) {
+                    addSkillMin(skills, source.skill, source.level);
+                }
+
+                if (!obtainableNow) {
+                    collectSkillsFromRuleMin(
+                        source.rule,
+                        skills,
+                        true,
+                        ctx
+                    );
+                }
+
+                for (const { skill, level } of houseRuleSkills) {
+                    addSkillMin(skills, skill, level);
+                }
             }
+        }
 
-            return levelA - levelB;
-        });
-}
+        return [...skills.entries()]
+            .filter(([, level]) => level !== null && level !== undefined)
+            .sort(([skillA, levelA], [skillB, levelB]) => {
+                if (skillA !== skillB) {
+                    return skillA.localeCompare(skillB);
+                }
+
+                return levelA - levelB;
+            });
+    }
 
     async function getItemSkillLabels(item, ctx, rank) {
         if (rank !== 5 && rank !== 6 && rank !== 7) return [];
@@ -868,26 +927,84 @@ export async function initItemsPage() {
                 if (isSourceHiddenByFilters(source, ctx)) continue;
                 if (!source?.rule) continue;
 
+                
                 if (rank === 7) {
-                    const obtainableWithIgnoredLevels = await evaluateRule(source.rule, levelIgnoredCtx);
+                    const obtainableWithIgnoredLevels =
+                        await evaluateRule(source.rule, levelIgnoredCtx);
+
                     if (!obtainableWithIgnoredLevels) continue;
 
-                    const obtainableNow = await evaluateRule(source.rule, ctx);
-                    if (obtainableNow) continue;
-                } else if (rank === 5 || rank === 6) {
-                    const obtainableNow = await evaluateRule(source.rule, ctx);
-                    if (!obtainableNow) continue;
-                } else {
-                    continue;
-                }
+                    const obtainableNow =
+                        await evaluateRule(source.rule, ctx);
 
-                if (Array.isArray(source.skill)) {
-                    for (const skill of source.skill) {
-                        addSkillForRank(skills, skill, includeLevels ? source.level : null);
+                    const houseRuleSkills =
+                        await getHouseRuleMissingSkills(source, ctx);
+
+                    if (obtainableNow && houseRuleSkills.length === 0) {
+                        continue;
                     }
-                }
 
-                collectSkillsForRank(source.rule, skills, includeLevels, ctx);
+                    if (!obtainableNow) {
+                        if (Array.isArray(source.skill)) {
+                            for (const skill of source.skill) {
+                                addSkillMin(
+                                    skills,
+                                    skill,
+                                    includeLevels ? source.level : null
+                                );
+                            }
+                        } else if (source.skill) {
+                            addSkillMin(
+                                skills,
+                                source.skill,
+                                includeLevels ? source.level : null
+                            );
+                        }
+
+                        collectSkillsFromRuleMin(
+                            source.rule,
+                            skills,
+                            includeLevels,
+                            ctx
+                        );
+                    }
+
+                    for (const { skill, level } of houseRuleSkills) {
+                        addSkillMin(
+                            skills,
+                            skill,
+                            includeLevels ? level : null
+                        );
+                    }
+                } else if (rank === 5 || rank === 6) {
+                    const obtainableNow =
+                        await evaluateRule(source.rule, ctx);
+
+                    if (!obtainableNow) continue;
+
+                    if (Array.isArray(source.skill)) {
+                        for (const skill of source.skill) {
+                            addSkillForRank(
+                                skills,
+                                skill,
+                                includeLevels ? source.level : null
+                            );
+                        }
+                    } else if (source.skill) {
+                        addSkillForRank(
+                            skills,
+                            source.skill,
+                            includeLevels ? source.level : null
+                        );
+                    }
+
+                    collectSkillsForRank(
+                        source.rule,
+                        skills,
+                        includeLevels,
+                        ctx
+                    );
+                }
             }
         }
 
