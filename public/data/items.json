@@ -138329,6 +138329,7 @@
           "rule": {
             "all": [
               "hasUsableAxe",
+              "canCompleteTheFremennikTrials",
               {
                 "skill": "Woodcutting",
                 "level": 50
