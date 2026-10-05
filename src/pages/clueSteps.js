@@ -1,4 +1,5 @@
 import { REQUIREMENT_CHECKS, canTrainSkill, hasElementalRuneRules, isElementalRuneRule } from "../logic/requirements.js";
+import { canMeetRequirementWithBoost } from "../logic/skillBoosts.js";
 import { router } from "../router.js";
 import { fileStore } from "../storage/fileStore.js";
 
@@ -15,8 +16,14 @@ function hasSkillRequirement(ctx, skill, level) {
     if (ctx?.ignoreSkillLevels) {
         return canTrainSkill(ctx, skill);
     }
+
     const current = ctx.player?.levels?.[skill];
-    return typeof current === "number" && current >= level;
+
+    if (typeof current === "number" && current >= level) {
+        return true;
+    }
+
+    return canMeetRequirementWithBoost(ctx, skill, level);
 }
 
 function hasQuestRequirement(ctx, questName, requirementType) {

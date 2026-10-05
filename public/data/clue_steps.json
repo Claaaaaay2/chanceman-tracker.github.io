@@ -17648,10 +17648,6 @@
                     "quests": {},
                     "items": [
                         {
-                            "id": 7936,
-                            "name": "Pure essence"
-                        },
-                        {
                             "id": 1755,
                             "name": "Chisel"
                         }
@@ -17807,17 +17803,13 @@
                     "quests": {},
                     "items": [
                         {
-                            "id": 307,
-                            "name": "Fishing rod"
-                        },
-                        {
                             "id": 13431,
                             "name": "Sandworms"
                         }
                     ],
                     "untracked": [],
                     "itemsAny": [],
-                    "rulesAll": [],
+                    "rulesAll": ["hasFishingRod"],
                     "rulesAny": []
                 }
             },
