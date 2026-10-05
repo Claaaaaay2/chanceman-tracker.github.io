@@ -27,6 +27,17 @@ const ITEM_SECTION_TITLES = {
     9: "Unobtainable items"
 };
 
+const CLUE_CASKET_SOURCES = new Set([
+    "Reward casket (master)",
+    "Reward casket (elite)",
+    "Reward casket (hard)",
+    "Reward casket (medium) Standard",
+    "Reward casket (medium) Entrana",
+    "Reward casket (easy) Entrana",
+    "Reward casket (easy) Standard",
+    "Reward casket (beginner)",
+]);
+
 const BUTTERFLY_NET_ID = 10010;
 const GOURMET_IMPLING_JAR_ID = 11242;
 const EARTH_IMPLING_JAR_ID = 11244;
@@ -78,6 +89,49 @@ const NPC_META = new Map(
 
 function isItemProfilingEnabled() {
     return typeof window !== "undefined" && window.__profileItems === true;
+}
+
+function isClueRewardOnlyBySource(item) {
+    const drops = item?.sources?.drops;
+    if (!drops) return false;
+
+    const dropSources = Object.keys(drops);
+    if (dropSources.length === 0) return false;
+
+    return dropSources.every(source => CLUE_CASKET_SOURCES.has(source));
+}
+
+async function hasReachableNonClueSource(item, ctx, rolledSet) {
+    // Shops only count if the item has been rolled.
+    if (rolledSet?.has(item.id) && item.sources?.shops) {
+        for (const rule of Object.values(item.sources.shops)) {
+            if (await isRuleObtainable(rule, ctx)) {
+                return true;
+            }
+        }
+    }
+
+    // Spawns only count if the item has been rolled.
+    if (rolledSet?.has(item.id) && item.sources?.spawns) {
+        for (const rule of Object.values(item.sources.spawns)) {
+            if (await isRuleObtainable(rule, ctx)) {
+                return true;
+            }
+        }
+    }
+
+    // "Other" sources count when they can actually be performed.
+    if (item.sources?.other) {
+        for (const source of Object.values(item.sources.other)) {
+            if (isSourceHiddenByFilters(source, ctx)) continue;
+
+            if (await canReachSource(source, ctx)) {
+                return true;
+            }
+        }
+    }
+
+    return false;
 }
 
 async function computeAllRanksOnce(items, ctx) {
@@ -1331,8 +1385,21 @@ export async function initItemsPage() {
             if (!itemNameLower.includes(searchLower)) continue;
             if (hideObtained && obtainedSet.has(item.id)) continue;
             if (onlyRolled && !rolledSet.has(item.id)) continue;
-            const isClueRewardOnly = meta?.isClueRewardOnly ?? item.tags?.includes("clue-reward-only");
+            let isClueRewardOnly =
+                meta?.isClueRewardOnly ??
+                item.tags?.includes("clue-reward-only");
+
+            const isClueRewardOnlyBySourceValue = isClueRewardOnlyBySource(item);
+
+            if (isClueRewardOnlyBySourceValue) {
+                const hasOtherObtainableSource =
+                    await hasReachableNonClueSource(item, fileStore, rolledSet);
+
+                isClueRewardOnly = !hasOtherObtainableSource;
+            }
+
             if (hideClue && isClueRewardOnly) continue;
+
             if (hideClue && await shouldHideForClueFilter(item, fileStore, rolledSet)) {
                 sort.rank = 9;
             }
