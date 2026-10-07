@@ -110562,6 +110562,44 @@
     ]
   },
   {
+    "index": 4608,
+    "id": 34631,
+    "name": "Net trap",
+    "image": "Net_trap.png",
+    "sources": {
+      "drops": {
+        "Hunter kit": {
+          "droprate": "Always"
+        }
+      },
+      "other": {
+        "Crafting a Net trap": {
+          "notes": "Requires Small fishing net, Rope and level 29 Hunter.",
+          "rule": {
+            "all": [
+              {
+                "has": 303
+              },
+              {
+                "has": 954
+              },
+              {
+                "skill": "Hunter",
+                "level": 29
+              }
+            ]
+          }
+        }
+      },
+      "shops": {
+        "Yes": "No requirements"
+      }
+    },
+    "tags": [
+      "Hunter"
+    ]
+  },
+  {
     "index": 2634,
     "id": 8439,
     "name": "Nice hedge (bagged)",

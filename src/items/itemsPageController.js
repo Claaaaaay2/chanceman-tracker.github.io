@@ -79,6 +79,7 @@ const NPC_META = new Map(
                 isLMS: tags.has("LMS"),
                 isHunterRumour: tags.has("hunterRumour"),
                 isJon: tags.has("jon"),
+                isHunterKit: tags.has("hunterKit"),
                 isNotForIron: tags.has("notForIronmen"),
                 skills: npc?.skill || [],
                 levels: npc?.level || []
@@ -262,6 +263,7 @@ export async function initItemsPage() {
         { id: "isHunterRumourLocked", key: "isHunterRumourLocked", defaultValue: false, invalidate: true },
         { id: "hideLMS", key: "hideLMS", defaultValue: false, invalidate: true },
         { id: "hideJon", key: "hideJon", defaultValue: false, invalidate: true },
+        { id: "hideHunterKit", key: "hideHunterKit", defaultValue: false, invalidate: true },
         { id: "hideHolidayItems", key: "hideHolidayItems", defaultValue: false, invalidate: true },
         { id: "isFreeToPlay", key: "isFreeToPlay", defaultValue: false, invalidate: true },
         { id: "hideSourcelessItems", key: "hideSourcelessItems", defaultValue: false },
@@ -1335,8 +1337,6 @@ export async function initItemsPage() {
             onlyRolled,
             hideUnobtainable,
             hideClue,
-            allowOthersHouses,
-            allowTelegrab,
             hasFlatpacks,
             hasItemsets,
             hideBosses,
@@ -1346,6 +1346,7 @@ export async function initItemsPage() {
             hideLMS,
             hideJon,
             hideHolidayItems,
+            hideHunterKit,
             isFreeToPlay,
             hideSourcelessItems,
             itemSortByDroprate = true,
@@ -1432,6 +1433,9 @@ export async function initItemsPage() {
                 sort.rank = 9;
             }
             if (hideHolidayItems && await hideTag(item, fileStore, "Holiday", rolledSet)) {
+                sort.rank = 9;
+            }
+            if (hideHunterKit && await hideTag(item, fileStore, "hunterKit", rolledSet)) {
                 sort.rank = 9;
             }
 

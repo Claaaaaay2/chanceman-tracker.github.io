@@ -8164,7 +8164,7 @@ export const NPC_DATA = {
         "rule": null,
         "skill": [],
         "level": [],
-        "tags": ["easy"],
+        "tags": ["easy","hunterKit"],
         "f2p": false
     },
     "Hunters' loot sack (adept)": {

@@ -111,6 +111,11 @@ export default async function ItemsPage() {
                 </label>
 
                 <label>
+                    <input type="checkbox" id="hideHunterKit">
+                    Hide Hunter kit
+                </label>
+
+                <label>
                     <input type="checkbox" id="countSkillBoosts">
                     Use skill boosts for level reqs
                 </label>
