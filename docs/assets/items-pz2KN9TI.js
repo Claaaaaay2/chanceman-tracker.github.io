@@ -1,4 +1,4 @@
-import{f as e}from"./index-BAigmvjP.js";async function t(){return await e.ensureItemsLoaded(),`
+import{f as e}from"./index-IVUDUwEN.js";async function t(){return await e.ensureItemsLoaded(),`
         <div class="items-header">
             <h1>Items</h1>
             <button id="filter-overrides-toggle" title="Toggle filters and overrides">
@@ -103,6 +103,11 @@ import{f as e}from"./index-BAigmvjP.js";async function t(){return await e.ensure
                 <label>
                     <input type="checkbox" id="hideHolidayItems">
                     Hide holiday items
+                </label>
+
+                <label>
+                    <input type="checkbox" id="hideHunterKit">
+                    Hide Hunter kit
                 </label>
 
                 <label>
