@@ -23654,6 +23654,9 @@
     "image": "blighted_karambwan.png",
     "sources": {
       "drops": {
+        "Pete Kayer": {
+          "droprate": "Once"
+        },
         "Bounty crate (tier 1)": {
           "droprate": "1/3"
         },
