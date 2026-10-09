@@ -11445,6 +11445,14 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
+    "Pete Kayer": {
+        "wiki": "https://oldschool.runescape.wiki/w/Pete_Kayer",
+        "rule": null,
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
     "Phantom Muspah": {
         "wiki": "https://oldschool.runescape.wiki/w/Phantom_Muspah",
         "rule": ["canCompleteSecretsOfTheNorth"],
