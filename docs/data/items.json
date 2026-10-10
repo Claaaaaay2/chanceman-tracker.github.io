@@ -23264,6 +23264,9 @@
     "image": "blighted_ancient_ice_sack.png",
     "sources": {
       "drops": {
+        "Pete Kayer": {
+          "droprate": "Once"
+        },
         "Spoils of war": {
           "droprate": "3 × 1/9"
         },
@@ -23561,6 +23564,9 @@
     "image": "blighted_entangle_sack.png",
     "sources": {
       "drops": {
+        "Pete Kayer": {
+          "droprate": "Once"
+        },
         "Revenant dragon": {
           "droprate": "1/5.75"
         },
@@ -23831,6 +23837,9 @@
     "image": "blighted_manta_ray.png",
     "sources": {
       "drops": {
+        "Pete Kayer": {
+          "droprate": "Once"
+        },
         "Bounty crate (tier 1)": {
           "droprate": "1/3"
         },
@@ -23987,6 +23996,9 @@
     "image": "blighted_super_restore(4).png",
     "sources": {
       "drops": {
+        "Pete Kayer": {
+          "droprate": "Once"
+        },
         "Bounty crate (tier 1)": {
           "droprate": "Always"
         },
@@ -41799,6 +41811,9 @@
         "Nest (nice) Raw chicken": {
           "droprate": "Always"
         }
+      },
+      "spawns": {
+        "Yes": "No requirements"
       },
       "other": {
         "Cooking a Cooked chicken": {
