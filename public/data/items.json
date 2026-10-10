@@ -41812,6 +41812,9 @@
           "droprate": "Always"
         }
       },
+      "spawns": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Cooking a Cooked chicken": {
           "notes": "Requires a Raw chicken.",
