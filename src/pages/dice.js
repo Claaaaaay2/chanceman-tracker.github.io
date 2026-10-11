@@ -86,6 +86,7 @@ function isDiceItemEligible(item, filters, obtainedSet) {
     if (!filters?.hasFlatpacks && item.tags?.includes("flatpack")) return false;
     if (!filters?.hasItemsets && item.tags?.includes("itemset")) return false;
     if (filters?.hideClue && item.tags?.includes("clue-reward-only")) return false;
+    if (filters.hideHunterKit && item.tags?.includes("hunterKit")) return false;
 
     return true;
 }

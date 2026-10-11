@@ -22,14 +22,15 @@ function normalizeIdArray(entries) {
 }
 
 function isItemEligible(item, obtainedSet, rolledSet, filters) {
-    if (!item) return false;
-    if (obtainedSet.has(item.id)) return false;
-    if (filters.onlyRolled && !rolledSet.has(item.id)) return false;
-    if (filters.npcOnlyRolled && !rolledSet.has(item.id)) return false;
-    if (isItemHiddenByTag(item)) return false;
-    if (!filters.hasFlatpacks && item.tags?.includes("flatpack")) return false;
-    if (!filters.hasItemsets && item.tags?.includes("itemset")) return false;
-    if (filters.hideClue && item.tags?.includes("clue-reward-only")) return false;
+    if (!item) return false; // if not an item, skip it
+    if (obtainedSet.has(item.id)) return false; // if already obtained, skip it
+    if (filters.onlyRolled && !rolledSet.has(item.id)) return false; // if filters are set to only rolled and youve not rolled it, skip it
+    if (filters.npcOnlyRolled && !rolledSet.has(item.id)) return false; // dunno
+    if (isItemHiddenByTag(item)) return false; // dunno
+    if (!filters.hasFlatpacks && item.tags?.includes("flatpack")) return false; // if flatpack and not playing with flatpacks, skip it
+    if (!filters.hasItemsets && item.tags?.includes("itemset")) return false; // if itemset and not playing with itemsets, skip it
+    if (filters.hideClue && item.tags?.includes("clue-reward-only")) return false; // if clues are hidden and the item has clue-reward-only, skip it
+    if (filters.hideHunterKit && item.tags?.includes("hunterKit")) return false; // if hunter kits are hidden and the item has hunterKit, skip it
     return true;
 }
 
