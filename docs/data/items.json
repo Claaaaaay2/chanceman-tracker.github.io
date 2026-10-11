@@ -30067,7 +30067,7 @@
     "image": "broad_bolts.png",
     "sources": {
       "shops": {
-        "Yes": "No requirements"
+        "Yes": "canTrainSlayer"
       },
       "other": {
         "Fletching Broad bolts": {
