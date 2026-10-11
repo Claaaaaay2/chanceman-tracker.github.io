@@ -9,6 +9,7 @@ let memory = {
         onlyRolled: false,
         hideUnobtainable: true,
         hideClue: true,
+        hideHunterKit: false,
         allowOthersHouses: false,
         hasFlatpacks: true,
         hasItemsets: true,
