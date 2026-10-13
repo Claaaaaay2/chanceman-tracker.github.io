@@ -64,8 +64,7 @@ export const NPC_DATA = {
         "wiki": "https://oldschool.runescape.wiki/w/Abyssal_Sire",
         "rule": {
             "all": [
-                "canReachAbyssalSire",
-                "canCompletePriestInPeril"
+                "canReachAbyssalSire"
             ]
         },
         "skill": ["Slayer"],

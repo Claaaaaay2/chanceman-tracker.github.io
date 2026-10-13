@@ -21,7 +21,10 @@ const LIKE_A_BOSS_MASTERS = new Set([
 
 const LIKE_A_BOSS = [
     {
-        name: "Abyssal Sire"
+        name: "Abyssal Sire",
+        notes: [
+            "Can be assigned as a boss even without Priest in Peril completed."
+        ]
     },
     {
         name: "Alchemical Hydra",

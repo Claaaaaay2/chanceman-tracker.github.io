@@ -406,11 +406,17 @@
                     "name": "Abyssal demons",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 85
+                            "Slayer": 85,
+                            "Combat": 85
                         },
-                        "quests": {
-                            "Priest in Peril": "completed"
-                        }
+                        "questsAny": [
+                            {
+                                "Priest in Peril": "completed"
+                            },
+                            {
+                                "Fairytale II - Cure a Queen": "completed"
+                            }
+                        ]
                     }
                 },
                 {
@@ -548,7 +554,11 @@
                     "name": "Nechryael",
                     "assignmentRequirements": {
                         "skills": {
-                            "Slayer": 80
+                            "Slayer": 80,
+                            "Combat": 85
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
                         }
                     }
                 },
@@ -1290,6 +1300,9 @@
                         "skills": {
                             "Slayer": 80,
                             "Combat": 85
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
                         }
                     }
                 },
@@ -1776,6 +1789,9 @@
                         "skills": {
                             "Slayer": 80,
                             "Combat": 85
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
                         }
                     }
                 },
@@ -1925,7 +1941,16 @@
                         "skills": {
                             "Slayer": 85,
                             "Combat": 85
-                        }
+                        },
+                        "questsAny": [
+                            {
+                                "Priest in Peril": "completed"
+                            },
+                            {
+                                "Fairytale II - Cure a Queen": "completed"
+                            }
+                        ]
+                    
                     },
                     "locations": [
                         {
@@ -1933,11 +1958,6 @@
                         },
                         {
                             "name": "Abyss",
-                            "assignmentRequirements": {
-                                "quests": {
-                                    "Priest in Peril": "completed"
-                                }
-                            },
                             "reachRequirements": {
                                 "rulesAll": [
                                     "canReachAbyssalSire"
@@ -1945,12 +1965,7 @@
                             }
                         },
                         {
-                            "name": "Slayer Tower",
-                            "assignmentRequirements": {
-                                "quests": {
-                                    "Priest in Peril": "completed"
-                                }
-                            }
+                            "name": "Slayer Tower"
                         }
                     ]
                 },
@@ -2236,6 +2251,9 @@
                 {
                     "name": "Dagannoth",
                     "assignmentRequirements": {
+                        "quests": {
+                            "Horror from the Deep": "completed"
+                        },
                         "skills": {
                             "Combat": 75
                         }
@@ -2751,6 +2769,9 @@
                         "skills": {
                             "Slayer": 80,
                             "Combat": 85
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
                         }
                     },
                     "locations": [
@@ -2813,6 +2834,9 @@
                         "skills": {
                             "Slayer": 72,
                             "Combat": 70
+                        },
+                        "quests": {
+                            "Elemental Workshop I": "completed"
                         }
                     },
                     "locations": [
@@ -2944,16 +2968,14 @@
                     "assignmentRequirements": {
                         "skills": {
                             "Combat": 75
-                        }
+                        },
+                        "rulesAll": [
+                            "canAssignWaterfiendsBarbarianFiremaking1"
+                        ]
                     },
                     "locations": [
                         {
                             "name": "Ancient Cavern",
-                            "assignmentRequirements": {
-                                "rulesAll": [
-                                    "canAssignWaterfiendsBarbarianFiremaking1"
-                                ]
-                            },
                             "reachRequirements": {
                                 "rulesAll": [
                                     "canAssignWaterfiendsBarbarianFiremaking1"
@@ -3053,9 +3075,14 @@
                             "Slayer": 85,
                             "Combat": 85
                         },
-                        "quests": {
-                            "Priest in Peril": "completed"
-                        }
+                        "questsAny": [
+                            {
+                                "Priest in Peril": "completed"
+                            },
+                            {
+                                "Fairytale II - Cure a Queen": "completed"
+                            }
+                        ]
                     }
                 },
                 {
@@ -3097,7 +3124,15 @@
                             "Slayer": 78,
                             "Sailing": 73
                         }
-                    }
+                    },
+                    "reachRequirements": {
+                        "rulesAll": [
+                            "canAccessYnsdailIsland"
+                        ]
+                    },
+                    "notes": [
+                        "Will only be assigned after slayer upgrade 'Lured In'."
+                    ]
                 },
                 {
                     "name": "Basilisks",
@@ -3391,6 +3426,9 @@
                         "skills": {
                             "Slayer": 80,
                             "Combat": 85
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
                         }
                     }
                 },
@@ -3585,13 +3623,21 @@
                     }
                 },
                 {
-                    "name": "Aquanite",
+                    "name": "Aquanites",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 78,
                             "Sailing": 73
                         }
-                    }
+                    },
+                    "reachRequirements": {
+                        "rulesAll": [
+                            "canAccessYnsdailIsland"
+                        ]
+                    },
+                    "notes": [
+                        "Will only be assigned after slayer upgrade 'Lured In'."
+                    ]
                 },
                 {
                     "name": "Araxytes",
@@ -3886,6 +3932,9 @@
                         "skills": {
                             "Slayer": 80,
                             "Combat": 85
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
                         }
                     }
                 },
@@ -3996,12 +4045,12 @@
                 {
                     "name": "Waterfiends",
                     "assignmentRequirements": {
-                        "rulesAll": [
-                            "canAssignWaterfiendsBarbarianFiremaking1"
-                        ],
                         "skills": {
                             "Combat": 75
-                        }
+                        },
+                        "rulesAll": [
+                            "canAssignWaterfiendsBarbarianFiremaking1"
+                        ]
                     }
                 },
                 {
@@ -4067,12 +4116,17 @@
                     }
                 },
                 {
-                    "name": "Aquanite",
+                    "name": "Aquanites",
                     "assignmentRequirements": {
                         "skills": {
                             "Slayer": 78,
                             "Sailing": 73
                         }
+                    },
+                    "reachRequirements": {
+                        "rulesAll": [
+                            "canAccessYnsdailIsland"
+                        ]
                     }
                 },
                 {
@@ -4324,6 +4378,9 @@
                         "skills": {
                             "Slayer": 80,
                             "Combat": 85
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
                         }
                     }
                 },
