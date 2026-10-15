@@ -783,6 +783,9 @@ export const REQUIREMENT_CHECKS = {
     canEnterCraftingGuild(ctx) {
         return canEnterCraftingGuild(ctx);
     },
+    canEnterRangingGuild(ctx) {
+        return canEnterRangingGuild(ctx);
+    },
     hasHighLevelHerb(ctx) {
         return hasAnyItems(ctx, [
             211,
@@ -6909,6 +6912,10 @@ function hasAnyLog(ctx) {
 function canEnterCraftingGuild(ctx) {
     return hasSkillLevel(ctx, "Crafting", 40) //
         && (has(ctx, 20208) || has(ctx, 1757)); // Golden apron / Brown apron
+}
+
+function canEnterRangingGuild(ctx) {
+    return hasSkillLevel(ctx, "Ranged", 40) //
 }
 
 function hasAnyFletchableLog(ctx) {
