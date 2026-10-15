@@ -1,4 +1,4 @@
-import{f as r,c as g,d as w,e as $,a as y,p as u,N as j,g as O,h as p,j as S}from"./index-cBfEPLry.js";async function I(){const e=r.obtained,s=r.rolled;if(!e||!s)return"<h1>Please upload your files on the Upload page first.</h1>";const l=new URLSearchParams(window.location.search).get("id");if(!l)return"<h1>No item selected</h1>";await r.ensureItemsLoaded();const i=r.items,a=i.find(n=>n.id==l);if(!a||g(a))return"<h1>Item not found</h1>";const c=await k(a,a.sources),t=P(a.processable,i);return`
+import{f as r,c as g,d as w,e as $,a as y,p as u,N as j,g as O,h as p,j as S}from"./index-CiuYoa58.js";async function I(){const e=r.obtained,s=r.rolled;if(!e||!s)return"<h1>Please upload your files on the Upload page first.</h1>";const l=new URLSearchParams(window.location.search).get("id");if(!l)return"<h1>No item selected</h1>";await r.ensureItemsLoaded();const i=r.items,a=i.find(n=>n.id==l);if(!a||g(a))return"<h1>Item not found</h1>";const c=await k(a,a.sources),t=P(a.processable,i);return`
         <h1>${a.name}</h1>
 
         <div class="item-header">
