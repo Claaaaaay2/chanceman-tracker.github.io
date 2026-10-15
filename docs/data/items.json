@@ -33433,7 +33433,7 @@
         }
       },
       "shops": {
-        "Yes": "No requirements"
+        "Yes": "canEnterRangingGuild"
       }
     },
     "tags": [
@@ -88510,7 +88510,7 @@
     "image": "iron_thrownaxe.png",
     "sources": {
       "shops": {
-        "Yes": "No requirements"
+        "Yes": "canEnterRangingGuild"
       }
     },
     "tags": [
@@ -106447,7 +106447,7 @@
         }
       },
       "shops": {
-        "Yes": "No requirements"
+        "Yes": "canEnterRangingGuild"
       }
     },
     "tags": [
@@ -133382,7 +133382,7 @@
         }
       },
       "shops": {
-        "Yes": "No requirements"
+        "Yes": "canEnterRangingGuild"
       }
     },
     "tags": [
@@ -149258,7 +149258,7 @@
         }
       },
       "shops": {
-        "Yes": "No requirements"
+        "Yes": "canEnterRangingGuild"
       }
     },
     "tags": [
