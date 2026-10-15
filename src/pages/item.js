@@ -2,6 +2,7 @@ import { NPC_DATA } from "../logic/npcData.js";
 import { isDropSlayerLocked, isItemHiddenByTag, isNpcBlockedByFilters, isNpcObtainable, isRuleObtainable, isSourceHiddenByFilters } from "../logic/itemVisibility.js";
 import { parseDropRate } from "../logic/utils.js";
 import { fileStore } from "../storage/fileStore.js";
+import { isTelegrabSpawnObtainable } from "../logic/telegrab.js";
 
 export default async function ItemPage() {
     const obtained = fileStore.obtained;
@@ -217,22 +218,19 @@ async function renderSourceTable(section, entries, item) {
     // ---------------------------
     // SPAWNS
     // ---------------------------
+    
+
     if (section === "spawns") {
         const rows = [];
+        const rolledSet = new Set(
+            (fileStore.rolled || []).map(Number)
+        );
 
         for (const [label, rule] of Object.entries(entries)) {
-            let obtainable = false;
+            const isRolled = rolledSet.has(Number(item.id));
 
-            if (fileStore.rolled.includes(id)) {
-                // Rule is a string
-                if (typeof rule === "string") {
-                    obtainable = await isRuleObtainable(rule, fileStore);
-                }
-                // Rule is an object (e.g. any/all)
-                else if (typeof rule === "object") {
-                    obtainable = await isRuleObtainable(rule, fileStore);
-                }
-            }
+            const obtainable = isRolled ||
+                await isTelegrabSpawnObtainable(rule, fileStore);
 
             rows.push(`
                 <tr>

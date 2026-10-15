@@ -5455,7 +5455,7 @@
     "image": "adamant_thrownaxe.png",
     "sources": {
       "shops": {
-        "Yes": "No requirements"
+        "Yes": "canEnterRangingGuild"
       }
     },
     "tags": [
@@ -96416,7 +96416,7 @@
         }
       },
       "spawns": {
-        "Yes": "No requirements"
+        "Yes": "canEnterRangingGuild"
       },
       "shops": {
         "Yes": "No requirements"
@@ -111997,7 +111997,7 @@
     "image": "oak_shield.png",
     "sources": {
       "spawns": {
-        "Yes": "No requirements"
+        "Yes": "canEnterRangingGuild"
       },
       "other": {
         "Fletching a shortbow": {

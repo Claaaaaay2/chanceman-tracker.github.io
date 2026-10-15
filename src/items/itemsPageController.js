@@ -13,6 +13,7 @@ import { initFiltersOverrides } from "../styles/filtersOverrides.js";
 import { getRankedItemsCache, invalidateLogicCaches, setRankedItemsCache } from "./logicCache.js";
 import { initNpcFilterUI } from "./npcFilterUI.js";
 import { hasSuperiorSlayerUnlock, isIronmanAccount } from "../logic/playerState.js";
+import { isTelegrabSpawnObtainable } from "../logic/telegrab.js";
 
 
 const ITEM_SECTION_TITLES = {
@@ -92,14 +93,30 @@ function isItemProfilingEnabled() {
     return typeof window !== "undefined" && window.__profileItems === true;
 }
 
-function isClueRewardOnlyBySource(item) {
+async function isClueRewardOnlyBySource(item, ctx) {
     const drops = item?.sources?.drops;
     if (!drops) return false;
 
     const dropSources = Object.keys(drops);
     if (dropSources.length === 0) return false;
 
-    return dropSources.every(source => CLUE_CASKET_SOURCES.has(source));
+    // At least one clue-casket drop must exist.
+    const hasClueCasketSource = dropSources.some(
+        source => CLUE_CASKET_SOURCES.has(source)
+    );
+
+    if (!hasClueCasketSource) return false;
+
+    // Every non-clue NPC drop must be unobtainable.
+    for (const source of dropSources) {
+        if (CLUE_CASKET_SOURCES.has(source)) continue;
+
+        if (await isNpcObtainable(source, ctx)) {
+            return false;
+        }
+    }
+
+    return true;
 }
 
 async function hasReachableNonClueSource(item, ctx, rolledSet) {
@@ -112,14 +129,20 @@ async function hasReachableNonClueSource(item, ctx, rolledSet) {
         }
     }
 
-    // Spawns only count if the item has been rolled.
-    if (rolledSet?.has(item.id) && item.sources?.spawns) {
-        for (const rule of Object.values(item.sources.spawns)) {
-            if (await isRuleObtainable(rule, ctx)) {
-                return true;
+        // Spawns count if the item has been rolled OR telegrab is enabled
+        // or the spawn is obtainable through the telegrab logic.
+        if (item.sources?.spawns) {
+            const isRolled = rolledSet?.has(item.id);
+            const canTelegrab = ctx.filters?.allowTelegrab;
+
+            if (isRolled || canTelegrab) {
+                for (const rule of Object.values(item.sources.spawns)) {
+                    if (await isRuleObtainable(rule, ctx)) {
+                        return true;
+                    }
+                }
             }
         }
-    }
 
     // "Other" sources count when they can actually be performed.
     if (item.sources?.other) {
@@ -215,6 +238,10 @@ function escapeHtml(value) {
 }
 
 function getItemDisplayRank(item, sort, isClueRewardOnly) {
+    if (sort.rank === 9) {
+        return 9;
+    }
+
     if (isClueRewardOnly) {
         return 8;
     }
@@ -459,18 +486,6 @@ export async function initItemsPage() {
             checkboxElements[config.key].disabled = disabled;
         }
     }
-
-    async function isTelegrabSpawnObtainable(rule, ctx) {
-    if (!ctx?.filters?.allowTelegrab) return false;
-
-    if (!(await hasTelegrabRunes(ctx))) return false;
-
-    if (!rule || rule === "No requirements") {
-        return true;
-    }
-
-    return await evaluateRule(rule, ctx);
-}
 
     function bindSectionSummaryNavigation() {
         if (!elements.itemsSectionSummary || elements.itemsSectionSummary.dataset.navBound === "true") return;
@@ -1390,7 +1405,7 @@ export async function initItemsPage() {
                 meta?.isClueRewardOnly ??
                 item.tags?.includes("clue-reward-only");
 
-            const isClueRewardOnlyBySourceValue = isClueRewardOnlyBySource(item);
+            const isClueRewardOnlyBySourceValue = await isClueRewardOnlyBySource(item, fileStore);
 
             if (isClueRewardOnlyBySourceValue) {
                 const hasOtherObtainableSource =
@@ -1399,7 +1414,9 @@ export async function initItemsPage() {
                 isClueRewardOnly = !hasOtherObtainableSource;
             }
 
-            if (hideClue && isClueRewardOnly) continue;
+            if (hideClue && isClueRewardOnly) {
+                sort.rank = 9;
+            }
 
             if (hideClue && await shouldHideForClueFilter(item, fileStore, rolledSet)) {
                 sort.rank = 9;
