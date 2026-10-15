@@ -262,15 +262,25 @@ export default async function ClueStepsPage() {
             let statusLabel = "Incompletable";
             let missingHtml = "";
 
+            const isJugglingMasterCryptic =
+                tier === "Master" &&
+                step.type === "Cryptic clues" &&
+                fileStore.filters?.juggleMasterCryptics;
+
             const isJuggledSherlock =
                 tier === "Elite" &&
                 description.startsWith("Show this to Sherlock.") &&
                 fileStore.filters?.juggleSherlockClues;
 
             if (hasPlayer) {
-                if (isJuggledSherlock) {
+                if (isJuggledSherlock || isJugglingMasterCryptic) {
                     // Sherlock clue juggling bug:
-                    // If we have one solvable Sherlock clue, we can keep juggling it instead of needing to solve the others.
+                    // If we have one solvable Sherlock clue, we can keep juggling it
+                    // instead of needing to solve the others.
+                    //
+                    // Master cryptic juggling:
+                    // If we have a good Master cryptic clue, we can keep juggling it
+                    // instead of needing to solve the others.
                     statusClass = "clue-status-ready";
                     statusLabel = "Completable";
                     isDoable = true;
@@ -295,7 +305,10 @@ export default async function ClueStepsPage() {
                             doableCount += 1;
                         }
                     } else {
-                        const trainableCtx = buildRequirementContext({ ignoreSkillLevels: true });
+                        const trainableCtx = buildRequirementContext({
+                            ignoreSkillLevels: true
+                        });
+
                         const { met: trainableMet } = await evaluateRequirements(
                             step.requirements,
                             trainableCtx,
@@ -391,6 +404,10 @@ export default async function ClueStepsPage() {
             <label class="clue-filter">
                 <input type="checkbox" id="juggleSherlockClues" ${fileStore.filters?.juggleSherlockClues ? "checked" : ""}>
                 I want to juggle good Sherlock clues (Elite clues only)
+            </label>
+            <label class="clue-filter">
+                <input type="checkbox" id="juggleMasterCryptics" ${fileStore.filters?.juggleMasterCryptics ? "checked" : ""}>
+                I want to juggle good Cryptic clues (Master clues only)
             </label>
         </div>
         <div class="clue-list" id="clueList">
@@ -492,6 +509,9 @@ export function init() {
         }
         if (event.target.id === "juggleSherlockClues") {
             await updateClueFiltersAndRerender({ juggleSherlockClues: event.target.checked });
+        }
+        if (event.target.id === "juggleMasterCryptics") {
+            await updateClueFiltersAndRerender({ juggleMasterCryptics: event.target.checked });
         }
     };
 
