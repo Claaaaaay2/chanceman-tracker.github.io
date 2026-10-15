@@ -66961,7 +66961,7 @@
               },
               {
                 "skill": "Farming",
-                "level": 36
+                "level": 34
               }
             ]
           }
@@ -68096,6 +68096,9 @@
     "image": "grey_toy_horsey.png",
     "sources": {
       "shops": {
+        "Yes": "No requirements"
+      },
+      "spawns": {
         "Yes": "No requirements"
       },
       "other": {
@@ -143330,7 +143333,7 @@
       },
       "other": {
         "Crafting some Spined chaps": {
-          "notes": "Requires Dagannoth hide and Stretched hide.",
+          "notes": "Requires Dagannoth hide and Stretched hide + completion of Fremennik Trials.",
           "rule": {
             "all": [
               {
