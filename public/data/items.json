@@ -6171,6 +6171,9 @@
         },
         "Large port reward bag (all ports)": {
           "droprate": "1/20"
+        },
+        "Chest (The Fractured Archive)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -6233,6 +6236,9 @@
         },
         "The Leviathan": {
           "droprate": "1/100"
+        },
+        "Chest (The Fractured Archive)": {
+          "droprate": "Unknown"
         }
       }
     }
@@ -13949,7 +13955,7 @@
     ],
     "sources": {
       "drops": {
-        "Raids4RewardsChestPlaceholder": {
+        "Chest (The Fractured Archive)": {
           "droprate": "Unknown"
         }
       }
@@ -13965,7 +13971,7 @@
         "Ascension rocks": {
           "droprate": "Always"
         },
-        "Raids4RewardsChestPlaceholder": {
+        "Chest (The Fractured Archive)": {
           "droprate": "Unknown"
         }
       }
@@ -14446,6 +14452,9 @@
           "droprate": "1/80"
         },
         "Huge port reward bag (lunar isle)": {
+          "droprate": "Unknown"
+        },
+        "Chest (The Fractured Archive)": {
           "droprate": "Unknown"
         }
       },
@@ -18203,6 +18212,9 @@
         },
         "Silver Chest (red)": {
           "droprate": "1/16.932; 1/16.52"
+        },
+        "Chest (The Fractured Archive)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -25279,6 +25291,9 @@
         },
         "Veiled kraken": {
           "droprate": "1/54.4"
+        },
+        "Chest (The Fractured Archive)": {
+          "droprate": "Unknown"
         }
       },
       "spawns": {
@@ -34725,6 +34740,9 @@
         },
         "Reward casket (master)": {
           "droprate": "1/13616"
+        },
+        "Chest (The Fractured Archive)": {
+          "droprate": "Always"
         }
       }
     }
@@ -46328,6 +46346,9 @@
         },
         "Gem stall (Port Roberts)": {
           "droprate": "1/384"
+        },
+        "Chest (The Fractured Archive)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -48938,6 +48959,9 @@
         },
         "Grotesque Guardians": {
           "droprate": "2 × 1/142"
+        },
+        "Chest (The Fractured Archive)": {
+          "droprate": "Unknown"
         }
       }
     },
@@ -51623,6 +51647,9 @@
         },
         "Revenant imp": {
           "droprate": "1/6050"
+        },
+        "Chest (The Fractured Archive)": {
+          "droprate": "Unknown"
         }
       }
     },
@@ -51729,6 +51756,9 @@
         },
         "Revenant imp": {
           "droprate": "1/6050"
+        },
+        "Chest (The Fractured Archive)": {
+          "droprate": "Unknown"
         }
       }
     },
@@ -54384,6 +54414,9 @@
         },
         "Zombie (Tarn's Lair) Low level": {
           "droprate": "1/128"
+        },
+        "Chest (The Fractured Archive)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -54926,6 +54959,9 @@
         },
         "Veiled kraken": {
           "droprate": "1/27.2"
+        },
+        "Chest (The Fractured Archive)": {
+          "droprate": "Unknown"
         }
       },
       "spawns": {
@@ -56242,6 +56278,9 @@
         },
         "Vardorvis": {
           "droprate": "1/100"
+        },
+        "Chest (The Fractured Archive)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -73221,6 +73260,9 @@
         },
         "Veiled kraken": {
           "droprate": "1/276.3"
+        },
+        "Chest (The Fractured Archive)": {
+          "droprate": "Unknown"
         }
       }
     },
@@ -78231,6 +78273,9 @@
         },
         "Veiled kraken": {
           "droprate": "1/351.7"
+        },
+        "Chest (The Fractured Archive)": {
+          "droprate": "Unknown"
         }
       }
     },
@@ -79395,6 +79440,9 @@
         },
         "Artio": {
           "droprate": "1/128"
+        },
+        "Chest (The Fractured Archive)": {
+          "droprate": "Unknown"
         }
       }
     },
@@ -82792,7 +82840,7 @@
     ],
     "sources": {
       "drops": {
-        "Raids4RewardsChestPlaceholder": {
+        "Chest (The Fractured Archive)": {
           "droprate": "Unknown"
         }
       }
@@ -87853,6 +87901,9 @@
         },
         "Small port reward bag (all ports)": {
           "droprate": "1/168"
+        },
+        "Chest (The Fractured Archive)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -91975,6 +92026,9 @@
         },
         "Flowering Tree (Forestry event)": {
           "droprate": "Uncommon"
+        },
+        "Chest (The Fractured Archive)": {
+          "droprate": "Unknown"
         }
       }
     },
@@ -98686,6 +98740,9 @@
           "droprate": "Common"
         },
         "Tiny port reward bag (etceteria)": {
+          "droprate": "Unknown"
+        },
+        "Chest (The Fractured Archive)": {
           "droprate": "Unknown"
         }
       },
@@ -110385,6 +110442,9 @@
         },
         "Wise Old Man tasks": {
           "droprate": "Common"
+        },
+        "Chest (The Fractured Archive)": {
+          "droprate": "Unknown"
         }
       },
       "spawns": {
@@ -112542,7 +112602,7 @@
     ],
     "sources": {
       "drops": {
-        "Raids4RewardsChestPlaceholder": {
+        "Chest (The Fractured Archive)": {
           "droprate": "Unknown"
         }
       }
@@ -113761,6 +113821,9 @@
         },
         "TzHaar-Ket Level 221": {
           "droprate": "1/51.2; 1/38.4"
+        },
+        "Chest (The Fractured Archive)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -120245,6 +120308,9 @@
         },
         "Reward Cart": {
           "droprate": "Varies"
+        },
+        "Chest (The Fractured Archive)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -123765,6 +123831,9 @@
         },
         "Barrel (Shaman Caves)": {
           "droprate": "Rare"
+        },
+        "Chest (The Fractured Archive)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -127309,7 +127378,7 @@
     ],
     "sources": {
       "drops": {
-        "Raids4RewardsChestPlaceholder": {
+        "Chest (The Fractured Archive)": {
           "droprate": "Unknown"
         }
       }
@@ -127852,6 +127921,9 @@
         },
         "Vardorvis": {
           "droprate": "1/100"
+        },
+        "Chest (The Fractured Archive)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -131345,6 +131417,9 @@
         },
         "Revenant imp": {
           "droprate": "1/1512.5"
+        },
+        "Chest (The Fractured Archive)": {
+          "droprate": "Unknown"
         }
       },
       "other": {
@@ -134708,6 +134783,9 @@
         },
         "Blood-starved venator": {
           "droprate": "3 x Unknown"
+        },
+        "Chest (The Fractured Archive)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -135573,6 +135651,9 @@
         },
         "Vardorvis": {
           "droprate": "1/100"
+        },
+        "Chest (The Fractured Archive)": {
+          "droprate": "Unknown"
         }
       },
       "spawns": {
@@ -141740,6 +141821,9 @@
         },
         "Master Farmer": {
           "droprate": "1/1854.4–1/3835.23"
+        },
+        "Chest (The Fractured Archive)": {
+          "droprate": "Unknown"
         }
       }
     },
@@ -142426,6 +142510,9 @@
         },
         "Wise Old Man tasks": {
           "droprate": "Rare"
+        },
+        "Chest (The Fractured Archive)": {
+          "droprate": "Unknown"
         }
       }
     },
@@ -142878,6 +142965,9 @@
         },
         "Nex": {
           "droprate": "Common"
+        },
+        "Chest (The Fractured Archive)": {
+          "droprate": "Unknown"
         }
       },
       "shops": {
@@ -170623,6 +170713,9 @@
         },
         "The Mimic Master": {
           "droprate": "1/5.158; 1/5.15"
+        },
+        "Chest (The Fractured Archive)": {
+          "droprate": "Unknown"
         }
       },
       "spawns": {
@@ -173610,6 +173703,9 @@
         },
         "Revenant pyrefiend": {
           "droprate": "1/3140; 1/1727"
+        },
+        "Chest (The Fractured Archive)": {
+          "droprate": "Unknown"
         }
       }
     },
@@ -175228,7 +175324,7 @@
     ],
     "sources": {
       "drops": {
-        "Raids4RewardsChestPlaceholder": {
+        "Chest (The Fractured Archive)": {
           "droprate": "Unknown"
         }
       }

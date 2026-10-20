@@ -940,15 +940,15 @@ export const NPC_DATA = {
         },
         "skill": ["mining"],
         "level": [80],
-        "tags": ["raid"],
+        "tags": [],
         "f2p": false
     },
-    "Raids4RewardsChestPlaceholder": {
-        "wiki": "https://oldschool.runescape.wiki/w/Raids4RewardsChestPlaceholder",
+    "Chest (The Fractured Archive)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Chest_(The_Fractured_Archive)",
         "rule": ["canDoTheFracturedArchive"],
         "skill": [],
         "level": [],
-        "tags": [],
+        "tags": ["raid"],
         "f2p": false
     },
     "Ash pile": {
