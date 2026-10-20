@@ -3363,7 +3363,7 @@ function canCompleteAtFirstLight(ctx) {
         hasNonBoostableSkillLevel(ctx, "Construction", 27),
         requiresQuest(ctx, "canCompleteEaglesPeak", canCompleteEaglesPeak), //
         requiresQuest(ctx, "canCompleteChildrenOfTheSun", canCompleteChildrenOfTheSun), //
-        has(ctx, 4055), // Toy mouse (wound)
+        has(ctx, 7769), // Toy mouse (wound)
         has(ctx, 29166), // Jerboa tail
         has(ctx, 2347), // Hammer
     ]);
