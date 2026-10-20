@@ -930,6 +930,27 @@ export const NPC_DATA = {
         "tags": [],
         "f2p": false
     },
+    "Ascension rocks": {
+        "wiki": "https://oldschool.runescape.wiki/w/Ascension_rocks",
+        "rule": {
+            "all": [
+                "canCompleteWhileGuthixSleeps",
+                "hasUsablePickaxe"
+            ]
+        },
+        "skill": ["mining"],
+        "level": [80],
+        "tags": ["raid"],
+        "f2p": false
+    },
+    "Raids4RewardsChestPlaceholder": {
+        "wiki": "https://oldschool.runescape.wiki/w/Raids4RewardsChestPlaceholder",
+        "rule": ["canDoTheFracturedArchive"],
+        "skill": [],
+        "level": [],
+        "tags": [],
+        "f2p": false
+    },
     "Ash pile": {
         "wiki": "https://oldschool.runescape.wiki/w/Ash_pile",
         "rule": ["canCompleteBoneVoyage"],
@@ -3446,6 +3467,14 @@ export const NPC_DATA = {
         "skill": [],
         "level": [],
         "tags": [],
+        "f2p": false
+    },
+    "Chest (inside Theatre of Blood)": {
+        "wiki": "https://oldschool.runescape.wiki/w/Chest_(Theatre_of_Blood)",
+        "rule": ["canCompletePriestInPeril"],
+        "skill": [],
+        "level": [],
+        "tags": ["raid"],
         "f2p": false
     },
     "Chest (Tombs of Amascut)": {
