@@ -1913,6 +1913,9 @@
                         "skills": {
                             "Slayer": 60,
                             "Combat": 65
+                        },
+                        "quests": {
+                            "Priest in Peril": "completed"
                         }
                     },
                     "notes": [
@@ -2662,7 +2665,8 @@
                             "name": "Ruins of Tapoyauik",
                             "assignmentRequirements": {
                                 "quests": {
-                                    "The Heart of Darkness": "completed"
+                                    "The Heart of Darkness": "completed",
+                                    "Perilous Moons": "completed"
                                 }
                             }
                         },
@@ -2670,7 +2674,8 @@
                             "name": "Crypt of Tonali",
                             "assignmentRequirements": {
                                 "quests": {
-                                    "The Final Dawn": "completed"
+                                    "The Final Dawn": "completed",
+                                    "Perilous Moons": "completed"
                                 }
                             }
                         }

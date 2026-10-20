@@ -1625,6 +1625,9 @@ export const REQUIREMENT_CHECKS = {
     canDoTombsOfAmascut(ctx) {
         return canDoTombsOfAmascut(ctx);
     },
+    canDoTheFracturedArchive(ctx) {
+        return canDoTheFracturedArchive(ctx);
+    },
     canCompleteHeroesQuest(ctx) {
         return canCompleteHeroesQuest(ctx);
     },
@@ -6518,6 +6521,10 @@ function canDoTombsOfAmascut(ctx) {
         && hasUsablePickaxe(ctx) //;
 }
 
+function canDoTheFracturedArchive(ctx) {
+    return requiresQuest(ctx, "canCompleteWhileGuthixSleeps", canCompleteWhileGuthixSleeps) //
+} 
+
 function canDoMageTrainingArena(ctx) {
     return has(ctx, 564) // Cosmic rune
         && has(ctx, 561) // Nature rune
@@ -6951,8 +6958,7 @@ function canPitfallTrap(ctx) {
 
 function canCatchSalamanders(ctx) {
     return canTrainHunter(ctx) //
-        && has(ctx, 954) // Rope
-        && has(ctx, 303); // Small fishing net
+        && has(ctx, 34631) // Net trap
 }
 
 function canCatchCrabs(ctx) {

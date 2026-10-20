@@ -13913,6 +13913,65 @@
     ]
   },
   {
+    "index": 4609,
+    "id": 34684,
+    "name": "Ascension bolts",
+    "image": "Ascension_bolts.png",
+    "sources": {
+      "other": {
+        "Crafting bolts": {
+          "notes": "Requires Ascension shards, a chisel and Fletching level 86.",
+          "rule": {
+            "all": [
+              {
+                "has": 34669
+              },
+              {
+                "has": 1755
+              },
+              {
+                "skill": "Fletching",
+                "level": 86
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "index": 4611,
+    "id": 34681,
+    "name": "Ascension crossbows",
+    "image": "Ascension_crossbows.png",
+    "tags": [
+      "Ranged"
+    ],
+    "sources": {
+      "drops": {
+        "Raids4RewardsChestPlaceholder": {
+          "droprate": "Unknown"
+        }
+      }
+    }
+  },
+  {
+    "index": 4610,
+    "id": 34669,
+    "name": "Ascension shards",
+    "image": "Ascension_shards.png",
+    "sources": {
+      "drops": {
+        "Ascension rocks": {
+          "droprate": "Always"
+        },
+        "Raids4RewardsChestPlaceholder": {
+          "droprate": "Unknown"
+        }
+      }
+    }
+  },
+  {
     "index": 376,
     "id": 1905,
     "name": "Asgarnian ale",
@@ -46289,6 +46348,57 @@
         "Questing": {
           "notes": "Obtained upon completion of Waterfall Quest.",
           "rule": "canCompleteWaterfallQuest"
+        }
+      }
+    }
+  },
+  {
+    "index": 4614,
+    "id": 34690,
+    "name": "Diamond ascension bolts",
+    "image": "Diamond_ascension_bolts.png",
+    "sources": {
+      "other": {
+        "Crafting bolts": {
+          "notes": "Requires Ascension bolts, diamond bolt tips and Fletching level 86 (TODO:confirm later).",
+          "rule": {
+            "all": [
+              {
+                "has": 34684
+              },
+              {
+                "has": 9192
+              },
+              {
+                "skill": "Fletching",
+                "level": 86
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "index": 4615,
+    "id": 34696,
+    "name": "Diamond ascension bolts (e)",
+    "image": "Diamond_ascension_bolts_e.png",
+    "sources": {
+      "other": {
+        "Crafting bolts": {
+          "notes": "Requires Diamond ascension bolts and Magic level 57.",
+          "rule": {
+            "all": [
+              {
+                "has": 34690
+              },
+              {
+                "skill": "Magic",
+                "level": 57
+              }
+            ]
+          }
         }
       }
     }
@@ -82673,6 +82783,22 @@
     }
   },
   {
+    "index": 4618,
+    "id": 34679, 
+    "name": "Horn of Bran",
+    "image": "Horn_of_Bran.png",
+    "tags": [
+      "Prayer"
+    ],
+    "sources": {
+      "drops": {
+        "Raids4RewardsChestPlaceholder": {
+          "droprate": "Unknown"
+        }
+      }
+    }
+  },
+  {
     "index": 1955,
     "id": 31243,
     "name": "Horn of plenty (empty)",
@@ -99224,10 +99350,10 @@
         },
         "Vorkath": {
           "droprate": "2 × 1/150"
+        },
+        "Chest (inside Theatre of Blood)": {
+          "droprate": "Always"
         }
-      },
-      "shops": {
-        "Yes": "canCompletePriestInPeril"
       },
       "other": {
         "Cooking a Manta ray": {
@@ -107955,10 +108081,10 @@
         },
         "Wingman Skree": {
           "droprate": "1/15.875"
+        },
+        "Chest (inside Theatre of Blood)": {
+          "droprate": "Always"
         }
-      },
-      "shops": {
-        "Yes": "canCompletePriestInPeril"
       },
       "other": {
         "Cooking a Mushroom potato": {
@@ -112407,6 +112533,22 @@
     }
   },
   {
+    "index": 4617,
+    "id": 34715, 
+    "name": "Obligator (uncharged)",
+    "image": "Obligator.png",
+    "tags": [
+      "Melee"
+    ],
+    "sources": {
+      "drops": {
+        "Raids4RewardsChestPlaceholder": {
+          "droprate": "Unknown"
+        }
+      }
+    }
+  },
+  {
     "index": 2688,
     "id": 21279,
     "name": "Obsidian armour set",
@@ -113351,6 +113493,57 @@
     "tags": [
       "Crafting"
     ]
+  },
+  {
+    "index": 4612,
+    "id": 34702,
+    "name": "Onyx ascension bolts",
+    "image": "Onyx_ascension_bolts.png",
+    "sources": {
+      "other": {
+        "Crafting bolts": {
+          "notes": "Requires Ascension bolts, onyx bolt tips and Fletching level 86 (TODO:confirm later).",
+          "rule": {
+            "all": [
+              {
+                "has": 34684
+              },
+              {
+                "has": 9194
+              },
+              {
+                "skill": "Fletching",
+                "level": 86
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "index": 4613,
+    "id": 34708,
+    "name": "Onyx ascension bolts (e)",
+    "image": "Onyx_ascension_bolts_e.png",
+    "sources": {
+      "other": {
+        "Crafting bolts": {
+          "notes": "Requires Onyx ascension bolts and Magic level 87.",
+          "rule": {
+            "all": [
+              {
+                "has": 34702
+              },
+              {
+                "skill": "Magic",
+                "level": 87
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   {
     "index": 2718,
@@ -119150,10 +119343,10 @@
         },
         "Nex": {
           "droprate": "Common"
+        },
+        "Chest (inside Theatre of Blood)": {
+          "droprate": "Always"
         }
-      },
-      "shops": {
-        "Yes": "canCompletePriestInPeril"
       },
       "other": {
         "Mixing a potion": {
@@ -127105,6 +127298,22 @@
       "Melee",
       "Prayer armours"
     ]
+  },
+  {
+    "index": 4616,
+    "id": 34719,
+    "name": "Rondache",
+    "image": "Rondache.png",
+    "tags": [
+      "Melee armours"
+    ],
+    "sources": {
+      "drops": {
+        "Raids4RewardsChestPlaceholder": {
+          "droprate": "Unknown"
+        }
+      }
+    }
   },
   {
     "index": 3150,
@@ -136251,10 +136460,10 @@
         },
         "Nex": {
           "droprate": "Common"
+        },
+        "Chest (inside Theatre of Blood)": {
+          "droprate": "Always"
         }
-      },
-      "shops": {
-        "Yes": "canCompletePriestInPeril"
       },
       "other": {
         "Mixing a potion": {
@@ -137072,10 +137281,10 @@
       "drops": {
         "The Leviathan": {
           "droprate": "1/5.4"
+        },
+        "Chest (inside Theatre of Blood)": {
+          "droprate": "Always"
         }
-      },
-      "shops": {
-        "Yes": "canCompletePriestInPeril"
       },
       "other": {
         "Cooking a Sea turtle": {
@@ -138407,10 +138616,10 @@
         },
         "Nex": {
           "droprate": "Common"
+        },
+        "Chest (inside Theatre of Blood)": {
+          "droprate": "Always"
         }
-      },
-      "shops": {
-        "Yes": "canCompletePriestInPeril"
       },
       "other": {
         "Cooking a Shark": {
@@ -144370,10 +144579,10 @@
       "drops": {
         "Jekyll and Hyde Torstol": {
           "droprate": "Always"
+        },
+        "Chest (inside Theatre of Blood)": {
+          "droprate": "Always"
         }
-      },
-      "shops": {
-        "Yes": "canCompletePriestInPeril"
       },
       "other": {
         "Mixing a potion": {
@@ -153033,10 +153242,10 @@
         },
         "Nex": {
           "droprate": "Common"
+        },
+        "Chest (inside Theatre of Blood)": {
+          "droprate": "Always"
         }
-      },
-      "shops": {
-        "Yes": "canCompletePriestInPeril"
       },
       "other": {
         "Mixing a potion": {
@@ -175005,6 +175214,22 @@
         },
         "Zombie pirate Regular": {
           "droprate": "1/78.75"
+        }
+      }
+    }
+  },
+  {
+    "index": 4619,
+    "id": 34725,
+    "name": "Zorya's tome (uncharged)",
+    "image": "Zorya's_tome_(uncharged).png",
+    "tags": [
+      "Magic"
+    ],
+    "sources": {
+      "drops": {
+        "Raids4RewardsChestPlaceholder": {
+          "droprate": "Unknown"
         }
       }
     }
