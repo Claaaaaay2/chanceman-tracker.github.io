@@ -107392,17 +107392,6 @@
         "Moonlight antelope": {
           "droprate": "Always"
         }
-      },
-      "shops": {
-        "Yes": {
-          "all": [
-            "canCompletePandemonium",
-            {
-              "skill": "Sailing",
-              "level": 67
-            }
-          ]
-        }
       }
     }
   },
