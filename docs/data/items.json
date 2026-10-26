@@ -36,7 +36,7 @@
       "clue-reward-only",
       "Melee",
       "Woodcutting",
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -215,7 +215,7 @@
       "clue-reward-only",
       "Melee",
       "Woodcutting",
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -370,7 +370,7 @@
       "clue-reward-only",
       "Melee",
       "Mining",
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -6206,7 +6206,7 @@
     },
     "tags": [
       "Food",
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -14670,6 +14670,9 @@
     "name": "Attack potion(1)",
     "image": "attack_potion(1).png",
     "sources": {
+      "spawns": {
+        "Yes": "No requirements"
+      },
       "other": {
         "Decanting a potion": {
           "notes": "Decanting an Attack potion(2), (3) or (4).",
@@ -15418,7 +15421,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -15463,7 +15466,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -15508,7 +15511,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -15553,7 +15556,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -16292,7 +16295,7 @@
     },
     "tags": [
       "Food",
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -17290,7 +17293,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -23138,7 +23141,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -29398,7 +29401,7 @@
     },
     "tags": [
       "Food",
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -38806,7 +38809,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -38927,7 +38930,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -39002,7 +39005,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -39077,7 +39080,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -39172,7 +39175,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -39885,7 +39888,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -39968,7 +39971,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -40007,7 +40010,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -48996,7 +48999,7 @@
     "tags": [
       "Melee",
       "Woodcutting",
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -50324,7 +50327,7 @@
     "tags": [
       "Fishing",
       "Melee",
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -51434,7 +51437,7 @@
     "tags": [
       "Melee",
       "Mining",
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -52178,7 +52181,7 @@
     },
     "tags": [
       "Food",
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -53991,7 +53994,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -54043,7 +54046,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -54099,7 +54102,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -54151,7 +54154,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -55443,7 +55446,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -56050,7 +56053,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -61920,7 +61923,7 @@
     },
     "tags": [
       "Food",
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -63717,7 +63720,7 @@
     },
     "tags": [
       "Food",
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -67993,7 +67996,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -68081,7 +68084,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -68126,7 +68129,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -68171,7 +68174,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -83798,7 +83801,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -89132,7 +89135,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -91416,7 +91419,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -91441,7 +91444,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -96054,7 +96057,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -100835,7 +100838,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -100880,7 +100883,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -101324,7 +101327,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -101442,7 +101445,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -101502,7 +101505,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -108100,7 +108103,7 @@
     },
     "tags": [
       "Food",
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -117569,7 +117572,7 @@
     },
     "tags": [
       "Food",
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -134968,7 +134971,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -140560,7 +140563,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -140605,7 +140608,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -140650,7 +140653,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -140695,7 +140698,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -144795,7 +144798,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -151171,7 +151174,7 @@
     },
     "tags": [
       "Food",
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -151252,7 +151255,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -154948,6 +154951,10 @@
               }
             ]
           }
+        },
+        "Completing the quest Tribal Totem": {
+          "notes": "Rewarded upon completing the quest.",
+          "rule": "canCompleteTribalTotem"
         }
       }
     }
@@ -161002,7 +161009,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -169563,7 +169570,7 @@
     },
     "tags": [
       "Food",
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {
@@ -170865,7 +170872,7 @@
       }
     },
     "tags": [
-      "Other skill boosts"
+      "Skill boosts"
     ],
     "boosts": [
       {

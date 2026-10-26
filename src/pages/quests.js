@@ -347,7 +347,20 @@ export default async function QuestsPage() {
                 data-doable="${quest.isDoable ? "true" : "false"}"
                 data-trainable="${quest.isTrainable ? "true" : "false"}"
                 data-name="${quest.questName.toLowerCase()}">
-                <div class="quest-name">${quest.questName}${questInfoHtml}</div>
+                <div class="quest-name">
+                    <span class="quest-title">${escapeHtml(quest.questName)}</span>
+                    ${questInfoHtml}
+                    <a
+                        class="quest-wiki-link"
+                        href="https://oldschool.runescape.wiki/w/${encodeURIComponent(quest.questName.replace(/ /g, "_"))}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="View ${escapeHtml(quest.questName)} on the OSRS Wiki"
+                        aria-label="View ${escapeHtml(quest.questName)} on the OSRS Wiki"
+                    >
+                        <img src="/images/wiki.png" style="width: 32px" />
+                    </a>
+                </div>
                 <div class="quest-status">${quest.statusLabel}</div>
                 ${missingHtml}
             </div>

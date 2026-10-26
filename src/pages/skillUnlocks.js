@@ -1,6 +1,7 @@
 import { fileStore } from "../storage/fileStore.js";
 
 const SECTION_ORDER = [
+    "Skill boosts",
     "Melee",
     "Melee armours",
     "Ranged",
@@ -9,7 +10,6 @@ const SECTION_ORDER = [
     "Magic armours",
     "Prayer armours",
     "Food",
-    "Other skill boosts",
     "Potion",
     "Teleports",
     "Cooking",
