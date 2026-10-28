@@ -11084,12 +11084,7 @@ export const NPC_DATA = {
     },
     "Ogre Coffin": {
         "wiki": "https://oldschool.runescape.wiki/w/Ogre_Coffin",
-        "rule": {
-            "all": [
-                "canCompleteZogreFleshEaters",
-                "hasOgreCoffinKey"
-            ]
-        },
+        "rule": ["hasOgreCoffinKey"],
         "skill": [],
         "level": [],
         "tags": [],

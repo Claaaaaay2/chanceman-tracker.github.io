@@ -112586,7 +112586,7 @@
   },
   {
     "index": 4617,
-    "id": 34715, 
+    "id": 34717, 
     "name": "Obligator (uncharged)",
     "image": "Obligator.png",
     "tags": [
@@ -127366,7 +127366,8 @@
     "name": "Rondache",
     "image": "Rondache.png",
     "tags": [
-      "Melee armours"
+      "Melee armours",
+      "God Wars - Saradomin"
     ],
     "sources": {
       "drops": {
@@ -175312,7 +175313,7 @@
   },
   {
     "index": 4619,
-    "id": 34725,
+    "id": 34727,
     "name": "Zorya's tome (uncharged)",
     "image": "Zorya's_tome_(uncharged).png",
     "tags": [

@@ -262,6 +262,10 @@ export default async function ClueStepsPage() {
             let statusLabel = "Incompletable";
             let missingHtml = "";
 
+            const isJorralStep =
+                description.startsWith("Buried beneath the ground, who knows where it's found.") &&
+                fileStore.filters?.ignoreMakingHistoryJorral;
+
             const isJugglingMasterCryptic =
                 tier === "Master" &&
                 step.type === "Cryptic clues" &&
@@ -290,8 +294,22 @@ export default async function ClueStepsPage() {
                     }
                 } else {
                     const ctx = buildRequirementContext();
+
+                    let requirements = step.requirements;
+
+                    if (isJorralStep && requirements.quests?.["Making History"]) {
+                        requirements = {
+                            ...requirements,
+                            quests: Object.fromEntries(
+                                Object.entries(requirements.quests).filter(
+                                    ([quest]) => quest !== "Making History"
+                                )
+                            )
+                        };
+                    }
+
                     const { met, missing } = await evaluateRequirements(
-                        step.requirements,
+                        requirements,
                         ctx,
                         itemsById
                     );
@@ -310,7 +328,7 @@ export default async function ClueStepsPage() {
                         });
 
                         const { met: trainableMet } = await evaluateRequirements(
-                            step.requirements,
+                            requirements,
                             trainableCtx,
                             itemsById
                         );
@@ -408,6 +426,10 @@ export default async function ClueStepsPage() {
             <label class="clue-filter">
                 <input type="checkbox" id="juggleMasterCryptics" ${fileStore.filters?.juggleMasterCryptics ? "checked" : ""}>
                 I want to juggle good Cryptic clues (Master clues only)
+            </label>
+            <label class="clue-filter">
+                <input type="checkbox" id="ignoreMakingHistoryJorral" ${fileStore.filters?.ignoreMakingHistoryJorral ? "checked" : ""}>
+                I want to dig in all available Jorral spots manually
             </label>
         </div>
         <div class="clue-list" id="clueList">
@@ -512,6 +534,9 @@ export function init() {
         }
         if (event.target.id === "juggleMasterCryptics") {
             await updateClueFiltersAndRerender({ juggleMasterCryptics: event.target.checked });
+        }
+        if (event.target.id === "ignoreMakingHistoryJorral") {
+            await updateClueFiltersAndRerender({ ignoreMakingHistoryJorral: event.target.checked });
         }
     };
 
