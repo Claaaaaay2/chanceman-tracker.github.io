@@ -2358,7 +2358,7 @@ export const REQUIREMENT_CHECKS = {
         return canCompleteBelowIceMountain(ctx) || canEnterLumbridgeSwampCaves(ctx);
     },
     hasOgreCoffinKey(ctx) {
-        return has(ctx, 4850);
+        return has(ctx, 4850) && (isIronmanAccount(ctx.player) ? canCompleteZogreFleshEaters(ctx) || hasTelegrabRunes(ctx) : true);
     },
     hasZombiePirateKey(ctx) {
         return has(ctx, 29449);
@@ -4038,7 +4038,6 @@ function canCompleteElementalWorkshopI(ctx) {
         hasSkillLevel(ctx, "Smithing", 20),
         hasSkillLevel(ctx, "Crafting", 20),
         has(ctx, 2347), // Hammer
-        has(ctx, 1733), // Needle
         has(ctx, 1734), // Thread
         has(ctx, 1741), // Leather
         has(ctx, 453), // Coal
