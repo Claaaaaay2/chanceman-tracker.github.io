@@ -1,4 +1,4 @@
-import{f as e}from"./index-KZi7GjdR.js";async function t(){return await e.ensureItemsLoaded(),`
+import{f as e}from"./index-Bs_UqkQA.js";async function i(){return await e.ensureItemsLoaded(),`
         <div class="items-header">
             <h1>Items</h1>
             <button id="filter-overrides-toggle" title="Toggle filters and overrides">
@@ -159,55 +159,6 @@ import{f as e}from"./index-KZi7GjdR.js";async function t(){return await e.ensure
                 </label>
                 </div>
 
-            <p class="marginOneRem"><strong>Overrides</strong> (e.g. when you want to see what lamping a skill can bring you)</p>
-
-            <div class="skill-filters">
-
-                <label>
-                    <input type="checkbox" id="overrideWoodcutting">
-                    Override woodcutting
-                </label>
-
-                <label>
-                    <input type="checkbox" id="overrideMining">
-                    Override mining
-                </label>
-
-                <label>
-                    <input type="checkbox" id="overrideFishing">
-                    Override fishing
-                </label>
-
-                <label>
-                    <input type="checkbox" id="overrideCooking">
-                    Override cooking
-                </label>
-
-                <label>
-                    <input type="checkbox" id="overrideFarming">
-                    Override farming
-                </label>
-
-                <label>
-                    <input type="checkbox" id="overrideFletching">
-                    Override fletching
-                </label>
-
-                <label>
-                    <input type="checkbox" id="overrideCrafting">
-                    Override crafting
-                </label>
-
-                <label>
-                    <input type="checkbox" id="overrideConstruction">
-                    Override construction
-                </label>
-
-                <label>
-                    <input type="checkbox" id="overrideSmithing">
-                    Override smithing
-                </label>
-            </div>
         </div>
 
         <div id="itemsLoading" class="items-loading" aria-live="polite">
@@ -215,4 +166,4 @@ import{f as e}from"./index-KZi7GjdR.js";async function t(){return await e.ensure
             <span>Loading items...</span>
         </div>
         <div class="item-grid" id="itemGrid"></div>
-    `}export{t as default};
+    `}export{i as default};

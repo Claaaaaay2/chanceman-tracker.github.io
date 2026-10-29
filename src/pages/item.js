@@ -26,17 +26,17 @@ export default async function ItemPage() {
     const sourcesHtml = await renderSources(item, item.sources);
     const processableHtml = renderProcessable(item.processable, items);
 
-    return `
-        <h1>${item.name}</h1>
+        return `
+            <h1>${item.name}</h1>
 
-        <div class="item-header">
-            <img src="/images/${item.image}" style="margin: 1rem" />
-            <a href="https://oldschool.runescape.wiki/w/${item.name}" target="_blank">
-                <img src="/images/wiki.png" style="width: 32px" />
-            </a>
-        </div>
+            <div class="item-header">
+                <img src="/images/${item.image}" style="margin: 1rem" />
+                <a href="https://oldschool.runescape.wiki/w/${item.name}" target="_blank">
+                    <img src="/images/wiki.png" style="width: 32px" />
+                </a>
+            </div>
 
-        <h2>Where to get it</h2>
+            <h2>Where to get it</h2>
         ${sourcesHtml}
 
         <h2>Processable into:</h2>
@@ -122,13 +122,28 @@ async function renderSourceTable(section, entries, item) {
             return a.name.localeCompare(b.name);
         });
 
-        const htmlRows = rows.map(({ name, data, obtainable }) => `
-            <tr>
-                <td><a href="${NPC_DATA[name]?.wiki || "#"}" target="_blank">${name}</a></td>
-                <td>${data.droprate}</td>
-                <td>${obtainable ? yes() : no()}</td>
-            </tr>
-        `).join("");
+        
+        
+        const htmlRows = rows.map(({ name, data, obtainable }) => {
+            const note = NPC_DATA[name]?.note;
+
+            const noteHtml = note
+                ? ` <span class="clue-step-info quest-info source-info"
+                    tabindex="0"
+                    aria-label="Source information"
+                    title="${escapeHtml(note)}">i</span>`
+                : "";
+
+            return `
+                <tr>
+                    <td>
+                        <a href="${NPC_DATA[name]?.wiki || "#"}" target="_blank">${name}</a>${noteHtml}
+                    </td>
+                    <td>${data.droprate}</td>
+                    <td>${obtainable ? yes() : no()}</td>
+                </tr>
+            `;
+        }).join("");
 
         return `
             <table class="osrs-table">
@@ -309,3 +324,13 @@ function formatRule(rule) {
 
     return JSON.stringify(rule);
 }
+
+function escapeHtml(value) {
+    return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+}
+

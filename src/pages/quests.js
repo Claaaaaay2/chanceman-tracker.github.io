@@ -24,7 +24,8 @@ const QUEST_INFO_NOTES = {
     "Enakhra's Lament": "You can pick up a lit candle which is untradable.",
     "Shadows of Custodia": "You can use a Barbarian fishing rod instead of a regular fishing rod.",
     "Pirate's Treasure": "Two ways to solve this one. Can use crop circle in Brimhaven to smuggle karamja rum. Drop it inside puro-puro, pick it up in another crop circle location before it despawns. Do not teleport with it (even fairy rings are a no-go). Alternatively, you can buy the rum right before your membership expires, and log out in brimhaven. When your membership has expired, you will be in Lumbridge with a nice bottle of rum in your inventory.",
-    "Twilight's Promise": "You can use a training bow if you do not have any short-ranged weapons."
+    "Twilight's Promise": "You can use a training bow if you do not have any short-ranged weapons.",
+    "The Fremennik Trials": "You can use an untradable cabbage from Draynor Manor."
 };
 
 function escapeHtml(value) {

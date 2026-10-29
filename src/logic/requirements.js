@@ -423,13 +423,7 @@ function hasClueSpadeRequirement(ctx) {
 const DIARY_SKILL_OVERRIDES = {
     Woodcutting: "overrideWoodcutting",
     Mining: "overrideMining",
-    Fishing: "overrideFishing",
-    Cooking: "overrideCooking",
     Farming: "overrideFarming",
-    Fletching: "overrideFletching",
-    Crafting: "overrideCrafting",
-    Construction: "overrideConstruction",
-    Smithing: "overrideSmithing"
 };
 
 let achievementDiaryDataPromise = null;
@@ -577,36 +571,20 @@ function allTrue(checks) {
 
 export function canTrainSkill(ctx, skill) {
     switch (skill) {
-        case "Construction":
-            return canTrainConstruction(ctx);
-        case "Cooking":
-            return canTrainCooking(ctx);
-        case "Crafting":
-            return canTrainCrafting(ctx);
         case "Farming":
             return canTrainFarming(ctx);
         case "Firemaking":
             return canTrainFiremaking(ctx);
-        case "Fishing":
-            return canTrainFishing(ctx);
-        case "Fletching":
-            return canTrainFletching(ctx);
+        case "Woodcutting":
+            return canTrainWoodcutting(ctx);
         case "Herblore":
             return canTrainHerblore(ctx);
         case "Hunter":
             return canTrainHunter(ctx);
         case "Mining":
             return canTrainMining(ctx);
-        case "Prayer":
-            return canTrainPrayer(ctx);
         case "Slayer":
             return canTrainSlayer(ctx);
-        case "Smithing":
-            return canTrainSmithing(ctx);
-        case "Woodcutting":
-            return canTrainWoodcutting(ctx);
-        case "Herblore":
-            return canCompleteDruidicRitual(ctx);
         case "Sailing":
             return canCompletePandemonium(ctx);
         default:
@@ -1832,12 +1810,6 @@ export const REQUIREMENT_CHECKS = {
     canDoGuardiansOfTheRift(ctx) {
         return canDoGuardiansOfTheRift(ctx);
     },
-    canTrainFarming(ctx) {
-        return canTrainFarming(ctx);
-    },
-    canTrainFishing(ctx) {
-        return canTrainFishing(ctx);
-    },
     canTrainWoodcutting(ctx) {
         return canTrainWoodcutting(ctx);
     },
@@ -1849,9 +1821,6 @@ export const REQUIREMENT_CHECKS = {
     },
     hasUsablePickaxe(ctx) {
         return hasUsablePickaxe(ctx);
-    },
-    canTrainCooking(ctx) {
-        return canTrainCooking(ctx);
     },
     canDoGnomeRestaurant(ctx) {
         return canDoGnomeRestaurant(ctx);
@@ -1955,14 +1924,14 @@ export const REQUIREMENT_CHECKS = {
     hasAccessToWyvernProtection(ctx) {
         return hasAccessToWyvernProtection(ctx);
     },
-    canTrainFletching(ctx) {
-        return canTrainFletching(ctx);
-    },
     canFishKarambwan(ctx) {
         return canFishKarambwan(ctx);
     },
-    canTrainSmithing(ctx) {
-        return canTrainSmithing(ctx);
+    canTrainFiremaking(ctx) {
+        return canTrainFiremaking(ctx);
+    },
+    canTrainFarming(ctx) {
+        return canTrainFarming(ctx);
     },
     canCompleteDwarfCannon(ctx) {
         return canCompleteDwarfCannon(ctx);
@@ -2785,15 +2754,6 @@ export const REQUIREMENT_CHECKS = {
     },
     canTrainHerblore(ctx) {
         return canTrainHerblore(ctx);
-    },
-    canTrainPrayer(ctx) {
-        return canTrainPrayer(ctx);
-    },
-    canTrainCrafting(ctx) {
-        return canTrainCrafting(ctx);
-    },
-    canTrainFiremaking(ctx) {
-        return canTrainFiremaking(ctx);
     },
     canBurnLoarShades(ctx) {
         return canBurnLoarShades(ctx);
@@ -6572,15 +6532,15 @@ function hasFishingRod(ctx) {
 }
 
 function canAerialFish(ctx) {
-   return hasAnyItems(ctx, [11334, 2162, 32307]);
+   return hasAnyItems(ctx, [11334, 2162, 32307]);// Fish offcuts or king worms or Fine fish offcuts
 }
 
 
 function canDeepSeaFish(ctx) {
     return requiresQuest(ctx, "canCompletePandemonium", canCompletePandemonium) //
         && hasSkillLevel(ctx, "Fishing", 69) //
-        && has(ctx, 307) // Fishing rod
-        && (has(ctx, 11334) || has(ctx, 32307)); // Fish offcuts or Fine fish offcuts
+        && hasFishingRod(ctx) // Fishing rod or untradable fishing rod
+        && hasAnyItems(ctx, [11334, 2162, 32307]); // Fish offcuts or king worms or Fine fish offcuts
 }
 
 function canMakeTrawlingNet(ctx) {
@@ -6763,11 +6723,12 @@ function canBurnUriumShades(ctx) {
         ]);
 }
 
-
-
 function hasCupOfTeaOrBowlOfWater(ctx) {
-    return has(ctx, 1978) // Cup of tea
-        || has(ctx, 1921) // Bowl of water
+    if (hasItem(ctx, 1978, { trackMissing: false })) return true; // Cup of tea
+    if (hasItem(ctx, 1921, { trackMissing: false })) return true; // Bowl of water
+
+    addMissingItemGroup(ctx, [1978, 1921]);
+    return false;
 }
 
 function hasAnyGuthixBalance(ctx) {
@@ -7418,19 +7379,15 @@ function canEnterNightmareZone(ctx) {
 }
 
 function hasKnifeOrNarwhalKnife(ctx) {
-    if (hasItem(ctx, 946, { trackMissing: false })) return true; // Knife
-
-    const hasHorn = hasItem(ctx, 31954, { trackMissing: false }); // Narwhal horn
-    if (hasHorn) {
-        return hasSkillLevel(ctx, "Crafting", 51) && has(ctx, 1755); // Chisel
-    }
+    if (has(ctx, 946)) return true; // Knife
+    if (hasNarwhalKnife(ctx)) return true;
 
     addMissingItemOptionGroup(ctx, [[946], [31954, 1755]]);
     return false;
 }
 
 function hasNarwhalKnife(ctx) {
-    return hasSkillLevel(ctx, "Crafting", 51) //
+    return hasSkillLevel(ctx, "Crafting", 51)
         && has(ctx, 31954) // Narwhal horn
         && has(ctx, 1755); // Chisel
 }
@@ -7725,124 +7682,6 @@ function canStartZogreFleshEaters(ctx) {
         && requiresQuest(ctx, "canCompleteJunglePotion", canCompleteJunglePotion);
 }
 
-function canTrainCrafting(ctx) {
-    if (ctx.filters?.overrideCrafting) return true;
-    return hasAnyItems(ctx, [
-        1737, // Wool
-        1761, // Soft clay
-    ])
-        || (has(ctx, 1741) // Leather
-            && (ctx.filters?.isFreeToPlay
-                ? (has(ctx, 1733) && has(ctx, 1734)) // Needle and Thread
-                : true)
-        ) //
-        || (has(ctx, 1775) // Molten glass
-            && has(ctx, 1785) // Glassblowing pipe
-        )
-        || (has(ctx, 1625) // Uncut opal
-            && has(ctx, 1755) // Chisel
-        )
-        || (has(ctx, 1592) // Ring mould
-            && has(ctx, 1609) // Opal
-            && has(ctx, 2355) // Silver bar
-        )
-        || (has(ctx, 1592) // Ring mould
-            && has(ctx, 2357) // Gold bar
-            && ctx.player.levels.Crafting >= 5
-        )
-        || (has(ctx, 1597) // Necklace mould
-            && has(ctx, 2357) // Gold bar
-            && ctx.player.levels.Crafting >= 6
-        )
-        || (has(ctx, 11065) // Bracelet mould
-            && has(ctx, 2357) // Gold bar
-            && ctx.player.levels.Crafting >= 7
-        )
-        || (has(ctx, 1595) // Amulet mould
-            && has(ctx, 2357) // Gold bar
-            && ctx.player.levels.Crafting >= 8
-        ); // TODO could add more.
-}
-
-function canTrainPrayer(ctx) {
-    return hasAnyItems(ctx, [
-        3183,
-        4834,
-        4832,
-        3123,
-        31726,
-    ])
-        || (has(ctx, 22124) && ctx.player.levels.Prayer >= 70) // Superior dragon bones
-        || hasAnyItems(ctx, [
-            2859,
-            22780,
-            28899,
-            6812,
-            4812,
-            534,
-            530,
-            532,
-            526,
-            528,
-            6729,
-            536,
-            22783,
-            4830,
-            31729,
-            22786,
-            3125,
-            11943,
-            25769,
-            25775,
-            25766,
-            25778,
-            25772,
-        ])
-        || ( // Basic reanimation
-            (has(ctx, 559) && has(ctx, 561)) // Body rune and Nature rune
-            && hasAnyItems(ctx, [
-                13448,
-                13451,
-                13454,
-                13457,
-                13460,
-                13463,
-                13466,
-            ])
-        ) //
-        || ( // Adept reanimation
-            (has(ctx, 559) && has(ctx, 561) && has(ctx, 566)) // Body rune and Nature rune and Soul rune
-            && hasAnyItems(ctx, [
-                13469,
-                13472,
-                13475,
-                13478,
-                13481,
-                13484,
-                13487,
-            ])
-        ) //
-        || ( // Expert reanimation
-            (has(ctx, 565) && has(ctx, 561) && has(ctx, 566)) // Blood rune and Nature rune and Soul rune
-            && hasAnyItems(ctx, [
-                13490,
-                13493,
-                13496,
-                13499,
-                13502,
-                26997,
-            ])
-        ) //
-        || ( // Master reanimation
-            (has(ctx, 565) && has(ctx, 561) && has(ctx, 566)) // Blood rune and Nature rune and Soul rune
-            && hasAnyItems(ctx, [
-                13505,
-                13508,
-                13511,
-            ])
-        ); //
-}
-
 function getUsableAxeIds(level) {
     const usableAxeIds = [];
     if (level >= 1) {
@@ -7883,8 +7722,44 @@ function hasUsableAxe(ctx) {
 }
 
 function canTrainWoodcutting(ctx) {
-    if (ctx.filters?.overrideWoodcutting) return true;
     return hasUsableAxe(ctx);
+}
+
+function canTrainFarming(ctx) {
+
+    return (
+        hasAnyItems(ctx, [
+            5341, // Rake
+            1925, // Bucket
+            8431, // bagged plant 1
+        ]) ||
+
+        // Bagged plants + Construction level
+        (has(ctx, 8455) && hasSkillLevel(ctx, "Construction", 76)) || // Bagged bluebells
+        (has(ctx, 8453) && hasSkillLevel(ctx, "Construction", 71)) || // Bagged daffodils
+        (has(ctx, 8417) && hasSkillLevel(ctx, "Construction", 5))  || // Bagged dead tree
+        (has(ctx, 8451) && hasSkillLevel(ctx, "Construction", 66)) || // Bagged flower
+        (has(ctx, 8429) && hasSkillLevel(ctx, "Construction", 75)) || // Bagged magic tree
+        (has(ctx, 8425) && hasSkillLevel(ctx, "Construction", 45)) || // Bagged maple tree
+        (has(ctx, 8459) && hasSkillLevel(ctx, "Construction", 71)) || // Bagged marigolds
+        (has(ctx, 8419) && hasSkillLevel(ctx, "Construction", 10)) || // Bagged nice tree
+        (has(ctx, 8421) && hasSkillLevel(ctx, "Construction", 15)) || // Bagged oak tree
+        (has(ctx, 8433) && hasSkillLevel(ctx, "Construction", 6))  || // Bagged plant 2
+        (has(ctx, 8435) && hasSkillLevel(ctx, "Construction", 12)) || // Bagged plant 3
+        (has(ctx, 8461) && hasSkillLevel(ctx, "Construction", 76)) || // Bagged roses
+        (has(ctx, 8457) && hasSkillLevel(ctx, "Construction", 66)) || // Bagged sunflower
+        (has(ctx, 8423) && hasSkillLevel(ctx, "Construction", 30)) || // Bagged willow tree
+        (has(ctx, 8427) && hasSkillLevel(ctx, "Construction", 60)) || // Bagged yew tree
+        (has(ctx, 8445) && hasSkillLevel(ctx, "Construction", 72)) || // Fancy hedge (bagged)
+        (has(ctx, 8439) && hasSkillLevel(ctx, "Construction", 60)) || // Nice hedge (bagged)
+        (has(ctx, 8449) && hasSkillLevel(ctx, "Construction", 80)) || // Tall box hedge (bagged)
+        (has(ctx, 8441) && hasSkillLevel(ctx, "Construction", 64)) || // Small box hedge (bagged)
+        (has(ctx, 8447) && hasSkillLevel(ctx, "Construction", 76)) || // Tall fancy hedge (bagged)
+        (has(ctx, 8437) && hasSkillLevel(ctx, "Construction", 56)) || // Thorny hedge (bagged)
+        (has(ctx, 8443) && hasSkillLevel(ctx, "Construction", 68)) ||   // Topiary hedge (bagged)
+		// Tithe Farm
+		(ctx.player.levels.Farming >= 34 && has(ctx, 952)) //spade
+    );
 }
 
 function canGainKingdomFavour(ctx) {
@@ -7935,21 +7810,11 @@ function hasUsablePickaxe(ctx) {
 }
 
 function canTrainMining(ctx) {
-    if (ctx.filters?.overrideMining) return true;
     return hasUsablePickaxe(ctx);
 }
 
 function canTrainHerblore(ctx) {
     return requiresQuest(ctx, "canCompleteDruidicRitual", canCompleteDruidicRitual);
-}
-
-function canTrainFishing(ctx) {
-    if (ctx.filters?.overrideFishing) return true;
-    return hasAnyItems(ctx, [
-        303,
-        305,
-    ])
-        || (has(ctx, 307) && has(ctx, 313)); // Fishing rod & Fishing bait
 }
 
 function canTrainSlayer(ctx) {
@@ -7964,25 +7829,6 @@ function canTrainHunter(ctx) {
         10010,
     ])
         || ctx.player.levels.Hunter >= 25; // Barehanding butterflies
-}
-
-function canTrainCooking(ctx) {
-    if (ctx.filters?.overrideCooking) return true;
-    return hasAnyItems(ctx, [
-        25833,
-        2132,
-        2136,
-        2134,
-        2138,
-        317,
-        3226,
-        327,
-        321,
-        1859,
-        2307,
-        3142,
-        345,
-    ]) // Raw herring
 }
 
 function canFillFishFoodBox(ctx) {
@@ -8433,43 +8279,6 @@ function hasAnyGnomeCocktail(ctx) {
     ]);
 }
 
-function canTrainFarming(ctx) {
-
-    if (ctx.filters?.overrideFarming) return true;
-
-    return (
-        hasAnyItems(ctx, [
-            5341, // Rake
-            1925, // Bucket
-            8431, // bagged plant 1
-        ]) ||
-
-        // Bagged plants + Construction level
-        (has(ctx, 8455) && hasSkillLevel(ctx, "Construction", 76)) || // Bagged bluebells
-        (has(ctx, 8453) && hasSkillLevel(ctx, "Construction", 71)) || // Bagged daffodils
-        (has(ctx, 8417) && hasSkillLevel(ctx, "Construction", 5))  || // Bagged dead tree
-        (has(ctx, 8451) && hasSkillLevel(ctx, "Construction", 66)) || // Bagged flower
-        (has(ctx, 8429) && hasSkillLevel(ctx, "Construction", 75)) || // Bagged magic tree
-        (has(ctx, 8425) && hasSkillLevel(ctx, "Construction", 45)) || // Bagged maple tree
-        (has(ctx, 8459) && hasSkillLevel(ctx, "Construction", 71)) || // Bagged marigolds
-        (has(ctx, 8419) && hasSkillLevel(ctx, "Construction", 10)) || // Bagged nice tree
-        (has(ctx, 8421) && hasSkillLevel(ctx, "Construction", 15)) || // Bagged oak tree
-        (has(ctx, 8433) && hasSkillLevel(ctx, "Construction", 6))  || // Bagged plant 2
-        (has(ctx, 8435) && hasSkillLevel(ctx, "Construction", 12)) || // Bagged plant 3
-        (has(ctx, 8461) && hasSkillLevel(ctx, "Construction", 76)) || // Bagged roses
-        (has(ctx, 8457) && hasSkillLevel(ctx, "Construction", 66)) || // Bagged sunflower
-        (has(ctx, 8423) && hasSkillLevel(ctx, "Construction", 30)) || // Bagged willow tree
-        (has(ctx, 8427) && hasSkillLevel(ctx, "Construction", 60)) || // Bagged yew tree
-        (has(ctx, 8445) && hasSkillLevel(ctx, "Construction", 72)) || // Fancy hedge (bagged)
-        (has(ctx, 8439) && hasSkillLevel(ctx, "Construction", 60)) || // Nice hedge (bagged)
-        (has(ctx, 8449) && hasSkillLevel(ctx, "Construction", 80)) || // Tall box hedge (bagged)
-        (has(ctx, 8441) && hasSkillLevel(ctx, "Construction", 64)) || // Small box hedge (bagged)
-        (has(ctx, 8447) && hasSkillLevel(ctx, "Construction", 76)) || // Tall fancy hedge (bagged)
-        (has(ctx, 8437) && hasSkillLevel(ctx, "Construction", 56)) || // Thorny hedge (bagged)
-        (has(ctx, 8443) && hasSkillLevel(ctx, "Construction", 68))    // Topiary hedge (bagged)
-    );
-}
-
 function canPlantTrees(ctx) {
     return has(ctx, 5341) // Rake
         && has(ctx, 952); // Spade
@@ -8488,30 +8297,9 @@ function canPlantPlants(ctx) {
     return has(ctx, 5341); // Rake
 }
 
-function canTrainConstruction(ctx) {
-    if (ctx.filters?.overrideConstruction) return true;
-    return has(ctx, 8431) // Bagged plant 1
-        || (
-            (has(ctx, 2347) && has(ctx, 8794)) // Hammer and Saw
-            && (has(ctx, 2351) || (has(ctx, 960) && hasAnyNails(ctx)))  // Iron bar or Plank and any nails
-        );
-}
-
-function canTrainFletching(ctx) {
-    if (ctx.filters?.overrideFletching) return true;
-    return (hasKnifeOrNarwhalKnife(ctx) && has(ctx, 1511)) // Knife & Logs
-        || (has(ctx, 52) && hasAnyFeather(ctx)) // Arrow shaft & Feather
-        || (has(ctx, 53) && has(ctx, 39)) // Headless arrow & Bronze arrowtip
-}
-
 function canTrainFiremaking(ctx) {
     return has(ctx, 590) // Tinderbox
         || hasUsableAxe(ctx); // For training FM in COX
-}
-
-function canTrainSmithing(ctx) {
-    if (ctx.filters?.overrideSmithing) return true;
-    return has(ctx, 2347); // Hammer
 }
 
 function canDoGnomeRestaurant(ctx) {
