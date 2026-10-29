@@ -2288,7 +2288,7 @@ export const REQUIREMENT_CHECKS = {
         return has(ctx, 301);
     },
     hasFlyFishingRod(ctx) {
-        return has(ctx, 309);
+        return hasFlyFishingRod(ctx);
     },
     hasAnyFeather(ctx) {
         return hasAnyFeather(ctx);
@@ -6528,6 +6528,11 @@ function hasAnyLantern(ctx) {
 
 function hasFishingRod(ctx) {
     return has(ctx, 307) // fishing rod
+        || canAerialFish(ctx);
+}
+
+function hasFlyFishingRod(ctx) {
+        return has(ctx, 309) // Fly fishing rod
         || canAerialFish(ctx);
 }
 
