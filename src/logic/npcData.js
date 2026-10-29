@@ -2325,6 +2325,7 @@ export const NPC_DATA = {
     },
     "Broken armour": {
         "wiki": "https://oldschool.runescape.wiki/w/Broken_armour",
+        "note": "You need leather gloves and any boots (Boots of Lightness are untradable). You'll also need a cup of tea or a bowl of water.",
         "rule": {
             "all": [
                 "canMakeArmourStand",
@@ -11402,6 +11403,7 @@ export const NPC_DATA = {
     },
     "Panning tray Mud": {
         "wiki": "https://oldschool.runescape.wiki/w/Panning_tray#Mud",
+        "note": "You'll need a cup of tea or a bowl of water.",
         "rule": ["hasCupOfTeaOrBowlOfWater"],
         "skill": [],
         "level": [],
@@ -14142,6 +14144,7 @@ export const NPC_DATA = {
     },
     "Soil Level 1 digs": {
         "wiki": "https://oldschool.runescape.wiki/w/Soil#Level_1_digs",
+        "note": "You need leather gloves and any boots (Boots of Lightness are untradable). You'll also need a cup of tea or a bowl of water.",
         "rule": {
             "all": [
                 "hasCupOfTeaOrBowlOfWater",
@@ -14155,6 +14158,7 @@ export const NPC_DATA = {
     },
     "Soil Level 2 digs": {
         "wiki": "https://oldschool.runescape.wiki/w/Soil#Level_2_digs",
+        "note": "You need leather gloves and any boots (Boots of Lightness are untradable). You'll also need a cup of tea or a bowl of water.",
         "rule": {
             "all": [
                 "hasCupOfTeaOrBowlOfWater",
@@ -14168,6 +14172,7 @@ export const NPC_DATA = {
     },
     "Soil Level 3 digs": {
         "wiki": "https://oldschool.runescape.wiki/w/Soil#Level_3_digs",
+        "note": "You need leather gloves and any boots (Boots of Lightness are untradable). You'll also need a cup of tea or a bowl of water.",
         "rule": {
             "all": [
                 "hasCupOfTeaOrBowlOfWater",
@@ -14182,6 +14187,7 @@ export const NPC_DATA = {
     },
     "Soil Training digs": {
         "wiki": "https://oldschool.runescape.wiki/w/Soil#Training_digs",
+        "note": "You'll need a cup of tea or a bowl of water.",
         "rule": ["hasCupOfTeaOrBowlOfWater"],
         "skill": [],
         "level": [],

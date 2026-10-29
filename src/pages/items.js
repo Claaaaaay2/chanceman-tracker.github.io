@@ -164,55 +164,6 @@ export default async function ItemsPage() {
                 </label>
                 </div>
 
-            <p class="marginOneRem"><strong>Overrides</strong> (e.g. when you want to see what lamping a skill can bring you)</p>
-
-            <div class="skill-filters">
-
-                <label>
-                    <input type="checkbox" id="overrideWoodcutting">
-                    Override woodcutting
-                </label>
-
-                <label>
-                    <input type="checkbox" id="overrideMining">
-                    Override mining
-                </label>
-
-                <label>
-                    <input type="checkbox" id="overrideFishing">
-                    Override fishing
-                </label>
-
-                <label>
-                    <input type="checkbox" id="overrideCooking">
-                    Override cooking
-                </label>
-
-                <label>
-                    <input type="checkbox" id="overrideFarming">
-                    Override farming
-                </label>
-
-                <label>
-                    <input type="checkbox" id="overrideFletching">
-                    Override fletching
-                </label>
-
-                <label>
-                    <input type="checkbox" id="overrideCrafting">
-                    Override crafting
-                </label>
-
-                <label>
-                    <input type="checkbox" id="overrideConstruction">
-                    Override construction
-                </label>
-
-                <label>
-                    <input type="checkbox" id="overrideSmithing">
-                    Override smithing
-                </label>
-            </div>
         </div>
 
         <div id="itemsLoading" class="items-loading" aria-live="polite">

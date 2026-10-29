@@ -39614,7 +39614,7 @@
           }
         },
         "Questing": {
-          "notes": "Received after The Digsite (show Certificate level 3 to Curator in Varrock Museum).",
+          "notes": "Received after completing most of The Digsite (show Certificate level 3 to Curator in Varrock Museum).",
           "rule": {
             "all": [
               "hasCupOfTeaOrBowlOfWater",
@@ -63528,7 +63528,7 @@
           }
         },
         "Questing": {
-          "notes": "Received after The Digsite (show Certificate level 3 to Curator in Varrock Museum).",
+          "notes": "Received after completing most of The Digsite (show Certificate level 3 to Curator in Varrock Museum).",
           "rule": {
             "all": [
               "hasCupOfTeaOrBowlOfWater",
@@ -96383,18 +96383,6 @@
               },
               {
                 "has": 1515
-              },
-              {
-                "skills": [
-                  {
-                    "skill": "Smithing",
-                    "level": 75
-                  },
-                  {
-                    "skill": "Woodcutting",
-                    "level": 75
-                  }
-                ]
               },
               "hasUsableAxe"
             ]
